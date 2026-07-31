@@ -18,3 +18,21 @@ Limitation: Playwright Chromium could not be downloaded in the local environment
 - Application-origin browser warning/error count: 0. Browser-extension metadata errors were observed separately and are not emitted by the game.
 
 Remaining evidence limit: no physical iPhone or Android-device run was available. The 320–375 CSS px layout and touch protections are covered by automated/static checks, while public pointer behavior is covered in real Chrome.
+
+## 2026-08-01 — round 1: mobile lifecycle recovery
+
+- Baseline `npm run check`: passed before modification.
+- Centralized pointer release and covered pointerup, lost capture, window blur, pause, restart, and finish paths.
+- Manual pause now stops procedural music; resume unlocks suspended mobile audio from its button gesture before restarting playback.
+- Added distinct recovery guidance for manual, background/pagehide, and orientation pauses.
+- `npm run check`: passed after the round; release payload was 62,420 bytes.
+
+## 2026-08-01 — round 2: combat clarity and motion fidelity
+
+- Added incoming/remaining-threat HUD feedback, an anchor-local energy arc, and accessible live tether/boss meters.
+- Reduced-motion mode now freezes nonessential procedural animation and reduces trails and particle bursts without advancing gameplay randomness.
+- Added a zero-size resize guard for transient mobile viewport collapse and switched DPR lookup to `globalThis`.
+- The first round-2 gate exposed a pre-existing particle-loop defect: the changing loop bound stopped normal bursts early (`85` instead of `100`). The bound is now fixed before iteration, and both full and reduced budgets are tested.
+- Final local `npm run check`: passed; release payload was 64,422 bytes with no external runtime URLs.
+
+Pending release evidence: GitHub Actions and the updated public Pages build must be verified after merge. Physical iPhone/Android hardware remains unavailable.

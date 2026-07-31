@@ -5,7 +5,7 @@ objective: "Publish an original, polished smartphone game playable through GitHu
 session_status: active
 verified_start_state: "Public empty repository with main as default branch."
 game: "Q: STARTHREAD"
-implementation_status: publicly_deployed_and_verified
+implementation_status: two_round_mobile_polish_locally_verified_awaiting_release
 verified_current_state:
   public_url: "https://bachikoljunior-blip.github.io/Q/"
   pull_request: "https://github.com/bachikoljunior-blip/Q/pull/1"
@@ -17,6 +17,9 @@ completed:
   - upgrades, procedural audio, settings, records, victory and failure flows
   - GitHub Pages deployment from main
   - public Chrome smoke test through tutorial, play, pause, and resume
-active: "No release blocker; logical session remains active until the user explicitly ends it."
+  - resilient pointer release, pause audio lifecycle, and reason-specific mobile recovery guidance
+  - live threat count, anchor-local energy gauge, accessible combat meters, and effective reduced-motion rendering
+  - zero-size viewport guard and corrected deterministic particle-cap accounting
+active: "Publish the two-round mobile polish candidate, verify GitHub Actions and the public Pages URL, then record release evidence."
 blocked: []
-next_start: "Continue from the deployed public build and prioritize verified user feedback or a physical-device compatibility run."
+next_start: "After release verification, prioritize verified player feedback or a physical iPhone/Android compatibility run."
