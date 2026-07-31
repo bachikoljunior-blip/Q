@@ -90,12 +90,29 @@ frames(12);
 canvas.dispatchEvent(new window.PointerEvent('pointerup', { bubbles: true, cancelable: true, pointerId: 7, clientX: 105, clientY: 205 }));
 const after = globalThis.__Q_TEST__.snapshot();
 assert.ok(after.energy < before.energy, 'holding the gravity tether consumes energy');
+assert.equal(after.tethered, false, 'pointerup releases the gravity tether');
+
+canvas.dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 8, clientX: 250, clientY: 220 }));
+assert.equal(globalThis.__Q_TEST__.snapshot().tethered, true, 'new primary pointer acquires the tether');
+canvas.dispatchEvent(new window.PointerEvent('lostpointercapture', { bubbles: true, pointerId: 8 }));
+assert.equal(globalThis.__Q_TEST__.snapshot().tethered, false, 'lost pointer capture safely releases the tether');
+
+canvas.dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 9, clientX: 230, clientY: 260 }));
+window.dispatchEvent(new window.Event('blur'));
+assert.equal(globalThis.__Q_TEST__.snapshot().tethered, false, 'window blur safely releases the tether');
 
 window.document.querySelector('#pause').click();
 assert.equal(globalThis.__Q_TEST__.snapshot().status, 'paused');
 assert.ok(window.document.querySelector('#paused').classList.contains('active'));
 window.document.querySelector('#resume').click();
+await new Promise(resolve => setImmediate(resolve));
 assert.equal(globalThis.__Q_TEST__.snapshot().status, 'running');
+
+globalThis.__Q_TEST__.pause('orientation');
+assert.match(window.document.querySelector('#pause-copy').textContent, /縦向き/);
+window.document.querySelector('#resume').click();
+await new Promise(resolve => setImmediate(resolve));
+assert.equal(globalThis.__Q_TEST__.snapshot().status, 'running', 'orientation pause can recover through a gesture');
 
 globalThis.__Q_TEST__.wave(4);
 frames(78);
