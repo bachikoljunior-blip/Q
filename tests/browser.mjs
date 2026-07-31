@@ -81,6 +81,19 @@ window.document.querySelector('#tutorial-skip').click();
 frames(4);
 assert.equal(globalThis.__Q_TEST__.snapshot().status, 'running');
 assert.equal(window.document.querySelector('#hud').classList.contains('hidden'), false);
+assert.equal(window.document.querySelector('#threat').textContent, 'INCOMING', 'wave entry is visible in the HUD');
+
+const reduced = window.document.querySelector('#reduced');
+const gameplayRandomState = globalThis.__Q_TEST__.snapshot().randomState;
+reduced.checked = true;
+reduced.dispatchEvent(new window.Event('change', { bubbles: true }));
+assert.ok(window.document.documentElement.classList.contains('reduce-motion'), 'reduced-motion setting applies immediately');
+assert.ok(globalThis.__Q_TEST__.particles(100) <= 30, 'reduced motion sharply limits particles');
+reduced.checked = false;
+reduced.dispatchEvent(new window.Event('change', { bubbles: true }));
+assert.equal(globalThis.__Q_TEST__.particles(100), 100, 'standard motion retains the full particle budget');
+globalThis.__Q_TEST__.particles(0);
+assert.equal(globalThis.__Q_TEST__.snapshot().randomState, gameplayRandomState, 'visual effect budgets never alter gameplay randomness');
 
 const before = globalThis.__Q_TEST__.snapshot();
 canvas.dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 7, clientX: 285, clientY: 240 }));
@@ -91,6 +104,7 @@ canvas.dispatchEvent(new window.PointerEvent('pointerup', { bubbles: true, cance
 const after = globalThis.__Q_TEST__.snapshot();
 assert.ok(after.energy < before.energy, 'holding the gravity tether consumes energy');
 assert.equal(after.tethered, false, 'pointerup releases the gravity tether');
+assert.ok(Number(window.document.querySelector('#tether-meter').getAttribute('aria-valuenow')) < 100, 'tether meter exposes live energy');
 
 canvas.dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 8, clientX: 250, clientY: 220 }));
 assert.equal(globalThis.__Q_TEST__.snapshot().tethered, true, 'new primary pointer acquires the tether');
@@ -119,6 +133,8 @@ frames(78);
 const boss = globalThis.__Q_TEST__.snapshot();
 assert.equal(boss.wave, 4);
 assert.ok(boss.enemies >= 4, 'middle boss and shield nodes spawn');
+assert.match(window.document.querySelector('#threat').textContent, /^THREATS /, 'remaining threats are visible during combat');
+assert.equal(window.document.querySelector('#boss-meter').getAttribute('aria-valuenow'), '100', 'boss durability is exposed to assistive UI');
 
 globalThis.__Q_TEST__.finish(false);
 assert.ok(window.document.querySelector('#result').classList.contains('active'));
@@ -142,4 +158,4 @@ assert.equal(window.document.querySelector('#result-title').textContent, 'DAWN R
 assert.ok(canvas.width * canvas.height <= 2_000_000, 'canvas backing store stays within budget');
 assert.deepEqual(uncaught, [], `no DOM integration errors: ${uncaught.join('\n')}`);
 
-console.log('DOM interaction passed: fresh menu, tutorial, tether input, fixed-step play, pause/resume, boss checkpoint, failure/restart, all upgrade transitions, final ending, and canvas budget.');
+console.log('DOM interaction passed: fresh menu, tutorial, tether and interruption recovery, motion budgets, combat meters, fixed-step play, pause/resume, boss checkpoint, failure/restart, all upgrade transitions, final ending, and canvas budget.');

@@ -16,15 +16,15 @@
 
     <div id="hud" class="hud hidden" aria-hidden="true">
       <header>
-        <div><span>RIFT</span><b id="wave">01 / 08</b></div>
+        <div><span>RIFT</span><b id="wave">01 / 08</b><small id="threat" class="threat">INCOMING</small></div>
         <div class="score"><span>SCORE</span><b id="score">0</b></div>
         <button id="pause" class="icon-button" aria-label="一時停止">Ⅱ</button>
       </header>
-      <div id="boss-hud" class="boss-hud hidden"><span id="boss-name"></span><i><b id="boss-life"></b></i></div>
+      <div id="boss-hud" class="boss-hud hidden"><span id="boss-name"></span><i id="boss-meter" role="progressbar" aria-label="ボスの残り耐久力" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><b id="boss-life"></b></i></div>
       <div id="combo" class="combo"></div>
       <footer>
         <div><span>HULL</span><div id="hull" class="hull"></div></div>
-        <div class="energy"><span>TETHER</span><i><b id="energy"></b></i></div>
+        <div class="energy"><span>TETHER</span><i id="tether-meter" role="progressbar" aria-label="光の糸の残りエネルギー" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><b id="energy"></b></i></div>
       </footer>
     </div>
 

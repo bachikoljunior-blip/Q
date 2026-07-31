@@ -1,8 +1,12 @@
 schema_version: 1
 nodes:
   - {id: Q-DESIGN, title: "Bounded mobile game design", status: verified}
-  - {id: Q-CORE, title: "Touch physics, combat, enemies, progression", status: awaiting_verification, depends_on: [Q-DESIGN]}
-  - {id: Q-POLISH, title: "Visuals, audio, UI, save and accessibility", status: awaiting_verification, depends_on: [Q-CORE]}
-  - {id: Q-QA, title: "Static, unit and browser interaction gates", status: active, depends_on: [Q-CORE, Q-POLISH]}
-  - {id: Q-RELEASE, title: "GitHub integration and Pages verification", status: ready_after_Q-QA, depends_on: [Q-QA]}
-active_frontier: [Q-QA]
+  - {id: Q-CORE, title: "Touch physics, combat, enemies, progression", status: verified, depends_on: [Q-DESIGN]}
+  - {id: Q-POLISH, title: "Visuals, audio, UI, save and accessibility", status: verified, depends_on: [Q-CORE]}
+  - {id: Q-QA, title: "Static, unit and browser interaction gates", status: verified, depends_on: [Q-CORE, Q-POLISH]}
+  - {id: Q-RELEASE, title: "GitHub integration and Pages verification", status: verified, depends_on: [Q-QA]}
+  - {id: Q-RECOVERY, title: "Mobile pointer, pause, audio and orientation recovery", status: verified, depends_on: [Q-RELEASE]}
+  - {id: Q-CLARITY, title: "Combat readability, accessibility and reduced-motion fidelity", status: verified, depends_on: [Q-RECOVERY]}
+  - {id: Q-RELEASE-2, title: "Publish and verify the two-round polish release", status: active, depends_on: [Q-CLARITY]}
+  - {id: Q-DEVICE, title: "Physical iPhone and Android compatibility evidence", status: awaiting_external_device, depends_on: [Q-RELEASE-2]}
+active_frontier: [Q-RELEASE-2]
