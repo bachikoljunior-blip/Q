@@ -1,0 +1,15 @@
+schema_version: 1
+project: Q
+repository: bachikoljunior-blip/Q
+objective: "Publish an original, polished smartphone game playable through GitHub Pages."
+session_status: active
+verified_start_state: "Public empty repository with main as default branch."
+game: "Q: STARTHREAD"
+implementation_status: locally_verified_awaiting_remote_release
+completed:
+  - touch-first gravity-tether core loop
+  - eight-rift progression and two bosses
+  - upgrades, procedural audio, settings, records, victory and failure flows
+active: "Publish verified files, run GitHub Actions, enable Pages if required, then test the public URL."
+blocked: []
+next_start: "Inspect the Pages workflow and public URL after the verified commit reaches main."

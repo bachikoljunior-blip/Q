@@ -1,0 +1,10 @@
+schema_version: 1
+criteria:
+  - {id: AC-PAGES, result: "Public Pages URL loads every asset with no console error or external dependency", status: pending}
+  - {id: AC-FLOW, result: "Player can learn, start, reach failure or victory, and restart without page reload", status: pending}
+  - {id: AC-TOUCH, result: "All play uses one pointer at 320 CSS px width without scrolling, selection or double-tap zoom", status: pending}
+  - {id: AC-SAVE, result: "Versioned settings and records persist; malformed storage safely resets", status: pending}
+  - {id: AC-AUDIO, result: "Audio begins only after a gesture; mute persists; unavailable audio never blocks play", status: pending}
+  - {id: AC-PERF, result: "DPR is capped, backing canvas stays under 2 million pixels, and entities/effects are bounded", status: pending}
+  - {id: AC-COMPLETE, result: "Eight rifts, upgrade choices, two bosses, failure, final victory and replay exist", status: pending}
+  - {id: AC-LICENSE, result: "No unlicensed third-party media or external runtime service is shipped", status: pending}

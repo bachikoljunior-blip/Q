@@ -1,0 +1,16 @@
+{
+  "name": "q-starthread",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "node tools/serve.mjs",
+    "test": "node --test tests/core.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "validate": "node tools/validate.mjs",
+    "check": "npm run validate && npm test && npm run test:browser"
+  },
+  "devDependencies": {
+    "happy-dom": "^20.11.1"
+  }
+}

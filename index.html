@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#050713">
+  <meta name="description" content="指先に重力を置き、光の糸で敵を切り裂く一指操作アクションゲーム。">
+  <title>Q: STARTHREAD</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <canvas id="canvas" aria-label="ゲーム画面。画面を押すと重力点を作り、機体と重力点を結ぶ光の糸で敵を攻撃します。"></canvas>
+
+    <div id="hud" class="hud hidden" aria-hidden="true">
+      <header>
+        <div><span>RIFT</span><b id="wave">01 / 08</b></div>
+        <div class="score"><span>SCORE</span><b id="score">0</b></div>
+        <button id="pause" class="icon-button" aria-label="一時停止">Ⅱ</button>
+      </header>
+      <div id="boss-hud" class="boss-hud hidden"><span id="boss-name"></span><i><b id="boss-life"></b></i></div>
+      <div id="combo" class="combo"></div>
+      <footer>
+        <div><span>HULL</span><div id="hull" class="hull"></div></div>
+        <div class="energy"><span>TETHER</span><i><b id="energy"></b></i></div>
+      </footer>
+    </div>
+
+    <section id="menu" class="screen menu active">
+      <div class="orbit-art" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+      <div class="title-block">
+        <span class="kicker">ONE-FINGER ORBIT ACTION</span>
+        <h1><em>Q</em><small>STARTHREAD</small></h1>
+        <p>つなぐ。振る。切り開く。</p>
+      </div>
+      <div class="menu-actions">
+        <button id="start" class="primary"><b>IGNITE</b><small>光路を起動</small></button>
+        <div class="records"><span>BEST <b id="best">0</b></span><span>DEPTH <b id="depth">—</b></span><span>WINS <b id="wins">0</b></span></div>
+        <div class="link-row"><button id="help">操作方法</button><button id="settings">設定</button></div>
+      </div>
+      <small class="footnote">NO ADS · NO LOGIN · LOCAL SAVE</small>
+    </section>
+
+    <section id="tutorial" class="screen">
+      <div class="panel tutorial-panel">
+        <span id="tutorial-count" class="kicker">01 / 03</span>
+        <div id="tutorial-art" class="tutorial-art"><i class="ship"></i><i class="anchor"></i><i class="beam"></i><i class="enemy"></i></div>
+        <h2 id="tutorial-title">重力を置く</h2>
+        <p id="tutorial-copy"></p>
+        <button id="tutorial-next" class="primary">次へ</button>
+        <button id="tutorial-skip" class="quiet">スキップ</button>
+      </div>
+    </section>
+
+    <section id="upgrade" class="screen upgrade-screen">
+      <div class="upgrade-title"><span class="kicker">RIFT STABILIZED</span><h2>ひとつ選ぶ</h2></div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section id="paused" class="screen"><div class="panel centered"><span class="kicker">ORBIT SUSPENDED</span><h2>一時停止</h2><button id="resume" class="primary">再開</button><button id="retry" class="secondary">最初から</button><button id="quit" class="quiet danger">タイトルへ戻る</button></div></section>
+
+    <section id="result" class="screen"><div class="panel centered result-panel"><span id="result-kicker" class="kicker">THREAD LOST</span><h2 id="result-title">RUN OVER</h2><p id="result-copy"></p><div class="big-score"><span>SCORE</span><b id="result-score">0</b></div><div class="result-stats"><div><span>RIFT</span><b id="result-wave">1</b></div><div><span>MAX SURGE</span><b id="result-combo">0</b></div><div><span>TIME</span><b id="result-time">00:00</b></div></div><p id="record" class="record hidden">NEW RECORD</p><button id="again" class="primary">もう一度</button><button id="result-menu" class="quiet">タイトルへ</button></div></section>
+
+    <section id="help-panel" class="screen"><div class="panel info"><button class="close" data-close="help-panel">×</button><h2>操作方法</h2><div class="guide"><div><i>●</i><p><b>押して重力点を作る</b><span>機体が指先へ引かれ、光の糸がつながります。</span></p></div><div><i>⌁</i><p><b>指を動かして振り回す</b><span>糸に触れた敵へダメージ。速いほど威力が上がります。</span></p></div><div><i>↗</i><p><b>離して飛ぶ</b><span>勢いを保って滑空。危険から抜け、次の角度を作れます。</span></p></div><div><i>8</i><p><b>全8区画</b><span>強化を組み合わせ、最後の「DEAD STAR」を破壊してください。</span></p></div></div></div></section>
+
+    <section id="settings-panel" class="screen"><div class="panel info"><button class="close" data-close="settings-panel">×</button><h2>設定</h2><label class="toggle"><span>サウンド<small>音楽と効果音</small></span><input id="sound" type="checkbox"><i></i></label><label class="toggle"><span>振動<small>対応端末のみ</small></span><input id="vibration" type="checkbox"><i></i></label><label class="toggle"><span>動きを抑える<small>揺れと粒子を軽減</small></span><input id="reduced" type="checkbox"><i></i></label><button id="reset" class="quiet danger wide">記録をリセット</button></div></section>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div class="landscape">縦向きでプレイしてください</div>
+  </main>
+  <noscript>このゲームを遊ぶにはJavaScriptを有効にしてください。</noscript>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
