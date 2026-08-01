@@ -65,12 +65,12 @@ acceptance:
     requirement: [R-RPG, R-COMPLETE, R-STORY]
     status: complete_unverified
     result: "Automated and user-surface checks cover tutorial, exploration, interaction, combat, character growth, main-objective transitions, defeat/recovery, final encounter, ending, and post-ending continuation or restart."
-    evidence: "npm run check executes the full happy-dom route; focused real Chromium WebGL menu/world/dialogue/choice smoke passed; full physical user-surface route remains prepared_not_executed"
+    evidence: "npm run check executes the full happy-dom route, including the three intervening Mira/Orin/Ilya scenes and protected climax; the prior focused real Chromium WebGL menu/world/dialogue/choice smoke passed; full physical user-surface route remains prepared_not_executed"
   - id: AC-NARRATIVE
     requirement: [R-STORY, R-CONSEQUENCE, R-COMPLETE, R-BENCHMARKS]
     status: failed
     result: "The actual playable route proves character-motivated story escalation, planted information and payoff, at least one delayed consequence, accumulated ending state, and a resolved central conflict without placeholder dialogue or false choice."
-    evidence: "Three persistent decisions and accumulated ending logic pass, but AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml records the remaining story/character depth failure"
+    evidence: "Save-version-4 automated routes execute three choice-dependent aftermath scenes, delayed character reactions, Ilya's planted-information payoff, protected climax gating, journal changes, and accumulated endings; AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml still records the commercial-scale story/character-depth failure"
   - id: AC-COMBAT-AI
     requirement: [R-RPG, R-BENCHMARKS]
     status: failed
@@ -80,7 +80,7 @@ acceptance:
     requirement: [R-PRESENTATION, R-BENCHMARKS]
     status: failed
     result: "Actual gameplay capture shows a unified realistic mobile presentation with authored materials, scale, lighting, atmosphere, character/enemy silhouettes, transitions, effects, and layered audio; no visible default primitives or placeholder content remains."
-    evidence: "Real WebGL screenshots and generated assets were inspected; AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml records the remaining primitive-model and animation/audio cohesion failure"
+    evidence: "The r2 candidate replaces single-shape live actors with role-specific articulated humanoid and creature rigs plus locomotion/combat motion under a 150-call/118,048-triangle visible-scene estimate; real visual inspection of this revision and the remaining authored-material, animation, environment, and audio bar are still open"
   - id: AC-TOUCH
     requirement: [R-MOBILE]
     status: prepared_not_executed
@@ -95,7 +95,7 @@ acceptance:
     requirement: [R-PERFORMANCE]
     status: prepared_not_executed
     result: "Rendering resolution, geometry, draw calls, entities, particles, audio voices, and updates are bounded; automatic quality reduction executes; physical-device 30 FPS remains required before claiming that device criterion."
-    evidence: "Static payload/pixel budgets and real WebGL 94 draw calls, 113,435 triangles, and auto-quality fallback passed; physical-device frame-time and memory evidence absent"
+    evidence: "The r2 candidate passes the static 1,518,486-byte payload budget and estimates 150 visible draw calls/118,048 triangles at the final scene; the prior real WebGL pass observed 94 calls/113,435 triangles and auto-quality fallback. Physical-device frame-time and memory evidence remain absent"
   - id: AC-PAGES
     requirement: [R-MOBILE, R-COMPLETE]
     status: complete_unverified

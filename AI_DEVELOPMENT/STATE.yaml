@@ -68,6 +68,10 @@ execution:
       - AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml
       - AI_DEVELOPMENT/REQUIREMENTS.yaml
   modified_but_unverified:
+    - status: complete_unverified
+      artifacts: "Release candidate wildbound-2026-08-01-r2 on agent/character-story-pass: articulated role-specific humanoid/creature rigs, animated locomotion/combat, three playable choice-dependent character aftermaths, protected climax gating, save version 4, expanded journal/ending coda, rebuilt Japanese font subset, offline cache v5, and automated coverage"
+      recovery: "Before merge, discard or revert only the r2 candidate commit and retain main 1388c41 / public r1. After publication, revert the r2 product merge, let branch-based Pages redeploy r1, and require the public release-ID verifier."
+      limitation: "Local checks and Level C deliberate-failure gates pass. Remote Quality, merge, r2 Pages publication, real-WebGL visual inspection, and physical-device evidence are not yet executed."
     - status: complete_verified
       artifacts: "Iterative WILDBOUND publication on main b26552e with locally bundled Three.js runtime, generated visual assets, tests, stable release metadata, and polling public verification"
       recovery: "Revert b26552e to 1c12511 if only the verifier repair regresses, or revert the WILDBOUND merge to 4e6076d if the public product has a blocking regression; let branch-based Pages redeploy and verify recovery."
@@ -79,7 +83,7 @@ execution:
     - status: complete_unverified
       artifacts: "Locally rendered Noto Sans JP WOFF subset, OFL license record, offline cache entry, provenance validation, and payload accounting"
       recovery: "Remove the font-face and font assets together if remote verification fails; the system-font stack remains a functional fallback."
-      limitation: "Local Chromium load and glyph coverage pass, the exact font tree is on draft PR 6 at f9def90, and remote Quality floor run 30688204245 passed; physical-device typography remains unverified."
+      limitation: "The r2 Regular 400 subset covers all 545 non-icon non-ASCII game code points and retains OFL provenance; exact r2 browser rendering and physical-device typography remain unverified."
     - status: complete_verified
       artifacts: "Local checkpoint ec44979 with persisted 667 × 375 world, dialogue, and choice screenshots plus reconciled benchmark evidence"
       recovery: "The exact evidence remains in local commit ec44979, remote PR head c0fd9b3, and merged main 1c12511."
@@ -87,7 +91,7 @@ execution:
     - status: failed
       artifacts: "Premium realistic in-world presentation and deeply developed commercial-scale character/story benchmark"
       recovery: "Continue from the published checkpoint without lowering the criteria or describing it as benchmark-complete."
-      limitation: "Generated portraits and ground texture improve cohesion, but primitive live models, compact arcs, animation, and audio remain below the recorded bar."
+      limitation: "Articulated role-specific live rigs and three intervening character scenes materially improve the slice, but procedural low-poly construction, authored animation/materials/audio, multi-stage character arcs, and relationship depth remain below the recorded bar."
   current_blockers:
     - status: blocked
       item: "Branch-protection and required-status-check configuration is not exposed by the current GitHub connector and must not be assumed."
@@ -98,7 +102,7 @@ execution:
   current_uncertainty:
     - SwiftShader frame timing does not predict physical iPhone or Android performance
     - open PR 3 remains open; applicable input lifecycle, safe-area, reduced-motion, and settings behavior has been carried forward without claiming PR 3 complete
-  exact_next_action: "At the next run, verify main and the public release ID still match b26552e / wildbound-2026-08-01-r1, then resume PRESENTATION-PASS and NARRATIVE-CONSEQUENCE by replacing primitive in-world character/enemy presentation and expanding Mira, Orin, and Ilya through intervening playable scenes; finish with the required merge, Pages publication, F6 check, and updated handoff."
+  exact_next_action: "Commit and push the r2 candidate, pass the remote Quality floor, merge it to main, wait for dynamic Pages, verify wildbound-2026-08-01-r2 from the public URL, then merge a final state reconciliation. After delivery, the first product action is multi-stage relationship quests plus interruption/guardian-phase combat, while preserving the physical iPhone and premium-presentation limitations."
 
 modules:
   activated: []
@@ -113,17 +117,17 @@ modules:
 floor:
   last_check:
     status: complete_verified
-    at: "2026-08-01T18:00:27+09:00"
-    note: "PR 7 merged as b26552e after Quality floor run 30692768125. Dynamic branch-based Pages run 30692798119 and verifier run 30692798350 succeeded; manual verification matched wildbound-2026-08-01-r1 on the first attempt. Public cloud Chrome loaded that exact ID and the intentional no-WebGL fallback but cannot execute the 3D journey because WebGL is disabled by the browser environment."
+    at: "2026-08-01T18:47:00+09:00"
+    note: "The r2 candidate passed static/license validation, seven deterministic tests, the full DOM route, a 150-call/118,048-triangle final-scene estimate, and deliberate failing F2/F3/F5/F6 probes. Remote Quality, merge, and r2 public verification remain pending; r1 remains the latest publicly verified release."
   independence_level_used: C
   review_outcome: passed
-  reviewed_at: "2026-08-01T18:00:27+09:00"
-  review_scope: "The complete PR 6 and PR 7 delivery chain, failed-first publication evidence, parent-aware continuity repair, stable release-ID validation, dynamic Pages and polling-verifier success, public browser title/revision/fallback state, rollback, and exact next-session recovery. The review preserves failed premium, narrative, combat-AI, physical-touch, and performance criteria."
-  review_limitation: "Same-agent Level C falsification; separate agents are prohibited in this run. Chromium used SwiftShader and a focused smoke route, not a physical iPhone or complete real-user journey. Premium presentation and story-depth acceptance remain failed."
+  reviewed_at: "2026-08-01T18:47:00+09:00"
+  review_scope: "The r2 actor rig construction and visibility budget, player/enemy motion wiring, three aftermath scene state machine and forged-progression protection, v3-to-v4 migration, Crown gate, dialogue/journal/ending payoff, font provenance/coverage, offline manifest, full DOM route, payload, rollback, and deliberate F2/F3/F5/F6 failures. The review preserves failed premium, narrative, combat-AI, physical-touch, and physical-performance criteria."
+  review_limitation: "Same-agent Level C falsification because separate agents are prohibited in this run. The current environment has no WebGL-capable public browser or physical iPhone, so the r2 scene estimate and DOM route do not prove visual quality, frame pacing, simultaneous touch, or the representative public 3D journey. Premium presentation and commercial story-depth acceptance remain failed."
   skips:
     - "F7 | objective-completion trigger did not fire because AC-WORLD, AC-NARRATIVE, AC-COMBAT-AI, AC-PRESENTATION, AC-PERF, and AC-PAGES are not satisfied | evidence: AI_DEVELOPMENT/REQUIREMENTS.yaml | revisit only before marking the objective complete."
     - "F9 required-check enforcement | could not be completed because gh is absent and no connected tool exposes branch protection or required-status configuration | evidence: gh command missing and tool registry has no protection/ruleset operation | revisit when capability changes."
-    - "F6 representative public 3D journey | the selected public cloud Chrome reports WebGL disabled and renders the intended recovery screen; local real-WebGL and DOM journeys are not substituted for the public route | evidence: public browser console and fallback at wildbound-2026-08-01-r1 | revisit on the next WebGL-capable public browser or physical device."
+    - "F6 representative public 3D journey | the selected public cloud Chrome reports WebGL disabled and renders the intended recovery screen; local DOM journeys and a headless scene estimate are not substituted for the public route | evidence: prior public browser console and fallback at wildbound-2026-08-01-r1 | retry r2 after publication and revisit gameplay on the next WebGL-capable public browser or physical device."
   waivers: []
   enforcement:
     f2_state_update_check:
@@ -147,16 +151,16 @@ floor:
       active: false
       mechanism: "No safe automatic Pages revert is installed or verified."
     last_observed_failing:
-      - {item: F2, status: complete_verified, evidence: "node tools/floor-gates.mjs --deliberate-failure F2_ASSET exited 1 and named the generated asset plus missing STATE.yaml"}
-      - {item: F3, status: complete_verified, evidence: "FLOOR_TEST_BAD=F3 npm run check exited 1 inside the real validation path"}
-      - {item: F5, status: complete_verified, evidence: "node tools/floor-gates.mjs --deliberate-failure F5 exited 1 and named the missing review record"}
-      - {item: F6, status: complete_verified, evidence: "node tools/verify-public.mjs --deliberate-failure exited 1 on a mismatched release identifier"}
+      - {item: F2, status: complete_verified, evidence: "2026-08-01 r2 review: node tools/floor-gates.mjs --deliberate-failure F2_ASSET exited 1 and named the generated asset plus missing STATE.yaml"}
+      - {item: F3, status: complete_verified, evidence: "2026-08-01 r2 review: FLOOR_TEST_BAD=F3 npm run check exited 1 inside the real validation path"}
+      - {item: F5, status: complete_verified, evidence: "2026-08-01 r2 review: node tools/floor-gates.mjs --deliberate-failure F5 exited 1 and named the missing review record"}
+      - {item: F6, status: complete_verified, evidence: "2026-08-01 r2 review: node tools/verify-public.mjs --deliberate-failure exited 1 on a mismatched release identifier"}
     unenforced_items: [F2, F3_required_merge_gate, F5]
     unattended_allowed: false
 
 recovery:
-  last_known_good_revision_or_artifact: b26552e8d492036b217053127517a4ae1609b627
-  rollback_or_recovery_method: "If only the verifier repair regresses, revert b26552e to 1c12511. If WILDBOUND has a blocking public regression, revert the product merge to 4e6076d. In either case, let branch-based Pages redeploy and require the public verifier plus fallback/page check before recovery is complete."
+  last_known_good_revision_or_artifact: 1388c41cb50608e6eafa1f3b1dd7e88dcdec7259
+  rollback_or_recovery_method: "Before r2 merges, retain main 1388c41 and public r1. If r2 has a blocking public regression after merge, revert its product merge, let branch-based Pages redeploy wildbound-2026-08-01-r1, and require the public verifier plus fallback/page check before recovery is complete."
 
 remote:
   repository: bachikoljunior-blip/Q
@@ -164,6 +168,7 @@ remote:
   default_branch_revision_at_migration_completion: 4e6076df54b7eb4b2f55a173910e1a48ae67517b
   branch: main
   branch_remote_status: complete_verified
+  pending_product_branch: "agent/character-story-pass based on 1388c41; local r2 checks passed, remote publication not yet executed"
   pull_requests:
     - number: 3
       url: https://github.com/bachikoljunior-blip/Q/pull/3
@@ -220,5 +225,5 @@ automation:
     migration_merge_run: "none; latest dynamic Pages run 30692798119 and public-verifier run 30692798350 both completed successfully for b26552e."
     unattended_delivery_allowed: false
 
-updated_at: "2026-08-01T18:00:27+09:00"
-reconciliation_status: complete_verified
+updated_at: "2026-08-01T18:47:00+09:00"
+reconciliation_status: complete_unverified

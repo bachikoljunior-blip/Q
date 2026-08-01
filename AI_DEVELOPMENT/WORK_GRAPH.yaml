@@ -28,19 +28,19 @@ nodes:
     priority: P2
     status: complete_unverified
     depends_on: [RPG-SYSTEMS, NARRATIVE-CONSEQUENCE]
-    note: "A start-to-ending mixed route and post-ending free roam pass automatically; public and physical-device routes remain unexecuted, and narrative depth remains below the preserved benchmark."
+    note: "A start-to-ending mixed route now includes three intervening character aftermaths, a protected climax, and post-ending free roam; public r2 and physical-device routes remain unexecuted, and narrative depth remains below the preserved benchmark."
   - id: NARRATIVE-CONSEQUENCE
     title: "Implement original character arcs, foreshadowing/payoff, delayed consequences, and accumulated ending state"
     priority: P2
     status: failed
     depends_on: [RPG-SYSTEMS]
-    note: "Three verified original choice/consequence points alter world state, mechanics, dialogue, journal, final gating, and three ending patterns; character arcs and intervening playable scenes remain too compact for the preserved depth requirement."
+    note: "Three original choice/consequence points now lead to separate playable Mira, Orin, and Ilya aftermath scenes, persist as version-4 story flags, visibly alter locations and dialogue, and gate the accumulated climax. These focused beats still lack the independent multi-stage arcs and relationship depth required by the preserved benchmark."
   - id: PRESENTATION-PASS
     title: "Replace primitive presentation with coherent realistic environment, character, animation, effects, and audio craft within measured mobile budgets"
     priority: P2
     status: failed
     depends_on: [WORLD-FOUNDATION, RPG-SYSTEMS]
-    note: "Ground material, portrait atlas, atmosphere, effects, and responsive UI pass real WebGL inspection, but in-world primitive models and limited animation/audio remain below the premium bar."
+    note: "Role-specific multi-part humanoid and creature rigs with locomotion/combat motion replace the former single-shape actors under a 150-call/118,048-triangle scene estimate. Procedural low-poly construction, basic environment assets, limited animation/audio, and absent real-WebGL r2 inspection remain below the premium bar."
   - id: MOBILE-POLISH
     title: "Carry forward applicable PR 3 lifecycle behavior and refine UI, audio, accessibility, readability, and small-screen controls"
     priority: P4
@@ -52,5 +52,5 @@ nodes:
     priority: P1
     status: blocked
     depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH, PRESENTATION-PASS]
-    note: "Local deterministic, DOM, real WebGL smoke, license, payload, and staged revision checks pass. Main b26552e, dynamic Pages run 30692798119, and public verifier run 30692798350 establish the iterative release and exact ID. The available public cloud Chrome has WebGL disabled, so a public 3D journey plus premium presentation/narrative and physical iPhone evidence remain open."
+    note: "The r2 candidate passes local deterministic, full DOM, license, payload, budget, and deliberate-failure gates. Its remote Quality check, merge, Pages publication, and public release-ID verification are pending; the public browser's disabled WebGL plus premium presentation/narrative and physical iPhone evidence remain open."
 active_frontier: [PRESENTATION-PASS, NARRATIVE-CONSEQUENCE, QA-RELEASE]

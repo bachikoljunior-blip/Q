@@ -11,6 +11,7 @@ import {
   endingFor,
   grantExperience,
   herbHealingFor,
+  narrativeSceneFor,
   objectiveFor,
   playerStats,
   questText,
@@ -19,6 +20,7 @@ import {
   terrainHeight,
   xpForLevel
 } from './core.js';
+import { animateCreature, animateHumanoid, createCreature, createHumanoid } from './actors.js';
 import { World } from './world.js';
 
 const STEP = 1 / 60;
@@ -84,18 +86,6 @@ const emptyCallbacks = {
   status() {}, hud() {}, toast() {}, dialogue() {}, choice() {}, ending() {}, death() {}, save() {}, discovery() {}, quality() {}, fatal() {}
 };
 
-function makeSurface(color, emissive = 0) {
-  return new THREE.MeshStandardMaterial({ color, roughness: .82, metalness: .04, emissive, emissiveIntensity: emissive ? .45 : 0 });
-}
-
-function addPart(parent, geometry, surface, x, y, z, scale = 1) {
-  const mesh = new THREE.Mesh(geometry, surface);
-  mesh.position.set(x, y, z);
-  mesh.scale.setScalar(scale);
-  parent.add(mesh);
-  return mesh;
-}
-
 function approachAngle(current, target, amount) {
   let delta = (target - current + Math.PI) % TAU - Math.PI;
   if (delta < -Math.PI) delta += TAU;
@@ -113,6 +103,23 @@ function createNullRenderer(canvas) {
     },
     render() {}, dispose() {}
   };
+}
+
+function visibleSceneBudget(scene) {
+  let drawCalls = 0;
+  let triangles = 0;
+  scene.traverse(object => {
+    if (!object.isMesh && !object.isInstancedMesh) return;
+    let current = object;
+    while (current && current.visible !== false) current = current.parent;
+    if (current) return;
+    const geometry = object.geometry;
+    if (!geometry?.attributes?.position) return;
+    drawCalls += Array.isArray(object.material) ? object.material.length : 1;
+    const perInstance = (geometry.index?.count || geometry.attributes.position.count) / 3;
+    triangles += perInstance * (object.isInstancedMesh ? object.count : 1);
+  });
+  return { drawCalls, triangles: Math.round(triangles) };
 }
 
 export class Game {
@@ -189,24 +196,11 @@ export class Game {
   }
 
   createPlayer() {
-    const root = new THREE.Group();
+    const root = createHumanoid({ role: 'traveler', scale: 1.04 });
     root.name = 'PLAYER';
-    const tunic = makeSurface(0x1d5860);
-    const cloth = makeSurface(0xd6c58f);
-    const skin = makeSurface(0xc99670);
-    const dark = makeSurface(0x28362f);
-    const metal = new THREE.MeshStandardMaterial({ color: 0xd4d1b3, roughness: .32, metalness: .48 });
-    addPart(root, new THREE.CapsuleGeometry(.72, 1.55, 4, 7), tunic, 0, 2.2, 0);
-    addPart(root, new THREE.SphereGeometry(.55, 9, 7), skin, 0, 4.15, 0);
-    this.cloak = addPart(root, new THREE.ConeGeometry(1.24, 2.75, 7, 1, true), cloth, 0, 2.15, .35);
-    this.cloak.rotation.z = Math.PI;
-    for (const side of [-1, 1]) addPart(root, new THREE.CapsuleGeometry(.23, .8, 3, 5), dark, side * .43, .8, 0);
-    this.swordPivot = new THREE.Group();
-    this.swordPivot.position.set(.78, 2.55, 0);
-    addPart(this.swordPivot, new THREE.BoxGeometry(.16, 3.6, .26), metal, 0, -1.35, -.1);
-    addPart(this.swordPivot, new THREE.BoxGeometry(.9, .16, .2), dark, 0, .38, 0);
-    this.swordPivot.rotation.z = -.42;
-    root.add(this.swordPivot);
+    this.playerRig = root.userData.rig;
+    this.cloak = this.playerRig.cloak;
+    this.swordPivot = this.playerRig.arms[1];
     this.scene.add(root);
     return root;
   }
@@ -336,6 +330,7 @@ export class Game {
     this.player.rotation.y = this.cameraYaw + Math.PI;
     this.world.setCollected(this.progress.collected);
     this.world.setChoices(this.progress.choices);
+    this.world.setNarrativeState(this.progress);
     this.spawnEnemies();
     this.status = 'running';
     this.saveTimer = 0;
@@ -413,27 +408,30 @@ export class Game {
       };
       enemy.mesh = this.createEnemyMesh(enemy);
       enemy.mesh.position.set(enemy.x, terrainHeight(enemy.x, enemy.z), enemy.z);
-      enemy.mesh.visible = !locked;
+      const renderRange = spec.final ? 340 : spec.guardian ? 280 : 220;
+      enemy.mesh.visible = !locked && Math.hypot(this.player.position.x - enemy.x, this.player.position.z - enemy.z) < renderRange;
       this.enemyRoot.add(enemy.mesh);
       this.enemies.push(enemy);
     }
   }
 
   createEnemyMesh(enemy) {
-    const root = new THREE.Group();
+    const root = enemy.type === 'crown'
+      ? createHumanoid({ role: 'crown', scale: enemy.final ? 2.25 : 1.6 })
+      : createCreature({ type: enemy.type, scale: enemy.guardian ? 1.65 : 1 });
     root.name = enemy.id;
     const boss = enemy.guardian || enemy.final;
     const scale = enemy.final ? 2.25 : enemy.guardian ? 1.65 : 1;
     const colors = enemy.type === 'stalker' ? [0x324d4a, 0x719482] : enemy.type === 'sentinel' ? [0x626b65, 0xb5ad89] : enemy.type === 'crown' ? [0x3d3849, 0xd1b35b] : [0x455e37, 0x93aa60];
-    const body = addPart(root, new THREE.IcosahedronGeometry(1.45, boss ? 1 : 0), makeSurface(colors[0]), 0, 2.1, 0, scale);
-    body.name = 'body';
-    addPart(root, new THREE.ConeGeometry(.78, 2.7, 5), makeSurface(colors[1], colors[1]), -1.15 * scale, 3.2 * scale, 0, scale);
-    addPart(root, new THREE.ConeGeometry(.78, 2.7, 5), makeSurface(colors[1], colors[1]), 1.15 * scale, 3.2 * scale, 0, scale);
-    for (const side of [-1, 1]) addPart(root, new THREE.SphereGeometry(.18 * scale, 6, 4), makeSurface(0xffd57b, 0xff7b2e), side * .48 * scale, 2.35 * scale, -1.25 * scale);
     if (boss) {
-      const ring = addPart(root, new THREE.TorusGeometry(2.35 * scale, .14 * scale, 6, 22), makeSurface(colors[1], colors[1]), 0, 4.5 * scale, 0);
+      const ring = new THREE.Mesh(
+        new THREE.TorusGeometry(2.35 * scale, .14 * scale, 6, 22),
+        new THREE.MeshStandardMaterial({ color: colors[1], roughness: .42, metalness: .18, emissive: colors[1], emissiveIntensity: .42 })
+      );
+      ring.position.y = (enemy.type === 'crown' ? 5.35 : 4.5) * scale;
       ring.rotation.x = Math.PI / 2;
       ring.name = 'ring';
+      root.add(ring);
     }
     const radius = 2.4 * scale;
     const tell = new THREE.Mesh(
@@ -452,6 +450,15 @@ export class Game {
   setObjective() {
     const target = objectiveFor(this.progress);
     this.world.setObjective(target);
+  }
+
+  refreshNarrativeState() {
+    this.world.setNarrativeState(this.progress);
+    for (const enemy of this.enemies) if (enemy.final && !enemy.dead) {
+      enemy.locked = !canEnterCrown(this.progress);
+      enemy.mesh.visible = !enemy.locked && distance2D(this.player.position, enemy) < 340;
+    }
+    this.setObjective();
   }
 
   movementInput() {
@@ -511,21 +518,24 @@ export class Game {
   }
 
   updateCombatAnimation() {
+    const speed = Math.hypot(this.velocity.x, this.velocity.z);
+    const attackProgress = this.attackTimer > 0 ? 1 - this.attackTimer / .38 : 0;
     if (this.attackTimer > 0) {
-      const t = 1 - this.attackTimer / .38;
-      this.swordPivot.rotation.z = -.45 - Math.sin(t * Math.PI) * 2.45;
-      this.attackArc.material.opacity = Math.sin(t * Math.PI) * .85;
-      if (!this.attackHit && t > .24) {
+      this.attackArc.material.opacity = Math.sin(attackProgress * Math.PI) * .85;
+      if (!this.attackHit && attackProgress > .24) {
         this.attackHit = true;
         this.resolveAttack();
       }
     } else {
-      this.swordPivot.rotation.z += (-.42 - this.swordPivot.rotation.z) * .18;
       this.attackArc.material.opacity = 0;
     }
-    const speed = Math.hypot(this.velocity.x, this.velocity.z);
-    this.player.position.y += Math.sin(this.clock * 9) * Math.min(.035, speed * .002);
-    this.cloak.rotation.x = .08 + Math.min(.32, speed * .012);
+    animateHumanoid(this.player, {
+      time: this.clock,
+      speed,
+      attack: attackProgress,
+      dodge: this.dodgeTimer > 0 ? this.dodgeTimer / .34 : 0,
+      reduced: Boolean(this.settings()?.reduced)
+    });
   }
 
   attack() {
@@ -610,9 +620,20 @@ export class Game {
     const player = this.player.position;
     let boss = null;
     for (const enemy of this.enemies) {
-      if (enemy.dead || enemy.locked || !enemy.mesh.visible) continue;
+      if (enemy.dead || enemy.locked) {
+        enemy.mesh.visible = false;
+        continue;
+      }
       const behavior = ENEMY_BEHAVIORS[enemy.type] || ENEMY_BEHAVIORS.beast;
       let dx = player.x - enemy.x, dz = player.z - enemy.z, distance = Math.hypot(dx, dz) || 1;
+      const renderRange = enemy.final ? 340 : enemy.guardian ? 280 : 220;
+      enemy.mesh.visible = distance < renderRange;
+      if (!enemy.mesh.visible) {
+        enemy.state = 'idle';
+        enemy.alert = false;
+        enemy.stateTimer = 0;
+        continue;
+      }
       const enter = (state, duration = 0) => {
         enemy.state = state;
         enemy.stateTimer = duration;
@@ -682,7 +703,26 @@ export class Game {
       enemy.mesh.position.y = Math.max(terrainHeight(enemy.x, enemy.z), WATER_LEVEL - .1);
       enemy.mesh.rotation.y = Math.atan2(dx, dz);
       const windupProgress = enemy.state === 'windup' ? 1 - clamp(enemy.stateTimer / (enemy.stateTotal || 1), 0, 1) : 0;
-      enemy.mesh.scale.y = 1 + Math.sin(this.clock * 4 + enemy.phase) * .035 + windupProgress * .09;
+      const activeProgress = enemy.state === 'active' ? 1 - clamp(enemy.stateTimer / (enemy.stateTotal || 1), 0, 1) : 0;
+      const rig = enemy.mesh.userData.rig;
+      if (rig?.kind === 'humanoid') {
+        animateHumanoid(enemy.mesh, {
+          time: this.clock + enemy.phase,
+          speed: ['approach', 'active'].includes(enemy.state) ? behavior.speed : 0,
+          attack: enemy.state === 'windup' ? windupProgress * .48 : enemy.state === 'active' ? .48 + activeProgress * .52 : 0,
+          reduced: Boolean(this.settings()?.reduced)
+        });
+      } else {
+        animateCreature(enemy.mesh, {
+          time: this.clock,
+          phase: enemy.phase,
+          state: enemy.state,
+          windup: windupProgress,
+          active: activeProgress,
+          speed: behavior.speed,
+          reduced: Boolean(this.settings()?.reduced)
+        });
+      }
       const ring = enemy.mesh.getObjectByName('ring');
       if (ring) ring.rotation.z += dt * (enemy.final ? 1.5 : .8);
       const tell = enemy.mesh.getObjectByName('attackTell');
@@ -762,6 +802,55 @@ export class Game {
       this.checkpoint('cache');
       return true;
     }
+    if (item.id === 'mira_grove_scene') {
+      if (!this.progress.choices.grove || this.progress.npcFlags?.groveReport) return false;
+      this.progress.npcFlags ||= {};
+      this.progress.npcFlags.groveReport = true;
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.refreshNarrativeState();
+      this.checkpoint('mira-grove-aftermath');
+      const restored = this.progress.choices.grove === 'wild_bloom';
+      this.cb.dialogue({
+        speaker: '斥候ミラ',
+        text: restored
+          ? '柵は倒れた。でも見て。根は土を押し上げ、若木が風を受け止め始めている。父を解けば全部うまくいくと思っていた。でも自由にした力を支えるのは、残された私たちなんだ。私はこの道を見張る。あなたは次の答えを見てきて。'
+          : '森の光が柵を立たせた。父と同じやり方を選んだと責めるつもりだった。でも、あなたは森を閉じ込めず、里にも分けた。守ることを恐れていたのは私かもしれない。次の答えも、結果まで見届けて。'
+      });
+      return true;
+    }
+    if (item.id === 'orin_marsh_scene') {
+      if (!this.progress.choices.marsh || this.progress.npcFlags?.marshReport) return false;
+      this.progress.npcFlags ||= {};
+      this.progress.npcFlags.marshReport = true;
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.refreshNarrativeState();
+      this.checkpoint('orin-marsh-aftermath');
+      const released = this.progress.choices.marsh === 'ring_release';
+      this.cb.dialogue({
+        speaker: '鍛冶師オリン',
+        text: released
+          ? '鐘の音で古い水路は空になった。だから今、人の手で新しい溝を掘っている。失った安全を数えるだけなら簡単だ。だがミラの言う通り、直す力まで結界に預けていたのかもしれない。俺は里に残る。お前は峰へ行け。'
+          : '水門は満ち、火に備える水ができた。その代わり、霧の中の声は残った。安全には、見えない場所へ払う代償がある。俺はこの門を毎日開けて確かめる。お前も最後まで、自分の答えから目を離すな。'
+      });
+      return true;
+    }
+    if (item.id === 'ilya_echo') {
+      if (!this.progress.choices.grove || !this.progress.choices.marsh || !this.progress.choices.peak || this.progress.npcFlags?.ilyaTruth || !this.progress.npcFlags?.groveReport || !this.progress.npcFlags?.marshReport) return false;
+      this.progress.npcFlags ||= {};
+      this.progress.npcFlags.ilyaTruth = true;
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.refreshNarrativeState();
+      this.checkpoint('ilya-revelation');
+      const restored = Object.values(this.progress.choices).filter(choice => ['wild_bloom', 'ring_release', 'wind_release'].includes(choice)).length;
+      this.cb.dialogue({
+        speaker: '初代守印イリヤの残響',
+        text: `私は谷を救ったのではない。十二年だけ、決断を先へ送った。印を三つに分けたのは、次の守印が一人で答えを決めないためだ。ミラの怒りも、オリンの恐れも正しい。あなたは${restored >= 2 ? '大地へ返す道を多く選び、その代償を人の手で支えた。' : '里へ残す力を多く選び、その代償を見えないままにしなかった。'} 神殿にいるのは私ではない。答えを止め続ける、私の古い命令だ。終わらせてほしい。`
+      });
+      return true;
+    }
     if (item.id === 'mira') {
       this.status = 'dialogue';
       this.pendingChoice = null;
@@ -784,7 +873,13 @@ export class Game {
         this.cb.dialogue({ speaker: '斥候ミラ', text: `${consequence} 印はあと${3 - this.progress.sigils.length}つ。${decisions ? 'あなたの答えで谷はもう変わり始めている。選んだ責任から目を逸らさないで。' : '守ることと、返すこと。その両方に代償がある。'}` });
       } else if (!canEnterCrown(this.progress)) {
         const unresolved = GUARDIANS.find(guardian => !this.progress.choices[guardian.point]);
-        this.cb.dialogue({ speaker: '斥候ミラ', text: `${unresolved?.sigil || '印'}はまだ行き先を持たない。${unresolved ? WORLD_POINTS.find(point => point.id === unresolved.point)?.label : '記憶の場所'}で答えを出してから、空環神殿へ向かって。` });
+        const scene = narrativeSceneFor(this.progress);
+        this.cb.dialogue({
+          speaker: '斥候ミラ',
+          text: unresolved
+            ? `${unresolved.sigil}はまだ行き先を持たない。${WORLD_POINTS.find(point => point.id === unresolved.point)?.label}で答えを出してから、空環神殿へ向かって。`
+            : `${scene?.label || '選んだ答えの行方を見届けること'}がまだ残っている。結果を受け止めてから、空環神殿へ向かって。`
+        });
       } else if (!this.progress.victory) {
         this.cb.dialogue({ speaker: '斥候ミラ', text: '三つの印が響いている。北の空環神殿へ。谷を縛る王を倒せるのは、もうあなただけ。' });
       } else {
@@ -821,9 +916,12 @@ export class Game {
       this.status = 'dialogue';
       this.pendingChoice = null;
       const unresolved = GUARDIANS.find(guardian => !this.progress.choices[guardian.point]);
+      const scene = narrativeSceneFor(this.progress);
       const text = this.progress.sigils.length < 3
         ? `三つの窪みのうち、${this.progress.sigils.length}つだけが光っている。すべての印が必要だ。`
-        : `${unresolved?.sigil || '印'}はまだ行き先を持たない。${unresolved ? WORLD_POINTS.find(point => point.id === unresolved.point)?.label : '記憶の場所'}で答えなければ、門は印を受け入れない。`;
+        : unresolved
+          ? `${unresolved.sigil}はまだ行き先を持たない。${WORLD_POINTS.find(point => point.id === unresolved.point)?.label}で答えなければ、門は印を受け入れない。`
+          : `${scene?.label || '選んだ答えの行方を見届けること'}が残っている。三人の声を受け止めるまで、門は印を受け入れない。`;
       this.cb.dialogue({ speaker: '空環の門', text });
       return true;
     }
@@ -873,11 +971,7 @@ export class Game {
     const stats = playerStats(this.progress);
     this.stamina = stats.maxStamina;
     this.progress.health = Math.min(stats.maxHealth, this.progress.health + (point === 'marsh' && choiceId === 'water_ward' ? 18 : 0));
-    for (const enemy of this.enemies) if (enemy.final) {
-      enemy.locked = !canEnterCrown(this.progress);
-      enemy.mesh.visible = !enemy.locked;
-    }
-    this.setObjective();
+    this.refreshNarrativeState();
     this.checkpoint(`${point}-choice`);
     this.sound?.event?.('discover');
     const result = CONSEQUENCES[guardian.id].options.find(option => option.id === choiceId)?.result || options[choiceId].journal;
@@ -971,6 +1065,7 @@ export class Game {
       discovered: [...this.progress.discovered],
       sigils: [...this.progress.sigils],
       choices: { ...this.progress.choices },
+      npcFlags: { ...this.progress.npcFlags },
       pendingChoice: this.progress.pendingChoice || null,
       ending: this.progress.ending || '',
       playTime: this.clock,
@@ -1040,11 +1135,13 @@ export class Game {
 
   testSnapshot() {
     const render = this.renderer.info?.render;
+    const fallback = visibleSceneBudget(this.scene);
     const metrics = {
       quality: this.quality,
       canvasPixels: this.canvas.width * this.canvas.height,
-      drawCalls: render?.calls ?? null,
-      triangles: render?.triangles ?? null
+      drawCalls: render?.calls ?? fallback.drawCalls,
+      triangles: render?.triangles ?? fallback.triangles,
+      source: render ? 'renderer' : 'visible-scene-estimate'
     };
     return this.progress ? { ...this.snapshotHud(), enemyCount: this.enemies.filter(enemy => !enemy.dead && !enemy.locked).length, metrics } : { status: this.status, metrics };
   }
@@ -1062,7 +1159,9 @@ export class Game {
       visible: enemy.mesh.visible,
       x: enemy.x,
       z: enemy.z,
-      hp: enemy.hp
+      hp: enemy.hp,
+      presentation: enemy.mesh.userData.rig?.kind || 'unknown',
+      articulatedParts: (enemy.mesh.userData.rig?.legs?.length || 0) + (enemy.mesh.userData.rig?.arms?.length || 0)
     };
   }
 
@@ -1077,6 +1176,8 @@ export class Game {
   testDefeat(id) {
     const enemy = this.enemies.find(item => item.id === id && !item.dead);
     if (!enemy) return false;
+    if (enemy.guardian && this.progress.story < 1) return false;
+    if (enemy.final && !canEnterCrown(this.progress)) return false;
     enemy.locked = false;
     enemy.mesh.visible = true;
     this.defeatEnemy(enemy);
