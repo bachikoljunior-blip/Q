@@ -152,6 +152,42 @@ export const NARRATIVE_SCENES = Object.freeze({
   ilya: Object.freeze({ id: 'ilya_echo', character: 'ilya', label: '神殿前でイリヤの残響に触れる', x: 0, z: -615 })
 });
 
+export const CHARACTER_TASKS = Object.freeze({
+  mira: Object.freeze([
+    Object.freeze({ id: 'mira_grove_scene', character: 'mira', stage: 0, label: '倒れた柵でミラと話す', x: -77.2, z: 238.8 }),
+    Object.freeze({ id: 'mira_scout_trace', character: 'mira', stage: 1, label: '古樹の境で斥候の印を探す', x: -430, z: -180 }),
+    Object.freeze({ id: 'mira_grove_scene', character: 'mira', stage: 2, label: '見つけた印をミラへ渡す', x: -77.2, z: 238.8 })
+  ]),
+  orin: Object.freeze([
+    Object.freeze({ id: 'orin_marsh_scene', character: 'orin', stage: 0, label: '水路でオリンと話す', x: 80.2, z: 307.8 }),
+    Object.freeze({ id: 'orin_sluice_fault', character: 'orin', stage: 1, label: '旧水路の詰まりを調べる', x: -220, z: 350 }),
+    Object.freeze({ id: 'orin_marsh_scene', character: 'orin', stage: 2, label: '水路の様子をオリンへ伝える', x: 80.2, z: 307.8 })
+  ]),
+  ilya: Object.freeze([
+    Object.freeze({ id: 'ilya_echo', character: 'ilya', stage: 0, label: '神殿前でイリヤの残響に触れる', x: 0, z: -615 }),
+    Object.freeze({ id: 'ilya_archive_echo', character: 'ilya', stage: 1, label: '潮騒の廃都で古い記録を探す', x: 535, z: 430 }),
+    Object.freeze({ id: 'ilya_echo', character: 'ilya', stage: 2, label: '記録をイリヤの残響へ届ける', x: 0, z: -615 })
+  ])
+});
+
+export function characterTaskFor(progress) {
+  const p = progress || {};
+  const choices = p.choices || {};
+  const stages = p.characterQuests || {};
+  const defeated = new Set(p.defeated || []);
+  if (choices.grove && defeated.has('grove_warden') && (stages.mira || 0) < 3) {
+    return CHARACTER_TASKS.mira[clamp(integer(stages.mira), 0, 2)];
+  }
+  if ((stages.mira || 0) >= 3 && choices.marsh && defeated.has('marsh_warden') && (stages.orin || 0) < 3) {
+    return CHARACTER_TASKS.orin[clamp(integer(stages.orin), 0, 2)];
+  }
+  const allGuardians = GUARDIANS.every(guardian => choices[guardian.point] && defeated.has(guardian.id));
+  if (allGuardians && (stages.mira || 0) >= 3 && (stages.orin || 0) >= 3 && (stages.ilya || 0) < 3) {
+    return CHARACTER_TASKS.ilya[clamp(integer(stages.ilya), 0, 2)];
+  }
+  return null;
+}
+
 export function narrativeSceneFor(progress) {
   const choices = progress?.choices || {};
   const flags = progress?.npcFlags || {};

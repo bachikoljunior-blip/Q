@@ -8,6 +8,7 @@ import {
   WORLD_HALF,
   biomeAt,
   canEnterCrown,
+  characterTaskFor,
   cleanSave,
   endingFor,
   formatTime,
@@ -158,6 +159,30 @@ test('RPG growth and objective progression remain coherent', () => {
   const gained = grantExperience(progress, xpForLevel(1) + xpForLevel(2) + 5);
   assert.equal(gained.levels, 2);
   assert.equal(gained.progress.level, 3);
+});
+
+test('character quest planner returns only the next coherent staged task', () => {
+  const progress = structuredClone(DEFAULT_SAVE.progress);
+  progress.started = true;
+  progress.story = 1;
+  progress.defeated.push('grove_warden');
+  progress.sigils.push('grove_warden');
+  progress.choices.grove = 'wild_bloom';
+  assert.deepEqual(characterTaskFor(progress), { id: 'mira_grove_scene', character: 'mira', stage: 0, label: '倒れた柵でミラと話す', x: -77.2, z: 238.8 });
+  progress.characterQuests.mira = 1;
+  assert.equal(characterTaskFor(progress).id, 'mira_scout_trace');
+  progress.characterQuests.mira = 3;
+  progress.defeated.push('marsh_warden');
+  progress.sigils.push('marsh_warden');
+  progress.choices.marsh = 'water_ward';
+  assert.equal(characterTaskFor(progress).id, 'orin_marsh_scene');
+  progress.characterQuests.orin = 3;
+  progress.defeated.push('peak_warden');
+  progress.sigils.push('peak_warden');
+  progress.choices.peak = 'wind_release';
+  assert.equal(characterTaskFor(progress).id, 'ilya_echo');
+  progress.characterQuests.ilya = 3;
+  assert.equal(characterTaskFor(progress), null);
 });
 
 test('storage migrates safely and tolerates corrupt or unavailable data', () => {
