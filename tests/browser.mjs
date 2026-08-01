@@ -186,6 +186,11 @@ assert.equal(globalThis.__Q_TEST__.interact(), true, 'returning the marker resol
 assert.equal(globalThis.__Q_TEST__.snapshot().characterQuests.mira, 3);
 assert.equal(globalThis.__Q_TEST__.snapshot().relationships.mira, 3, 'honoring Mira aligned choice earns the strongest scout bond');
 window.document.querySelector('#dialogue-close').click();
+window.document.querySelector('#pause').click();
+window.document.querySelector('#open-journal').click();
+assert.match(window.document.querySelector('#journal-content').textContent, /ミラ.+信頼 3 \/ 3/s, 'journal records Mira quest resolution and relationship');
+window.document.querySelector('[data-back="paused"]').click();
+window.document.querySelector('#resume').click();
 
 assert.equal(globalThis.__Q_TEST__.defeat('marsh_warden'), true);
 assert.equal(globalThis.__Q_TEST__.snapshot().quest.step, '選択');
@@ -234,6 +239,7 @@ assert.equal(globalThis.__Q_TEST__.defeat('crown_warden'), true);
 assert.ok(window.document.querySelector('#ending').classList.contains('active'), 'final guardian reaches the ending');
 assert.equal(globalThis.__Q_TEST__.snapshot().victory, true);
 assert.match(window.document.querySelector('#ending-copy').textContent, /若木/, 'the early grove choice changes the final account of the valley');
+assert.match(window.document.querySelector('#ending-copy').textContent, /斥候標|相棒/, 'Mira relationship quest pays off in the ending');
 assert.match(window.document.querySelector('#ending-copy').textContent, /井戸|湿原/, 'the marsh choice also appears in the ending');
 assert.match(window.document.querySelector('#ending-title').textContent, /守ることと/, 'mixed accumulated choices reach the covenant ending');
 window.document.querySelector('#free-roam').click();

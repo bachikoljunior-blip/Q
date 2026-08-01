@@ -897,7 +897,8 @@ export class Game {
             ? '古樹の森に若木が戻った。月露草にも、前より強い命が巡っている。'
             : '古樹の記憶が、印の行方をあなたに問いかけている。';
         const decisions = Object.values(this.progress.choices).filter(Boolean).length;
-        this.cb.dialogue({ speaker: '斥候ミラ', text: `${consequence} 印はあと${3 - this.progress.sigils.length}つ。${decisions ? 'あなたの答えで谷はもう変わり始めている。選んだ責任から目を逸らさないで。' : '守ることと、返すこと。その両方に代償がある。'}` });
+        const trust = this.progress.relationships?.mira >= 3 ? '父の斥候標を見つけてくれたあなたなら、見えた事実を隠さないと信じている。' : '';
+        this.cb.dialogue({ speaker: '斥候ミラ', text: `${consequence} ${trust} 印はあと${3 - this.progress.sigils.length}つ。${decisions ? 'あなたの答えで谷はもう変わり始めている。選んだ責任から目を逸らさないで。' : '守ることと、返すこと。その両方に代償がある。'}` });
       } else if (!canEnterCrown(this.progress)) {
         const unresolved = GUARDIANS.find(guardian => !this.progress.choices[guardian.point]);
         const scene = narrativeSceneFor(this.progress);
@@ -911,7 +912,8 @@ export class Game {
         this.cb.dialogue({ speaker: '斥候ミラ', text: '三つの印が響いている。北の空環神殿へ。谷を縛る王を倒せるのは、もうあなただけ。' });
       } else {
         const memory = this.progress.choices.grove === 'haven_ward' ? '里の護りは、あなたの決断を覚えている。' : this.progress.choices.grove === 'wild_bloom' ? '芽吹いた森は、あなたの決断を覚えている。' : '';
-        this.cb.dialogue({ speaker: '斥候ミラ', text: `風が帰ってきた。${memory} 物語は終わっても、この谷はまだ広い。好きな道を歩いて。` });
+        const trust = this.progress.relationships?.mira >= 3 ? '父の斥候標は、二人が帰る道を示す印として柵に結んだ。' : '';
+        this.cb.dialogue({ speaker: '斥候ミラ', text: `風が帰ってきた。${memory} ${trust} 物語は終わっても、この谷はまだ広い。好きな道を歩いて。` });
       }
       return true;
     }

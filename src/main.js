@@ -104,7 +104,9 @@ const game = new Game(canvas, {
       };
       const version = versions[ending] || versions.covenant;
       const memories = Object.entries(snapshot.choices || {}).map(([point, id]) => CONSEQUENCE_CHOICES[point]?.[id]?.ending).filter(Boolean).join(' ');
-      const miraCoda = snapshot.choices?.grove === 'wild_bloom' ? 'ミラは倒れた柵の外に若木を植え、父の決断を責めるだけだった自分と向き合った。' : 'ミラは里の護りを見張りながら、守る力そのものではなく、使い続ける人を疑うべきだと学んだ。';
+      const miraCoda = snapshot.relationships?.mira >= 3
+        ? 'ミラは見つかった斥候標を倒れた柵へ結び、父の怒りだけでなく帰る道も受け継いだ。旅人を、事実を隠さない相棒として迎えた。'
+        : snapshot.choices?.grove === 'wild_bloom' ? 'ミラは倒れた柵の外に若木を植え、父の決断を責めるだけだった自分と向き合った。' : 'ミラは里の護りを見張りながら、守る力そのものではなく、使い続ける人を疑うべきだと学んだ。';
       const orinCoda = snapshot.choices?.marsh === 'ring_release' ? 'オリンは空になった水路を人の手で掘り直した。' : 'オリンは満ちた水門を毎日開き、霧に残した名を忘れないと決めた。';
       $('#ending-kicker').textContent = version.kicker;
       $('#ending-title').textContent = version.title;
@@ -305,7 +307,9 @@ function renderJournal() {
     return choice ? `<section class="journal-card"><h3>${labels[point]} — ${choice.label}</h3><p>${choice.journal}</p></section>` : '';
   }).join('');
   const characterCards = [
-    progress.npcFlags?.groveReport ? `<section class="journal-card"><h3>ミラ — 森のあとで</h3><p>${progress.choices.grove === 'wild_bloom' ? '自由にした森を支えるのは、残された人々だと知った。倒れた柵の外で若木を見張っている。' : '守る選択にも変わる余地があると認め、里へ分けた森の力を見張っている。'}</p></section>` : '',
+    progress.characterQuests?.mira === 1 ? '<section class="journal-card"><h3>ミラ — 途切れた道</h3><p>古樹の境で、イリヤが残した斥候標を探す。</p></section>' : '',
+    progress.characterQuests?.mira === 2 ? '<section class="journal-card"><h3>ミラ — 帰る印</h3><p>里を指す斥候標を、倒れた柵にいるミラへ届ける。</p></section>' : '',
+    progress.characterQuests?.mira >= 3 ? `<section class="journal-card"><h3>ミラ — 森のあとで</h3><p>信頼 ${progress.relationships?.mira || 0} / 3。${progress.relationships?.mira >= 3 ? '父の斥候標が残した事実を共に受け止め、旅人を相棒と呼んだ。' : '守ることと返すことの両方を見届ける協力者となった。'}</p></section>` : '',
     progress.npcFlags?.marshReport ? `<section class="journal-card"><h3>オリン — 水のあとで</h3><p>${progress.choices.marsh === 'ring_release' ? '失った水路を数えるのではなく、自分の手で掘り直し始めた。' : '水門が守る暮らしと、霧に残した声の両方を毎日確かめている。'}</p></section>` : '',
     progress.npcFlags?.ilyaTruth ? '<section class="journal-card"><h3>イリヤ — 残された声</h3><p>十二年前の結界は答えではなく、次の世代へ決断を送るための時間だった。神殿には彼ではなく、止まり続ける古い命令がいる。</p></section>' : ''
   ].join('');
