@@ -23,6 +23,9 @@ test('procedural world builds a continuous local scene with every required desti
   assert.ok(world.interactables.some(item => item.type === 'camp'));
   assert.ok(world.interactables.some(item => item.type === 'herb'));
   assert.ok(world.interactables.some(item => item.type === 'crystal'));
+  assert.equal(world.blockers.length, 5, 'village houses register deterministic navigation footprints');
+  assert.equal(world.isBlocked(-27, 252, 1), true);
+  assert.equal(world.isBlocked(80, 270, 1), false);
   assert.ok(world.npcs.length >= 5, 'Mira, Orin, and Ilya have persistent and aftermath actor rigs');
   for (const npc of world.npcs) {
     assert.equal(npc.userData.rig?.kind, 'humanoid');

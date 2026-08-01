@@ -60,6 +60,7 @@ export class World {
     this.quality = quality;
     this.detail = [];
     this.interactables = [];
+    this.blockers = [];
     this.animated = [];
     this.npcs = [];
     this.discovery = new Map();
@@ -292,7 +293,7 @@ export class World {
     const group = this.landmarkRoot('haven');
     const wood = material(0x796049), plaster = material(0xb2a681), roof = material(0x4d5542), warm = material(0xffb55b, { emissive: 0x7a2605, emissiveIntensity: .7 });
     const houses = [[-27, -18, .2], [24, -14, -.4], [-31, 24, .5], [31, 25, -.8], [2, 38, 0]];
-    for (const [x, z, rotation] of houses) {
+    for (const [index, [x, z, rotation]] of houses.entries()) {
       const house = new THREE.Group();
       house.position.set(x, 0, z);
       house.rotation.y = rotation;
@@ -301,6 +302,7 @@ export class World {
       addMesh(house, new THREE.BoxGeometry(2.2, 4.2, .35), wood, [0, 2.1, 5.15]);
       addMesh(house, new THREE.BoxGeometry(1.1, 1.25, .25), warm, [-3.2, 4.3, 5.2]);
       group.add(house);
+      this.blockers.push({ id: `haven_house_${index + 1}`, x: group.position.x + x, z: group.position.z + z, radius: 8.4 });
     }
     addMesh(group, new THREE.CylinderGeometry(5.5, 6.2, 1.1, 20), material(0x8c876f), [0, .5, 3]);
     const fire = addMesh(group, new THREE.ConeGeometry(1.25, 2.8, 6), warm, [0, 2, 3]);
@@ -573,6 +575,10 @@ export class World {
       this.root.add(group);
       this.interactables.push({ id: `crystal_${i}`, type: 'crystal', name: '青脈晶', x, z, radius: 4, mesh: group });
     }
+  }
+
+  isBlocked(x, z, radius = 0) {
+    return this.blockers.some(blocker => Math.hypot(x - blocker.x, z - blocker.z) < blocker.radius + Math.max(0, radius));
   }
 
   createAtmosphere() {

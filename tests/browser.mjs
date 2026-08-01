@@ -91,6 +91,9 @@ let snapshot = globalThis.__Q_TEST__.snapshot();
 assert.equal(snapshot.status, 'running');
 assert.equal(window.document.querySelector('#hud').classList.contains('hidden'), false);
 assert.ok(snapshot.enemyCount >= 9, 'the valley contains deterministic local enemies');
+const navigationEnemy = globalThis.__Q_TEST__.enemy('stonewing_1');
+assert.equal(globalThis.__Q_TEST__.navigation('stonewing_1', navigationEnemy.x + .5, navigationEnemy.z + .5), true, 'enemy AI accepts a nearby legal terrain step');
+assert.equal(globalThis.__Q_TEST__.navigation('stonewing_1', navigationEnemy.x + 120, navigationEnemy.z), false, 'enemy AI rejects movement beyond its encounter leash');
 
 const startZ = snapshot.z;
 pad.dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 4, clientX: 66, clientY: 238 }));

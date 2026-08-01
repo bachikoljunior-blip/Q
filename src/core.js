@@ -91,6 +91,19 @@ export function terrainHeight(x, z) {
   return height + edge * 35;
 }
 
+export function enemyTerrainStepAllowed({ fromX, fromZ, toX, toZ, spawnX, spawnZ, allowDeepWater = false, large = false } = {}) {
+  const values = [fromX, fromZ, toX, toZ, spawnX, spawnZ].map(Number);
+  if (!values.every(Number.isFinite)) return false;
+  const [fx, fz, tx, tz, sx, sz] = values;
+  if (Math.abs(tx) > WORLD_HALF - 10 || Math.abs(tz) > WORLD_HALF - 10) return false;
+  if (Math.hypot(tx - sx, tz - sz) > (large ? 82 : 94)) return false;
+  const fromHeight = terrainHeight(fx, fz);
+  const toHeight = terrainHeight(tx, tz);
+  if (Math.abs(toHeight - fromHeight) > (large ? 6.4 : 3.8)) return false;
+  if (!allowDeepWater && toHeight < WATER_LEVEL - .25) return false;
+  return true;
+}
+
 export const BIOMES = Object.freeze({
   meadow: { id: 'meadow', name: '風渡りの草原', color: 0x668851, accent: 0xa9ca6a },
   forest: { id: 'forest', name: '古樹の森', color: 0x365f43, accent: 0x6f9a55 },

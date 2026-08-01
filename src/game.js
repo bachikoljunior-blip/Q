@@ -9,6 +9,7 @@ import {
   clamp,
   distance2D,
   endingFor,
+  enemyTerrainStepAllowed,
   grantExperience,
   herbHealingFor,
   narrativeSceneFor,
@@ -443,6 +444,10 @@ export class Game {
         poise: poiseFor(spec),
         poiseRecoveryDelay: 0,
         combatPhase: 1,
+        spawnX: spec.x,
+        spawnZ: spec.z,
+        spawnHeight: terrainHeight(spec.x, spec.z),
+        blockedMoves: 0,
         alert: false,
         dead: false,
         locked,
@@ -703,6 +708,42 @@ export class Game {
     this.checkpoint('enemy-defeated');
   }
 
+  canEnemyMove(enemy, nextX, nextZ) {
+    const allowedTerrain = enemyTerrainStepAllowed({
+      fromX: enemy.x,
+      fromZ: enemy.z,
+      toX: nextX,
+      toZ: nextZ,
+      spawnX: enemy.spawnX,
+      spawnZ: enemy.spawnZ,
+      allowDeepWater: enemy.spawnHeight < WATER_LEVEL + .4 || enemy.type === 'stalker',
+      large: Boolean(enemy.guardian || enemy.final)
+    });
+    if (!allowedTerrain) return false;
+    const radius = enemy.mesh.userData.radius * .42;
+    if (this.world.isBlocked(nextX, nextZ, radius)) return false;
+    return !this.enemies.some(other => other !== enemy && !other.dead && !other.locked && Math.hypot(nextX - other.x, nextZ - other.z) < radius + other.mesh.userData.radius * .42);
+  }
+
+  moveEnemy(enemy, directionX, directionZ, speed, dt) {
+    const length = Math.hypot(directionX, directionZ);
+    if (!Number.isFinite(length) || length < .001 || speed <= 0 || dt <= 0) return false;
+    const baseX = directionX / length, baseZ = directionZ / length;
+    for (const offset of [0, enemy.circleSide * .68, -enemy.circleSide * .92]) {
+      const cosine = Math.cos(offset), sine = Math.sin(offset);
+      const moveX = baseX * cosine - baseZ * sine;
+      const moveZ = baseX * sine + baseZ * cosine;
+      const nextX = enemy.x + moveX * speed * dt;
+      const nextZ = enemy.z + moveZ * speed * dt;
+      if (!this.canEnemyMove(enemy, nextX, nextZ)) continue;
+      enemy.x = nextX;
+      enemy.z = nextZ;
+      return true;
+    }
+    enemy.blockedMoves += 1;
+    return false;
+  }
+
   updateEnemies(dt) {
     const player = this.player.position;
     let boss = null;
@@ -736,8 +777,7 @@ export class Game {
       };
 
       if (enemy.state === 'idle') {
-        enemy.x += Math.sin(this.clock * .36 + enemy.phase) * dt * .4;
-        enemy.z += Math.cos(this.clock * .31 + enemy.phase) * dt * .4;
+        this.moveEnemy(enemy, Math.sin(this.clock * .36 + enemy.phase), Math.cos(this.clock * .31 + enemy.phase), .4, dt);
         if (distance < behavior.activation) {
           enemy.alert = true;
           enter('approach');
@@ -764,8 +804,7 @@ export class Game {
             moveX /= length;
             moveZ /= length;
           }
-          enemy.x += moveX * behavior.speed * dt;
-          enemy.z += moveZ * behavior.speed * dt;
+          this.moveEnemy(enemy, moveX, moveZ, behavior.speed, dt);
         }
       } else if (enemy.state === 'windup') {
         enemy.alert = true;
@@ -776,8 +815,7 @@ export class Game {
         enemy.stateTimer -= dt;
         const attackX = behavior.lockDirection && enemy.attackDirection ? enemy.attackDirection.x : dx / distance;
         const attackZ = behavior.lockDirection && enemy.attackDirection ? enemy.attackDirection.z : dz / distance;
-        enemy.x += attackX * behavior.lunge * dt;
-        enemy.z += attackZ * behavior.lunge * dt;
+        this.moveEnemy(enemy, attackX, attackZ, behavior.lunge, dt);
         dx = player.x - enemy.x;
         dz = player.z - enemy.z;
         distance = Math.hypot(dx, dz) || 1;
@@ -791,8 +829,7 @@ export class Game {
         enemy.alert = true;
         enemy.stateTimer -= dt;
         if (behavior.recoveryRetreat) {
-          enemy.x -= dx / distance * behavior.recoveryRetreat * dt;
-          enemy.z -= dz / distance * behavior.recoveryRetreat * dt;
+          this.moveEnemy(enemy, -dx / distance, -dz / distance, behavior.recoveryRetreat, dt);
         }
         if (enemy.stateTimer <= 0) {
           if (behavior.flipOrbit) enemy.circleSide *= -1;
@@ -808,8 +845,7 @@ export class Game {
       } else if (enemy.state === 'backstep') {
         enemy.alert = true;
         enemy.stateTimer -= dt;
-        enemy.x -= dx / distance * behavior.backstepSpeed * dt;
-        enemy.z -= dz / distance * behavior.backstepSpeed * dt;
+        this.moveEnemy(enemy, -dx / distance, -dz / distance, behavior.backstepSpeed, dt);
         if (enemy.stateTimer <= 0) {
           enemy.attackPrepared = true;
           enter('windup', behavior.windup * .86);
@@ -828,6 +864,9 @@ export class Game {
         if (enemy.stateTimer <= 0) enter(distance > 175 ? 'idle' : 'approach');
       }
 
+      dx = player.x - enemy.x;
+      dz = player.z - enemy.z;
+      distance = Math.hypot(dx, dz) || 1;
       if ((enemy.guardian || enemy.final) && enemy.alert) boss = enemy;
       enemy.mesh.position.x = enemy.x;
       enemy.mesh.position.z = enemy.z;
@@ -1405,6 +1444,7 @@ export class Game {
       combatPhase: enemy.combatPhase,
       phaseLabel: PHASE_LABELS[enemy.combatPhase],
       tactic: behaviorForEnemy(enemy).tactic,
+      blockedMoves: enemy.blockedMoves,
       presentation: enemy.mesh.userData.rig?.kind || 'unknown',
       articulatedParts: (enemy.mesh.userData.rig?.legs?.length || 0) + (enemy.mesh.userData.rig?.arms?.length || 0)
     };
@@ -1435,6 +1475,11 @@ export class Game {
     if (!enemy || !Number.isFinite(damage) || damage <= 0) return false;
     this.damageEnemy(enemy, damage);
     return true;
+  }
+
+  testNavigation(id, x, z) {
+    const enemy = this.enemies.find(item => item.id === id && !item.dead && !item.locked);
+    return Boolean(enemy && this.canEnemyMove(enemy, Number(x), Number(z)));
   }
 
   testTick(seconds = STEP) {

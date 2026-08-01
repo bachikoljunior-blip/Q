@@ -438,6 +438,7 @@ if (localTest) Object.defineProperty(globalThis, '__Q_TEST__', { value: Object.f
   choose: id => game.chooseDialogue(id),
   defeat: id => game.testDefeat(id),
   strike(id, amount) { const result = game.testStrike(id, amount); updateHud(game.snapshotHud()); return result; },
+  navigation: (id, x, z) => game.testNavigation(id, x, z),
   tick(seconds) { game.testTick(seconds); updateHud(game.snapshotHud()); },
   attack: () => game.attack(),
   dodge: () => game.dodge(),

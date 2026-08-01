@@ -11,6 +11,7 @@ import {
   characterTaskFor,
   cleanSave,
   endingFor,
+  enemyTerrainStepAllowed,
   formatTime,
   grantExperience,
   herbHealingFor,
@@ -38,6 +39,10 @@ test('seeded generation and terrain are deterministic and bounded', () => {
     assert.ok(biomeAt(x, z)?.name);
   }
   assert.equal(regionAt(0, 270), '風見の里');
+  assert.equal(enemyTerrainStepAllowed({ fromX: 500, fromZ: -420, toX: 501, toZ: -420, spawnX: 500, spawnZ: -420, large: true }), true);
+  assert.equal(enemyTerrainStepAllowed({ fromX: 500, fromZ: -420, toX: 700, toZ: -420, spawnX: 500, spawnZ: -420, large: true }), false, 'enemy navigation respects its local leash');
+  assert.equal(enemyTerrainStepAllowed({ fromX: -650, fromZ: 10, toX: -610, toZ: 10, spawnX: -650, spawnZ: 10 }), false, 'land enemies do not path into deep river terrain');
+  assert.equal(enemyTerrainStepAllowed({ fromX: -650, fromZ: 10, toX: -610, toZ: 10, spawnX: -650, spawnZ: 10, allowDeepWater: true }), true, 'water-native enemies may traverse the same legal slope');
 });
 
 test('save cleaning rejects malformed progress while preserving valid RPG state', () => {
