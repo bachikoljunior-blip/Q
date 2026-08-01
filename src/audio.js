@@ -27,17 +27,18 @@ export class Sound {
   stopVoices(group){for(const voice of [...this.voices])if(!group||voice.group===group)this.endVoice(voice)}
   event(name,power=1){if(!this.enabled())return;const v=cap(Number(power)||1,.2,1.5);switch(name){
     case'ui':this.tone(520,760,.07,'triangle',.07*v);break;
-    case'tether':this.tone(160,440,.16,'sawtooth',.1*v);break;
-    case'cut':this.tone(820,170,.1,'sawtooth',.1*v);break;
-    case'kill':this.tone(210,92,.09,'square',.1*v);this.tone(620,360,.07,'sine',.05*v,.02);break;
+    case'attack':this.tone(310,110,.1,'sawtooth',.07*v);break;
+    case'dodge':this.tone(140,420,.14,'triangle',.06*v);break;
+    case'hit':this.tone(118,72,.08,'square',.08*v);this.tone(560,280,.06,'triangle',.04*v,.02);break;
     case'hurt':this.tone(170,46,.3,'sawtooth',.16*v);break;
-    case'wave':this.tone(330,660,.16,'triangle',.1*v);this.tone(494,988,.18,'triangle',.08*v,.1);break;
+    case'pickup':this.tone(560,820,.1,'sine',.07*v);break;
+    case'heal':this.tone(260,520,.25,'sine',.07*v);this.tone(390,780,.22,'triangle',.04*v,.08);break;
+    case'danger':this.tone(330,245,.13,'sawtooth',.075*v);this.tone(220,175,.11,'triangle',.05*v,.09);break;
+    case'discover':[294,440,587].forEach((f,i)=>this.tone(f,f*1.02,.28,'triangle',.065*v,i*.09));break;
     case'boss':this.tone(78,39,.7,'sawtooth',.16*v);break;
-    case'upgrade':[440,554,659].forEach((f,i)=>this.tone(f,f*1.02,.15,'triangle',.07*v,i*.07));break;
     case'victory':[523,659,784,1047].forEach((f,i)=>this.tone(f,f,.28,'triangle',.1*v,i*.1));break;
-    case'defeat':[294,220,147].forEach((f,i)=>this.tone(f,f*.65,.3,'sawtooth',.09*v,i*.13));break;
   }}
-  start(){this.requested=true;if(!this.enabled()||this.timer)return;const play=()=>{if(!this.enabled())return;const notes=[110,147,165,220,165,147,123,147];const f=notes[this.step++%notes.length];this.tone(f,f,.38,'sine',.035,0,'music');if(this.step%2===0)this.tone(f*2,f*1.5,.2,'triangle',.018,0,'music')};play();this.timer=setInterval(play,480)}
+  start(){this.requested=true;if(!this.enabled()||this.timer)return;const play=()=>{if(!this.enabled())return;const notes=[110,147,165,196,147,123,98,123,147,220,196,165];const f=notes[this.step++%notes.length];this.tone(f,f*.995,1.8,'sine',.021,0,'music');if(this.step%3===0)this.tone(f*2,f*1.5,.7,'triangle',.012,.16,'music')};play();this.timer=setInterval(play,1550)}
   stop(){this.requested=false;clearInterval(this.timer);this.timer=0;this.stopVoices('music')}
   destroy(){this.stop();this.stopVoices();try{this.ctx?.close()}catch{}this.ctx=null;this.master=null}
 }

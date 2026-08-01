@@ -7,6 +7,7 @@ Canonical files:
 - Rules and full mandatory floor: `AI_DEVELOPMENT/PROTOCOL.md`
 - Active continuation state: `AI_DEVELOPMENT/STATE.yaml`
 - Active requirements and acceptance: `AI_DEVELOPMENT/REQUIREMENTS.yaml`
+- Active concept, element references, criteria, and quality gaps: `AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml`
 - Dependency plan: `AI_DEVELOPMENT/WORK_GRAPH.yaml`
 - Optional procedures: `AI_DEVELOPMENT/MODULES/` (load only when triggered)
 
@@ -25,5 +26,7 @@ Mandatory floor, by trigger:
 - F9 during repeated implementation/delivery when independent gates are possible: enforce F2/F3/F5/F6 with the smallest failing mechanisms and observe deliberate failure before calling a gate active.
 
 Enforcement summary: F2/F3/F5 checks are installed and passed one remote PR run, but required-check protection is unavailable through the current tools; real-surface F6 and automatic revert remain absent until a revision-enabled product release; unattended delivery is not allowed.
+
+Session-end delivery: every project-changing Work or Codex session must update `AI_DEVELOPMENT/STATE.yaml`, execute applicable checks, merge the newest runnable checkpoint into `main`, publish it through GitHub Pages, verify the served revision and primary journey under F6, and record the exact next action. Objective incompleteness alone does not defer delivery; retain all failed or unverified acceptance gaps. Delivery may stop only for a mandatory-check failure, blocking regression, safety or licensing problem, missing permission, branch protection, or required human approval, and that exception must remain as an exact remote checkpoint and resumption record. A run ending does not end the logical session; only the user's explicit declaration does.
 
 Resume: inspect `AI_DEVELOPMENT/STATE.yaml`, compare its branch/SHA/PR/deployment and modified-artifact records with Git/GitHub and runtime reality, correct discrepancies, then perform `execution.exact_next_action`. End every project-changing run with the compact floor line from Section 0.3.

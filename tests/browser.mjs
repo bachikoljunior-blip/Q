@@ -20,9 +20,12 @@ const globals = {
   ResizeObserver: class { observe() {} disconnect() {} },
   matchMedia: () => ({ matches: false, addEventListener() {}, removeEventListener() {} }),
   devicePixelRatio: 2,
+  innerWidth: 568,
+  innerHeight: 320,
   addEventListener: window.addEventListener.bind(window),
   removeEventListener: window.removeEventListener.bind(window),
   dispatchEvent: window.dispatchEvent.bind(window),
+  __Q_HEADLESS__: true
 };
 for (const [key, value] of Object.entries(globals)) Object.defineProperty(globalThis, key, { configurable: true, writable: true, value });
 window.navigator.vibrate = () => true;
@@ -42,25 +45,30 @@ function frames(count) {
   }
 }
 
-const rect = { x: 0, y: 0, left: 0, top: 0, right: 375, bottom: 667, width: 375, height: 667, toJSON() { return this; } };
+const appRect = { x: 0, y: 0, left: 0, top: 0, right: 568, bottom: 320, width: 568, height: 320, toJSON() { return this; } };
+const padRect = { x: 18, y: 202, left: 18, top: 202, right: 114, bottom: 298, width: 96, height: 96, toJSON() { return this; } };
 const app = window.document.querySelector('#app');
 const canvas = window.document.querySelector('#canvas');
-app.getBoundingClientRect = () => rect;
-canvas.getBoundingClientRect = () => rect;
-canvas.setPointerCapture = () => {};
-canvas.releasePointerCapture = () => {};
+const pad = window.document.querySelector('#move-pad');
+app.getBoundingClientRect = () => appRect;
+canvas.getBoundingClientRect = () => appRect;
+pad.getBoundingClientRect = () => padRect;
+for (const element of [canvas, pad]) {
+  element.setPointerCapture = () => {};
+  element.releasePointerCapture = () => {};
+}
 
 const gradient = { addColorStop() {} };
 const context = new Proxy({
   canvas,
   createLinearGradient: () => gradient,
   createRadialGradient: () => gradient,
-  measureText: text => ({ width: String(text).length * 7 }),
+  measureText: text => ({ width: String(text).length * 7 })
 }, {
   get(target, property) { return property in target ? target[property] : () => {}; },
-  set(target, property, value) { target[property] = value; return true; },
+  set(target, property, value) { target[property] = value; return true; }
 });
-canvas.getContext = () => context;
+window.HTMLCanvasElement.prototype.getContext = () => context;
 
 const uncaught = [];
 window.addEventListener('error', event => uncaught.push(event.message || String(event.error)));
@@ -70,59 +78,136 @@ await import(new URL(`../src/main.js?dom-test=${Date.now()}`, import.meta.url));
 await new Promise(resolve => setImmediate(resolve));
 
 assert.ok(window.document.querySelector('#menu').classList.contains('active'), 'menu opens');
-assert.equal(window.document.title, 'Q: STARTHREAD');
+assert.equal(window.document.title, 'Q: WILDBOUND');
 assert.match(readFileSync(new URL('../styles.css', import.meta.url), 'utf8'), /#canvas\{[^}]*touch-action:none/);
-assert.match(readFileSync(new URL('../styles.css', import.meta.url), 'utf8'), /\.primary,.secondary\{[^}]*min-height:56px/);
+assert.match(readFileSync(new URL('../styles.css', import.meta.url), 'utf8'), /\.primary,\.secondary\{[^}]*min-height:52px/);
 
-window.document.querySelector('#start').click();
+window.document.querySelector('#new-game').click();
 await new Promise(resolve => setImmediate(resolve));
-assert.ok(window.document.querySelector('#tutorial').classList.contains('active'), 'fresh save opens tutorial');
+assert.ok(window.document.querySelector('#tutorial').classList.contains('active'), 'fresh journey opens onboarding');
 window.document.querySelector('#tutorial-skip').click();
 frames(4);
-assert.equal(globalThis.__Q_TEST__.snapshot().status, 'running');
+let snapshot = globalThis.__Q_TEST__.snapshot();
+assert.equal(snapshot.status, 'running');
 assert.equal(window.document.querySelector('#hud').classList.contains('hidden'), false);
+assert.ok(snapshot.enemyCount >= 9, 'the valley contains deterministic local enemies');
 
-const before = globalThis.__Q_TEST__.snapshot();
-canvas.dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 7, clientX: 285, clientY: 240 }));
-frames(38);
-canvas.dispatchEvent(new window.PointerEvent('pointermove', { bubbles: true, cancelable: true, pointerId: 7, clientX: 105, clientY: 205 }));
-frames(12);
-canvas.dispatchEvent(new window.PointerEvent('pointerup', { bubbles: true, cancelable: true, pointerId: 7, clientX: 105, clientY: 205 }));
-const after = globalThis.__Q_TEST__.snapshot();
-assert.ok(after.energy < before.energy, 'holding the gravity tether consumes energy');
+const startZ = snapshot.z;
+pad.dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 4, clientX: 66, clientY: 238 }));
+pad.dispatchEvent(new window.PointerEvent('pointermove', { bubbles: true, cancelable: true, pointerId: 4, clientX: 66, clientY: 204 }));
+frames(55);
+pad.dispatchEvent(new window.PointerEvent('pointerup', { bubbles: true, cancelable: true, pointerId: 4, clientX: 66, clientY: 204 }));
+snapshot = globalThis.__Q_TEST__.snapshot();
+assert.ok(Math.abs(snapshot.z - startZ) > 2, 'touch joystick moves the third-person player');
+
+const stamina = snapshot.stamina;
+window.document.querySelector('#dodge').dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 8 }));
+frames(2);
+assert.ok(globalThis.__Q_TEST__.snapshot().stamina < stamina, 'dodge consumes stamina');
+window.document.querySelector('#attack').dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 9 }));
+frames(3);
+
+globalThis.__Q_TEST__.teleport(-185, 56);
+const healthBeforeTelegraph = globalThis.__Q_TEST__.snapshot().health;
+globalThis.__Q_TEST__.tick(.08);
+assert.equal(globalThis.__Q_TEST__.enemy('mossfang_1').state, 'windup', 'nearby enemy enters an explicit attack windup');
+globalThis.__Q_TEST__.tick(.25);
+assert.equal(globalThis.__Q_TEST__.snapshot().health, healthBeforeTelegraph, 'enemy windup cannot deal immediate contact damage');
+globalThis.__Q_TEST__.tick(.4);
+assert.ok(globalThis.__Q_TEST__.snapshot().health < healthBeforeTelegraph, 'telegraphed active attack can deal damage after the warning');
 
 window.document.querySelector('#pause').click();
 assert.equal(globalThis.__Q_TEST__.snapshot().status, 'paused');
 assert.ok(window.document.querySelector('#paused').classList.contains('active'));
+window.document.querySelector('#open-map').click();
+assert.ok(window.document.querySelector('#map-screen').classList.contains('active'), 'world map opens without leaving the journey');
+window.document.querySelector('[data-back="paused"]').click();
 window.document.querySelector('#resume').click();
 assert.equal(globalThis.__Q_TEST__.snapshot().status, 'running');
 
-globalThis.__Q_TEST__.wave(4);
-frames(78);
-const boss = globalThis.__Q_TEST__.snapshot();
-assert.equal(boss.wave, 4);
-assert.ok(boss.enemies >= 4, 'middle boss and shield nodes spawn');
+globalThis.__Q_TEST__.teleport(-8, 264);
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'nearby NPC interaction fires');
+assert.ok(window.document.querySelector('#dialogue').classList.contains('active'));
+assert.match(window.document.querySelector('#dialogue-text').textContent, /三つの印/);
+window.document.querySelector('#dialogue-close').click();
+assert.equal(globalThis.__Q_TEST__.snapshot().quest.step, '0 / 3');
+assert.equal(globalThis.__Q_TEST__.enemy('grove_warden').locked, false, 'first quest conversation unlocks guardians in the active session');
+assert.equal(globalThis.__Q_TEST__.enemy('grove_warden').visible, true);
 
-globalThis.__Q_TEST__.finish(false);
-assert.ok(window.document.querySelector('#result').classList.contains('active'));
-window.document.querySelector('#again').click();
-frames(2);
-assert.equal(globalThis.__Q_TEST__.snapshot().status, 'running', 'restart does not reload the page');
+const enemiesBeforeCombat = globalThis.__Q_TEST__.snapshot().enemyCount;
+globalThis.__Q_TEST__.teleport(-185, 52);
+for (let strike = 0; strike < 3; strike += 1) { globalThis.__Q_TEST__.attack(); globalThis.__Q_TEST__.tick(.52); }
+assert.ok(globalThis.__Q_TEST__.snapshot().enemyCount < enemiesBeforeCombat, 'normal sword combat defeats a roaming creature');
 
-for (let wave = 1; wave <= 7; wave += 1) {
-  globalThis.__Q_TEST__.wave(wave);
-  globalThis.__Q_TEST__.clearWave();
-  assert.equal(globalThis.__Q_TEST__.snapshot().status, 'upgrading', `wave ${wave} reaches upgrade selection`);
-  const card = window.document.querySelector('#cards .card');
-  assert.ok(card, `wave ${wave} offers an upgrade`);
-  card.click();
-  assert.equal(globalThis.__Q_TEST__.snapshot().wave, wave + 1, `upgrade advances beyond wave ${wave}`);
-}
-globalThis.__Q_TEST__.wave(8);
-globalThis.__Q_TEST__.clearWave();
-assert.ok(window.document.querySelector('#result').classList.contains('active'), 'eighth rift reaches ending');
-assert.equal(window.document.querySelector('#result-title').textContent, 'DAWN RESTORED');
-assert.ok(canvas.width * canvas.height <= 2_000_000, 'canvas backing store stays within budget');
+globalThis.__Q_TEST__.grant({ coins: 200, crystals: 5 });
+globalThis.__Q_TEST__.teleport(12, 279);
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'blacksmith first explains the cost of the coming choices');
+assert.ok(window.document.querySelector('#dialogue').classList.contains('active'));
+assert.match(window.document.querySelector('#dialogue-text').textContent, /結界/);
+window.document.querySelector('#dialogue-close').click();
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'blacksmith interaction opens camp after the introduction');
+assert.ok(window.document.querySelector('#camp').classList.contains('active'));
+window.document.querySelector('#upgrade-list .upgrade-card').click();
+assert.equal(globalThis.__Q_TEST__.snapshot().upgrades.vigor, 1, 'forge spends resources on persistent character growth');
+window.document.querySelector('#camp-close').click();
+
+assert.equal(globalThis.__Q_TEST__.defeat('grove_warden'), true, 'grove guardian can be resolved through deterministic checkpoint injection');
+assert.equal(globalThis.__Q_TEST__.snapshot().quest.step, '選択', 'the grove decision becomes the active consequence checkpoint');
+assert.equal(globalThis.__Q_TEST__.snapshot().pendingChoice, 'grove_warden');
+globalThis.__Q_TEST__.teleport(-410, -245);
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'defeated grove altar opens the persistent choice');
+const groveChoices = [...window.document.querySelectorAll('.dialogue-choice')];
+assert.equal(groveChoices.length, 2, 'the choice presents two distinct tradeoffs');
+assert.match(groveChoices[1].textContent, /森へ還す/);
+groveChoices[1].click();
+assert.equal(globalThis.__Q_TEST__.snapshot().choices.grove, 'wild_bloom', 'choice is committed to game state');
+assert.equal(globalThis.__Q_TEST__.snapshot().pendingChoice, null, 'committing the choice clears its durable pending checkpoint');
+assert.equal(JSON.parse(window.localStorage.getItem('q-wildbound-save')).progress.choices.grove, 'wild_bloom', 'choice is persisted immediately in the versioned save');
+assert.equal(globalThis.__Q_TEST__.choose('haven_ward'), false, 'a committed consequence cannot be overwritten');
+assert.equal(globalThis.__Q_TEST__.snapshot().maxStamina, 116, 'wild choice produces a later mechanical stamina consequence');
+assert.equal(window.document.querySelector('#dialogue-choices').classList.contains('hidden'), true, 'choice cannot be selected twice in the same dialogue');
+window.document.querySelector('#dialogue-close').click();
+assert.equal(globalThis.__Q_TEST__.defeat('marsh_warden'), true);
+assert.equal(globalThis.__Q_TEST__.snapshot().quest.step, '選択');
+globalThis.__Q_TEST__.teleport(-520, 310);
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'marsh memory exposes the second delayed consequence');
+const marshChoices = [...window.document.querySelectorAll('.dialogue-choice')];
+assert.equal(marshChoices.length, 2);
+marshChoices[0].click();
+assert.equal(globalThis.__Q_TEST__.snapshot().choices.marsh, 'water_ward');
+assert.ok(globalThis.__Q_TEST__.snapshot().maxHealth > 100, 'water ward changes later player survivability');
+window.document.querySelector('#dialogue-close').click();
+
+assert.equal(globalThis.__Q_TEST__.defeat('peak_warden'), true);
+assert.equal(globalThis.__Q_TEST__.snapshot().quest.step, '選択');
+globalThis.__Q_TEST__.teleport(500, -420);
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'peak memory exposes the third accumulated consequence');
+const peakChoices = [...window.document.querySelectorAll('.dialogue-choice')];
+assert.equal(peakChoices.length, 2);
+peakChoices[1].click();
+assert.equal(globalThis.__Q_TEST__.snapshot().choices.peak, 'wind_release');
+window.document.querySelector('#dialogue-close').click();
+snapshot = globalThis.__Q_TEST__.snapshot();
+assert.equal(snapshot.sigils.length, 3);
+assert.equal(snapshot.quest.step, '最終章');
+assert.equal(globalThis.__Q_TEST__.enemy('crown_warden').locked, false, 'final temple requires every guardian and every consequence decision');
+assert.equal(globalThis.__Q_TEST__.defeat('crown_warden'), true);
+assert.ok(window.document.querySelector('#ending').classList.contains('active'), 'final guardian reaches the ending');
+assert.equal(globalThis.__Q_TEST__.snapshot().victory, true);
+assert.match(window.document.querySelector('#ending-copy').textContent, /若木/, 'the early grove choice changes the final account of the valley');
+assert.match(window.document.querySelector('#ending-copy').textContent, /井戸|湿原/, 'the marsh choice also appears in the ending');
+assert.match(window.document.querySelector('#ending-title').textContent, /守ることと/, 'mixed accumulated choices reach the covenant ending');
+window.document.querySelector('#free-roam').click();
+assert.equal(globalThis.__Q_TEST__.snapshot().status, 'running', 'ending returns to free roam without reload');
+
+globalThis.__Q_TEST__.damage(9999);
+assert.ok(window.document.querySelector('#dead').classList.contains('active'), 'lethal damage reaches recoverable defeat');
+window.document.querySelector('#respawn').click();
+assert.equal(globalThis.__Q_TEST__.snapshot().status, 'running');
+assert.equal(globalThis.__Q_TEST__.snapshot().health, globalThis.__Q_TEST__.snapshot().maxHealth, 'camp respawn restores health');
+
+assert.ok(canvas.width * canvas.height <= 1_850_000, '3D backing store stays within the mobile pixel budget');
+assert.ok(window.localStorage.getItem('q-wildbound-save'), 'journey is persisted locally');
 assert.deepEqual(uncaught, [], `no DOM integration errors: ${uncaught.join('\n')}`);
 
-console.log('DOM interaction passed: fresh menu, tutorial, tether input, fixed-step play, pause/resume, boss checkpoint, failure/restart, all upgrade transitions, final ending, and canvas budget.');
+console.log('DOM journey passed: title/tutorial, mobile movement, telegraphed combat, pause/map, Mira and Orin story beats, three persistent choice consequences, accumulated ending, free roam, autosave, and pixel budget.');

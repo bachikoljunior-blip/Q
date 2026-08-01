@@ -11,6 +11,17 @@ logical_session:
   lifecycle: active
   explicit_end_required: true
 
+session_end_delivery_policy:
+  applies_to: "Every project-changing Work or Codex session, including an incomplete-objective checkpoint."
+  merge_target: main
+  merge_required: true
+  pages_publication_required: true
+  real_surface_verification_required: true
+  objective_completion_required: false
+  allowed_exceptions: "A mandatory-check failure, known blocking regression, safety/privacy/license defect, unavailable permission, branch protection, or required human approval."
+  blocked_handoff: "Preserve the safe checkpoint on the existing remote branch and PR, record the exact blocker, recovery path, remote state, and first next action, then resume that delivery before creating replacements."
+  logical_session_effect: "A run-level merge and publication checkpoint does not end the logical session; explicit user declaration remains required."
+
 migration:
   from: legacy_project_operating_protocol_v1
   status: complete_verified
@@ -28,7 +39,7 @@ migration:
 objective:
   id: Q-OPEN-WORLD-RPG
   statement: "Replace the published Q: STARTHREAD build with a mobile open-world RPG containing a broad, explorable natural world and other varied meaningful regions and systems."
-  status: prepared_not_applied
+  status: failed
   key_requirements:
     - open-world RPG rather than an arena action game
     - broad natural spaces plus varied settlements, ruins, caves, coasts, rivers, and mountains
@@ -40,8 +51,8 @@ objective:
 execution:
   selected_rigor: STRICT
   active_work:
-    description: "Restore the preserved open-world branch and resume the mobile open-world RPG replacement from its partial core checkpoint."
-    status: prepared_not_applied
+    description: "Publish the current runnable WILDBOUND checkpoint, then continue raising its narrative and in-world presentation toward the preserved premium benchmark without hiding the remaining failures."
+    status: complete_unverified
     allowed_scope:
       - Three.js open-world renderer, terrain, nature, destinations, player, combat, RPG progression, quests, saves, UI, audio, tests, and release metadata
       - selective carry-forward of PR 3 lifecycle and accessibility behavior that still applies
@@ -50,48 +61,73 @@ execution:
       - no unattended delivery while all four F9 gates and automatic revert are absent
   last_verified_checkpoint:
     status: complete_verified
-    revision: ac6f57f01c569201e453d84dad1e9bd02fe7285c
-    result: "Remote main and the published STARTHREAD baseline; local npm run check and the recorded 2026-07-31 public primary journey passed. On 2026-08-01 the live index was fetched again and was byte-identical to main's index.html."
+    revision: "Draft PR 6 product revision f9def90a07761007e8b8fe12b5a7f9d449b06f4e based on 4e6076df54b7eb4b2f55a173910e1a48ae67517b"
+    result: "The continuous Three.js valley, full mixed-choice journey, combat/progression/save-integrity systems, generated ground and portrait assets, bundled Japanese glyph subset, and mobile UI passed npm run check. Focused Chromium WebGL/font checks and persisted 667 × 375 screenshots rendered world, dialogue, and choice surfaces with readable Japanese and no runtime or asset error. Quality floor run 30688204245 passed for the draft product tree; staged revision injection and forged-progression rejection also passed."
     evidence:
-      - AI_DEVELOPMENT/TEST_HISTORY.md
-      - AI_DEVELOPMENT/ARCHIVE/ACCEPTANCE_STARTHREAD_v1.yaml
+      - AI_DEVELOPMENT/EVIDENCE/WILDBOUND_QA_2026-08-01.md
+      - AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml
+      - AI_DEVELOPMENT/REQUIREMENTS.yaml
   modified_but_unverified:
-    - status: prepared_not_applied
-      artifacts: "package.json, package-lock.json, src/core.js, vendor/three.module.js, vendor/THREE-LICENSE.txt"
-      recovery: "local stash named 'pre-migration open-world RPG work 2026-08-01' and /tmp/Q_pre_migration_product.patch"
-      limitation: "Partial open-world core work has not been executed."
+    - status: complete_unverified
+      artifacts: "WILDBOUND product replacement, locally bundled Three.js runtime, generated visual assets, tests, Pages release metadata, and related documentation in the current working tree"
+      recovery: "Return to remote main 4e6076d for the currently published STARTHREAD product. Keep the pre-migration stash and /tmp/Q_pre_migration_product.patch as additional recovery inputs until draft PR 6 is resolved."
+      limitation: "Local automated and focused WebGL checks pass and the exact latest product tree is remotely preserved at f9def90, but the replacement is not merged, deployed, physically verified, or benchmark-complete."
+    - status: prepared_not_executed
+      artifacts: "Physical iPhone SE third-generation complete touch route, frame pacing, memory proxy, orientation/background recovery, and offline reload"
+      recovery: "Keep the limitation explicit after iterative publication and perform the physical route when a representative device becomes available."
+      limitation: "No physical device is exposed in this Work run."
+    - status: complete_unverified
+      artifacts: "Locally rendered Noto Sans JP WOFF subset, OFL license record, offline cache entry, provenance validation, and payload accounting"
+      recovery: "Remove the font-face and font assets together if remote verification fails; the system-font stack remains a functional fallback."
+      limitation: "Local Chromium load and glyph coverage pass, the exact font tree is on draft PR 6 at f9def90, and remote Quality floor run 30688204245 passed; physical-device typography remains unverified."
+    - status: complete_unverified
+      artifacts: "Local checkpoint ec44979 with persisted 667 × 375 world, dialogue, and choice screenshots plus reconciled benchmark evidence"
+      recovery: "The screenshots and records remain in local commit ec44979 until the connected GitHub commit is verified on PR 6."
+      limitation: "The connected GitHub branch update, merge, Pages deployment, and public F6 check are pending in this run."
+    - status: failed
+      artifacts: "Premium realistic in-world presentation and deeply developed commercial-scale character/story benchmark"
+      recovery: "Continue from the published checkpoint without lowering the criteria or describing it as benchmark-complete."
+      limitation: "Generated portraits and ground texture improve cohesion, but primitive live models, compact arcs, animation, and audio remain below the recorded bar."
   current_blockers:
     - status: blocked
       item: "Branch-protection and required-status-check configuration is not exposed by the current GitHub connector and must not be assumed."
+    - status: blocked
+      item: "Physical iPhone SE third-generation evidence cannot be executed in the current environment; this remains an acceptance limitation but no longer defers the user-required iterative publication."
   current_uncertainty:
-    - exact commit served by Pages is not reachable from the current public artifact
-    - physical iPhone and Android behavior remains unverified
-    - open PR 3 overlaps the product replacement but contains lifecycle behaviors that remain applicable
-  exact_next_action: "Switch to agent/open-world-rpg, rebase its clean base onto remote main bfdd56b without losing the preserved product patch, restore the named stash, reconcile package/core conflicts with Adaptive 2.2 files, then execute the first bounded world-foundation slice."
+    - exact commit served by the legacy Pages artifact remains unreachable because STARTHREAD has no embedded revision identifier
+    - SwiftShader frame timing does not predict physical iPhone or Android performance
+    - open PR 3 remains open; applicable input lifecycle, safe-area, reduced-motion, and settings behavior has been carried forward without claiming PR 3 complete
+  exact_next_action: "Synchronize the current local checkpoint to draft PR 6 through the connected GitHub commit path, rerun the remote quality gate, merge it into main, verify the GitHub Pages revision and primary journey, then continue the presentation and narrative frontier from that merged public checkpoint in the next run."
 
 modules:
   activated: []
-  note: "All nine Appendix M texts are stored as Layer 3. None was activated by the migration; F9 work was performed directly under the mandatory floor."
+  deactivated:
+    - {module: M3, status: complete_verified, result: "Local Three.js, generated assets, packaging, and release wiring integrated and executed."}
+    - {module: M4, status: complete_unverified, result: "DOM journey and focused real WebGL surfaces executed; 667 × 375 world/dialogue/choice screenshots were persisted and inspected. Physical user-surface route remains prepared_not_executed."}
+    - {module: M5, status: complete_verified, result: "Localhost-only deterministic teleport, resource, guardian, and damage injection exercised protected progression and remains unreachable publicly."}
+    - {module: M6, status: complete_unverified, result: "Payload, pixels, draw calls, triangles, and auto-quality were measured; physical frame pacing and memory remain prepared_not_executed."}
+    - {module: M9, status: complete_verified, result: "Local deterministic enemy states and protected story locks were implemented and exercised."}
+  note: "Activated modules were loaded only for their triggered work and are deactivated at this checkpoint."
 
 floor:
   last_check:
     status: complete_verified
-    at: "2026-08-01T14:05:07+09:00"
-    note: "Canonical files and loader were fetched from remote main at bfdd56b; PR 4 merged after Quality floor success; PR 3 remains open; no Pages run occurred; the live STARTHREAD index remained byte-identical."
+    at: "2026-08-01T17:37:09+09:00"
+    note: "The runnable WILDBOUND product, generated assets, bundled Japanese font, benchmark map, and persisted 667 × 375 evidence remain locally verified. The latest user instruction now requires every project-changing session to merge and publish its runnable checkpoint while preserving unresolved acceptance failures; remote synchronization, merge, deployment, and F6 are pending in this run."
   independence_level_used: C
   review_outcome: passed
-  reviewed_at: "2026-08-01T13:56:53+09:00"
-  review_scope: "Adaptive 2.2 canonical files, legacy preservation, loader, F9 scripts/workflows, rollback, no-product-deploy path filter, STARTHREAD regression baseline, and live-index byte comparison."
-  review_limitation: "Same-agent separate falsification pass; no separate agent was used, branch protection is not exposed, and F6 cannot run against the legacy public artifact because it has no release identifier."
+  reviewed_at: "2026-08-01T17:37:09+09:00"
+  review_scope: "WILDBOUND runnable checkpoint plus the new mandatory session-end merge, Pages publication, F6 verification, and next-session handoff policy. The review preserves failed premium, narrative, combat-AI, physical-touch, and performance criteria while allowing an explicitly iterative public checkpoint."
+  review_limitation: "Same-agent Level C falsification; separate agents are prohibited in this run. Chromium used SwiftShader and a focused smoke route, not a physical iPhone or complete real-user journey. Premium presentation and story-depth acceptance remain failed."
   skips:
-    - "F6 | user-visible delivery trigger did not fire because the migration changed no product path, produced no Pages run, and the live index hash stayed unchanged | evidence: workflow_runs empty for bfdd56b plus byte comparison | revisit on the next product deployment."
+    - "F7 | objective-completion trigger did not fire because AC-WORLD, AC-NARRATIVE, AC-COMBAT-AI, AC-PRESENTATION, AC-PERF, and AC-PAGES are not satisfied | evidence: AI_DEVELOPMENT/REQUIREMENTS.yaml | revisit only before marking the objective complete."
     - "F9 required-check enforcement | could not be completed because gh is absent and no connected tool exposes branch protection or required-status configuration | evidence: gh command missing and tool registry has no protection/ruleset operation | revisit when capability changes."
   waivers: []
   enforcement:
     f2_state_update_check:
       status: blocked
       active: false
-      mechanism: "tools/floor-gates.mjs is installed in Quality floor and Pages; deliberate local failure and remote good-input pass observed. It is not a verified required merge check because branch protection is unavailable."
+      mechanism: "tools/floor-gates.mjs covers code, workflows, vendor, and generated assets in Quality floor and Pages; source and asset-only deliberate failures and a prior remote good-input pass were observed. It is not a verified required merge check because branch protection is unavailable."
     f3_execution_check:
       status: blocked
       active: false
@@ -103,13 +139,13 @@ floor:
     f6_public_revision_check:
       status: prepared_not_applied
       active: false
-      mechanism: "tools/verify-public.mjs and the post-deploy job compare release.json with public meta; deliberate mismatch failure observed locally; legacy public build exposes no identifier and no real F6 pass exists."
+      mechanism: "Pages injects GITHUB_SHA into release.json and the public meta value; tools/verify-public.mjs compares both. Deliberate mismatch and staged correct-identifier cases executed locally; no real public WILDBOUND F6 pass exists."
     revert_mechanism:
       status: blocked
       active: false
       mechanism: "No safe automatic Pages revert is installed or verified."
     last_observed_failing:
-      - {item: F2, status: complete_verified, evidence: "node tools/floor-gates.mjs --deliberate-failure F2 exited 1 and named missing STATE.yaml"}
+      - {item: F2, status: complete_verified, evidence: "node tools/floor-gates.mjs --deliberate-failure F2_ASSET exited 1 and named the generated asset plus missing STATE.yaml"}
       - {item: F3, status: complete_verified, evidence: "FLOOR_TEST_BAD=F3 npm run check exited 1 inside the real validation path"}
       - {item: F5, status: complete_verified, evidence: "node tools/floor-gates.mjs --deliberate-failure F5 exited 1 and named the missing review record"}
       - {item: F6, status: complete_verified, evidence: "node tools/verify-public.mjs --deliberate-failure exited 1 on a mismatched release identifier"}
@@ -118,13 +154,13 @@ floor:
 
 recovery:
   last_known_good_revision_or_artifact: ac6f57f01c569201e453d84dad1e9bd02fe7285c
-  rollback_or_recovery_method: "For migration, restore legacy files from AI_DEVELOPMENT/ARCHIVE or reset the migration branch to ac6f57f. For product work, return to agent/open-world-rpg and apply the named stash; use the binary /tmp patch only if the stash is unavailable."
+  rollback_or_recovery_method: "If the iterative WILDBOUND release has a blocking regression, revert main to 4e6076d (or the immediately preceding verified public revision), redeploy Pages, and verify recovery. Retain agent/open-world-rpg, local commit ec44979, the named pre-migration stash, and /tmp/Q_pre_migration_product.patch until the new public revision is verified."
 
 remote:
   repository: bachikoljunior-blip/Q
   default_branch: main
-  default_branch_revision_at_migration_completion: bfdd56bb3a9e4e760e7185e3dd22ffa3b5c72740
-  branch: main
+  default_branch_revision_at_migration_completion: 4e6076df54b7eb4b2f55a173910e1a48ae67517b
+  branch: agent/open-world-rpg
   branch_remote_status: complete_verified
   pull_requests:
     - number: 3
@@ -133,6 +169,14 @@ remote:
       revision: e7c61c8e32413fbae096a4d7c5b51545c8458c30
       status: complete_unverified
       note: "Local checks recorded as passed in the PR, but merge and updated public verification remain incomplete."
+    - number: 6
+      url: https://github.com/bachikoljunior-blip/Q/pull/6
+      head: agent/open-world-rpg
+      product_revision: f9def90a07761007e8b8fe12b5a7f9d449b06f4e
+      status: complete_unverified
+      quality_run: 30688290687
+      quality_run_status: complete_verified
+      note: "Draft product/benchmark checkpoint with an exact tree match and prior remote gates passed. Local screenshot-evidence and session-end delivery policy are being synchronized for the user-required iterative merge and Pages publication; premium, narrative, combat-AI, and physical-device gaps remain explicitly failed or unverified."
   migration_pull_request: null
   completed_migration_pull_request:
     number: 4
@@ -140,6 +184,12 @@ remote:
     head_revision: a3a4fa8742e519a0d785220fd3c122ea57cd98a9
     merged_revision: bfdd56bb3a9e4e760e7185e3dd22ffa3b5c72740
     quality_run: 30685069375
+    status: complete_verified
+  completed_reconciliation_pull_request:
+    number: 5
+    url: https://github.com/bachikoljunior-blip/Q/pull/5
+    merged_revision: 4e6076df54b7eb4b2f55a173910e1a48ae67517b
+    quality_run: 30685221459
     status: complete_verified
   deployed_revision: "exact served revision unavailable; product content corresponds to the eaa7715 STARTHREAD release and main is ac6f57f"
   verified_public_revision: "STARTHREAD index content byte-matched main at SHA-256 7cbc9ae4edb79024fbac94b981ab79f1b72800e35d03bfe4dc5e5d63d340bb9e on 2026-08-01; no embedded commit SHA"
@@ -151,11 +201,11 @@ automation:
     status: complete_verified
     result: "No scheduled, self-restarting, or looping project chain found."
   pages_workflow:
-    status: complete_verified
-    trigger: "push to main or manual dispatch"
+    status: prepared_not_applied
+    trigger: "Prepared workflow triggers on product, source, vendor, or asset push to main, or manual dispatch"
     running_at_migration_check: false
     migration_merge_run: "none; the product-only path filter excluded the operating migration"
     unattended_delivery_allowed: false
 
-updated_at: "2026-08-01T14:05:07+09:00"
+updated_at: "2026-08-01T17:37:09+09:00"
 reconciliation_status: complete_verified

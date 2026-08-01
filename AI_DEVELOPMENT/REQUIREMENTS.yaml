@@ -10,7 +10,9 @@ task_contract:
     - ship no secrets, paid runtime dependency, unauthorized asset, or required external AI/API
     - keep test-only controls unreachable on the public hostname
     - preserve useful concurrent PR 3 lifecycle behavior in the replacement or record why a part is superseded
-  recovery: "The complete_verified STARTHREAD baseline remains at ac6f57f; the replacement develops on agent/open-world-rpg until verified."
+    - preserve the latest user concept and update only concept-affected reference benchmarks
+    - do not weaken a valid benchmark or acceptance criterion to pass the current implementation
+  recovery: "The complete_verified STARTHREAD baseline remains recoverable at ac6f57f. Runnable WILDBOUND checkpoints are merged and published iteratively at each project-changing session end, while failed and unverified acceptance items remain open until their own evidence passes."
 
 requirements:
   - id: R-OPEN-WORLD
@@ -22,6 +24,18 @@ requirements:
   - id: R-DENSITY
     authority: preserved_user_constraint
     statement: "World breadth must not become an empty map; exploration locations, encounters, rewards, traversal choices, and visual landmarks provide useful density."
+  - id: R-PRESENTATION
+    authority: preserved_user_constraint
+    statement: "The natural-world replacement retains a grounded, realistic, cohesive premium presentation; changing the setting did not authorize default primitives, placeholder art, a low-poly product direction, or unrelated generated assets."
+  - id: R-STORY
+    authority: preserved_user_constraint
+    statement: "The complete playable journey contains a deeply developed original story with character motivations and arcs, foreshadowing and payoff, escalation, climax, and resolution."
+  - id: R-CONSEQUENCE
+    authority: preserved_user_constraint
+    statement: "Player choices produce later visible consequences in characters, quests, locations, resources, relationships, or endings, and accumulated actions matter more than a final menu choice."
+  - id: R-BENCHMARKS
+    authority: user_requirement
+    statement: "Maintain element-specific high-quality reference games, evidence, transferable criteria, concept-change history, and the current quality gap in AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml; use them for criticism and re-verification without copying protected expression."
   - id: R-RPG
     authority: derived_from_user_requirement
     statement: "The delivered game includes character growth, combat, quests or objectives, resources or equipment choices, persistence, failure/recovery, and a finishable main journey."
@@ -43,30 +57,45 @@ requirements:
 
 acceptance:
   - id: AC-WORLD
-    requirement: [R-OPEN-WORLD, R-NATURE, R-DENSITY]
-    status: prepared_not_applied
+    requirement: [R-OPEN-WORLD, R-NATURE, R-DENSITY, R-PRESENTATION, R-BENCHMARKS]
+    status: failed
     result: "A continuous navigable 3D world visibly includes multiple natural biomes and non-natural destinations, with discoverable landmarks and no required menu teleportation between the main regions."
-    evidence: null
+    evidence: AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml#current_quality_gap
   - id: AC-RPG-FLOW
-    requirement: [R-RPG, R-COMPLETE]
-    status: prepared_not_applied
+    requirement: [R-RPG, R-COMPLETE, R-STORY]
+    status: complete_unverified
     result: "Automated and user-surface checks cover tutorial, exploration, interaction, combat, character growth, main-objective transitions, defeat/recovery, final encounter, ending, and post-ending continuation or restart."
-    evidence: null
+    evidence: "npm run check executes the full happy-dom route; focused real Chromium WebGL menu/world/dialogue/choice smoke passed; full physical user-surface route remains prepared_not_executed"
+  - id: AC-NARRATIVE
+    requirement: [R-STORY, R-CONSEQUENCE, R-COMPLETE, R-BENCHMARKS]
+    status: failed
+    result: "The actual playable route proves character-motivated story escalation, planted information and payoff, at least one delayed consequence, accumulated ending state, and a resolved central conflict without placeholder dialogue or false choice."
+    evidence: "Three persistent decisions and accumulated ending logic pass, but AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml records the remaining story/character depth failure"
+  - id: AC-COMBAT-AI
+    requirement: [R-RPG, R-BENCHMARKS]
+    status: failed
+    result: "Recorded representative encounters show readable enemy anticipation/active/recovery phases, immediate synchronized feedback, distinct archetype decisions, legal terrain/range behavior, fair failure, and deterministic protected progression."
+    evidence: "Automated windup/active damage timing and real WebGL rendering pass; AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml records missing interruption, obstacle handling, guardian phases, and physical readability replay"
+  - id: AC-PRESENTATION
+    requirement: [R-PRESENTATION, R-BENCHMARKS]
+    status: failed
+    result: "Actual gameplay capture shows a unified realistic mobile presentation with authored materials, scale, lighting, atmosphere, character/enemy silhouettes, transitions, effects, and layered audio; no visible default primitives or placeholder content remains."
+    evidence: "Real WebGL screenshots and generated assets were inspected; AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml records the remaining primitive-model and animation/audio cohesion failure"
   - id: AC-TOUCH
     requirement: [R-MOBILE]
-    status: prepared_not_applied
+    status: prepared_not_executed
     result: "Landscape touch controls support simultaneous movement, camera, attack, dodge, and interaction without page gestures or stuck input at the iPhone SE viewport."
-    evidence: null
+    evidence: "DOM input journey and small-viewport real WebGL layout passed; physical simultaneous-touch execution on iPhone SE third generation remains prepared_not_executed"
   - id: AC-SAVE
     requirement: [R-COMPLETE]
-    status: prepared_not_applied
+    status: complete_unverified
     result: "Versioned save migration, malformed-data recovery, autosave, reload position/progression, and full reset execute without data corruption."
-    evidence: null
+    evidence: "tests/core.test.mjs and tests/browser.mjs pass malformed data, legacy migration, immediate decision persistence, autosave, and reset paths; physical browser reload remains prepared_not_executed"
   - id: AC-PERF
     requirement: [R-PERFORMANCE]
-    status: prepared_not_applied
+    status: prepared_not_executed
     result: "Rendering resolution, geometry, draw calls, entities, particles, audio voices, and updates are bounded; automatic quality reduction executes; physical-device 30 FPS remains required before claiming that device criterion."
-    evidence: null
+    evidence: "Static payload/pixel budgets and real WebGL 94 draw calls, 113,435 triangles, and auto-quality fallback passed; physical-device frame-time and memory evidence absent"
   - id: AC-PAGES
     requirement: [R-MOBILE, R-COMPLETE]
     status: prepared_not_applied
@@ -74,6 +103,11 @@ acceptance:
     evidence: null
   - id: AC-LICENSE
     requirement: [R-LICENSE, R-THREE]
-    status: prepared_not_applied
+    status: complete_verified
     result: "Release validation identifies bundled Three.js version/license and reports no unknown-license or external runtime asset."
-    evidence: null
+    evidence: "npm run validate: bundled Three.js 0.185.1 files matched exact MIT metadata and no external runtime asset was declared"
+  - id: AC-BENCHMARK-TRACE
+    requirement: [R-BENCHMARKS]
+    status: complete_verified
+    result: "Every required quality element has a small explicit reference set, evidence-backed selection reason, observable pass criteria, prohibited-copy boundary, concept-change rule, and honest current gap."
+    evidence: AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml

@@ -371,7 +371,7 @@ The following policies remain active until the user changes them:
 
 ```yaml
 remote_delivery: standing_authorized
-public_release: authorized_when_required_by_active_objective
+public_release: required_at_each_project_changing_session_end
 routine_connected_credentials: authorized_without_secret_disclosure
 paid_actions: prohibited
 repository_visibility_change: prohibited
@@ -381,6 +381,10 @@ private_information_exposure: prohibited
 ```
 
 Standing authorization covers routine branch, commit, push, pull request, permitted review, merge, release, deployment, publication, and public verification through currently connected repositories and authorized targets. It remains subject to later user instructions, actual capability, permission and branch protection, required human approval, system safety, Section 0.4, and valid gates. Protected-branch merge and public deployment are STRICT.
+
+At the end of every project-changing Work or Codex session, integrate the newest coherent, runnable checkpoint into `main` and publish it through the established GitHub Pages workflow. Objective completion and F7 are not prerequisites for an iterative checkpoint release; unresolved acceptance items must retain their exact F4 statuses and remain the next-session frontier. Before the final response, verify the merged revision, completed deployment, public revision identifier, page load, blocking runtime errors, and a representative primary journey, then persist the exact continuation point. Do not stop at a local commit, remote branch, draft pull request, ready pull request, pending auto-merge, or deployment start when the authorized capabilities can complete and verify delivery.
+
+This required session-end delivery may be blocked only by a failing mandatory check, a known blocking regression, secret or private-data exposure, an incompatible or unknown license, unavailable permission, branch protection, or required human approval. In that case, preserve the complete safe checkpoint on the existing branch and pull request, record the exact blocker and recovery path, and resume that same delivery next run before creating a duplicate. Never lower acceptance criteria or report the incomplete objective as complete merely because an iterative checkpoint was published. A project-changing run ending does not itself end the logical session; the user must still end that explicitly.
 
 Before delivery, inspect the actual repository, target, current revision, concurrent changes, protections, checks, PRs, deployment, public target, and rollback method as applicable. Do not duplicate valid branches/PRs or expose secrets, private data, internal credentials, development controls, unauthorized assets, or inappropriate source maps.
 

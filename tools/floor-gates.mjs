@@ -7,7 +7,7 @@ const valueAfter = flag => {
   return index >= 0 ? args[index + 1] : null;
 };
 
-const productPattern = /^(?:index\.html|styles\.css|icon\.svg|manifest\.webmanifest|sw\.js|release\.json|assets-manifest\.json|package(?:-lock)?\.json|src\/|tests\/|tools\/|vendor\/|\.github\/workflows\/)/;
+const productPattern = /^(?:index\.html|styles\.css|icon\.svg|manifest\.webmanifest|sw\.js|release\.json|assets-manifest\.json|package(?:-lock)?\.json|assets\/|src\/|tests\/|tools\/|vendor\/|\.github\/workflows\/)/;
 
 export function evaluateFloorGate({ changedFiles, stateText, stateDiffText = '' }) {
   const failures = [];
@@ -34,6 +34,7 @@ const deliberate = valueAfter('--deliberate-failure');
 if (deliberate) {
   const scenarios = {
     F2: { changedFiles: ['src/game.js'], stateText: 'independence_level_used: C\nreview_outcome: passed\n', stateDiffText: '+reviewed_at: now\n' },
+    F2_ASSET: { changedFiles: ['assets/textures/ground.webp'], stateText: 'independence_level_used: C\nreview_outcome: passed\n', stateDiffText: '+reviewed_at: now\n' },
     F5: { changedFiles: ['src/game.js', 'AI_DEVELOPMENT/STATE.yaml'], stateText: 'independence_level_used: null\nreview_outcome: null\n', stateDiffText: '' }
   };
   const scenario = scenarios[deliberate.toUpperCase()];

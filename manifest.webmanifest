@@ -1,12 +1,12 @@
 {
-  "name": "Q: STARTHREAD",
-  "short_name": "STARTHREAD",
-  "description": "一指操作の重力ワイヤー・アクション",
+  "name": "Q: WILDBOUND",
+  "short_name": "WILDBOUND",
+  "description": "広大な自然を自由に旅する3DオープンワールドRPG",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#050713",
-  "theme_color": "#050713",
+  "orientation": "landscape",
+  "background_color": "#17251f",
+  "theme_color": "#24372f",
   "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
 }
