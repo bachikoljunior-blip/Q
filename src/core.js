@@ -275,6 +275,15 @@ export function respawnCoinLossFor(progress) {
     : Math.min(25, Math.floor(coins * .12));
 }
 
+export function upgradeCostFor(progress, kind) {
+  const level = clamp(integer(progress?.upgrades?.[kind]), 0, 5);
+  const trust = clamp(integer(progress?.relationships?.orin), 0, 3);
+  return {
+    crystalCost: level + 1,
+    coinCost: Math.max(15, 25 + level * 25 - trust * 5)
+  };
+}
+
 export function canEnterCrown(progress) {
   return GUARDIANS.every(guardian => progress?.sigils?.includes(guardian.id) && Boolean(progress?.choices?.[guardian.point]))
     && Boolean(progress?.npcFlags?.groveReport && progress?.npcFlags?.marshReport && progress?.npcFlags?.ilyaTruth);

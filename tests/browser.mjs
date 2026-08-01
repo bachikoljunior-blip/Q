@@ -216,6 +216,7 @@ window.document.querySelector('#dialogue-close').click();
 globalThis.__Q_TEST__.teleport(80.2, 307.8);
 assert.equal(globalThis.__Q_TEST__.interact(), true, 'returning the inspection resolves Orin three-stage quest');
 assert.equal(globalThis.__Q_TEST__.snapshot().characterQuests.orin, 3);
+assert.equal(globalThis.__Q_TEST__.snapshot().relationships.orin, 3, 'supporting Orin aligned choice earns the strongest forge bond');
 window.document.querySelector('#dialogue-close').click();
 
 assert.equal(globalThis.__Q_TEST__.defeat('peak_warden'), true);

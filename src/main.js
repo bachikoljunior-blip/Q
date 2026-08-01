@@ -11,7 +11,8 @@ import {
   playerStats,
   questText,
   regionAt,
-  riverCenter
+  riverCenter,
+  upgradeCostFor
 } from './core.js';
 import { Game } from './game.js';
 import { Sound } from './audio.js';
@@ -331,8 +332,7 @@ function renderCamp() {
   box.replaceChildren();
   for (const [kind, label] of Object.entries(labels)) {
     const level = data.progress.upgrades[kind];
-    const crystalCost = level + 1;
-    const coinCost = 25 + level * 25;
+    const { crystalCost, coinCost } = upgradeCostFor(data.progress, kind);
     const button = document.createElement('button');
     button.className = 'upgrade-card';
     button.disabled = level >= 5;

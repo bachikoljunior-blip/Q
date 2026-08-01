@@ -18,6 +18,7 @@ import {
   regionAt,
   respawnCoinLossFor,
   terrainHeight,
+  upgradeCostFor,
   xpForLevel
 } from './core.js';
 import { animateCreature, animateHumanoid, createCreature, createHumanoid } from './actors.js';
@@ -855,6 +856,7 @@ export class Game {
       this.pendingChoice = null;
       if (stage === 2) {
         this.progress.characterQuests.orin = 3;
+        this.progress.relationships.orin = this.progress.choices.marsh === 'water_ward' ? 3 : 2;
         this.refreshNarrativeState();
         this.checkpoint('orin-sluice-return');
         this.cb.dialogue({
@@ -1041,8 +1043,7 @@ export class Game {
   upgrade(kind) {
     if (!this.progress || !['vigor', 'edge', 'stride'].includes(kind)) return { ok: false, reason: 'invalid' };
     const level = this.progress.upgrades[kind] || 0;
-    const crystalCost = level + 1;
-    const coinCost = 25 + level * 25;
+    const { crystalCost, coinCost } = upgradeCostFor(this.progress, kind);
     if (level >= 5) return { ok: false, reason: 'max' };
     if (this.progress.crystals < crystalCost || this.progress.coins < coinCost) return { ok: false, reason: 'cost', crystalCost, coinCost };
     this.progress.crystals -= crystalCost;

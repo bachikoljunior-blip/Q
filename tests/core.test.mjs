@@ -23,6 +23,7 @@ import {
   respawnCoinLossFor,
   rng,
   terrainHeight,
+  upgradeCostFor,
   xpForLevel
 } from '../src/core.js';
 import { load, reset, save } from '../src/storage.js';
@@ -192,6 +193,16 @@ test('character quest planner returns only the next coherent staged task', () =>
   assert.equal(characterTaskFor(progress).id, 'ilya_echo');
   progress.characterQuests.ilya = 3;
   assert.equal(characterTaskFor(progress), null);
+});
+
+test('Orin relationship discounts the displayed and charged forge cost', () => {
+  const progress = structuredClone(DEFAULT_SAVE.progress);
+  assert.deepEqual(upgradeCostFor(progress, 'edge'), { crystalCost: 1, coinCost: 25 });
+  progress.upgrades.edge = 2;
+  progress.relationships.orin = 2;
+  assert.deepEqual(upgradeCostFor(progress, 'edge'), { crystalCost: 3, coinCost: 65 });
+  progress.relationships.orin = 3;
+  assert.deepEqual(upgradeCostFor(progress, 'edge'), { crystalCost: 3, coinCost: 60 });
 });
 
 test('storage migrates safely and tolerates corrupt or unavailable data', () => {
