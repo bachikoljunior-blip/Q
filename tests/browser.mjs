@@ -140,6 +140,11 @@ const enemiesBeforeCombat = globalThis.__Q_TEST__.snapshot().enemyCount;
 globalThis.__Q_TEST__.teleport(-185, 52);
 for (let strike = 0; strike < 3; strike += 1) { globalThis.__Q_TEST__.attack(); globalThis.__Q_TEST__.tick(.52); }
 assert.ok(globalThis.__Q_TEST__.snapshot().enemyCount < enemiesBeforeCombat, 'normal sword combat defeats a roaming creature');
+const poiseBefore = globalThis.__Q_TEST__.enemy('mossfang_2').poise;
+assert.equal(globalThis.__Q_TEST__.strike('mossfang_2', 7), true, 'local strike reaches the real enemy damage path');
+assert.equal(globalThis.__Q_TEST__.enemy('mossfang_2').poise, poiseBefore - 7, 'enemy poise records accumulated pressure');
+globalThis.__Q_TEST__.tick(1.5);
+assert.ok(globalThis.__Q_TEST__.enemy('mossfang_2').poise > poiseBefore - 7, 'poise recovers after its interruption window');
 
 globalThis.__Q_TEST__.grant({ coins: 200, crystals: 5 });
 globalThis.__Q_TEST__.teleport(12, 279);

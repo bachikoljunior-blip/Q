@@ -437,6 +437,7 @@ if (localTest) Object.defineProperty(globalThis, '__Q_TEST__', { value: Object.f
   interact: () => game.interact(),
   choose: id => game.chooseDialogue(id),
   defeat: id => game.testDefeat(id),
+  strike: (id, amount) => game.testStrike(id, amount),
   tick: seconds => game.testTick(seconds),
   attack: () => game.attack(),
   dodge: () => game.dodge(),

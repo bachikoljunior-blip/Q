@@ -83,6 +83,14 @@ const ENEMY_BEHAVIORS = Object.freeze({
   crown: Object.freeze({ activation: 98, speed: 8.1, attackRange: 9.2, windup: 1.18, active: .42, recovery: .92, lunge: 14, damage: 1.35 })
 });
 
+function poiseFor(enemy) {
+  if (enemy.final) return 112;
+  if (enemy.guardian) return 68;
+  if (enemy.type === 'sentinel') return 34;
+  if (enemy.type === 'stalker') return 24;
+  return 18;
+}
+
 const emptyCallbacks = {
   status() {}, hud() {}, toast() {}, dialogue() {}, choice() {}, ending() {}, death() {}, save() {}, discovery() {}, quality() {}, fatal() {}
 };
@@ -398,6 +406,9 @@ export class Game {
       const enemy = {
         ...spec,
         maxHp: spec.hp,
+        maxPoise: poiseFor(spec),
+        poise: poiseFor(spec),
+        poiseRecoveryDelay: 0,
         alert: false,
         dead: false,
         locked,
@@ -583,6 +594,8 @@ export class Game {
   damageEnemy(enemy, amount) {
     if (enemy.dead) return;
     enemy.hp -= amount;
+    enemy.poise = Math.max(0, enemy.poise - amount);
+    enemy.poiseRecoveryDelay = 1.15;
     enemy.flash = .17;
     enemy.alert = true;
     this.sound?.event?.('hit', enemy.guardian || enemy.final ? 1.2 : 1);
@@ -630,6 +643,8 @@ export class Game {
         enemy.mesh.visible = false;
         continue;
       }
+      enemy.poiseRecoveryDelay = Math.max(0, enemy.poiseRecoveryDelay - dt);
+      if (enemy.poiseRecoveryDelay <= 0) enemy.poise = Math.min(enemy.maxPoise, enemy.poise + enemy.maxPoise * .28 * dt);
       const behavior = ENEMY_BEHAVIORS[enemy.type] || ENEMY_BEHAVIORS.beast;
       let dx = player.x - enemy.x, dz = player.z - enemy.z, distance = Math.hypot(dx, dz) || 1;
       const renderRange = enemy.final ? 340 : enemy.guardian ? 280 : 220;
@@ -1268,6 +1283,8 @@ export class Game {
       x: enemy.x,
       z: enemy.z,
       hp: enemy.hp,
+      poise: enemy.poise,
+      maxPoise: enemy.maxPoise,
       presentation: enemy.mesh.userData.rig?.kind || 'unknown',
       articulatedParts: (enemy.mesh.userData.rig?.legs?.length || 0) + (enemy.mesh.userData.rig?.arms?.length || 0)
     };
@@ -1289,6 +1306,14 @@ export class Game {
     enemy.locked = false;
     enemy.mesh.visible = true;
     this.defeatEnemy(enemy);
+    return true;
+  }
+
+  testStrike(id, amount = 1) {
+    const enemy = this.enemies.find(item => item.id === id && !item.dead && !item.locked);
+    const damage = Number(amount);
+    if (!enemy || !Number.isFinite(damage) || damage <= 0) return false;
+    this.damageEnemy(enemy, damage);
     return true;
   }
 
