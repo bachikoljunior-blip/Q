@@ -106,6 +106,7 @@ frames(2);
 assert.ok(globalThis.__Q_TEST__.snapshot().stamina < stamina, 'dodge consumes stamina');
 window.document.querySelector('#attack').dispatchEvent(new window.PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: 9 }));
 frames(3);
+globalThis.__Q_TEST__.tick(.4);
 
 globalThis.__Q_TEST__.teleport(-185, 56);
 const healthBeforeTelegraph = globalThis.__Q_TEST__.snapshot().health;
@@ -145,6 +146,14 @@ assert.equal(globalThis.__Q_TEST__.strike('mossfang_2', 7), true, 'local strike 
 assert.equal(globalThis.__Q_TEST__.enemy('mossfang_2').poise, poiseBefore - 7, 'enemy poise records accumulated pressure');
 globalThis.__Q_TEST__.tick(1.5);
 assert.ok(globalThis.__Q_TEST__.enemy('mossfang_2').poise > poiseBefore - 7, 'poise recovers after its interruption window');
+globalThis.__Q_TEST__.teleport(-310, -161);
+globalThis.__Q_TEST__.tick(.08);
+assert.equal(globalThis.__Q_TEST__.enemy('mossfang_3').state, 'windup');
+const healthBeforeInterrupt = globalThis.__Q_TEST__.snapshot().health;
+assert.equal(globalThis.__Q_TEST__.strike('mossfang_3', 18), true);
+assert.equal(globalThis.__Q_TEST__.enemy('mossfang_3').state, 'stagger', 'breaking poise interrupts an enemy attack windup');
+globalThis.__Q_TEST__.tick(.6);
+assert.equal(globalThis.__Q_TEST__.snapshot().health, healthBeforeInterrupt, 'a staggered attack cannot connect during the counter window');
 
 globalThis.__Q_TEST__.grant({ coins: 200, crystals: 5 });
 globalThis.__Q_TEST__.teleport(12, 279);

@@ -30,6 +30,7 @@ export class Sound {
     case'attack':this.tone(310,110,.1,'sawtooth',.07*v);break;
     case'dodge':this.tone(140,420,.14,'triangle',.06*v);break;
     case'hit':this.tone(118,72,.08,'square',.08*v);this.tone(560,280,.06,'triangle',.04*v,.02);break;
+    case'stagger':this.tone(94,47,.18,'square',.11*v);this.tone(420,180,.12,'triangle',.055*v,.04);break;
     case'hurt':this.tone(170,46,.3,'sawtooth',.16*v);break;
     case'pickup':this.tone(560,820,.1,'sine',.07*v);break;
     case'heal':this.tone(260,520,.25,'sine',.07*v);this.tone(390,780,.22,'triangle',.04*v,.08);break;

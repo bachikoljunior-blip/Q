@@ -594,12 +594,29 @@ export class Game {
   damageEnemy(enemy, amount) {
     if (enemy.dead) return;
     enemy.hp -= amount;
-    enemy.poise = Math.max(0, enemy.poise - amount);
-    enemy.poiseRecoveryDelay = 1.15;
+    const canPressure = enemy.state !== 'stagger';
+    const poiseBefore = enemy.poise;
+    if (canPressure) {
+      enemy.poise = Math.max(0, enemy.poise - amount);
+      enemy.poiseRecoveryDelay = 1.15;
+    }
     enemy.flash = .17;
     enemy.alert = true;
     this.sound?.event?.('hit', enemy.guardian || enemy.final ? 1.2 : 1);
-    if (enemy.hp <= 0) this.defeatEnemy(enemy);
+    if (enemy.hp <= 0) {
+      this.defeatEnemy(enemy);
+      return;
+    }
+    const interruptible = ['approach', 'windup', 'active'].includes(enemy.state);
+    if (interruptible && poiseBefore > 0 && enemy.poise <= 0) {
+      const duration = enemy.final ? .38 : enemy.guardian ? .5 : .68;
+      enemy.state = 'stagger';
+      enemy.stateTimer = duration;
+      enemy.stateTotal = duration;
+      enemy.attackConnected = false;
+      enemy.poiseRecoveryDelay = duration + .45;
+      this.sound?.event?.('stagger', enemy.guardian || enemy.final ? 1.25 : 1);
+    }
   }
 
   defeatEnemy(enemy) {
@@ -716,6 +733,14 @@ export class Game {
         enemy.alert = true;
         enemy.stateTimer -= dt;
         if (enemy.stateTimer <= 0) enter(distance > 175 ? 'idle' : 'approach');
+      } else if (enemy.state === 'stagger') {
+        enemy.alert = true;
+        enemy.stateTimer -= dt;
+        if (enemy.stateTimer <= 0) {
+          enemy.poise = enemy.maxPoise;
+          enemy.poiseRecoveryDelay = .45;
+          enter(distance > 175 ? 'idle' : 'approach');
+        }
       }
 
       if ((enemy.guardian || enemy.final) && enemy.alert) boss = enemy;
@@ -755,8 +780,8 @@ export class Game {
       }
       const body = enemy.mesh.getObjectByName('body');
       if (body?.material) {
-        body.material.emissive.setHex(enemy.flash > 0 ? 0xffffff : enemy.state === 'windup' ? 0x8a3309 : enemy.state === 'active' ? 0xff7a18 : 0x000000);
-        body.material.emissiveIntensity = enemy.flash > 0 ? 1 : enemy.state === 'active' ? .9 : enemy.state === 'windup' ? .48 : 0;
+        body.material.emissive.setHex(enemy.flash > 0 ? 0xffffff : enemy.state === 'stagger' ? 0x2c8b83 : enemy.state === 'windup' ? 0x8a3309 : enemy.state === 'active' ? 0xff7a18 : 0x000000);
+        body.material.emissiveIntensity = enemy.flash > 0 ? 1 : enemy.state === 'active' ? .9 : enemy.state === 'stagger' ? .68 : enemy.state === 'windup' ? .48 : 0;
       }
       enemy.flash = Math.max(0, enemy.flash - dt);
     }
