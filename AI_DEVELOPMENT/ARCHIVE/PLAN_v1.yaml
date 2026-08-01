@@ -1,0 +1,8 @@
+schema_version: 1
+nodes:
+  - {id: Q-DESIGN, title: "Bounded mobile game design", status: verified}
+  - {id: Q-CORE, title: "Touch physics, combat, enemies, progression", status: awaiting_verification, depends_on: [Q-DESIGN]}
+  - {id: Q-POLISH, title: "Visuals, audio, UI, save and accessibility", status: awaiting_verification, depends_on: [Q-CORE]}
+  - {id: Q-QA, title: "Static, unit and browser interaction gates", status: active, depends_on: [Q-CORE, Q-POLISH]}
+  - {id: Q-RELEASE, title: "GitHub integration and Pages verification", status: ready_after_Q-QA, depends_on: [Q-QA]}
+active_frontier: [Q-QA]

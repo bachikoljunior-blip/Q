@@ -1,5 +1,5 @@
-# Project Q operating protocol
+# Superseded operating record
 
-Repository files and verified runtime behavior are the source of truth. The latest explicit user instruction has highest priority. Work stays project-scoped, reversible, free of secrets, and independent of external runtime APIs. A logical session remains active until the user explicitly ends it.
+Status: `superseded` by Adaptive Edition 2.2 on 2026-08-01.
 
-Resume by reading `AI_DEVELOPMENT/STATE.yaml`, `PLAN.yaml`, `ACCEPTANCE.yaml`, and relevant decisions/test history. Do not mark work complete until applicable automated checks, user-surface interaction, regression checks, and public Pages verification have actually passed. Record failures honestly and preserve the exact continuation point after meaningful changes.
+The active protocol is `AI_DEVELOPMENT/PROTOCOL.md`; begin with `START_HERE.md`. The exact legacy text is preserved at `AI_DEVELOPMENT/ARCHIVE/PROJECT_OPERATING_PROTOCOL_v1.md`.

@@ -1,22 +1,146 @@
-schema_version: 1
-project: Q
-repository: bachikoljunior-blip/Q
-objective: "Publish an original, polished smartphone game playable through GitHub Pages."
-session_status: active
-verified_start_state: "Public empty repository with main as default branch."
-game: "Q: STARTHREAD"
-implementation_status: publicly_deployed_and_verified
-verified_current_state:
-  public_url: "https://bachikoljunior-blip.github.io/Q/"
-  pull_request: "https://github.com/bachikoljunior-blip/Q/pull/1"
-  release_commit: "eaa771528d5306af1f3f6f067cfcfffdd92a0683"
-  verified_at: "2026-07-31"
-completed:
-  - touch-first gravity-tether core loop
-  - eight-rift progression and two bosses
-  - upgrades, procedural audio, settings, records, victory and failure flows
-  - GitHub Pages deployment from main
-  - public Chrome smoke test through tutorial, play, pause, and resume
-active: "No release blocker; logical session remains active until the user explicitly ends it."
-blocked: []
-next_start: "Continue from the deployed public build and prioritize verified user feedback or a physical-device compatibility run."
+protocol_version: "2.2"
+
+project:
+  id: Q
+  repository: bachikoljunior-blip/Q
+  visibility: public
+  verified_baseline_status: complete_verified
+
+logical_session:
+  id: q-open-world-2026-08-01
+  lifecycle: active
+  explicit_end_required: true
+
+migration:
+  from: legacy_project_operating_protocol_v1
+  status: complete_unverified
+  checkpoint: AI_DEVELOPMENT/ARCHIVE/MIGRATION_CHECKPOINT_2026-08-01.md
+  legacy_archives:
+    - AI_DEVELOPMENT/ARCHIVE/PROJECT_OPERATING_PROTOCOL_v1.md
+    - AI_DEVELOPMENT/ARCHIVE/STATE_v1.yaml
+    - AI_DEVELOPMENT/ARCHIVE/PLAN_v1.yaml
+    - AI_DEVELOPMENT/ARCHIVE/ACCEPTANCE_STARTHREAD_v1.yaml
+
+objective:
+  id: Q-OPEN-WORLD-RPG
+  statement: "Replace the published Q: STARTHREAD build with a mobile open-world RPG containing a broad, explorable natural world and other varied meaningful regions and systems."
+  status: prepared_not_applied
+  key_requirements:
+    - open-world RPG rather than an arena action game
+    - broad natural spaces plus varied settlements, ruins, caves, coasts, rivers, and mountains
+    - touch-first smartphone play and GitHub Pages delivery
+    - meaningful exploration, combat, progression, quests, persistence, and a finishable journey
+    - performance and layout appropriate for iPhone SE third generation
+  acceptance_evidence: AI_DEVELOPMENT/REQUIREMENTS.yaml
+
+execution:
+  selected_rigor: STRICT
+  active_work:
+    description: "Complete and verify the Adaptive 2.2 migration before resuming the high-impact product replacement."
+    status: complete_unverified
+    allowed_scope:
+      - canonical operating files and archives
+      - bounded F9 enforcement and deployment-trigger correction
+      - no product behavior change during the migration transaction
+    prohibited_changes:
+      - no deletion or completion claim for open PR 3
+      - no public product deployment solely because operating documents changed
+      - no unattended delivery while all four F9 gates and automatic revert are absent
+  last_verified_checkpoint:
+    status: complete_verified
+    revision: ac6f57f01c569201e453d84dad1e9bd02fe7285c
+    result: "Remote main and the published STARTHREAD baseline; local npm run check and the recorded 2026-07-31 public primary journey passed. On 2026-08-01 the live index was fetched again and was byte-identical to main's index.html."
+    evidence:
+      - AI_DEVELOPMENT/TEST_HISTORY.md
+      - AI_DEVELOPMENT/ARCHIVE/ACCEPTANCE_STARTHREAD_v1.yaml
+  modified_but_unverified:
+    - status: prepared_not_applied
+      artifacts: "package.json, package-lock.json, src/core.js, vendor/three.module.js, vendor/THREE-LICENSE.txt"
+      recovery: "local stash named 'pre-migration open-world RPG work 2026-08-01' and /tmp/Q_pre_migration_product.patch"
+      limitation: "Partial open-world core work has not been executed."
+  current_blockers:
+    - status: blocked
+      item: "GitHub CLI gh is absent; use the connected GitHub app or ordinary git where capability is verified."
+    - status: blocked
+      item: "Branch-protection and required-status-check configuration is not exposed by the current GitHub connector and must not be assumed."
+  current_uncertainty:
+    - exact commit served by Pages is not reachable from the current public artifact
+    - physical iPhone and Android behavior remains unverified
+    - open PR 3 overlaps the product replacement but contains lifecycle behaviors that remain applicable
+  exact_next_action: "Run the final normal floor and regression gates, commit and push agent/adaptive-2.2-migration, create and inspect its PR/checks, merge it without a Pages product deployment, reconcile remote main, then restore agent/open-world-rpg and its stash."
+
+modules:
+  activated: []
+  note: "All nine Appendix M texts are stored as Layer 3. None was activated by the migration; F9 work was performed directly under the mandatory floor."
+
+floor:
+  last_check:
+    status: complete_unverified
+    at: "2026-08-01T13:54:54+09:00"
+    note: "Canonical validation, STARTHREAD regression flow, rollback patch check, clean resume simulation, YAML parse, deployment-path falsification, and all four deliberate gate failures passed locally; remote application remains outstanding."
+  independence_level_used: C
+  review_outcome: passed
+  reviewed_at: "2026-08-01T13:56:53+09:00"
+  review_scope: "Adaptive 2.2 canonical files, legacy preservation, loader, F9 scripts/workflows, rollback, no-product-deploy path filter, STARTHREAD regression baseline, and live-index byte comparison."
+  review_limitation: "Same-agent separate falsification pass; no separate agent was used, branch protection is not exposed, and F6 cannot run against the legacy public artifact because it has no release identifier."
+  skips: []
+  waivers: []
+  enforcement:
+    f2_state_update_check:
+      status: prepared_not_applied
+      mechanism: "tools/floor-gates.mjs and quality/pages workflow steps reject protected changes without STATE.yaml; deliberate F2 failure observed locally; branch is not yet remote and required-check protection is unverified."
+    f3_execution_check:
+      status: prepared_not_applied
+      mechanism: "Quality and Pages workflows execute protocol validation plus npm run check; deliberate injected F3 failure and normal regression pass observed locally; remote required-check protection is unverified."
+    f5_review_record_check:
+      status: prepared_not_applied
+      mechanism: "tools/floor-gates.mjs requires A/B/C, passed outcome, and a changed review record; deliberate F5 failure observed locally; remote required-check protection is unverified."
+    f6_public_revision_check:
+      status: prepared_not_applied
+      mechanism: "tools/verify-public.mjs and the post-deploy job compare release.json with public meta; deliberate mismatch failure observed locally; legacy public build exposes no identifier and no real F6 pass exists."
+    revert_mechanism:
+      status: blocked
+      mechanism: "No safe automatic Pages revert is installed or verified."
+    last_observed_failing:
+      - {item: F2, status: complete_verified, evidence: "node tools/floor-gates.mjs --deliberate-failure F2 exited 1 and named missing STATE.yaml"}
+      - {item: F3, status: complete_verified, evidence: "FLOOR_TEST_BAD=F3 npm run check exited 1 inside the real validation path"}
+      - {item: F5, status: complete_verified, evidence: "node tools/floor-gates.mjs --deliberate-failure F5 exited 1 and named the missing review record"}
+      - {item: F6, status: complete_verified, evidence: "node tools/verify-public.mjs --deliberate-failure exited 1 on a mismatched release identifier"}
+    unenforced_items: [F2, F3_required_merge_gate, F5, F6]
+    unattended_allowed: false
+
+recovery:
+  last_known_good_revision_or_artifact: ac6f57f01c569201e453d84dad1e9bd02fe7285c
+  rollback_or_recovery_method: "For migration, restore legacy files from AI_DEVELOPMENT/ARCHIVE or reset the migration branch to ac6f57f. For product work, return to agent/open-world-rpg and apply the named stash; use the binary /tmp patch only if the stash is unavailable."
+
+remote:
+  repository: bachikoljunior-blip/Q
+  default_branch: main
+  default_branch_revision: ac6f57f01c569201e453d84dad1e9bd02fe7285c
+  branch: agent/adaptive-2.2-migration
+  branch_remote_status: prepared_not_applied
+  pull_requests:
+    - number: 3
+      url: https://github.com/bachikoljunior-blip/Q/pull/3
+      head: agent/two-round-mobile-polish
+      revision: e7c61c8e32413fbae096a4d7c5b51545c8458c30
+      status: complete_unverified
+      note: "Local checks recorded as passed in the PR, but merge and updated public verification remain incomplete."
+  migration_pull_request: null
+  deployed_revision: "exact served revision unavailable; product content corresponds to the eaa7715 STARTHREAD release and main is ac6f57f"
+  verified_public_revision: "STARTHREAD index content byte-matched main at SHA-256 7cbc9ae4edb79024fbac94b981ab79f1b72800e35d03bfe4dc5e5d63d340bb9e on 2026-08-01; no embedded commit SHA"
+  public_url: https://bachikoljunior-blip.github.io/Q/
+  status: complete_verified
+
+automation:
+  unattended_chain:
+    status: complete_verified
+    result: "No scheduled, self-restarting, or looping project chain found."
+  pages_workflow:
+    status: complete_verified
+    trigger: "push to main or manual dispatch"
+    running_at_migration_check: false
+    unattended_delivery_allowed: false
+
+updated_at: "2026-08-01T13:56:53+09:00"
+reconciliation_status: complete_verified
