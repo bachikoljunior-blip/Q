@@ -51,7 +51,7 @@ objective:
 execution:
   selected_rigor: STRICT
   active_work:
-    description: "Repair and verify the iterative Pages publication record, then continue raising WILDBOUND's narrative and in-world presentation toward the preserved premium benchmark without hiding the remaining failures."
+    description: "Continue raising the publicly deployed WILDBOUND checkpoint's narrative and in-world presentation toward the preserved premium benchmark without hiding the remaining failures."
     status: complete_unverified
     allowed_scope:
       - Three.js open-world renderer, terrain, nature, destinations, player, combat, RPG progression, quests, saves, UI, audio, tests, and release metadata
@@ -61,17 +61,17 @@ execution:
       - no unattended delivery while all four F9 gates and automatic revert are absent
   last_verified_checkpoint:
     status: complete_verified
-    revision: "PR 6 head c0fd9b33c260389e55d6bc707e942c508340482a, merged to main as 1c12511b0dc06ee9b3f03147a13fe4161bdaffbc"
-    result: "The continuous Three.js valley, mixed-choice journey, combat/progression/save-integrity systems, generated assets, bundled Japanese glyph subset, persisted 667 × 375 evidence, and session-end delivery policy passed local checks and remote Quality floor run 30692305787 before PR 6 merged. Dynamic branch-based Pages run 30692355529 then published the WILDBOUND title and source from main."
+    revision: "Main b26552e8d492036b217053127517a4ae1609b627; public release ID wildbound-2026-08-01-r1"
+    result: "PR 7 repaired the real branch-based Pages route after Quality floor run 30692768125 passed. Dynamic Pages run 30692798119 and publication-verifier run 30692798350 both completed successfully. The served index and release.json matched wildbound-2026-08-01-r1, the public title/fallback loaded, and manual CLI verification passed on the first attempt."
     evidence:
       - AI_DEVELOPMENT/EVIDENCE/WILDBOUND_QA_2026-08-01.md
       - AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml
       - AI_DEVELOPMENT/REQUIREMENTS.yaml
   modified_but_unverified:
-    - status: complete_unverified
-      artifacts: "WILDBOUND product replacement on main 1c12511, locally bundled Three.js runtime, generated visual assets, tests, Pages source, and related documentation"
-      recovery: "Revert 1c12511 to remote main 4e6076d and let branch-based Pages redeploy the prior STARTHREAD source if the WILDBOUND checkpoint has a blocking public regression."
-      limitation: "Dynamic Pages published WILDBOUND, but its release identifier remained __BUILD_REVISION__, the custom verifier failed, cloud Chrome exposed no WebGL, and physical or benchmark-complete criteria remain open."
+    - status: complete_verified
+      artifacts: "Iterative WILDBOUND publication on main b26552e with locally bundled Three.js runtime, generated visual assets, tests, stable release metadata, and polling public verification"
+      recovery: "Revert b26552e to 1c12511 if only the verifier repair regresses, or revert the WILDBOUND merge to 4e6076d if the public product has a blocking regression; let branch-based Pages redeploy and verify recovery."
+      limitation: "The exact release ID, page, and no-WebGL fallback are verified. This cloud browser disables WebGL, so a representative public 3D journey remains prepared_not_executed; physical and benchmark-complete criteria also remain open."
     - status: prepared_not_executed
       artifacts: "Physical iPhone SE third-generation complete touch route, frame pacing, memory proxy, orientation/background recovery, and offline reload"
       recovery: "Keep the limitation explicit after iterative publication and perform the physical route when a representative device becomes available."
@@ -90,16 +90,15 @@ execution:
       limitation: "Generated portraits and ground texture improve cohesion, but primitive live models, compact arcs, animation, and audio remain below the recorded bar."
   current_blockers:
     - status: blocked
-      item: "Custom Pages verification run 30692355980 failed because main-push protocol validation required STATE.yaml to contain the self-referential current merge SHA; dynamic Pages served the literal __BUILD_REVISION__ placeholder. The fix branch replaces that with a durable release ID, main-parent continuity validation, and a polling public verifier."
-    - status: blocked
       item: "Branch-protection and required-status-check configuration is not exposed by the current GitHub connector and must not be assumed."
     - status: blocked
       item: "Physical iPhone SE third-generation evidence cannot be executed in the current environment; this remains an acceptance limitation but no longer defers the user-required iterative publication."
+    - status: blocked
+      item: "The available public cloud Chrome reports GL_VENDOR and GL_RENDERER as Disabled, so it verifies the production fallback but cannot execute the public 3D primary journey. Local WebGL and full DOM journeys remain the latest gameplay evidence; revisit on a WebGL-capable public browser."
   current_uncertainty:
-    - dynamic branch-based Pages published the WILDBOUND source from main 1c12511, but exact revision verification remains incomplete until the release-ID repair is deployed
     - SwiftShader frame timing does not predict physical iPhone or Android performance
     - open PR 3 remains open; applicable input lifecycle, safe-area, reduced-motion, and settings behavior has been carried forward without claiming PR 3 complete
-  exact_next_action: "Validate and merge agent/pages-publication-fix, wait for the branch-based Pages deployment, require the polling F6 workflow to verify release ID wildbound-2026-08-01-r1, execute a representative public journey on a WebGL-capable surface, reconcile the exact merge/deployment state, then continue PRESENTATION-PASS and NARRATIVE-CONSEQUENCE next run."
+  exact_next_action: "At the next run, verify main and the public release ID still match b26552e / wildbound-2026-08-01-r1, then resume PRESENTATION-PASS and NARRATIVE-CONSEQUENCE by replacing primitive in-world character/enemy presentation and expanding Mira, Orin, and Ilya through intervening playable scenes; finish with the required merge, Pages publication, F6 check, and updated handoff."
 
 modules:
   activated: []
@@ -114,16 +113,17 @@ modules:
 floor:
   last_check:
     status: complete_verified
-    at: "2026-08-01T17:49:11+09:00"
-    note: "PR 6 merged at 1c12511 after Quality floor success and dynamic Pages run 30692355529 published WILDBOUND. The custom verification run 30692355980 honestly failed before release gates because main continuity validation was self-referential; the public release ID also remained a placeholder. The bounded repair uses an explicit release ID, parent-aware main validation, and a polling F6 verifier while preserving every open quality gap."
+    at: "2026-08-01T18:00:27+09:00"
+    note: "PR 7 merged as b26552e after Quality floor run 30692768125. Dynamic branch-based Pages run 30692798119 and verifier run 30692798350 succeeded; manual verification matched wildbound-2026-08-01-r1 on the first attempt. Public cloud Chrome loaded that exact ID and the intentional no-WebGL fallback but cannot execute the 3D journey because WebGL is disabled by the browser environment."
   independence_level_used: C
   review_outcome: passed
-  reviewed_at: "2026-08-01T17:49:11+09:00"
-  review_scope: "The observed PR 6 merge, dynamic branch-based Pages delivery, failed custom verifier, literal public release placeholder, main-push continuity false positive, and the bounded release-ID/polling repair. The review preserves failed premium, narrative, combat-AI, physical-touch, and performance criteria."
+  reviewed_at: "2026-08-01T18:00:27+09:00"
+  review_scope: "The complete PR 6 and PR 7 delivery chain, failed-first publication evidence, parent-aware continuity repair, stable release-ID validation, dynamic Pages and polling-verifier success, public browser title/revision/fallback state, rollback, and exact next-session recovery. The review preserves failed premium, narrative, combat-AI, physical-touch, and performance criteria."
   review_limitation: "Same-agent Level C falsification; separate agents are prohibited in this run. Chromium used SwiftShader and a focused smoke route, not a physical iPhone or complete real-user journey. Premium presentation and story-depth acceptance remain failed."
   skips:
     - "F7 | objective-completion trigger did not fire because AC-WORLD, AC-NARRATIVE, AC-COMBAT-AI, AC-PRESENTATION, AC-PERF, and AC-PAGES are not satisfied | evidence: AI_DEVELOPMENT/REQUIREMENTS.yaml | revisit only before marking the objective complete."
     - "F9 required-check enforcement | could not be completed because gh is absent and no connected tool exposes branch protection or required-status configuration | evidence: gh command missing and tool registry has no protection/ruleset operation | revisit when capability changes."
+    - "F6 representative public 3D journey | the selected public cloud Chrome reports WebGL disabled and renders the intended recovery screen; local real-WebGL and DOM journeys are not substituted for the public route | evidence: public browser console and fallback at wildbound-2026-08-01-r1 | revisit on the next WebGL-capable public browser or physical device."
   waivers: []
   enforcement:
     f2_state_update_check:
@@ -139,9 +139,9 @@ floor:
       active: false
       mechanism: "tools/floor-gates.mjs requires A/B/C, passed outcome, and a changed review record; deliberate local failure and remote good-input pass observed. It is not a verified required merge check."
     f6_public_revision_check:
-      status: prepared_not_applied
-      active: false
-      mechanism: "Branch-based Pages publishes a source-controlled release ID in release.json and the index meta value. The repaired workflow polls both until they match wildbound-2026-08-01-r1 or fails after three minutes. Deliberate mismatch and staged correct-identifier cases were previously executed; a real public pass is pending."
+      status: complete_verified
+      active: true
+      mechanism: "Branch-based Pages publishes a source-controlled release ID in release.json and the index meta value. Run 30692798350 polled until both matched wildbound-2026-08-01-r1 after dynamic Pages run 30692798119; a separate manual check passed on attempt 1. This gate verifies revision and page availability, not a WebGL gameplay journey."
     revert_mechanism:
       status: blocked
       active: false
@@ -151,19 +151,19 @@ floor:
       - {item: F3, status: complete_verified, evidence: "FLOOR_TEST_BAD=F3 npm run check exited 1 inside the real validation path"}
       - {item: F5, status: complete_verified, evidence: "node tools/floor-gates.mjs --deliberate-failure F5 exited 1 and named the missing review record"}
       - {item: F6, status: complete_verified, evidence: "node tools/verify-public.mjs --deliberate-failure exited 1 on a mismatched release identifier"}
-    unenforced_items: [F2, F3_required_merge_gate, F5, F6]
+    unenforced_items: [F2, F3_required_merge_gate, F5]
     unattended_allowed: false
 
 recovery:
-  last_known_good_revision_or_artifact: 4e6076df54b7eb4b2f55a173910e1a48ae67517b
-  rollback_or_recovery_method: "If the iterative WILDBOUND release has a blocking regression, revert main from 1c12511 to 4e6076d, let branch-based Pages redeploy, and verify recovery. Retain local commit ec44979, PR 6 / c0fd9b3, the named pre-migration stash, and /tmp/Q_pre_migration_product.patch until the release-ID repair and public journey pass."
+  last_known_good_revision_or_artifact: b26552e8d492036b217053127517a4ae1609b627
+  rollback_or_recovery_method: "If only the verifier repair regresses, revert b26552e to 1c12511. If WILDBOUND has a blocking public regression, revert the product merge to 4e6076d. In either case, let branch-based Pages redeploy and require the public verifier plus fallback/page check before recovery is complete."
 
 remote:
   repository: bachikoljunior-blip/Q
   default_branch: main
   default_branch_revision_at_migration_completion: 4e6076df54b7eb4b2f55a173910e1a48ae67517b
-  branch: agent/pages-publication-fix
-  branch_remote_status: prepared_not_applied
+  branch: main
+  branch_remote_status: complete_verified
   pull_requests:
     - number: 3
       url: https://github.com/bachikoljunior-blip/Q/pull/3
@@ -195,21 +195,30 @@ remote:
     custom_verification_run: 30692355980
     status: complete_unverified
     note: "Quality floor and dynamic Pages succeeded; exact revision F6 failed because the source placeholder was never replaced and the custom workflow stopped on self-referential main validation."
-  deployed_revision: "WILDBOUND source from main 1c12511 was published by dynamic branch-based Pages run 30692355529."
-  verified_public_revision: "complete_unverified: public title and WILDBOUND source loaded, but release.json and index exposed __BUILD_REVISION__; custom run 30692355980 failed and cloud Chrome had no WebGL."
+  completed_publication_fix_pull_request:
+    number: 7
+    url: https://github.com/bachikoljunior-blip/Q/pull/7
+    head_revision: e9366b70998ce346fe78e706903c51549f2f0db8
+    merged_revision: b26552e8d492036b217053127517a4ae1609b627
+    quality_run: 30692768125
+    dynamic_pages_run: 30692798119
+    public_verification_run: 30692798350
+    status: complete_verified
+  deployed_revision: "Main b26552e published by dynamic branch-based Pages run 30692798119 with release ID wildbound-2026-08-01-r1."
+  verified_public_revision: "wildbound-2026-08-01-r1 matched release.json and index meta in workflow run 30692798350 and a separate manual attempt-1 check; public Chrome loaded the exact ID and intended no-WebGL fallback."
   public_url: https://bachikoljunior-blip.github.io/Q/
-  status: complete_unverified
+  status: complete_verified
 
 automation:
   unattended_chain:
     status: complete_verified
     result: "No scheduled, self-restarting, or looping project chain found."
   pages_workflow:
-    status: failed
+    status: complete_verified
     trigger: "GitHub's dynamic branch-based Pages deployment publishes main; the repository workflow verifies product changes and the served release ID."
     running_at_migration_check: false
-    migration_merge_run: "none; PR 6 dynamic Pages run 30692355529 succeeded, while custom verification run 30692355980 failed before the release gates."
+    migration_merge_run: "none; latest dynamic Pages run 30692798119 and public-verifier run 30692798350 both completed successfully for b26552e."
     unattended_delivery_allowed: false
 
-updated_at: "2026-08-01T17:49:11+09:00"
-reconciliation_status: complete_unverified
+updated_at: "2026-08-01T18:00:27+09:00"
+reconciliation_status: complete_verified

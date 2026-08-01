@@ -40,9 +40,9 @@ These are automated Chromium captures using SwiftShader and touch emulation. The
 ## Remaining limitations
 
 - Physical iPhone SE third-generation touch, frame pacing, memory, orientation/background recovery, and offline reload are `prepared_not_executed`.
-- Public GitHub Pages revision and primary journey are `prepared_not_applied`; the published STARTHREAD build remains the last verified public product.
+- Public revision and page availability are `complete_verified` at release ID `wildbound-2026-08-01-r1`. The available public cloud Chrome has WebGL disabled and correctly renders the recovery screen, so the public 3D primary journey remains `prepared_not_executed`.
 - Premium-presentation review remains `failed`: in-world characters, enemies, buildings, and foliage still expose a procedural primitive-based style, and narrative/animation/audio depth remains below the preserved benchmark.
-- F2, F3, and F5 checks run locally and in workflows but are not independently required merge checks because branch-protection configuration is not exposed. F6 has staged revision evidence but no public pass; automatic revert is absent.
+- F2, F3, and F5 checks run locally and in workflows but are not independently required merge checks because branch-protection configuration is not exposed. The revision/page F6 gate is active; automatic revert and a WebGL-capable public journey remain absent.
 
 ## Iterative publication and verifier repair
 
@@ -50,3 +50,6 @@ These are automated Chromium captures using SwiftShader and touch emulation. The
 - GitHub's configured dynamic branch-based Pages run `30692355529` completed successfully. The public page changed to `Q: WILDBOUND`, and the public source, local assets, and error fallback loaded.
 - Repository workflow run `30692355980` failed honestly during protocol validation. On a `main` push, the validator required `STATE.yaml` to contain the current squash SHA even though a commit cannot contain its own future SHA. The public index and `release.json` also exposed the literal `__BUILD_REVISION__` placeholder because branch-based Pages serves repository source and does not execute the abandoned artifact substitution step.
 - The bounded repair accepts the recorded parent when validation runs on `main`, uses the source-controlled release ID `wildbound-2026-08-01-r1`, bumps the offline cache, and polls the branch-based public site for up to three minutes before deciding F6. Objective-quality failures remain unchanged.
+- PR 7 head `e9366b7` passed Quality floor run `30692768125` and was squash-merged to `main` as `b26552e`.
+- Dynamic Pages run `30692798119` and repository verifier run `30692798350` both succeeded. A separate manual call to `tools/verify-public.mjs` matched `release.json` and the index meta value on attempt 1.
+- Public cloud Chrome loaded `Q: WILDBOUND` with build ID `wildbound-2026-08-01-r1`. Its sandbox reports GL vendor/renderer disabled, and the game displays the intended reload guidance. This is valid fallback and deployment evidence, not a public WebGL journey or physical-device pass.
