@@ -59,7 +59,18 @@ if (pages && !pages.includes('paths:')) failures.push('Pages workflow lacks prod
 
 try {
   const main = execFileSync('git', ['rev-parse', 'origin/main'], { encoding: 'utf8' }).trim();
-  if (!state.includes(main)) failures.push(`state does not preserve verified origin/main ${main}`);
+  const head = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
+  const acceptable = [main];
+  if (head === main) {
+    try {
+      acceptable.push(execFileSync('git', ['rev-parse', 'HEAD^'], { encoding: 'utf8' }).trim());
+    } catch {
+      // A root commit has no parent; the current revision remains the only candidate.
+    }
+  }
+  if (!acceptable.some(revision => state.includes(revision))) {
+    failures.push(`state does not preserve verified main context (${acceptable.join(' or ')})`);
+  }
 } catch (error) {
   failures.push(`cannot resolve origin/main: ${error.message}`);
 }
