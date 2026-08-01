@@ -258,6 +258,7 @@ globalThis.__Q_TEST__.teleport(0, -615);
 assert.equal(globalThis.__Q_TEST__.interact(), true, 'returning the record resolves Ilya three-stage quest');
 assert.equal(globalThis.__Q_TEST__.snapshot().characterQuests.ilya, 3);
 assert.equal(globalThis.__Q_TEST__.snapshot().npcFlags.ilyaTruth, true);
+assert.equal(globalThis.__Q_TEST__.snapshot().relationships.ilya, 3, 'a mixed set of decisions earns Ilya strongest shared-judgment bond');
 window.document.querySelector('#dialogue-close').click();
 snapshot = globalThis.__Q_TEST__.snapshot();
 assert.equal(snapshot.quest.step, '最終章');

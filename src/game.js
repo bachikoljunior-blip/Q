@@ -543,8 +543,9 @@ export class Game {
 
   attack() {
     if (this.status !== 'running' || this.attackCooldown > 0) return false;
+    const cooldown = playerStats(this.progress).attackCooldown;
     this.attackTimer = .38;
-    this.attackCooldown = .48;
+    this.attackCooldown = cooldown;
     this.attackHit = false;
     this.sound?.event?.('attack');
     return true;
@@ -906,6 +907,8 @@ export class Game {
       if (stage === 2) {
         this.progress.characterQuests.ilya = 3;
         this.progress.npcFlags.ilyaTruth = true;
+        const restored = Object.values(this.progress.choices).filter(choice => ['wild_bloom', 'ring_release', 'wind_release'].includes(choice)).length;
+        this.progress.relationships.ilya = restored === 0 || restored === 3 ? 2 : 3;
         this.refreshNarrativeState();
         this.checkpoint('ilya-archive-return');
         this.cb.dialogue({

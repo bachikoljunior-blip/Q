@@ -260,7 +260,8 @@ export function playerStats(progress) {
     power: 18 + (level - 1) * 2.4 + integer(upgrades.edge) * 5 + (p.choices?.peak === 'wind_ward' ? 4 : 0),
     speed: 15.5 + integer(upgrades.stride) * 1.25 + (p.choices?.peak === 'wind_release' ? 1.5 : 0),
     maxStamina: 100 + integer(upgrades.stride) * 12 + (p.choices?.grove === 'wild_bloom' ? 16 : 0),
-    dodgeCost: p.relationships?.mira >= 3 ? 20 : p.relationships?.mira >= 2 ? 22 : 24
+    dodgeCost: p.relationships?.mira >= 3 ? 20 : p.relationships?.mira >= 2 ? 22 : 24,
+    attackCooldown: p.relationships?.ilya >= 3 ? .42 : p.relationships?.ilya >= 2 ? .45 : .48
   };
 }
 

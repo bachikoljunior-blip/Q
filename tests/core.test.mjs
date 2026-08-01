@@ -115,6 +115,7 @@ test('RPG growth and objective progression remain coherent', () => {
   assert.equal(upgraded.power, base.power + 5);
   assert.ok(upgraded.speed > base.speed);
   assert.equal(upgraded.dodgeCost, 24);
+  assert.equal(upgraded.attackCooldown, .48);
   progress.choices.grove = 'wild_bloom';
   assert.equal(playerStats(progress).maxStamina, upgraded.maxStamina + 16);
   assert.equal(herbHealingFor(progress), 30);
@@ -127,6 +128,10 @@ test('RPG growth and objective progression remain coherent', () => {
   assert.equal(playerStats(progress).dodgeCost, 22);
   progress.relationships.mira = 3;
   assert.equal(playerStats(progress).dodgeCost, 20);
+  progress.relationships.ilya = 2;
+  assert.equal(playerStats(progress).attackCooldown, .45);
+  progress.relationships.ilya = 3;
+  assert.equal(playerStats(progress).attackCooldown, .42);
   progress.coins = 200;
   assert.equal(respawnCoinLossFor(progress), 10);
   assert.equal(objectiveFor(progress).label, 'ミラと話す');
