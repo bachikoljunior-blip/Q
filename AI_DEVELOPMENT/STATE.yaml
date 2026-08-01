@@ -68,7 +68,7 @@ execution:
     - status: complete_unverified
       artifacts: "Locally rendered Noto Sans JP WOFF subset, OFL license record, offline cache entry, provenance validation, and payload accounting"
       recovery: "Remove the font-face and font assets together if remote verification fails; the system-font stack remains a functional fallback."
-      limitation: "Local Chromium load and glyph coverage pass and the exact font tree is on draft PR 6 at f9def90; remote workflow and physical-device typography remain unverified."
+      limitation: "Local Chromium load and glyph coverage pass, the exact font tree is on draft PR 6 at f9def90, and remote Quality floor run 30688204245 passed; physical-device typography remains unverified."
     - status: failed
       artifacts: "Premium realistic in-world presentation and deeply developed commercial-scale character/story benchmark"
       recovery: "Continue on agent/open-world-rpg; do not lower the criteria or publish the replacement as benchmark-complete."
@@ -97,8 +97,8 @@ modules:
 floor:
   last_check:
     status: complete_verified
-    at: "2026-08-01T15:39:58+09:00"
-    note: "The exact latest WILDBOUND product tree, including the licensed Japanese font subset, was confirmed on remote revision f9def90 and draft PR 6 without merging or deploying. Local product, forged-progression, focused WebGL/font, and staged-release checks pass; remote Quality floor remains pending."
+    at: "2026-08-01T15:42:39+09:00"
+    note: "The exact WILDBOUND product/font tree is preserved on draft PR 6. Quality floor run 30688204245 passed continuity enforcement, Adaptive 2.2 validation, and npm run check for the head containing that tree. No merge or deployment occurred; physical and premium acceptance remain open."
   independence_level_used: C
   review_outcome: passed
   reviewed_at: "2026-08-01T15:36:12+09:00"
@@ -160,7 +160,9 @@ remote:
       head: agent/open-world-rpg
       product_revision: f9def90a07761007e8b8fe12b5a7f9d449b06f4e
       status: complete_unverified
-      note: "Draft checkpoint with an exact tree match and local gates passed; remote Quality floor is pending. Merge and deployment are blocked by preserved premium narrative/presentation and physical-device criteria."
+      quality_run: 30688204245
+      quality_run_status: complete_verified
+      note: "Draft checkpoint with an exact tree match and local/remote gates passed. Merge and deployment remain blocked by preserved premium narrative/presentation and physical-device criteria."
   migration_pull_request: null
   completed_migration_pull_request:
     number: 4
@@ -191,5 +193,5 @@ automation:
     migration_merge_run: "none; the product-only path filter excluded the operating migration"
     unattended_delivery_allowed: false
 
-updated_at: "2026-08-01T15:39:58+09:00"
+updated_at: "2026-08-01T15:42:39+09:00"
 reconciliation_status: complete_verified
