@@ -84,4 +84,13 @@ The r3 candidate was built as exactly 20 independently committed implementation 
 - The rebuilt OFL Noto Sans JP Regular 400 WOFF covers 601/601 non-icon non-ASCII code points used by r3. Release ID is `wildbound-2026-08-01-r3` and offline cache is v6.
 - Level C deliberate-failure probes for F2 asset/state coupling, F3 execution, F5 review recording, and F6 release identity each exited 1 and named the intended defect.
 
-The objective remains failed against the preserved premium benchmark. R3 is not yet remote-verified in this record; public merge/Pages evidence will be appended only after observation. Blocked-geometry hit rejection, authored character/environment performance, a WebGL-capable public journey, and physical iPhone SE touch/performance remain open.
+The objective remains failed against the preserved premium benchmark. Blocked-geometry hit rejection, authored character/environment performance, a WebGL-capable public journey, and physical iPhone SE touch/performance remain open.
+
+### r3 publication result
+
+- The connected GitHub path recreated the local 22-commit delivery history with per-blob SHA verification. The final remote tree `c64660ccd4375cee32612799bdddf1c114b36748` matched the local r3 tree before `agent/twenty-round-quests-combat` was exposed.
+- PR 11 head `48fdc9b12cea5d636aff5ce07361d3ec1acd5d5e` passed Quality floor run `30719619021` and squash-merged to product main as `078796ecbee87fb29f0ecdd3c5ae25bd807cbe12`.
+- The branch-based Pages surface served `wildbound-2026-08-01-r3`; `tools/verify-public.mjs` matched `release.json` and the index meta value on attempt 1/10.
+- Public SHA-256 comparisons matched `src/core.js` (`b214a0e6f8744d1259cb64c4f3f3df6da072a617efec80e7f35f6d89b23e5370`), `src/game.js` (`059c978e303f3e952b41dfaf3fbe8b6c56335e9f1f5a748e2bc168c0862a6172`), `assets/fonts/q-japanese.woff` (`784f63d6fb20e91966a33574c0cb056b3acc8d897a8beeea5707b1d28ef3e555`), and `sw.js` (`d2c14eb3c99afe77a16050857235f8a5d04772c90cd57e9613ef2814e5d78d75`).
+- Public cloud Chrome loaded title `Q: WILDBOUND`, exact r3 meta, and `src/main.js`, kept `window.__Q_TEST__` undefined, and displayed the intended Japanese recovery screen. Its GL vendor/renderer are disabled, so the public 3D primary journey remains `prepared_not_executed`; extension metadata noise was not attributed to the product.
+- Open PR 3 remained unchanged and unmerged because it targets the superseded STARTHREAD product.

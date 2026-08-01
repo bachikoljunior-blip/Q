@@ -22,7 +22,7 @@ nodes:
     priority: P2
     status: complete_unverified
     depends_on: [WORLD-FOUNDATION]
-    note: "The r3 candidate's complete DOM route passes with poise interruption, guardian phases/specific tactics, legal navigation, progression, three decisions, staged relationship quests, failure/recovery, and an accumulated ending; physical interaction and benchmark depth remain open."
+    note: "The published r3 checkpoint's complete DOM route passes with poise interruption, guardian phases/specific tactics, legal navigation, progression, three decisions, staged relationship quests, failure/recovery, and an accumulated ending; physical interaction and benchmark depth remain open."
   - id: COMPLETE-JOURNEY
     title: "Author and integrate a finishable main journey, side discoveries, final encounter, ending, and continued exploration"
     priority: P2
@@ -40,7 +40,7 @@ nodes:
     priority: P2
     status: failed
     depends_on: [WORLD-FOUNDATION, RPG-SYSTEMS]
-    note: "Role-specific multi-part humanoid and creature rigs with locomotion/combat motion replace the former single-shape actors under a 150-call/118,048-triangle scene estimate. Procedural low-poly construction, basic environment assets, limited animation/audio, and absent real-WebGL r2 inspection remain below the premium bar."
+    note: "Role-specific multi-part humanoid and creature rigs with locomotion/combat motion remain under the r3 route's 170-call/170,000-triangle guard. Procedural low-poly construction, basic environment assets, limited animation/audio, and absent real-WebGL r3 inspection remain below the premium bar."
   - id: MOBILE-POLISH
     title: "Carry forward applicable PR 3 lifecycle behavior and refine UI, audio, accessibility, readability, and small-screen controls"
     priority: P4
@@ -52,5 +52,5 @@ nodes:
     priority: P1
     status: blocked
     depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH, PRESENTATION-PASS]
-    note: "The r3 candidate passes local deterministic, full DOM, license, payload, font-coverage, and structural-budget checks; remote quality, merge, and public r3 verification are pending. Disabled public WebGL plus premium presentation/narrative and physical iPhone evidence keep this node blocked after iterative publication."
+    note: "The r3 checkpoint passes local and remote Quality, full DOM, license, payload, font-coverage, structural-budget, main merge, public release-ID, selected-hash, module/test-boundary, and fallback checks. Disabled public WebGL plus premium presentation/narrative, blocked-hit, and physical iPhone evidence keep this node blocked after iterative publication."
 active_frontier: [PRESENTATION-PASS, NARRATIVE-CONSEQUENCE, QA-RELEASE]

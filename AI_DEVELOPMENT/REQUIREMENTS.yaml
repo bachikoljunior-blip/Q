@@ -65,7 +65,7 @@ acceptance:
     requirement: [R-RPG, R-COMPLETE, R-STORY]
     status: complete_unverified
     result: "Automated and user-surface checks cover tutorial, exploration, interaction, combat, character growth, main-objective transitions, defeat/recovery, final encounter, ending, and post-ending continuation or restart."
-    evidence: "The r3 candidate's npm run check executes the full happy-dom route, including three staged relationship quests, protected climax, relationship council, poise interruption, guardian phases/tactics, and legal navigation; the prior focused real Chromium WebGL menu/world/dialogue/choice smoke passed; full physical user-surface route remains prepared_not_executed"
+    evidence: "The published r3 checkpoint's npm run check executes the full happy-dom route, including three staged relationship quests, protected climax, relationship council, poise interruption, guardian phases/tactics, and legal navigation; PR 11 Quality passed and Pages serves the exact r3 source, while the prior focused real Chromium WebGL menu/world/dialogue/choice smoke and the full physical user-surface route remain the latest gameplay evidence"
   - id: AC-NARRATIVE
     requirement: [R-STORY, R-CONSEQUENCE, R-COMPLETE, R-BENCHMARKS]
     status: failed
@@ -75,12 +75,12 @@ acceptance:
     requirement: [R-RPG, R-BENCHMARKS]
     status: failed
     result: "Recorded representative encounters show readable enemy anticipation/active/recovery phases, immediate synchronized feedback, distinct archetype decisions, legal terrain/range behavior, fair failure, and deterministic protected progression."
-    evidence: "The r3 candidate automates anticipation/active/recovery timing, poise interruption, three health phases, four guardian-specific tactics, terrain/water/leash/house/separation navigation rules, and progression locks. Blocked-geometry hit rejection plus real-user and physical-device combat readability replays remain absent, so this acceptance stays failed."
+    evidence: "The published r3 checkpoint automates anticipation/active/recovery timing, poise interruption, three health phases, four guardian-specific tactics, terrain/water/leash/house/separation navigation rules, and progression locks. Blocked-geometry hit rejection plus real-user and physical-device combat readability replays remain absent, so this acceptance stays failed."
   - id: AC-PRESENTATION
     requirement: [R-PRESENTATION, R-BENCHMARKS]
     status: failed
     result: "Actual gameplay capture shows a unified realistic mobile presentation with authored materials, scale, lighting, atmosphere, character/enemy silhouettes, transitions, effects, and layered audio; no visible default primitives or placeholder content remains."
-    evidence: "The r3 candidate retains role-specific articulated humanoid and creature rigs and adds relationship/phase scenes under the 170-call/170,000-triangle guard; real visual inspection of this revision and the remaining authored-material, animation, environment, and audio bar are still open"
+    evidence: "The published r3 checkpoint retains role-specific articulated humanoid and creature rigs and adds relationship/phase scenes under the 170-call/170,000-triangle guard; the public cloud browser verifies only the intended disabled-WebGL fallback, so real r3 gameplay inspection and the remaining authored-material, animation, environment, and audio bar are still open"
   - id: AC-TOUCH
     requirement: [R-MOBILE]
     status: prepared_not_executed
@@ -95,12 +95,12 @@ acceptance:
     requirement: [R-PERFORMANCE]
     status: prepared_not_executed
     result: "Rendering resolution, geometry, draw calls, entities, particles, audio voices, and updates are bounded; automatic quality reduction executes; physical-device 30 FPS remains required before claiming that device criterion."
-    evidence: "The local r3 candidate passes at 1,556,151 release bytes and 198,958 JS+CSS bytes; its full route remains below the 170-call/170,000-triangle guard and reports 103 calls/114,950 triangles at the post-respawn final snapshot. The prior real WebGL pass observed 94 calls/113,435 triangles and auto-quality fallback. Physical-device frame-time and memory evidence remain absent."
+    evidence: "The published r3 checkpoint passes at 1,556,151 release bytes and 198,958 JS+CSS bytes; its full route remains below the 170-call/170,000-triangle guard and reports 103 calls/114,950 triangles at the post-respawn final snapshot. Public source hashes match, while the prior real WebGL pass observed 94 calls/113,435 triangles and auto-quality fallback. Physical-device frame-time and memory evidence remain absent."
   - id: AC-PAGES
     requirement: [R-MOBILE, R-COMPLETE]
     status: complete_unverified
     result: "The intended revision loads from the public GitHub Pages URL with relative assets, no blocking runtime error, and a verified primary journey."
-    evidence: "Published r2 remains complete_verified at main 4b91e2a and wildbound-2026-08-01-r2. The r3 candidate is locally complete but not yet merged or publicly verified. Public cloud Chrome previously confirmed the exact title/revision/scripts/private test boundary and recovery screen but has WebGL disabled, so the public 3D primary journey remains prepared_not_executed."
+    evidence: "PR 11 passed Quality run 30719619021 and merged as product main 078796e. Pages serves wildbound-2026-08-01-r3; release.json, index meta, core.js, game.js, the font, and sw.js match, and public Chrome confirmed the exact title/module/private-test boundary plus the intended Japanese recovery screen. Its WebGL renderer is disabled, so the public 3D primary journey remains prepared_not_executed."
   - id: AC-LICENSE
     requirement: [R-LICENSE, R-THREE]
     status: complete_verified
