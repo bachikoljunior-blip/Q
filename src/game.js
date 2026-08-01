@@ -770,7 +770,8 @@ export class Game {
       if (item.mesh && !item.mesh.visible) continue;
       const distance = Math.hypot(this.player.position.x - item.x, this.player.position.z - item.z);
       const reach = (item.radius || 5) + 7;
-      if (distance <= reach && (!nearest || distance < nearest.distance)) nearest = { ...item, distance };
+      const priority = item.type === 'story' ? 2 : item.type === 'npc' || item.type === 'final' ? 1 : 0;
+      if (distance <= reach && (!nearest || distance < nearest.distance - .25 || (Math.abs(distance - nearest.distance) <= .25 && priority > nearest.priority))) nearest = { ...item, distance, priority };
     }
     this.nearby = nearest;
     this.targetRing.visible = Boolean(nearest);
@@ -896,17 +897,43 @@ export class Game {
       return true;
     }
     if (item.id === 'ilya_echo') {
-      if (!this.progress.choices.grove || !this.progress.choices.marsh || !this.progress.choices.peak || this.progress.npcFlags?.ilyaTruth || !this.progress.npcFlags?.groveReport || !this.progress.npcFlags?.marshReport) return false;
+      const stage = this.progress.characterQuests?.ilya || 0;
+      if (!this.progress.choices.grove || !this.progress.choices.marsh || !this.progress.choices.peak || ![0, 2].includes(stage) || !this.progress.npcFlags?.groveReport || !this.progress.npcFlags?.marshReport) return false;
       this.progress.npcFlags ||= {};
-      this.progress.npcFlags.ilyaTruth = true;
+      this.progress.characterQuests ||= { mira: 0, orin: 0, ilya: 0 };
       this.status = 'dialogue';
       this.pendingChoice = null;
+      if (stage === 2) {
+        this.progress.characterQuests.ilya = 3;
+        this.progress.npcFlags.ilyaTruth = true;
+        this.refreshNarrativeState();
+        this.checkpoint('ilya-archive-return');
+        this.cb.dialogue({
+          speaker: '初代守印イリヤの残響',
+          text: 'その記録を残したのは私だ。評議会は嵐の被害を隠し、結界を永遠の答えにしようとした。私は三つの印を分け、次の世代が異なる声を持ち寄るまで命令を止められない形にした。ミラとオリン、そしてあなたが戻った今、古い命令を終わらせられる。'
+        });
+        return true;
+      }
+      this.progress.characterQuests.ilya = 1;
       this.refreshNarrativeState();
-      this.checkpoint('ilya-revelation');
+      this.checkpoint('ilya-archive-start');
       const restored = Object.values(this.progress.choices).filter(choice => ['wild_bloom', 'ring_release', 'wind_release'].includes(choice)).length;
       this.cb.dialogue({
         speaker: '初代守印イリヤの残響',
         text: `私は谷を救ったのではない。十二年だけ、決断を先へ送った。印を三つに分けたのは、次の守印が一人で答えを決めないためだ。ミラの怒りも、オリンの恐れも正しい。あなたは${restored >= 2 ? '大地へ返す道を多く選び、その代償を人の手で支えた。' : '里へ残す力を多く選び、その代償を見えないままにしなかった。'} 神殿にいるのは私ではない。答えを止め続ける、私の古い命令だ。終わらせてほしい。`
+      });
+      return true;
+    }
+    if (item.id === 'ilya_archive_echo') {
+      if (this.progress.characterQuests?.ilya !== 1) return false;
+      this.progress.characterQuests.ilya = 2;
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.refreshNarrativeState();
+      this.checkpoint('ilya-archive-found');
+      this.cb.dialogue({
+        speaker: '十二年前の記録',
+        text: '石板には嵐の死者だけでなく、評議会が消した避難路と失敗した水門の名が刻まれている。最後の一行はイリヤの手だ。「守印一人の正しさを、谷の答えにしてはならない」。残響へ記録を届けられる。'
       });
       return true;
     }
