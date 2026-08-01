@@ -100,7 +100,7 @@ acceptance:
     requirement: [R-MOBILE, R-COMPLETE]
     status: complete_unverified
     result: "The intended revision loads from the public GitHub Pages URL with relative assets, no blocking runtime error, and a verified primary journey."
-    evidence: "Dynamic Pages run 30692355529 published the WILDBOUND title from main 1c12511; exact release-ID verification and a WebGL-capable public primary journey remain pending after custom run 30692355980 failed."
+    evidence: "Dynamic Pages run 30692798119 published main b26552e; verifier run 30692798350 and a manual check matched wildbound-2026-08-01-r1. Public cloud Chrome loaded the exact title, revision, scripts, and recovery screen but has WebGL disabled, so the public 3D primary journey remains prepared_not_executed."
   - id: AC-LICENSE
     requirement: [R-LICENSE, R-THREE]
     status: complete_verified
