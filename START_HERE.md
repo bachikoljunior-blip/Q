@@ -24,6 +24,6 @@ Mandatory floor, by trigger:
 - F8 when a floor trigger is skipped or impossible: record one evidence-backed line and whether to revisit.
 - F9 during repeated implementation/delivery when independent gates are possible: enforce F2/F3/F5/F6 with the smallest failing mechanisms and observe deliberate failure before calling a gate active.
 
-Enforcement summary: local F2/F3/F5/F6 failure mechanisms are verified, but remote-required F2/F3/F5 and real-surface F6 remain unapplied or unenforced; unattended delivery is not allowed.
+Enforcement summary: F2/F3/F5 checks are installed and passed one remote PR run, but required-check protection is unavailable through the current tools; real-surface F6 and automatic revert remain absent until a revision-enabled product release; unattended delivery is not allowed.
 
 Resume: inspect `AI_DEVELOPMENT/STATE.yaml`, compare its branch/SHA/PR/deployment and modified-artifact records with Git/GitHub and runtime reality, correct discrepancies, then perform `execution.exact_next_action`. End every project-changing run with the compact floor line from Section 0.3.
