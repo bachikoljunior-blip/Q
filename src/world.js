@@ -6,6 +6,7 @@ import {
   WORLD_POINTS,
   WORLD_SIZE,
   biomeAt,
+  characterTaskFor,
   fbm,
   narrativeSceneFor,
   riverCenter,
@@ -493,6 +494,14 @@ export class World {
     this.storyScenes.mira = { group: mira, actor: miraActor, wild, bound };
     this.interactables.push({ id: 'mira_grove_scene', type: 'story', name: '倒れた柵のミラ', x: -77.2, z: 238.8, radius: 6, mesh: mira, distanceCulled: false });
 
+    const miraTrace = makeScene('MIRA_SCOUT_TRACE', -430, -180);
+    const traceWood = material(0x49372b), traceCloth = material(0x416779, { side: THREE.DoubleSide });
+    addMesh(miraTrace, new THREE.CylinderGeometry(.16, .22, 4.6, 6), traceWood, [0, 2.05, 0], [0, 0, .38]);
+    addMesh(miraTrace, new THREE.PlaneGeometry(2.6, 1.1), traceCloth, [.55, 3.35, 0], [0, .35, -.22]);
+    for (let i = 0; i < 4; i += 1) addMesh(miraTrace, new THREE.DodecahedronGeometry(.45 + i * .08, 0), material(0x77766a), [-1.2 + i * .72, .25, .7 + Math.sin(i) * .3], [i * .2, i, 0]);
+    this.storyScenes.miraTrace = { group: miraTrace };
+    this.interactables.push({ id: 'mira_scout_trace', type: 'story', name: '壊れた斥候標', x: -430, z: -180, radius: 6, mesh: miraTrace, distanceCulled: false });
+
     const orin = makeScene('ORIN_MARSH_AFTERMATH', 76, 310);
     const stone = material(0x79776b), wood = material(0x705039), water = material(0x65a9b3, { transparent: true, opacity: .68, roughness: .25, depthWrite: false });
     addMesh(orin, new THREE.BoxGeometry(14, .8, 5), stone, [0, .25, 0]);
@@ -596,6 +605,7 @@ export class World {
   setNarrativeState(progress = {}) {
     const choices = progress.choices || {};
     const activeScene = narrativeSceneFor(progress)?.id;
+    const activeTask = characterTaskFor(progress)?.id;
     const miraActive = activeScene === 'mira_grove_scene';
     const orinActive = activeScene === 'orin_marsh_scene';
     const ilyaActive = activeScene === 'ilya_echo';
@@ -604,6 +614,7 @@ export class World {
       this.storyScenes.mira.wild.visible = choices.grove === 'wild_bloom';
       this.storyScenes.mira.bound.visible = choices.grove === 'haven_ward';
     }
+    if (this.storyScenes.miraTrace) this.storyScenes.miraTrace.group.visible = activeTask === 'mira_scout_trace';
     if (this.storyScenes.orin) {
       this.storyScenes.orin.group.visible = orinActive;
       this.storyScenes.orin.openChannel.visible = choices.marsh === 'ring_release';

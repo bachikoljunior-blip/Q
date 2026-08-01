@@ -67,7 +67,11 @@ test('quality controls and objective marker change the runnable scene', () => {
   world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: '', peak: '' }, defeated: ['grove_warden'], npcFlags: {} });
   assert.equal(world.storyScenes.mira.group.visible, true);
   assert.equal(world.storyScenes.mira.wild.visible, true);
+  assert.equal(world.storyScenes.miraTrace.group.visible, false);
   assert.equal(world.miraNpc.visible, false, 'Mira moves from the village into the playable aftermath scene');
+  world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: '', peak: '' }, defeated: ['grove_warden'], characterQuests: { mira: 1 }, npcFlags: {} });
+  assert.equal(world.storyScenes.miraTrace.group.visible, true, 'the broken scout marker appears only during Mira stage two');
+  assert.equal(world.interactables.find(item => item.id === 'mira_scout_trace').mesh.visible, true);
   world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: 'water_ward', peak: 'wind_release' }, defeated: ['grove_warden', 'marsh_warden', 'peak_warden'], npcFlags: { groveReport: false, marshReport: false, ilyaTruth: false } });
   assert.equal(world.storyScenes.mira.group.visible, true, 'aftermath scenes remain sequential when several choices are already complete');
   assert.equal(world.storyScenes.orin.group.visible, false);
