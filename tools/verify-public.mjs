@@ -29,17 +29,21 @@ if (args.includes('--deliberate-failure')) {
 
 const publicUrl = valueAfter('--url')?.replace(/\/$/, '');
 const expectedFile = valueAfter('--expected-file') || 'release.json';
+const expectedId = valueAfter('--expected-id');
 if (!publicUrl) {
   console.error('FAIL --url is required');
   process.exit(2);
 }
 
 let expected;
-try {
-  expected = JSON.parse(readFileSync(expectedFile, 'utf8'));
-} catch (error) {
-  console.error(`FAIL cannot read ${expectedFile}: ${error.message}`);
-  process.exit(1);
+if (expectedId) expected = { release_id: expectedId };
+else {
+  try {
+    expected = JSON.parse(readFileSync(expectedFile, 'utf8'));
+  } catch (error) {
+    console.error(`FAIL cannot read ${expectedFile}: ${error.message}`);
+    process.exit(1);
+  }
 }
 
 try {

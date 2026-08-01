@@ -6,29 +6,51 @@ nodes:
     priority: P1
     status: complete_verified
     depends_on: []
+  - id: BENCHMARK-BASELINE
+    title: "Persist the latest concept, element-specific reference games, evidence, criteria, originality boundary, and quality gaps"
+    priority: P2
+    status: complete_verified
+    depends_on: [MIGRATE-2.2]
   - id: WORLD-FOUNDATION
     title: "Build the local Three.js renderer, terrain, biomes, landmarks, streaming budgets, and third-person traversal"
     priority: P2
-    status: prepared_not_applied
-    depends_on: [MIGRATE-2.2]
+    status: complete_unverified
+    depends_on: [MIGRATE-2.2, BENCHMARK-BASELINE]
+    note: "Deterministic construction and focused real WebGL scene/UI capture pass at a small mobile viewport; collision completeness and physical-device budgets remain unverified."
   - id: RPG-SYSTEMS
     title: "Integrate touch combat, enemies, interaction, progression, quests, resources, save migration, failure, and recovery"
     priority: P2
-    status: prepared_not_applied
+    status: complete_unverified
     depends_on: [WORLD-FOUNDATION]
+    note: "The complete DOM route passes with telegraphed combat, progression, three decisions, failure/recovery, and an accumulated ending; physical interaction and benchmark depth remain open."
   - id: COMPLETE-JOURNEY
     title: "Author and integrate a finishable main journey, side discoveries, final encounter, ending, and continued exploration"
     priority: P2
-    status: prepared_not_applied
+    status: complete_unverified
+    depends_on: [RPG-SYSTEMS, NARRATIVE-CONSEQUENCE]
+    note: "A start-to-ending mixed route and post-ending free roam pass automatically; public and physical-device routes remain unexecuted, and narrative depth remains below the preserved benchmark."
+  - id: NARRATIVE-CONSEQUENCE
+    title: "Implement original character arcs, foreshadowing/payoff, delayed consequences, and accumulated ending state"
+    priority: P2
+    status: failed
     depends_on: [RPG-SYSTEMS]
+    note: "Three verified original choice/consequence points alter world state, mechanics, dialogue, journal, final gating, and three ending patterns; character arcs and intervening playable scenes remain too compact for the preserved depth requirement."
+  - id: PRESENTATION-PASS
+    title: "Replace primitive presentation with coherent realistic environment, character, animation, effects, and audio craft within measured mobile budgets"
+    priority: P2
+    status: failed
+    depends_on: [WORLD-FOUNDATION, RPG-SYSTEMS]
+    note: "Ground material, portrait atlas, atmosphere, effects, and responsive UI pass real WebGL inspection, but in-world primitive models and limited animation/audio remain below the premium bar."
   - id: MOBILE-POLISH
     title: "Carry forward applicable PR 3 lifecycle behavior and refine UI, audio, accessibility, readability, and small-screen controls"
     priority: P4
-    status: prepared_not_applied
+    status: complete_unverified
     depends_on: [RPG-SYSTEMS]
+    note: "Lifecycle input clearing, safe-area UI, 52 px menu targets, 54 px action controls, reduced motion, settings, and small-viewport layouts are integrated; physical simultaneous touch remains unexecuted."
   - id: QA-RELEASE
     title: "Execute deterministic, browser, performance, falsification, license, remote-check, deployment, and public-surface gates"
     priority: P1
-    status: prepared_not_applied
-    depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH]
-active_frontier: [WORLD-FOUNDATION]
+    status: blocked
+    depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH, PRESENTATION-PASS]
+    note: "Local deterministic, DOM, real WebGL smoke, license, payload, and staged revision checks pass. Premium presentation/narrative criteria and physical iPhone evidence block release approval."
+active_frontier: [PRESENTATION-PASS, NARRATIVE-CONSEQUENCE, QA-RELEASE]

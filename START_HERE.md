@@ -7,6 +7,7 @@ Canonical files:
 - Rules and full mandatory floor: `AI_DEVELOPMENT/PROTOCOL.md`
 - Active continuation state: `AI_DEVELOPMENT/STATE.yaml`
 - Active requirements and acceptance: `AI_DEVELOPMENT/REQUIREMENTS.yaml`
+- Active concept, element references, criteria, and quality gaps: `AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml`
 - Dependency plan: `AI_DEVELOPMENT/WORK_GRAPH.yaml`
 - Optional procedures: `AI_DEVELOPMENT/MODULES/` (load only when triggered)
 

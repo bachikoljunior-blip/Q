@@ -3,72 +3,109 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-  <meta name="theme-color" content="#050713">
-  <meta name="description" content="指先に重力を置き、光の糸で敵を切り裂く一指操作アクションゲーム。">
-  <title>Q: STARTHREAD</title>
+  <meta name="theme-color" content="#24372f">
+  <meta name="description" content="森、湿原、雪峰、海岸を自由に旅する、モバイル向け3DオープンワールドRPG。">
+  <meta name="build-revision" content="__BUILD_REVISION__">
+  <title>Q: WILDBOUND</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main id="app">
-    <canvas id="canvas" aria-label="ゲーム画面。画面を押すと重力点を作り、機体と重力点を結ぶ光の糸で敵を攻撃します。"></canvas>
+    <canvas id="canvas" aria-label="Q: WILDBOUND 3Dゲーム画面。左のパッドで移動、画面をドラッグしてカメラを操作します。"></canvas>
 
     <div id="hud" class="hud hidden" aria-hidden="true">
-      <header>
-        <div><span>RIFT</span><b id="wave">01 / 08</b></div>
-        <div class="score"><span>SCORE</span><b id="score">0</b></div>
-        <button id="pause" class="icon-button" aria-label="一時停止">Ⅱ</button>
+      <header class="hud-top">
+        <div class="place"><small id="region">風見の里</small><b>LV.<span id="level">1</span></b></div>
+        <div class="quest"><span id="quest-title">谷に目覚めて</span><b id="quest-detail">斥候ミラを探す</b><small><i id="quest-step">0 / 3</i><i id="objective-distance">0m</i></small></div>
+        <button id="pause" class="round-button" aria-label="メニューを開く">☰</button>
       </header>
-      <div id="boss-hud" class="boss-hud hidden"><span id="boss-name"></span><i><b id="boss-life"></b></i></div>
-      <div id="combo" class="combo"></div>
-      <footer>
-        <div><span>HULL</span><div id="hull" class="hull"></div></div>
-        <div class="energy"><span>TETHER</span><i><b id="energy"></b></i></div>
-      </footer>
+      <div class="vitals">
+        <label><span>生命</span><i class="meter health"><b id="health"></b></i><small id="health-value">100</small></label>
+        <label><span>気力</span><i class="meter stamina"><b id="stamina"></b></i></label>
+      </div>
+      <div id="boss" class="boss hidden"><span id="boss-name"></span><i><b id="boss-health"></b></i></div>
+      <div class="resources"><span>◈ <b id="crystals">0</b></span><span>⌁ <b id="herbs">0</b></span><span>● <b id="coins">0</b></span></div>
+      <button id="quick-map" class="map-button" aria-label="地図を開く"><canvas id="minimap" width="92" height="92"></canvas><span>MAP</span></button>
+      <div id="interact-hint" class="interact-hint"></div>
+    </div>
+
+    <div id="touch-controls" class="touch-controls hidden" aria-hidden="true">
+      <div id="move-pad" class="move-pad" aria-label="移動パッド"><i id="move-knob"></i></div>
+      <div class="action-pad">
+        <button id="interact" class="action interact" aria-label="調べる"><span>調べる</span></button>
+        <button id="dodge" class="action dodge" aria-label="回避"><span>回避</span></button>
+        <button id="attack" class="action attack" aria-label="攻撃"><span>攻撃</span></button>
+      </div>
+      <small class="camera-hint">画面をドラッグ：視点</small>
     </div>
 
     <section id="menu" class="screen menu active">
-      <div class="orbit-art" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-      <div class="title-block">
-        <span class="kicker">ONE-FINGER ORBIT ACTION</span>
-        <h1><em>Q</em><small>STARTHREAD</small></h1>
-        <p>つなぐ。振る。切り開く。</p>
-      </div>
+      <div class="menu-landscape" aria-hidden="true"><i></i><b></b><em></em></div>
+      <div class="brand"><span class="eyebrow">A VAST VALLEY AWAITS</span><h1><em>Q</em><small>WILDBOUND</small></h1><p>風の消えた谷を、どこまでも。</p></div>
       <div class="menu-actions">
-        <button id="start" class="primary"><b>IGNITE</b><small>光路を起動</small></button>
-        <div class="records"><span>BEST <b id="best">0</b></span><span>DEPTH <b id="depth">—</b></span><span>WINS <b id="wins">0</b></span></div>
-        <div class="link-row"><button id="help">操作方法</button><button id="settings">設定</button></div>
+        <button id="continue" class="primary hidden"><b>旅を続ける</b><small id="continue-place">風見の里から</small></button>
+        <button id="new-game" class="secondary"><b>新しい旅</b><small>物語を最初から始める</small></button>
+        <div class="menu-links"><button id="help">遊び方</button><button id="settings">設定</button></div>
+        <small class="local-note">広告なし · ログイン不要 · 端末内に自動保存</small>
       </div>
-      <small class="footnote">NO ADS · NO LOGIN · LOCAL SAVE</small>
     </section>
 
     <section id="tutorial" class="screen">
-      <div class="panel tutorial-panel">
-        <span id="tutorial-count" class="kicker">01 / 03</span>
-        <div id="tutorial-art" class="tutorial-art"><i class="ship"></i><i class="anchor"></i><i class="beam"></i><i class="enemy"></i></div>
-        <h2 id="tutorial-title">重力を置く</h2>
+      <article class="panel tutorial-panel">
+        <span id="tutorial-count" class="eyebrow">01 / 04</span>
+        <div id="tutorial-art" class="tutorial-art" aria-hidden="true"><i></i><b></b><em></em></div>
+        <h2 id="tutorial-title">谷を歩く</h2>
         <p id="tutorial-copy"></p>
         <button id="tutorial-next" class="primary">次へ</button>
         <button id="tutorial-skip" class="quiet">スキップ</button>
-      </div>
+      </article>
     </section>
 
-    <section id="upgrade" class="screen upgrade-screen">
-      <div class="upgrade-title"><span class="kicker">RIFT STABILIZED</span><h2>ひとつ選ぶ</h2></div>
-      <div id="cards" class="cards"></div>
+    <section id="paused" class="screen">
+      <article class="panel pause-panel">
+        <span class="eyebrow">JOURNEY PAUSED</span><h2>旅の支度</h2>
+        <div class="pause-grid"><button id="resume" class="primary">旅へ戻る</button><button id="open-map" class="secondary">地図</button><button id="open-journal" class="secondary">旅の記録</button><button id="pause-settings" class="secondary">設定</button></div>
+        <button id="to-menu" class="quiet">タイトルへ戻る</button>
+      </article>
     </section>
 
-    <section id="paused" class="screen"><div class="panel centered"><span class="kicker">ORBIT SUSPENDED</span><h2>一時停止</h2><button id="resume" class="primary">再開</button><button id="retry" class="secondary">最初から</button><button id="quit" class="quiet danger">タイトルへ戻る</button></div></section>
+    <section id="map-screen" class="screen">
+      <article class="panel map-panel"><div class="panel-title"><div><span class="eyebrow">VALLEY MAP</span><h2>風眠りの谷</h2></div><button class="close" data-back="paused" aria-label="閉じる">×</button></div><canvas id="world-map" width="900" height="680" aria-label="発見した場所と現在地を示す地図"></canvas><p><i class="legend player"></i>現在地　<i class="legend goal"></i>目的地　<i class="legend place"></i>発見した場所</p></article>
+    </section>
 
-    <section id="result" class="screen"><div class="panel centered result-panel"><span id="result-kicker" class="kicker">THREAD LOST</span><h2 id="result-title">RUN OVER</h2><p id="result-copy"></p><div class="big-score"><span>SCORE</span><b id="result-score">0</b></div><div class="result-stats"><div><span>RIFT</span><b id="result-wave">1</b></div><div><span>MAX SURGE</span><b id="result-combo">0</b></div><div><span>TIME</span><b id="result-time">00:00</b></div></div><p id="record" class="record hidden">NEW RECORD</p><button id="again" class="primary">もう一度</button><button id="result-menu" class="quiet">タイトルへ</button></div></section>
+    <section id="journal" class="screen">
+      <article class="panel journal-panel"><div class="panel-title"><div><span class="eyebrow">FIELD JOURNAL</span><h2>旅の記録</h2></div><button class="close" data-back="paused" aria-label="閉じる">×</button></div><div id="journal-content"></div></article>
+    </section>
 
-    <section id="help-panel" class="screen"><div class="panel info"><button class="close" data-close="help-panel">×</button><h2>操作方法</h2><div class="guide"><div><i>●</i><p><b>押して重力点を作る</b><span>機体が指先へ引かれ、光の糸がつながります。</span></p></div><div><i>⌁</i><p><b>指を動かして振り回す</b><span>糸に触れた敵へダメージ。速いほど威力が上がります。</span></p></div><div><i>↗</i><p><b>離して飛ぶ</b><span>勢いを保って滑空。危険から抜け、次の角度を作れます。</span></p></div><div><i>8</i><p><b>全8区画</b><span>強化を組み合わせ、最後の「DEAD STAR」を破壊してください。</span></p></div></div></div></section>
+    <section id="dialogue" class="screen dialogue-screen">
+      <article id="dialogue-box" class="dialogue-box"><div id="dialogue-portrait" class="dialogue-portrait hidden" aria-hidden="true"></div><span id="speaker">斥候ミラ</span><p id="dialogue-text"></p><div id="dialogue-choices" class="dialogue-choices hidden" aria-label="返答を選ぶ"></div><button id="dialogue-close" class="primary">旅を続ける</button></article>
+    </section>
 
-    <section id="settings-panel" class="screen"><div class="panel info"><button class="close" data-close="settings-panel">×</button><h2>設定</h2><label class="toggle"><span>サウンド<small>音楽と効果音</small></span><input id="sound" type="checkbox"><i></i></label><label class="toggle"><span>振動<small>対応端末のみ</small></span><input id="vibration" type="checkbox"><i></i></label><label class="toggle"><span>動きを抑える<small>揺れと粒子を軽減</small></span><input id="reduced" type="checkbox"><i></i></label><button id="reset" class="quiet danger wide">記録をリセット</button></div></section>
+    <section id="camp" class="screen">
+      <article class="panel camp-panel"><div class="panel-title"><div><span class="eyebrow">HAVEN FORGE</span><h2>篝火と鍛冶場</h2></div><button id="camp-close" class="close" aria-label="閉じる">×</button></div><p>生命力を回復し、旅を保存しました。青脈晶と木の葉貨で装備を鍛えられます。</p><div id="upgrade-list" class="upgrade-list"></div><small>最大 LV.5 · 強化は自動保存</small></article>
+    </section>
 
+    <section id="dead" class="screen">
+      <article class="panel centered death-panel"><span class="eyebrow">THE VALLEY REMEMBERS</span><h2>風に還った</h2><p>風見の里の篝火から再び歩き出せます。所持金の一部だけを失います。</p><button id="respawn" class="primary">篝火で目覚める</button><button id="death-menu" class="quiet">タイトルへ戻る</button></article>
+    </section>
+
+    <section id="ending" class="screen ending-screen">
+      <div class="ending-sun" aria-hidden="true"></div><article><span id="ending-kicker" class="eyebrow">THE WIND RETURNS</span><h2 id="ending-title">谷に、新しい朝が来た。</h2><p id="ending-copy">三つの印が大地へ還り、初代守印イリヤは眠りについた。あなたが歩いた道は、これからも谷の記憶に残る。</p><button id="free-roam" class="primary">自由な旅を続ける</button><button id="ending-menu" class="quiet">タイトルへ</button></article>
+    </section>
+
+    <section id="help-panel" class="screen">
+      <article class="panel info-panel"><div class="panel-title"><div><span class="eyebrow">HOW TO PLAY</span><h2>遊び方</h2></div><button class="close" data-back="menu" aria-label="閉じる">×</button></div><div class="guide"><div><i>◉</i><p><b>歩く・見渡す</b><span>左パッドで移動。画面をドラッグしてカメラを回します。</span></p></div><div><i>⚔</i><p><b>戦う</b><span>攻撃で剣を振り、回避で敵の一撃をすり抜けます。</span></p></div><div><i>◇</i><p><b>調べる</b><span>人や篝火、草花、遺跡へ近づくと「調べる」が使えます。</span></p></div><div><i>⌖</i><p><b>自由に旅する</b><span>金色の光は主目的。寄り道、採集、洞窟、海岸は好きな順で探索できます。</span></p></div></div><p class="keyboard">PC: WASD / 矢印キー · マウス視点 · J/Space 攻撃 · K/Shift 回避 · E 調べる</p></article>
+    </section>
+
+    <section id="settings-panel" class="screen">
+      <article class="panel settings-panel"><div class="panel-title"><div><span class="eyebrow">SETTINGS</span><h2>設定</h2></div><button class="close" data-settings-close aria-label="閉じる">×</button></div><label class="toggle"><span>サウンド<small>音楽と効果音</small></span><input id="sound" type="checkbox"><i></i></label><label class="toggle"><span>振動<small>対応端末のみ</small></span><input id="vibration" type="checkbox"><i></i></label><label class="toggle"><span>動きを抑える<small>画面演出を軽減</small></span><input id="reduced" type="checkbox"><i></i></label><label class="select-row"><span>描画品質<small>自動は端末性能に合わせて調整</small></span><select id="quality"><option value="auto">自動</option><option value="high">高</option><option value="low">省電力</option></select></label><button id="reset" class="quiet danger wide">セーブデータをリセット</button></article>
+    </section>
+
+    <section id="fatal" class="screen"><article class="panel centered"><h2>3D描画を開始できません</h2><p id="fatal-copy"></p><button onclick="location.reload()" class="primary">再読み込み</button></article></section>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
-    <div class="landscape">縦向きでプレイしてください</div>
+    <div class="portrait-warning"><div>↻</div><b>端末を横向きにしてください</b><span>広い谷を見渡せる横画面で遊びます</span></div>
   </main>
   <noscript>このゲームを遊ぶにはJavaScriptを有効にしてください。</noscript>
   <script type="module" src="src/main.js"></script>

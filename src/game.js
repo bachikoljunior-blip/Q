@@ -1,70 +1,1100 @@
-import{beamHits,clamp,distance,formatNumber,lerp,rng,upgradeChoices}from'./core.js';
-const TAU=Math.PI*2,STEP=1/60;
-const ENEMIES={seeker:{hp:42,speed:47,r:12,score:100,color:'#ff557d'},gunner:{hp:36,speed:32,r:12,score:140,color:'#ff9b68'},charger:{hp:68,speed:36,r:14,score:190,color:'#ffd36f'},splitter:{hp:58,speed:38,r:15,score:220,color:'#c879ff'},mite:{hp:18,speed:69,r:8,score:50,color:'#e8a0ff'},node:{hp:95,speed:0,r:13,score:280,color:'#7fa8ff'}};
-const BOSSES=[{name:'GYRE KEEPER',hp:900,r:36,color:'#ef68ff'},{name:'DEAD STAR',hp:2100,r:47,color:'#ffb966'}];
-const callbacks={hud(){},status(){},upgrade(){},result(){},toast(){},quality(){}};
-const pct=(arr,p)=>{if(!arr.length)return 0;const s=[...arr].sort((a,b)=>a-b);return s[Math.min(s.length-1,Math.floor(s.length*p))]};
-const polygon=(ctx,n,r,rot=0)=>{ctx.beginPath();for(let i=0;i<n;i++){const a=rot+i/n*TAU,x=Math.cos(a)*r,y=Math.sin(a)*r;i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.closePath()};
+import * as THREE from '../vendor/three.module.js';
+import {
+  CONSEQUENCE_CHOICES,
+  GUARDIANS,
+  WATER_LEVEL,
+  WORLD_HALF,
+  WORLD_POINTS,
+  canEnterCrown,
+  clamp,
+  distance2D,
+  endingFor,
+  grantExperience,
+  herbHealingFor,
+  objectiveFor,
+  playerStats,
+  questText,
+  regionAt,
+  respawnCoinLossFor,
+  terrainHeight,
+  xpForLevel
+} from './core.js';
+import { World } from './world.js';
 
-export class Game{
- constructor(canvas,{sound,callbacks:cb={}}={}){this.canvas=canvas;this.ctx=canvas.getContext('2d',{alpha:false,desynchronized:true});this.sound=sound;this.cb={...callbacks,...cb};this.w=375;this.h=667;this.dpr=1;this.quality=2;this.state=null;this.random=rng(1);this.pointer=null;this.anchor=null;this.acc=0;this.last=performance.now();this.samples=[];this.hudTimer=0;this.shake=0;this.flash=0;this.soundTimer=0;this.loop=this.loop.bind(this);this.bind();this.ro=new ResizeObserver(()=>this.resize());this.ro.observe(canvas.parentElement);this.resize();requestAnimationFrame(this.loop)}
- bounds(){return{left:18,right:this.w-18,top:this.h<620?63:75,bottom:this.h-(this.h<620?58:72)}}
- newState(seed){const b=this.bounds();return{status:'running',seed,clock:0,wave:1,score:0,hp:3,maxHp:3,invuln:0,energy:100,maxEnergy:100,combo:0,maxCombo:0,comboTime:0,levels:{},shield:0,leech:0,player:{x:(b.left+b.right)/2,y:b.bottom-90,vx:105,vy:-62,radius:9},enemies:[],bullets:[],particles:[],rings:[],floaters:[],trail:[],stars:[],spawnLeft:0,spawnTimer:0,waveIntro:0,waveStarted:false,clearTime:0,id:1,kills:0,cuts:0,metrics:{enemies:0,bullets:0,particles:0}}}
- start({seed=Date.now()}={}){this.random=rng(seed);this.state=this.newState(this.random.state);for(let i=0;i<70;i++)this.state.stars.push({x:this.random.next()*this.w,y:this.random.next()*this.h,a:.1+this.random.next()*.5,s:.4+this.random.next()*1.2,p:this.random.next()*TAU});this.pointer=null;this.anchor=null;this.acc=0;this.beginWave();this.sound?.start();this.cb.status('running')}
- stop(){this.pointer=null;this.anchor=null;if(this.state)this.state.status='idle';this.sound?.stop();this.cb.status('idle')}
- pause(reason='manual'){if(this.state?.status!=='running')return false;this.pointer=null;this.anchor=null;this.state.status='paused';this.state.pauseReason=reason;this.cb.status('paused',reason);return true}
- resume(){if(this.state?.status!=='paused')return false;this.state.status='running';this.last=performance.now();this.acc=0;this.cb.status('running');return true}
- bind(){const opts={passive:false};this.canvas.addEventListener('pointerdown',e=>{if(this.state?.status!=='running'||this.pointer!==null)return;e.preventDefault();this.sound?.unlock();this.pointer=e.pointerId;try{this.canvas.setPointerCapture(e.pointerId)}catch{}this.setAnchor(e);this.sound?.event('tether',.6)},opts);this.canvas.addEventListener('pointermove',e=>{if(e.pointerId!==this.pointer)return;e.preventDefault();this.setAnchor(e)},opts);const release=e=>{if(e.pointerId!==this.pointer)return;e.preventDefault();try{this.canvas.releasePointerCapture(e.pointerId)}catch{}this.pointer=null;this.anchor=null};this.canvas.addEventListener('pointerup',release,opts);this.canvas.addEventListener('pointercancel',release,opts);this.canvas.addEventListener('contextmenu',e=>e.preventDefault())}
- setAnchor(e){const r=this.canvas.getBoundingClientRect(),b=this.bounds();this.anchor={x:clamp(e.clientX-r.left,b.left,b.right),y:clamp(e.clientY-r.top,b.top,b.bottom)}}
- beginWave(){const s=this.state;s.waveStarted=false;s.waveIntro=1.2;s.clearTime=0;s.spawnLeft=0;s.spawnTimer=.45;s.enemies.length=0;s.bullets.length=0;s.shield=s.levels.shield?1:0;this.cb.toast(s.wave===4||s.wave===8?`RIFT ${s.wave} // ANOMALY`:`RIFT ${String(s.wave).padStart(2,'0')}`);this.sound?.event(s.wave===4||s.wave===8?'boss':'wave',.9)}
- activateWave(){const s=this.state;s.waveStarted=true;if(s.wave===4)this.spawnBoss(1);else if(s.wave===8)this.spawnBoss(2);else s.spawnLeft=Math.min(20,5+s.wave*2)}
- choices(){const s=this.state;if(s.status!=='upgrading')return[];return s.pending||[]}
- choose(id){const s=this.state;if(!s||s.status!=='upgrading')return false;const item=s.pending?.find(x=>x.id===id);if(!item)return false;s.levels[id]=(s.levels[id]||0)+1;if(id==='hull'){s.maxHp++;s.hp=s.maxHp}if(id==='energy'){s.maxEnergy+=25;s.energy=s.maxEnergy}s.pending=null;s.wave++;s.status='running';s.energy=Math.max(s.energy,s.maxEnergy*.58);this.sound?.event('upgrade');this.cb.status('running');this.beginWave();return true}
- rangeSpawn(r=16){const b=this.bounds(),side=this.random.int(0,3);if(side===0)return{x:b.left+r,y:lerp(b.top,b.bottom,this.random.next())};if(side===1)return{x:b.right-r,y:lerp(b.top,b.bottom,this.random.next())};if(side===2)return{x:lerp(b.left,b.right,this.random.next()),y:b.top+r};return{x:lerp(b.left,b.right,this.random.next()),y:b.bottom-r}}
- types(){const w=this.state.wave,out=['seeker'];if(w>=2)out.push('gunner');if(w>=3)out.push('charger');if(w>=5)out.push('splitter');return out}
- spawn(type=this.random.pick(this.types()),extra={}){const s=this.state,data=ENEMIES[type];if(!data||s.enemies.length>=34)return null;const p=extra.x==null?this.rangeSpawn(data.r):extra,scale=1+(s.wave-1)*.07,e={id:s.id++,type,x:p.x,y:p.y,vx:0,vy:0,radius:data.r*(extra.child?.82:1),hp:data.hp*scale*(extra.child?.7:1),maxHp:data.hp*scale*(extra.child?.7:1),speed:data.speed*(1+Math.min(.3,s.wave*.018)),score:data.score,color:data.color,age:0,shoot:.7+this.random.next()*1.3,ai:.6+this.random.next(),mode:'idle',rot:this.random.next()*TAU,flash:0,spark:0,child:Boolean(extra.child),parent:extra.parent,slot:extra.slot};s.enemies.push(e);this.particles(e.x,e.y,e.color,6,45);return e}
- spawnBoss(tier){const s=this.state,d=BOSSES[tier-1],b=this.bounds(),boss={id:s.id++,type:'boss',boss:true,tier,name:d.name,x:(b.left+b.right)/2,y:b.top+105,vx:0,vy:0,radius:d.r,hp:d.hp,maxHp:d.hp,speed:25+tier*4,score:4200*tier,color:d.color,age:0,shoot:1.2,summon:4.8,rot:0,flash:0,phase:1,nodes:0,secondNodes:false};s.enemies.push(boss);s.boss=boss;this.spawnNodes(boss,tier===1?3:4);s.rings.push({x:boss.x,y:boss.y,r:8,max:135,life:1,color:d.color})}
- spawnNodes(boss,count){boss.nodes+=count;for(let i=0;i<count;i++)this.spawn('node',{x:boss.x,y:boss.y,parent:boss.id,slot:i/boss.nodes*TAU})}
- bullet(x,y,a,speed=120,color='#ff688c',r=4.5){const s=this.state;if(s.bullets.length>=170)return;s.bullets.push({x,y,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,radius:r,color,life:7,age:0,dead:false})}
- aimed(e,count=1,spread=.15,speed=125){const a=Math.atan2(this.state.player.y-e.y,this.state.player.x-e.x);for(let i=0;i<count;i++)this.bullet(e.x,e.y,a+(i-(count-1)/2)*spread,speed,e.color)}
- radial(e,count,speed,offset=0){for(let i=0;i<count;i++)this.bullet(e.x,e.y,offset+i/count*TAU,speed,e.color)}
- gravity(){return 410*(1+(this.state.levels.gravity||0)*.22)}
- speedCap(){return 255*(1+(this.state.levels.velocity||0)*.2)}
- beamDamage(){const s=this.state,p=s.player,speed=Math.hypot(p.vx,p.vy),velocity=1+Math.min(1.3,speed/250)*(.65+(s.levels.velocity||0)*.1);return 44*(1+(s.levels.edge||0)*.35)*velocity}
- update(dt){const s=this.state;if(!s||s.status!=='running')return;s.clock+=dt;this.soundTimer=Math.max(0,this.soundTimer-dt);this.shake=Math.max(0,this.shake-dt*28);this.flash=Math.max(0,this.flash-dt*1.8);s.invuln=Math.max(0,s.invuln-dt);s.comboTime=Math.max(0,s.comboTime-dt);if(!s.comboTime)s.combo=0;
-   if(this.anchor&&s.energy>0){const p=s.player,dx=this.anchor.x-p.x,dy=this.anchor.y-p.y,d=Math.hypot(dx,dy)||1,g=this.gravity();p.vx+=dx/d*g*dt;p.vy+=dy/d*g*dt;s.energy=Math.max(0,s.energy-dt*8.5);if(!s.energy){this.anchor=null;this.pointer=null;this.cb.toast('TETHER EMPTY')}}else{s.energy=Math.min(s.maxEnergy,s.energy+dt*19*(1+(s.levels.regen||0)*.3))}
-   const p=s.player,max=this.speedCap(),spd=Math.hypot(p.vx,p.vy);if(spd>max){p.vx=p.vx/spd*max;p.vy=p.vy/spd*max}const drag=Math.pow(.992,dt*60);p.vx*=drag;p.vy*=drag;p.x+=p.vx*dt;p.y+=p.vy*dt;const b=this.bounds();if(p.x<b.left){p.x=b.left;p.vx=Math.abs(p.vx)*.78;this.wallSpark(p)}if(p.x>b.right){p.x=b.right;p.vx=-Math.abs(p.vx)*.78;this.wallSpark(p)}if(p.y<b.top){p.y=b.top;p.vy=Math.abs(p.vy)*.78;this.wallSpark(p)}if(p.y>b.bottom){p.y=b.bottom;p.vy=-Math.abs(p.vy)*.78;this.wallSpark(p)}s.trail.unshift({x:p.x,y:p.y});if(s.trail.length>(this.quality===2?42:24))s.trail.pop();
-   if(s.waveIntro>0){s.waveIntro-=dt;if(s.waveIntro<=0)this.activateWave()}else{if(s.spawnLeft>0){s.spawnTimer-=dt;if(s.spawnTimer<=0){this.spawn();s.spawnLeft--;s.spawnTimer=Math.max(.43,.98-s.wave*.035)*(.7+this.random.next()*.6)}}for(const e of s.enemies)if(!e.dead)this.updateEnemy(e,dt);this.updateBullets(dt);this.updateBeam(dt);if(s.waveStarted&&!s.spawnLeft&&!s.enemies.some(e=>!e.dead)){s.clearTime+=dt;if(s.clearTime>.75)this.waveClear()}else s.clearTime=0}
-   for(const q of s.particles){q.life-=dt;q.x+=q.vx*dt;q.y+=q.vy*dt;q.vx*=Math.pow(.04,dt);q.vy*=Math.pow(.04,dt)}s.particles=s.particles.filter(q=>q.life>0);for(const r of s.rings){r.life-=dt;r.r=lerp(r.r,r.max,Math.min(1,dt*9))}s.rings=s.rings.filter(r=>r.life>0);for(const f of s.floaters){f.life-=dt;f.y-=23*dt}s.floaters=s.floaters.filter(f=>f.life>0);s.enemies=s.enemies.filter(e=>!e.dead);s.bullets=s.bullets.filter(x=>!x.dead&&x.life>0);s.metrics.enemies=Math.max(s.metrics.enemies,s.enemies.length);s.metrics.bullets=Math.max(s.metrics.bullets,s.bullets.length);s.metrics.particles=Math.max(s.metrics.particles,s.particles.length)}
- wallSpark(p){this.particles(p.x,p.y,'#75fff0',3,55)}
- updateBeam(dt){const s=this.state;if(!this.anchor)return;const p=s.player,width=5+(s.levels.width||0)*2.2;let hits=0;for(const e of s.enemies){if(e.dead||!beamHits(p,this.anchor,e,width))continue;if(e.boss&&e.nodes>0)continue;let damage=this.beamDamage();if(s.levels.focus&&distance(e,this.anchor)<74)damage*=2;this.damage(e,damage*dt,'beam');e.spark-=dt;if(e.spark<=0){this.particles(e.x,e.y,'#dffffb',2,35);e.spark=.09}hits++}for(const shot of s.bullets){if(!shot.dead&&beamHits(p,this.anchor,shot,width+2)){shot.dead=true;s.cuts++;s.score+=9;s.energy=Math.min(s.maxEnergy,s.energy+2.2);this.particles(shot.x,shot.y,'#8ffff4',2,48)}}if(hits&&this.soundTimer<=0){this.sound.event('cut',clamp(hits/3,.3,1));this.soundTimer=.11}}
- updateEnemy(e,dt){const s=this.state,p=s.player;e.age+=dt;e.rot+=dt*(e.boss?.55:1.2);e.flash=Math.max(0,e.flash-dt*5);e.spark-=dt;if(e.type==='node'){const boss=s.enemies.find(x=>x.id===e.parent&&!x.dead);if(!boss){e.dead=true;return}const a=e.slot+e.age*(boss.tier===2?1:-1)*.75,r=boss.radius+31;e.x=boss.x+Math.cos(a)*r;e.y=boss.y+Math.sin(a)*r;return}if(e.boss){this.updateBoss(e,dt);return}const dx=p.x-e.x,dy=p.y-e.y,d=Math.hypot(dx,dy)||1;let vx=0,vy=0;if(e.type==='seeker'||e.type==='splitter'||e.type==='mite'){vx=dx/d*e.speed;vy=dy/d*e.speed;if(e.type==='seeker'){const w=Math.sin(e.age*3+e.id)*16;vx+=-dy/d*w;vy+=dx/d*w}}else if(e.type==='gunner'){const q=d>190?1:d<135?-1:0;vx=dx/d*e.speed*q-dy/d*12;vy=dy/d*e.speed*q+dx/d*12;e.shoot-=dt;if(e.shoot<=0){this.aimed(e,s.wave>5?3:1,.16,122+s.wave*2);e.shoot=Math.max(1.3,2.25-s.wave*.06)}}else if(e.type==='charger'){if(e.mode==='idle'){e.ai-=dt;vx=dx/d*e.speed*.55;vy=dy/d*e.speed*.55;if(e.ai<=0&&d<280){e.mode='warn';e.ai=.72;e.charge=Math.atan2(dy,dx)}}else if(e.mode==='warn'){e.ai-=dt;if(e.ai<=0){e.mode='charge';e.ai=.5}}else{e.ai-=dt;vx=Math.cos(e.charge)*245;vy=Math.sin(e.charge)*245;if(e.ai<=0){e.mode='idle';e.ai=1.4+this.random.next()}}}e.x+=vx*dt;e.y+=vy*dt;const b=this.bounds();e.x=clamp(e.x,b.left-10,b.right+10);e.y=clamp(e.y,b.top-10,b.bottom+10);if(distance(e,p)<e.radius+p.radius)this.hurt(e.mode==='charge'?2:1,e)}
- updateBoss(e,dt){const s=this.state,p=s.player,ratio=e.hp/e.maxHp;e.phase=ratio>.66?1:ratio>.33?2:3;e.age+=0;const targetX=p.x+Math.cos(e.age*.37)*145,targetY=clamp(p.y-205+Math.sin(e.age*.51)*75,this.bounds().top+55,this.bounds().bottom-95),d=Math.hypot(targetX-e.x,targetY-e.y)||1;e.x+=(targetX-e.x)/d*e.speed*dt;e.y+=(targetY-e.y)/d*e.speed*dt;e.shoot-=dt;if(e.shoot<=0){if(e.tier===1){this.radial(e,8+e.phase*2,105+e.phase*9,e.rot);this.aimed(e,2+e.phase,.15,140);e.shoot=1.9-e.phase*.13}else{this.radial(e,12+e.phase*3,112+e.phase*10,e.rot);this.aimed(e,3+e.phase,.11,150);e.shoot=1.5-e.phase*.1}}e.summon-=dt;if(e.summon<=0&&s.enemies.length<13){for(let i=0;i<(e.tier===2?3:2);i++)this.spawn(this.random.pick(['seeker','gunner']));e.summon=4.7-e.phase*.25}if(e.tier===2&&ratio<.5&&!e.secondNodes){e.secondNodes=true;this.spawnNodes(e,2);this.cb.toast('SHIELD REFORMED')}if(distance(e,p)<e.radius+p.radius)this.hurt(1,e)}
- updateBullets(dt){const s=this.state,p=s.player,b=this.bounds();for(const x of s.bullets){x.age+=dt;x.life-=dt;x.x+=x.vx*dt;x.y+=x.vy*dt;if(x.x<b.left-80||x.x>b.right+80||x.y<b.top-80||x.y>b.bottom+80)x.dead=true;else if(!x.dead&&distance(x,p)<x.radius+p.radius){x.dead=true;this.hurt(1,x)}}}
- damage(e,amount,source){if(e.dead)return;e.hp-=amount;e.flash=1;if(e.hp<=0)this.kill(e,source)}
- kill(e,source){if(e.dead)return;const s=this.state;e.dead=true;if(e.type==='node'){const boss=s.enemies.find(x=>x.id===e.parent&&!x.dead);if(boss){boss.nodes=Math.max(0,boss.nodes-1);if(!boss.nodes){this.cb.toast('CORE EXPOSED');s.rings.push({x:boss.x,y:boss.y,r:5,max:95,life:.7,color:'#ffe288'})}}}s.kills++;s.combo=s.comboTime>0?s.combo+1:1;s.comboTime=2.15*(1+(s.levels.surge||0)*.5);s.maxCombo=Math.max(s.maxCombo,s.combo);const points=Math.floor(e.score*(1+Math.min(5,s.combo*.17)));s.score+=points;s.energy=Math.min(s.maxEnergy,s.energy+(e.boss?45:7));this.floater(e.x,e.y,`+${points}`,source==='burst'?'#ffe28a':e.color);this.particles(e.x,e.y,e.color,e.boss?34:12,e.boss?210:115);this.sound?.event('kill',e.boss?1:.6);if(e.type==='splitter'&&!e.child)for(let i=0;i<2;i++)this.spawn('mite',{x:e.x+(i?10:-10),y:e.y,child:true});if(s.levels.burst&&!e.boss)this.explode(e.x,e.y);if(s.levels.leech&&!e.boss){s.leech++;if(s.leech>=10&&s.hp<s.maxHp){s.leech-=10;s.hp++;this.floater(s.player.x,s.player.y-18,'+HULL','#74ffd0')}}if(e.boss){s.boss=null;this.flash=.45;this.shake=15}}
- explode(x,y){const s=this.state;s.rings.push({x,y,r:4,max:70,life:.4,color:'#ffe083'});for(const e of s.enemies)if(!e.dead&&!e.boss&&distance({x,y},e)<72+e.radius)this.damage(e,55,'burst');for(const b of s.bullets)if(distance({x,y},b)<72)b.dead=true}
- hurt(amount,source){const s=this.state;if(s.invuln>0||s.status!=='running')return;if(s.shield){s.shield=0;s.invuln=.8;s.rings.push({x:s.player.x,y:s.player.y,r:5,max:55,life:.4,color:'#78fff2'});this.floater(s.player.x,s.player.y-20,'SHIELD','#78fff2');return}s.hp=Math.max(0,s.hp-amount);s.invuln=1.1;this.shake=13;this.flash=.42;this.particles(s.player.x,s.player.y,'#ff557d',18,150);this.sound?.event('hurt');if(source){const a=Math.atan2(s.player.y-source.y,s.player.x-source.x);s.player.vx+=Math.cos(a)*90;s.player.vy+=Math.sin(a)*90}if(!s.hp)this.finish(false)}
- particles(x,y,color,count,speed=90){const s=this.state;if(!s)return;const limit=this.quality===2?170:this.quality===1?100:55;for(let i=0;i<Math.min(count,Math.max(0,limit-s.particles.length));i++){const a=this.random.next()*TAU,v=speed*(.25+this.random.next()*.75),life=.25+this.random.next()*.45;s.particles.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,life,max:life,color,size:.8+this.random.next()*2.2})}}
- floater(x,y,text,color){const s=this.state;s.floaters.push({x,y,text,color,life:.8,max:.8});if(s.floaters.length>18)s.floaters.shift()}
- waveClear(){const s=this.state;s.waveStarted=false;if(s.wave>=8){this.finish(true);return}s.status='upgrading';s.energy=Math.min(s.maxEnergy,s.energy+30);if(s.wave===4)s.hp=Math.min(s.maxHp,s.hp+1);s.pending=upgradeChoices(this.random,s.levels,3);if(!s.pending.length){s.wave++;s.status='running';this.beginWave();return}this.sound?.event('wave');this.cb.status('upgrading');this.cb.upgrade(s.pending,s.levels)}
- finish(victory){const s=this.state;if(!s||s.status==='result')return;this.pointer=null;this.anchor=null;s.status='result';s.victory=victory;this.sound?.stop();this.sound?.event(victory?'victory':'defeat');this.cb.status('result');this.cb.result({victory,score:Math.floor(s.score),wave:s.wave,maxCombo:s.maxCombo,time:s.clock,kills:s.kills,cuts:s.cuts,metrics:{...s.metrics},seed:s.seed})}
- resize(){const r=this.canvas.parentElement.getBoundingClientRect();this.w=Math.max(1,Math.round(r.width));this.h=Math.max(1,Math.round(r.height));const cap=this.quality===2?2:this.quality===1?1.5:1;let d=Math.min(devicePixelRatio||1,cap);if(this.w*this.h*d*d>2e6)d=Math.sqrt(2e6/(this.w*this.h));this.dpr=Math.max(1,d);this.canvas.width=Math.round(this.w*this.dpr);this.canvas.height=Math.round(this.h*this.dpr);this.ctx.setTransform(this.dpr,0,0,this.dpr,0,0);if(this.state){const b=this.bounds(),p=this.state.player;p.x=clamp(p.x,b.left,b.right);p.y=clamp(p.y,b.top,b.bottom);if(this.w>this.h&&this.h<520)this.pause('orientation')}}
- loop(t){const dt=clamp((t-this.last)/1000,0,.05);this.last=t;if(this.state?.status==='running'){this.acc+=dt;let n=0;while(this.acc>=STEP&&n<3){this.update(STEP);this.acc-=STEP;n++}if(n===3)this.acc=0}else this.acc=0;this.render(t/1000);this.samples.push(dt*1000);if(this.samples.length>=240){const p=pct(this.samples,.95),avg=this.samples.reduce((a,b)=>a+b,0)/this.samples.length;this.samples=[];if(this.state&&this.quality>0&&(p>29||avg>23)){this.quality--;this.resize();this.cb.quality(this.quality,{p,avg})}}this.hudTimer+=dt;if(this.state&&this.hudTimer>.08){this.hudTimer=0;this.cb.hud(this.snapshotHud())}requestAnimationFrame(this.loop)}
- snapshotHud(){const s=this.state,b=s?.enemies.find(x=>x.boss&&!x.dead);return{status:s?.status||'idle',wave:s?.wave||1,score:formatNumber(s?.score||0),hp:s?.hp||0,maxHp:s?.maxHp||3,energy:s?s.energy/s.maxEnergy:1,combo:s?.combo||0,shield:s?.shield||0,boss:b?{name:b.name,hp:Math.max(0,b.hp/b.maxHp),shield:b.nodes>0}:null}}
- render(time){const c=this.ctx;c.save();c.setTransform(this.dpr,0,0,this.dpr,0,0);this.background(c,time);if(!this.state){c.restore();return}const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches||document.documentElement.classList.contains('reduce-motion'),sx=!reduce&&this.shake?Math.sin(time*89)*this.shake:0,sy=!reduce&&this.shake?Math.cos(time*73)*this.shake:0;c.translate(sx,sy);this.drawTrail(c);this.drawRings(c);this.drawBullets(c);this.drawEnemies(c,time);this.drawTether(c,time);this.drawPlayer(c,time);this.drawParticles(c);this.drawFloaters(c);c.translate(-sx,-sy);this.vignette(c);c.restore()}
- background(c,time){const g=c.createRadialGradient(this.w*.5,this.h*.45,20,this.w*.5,this.h*.45,Math.max(this.w,this.h)*.72);g.addColorStop(0,'#111d40');g.addColorStop(.55,'#070b1e');g.addColorStop(1,'#02030a');c.fillStyle=g;c.fillRect(0,0,this.w,this.h);c.save();c.globalAlpha=.13;c.strokeStyle='#5974b5';c.lineWidth=.5;for(let x=-40;x<this.w+40;x+=40){c.beginPath();c.moveTo(x,0);c.lineTo(x+this.h*.05,this.h);c.stroke()}for(let y=-40+(time*4)%40;y<this.h+40;y+=40){c.beginPath();c.moveTo(0,y);c.lineTo(this.w,y);c.stroke()}c.restore();if(this.state)for(const s of this.state.stars){c.globalAlpha=s.a*(.65+Math.sin(time*1.5+s.p)*.35);c.fillStyle='#c6ddff';c.fillRect(s.x,(s.y+time*s.s*1.5)%this.h,s.s,s.s)}c.globalAlpha=1}
- drawTrail(c){const t=this.state.trail;if(t.length<2)return;c.save();c.lineCap='round';for(let i=t.length-1;i>0;i--){c.globalAlpha=(1-i/t.length)*.22;c.strokeStyle='#72fff1';c.lineWidth=1.4;c.beginPath();c.moveTo(t[i].x,t[i].y);c.lineTo(t[i-1].x,t[i-1].y);c.stroke()}c.restore()}
- drawTether(c,time){if(!this.anchor)return;const p=this.state.player,a=this.anchor,g=c.createLinearGradient(p.x,p.y,a.x,a.y);g.addColorStop(0,'#75fff1');g.addColorStop(.52,'#fff');g.addColorStop(1,'#aa7cff');c.save();c.strokeStyle=g;c.lineCap='round';c.shadowColor='#68fff1';c.shadowBlur=this.quality===2?16:6;c.globalAlpha=.32;c.lineWidth=14+(this.state.levels.width||0)*2;c.beginPath();c.moveTo(p.x,p.y);c.lineTo(a.x,a.y);c.stroke();c.globalAlpha=.96;c.lineWidth=2.4+(this.state.levels.width||0)*.8;c.beginPath();c.moveTo(p.x,p.y);c.lineTo(a.x,a.y);c.stroke();c.translate(a.x,a.y);c.strokeStyle='#b789ff';c.lineWidth=1.5;c.setLineDash([5,6]);c.lineDashOffset=-time*18;c.beginPath();c.arc(0,0,16+Math.sin(time*6)*2,0,TAU);c.stroke();c.setLineDash([]);c.globalAlpha=.38;c.beginPath();c.arc(0,0,31+Math.sin(time*3)*4,0,TAU);c.stroke();c.restore()}
- drawBullets(c){for(const b of this.state.bullets){c.save();c.translate(b.x,b.y);c.rotate(b.age*3);c.fillStyle='#fff';c.strokeStyle=b.color;c.lineWidth=2;c.shadowColor=b.color;c.shadowBlur=this.quality===2?9:3;polygon(c,4,b.radius,Math.PI/4);c.fill();c.stroke();c.restore()}}
- drawEnemies(c,time){for(const e of this.state.enemies){c.save();c.translate(e.x,e.y);c.rotate(e.rot);c.strokeStyle=e.flash?'#fff':e.color;c.fillStyle=e.color+'20';c.lineWidth=e.boss?3:2;c.shadowColor=e.color;c.shadowBlur=this.quality===2?(e.boss?18:9):3;if(e.boss){polygon(c,e.tier===1?8:10,e.radius,0);c.fill();c.stroke();c.rotate(-e.rot*2);polygon(c,e.tier===1?4:6,e.radius*.56,Math.PI/4);c.stroke();c.fillStyle='#fff';c.beginPath();c.arc(0,0,4+e.phase,0,TAU);c.fill()}else if(e.type==='seeker'){polygon(c,3,e.radius,-Math.PI/2);c.fill();c.stroke()}else if(e.type==='gunner'){polygon(c,4,e.radius,Math.PI/4);c.fill();c.stroke()}else if(e.type==='charger'){polygon(c,4,e.radius*1.1,0);c.fill();c.stroke()}else if(e.type==='splitter'){polygon(c,6,e.radius,0);c.fill();c.stroke()}else if(e.type==='node'){c.beginPath();c.arc(0,0,e.radius,0,TAU);c.stroke();c.beginPath();c.arc(0,0,e.radius*.35,0,TAU);c.fill()}else{polygon(c,5,e.radius,-Math.PI/2);c.fill();c.stroke()}c.restore();if(e.type==='charger'&&e.mode==='warn'){c.save();c.globalAlpha=.5+Math.sin(time*20)*.2;c.strokeStyle='#ffd36f';c.setLineDash([7,7]);c.beginPath();c.moveTo(e.x,e.y);c.lineTo(e.x+Math.cos(e.charge)*320,e.y+Math.sin(e.charge)*320);c.stroke();c.restore()}if(!e.boss&&e.hp<e.maxHp){c.fillStyle='rgba(2,3,10,.75)';c.fillRect(e.x-e.radius,e.y-e.radius-8,e.radius*2,2);c.fillStyle=e.color;c.fillRect(e.x-e.radius,e.y-e.radius-8,e.radius*2*clamp(e.hp/e.maxHp,0,1),2)}}}
- drawPlayer(c,time){const s=this.state,p=s.player,blink=s.invuln>0&&Math.floor(time*13)%2===0;c.save();c.translate(p.x,p.y);c.rotate(Math.atan2(p.vy,p.vx));c.globalAlpha=blink?.3:1;c.fillStyle='#fff';c.strokeStyle='#73fff1';c.lineWidth=2;c.shadowColor='#5effee';c.shadowBlur=this.quality===2?18:7;c.beginPath();c.moveTo(12,0);c.lineTo(-9,-7);c.lineTo(-5,0);c.lineTo(-9,7);c.closePath();c.fill();c.stroke();if(s.shield){c.strokeStyle='#82fff3';c.setLineDash([4,5]);c.beginPath();c.arc(0,0,19+Math.sin(time*4)*2,0,TAU);c.stroke()}c.restore()}
- drawRings(c){for(const r of this.state.rings){c.save();c.globalAlpha=clamp(r.life*2.2,0,1);c.strokeStyle=r.color;c.lineWidth=2+r.life*3;c.shadowColor=r.color;c.shadowBlur=this.quality===2?14:4;c.beginPath();c.arc(r.x,r.y,r.r,0,TAU);c.stroke();c.restore()}}
- drawParticles(c){for(const p of this.state.particles){c.globalAlpha=clamp(p.life/p.max,0,1);c.fillStyle=p.color;c.fillRect(p.x-p.size/2,p.y-p.size/2,p.size,p.size)}c.globalAlpha=1}
- drawFloaters(c){c.textAlign='center';c.font='800 9px ui-sans-serif,system-ui';for(const f of this.state.floaters){c.globalAlpha=clamp(f.life/f.max,0,1);c.fillStyle=f.color;c.fillText(f.text,f.x,f.y)}c.globalAlpha=1}
- vignette(c){const g=c.createRadialGradient(this.w/2,this.h/2,Math.min(this.w,this.h)*.25,this.w/2,this.h/2,Math.max(this.w,this.h)*.72);g.addColorStop(.55,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,8,.73)');c.fillStyle=g;c.fillRect(0,0,this.w,this.h);if(this.flash){c.fillStyle=`rgba(160,230,255,${Math.min(.27,this.flash)})`;c.fillRect(0,0,this.w,this.h)}}
- testSnapshot(){const s=this.state;return s?{status:s.status,wave:s.wave,score:Math.floor(s.score),hp:s.hp,energy:+s.energy.toFixed(2),enemies:s.enemies.length,bullets:s.bullets.length,seed:s.seed,metrics:{...s.metrics}}:null}
- testWave(wave){if(!this.state)return;this.state.wave=clamp(Math.floor(wave),1,8);this.state.status='running';this.state.enemies.length=0;this.state.bullets.length=0;this.beginWave()}
- testClearWave(){if(this.state?.status!=='running')return;this.state.spawnLeft=0;this.state.enemies.length=0;this.state.bullets.length=0;this.state.waveStarted=true;this.state.waveIntro=0;this.state.clearTime=.76;this.update(STEP)}
- destroy(){this.stop();this.ro.disconnect()}
+const STEP = 1 / 60;
+const TAU = Math.PI * 2;
+const v3 = new THREE.Vector3();
+const targetV = new THREE.Vector3();
+
+const ENEMY_SPAWNS = Object.freeze([
+  { id: 'mossfang_1', name: '苔牙', type: 'beast', x: -185, z: 52, hp: 42, power: 9, xp: 24, coins: 7 },
+  { id: 'mossfang_2', name: '苔牙', type: 'beast', x: -248, z: -52, hp: 42, power: 9, xp: 24, coins: 7 },
+  { id: 'mossfang_3', name: '苔牙', type: 'beast', x: -310, z: -165, hp: 48, power: 10, xp: 27, coins: 8 },
+  { id: 'reedshade_1', name: '葦影', type: 'stalker', x: -430, z: 245, hp: 52, power: 11, xp: 31, coins: 9 },
+  { id: 'reedshade_2', name: '葦影', type: 'stalker', x: -605, z: 355, hp: 52, power: 11, xp: 31, coins: 9 },
+  { id: 'stonewing_1', name: '岩羽', type: 'sentinel', x: 390, z: -310, hp: 62, power: 13, xp: 38, coins: 12 },
+  { id: 'stonewing_2', name: '岩羽', type: 'sentinel', x: 575, z: -360, hp: 62, power: 13, xp: 38, coins: 12 },
+  { id: 'tidebound_1', name: '潮骸', type: 'sentinel', x: 460, z: 390, hp: 68, power: 14, xp: 42, coins: 14 },
+  { id: 'rootling_1', name: '根喰い', type: 'beast', x: 325, z: 115, hp: 58, power: 12, xp: 34, coins: 10 },
+  { id: 'grove_warden', name: '苔角の守り手', type: 'warden', x: -410, z: -245, hp: 245, power: 17, xp: 145, coins: 48, guardian: true },
+  { id: 'marsh_warden', name: '沼影の獣', type: 'stalker', x: -520, z: 310, hp: 275, power: 18, xp: 165, coins: 52, guardian: true },
+  { id: 'peak_warden', name: '白嶺の番人', type: 'sentinel', x: 500, z: -420, hp: 315, power: 20, xp: 190, coins: 58, guardian: true },
+  { id: 'crown_warden', name: '初代守印・イリヤ', type: 'crown', x: 0, z: -675, hp: 520, power: 24, xp: 320, coins: 120, final: true }
+]);
+
+const CONSEQUENCES = Object.freeze({
+  grove_warden: {
+    point: 'grove',
+    title: '森の印 — 誰のために芽吹くか',
+    prompt: '苔角が崩れ、父イリヤの記憶が流れ込む。「私は森を奪ったのではない。嵐の夜、里を守るため借りた」。ミラは印を大地へ返せと言い、オリンは次の嵐に備えて力を残せと言った。',
+    options: [
+      { id: 'wild_bloom', result: '枯れていた枝から新芽が開いた。その夜、里の古い防風柵が一本倒れた。自由には、守る手が要る。' },
+      { id: 'haven_ward', result: '腕輪に森の脈動が宿り、里の柵へ緑の光が走った。背後で古樹の葉が一枚、静かに落ちた。' }
+    ]
+  },
+  marsh_warden: {
+    point: 'marsh',
+    title: '水の印 — 鐘を鳴らすか',
+    prompt: '水底の鐘には、洪水で失われた人々の名が刻まれていた。鳴らせば湿原の水は海へ戻るが、低地の旧道は二度と使えない。閉じれば里の水門は満ち、記憶は霧に残る。',
+    options: [
+      { id: 'ring_release', result: '鐘は一度だけ鳴った。霧が割れ、湿原に星空が映る。里では井戸が浅くなり、オリンが新しい水路を掘り始めた。' },
+      { id: 'water_ward', result: '水門の紋が青く灯り、里の井戸が満ちた。湿原では、誰も触れていない鐘の音が夜ごと遠く響いた。' }
+    ]
+  },
+  peak_warden: {
+    point: 'peak',
+    title: '風の印 — 嵐を恐れるか',
+    prompt: '祭壇で最後の記憶がほどける。イリヤは空環の核に自ら残り、三つの印を抱えて嵐を止め続けていた。風を放てば彼の役目は終わる。束ねれば、その犠牲をあなたが継ぐ。',
+    options: [
+      { id: 'wind_release', result: '雲が裂け、何年ぶりかの強い風が谷を走った。ミラは笑い、里の者たちは屋根を押さえながら空を見上げた。' },
+      { id: 'wind_ward', result: '風は腕輪の中で静まった。里の灯は揺れず、遠い峰の雲だけが出口を探すように渦巻いた。' }
+    ]
+  }
+});
+
+const ENEMY_BEHAVIORS = Object.freeze({
+  beast: Object.freeze({ activation: 55, speed: 10.2, attackRange: 5.2, windup: .48, active: .2, recovery: .68, lunge: 21, damage: 1 }),
+  stalker: Object.freeze({ activation: 64, speed: 12.4, attackRange: 6.4, windup: .7, active: .26, recovery: .56, lunge: 25, damage: .92, circle: true }),
+  sentinel: Object.freeze({ activation: 68, speed: 7.4, attackRange: 7.2, windup: 1.05, active: .34, recovery: 1.08, lunge: 10, damage: 1.28 }),
+  warden: Object.freeze({ activation: 88, speed: 9.2, attackRange: 7.6, windup: .82, active: .3, recovery: .82, lunge: 17, damage: 1.08 }),
+  crown: Object.freeze({ activation: 98, speed: 8.1, attackRange: 9.2, windup: 1.18, active: .42, recovery: .92, lunge: 14, damage: 1.35 })
+});
+
+const emptyCallbacks = {
+  status() {}, hud() {}, toast() {}, dialogue() {}, choice() {}, ending() {}, death() {}, save() {}, discovery() {}, quality() {}, fatal() {}
+};
+
+function makeSurface(color, emissive = 0) {
+  return new THREE.MeshStandardMaterial({ color, roughness: .82, metalness: .04, emissive, emissiveIntensity: emissive ? .45 : 0 });
+}
+
+function addPart(parent, geometry, surface, x, y, z, scale = 1) {
+  const mesh = new THREE.Mesh(geometry, surface);
+  mesh.position.set(x, y, z);
+  mesh.scale.setScalar(scale);
+  parent.add(mesh);
+  return mesh;
+}
+
+function approachAngle(current, target, amount) {
+  let delta = (target - current + Math.PI) % TAU - Math.PI;
+  if (delta < -Math.PI) delta += TAU;
+  return current + clamp(delta, -amount, amount);
+}
+
+function createNullRenderer(canvas) {
+  return {
+    domElement: canvas,
+    pixelRatio: 1,
+    setPixelRatio(value) { this.pixelRatio = value; },
+    setSize(width, height) {
+      canvas.width = Math.max(1, Math.round(width * this.pixelRatio));
+      canvas.height = Math.max(1, Math.round(height * this.pixelRatio));
+    },
+    render() {}, dispose() {}
+  };
+}
+
+export class Game {
+  constructor(canvas, { sound, settings = () => ({}), callbacks = {} } = {}) {
+    this.canvas = canvas;
+    this.sound = sound;
+    this.settings = settings;
+    this.cb = { ...emptyCallbacks, ...callbacks };
+    this.scene = new THREE.Scene();
+    this.scene.background = new THREE.Color(0x8ca5a1);
+    this.scene.fog = new THREE.FogExp2(0x8ca5a1, .00275);
+    this.camera = new THREE.PerspectiveCamera(58, 1, .1, 760);
+    this.renderer = this.createRenderer();
+    this.quality = this.resolveQuality();
+    this.world = new World(this.scene, this.quality);
+    this.player = this.createPlayer();
+    this.enemyRoot = new THREE.Group();
+    this.scene.add(this.enemyRoot);
+    this.enemies = [];
+    this.progress = null;
+    this.status = 'idle';
+    this.input = { x: 0, y: 0, keys: new Set(), padPointer: null, lookPointer: null };
+    this.cameraYaw = Math.PI;
+    this.cameraPitch = .33;
+    this.stamina = 100;
+    this.attackTimer = 0;
+    this.attackCooldown = 0;
+    this.attackHit = false;
+    this.dodgeTimer = 0;
+    this.invulnerable = 0;
+    this.hitFlash = 0;
+    this.velocity = new THREE.Vector3();
+    this.dodgeDirection = new THREE.Vector3(0, 0, -1);
+    this.clock = 0;
+    this.day = .29;
+    this.saveTimer = 0;
+    this.hudTimer = 0;
+    this.samples = [];
+    this.accumulator = 0;
+    this.lastFrame = 0;
+    this.frameHandle = 0;
+    this.nearby = null;
+    this.pendingChoice = null;
+    this.disposed = false;
+    this.bound = [];
+    this.createEffects();
+    this.bindLifecycle();
+    this.resize();
+    this.frame = this.frame.bind(this);
+    this.frameHandle = requestAnimationFrame(this.frame);
+  }
+
+  createRenderer() {
+    if (globalThis.__Q_HEADLESS__) return createNullRenderer(this.canvas);
+    try {
+      const renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, powerPreference: 'high-performance' });
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.04;
+      return renderer;
+    } catch (error) {
+      this.rendererFailed = true;
+      this.cb?.fatal?.('この端末では3D描画を開始できません。ブラウザを更新して再読み込みしてください。');
+      console.error(error);
+      return createNullRenderer(this.canvas);
+    }
+  }
+
+  resolveQuality() {
+    const chosen = this.settings()?.quality;
+    if (chosen === 'low') return 0;
+    if (chosen === 'high') return 2;
+    return 2;
+  }
+
+  createPlayer() {
+    const root = new THREE.Group();
+    root.name = 'PLAYER';
+    const tunic = makeSurface(0x1d5860);
+    const cloth = makeSurface(0xd6c58f);
+    const skin = makeSurface(0xc99670);
+    const dark = makeSurface(0x28362f);
+    const metal = new THREE.MeshStandardMaterial({ color: 0xd4d1b3, roughness: .32, metalness: .48 });
+    addPart(root, new THREE.CapsuleGeometry(.72, 1.55, 4, 7), tunic, 0, 2.2, 0);
+    addPart(root, new THREE.SphereGeometry(.55, 9, 7), skin, 0, 4.15, 0);
+    this.cloak = addPart(root, new THREE.ConeGeometry(1.24, 2.75, 7, 1, true), cloth, 0, 2.15, .35);
+    this.cloak.rotation.z = Math.PI;
+    for (const side of [-1, 1]) addPart(root, new THREE.CapsuleGeometry(.23, .8, 3, 5), dark, side * .43, .8, 0);
+    this.swordPivot = new THREE.Group();
+    this.swordPivot.position.set(.78, 2.55, 0);
+    addPart(this.swordPivot, new THREE.BoxGeometry(.16, 3.6, .26), metal, 0, -1.35, -.1);
+    addPart(this.swordPivot, new THREE.BoxGeometry(.9, .16, .2), dark, 0, .38, 0);
+    this.swordPivot.rotation.z = -.42;
+    root.add(this.swordPivot);
+    this.scene.add(root);
+    return root;
+  }
+
+  createEffects() {
+    this.targetRing = new THREE.Mesh(
+      new THREE.RingGeometry(2.3, 2.65, 28),
+      new THREE.MeshBasicMaterial({ color: 0xf6db87, transparent: true, opacity: .72, side: THREE.DoubleSide, depthWrite: false })
+    );
+    this.targetRing.rotation.x = -Math.PI / 2;
+    this.targetRing.visible = false;
+    this.scene.add(this.targetRing);
+    this.attackArc = new THREE.Mesh(
+      new THREE.TorusGeometry(3.4, .11, 5, 20, Math.PI * 1.16),
+      new THREE.MeshBasicMaterial({ color: 0xf5df9c, transparent: true, opacity: 0, depthWrite: false })
+    );
+    this.attackArc.rotation.x = Math.PI / 2;
+    this.attackArc.rotation.z = -.58;
+    this.player.add(this.attackArc);
+  }
+
+  bindLifecycle() {
+    const on = (target, event, handler, options) => {
+      target.addEventListener(event, handler, options);
+      this.bound.push(() => target.removeEventListener(event, handler, options));
+    };
+    on(globalThis, 'resize', () => this.resize());
+    on(globalThis, 'keydown', event => {
+      if (['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.code)) {
+        this.input.keys.add(event.code);
+        event.preventDefault();
+      }
+      if (!event.repeat && ['Space', 'KeyJ'].includes(event.code)) { this.attack(); event.preventDefault(); }
+      if (!event.repeat && ['ShiftLeft', 'ShiftRight', 'KeyK'].includes(event.code)) { this.dodge(); event.preventDefault(); }
+      if (!event.repeat && event.code === 'KeyE') { this.interact(); event.preventDefault(); }
+    });
+    on(globalThis, 'keyup', event => this.input.keys.delete(event.code));
+    on(globalThis, 'blur', () => this.resetInput());
+    on(this.canvas, 'contextmenu', event => event.preventDefault());
+    on(this.canvas, 'pointerdown', event => {
+      if (this.status !== 'running' || this.input.lookPointer !== null) return;
+      this.input.lookPointer = event.pointerId;
+      this.input.lookX = event.clientX;
+      this.input.lookY = event.clientY;
+      this.canvas.setPointerCapture?.(event.pointerId);
+    });
+    on(this.canvas, 'pointermove', event => {
+      if (event.pointerId !== this.input.lookPointer) return;
+      const dx = event.clientX - this.input.lookX;
+      const dy = event.clientY - this.input.lookY;
+      this.input.lookX = event.clientX;
+      this.input.lookY = event.clientY;
+      this.cameraYaw -= dx * .0062;
+      this.cameraPitch = clamp(this.cameraPitch + dy * .0035, .12, .63);
+    });
+    const releaseLook = event => {
+      if (event.pointerId !== this.input.lookPointer) return;
+      this.canvas.releasePointerCapture?.(event.pointerId);
+      this.input.lookPointer = null;
+    };
+    on(this.canvas, 'pointerup', releaseLook);
+    on(this.canvas, 'pointercancel', releaseLook);
+  }
+
+  bindControls({ pad, knob, attack, dodge, interact }) {
+    this.pad = pad;
+    this.knob = knob;
+    const on = (target, event, handler, options) => {
+      target.addEventListener(event, handler, options);
+      this.bound.push(() => target.removeEventListener(event, handler, options));
+    };
+    const updatePad = event => {
+      const rect = pad.getBoundingClientRect();
+      const radius = Math.max(28, Math.min(rect.width, rect.height) * .36);
+      const dx = event.clientX - (rect.left + rect.width / 2);
+      const dy = event.clientY - (rect.top + rect.height / 2);
+      const length = Math.hypot(dx, dy) || 1;
+      const scale = Math.min(1, radius / length);
+      const x = dx * scale, y = dy * scale;
+      this.input.x = clamp(x / radius, -1, 1);
+      this.input.y = clamp(-y / radius, -1, 1);
+      knob.style.transform = `translate(${x}px,${y}px)`;
+    };
+    on(pad, 'pointerdown', event => {
+      if (this.input.padPointer !== null) return;
+      this.input.padPointer = event.pointerId;
+      pad.setPointerCapture?.(event.pointerId);
+      updatePad(event);
+      event.preventDefault();
+    }, { passive: false });
+    on(pad, 'pointermove', event => {
+      if (event.pointerId === this.input.padPointer) updatePad(event);
+    });
+    const releasePad = event => {
+      if (event.pointerId !== this.input.padPointer) return;
+      pad.releasePointerCapture?.(event.pointerId);
+      this.input.padPointer = null;
+      this.input.x = 0;
+      this.input.y = 0;
+      knob.style.transform = 'translate(0,0)';
+    };
+    on(pad, 'pointerup', releasePad);
+    on(pad, 'pointercancel', releasePad);
+    on(attack, 'pointerdown', event => { event.preventDefault(); this.attack(); }, { passive: false });
+    on(dodge, 'pointerdown', event => { event.preventDefault(); this.dodge(); }, { passive: false });
+    on(interact, 'pointerdown', event => { event.preventDefault(); this.interact(); }, { passive: false });
+  }
+
+  resetInput() {
+    this.input.x = 0;
+    this.input.y = 0;
+    this.input.keys.clear();
+    this.input.padPointer = null;
+    this.input.lookPointer = null;
+    if (this.knob) this.knob.style.transform = 'translate(0,0)';
+  }
+
+  start(progress) {
+    this.progress = structuredClone(progress);
+    this.progress.collected ||= [];
+    this.progress.choices ||= { grove: '', marsh: '', peak: '' };
+    this.clock = Number(this.progress.playTime) || 0;
+    this.day = .27 + this.clock / 780 % .48;
+    this.cameraYaw = Number.isFinite(Number(this.progress.yaw)) ? Number(this.progress.yaw) : 0;
+    this.stamina = playerStats(this.progress).maxStamina;
+    this.player.position.set(this.progress.x, terrainHeight(this.progress.x, this.progress.z), this.progress.z);
+    this.player.rotation.y = this.cameraYaw + Math.PI;
+    this.world.setCollected(this.progress.collected);
+    this.world.setChoices(this.progress.choices);
+    this.spawnEnemies();
+    this.status = 'running';
+    this.saveTimer = 0;
+    this.accumulator = 0;
+    this.setObjective();
+    this.updateCamera(1);
+    this.sound?.start?.();
+    this.cb.status('running');
+    this.cb.hud(this.snapshotHud());
+  }
+
+  stop() {
+    if (this.progress && this.status !== 'idle') this.checkpoint('menu');
+    this.status = 'idle';
+    this.resetInput();
+    this.sound?.stop?.();
+    this.cb.status('idle');
+  }
+
+  pause(reason = 'user') {
+    if (this.status !== 'running') return false;
+    this.status = 'paused';
+    this.pauseReason = reason;
+    this.resetInput();
+    this.checkpoint(reason);
+    this.sound?.stop?.();
+    this.cb.status('paused', reason);
+    return true;
+  }
+
+  resume() {
+    if (!['paused', 'dialogue', 'camp', 'ending'].includes(this.status)) return false;
+    this.pendingChoice = null;
+    this.status = 'running';
+    this.sound?.start?.();
+    this.cb.status('running');
+    return true;
+  }
+
+  respawn() {
+    if (!this.progress) return;
+    this.progress.coins = Math.max(0, this.progress.coins - respawnCoinLossFor(this.progress));
+    const stats = playerStats(this.progress);
+    this.progress.health = stats.maxHealth;
+    this.player.position.set(0, terrainHeight(0, 310), 310);
+    this.progress.x = 0;
+    this.progress.z = 310;
+    this.stamina = stats.maxStamina;
+    this.spawnEnemies();
+    this.status = 'running';
+    this.invulnerable = 2;
+    this.checkpoint('respawn');
+    this.cb.status('running');
+  }
+
+  spawnEnemies() {
+    for (const enemy of this.enemies) this.enemyRoot.remove(enemy.mesh);
+    this.enemies.length = 0;
+    for (const [index, spec] of ENEMY_SPAWNS.entries()) {
+      if (this.progress.defeated.includes(spec.id)) continue;
+      const locked = (spec.guardian && this.progress.story < 1) || (spec.final && !canEnterCrown(this.progress));
+      const enemy = {
+        ...spec,
+        maxHp: spec.hp,
+        alert: false,
+        dead: false,
+        locked,
+        flash: 0,
+        phase: (index * 2.399963229728653) % TAU,
+        state: 'idle',
+        stateTimer: 0,
+        stateTotal: 0,
+        attackConnected: false,
+        circleSide: index % 2 ? 1 : -1
+      };
+      enemy.mesh = this.createEnemyMesh(enemy);
+      enemy.mesh.position.set(enemy.x, terrainHeight(enemy.x, enemy.z), enemy.z);
+      enemy.mesh.visible = !locked;
+      this.enemyRoot.add(enemy.mesh);
+      this.enemies.push(enemy);
+    }
+  }
+
+  createEnemyMesh(enemy) {
+    const root = new THREE.Group();
+    root.name = enemy.id;
+    const boss = enemy.guardian || enemy.final;
+    const scale = enemy.final ? 2.25 : enemy.guardian ? 1.65 : 1;
+    const colors = enemy.type === 'stalker' ? [0x324d4a, 0x719482] : enemy.type === 'sentinel' ? [0x626b65, 0xb5ad89] : enemy.type === 'crown' ? [0x3d3849, 0xd1b35b] : [0x455e37, 0x93aa60];
+    const body = addPart(root, new THREE.IcosahedronGeometry(1.45, boss ? 1 : 0), makeSurface(colors[0]), 0, 2.1, 0, scale);
+    body.name = 'body';
+    addPart(root, new THREE.ConeGeometry(.78, 2.7, 5), makeSurface(colors[1], colors[1]), -1.15 * scale, 3.2 * scale, 0, scale);
+    addPart(root, new THREE.ConeGeometry(.78, 2.7, 5), makeSurface(colors[1], colors[1]), 1.15 * scale, 3.2 * scale, 0, scale);
+    for (const side of [-1, 1]) addPart(root, new THREE.SphereGeometry(.18 * scale, 6, 4), makeSurface(0xffd57b, 0xff7b2e), side * .48 * scale, 2.35 * scale, -1.25 * scale);
+    if (boss) {
+      const ring = addPart(root, new THREE.TorusGeometry(2.35 * scale, .14 * scale, 6, 22), makeSurface(colors[1], colors[1]), 0, 4.5 * scale, 0);
+      ring.rotation.x = Math.PI / 2;
+      ring.name = 'ring';
+    }
+    const radius = 2.4 * scale;
+    const tell = new THREE.Mesh(
+      new THREE.RingGeometry(radius * 1.12, radius * 1.38, 28),
+      new THREE.MeshBasicMaterial({ color: 0xffb45f, transparent: true, opacity: 0, depthWrite: false, side: THREE.DoubleSide })
+    );
+    tell.rotation.x = -Math.PI / 2;
+    tell.position.y = .12;
+    tell.visible = false;
+    tell.name = 'attackTell';
+    root.add(tell);
+    root.userData.radius = radius;
+    return root;
+  }
+
+  setObjective() {
+    const target = objectiveFor(this.progress);
+    this.world.setObjective(target);
+  }
+
+  movementInput() {
+    let x = this.input.x;
+    let y = this.input.y;
+    if (this.input.keys.has('KeyA') || this.input.keys.has('ArrowLeft')) x -= 1;
+    if (this.input.keys.has('KeyD') || this.input.keys.has('ArrowRight')) x += 1;
+    if (this.input.keys.has('KeyW') || this.input.keys.has('ArrowUp')) y += 1;
+    if (this.input.keys.has('KeyS') || this.input.keys.has('ArrowDown')) y -= 1;
+    const length = Math.hypot(x, y);
+    return length > 1 ? { x: x / length, y: y / length, length: 1 } : { x, y, length };
+  }
+
+  update(dt) {
+    if (!this.progress) return;
+    this.clock += dt;
+    this.day = (.27 + this.clock / 780) % 1;
+    this.saveTimer += dt;
+    this.attackTimer = Math.max(0, this.attackTimer - dt);
+    this.attackCooldown = Math.max(0, this.attackCooldown - dt);
+    this.dodgeTimer = Math.max(0, this.dodgeTimer - dt);
+    this.invulnerable = Math.max(0, this.invulnerable - dt);
+    this.hitFlash = Math.max(0, this.hitFlash - dt * 2.5);
+    const move = this.movementInput();
+    const stats = playerStats(this.progress);
+    const forwardX = -Math.sin(this.cameraYaw), forwardZ = -Math.cos(this.cameraYaw);
+    const rightX = Math.cos(this.cameraYaw), rightZ = -Math.sin(this.cameraYaw);
+    let moveX = rightX * move.x + forwardX * move.y;
+    let moveZ = rightZ * move.x + forwardZ * move.y;
+    if (this.dodgeTimer > 0) {
+      moveX = this.dodgeDirection.x;
+      moveZ = this.dodgeDirection.z;
+    }
+    const targetSpeed = this.dodgeTimer > 0 ? 34 : stats.speed * (terrainHeight(this.player.position.x, this.player.position.z) < WATER_LEVEL + .25 ? .58 : 1);
+    this.velocity.x += (moveX * targetSpeed - this.velocity.x) * Math.min(1, dt * (this.dodgeTimer ? 20 : 9));
+    this.velocity.z += (moveZ * targetSpeed - this.velocity.z) * Math.min(1, dt * (this.dodgeTimer ? 20 : 9));
+    if (move.length < .08 && this.dodgeTimer <= 0) {
+      this.velocity.x *= Math.max(0, 1 - dt * 11);
+      this.velocity.z *= Math.max(0, 1 - dt * 11);
+    }
+    this.player.position.x = clamp(this.player.position.x + this.velocity.x * dt, -WORLD_HALF + 12, WORLD_HALF - 12);
+    this.player.position.z = clamp(this.player.position.z + this.velocity.z * dt, -WORLD_HALF + 12, WORLD_HALF - 12);
+    const ground = Math.max(terrainHeight(this.player.position.x, this.player.position.z), WATER_LEVEL - .15);
+    this.player.position.y += (ground - this.player.position.y) * Math.min(1, dt * 14);
+    if (Math.hypot(this.velocity.x, this.velocity.z) > 1.4) {
+      const angle = Math.atan2(this.velocity.x, this.velocity.z);
+      this.player.rotation.y = approachAngle(this.player.rotation.y, angle, dt * 10);
+    }
+    this.stamina = clamp(this.stamina + dt * (this.dodgeTimer ? 4 : 19), 0, stats.maxStamina);
+    this.updateCombatAnimation();
+    this.updateEnemies(dt);
+    this.updateNearby();
+    this.updateDiscovery();
+    this.updateCamera(dt);
+    this.world.update(this.clock, this.player.position, this.day);
+    if (this.saveTimer >= 18) this.checkpoint('autosave');
+  }
+
+  updateCombatAnimation() {
+    if (this.attackTimer > 0) {
+      const t = 1 - this.attackTimer / .38;
+      this.swordPivot.rotation.z = -.45 - Math.sin(t * Math.PI) * 2.45;
+      this.attackArc.material.opacity = Math.sin(t * Math.PI) * .85;
+      if (!this.attackHit && t > .24) {
+        this.attackHit = true;
+        this.resolveAttack();
+      }
+    } else {
+      this.swordPivot.rotation.z += (-.42 - this.swordPivot.rotation.z) * .18;
+      this.attackArc.material.opacity = 0;
+    }
+    const speed = Math.hypot(this.velocity.x, this.velocity.z);
+    this.player.position.y += Math.sin(this.clock * 9) * Math.min(.035, speed * .002);
+    this.cloak.rotation.x = .08 + Math.min(.32, speed * .012);
+  }
+
+  attack() {
+    if (this.status !== 'running' || this.attackCooldown > 0) return false;
+    this.attackTimer = .38;
+    this.attackCooldown = .48;
+    this.attackHit = false;
+    this.sound?.event?.('attack');
+    return true;
+  }
+
+  resolveAttack() {
+    const stats = playerStats(this.progress);
+    const nearby = this.enemies.filter(enemy => !enemy.dead && !enemy.locked && enemy.mesh.visible && distance2D(this.player.position, enemy) < (enemy.guardian || enemy.final ? 10 : 8));
+    nearby.sort((a, b) => distance2D(this.player.position, a) - distance2D(this.player.position, b));
+    const target = nearby[0];
+    if (!target) return;
+    this.player.rotation.y = Math.atan2(target.x - this.player.position.x, target.z - this.player.position.z);
+    const damage = stats.power * (.92 + Math.min(1, this.stamina / stats.maxStamina) * .16);
+    this.damageEnemy(target, damage);
+  }
+
+  dodge() {
+    if (this.status !== 'running' || this.dodgeTimer > 0 || this.stamina < 24) return false;
+    const move = this.movementInput();
+    if (move.length > .08) {
+      const fx = -Math.sin(this.cameraYaw), fz = -Math.cos(this.cameraYaw);
+      const rx = Math.cos(this.cameraYaw), rz = -Math.sin(this.cameraYaw);
+      this.dodgeDirection.set(rx * move.x + fx * move.y, 0, rz * move.x + fz * move.y).normalize();
+    } else {
+      this.dodgeDirection.set(Math.sin(this.player.rotation.y), 0, Math.cos(this.player.rotation.y));
+    }
+    this.stamina -= 24;
+    this.dodgeTimer = .34;
+    this.invulnerable = .48;
+    this.sound?.event?.('dodge');
+    return true;
+  }
+
+  damageEnemy(enemy, amount) {
+    if (enemy.dead) return;
+    enemy.hp -= amount;
+    enemy.flash = .17;
+    enemy.alert = true;
+    this.sound?.event?.('hit', enemy.guardian || enemy.final ? 1.2 : 1);
+    if (enemy.hp <= 0) this.defeatEnemy(enemy);
+  }
+
+  defeatEnemy(enemy) {
+    enemy.dead = true;
+    enemy.mesh.visible = false;
+    this.progress.coins += enemy.coins;
+    const result = grantExperience(this.progress, enemy.xp);
+    this.progress = result.progress;
+    if (result.levels) this.cb.toast(`レベル ${this.progress.level} — 生命力と攻撃力が上昇`);
+    if (enemy.guardian) {
+      if (!this.progress.defeated.includes(enemy.id)) this.progress.defeated.push(enemy.id);
+      if (!this.progress.sigils.includes(enemy.id)) this.progress.sigils.push(enemy.id);
+      const guardian = GUARDIANS.find(item => item.id === enemy.id);
+      if (!this.progress.choices[guardian.point]) this.progress.pendingChoice = enemy.id;
+      this.progress.story = this.progress.sigils.length >= 3 ? 2 : 1;
+      this.cb.toast(`${guardian.sigil}を取り戻した`, 2600);
+      this.sound?.event?.('discover');
+      for (const other of this.enemies) if (other.final) { other.locked = !canEnterCrown(this.progress); other.mesh.visible = !other.locked; }
+    } else if (enemy.final) {
+      if (!this.progress.defeated.includes(enemy.id)) this.progress.defeated.push(enemy.id);
+      this.progress.story = 3;
+      this.progress.victory = true;
+      this.progress.ending = endingFor(this.progress);
+      this.progress.endings += 1;
+      this.status = 'ending';
+      this.checkpoint('ending');
+      this.sound?.event?.('victory');
+      this.cb.ending(this.snapshotHud());
+      return;
+    }
+    this.setObjective();
+    this.checkpoint('enemy-defeated');
+  }
+
+  updateEnemies(dt) {
+    const player = this.player.position;
+    let boss = null;
+    for (const enemy of this.enemies) {
+      if (enemy.dead || enemy.locked || !enemy.mesh.visible) continue;
+      const behavior = ENEMY_BEHAVIORS[enemy.type] || ENEMY_BEHAVIORS.beast;
+      let dx = player.x - enemy.x, dz = player.z - enemy.z, distance = Math.hypot(dx, dz) || 1;
+      const enter = (state, duration = 0) => {
+        enemy.state = state;
+        enemy.stateTimer = duration;
+        enemy.stateTotal = duration;
+        if (state === 'idle') enemy.alert = false;
+        if (state === 'windup') {
+          enemy.attackConnected = false;
+          if (distance < 30) this.sound?.event?.('danger', enemy.guardian || enemy.final ? 1.25 : 1);
+        }
+      };
+
+      if (enemy.state === 'idle') {
+        enemy.x += Math.sin(this.clock * .36 + enemy.phase) * dt * .4;
+        enemy.z += Math.cos(this.clock * .31 + enemy.phase) * dt * .4;
+        if (distance < behavior.activation) {
+          enemy.alert = true;
+          enter('approach');
+        }
+      } else if (enemy.state === 'approach') {
+        enemy.alert = true;
+        if (distance > 175) {
+          enemy.alert = false;
+          enter('idle');
+        } else if (distance <= behavior.attackRange + enemy.mesh.userData.radius * .18) {
+          enter('windup', behavior.windup * (enemy.guardian ? .92 : 1));
+        } else {
+          let moveX = dx / distance, moveZ = dz / distance;
+          if (behavior.circle && distance < 21) {
+            const forwardWeight = clamp((distance - behavior.attackRange) / 14, .18, .72);
+            const sideX = -moveZ * enemy.circleSide, sideZ = moveX * enemy.circleSide;
+            moveX = moveX * forwardWeight + sideX * (1 - forwardWeight);
+            moveZ = moveZ * forwardWeight + sideZ * (1 - forwardWeight);
+            const length = Math.hypot(moveX, moveZ) || 1;
+            moveX /= length;
+            moveZ /= length;
+          }
+          enemy.x += moveX * behavior.speed * dt;
+          enemy.z += moveZ * behavior.speed * dt;
+        }
+      } else if (enemy.state === 'windup') {
+        enemy.alert = true;
+        enemy.stateTimer -= dt;
+        if (enemy.stateTimer <= 0) enter('active', behavior.active);
+      } else if (enemy.state === 'active') {
+        enemy.alert = true;
+        enemy.stateTimer -= dt;
+        enemy.x += dx / distance * behavior.lunge * dt;
+        enemy.z += dz / distance * behavior.lunge * dt;
+        dx = player.x - enemy.x;
+        dz = player.z - enemy.z;
+        distance = Math.hypot(dx, dz) || 1;
+        const hitRange = behavior.attackRange + enemy.mesh.userData.radius * .28;
+        if (!enemy.attackConnected && distance <= hitRange) {
+          enemy.attackConnected = true;
+          this.hurt(enemy.power * behavior.damage, enemy);
+        }
+        if (enemy.stateTimer <= 0) enter('recovery', behavior.recovery);
+      } else if (enemy.state === 'recovery') {
+        enemy.alert = true;
+        enemy.stateTimer -= dt;
+        if (enemy.stateTimer <= 0) enter(distance > 175 ? 'idle' : 'approach');
+      }
+
+      if ((enemy.guardian || enemy.final) && enemy.alert) boss = enemy;
+      enemy.mesh.position.x = enemy.x;
+      enemy.mesh.position.z = enemy.z;
+      enemy.mesh.position.y = Math.max(terrainHeight(enemy.x, enemy.z), WATER_LEVEL - .1);
+      enemy.mesh.rotation.y = Math.atan2(dx, dz);
+      const windupProgress = enemy.state === 'windup' ? 1 - clamp(enemy.stateTimer / (enemy.stateTotal || 1), 0, 1) : 0;
+      enemy.mesh.scale.y = 1 + Math.sin(this.clock * 4 + enemy.phase) * .035 + windupProgress * .09;
+      const ring = enemy.mesh.getObjectByName('ring');
+      if (ring) ring.rotation.z += dt * (enemy.final ? 1.5 : .8);
+      const tell = enemy.mesh.getObjectByName('attackTell');
+      if (tell) {
+        tell.visible = enemy.state === 'windup' || enemy.state === 'active';
+        tell.material.opacity = enemy.state === 'active' ? .92 : .14 + windupProgress * .68;
+        const pulse = 1 + windupProgress * .18 + Math.sin(this.clock * 16) * .025;
+        tell.scale.setScalar(pulse);
+      }
+      const body = enemy.mesh.getObjectByName('body');
+      if (body?.material) {
+        body.material.emissive.setHex(enemy.flash > 0 ? 0xffffff : enemy.state === 'windup' ? 0x8a3309 : enemy.state === 'active' ? 0xff7a18 : 0x000000);
+        body.material.emissiveIntensity = enemy.flash > 0 ? 1 : enemy.state === 'active' ? .9 : enemy.state === 'windup' ? .48 : 0;
+      }
+      enemy.flash = Math.max(0, enemy.flash - dt);
+    }
+    this.activeBoss = boss;
+  }
+
+  hurt(amount, source) {
+    if (this.status !== 'running' || this.invulnerable > 0) return;
+    this.progress.health = Math.max(0, this.progress.health - amount);
+    this.invulnerable = .72;
+    this.hitFlash = .7;
+    this.sound?.event?.('hurt');
+    if (source) {
+      v3.set(this.player.position.x - source.x, 0, this.player.position.z - source.z).normalize();
+      this.player.position.addScaledVector(v3, 3.5);
+    }
+    if (this.progress.health <= 0) {
+      this.status = 'dead';
+      this.checkpoint('defeat');
+      this.sound?.stop?.();
+      this.cb.death({ coins: this.progress.coins });
+    }
+  }
+
+  updateNearby() {
+    let nearest = null;
+    for (const item of this.world.interactables) {
+      if (item.mesh && !item.mesh.visible) continue;
+      const distance = Math.hypot(this.player.position.x - item.x, this.player.position.z - item.z);
+      const reach = (item.radius || 5) + 7;
+      if (distance <= reach && (!nearest || distance < nearest.distance)) nearest = { ...item, distance };
+    }
+    this.nearby = nearest;
+    this.targetRing.visible = Boolean(nearest);
+    if (nearest) this.targetRing.position.set(nearest.x, terrainHeight(nearest.x, nearest.z) + .12, nearest.z);
+  }
+
+  interact() {
+    if (this.status !== 'running' || !this.nearby) return false;
+    const item = this.nearby;
+    if (item.type === 'herb' || item.type === 'crystal') {
+      if (!this.progress.collected.includes(item.id)) this.progress.collected.push(item.id);
+      item.collected = true;
+      item.mesh.visible = false;
+      if (item.type === 'herb') {
+        this.progress.herbs += 1;
+        const stats = playerStats(this.progress);
+        this.progress.health = Math.min(stats.maxHealth, this.progress.health + herbHealingFor(this.progress));
+        this.cb.toast('月露草 +1　生命力を回復');
+      } else {
+        this.progress.crystals += 1;
+        this.cb.toast('青脈晶 +1');
+      }
+      this.sound?.event?.('pickup');
+      this.checkpoint('resource');
+      return true;
+    }
+    if (item.type === 'cache') {
+      if (this.progress.collected.includes(item.id)) return false;
+      this.progress.collected.push(item.id);
+      this.progress.crystals += 3;
+      this.progress.coins += 35;
+      this.cb.toast('古い鉱夫の箱：青脈晶 +3 / 木の葉貨 +35', 2600);
+      this.checkpoint('cache');
+      return true;
+    }
+    if (item.id === 'mira') {
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      if (this.progress.story === 0) {
+        this.progress.story = 1;
+        for (const enemy of this.enemies) if (enemy.guardian) {
+          enemy.locked = false;
+          enemy.mesh.visible = true;
+        }
+        this.setObjective();
+        this.checkpoint('quest-start');
+        this.cb.dialogue({ speaker: '斥候ミラ', text: '帰ってきたのね。父イリヤが三つの印を空環へ束ね、あの大嵐から里を救って十二年。でも代わりに森も川も風も眠った。私は印を大地へ返したい。オリンは結界を失えば次は誰も救えないと言う。古樹、鐘楼、白嶺で記憶を見て、最後はあなた自身で決めて。' });
+      } else if (this.progress.sigils.length < 3) {
+        const consequence = this.progress.choices.grove === 'haven_ward'
+          ? '森の印は里の境に根づいた。あの淡い輪が、旅人をここへ導いてくれる。'
+          : this.progress.choices.grove === 'wild_bloom'
+            ? '古樹の森に若木が戻った。月露草にも、前より強い命が巡っている。'
+            : '古樹の記憶が、印の行方をあなたに問いかけている。';
+        const decisions = Object.values(this.progress.choices).filter(Boolean).length;
+        this.cb.dialogue({ speaker: '斥候ミラ', text: `${consequence} 印はあと${3 - this.progress.sigils.length}つ。${decisions ? 'あなたの答えで谷はもう変わり始めている。選んだ責任から目を逸らさないで。' : '守ることと、返すこと。その両方に代償がある。'}` });
+      } else if (!canEnterCrown(this.progress)) {
+        const unresolved = GUARDIANS.find(guardian => !this.progress.choices[guardian.point]);
+        this.cb.dialogue({ speaker: '斥候ミラ', text: `${unresolved?.sigil || '印'}はまだ行き先を持たない。${unresolved ? WORLD_POINTS.find(point => point.id === unresolved.point)?.label : '記憶の場所'}で答えを出してから、空環神殿へ向かって。` });
+      } else if (!this.progress.victory) {
+        this.cb.dialogue({ speaker: '斥候ミラ', text: '三つの印が響いている。北の空環神殿へ。谷を縛る王を倒せるのは、もうあなただけ。' });
+      } else {
+        const memory = this.progress.choices.grove === 'haven_ward' ? '里の護りは、あなたの決断を覚えている。' : this.progress.choices.grove === 'wild_bloom' ? '芽吹いた森は、あなたの決断を覚えている。' : '';
+        this.cb.dialogue({ speaker: '斥候ミラ', text: `風が帰ってきた。${memory} 物語は終わっても、この谷はまだ広い。好きな道を歩いて。` });
+      }
+      return true;
+    }
+    if (item.id === 'orin') {
+      if (!this.progress.npcFlags?.orinIntro) {
+        this.progress.npcFlags ||= {};
+        this.progress.npcFlags.orinIntro = true;
+        this.status = 'dialogue';
+        this.pendingChoice = null;
+        this.checkpoint('orin-intro');
+        this.cb.dialogue({ speaker: '鍛冶師オリン', text: 'ミラは父親を檻から解きたい。それは分かる。だが十二年前、イリヤの結界がなければ、ここにいる子どもは一人も生まれていない。印を大地へ返すなら、次の嵐を人の手で耐える覚悟も一緒に持て。俺は武器も水路も直す。決めるのは旅を見たお前だ。' });
+        return true;
+      }
+      this.status = 'camp';
+      this.cb.status('camp');
+      return true;
+    }
+    if (item.type === 'camp') {
+      const stats = playerStats(this.progress);
+      this.progress.health = stats.maxHealth;
+      this.stamina = stats.maxStamina;
+      this.status = 'camp';
+      this.checkpoint('camp');
+      this.sound?.event?.('heal');
+      this.cb.status('camp');
+      return true;
+    }
+    if (item.type === 'final' && !canEnterCrown(this.progress)) {
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      const unresolved = GUARDIANS.find(guardian => !this.progress.choices[guardian.point]);
+      const text = this.progress.sigils.length < 3
+        ? `三つの窪みのうち、${this.progress.sigils.length}つだけが光っている。すべての印が必要だ。`
+        : `${unresolved?.sigil || '印'}はまだ行き先を持たない。${unresolved ? WORLD_POINTS.find(point => point.id === unresolved.point)?.label : '記憶の場所'}で答えなければ、門は印を受け入れない。`;
+      this.cb.dialogue({ speaker: '空環の門', text });
+      return true;
+    }
+    const choicePoint = { grove_altar: 'grove', marsh_bell: 'marsh', peak_wind: 'peak' }[item.id];
+    const choiceGuardian = GUARDIANS.find(guardian => guardian.point === choicePoint);
+    if (choicePoint && this.progress.defeated.includes(choiceGuardian.id)) {
+      this.status = 'dialogue';
+      if (!this.progress.choices[choicePoint]) {
+        this.pendingChoice = choicePoint;
+        const memory = CONSEQUENCES[choiceGuardian.id];
+        this.cb.dialogue({
+          speaker: memory.title,
+          text: memory.prompt,
+          choices: Object.values(CONSEQUENCE_CHOICES[choicePoint]).map(({ id, label, detail }) => ({ id, label, detail }))
+        });
+      } else {
+        this.pendingChoice = null;
+        const chosen = CONSEQUENCE_CHOICES[choicePoint][this.progress.choices[choicePoint]];
+        this.cb.dialogue({ speaker: CONSEQUENCES[choiceGuardian.id].title, text: `${chosen.label}と決めた記憶は消えない。${chosen.journal}` });
+      }
+      return true;
+    }
+    const lore = {
+      grove_altar: ['古樹の記憶', '倒れた木も、土の下で森を支える。谷の力は失われず、姿を変えて巡る。'],
+      marsh_bell: ['沈んだ鐘', '鐘は水の底でも鳴る。霧の夜、その音を聞いた旅人は帰る道を思い出した。'],
+      peak_wind: ['風読みの碑', '風に逆らう者は峰を恐れ、風を読む者は峰を道に変える。'],
+      coast_archive: ['潮騒の碑文', '王都は海へ崩れた。それでも人々は高台に里を築き、朝を待った。']
+    }[item.id];
+    if (lore) {
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.cb.dialogue({ speaker: lore[0], text: lore[1] });
+      return true;
+    }
+    return false;
+  }
+
+  chooseDialogue(choiceId) {
+    const point = this.pendingChoice;
+    const options = CONSEQUENCE_CHOICES[point];
+    if (this.status !== 'dialogue' || !options || !Object.prototype.hasOwnProperty.call(options, choiceId) || this.progress.choices[point]) return false;
+    const guardian = GUARDIANS.find(item => item.point === point);
+    this.progress.choices[point] = choiceId;
+    if (this.progress.pendingChoice === guardian?.id) this.progress.pendingChoice = null;
+    this.pendingChoice = null;
+    this.world.setChoices(this.progress.choices);
+    const stats = playerStats(this.progress);
+    this.stamina = stats.maxStamina;
+    this.progress.health = Math.min(stats.maxHealth, this.progress.health + (point === 'marsh' && choiceId === 'water_ward' ? 18 : 0));
+    for (const enemy of this.enemies) if (enemy.final) {
+      enemy.locked = !canEnterCrown(this.progress);
+      enemy.mesh.visible = !enemy.locked;
+    }
+    this.setObjective();
+    this.checkpoint(`${point}-choice`);
+    this.sound?.event?.('discover');
+    const result = CONSEQUENCES[guardian.id].options.find(option => option.id === choiceId)?.result || options[choiceId].journal;
+    this.cb.dialogue({ speaker: CONSEQUENCES[guardian.id].title, text: result });
+    return true;
+  }
+
+  upgrade(kind) {
+    if (!this.progress || !['vigor', 'edge', 'stride'].includes(kind)) return { ok: false, reason: 'invalid' };
+    const level = this.progress.upgrades[kind] || 0;
+    const crystalCost = level + 1;
+    const coinCost = 25 + level * 25;
+    if (level >= 5) return { ok: false, reason: 'max' };
+    if (this.progress.crystals < crystalCost || this.progress.coins < coinCost) return { ok: false, reason: 'cost', crystalCost, coinCost };
+    this.progress.crystals -= crystalCost;
+    this.progress.coins -= coinCost;
+    this.progress.upgrades[kind] = level + 1;
+    const stats = playerStats(this.progress);
+    this.progress.health = stats.maxHealth;
+    this.stamina = stats.maxStamina;
+    this.checkpoint('upgrade');
+    this.sound?.event?.('discover');
+    return { ok: true, level: level + 1 };
+  }
+
+  updateDiscovery() {
+    for (const point of WORLD_POINTS) {
+      if (this.progress.discovered.includes(point.id)) continue;
+      if (Math.hypot(this.player.position.x - point.x, this.player.position.z - point.z) < 92) {
+        this.progress.discovered.push(point.id);
+        this.cb.discovery(point);
+        this.sound?.event?.('discover');
+        this.checkpoint('discovery');
+      }
+    }
+  }
+
+  updateCamera(dt) {
+    const distance = 15.5;
+    const height = 8.4 + this.cameraPitch * 8;
+    const desired = v3.set(
+      this.player.position.x + Math.sin(this.cameraYaw) * distance,
+      this.player.position.y + height,
+      this.player.position.z + Math.cos(this.cameraYaw) * distance
+    );
+    desired.y = Math.max(desired.y, terrainHeight(desired.x, desired.z) + 3.2);
+    const factor = dt >= 1 ? 1 : 1 - Math.exp(-dt * 8);
+    this.camera.position.lerp(desired, factor);
+    targetV.set(this.player.position.x, this.player.position.y + 3.1, this.player.position.z);
+    this.camera.lookAt(targetV);
+  }
+
+  checkpoint(reason) {
+    if (!this.progress) return;
+    this.progress.x = this.player.position.x;
+    this.progress.z = this.player.position.z;
+    this.progress.yaw = this.cameraYaw;
+    this.progress.playTime = this.clock;
+    this.progress.lastSaved = Date.now();
+    const stats = playerStats(this.progress);
+    this.progress.health = clamp(this.progress.health, 0, stats.maxHealth);
+    this.saveTimer = 0;
+    this.cb.save(structuredClone(this.progress), reason);
+  }
+
+  snapshotHud() {
+    if (!this.progress) return { status: this.status };
+    const stats = playerStats(this.progress);
+    const objective = objectiveFor(this.progress);
+    return {
+      status: this.status,
+      health: this.progress.health,
+      maxHealth: stats.maxHealth,
+      stamina: this.stamina,
+      maxStamina: stats.maxStamina,
+      level: this.progress.level,
+      xp: this.progress.xp,
+      nextXp: xpForLevel(this.progress.level),
+      coins: this.progress.coins,
+      herbs: this.progress.herbs,
+      crystals: this.progress.crystals,
+      upgrades: { ...this.progress.upgrades },
+      quest: questText(this.progress),
+      region: regionAt(this.player.position.x, this.player.position.z),
+      objectiveDistance: Math.round(Math.hypot(this.player.position.x - objective.x, this.player.position.z - objective.z)),
+      interact: this.nearby?.name || '',
+      boss: this.activeBoss ? { name: this.activeBoss.name, health: Math.max(0, this.activeBoss.hp / this.activeBoss.maxHp) } : null,
+      x: this.player.position.x,
+      z: this.player.position.z,
+      yaw: this.player.rotation.y,
+      discovered: [...this.progress.discovered],
+      sigils: [...this.progress.sigils],
+      choices: { ...this.progress.choices },
+      pendingChoice: this.progress.pendingChoice || null,
+      ending: this.progress.ending || '',
+      playTime: this.clock,
+      victory: this.progress.victory,
+      hitFlash: this.hitFlash
+    };
+  }
+
+  render() {
+    this.renderer.render(this.scene, this.camera);
+  }
+
+  resize() {
+    const rect = this.canvas.parentElement?.getBoundingClientRect?.() || this.canvas.getBoundingClientRect();
+    const width = Math.max(1, Math.round(rect.width || globalThis.innerWidth || 1));
+    const height = Math.max(1, Math.round(rect.height || globalThis.innerHeight || 1));
+    const cap = this.quality === 2 ? 1.55 : this.quality === 1 ? 1.25 : 1;
+    let dpr = Math.min(globalThis.devicePixelRatio || 1, cap);
+    if (width * height * dpr * dpr > 1_850_000) dpr = Math.sqrt(1_850_000 / (width * height));
+    this.renderer.setPixelRatio(Math.max(.75, dpr));
+    this.renderer.setSize(width, height, false);
+    this.camera.aspect = width / height;
+    this.camera.updateProjectionMatrix();
+  }
+
+  frame(time) {
+    if (this.disposed) return;
+    const elapsed = this.lastFrame ? clamp((time - this.lastFrame) / 1000, 0, .05) : 0;
+    this.lastFrame = time;
+    if (this.status === 'running') {
+      this.accumulator += elapsed;
+      let steps = 0;
+      while (this.accumulator >= STEP && steps < 3) {
+        this.update(STEP);
+        this.accumulator -= STEP;
+        steps += 1;
+      }
+      if (steps === 3) this.accumulator = 0;
+      this.hudTimer += elapsed;
+      if (this.hudTimer > .1) { this.hudTimer = 0; this.cb.hud(this.snapshotHud()); }
+    } else {
+      this.accumulator = 0;
+      if (this.progress) this.world.update(this.clock, this.player.position, this.day);
+    }
+    this.render();
+    if (elapsed > 0) this.samples.push(elapsed * 1000);
+    if (this.samples.length >= 90) {
+      const average = this.samples.reduce((sum, value) => sum + value, 0) / this.samples.length;
+      const ordered = [...this.samples].sort((a, b) => a - b);
+      const p95 = ordered[Math.floor(ordered.length * .95)];
+      this.samples.length = 0;
+      if (this.settings()?.quality === 'auto' && this.quality > 0 && (average > 24 || p95 > 34)) {
+        this.quality -= 1;
+        this.world.setQuality(this.quality);
+        this.resize();
+        this.cb.quality(this.quality, { average, p95 });
+      }
+    }
+    this.frameHandle = requestAnimationFrame(this.frame);
+  }
+
+  setQuality(value) {
+    this.quality = value === 'low' ? 0 : 2;
+    this.world.setQuality(this.quality);
+    this.resize();
+  }
+
+  testSnapshot() {
+    const render = this.renderer.info?.render;
+    const metrics = {
+      quality: this.quality,
+      canvasPixels: this.canvas.width * this.canvas.height,
+      drawCalls: render?.calls ?? null,
+      triangles: render?.triangles ?? null
+    };
+    return this.progress ? { ...this.snapshotHud(), enemyCount: this.enemies.filter(enemy => !enemy.dead && !enemy.locked).length, metrics } : { status: this.status, metrics };
+  }
+
+  testEnemy(id) {
+    const enemy = this.enemies.find(item => item.id === id);
+    if (!enemy) return null;
+    return {
+      id: enemy.id,
+      type: enemy.type,
+      state: enemy.state,
+      stateTimer: enemy.stateTimer,
+      attackConnected: enemy.attackConnected,
+      locked: enemy.locked,
+      visible: enemy.mesh.visible,
+      x: enemy.x,
+      z: enemy.z,
+      hp: enemy.hp
+    };
+  }
+
+  testTeleport(x, z) {
+    if (!this.progress) return;
+    this.player.position.set(clamp(x, -WORLD_HALF + 12, WORLD_HALF - 12), terrainHeight(x, z), clamp(z, -WORLD_HALF + 12, WORLD_HALF - 12));
+    this.updateNearby();
+    this.updateDiscovery();
+    this.updateCamera(1);
+  }
+
+  testDefeat(id) {
+    const enemy = this.enemies.find(item => item.id === id && !item.dead);
+    if (!enemy) return false;
+    enemy.locked = false;
+    enemy.mesh.visible = true;
+    this.defeatEnemy(enemy);
+    return true;
+  }
+
+  testTick(seconds = STEP) {
+    const frames = Math.min(600, Math.max(1, Math.round(seconds / STEP)));
+    for (let i = 0; i < frames; i += 1) if (this.status === 'running') this.update(STEP);
+  }
+
+  destroy() {
+    this.checkpoint('destroy');
+    this.disposed = true;
+    cancelAnimationFrame(this.frameHandle);
+    this.bound.splice(0).forEach(unbind => unbind());
+    this.world.dispose();
+    this.renderer.dispose();
+    this.sound?.destroy?.();
+  }
 }

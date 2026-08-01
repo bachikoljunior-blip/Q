@@ -11,6 +11,7 @@ on:
       - sw.js
       - release.json
       - assets-manifest.json
+      - assets/**
       - package.json
       - package-lock.json
       - src/**
@@ -52,8 +53,10 @@ jobs:
           mkdir _site
           cp index.html styles.css icon.svg manifest.webmanifest sw.js .nojekyll _site/
           cp -R src _site/src
+          if [ -d assets ]; then cp -R assets _site/assets; fi
           if [ -d vendor ]; then cp -R vendor _site/vendor; fi
           if [ -f release.json ]; then cp release.json _site/release.json; fi
+          sed -i "s/__BUILD_REVISION__/${GITHUB_SHA}/g" _site/index.html _site/release.json
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
@@ -86,4 +89,4 @@ jobs:
           if [ -f release.json ]; then echo "enabled=true" >> "$GITHUB_OUTPUT"; else echo "enabled=false" >> "$GITHUB_OUTPUT"; fi
       - name: Verify served release identifier and page
         if: steps.revision.outputs.enabled == 'true'
-        run: node tools/verify-public.mjs --url "${{ needs.deploy.outputs.page_url }}" --expected-file release.json
+        run: node tools/verify-public.mjs --url "${{ needs.deploy.outputs.page_url }}" --expected-id "${GITHUB_SHA}"
