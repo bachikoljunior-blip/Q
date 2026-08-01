@@ -13,7 +13,11 @@ logical_session:
 
 migration:
   from: legacy_project_operating_protocol_v1
-  status: complete_unverified
+  status: complete_verified
+  verified_revision: bfdd56bb3a9e4e760e7185e3dd22ffa3b5c72740
+  pull_request: https://github.com/bachikoljunior-blip/Q/pull/4
+  remote_quality_run: "Quality floor run 30685069375 completed with success"
+  public_product_impact: "No Pages workflow run for the migration merge; live index SHA-256 remained 7cbc9ae4edb79024fbac94b981ab79f1b72800e35d03bfe4dc5e5d63d340bb9e."
   checkpoint: AI_DEVELOPMENT/ARCHIVE/MIGRATION_CHECKPOINT_2026-08-01.md
   legacy_archives:
     - AI_DEVELOPMENT/ARCHIVE/PROJECT_OPERATING_PROTOCOL_v1.md
@@ -36,15 +40,13 @@ objective:
 execution:
   selected_rigor: STRICT
   active_work:
-    description: "Complete and verify the Adaptive 2.2 migration before resuming the high-impact product replacement."
-    status: complete_unverified
+    description: "Restore the preserved open-world branch and resume the mobile open-world RPG replacement from its partial core checkpoint."
+    status: prepared_not_applied
     allowed_scope:
-      - canonical operating files and archives
-      - bounded F9 enforcement and deployment-trigger correction
-      - no product behavior change during the migration transaction
+      - Three.js open-world renderer, terrain, nature, destinations, player, combat, RPG progression, quests, saves, UI, audio, tests, and release metadata
+      - selective carry-forward of PR 3 lifecycle and accessibility behavior that still applies
     prohibited_changes:
       - no deletion or completion claim for open PR 3
-      - no public product deployment solely because operating documents changed
       - no unattended delivery while all four F9 gates and automatic revert are absent
   last_verified_checkpoint:
     status: complete_verified
@@ -60,14 +62,12 @@ execution:
       limitation: "Partial open-world core work has not been executed."
   current_blockers:
     - status: blocked
-      item: "GitHub CLI gh is absent; use the connected GitHub app or ordinary git where capability is verified."
-    - status: blocked
       item: "Branch-protection and required-status-check configuration is not exposed by the current GitHub connector and must not be assumed."
   current_uncertainty:
     - exact commit served by Pages is not reachable from the current public artifact
     - physical iPhone and Android behavior remains unverified
     - open PR 3 overlaps the product replacement but contains lifecycle behaviors that remain applicable
-  exact_next_action: "Run the final normal floor and regression gates, commit and push agent/adaptive-2.2-migration, create and inspect its PR/checks, merge it without a Pages product deployment, reconcile remote main, then restore agent/open-world-rpg and its stash."
+  exact_next_action: "Switch to agent/open-world-rpg, rebase its clean base onto remote main bfdd56b without losing the preserved product patch, restore the named stash, reconcile package/core conflicts with Adaptive 2.2 files, then execute the first bounded world-foundation slice."
 
 modules:
   activated: []
@@ -75,31 +75,38 @@ modules:
 
 floor:
   last_check:
-    status: complete_unverified
-    at: "2026-08-01T13:54:54+09:00"
-    note: "Canonical validation, STARTHREAD regression flow, rollback patch check, clean resume simulation, YAML parse, deployment-path falsification, and all four deliberate gate failures passed locally; remote application remains outstanding."
+    status: complete_verified
+    at: "2026-08-01T14:05:07+09:00"
+    note: "Canonical files and loader were fetched from remote main at bfdd56b; PR 4 merged after Quality floor success; PR 3 remains open; no Pages run occurred; the live STARTHREAD index remained byte-identical."
   independence_level_used: C
   review_outcome: passed
   reviewed_at: "2026-08-01T13:56:53+09:00"
   review_scope: "Adaptive 2.2 canonical files, legacy preservation, loader, F9 scripts/workflows, rollback, no-product-deploy path filter, STARTHREAD regression baseline, and live-index byte comparison."
   review_limitation: "Same-agent separate falsification pass; no separate agent was used, branch protection is not exposed, and F6 cannot run against the legacy public artifact because it has no release identifier."
-  skips: []
+  skips:
+    - "F6 | user-visible delivery trigger did not fire because the migration changed no product path, produced no Pages run, and the live index hash stayed unchanged | evidence: workflow_runs empty for bfdd56b plus byte comparison | revisit on the next product deployment."
+    - "F9 required-check enforcement | could not be completed because gh is absent and no connected tool exposes branch protection or required-status configuration | evidence: gh command missing and tool registry has no protection/ruleset operation | revisit when capability changes."
   waivers: []
   enforcement:
     f2_state_update_check:
-      status: prepared_not_applied
-      mechanism: "tools/floor-gates.mjs and quality/pages workflow steps reject protected changes without STATE.yaml; deliberate F2 failure observed locally; branch is not yet remote and required-check protection is unverified."
+      status: blocked
+      active: false
+      mechanism: "tools/floor-gates.mjs is installed in Quality floor and Pages; deliberate local failure and remote good-input pass observed. It is not a verified required merge check because branch protection is unavailable."
     f3_execution_check:
-      status: prepared_not_applied
-      mechanism: "Quality and Pages workflows execute protocol validation plus npm run check; deliberate injected F3 failure and normal regression pass observed locally; remote required-check protection is unverified."
+      status: blocked
+      active: false
+      mechanism: "Quality floor and Pages execute protocol validation plus npm run check; deliberate local failure, local normal pass, and remote normal pass observed. It is not a verified required merge check."
     f5_review_record_check:
-      status: prepared_not_applied
-      mechanism: "tools/floor-gates.mjs requires A/B/C, passed outcome, and a changed review record; deliberate F5 failure observed locally; remote required-check protection is unverified."
+      status: blocked
+      active: false
+      mechanism: "tools/floor-gates.mjs requires A/B/C, passed outcome, and a changed review record; deliberate local failure and remote good-input pass observed. It is not a verified required merge check."
     f6_public_revision_check:
       status: prepared_not_applied
+      active: false
       mechanism: "tools/verify-public.mjs and the post-deploy job compare release.json with public meta; deliberate mismatch failure observed locally; legacy public build exposes no identifier and no real F6 pass exists."
     revert_mechanism:
       status: blocked
+      active: false
       mechanism: "No safe automatic Pages revert is installed or verified."
     last_observed_failing:
       - {item: F2, status: complete_verified, evidence: "node tools/floor-gates.mjs --deliberate-failure F2 exited 1 and named missing STATE.yaml"}
@@ -116,9 +123,9 @@ recovery:
 remote:
   repository: bachikoljunior-blip/Q
   default_branch: main
-  default_branch_revision: ac6f57f01c569201e453d84dad1e9bd02fe7285c
-  branch: agent/adaptive-2.2-migration
-  branch_remote_status: prepared_not_applied
+  default_branch_revision_at_migration_completion: bfdd56bb3a9e4e760e7185e3dd22ffa3b5c72740
+  branch: main
+  branch_remote_status: complete_verified
   pull_requests:
     - number: 3
       url: https://github.com/bachikoljunior-blip/Q/pull/3
@@ -127,6 +134,13 @@ remote:
       status: complete_unverified
       note: "Local checks recorded as passed in the PR, but merge and updated public verification remain incomplete."
   migration_pull_request: null
+  completed_migration_pull_request:
+    number: 4
+    url: https://github.com/bachikoljunior-blip/Q/pull/4
+    head_revision: a3a4fa8742e519a0d785220fd3c122ea57cd98a9
+    merged_revision: bfdd56bb3a9e4e760e7185e3dd22ffa3b5c72740
+    quality_run: 30685069375
+    status: complete_verified
   deployed_revision: "exact served revision unavailable; product content corresponds to the eaa7715 STARTHREAD release and main is ac6f57f"
   verified_public_revision: "STARTHREAD index content byte-matched main at SHA-256 7cbc9ae4edb79024fbac94b981ab79f1b72800e35d03bfe4dc5e5d63d340bb9e on 2026-08-01; no embedded commit SHA"
   public_url: https://bachikoljunior-blip.github.io/Q/
@@ -140,7 +154,8 @@ automation:
     status: complete_verified
     trigger: "push to main or manual dispatch"
     running_at_migration_check: false
+    migration_merge_run: "none; the product-only path filter excluded the operating migration"
     unattended_delivery_allowed: false
 
-updated_at: "2026-08-01T13:56:53+09:00"
+updated_at: "2026-08-01T14:05:07+09:00"
 reconciliation_status: complete_verified

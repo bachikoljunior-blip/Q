@@ -4,7 +4,7 @@ nodes:
   - id: MIGRATE-2.2
     title: "Install, enforce, validate, and remotely integrate Adaptive 2.2 continuity"
     priority: P1
-    status: complete_unverified
+    status: complete_verified
     depends_on: []
   - id: WORLD-FOUNDATION
     title: "Build the local Three.js renderer, terrain, biomes, landmarks, streaming budgets, and third-person traversal"
@@ -31,4 +31,4 @@ nodes:
     priority: P1
     status: prepared_not_applied
     depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH]
-active_frontier: [MIGRATE-2.2]
+active_frontier: [WORLD-FOUNDATION]
