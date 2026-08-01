@@ -28,4 +28,13 @@ Remaining evidence limit: no physical iPhone or Android-device run was available
 - Post-respawn final scene estimate: 103 draw calls and 114,950 triangles; the route guard remains 170 calls and 170,000 triangles. This is a headless visible-scene estimate, not WebGL renderer or physical-device evidence.
 - Noto Sans JP Regular 400 was re-subset from the recorded `@fontsource/noto-sans-jp` 5.3.0 source. FontTools verified 601/601 non-icon non-ASCII game code points; the ten intentional UI symbols remain on the system fallback stack.
 
-Remaining evidence limit: r3 remote Quality/merge/Pages verification, a WebGL-capable public journey, blocked-geometry hit rejection, and physical iPhone SE touch/performance remain pending. Premium presentation and commercial-scale narrative acceptance remain failed.
+Remaining evidence limit: a WebGL-capable public journey, blocked-geometry hit rejection, and physical iPhone SE touch/performance remain pending. Premium presentation and commercial-scale narrative acceptance remain failed.
+
+## 2026-08-02 — r3 public GitHub Pages release
+
+- The 22-commit delivery branch preserved exactly 20 implementation commits plus two release/state records; its remote tree SHA matched the local r3 tree before branch creation.
+- PR #11 head `48fdc9b12cea5d636aff5ce07361d3ec1acd5d5e` passed Quality floor run `30719619021` and squash-merged to product main as `078796ecbee87fb29f0ecdd3c5ae25bd807cbe12`.
+- `tools/verify-public.mjs` matched `wildbound-2026-08-01-r3` in both `release.json` and the index meta value on attempt 1/10 at `https://bachikoljunior-blip.github.io/Q/`.
+- Public SHA-256 hashes matched the product tree for `src/core.js` (`b214a0e6…e5370`), `src/game.js` (`059c978e…a6172`), `assets/fonts/q-japanese.woff` (`784f63d6…e555`), and `sw.js` (`d2c14eb3…8d75`).
+- Public cloud Chrome loaded `Q: WILDBOUND`, the exact r3 identifier, and `src/main.js`, kept `window.__Q_TEST__` undefined, and rendered the intentional Japanese recovery screen. Its sandbox reports `GL_VENDOR = Disabled` and `GL_RENDERER = Disabled`, so this is fallback/publication evidence rather than a public 3D journey.
+- Open PR #3 remained unchanged and unmerged.
