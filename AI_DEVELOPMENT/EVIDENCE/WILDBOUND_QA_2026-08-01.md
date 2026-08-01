@@ -4,7 +4,8 @@ Scope: local `agent/open-world-rpg` replacement based on remote main `4e6076d`. 
 
 ## Executed checks
 
-- `npm run check` — passed. Static and license validation found 25 required files, a 1,365,755-byte release payload, 141,977 bytes of JS plus CSS, local-only runtime assets, and exact Three.js 0.185.1 MIT metadata. Seven deterministic core/world tests and the happy-dom small-mobile journey passed.
+- `npm run check` — passed. Static and license validation found 27 required files, a 1,485,373-byte release payload, 142,212 bytes of JS plus CSS, local-only runtime assets, exact Three.js 0.185.1 MIT metadata, and the bundled Japanese font's SIL OFL 1.1 metadata. Seven deterministic core/world tests and the happy-dom small-mobile journey passed.
+- Real Chromium font load at 568 × 320 CSS pixels — passed. `document.fonts.load` and `document.fonts.check` confirmed `Q Japanese`; the WOFF resource loaded exactly once with no console, page, or request error.
 - Real Chromium WebGL smoke pass at 568 × 320 CSS pixels, device scale factor 2, touch/mobile emulation — passed. Local Three.js WebGL started; `ground.webp` and `characters.webp` loaded; world, Mira dialogue, and Ilya choice layouts rendered; no console, page, or request error was observed.
 - Observed real-WebGL scene budget after visibility tuning: 94 draw calls, 113,435 triangles, quality tier 2, 436,480 backing-store pixels. Under deliberately slow SwiftShader timing, automatic quality reduction reached tier 1 and 284,000 pixels. These timings do not represent iPhone performance.
 - Staged release injection — passed. A temporary local artifact replaced `__BUILD_REVISION__` with `staged-wildbound-test`; `tools/verify-public.mjs` fetched both the staged page and `release.json` and matched the identifier.
@@ -24,6 +25,7 @@ Scope: local `agent/open-world-rpg` replacement based on remote main `4e6076d`. 
 
 - `assets/textures/ground.webp` — seamless realistic meadow/soil/pebble/moss ground microtexture, generated with the built-in image generator and converted to a mirrored 1024 px WebP tile.
 - `assets/portraits/characters.webp` — original 2 × 2 realistic portrait atlas for Mira, Orin, Ilya, and the player, generated with the built-in image generator and converted to 1024 px WebP.
+- `assets/fonts/q-japanese.woff` — locally bundled Noto Sans JP Thin subset under SIL OFL 1.1. Font metadata and the license text were inspected; all 519 Japanese/non-icon code points used by the game are covered, while ten UI symbols intentionally fall back to the system symbol font.
 
 ## Remaining limitations
 

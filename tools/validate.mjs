@@ -4,7 +4,7 @@ import { spawnSync } from 'node:child_process';
 const required = [
   'index.html', 'styles.css', 'manifest.webmanifest', 'icon.svg', 'sw.js', 'release.json',
   'src/main.js', 'src/game.js', 'src/world.js', 'src/core.js', 'src/storage.js', 'src/audio.js',
-  'assets/textures/ground.webp', 'assets/portraits/characters.webp',
+  'assets/textures/ground.webp', 'assets/portraits/characters.webp', 'assets/fonts/q-japanese.woff', 'assets/fonts/OFL-NotoSansJP.txt',
   'vendor/three.module.js', 'vendor/three.core.min.js', 'vendor/THREE-LICENSE.txt', 'assets-manifest.json', 'package.json',
   'START_HERE.md', 'AI_DEVELOPMENT/PROTOCOL.md', 'AI_DEVELOPMENT/STATE.yaml',
   'AI_DEVELOPMENT/REQUIREMENTS.yaml', 'AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml', 'AI_DEVELOPMENT/WORK_GRAPH.yaml'
@@ -48,6 +48,8 @@ try {
     const generated = assets.assets?.find(item => item.path === path);
     if (!generated || !/Generated for this project/.test(generated.source) || generated.license !== 'Project-owned generated original') failures.push(`generated asset provenance missing for ${path}`);
   }
+  const font = assets.assets?.find(item => item.path === 'assets/fonts/q-japanese.woff');
+  if (!font || font.license !== 'SIL Open Font License 1.1' || font.licenseFile !== 'assets/fonts/OFL-NotoSansJP.txt') failures.push('Japanese font license metadata missing');
 } catch (error) { failures.push(`assets ${error.message}`); }
 
 try {
@@ -57,6 +59,10 @@ try {
 
 const license = readFileSync('vendor/THREE-LICENSE.txt', 'utf8');
 if (!/MIT License/.test(license) || !/three\.js authors/i.test(license)) failures.push('Three.js MIT license text invalid');
+const fontLicense = readFileSync('assets/fonts/OFL-NotoSansJP.txt', 'utf8');
+if (!/SIL OPEN FONT LICENSE Version 1\.1/.test(fontLicense)) failures.push('Japanese font OFL text invalid');
+if (statSync('assets/fonts/q-japanese.woff').size < 10000) failures.push('Japanese font subset is unexpectedly small');
+if (!/@font-face\{font-family:"Q Japanese";src:url\("assets\/fonts\/q-japanese\.woff"\)/.test(readFileSync('styles.css', 'utf8'))) failures.push('Japanese font-face wiring missing');
 const packageData = JSON.parse(readFileSync('package.json'));
 if (packageData.dependencies?.three !== '0.185.1') failures.push('Three.js version must stay exact');
 
@@ -71,13 +77,13 @@ for (const file of ['sw.js', ...globSync('src/*.js'), ...globSync('tools/*.mjs')
   if (result.status) failures.push(`syntax ${file}: ${result.stderr.trim()}`);
 }
 
-const releaseFiles = ['index.html', 'styles.css', 'manifest.webmanifest', 'icon.svg', 'sw.js', 'release.json', ...globSync('src/*.js'), ...globSync('assets/**/*.{webp,png,jpg}'), 'vendor/three.module.js', 'vendor/three.core.min.js', 'vendor/THREE-LICENSE.txt'];
+const releaseFiles = ['index.html', 'styles.css', 'manifest.webmanifest', 'icon.svg', 'sw.js', 'release.json', ...globSync('src/*.js'), ...globSync('assets/**/*.{webp,png,jpg,woff,txt}'), 'vendor/three.module.js', 'vendor/three.core.min.js', 'vendor/THREE-LICENSE.txt'];
 const total = releaseFiles.reduce((sum, file) => sum + statSync(file).size, 0);
 const code = ['styles.css', ...globSync('src/*.js')].reduce((sum, file) => sum + statSync(file).size, 0);
 if (total > 1600000) failures.push(`payload ${total}`);
 if (code > 280000) failures.push(`code ${code}`);
 const serviceWorker = readFileSync('sw.js', 'utf8');
-for (const file of ['index.html', 'styles.css', 'icon.svg', 'manifest.webmanifest', 'release.json', 'src/main.js', 'src/game.js', 'src/world.js', 'src/core.js', 'src/storage.js', 'src/audio.js', 'assets/textures/ground.webp', 'assets/portraits/characters.webp', 'vendor/three.module.js', 'vendor/three.core.min.js', 'vendor/THREE-LICENSE.txt']) {
+for (const file of ['index.html', 'styles.css', 'icon.svg', 'manifest.webmanifest', 'release.json', 'src/main.js', 'src/game.js', 'src/world.js', 'src/core.js', 'src/storage.js', 'src/audio.js', 'assets/textures/ground.webp', 'assets/portraits/characters.webp', 'assets/fonts/q-japanese.woff', 'assets/fonts/OFL-NotoSansJP.txt', 'vendor/three.module.js', 'vendor/three.core.min.js', 'vendor/THREE-LICENSE.txt']) {
   if (!serviceWorker.includes(`./${file}`)) failures.push(`cache missing ${file}`);
 }
 
