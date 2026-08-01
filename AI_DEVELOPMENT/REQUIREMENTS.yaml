@@ -1,0 +1,79 @@
+schema_version: 1
+objective: Q-OPEN-WORLD-RPG
+task_contract:
+  rigor: STRICT
+  reason: "High-impact replacement of a deployed interactive product followed by protected-branch merge and public deployment."
+  allowed_scope: "Replace game code, UI, procedural assets, tests, documentation, and release configuration needed for the requested mobile open-world RPG."
+  invariants:
+    - preserve relative GitHub Pages paths and offline-safe static hosting
+    - preserve or migrate local settings and saves safely
+    - ship no secrets, paid runtime dependency, unauthorized asset, or required external AI/API
+    - keep test-only controls unreachable on the public hostname
+    - preserve useful concurrent PR 3 lifecycle behavior in the replacement or record why a part is superseded
+  recovery: "The complete_verified STARTHREAD baseline remains at ac6f57f; the replacement develops on agent/open-world-rpg until verified."
+
+requirements:
+  - id: R-OPEN-WORLD
+    authority: user_requirement
+    statement: "The game is an open-world RPG, not the existing bounded arena action game."
+  - id: R-NATURE
+    authority: user_requirement
+    statement: "The explorable world contains broad natural spaces and other varied meaningful environments, including forests, grasslands, rivers or wetlands, mountains, coast, caves, settlements, ruins, and landmark destinations where technically appropriate."
+  - id: R-DENSITY
+    authority: preserved_user_constraint
+    statement: "World breadth must not become an empty map; exploration locations, encounters, rewards, traversal choices, and visual landmarks provide useful density."
+  - id: R-RPG
+    authority: derived_from_user_requirement
+    statement: "The delivered game includes character growth, combat, quests or objectives, resources or equipment choices, persistence, failure/recovery, and a finishable main journey."
+  - id: R-MOBILE
+    authority: verified_project_requirement
+    statement: "Touch-first smartphone browser play remains primary, with iPhone SE third generation as the representative small device and GitHub Pages as the public target."
+  - id: R-THREE
+    authority: preserved_user_requirement
+    statement: "Use Three.js for the three-dimensional third-person game while keeping runtime dependencies bundled locally."
+  - id: R-PERFORMANCE
+    authority: preserved_user_constraint
+    statement: "Target stable 30 FPS in representative worst-case play on iPhone SE third generation, with automatic quality reduction and bounded memory/effects."
+  - id: R-COMPLETE
+    authority: preserved_user_constraint
+    statement: "A player can start from a new save, learn the touch controls, explore, progress, reach an ending, continue or restart, and reload a valid save from the public Pages URL."
+  - id: R-LICENSE
+    authority: verified_project_constraint
+    statement: "All shipped assets and libraries have verified compatible licenses and no unauthorized external runtime asset."
+
+acceptance:
+  - id: AC-WORLD
+    requirement: [R-OPEN-WORLD, R-NATURE, R-DENSITY]
+    status: prepared_not_applied
+    result: "A continuous navigable 3D world visibly includes multiple natural biomes and non-natural destinations, with discoverable landmarks and no required menu teleportation between the main regions."
+    evidence: null
+  - id: AC-RPG-FLOW
+    requirement: [R-RPG, R-COMPLETE]
+    status: prepared_not_applied
+    result: "Automated and user-surface checks cover tutorial, exploration, interaction, combat, character growth, main-objective transitions, defeat/recovery, final encounter, ending, and post-ending continuation or restart."
+    evidence: null
+  - id: AC-TOUCH
+    requirement: [R-MOBILE]
+    status: prepared_not_applied
+    result: "Landscape touch controls support simultaneous movement, camera, attack, dodge, and interaction without page gestures or stuck input at the iPhone SE viewport."
+    evidence: null
+  - id: AC-SAVE
+    requirement: [R-COMPLETE]
+    status: prepared_not_applied
+    result: "Versioned save migration, malformed-data recovery, autosave, reload position/progression, and full reset execute without data corruption."
+    evidence: null
+  - id: AC-PERF
+    requirement: [R-PERFORMANCE]
+    status: prepared_not_applied
+    result: "Rendering resolution, geometry, draw calls, entities, particles, audio voices, and updates are bounded; automatic quality reduction executes; physical-device 30 FPS remains required before claiming that device criterion."
+    evidence: null
+  - id: AC-PAGES
+    requirement: [R-MOBILE, R-COMPLETE]
+    status: prepared_not_applied
+    result: "The intended revision loads from the public GitHub Pages URL with relative assets, no blocking runtime error, and a verified primary journey."
+    evidence: null
+  - id: AC-LICENSE
+    requirement: [R-LICENSE, R-THREE]
+    status: prepared_not_applied
+    result: "Release validation identifies bundled Three.js version/license and reports no unknown-license or external runtime asset."
+    evidence: null

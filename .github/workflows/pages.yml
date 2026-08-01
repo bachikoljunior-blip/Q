@@ -3,6 +3,18 @@ name: Verify and deploy Pages
 on:
   push:
     branches: [main]
+    paths:
+      - index.html
+      - styles.css
+      - icon.svg
+      - manifest.webmanifest
+      - sw.js
+      - release.json
+      - assets-manifest.json
+      - package.json
+      - package-lock.json
+      - src/**
+      - vendor/**
   workflow_dispatch:
 
 permissions:
@@ -20,6 +32,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Set up Node
         uses: actions/setup-node@v6
         with:
@@ -27,6 +41,10 @@ jobs:
           cache: npm
       - name: Install verification dependencies
         run: npm ci
+      - name: Enforce continuity and review record
+        run: node tools/floor-gates.mjs --base "${{ github.event.before || 'origin/main^' }}"
+      - name: Validate Adaptive 2.2 continuity
+        run: node tools/validate-protocol.mjs
       - name: Run release gates
         run: npm run check
       - name: Prepare static artifact
@@ -34,6 +52,8 @@ jobs:
           mkdir _site
           cp index.html styles.css icon.svg manifest.webmanifest sw.js .nojekyll _site/
           cp -R src _site/src
+          if [ -d vendor ]; then cp -R vendor _site/vendor; fi
+          if [ -f release.json ]; then cp release.json _site/release.json; fi
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
@@ -47,7 +67,23 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  verify-public:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Checkout release metadata
+        uses: actions/checkout@v6
+      - name: Detect revision-enabled release
+        id: revision
+        run: |
+          if [ -f release.json ]; then echo "enabled=true" >> "$GITHUB_OUTPUT"; else echo "enabled=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Verify served release identifier and page
+        if: steps.revision.outputs.enabled == 'true'
+        run: node tools/verify-public.mjs --url "${{ needs.deploy.outputs.page_url }}" --expected-file release.json

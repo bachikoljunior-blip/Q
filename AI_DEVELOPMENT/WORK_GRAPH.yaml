@@ -1,0 +1,34 @@
+schema_version: 1
+objective: Q-OPEN-WORLD-RPG
+nodes:
+  - id: MIGRATE-2.2
+    title: "Install, enforce, validate, and remotely integrate Adaptive 2.2 continuity"
+    priority: P1
+    status: complete_unverified
+    depends_on: []
+  - id: WORLD-FOUNDATION
+    title: "Build the local Three.js renderer, terrain, biomes, landmarks, streaming budgets, and third-person traversal"
+    priority: P2
+    status: prepared_not_applied
+    depends_on: [MIGRATE-2.2]
+  - id: RPG-SYSTEMS
+    title: "Integrate touch combat, enemies, interaction, progression, quests, resources, save migration, failure, and recovery"
+    priority: P2
+    status: prepared_not_applied
+    depends_on: [WORLD-FOUNDATION]
+  - id: COMPLETE-JOURNEY
+    title: "Author and integrate a finishable main journey, side discoveries, final encounter, ending, and continued exploration"
+    priority: P2
+    status: prepared_not_applied
+    depends_on: [RPG-SYSTEMS]
+  - id: MOBILE-POLISH
+    title: "Carry forward applicable PR 3 lifecycle behavior and refine UI, audio, accessibility, readability, and small-screen controls"
+    priority: P4
+    status: prepared_not_applied
+    depends_on: [RPG-SYSTEMS]
+  - id: QA-RELEASE
+    title: "Execute deterministic, browser, performance, falsification, license, remote-check, deployment, and public-surface gates"
+    priority: P1
+    status: prepared_not_applied
+    depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH]
+active_frontier: [MIGRATE-2.2]
