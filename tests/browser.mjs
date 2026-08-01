@@ -280,6 +280,16 @@ assert.match(window.document.querySelector('#ending-copy').textContent, /異な�
 assert.match(window.document.querySelector('#ending-title').textContent, /守ることと/, 'mixed accumulated choices reach the covenant ending');
 window.document.querySelector('#free-roam').click();
 assert.equal(globalThis.__Q_TEST__.snapshot().status, 'running', 'ending returns to free roam without reload');
+globalThis.__Q_TEST__.teleport(28, 260);
+const coinsBeforeCouncil = globalThis.__Q_TEST__.snapshot().coins;
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'three strongest relationships unlock the postgame council');
+assert.match(window.document.querySelector('#dialogue-text').textContent, /誰か一人|役目を交代|木の葉貨 60/);
+assert.equal(globalThis.__Q_TEST__.snapshot().coins, coinsBeforeCouncil + 60, 'the council reward is granted once');
+assert.equal(globalThis.__Q_TEST__.snapshot().npcFlags.councilSeen, true);
+window.document.querySelector('#dialogue-close').click();
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'the council can be revisited without another reward');
+assert.equal(globalThis.__Q_TEST__.snapshot().coins, coinsBeforeCouncil + 60);
+window.document.querySelector('#dialogue-close').click();
 
 globalThis.__Q_TEST__.damage(9999);
 assert.ok(window.document.querySelector('#dead').classList.contains('active'), 'lethal damage reaches recoverable defeat');

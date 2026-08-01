@@ -97,5 +97,7 @@ test('quality controls and objective marker change the runnable scene', () => {
   assert.equal(world.storyScenes.ilya.group.visible, false);
   assert.equal(world.storyScenes.ilyaArchive.group.visible, true, 'Ilya archive appears only during the coast investigation');
   assert.equal(world.interactables.find(item => item.id === 'ilya_archive_echo').mesh.visible, true);
+  world.setNarrativeState({ victory: true, choices: { grove: 'wild_bloom', marsh: 'water_ward', peak: 'wind_release' }, defeated: ['grove_warden', 'marsh_warden', 'peak_warden', 'crown_warden'], characterQuests: { mira: 3, orin: 3, ilya: 3 }, relationships: { mira: 3, orin: 3, ilya: 3 }, npcFlags: { groveReport: true, marshReport: true, ilyaTruth: true } });
+  assert.equal(world.storyScenes.council.group.visible, true, 'the postgame council requires all three strongest relationships');
   world.dispose();
 });

@@ -543,6 +543,12 @@ export class World {
     }
     this.storyScenes.ilyaArchive = { group: ilyaArchive };
     this.interactables.push({ id: 'ilya_archive_echo', type: 'story', name: '十二年前の記録', x: 535, z: 430, radius: 8, mesh: ilyaArchive, distanceCulled: false });
+
+    const council = makeScene('HAVEN_COUNCIL', 28, 260);
+    const councilRing = addMesh(council, new THREE.TorusGeometry(3.4, .12, 6, 30), new THREE.MeshBasicMaterial({ color: 0xf0d58a, transparent: true, opacity: .64, depthWrite: false }), [0, .22, 0], [Math.PI / 2, 0, 0]);
+    this.storyScenes.council = { group: council, ring: councilRing };
+    this.animated.push({ type: 'choiceGlyph', mesh: councilRing });
+    this.interactables.push({ id: 'alliance_council', type: 'story', name: '三人の谷の評議', x: 28, z: 260, radius: 7, mesh: council, distanceCulled: false });
   }
 
   createResources() {
@@ -646,6 +652,7 @@ export class World {
     }
     if (this.storyScenes.ilya) this.storyScenes.ilya.group.visible = ilyaActive;
     if (this.storyScenes.ilyaArchive) this.storyScenes.ilyaArchive.group.visible = activeTask === 'ilya_archive_echo';
+    if (this.storyScenes.council) this.storyScenes.council.group.visible = Boolean(progress.victory && ['mira', 'orin', 'ilya'].every(character => (progress.relationships?.[character] || 0) >= 3));
     if (this.miraNpc) this.miraNpc.visible = !miraActive;
     if (this.orinNpc) this.orinNpc.visible = !orinActive;
   }

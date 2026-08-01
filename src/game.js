@@ -612,6 +612,7 @@ export class Game {
       this.progress.ending = endingFor(this.progress);
       this.progress.endings += 1;
       this.status = 'ending';
+      this.refreshNarrativeState();
       this.checkpoint('ending');
       this.sound?.event?.('victory');
       this.cb.ending(this.snapshotHud());
@@ -937,6 +938,21 @@ export class Game {
       this.cb.dialogue({
         speaker: '十二年前の記録',
         text: '石板には嵐の死者だけでなく、評議会が消した避難路と失敗した水門の名が刻まれている。最後の一行はイリヤの手だ。「守印一人の正しさを、谷の答えにしてはならない」。残響へ記録を届けられる。'
+      });
+      return true;
+    }
+    if (item.id === 'alliance_council') {
+      if (!this.progress.victory || !['mira', 'orin', 'ilya'].every(character => (this.progress.relationships?.[character] || 0) >= 3)) return false;
+      const first = !this.progress.npcFlags?.councilSeen;
+      this.progress.npcFlags ||= {};
+      this.progress.npcFlags.councilSeen = true;
+      if (first) this.progress.coins += 60;
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.checkpoint('alliance-council');
+      this.cb.dialogue({
+        speaker: '谷の評議 — ミラ、オリン、イリヤ',
+        text: `ミラは森と道を見張り、オリンは水門と鍛冶を受け持つ。イリヤの最後の声は、誰か一人を次の守印にしないよう求めた。三人は意見が違うまま、記録を開き、役目を交代し、あなたが戻れる席を残すと決めた。${first ? '共同の木の葉貨 60 を受け取った。' : '評議の記録はいつでも読み直せる。'}`
       });
       return true;
     }

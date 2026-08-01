@@ -222,7 +222,7 @@ const DEFAULT_PROGRESS = Object.freeze({
   choices: { grove: '', marsh: '', peak: '' },
   pendingChoice: null,
   ending: '',
-  npcFlags: { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false },
+  npcFlags: { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false, councilSeen: false },
   characterQuests: { mira: 0, orin: 0, ilya: 0 },
   relationships: { mira: 0, orin: 0, ilya: 0 },
   upgrades: { vigor: 0, edge: 0, stride: 0 },
@@ -318,7 +318,8 @@ export function cleanSave(raw) {
       orinIntro: Boolean(source.npcFlags?.orinIntro),
       groveReport: Boolean(source.npcFlags?.groveReport),
       marshReport: Boolean(source.npcFlags?.marshReport),
-      ilyaTruth: Boolean(source.npcFlags?.ilyaTruth)
+      ilyaTruth: Boolean(source.npcFlags?.ilyaTruth),
+      councilSeen: Boolean(source.npcFlags?.councilSeen)
     },
     characterQuests: {
       mira: clamp(integer(source.characterQuests?.mira), 0, 3),
@@ -385,6 +386,7 @@ export function cleanSave(raw) {
   const finalDefeated = canEnterCrown(progress) && progress.defeated.includes('crown_warden');
   if (!finalDefeated) progress.defeated = progress.defeated.filter(id => id !== 'crown_warden');
   progress.victory = finalDefeated;
+  if (!progress.victory || !['mira', 'orin', 'ilya'].every(character => progress.relationships[character] >= 3)) progress.npcFlags.councilSeen = false;
   progress.ending = finalDefeated ? endingFor(progress) : '';
   progress.endings = finalDefeated ? Math.max(1, progress.endings) : 0;
   progress.story = finalDefeated ? 3 : progress.sigils.length >= 3 ? 2 : progress.sigils.length ? 1 : progress.started ? clamp(progress.story, 0, 1) : 0;

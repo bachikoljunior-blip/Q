@@ -321,7 +321,8 @@ function renderJournal() {
     progress.characterQuests?.orin >= 3 ? `<section class="journal-card"><h3>オリン — 水のあとで</h3><p>信頼 ${progress.relationships?.orin || 0} / 3。止水輪を共同で直し、鍛冶の木の葉貨を ${Math.min(15, (progress.relationships?.orin || 0) * 5)} 枚分軽くしてくれる。</p></section>` : '',
     progress.characterQuests?.ilya === 1 ? '<section class="journal-card"><h3>イリヤ — 消された記録</h3><p>潮騒の廃都で、十二年前の避難と水門の記録を探す。</p></section>' : '',
     progress.characterQuests?.ilya === 2 ? '<section class="journal-card"><h3>イリヤ — 一人の正しさ</h3><p>見つけた石板を、神殿前に残るイリヤの声へ届ける。</p></section>' : '',
-    progress.characterQuests?.ilya >= 3 ? `<section class="journal-card"><h3>イリヤ — 残された声</h3><p>理解 ${progress.relationships?.ilya || 0} / 3。十二年前の結界は答えではなく、異なる声が決断を分け合うまでの時間だった。</p></section>` : ''
+    progress.characterQuests?.ilya >= 3 ? `<section class="journal-card"><h3>イリヤ — 残された声</h3><p>理解 ${progress.relationships?.ilya || 0} / 3。十二年前の結界は答えではなく、異なる声が決断を分け合うまでの時間だった。</p></section>` : '',
+    progress.npcFlags?.councilSeen ? '<section class="journal-card"><h3>谷の評議</h3><p>ミラ、オリン、イリヤの記録を一つに開き、役目を交代しながら谷の判断を分け合う。</p></section>' : ''
   ].join('');
   $('#journal-content').innerHTML = `
     <section class="journal-card"><h3>${quest.title}</h3><p>${quest.detail}<br><b>${quest.step}</b></p><div class="sigil-row">${sigils}</div></section>
