@@ -83,6 +83,11 @@ test('quality controls and objective marker change the runnable scene', () => {
   assert.equal(world.storyScenes.orin.group.visible, false);
   assert.equal(world.storyScenes.orinFault.group.visible, true, 'the damaged sluice appears only during Orin repair stage');
   assert.equal(world.interactables.find(item => item.id === 'orin_sluice_fault').mesh.visible, true);
+  world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: 'water_ward', peak: '' }, defeated: ['grove_warden', 'marsh_warden'], characterQuests: { mira: 3, orin: 3, ilya: 0 }, npcFlags: { groveReport: true, marshReport: true } });
+  const wheelBefore = world.storyScenes.orinFault.wheel.rotation.z;
+  world.update(3, new THREE.Vector3(-220, terrainHeight(-220, 350), 350));
+  assert.equal(world.storyScenes.orinFault.group.visible, true, 'the repaired sluice remains as a persistent world consequence');
+  assert.notEqual(world.storyScenes.orinFault.wheel.rotation.z, wheelBefore, 'the repaired wheel moves after completion');
   world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: 'water_ward', peak: 'wind_release' }, defeated: ['grove_warden', 'marsh_warden', 'peak_warden'], npcFlags: { groveReport: true, marshReport: true, ilyaTruth: false } });
   assert.equal(world.storyScenes.ilya.group.visible, true);
   const before = world.storyScenes.ilya.actor.userData.rig.halo.rotation.z;

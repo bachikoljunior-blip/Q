@@ -520,7 +520,8 @@ export class World {
     const wheel = addMesh(orinFault, new THREE.TorusGeometry(2.4, .24, 7, 18), faultWood, [0, 2.5, .2], [0, 0, .24]);
     for (let i = 0; i < 6; i += 1) addMesh(wheel, new THREE.BoxGeometry(.18, 4.2, .18), faultWood, [0, 0, 0], [0, 0, i / 6 * Math.PI]);
     addMesh(orinFault, new THREE.PlaneGeometry(8.5, 2.1), faultWater, [0, .18, 0], [-Math.PI / 2, 0, 0]);
-    this.storyScenes.orinFault = { group: orinFault, wheel };
+    this.storyScenes.orinFault = { group: orinFault, wheel, repaired: false };
+    this.animated.push({ type: 'sluiceWheel', scene: this.storyScenes.orinFault });
     this.interactables.push({ id: 'orin_sluice_fault', type: 'story', name: '詰まった止水輪', x: -220, z: 350, radius: 7, mesh: orinFault, distanceCulled: false });
 
     const ilya = makeScene('ILYA_CROWN_REVELATION', 0, -615);
@@ -629,7 +630,10 @@ export class World {
       this.storyScenes.orin.openChannel.visible = choices.marsh === 'ring_release';
       this.storyScenes.orin.wardChannel.visible = choices.marsh === 'water_ward';
     }
-    if (this.storyScenes.orinFault) this.storyScenes.orinFault.group.visible = activeTask === 'orin_sluice_fault';
+    if (this.storyScenes.orinFault) {
+      this.storyScenes.orinFault.repaired = (progress.characterQuests?.orin || 0) >= 3;
+      this.storyScenes.orinFault.group.visible = activeTask === 'orin_sluice_fault' || this.storyScenes.orinFault.repaired;
+    }
     if (this.storyScenes.ilya) this.storyScenes.ilya.group.visible = ilyaActive;
     if (this.miraNpc) this.miraNpc.visible = !miraActive;
     if (this.orinNpc) this.orinNpc.visible = !orinActive;
@@ -663,6 +667,7 @@ export class World {
         entry.mesh.rotation.z = time * (.22 + entry.phase * .03) + entry.phase;
         entry.mesh.material.opacity = .34 + Math.sin(time * 1.4 + entry.phase) * .12;
       }
+      if (entry.type === 'sluiceWheel' && entry.scene.repaired && entry.scene.group.visible) entry.scene.wheel.rotation.z = time * .38;
     }
     for (const npc of this.npcs) if (npc.visible && npc.parent?.visible !== false) animateHumanoid(npc, { time, reduced: false });
     if (this.fireflies.visible) {
