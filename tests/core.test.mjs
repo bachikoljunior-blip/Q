@@ -65,6 +65,8 @@ test('save cleaning rejects malformed progress while preserving valid RPG state'
   assert.deepEqual(clean.progress.collected, ['herb_1', 'crystal_14']);
   assert.deepEqual(clean.progress.choices, { grove: '', marsh: '', peak: '' });
   assert.deepEqual(clean.progress.npcFlags, { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false });
+  assert.deepEqual(clean.progress.characterQuests, { mira: 0, orin: 0, ilya: 0 });
+  assert.deepEqual(clean.progress.relationships, { mira: 0, orin: 0, ilya: 0 });
   assert.equal(clean.version, SAVE_VERSION);
   assert.equal(clean.progress.level, 40);
   assert.equal(clean.progress.x, WORLD_HALF - 20);
@@ -95,6 +97,8 @@ test('save cleaning rejects malformed progress while preserving valid RPG state'
     }
   });
   assert.deepEqual(migratedV3.progress.npcFlags, { orinIntro: false, groveReport: true, marshReport: true, ilyaTruth: true }, 'version 3 completed routes retain crown access after migration');
+  assert.deepEqual(migratedV3.progress.characterQuests, { mira: 3, orin: 3, ilya: 3 }, 'completed legacy character beats migrate to resolved quest stages');
+  assert.deepEqual(migratedV3.progress.relationships, { mira: 2, orin: 2, ilya: 2 }, 'legacy completion receives a neutral preserved relationship baseline');
   assert.equal(canEnterCrown(migratedV3.progress), true);
 });
 

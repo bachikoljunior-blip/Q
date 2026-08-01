@@ -1,6 +1,6 @@
 export const SAVE_KEY = 'q-wildbound-save';
 export const LEGACY_SAVE_KEYS = Object.freeze(['q-starthread-save']);
-export const SAVE_VERSION = 4;
+export const SAVE_VERSION = 5;
 export const WORLD_SIZE = 1800;
 export const WORLD_HALF = WORLD_SIZE / 2;
 export const WATER_LEVEL = -1.6;
@@ -181,6 +181,8 @@ const DEFAULT_PROGRESS = Object.freeze({
   pendingChoice: null,
   ending: '',
   npcFlags: { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false },
+  characterQuests: { mira: 0, orin: 0, ilya: 0 },
+  relationships: { mira: 0, orin: 0, ilya: 0 },
   upgrades: { vigor: 0, edge: 0, stride: 0 },
   health: 100,
   x: 0,
@@ -264,6 +266,16 @@ export function cleanSave(raw) {
       marshReport: Boolean(source.npcFlags?.marshReport),
       ilyaTruth: Boolean(source.npcFlags?.ilyaTruth)
     },
+    characterQuests: {
+      mira: clamp(integer(source.characterQuests?.mira), 0, 3),
+      orin: clamp(integer(source.characterQuests?.orin), 0, 3),
+      ilya: clamp(integer(source.characterQuests?.ilya), 0, 3)
+    },
+    relationships: {
+      mira: clamp(integer(source.relationships?.mira), 0, 3),
+      orin: clamp(integer(source.relationships?.orin), 0, 3),
+      ilya: clamp(integer(source.relationships?.ilya), 0, 3)
+    },
     upgrades: {
       vigor: clamp(integer(source.upgrades?.vigor), 0, 5),
       edge: clamp(integer(source.upgrades?.edge), 0, 5),
@@ -288,10 +300,28 @@ export function cleanSave(raw) {
     progress.npcFlags.groveReport ||= Boolean(progress.choices.grove);
     progress.npcFlags.marshReport ||= Boolean(progress.choices.marsh);
     progress.npcFlags.ilyaTruth ||= Boolean(progress.choices.grove && progress.choices.marsh && progress.choices.peak);
+    progress.characterQuests.mira = progress.npcFlags.groveReport ? 3 : 0;
+    progress.characterQuests.orin = progress.npcFlags.marshReport ? 3 : 0;
+    progress.characterQuests.ilya = progress.npcFlags.ilyaTruth ? 3 : 0;
+    progress.relationships.mira = progress.npcFlags.groveReport ? 2 : 0;
+    progress.relationships.orin = progress.npcFlags.marshReport ? 2 : 0;
+    progress.relationships.ilya = progress.npcFlags.ilyaTruth ? 2 : 0;
   }
-  if (!progress.choices.grove) progress.npcFlags.groveReport = false;
-  if (!progress.choices.marsh) progress.npcFlags.marshReport = false;
-  if (!(progress.choices.grove && progress.choices.marsh && progress.choices.peak && progress.npcFlags.groveReport && progress.npcFlags.marshReport)) progress.npcFlags.ilyaTruth = false;
+  if (!progress.choices.grove) {
+    progress.npcFlags.groveReport = false;
+    progress.characterQuests.mira = 0;
+    progress.relationships.mira = 0;
+  }
+  if (!progress.choices.marsh) {
+    progress.npcFlags.marshReport = false;
+    progress.characterQuests.orin = 0;
+    progress.relationships.orin = 0;
+  }
+  if (!(progress.choices.grove && progress.choices.marsh && progress.choices.peak && progress.npcFlags.groveReport && progress.npcFlags.marshReport)) {
+    progress.npcFlags.ilyaTruth = false;
+    progress.characterQuests.ilya = 0;
+    progress.relationships.ilya = 0;
+  }
   const finalDefeated = canEnterCrown(progress) && progress.defeated.includes('crown_warden');
   if (!finalDefeated) progress.defeated = progress.defeated.filter(id => id !== 'crown_warden');
   progress.victory = finalDefeated;
