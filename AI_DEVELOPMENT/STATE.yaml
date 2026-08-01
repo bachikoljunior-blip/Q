@@ -57,10 +57,10 @@ execution:
       - AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml
       - AI_DEVELOPMENT/REQUIREMENTS.yaml
   modified_but_unverified:
-    - status: prepared_not_applied
+    - status: complete_unverified
       artifacts: "WILDBOUND product replacement, locally bundled Three.js runtime, generated visual assets, tests, Pages release metadata, and related documentation in the current working tree"
-      recovery: "Return to remote main 4e6076d for the currently published STARTHREAD product. The pre-migration stash and /tmp/Q_pre_migration_product.patch remain additional recovery inputs until the WILDBOUND branch is remotely preserved."
-      limitation: "Local automated and focused WebGL checks pass and a local commit exists, but the replacement is not yet confirmed on a remote branch, merged, deployed, or publicly verified."
+      recovery: "Return to remote main 4e6076d for the currently published STARTHREAD product. Keep the pre-migration stash and /tmp/Q_pre_migration_product.patch as additional recovery inputs until draft PR 6 is resolved."
+      limitation: "Local automated and focused WebGL checks pass and the exact product tree is remotely preserved at 6ca339b, but the replacement is not merged, deployed, physically verified, or benchmark-complete."
     - status: prepared_not_executed
       artifacts: "Physical iPhone SE third-generation complete touch route, frame pacing, memory proxy, orientation/background recovery, and offline reload"
       recovery: "Keep public STARTHREAD unchanged until the physical-device and presentation gates pass."
@@ -78,7 +78,7 @@ execution:
     - exact commit served by the legacy Pages artifact remains unreachable because STARTHREAD has no embedded revision identifier
     - SwiftShader frame timing does not predict physical iPhone or Android performance
     - open PR 3 remains open; applicable input lifecycle, safe-area, reduced-motion, and settings behavior has been carried forward without claiming PR 3 complete
-  exact_next_action: "Remotely preserve the verified WILDBOUND branch in a draft pull request without merging or deploying, then replace the primitive in-world character/enemy presentation and expand Mira, Orin, and Ilya through intervening playable scenes before repeating physical-device release gates."
+  exact_next_action: "On draft PR 6, replace the primitive in-world character/enemy presentation and expand Mira, Orin, and Ilya through intervening playable scenes; rerun the full local and remote gates, then execute the physical iPhone SE release route before any merge or deployment."
 
 modules:
   activated: []
@@ -93,8 +93,8 @@ modules:
 floor:
   last_check:
     status: complete_verified
-    at: "2026-08-01T15:28:09+09:00"
-    note: "F1 continuity was reconciled against main 4e6076d and agent/open-world-rpg. Product execution, forged-progression rejection, focused real WebGL, and staged-release checks passed; the objective remains failed against premium narrative/presentation criteria and physical/public verification is open."
+    at: "2026-08-01T15:31:07+09:00"
+    note: "The exact local WILDBOUND product tree was confirmed on remote revision 6ca339b and draft PR 6 without merging or deploying. Product execution, forged-progression rejection, focused real WebGL, and staged-release checks passed; remote Quality floor is pending and the objective remains failed against premium narrative/presentation criteria."
   independence_level_used: C
   review_outcome: passed
   reviewed_at: "2026-08-01T15:28:09+09:00"
@@ -143,7 +143,7 @@ remote:
   default_branch: main
   default_branch_revision_at_migration_completion: 4e6076df54b7eb4b2f55a173910e1a48ae67517b
   branch: agent/open-world-rpg
-  branch_remote_status: prepared_not_applied
+  branch_remote_status: complete_verified
   pull_requests:
     - number: 3
       url: https://github.com/bachikoljunior-blip/Q/pull/3
@@ -151,6 +151,12 @@ remote:
       revision: e7c61c8e32413fbae096a4d7c5b51545c8458c30
       status: complete_unverified
       note: "Local checks recorded as passed in the PR, but merge and updated public verification remain incomplete."
+    - number: 6
+      url: https://github.com/bachikoljunior-blip/Q/pull/6
+      head: agent/open-world-rpg
+      product_revision: 6ca339b6ac1e1fe79fd89e43a0463005988b3e27
+      status: complete_unverified
+      note: "Draft checkpoint with an exact tree match and local gates passed; remote Quality floor is pending. Merge and deployment are blocked by preserved premium narrative/presentation and physical-device criteria."
   migration_pull_request: null
   completed_migration_pull_request:
     number: 4
@@ -181,5 +187,5 @@ automation:
     migration_merge_run: "none; the product-only path filter excluded the operating migration"
     unattended_delivery_allowed: false
 
-updated_at: "2026-08-01T15:28:09+09:00"
+updated_at: "2026-08-01T15:31:07+09:00"
 reconciliation_status: complete_verified
