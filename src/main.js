@@ -113,7 +113,10 @@ const game = new Game(canvas, {
         : snapshot.choices?.marsh === 'ring_release' ? 'オリンは空になった水路を人の手で掘り直した。' : 'オリンは満ちた水門を毎日開き、霧に残した名を忘れないと決めた。';
       $('#ending-kicker').textContent = version.kicker;
       $('#ending-title').textContent = version.title;
-      $('#ending-copy').textContent = `${version.lead} ${memories} ${miraCoda} ${orinCoda} イリヤの残響は、谷の答えを一人で背負う時代が終わるのを見届けた。あなたの選択は景色と人々の暮らしに残り続ける。`;
+      const ilyaCoda = snapshot.relationships?.ilya >= 3
+        ? 'イリヤの残響は、異なる答えを持ち帰った三人が谷の判断を分け合う姿を見届け、古い命令と共に消えた。'
+        : 'イリヤの残響は、谷の答えを一人で背負う時代が終わるのを見届けた。';
+      $('#ending-copy').textContent = `${version.lead} ${memories} ${miraCoda} ${orinCoda} ${ilyaCoda} あなたの選択は景色と人々の暮らしに残り続ける。`;
       show('ending');
       gameUi(false, false);
       vibrate([30, 40, 30, 40, 90]);
@@ -316,7 +319,9 @@ function renderJournal() {
     progress.characterQuests?.orin === 1 ? '<section class="journal-card"><h3>オリン — 止まった輪</h3><p>旧水路で、詰まった止水輪の原因を調べる。</p></section>' : '',
     progress.characterQuests?.orin === 2 ? '<section class="journal-card"><h3>オリン — 毎日の守り</h3><p>止水輪の傷と泥の様子を、水路にいるオリンへ伝える。</p></section>' : '',
     progress.characterQuests?.orin >= 3 ? `<section class="journal-card"><h3>オリン — 水のあとで</h3><p>信頼 ${progress.relationships?.orin || 0} / 3。止水輪を共同で直し、鍛冶の木の葉貨を ${Math.min(15, (progress.relationships?.orin || 0) * 5)} 枚分軽くしてくれる。</p></section>` : '',
-    progress.npcFlags?.ilyaTruth ? '<section class="journal-card"><h3>イリヤ — 残された声</h3><p>十二年前の結界は答えではなく、次の世代へ決断を送るための時間だった。神殿には彼ではなく、止まり続ける古い命令がいる。</p></section>' : ''
+    progress.characterQuests?.ilya === 1 ? '<section class="journal-card"><h3>イリヤ — 消された記録</h3><p>潮騒の廃都で、十二年前の避難と水門の記録を探す。</p></section>' : '',
+    progress.characterQuests?.ilya === 2 ? '<section class="journal-card"><h3>イリヤ — 一人の正しさ</h3><p>見つけた石板を、神殿前に残るイリヤの声へ届ける。</p></section>' : '',
+    progress.characterQuests?.ilya >= 3 ? `<section class="journal-card"><h3>イリヤ — 残された声</h3><p>理解 ${progress.relationships?.ilya || 0} / 3。十二年前の結界は答えではなく、異なる声が決断を分け合うまでの時間だった。</p></section>` : ''
   ].join('');
   $('#journal-content').innerHTML = `
     <section class="journal-card"><h3>${quest.title}</h3><p>${quest.detail}<br><b>${quest.step}</b></p><div class="sigil-row">${sigils}</div></section>

@@ -164,6 +164,8 @@ test('RPG growth and objective progression remain coherent', () => {
   assert.equal(objectiveFor(progress).id, 'ilya_echo');
   assert.equal(canEnterCrown(progress), false);
   progress.npcFlags.ilyaTruth = true;
+  progress.characterQuests.ilya = 2;
+  assert.equal(canEnterCrown(progress), false, 'truth flag alone cannot bypass the final character quest stage');
   progress.characterQuests.ilya = 3;
   assert.equal(canEnterCrown(progress), true);
   assert.equal(endingFor(progress), 'wild');

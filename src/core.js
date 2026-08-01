@@ -176,9 +176,10 @@ export function characterTaskFor(progress) {
   const stages = p.characterQuests || {};
   const flags = p.npcFlags || {};
   const defeated = new Set(p.defeated || []);
-  const miraComplete = (stages.mira || 0) >= 3 || ((stages.mira || 0) === 0 && flags.groveReport);
-  const orinComplete = (stages.orin || 0) >= 3 || ((stages.orin || 0) === 0 && flags.marshReport);
-  const ilyaComplete = (stages.ilya || 0) >= 3 || ((stages.ilya || 0) === 0 && flags.ilyaTruth);
+  const hasStages = Boolean(p.characterQuests);
+  const miraComplete = (stages.mira || 0) >= 3 || (!hasStages && flags.groveReport);
+  const orinComplete = (stages.orin || 0) >= 3 || (!hasStages && flags.marshReport);
+  const ilyaComplete = (stages.ilya || 0) >= 3 || (!hasStages && flags.ilyaTruth);
   if (choices.grove && defeated.has('grove_warden') && !miraComplete) {
     return CHARACTER_TASKS.mira[clamp(integer(stages.mira), 0, 2)];
   }
@@ -287,6 +288,7 @@ export function upgradeCostFor(progress, kind) {
 
 export function canEnterCrown(progress) {
   return GUARDIANS.every(guardian => progress?.sigils?.includes(guardian.id) && Boolean(progress?.choices?.[guardian.point]))
+    && ['mira', 'orin', 'ilya'].every(character => (progress?.characterQuests?.[character] || 0) >= 3)
     && Boolean(progress?.npcFlags?.groveReport && progress?.npcFlags?.marshReport && progress?.npcFlags?.ilyaTruth);
 }
 
@@ -376,7 +378,10 @@ export function cleanSave(raw) {
   }
   if (progress.characterQuests.mira < 3) progress.relationships.mira = 0;
   if (progress.characterQuests.orin < 3) progress.relationships.orin = 0;
-  if (progress.characterQuests.ilya < 3) progress.relationships.ilya = 0;
+  if (progress.characterQuests.ilya < 3) {
+    progress.relationships.ilya = 0;
+    progress.npcFlags.ilyaTruth = false;
+  }
   const finalDefeated = canEnterCrown(progress) && progress.defeated.includes('crown_warden');
   if (!finalDefeated) progress.defeated = progress.defeated.filter(id => id !== 'crown_warden');
   progress.victory = finalDefeated;
