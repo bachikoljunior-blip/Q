@@ -93,5 +93,9 @@ test('quality controls and objective marker change the runnable scene', () => {
   const before = world.storyScenes.ilya.actor.userData.rig.halo.rotation.z;
   world.update(2, new THREE.Vector3(0, terrainHeight(0, -615), -615));
   assert.notEqual(world.storyScenes.ilya.actor.userData.rig.halo.rotation.z, before, 'Ilya has an articulated spectral idle animation');
+  world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: 'water_ward', peak: 'wind_release' }, defeated: ['grove_warden', 'marsh_warden', 'peak_warden'], characterQuests: { mira: 3, orin: 3, ilya: 1 }, npcFlags: { groveReport: true, marshReport: true, ilyaTruth: false } });
+  assert.equal(world.storyScenes.ilya.group.visible, false);
+  assert.equal(world.storyScenes.ilyaArchive.group.visible, true, 'Ilya archive appears only during the coast investigation');
+  assert.equal(world.interactables.find(item => item.id === 'ilya_archive_echo').mesh.visible, true);
   world.dispose();
 });

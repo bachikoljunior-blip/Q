@@ -533,6 +533,16 @@ export class World {
     const ilyaActor = this.addNpc(ilya, 'ilya_echo_actor', 0, 0, { role: 'ilya', scale: 1.16, spectral: true });
     this.storyScenes.ilya = { group: ilya, actor: ilyaActor };
     this.interactables.push({ id: 'ilya_echo', type: 'story', name: 'イリヤの残響', x: 0, z: -615, radius: 7, mesh: ilya, distanceCulled: false });
+
+    const ilyaArchive = makeScene('ILYA_ARCHIVE_ECHO', 535, 430);
+    const archiveStone = material(0x8f8978), archiveGlow = new THREE.MeshBasicMaterial({ color: 0xe1ca78, transparent: true, opacity: .48, depthWrite: false });
+    addMesh(ilyaArchive, new THREE.BoxGeometry(8.4, 4.8, .8), archiveStone, [0, 2.1, 0], [0, -.18, -.07]);
+    for (let i = 0; i < 2; i += 1) {
+      const ring = addMesh(ilyaArchive, new THREE.TorusGeometry(2.1 + i * 1.15, .075, 5, 24), archiveGlow.clone(), [0, 2.1, .55 + i * .08], [0, 0, i * .42]);
+      this.animated.push({ type: 'storyRing', mesh: ring, phase: 3.6 + i * 1.4 });
+    }
+    this.storyScenes.ilyaArchive = { group: ilyaArchive };
+    this.interactables.push({ id: 'ilya_archive_echo', type: 'story', name: '十二年前の記録', x: 535, z: 430, radius: 8, mesh: ilyaArchive, distanceCulled: false });
   }
 
   createResources() {
@@ -635,6 +645,7 @@ export class World {
       this.storyScenes.orinFault.group.visible = activeTask === 'orin_sluice_fault' || this.storyScenes.orinFault.repaired;
     }
     if (this.storyScenes.ilya) this.storyScenes.ilya.group.visible = ilyaActive;
+    if (this.storyScenes.ilyaArchive) this.storyScenes.ilyaArchive.group.visible = activeTask === 'ilya_archive_echo';
     if (this.miraNpc) this.miraNpc.visible = !miraActive;
     if (this.orinNpc) this.orinNpc.visible = !orinActive;
   }
