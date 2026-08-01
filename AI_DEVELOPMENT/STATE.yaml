@@ -120,7 +120,7 @@ floor:
     at: "2026-08-01T19:02:00+09:00"
     note: "The r2 candidate passed static/license validation, seven deterministic tests, the full DOM route, a 150-call/118,048-triangle final-scene estimate, and deliberate failing F2/F3/F5/F6 probes. PR 9 Quality run 30694693884 succeeded, main 4b91e2a published r2, manual verification matched on attempt 1, selected public asset hashes matched, and Chrome confirmed the exact fallback/test boundary."
   independence_level_used: C
-  review_outcome: passed
+  review_outcome: complete_verified
   reviewed_at: "2026-08-01T19:02:00+09:00"
   review_scope: "The r2 actor rig construction and visibility budget, player/enemy motion wiring, ordered aftermath state machine and forged-progression protection, v3-to-v4 migration, Crown gate guidance, dialogue/journal/ending payoff, font provenance/coverage, offline manifest, full DOM route, payload, rollback, deliberate F2/F3/F5/F6 failures, PR 9 Quality/merge, public release-ID and selected-asset hashes, test boundary, and fallback surface. The review preserves failed premium, narrative, combat-AI, physical-touch, and physical-performance criteria."
   review_limitation: "Same-agent Level C falsification because separate agents are prohibited in this run. The current environment has no WebGL-capable public browser or physical iPhone, so the r2 scene estimate and DOM route do not prove visual quality, frame pacing, simultaneous touch, or the representative public 3D journey. Premium presentation and commercial story-depth acceptance remain failed."
