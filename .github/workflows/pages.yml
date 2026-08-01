@@ -43,6 +43,14 @@ jobs:
           cache: npm
       - name: Install verification dependencies
         run: npm ci
+      - name: Prove the gates can fail
+        run: |
+          node tools/validate-protocol.mjs --selftest
+          for scenario in F2 F2_ASSET F5; do
+            if node tools/floor-gates.mjs --deliberate-failure "$scenario"; then
+              echo "deliberate $scenario failure did not fire"; exit 1
+            fi
+          done
       - name: Enforce continuity and review record
         run: node tools/floor-gates.mjs --base "${{ github.event.before || 'origin/main^' }}"
       - name: Validate Adaptive 2.2 continuity
