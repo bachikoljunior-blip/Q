@@ -99,6 +99,31 @@ function combatPhaseFor(enemy) {
 
 const PHASE_LABELS = Object.freeze(['', '静観', '猛攻', '決死']);
 
+const GUARDIAN_TACTICS = Object.freeze({
+  grove_warden: Object.freeze({
+    2: Object.freeze({ tactic: 'rootRush', speed: 10.6, windup: .72, lunge: 28, lockDirection: true }),
+    3: Object.freeze({ tactic: 'rootRush', speed: 11.8, windup: .62, lunge: 34, lockDirection: true })
+  }),
+  marsh_warden: Object.freeze({
+    2: Object.freeze({ tactic: 'mistOrbit', speed: 13.2, circle: true, circleBias: .74, recoveryRetreat: 7, flipOrbit: true }),
+    3: Object.freeze({ tactic: 'mistOrbit', speed: 14.2, circle: true, circleBias: .84, recoveryRetreat: 10, flipOrbit: true })
+  }),
+  peak_warden: Object.freeze({
+    2: Object.freeze({ tactic: 'galeSpacing', windup: .92, lunge: 15, prepareBackstep: true, backstepSpeed: 13 }),
+    3: Object.freeze({ tactic: 'galeSpacing', windup: .78, lunge: 18, prepareBackstep: true, backstepSpeed: 16 })
+  }),
+  crown_warden: Object.freeze({
+    2: Object.freeze({ tactic: 'commandPivot', speed: 9.2, windup: .98, lunge: 18 }),
+    3: Object.freeze({ tactic: 'commandChain', speed: 10.1, windup: .84, recovery: .68, lunge: 21, chain: true })
+  })
+});
+
+function behaviorForEnemy(enemy) {
+  const base = ENEMY_BEHAVIORS[enemy.type] || ENEMY_BEHAVIORS.beast;
+  const tactic = GUARDIAN_TACTICS[enemy.id]?.[enemy.combatPhase];
+  return tactic ? { ...base, ...tactic } : { ...base, tactic: enemy.type };
+}
+
 const emptyCallbacks = {
   status() {}, hud() {}, toast() {}, dialogue() {}, choice() {}, ending() {}, death() {}, save() {}, discovery() {}, quality() {}, fatal() {}
 };
@@ -427,6 +452,9 @@ export class Game {
         stateTimer: 0,
         stateTotal: 0,
         attackConnected: false,
+        attackDirection: null,
+        attackPrepared: false,
+        chainUsed: false,
         circleSide: index % 2 ? 1 : -1
       };
       enemy.mesh = this.createEnemyMesh(enemy);
@@ -624,6 +652,8 @@ export class Game {
       enemy.stateTimer = enemy.final ? .62 : .52;
       enemy.stateTotal = enemy.stateTimer;
       enemy.attackConnected = false;
+      enemy.attackPrepared = false;
+      enemy.chainUsed = false;
       enemy.poise = enemy.maxPoise;
       enemy.poiseRecoveryDelay = .8;
       this.sound?.event?.('boss', 1.2);
@@ -683,7 +713,7 @@ export class Game {
       }
       enemy.poiseRecoveryDelay = Math.max(0, enemy.poiseRecoveryDelay - dt);
       if (enemy.poiseRecoveryDelay <= 0) enemy.poise = Math.min(enemy.maxPoise, enemy.poise + enemy.maxPoise * .28 * dt);
-      const behavior = ENEMY_BEHAVIORS[enemy.type] || ENEMY_BEHAVIORS.beast;
+      const behavior = behaviorForEnemy(enemy);
       let dx = player.x - enemy.x, dz = player.z - enemy.z, distance = Math.hypot(dx, dz) || 1;
       const renderRange = enemy.final ? 340 : enemy.guardian ? 280 : 220;
       enemy.mesh.visible = distance < renderRange;
@@ -700,6 +730,7 @@ export class Game {
         if (state === 'idle') enemy.alert = false;
         if (state === 'windup') {
           enemy.attackConnected = false;
+          if (behavior.lockDirection) enemy.attackDirection = { x: dx / distance, z: dz / distance };
           if (distance < 30) this.sound?.event?.('danger', enemy.guardian || enemy.final ? 1.25 : 1);
         }
       };
@@ -716,15 +747,19 @@ export class Game {
         if (distance > 175) {
           enemy.alert = false;
           enter('idle');
+        } else if (behavior.prepareBackstep && !enemy.attackPrepared && distance <= behavior.attackRange + enemy.mesh.userData.radius * .18) {
+          enter('backstep', .3);
         } else if (distance <= behavior.attackRange + enemy.mesh.userData.radius * .18) {
+          enemy.attackPrepared = false;
           enter('windup', behavior.windup * (enemy.guardian ? .92 : 1));
         } else {
           let moveX = dx / distance, moveZ = dz / distance;
           if (behavior.circle && distance < 21) {
             const forwardWeight = clamp((distance - behavior.attackRange) / 14, .18, .72);
             const sideX = -moveZ * enemy.circleSide, sideZ = moveX * enemy.circleSide;
-            moveX = moveX * forwardWeight + sideX * (1 - forwardWeight);
-            moveZ = moveZ * forwardWeight + sideZ * (1 - forwardWeight);
+            const sideWeight = behavior.circleBias || 1 - forwardWeight;
+            moveX = moveX * (1 - sideWeight) + sideX * sideWeight;
+            moveZ = moveZ * (1 - sideWeight) + sideZ * sideWeight;
             const length = Math.hypot(moveX, moveZ) || 1;
             moveX /= length;
             moveZ /= length;
@@ -739,8 +774,10 @@ export class Game {
       } else if (enemy.state === 'active') {
         enemy.alert = true;
         enemy.stateTimer -= dt;
-        enemy.x += dx / distance * behavior.lunge * dt;
-        enemy.z += dz / distance * behavior.lunge * dt;
+        const attackX = behavior.lockDirection && enemy.attackDirection ? enemy.attackDirection.x : dx / distance;
+        const attackZ = behavior.lockDirection && enemy.attackDirection ? enemy.attackDirection.z : dz / distance;
+        enemy.x += attackX * behavior.lunge * dt;
+        enemy.z += attackZ * behavior.lunge * dt;
         dx = player.x - enemy.x;
         dz = player.z - enemy.z;
         distance = Math.hypot(dx, dz) || 1;
@@ -753,7 +790,30 @@ export class Game {
       } else if (enemy.state === 'recovery') {
         enemy.alert = true;
         enemy.stateTimer -= dt;
-        if (enemy.stateTimer <= 0) enter(distance > 175 ? 'idle' : 'approach');
+        if (behavior.recoveryRetreat) {
+          enemy.x -= dx / distance * behavior.recoveryRetreat * dt;
+          enemy.z -= dz / distance * behavior.recoveryRetreat * dt;
+        }
+        if (enemy.stateTimer <= 0) {
+          if (behavior.flipOrbit) enemy.circleSide *= -1;
+          if (behavior.chain && !enemy.chainUsed && distance < behavior.activation) {
+            enemy.chainUsed = true;
+            enter('windup', behavior.windup * .62);
+          } else {
+            enemy.chainUsed = false;
+            enemy.attackPrepared = false;
+            enter(distance > 175 ? 'idle' : 'approach');
+          }
+        }
+      } else if (enemy.state === 'backstep') {
+        enemy.alert = true;
+        enemy.stateTimer -= dt;
+        enemy.x -= dx / distance * behavior.backstepSpeed * dt;
+        enemy.z -= dz / distance * behavior.backstepSpeed * dt;
+        if (enemy.stateTimer <= 0) {
+          enemy.attackPrepared = true;
+          enter('windup', behavior.windup * .86);
+        }
       } else if (enemy.state === 'stagger') {
         enemy.alert = true;
         enemy.stateTimer -= dt;
@@ -779,7 +839,7 @@ export class Game {
       if (rig?.kind === 'humanoid') {
         animateHumanoid(enemy.mesh, {
           time: this.clock + enemy.phase,
-          speed: ['approach', 'active'].includes(enemy.state) ? behavior.speed : 0,
+          speed: ['approach', 'active', 'backstep'].includes(enemy.state) ? behavior.speed : 0,
           attack: enemy.state === 'windup' ? windupProgress * .48 : enemy.state === 'active' ? .48 + activeProgress * .52 : 0,
           reduced: Boolean(this.settings()?.reduced)
         });
@@ -800,6 +860,7 @@ export class Game {
       if (tell) {
         tell.visible = enemy.state === 'windup' || enemy.state === 'active';
         tell.material.opacity = enemy.state === 'active' ? .92 : .14 + windupProgress * .68;
+        tell.material.color.setHex(behavior.tactic === 'rootRush' ? 0xd9873d : behavior.tactic === 'mistOrbit' ? 0x69a8a0 : behavior.tactic === 'galeSpacing' ? 0xd1d8b5 : behavior.tactic === 'commandChain' ? 0xb184d0 : 0xffb45f);
         const pulse = 1 + windupProgress * .18 + Math.sin(this.clock * 16) * .025;
         tell.scale.setScalar(pulse);
       }
@@ -1343,6 +1404,7 @@ export class Game {
       maxPoise: enemy.maxPoise,
       combatPhase: enemy.combatPhase,
       phaseLabel: PHASE_LABELS[enemy.combatPhase],
+      tactic: behaviorForEnemy(enemy).tactic,
       presentation: enemy.mesh.userData.rig?.kind || 'unknown',
       articulatedParts: (enemy.mesh.userData.rig?.legs?.length || 0) + (enemy.mesh.userData.rig?.arms?.length || 0)
     };

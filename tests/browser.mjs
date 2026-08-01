@@ -172,6 +172,7 @@ globalThis.__Q_TEST__.tick(.08);
 assert.equal(globalThis.__Q_TEST__.strike('grove_warden', 90), true);
 assert.equal(globalThis.__Q_TEST__.enemy('grove_warden').combatPhase, 2, 'guardian health threshold advances its combat phase');
 assert.equal(globalThis.__Q_TEST__.enemy('grove_warden').state, 'phaseShift', 'phase advance creates a readable transition window');
+assert.equal(globalThis.__Q_TEST__.enemy('grove_warden').tactic, 'rootRush', 'grove guardian commits to a sidestep-readable fixed rush');
 assert.equal(globalThis.__Q_TEST__.snapshot().boss.phaseLabel, '猛攻');
 assert.match(window.document.querySelector('#boss-name').textContent, /猛攻/, 'boss HUD names the active phase');
 
@@ -214,6 +215,8 @@ assert.match(window.document.querySelector('#journal-content').textContent, /ミ
 window.document.querySelector('[data-back="paused"]').click();
 window.document.querySelector('#resume').click();
 
+assert.equal(globalThis.__Q_TEST__.strike('marsh_warden', 100), true);
+assert.equal(globalThis.__Q_TEST__.enemy('marsh_warden').tactic, 'mistOrbit', 'marsh guardian adopts circling retreats');
 assert.equal(globalThis.__Q_TEST__.defeat('marsh_warden'), true);
 assert.equal(globalThis.__Q_TEST__.snapshot().quest.step, '選択');
 globalThis.__Q_TEST__.teleport(-520, 310);
@@ -246,6 +249,8 @@ assert.match(window.document.querySelector('#journal-content').textContent, /オ
 window.document.querySelector('[data-back="paused"]').click();
 window.document.querySelector('#resume').click();
 
+assert.equal(globalThis.__Q_TEST__.strike('peak_warden', 110), true);
+assert.equal(globalThis.__Q_TEST__.enemy('peak_warden').tactic, 'galeSpacing', 'peak guardian creates space before committing');
 assert.equal(globalThis.__Q_TEST__.defeat('peak_warden'), true);
 assert.equal(globalThis.__Q_TEST__.snapshot().quest.step, '選択');
 globalThis.__Q_TEST__.teleport(500, -420);
@@ -291,6 +296,9 @@ snapshot = globalThis.__Q_TEST__.snapshot();
 assert.equal(snapshot.quest.step, '最終章');
 assert.equal(globalThis.__Q_TEST__.enemy('crown_warden').locked, false, 'the final temple requires every guardian, consequence, and intervening character scene');
 assert.equal(globalThis.__Q_TEST__.enemy('crown_warden').presentation, 'humanoid', 'Ilya command uses the articulated humanoid boss rig');
+assert.equal(globalThis.__Q_TEST__.strike('crown_warden', 360), true);
+assert.equal(globalThis.__Q_TEST__.enemy('crown_warden').combatPhase, 3);
+assert.equal(globalThis.__Q_TEST__.enemy('crown_warden').tactic, 'commandChain', 'final guardian unlocks a bounded two-strike command chain');
 assert.equal(globalThis.__Q_TEST__.defeat('crown_warden'), true);
 assert.ok(window.document.querySelector('#ending').classList.contains('active'), 'final guardian reaches the ending');
 assert.equal(globalThis.__Q_TEST__.snapshot().victory, true);
