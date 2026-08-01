@@ -174,21 +174,26 @@ export function characterTaskFor(progress) {
   const p = progress || {};
   const choices = p.choices || {};
   const stages = p.characterQuests || {};
+  const flags = p.npcFlags || {};
   const defeated = new Set(p.defeated || []);
-  if (choices.grove && defeated.has('grove_warden') && (stages.mira || 0) < 3) {
+  const miraComplete = (stages.mira || 0) >= 3 || ((stages.mira || 0) === 0 && flags.groveReport);
+  const orinComplete = (stages.orin || 0) >= 3 || ((stages.orin || 0) === 0 && flags.marshReport);
+  const ilyaComplete = (stages.ilya || 0) >= 3 || ((stages.ilya || 0) === 0 && flags.ilyaTruth);
+  if (choices.grove && defeated.has('grove_warden') && !miraComplete) {
     return CHARACTER_TASKS.mira[clamp(integer(stages.mira), 0, 2)];
   }
-  if ((stages.mira || 0) >= 3 && choices.marsh && defeated.has('marsh_warden') && (stages.orin || 0) < 3) {
+  if (miraComplete && choices.marsh && defeated.has('marsh_warden') && !orinComplete) {
     return CHARACTER_TASKS.orin[clamp(integer(stages.orin), 0, 2)];
   }
   const allGuardians = GUARDIANS.every(guardian => choices[guardian.point] && defeated.has(guardian.id));
-  if (allGuardians && (stages.mira || 0) >= 3 && (stages.orin || 0) >= 3 && (stages.ilya || 0) < 3) {
+  if (allGuardians && miraComplete && orinComplete && !ilyaComplete) {
     return CHARACTER_TASKS.ilya[clamp(integer(stages.ilya), 0, 2)];
   }
   return null;
 }
 
 export function narrativeSceneFor(progress) {
+  if (progress?.characterQuests) return characterTaskFor(progress);
   const choices = progress?.choices || {};
   const flags = progress?.npcFlags || {};
   const defeated = new Set(progress?.defeated || []);
@@ -435,7 +440,7 @@ export function questText(progress) {
   const narrative = narrativeSceneFor(p);
   if (narrative) {
     const titles = { mira: '森のあとで', orin: '水のあとで', ilya: '残された声' };
-    return { title: titles[narrative.character], detail: narrative.label, step: '人物' };
+    return { title: titles[narrative.character], detail: narrative.label, step: Number.isInteger(narrative.stage) ? `人物 ${narrative.stage + 1} / 3` : '人物' };
   }
   const unresolved = GUARDIANS.find(guardian => p.defeated?.includes(guardian.id) && !p.choices?.[guardian.point]);
   if (unresolved) return { title: '大地の答え', detail: `${unresolved.sigil}の行く先を決める`, step: '選択' };

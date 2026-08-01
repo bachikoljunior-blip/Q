@@ -134,8 +134,9 @@ test('RPG growth and objective progression remain coherent', () => {
   progress.choices.grove = 'wild_bloom';
   assert.equal(narrativeSceneFor(progress).id, 'mira_grove_scene');
   assert.equal(objectiveFor(progress).id, 'mira_grove_scene');
-  assert.equal(questText(progress).step, '人物');
+  assert.equal(questText(progress).step, '人物 1 / 3');
   progress.npcFlags.groveReport = true;
+  progress.characterQuests.mira = 3;
   assert.equal(objectiveFor(progress).id, 'marsh');
   progress.sigils = GUARDIANS.map(item => item.id);
   progress.choices.grove = '';
@@ -144,12 +145,15 @@ test('RPG growth and objective progression remain coherent', () => {
   progress.choices.marsh = 'ring_release';
   progress.choices.peak = 'wind_release';
   progress.defeated = GUARDIANS.map(item => item.id);
+  progress.characterQuests.mira = 3;
   assert.equal(objectiveFor(progress).id, 'orin_marsh_scene');
   assert.equal(canEnterCrown(progress), false, 'the final encounter waits for visible character aftermath scenes');
   progress.npcFlags.marshReport = true;
+  progress.characterQuests.orin = 3;
   assert.equal(objectiveFor(progress).id, 'ilya_echo');
   assert.equal(canEnterCrown(progress), false);
   progress.npcFlags.ilyaTruth = true;
+  progress.characterQuests.ilya = 3;
   assert.equal(canEnterCrown(progress), true);
   assert.equal(endingFor(progress), 'wild');
   progress.choices.peak = 'wind_ward';

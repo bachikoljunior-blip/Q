@@ -322,6 +322,8 @@ export class Game {
     this.progress = structuredClone(progress);
     this.progress.collected ||= [];
     this.progress.choices ||= { grove: '', marsh: '', peak: '' };
+    this.progress.characterQuests ||= { mira: 0, orin: 0, ilya: 0 };
+    this.progress.relationships ||= { mira: 0, orin: 0, ilya: 0 };
     this.clock = Number(this.progress.playTime) || 0;
     this.day = .27 + this.clock / 780 % .48;
     this.cameraYaw = Number.isFinite(Number(this.progress.yaw)) ? Number(this.progress.yaw) : 0;
@@ -803,13 +805,26 @@ export class Game {
       return true;
     }
     if (item.id === 'mira_grove_scene') {
-      if (!this.progress.choices.grove || this.progress.npcFlags?.groveReport) return false;
+      const stage = this.progress.characterQuests?.mira || 0;
+      if (!this.progress.choices.grove || ![0, 2].includes(stage)) return false;
       this.progress.npcFlags ||= {};
-      this.progress.npcFlags.groveReport = true;
+      this.progress.characterQuests ||= { mira: 0, orin: 0, ilya: 0 };
       this.status = 'dialogue';
       this.pendingChoice = null;
+      if (stage === 2) {
+        this.progress.characterQuests.mira = 3;
+        this.refreshNarrativeState();
+        this.checkpoint('mira-scout-return');
+        this.cb.dialogue({
+          speaker: '斥候ミラ',
+          text: 'これは父が使っていた斥候標。折れた向きが神殿ではなく里を指していた。父は大地を黙らせる前に、帰る道を残そうとしていたんだ。私は怒りだけを受け継がない。あなたが見つけた事実も持って、次の答えを見届ける。'
+        });
+        return true;
+      }
+      this.progress.npcFlags.groveReport = true;
+      this.progress.characterQuests.mira = 1;
       this.refreshNarrativeState();
-      this.checkpoint('mira-grove-aftermath');
+      this.checkpoint('mira-scout-start');
       const restored = this.progress.choices.grove === 'wild_bloom';
       this.cb.dialogue({
         speaker: '斥候ミラ',
@@ -817,6 +832,16 @@ export class Game {
           ? '柵は倒れた。でも見て。根は土を押し上げ、若木が風を受け止め始めている。父を解けば全部うまくいくと思っていた。でも自由にした力を支えるのは、残された私たちなんだ。私はこの道を見張る。あなたは次の答えを見てきて。'
           : '森の光が柵を立たせた。父と同じやり方を選んだと責めるつもりだった。でも、あなたは森を閉じ込めず、里にも分けた。守ることを恐れていたのは私かもしれない。次の答えも、結果まで見届けて。'
       });
+      return true;
+    }
+    if (item.id === 'mira_scout_trace') {
+      if (this.progress.characterQuests?.mira !== 1) return false;
+      this.progress.characterQuests.mira = 2;
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.refreshNarrativeState();
+      this.checkpoint('mira-scout-trace');
+      this.cb.dialogue({ speaker: 'イリヤの斥候標', text: '青い布の裏に、古い刻みが残っている。「風が止まったら、印ではなく人の声を追え」。折れた標は風見の里を指している。ミラへ持ち帰れる。' });
       return true;
     }
     if (item.id === 'orin_marsh_scene') {
@@ -1066,6 +1091,8 @@ export class Game {
       sigils: [...this.progress.sigils],
       choices: { ...this.progress.choices },
       npcFlags: { ...this.progress.npcFlags },
+      characterQuests: { ...this.progress.characterQuests },
+      relationships: { ...this.progress.relationships },
       pendingChoice: this.progress.pendingChoice || null,
       ending: this.progress.ending || '',
       playTime: this.clock,
