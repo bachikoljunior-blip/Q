@@ -206,6 +206,16 @@ globalThis.__Q_TEST__.teleport(80.2, 307.8);
 assert.equal(globalThis.__Q_TEST__.interact(), true, 'Orin works at the consequence-specific water channel');
 assert.match(window.document.querySelector('#dialogue-text').textContent, /水門|代償/);
 assert.equal(globalThis.__Q_TEST__.snapshot().npcFlags.marshReport, true, 'Orin relationship aftermath is persisted');
+assert.equal(globalThis.__Q_TEST__.snapshot().characterQuests.orin, 1);
+window.document.querySelector('#dialogue-close').click();
+globalThis.__Q_TEST__.teleport(-220, 350);
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'Orin quest continues at the jammed sluice wheel');
+assert.match(window.document.querySelector('#dialogue-text').textContent, /止水輪|泥|鉄/);
+assert.equal(globalThis.__Q_TEST__.snapshot().characterQuests.orin, 2);
+window.document.querySelector('#dialogue-close').click();
+globalThis.__Q_TEST__.teleport(80.2, 307.8);
+assert.equal(globalThis.__Q_TEST__.interact(), true, 'returning the inspection resolves Orin three-stage quest');
+assert.equal(globalThis.__Q_TEST__.snapshot().characterQuests.orin, 3);
 window.document.querySelector('#dialogue-close').click();
 
 assert.equal(globalThis.__Q_TEST__.defeat('peak_warden'), true);

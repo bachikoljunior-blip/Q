@@ -847,19 +847,49 @@ export class Game {
       return true;
     }
     if (item.id === 'orin_marsh_scene') {
-      if (!this.progress.choices.marsh || this.progress.npcFlags?.marshReport) return false;
+      const stage = this.progress.characterQuests?.orin || 0;
+      if (!this.progress.choices.marsh || ![0, 2].includes(stage)) return false;
       this.progress.npcFlags ||= {};
-      this.progress.npcFlags.marshReport = true;
+      this.progress.characterQuests ||= { mira: 0, orin: 0, ilya: 0 };
       this.status = 'dialogue';
       this.pendingChoice = null;
+      if (stage === 2) {
+        this.progress.characterQuests.orin = 3;
+        this.refreshNarrativeState();
+        this.checkpoint('orin-sluice-return');
+        this.cb.dialogue({
+          speaker: '鍛冶師オリン',
+          text: this.progress.choices.marsh === 'ring_release'
+            ? '止水輪は外から壊されたんじゃない。長く動かさなかった鉄が、自分の重さで噛んでいた。守りに任せた時間そのものが故障だ。新しい水路は、毎日人の手で開ける形にする。調べたお前も最初の番に入れ。'
+            : '印の力だけなら止水輪は回る。だが泥を取り、軸へ油を差す人がいなければ次の雨で止まる。安全は一度選んで終わりじゃない。俺とお前が、見えない代償を毎日確かめるんだ。'
+        });
+        return true;
+      }
+      this.progress.npcFlags.marshReport = true;
+      this.progress.characterQuests.orin = 1;
       this.refreshNarrativeState();
-      this.checkpoint('orin-marsh-aftermath');
+      this.checkpoint('orin-sluice-start');
       const released = this.progress.choices.marsh === 'ring_release';
       this.cb.dialogue({
         speaker: '鍛冶師オリン',
         text: released
           ? '鐘の音で古い水路は空になった。だから今、人の手で新しい溝を掘っている。失った安全を数えるだけなら簡単だ。だがミラの言う通り、直す力まで結界に預けていたのかもしれない。俺は里に残る。お前は峰へ行け。'
           : '水門は満ち、火に備える水ができた。その代わり、霧の中の声は残った。安全には、見えない場所へ払う代償がある。俺はこの門を毎日開けて確かめる。お前も最後まで、自分の答えから目を離すな。'
+      });
+      return true;
+    }
+    if (item.id === 'orin_sluice_fault') {
+      if (this.progress.characterQuests?.orin !== 1) return false;
+      this.progress.characterQuests.orin = 2;
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.refreshNarrativeState();
+      this.checkpoint('orin-sluice-fault');
+      this.cb.dialogue({
+        speaker: '詰まった止水輪',
+        text: this.progress.choices.marsh === 'ring_release'
+          ? '乾いた軸の内側に、長年動かなかった鉄の傷が重なっている。流れを戻すなら、輪を作り直して人が毎日開く仕組みが要る。オリンへ伝えられる。'
+          : '青い印は輪を押しているが、泥が軸を固めている。結界だけでは次の雨を越せない。手入れを続ける人の役目まで含めて、オリンへ伝えられる。'
       });
       return true;
     }
