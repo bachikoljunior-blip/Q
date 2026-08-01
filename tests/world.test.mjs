@@ -23,6 +23,12 @@ test('procedural world builds a continuous local scene with every required desti
   assert.ok(world.interactables.some(item => item.type === 'camp'));
   assert.ok(world.interactables.some(item => item.type === 'herb'));
   assert.ok(world.interactables.some(item => item.type === 'crystal'));
+  assert.ok(world.npcs.length >= 5, 'Mira, Orin, and Ilya have persistent and aftermath actor rigs');
+  for (const npc of world.npcs) {
+    assert.equal(npc.userData.rig?.kind, 'humanoid');
+    assert.equal(npc.userData.rig?.arms.length, 2);
+    assert.equal(npc.userData.rig?.legs.length, 2);
+  }
   world.dispose();
   assert.equal(scene.getObjectByName('WILDBOUND_WORLD'), undefined);
 });
@@ -58,5 +64,21 @@ test('quality controls and objective marker change the runnable scene', () => {
   assert.equal(world.choiceVisuals.ringRelease.visible, true);
   assert.equal(world.choiceVisuals.windWard.visible, true);
   assert.equal(world.choiceVisuals.windRelease.visible, false);
+  world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: '', peak: '' }, defeated: ['grove_warden'], npcFlags: {} });
+  assert.equal(world.storyScenes.mira.group.visible, true);
+  assert.equal(world.storyScenes.mira.wild.visible, true);
+  assert.equal(world.miraNpc.visible, false, 'Mira moves from the village into the playable aftermath scene');
+  world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: 'water_ward', peak: 'wind_release' }, defeated: ['grove_warden', 'marsh_warden', 'peak_warden'], npcFlags: { groveReport: false, marshReport: false, ilyaTruth: false } });
+  assert.equal(world.storyScenes.mira.group.visible, true, 'aftermath scenes remain sequential when several choices are already complete');
+  assert.equal(world.storyScenes.orin.group.visible, false);
+  world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: 'water_ward', peak: 'wind_release' }, defeated: ['grove_warden', 'marsh_warden', 'peak_warden'], npcFlags: { groveReport: true, marshReport: false, ilyaTruth: false } });
+  assert.equal(world.storyScenes.mira.group.visible, false);
+  assert.equal(world.storyScenes.orin.group.visible, true);
+  assert.equal(world.storyScenes.orin.wardChannel.visible, true);
+  world.setNarrativeState({ choices: { grove: 'wild_bloom', marsh: 'water_ward', peak: 'wind_release' }, defeated: ['grove_warden', 'marsh_warden', 'peak_warden'], npcFlags: { groveReport: true, marshReport: true, ilyaTruth: false } });
+  assert.equal(world.storyScenes.ilya.group.visible, true);
+  const before = world.storyScenes.ilya.actor.userData.rig.halo.rotation.z;
+  world.update(2, new THREE.Vector3(0, terrainHeight(0, -615), -615));
+  assert.notEqual(world.storyScenes.ilya.actor.userData.rig.halo.rotation.z, before, 'Ilya has an articulated spectral idle animation');
   world.dispose();
 });

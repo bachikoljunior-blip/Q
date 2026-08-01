@@ -3,7 +3,7 @@ import { spawnSync } from 'node:child_process';
 
 const required = [
   'index.html', 'styles.css', 'manifest.webmanifest', 'icon.svg', 'sw.js', 'release.json',
-  'src/main.js', 'src/game.js', 'src/world.js', 'src/core.js', 'src/storage.js', 'src/audio.js',
+  'src/main.js', 'src/game.js', 'src/world.js', 'src/actors.js', 'src/core.js', 'src/storage.js', 'src/audio.js',
   'assets/textures/ground.webp', 'assets/portraits/characters.webp', 'assets/fonts/q-japanese.woff', 'assets/fonts/OFL-NotoSansJP.txt',
   'vendor/three.module.js', 'vendor/three.core.min.js', 'vendor/THREE-LICENSE.txt', 'assets-manifest.json', 'package.json',
   'START_HERE.md', 'AI_DEVELOPMENT/PROTOCOL.md', 'AI_DEVELOPMENT/STATE.yaml',
@@ -87,7 +87,7 @@ const code = ['styles.css', ...globSync('src/*.js')].reduce((sum, file) => sum +
 if (total > 1600000) failures.push(`payload ${total}`);
 if (code > 280000) failures.push(`code ${code}`);
 const serviceWorker = readFileSync('sw.js', 'utf8');
-for (const file of ['index.html', 'styles.css', 'icon.svg', 'manifest.webmanifest', 'release.json', 'src/main.js', 'src/game.js', 'src/world.js', 'src/core.js', 'src/storage.js', 'src/audio.js', 'assets/textures/ground.webp', 'assets/portraits/characters.webp', 'assets/fonts/q-japanese.woff', 'assets/fonts/OFL-NotoSansJP.txt', 'vendor/three.module.js', 'vendor/three.core.min.js', 'vendor/THREE-LICENSE.txt']) {
+for (const file of ['index.html', 'styles.css', 'icon.svg', 'manifest.webmanifest', 'release.json', 'src/main.js', 'src/game.js', 'src/world.js', 'src/actors.js', 'src/core.js', 'src/storage.js', 'src/audio.js', 'assets/textures/ground.webp', 'assets/portraits/characters.webp', 'assets/fonts/q-japanese.woff', 'assets/fonts/OFL-NotoSansJP.txt', 'vendor/three.module.js', 'vendor/three.core.min.js', 'vendor/THREE-LICENSE.txt']) {
   if (!serviceWorker.includes(`./${file}`)) failures.push(`cache missing ${file}`);
 }
 

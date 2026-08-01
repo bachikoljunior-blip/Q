@@ -104,9 +104,11 @@ const game = new Game(canvas, {
       };
       const version = versions[ending] || versions.covenant;
       const memories = Object.entries(snapshot.choices || {}).map(([point, id]) => CONSEQUENCE_CHOICES[point]?.[id]?.ending).filter(Boolean).join(' ');
+      const miraCoda = snapshot.choices?.grove === 'wild_bloom' ? 'ミラは倒れた柵の外に若木を植え、父の決断を責めるだけだった自分と向き合った。' : 'ミラは里の護りを見張りながら、守る力そのものではなく、使い続ける人を疑うべきだと学んだ。';
+      const orinCoda = snapshot.choices?.marsh === 'ring_release' ? 'オリンは空になった水路を人の手で掘り直した。' : 'オリンは満ちた水門を毎日開き、霧に残した名を忘れないと決めた。';
       $('#ending-kicker').textContent = version.kicker;
       $('#ending-title').textContent = version.title;
-      $('#ending-copy').textContent = `${version.lead} ${memories} ミラは道を測り、オリンは壊れたものを直し始めた。あなたの選択は景色と人々の暮らしに残り続ける。`;
+      $('#ending-copy').textContent = `${version.lead} ${memories} ${miraCoda} ${orinCoda} イリヤの残響は、谷の答えを一人で背負う時代が終わるのを見届けた。あなたの選択は景色と人々の暮らしに残り続ける。`;
       show('ending');
       gameUi(false, false);
       vibrate([30, 40, 30, 40, 90]);
@@ -302,12 +304,17 @@ function renderJournal() {
     const labels = { grove: '森の行方', marsh: '水の行方', peak: '風の行方' };
     return choice ? `<section class="journal-card"><h3>${labels[point]} — ${choice.label}</h3><p>${choice.journal}</p></section>` : '';
   }).join('');
+  const characterCards = [
+    progress.npcFlags?.groveReport ? `<section class="journal-card"><h3>ミラ — 森のあとで</h3><p>${progress.choices.grove === 'wild_bloom' ? '自由にした森を支えるのは、残された人々だと知った。倒れた柵の外で若木を見張っている。' : '守る選択にも変わる余地があると認め、里へ分けた森の力を見張っている。'}</p></section>` : '',
+    progress.npcFlags?.marshReport ? `<section class="journal-card"><h3>オリン — 水のあとで</h3><p>${progress.choices.marsh === 'ring_release' ? '失った水路を数えるのではなく、自分の手で掘り直し始めた。' : '水門が守る暮らしと、霧に残した声の両方を毎日確かめている。'}</p></section>` : '',
+    progress.npcFlags?.ilyaTruth ? '<section class="journal-card"><h3>イリヤ — 残された声</h3><p>十二年前の結界は答えではなく、次の世代へ決断を送るための時間だった。神殿には彼ではなく、止まり続ける古い命令がいる。</p></section>' : ''
+  ].join('');
   $('#journal-content').innerHTML = `
     <section class="journal-card"><h3>${quest.title}</h3><p>${quest.detail}<br><b>${quest.step}</b></p><div class="sigil-row">${sigils}</div></section>
     <section class="journal-card"><h3>旅人の力</h3><p>レベル ${progress.level}<br>生命 ${stats.maxHealth} · 攻撃 ${Math.round(stats.power)} · 気力 ${stats.maxStamina}<br>次の成長まで ${Math.max(0, 85 + (progress.level - 1) * 55 - progress.xp)} XP</p></section>
     <section class="journal-card"><h3>見つけたもの</h3><p>場所 ${progress.discovered.length} / ${WORLD_POINTS.length}<br>月露草 ${progress.herbs} · 青脈晶 ${progress.crystals}<br>木の葉貨 ${progress.coins}</p></section>
     <section class="journal-card"><h3>旅の時間</h3><p>${formatTime(progress.playTime)}<br>生命 LV.${progress.upgrades.vigor} · 剣 LV.${progress.upgrades.edge} · 足運び LV.${progress.upgrades.stride}</p></section>
-    ${choiceCards}`;
+    ${choiceCards}${characterCards}`;
 }
 
 function renderCamp() {

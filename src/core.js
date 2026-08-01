@@ -1,6 +1,6 @@
 export const SAVE_KEY = 'q-wildbound-save';
 export const LEGACY_SAVE_KEYS = Object.freeze(['q-starthread-save']);
-export const SAVE_VERSION = 3;
+export const SAVE_VERSION = 4;
 export const WORLD_SIZE = 1800;
 export const WORLD_HALF = WORLD_SIZE / 2;
 export const WATER_LEVEL = -1.6;
@@ -146,6 +146,25 @@ export const CONSEQUENCE_CHOICES = Object.freeze({
 
 export const GROVE_CHOICES = CONSEQUENCE_CHOICES.grove;
 
+export const NARRATIVE_SCENES = Object.freeze({
+  grove: Object.freeze({ id: 'mira_grove_scene', character: 'mira', label: '倒れた柵でミラと話す', x: -77.2, z: 238.8 }),
+  marsh: Object.freeze({ id: 'orin_marsh_scene', character: 'orin', label: '水路でオリンと話す', x: 80.2, z: 307.8 }),
+  ilya: Object.freeze({ id: 'ilya_echo', character: 'ilya', label: '神殿前でイリヤの残響に触れる', x: 0, z: -615 })
+});
+
+export function narrativeSceneFor(progress) {
+  const choices = progress?.choices || {};
+  const flags = progress?.npcFlags || {};
+  const defeated = new Set(progress?.defeated || []);
+  const groveComplete = Boolean(choices.grove && defeated.has('grove_warden'));
+  const marshComplete = Boolean(choices.marsh && defeated.has('marsh_warden'));
+  const peakComplete = Boolean(choices.peak && defeated.has('peak_warden'));
+  if (groveComplete && !flags.groveReport) return NARRATIVE_SCENES.grove;
+  if (marshComplete && !flags.marshReport) return NARRATIVE_SCENES.marsh;
+  if (groveComplete && marshComplete && peakComplete && flags.groveReport && flags.marshReport && !flags.ilyaTruth) return NARRATIVE_SCENES.ilya;
+  return null;
+}
+
 const DEFAULT_PROGRESS = Object.freeze({
   started: false,
   story: 0,
@@ -161,7 +180,7 @@ const DEFAULT_PROGRESS = Object.freeze({
   choices: { grove: '', marsh: '', peak: '' },
   pendingChoice: null,
   ending: '',
-  npcFlags: { orinIntro: false },
+  npcFlags: { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false },
   upgrades: { vigor: 0, edge: 0, stride: 0 },
   health: 100,
   x: 0,
@@ -213,13 +232,15 @@ export function respawnCoinLossFor(progress) {
 }
 
 export function canEnterCrown(progress) {
-  return GUARDIANS.every(guardian => progress?.sigils?.includes(guardian.id) && Boolean(progress?.choices?.[guardian.point]));
+  return GUARDIANS.every(guardian => progress?.sigils?.includes(guardian.id) && Boolean(progress?.choices?.[guardian.point]))
+    && Boolean(progress?.npcFlags?.groveReport && progress?.npcFlags?.marshReport && progress?.npcFlags?.ilyaTruth);
 }
 
 export function cleanSave(raw) {
   if (!raw || typeof raw !== 'object') return structuredClone(DEFAULT_SAVE);
   const settings = raw.settings && typeof raw.settings === 'object' ? raw.settings : {};
   const source = raw.progress && typeof raw.progress === 'object' ? raw.progress : {};
+  const sourceVersion = integer(raw.version);
   const pointIds = WORLD_POINTS.map(point => point.id);
   const defeatedIds = [...GUARDIANS.map(item => item.id), 'crown_warden'];
   const progress = {
@@ -237,7 +258,12 @@ export function cleanSave(raw) {
     choices: Object.fromEntries(Object.entries(CONSEQUENCE_CHOICES).map(([point, options]) => [point, Object.prototype.hasOwnProperty.call(options, source.choices?.[point]) ? source.choices[point] : ''])),
     pendingChoice: GUARDIANS.some(item => item.id === source.pendingChoice) ? source.pendingChoice : null,
     ending: ['', 'wild', 'covenant', 'bastion'].includes(source.ending) ? source.ending : '',
-    npcFlags: { orinIntro: Boolean(source.npcFlags?.orinIntro) },
+    npcFlags: {
+      orinIntro: Boolean(source.npcFlags?.orinIntro),
+      groveReport: Boolean(source.npcFlags?.groveReport),
+      marshReport: Boolean(source.npcFlags?.marshReport),
+      ilyaTruth: Boolean(source.npcFlags?.ilyaTruth)
+    },
     upgrades: {
       vigor: clamp(integer(source.upgrades?.vigor), 0, 5),
       edge: clamp(integer(source.upgrades?.edge), 0, 5),
@@ -258,6 +284,14 @@ export function cleanSave(raw) {
     if (!defeated) progress.choices[guardian.point] = '';
     if (defeated && progress.choices[guardian.point] && !progress.sigils.includes(guardian.id)) progress.sigils.push(guardian.id);
   }
+  if (sourceVersion > 0 && sourceVersion < SAVE_VERSION) {
+    progress.npcFlags.groveReport ||= Boolean(progress.choices.grove);
+    progress.npcFlags.marshReport ||= Boolean(progress.choices.marsh);
+    progress.npcFlags.ilyaTruth ||= Boolean(progress.choices.grove && progress.choices.marsh && progress.choices.peak);
+  }
+  if (!progress.choices.grove) progress.npcFlags.groveReport = false;
+  if (!progress.choices.marsh) progress.npcFlags.marshReport = false;
+  if (!(progress.choices.grove && progress.choices.marsh && progress.choices.peak && progress.npcFlags.groveReport && progress.npcFlags.marshReport)) progress.npcFlags.ilyaTruth = false;
   const finalDefeated = canEnterCrown(progress) && progress.defeated.includes('crown_warden');
   if (!finalDefeated) progress.defeated = progress.defeated.filter(id => id !== 'crown_warden');
   progress.victory = finalDefeated;
@@ -312,6 +346,8 @@ export function objectiveFor(progress) {
     const point = WORLD_POINTS.find(item => item.id === guardian?.point) || WORLD_POINTS[0];
     return { ...point, label: `${guardian?.sigil || '印'}の行く先を決める` };
   }
+  const narrative = narrativeSceneFor(p);
+  if (narrative) return { ...narrative };
   const unresolved = GUARDIANS.find(guardian => p.defeated?.includes(guardian.id) && !p.choices?.[guardian.point]);
   if (unresolved) return { ...WORLD_POINTS.find(item => item.id === unresolved.point), label: `${unresolved.sigil}の行方を決める` };
   const missing = GUARDIANS.find(guardian => !p.sigils.includes(guardian.id));
@@ -330,6 +366,11 @@ export function questText(progress) {
     return { title: '大地の答え', detail: `${guardian.sigil}の行く先を決める`, step: '選択' };
   }
   if (p.story === 0) return { title: '谷に目覚めて', detail: '風見の里で斥候ミラを探す', step: '0 / 3' };
+  const narrative = narrativeSceneFor(p);
+  if (narrative) {
+    const titles = { mira: '森のあとで', orin: '水のあとで', ilya: '残された声' };
+    return { title: titles[narrative.character], detail: narrative.label, step: '人物' };
+  }
   const unresolved = GUARDIANS.find(guardian => p.defeated?.includes(guardian.id) && !p.choices?.[guardian.point]);
   if (unresolved) return { title: '大地の答え', detail: `${unresolved.sigil}の行く先を決める`, step: '選択' };
   if (p.sigils.length < 3) return { title: '眠れる大地', detail: '三つの自然の印を取り戻す', step: `${p.sigils.length} / 3` };

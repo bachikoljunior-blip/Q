@@ -53,3 +53,16 @@ These are automated Chromium captures using SwiftShader and touch emulation. The
 - PR 7 head `e9366b7` passed Quality floor run `30692768125` and was squash-merged to `main` as `b26552e`.
 - Dynamic Pages run `30692798119` and repository verifier run `30692798350` both succeeded. A separate manual call to `tools/verify-public.mjs` matched `release.json` and the index meta value on attempt 1.
 - Public cloud Chrome loaded `Q: WILDBOUND` with build ID `wildbound-2026-08-01-r1`. Its sandbox reports GL vendor/renderer disabled, and the game displays the intended reload guidance. This is valid fallback and deployment evidence, not a public WebGL journey or physical-device pass.
+
+## r2 character and consequence checkpoint
+
+Candidate scope: `agent/character-story-pass` based on main `1388c41`, release ID `wildbound-2026-08-01-r2`. Remote publication evidence is added only after the candidate merges and the public verifier succeeds.
+
+- `npm run check` — passed after the final font subset and actor-budget tuning: 28 required files, 1,518,486 release bytes, 170,721 JS+CSS bytes, seven deterministic core/world tests, and the complete happy-dom journey.
+- The journey executes articulated player/enemy combat, all three persistent choices, separate choice-dependent Mira and Orin consequence scenes, Ilya's barrier-cost payoff, a climax that rejects direct or test-injected bypass, the accumulated ending, free roam, autosave, and save-version-3 migration to version 4.
+- The final-route visible-scene estimator reports 150 draw calls and 118,048 triangles. It traverses the actual scene graph and applies instancing counts, but remains a headless estimate rather than WebGL renderer or physical-device evidence.
+- The new actor system gives the traveler, Mira, Orin, Ilya, and the Crown multi-part bodies, limbs, cloaks, and role gear; beasts, stalkers, sentinels, and wardens have distinct quadruped, winged, armored, or antlered silhouettes and procedural motion. The previous single-shape actors are no longer used for these roles.
+- The Noto Sans JP asset was rebuilt from the OFL-licensed Regular 400 package in `@fontsource/noto-sans-jp` 5.3.0 and locally subset. FontTools inspection found coverage for all 545 non-icon non-ASCII code points used by the candidate; the ten intentional UI symbols `↻⌁⌖◇◈◉●☰⚔✦` use the system fallback.
+- Level C falsification passed by rejecting deliberate failures: F2 asset-without-state, F3 validation failure, F5 missing review record, and F6 mismatched public release ID each exited 1 and identified the intended defect.
+
+The exact r2 presentation has not been rendered in a WebGL-capable browser in this environment, and the procedural low-poly rigs do not satisfy the preserved premium authored-asset bar. Physical iPhone SE touch/performance, facial or voiced performance, obstacle-aware combat, guardian phases, multi-stage relationship quests, and public 3D journey evidence remain open.

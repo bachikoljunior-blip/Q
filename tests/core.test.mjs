@@ -4,6 +4,7 @@ import {
   DEFAULT_SAVE,
   GUARDIANS,
   SAVE_KEY,
+  SAVE_VERSION,
   WORLD_HALF,
   biomeAt,
   canEnterCrown,
@@ -13,6 +14,7 @@ import {
   grantExperience,
   herbHealingFor,
   newGame,
+  narrativeSceneFor,
   objectiveFor,
   playerStats,
   questText,
@@ -62,6 +64,8 @@ test('save cleaning rejects malformed progress while preserving valid RPG state'
   assert.deepEqual(clean.progress.sigils, ['grove_warden']);
   assert.deepEqual(clean.progress.collected, ['herb_1', 'crystal_14']);
   assert.deepEqual(clean.progress.choices, { grove: '', marsh: '', peak: '' });
+  assert.deepEqual(clean.progress.npcFlags, { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false });
+  assert.equal(clean.version, SAVE_VERSION);
   assert.equal(clean.progress.level, 40);
   assert.equal(clean.progress.x, WORLD_HALF - 20);
   assert.equal(clean.progress.z, -WORLD_HALF + 20);
@@ -80,6 +84,18 @@ test('save cleaning rejects malformed progress while preserving valid RPG state'
   assert.equal(forged.progress.victory, false);
   assert.equal(forged.progress.ending, '');
   assert.equal(forged.progress.story, 0);
+  const migratedV3 = cleanSave({
+    version: 3,
+    progress: {
+      started: true,
+      story: 2,
+      defeated: GUARDIANS.map(item => item.id),
+      sigils: GUARDIANS.map(item => item.id),
+      choices: { grove: 'wild_bloom', marsh: 'ring_release', peak: 'wind_release' }
+    }
+  });
+  assert.deepEqual(migratedV3.progress.npcFlags, { orinIntro: false, groveReport: true, marshReport: true, ilyaTruth: true }, 'version 3 completed routes retain crown access after migration');
+  assert.equal(canEnterCrown(migratedV3.progress), true);
 });
 
 test('RPG growth and objective progression remain coherent', () => {
@@ -111,6 +127,10 @@ test('RPG growth and objective progression remain coherent', () => {
   assert.equal(objectiveFor(progress).label, '森の印の行方を決める');
   assert.equal(questText(progress).step, '選択');
   progress.choices.grove = 'wild_bloom';
+  assert.equal(narrativeSceneFor(progress).id, 'mira_grove_scene');
+  assert.equal(objectiveFor(progress).id, 'mira_grove_scene');
+  assert.equal(questText(progress).step, '人物');
+  progress.npcFlags.groveReport = true;
   assert.equal(objectiveFor(progress).id, 'marsh');
   progress.sigils = GUARDIANS.map(item => item.id);
   progress.choices.grove = '';
@@ -118,6 +138,13 @@ test('RPG growth and objective progression remain coherent', () => {
   progress.choices.grove = 'wild_bloom';
   progress.choices.marsh = 'ring_release';
   progress.choices.peak = 'wind_release';
+  progress.defeated = GUARDIANS.map(item => item.id);
+  assert.equal(objectiveFor(progress).id, 'orin_marsh_scene');
+  assert.equal(canEnterCrown(progress), false, 'the final encounter waits for visible character aftermath scenes');
+  progress.npcFlags.marshReport = true;
+  assert.equal(objectiveFor(progress).id, 'ilya_echo');
+  assert.equal(canEnterCrown(progress), false);
+  progress.npcFlags.ilyaTruth = true;
   assert.equal(canEnterCrown(progress), true);
   assert.equal(endingFor(progress), 'wild');
   progress.choices.peak = 'wind_ward';
