@@ -259,7 +259,8 @@ export function playerStats(progress) {
     maxHealth: 100 + (level - 1) * 9 + integer(upgrades.vigor) * 22 + (p.choices?.marsh === 'water_ward' ? 18 : 0),
     power: 18 + (level - 1) * 2.4 + integer(upgrades.edge) * 5 + (p.choices?.peak === 'wind_ward' ? 4 : 0),
     speed: 15.5 + integer(upgrades.stride) * 1.25 + (p.choices?.peak === 'wind_release' ? 1.5 : 0),
-    maxStamina: 100 + integer(upgrades.stride) * 12 + (p.choices?.grove === 'wild_bloom' ? 16 : 0)
+    maxStamina: 100 + integer(upgrades.stride) * 12 + (p.choices?.grove === 'wild_bloom' ? 16 : 0),
+    dodgeCost: p.relationships?.mira >= 3 ? 20 : p.relationships?.mira >= 2 ? 22 : 24
   };
 }
 
@@ -363,6 +364,9 @@ export function cleanSave(raw) {
     progress.characterQuests.ilya = 0;
     progress.relationships.ilya = 0;
   }
+  if (progress.characterQuests.mira < 3) progress.relationships.mira = 0;
+  if (progress.characterQuests.orin < 3) progress.relationships.orin = 0;
+  if (progress.characterQuests.ilya < 3) progress.relationships.ilya = 0;
   const finalDefeated = canEnterCrown(progress) && progress.defeated.includes('crown_warden');
   if (!finalDefeated) progress.defeated = progress.defeated.filter(id => id !== 'crown_warden');
   progress.victory = finalDefeated;

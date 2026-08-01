@@ -184,6 +184,7 @@ window.document.querySelector('#dialogue-close').click();
 globalThis.__Q_TEST__.teleport(-77.2, 238.8);
 assert.equal(globalThis.__Q_TEST__.interact(), true, 'returning the marker resolves Mira three-stage quest');
 assert.equal(globalThis.__Q_TEST__.snapshot().characterQuests.mira, 3);
+assert.equal(globalThis.__Q_TEST__.snapshot().relationships.mira, 3, 'honoring Mira aligned choice earns the strongest scout bond');
 window.document.querySelector('#dialogue-close').click();
 
 assert.equal(globalThis.__Q_TEST__.defeat('marsh_warden'), true);

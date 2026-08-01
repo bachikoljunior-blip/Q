@@ -561,7 +561,8 @@ export class Game {
   }
 
   dodge() {
-    if (this.status !== 'running' || this.dodgeTimer > 0 || this.stamina < 24) return false;
+    const cost = playerStats(this.progress).dodgeCost;
+    if (this.status !== 'running' || this.dodgeTimer > 0 || this.stamina < cost) return false;
     const move = this.movementInput();
     if (move.length > .08) {
       const fx = -Math.sin(this.cameraYaw), fz = -Math.cos(this.cameraYaw);
@@ -570,7 +571,7 @@ export class Game {
     } else {
       this.dodgeDirection.set(Math.sin(this.player.rotation.y), 0, Math.cos(this.player.rotation.y));
     }
-    this.stamina -= 24;
+    this.stamina -= cost;
     this.dodgeTimer = .34;
     this.invulnerable = .48;
     this.sound?.event?.('dodge');
@@ -813,6 +814,7 @@ export class Game {
       this.pendingChoice = null;
       if (stage === 2) {
         this.progress.characterQuests.mira = 3;
+        this.progress.relationships.mira = this.progress.choices.grove === 'wild_bloom' ? 3 : 2;
         this.refreshNarrativeState();
         this.checkpoint('mira-scout-return');
         this.cb.dialogue({
