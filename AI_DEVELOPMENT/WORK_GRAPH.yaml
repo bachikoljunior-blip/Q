@@ -52,5 +52,5 @@ nodes:
     priority: P1
     status: blocked
     depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH, PRESENTATION-PASS]
-    note: "Local deterministic, DOM, real WebGL smoke, license, payload, and staged revision checks pass. Premium presentation/narrative criteria and physical iPhone evidence still block benchmark-complete objective approval, but do not block the user-required iterative session-end publication of a runnable checkpoint."
+    note: "Local deterministic, DOM, real WebGL smoke, license, payload, and staged revision checks pass. PR 6 merged and dynamic Pages published WILDBOUND, but exact release-ID verification and a WebGL-capable public journey are being repaired. Premium presentation/narrative criteria and physical iPhone evidence still block benchmark-complete objective approval, not iterative publication."
 active_frontier: [PRESENTATION-PASS, NARRATIVE-CONSEQUENCE, QA-RELEASE]

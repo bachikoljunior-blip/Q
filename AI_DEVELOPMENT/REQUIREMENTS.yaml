@@ -98,9 +98,9 @@ acceptance:
     evidence: "Static payload/pixel budgets and real WebGL 94 draw calls, 113,435 triangles, and auto-quality fallback passed; physical-device frame-time and memory evidence absent"
   - id: AC-PAGES
     requirement: [R-MOBILE, R-COMPLETE]
-    status: prepared_not_applied
+    status: complete_unverified
     result: "The intended revision loads from the public GitHub Pages URL with relative assets, no blocking runtime error, and a verified primary journey."
-    evidence: null
+    evidence: "Dynamic Pages run 30692355529 published the WILDBOUND title from main 1c12511; exact release-ID verification and a WebGL-capable public primary journey remain pending after custom run 30692355980 failed."
   - id: AC-LICENSE
     requirement: [R-LICENSE, R-THREE]
     status: complete_verified

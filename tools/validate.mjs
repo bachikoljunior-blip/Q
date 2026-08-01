@@ -20,8 +20,17 @@ if (process.env.FLOOR_TEST_BAD === 'F3') failures.push('DELIBERATE F3 FAILURE OB
 const html = readFileSync('index.html', 'utf8');
 if (/(?:src|href)=["']\/(?!\/)/.test(html)) failures.push('root-relative path in index');
 if (!html.includes('user-scalable=no')) failures.push('viewport zoom policy missing');
-if (!html.includes('name="build-revision" content="__BUILD_REVISION__"')) failures.push('build revision meta template missing');
 if (!html.includes('Q: WILDBOUND')) failures.push('product title missing');
+
+let release;
+try {
+  release = JSON.parse(readFileSync('release.json'));
+  if (typeof release.release_id !== 'string' || !/^[a-z0-9][a-z0-9._-]{4,127}$/i.test(release.release_id) || release.release_id.includes('__')) {
+    failures.push('release ID must be a concrete stable identifier');
+  } else if (!html.includes(`name="build-revision" content="${release.release_id}"`)) {
+    failures.push('index build revision does not match release.json');
+  }
+} catch (error) { failures.push(`release ${error.message}`); }
 
 const benchmarks = readFileSync('AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml', 'utf8');
 for (const element of ['movement', 'camera', 'combat', 'exploration', 'world_design', 'story', 'characters', 'choice_and_consequence', 'UI', 'touch_controls', 'visuals', 'animation', 'audio', 'AI', 'performance', 'stability']) {
@@ -51,11 +60,6 @@ try {
   const font = assets.assets?.find(item => item.path === 'assets/fonts/q-japanese.woff');
   if (!font || font.license !== 'SIL Open Font License 1.1' || font.licenseFile !== 'assets/fonts/OFL-NotoSansJP.txt') failures.push('Japanese font license metadata missing');
 } catch (error) { failures.push(`assets ${error.message}`); }
-
-try {
-  const release = JSON.parse(readFileSync('release.json'));
-  if (release.release_id !== '__BUILD_REVISION__') failures.push('release revision template missing');
-} catch (error) { failures.push(`release ${error.message}`); }
 
 const license = readFileSync('vendor/THREE-LICENSE.txt', 'utf8');
 if (!/MIT License/.test(license) || !/three\.js authors/i.test(license)) failures.push('Three.js MIT license text invalid');
