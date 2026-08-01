@@ -6,6 +6,7 @@ import {
   WORLD_POINTS,
   WORLD_SIZE,
   biomeAt,
+  characterTaskFor,
   fbm,
   narrativeSceneFor,
   riverCenter,
@@ -59,6 +60,7 @@ export class World {
     this.quality = quality;
     this.detail = [];
     this.interactables = [];
+    this.blockers = [];
     this.animated = [];
     this.npcs = [];
     this.discovery = new Map();
@@ -291,7 +293,7 @@ export class World {
     const group = this.landmarkRoot('haven');
     const wood = material(0x796049), plaster = material(0xb2a681), roof = material(0x4d5542), warm = material(0xffb55b, { emissive: 0x7a2605, emissiveIntensity: .7 });
     const houses = [[-27, -18, .2], [24, -14, -.4], [-31, 24, .5], [31, 25, -.8], [2, 38, 0]];
-    for (const [x, z, rotation] of houses) {
+    for (const [index, [x, z, rotation]] of houses.entries()) {
       const house = new THREE.Group();
       house.position.set(x, 0, z);
       house.rotation.y = rotation;
@@ -300,6 +302,7 @@ export class World {
       addMesh(house, new THREE.BoxGeometry(2.2, 4.2, .35), wood, [0, 2.1, 5.15]);
       addMesh(house, new THREE.BoxGeometry(1.1, 1.25, .25), warm, [-3.2, 4.3, 5.2]);
       group.add(house);
+      this.blockers.push({ id: `haven_house_${index + 1}`, x: group.position.x + x, z: group.position.z + z, radius: 8.4 });
     }
     addMesh(group, new THREE.CylinderGeometry(5.5, 6.2, 1.1, 20), material(0x8c876f), [0, .5, 3]);
     const fire = addMesh(group, new THREE.ConeGeometry(1.25, 2.8, 6), warm, [0, 2, 3]);
@@ -493,6 +496,14 @@ export class World {
     this.storyScenes.mira = { group: mira, actor: miraActor, wild, bound };
     this.interactables.push({ id: 'mira_grove_scene', type: 'story', name: '倒れた柵のミラ', x: -77.2, z: 238.8, radius: 6, mesh: mira, distanceCulled: false });
 
+    const miraTrace = makeScene('MIRA_SCOUT_TRACE', -430, -180);
+    const traceWood = material(0x49372b), traceCloth = material(0x416779, { side: THREE.DoubleSide });
+    addMesh(miraTrace, new THREE.CylinderGeometry(.16, .22, 4.6, 6), traceWood, [0, 2.05, 0], [0, 0, .38]);
+    addMesh(miraTrace, new THREE.PlaneGeometry(2.6, 1.1), traceCloth, [.55, 3.35, 0], [0, .35, -.22]);
+    for (let i = 0; i < 4; i += 1) addMesh(miraTrace, new THREE.DodecahedronGeometry(.45 + i * .08, 0), material(0x77766a), [-1.2 + i * .72, .25, .7 + Math.sin(i) * .3], [i * .2, i, 0]);
+    this.storyScenes.miraTrace = { group: miraTrace };
+    this.interactables.push({ id: 'mira_scout_trace', type: 'story', name: '壊れた斥候標', x: -430, z: -180, radius: 6, mesh: miraTrace, distanceCulled: false });
+
     const orin = makeScene('ORIN_MARSH_AFTERMATH', 76, 310);
     const stone = material(0x79776b), wood = material(0x705039), water = material(0x65a9b3, { transparent: true, opacity: .68, roughness: .25, depthWrite: false });
     addMesh(orin, new THREE.BoxGeometry(14, .8, 5), stone, [0, .25, 0]);
@@ -505,6 +516,16 @@ export class World {
     this.storyScenes.orin = { group: orin, actor: orinActor, openChannel, wardChannel };
     this.interactables.push({ id: 'orin_marsh_scene', type: 'story', name: '水路を直すオリン', x: 80.2, z: 307.8, radius: 6, mesh: orin, distanceCulled: false });
 
+    const orinFault = makeScene('ORIN_SLUICE_FAULT', -220, 350);
+    const faultStone = material(0x686b63), faultWood = material(0x684934), faultWater = material(0x55949e, { transparent: true, opacity: .62, roughness: .25, depthWrite: false });
+    for (const side of [-1, 1]) addMesh(orinFault, new THREE.BoxGeometry(9, 1.2, 2.4), faultStone, [side * 5.2, .3, 0], [0, side * .08, side * .06]);
+    const wheel = addMesh(orinFault, new THREE.TorusGeometry(2.4, .24, 7, 18), faultWood, [0, 2.5, .2], [0, 0, .24]);
+    for (let i = 0; i < 6; i += 1) addMesh(wheel, new THREE.BoxGeometry(.18, 4.2, .18), faultWood, [0, 0, 0], [0, 0, i / 6 * Math.PI]);
+    addMesh(orinFault, new THREE.PlaneGeometry(8.5, 2.1), faultWater, [0, .18, 0], [-Math.PI / 2, 0, 0]);
+    this.storyScenes.orinFault = { group: orinFault, wheel, repaired: false };
+    this.animated.push({ type: 'sluiceWheel', scene: this.storyScenes.orinFault });
+    this.interactables.push({ id: 'orin_sluice_fault', type: 'story', name: '詰まった止水輪', x: -220, z: 350, radius: 7, mesh: orinFault, distanceCulled: false });
+
     const ilya = makeScene('ILYA_CROWN_REVELATION', 0, -615);
     const memorySurface = new THREE.MeshBasicMaterial({ color: 0xe4cb79, transparent: true, opacity: .5, depthWrite: false });
     for (let i = 0; i < 3; i += 1) {
@@ -514,6 +535,22 @@ export class World {
     const ilyaActor = this.addNpc(ilya, 'ilya_echo_actor', 0, 0, { role: 'ilya', scale: 1.16, spectral: true });
     this.storyScenes.ilya = { group: ilya, actor: ilyaActor };
     this.interactables.push({ id: 'ilya_echo', type: 'story', name: 'イリヤの残響', x: 0, z: -615, radius: 7, mesh: ilya, distanceCulled: false });
+
+    const ilyaArchive = makeScene('ILYA_ARCHIVE_ECHO', 535, 430);
+    const archiveStone = material(0x8f8978), archiveGlow = new THREE.MeshBasicMaterial({ color: 0xe1ca78, transparent: true, opacity: .48, depthWrite: false });
+    addMesh(ilyaArchive, new THREE.BoxGeometry(8.4, 4.8, .8), archiveStone, [0, 2.1, 0], [0, -.18, -.07]);
+    for (let i = 0; i < 2; i += 1) {
+      const ring = addMesh(ilyaArchive, new THREE.TorusGeometry(2.1 + i * 1.15, .075, 5, 24), archiveGlow.clone(), [0, 2.1, .55 + i * .08], [0, 0, i * .42]);
+      this.animated.push({ type: 'storyRing', mesh: ring, phase: 3.6 + i * 1.4 });
+    }
+    this.storyScenes.ilyaArchive = { group: ilyaArchive };
+    this.interactables.push({ id: 'ilya_archive_echo', type: 'story', name: '十二年前の記録', x: 535, z: 430, radius: 8, mesh: ilyaArchive, distanceCulled: false });
+
+    const council = makeScene('HAVEN_COUNCIL', 28, 260);
+    const councilRing = addMesh(council, new THREE.TorusGeometry(3.4, .12, 6, 30), new THREE.MeshBasicMaterial({ color: 0xf0d58a, transparent: true, opacity: .64, depthWrite: false }), [0, .22, 0], [Math.PI / 2, 0, 0]);
+    this.storyScenes.council = { group: council, ring: councilRing };
+    this.animated.push({ type: 'choiceGlyph', mesh: councilRing });
+    this.interactables.push({ id: 'alliance_council', type: 'story', name: '三人の谷の評議', x: 28, z: 260, radius: 7, mesh: council, distanceCulled: false });
   }
 
   createResources() {
@@ -538,6 +575,10 @@ export class World {
       this.root.add(group);
       this.interactables.push({ id: `crystal_${i}`, type: 'crystal', name: '青脈晶', x, z, radius: 4, mesh: group });
     }
+  }
+
+  isBlocked(x, z, radius = 0) {
+    return this.blockers.some(blocker => Math.hypot(x - blocker.x, z - blocker.z) < blocker.radius + Math.max(0, radius));
   }
 
   createAtmosphere() {
@@ -596,6 +637,7 @@ export class World {
   setNarrativeState(progress = {}) {
     const choices = progress.choices || {};
     const activeScene = narrativeSceneFor(progress)?.id;
+    const activeTask = characterTaskFor(progress)?.id;
     const miraActive = activeScene === 'mira_grove_scene';
     const orinActive = activeScene === 'orin_marsh_scene';
     const ilyaActive = activeScene === 'ilya_echo';
@@ -604,12 +646,19 @@ export class World {
       this.storyScenes.mira.wild.visible = choices.grove === 'wild_bloom';
       this.storyScenes.mira.bound.visible = choices.grove === 'haven_ward';
     }
+    if (this.storyScenes.miraTrace) this.storyScenes.miraTrace.group.visible = activeTask === 'mira_scout_trace';
     if (this.storyScenes.orin) {
       this.storyScenes.orin.group.visible = orinActive;
       this.storyScenes.orin.openChannel.visible = choices.marsh === 'ring_release';
       this.storyScenes.orin.wardChannel.visible = choices.marsh === 'water_ward';
     }
+    if (this.storyScenes.orinFault) {
+      this.storyScenes.orinFault.repaired = (progress.characterQuests?.orin || 0) >= 3;
+      this.storyScenes.orinFault.group.visible = activeTask === 'orin_sluice_fault' || this.storyScenes.orinFault.repaired;
+    }
     if (this.storyScenes.ilya) this.storyScenes.ilya.group.visible = ilyaActive;
+    if (this.storyScenes.ilyaArchive) this.storyScenes.ilyaArchive.group.visible = activeTask === 'ilya_archive_echo';
+    if (this.storyScenes.council) this.storyScenes.council.group.visible = Boolean(progress.victory && ['mira', 'orin', 'ilya'].every(character => (progress.relationships?.[character] || 0) >= 3));
     if (this.miraNpc) this.miraNpc.visible = !miraActive;
     if (this.orinNpc) this.orinNpc.visible = !orinActive;
   }
@@ -642,6 +691,7 @@ export class World {
         entry.mesh.rotation.z = time * (.22 + entry.phase * .03) + entry.phase;
         entry.mesh.material.opacity = .34 + Math.sin(time * 1.4 + entry.phase) * .12;
       }
+      if (entry.type === 'sluiceWheel' && entry.scene.repaired && entry.scene.group.visible) entry.scene.wheel.rotation.z = time * .38;
     }
     for (const npc of this.npcs) if (npc.visible && npc.parent?.visible !== false) animateHumanoid(npc, { time, reduced: false });
     if (this.fireflies.visible) {

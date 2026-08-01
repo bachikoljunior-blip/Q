@@ -73,3 +73,15 @@ The exact r2 presentation has not been rendered in a WebGL-capable browser in th
 - The dynamic branch-based Pages surface served `wildbound-2026-08-01-r2`; the bounded manual verifier matched `release.json` and the index meta value on attempt 1 of 36. The connected GitHub workflow reader exposes pull-request runs only, so the dynamic Pages run ID and push-triggered verifier run ID were not observable and are not invented here.
 - Public SHA-256 comparisons matched the local candidate for `src/actors.js` (`00903fec…c0e1`), `assets/fonts/q-japanese.woff` (`13f78381…7792`), and `sw.js` (`09da53df…45a3`).
 - Public cloud Chrome loaded `https://bachikoljunior-blip.github.io/Q/` with title `Q: WILDBOUND`, release ID `wildbound-2026-08-01-r2`, the main module and canvas, and no public `__Q_TEST__` API. Its GL vendor/renderer remain disabled, so the intended Japanese recovery screen is visible and the public 3D journey remains `prepared_not_executed`.
+
+## r3 twenty-round local checkpoint
+
+The r3 candidate was built as exactly 20 independently committed implementation rounds after published r2. Rounds 1–15 add save-v5 staged character state; Mira, Orin, and Ilya three-stage quests; relationship-derived mechanical rewards; changed-world, journal, ending, and Crown-gate payoff; and a strongest-bond postgame council. Rounds 16–20 add per-enemy poise and recovery, attack interruption/stagger, three guardian phases and HUD, four guardian-specific tactical branches, and legal terrain/obstacle/separation movement with rotated alternatives.
+
+- Final local `npm run check` passed: 28 required files, 1,556,151 release bytes, 198,958 JS+CSS bytes, nine deterministic tests, and the full happy-dom journey.
+- The full route directly exercises version migration, forged-progress rejection, quest staging, relationship rewards, one-time council reward, windup/active timing, stagger interruption, guardian phase/tactic selection, terrain/leash navigation, death/recovery, persistence, and the public test-control boundary.
+- The post-respawn final scene estimate is 103 draw calls and 114,950 triangles; every tested route snapshot remains under the 170-call/170,000-triangle structural guard. This is not a real WebGL or physical-device measurement.
+- The rebuilt OFL Noto Sans JP Regular 400 WOFF covers 601/601 non-icon non-ASCII code points used by r3. Release ID is `wildbound-2026-08-01-r3` and offline cache is v6.
+- Level C deliberate-failure probes for F2 asset/state coupling, F3 execution, F5 review recording, and F6 release identity each exited 1 and named the intended defect.
+
+The objective remains failed against the preserved premium benchmark. R3 is not yet remote-verified in this record; public merge/Pages evidence will be appended only after observation. Blocked-geometry hit rejection, authored character/environment performance, a WebGL-capable public journey, and physical iPhone SE touch/performance remain open.

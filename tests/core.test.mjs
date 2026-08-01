@@ -8,8 +8,10 @@ import {
   WORLD_HALF,
   biomeAt,
   canEnterCrown,
+  characterTaskFor,
   cleanSave,
   endingFor,
+  enemyTerrainStepAllowed,
   formatTime,
   grantExperience,
   herbHealingFor,
@@ -22,6 +24,7 @@ import {
   respawnCoinLossFor,
   rng,
   terrainHeight,
+  upgradeCostFor,
   xpForLevel
 } from '../src/core.js';
 import { load, reset, save } from '../src/storage.js';
@@ -36,6 +39,10 @@ test('seeded generation and terrain are deterministic and bounded', () => {
     assert.ok(biomeAt(x, z)?.name);
   }
   assert.equal(regionAt(0, 270), '風見の里');
+  assert.equal(enemyTerrainStepAllowed({ fromX: 500, fromZ: -420, toX: 501, toZ: -420, spawnX: 500, spawnZ: -420, large: true }), true);
+  assert.equal(enemyTerrainStepAllowed({ fromX: 500, fromZ: -420, toX: 700, toZ: -420, spawnX: 500, spawnZ: -420, large: true }), false, 'enemy navigation respects its local leash');
+  assert.equal(enemyTerrainStepAllowed({ fromX: -650, fromZ: 10, toX: -610, toZ: 10, spawnX: -650, spawnZ: 10 }), false, 'land enemies do not path into deep river terrain');
+  assert.equal(enemyTerrainStepAllowed({ fromX: -650, fromZ: 10, toX: -610, toZ: 10, spawnX: -650, spawnZ: 10, allowDeepWater: true }), true, 'water-native enemies may traverse the same legal slope');
 });
 
 test('save cleaning rejects malformed progress while preserving valid RPG state', () => {
@@ -64,7 +71,9 @@ test('save cleaning rejects malformed progress while preserving valid RPG state'
   assert.deepEqual(clean.progress.sigils, ['grove_warden']);
   assert.deepEqual(clean.progress.collected, ['herb_1', 'crystal_14']);
   assert.deepEqual(clean.progress.choices, { grove: '', marsh: '', peak: '' });
-  assert.deepEqual(clean.progress.npcFlags, { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false });
+  assert.deepEqual(clean.progress.npcFlags, { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false, councilSeen: false });
+  assert.deepEqual(clean.progress.characterQuests, { mira: 0, orin: 0, ilya: 0 });
+  assert.deepEqual(clean.progress.relationships, { mira: 0, orin: 0, ilya: 0 });
   assert.equal(clean.version, SAVE_VERSION);
   assert.equal(clean.progress.level, 40);
   assert.equal(clean.progress.x, WORLD_HALF - 20);
@@ -94,7 +103,9 @@ test('save cleaning rejects malformed progress while preserving valid RPG state'
       choices: { grove: 'wild_bloom', marsh: 'ring_release', peak: 'wind_release' }
     }
   });
-  assert.deepEqual(migratedV3.progress.npcFlags, { orinIntro: false, groveReport: true, marshReport: true, ilyaTruth: true }, 'version 3 completed routes retain crown access after migration');
+  assert.deepEqual(migratedV3.progress.npcFlags, { orinIntro: false, groveReport: true, marshReport: true, ilyaTruth: true, councilSeen: false }, 'version 3 completed routes retain crown access after migration');
+  assert.deepEqual(migratedV3.progress.characterQuests, { mira: 3, orin: 3, ilya: 3 }, 'completed legacy character beats migrate to resolved quest stages');
+  assert.deepEqual(migratedV3.progress.relationships, { mira: 2, orin: 2, ilya: 2 }, 'legacy completion receives a neutral preserved relationship baseline');
   assert.equal(canEnterCrown(migratedV3.progress), true);
 });
 
@@ -108,6 +119,8 @@ test('RPG growth and objective progression remain coherent', () => {
   assert.equal(upgraded.maxHealth, base.maxHealth + 44);
   assert.equal(upgraded.power, base.power + 5);
   assert.ok(upgraded.speed > base.speed);
+  assert.equal(upgraded.dodgeCost, 24);
+  assert.equal(upgraded.attackCooldown, .48);
   progress.choices.grove = 'wild_bloom';
   assert.equal(playerStats(progress).maxStamina, upgraded.maxStamina + 16);
   assert.equal(herbHealingFor(progress), 30);
@@ -116,6 +129,14 @@ test('RPG growth and objective progression remain coherent', () => {
   progress.choices.peak = 'wind_release';
   assert.equal(playerStats(progress).speed, upgraded.speed + 1.5);
   progress.choices.grove = 'haven_ward';
+  progress.relationships.mira = 2;
+  assert.equal(playerStats(progress).dodgeCost, 22);
+  progress.relationships.mira = 3;
+  assert.equal(playerStats(progress).dodgeCost, 20);
+  progress.relationships.ilya = 2;
+  assert.equal(playerStats(progress).attackCooldown, .45);
+  progress.relationships.ilya = 3;
+  assert.equal(playerStats(progress).attackCooldown, .42);
   progress.coins = 200;
   assert.equal(respawnCoinLossFor(progress), 10);
   assert.equal(objectiveFor(progress).label, 'ミラと話す');
@@ -129,8 +150,9 @@ test('RPG growth and objective progression remain coherent', () => {
   progress.choices.grove = 'wild_bloom';
   assert.equal(narrativeSceneFor(progress).id, 'mira_grove_scene');
   assert.equal(objectiveFor(progress).id, 'mira_grove_scene');
-  assert.equal(questText(progress).step, '人物');
+  assert.equal(questText(progress).step, '人物 1 / 3');
   progress.npcFlags.groveReport = true;
+  progress.characterQuests.mira = 3;
   assert.equal(objectiveFor(progress).id, 'marsh');
   progress.sigils = GUARDIANS.map(item => item.id);
   progress.choices.grove = '';
@@ -139,12 +161,17 @@ test('RPG growth and objective progression remain coherent', () => {
   progress.choices.marsh = 'ring_release';
   progress.choices.peak = 'wind_release';
   progress.defeated = GUARDIANS.map(item => item.id);
+  progress.characterQuests.mira = 3;
   assert.equal(objectiveFor(progress).id, 'orin_marsh_scene');
   assert.equal(canEnterCrown(progress), false, 'the final encounter waits for visible character aftermath scenes');
   progress.npcFlags.marshReport = true;
+  progress.characterQuests.orin = 3;
   assert.equal(objectiveFor(progress).id, 'ilya_echo');
   assert.equal(canEnterCrown(progress), false);
   progress.npcFlags.ilyaTruth = true;
+  progress.characterQuests.ilya = 2;
+  assert.equal(canEnterCrown(progress), false, 'truth flag alone cannot bypass the final character quest stage');
+  progress.characterQuests.ilya = 3;
   assert.equal(canEnterCrown(progress), true);
   assert.equal(endingFor(progress), 'wild');
   progress.choices.peak = 'wind_ward';
@@ -154,6 +181,40 @@ test('RPG growth and objective progression remain coherent', () => {
   const gained = grantExperience(progress, xpForLevel(1) + xpForLevel(2) + 5);
   assert.equal(gained.levels, 2);
   assert.equal(gained.progress.level, 3);
+});
+
+test('character quest planner returns only the next coherent staged task', () => {
+  const progress = structuredClone(DEFAULT_SAVE.progress);
+  progress.started = true;
+  progress.story = 1;
+  progress.defeated.push('grove_warden');
+  progress.sigils.push('grove_warden');
+  progress.choices.grove = 'wild_bloom';
+  assert.deepEqual(characterTaskFor(progress), { id: 'mira_grove_scene', character: 'mira', stage: 0, label: '倒れた柵でミラと話す', x: -77.2, z: 238.8 });
+  progress.characterQuests.mira = 1;
+  assert.equal(characterTaskFor(progress).id, 'mira_scout_trace');
+  progress.characterQuests.mira = 3;
+  progress.defeated.push('marsh_warden');
+  progress.sigils.push('marsh_warden');
+  progress.choices.marsh = 'water_ward';
+  assert.equal(characterTaskFor(progress).id, 'orin_marsh_scene');
+  progress.characterQuests.orin = 3;
+  progress.defeated.push('peak_warden');
+  progress.sigils.push('peak_warden');
+  progress.choices.peak = 'wind_release';
+  assert.equal(characterTaskFor(progress).id, 'ilya_echo');
+  progress.characterQuests.ilya = 3;
+  assert.equal(characterTaskFor(progress), null);
+});
+
+test('Orin relationship discounts the displayed and charged forge cost', () => {
+  const progress = structuredClone(DEFAULT_SAVE.progress);
+  assert.deepEqual(upgradeCostFor(progress, 'edge'), { crystalCost: 1, coinCost: 25 });
+  progress.upgrades.edge = 2;
+  progress.relationships.orin = 2;
+  assert.deepEqual(upgradeCostFor(progress, 'edge'), { crystalCost: 3, coinCost: 65 });
+  progress.relationships.orin = 3;
+  assert.deepEqual(upgradeCostFor(progress, 'edge'), { crystalCost: 3, coinCost: 60 });
 });
 
 test('storage migrates safely and tolerates corrupt or unavailable data', () => {

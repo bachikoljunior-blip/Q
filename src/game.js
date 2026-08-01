@@ -9,6 +9,7 @@ import {
   clamp,
   distance2D,
   endingFor,
+  enemyTerrainStepAllowed,
   grantExperience,
   herbHealingFor,
   narrativeSceneFor,
@@ -18,6 +19,7 @@ import {
   regionAt,
   respawnCoinLossFor,
   terrainHeight,
+  upgradeCostFor,
   xpForLevel
 } from './core.js';
 import { animateCreature, animateHumanoid, createCreature, createHumanoid } from './actors.js';
@@ -81,6 +83,47 @@ const ENEMY_BEHAVIORS = Object.freeze({
   warden: Object.freeze({ activation: 88, speed: 9.2, attackRange: 7.6, windup: .82, active: .3, recovery: .82, lunge: 17, damage: 1.08 }),
   crown: Object.freeze({ activation: 98, speed: 8.1, attackRange: 9.2, windup: 1.18, active: .42, recovery: .92, lunge: 14, damage: 1.35 })
 });
+
+function poiseFor(enemy) {
+  if (enemy.final) return 112;
+  if (enemy.guardian) return 68;
+  if (enemy.type === 'sentinel') return 34;
+  if (enemy.type === 'stalker') return 24;
+  return 18;
+}
+
+function combatPhaseFor(enemy) {
+  if (!enemy.guardian && !enemy.final) return 1;
+  const ratio = Math.max(0, enemy.hp / enemy.maxHp);
+  return ratio <= .33 ? 3 : ratio <= .66 ? 2 : 1;
+}
+
+const PHASE_LABELS = Object.freeze(['', '静観', '猛攻', '決死']);
+
+const GUARDIAN_TACTICS = Object.freeze({
+  grove_warden: Object.freeze({
+    2: Object.freeze({ tactic: 'rootRush', speed: 10.6, windup: .72, lunge: 28, lockDirection: true }),
+    3: Object.freeze({ tactic: 'rootRush', speed: 11.8, windup: .62, lunge: 34, lockDirection: true })
+  }),
+  marsh_warden: Object.freeze({
+    2: Object.freeze({ tactic: 'mistOrbit', speed: 13.2, circle: true, circleBias: .74, recoveryRetreat: 7, flipOrbit: true }),
+    3: Object.freeze({ tactic: 'mistOrbit', speed: 14.2, circle: true, circleBias: .84, recoveryRetreat: 10, flipOrbit: true })
+  }),
+  peak_warden: Object.freeze({
+    2: Object.freeze({ tactic: 'galeSpacing', windup: .92, lunge: 15, prepareBackstep: true, backstepSpeed: 13 }),
+    3: Object.freeze({ tactic: 'galeSpacing', windup: .78, lunge: 18, prepareBackstep: true, backstepSpeed: 16 })
+  }),
+  crown_warden: Object.freeze({
+    2: Object.freeze({ tactic: 'commandPivot', speed: 9.2, windup: .98, lunge: 18 }),
+    3: Object.freeze({ tactic: 'commandChain', speed: 10.1, windup: .84, recovery: .68, lunge: 21, chain: true })
+  })
+});
+
+function behaviorForEnemy(enemy) {
+  const base = ENEMY_BEHAVIORS[enemy.type] || ENEMY_BEHAVIORS.beast;
+  const tactic = GUARDIAN_TACTICS[enemy.id]?.[enemy.combatPhase];
+  return tactic ? { ...base, ...tactic } : { ...base, tactic: enemy.type };
+}
 
 const emptyCallbacks = {
   status() {}, hud() {}, toast() {}, dialogue() {}, choice() {}, ending() {}, death() {}, save() {}, discovery() {}, quality() {}, fatal() {}
@@ -322,6 +365,8 @@ export class Game {
     this.progress = structuredClone(progress);
     this.progress.collected ||= [];
     this.progress.choices ||= { grove: '', marsh: '', peak: '' };
+    this.progress.characterQuests ||= { mira: 0, orin: 0, ilya: 0 };
+    this.progress.relationships ||= { mira: 0, orin: 0, ilya: 0 };
     this.clock = Number(this.progress.playTime) || 0;
     this.day = .27 + this.clock / 780 % .48;
     this.cameraYaw = Number.isFinite(Number(this.progress.yaw)) ? Number(this.progress.yaw) : 0;
@@ -395,6 +440,14 @@ export class Game {
       const enemy = {
         ...spec,
         maxHp: spec.hp,
+        maxPoise: poiseFor(spec),
+        poise: poiseFor(spec),
+        poiseRecoveryDelay: 0,
+        combatPhase: 1,
+        spawnX: spec.x,
+        spawnZ: spec.z,
+        spawnHeight: terrainHeight(spec.x, spec.z),
+        blockedMoves: 0,
         alert: false,
         dead: false,
         locked,
@@ -404,6 +457,9 @@ export class Game {
         stateTimer: 0,
         stateTotal: 0,
         attackConnected: false,
+        attackDirection: null,
+        attackPrepared: false,
+        chainUsed: false,
         circleSide: index % 2 ? 1 : -1
       };
       enemy.mesh = this.createEnemyMesh(enemy);
@@ -540,8 +596,9 @@ export class Game {
 
   attack() {
     if (this.status !== 'running' || this.attackCooldown > 0) return false;
+    const cooldown = playerStats(this.progress).attackCooldown;
     this.attackTimer = .38;
-    this.attackCooldown = .48;
+    this.attackCooldown = cooldown;
     this.attackHit = false;
     this.sound?.event?.('attack');
     return true;
@@ -559,7 +616,8 @@ export class Game {
   }
 
   dodge() {
-    if (this.status !== 'running' || this.dodgeTimer > 0 || this.stamina < 24) return false;
+    const cost = playerStats(this.progress).dodgeCost;
+    if (this.status !== 'running' || this.dodgeTimer > 0 || this.stamina < cost) return false;
     const move = this.movementInput();
     if (move.length > .08) {
       const fx = -Math.sin(this.cameraYaw), fz = -Math.cos(this.cameraYaw);
@@ -568,7 +626,7 @@ export class Game {
     } else {
       this.dodgeDirection.set(Math.sin(this.player.rotation.y), 0, Math.cos(this.player.rotation.y));
     }
-    this.stamina -= 24;
+    this.stamina -= cost;
     this.dodgeTimer = .34;
     this.invulnerable = .48;
     this.sound?.event?.('dodge');
@@ -578,10 +636,43 @@ export class Game {
   damageEnemy(enemy, amount) {
     if (enemy.dead) return;
     enemy.hp -= amount;
+    const canPressure = enemy.state !== 'stagger';
+    const poiseBefore = enemy.poise;
+    if (canPressure) {
+      enemy.poise = Math.max(0, enemy.poise - amount);
+      enemy.poiseRecoveryDelay = 1.15;
+    }
     enemy.flash = .17;
     enemy.alert = true;
     this.sound?.event?.('hit', enemy.guardian || enemy.final ? 1.2 : 1);
-    if (enemy.hp <= 0) this.defeatEnemy(enemy);
+    if (enemy.hp <= 0) {
+      this.defeatEnemy(enemy);
+      return;
+    }
+    const nextPhase = combatPhaseFor(enemy);
+    const phaseAdvanced = nextPhase > enemy.combatPhase;
+    if (phaseAdvanced) {
+      enemy.combatPhase = nextPhase;
+      enemy.state = 'phaseShift';
+      enemy.stateTimer = enemy.final ? .62 : .52;
+      enemy.stateTotal = enemy.stateTimer;
+      enemy.attackConnected = false;
+      enemy.attackPrepared = false;
+      enemy.chainUsed = false;
+      enemy.poise = enemy.maxPoise;
+      enemy.poiseRecoveryDelay = .8;
+      this.sound?.event?.('boss', 1.2);
+    }
+    const interruptible = ['approach', 'windup', 'active'].includes(enemy.state);
+    if (!phaseAdvanced && interruptible && poiseBefore > 0 && enemy.poise <= 0) {
+      const duration = enemy.final ? .38 : enemy.guardian ? .5 : .68;
+      enemy.state = 'stagger';
+      enemy.stateTimer = duration;
+      enemy.stateTotal = duration;
+      enemy.attackConnected = false;
+      enemy.poiseRecoveryDelay = duration + .45;
+      this.sound?.event?.('stagger', enemy.guardian || enemy.final ? 1.25 : 1);
+    }
   }
 
   defeatEnemy(enemy) {
@@ -607,6 +698,7 @@ export class Game {
       this.progress.ending = endingFor(this.progress);
       this.progress.endings += 1;
       this.status = 'ending';
+      this.refreshNarrativeState();
       this.checkpoint('ending');
       this.sound?.event?.('victory');
       this.cb.ending(this.snapshotHud());
@@ -614,6 +706,42 @@ export class Game {
     }
     this.setObjective();
     this.checkpoint('enemy-defeated');
+  }
+
+  canEnemyMove(enemy, nextX, nextZ) {
+    const allowedTerrain = enemyTerrainStepAllowed({
+      fromX: enemy.x,
+      fromZ: enemy.z,
+      toX: nextX,
+      toZ: nextZ,
+      spawnX: enemy.spawnX,
+      spawnZ: enemy.spawnZ,
+      allowDeepWater: enemy.spawnHeight < WATER_LEVEL + .4 || enemy.type === 'stalker',
+      large: Boolean(enemy.guardian || enemy.final)
+    });
+    if (!allowedTerrain) return false;
+    const radius = enemy.mesh.userData.radius * .42;
+    if (this.world.isBlocked(nextX, nextZ, radius)) return false;
+    return !this.enemies.some(other => other !== enemy && !other.dead && !other.locked && Math.hypot(nextX - other.x, nextZ - other.z) < radius + other.mesh.userData.radius * .42);
+  }
+
+  moveEnemy(enemy, directionX, directionZ, speed, dt) {
+    const length = Math.hypot(directionX, directionZ);
+    if (!Number.isFinite(length) || length < .001 || speed <= 0 || dt <= 0) return false;
+    const baseX = directionX / length, baseZ = directionZ / length;
+    for (const offset of [0, enemy.circleSide * .68, -enemy.circleSide * .92]) {
+      const cosine = Math.cos(offset), sine = Math.sin(offset);
+      const moveX = baseX * cosine - baseZ * sine;
+      const moveZ = baseX * sine + baseZ * cosine;
+      const nextX = enemy.x + moveX * speed * dt;
+      const nextZ = enemy.z + moveZ * speed * dt;
+      if (!this.canEnemyMove(enemy, nextX, nextZ)) continue;
+      enemy.x = nextX;
+      enemy.z = nextZ;
+      return true;
+    }
+    enemy.blockedMoves += 1;
+    return false;
   }
 
   updateEnemies(dt) {
@@ -624,7 +752,9 @@ export class Game {
         enemy.mesh.visible = false;
         continue;
       }
-      const behavior = ENEMY_BEHAVIORS[enemy.type] || ENEMY_BEHAVIORS.beast;
+      enemy.poiseRecoveryDelay = Math.max(0, enemy.poiseRecoveryDelay - dt);
+      if (enemy.poiseRecoveryDelay <= 0) enemy.poise = Math.min(enemy.maxPoise, enemy.poise + enemy.maxPoise * .28 * dt);
+      const behavior = behaviorForEnemy(enemy);
       let dx = player.x - enemy.x, dz = player.z - enemy.z, distance = Math.hypot(dx, dz) || 1;
       const renderRange = enemy.final ? 340 : enemy.guardian ? 280 : 220;
       enemy.mesh.visible = distance < renderRange;
@@ -641,13 +771,13 @@ export class Game {
         if (state === 'idle') enemy.alert = false;
         if (state === 'windup') {
           enemy.attackConnected = false;
+          if (behavior.lockDirection) enemy.attackDirection = { x: dx / distance, z: dz / distance };
           if (distance < 30) this.sound?.event?.('danger', enemy.guardian || enemy.final ? 1.25 : 1);
         }
       };
 
       if (enemy.state === 'idle') {
-        enemy.x += Math.sin(this.clock * .36 + enemy.phase) * dt * .4;
-        enemy.z += Math.cos(this.clock * .31 + enemy.phase) * dt * .4;
+        this.moveEnemy(enemy, Math.sin(this.clock * .36 + enemy.phase), Math.cos(this.clock * .31 + enemy.phase), .4, dt);
         if (distance < behavior.activation) {
           enemy.alert = true;
           enter('approach');
@@ -657,21 +787,24 @@ export class Game {
         if (distance > 175) {
           enemy.alert = false;
           enter('idle');
+        } else if (behavior.prepareBackstep && !enemy.attackPrepared && distance <= behavior.attackRange + enemy.mesh.userData.radius * .18) {
+          enter('backstep', .3);
         } else if (distance <= behavior.attackRange + enemy.mesh.userData.radius * .18) {
+          enemy.attackPrepared = false;
           enter('windup', behavior.windup * (enemy.guardian ? .92 : 1));
         } else {
           let moveX = dx / distance, moveZ = dz / distance;
           if (behavior.circle && distance < 21) {
             const forwardWeight = clamp((distance - behavior.attackRange) / 14, .18, .72);
             const sideX = -moveZ * enemy.circleSide, sideZ = moveX * enemy.circleSide;
-            moveX = moveX * forwardWeight + sideX * (1 - forwardWeight);
-            moveZ = moveZ * forwardWeight + sideZ * (1 - forwardWeight);
+            const sideWeight = behavior.circleBias || 1 - forwardWeight;
+            moveX = moveX * (1 - sideWeight) + sideX * sideWeight;
+            moveZ = moveZ * (1 - sideWeight) + sideZ * sideWeight;
             const length = Math.hypot(moveX, moveZ) || 1;
             moveX /= length;
             moveZ /= length;
           }
-          enemy.x += moveX * behavior.speed * dt;
-          enemy.z += moveZ * behavior.speed * dt;
+          this.moveEnemy(enemy, moveX, moveZ, behavior.speed, dt);
         }
       } else if (enemy.state === 'windup') {
         enemy.alert = true;
@@ -680,8 +813,9 @@ export class Game {
       } else if (enemy.state === 'active') {
         enemy.alert = true;
         enemy.stateTimer -= dt;
-        enemy.x += dx / distance * behavior.lunge * dt;
-        enemy.z += dz / distance * behavior.lunge * dt;
+        const attackX = behavior.lockDirection && enemy.attackDirection ? enemy.attackDirection.x : dx / distance;
+        const attackZ = behavior.lockDirection && enemy.attackDirection ? enemy.attackDirection.z : dz / distance;
+        this.moveEnemy(enemy, attackX, attackZ, behavior.lunge, dt);
         dx = player.x - enemy.x;
         dz = player.z - enemy.z;
         distance = Math.hypot(dx, dz) || 1;
@@ -694,9 +828,45 @@ export class Game {
       } else if (enemy.state === 'recovery') {
         enemy.alert = true;
         enemy.stateTimer -= dt;
+        if (behavior.recoveryRetreat) {
+          this.moveEnemy(enemy, -dx / distance, -dz / distance, behavior.recoveryRetreat, dt);
+        }
+        if (enemy.stateTimer <= 0) {
+          if (behavior.flipOrbit) enemy.circleSide *= -1;
+          if (behavior.chain && !enemy.chainUsed && distance < behavior.activation) {
+            enemy.chainUsed = true;
+            enter('windup', behavior.windup * .62);
+          } else {
+            enemy.chainUsed = false;
+            enemy.attackPrepared = false;
+            enter(distance > 175 ? 'idle' : 'approach');
+          }
+        }
+      } else if (enemy.state === 'backstep') {
+        enemy.alert = true;
+        enemy.stateTimer -= dt;
+        this.moveEnemy(enemy, -dx / distance, -dz / distance, behavior.backstepSpeed, dt);
+        if (enemy.stateTimer <= 0) {
+          enemy.attackPrepared = true;
+          enter('windup', behavior.windup * .86);
+        }
+      } else if (enemy.state === 'stagger') {
+        enemy.alert = true;
+        enemy.stateTimer -= dt;
+        if (enemy.stateTimer <= 0) {
+          enemy.poise = enemy.maxPoise;
+          enemy.poiseRecoveryDelay = .45;
+          enter(distance > 175 ? 'idle' : 'approach');
+        }
+      } else if (enemy.state === 'phaseShift') {
+        enemy.alert = true;
+        enemy.stateTimer -= dt;
         if (enemy.stateTimer <= 0) enter(distance > 175 ? 'idle' : 'approach');
       }
 
+      dx = player.x - enemy.x;
+      dz = player.z - enemy.z;
+      distance = Math.hypot(dx, dz) || 1;
       if ((enemy.guardian || enemy.final) && enemy.alert) boss = enemy;
       enemy.mesh.position.x = enemy.x;
       enemy.mesh.position.z = enemy.z;
@@ -708,7 +878,7 @@ export class Game {
       if (rig?.kind === 'humanoid') {
         animateHumanoid(enemy.mesh, {
           time: this.clock + enemy.phase,
-          speed: ['approach', 'active'].includes(enemy.state) ? behavior.speed : 0,
+          speed: ['approach', 'active', 'backstep'].includes(enemy.state) ? behavior.speed : 0,
           attack: enemy.state === 'windup' ? windupProgress * .48 : enemy.state === 'active' ? .48 + activeProgress * .52 : 0,
           reduced: Boolean(this.settings()?.reduced)
         });
@@ -724,18 +894,19 @@ export class Game {
         });
       }
       const ring = enemy.mesh.getObjectByName('ring');
-      if (ring) ring.rotation.z += dt * (enemy.final ? 1.5 : .8);
+      if (ring) ring.rotation.z += dt * (enemy.final ? 1.5 : .8) * (1 + (enemy.combatPhase - 1) * .35);
       const tell = enemy.mesh.getObjectByName('attackTell');
       if (tell) {
         tell.visible = enemy.state === 'windup' || enemy.state === 'active';
         tell.material.opacity = enemy.state === 'active' ? .92 : .14 + windupProgress * .68;
+        tell.material.color.setHex(behavior.tactic === 'rootRush' ? 0xd9873d : behavior.tactic === 'mistOrbit' ? 0x69a8a0 : behavior.tactic === 'galeSpacing' ? 0xd1d8b5 : behavior.tactic === 'commandChain' ? 0xb184d0 : 0xffb45f);
         const pulse = 1 + windupProgress * .18 + Math.sin(this.clock * 16) * .025;
         tell.scale.setScalar(pulse);
       }
       const body = enemy.mesh.getObjectByName('body');
       if (body?.material) {
-        body.material.emissive.setHex(enemy.flash > 0 ? 0xffffff : enemy.state === 'windup' ? 0x8a3309 : enemy.state === 'active' ? 0xff7a18 : 0x000000);
-        body.material.emissiveIntensity = enemy.flash > 0 ? 1 : enemy.state === 'active' ? .9 : enemy.state === 'windup' ? .48 : 0;
+        body.material.emissive.setHex(enemy.flash > 0 ? 0xffffff : enemy.state === 'phaseShift' ? 0x713b8f : enemy.state === 'stagger' ? 0x2c8b83 : enemy.state === 'windup' ? 0x8a3309 : enemy.state === 'active' ? 0xff7a18 : 0x000000);
+        body.material.emissiveIntensity = enemy.flash > 0 ? 1 : enemy.state === 'active' ? .9 : enemy.state === 'phaseShift' ? .82 : enemy.state === 'stagger' ? .68 : enemy.state === 'windup' ? .48 : 0;
       }
       enemy.flash = Math.max(0, enemy.flash - dt);
     }
@@ -766,7 +937,8 @@ export class Game {
       if (item.mesh && !item.mesh.visible) continue;
       const distance = Math.hypot(this.player.position.x - item.x, this.player.position.z - item.z);
       const reach = (item.radius || 5) + 7;
-      if (distance <= reach && (!nearest || distance < nearest.distance)) nearest = { ...item, distance };
+      const priority = item.type === 'story' ? 2 : item.type === 'npc' || item.type === 'final' ? 1 : 0;
+      if (distance <= reach && (!nearest || distance < nearest.distance - .25 || (Math.abs(distance - nearest.distance) <= .25 && priority > nearest.priority))) nearest = { ...item, distance, priority };
     }
     this.nearby = nearest;
     this.targetRing.visible = Boolean(nearest);
@@ -803,13 +975,27 @@ export class Game {
       return true;
     }
     if (item.id === 'mira_grove_scene') {
-      if (!this.progress.choices.grove || this.progress.npcFlags?.groveReport) return false;
+      const stage = this.progress.characterQuests?.mira || 0;
+      if (!this.progress.choices.grove || ![0, 2].includes(stage)) return false;
       this.progress.npcFlags ||= {};
-      this.progress.npcFlags.groveReport = true;
+      this.progress.characterQuests ||= { mira: 0, orin: 0, ilya: 0 };
       this.status = 'dialogue';
       this.pendingChoice = null;
+      if (stage === 2) {
+        this.progress.characterQuests.mira = 3;
+        this.progress.relationships.mira = this.progress.choices.grove === 'wild_bloom' ? 3 : 2;
+        this.refreshNarrativeState();
+        this.checkpoint('mira-scout-return');
+        this.cb.dialogue({
+          speaker: '斥候ミラ',
+          text: 'これは父が使っていた斥候標。折れた向きが神殿ではなく里を指していた。父は大地を黙らせる前に、帰る道を残そうとしていたんだ。私は怒りだけを受け継がない。あなたが見つけた事実も持って、次の答えを見届ける。'
+        });
+        return true;
+      }
+      this.progress.npcFlags.groveReport = true;
+      this.progress.characterQuests.mira = 1;
       this.refreshNarrativeState();
-      this.checkpoint('mira-grove-aftermath');
+      this.checkpoint('mira-scout-start');
       const restored = this.progress.choices.grove === 'wild_bloom';
       this.cb.dialogue({
         speaker: '斥候ミラ',
@@ -819,14 +1005,40 @@ export class Game {
       });
       return true;
     }
-    if (item.id === 'orin_marsh_scene') {
-      if (!this.progress.choices.marsh || this.progress.npcFlags?.marshReport) return false;
-      this.progress.npcFlags ||= {};
-      this.progress.npcFlags.marshReport = true;
+    if (item.id === 'mira_scout_trace') {
+      if (this.progress.characterQuests?.mira !== 1) return false;
+      this.progress.characterQuests.mira = 2;
       this.status = 'dialogue';
       this.pendingChoice = null;
       this.refreshNarrativeState();
-      this.checkpoint('orin-marsh-aftermath');
+      this.checkpoint('mira-scout-trace');
+      this.cb.dialogue({ speaker: 'イリヤの斥候標', text: '青い布の裏に、古い刻みが残っている。「風が止まったら、印ではなく人の声を追え」。折れた標は風見の里を指している。ミラへ持ち帰れる。' });
+      return true;
+    }
+    if (item.id === 'orin_marsh_scene') {
+      const stage = this.progress.characterQuests?.orin || 0;
+      if (!this.progress.choices.marsh || ![0, 2].includes(stage)) return false;
+      this.progress.npcFlags ||= {};
+      this.progress.characterQuests ||= { mira: 0, orin: 0, ilya: 0 };
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      if (stage === 2) {
+        this.progress.characterQuests.orin = 3;
+        this.progress.relationships.orin = this.progress.choices.marsh === 'water_ward' ? 3 : 2;
+        this.refreshNarrativeState();
+        this.checkpoint('orin-sluice-return');
+        this.cb.dialogue({
+          speaker: '鍛冶師オリン',
+          text: this.progress.choices.marsh === 'ring_release'
+            ? '止水輪は外から壊されたんじゃない。長く動かさなかった鉄が、自分の重さで噛んでいた。守りに任せた時間そのものが故障だ。新しい水路は、毎日人の手で開ける形にする。調べたお前も最初の番に入れ。'
+            : '印の力だけなら止水輪は回る。だが泥を取り、軸へ油を差す人がいなければ次の雨で止まる。安全は一度選んで終わりじゃない。俺とお前が、見えない代償を毎日確かめるんだ。'
+        });
+        return true;
+      }
+      this.progress.npcFlags.marshReport = true;
+      this.progress.characterQuests.orin = 1;
+      this.refreshNarrativeState();
+      this.checkpoint('orin-sluice-start');
       const released = this.progress.choices.marsh === 'ring_release';
       this.cb.dialogue({
         speaker: '鍛冶師オリン',
@@ -836,18 +1048,76 @@ export class Game {
       });
       return true;
     }
-    if (item.id === 'ilya_echo') {
-      if (!this.progress.choices.grove || !this.progress.choices.marsh || !this.progress.choices.peak || this.progress.npcFlags?.ilyaTruth || !this.progress.npcFlags?.groveReport || !this.progress.npcFlags?.marshReport) return false;
-      this.progress.npcFlags ||= {};
-      this.progress.npcFlags.ilyaTruth = true;
+    if (item.id === 'orin_sluice_fault') {
+      if (this.progress.characterQuests?.orin !== 1) return false;
+      this.progress.characterQuests.orin = 2;
       this.status = 'dialogue';
       this.pendingChoice = null;
       this.refreshNarrativeState();
-      this.checkpoint('ilya-revelation');
+      this.checkpoint('orin-sluice-fault');
+      this.cb.dialogue({
+        speaker: '詰まった止水輪',
+        text: this.progress.choices.marsh === 'ring_release'
+          ? '乾いた軸の内側に、長年動かなかった鉄の傷が重なっている。流れを戻すなら、輪を作り直して人が毎日開く仕組みが要る。オリンへ伝えられる。'
+          : '青い印は輪を押しているが、泥が軸を固めている。結界だけでは次の雨を越せない。手入れを続ける人の役目まで含めて、オリンへ伝えられる。'
+      });
+      return true;
+    }
+    if (item.id === 'ilya_echo') {
+      const stage = this.progress.characterQuests?.ilya || 0;
+      if (!this.progress.choices.grove || !this.progress.choices.marsh || !this.progress.choices.peak || ![0, 2].includes(stage) || !this.progress.npcFlags?.groveReport || !this.progress.npcFlags?.marshReport) return false;
+      this.progress.npcFlags ||= {};
+      this.progress.characterQuests ||= { mira: 0, orin: 0, ilya: 0 };
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      if (stage === 2) {
+        this.progress.characterQuests.ilya = 3;
+        this.progress.npcFlags.ilyaTruth = true;
+        const restored = Object.values(this.progress.choices).filter(choice => ['wild_bloom', 'ring_release', 'wind_release'].includes(choice)).length;
+        this.progress.relationships.ilya = restored === 0 || restored === 3 ? 2 : 3;
+        this.refreshNarrativeState();
+        this.checkpoint('ilya-archive-return');
+        this.cb.dialogue({
+          speaker: '初代守印イリヤの残響',
+          text: 'その記録を残したのは私だ。評議会は嵐の被害を隠し、結界を永遠の答えにしようとした。私は三つの印を分け、次の世代が異なる声を持ち寄るまで命令を止められない形にした。ミラとオリン、そしてあなたが戻った今、古い命令を終わらせられる。'
+        });
+        return true;
+      }
+      this.progress.characterQuests.ilya = 1;
+      this.refreshNarrativeState();
+      this.checkpoint('ilya-archive-start');
       const restored = Object.values(this.progress.choices).filter(choice => ['wild_bloom', 'ring_release', 'wind_release'].includes(choice)).length;
       this.cb.dialogue({
         speaker: '初代守印イリヤの残響',
         text: `私は谷を救ったのではない。十二年だけ、決断を先へ送った。印を三つに分けたのは、次の守印が一人で答えを決めないためだ。ミラの怒りも、オリンの恐れも正しい。あなたは${restored >= 2 ? '大地へ返す道を多く選び、その代償を人の手で支えた。' : '里へ残す力を多く選び、その代償を見えないままにしなかった。'} 神殿にいるのは私ではない。答えを止め続ける、私の古い命令だ。終わらせてほしい。`
+      });
+      return true;
+    }
+    if (item.id === 'ilya_archive_echo') {
+      if (this.progress.characterQuests?.ilya !== 1) return false;
+      this.progress.characterQuests.ilya = 2;
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.refreshNarrativeState();
+      this.checkpoint('ilya-archive-found');
+      this.cb.dialogue({
+        speaker: '十二年前の記録',
+        text: '石板には嵐の死者だけでなく、評議会が消した避難路と失敗した水門の名が刻まれている。最後の一行はイリヤの手だ。「守印一人の正しさを、谷の答えにしてはならない」。残響へ記録を届けられる。'
+      });
+      return true;
+    }
+    if (item.id === 'alliance_council') {
+      if (!this.progress.victory || !['mira', 'orin', 'ilya'].every(character => (this.progress.relationships?.[character] || 0) >= 3)) return false;
+      const first = !this.progress.npcFlags?.councilSeen;
+      this.progress.npcFlags ||= {};
+      this.progress.npcFlags.councilSeen = true;
+      if (first) this.progress.coins += 60;
+      this.status = 'dialogue';
+      this.pendingChoice = null;
+      this.checkpoint('alliance-council');
+      this.cb.dialogue({
+        speaker: '谷の評議 — ミラ、オリン、イリヤ',
+        text: `ミラは森と道を見張り、オリンは水門と鍛冶を受け持つ。イリヤの最後の声は、誰か一人を次の守印にしないよう求めた。三人は意見が違うまま、記録を開き、役目を交代し、あなたが戻れる席を残すと決めた。${first ? '共同の木の葉貨 60 を受け取った。' : '評議の記録はいつでも読み直せる。'}`
       });
       return true;
     }
@@ -870,7 +1140,8 @@ export class Game {
             ? '古樹の森に若木が戻った。月露草にも、前より強い命が巡っている。'
             : '古樹の記憶が、印の行方をあなたに問いかけている。';
         const decisions = Object.values(this.progress.choices).filter(Boolean).length;
-        this.cb.dialogue({ speaker: '斥候ミラ', text: `${consequence} 印はあと${3 - this.progress.sigils.length}つ。${decisions ? 'あなたの答えで谷はもう変わり始めている。選んだ責任から目を逸らさないで。' : '守ることと、返すこと。その両方に代償がある。'}` });
+        const trust = this.progress.relationships?.mira >= 3 ? '父の斥候標を見つけてくれたあなたなら、見えた事実を隠さないと信じている。' : '';
+        this.cb.dialogue({ speaker: '斥候ミラ', text: `${consequence} ${trust} 印はあと${3 - this.progress.sigils.length}つ。${decisions ? 'あなたの答えで谷はもう変わり始めている。選んだ責任から目を逸らさないで。' : '守ることと、返すこと。その両方に代償がある。'}` });
       } else if (!canEnterCrown(this.progress)) {
         const unresolved = GUARDIANS.find(guardian => !this.progress.choices[guardian.point]);
         const scene = narrativeSceneFor(this.progress);
@@ -884,7 +1155,8 @@ export class Game {
         this.cb.dialogue({ speaker: '斥候ミラ', text: '三つの印が響いている。北の空環神殿へ。谷を縛る王を倒せるのは、もうあなただけ。' });
       } else {
         const memory = this.progress.choices.grove === 'haven_ward' ? '里の護りは、あなたの決断を覚えている。' : this.progress.choices.grove === 'wild_bloom' ? '芽吹いた森は、あなたの決断を覚えている。' : '';
-        this.cb.dialogue({ speaker: '斥候ミラ', text: `風が帰ってきた。${memory} 物語は終わっても、この谷はまだ広い。好きな道を歩いて。` });
+        const trust = this.progress.relationships?.mira >= 3 ? '父の斥候標は、二人が帰る道を示す印として柵に結んだ。' : '';
+        this.cb.dialogue({ speaker: '斥候ミラ', text: `風が帰ってきた。${memory} ${trust} 物語は終わっても、この谷はまだ広い。好きな道を歩いて。` });
       }
       return true;
     }
@@ -982,8 +1254,7 @@ export class Game {
   upgrade(kind) {
     if (!this.progress || !['vigor', 'edge', 'stride'].includes(kind)) return { ok: false, reason: 'invalid' };
     const level = this.progress.upgrades[kind] || 0;
-    const crystalCost = level + 1;
-    const coinCost = 25 + level * 25;
+    const { crystalCost, coinCost } = upgradeCostFor(this.progress, kind);
     if (level >= 5) return { ok: false, reason: 'max' };
     if (this.progress.crystals < crystalCost || this.progress.coins < coinCost) return { ok: false, reason: 'cost', crystalCost, coinCost };
     this.progress.crystals -= crystalCost;
@@ -1058,7 +1329,12 @@ export class Game {
       region: regionAt(this.player.position.x, this.player.position.z),
       objectiveDistance: Math.round(Math.hypot(this.player.position.x - objective.x, this.player.position.z - objective.z)),
       interact: this.nearby?.name || '',
-      boss: this.activeBoss ? { name: this.activeBoss.name, health: Math.max(0, this.activeBoss.hp / this.activeBoss.maxHp) } : null,
+      boss: this.activeBoss ? {
+        name: this.activeBoss.name,
+        health: Math.max(0, this.activeBoss.hp / this.activeBoss.maxHp),
+        phase: this.activeBoss.combatPhase,
+        phaseLabel: PHASE_LABELS[this.activeBoss.combatPhase]
+      } : null,
       x: this.player.position.x,
       z: this.player.position.z,
       yaw: this.player.rotation.y,
@@ -1066,6 +1342,8 @@ export class Game {
       sigils: [...this.progress.sigils],
       choices: { ...this.progress.choices },
       npcFlags: { ...this.progress.npcFlags },
+      characterQuests: { ...this.progress.characterQuests },
+      relationships: { ...this.progress.relationships },
       pendingChoice: this.progress.pendingChoice || null,
       ending: this.progress.ending || '',
       playTime: this.clock,
@@ -1160,6 +1438,13 @@ export class Game {
       x: enemy.x,
       z: enemy.z,
       hp: enemy.hp,
+      maxHp: enemy.maxHp,
+      poise: enemy.poise,
+      maxPoise: enemy.maxPoise,
+      combatPhase: enemy.combatPhase,
+      phaseLabel: PHASE_LABELS[enemy.combatPhase],
+      tactic: behaviorForEnemy(enemy).tactic,
+      blockedMoves: enemy.blockedMoves,
       presentation: enemy.mesh.userData.rig?.kind || 'unknown',
       articulatedParts: (enemy.mesh.userData.rig?.legs?.length || 0) + (enemy.mesh.userData.rig?.arms?.length || 0)
     };
@@ -1182,6 +1467,19 @@ export class Game {
     enemy.mesh.visible = true;
     this.defeatEnemy(enemy);
     return true;
+  }
+
+  testStrike(id, amount = 1) {
+    const enemy = this.enemies.find(item => item.id === id && !item.dead && !item.locked);
+    const damage = Number(amount);
+    if (!enemy || !Number.isFinite(damage) || damage <= 0) return false;
+    this.damageEnemy(enemy, damage);
+    return true;
+  }
+
+  testNavigation(id, x, z) {
+    const enemy = this.enemies.find(item => item.id === id && !item.dead && !item.locked);
+    return Boolean(enemy && this.canEnemyMove(enemy, Number(x), Number(z)));
   }
 
   testTick(seconds = STEP) {

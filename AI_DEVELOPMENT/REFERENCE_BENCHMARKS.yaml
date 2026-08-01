@@ -205,17 +205,17 @@ element_benchmarks:
       - "The public revision identifier matches the intended release, required assets load by relative path, and development-only controls are unreachable on the public hostname."
 
 current_quality_gap:
-  assessed_revision: "Published r2 product checkpoint on main 4b91e2aba3f3c94f4940e6416f94c958a3064851"
+  assessed_revision: "Local r3 candidate after exactly 20 implementation rounds; implementation head 1c20f62a1db7cd9a64433f8ccdfb2df14824bf71 based on published r2 main 4b91e2a"
   assessment_status: complete_unverified
   evidence:
     - "Source inspection of index.html, src/actors.js, src/core.js, src/world.js, src/game.js, src/main.js, src/storage.js, and src/audio.js on 2026-08-01."
-    - "npm run check passed on 2026-08-01: 28-file static/license validation, 7 deterministic core/world tests, and the happy-dom small-mobile journey through articulated combat, three persistent regional decisions, three choice-dependent playable aftermath scenes, protected climax, accumulated ending, defeat/recovery, and free roam."
-    - "The headless visible-scene estimator reports 150 draw calls and 118,048 triangles for the final route. This is a deterministic budget guard, not a real renderer observation or physical-device performance result."
-    - "The previous r1 real Chromium WebGL run at a 568 × 320 CSS-pixel touch viewport observed 94 draw calls, 113,435 triangles, quality tier 2, and 436,480 backing-store pixels. The r2 actor revision has not been visually replayed in a WebGL-capable browser in this environment."
-    - "The locally re-subset Noto Sans JP Regular 400 WOFF covers all 545 non-icon non-ASCII code points used by the r2 game; ten intentional UI symbols remain on the system fallback stack."
+    - "npm run check passed on 2026-08-01: 28-file static/license validation, 9 deterministic core/world tests, and the happy-dom small-mobile journey through staged character quests, relationship rewards, protected climax, postgame council, poise interruption, guardian phases/tactics, legal navigation, defeat/recovery, and free roam."
+    - "The full route remains below the 170-call/170,000-triangle structural guard; the post-respawn final snapshot reports 103 draw calls and 114,950 triangles. This is a deterministic scene-graph estimate, not a real renderer observation or physical-device result."
+    - "The previous r1 real Chromium WebGL run at a 568 × 320 CSS-pixel touch viewport observed 94 draw calls, 113,435 triangles, quality tier 2, and 436,480 backing-store pixels. The r3 candidate has not been visually replayed in a WebGL-capable browser in this environment."
+    - "The locally re-subset Noto Sans JP Regular 400 WOFF covers all 601 non-icon non-ASCII code points used by the r3 game; ten intentional UI symbols remain on the system fallback stack."
     - "A deliberately slow SwiftShader run triggered automatic quality reduction to tier 1 and 284,000 backing-store pixels. SwiftShader timing is not physical-device performance evidence."
     - "PR 9 Quality floor run 30694693884 passed, main 4b91e2a published wildbound-2026-08-01-r2, and the manual public verifier matched on attempt 1. Public actors.js, q-japanese.woff, and sw.js hashes match the candidate."
-    - "Public cloud Chrome loaded the exact r2 title/revision and test-only API boundary, then displayed the intended recovery screen because its GL vendor and renderer are disabled. This verifies the public fallback, not the r2 3D presentation or primary gameplay journey."
+    - "Public cloud Chrome loaded the exact r2 title/revision and test-only API boundary, then displayed the intended recovery screen because its GL vendor and renderer are disabled. This remains the latest public evidence until r3 is merged and verified."
   gaps:
     - element: world_foundation
       severity: high
@@ -230,13 +230,13 @@ current_quality_gap:
     - element: combat_animation_AI
       severity: critical
       status: complete_unverified
-      current: "Attack, dodge invulnerability, stamina, hit/death flow, bosses, deterministic idle/approach/windup/active/recovery enemy states, per-archetype range/timing/circling decisions, visual/audio telegraphs, and protected local test injection exist. Multi-part humanoid and creature rigs now animate locomotion, attacks, dodges, wing beats, and body gait, with distinct beast, stalker, sentinel, warden, and Crown silhouettes."
-      gap: "The player still has one basic attack; procedural articulation is not authored skeletal animation; obstacle navigation, interruption/stagger, multi-phase guardian behavior, and a real-user combat-readability replay remain below the combat, animation, and AI reference criteria."
+      current: "Explicit idle/approach/windup/active/recovery/stagger/phase-shift states now include per-enemy poise recovery, attack interruption, three guardian health phases, and four guardian-specific decisions: fixed rush, orbit/retreat, spacing backstep, and bounded command chain. Movement tests exercise terrain slope, water-native rules, encounter leashes, house blockers, separation, and rotated alternatives."
+      gap: "The player still has one basic attack; procedural articulation is not authored skeletal animation; attacks do not yet prove blocked-geometry line of sight; and no real-user or physical-device replay verifies combat readability, collision, and pacing."
     - element: story_characters_choices
       severity: critical
       status: complete_unverified
-      current: "Mira, Orin, and Ilya now have choice-dependent intervening scenes in changed locations: Mira tends the grove's consequence, Orin repairs the marsh water route, and Ilya's echo pays off the barrier's twelve-year cost. Save version 4 persists these reports, the Crown remains locked until all three are played, the journal and ending coda reflect them, and prior coherent saves migrate without losing completion."
-      gap: "The route remains compact and mostly text-delivered; the three scenes are focused aftermath beats rather than multi-stage independent quests or schedules; relationship levels and quest availability do not branch; emotional animation, voiced performance, and commercial-scale escalation remain absent. The accumulated structure is stronger but still below the preserved story and character-depth bar."
+      current: "Mira, Orin, and Ilya each have a persisted three-stage quest in a changed location, relationship strength derived from accumulated choices, a distinct mechanical reward, journal/ending payoff, and a strongest-bond postgame council with a one-time shared reward. Save version 5 migrates coherent earlier routes and rejects forged Crown or council progress."
+      gap: "The route remains compact and mostly text-delivered; characters lack independent schedules, branching quest resolutions beyond relationship strength, facial or voiced performance, and commercial-scale escalation. The stronger playable arcs still do not satisfy the preserved premium story/character benchmark."
     - element: visuals_audio
       severity: critical
       status: complete_unverified
@@ -245,8 +245,8 @@ current_quality_gap:
     - element: performance_stability
       severity: critical
       status: complete_unverified
-      current: "The published r2 checkpoint is 1,518,486 release bytes and 170,721 JS+CSS bytes, uses distance-bounded actor visibility, and passes a final-scene estimate of 150 calls/118,048 triangles plus the renderer pixel cap, automatic quality reduction, save cleaning, autosave, offline-local cache, relative paths, and full DOM journey. The prior r1 WebGL observation was 94 calls/113,435 triangles."
-      gap: "The r2 estimates have not been confirmed by a real WebGL renderer. Main 4b91e2a and wildbound-2026-08-01-r2 are publicly verified, but the available public cloud Chrome has WebGL disabled; physical iPhone frame-time/memory, simultaneous-touch, and offline reload evidence remain absent."
+      current: "The r3 candidate is 1,556,151 release bytes and 198,958 JS+CSS bytes, retains distance-bounded visibility and renderer pixel caps, and passes the full DOM journey below the 170-call/170,000-triangle guard. Save cleaning, autosave, offline-local cache v6, relative paths, and complete font coverage pass locally."
+      gap: "The r3 estimates have not been confirmed by a real WebGL renderer or public deployment. The available public cloud Chrome has WebGL disabled; physical iPhone frame-time/memory, simultaneous-touch, orientation/background recovery, and offline reload evidence remain absent."
   overall_result: failed
   rule: "Do not describe the current game as benchmark-complete. Preserve the reference bar after each iterative public checkpoint and repair the critical gaps before objective-complete release approval."
 
@@ -254,15 +254,18 @@ next_benchmark_driven_actions:
   - priority: P1
     action: "Run the complete route with simultaneous touch on a physical iPhone SE third generation; record frame-time distribution, memory proxies, orientation/background recovery, and visual findings."
   - priority: P2
-    action: "Expand the telegraph/attack/recovery foundation with interruption, obstacle handling, guardian phases, and physical-device combat readability replays."
+    action: "Add blocked-geometry hit rejection and geometry-aware camera/player collision, then record representative combat readability replays on a WebGL-capable surface."
   - priority: P2
-    action: "Deepen Mira, Orin, and Ilya beyond the new aftermath scenes with multi-stage independent quests, relationship-dependent availability, and stronger emotional performance while preserving the verified accumulated ending model."
+    action: "Add authored emotional staging, character schedules, and genuinely branching quest resolutions beyond relationship-strength rewards while preserving the verified accumulated ending model."
   - priority: P2
     action: "Raise environment, character, animation, effects, and audio presentation without exceeding measured mobile budgets."
   - priority: P1
     action: "Before claiming the physical-device or benchmark-complete release criteria, run the complete route on the physical iPhone SE third generation. For every iterative publication, verify the deployed revision and representative primary journey through the public surface."
 
 change_history:
+  - at: "2026-08-01T22:55:44+09:00"
+    status: complete_unverified
+    change: "Recorded exactly 20 local implementation rounds: version-5 three-stage Mira/Orin/Ilya quests, relationship-dependent mechanical rewards and council epilogue, plus poise interruption, guardian phases/specific tactics, and legal terrain/obstacle movement. Local checks and font coverage pass; remote merge, r3 publication, real WebGL, physical device, premium presentation, and commercial-scale story criteria remain open."
   - at: "2026-08-01T19:02:00+09:00"
     status: complete_verified
     change: "Recorded PR 9 Quality success, main 4b91e2a, public r2 release-ID and asset-hash matches, and the public browser's exact fallback/test-boundary state. Real r2 WebGL presentation and physical-device criteria remain unverified, so the assessment and overall result remain below the benchmark."

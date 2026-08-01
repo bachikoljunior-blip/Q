@@ -51,7 +51,7 @@ objective:
 execution:
   selected_rigor: STRICT
   active_work:
-    description: "Continue raising the publicly deployed WILDBOUND checkpoint's narrative and in-world presentation toward the preserved premium benchmark without hiding the remaining failures."
+    description: "Deliver exactly 20 implementation rounds that deepen Mira/Orin/Ilya into relationship-dependent staged quests and extend deterministic combat AI with interruption, guardian phases, distinct tactics, and legal movement without hiding the remaining benchmark failures."
     status: complete_verified
     allowed_scope:
       - Three.js open-world renderer, terrain, nature, destinations, player, combat, RPG progression, quests, saves, UI, audio, tests, and release metadata
@@ -68,6 +68,10 @@ execution:
       - AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml
       - AI_DEVELOPMENT/REQUIREMENTS.yaml
   modified_but_unverified:
+    - status: complete_unverified
+      artifacts: "Local wildbound-2026-08-01-r3 candidate after exactly 20 implementation commits, with save version 5, three three-stage character quests, relationship rewards and council epilogue, poise interruption, three guardian phases, four guardian tactics, legal terrain/house/separation movement, 601-code-point Japanese font subset, offline cache v6, and expanded automated coverage"
+      recovery: "Published r2 on main 4b91e2a remains the known-good public product until r3 passes remote Quality, merges, deploys, and verifies; if the candidate fails, retain its branch for repair without altering public main."
+      limitation: "Local static, deterministic, and DOM checks pass. Remote Quality, merge, Pages release-ID/hash checks, real-WebGL r3 presentation, and physical-device evidence are not yet executed."
     - status: complete_verified
       artifacts: "Published wildbound-2026-08-01-r2 on product main 4b91e2a: articulated role-specific humanoid/creature rigs, animated locomotion/combat, three playable choice-dependent character aftermaths, protected climax gating, save version 4, expanded journal/ending coda, rebuilt Japanese font subset, offline cache v5, and automated coverage"
       recovery: "Revert product merge 4b91e2a, let branch-based Pages redeploy main's prior r1 product tree, and require the public release-ID verifier plus fallback/page check."
@@ -83,7 +87,7 @@ execution:
     - status: complete_unverified
       artifacts: "Locally rendered Noto Sans JP WOFF subset, OFL license record, offline cache entry, provenance validation, and payload accounting"
       recovery: "Remove the font-face and font assets together if remote verification fails; the system-font stack remains a functional fallback."
-      limitation: "The r2 Regular 400 subset covers all 545 non-icon non-ASCII game code points and retains OFL provenance; exact r2 browser rendering and physical-device typography remain unverified."
+      limitation: "The r3 Regular 400 subset covers all 601 non-icon non-ASCII game code points and retains OFL provenance; exact r3 browser rendering and physical-device typography remain unverified."
     - status: complete_verified
       artifacts: "Local checkpoint ec44979 with persisted 667 × 375 world, dialogue, and choice screenshots plus reconciled benchmark evidence"
       recovery: "The exact evidence remains in local commit ec44979, remote PR head c0fd9b3, and merged main 1c12511."
@@ -91,8 +95,10 @@ execution:
     - status: failed
       artifacts: "Premium realistic in-world presentation and deeply developed commercial-scale character/story benchmark"
       recovery: "Continue from the published checkpoint without lowering the criteria or describing it as benchmark-complete."
-      limitation: "Articulated role-specific live rigs and three intervening character scenes materially improve the slice, but procedural low-poly construction, authored animation/materials/audio, multi-stage character arcs, and relationship depth remain below the recorded bar."
+      limitation: "Articulated rigs, staged character quests, relationship rewards, and deterministic combat phases materially improve the slice, but procedural low-poly construction, authored animation/materials/audio, branching quest resolution, emotional performance, and commercial-scale depth remain below the recorded bar."
   current_blockers:
+    - status: blocked
+      item: "The public GitHub connector rejected uploading the AI_DEVELOPMENT concept/constraint/evidence documents without explicit end-user authorization for that payload and destination. Direct git push also lacks credentials. No candidate branch or PR was created; request explicit approval before retrying the public upload."
     - status: blocked
       item: "Branch-protection and required-status-check configuration is not exposed by the current GitHub connector and must not be assumed."
     - status: blocked
@@ -102,7 +108,7 @@ execution:
   current_uncertainty:
     - SwiftShader frame timing does not predict physical iPhone or Android performance
     - open PR 3 remains open; applicable input lifecycle, safe-area, reduced-motion, and settings behavior has been carried forward without claiming PR 3 complete
-  exact_next_action: "At the next run, verify product main 4b91e2a and public wildbound-2026-08-01-r2 still match, then deepen Mira/Orin/Ilya with multi-stage relationship-dependent quests and add interruption plus guardian-phase combat. Preserve the physical iPhone, real-WebGL r2, premium-presentation, and commercial-story limitations, and finish with the required merge, Pages publication, F6 check, and state reconciliation."
+  exact_next_action: "Obtain explicit user authorization to upload the r3 source together with AI_DEVELOPMENT concept/constraint/evidence records to the public bachikoljunior-blip/Q repository. If approved, create agent/twenty-round-quests-combat through the connected GitHub path, open one focused PR without disturbing PR 3, require Quality success, merge, verify wildbound-2026-08-01-r3 and selected public hashes, then reconcile actual remote state."
 
 modules:
   activated: []
@@ -111,23 +117,23 @@ modules:
     - {module: M4, status: complete_unverified, result: "DOM journey and focused real WebGL surfaces executed; 667 × 375 world/dialogue/choice screenshots were persisted and inspected. Physical user-surface route remains prepared_not_executed."}
     - {module: M5, status: complete_verified, result: "Localhost-only deterministic teleport, resource, guardian, and damage injection exercised protected progression and remains unreachable publicly."}
     - {module: M6, status: complete_unverified, result: "Payload, pixels, draw calls, triangles, and auto-quality were measured; physical frame pacing and memory remain prepared_not_executed."}
-    - {module: M9, status: complete_verified, result: "Local deterministic enemy states and protected story locks were implemented and exercised."}
+    - {module: M9, status: complete_verified, result: "Local deterministic enemy states now include poise recovery, stagger interruption, guardian phase/tactic branches, terrain/water/leash/house/separation legality, rotated alternatives, and protected story locks; all were exercised through loopback-only controls and deterministic tests."}
   note: "Activated modules were loaded only for their triggered work and are deactivated at this checkpoint."
 
 floor:
   last_check:
     status: complete_verified
-    at: "2026-08-01T19:02:00+09:00"
-    note: "The r2 candidate passed static/license validation, seven deterministic tests, the full DOM route, a 150-call/118,048-triangle final-scene estimate, and deliberate failing F2/F3/F5/F6 probes. PR 9 Quality run 30694693884 succeeded, main 4b91e2a published r2, manual verification matched on attempt 1, selected public asset hashes matched, and Chrome confirmed the exact fallback/test boundary."
+    at: "2026-08-01T22:55:44+09:00"
+    note: "The r3 local candidate passed 28-file static/license validation, nine deterministic tests, the full staged-quest/combat-AI DOM route, 1,556,151-byte payload, 198,958 JS+CSS bytes, 601/601 font coverage, and the 170-call/170,000-triangle guard. Deliberate F2/F3/F5/F6 defects each exited 1 and named the intended failure. Remote Quality, merge, Pages, and public r3 evidence remain pending; published r2 is still the public known good."
   independence_level_used: C
   review_outcome: passed
-  reviewed_at: "2026-08-01T19:02:00+09:00"
-  review_scope: "The r2 actor rig construction and visibility budget, player/enemy motion wiring, ordered aftermath state machine and forged-progression protection, v3-to-v4 migration, Crown gate guidance, dialogue/journal/ending payoff, font provenance/coverage, offline manifest, full DOM route, payload, rollback, deliberate F2/F3/F5/F6 failures, PR 9 Quality/merge, public release-ID and selected-asset hashes, test boundary, and fallback surface. The review preserves failed premium, narrative, combat-AI, physical-touch, and physical-performance criteria."
-  review_limitation: "Same-agent Level C falsification because separate agents are prohibited in this run. The current environment has no WebGL-capable public browser or physical iPhone, so the r2 scene estimate and DOM route do not prove visual quality, frame pacing, simultaneous touch, or the representative public 3D journey. Premium presentation and commercial story-depth acceptance remain failed."
+  reviewed_at: "2026-08-01T22:55:44+09:00"
+  review_scope: "The r3 candidate's exactly 20 implementation commits; save-v5 migration and forged-progression protection; all Mira/Orin/Ilya quest stages, relationship calculations and rewards, Crown/council gates, journal/ending payoff; poise recovery, interruption safety, guardian phases/HUD/specific tactics, terrain/obstacle/separation movement; local test boundary, payload, font provenance/coverage, cache/release metadata, and rollback. The review preserves failed premium, narrative, combat-AI, physical-touch, public-3D, and physical-performance criteria."
+  review_limitation: "Same-agent Level C falsification because separate agents are prohibited in this run. The environment has no WebGL-capable public browser or physical iPhone, so scene estimates and the DOM route do not prove r3 visual quality, frame pacing, simultaneous touch, blocked-geometry attacks, or the representative public 3D journey. Premium presentation and commercial story-depth acceptance remain failed."
   skips:
     - "F7 | objective-completion trigger did not fire because AC-WORLD, AC-NARRATIVE, AC-COMBAT-AI, AC-PRESENTATION, AC-PERF, and AC-PAGES are not satisfied | evidence: AI_DEVELOPMENT/REQUIREMENTS.yaml | revisit only before marking the objective complete."
     - "F9 required-check enforcement | could not be completed because gh is absent and no connected tool exposes branch protection or required-status configuration | evidence: gh command missing and tool registry has no protection/ruleset operation | revisit when capability changes."
-    - "F6 representative public 3D journey | the selected public cloud Chrome reports GL vendor/renderer Disabled and renders the intended r2 recovery screen; the local DOM route and headless scene estimate are not substituted for public gameplay | evidence: exact wildbound-2026-08-01-r2 browser title/meta/test boundary and WebGL error | revisit gameplay on the next WebGL-capable public browser or physical device."
+    - "F6 representative public 3D journey | the selected public cloud Chrome reports GL vendor/renderer Disabled and previously rendered the intended r2 recovery screen; the local r3 DOM route and headless scene estimate are not substituted for public gameplay | evidence: exact r2 browser title/meta/test boundary and WebGL error; r3 public verification pending | revisit gameplay on the next WebGL-capable public browser or physical device."
   waivers: []
   enforcement:
     f2_state_update_check:
@@ -151,10 +157,10 @@ floor:
       active: false
       mechanism: "No safe automatic Pages revert is installed or verified."
     last_observed_failing:
-      - {item: F2, status: complete_verified, evidence: "2026-08-01 r2 review: node tools/floor-gates.mjs --deliberate-failure F2_ASSET exited 1 and named the generated asset plus missing STATE.yaml"}
-      - {item: F3, status: complete_verified, evidence: "2026-08-01 r2 review: FLOOR_TEST_BAD=F3 npm run check exited 1 inside the real validation path"}
-      - {item: F5, status: complete_verified, evidence: "2026-08-01 r2 review: node tools/floor-gates.mjs --deliberate-failure F5 exited 1 and named the missing review record"}
-      - {item: F6, status: complete_verified, evidence: "2026-08-01 r2 review: node tools/verify-public.mjs --deliberate-failure exited 1 on a mismatched release identifier"}
+      - {item: F2, status: complete_verified, evidence: "2026-08-01 r3 review: node tools/floor-gates.mjs --deliberate-failure F2_ASSET exited 1 and named the generated asset plus missing STATE.yaml"}
+      - {item: F3, status: complete_verified, evidence: "2026-08-01 r3 review: FLOOR_TEST_BAD=F3 npm run check exited 1 inside the real validation path"}
+      - {item: F5, status: complete_verified, evidence: "2026-08-01 r3 review: node tools/floor-gates.mjs --deliberate-failure F5 exited 1 and named both invalid independence and missing review record"}
+      - {item: F6, status: complete_verified, evidence: "2026-08-01 r3 review: node tools/verify-public.mjs --deliberate-failure exited 1 on a mismatched release identifier"}
     unenforced_items: [F2, F3_required_merge_gate, F5]
     unattended_allowed: false
 
@@ -167,8 +173,11 @@ remote:
   default_branch: main
   default_branch_revision_at_migration_completion: 4e6076df54b7eb4b2f55a173910e1a48ae67517b
   branch: main
+  branch_revision_at_session_start: 34eb98904483de4faa87ec1366e8d77f363c7879
   branch_remote_status: complete_verified
   delivered_product_branch: "agent/character-story-pass at d55dbc9; PR 9 merged to product main 4b91e2a"
+  pending_product_branch: "Local agent/twenty-round-quests-combat at release head fe5b7b4; exactly 20 implementation commits plus release/state records. No remote branch or PR exists because git credentials are absent and the connector requires explicit user authorization for public AI_DEVELOPMENT upload."
+  candidate_delivery_status: blocked
   pull_requests:
     - number: 3
       url: https://github.com/bachikoljunior-blip/Q/pull/3
@@ -234,5 +243,5 @@ automation:
     migration_merge_run: "none; r2 dynamic Pages publication completed after product main 4b91e2a and the manual public verifier passed on attempt 1. Push-run IDs are unavailable through the connected workflow reader."
     unattended_delivery_allowed: false
 
-updated_at: "2026-08-01T19:02:00+09:00"
-reconciliation_status: complete_verified
+updated_at: "2026-08-01T23:05:32+09:00"
+reconciliation_status: blocked

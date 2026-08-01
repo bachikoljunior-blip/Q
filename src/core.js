@@ -1,6 +1,6 @@
 export const SAVE_KEY = 'q-wildbound-save';
 export const LEGACY_SAVE_KEYS = Object.freeze(['q-starthread-save']);
-export const SAVE_VERSION = 4;
+export const SAVE_VERSION = 5;
 export const WORLD_SIZE = 1800;
 export const WORLD_HALF = WORLD_SIZE / 2;
 export const WATER_LEVEL = -1.6;
@@ -91,6 +91,19 @@ export function terrainHeight(x, z) {
   return height + edge * 35;
 }
 
+export function enemyTerrainStepAllowed({ fromX, fromZ, toX, toZ, spawnX, spawnZ, allowDeepWater = false, large = false } = {}) {
+  const values = [fromX, fromZ, toX, toZ, spawnX, spawnZ].map(Number);
+  if (!values.every(Number.isFinite)) return false;
+  const [fx, fz, tx, tz, sx, sz] = values;
+  if (Math.abs(tx) > WORLD_HALF - 10 || Math.abs(tz) > WORLD_HALF - 10) return false;
+  if (Math.hypot(tx - sx, tz - sz) > (large ? 82 : 94)) return false;
+  const fromHeight = terrainHeight(fx, fz);
+  const toHeight = terrainHeight(tx, tz);
+  if (Math.abs(toHeight - fromHeight) > (large ? 6.4 : 3.8)) return false;
+  if (!allowDeepWater && toHeight < WATER_LEVEL - .25) return false;
+  return true;
+}
+
 export const BIOMES = Object.freeze({
   meadow: { id: 'meadow', name: '風渡りの草原', color: 0x668851, accent: 0xa9ca6a },
   forest: { id: 'forest', name: '古樹の森', color: 0x365f43, accent: 0x6f9a55 },
@@ -152,7 +165,49 @@ export const NARRATIVE_SCENES = Object.freeze({
   ilya: Object.freeze({ id: 'ilya_echo', character: 'ilya', label: '神殿前でイリヤの残響に触れる', x: 0, z: -615 })
 });
 
+export const CHARACTER_TASKS = Object.freeze({
+  mira: Object.freeze([
+    Object.freeze({ id: 'mira_grove_scene', character: 'mira', stage: 0, label: '倒れた柵でミラと話す', x: -77.2, z: 238.8 }),
+    Object.freeze({ id: 'mira_scout_trace', character: 'mira', stage: 1, label: '古樹の境で斥候の印を探す', x: -430, z: -180 }),
+    Object.freeze({ id: 'mira_grove_scene', character: 'mira', stage: 2, label: '見つけた印をミラへ渡す', x: -77.2, z: 238.8 })
+  ]),
+  orin: Object.freeze([
+    Object.freeze({ id: 'orin_marsh_scene', character: 'orin', stage: 0, label: '水路でオリンと話す', x: 80.2, z: 307.8 }),
+    Object.freeze({ id: 'orin_sluice_fault', character: 'orin', stage: 1, label: '旧水路の詰まりを調べる', x: -220, z: 350 }),
+    Object.freeze({ id: 'orin_marsh_scene', character: 'orin', stage: 2, label: '水路の様子をオリンへ伝える', x: 80.2, z: 307.8 })
+  ]),
+  ilya: Object.freeze([
+    Object.freeze({ id: 'ilya_echo', character: 'ilya', stage: 0, label: '神殿前でイリヤの残響に触れる', x: 0, z: -615 }),
+    Object.freeze({ id: 'ilya_archive_echo', character: 'ilya', stage: 1, label: '潮騒の廃都で古い記録を探す', x: 535, z: 430 }),
+    Object.freeze({ id: 'ilya_echo', character: 'ilya', stage: 2, label: '記録をイリヤの残響へ届ける', x: 0, z: -615 })
+  ])
+});
+
+export function characterTaskFor(progress) {
+  const p = progress || {};
+  const choices = p.choices || {};
+  const stages = p.characterQuests || {};
+  const flags = p.npcFlags || {};
+  const defeated = new Set(p.defeated || []);
+  const hasStages = Boolean(p.characterQuests);
+  const miraComplete = (stages.mira || 0) >= 3 || (!hasStages && flags.groveReport);
+  const orinComplete = (stages.orin || 0) >= 3 || (!hasStages && flags.marshReport);
+  const ilyaComplete = (stages.ilya || 0) >= 3 || (!hasStages && flags.ilyaTruth);
+  if (choices.grove && defeated.has('grove_warden') && !miraComplete) {
+    return CHARACTER_TASKS.mira[clamp(integer(stages.mira), 0, 2)];
+  }
+  if (miraComplete && choices.marsh && defeated.has('marsh_warden') && !orinComplete) {
+    return CHARACTER_TASKS.orin[clamp(integer(stages.orin), 0, 2)];
+  }
+  const allGuardians = GUARDIANS.every(guardian => choices[guardian.point] && defeated.has(guardian.id));
+  if (allGuardians && miraComplete && orinComplete && !ilyaComplete) {
+    return CHARACTER_TASKS.ilya[clamp(integer(stages.ilya), 0, 2)];
+  }
+  return null;
+}
+
 export function narrativeSceneFor(progress) {
+  if (progress?.characterQuests) return characterTaskFor(progress);
   const choices = progress?.choices || {};
   const flags = progress?.npcFlags || {};
   const defeated = new Set(progress?.defeated || []);
@@ -180,7 +235,9 @@ const DEFAULT_PROGRESS = Object.freeze({
   choices: { grove: '', marsh: '', peak: '' },
   pendingChoice: null,
   ending: '',
-  npcFlags: { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false },
+  npcFlags: { orinIntro: false, groveReport: false, marshReport: false, ilyaTruth: false, councilSeen: false },
+  characterQuests: { mira: 0, orin: 0, ilya: 0 },
+  relationships: { mira: 0, orin: 0, ilya: 0 },
   upgrades: { vigor: 0, edge: 0, stride: 0 },
   health: 100,
   x: 0,
@@ -216,7 +273,9 @@ export function playerStats(progress) {
     maxHealth: 100 + (level - 1) * 9 + integer(upgrades.vigor) * 22 + (p.choices?.marsh === 'water_ward' ? 18 : 0),
     power: 18 + (level - 1) * 2.4 + integer(upgrades.edge) * 5 + (p.choices?.peak === 'wind_ward' ? 4 : 0),
     speed: 15.5 + integer(upgrades.stride) * 1.25 + (p.choices?.peak === 'wind_release' ? 1.5 : 0),
-    maxStamina: 100 + integer(upgrades.stride) * 12 + (p.choices?.grove === 'wild_bloom' ? 16 : 0)
+    maxStamina: 100 + integer(upgrades.stride) * 12 + (p.choices?.grove === 'wild_bloom' ? 16 : 0),
+    dodgeCost: p.relationships?.mira >= 3 ? 20 : p.relationships?.mira >= 2 ? 22 : 24,
+    attackCooldown: p.relationships?.ilya >= 3 ? .42 : p.relationships?.ilya >= 2 ? .45 : .48
   };
 }
 
@@ -231,8 +290,18 @@ export function respawnCoinLossFor(progress) {
     : Math.min(25, Math.floor(coins * .12));
 }
 
+export function upgradeCostFor(progress, kind) {
+  const level = clamp(integer(progress?.upgrades?.[kind]), 0, 5);
+  const trust = clamp(integer(progress?.relationships?.orin), 0, 3);
+  return {
+    crystalCost: level + 1,
+    coinCost: Math.max(15, 25 + level * 25 - trust * 5)
+  };
+}
+
 export function canEnterCrown(progress) {
   return GUARDIANS.every(guardian => progress?.sigils?.includes(guardian.id) && Boolean(progress?.choices?.[guardian.point]))
+    && ['mira', 'orin', 'ilya'].every(character => (progress?.characterQuests?.[character] || 0) >= 3)
     && Boolean(progress?.npcFlags?.groveReport && progress?.npcFlags?.marshReport && progress?.npcFlags?.ilyaTruth);
 }
 
@@ -262,7 +331,18 @@ export function cleanSave(raw) {
       orinIntro: Boolean(source.npcFlags?.orinIntro),
       groveReport: Boolean(source.npcFlags?.groveReport),
       marshReport: Boolean(source.npcFlags?.marshReport),
-      ilyaTruth: Boolean(source.npcFlags?.ilyaTruth)
+      ilyaTruth: Boolean(source.npcFlags?.ilyaTruth),
+      councilSeen: Boolean(source.npcFlags?.councilSeen)
+    },
+    characterQuests: {
+      mira: clamp(integer(source.characterQuests?.mira), 0, 3),
+      orin: clamp(integer(source.characterQuests?.orin), 0, 3),
+      ilya: clamp(integer(source.characterQuests?.ilya), 0, 3)
+    },
+    relationships: {
+      mira: clamp(integer(source.relationships?.mira), 0, 3),
+      orin: clamp(integer(source.relationships?.orin), 0, 3),
+      ilya: clamp(integer(source.relationships?.ilya), 0, 3)
     },
     upgrades: {
       vigor: clamp(integer(source.upgrades?.vigor), 0, 5),
@@ -288,13 +368,38 @@ export function cleanSave(raw) {
     progress.npcFlags.groveReport ||= Boolean(progress.choices.grove);
     progress.npcFlags.marshReport ||= Boolean(progress.choices.marsh);
     progress.npcFlags.ilyaTruth ||= Boolean(progress.choices.grove && progress.choices.marsh && progress.choices.peak);
+    progress.characterQuests.mira = progress.npcFlags.groveReport ? 3 : 0;
+    progress.characterQuests.orin = progress.npcFlags.marshReport ? 3 : 0;
+    progress.characterQuests.ilya = progress.npcFlags.ilyaTruth ? 3 : 0;
+    progress.relationships.mira = progress.npcFlags.groveReport ? 2 : 0;
+    progress.relationships.orin = progress.npcFlags.marshReport ? 2 : 0;
+    progress.relationships.ilya = progress.npcFlags.ilyaTruth ? 2 : 0;
   }
-  if (!progress.choices.grove) progress.npcFlags.groveReport = false;
-  if (!progress.choices.marsh) progress.npcFlags.marshReport = false;
-  if (!(progress.choices.grove && progress.choices.marsh && progress.choices.peak && progress.npcFlags.groveReport && progress.npcFlags.marshReport)) progress.npcFlags.ilyaTruth = false;
+  if (!progress.choices.grove) {
+    progress.npcFlags.groveReport = false;
+    progress.characterQuests.mira = 0;
+    progress.relationships.mira = 0;
+  }
+  if (!progress.choices.marsh) {
+    progress.npcFlags.marshReport = false;
+    progress.characterQuests.orin = 0;
+    progress.relationships.orin = 0;
+  }
+  if (!(progress.choices.grove && progress.choices.marsh && progress.choices.peak && progress.npcFlags.groveReport && progress.npcFlags.marshReport)) {
+    progress.npcFlags.ilyaTruth = false;
+    progress.characterQuests.ilya = 0;
+    progress.relationships.ilya = 0;
+  }
+  if (progress.characterQuests.mira < 3) progress.relationships.mira = 0;
+  if (progress.characterQuests.orin < 3) progress.relationships.orin = 0;
+  if (progress.characterQuests.ilya < 3) {
+    progress.relationships.ilya = 0;
+    progress.npcFlags.ilyaTruth = false;
+  }
   const finalDefeated = canEnterCrown(progress) && progress.defeated.includes('crown_warden');
   if (!finalDefeated) progress.defeated = progress.defeated.filter(id => id !== 'crown_warden');
   progress.victory = finalDefeated;
+  if (!progress.victory || !['mira', 'orin', 'ilya'].every(character => progress.relationships[character] >= 3)) progress.npcFlags.councilSeen = false;
   progress.ending = finalDefeated ? endingFor(progress) : '';
   progress.endings = finalDefeated ? Math.max(1, progress.endings) : 0;
   progress.story = finalDefeated ? 3 : progress.sigils.length >= 3 ? 2 : progress.sigils.length ? 1 : progress.started ? clamp(progress.story, 0, 1) : 0;
@@ -369,7 +474,7 @@ export function questText(progress) {
   const narrative = narrativeSceneFor(p);
   if (narrative) {
     const titles = { mira: '森のあとで', orin: '水のあとで', ilya: '残された声' };
-    return { title: titles[narrative.character], detail: narrative.label, step: '人物' };
+    return { title: titles[narrative.character], detail: narrative.label, step: Number.isInteger(narrative.stage) ? `人物 ${narrative.stage + 1} / 3` : '人物' };
   }
   const unresolved = GUARDIANS.find(guardian => p.defeated?.includes(guardian.id) && !p.choices?.[guardian.point]);
   if (unresolved) return { title: '大地の答え', detail: `${unresolved.sigil}の行く先を決める`, step: '選択' };
