@@ -514,6 +514,15 @@ export class World {
     this.storyScenes.orin = { group: orin, actor: orinActor, openChannel, wardChannel };
     this.interactables.push({ id: 'orin_marsh_scene', type: 'story', name: '水路を直すオリン', x: 80.2, z: 307.8, radius: 6, mesh: orin, distanceCulled: false });
 
+    const orinFault = makeScene('ORIN_SLUICE_FAULT', -220, 350);
+    const faultStone = material(0x686b63), faultWood = material(0x684934), faultWater = material(0x55949e, { transparent: true, opacity: .62, roughness: .25, depthWrite: false });
+    for (const side of [-1, 1]) addMesh(orinFault, new THREE.BoxGeometry(9, 1.2, 2.4), faultStone, [side * 5.2, .3, 0], [0, side * .08, side * .06]);
+    const wheel = addMesh(orinFault, new THREE.TorusGeometry(2.4, .24, 7, 18), faultWood, [0, 2.5, .2], [0, 0, .24]);
+    for (let i = 0; i < 6; i += 1) addMesh(wheel, new THREE.BoxGeometry(.18, 4.2, .18), faultWood, [0, 0, 0], [0, 0, i / 6 * Math.PI]);
+    addMesh(orinFault, new THREE.PlaneGeometry(8.5, 2.1), faultWater, [0, .18, 0], [-Math.PI / 2, 0, 0]);
+    this.storyScenes.orinFault = { group: orinFault, wheel };
+    this.interactables.push({ id: 'orin_sluice_fault', type: 'story', name: '詰まった止水輪', x: -220, z: 350, radius: 7, mesh: orinFault, distanceCulled: false });
+
     const ilya = makeScene('ILYA_CROWN_REVELATION', 0, -615);
     const memorySurface = new THREE.MeshBasicMaterial({ color: 0xe4cb79, transparent: true, opacity: .5, depthWrite: false });
     for (let i = 0; i < 3; i += 1) {
@@ -620,6 +629,7 @@ export class World {
       this.storyScenes.orin.openChannel.visible = choices.marsh === 'ring_release';
       this.storyScenes.orin.wardChannel.visible = choices.marsh === 'water_ward';
     }
+    if (this.storyScenes.orinFault) this.storyScenes.orinFault.group.visible = activeTask === 'orin_sluice_fault';
     if (this.storyScenes.ilya) this.storyScenes.ilya.group.visible = ilyaActive;
     if (this.miraNpc) this.miraNpc.visible = !miraActive;
     if (this.orinNpc) this.orinNpc.visible = !orinActive;
