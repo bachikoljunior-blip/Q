@@ -337,4 +337,4 @@ assert.ok(finalMetrics.triangles <= 170000, `visible scene stays below the 170k-
 assert.ok(window.localStorage.getItem('q-wildbound-save'), 'journey is persisted locally');
 assert.deepEqual(uncaught, [], `no DOM integration errors: ${uncaught.join('\n')}`);
 
-console.log(`DOM journey passed: title/tutorial, mobile movement, articulated telegraphed combat, pause/map, three playable character aftermaths, persistent choice consequences, protected climax, accumulated ending, free roam, autosave, and pixel budget (${finalMetrics.drawCalls} calls / ${finalMetrics.triangles} triangles, ${finalMetrics.source}).`);
+console.log(`DOM journey passed: title/tutorial, mobile movement, interruption and guardian phases, pause/map, three staged relationship quests, persistent consequences, protected climax, council epilogue, free roam, autosave, and pixel budget (${finalMetrics.drawCalls} calls / ${finalMetrics.triangles} triangles, ${finalMetrics.source}).`);

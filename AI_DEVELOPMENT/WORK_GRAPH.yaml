@@ -22,19 +22,19 @@ nodes:
     priority: P2
     status: complete_unverified
     depends_on: [WORLD-FOUNDATION]
-    note: "The complete DOM route passes with telegraphed combat, progression, three decisions, failure/recovery, and an accumulated ending; physical interaction and benchmark depth remain open."
+    note: "The r3 candidate's complete DOM route passes with poise interruption, guardian phases/specific tactics, legal navigation, progression, three decisions, staged relationship quests, failure/recovery, and an accumulated ending; physical interaction and benchmark depth remain open."
   - id: COMPLETE-JOURNEY
     title: "Author and integrate a finishable main journey, side discoveries, final encounter, ending, and continued exploration"
     priority: P2
     status: complete_unverified
     depends_on: [RPG-SYSTEMS, NARRATIVE-CONSEQUENCE]
-    note: "A start-to-ending mixed route now includes three intervening character aftermaths, a protected climax, and post-ending free roam; the public r2 3D route and physical-device route remain unexecuted, and narrative depth remains below the preserved benchmark."
+    note: "A start-to-ending mixed route now includes three persisted three-stage character quests, relationship rewards, a protected climax, strongest-bond council, and post-ending free roam; the r3 public 3D route and physical-device route remain unexecuted, and narrative depth remains below the preserved benchmark."
   - id: NARRATIVE-CONSEQUENCE
     title: "Implement original character arcs, foreshadowing/payoff, delayed consequences, and accumulated ending state"
     priority: P2
     status: failed
     depends_on: [RPG-SYSTEMS]
-    note: "Three original choice/consequence points now lead to separate playable Mira, Orin, and Ilya aftermath scenes, persist as version-4 story flags, visibly alter locations and dialogue, and gate the accumulated climax. These focused beats still lack the independent multi-stage arcs and relationship depth required by the preserved benchmark."
+    note: "Three original choice/consequence points now lead to persisted three-stage Mira, Orin, and Ilya quests, relationship-derived rewards, changed locations, ending payoffs, and a strongest-bond council under save version 5. Compact text delivery, limited branch resolution, missing schedules/performance, and commercial-scale depth keep this node failed."
   - id: PRESENTATION-PASS
     title: "Replace primitive presentation with coherent realistic environment, character, animation, effects, and audio craft within measured mobile budgets"
     priority: P2
@@ -52,5 +52,5 @@ nodes:
     priority: P1
     status: blocked
     depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH, PRESENTATION-PASS]
-    note: "The r2 checkpoint passes local deterministic, full DOM, license, payload, budget, and deliberate-failure gates; PR 9 Quality run 30694693884 succeeded, main 4b91e2a is published, and public release ID plus actor/font/service-worker hashes match. The public browser's disabled WebGL plus premium presentation/narrative and physical iPhone evidence keep this node blocked."
+    note: "The r3 candidate passes local deterministic, full DOM, license, payload, font-coverage, and structural-budget checks; remote quality, merge, and public r3 verification are pending. Disabled public WebGL plus premium presentation/narrative and physical iPhone evidence keep this node blocked after iterative publication."
 active_frontier: [PRESENTATION-PASS, NARRATIVE-CONSEQUENCE, QA-RELEASE]
