@@ -52,5 +52,5 @@ nodes:
     priority: P1
     status: blocked
     depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH, PRESENTATION-PASS]
-    note: "Local deterministic, DOM, real WebGL smoke, license, payload, and staged revision checks pass. Premium presentation/narrative criteria and physical iPhone evidence block release approval."
+    note: "Local deterministic, DOM, real WebGL smoke, license, payload, and staged revision checks pass. Premium presentation/narrative criteria and physical iPhone evidence still block benchmark-complete objective approval, but do not block the user-required iterative session-end publication of a runnable checkpoint."
 active_frontier: [PRESENTATION-PASS, NARRATIVE-CONSEQUENCE, QA-RELEASE]

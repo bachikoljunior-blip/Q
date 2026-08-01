@@ -11,6 +11,17 @@ logical_session:
   lifecycle: active
   explicit_end_required: true
 
+session_end_delivery_policy:
+  applies_to: "Every project-changing Work or Codex session, including an incomplete-objective checkpoint."
+  merge_target: main
+  merge_required: true
+  pages_publication_required: true
+  real_surface_verification_required: true
+  objective_completion_required: false
+  allowed_exceptions: "A mandatory-check failure, known blocking regression, safety/privacy/license defect, unavailable permission, branch protection, or required human approval."
+  blocked_handoff: "Preserve the safe checkpoint on the existing remote branch and PR, record the exact blocker, recovery path, remote state, and first next action, then resume that delivery before creating replacements."
+  logical_session_effect: "A run-level merge and publication checkpoint does not end the logical session; explicit user declaration remains required."
+
 migration:
   from: legacy_project_operating_protocol_v1
   status: complete_verified
@@ -40,7 +51,7 @@ objective:
 execution:
   selected_rigor: STRICT
   active_work:
-    description: "Build and verify the first complete WILDBOUND journey, then raise its narrative and in-world presentation to the preserved premium benchmark before public release."
+    description: "Publish the current runnable WILDBOUND checkpoint, then continue raising its narrative and in-world presentation toward the preserved premium benchmark without hiding the remaining failures."
     status: complete_unverified
     allowed_scope:
       - Three.js open-world renderer, terrain, nature, destinations, player, combat, RPG progression, quests, saves, UI, audio, tests, and release metadata
@@ -50,8 +61,8 @@ execution:
       - no unattended delivery while all four F9 gates and automatic revert are absent
   last_verified_checkpoint:
     status: complete_verified
-    revision: "local working tree on agent/open-world-rpg based on 4e6076df54b7eb4b2f55a173910e1a48ae67517b"
-    result: "The continuous Three.js valley, full mixed-choice journey, combat/progression/save-integrity systems, generated ground and portrait assets, bundled Japanese glyph subset, and mobile UI passed npm run check. Focused Chromium WebGL and font-load checks rendered the small touch viewport with no runtime or asset error at 94 calls and 113,435 triangles. Staged release revision injection and forged-progression rejection passed."
+    revision: "Draft PR 6 product revision f9def90a07761007e8b8fe12b5a7f9d449b06f4e based on 4e6076df54b7eb4b2f55a173910e1a48ae67517b"
+    result: "The continuous Three.js valley, full mixed-choice journey, combat/progression/save-integrity systems, generated ground and portrait assets, bundled Japanese glyph subset, and mobile UI passed npm run check. Focused Chromium WebGL/font checks and persisted 667 × 375 screenshots rendered world, dialogue, and choice surfaces with readable Japanese and no runtime or asset error. Quality floor run 30688204245 passed for the draft product tree; staged revision injection and forged-progression rejection also passed."
     evidence:
       - AI_DEVELOPMENT/EVIDENCE/WILDBOUND_QA_2026-08-01.md
       - AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml
@@ -63,32 +74,36 @@ execution:
       limitation: "Local automated and focused WebGL checks pass and the exact latest product tree is remotely preserved at f9def90, but the replacement is not merged, deployed, physically verified, or benchmark-complete."
     - status: prepared_not_executed
       artifacts: "Physical iPhone SE third-generation complete touch route, frame pacing, memory proxy, orientation/background recovery, and offline reload"
-      recovery: "Keep public STARTHREAD unchanged until the physical-device and presentation gates pass."
+      recovery: "Keep the limitation explicit after iterative publication and perform the physical route when a representative device becomes available."
       limitation: "No physical device is exposed in this Work run."
     - status: complete_unverified
       artifacts: "Locally rendered Noto Sans JP WOFF subset, OFL license record, offline cache entry, provenance validation, and payload accounting"
       recovery: "Remove the font-face and font assets together if remote verification fails; the system-font stack remains a functional fallback."
       limitation: "Local Chromium load and glyph coverage pass, the exact font tree is on draft PR 6 at f9def90, and remote Quality floor run 30688204245 passed; physical-device typography remains unverified."
+    - status: complete_unverified
+      artifacts: "Local checkpoint ec44979 with persisted 667 × 375 world, dialogue, and choice screenshots plus reconciled benchmark evidence"
+      recovery: "The screenshots and records remain in local commit ec44979 until the connected GitHub commit is verified on PR 6."
+      limitation: "The connected GitHub branch update, merge, Pages deployment, and public F6 check are pending in this run."
     - status: failed
       artifacts: "Premium realistic in-world presentation and deeply developed commercial-scale character/story benchmark"
-      recovery: "Continue on agent/open-world-rpg; do not lower the criteria or publish the replacement as benchmark-complete."
+      recovery: "Continue from the published checkpoint without lowering the criteria or describing it as benchmark-complete."
       limitation: "Generated portraits and ground texture improve cohesion, but primitive live models, compact arcs, animation, and audio remain below the recorded bar."
   current_blockers:
     - status: blocked
       item: "Branch-protection and required-status-check configuration is not exposed by the current GitHub connector and must not be assumed."
     - status: blocked
-      item: "Physical iPhone SE third-generation evidence cannot be executed in the current environment; public release approval requires it."
+      item: "Physical iPhone SE third-generation evidence cannot be executed in the current environment; this remains an acceptance limitation but no longer defers the user-required iterative publication."
   current_uncertainty:
     - exact commit served by the legacy Pages artifact remains unreachable because STARTHREAD has no embedded revision identifier
     - SwiftShader frame timing does not predict physical iPhone or Android performance
     - open PR 3 remains open; applicable input lifecycle, safe-area, reduced-motion, and settings behavior has been carried forward without claiming PR 3 complete
-  exact_next_action: "On draft PR 6, replace the primitive in-world character/enemy presentation and expand Mira, Orin, and Ilya through intervening playable scenes; rerun the full local and remote gates, then execute the physical iPhone SE release route before any merge or deployment."
+  exact_next_action: "Synchronize the current local checkpoint to draft PR 6 through the connected GitHub commit path, rerun the remote quality gate, merge it into main, verify the GitHub Pages revision and primary journey, then continue the presentation and narrative frontier from that merged public checkpoint in the next run."
 
 modules:
   activated: []
   deactivated:
     - {module: M3, status: complete_verified, result: "Local Three.js, generated assets, packaging, and release wiring integrated and executed."}
-    - {module: M4, status: complete_unverified, result: "DOM journey and focused real WebGL surfaces executed; physical user-surface route remains prepared_not_executed."}
+    - {module: M4, status: complete_unverified, result: "DOM journey and focused real WebGL surfaces executed; 667 × 375 world/dialogue/choice screenshots were persisted and inspected. Physical user-surface route remains prepared_not_executed."}
     - {module: M5, status: complete_verified, result: "Localhost-only deterministic teleport, resource, guardian, and damage injection exercised protected progression and remains unreachable publicly."}
     - {module: M6, status: complete_unverified, result: "Payload, pixels, draw calls, triangles, and auto-quality were measured; physical frame pacing and memory remain prepared_not_executed."}
     - {module: M9, status: complete_verified, result: "Local deterministic enemy states and protected story locks were implemented and exercised."}
@@ -97,15 +112,14 @@ modules:
 floor:
   last_check:
     status: complete_verified
-    at: "2026-08-01T15:42:39+09:00"
-    note: "The exact WILDBOUND product/font tree is preserved on draft PR 6. Quality floor run 30688204245 passed continuity enforcement, Adaptive 2.2 validation, and npm run check for the head containing that tree. No merge or deployment occurred; physical and premium acceptance remain open."
+    at: "2026-08-01T17:37:09+09:00"
+    note: "The runnable WILDBOUND product, generated assets, bundled Japanese font, benchmark map, and persisted 667 × 375 evidence remain locally verified. The latest user instruction now requires every project-changing session to merge and publish its runnable checkpoint while preserving unresolved acceptance failures; remote synchronization, merge, deployment, and F6 are pending in this run."
   independence_level_used: C
   review_outcome: passed
-  reviewed_at: "2026-08-01T15:36:12+09:00"
-  review_scope: "Local WILDBOUND implementation slice: progression locks, three irreversible decisions and endings, combat timing, mobile UI, generated-asset and Japanese-font loading/licensing, save migration, performance bounds, release revision injection, offline-local paths, and continuity/workflow gates. Passed means safe to preserve as a draft branch, not approved for merge or public release."
+  reviewed_at: "2026-08-01T17:37:09+09:00"
+  review_scope: "WILDBOUND runnable checkpoint plus the new mandatory session-end merge, Pages publication, F6 verification, and next-session handoff policy. The review preserves failed premium, narrative, combat-AI, physical-touch, and performance criteria while allowing an explicitly iterative public checkpoint."
   review_limitation: "Same-agent Level C falsification; separate agents are prohibited in this run. Chromium used SwiftShader and a focused smoke route, not a physical iPhone or complete real-user journey. Premium presentation and story-depth acceptance remain failed."
   skips:
-    - "F6 | user-visible delivery trigger did not fire because WILDBOUND was not merged, released, deployed, or published; the revision check passed only against a temporary staged artifact | evidence: remote main remains 4e6076d and staged-wildbound-test matched locally | revisit on the first product deployment."
     - "F7 | objective-completion trigger did not fire because AC-WORLD, AC-NARRATIVE, AC-COMBAT-AI, AC-PRESENTATION, AC-PERF, and AC-PAGES are not satisfied | evidence: AI_DEVELOPMENT/REQUIREMENTS.yaml | revisit only before marking the objective complete."
     - "F9 required-check enforcement | could not be completed because gh is absent and no connected tool exposes branch protection or required-status configuration | evidence: gh command missing and tool registry has no protection/ruleset operation | revisit when capability changes."
   waivers: []
@@ -140,7 +154,7 @@ floor:
 
 recovery:
   last_known_good_revision_or_artifact: ac6f57f01c569201e453d84dad1e9bd02fe7285c
-  rollback_or_recovery_method: "Keep remote main and public Pages on the verified STARTHREAD baseline until WILDBOUND release gates pass. For the replacement, retain agent/open-world-rpg, the named pre-migration stash, and /tmp/Q_pre_migration_product.patch until a remote branch checkpoint is confirmed."
+  rollback_or_recovery_method: "If the iterative WILDBOUND release has a blocking regression, revert main to 4e6076d (or the immediately preceding verified public revision), redeploy Pages, and verify recovery. Retain agent/open-world-rpg, local commit ec44979, the named pre-migration stash, and /tmp/Q_pre_migration_product.patch until the new public revision is verified."
 
 remote:
   repository: bachikoljunior-blip/Q
@@ -160,9 +174,9 @@ remote:
       head: agent/open-world-rpg
       product_revision: f9def90a07761007e8b8fe12b5a7f9d449b06f4e
       status: complete_unverified
-      quality_run: 30688204245
+      quality_run: 30688290687
       quality_run_status: complete_verified
-      note: "Draft checkpoint with an exact tree match and local/remote gates passed. Merge and deployment remain blocked by preserved premium narrative/presentation and physical-device criteria."
+      note: "Draft product/benchmark checkpoint with an exact tree match and prior remote gates passed. Local screenshot-evidence and session-end delivery policy are being synchronized for the user-required iterative merge and Pages publication; premium, narrative, combat-AI, and physical-device gaps remain explicitly failed or unverified."
   migration_pull_request: null
   completed_migration_pull_request:
     number: 4
@@ -193,5 +207,5 @@ automation:
     migration_merge_run: "none; the product-only path filter excluded the operating migration"
     unattended_delivery_allowed: false
 
-updated_at: "2026-08-01T15:42:39+09:00"
+updated_at: "2026-08-01T17:37:09+09:00"
 reconciliation_status: complete_verified

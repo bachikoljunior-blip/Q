@@ -12,7 +12,7 @@ task_contract:
     - preserve useful concurrent PR 3 lifecycle behavior in the replacement or record why a part is superseded
     - preserve the latest user concept and update only concept-affected reference benchmarks
     - do not weaken a valid benchmark or acceptance criterion to pass the current implementation
-  recovery: "The complete_verified STARTHREAD baseline remains at ac6f57f; the replacement develops on agent/open-world-rpg until verified."
+  recovery: "The complete_verified STARTHREAD baseline remains recoverable at ac6f57f. Runnable WILDBOUND checkpoints are merged and published iteratively at each project-changing session end, while failed and unverified acceptance items remain open until their own evidence passes."
 
 requirements:
   - id: R-OPEN-WORLD

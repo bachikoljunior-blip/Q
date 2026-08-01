@@ -1,7 +1,7 @@
 schema_version: 1
 objective: Q-OPEN-WORLD-RPG
 selection_status: complete_verified
-updated_at: "2026-08-01T15:13:17+09:00"
+updated_at: "2026-08-01T15:47:03+09:00"
 
 authority:
   precedence:
@@ -205,13 +205,15 @@ element_benchmarks:
       - "The public revision identifier matches the intended release, required assets load by relative path, and development-only controls are unreachable on the public hostname."
 
 current_quality_gap:
-  assessed_revision: "local uncommitted agent/open-world-rpg tree based on 4e6076d"
+  assessed_revision: "Draft PR 6 product revision f9def90a07761007e8b8fe12b5a7f9d449b06f4e, based on main 4e6076df54b7eb4b2f55a173910e1a48ae67517b"
   assessment_status: complete_verified
   evidence:
     - "Source inspection of index.html, styles.css, src/core.js, src/world.js, src/game.js, src/main.js, src/storage.js, and src/audio.js on 2026-08-01."
     - "npm run check passed on 2026-08-01: static/license validation, 7 deterministic core/world tests, and the happy-dom small-mobile journey through telegraphed combat, two NPC motivations, three persistent regional decisions, mechanical consequences, accumulated ending, defeat/recovery, and free roam."
-    - "A real Chromium WebGL run at a 568 × 320 CSS-pixel touch viewport loaded the local Three.js renderer, generated ground texture, and portrait atlas with no console, page, or request error. Final scene metrics were 94 draw calls, 113,435 triangles, quality tier 2, and 436,480 backing-store pixels. Screenshots of world, Mira dialogue, and the Ilya decision were inspected."
+    - "A real Chromium WebGL run at a 568 × 320 CSS-pixel touch viewport loaded the local Three.js renderer, generated ground texture, and portrait atlas with no console, page, or request error. Final scene metrics were 94 draw calls, 113,435 triangles, quality tier 2, and 436,480 backing-store pixels."
+    - "A second real Chromium run at 667 × 375 CSS pixels and device scale factor 2 loaded the bundled Japanese font once, reported no console, page, or request error, and preserved world, Mira-dialogue, and grove-choice screenshots in AI_DEVELOPMENT/EVIDENCE. Direct image inspection found readable Japanese and contained dialogue/choice layouts, while also confirming that the primitive-based live 3D presentation remains below the visual benchmark."
     - "A deliberately slow SwiftShader run triggered automatic quality reduction to tier 1 and 284,000 backing-store pixels. SwiftShader timing is not physical-device performance evidence."
+    - "GitHub Quality floor run 30688204245 completed successfully for the draft head containing the exact product/font tree; this is workflow evidence, not physical-device or public-release evidence."
   gaps:
     - element: world_foundation
       severity: high
@@ -244,7 +246,7 @@ current_quality_gap:
       current: "Release payload and code budgets, 94-call/113,435-triangle observed scene, renderer pixel cap, automatic quality reduction, versioned save cleaning, autosave, offline-local asset cache, relative paths, staged revision injection, full DOM journey, and focused real WebGL asset/UI smoke pass succeed."
       gap: "No physical iPhone SE third generation or Android frame-time/memory measurement, physical touch run, offline real-browser reload, or public deployment evidence exists for this replacement."
   overall_result: failed
-  rule: "Do not describe the current game as benchmark-complete. Preserve the reference bar and repair the critical gaps before release approval."
+  rule: "Do not describe the current game as benchmark-complete. Preserve the reference bar after each iterative public checkpoint and repair the critical gaps before objective-complete release approval."
 
 next_benchmark_driven_actions:
   - priority: P1
@@ -256,7 +258,7 @@ next_benchmark_driven_actions:
   - priority: P2
     action: "Raise environment, character, animation, effects, and audio presentation without exceeding measured mobile budgets."
   - priority: P1
-    action: "Before public release, run the complete route on the physical iPhone SE third generation and verify the deployed revision through the public surface."
+    action: "Before claiming the physical-device or benchmark-complete release criteria, run the complete route on the physical iPhone SE third generation. For every iterative publication, verify the deployed revision and representative primary journey through the public surface."
 
 change_history:
   - at: "2026-08-01T15:13:17+09:00"

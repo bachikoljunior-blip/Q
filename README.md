@@ -6,7 +6,7 @@
 
 https://bachikoljunior-blip.github.io/Q/
 
-WILDBOUNDは現在、公開前の検証ブランチです。上記URLは品質基準と実機確認を通過するまで従来版STARTHREADを配信します。
+WILDBOUNDは反復公開中の開発版です。各プロジェクト変更セッションの終わりに、起動可能で検証を通過したチェックポイントを`main`へ統合し、上記URLへ公開します。プレミアム表現、物語の深さ、実機iPhone性能などの未達項目は、公開とは別に基準を維持したまま継続改善します。
 
 ## Journey
 
