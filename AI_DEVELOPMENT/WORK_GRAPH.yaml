@@ -28,7 +28,7 @@ nodes:
     priority: P2
     status: complete_unverified
     depends_on: [RPG-SYSTEMS, NARRATIVE-CONSEQUENCE]
-    note: "A start-to-ending mixed route now includes three intervening character aftermaths, a protected climax, and post-ending free roam; public r2 and physical-device routes remain unexecuted, and narrative depth remains below the preserved benchmark."
+    note: "A start-to-ending mixed route now includes three intervening character aftermaths, a protected climax, and post-ending free roam; the public r2 3D route and physical-device route remain unexecuted, and narrative depth remains below the preserved benchmark."
   - id: NARRATIVE-CONSEQUENCE
     title: "Implement original character arcs, foreshadowing/payoff, delayed consequences, and accumulated ending state"
     priority: P2
@@ -52,5 +52,5 @@ nodes:
     priority: P1
     status: blocked
     depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH, PRESENTATION-PASS]
-    note: "The r2 candidate passes local deterministic, full DOM, license, payload, budget, and deliberate-failure gates. Its remote Quality check, merge, Pages publication, and public release-ID verification are pending; the public browser's disabled WebGL plus premium presentation/narrative and physical iPhone evidence remain open."
+    note: "The r2 checkpoint passes local deterministic, full DOM, license, payload, budget, and deliberate-failure gates; PR 9 Quality run 30694693884 succeeded, main 4b91e2a is published, and public release ID plus actor/font/service-worker hashes match. The public browser's disabled WebGL plus premium presentation/narrative and physical iPhone evidence keep this node blocked."
 active_frontier: [PRESENTATION-PASS, NARRATIVE-CONSEQUENCE, QA-RELEASE]

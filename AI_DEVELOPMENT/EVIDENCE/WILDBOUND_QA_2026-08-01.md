@@ -56,7 +56,7 @@ These are automated Chromium captures using SwiftShader and touch emulation. The
 
 ## r2 character and consequence checkpoint
 
-Candidate scope: `agent/character-story-pass` based on main `1388c41`, release ID `wildbound-2026-08-01-r2`. Remote publication evidence is added only after the candidate merges and the public verifier succeeds.
+Candidate scope was `agent/character-story-pass` based on main `1388c41`, release ID `wildbound-2026-08-01-r2`. Its remote publication evidence follows the local evidence below.
 
 - `npm run check` — passed after the final font subset and actor-budget tuning: 28 required files, 1,518,486 release bytes, 170,721 JS+CSS bytes, seven deterministic core/world tests, and the complete happy-dom journey.
 - The journey executes articulated player/enemy combat, all three persistent choices, separate choice-dependent Mira and Orin consequence scenes, Ilya's barrier-cost payoff, a climax that rejects direct or test-injected bypass, the accumulated ending, free roam, autosave, and save-version-3 migration to version 4.
@@ -66,3 +66,10 @@ Candidate scope: `agent/character-story-pass` based on main `1388c41`, release I
 - Level C falsification passed by rejecting deliberate failures: F2 asset-without-state, F3 validation failure, F5 missing review record, and F6 mismatched public release ID each exited 1 and identified the intended defect.
 
 The exact r2 presentation has not been rendered in a WebGL-capable browser in this environment, and the procedural low-poly rigs do not satisfy the preserved premium authored-asset bar. Physical iPhone SE touch/performance, facial or voiced performance, obstacle-aware combat, guardian phases, multi-stage relationship quests, and public 3D journey evidence remain open.
+
+### r2 publication result
+
+- PR 9 head `d55dbc9` passed Quality floor run `30694693884` and was squash-merged to `main` as `4b91e2a`.
+- The dynamic branch-based Pages surface served `wildbound-2026-08-01-r2`; the bounded manual verifier matched `release.json` and the index meta value on attempt 1 of 36. The connected GitHub workflow reader exposes pull-request runs only, so the dynamic Pages run ID and push-triggered verifier run ID were not observable and are not invented here.
+- Public SHA-256 comparisons matched the local candidate for `src/actors.js` (`00903fec…c0e1`), `assets/fonts/q-japanese.woff` (`13f78381…7792`), and `sw.js` (`09da53df…45a3`).
+- Public cloud Chrome loaded `https://bachikoljunior-blip.github.io/Q/` with title `Q: WILDBOUND`, release ID `wildbound-2026-08-01-r2`, the main module and canvas, and no public `__Q_TEST__` API. Its GL vendor/renderer remain disabled, so the intended Japanese recovery screen is visible and the public 3D journey remains `prepared_not_executed`.

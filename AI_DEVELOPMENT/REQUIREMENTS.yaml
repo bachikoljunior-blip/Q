@@ -80,7 +80,7 @@ acceptance:
     requirement: [R-PRESENTATION, R-BENCHMARKS]
     status: failed
     result: "Actual gameplay capture shows a unified realistic mobile presentation with authored materials, scale, lighting, atmosphere, character/enemy silhouettes, transitions, effects, and layered audio; no visible default primitives or placeholder content remains."
-    evidence: "The r2 candidate replaces single-shape live actors with role-specific articulated humanoid and creature rigs plus locomotion/combat motion under a 150-call/118,048-triangle visible-scene estimate; real visual inspection of this revision and the remaining authored-material, animation, environment, and audio bar are still open"
+    evidence: "The published r2 checkpoint replaces single-shape live actors with role-specific articulated humanoid and creature rigs plus locomotion/combat motion under a 150-call/118,048-triangle visible-scene estimate; real visual inspection of this revision and the remaining authored-material, animation, environment, and audio bar are still open"
   - id: AC-TOUCH
     requirement: [R-MOBILE]
     status: prepared_not_executed
@@ -95,12 +95,12 @@ acceptance:
     requirement: [R-PERFORMANCE]
     status: prepared_not_executed
     result: "Rendering resolution, geometry, draw calls, entities, particles, audio voices, and updates are bounded; automatic quality reduction executes; physical-device 30 FPS remains required before claiming that device criterion."
-    evidence: "The r2 candidate passes the static 1,518,486-byte payload budget and estimates 150 visible draw calls/118,048 triangles at the final scene; the prior real WebGL pass observed 94 calls/113,435 triangles and auto-quality fallback. Physical-device frame-time and memory evidence remain absent"
+    evidence: "The published r2 checkpoint passes the static 1,518,486-byte payload budget and estimates 150 visible draw calls/118,048 triangles at the final scene; the prior real WebGL pass observed 94 calls/113,435 triangles and auto-quality fallback. Physical-device frame-time and memory evidence remain absent"
   - id: AC-PAGES
     requirement: [R-MOBILE, R-COMPLETE]
     status: complete_unverified
     result: "The intended revision loads from the public GitHub Pages URL with relative assets, no blocking runtime error, and a verified primary journey."
-    evidence: "Dynamic Pages run 30692798119 published main b26552e; verifier run 30692798350 and a manual check matched wildbound-2026-08-01-r1. Public cloud Chrome loaded the exact title, revision, scripts, and recovery screen but has WebGL disabled, so the public 3D primary journey remains prepared_not_executed."
+    evidence: "PR 9 passed Quality floor run 30694693884 and merged as main 4b91e2a. The manual polling verifier matched wildbound-2026-08-01-r2 on attempt 1; public actor/font/service-worker hashes match the candidate. Public cloud Chrome loaded the exact title, revision, scripts, private test boundary, and recovery screen but has WebGL disabled, so the public 3D primary journey remains prepared_not_executed."
   - id: AC-LICENSE
     requirement: [R-LICENSE, R-THREE]
     status: complete_verified
