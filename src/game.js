@@ -91,6 +91,14 @@ function poiseFor(enemy) {
   return 18;
 }
 
+function combatPhaseFor(enemy) {
+  if (!enemy.guardian && !enemy.final) return 1;
+  const ratio = Math.max(0, enemy.hp / enemy.maxHp);
+  return ratio <= .33 ? 3 : ratio <= .66 ? 2 : 1;
+}
+
+const PHASE_LABELS = Object.freeze(['', '静観', '猛攻', '決死']);
+
 const emptyCallbacks = {
   status() {}, hud() {}, toast() {}, dialogue() {}, choice() {}, ending() {}, death() {}, save() {}, discovery() {}, quality() {}, fatal() {}
 };
@@ -409,6 +417,7 @@ export class Game {
         maxPoise: poiseFor(spec),
         poise: poiseFor(spec),
         poiseRecoveryDelay: 0,
+        combatPhase: 1,
         alert: false,
         dead: false,
         locked,
@@ -607,8 +616,20 @@ export class Game {
       this.defeatEnemy(enemy);
       return;
     }
+    const nextPhase = combatPhaseFor(enemy);
+    const phaseAdvanced = nextPhase > enemy.combatPhase;
+    if (phaseAdvanced) {
+      enemy.combatPhase = nextPhase;
+      enemy.state = 'phaseShift';
+      enemy.stateTimer = enemy.final ? .62 : .52;
+      enemy.stateTotal = enemy.stateTimer;
+      enemy.attackConnected = false;
+      enemy.poise = enemy.maxPoise;
+      enemy.poiseRecoveryDelay = .8;
+      this.sound?.event?.('boss', 1.2);
+    }
     const interruptible = ['approach', 'windup', 'active'].includes(enemy.state);
-    if (interruptible && poiseBefore > 0 && enemy.poise <= 0) {
+    if (!phaseAdvanced && interruptible && poiseBefore > 0 && enemy.poise <= 0) {
       const duration = enemy.final ? .38 : enemy.guardian ? .5 : .68;
       enemy.state = 'stagger';
       enemy.stateTimer = duration;
@@ -741,6 +762,10 @@ export class Game {
           enemy.poiseRecoveryDelay = .45;
           enter(distance > 175 ? 'idle' : 'approach');
         }
+      } else if (enemy.state === 'phaseShift') {
+        enemy.alert = true;
+        enemy.stateTimer -= dt;
+        if (enemy.stateTimer <= 0) enter(distance > 175 ? 'idle' : 'approach');
       }
 
       if ((enemy.guardian || enemy.final) && enemy.alert) boss = enemy;
@@ -770,7 +795,7 @@ export class Game {
         });
       }
       const ring = enemy.mesh.getObjectByName('ring');
-      if (ring) ring.rotation.z += dt * (enemy.final ? 1.5 : .8);
+      if (ring) ring.rotation.z += dt * (enemy.final ? 1.5 : .8) * (1 + (enemy.combatPhase - 1) * .35);
       const tell = enemy.mesh.getObjectByName('attackTell');
       if (tell) {
         tell.visible = enemy.state === 'windup' || enemy.state === 'active';
@@ -780,8 +805,8 @@ export class Game {
       }
       const body = enemy.mesh.getObjectByName('body');
       if (body?.material) {
-        body.material.emissive.setHex(enemy.flash > 0 ? 0xffffff : enemy.state === 'stagger' ? 0x2c8b83 : enemy.state === 'windup' ? 0x8a3309 : enemy.state === 'active' ? 0xff7a18 : 0x000000);
-        body.material.emissiveIntensity = enemy.flash > 0 ? 1 : enemy.state === 'active' ? .9 : enemy.state === 'stagger' ? .68 : enemy.state === 'windup' ? .48 : 0;
+        body.material.emissive.setHex(enemy.flash > 0 ? 0xffffff : enemy.state === 'phaseShift' ? 0x713b8f : enemy.state === 'stagger' ? 0x2c8b83 : enemy.state === 'windup' ? 0x8a3309 : enemy.state === 'active' ? 0xff7a18 : 0x000000);
+        body.material.emissiveIntensity = enemy.flash > 0 ? 1 : enemy.state === 'active' ? .9 : enemy.state === 'phaseShift' ? .82 : enemy.state === 'stagger' ? .68 : enemy.state === 'windup' ? .48 : 0;
       }
       enemy.flash = Math.max(0, enemy.flash - dt);
     }
@@ -1204,7 +1229,12 @@ export class Game {
       region: regionAt(this.player.position.x, this.player.position.z),
       objectiveDistance: Math.round(Math.hypot(this.player.position.x - objective.x, this.player.position.z - objective.z)),
       interact: this.nearby?.name || '',
-      boss: this.activeBoss ? { name: this.activeBoss.name, health: Math.max(0, this.activeBoss.hp / this.activeBoss.maxHp) } : null,
+      boss: this.activeBoss ? {
+        name: this.activeBoss.name,
+        health: Math.max(0, this.activeBoss.hp / this.activeBoss.maxHp),
+        phase: this.activeBoss.combatPhase,
+        phaseLabel: PHASE_LABELS[this.activeBoss.combatPhase]
+      } : null,
       x: this.player.position.x,
       z: this.player.position.z,
       yaw: this.player.rotation.y,
@@ -1308,8 +1338,11 @@ export class Game {
       x: enemy.x,
       z: enemy.z,
       hp: enemy.hp,
+      maxHp: enemy.maxHp,
       poise: enemy.poise,
       maxPoise: enemy.maxPoise,
+      combatPhase: enemy.combatPhase,
+      phaseLabel: PHASE_LABELS[enemy.combatPhase],
       presentation: enemy.mesh.userData.rig?.kind || 'unknown',
       articulatedParts: (enemy.mesh.userData.rig?.legs?.length || 0) + (enemy.mesh.userData.rig?.arms?.length || 0)
     };

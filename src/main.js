@@ -219,7 +219,7 @@ function updateHud(snapshot) {
   $('#crystals').textContent = snapshot.crystals;
   $('#boss').classList.toggle('hidden', !snapshot.boss);
   if (snapshot.boss) {
-    $('#boss-name').textContent = snapshot.boss.name;
+    $('#boss-name').textContent = `${snapshot.boss.name}　${snapshot.boss.phaseLabel}`;
     $('#boss-health').style.transform = `scaleX(${snapshot.boss.health})`;
   }
   $('#interact').classList.toggle('hidden', !snapshot.interact);
@@ -437,8 +437,8 @@ if (localTest) Object.defineProperty(globalThis, '__Q_TEST__', { value: Object.f
   interact: () => game.interact(),
   choose: id => game.chooseDialogue(id),
   defeat: id => game.testDefeat(id),
-  strike: (id, amount) => game.testStrike(id, amount),
-  tick: seconds => game.testTick(seconds),
+  strike(id, amount) { const result = game.testStrike(id, amount); updateHud(game.snapshotHud()); return result; },
+  tick(seconds) { game.testTick(seconds); updateHud(game.snapshotHud()); },
   attack: () => game.attack(),
   dodge: () => game.dodge(),
   grant(resources = {}) {

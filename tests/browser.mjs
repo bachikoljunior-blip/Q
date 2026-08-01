@@ -167,6 +167,14 @@ window.document.querySelector('#upgrade-list .upgrade-card').click();
 assert.equal(globalThis.__Q_TEST__.snapshot().upgrades.vigor, 1, 'forge spends resources on persistent character growth');
 window.document.querySelector('#camp-close').click();
 
+globalThis.__Q_TEST__.teleport(-410, -237);
+globalThis.__Q_TEST__.tick(.08);
+assert.equal(globalThis.__Q_TEST__.strike('grove_warden', 90), true);
+assert.equal(globalThis.__Q_TEST__.enemy('grove_warden').combatPhase, 2, 'guardian health threshold advances its combat phase');
+assert.equal(globalThis.__Q_TEST__.enemy('grove_warden').state, 'phaseShift', 'phase advance creates a readable transition window');
+assert.equal(globalThis.__Q_TEST__.snapshot().boss.phaseLabel, '猛攻');
+assert.match(window.document.querySelector('#boss-name').textContent, /猛攻/, 'boss HUD names the active phase');
+
 assert.equal(globalThis.__Q_TEST__.defeat('grove_warden'), true, 'grove guardian can be resolved through deterministic checkpoint injection');
 assert.equal(globalThis.__Q_TEST__.snapshot().quest.step, '選択', 'the grove decision becomes the active consequence checkpoint');
 assert.equal(globalThis.__Q_TEST__.snapshot().pendingChoice, 'grove_warden');
