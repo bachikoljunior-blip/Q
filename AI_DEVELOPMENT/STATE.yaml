@@ -62,8 +62,8 @@ execution:
       - no round-complete or publication-success claim when either iPhone browser layer is missing, skipped, cancelled, or failed
   last_verified_checkpoint:
     status: complete_verified
-    revision: "Product main 078796ecbee87fb29f0ecdd3c5ae25bd807cbe12; public release ID wildbound-2026-08-01-r3"
-    result: "PR 11 preserved all 22 delivery commits, passed Quality floor run 30719619021, and squash-merged as 078796e. The branch-based Pages surface served wildbound-2026-08-01-r3; manual polling matched release.json and the index meta value on attempt 1, public core.js/game.js/font/service-worker hashes matched, and cloud Chrome verified the exact title/revision/module/test boundary plus the intentional no-WebGL fallback."
+    revision: "Repository main 819175fdf32fe6128365378e0e9438fb79af53d1; product merge 078796ecbee87fb29f0ecdd3c5ae25bd807cbe12; public release ID wildbound-2026-08-01-r3"
+    result: "PR 11 preserved all 22 delivery commits, passed Quality floor run 30719619021, and squash-merged the r3 product as 078796e. PR 12 then reconciled the verified r3 publication record as repository main 819175f without changing the served product. The branch-based Pages surface served wildbound-2026-08-01-r3; manual polling matched release.json and index meta on attempt 1, public core.js/game.js/font/service-worker hashes matched, and cloud Chrome verified the exact title/revision/module/test boundary plus the intentional no-WebGL fallback."
     evidence:
       - AI_DEVELOPMENT/EVIDENCE/WILDBOUND_QA_2026-08-01.md
       - AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml
