@@ -51,14 +51,15 @@ objective:
 execution:
   selected_rigor: STRICT
   active_work:
-    description: "Deliver exactly 20 implementation rounds that deepen Mira/Orin/Ilya into relationship-dependent staged quests and extend deterministic combat AI with interruption, guardian phases, distinct tactics, and legal movement without hiding the remaining benchmark failures."
-    status: complete_verified
+    description: "Make deterministic checks, iPhone SE 3 landscape WebKit, and iPhone SE 3 iOS Simulator Mobile Safari one indivisible implementation-round gate, repeat both browser layers on main before public acceptance, and deliver the gate without altering the published r3 game content."
+    status: complete_unverified
     allowed_scope:
       - Three.js open-world renderer, terrain, nature, destinations, player, combat, RPG progression, quests, saves, UI, audio, tests, and release metadata
       - selective carry-forward of PR 3 lifecycle and accessibility behavior that still applies
     prohibited_changes:
       - no deletion or completion claim for open PR 3
       - no unattended delivery while all four F9 gates and automatic revert are absent
+      - no round-complete or publication-success claim when either iPhone browser layer is missing, skipped, cancelled, or failed
   last_verified_checkpoint:
     status: complete_verified
     revision: "Product main 078796ecbee87fb29f0ecdd3c5ae25bd807cbe12; public release ID wildbound-2026-08-01-r3"
@@ -68,6 +69,10 @@ execution:
       - AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml
       - AI_DEVELOPMENT/REQUIREMENTS.yaml
   modified_but_unverified:
+    - status: complete_unverified
+      artifacts: "Combined per-round deterministic/WebKit/Mobile Safari PR workflow, matching main/public verifier, iPhone SE 3 WebKit visual harness, Appium/XCUITest Mobile Safari journey, interaction observability, package lock, one-round protocol/requirements/work-graph mapping, and this evidence record"
+      recovery: "Revert the eventual round-gate merge to product main 819175f and retain the existing r3 branch-based Pages publication if the gate itself causes a blocking regression."
+      limitation: "Local deterministic and harness validation can verify source and fallback behavior, but the approved WebKit baseline and real GitHub iOS Simulator session must pass remotely before merge; physical-phone-only metrics remain explicit non-claims."
     - status: complete_verified
       artifacts: "Published wildbound-2026-08-01-r3 on product main 078796e after exactly 20 implementation commits: save version 5, three three-stage character quests, relationship rewards and council epilogue, poise interruption, three guardian phases, four guardian tactics, legal terrain/house/separation movement, 601-code-point Japanese font subset, offline cache v6, and expanded automated coverage"
       recovery: "Revert product merge 078796e to product main 4b91e2a, let branch-based Pages redeploy wildbound-2026-08-01-r2, and require the public release-ID verifier plus selected-hash and fallback checks before recovery is complete."
@@ -106,7 +111,7 @@ execution:
   current_uncertainty:
     - SwiftShader frame timing does not predict physical iPhone or Android performance
     - open PR 3 remains open; applicable input lifecycle, safe-area, reduced-motion, and settings behavior has been carried forward without claiming PR 3 complete
-  exact_next_action: "Resume from published r3 by adding blocked-geometry hit rejection and geometry-aware camera/player collision, then execute the existing deterministic/DOM gates and record representative combat readability on the next WebGL-capable surface. Preserve PR 3, the physical-iPhone limitation, and the failed premium-presentation/commercial-story criteria; finish the next runnable checkpoint with Quality, main merge, Pages, F6, and state reconciliation."
+  exact_next_action: "Run the combined round gate on the remote PR, inspect and approve the WebKit baseline candidate, require WebKit and iPhone SE 3 Mobile Safari to pass on the exact head, merge, then require both main browser layers and the public release-ID journey before reconciling this state. Preserve PR 3 and all failed premium/narrative/physical-performance criteria."
 
 modules:
   activated: []
@@ -120,14 +125,14 @@ modules:
 
 floor:
   last_check:
-    status: complete_verified
-    at: "2026-08-02T06:44:31+09:00"
-    note: "The r3 candidate passed 28-file static/license validation, nine deterministic tests, the full staged-quest/combat-AI DOM route, 1,556,151-byte payload, 198,958 JS+CSS bytes, 601/601 font coverage, and the 170-call/170,000-triangle guard. Deliberate F2/F3/F5/F6 defects each exited 1 as intended. PR 11 Quality run 30719619021 succeeded, product main 078796e published r3, manual F6 matched on attempt 1, four selected public hashes matched, and Chrome confirmed the exact fallback/test boundary."
+    status: complete_unverified
+    at: "2026-08-02T10:02:50+09:00"
+    note: "The per-round workflows and executable journeys are implemented on r3. Local YAML/syntax/protocol validation, all nine deterministic tests, the full DOM journey, payload/license/budget checks, and the 21-check Chromium harness substitution passed with movement, attack, dodge, camera, pause/resume, exact save position restoration, finite soak state, and zero runtime/network errors. Approved GitHub WebKit and Mobile Safari evidence remain blocking."
   independence_level_used: C
   review_outcome: passed
-  reviewed_at: "2026-08-02T06:44:31+09:00"
-  review_scope: "The r3 candidate's exactly 20 implementation commits; save-v5 migration and forged-progression protection; all Mira/Orin/Ilya quest stages, relationship calculations and rewards, Crown/council gates, journal/ending payoff; poise recovery, interruption safety, guardian phases/HUD/specific tactics, terrain/obstacle/separation movement; local and remote Quality, public release identity and selected hashes, module/test boundary, fallback surface, font provenance/coverage, cache/release metadata, and rollback. The review preserves failed premium, narrative, blocked-hit, physical-touch, public-3D, and physical-performance criteria."
-  review_limitation: "Same-agent Level C falsification because separate agents are prohibited in this run. The environment has no WebGL-capable public browser or physical iPhone, so scene estimates and the DOM route do not prove r3 visual quality, frame pacing, simultaneous touch, blocked-geometry attacks, or the representative public 3D journey. Premium presentation and commercial story-depth acceptance remain failed."
+  reviewed_at: "2026-08-02T10:02:50+09:00"
+  review_scope: "The one-round contract; workflow dependency and failure propagation; exact iPhone SE 3/Xcode/iOS selection; WebKit baseline absence; trusted two-finger, dodge, camera, pause/resume, save/reload, soak, rendering-budget and runtime-error assertions; main repetition before public polling; rollback to main 819175f; and preservation of the r3 product tree and all existing failed acceptance criteria."
+  review_limitation: "Same-agent Level C falsification because separate agents are prohibited. Local Linux cannot execute Mobile Safari, the first approved WebKit baseline must originate from GitHub Actions, required-check branch protection remains unavailable, and simulator evidence cannot prove physical GPU/FPS, heat, memory pressure, glass touch, haptics, speakers, or audio latency."
   skips:
     - "F7 | objective-completion trigger did not fire because AC-WORLD, AC-NARRATIVE, AC-COMBAT-AI, AC-PRESENTATION, AC-PERF, and AC-PAGES are not satisfied | evidence: AI_DEVELOPMENT/REQUIREMENTS.yaml | revisit only before marking the objective complete."
     - "F9 required-check enforcement | could not be completed because gh is absent and no connected tool exposes branch protection or required-status configuration | evidence: gh command missing and tool registry has no protection/ruleset operation | revisit when capability changes."
@@ -139,9 +144,9 @@ floor:
       active: false
       mechanism: "tools/floor-gates.mjs covers code, workflows, vendor, and generated assets in Quality floor and Pages; source and asset-only deliberate failures and a prior remote good-input pass were observed. It is not a verified required merge check because branch protection is unavailable."
     f3_execution_check:
-      status: blocked
+      status: complete_unverified
       active: false
-      mechanism: "Quality floor and Pages execute protocol validation plus npm run check; deliberate local failure, local normal pass, and remote normal pass observed. It is not a verified required merge check."
+      mechanism: "The combined PR workflow executes protocol/project checks, approved-baseline WebKit, then iPhone SE 3 Mobile Safari and an aggregate success job; main repeats both before public polling. Local execution is pending and remote browser evidence is required. It is not a protected required merge check because branch protection is unavailable."
     f5_review_record_check:
       status: blocked
       active: false
@@ -170,11 +175,11 @@ remote:
   repository: bachikoljunior-blip/Q
   default_branch: main
   default_branch_revision_at_migration_completion: 4e6076df54b7eb4b2f55a173910e1a48ae67517b
-  branch: main
+  branch: agent/round-phone-gates
   branch_revision_at_session_start: 34eb98904483de4faa87ec1366e8d77f363c7879
-  branch_remote_status: complete_verified
+  branch_remote_status: prepared_not_applied
   delivered_product_branch: "agent/twenty-round-quests-combat at remote head 48fdc9b; PR 11 merged to product main 078796e"
-  candidate_delivery_status: complete_verified
+  candidate_delivery_status: complete_unverified
   pull_requests:
     - number: 3
       url: https://github.com/bachikoljunior-blip/Q/pull/3

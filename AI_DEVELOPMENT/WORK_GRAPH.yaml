@@ -47,10 +47,16 @@ nodes:
     status: complete_unverified
     depends_on: [RPG-SYSTEMS]
     note: "Lifecycle input clearing, safe-area UI, 52 px menu targets, 54 px action controls, reduced motion, settings, and small-viewport layouts are integrated; physical simultaneous touch remains unexecuted."
+  - id: ROUND-PHONE-GATE
+    title: "Require iPhone SE 3 WebKit and Mobile Safari inside every implementation round and before public acceptance"
+    priority: P1
+    status: complete_unverified
+    depends_on: [MOBILE-POLISH]
+    note: "The combined PR and main workflows, WebKit visual gate, and Mobile Safari Appium journey are implemented. All existing checks and the 21-check Chromium harness substitution pass; GitHub WebKit baseline approval and a full simulator pass remain required before merge."
   - id: QA-RELEASE
     title: "Execute deterministic, browser, performance, falsification, license, remote-check, deployment, and public-surface gates"
     priority: P1
     status: blocked
     depends_on: [COMPLETE-JOURNEY, MOBILE-POLISH, PRESENTATION-PASS]
     note: "The r3 checkpoint passes local and remote Quality, full DOM, license, payload, font-coverage, structural-budget, main merge, public release-ID, selected-hash, module/test-boundary, and fallback checks. Disabled public WebGL plus premium presentation/narrative, blocked-hit, and physical iPhone evidence keep this node blocked after iterative publication."
-active_frontier: [PRESENTATION-PASS, NARRATIVE-CONSEQUENCE, QA-RELEASE]
+active_frontier: [ROUND-PHONE-GATE, PRESENTATION-PASS, NARRATIVE-CONSEQUENCE, QA-RELEASE]
