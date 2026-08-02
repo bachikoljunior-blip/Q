@@ -1421,7 +1421,18 @@ export class Game {
       triangles: render?.triangles ?? fallback.triangles,
       source: render ? 'renderer' : 'visible-scene-estimate'
     };
-    return this.progress ? { ...this.snapshotHud(), enemyCount: this.enemies.filter(enemy => !enemy.dead && !enemy.locked).length, metrics } : { status: this.status, metrics };
+    const interaction = {
+      cameraYaw: this.cameraYaw,
+      cameraPitch: this.cameraPitch,
+      attackCooldown: this.attackCooldown,
+      attackTimer: this.attackTimer,
+      dodgeTimer: this.dodgeTimer,
+      moveX: this.input.x,
+      moveY: this.input.y
+    };
+    return this.progress
+      ? { ...this.snapshotHud(), enemyCount: this.enemies.filter(enemy => !enemy.dead && !enemy.locked).length, metrics, interaction }
+      : { status: this.status, metrics, interaction };
   }
 
   testEnemy(id) {

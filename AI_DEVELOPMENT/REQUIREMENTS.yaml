@@ -42,6 +42,9 @@ requirements:
   - id: R-MOBILE
     authority: verified_project_requirement
     statement: "Touch-first smartphone browser play remains primary, with iPhone SE third generation as the representative small device and GitHub Pages as the public target."
+  - id: R-ROUND-PHONE-GATE
+    authority: user_requirement
+    statement: "One implementation round is complete only after the exact candidate passes deterministic checks, iPhone SE third-generation landscape WebKit, and iPhone SE third-generation iOS Simulator Mobile Safari; main repeats both browser layers before public acceptance."
   - id: R-THREE
     authority: preserved_user_requirement
     statement: "Use Three.js for the three-dimensional third-person game while keeping runtime dependencies bundled locally."
@@ -86,6 +89,11 @@ acceptance:
     status: prepared_not_executed
     result: "Landscape touch controls support simultaneous movement, camera, attack, dodge, and interaction without page gestures or stuck input at the iPhone SE viewport."
     evidence: "DOM input journey and small-viewport real WebGL layout passed; physical simultaneous-touch execution on iPhone SE third generation remains prepared_not_executed"
+  - id: AC-ROUND-PHONE-GATE
+    requirement: [R-MOBILE, R-ROUND-PHONE-GATE]
+    status: complete_unverified
+    result: "A single PR workflow blocks round completion unless deterministic checks, the approved iPhone SE 3 WebKit journey, and the iPhone SE 3 Mobile Safari journey all pass; the main publication verifier repeats both browser layers."
+    evidence: "Workflow and harness source plus local deterministic validation are present on agent/round-phone-gates; the first GitHub WebKit run must create an inspectable baseline candidate, then the approved baseline and real Mobile Safari run must pass before merge."
   - id: AC-SAVE
     requirement: [R-COMPLETE]
     status: complete_unverified
