@@ -253,10 +253,10 @@ try {
   const attackPoint = { x: controls.attack.x + controls.attack.width / 2, y: controls.attack.y + controls.attack.height / 2 };
   await performActions([
     finger('move-thumb', [
-      move(padStart.x, padStart.y), down(), move(padEnd.x, padEnd.y, 250), pause(0), pause(90), pause(510), up(),
+      move(padStart.x, padStart.y), down(), move(padEnd.x, padEnd.y, 250), pause(600), up(),
     ]),
     finger('attack-thumb', [
-      pause(0), pause(0), pause(250), move(attackPoint.x, attackPoint.y), down(), pause(90), up(),
+      move(attackPoint.x, attackPoint.y), pause(250), down(), pause(600), up(),
     ]),
   ]);
   const afterMove = await execute('return window.__Q_TEST__.snapshot();');

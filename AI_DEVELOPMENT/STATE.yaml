@@ -72,7 +72,7 @@ execution:
     - status: complete_unverified
       artifacts: "Combined per-round deterministic/WebKit/Mobile Safari PR workflow, matching main/public verifier, iPhone SE 3 WebKit visual harness, Appium/XCUITest Mobile Safari journey, interaction observability, package lock, one-round protocol/requirements/work-graph mapping, and this evidence record"
       recovery: "Revert the eventual round-gate merge to product main 819175f and retain the existing r3 branch-based Pages publication if the gate itself causes a blocking regression."
-      limitation: "Local deterministic and harness validation can verify source and fallback behavior, but the approved WebKit baseline and real GitHub iOS Simulator session must pass remotely before merge; physical-phone-only metrics remain explicit non-claims."
+      limitation: "The first remote WebKit journey passed every gameplay/runtime check and its visually inspected baseline is now approved; the exact baseline-bearing head and corrected WDA-compatible Mobile Safari journey must still pass before merge. Physical-phone-only metrics remain explicit non-claims."
     - status: complete_verified
       artifacts: "Published wildbound-2026-08-01-r3 on product main 078796e after exactly 20 implementation commits: save version 5, three three-stage character quests, relationship rewards and council epilogue, poise interruption, three guardian phases, four guardian tactics, legal terrain/house/separation movement, 601-code-point Japanese font subset, offline cache v6, and expanded automated coverage"
       recovery: "Revert product merge 078796e to product main 4b91e2a, let branch-based Pages redeploy wildbound-2026-08-01-r2, and require the public release-ID verifier plus selected-hash and fallback checks before recovery is complete."
@@ -111,7 +111,7 @@ execution:
   current_uncertainty:
     - SwiftShader frame timing does not predict physical iPhone or Android performance
     - open PR 3 remains open; applicable input lifecycle, safe-area, reduced-motion, and settings behavior has been carried forward without claiming PR 3 complete
-  exact_next_action: "Run the combined round gate on the remote PR, inspect and approve the WebKit baseline candidate, require WebKit and iPhone SE 3 Mobile Safari to pass on the exact head, merge, then require both main browser layers and the public release-ID journey before reconciling this state. Preserve PR 3 and all failed premium/narrative/physical-performance criteria."
+  exact_next_action: "Require PR #13's exact baseline-bearing head to pass WebKit and the corrected WDA-compatible iPhone SE 3 Mobile Safari journey, merge, then require both main browser layers and the public release-ID journey before reconciling this state. Preserve PR 3 and all failed premium/narrative/physical-performance criteria."
 
 modules:
   activated: []
@@ -126,12 +126,12 @@ modules:
 floor:
   last_check:
     status: complete_unverified
-    at: "2026-08-02T10:02:50+09:00"
-    note: "The per-round workflows and executable journeys are implemented on r3. Local YAML/syntax/protocol validation, all nine deterministic tests, the full DOM journey, payload/license/budget checks, and the 21-check Chromium harness substitution passed with movement, attack, dodge, camera, pause/resume, exact save position restoration, finite soak state, and zero runtime/network errors. Approved GitHub WebKit and Mobile Safari evidence remain blocking."
+    at: "2026-08-02T10:28:30+09:00"
+    note: "PR #13 run 30726669829 passed continuity, protocol, nine deterministic tests, the full DOM journey and every WebKit gameplay/runtime assertion, then deliberately stopped only because no approved baseline existed. Artifact 8826590601 was visually inspected and approved as baseline SHA-256 11011853efdb03921a8210e1d9722f616681d77a411220417b078e250d3deb8b. The Mobile Safari action sequence now begins both W3C touch sources with pointerMove for Xcode 26.2 WebDriverAgent compatibility; an exact-head rerun remains blocking."
   independence_level_used: C
   review_outcome: passed
   reviewed_at: "2026-08-02T10:02:50+09:00"
-  review_scope: "The one-round contract; workflow dependency and failure propagation; exact iPhone SE 3/Xcode/iOS selection; WebKit baseline absence; trusted two-finger, dodge, camera, pause/resume, save/reload, soak, rendering-budget and runtime-error assertions; main repetition before public polling; rollback to main 819175f; and preservation of the r3 product tree and all existing failed acceptance criteria."
+  review_scope: "The one-round contract; workflow dependency and failure propagation; exact iPhone SE 3/Xcode/iOS selection; approved WebKit baseline identity; WDA-compatible trusted two-finger ordering, dodge, camera, pause/resume, save/reload, soak, rendering-budget and runtime-error assertions; main repetition before public polling; rollback to main 819175f; and preservation of the r3 product tree and all existing failed acceptance criteria."
   review_limitation: "Same-agent Level C falsification because separate agents are prohibited. Local Linux cannot execute Mobile Safari, the first approved WebKit baseline must originate from GitHub Actions, required-check branch protection remains unavailable, and simulator evidence cannot prove physical GPU/FPS, heat, memory pressure, glass touch, haptics, speakers, or audio latency."
   skips:
     - "F7 | objective-completion trigger did not fire because AC-WORLD, AC-NARRATIVE, AC-COMBAT-AI, AC-PRESENTATION, AC-PERF, and AC-PAGES are not satisfied | evidence: AI_DEVELOPMENT/REQUIREMENTS.yaml | revisit only before marking the objective complete."
@@ -146,7 +146,7 @@ floor:
     f3_execution_check:
       status: complete_unverified
       active: false
-      mechanism: "The combined PR workflow executes protocol/project checks, approved-baseline WebKit, then iPhone SE 3 Mobile Safari and an aggregate success job; main repeats both before public polling. Local execution is pending and remote browser evidence is required. It is not a protected required merge check because branch protection is unavailable."
+      mechanism: "The combined PR workflow executes protocol/project checks, approved-baseline WebKit, then iPhone SE 3 Mobile Safari and an aggregate success job; main repeats both before public polling. Run 30726669829 proved all WebKit behavior and the intended missing-baseline stop. The inspected baseline is registered and both W3C pointer sources now begin with pointerMove; the exact-head Safari pass remains required. It is not a protected required merge check because branch protection is unavailable."
     f5_review_record_check:
       status: blocked
       active: false
@@ -164,6 +164,7 @@ floor:
       - {item: F3, status: complete_verified, evidence: "2026-08-01 r3 review: FLOOR_TEST_BAD=F3 npm run check exited 1 inside the real validation path"}
       - {item: F5, status: complete_verified, evidence: "2026-08-01 r3 review: node tools/floor-gates.mjs --deliberate-failure F5 exited 1 and named both invalid independence and missing review record"}
       - {item: F6, status: complete_verified, evidence: "2026-08-01 r3 review: node tools/verify-public.mjs --deliberate-failure exited 1 on a mismatched release identifier"}
+      - {item: iPhone_WebKit_baseline, status: complete_verified, evidence: "PR #13 run 30726669829 passed all device/journey/runtime assertions and rejected only the missing baseline; artifact 8826590601 was visually inspected and promoted with SHA-256 11011853efdb03921a8210e1d9722f616681d77a411220417b078e250d3deb8b"}
     unenforced_items: [F2, F3_required_merge_gate, F5]
     unattended_allowed: false
 
