@@ -8,7 +8,10 @@
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node tests/browser.mjs",
     "validate": "node tools/validate.mjs",
-    "check": "npm run validate && npm test && npm run test:browser"
+    "check:kit": "node .kit/tools/bootstrap.mjs --target=. --check",
+    "check:protocol": "node tools/validate-protocol.mjs",
+    "check:gates": "node tools/validate-protocol.mjs --selftest",
+    "check": "npm run validate && npm run check:kit && npm run check:gates && npm run check:protocol && npm test && npm run test:browser"
   },
   "devDependencies": {
     "happy-dom": "^20.11.1"

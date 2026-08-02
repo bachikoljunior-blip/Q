@@ -68,6 +68,10 @@ execution:
       - AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml
       - AI_DEVELOPMENT/REQUIREMENTS.yaml
   modified_but_unverified:
+    - status: complete_unverified
+      artifacts: "Shared kit v0.2.0 vendored into .kit/ with the nine skills, tools/validate-protocol.mjs and tools/floor-gates.mjs rewired onto .kit/lib/state/, check:kit chained into npm run check, and the floor-gate review vocabulary settled on complete_verified (AI_DEVELOPMENT/DECISIONS.md). Tooling only: no product file, asset or release artifact was touched, so the published r3 surface is unchanged by this."
+      recovery: "Revert the kit integration merge on main. Nothing in the product tree, assets/ or release metadata depends on .kit/, so a revert restores the previous tooling with no effect on the public surface."
+      limitation: "Verified on this merged tree: check:kit intact at 34 files and observed failing when a kit file is corrupted; validate-protocol passes with 13/13 self-tests; floor-gates passes on 44 changed files and all three deliberate-failure scenarios (F2, F2_ASSET, F5) still fire; npm run check exits 0 end to end including 9/9 core tests and the DOM journey. NOT re-verified: the public Pages surface after this merge redeploys, and the 768-input floor-gate equivalence sweep, which was measured before main moved to r3."
     - status: complete_verified
       artifacts: "Published wildbound-2026-08-01-r3 on product main 078796e after exactly 20 implementation commits: save version 5, three three-stage character quests, relationship rewards and council epilogue, poise interruption, three guardian phases, four guardian tactics, legal terrain/house/separation movement, 601-code-point Japanese font subset, offline cache v6, and expanded automated coverage"
       recovery: "Revert product merge 078796e to product main 4b91e2a, let branch-based Pages redeploy wildbound-2026-08-01-r2, and require the public release-ID verifier plus selected-hash and fallback checks before recovery is complete."
@@ -124,7 +128,7 @@ floor:
     at: "2026-08-02T06:44:31+09:00"
     note: "The r3 candidate passed 28-file static/license validation, nine deterministic tests, the full staged-quest/combat-AI DOM route, 1,556,151-byte payload, 198,958 JS+CSS bytes, 601/601 font coverage, and the 170-call/170,000-triangle guard. Deliberate F2/F3/F5/F6 defects each exited 1 as intended. PR 11 Quality run 30719619021 succeeded, product main 078796e published r3, manual F6 matched on attempt 1, four selected public hashes matched, and Chrome confirmed the exact fallback/test boundary."
   independence_level_used: C
-  review_outcome: passed
+  review_outcome: complete_verified
   reviewed_at: "2026-08-02T06:44:31+09:00"
   review_scope: "The r3 candidate's exactly 20 implementation commits; save-v5 migration and forged-progression protection; all Mira/Orin/Ilya quest stages, relationship calculations and rewards, Crown/council gates, journal/ending payoff; poise recovery, interruption safety, guardian phases/HUD/specific tactics, terrain/obstacle/separation movement; local and remote Quality, public release identity and selected hashes, module/test boundary, fallback surface, font provenance/coverage, cache/release metadata, and rollback. The review preserves failed premium, narrative, blocked-hit, physical-touch, public-3D, and physical-performance criteria."
   review_limitation: "Same-agent Level C falsification because separate agents are prohibited in this run. The environment has no WebGL-capable public browser or physical iPhone, so scene estimates and the DOM route do not prove r3 visual quality, frame pacing, simultaneous touch, blocked-geometry attacks, or the representative public 3D journey. Premium presentation and commercial story-depth acceptance remain failed."
