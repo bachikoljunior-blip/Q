@@ -44,6 +44,13 @@
  * Replacing it is the job of a variance measurement — same build, N runs, describe the spread
  * — which is a different tool that must not emit a verdict, just as this one must not invent
  * its own tolerance. See "What compare-round is not" in the kit README for the seam.
+ *
+ * `game2`'s KIT-VARIANCE arm 1 has landed and names this module as its consumer. Read the
+ * mapping before substituting anything: it measured that repository's *art capture rig*, so it
+ * speaks to image-derived and renderer-counter cells and says nothing at all about bootMs or
+ * frame gap. The timing tolerances below are still unmeasured everywhere. And arm 1's own rule
+ * cuts both ways — it refused to import `survival`'s noise figure, so its figures must not be
+ * imported into the Playwright WebKit harness either.
  */
 export const DEFAULT_TOLERANCE = { relative: 0.25, absolute: 0 };
 
