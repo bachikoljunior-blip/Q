@@ -1,5 +1,9 @@
 protocol_version: "2.2"
 
+work:
+  unit: "starts on the user's instruction, ends when a blind comparison the agent launched completes"
+  units_requested: 1   # the user's dial. A number, or "continuous".
+
 project:
   id: Q
   repository: bachikoljunior-blip/Q
