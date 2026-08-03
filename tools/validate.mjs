@@ -6,7 +6,7 @@ const required = [
   'src/main.js', 'src/game.js', 'src/world.js', 'src/actors.js', 'src/core.js', 'src/storage.js', 'src/audio.js',
   'assets/textures/ground.webp', 'assets/portraits/characters.webp', 'assets/fonts/q-japanese.woff', 'assets/fonts/OFL-NotoSansJP.txt',
   'vendor/three.module.js', 'vendor/three.core.min.js', 'vendor/THREE-LICENSE.txt', 'assets-manifest.json', 'package.json',
-  'START_HERE.md', 'AI_DEVELOPMENT/PROTOCOL.md', 'AI_DEVELOPMENT/STATE.yaml',
+  'AGENTS.md', 'AI_DEVELOPMENT/STATE.yaml',
   'AI_DEVELOPMENT/REQUIREMENTS.yaml', 'AI_DEVELOPMENT/REFERENCE_BENCHMARKS.yaml', 'AI_DEVELOPMENT/WORK_GRAPH.yaml'
 ];
 const failures = [];

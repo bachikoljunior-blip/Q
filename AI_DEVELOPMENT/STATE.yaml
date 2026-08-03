@@ -257,5 +257,7 @@ automation:
     migration_merge_run: "none; r3 dynamic Pages publication completed after product main 078796e and the manual public verifier passed on attempt 1. Push-run IDs are unavailable through the connected workflow reader."
     unattended_delivery_allowed: false
 
+procedure_retired_2026_08_03: "START_HERE.md, AI_DEVELOPMENT/PROTOCOL.md, PROJECT_OPERATING_PROTOCOL.md and the nine modules moved to AI_DEVELOPMENT/ARCHIVE/PROCEDURE_2026-08-03/ by user instruction. AGENTS.md is the whole standing instruction; validate-protocol.mjs now checks the rules it states rather than the shape of the retired documents."
+
 updated_at: "2026-08-02T06:44:31+09:00"
 reconciliation_status: complete_verified

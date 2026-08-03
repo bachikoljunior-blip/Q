@@ -21,12 +21,12 @@
  */
 
 import { execFileSync } from 'node:child_process';
-import { globSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import {
-  requireFiles, requireNonEmpty, requireByteCeiling, requireContains, requireAbsent,
+  requireFiles, requireNonEmpty, requireContains,
 } from '../.kit/lib/state/files.mjs';
 import { reportGateSelfTests } from '../.kit/lib/state/selftest.mjs';
 
@@ -37,26 +37,15 @@ const argv = new Set(process.argv.slice(2));
 /* ------------------------------------------------------- this repository's vocabulary */
 
 const REQUIRED = [
-  'START_HERE.md',
   'AGENTS.md',
-  'AI_DEVELOPMENT/PROTOCOL.md',
   'AI_DEVELOPMENT/STATE.yaml',
   'AI_DEVELOPMENT/REQUIREMENTS.yaml',
   'AI_DEVELOPMENT/WORK_GRAPH.yaml',
   'AI_DEVELOPMENT/ARCHIVE/MIGRATION_CHECKPOINT_2026-08-01.md',
+  'AI_DEVELOPMENT/ARCHIVE/PROCEDURE_2026-08-03/README.md',
 ];
 
-const CEILINGS = { 'START_HERE.md': 7000 };
 
-const FLOOR_ITEMS = [
-  '0. MANDATORY FLOOR',
-  'F1 — Continuity read', 'F2 — Continuity write', 'F3 — Execution verification',
-  'F4 — Status honesty', 'F5 — Falsification', 'F6 — Real-surface',
-  'F7 — Acceptance mapping', 'F8 — Skip accounting', 'F9 — Deterministic enforcement',
-  '0.4 Unattended operation', '0.5 Enforcement state',
-];
-
-const BOOT_MARKERS = ['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'exact_next_action'];
 
 const ENFORCEMENT_FIELDS = [
   'f2_state_update_check:', 'f3_execution_check:', 'f5_review_record_check:',
@@ -71,7 +60,23 @@ const LEGACY_ARCHIVES = [
   'AI_DEVELOPMENT/ARCHIVE/ACCEPTANCE_STARTHREAD_v1.yaml',
 ];
 
-/** PROTOCOL.md §116. `passed` is deliberately not among them — see DECISIONS.md. */
+/**
+ * The rules the loader must still carry, each reduced to the phrase that cannot be dropped
+ * without losing it. Matched loosely: this defends that the rule is stated, not its wording.
+ */
+const GOALS = [
+  [/Every element reads `satisfied`/, 'the goal'],
+  [/largest grouping that can still be compared/i, 'how an element is cut'],
+  [/Too few is a defect/i, 'the set must cover the concept'],
+  [/Fit to this concept/i, 'the four selection axes'],
+  [/cannot be worked out at\s+all/i, 'blind means unworkable-out'],
+  [/only failing answer/i, 'the verdict rule'],
+  [/work out a way to compare it/i, '`not measured` is not the end'],
+  [/never build a reference work's content into the game/i, 'no reference content in the game'],
+  [/units_requested/, 'the unit of work'],
+];
+
+/** `passed` is deliberately not among them — see DECISIONS.md. */
 const STATUSES = new Set([
   'complete_verified', 'complete_unverified', 'prepared_not_applied', 'prepared_not_executed',
   'blocked', 'inconclusive', 'failed', 'rejected', 'rolled_back', 'superseded',
@@ -94,31 +99,15 @@ export function validate({ root = ROOT, read } = {}) {
 
   failures.push(...requireFiles(root, REQUIRED));
   failures.push(...requireNonEmpty(root, REQUIRED));
-  failures.push(...requireByteCeiling(root, CEILINGS));
-
-  const start = readFile('START_HERE.md');
-  const protocol = readFile('AI_DEVELOPMENT/PROTOCOL.md');
   const state = readFile('AI_DEVELOPMENT/STATE.yaml');
   const loader = readFile('AGENTS.md');
 
-  // A floor marker may be recorded in either the boot document or the state file.
-  for (const item of BOOT_MARKERS) {
-    if (!start.includes(item) && !state.includes(item)) failures.push(`boot/state missing ${item}`);
+  // The loader states the goal and the rules that reach it. Nothing here checks method.
+  for (const [pattern, name] of GOALS) {
+    if (!pattern.test(loader)) failures.push(`AGENTS.md no longer states: ${name}`);
   }
-  if (!loader.includes('START_HERE.md') || !loader.includes('floor check line')) {
-    failures.push('AGENTS.md loader is incomplete');
-  }
-  for (const item of FLOOR_ITEMS) {
-    if (!protocol.includes(item)) failures.push(`protocol floor missing ${item}`);
-  }
-  if (protocol.includes('M.1 Minimal infrastructure bootstrap')) {
-    failures.push('module library duplicated inside PROTOCOL.md');
-  }
-
-  const modules = globSync('AI_DEVELOPMENT/MODULES/*.md', { cwd: root }).sort();
-  if (modules.length !== 9) failures.push(`expected 9 module files, found ${modules.length}`);
-  for (const file of modules) {
-    if (!/^# M\.[1-9] /m.test(readFile(file))) failures.push(`invalid module heading ${file}`);
+  if (/^\s*Apply the mandatory floor/m.test(loader) || loader.includes('START_HERE.md')) {
+    failures.push('AGENTS.md still points at the retired procedure documents');
   }
 
   for (const field of ENFORCEMENT_FIELDS) {
@@ -204,10 +193,6 @@ export function selfTestCases({ root = ROOT } = {}) {
   return [
     { name: 'control: this repository\'s own state passes', shouldFire: false, evaluate: () => validate({ root }) },
     {
-      name: 'a floor item deleted from PROTOCOL.md',
-      evaluate: () => validate(withEdit('AI_DEVELOPMENT/PROTOCOL.md', (t) => drop(t, 'F5 — Falsification'))),
-    },
-    {
       name: 'the enforcement block missing a field',
       evaluate: () => validate(withEdit('AI_DEVELOPMENT/STATE.yaml', (t) => drop(t, 'f6_public_revision_check:'))),
     },
@@ -226,30 +211,21 @@ export function selfTestCases({ root = ROOT } = {}) {
         (t) => t.replace(/exact_next_action:\s*"[^"]+"/, 'exact_next_action: ""'))),
     },
     {
-      name: 'the loader losing its pointer to START_HERE.md',
-      evaluate: () => validate(withEdit('AGENTS.md', (t) => drop(t, 'START_HERE.md'))),
-    },
-    {
       name: 'the state losing the verified main revision',
       evaluate: () => validate(withEdit('AI_DEVELOPMENT/STATE.yaml',
         (t) => t.replace(/[0-9a-f]{40}/g, '0'.repeat(40)))),
     },
     {
-      name: 'the module library copied back into PROTOCOL.md',
-      evaluate: () => validate(withEdit('AI_DEVELOPMENT/PROTOCOL.md',
-        (t) => `${t}\nM.1 Minimal infrastructure bootstrap\n`)),
+      name: 'the loader losing a rule it must state',
+      evaluate: () => validate(withEdit('AGENTS.md', (t) => drop(t, 'only failing answer'))),
     },
     {
-      name: 'START_HERE.md grown past its ceiling',
-      evaluate: () => requireByteCeiling(root, { 'START_HERE.md': 10 }),
+      name: 'the loader pointing back at the retired procedure',
+      evaluate: () => validate(withEdit('AGENTS.md', (t) => `${t}\nread START_HERE.md\n`)),
     },
     {
       name: 'a required canonical file missing',
       evaluate: () => requireFiles(root, ['AI_DEVELOPMENT/NO_SUCH_FILE.yaml']),
-    },
-    {
-      name: 'a document that must not contain a marker containing it',
-      evaluate: () => requireAbsent(root, 'AI_DEVELOPMENT/PROTOCOL.md', ['0. MANDATORY FLOOR']),
     },
     {
       name: 'a required marker absent from a document',
@@ -271,6 +247,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     for (const failure of failures) console.error(`FAIL ${failure}`);
     process.exit(1);
   }
-  const modules = globSync('AI_DEVELOPMENT/MODULES/*.md', { cwd: ROOT });
-  console.log(`Protocol validation passed: ${REQUIRED.length} canonical files, ${modules.length} on-demand modules, full floor markers, enforcement block, F4 statuses, archives, loader, and fresh-run resume pointer.`);
+  console.log(`Validation passed: ${REQUIRED.length} canonical files, ${GOALS.length} loader rules, enforcement block, status vocabulary, archives, and a fresh-run resume pointer.`);
 }

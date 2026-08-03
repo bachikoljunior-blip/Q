@@ -10,7 +10,7 @@
  * repository's own constants.
  *
  * The accepted outcome here is now `complete_verified`. `passed` was never in the ten-value
- * status vocabulary this repository's own protocol defines (`AI_DEVELOPMENT/PROTOCOL.md`
+ * status vocabulary this repository's loader defines (`AGENTS.md`
  * §116) — the word does not appear anywhere in that document — so the gate was requiring a
  * value the protocol it enforces does not contain. See `AI_DEVELOPMENT/DECISIONS.md`.
  *
