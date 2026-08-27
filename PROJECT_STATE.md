@@ -30,7 +30,7 @@
 ## Selected experiment
 **EXP002 — つづきから / AI引き継ぎパック**
 
-長いAIプロジェクトの目標、現在地、決定、次の行動を5つのMarkdownへ変換し、別セッション・別AIへ持ち運ぶ日本語スマホ向けツール。
+長いAIプロジェクトの目標、現在地、決定、次の行動を5つのファイルへ変換し、別セッション・別AIへ持ち運ぶ日本語スマホ向けツール。
 
 選定理由:
 - ユーザー自身の実際の問題を解く
@@ -47,10 +47,15 @@ Qのmainへ以下のMVPを追加:
 - SEO (`robots.txt`, `sitemap.xml`)
 - 匿名イベント計測
 - 5ファイル生成、コピー、保存、JSON復元、AI抽出プロンプト
+- `.github/workflows/smoke.yml` によるpushごとの自動検査
 
-## Target URL
-- `https://bachikoljunior-blip.github.io/Q/`
-- `https://bachikoljunior-blip.github.io/Q/stats.html`
+## Deployment / validation status
+- GitHub Pagesのbuild・deployは成功
+- 公開URL: `https://bachikoljunior-blip.github.io/Q/`
+- 検証数字: `https://bachikoljunior-blip.github.io/Q/stats.html`
+- スマホ幅のブラウザ試験で、サンプル入力→5ファイル生成→タブ切替を確認
+- 初回生成時に1つ目のファイルが空になる不具合を発見し、hotfix後に再試験済み
+- GitHub ActionsでJavaScript構文、静的ファイル、ローカルHTTP、匿名カウンター接続がすべて成功
 
 ## Business hypothesis
 無料手動版で利用を集め、完全自動抽出、矛盾検出、版管理、GitHub同期をPro（月額¥980仮説）にする。売上20万円には約205人が必要で、手取り20万円にはさらに多い有料会員が必要。
@@ -76,10 +81,10 @@ EXP001（高単価AI個別サービス）は、人との個別対応が必須条
 `bachikoljunior-blip/youtube` は自動運転の副戦線。主戦略の開発時間を奪わせない。将来は自社ツールへの集客導線として再利用可能。
 
 ## Immediate next action
-1. GitHub Pagesの公開を確認する。
-2. iPhoneでフォーム入力→生成→統合保存→JSON復元を実機確認する。
-3. `stats.html` の開始値を確認する。
-4. 公開後にツール説明コンテンツを作成し、14日間の流入/利用を測る。
+1. iPhoneで公開URLを開き、サンプル→生成→統合保存を1回実行する。
+2. JSONバックアップを保存し、フォームを消してから復元する。
+3. `stats.html` でイベントが増えたことを確認する。
+4. 実機で問題がなければ、検索向け説明ページと短いデモを公開し、14日間の流入→生成→保存→自動版希望を測る。
 
 ## Resume instruction
 別セッションのAIへ: `START_HERE.md` → このファイル → `DECISIONS.md` → `experiments/EXP002_TSUZUKIKARA.md` の順で読む。同じ診断を再質問せず、Immediate next actionから続ける。終了時にこのファイルを更新する。
