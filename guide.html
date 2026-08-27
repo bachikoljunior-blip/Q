@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="ChatGPT・Claude・Geminiの長い会話を別セッションへ引き継ぐ方法。全文保存とプロジェクト状態の違い、5ファイルの使い方を説明します。">
+  <meta property="og:title" content="AIの長い会話を別セッションへ引き継ぐ方法">
+  <meta property="og:description" content="全文ではなく、目標・決定・次の一手を持ち運ぶ。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://bachikoljunior-blip.github.io/Q/og.svg">
+  <title>AIの長い会話を別セッションへ引き継ぐ方法 — つづきから</title>
+  <link rel="canonical" href="https://bachikoljunior-blip.github.io/Q/guide.html">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .guide-main{width:min(860px,calc(100% - 32px));margin:55px auto}.guide-hero{padding:28px 0 35px}.guide-hero h1{font-size:clamp(2.1rem,7vw,4rem);line-height:1.12;letter-spacing:-.05em;margin:10px 0 18px}.lead{color:var(--muted);font-size:1.1rem}.toc,.article-section,.callout{margin:22px 0;padding:25px;background:var(--surface);border:1px solid var(--border);border-radius:18px}.toc ol{margin-bottom:0}.article-section h2{margin-top:0;font-size:1.75rem;letter-spacing:-.03em}.article-section h3{margin-top:26px}.article-section p,.article-section li{color:#475569}.callout{background:var(--accent-soft);border-color:rgba(37,99,235,.3)}.callout h2{margin-top:0}.matrix{width:100%;border-collapse:collapse;margin:18px 0}.matrix th,.matrix td{padding:12px 10px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}.matrix th{font-size:.82rem;color:var(--muted)}.file-list code{white-space:nowrap}.guide-actions{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}@media(prefers-color-scheme:dark){.article-section p,.article-section li{color:#cbd5e1}}@media(max-width:600px){.matrix{font-size:.86rem}.matrix th,.matrix td{padding:9px 6px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">続</span><span>つづきから</span></a>
+    <nav class="header-actions"><a class="ghost small" href="index.html#builder">パックを作る</a><a class="ghost small" href="stats.html">検証数字</a></nav>
+  </header>
+  <main class="guide-main">
+    <section class="guide-hero">
+      <div class="eyebrow">PORTABLE AI CONTEXT GUIDE</div>
+      <h1>AIの長い会話を、<br>別セッションへ引き継ぐ方法</h1>
+      <p class="lead">大事なのは会話を全部保存することではなく、次のAIが迷わず行動できる「プロジェクト状態」を残すことです。</p>
+      <div class="guide-actions"><a class="primary" href="index.html#builder">無料で引き継ぎパックを作る</a><a class="ghost" href="#five-files">5ファイルを見る</a></div>
+    </section>
+
+    <nav class="toc" aria-label="目次">
+      <strong>目次</strong>
+      <ol>
+        <li><a href="#why">なぜ長い会話だけでは引き継げないのか</a></li>
+        <li><a href="#choice">内蔵プロジェクト・全文保存・状態パックの使い分け</a></li>
+        <li><a href="#five-files">5ファイルの役割</a></li>
+        <li><a href="#steps">実際の引き継ぎ手順</a></li>
+        <li><a href="#update">続けるほど壊れにくくする運用</a></li>
+      </ol>
+    </nav>
+
+    <section class="article-section" id="why">
+      <h2>なぜ長い会話だけでは引き継げないのか</h2>
+      <p>会話ログには、採用した案、捨てた案、雑談、途中の誤解、古くなった前提が一緒に残ります。全文を次のAIへ渡しても、「いま何が正本か」「次に何をすべきか」をもう一度読み解かせることになります。</p>
+      <p>引き継ぎに必要なのは、少なくとも次の5点です。</p>
+      <ul>
+        <li>最終目標</li>
+        <li>現在地と確認済みの事実</li>
+        <li>絶対に守る制約</li>
+        <li>決定事項と、捨てた案の理由</li>
+        <li>会話履歴がなくても実行できる次の一手</li>
+      </ul>
+    </section>
+
+    <section class="article-section" id="choice">
+      <h2>3つの方法を使い分ける</h2>
+      <table class="matrix">
+        <thead><tr><th>方法</th><th>向いている場面</th><th>弱点</th></tr></thead>
+        <tbody>
+          <tr><td>AI内蔵のプロジェクト</td><td>同じAIサービス内で継続する</td><td>別AI、別アカウント、GitHubへ移すときは持ち運びが必要</td></tr>
+          <tr><td>会話の全文保存</td><td>監査、検索、原文確認、バックアップ</td><td>長いほど現在地の再発見に時間がかかる</td></tr>
+          <tr><td>状態パック</td><td>別セッション、別AI、別の担当へ即座に渡す</td><td>作業後に現在地を更新する習慣が必要</td></tr>
+        </tbody>
+      </table>
+      <p>どれか一つに統一する必要はありません。内蔵プロジェクトを普段使いし、全文をバックアップし、節目で状態パックを更新する組み合わせが安全です。</p>
+    </section>
+
+    <section class="article-section file-list" id="five-files">
+      <h2>つづきからが作る5ファイル</h2>
+      <h3><code>START_HERE.md</code></h3><p>読む順番と運用ルール。新しいAIが最初に開く入口です。</p>
+      <h3><code>PROJECT_STATE.md</code></h3><p>目標、現在地、制約、完了、未解決、次の行動。最も頻繁に更新します。</p>
+      <h3><code>DECISIONS.md</code></h3><p>何を決め、なぜそうしたか。古い案へ理由なく戻ることを防ぎます。</p>
+      <h3><code>CONTEXT.md</code></h3><p>圧縮すると失われる原文、会話、URL。必要なときだけ参照します。</p>
+      <h3><code>RESUME_PROMPT.txt</code></h3><p>次のAIへ貼る短い再開指示。ファイルを読む順番と行動ルールを固定します。</p>
+    </section>
+
+    <section class="article-section" id="steps">
+      <h2>引き継ぎの手順</h2>
+      <ol>
+        <li>ツールへ目標・現在地・決定・次の行動を入力する。</li>
+        <li>生成後、古い前提や誇張がないか確認する。</li>
+        <li>統合Markdownを保存するか、各ファイルを個別に保存する。</li>
+        <li>次のAIへファイルを添付し、<code>RESUME_PROMPT.txt</code>を貼る。</li>
+        <li>AIが読み取った現在地を2〜4文で確認させ、そのまま次の一手を実行させる。</li>
+      </ol>
+      <div class="callout"><strong>長い会話を手で整理したくない場合</strong><p>ツール内の「元の会話・メモも残す」を開き、抽出用プロンプトをコピーしてください。普段使っているAIが返したJSONをフォームへ取り込めます。</p></div>
+    </section>
+
+    <section class="article-section" id="update">
+      <h2>続けるほど壊れにくくする運用</h2>
+      <p>毎回すべてを書き直す必要はありません。作業終了時に、次の3点だけ更新します。</p>
+      <ol>
+        <li>何が完了し、何が分かったか</li>
+        <li>現在の仮説や数字がどう変わったか</li>
+        <li>次に実行する具体的な一手</li>
+      </ol>
+      <p>方針を変えたときだけ、<code>DECISIONS.md</code>へ理由と見直し条件を追記します。失敗した案も消さないことで、別セッションが同じ失敗を繰り返しにくくなります。</p>
+    </section>
+
+    <section class="callout">
+      <h2>今のプロジェクトを3分で持ち運ぶ</h2>
+      <p>登録は不要です。入力本文はブラウザ内で処理されます。</p>
+      <a class="primary" href="index.html#builder">引き継ぎパックを作る</a>
+    </section>
+  </main>
+  <footer><p>つづきから — portable AI project handoff</p><p><a href="index.html">ツール</a> · <a href="privacy.html">プライバシー</a> · <a href="https://github.com/bachikoljunior-blip/Q">GitHub</a></p></footer>
+</body>
+</html>
