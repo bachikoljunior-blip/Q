@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="長いAIプロジェクトを5つのMarkdownに整理し、ChatGPT・Claude・Gemini・Codexへ持ち運べる無料ツール。登録不要、入力内容は端末内だけで処理します。">
+  <meta property="og:title" content="つづきから — AI引き継ぎパック">
+  <meta property="og:description" content="AIに同じ説明を、もうしない。プロジェクトの現在地をMarkdownで持ち運ぶ。">
+  <meta property="og:type" content="website">
+  <title>つづきから — AI引き継ぎパック</title>
+  <link rel="canonical" href="https://bachikoljunior-blip.github.io/Q/">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"つづきから","applicationCategory":"ProductivityApplication","operatingSystem":"Any","isAccessibleForFree":true,"url":"https://bachikoljunior-blip.github.io/Q/","description":"AIプロジェクトをMarkdownで別セッション・別AIへ引き継ぐ無料ツール"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#builder">入力フォームへ</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="つづきから ホーム">
+      <span class="brand-mark">続</span>
+      <span>つづきから</span>
+    </a>
+    <nav class="header-actions" aria-label="ページ操作">
+      <button class="ghost small" id="loadSampleBtn" type="button">サンプル</button>
+      <button class="ghost small" id="installBtn" type="button" hidden>ホーム画面に追加</button>
+      <a class="ghost small" href="stats.html">検証数字</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">登録不要・スマホ対応・端末内保存</div>
+      <h1>AIに同じ説明を、<br><span>もうしない。</span></h1>
+      <p class="hero-copy">長い会話や別セッションでも再開できるよう、プロジェクトの目標・現在地・決定・次の一手を5つのファイルに整理します。</p>
+      <div class="compatibility" aria-label="対応AI">
+        <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Codex</span><span>その他のAI</span>
+      </div>
+      <a class="primary hero-cta" href="#builder">無料で引き継ぎパックを作る</a>
+      <p class="privacy-note">入力内容は外部へ送信しません。ブラウザ内だけで処理します。</p>
+    </section>
+
+    <section class="three-steps" aria-labelledby="how-title">
+      <h2 id="how-title">3分で、次のAIが迷わない状態へ</h2>
+      <div class="step-grid">
+        <article><b>1</b><h3>現在地を書く</h3><p>目標、制約、決定、次の行動を短く入力。</p></article>
+        <article><b>2</b><h3>パックを生成</h3><p>AIが読みやすいMarkdownに自動整形。</p></article>
+        <article><b>3</b><h3>次の会話へ渡す</h3><p>再開プロンプトとファイルをコピー・保存。</p></article>
+      </div>
+    </section>
+
+    <section class="builder-shell" id="builder" aria-labelledby="builder-title">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">HANDOFF PACK BUILDER</div>
+          <h2 id="builder-title">プロジェクトの現在地を入力</h2>
+        </div>
+        <div class="save-state" id="saveState" aria-live="polite">端末に自動保存</div>
+      </div>
+
+      <form id="projectForm" novalidate>
+        <div class="form-grid two">
+          <label>
+            <span>プロジェクト名 <em>必須</em></span>
+            <input id="projectName" name="projectName" required maxlength="100" placeholder="例：不労月収20万円プロジェクト">
+          </label>
+          <label>
+            <span>現在のフェーズ</span>
+            <input id="phase" name="phase" maxlength="100" placeholder="例：最初のMVPを検証中">
+          </label>
+        </div>
+
+        <label>
+          <span>最終目標 <em>必須</em></span>
+          <textarea id="goal" name="goal" required rows="3" placeholder="何を、どの状態まで達成したいか"></textarea>
+        </label>
+
+        <label>
+          <span>現在地・分かっていること</span>
+          <textarea id="currentState" name="currentState" rows="5" placeholder="進捗、数字、使える資源、いま試していること"></textarea>
+        </label>
+
+        <div class="form-grid two">
+          <label>
+            <span>絶対に守る条件</span>
+            <textarea id="constraints" name="constraints" rows="5" placeholder="1行に1つ。例：個別営業をしない"></textarea>
+          </label>
+          <label>
+            <span>決定事項</span>
+            <textarea id="decisions" name="decisions" rows="5" placeholder="1行に1つ。例：YouTubeは副戦線として維持する"></textarea>
+          </label>
+        </div>
+
+        <div class="form-grid two">
+          <label>
+            <span>完了・試して分かったこと</span>
+            <textarea id="completed" name="completed" rows="5" placeholder="やったこと、失敗、学び"></textarea>
+          </label>
+          <label>
+            <span>未解決・確認が必要なこと</span>
+            <textarea id="openQuestions" name="openQuestions" rows="5" placeholder="次のAIが勝手に断定してはいけない点"></textarea>
+          </label>
+        </div>
+
+        <label>
+          <span>次にやること <em>重要</em></span>
+          <textarea id="nextAction" name="nextAction" rows="3" placeholder="会話履歴がなくても、一意に再開できる行動"></textarea>
+        </label>
+
+        <details class="advanced">
+          <summary>元の会話・メモも残す</summary>
+          <label>
+            <span>生のコンテキスト</span>
+            <textarea id="rawContext" name="rawContext" rows="8" placeholder="長い会話、メモ、参考URLなど。ここはそのまま CONTEXT.md に入ります。"></textarea>
+          </label>
+          <div class="ai-extract-box">
+            <div>
+              <strong>長い会話から自動で項目を抜きたい場合</strong>
+              <p>抽出用プロンプトをコピーして普段のAIへ送り、返ってきたJSONを取り込めます。APIキーは不要です。</p>
+            </div>
+            <button class="secondary" id="copyExtractPromptBtn" type="button">抽出用プロンプトをコピー</button>
+          </div>
+          <label>
+            <span>AIが返したJSONを取り込む</span>
+            <textarea id="aiJson" rows="5" placeholder='{"projectName":"...","goal":"..."}'></textarea>
+          </label>
+          <button class="ghost" id="importAiJsonBtn" type="button">JSONをフォームへ反映</button>
+        </details>
+
+        <div class="form-actions">
+          <button class="primary" type="submit">引き継ぎパックを生成</button>
+          <button class="ghost" id="exportBackupBtn" type="button">入力をJSON保存</button>
+          <label class="ghost file-button" for="importBackupInput">JSONを復元</label>
+          <input id="importBackupInput" type="file" accept="application/json,.json" hidden>
+          <button class="danger-link" id="clearBtn" type="button">入力を消す</button>
+        </div>
+        <p class="form-error" id="formError" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <section class="output-shell" id="output" hidden aria-labelledby="output-title">
+      <div class="section-heading output-heading">
+        <div>
+          <div class="eyebrow">READY TO HAND OFF</div>
+          <h2 id="output-title">引き継ぎパックができました</h2>
+        </div>
+        <div class="output-actions">
+          <button class="secondary" id="copyActiveBtn" type="button">表示中をコピー</button>
+          <button class="secondary" id="downloadActiveBtn" type="button">表示中を保存</button>
+          <button class="primary" id="downloadBundleBtn" type="button">全部まとめて保存</button>
+        </div>
+      </div>
+
+      <div class="file-layout">
+        <div class="file-tabs" id="fileTabs" role="tablist" aria-label="生成ファイル"></div>
+        <div class="editor-wrap">
+          <div class="editor-bar"><span id="activeFilename">START_HERE.md</span><span>編集できます</span></div>
+          <textarea id="fileEditor" spellcheck="false" aria-label="生成ファイルの内容"></textarea>
+        </div>
+      </div>
+
+      <div class="handoff-tip">
+        <strong>最短の再開方法</strong>
+        <p><code>RESUME_PROMPT.txt</code> を次のAIへ貼り、生成したMarkdownを添付してください。</p>
+      </div>
+    </section>
+
+    <section class="pro-test" aria-labelledby="pro-title">
+      <div>
+        <div class="eyebrow">NEXT EXPERIMENT</div>
+        <h2 id="pro-title">会話を貼るだけの完全自動版、必要ですか？</h2>
+        <p>将来版では、長い会話の読込、重複・矛盾の検出、GitHub同期、更新履歴まで自動化する予定です。購入ではなく、需要を測る匿名ボタンです。</p>
+      </div>
+      <button class="primary" id="proInterestBtn" type="button">自動版が欲しい</button>
+      <p class="interest-result" id="interestResult" aria-live="polite"></p>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">よくある質問</h2>
+      <details><summary>入力内容はサーバーへ送られますか？</summary><p>送りません。フォーム内容と生成結果はブラウザ内で処理され、下書きは端末のlocalStorageに保存されます。利用状況の検証として「ページ表示・生成・保存・自動版希望」の匿名イベント数だけ外部カウンターへ送ります。本文は含みません。</p></details>
+      <details><summary>どのAIで使えますか？</summary><p>Markdownやテキストを読めるAIなら利用できます。ChatGPT、Claude、Gemini、Codexなど、特定サービスへ依存しません。</p></details>
+      <details><summary>完全自動で会話を要約できますか？</summary><p>この無料MVPは構造化と書き出しを自動化します。会話からの抽出は、普段使っているAIへ抽出プロンプトを送る方式です。API接続による完全自動抽出は、需要が確認できた場合に追加します。</p></details>
+      <details><summary>生成内容は正しいですか？</summary><p>入力内容を整形するツールなので、事実確認は行いません。保存前に必ず確認・編集してください。</p></details>
+    </section>
+  </main>
+
+  <footer>
+    <p>つづきから — portable AI project handoff</p>
+    <p><a href="privacy.html">プライバシー</a> · <a href="https://github.com/bachikoljunior-blip/Q">GitHub</a></p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

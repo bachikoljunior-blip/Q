@@ -1,0 +1,18 @@
+{
+  "name": "つづきから — AI引き継ぎパック",
+  "short_name": "つづきから",
+  "description": "AIプロジェクトの目標・現在地・決定・次の一手をMarkdownで持ち運ぶ",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8fb",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

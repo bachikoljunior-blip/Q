@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="robots" content="noindex">
+  <title>検証数字 — つづきから</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .stats-main{width:min(900px,calc(100% - 32px));margin:60px auto}.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:18px}.stat strong{display:block;font-size:2rem}.stat span{color:var(--muted)}.criteria{margin-top:30px;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:18px}.status{padding:10px 12px;margin:18px 0;background:var(--surface-2);border-radius:10px;color:var(--muted)}@media(max-width:650px){.stats-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">続</span><span>つづきから</span></a><a class="ghost small" href="index.html">ツールへ戻る</a></header>
+  <main class="stats-main">
+    <div class="eyebrow">PUBLIC EXPERIMENT DASHBOARD</div>
+    <h1>検証数字</h1>
+    <p>第三者サービスの公開カウンターを使った簡易指標です。個人情報や入力本文は記録しません。不正操作も可能なため、意思決定の補助としてだけ使います。</p>
+    <div class="status" id="status">数字を取得中…</div>
+    <div class="stats-grid" id="statsGrid"></div>
+    <section class="criteria">
+      <h2>EXP002 判定ルール</h2>
+      <ul>
+        <li>14日以内にユニーク端末30、初回生成10、初回保存5を目指す。</li>
+        <li>自動版希望が3未満なら、有料機能仮説を見直す。</li>
+        <li>30日以内にユニーク端末100へ届かず、流入改善の兆候もなければ主戦略から降格する。</li>
+        <li>数字が出ても、月20万円への単価×人数が成立しない場合は拡大しない。</li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    const metrics = [
+      ['pageview','ページ表示'],['unique-visitor','ユニーク端末'],['generate','生成回数'],
+      ['first-generate','初回生成端末'],['download-bundle','一括保存'],['first-download','初回保存端末'],
+      ['copy-extract-prompt','AI抽出プロンプト'],['ai-json-import','AI結果取込'],['pro-interest','自動版希望']
+    ];
+    const ns='bachikoljunior-blip.github.io', action='tsuzukikara';
+    async function readMetric(key){
+      const url=`https://counterapi.com/api/${ns}/${action}/${encodeURIComponent(key)}?readOnly=true`;
+      const response=await fetch(url); if(!response.ok) throw new Error('fetch failed');
+      const data=await response.json(); return Number(data.value||0);
+    }
+    Promise.all(metrics.map(async ([key,label])=>({key,label,value:await readMetric(key)})))
+      .then(rows=>{
+        document.getElementById('statsGrid').innerHTML=rows.map(row=>`<article class="stat"><strong>${row.value.toLocaleString('ja-JP')}</strong><span>${row.label}</span></article>`).join('');
+        document.getElementById('status').textContent=`最終取得: ${new Date().toLocaleString('ja-JP')}`;
+      })
+      .catch(()=>{document.getElementById('status').textContent='カウンターを取得できませんでした。時間を置いて再読み込みしてください。';});
+  </script>
+</body>
+</html>
