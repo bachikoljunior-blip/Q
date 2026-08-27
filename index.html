@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#111827">
-  <meta name="description" content="長いAIプロジェクトを5つのMarkdownに整理し、ChatGPT・Claude・Gemini・Codexへ持ち運べる無料ツール。登録不要、入力内容は端末内だけで処理します。">
+  <meta name="description" content="長いAIプロジェクトを5つのファイルに整理し、ChatGPT・Claude・Gemini・Codexへ持ち運べる無料ツール。登録不要、入力内容は端末内だけで処理します。">
   <meta property="og:title" content="つづきから — AI引き継ぎパック">
   <meta property="og:description" content="AIに同じ説明を、もうしない。プロジェクトの現在地をMarkdownで持ち運ぶ。">
   <meta property="og:type" content="website">
@@ -192,5 +192,26 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="app.js" defer></script>
+  <script>
+    // EXP002 hotfix: generatedFiles is replaced on submit, so the first tab must not save the old blank editor.
+    window.addEventListener('DOMContentLoaded', () => {
+      let loadedFilename = null;
+      switchFile = function(filename) {
+        if (loadedFilename && generatedFiles[loadedFilename] !== undefined) {
+          generatedFiles[loadedFilename] = fileEditor.value;
+        }
+        loadedFilename = filename;
+        activeFile = filename;
+        activeFilename.textContent = filename;
+        fileEditor.value = generatedFiles[filename] || '';
+        fileTabs.querySelectorAll('.file-tab').forEach(button => {
+          const selected = button.dataset.file === filename;
+          button.setAttribute('aria-selected', selected ? 'true' : 'false');
+          button.tabIndex = selected ? 0 : -1;
+        });
+      };
+      form.addEventListener('submit', () => { loadedFilename = null; }, true);
+    }, { once: true });
+  </script>
 </body>
 </html>
