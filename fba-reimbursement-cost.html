@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <meta name="description" content="Amazon.co.jpのFBA補てん額が仕入原価を下回っていないか確認する方法。補てんレポートと原価表をCSVで照合します。">
+  <title>FBA補てん額が仕入原価より低いときの確認方法</title>
+  <link rel="canonical" href="https://bachikoljunior-blip.github.io/Q/fba-reimbursement-cost.html">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">¥</span><span>FBA補てん原価監査</span></a>
+    <a class="primary small" href="index.html#audit">無料で照合</a>
+  </header>
+  <main class="guide-main">
+    <div class="eyebrow">FBA REIMBURSEMENT COST</div>
+    <h1>FBA補てん額が<br>仕入原価より低いとき</h1>
+
+    <p>Amazonは2025年、注文前にAmazonの管理下で紛失・破損したFBA在庫について、製造原価または仕入原価を基準に補てんする方針を案内しました。Amazonが推定した原価と実際の原価が異なる場合は、原価情報の更新や補てん評価額の再評価を確認する余地があります。</p>
+
+    <h2>確認する2つの数字</h2>
+    <ol>
+      <li>FBA補てんレポートに記録された現金補てん額と数量</li>
+      <li>請求書・領収書等で確認できる商品1個あたりの製造・仕入原価</li>
+    </ol>
+    <p>送料、関税、保管、広告、作業代などは、商品そのものの製造・仕入原価とは別に扱われる可能性があります。最新のAmazon定義と申請画面を確認してください。</p>
+
+    <h2>単純比較してはいけないケース</h2>
+    <ul>
+      <li>購入者返品や注文後の破損・紛失</li>
+      <li>現金ではなく在庫で補てんされた行</li>
+      <li>取消・逆仕訳の行</li>
+      <li>元の補てんIDに紐づく調整</li>
+      <li>理由コードが不明な行</li>
+    </ul>
+    <p>算定基準は事象によって異なるため、「補てん額が仕入原価より低い」だけで再評価対象とは断定できません。</p>
+
+    <h2>CSVで確認する手順</h2>
+    <ol>
+      <li>Seller CentralからFBA補てんレポートを取得する。</li>
+      <li>SKU、FNSKU、ASINのいずれかと1個あたり原価を入れた原価CSVを用意する。</li>
+      <li>両方を照合し、注文前の倉庫内紛失・破損候補だけを見る。</li>
+      <li>承認日からの経過日数と、証憑の有無を確認する。</li>
+      <li>Seller Centralの最新ポリシーと対象画面で最終確認する。</li>
+    </ol>
+
+    <h2>ブラウザ内で照合</h2>
+    <p>本サイトの無料ツールは、補てんレポートと原価表を端末内で照合し、原価差、原価未登録、評価額のばらつき、60日期限の候補を表示します。Amazonアカウントへの接続やファイル本文の送信は行いません。</p>
+    <p><a class="primary" href="index.html#audit">FBA補てん額を無料で照合する</a></p>
+
+    <aside class="disclaimer">
+      <strong>免責</strong>
+      <p>このページとツールは、補てん資格、再評価、回収額、期限を保証しません。Amazon.com, Inc.およびAmazon Japan G.K.とは無関係です。最新のSeller Centralと証憑を優先してください。</p>
+    </aside>
+
+    <h2>参考</h2>
+    <ul>
+      <li><a href="https://sellercentral.amazon.co.jp/seller-forums/discussions/t/68864b6f-0ab8-41ef-be18-069c33df6336" rel="noopener">Amazon：FBA在庫補てんポリシー更新</a></li>
+      <li><a href="https://sellercentral.amazon.co.jp/seller-forums/discussions/t/f80b0517-d56e-4213-a957-d482ccdbaace" rel="noopener">Amazon：自動補てんと申請期間の変更</a></li>
+    </ul>
+  </main>
+</body>
+</html>
