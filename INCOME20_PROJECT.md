@@ -1,36 +1,25 @@
-# 不労月収20万円プロジェクト — Single Source of Truth
+# INCOME20 PROJECT
 
-最終更新: 2026-08-25
+## Outcome
+手取り月20万円以上を、顧客数に比例して本人の作業量が増えない仕組みで作る。
 
-## Mission
-月20万円の「本人の継続労働への依存が小さい収入」を、許容可能なリスクで最短達成する。
-
-完全不労を最初から要求せず、まず労働で検証し、商品化・継続課金化・自動化・外注化し、最終的に労働依存を下げる。投資は並行するが、小資本期の主エンジンにはしない。
-
-## Current constraints
-- 新規投入可能資金: 月0〜10万円（投資を含む）
-- 投下可能時間: 週約18時間
-- 得意分野: 現時点では未特定
-- 初期戦略: 小さな有料実験で市場と適性を同時に検証する
+## Constraints
+- capital: ¥0–100k/month
+- time: ~18h/week
+- main device: iPhone
+- no coding background, but AI/GitHub orchestration experience
+- low direct-sales tolerance
+- no primary strategy requiring calls, meetings, or custom delivery
 
 ## Strategy
-1. 月1万円の再現可能な売上を作る
-2. 月3万円
-3. 月10万円
-4. 月20万円
-5. 標準化・自動化・外注化
-6. 余剰利益を長期分散投資へ移し、事業収入を資産収入へ徐々に置換
+1. Search only paid-pain markets.
+2. Verify current competitors and free substitutes before coding.
+3. Select a narrow self-service wedge.
+4. Build deterministic MVP where rules are enough.
+5. Measure use and paid intent.
+6. Add payment/automation only after gates pass.
+7. Kill weak experiments without sunk-cost bias.
+8. Convert profits into diversified long-term assets after business cash flow exists.
 
-基本変換: **労働 → 商品化 → 月額化 → 自動化 → 資産化**
-
-## Candidate experiments
-1. AIを使った小規模B2B業務代行 → 定型化/月額化
-2. テンプレート・デジタル商品の販売
-3. 小さなWebツール / micro-SaaS
-
-## Session continuity protocol
-新しいセッションでは最初にこのファイル、次に `PROJECT_STATE.md`、最後に `DECISIONS.md` を読む。
-
-会話履歴よりリポジトリの最新状態を優先する。セッション終了前に `PROJECT_STATE.md` を更新し、会話コンテキストなしでも次の行動が分かる状態を保つ。
-
-重要な方針変更は `DECISIONS.md` に残す。
+## Current experiment
+See `PROJECT_STATE.md`.
