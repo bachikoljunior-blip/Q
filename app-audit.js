@@ -70,10 +70,11 @@ function classifyReason(reason, amountTotal, originalId) {
     return { type: 'reversal', label: '取消・逆仕訳', costBased: false };
   }
 
-  const postOrder = /CUSTOMER|RETURN|REFUND|ORDER|BUYER|購入者|返品|返金/.test(value);
-  const warehouse = /WAREHOUSE|FULFILLMENT|FC_|INBOUND|LOST|DAMAGED|MISSING|倉庫|紛失|破損|受領/.test(value);
+  const postOrder = /OUTBOUND|CUSTOMER|RETURN|REFUND|ORDER|BUYER|購入者|返品|返金/.test(value);
+  const preOrderPlace = /WAREHOUSE|FULFILLMENT|FC_|INBOUND|倉庫|受領/.test(value);
+  const lossOrDamage = /LOST|DAMAGED|MISSING|紛失|破損/.test(value);
 
-  if (warehouse && !postOrder) {
+  if (preOrderPlace && lossOrDamage && !postOrder) {
     return { type: 'cost', label: '原価基準候補', costBased: true };
   }
 
