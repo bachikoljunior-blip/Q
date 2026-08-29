@@ -2,13 +2,14 @@ function renderResults() {
   const records = state.audited;
   const costCandidates = records.filter(record => record.classInfo.costBased);
   const withinWindow = costCandidates.filter(record => record.daysLeft === null || record.daysLeft >= 0);
-  const potential = withinWindow.reduce((sum, record) => sum + (Number.isFinite(record.fullGap) ? record.fullGap : 0), 0);
+  const potential = withinWindow.reduce((sum, record) =>
+    sum + (record.shortfall > 0 && Number.isFinite(record.fullGap) ? record.fullGap : 0), 0);
   const missing = costCandidates.filter(record => !Number.isFinite(record.cost)).length;
   const urgent = records.filter(record => record.daysLeft !== null && record.daysLeft >= 0 && record.daysLeft <= 14 && record.bucket !== 'reversal').length;
 
   summaryGrid.innerHTML = [
     summaryCard(records.length.toLocaleString('ja-JP'), '読込補てん行', ''),
-    summaryCard(formatYen(potential), '原価との差額候補（参考）', potential > 0 ? 'critical' : 'good'),
+    summaryCard(formatYen(potential), '閾値を超えた差額候補', potential > 0 ? 'critical' : 'good'),
     summaryCard(missing.toLocaleString('ja-JP'), '原価未照合', missing > 0 ? 'warn' : 'good'),
     summaryCard(urgent.toLocaleString('ja-JP'), '期限14日以内候補', urgent > 0 ? 'critical' : 'good')
   ].join('');
@@ -80,7 +81,7 @@ function buildClaimPack() {
   const candidates = state.audited.filter(record =>
     record.classInfo.costBased &&
     Number.isFinite(record.cost) &&
-    record.fullGap > 0 &&
+    record.shortfall > 0 &&
     (record.daysLeft === null || record.daysLeft >= 0) &&
     record.bucket !== 'reversal'
   );
@@ -97,7 +98,7 @@ function buildClaimPack() {
 
   if (!candidates.length) {
     state.claimPack = `${header}
-現時点で、原価差と期限の両方を満たす再評価候補は生成されませんでした。
+現時点で、設定した閾値を超える原価差の再評価候補は生成されませんでした。
 `;
     return;
   }
