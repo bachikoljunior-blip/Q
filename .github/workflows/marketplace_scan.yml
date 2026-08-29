@@ -1,6 +1,11 @@
 name: Marketplace-first discovery scan
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/tools/marketplace_scan.py'
+      - '.github/workflows/marketplace_scan.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 18 * * 0'
