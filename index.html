@@ -2,228 +2,25 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#08111f">
-  <meta name="description" content="Amazon.co.jpのFBA補てんレポートと仕入原価CSVをブラウザ内で照合し、原価割れ候補・期限・原価未登録を確認する無料セルフ監査ツール。">
-  <meta property="og:title" content="FBA補てん原価監査">
-  <meta property="og:description" content="補てん額と仕入原価を60秒で照合。Amazonログイン不要、ファイルは端末外へ送信しません。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bachikoljunior-blip.github.io/Q/">
-  <meta property="og:image" content="https://bachikoljunior-blip.github.io/Q/og.svg">
-  <title>FBA補てん原価監査 — Amazon.co.jp向け無料CSVチェッカー</title>
-  <link rel="canonical" href="https://bachikoljunior-blip.github.io/Q/">
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"FBA補てん原価監査","applicationCategory":"BusinessApplication","operatingSystem":"Any","isAccessibleForFree":true,"url":"https://bachikoljunior-blip.github.io/Q/","description":"Amazon.co.jpのFBA補てん額と仕入原価をブラウザ内で照合する無料監査ツール"}
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#0b1020">
+  <title>Q — 現在、公開中の商品はありません</title>
+  <style>
+    :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b1020;color:#eef2ff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;line-height:1.7}main{width:min(760px,calc(100% - 32px));padding:40px;background:#131a2d;border:1px solid #27324f;border-radius:24px;box-shadow:0 24px 80px rgba(0,0,0,.28)}.status{display:inline-block;padding:6px 11px;border:1px solid #53658f;border-radius:999px;color:#bdc9e8;font-size:.8rem;font-weight:800;letter-spacing:.08em}h1{font-size:clamp(2rem,8vw,4rem);line-height:1.12;letter-spacing:-.045em;margin:20px 0}p{color:#bdc9e8}strong{color:#fff}a{color:#9ec5ff}.box{margin-top:26px;padding:18px;background:#0d1426;border-radius:16px}.box p{margin:0}.date{font-size:.85rem;color:#8594b8}
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#audit">監査フォームへ</a>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="FBA補てん原価監査 ホーム">
-      <span class="brand-mark">¥</span>
-      <span>FBA補てん原価監査</span>
-    </a>
-    <nav class="header-actions" aria-label="ページ操作">
-      <button class="ghost small" id="sampleBtn" type="button">サンプルで試す</button>
-      <a class="ghost small" href="guide.html">使い方</a>
-      <a class="ghost small" href="stats.html">検証数字</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="eyebrow">AMAZON.CO.JP · LOCAL CSV AUDIT</div>
-      <h1>補てん額が、<br><span>仕入原価を下回っていないか。</span></h1>
-      <p class="hero-copy">FBAの補てんレポートと原価表を照合し、原価割れ候補・原価未登録・評価額のばらつき・60日期限を見つけます。</p>
-      <div class="trust-row">
-        <span>Amazonログイン不要</span><span>登録不要</span><span>ブラウザ内処理</span><span>CSV / TSV / TXT</span>
-      </div>
-      <a class="primary hero-cta" href="#audit">無料で監査する</a>
-      <p class="privacy-note">アップロードした本文・原価・金額はサーバーへ送信しません。</p>
-    </section>
-
-    <section class="context-strip" aria-label="このツールの背景">
-      <article>
-        <strong>2025年3月〜</strong>
-        <p>注文前の紛失・破損は、原則として販売価格ではなく製造・仕入原価を基準に補てん。</p>
-      </article>
-      <article>
-        <strong>60日</strong>
-        <p>補てん評価額の再評価申請は、補てん後60日以内。放置すると期限を過ぎる可能性があります。</p>
-      </article>
-      <article>
-        <strong>対象</strong>
-        <p>まずは「支払済み補てん額が自分の仕入原価を下回る候補」の発見に絞っています。</p>
-      </article>
-    </section>
-
-    <section class="audit-shell" id="audit" aria-labelledby="audit-title">
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">FREE DIAGNOSTIC</div>
-          <h2 id="audit-title">2つのファイルを照合</h2>
-          <p>Amazonの「補てんレポート」と、SKU/FNSKU/ASINごとの仕入原価表を用意してください。</p>
-        </div>
-        <div class="local-badge">端末内だけで処理</div>
-      </div>
-
-      <div class="upload-grid">
-        <label class="drop-zone" id="reportDrop">
-          <span class="drop-kicker">STEP 1</span>
-          <strong>FBA補てんレポート</strong>
-          <small>.txt / .tsv / .csv</small>
-          <input id="reportFile" type="file" accept=".txt,.tsv,.csv,text/plain,text/csv">
-          <span class="file-state" id="reportState">ファイルを選択</span>
-        </label>
-        <label class="drop-zone" id="costDrop">
-          <span class="drop-kicker">STEP 2</span>
-          <strong>仕入原価表</strong>
-          <small>キー列 + 1個あたりの原価</small>
-          <input id="costFile" type="file" accept=".txt,.tsv,.csv,text/plain,text/csv">
-          <span class="file-state" id="costState">ファイルを選択</span>
-        </label>
-      </div>
-
-      <details class="format-help">
-        <summary>原価表の作り方</summary>
-        <p>最低2列です。例：<code>seller-sku, sourcing-cost</code>。FNSKUまたはASINでも照合できます。原価は送料・関税・保管料等を除いた、商品そのものの仕入・製造原価を入れてください。</p>
-        <button class="ghost small" id="downloadCostTemplateBtn" type="button">原価CSVひな形を保存</button>
-      </details>
-
-      <section class="mapping" id="mapping" hidden aria-labelledby="mapping-title">
-        <div class="mapping-head">
-          <div>
-            <h3 id="mapping-title">列の対応を確認</h3>
-            <p>自動判定しています。違う場合だけ変更してください。</p>
-          </div>
-          <div class="threshold">
-            <label for="thresholdInput">原価割れ判定</label>
-            <div><input id="thresholdInput" type="number" min="50" max="100" value="90"> <span>%未満</span></div>
-          </div>
-        </div>
-
-        <div class="mapping-groups">
-          <fieldset>
-            <legend>補てんレポート</legend>
-            <label>照合キー <select id="mapReportKey"></select></label>
-            <label>承認日 <select id="mapDate"></select></label>
-            <label>補てんID <select id="mapReimbursementId"></select></label>
-            <label>理由 <select id="mapReason"></select></label>
-            <label>合計金額 <select id="mapAmountTotal"></select></label>
-            <label>1個あたり金額 <select id="mapAmountPerUnit"></select></label>
-            <label>現金補てん数量 <select id="mapCashQty"></select></label>
-            <label>在庫補てん数量 <select id="mapInventoryQty"></select></label>
-            <label>補てん数量合計 <select id="mapTotalQty"></select></label>
-            <label>元の補てんID <select id="mapOriginalId"></select></label>
-          </fieldset>
-
-          <fieldset>
-            <legend>仕入原価表</legend>
-            <label>照合キー <select id="mapCostKey"></select></label>
-            <label>1個あたり原価 <select id="mapCostValue"></select></label>
-            <label>原価メモ <select id="mapCostNote"></select></label>
-          </fieldset>
-        </div>
-
-        <p class="mapping-error" id="mappingError" role="alert" hidden></p>
-        <button class="primary audit-button" id="auditBtn" type="button">補てん額を監査する</button>
-      </section>
-    </section>
-
-    <section class="result-shell" id="results" hidden aria-labelledby="results-title">
-      <div class="section-heading result-heading">
-        <div>
-          <div class="eyebrow">AUDIT RESULT</div>
-          <h2 id="results-title">監査結果</h2>
-          <p id="resultCaption">候補は必ずAmazonの最新ポリシーと原本で確認してください。</p>
-        </div>
-        <button class="ghost" id="resetBtn" type="button">別のファイルを監査</button>
-      </div>
-
-      <div class="summary-grid" id="summaryGrid"></div>
-
-      <div class="result-actions">
-        <button class="primary" id="exportFlagsBtn" type="button">指摘CSVを保存</button>
-        <button class="secondary" id="copyClaimPackBtn" type="button">再評価依頼の下書きをコピー</button>
-        <button class="ghost" id="downloadClaimPackBtn" type="button">下書きを保存</button>
-      </div>
-
-      <div class="filter-row">
-        <label>表示
-          <select id="resultFilter">
-            <option value="all">すべて</option>
-            <option value="high">期限・原価割れ候補</option>
-            <option value="missing">原価未登録</option>
-            <option value="review">理由の確認が必要</option>
-            <option value="reversal">取消・逆仕訳</option>
-          </select>
-        </label>
-        <span id="visibleCount"></span>
-      </div>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>判定</th>
-              <th>承認日 / 残日数</th>
-              <th>SKU等</th>
-              <th>理由</th>
-              <th>補てん</th>
-              <th>原価基準</th>
-              <th>差額候補</th>
-              <th>根拠</th>
-            </tr>
-          </thead>
-          <tbody id="resultBody"></tbody>
-        </table>
-      </div>
-
-      <aside class="disclaimer">
-        <strong>重要</strong>
-        <p>この結果は申請資格や回収額を保証しません。理由コード、注文前/注文後、現金/在庫補てん、取消、証憑などにより扱いが異なります。再評価申請前にSeller Centralの最新画面・ポリシー・請求書等を確認してください。</p>
-      </aside>
-    </section>
-
-    <section class="paid-test" aria-labelledby="paid-title">
-      <div>
-        <div class="eyebrow">PAID-PAIN VALIDATION</div>
-        <h2 id="paid-title">これを毎月、期限前に自動監査したいですか？</h2>
-        <p>候補：複数レポート照合、未補てん検出、期限通知、証憑チェック、申請パック生成。購入ではなく匿名の需要確認です。</p>
-      </div>
-      <button class="primary" id="paidInterestBtn" type="button">月額版が欲しい</button>
-      <p id="interestResult" class="interest-result" aria-live="polite"></p>
-    </section>
-
-    <section class="evidence" aria-labelledby="evidence-title">
-      <h2 id="evidence-title">なぜこの監査を作ったか</h2>
-      <div class="evidence-grid">
-        <article><h3>金銭損失に直結</h3><p>補てん評価額が実際の仕入原価より低ければ、差額がそのまま粗利益を削ります。</p></article>
-        <article><h3>期限が短い</h3><p>評価額の再評価は補てん後60日以内。四半期ごとの確認では遅れる可能性があります。</p></article>
-        <article><h3>小規模セラー向け</h3><p>成功報酬25〜30%や面談・権限付与を前提にせず、まず自分のCSVだけで確認できます。</p></article>
-      </div>
-      <p class="sources">参考：<a href="https://sellercentral.amazon.co.jp/seller-forums/discussions/t/68864b6f-0ab8-41ef-be18-069c33df6336" rel="noopener">Amazonの2025年補てん方針更新</a> / <a href="https://sellercentral.amazon.co.jp/seller-forums/discussions/t/f80b0517-d56e-4213-a957-d482ccdbaace" rel="noopener">補てん申請期間の変更</a></p>
-    </section>
-
-    <section class="faq" aria-labelledby="faq-title">
-      <h2 id="faq-title">よくある質問</h2>
-      <details><summary>ファイルは外部へ送信されますか？</summary><p>送りません。読み込み、照合、CSV生成はブラウザ内で行います。本文を含まない「訪問・監査実行・保存・月額版希望」の匿名イベント数だけを検証用カウンターへ送ります。</p></details>
-      <details><summary>Amazonへの申請を自動送信しますか？</summary><p>しません。誤申請や規約違反を避けるため、候補と下書きを出すだけです。最終確認と申請は利用者がSeller Centralで行います。</p></details>
-      <details><summary>どの補てんでも仕入原価と比べればよいですか？</summary><p>いいえ。注文前の倉庫内紛失・破損と、注文後の購入者返品などでは算定基準が異なります。本ツールは理由コードから「原価基準の可能性が高いもの」と「要確認」を分けますが、最終判定は最新ポリシーを優先してください。</p></details>
-      <details><summary>原価表がありません。</summary><p>ひな形CSVを保存し、SKU/FNSKU/ASINと商品1個あたりの仕入・製造原価を入力してください。送料、関税、保管、広告などを混ぜないでください。</p></details>
-    </section>
+  <main>
+    <span class="status">NO_ACTIVE_CANDIDATE</span>
+    <h1>現在、公開中の商品はありません。</h1>
+    <p><strong>EXP004「FBA補てん原価監査」は2026年8月30日に終了しました。</strong></p>
+    <p>既存商品が、同じ購入者・同じ入力ファイル・同じ90%判定・同じ異常検出・同じ出力・同じ定額モデルを既に提供していたためです。日本語化やローカル処理だけでは有料差として不十分と判断しました。</p>
+    <div class="box">
+      <p>次の案は、直接競合・無料代替・集客経路・単価計算・未解決差への外部証拠を先に確認し、Gateを通過するまで実装しません。</p>
+    </div>
+    <p><a href="https://github.com/bachikoljunior-blip/Q">プロジェクトの判断記録を見る</a></p>
+    <p class="date">最終更新: 2026-08-30</p>
   </main>
-
-  <footer>
-    <div><strong>FBA補てん原価監査</strong><br><span>Amazon.co.jp向けセルフ監査実験</span></div>
-    <div><a href="privacy.html">プライバシー</a> · <a href="guide.html">使い方</a> · <a href="https://github.com/bachikoljunior-blip/Q">GitHub</a></div>
-    <p>Amazon.com, Inc.およびAmazon Japan G.K.とは無関係です。</p>
-  </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js" defer></script>
 </body>
 </html>
