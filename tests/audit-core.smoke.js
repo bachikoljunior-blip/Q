@@ -38,7 +38,9 @@ const context = {
   Intl, Date, Number, String, Math, Map, Promise
 };
 vm.createContext(context);
-vm.runInContext(fs.readFileSync('app.js', 'utf8'), context);
+for (const file of ['app-core.js', 'app-audit.js', 'app-ui.js']) {
+  vm.runInContext(fs.readFileSync(file, 'utf8'), context);
+}
 
 const parsed = context.parseDelimited(
   'approval-date\treimbursement-id\treason\tseller-sku\tamount-total\tquantity-reimbursed-cash\n' +
