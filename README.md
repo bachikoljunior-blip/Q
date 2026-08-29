@@ -1,40 +1,34 @@
 # Q — zero-touch income project
 
-目標: **手取り月20万円以上を、本人の継続労働への依存を小さくして構築する。**
+目標: **本人の継続労働への依存を小さくし、手取り月20万円以上を構築する。**
 
-現在の無料反証テストは `EXP004 — Amazon.co.jp FBA補てん原価監査`。
-課金本命ではなく、実ファイル利用・支払意思・国内競合との差を検証する段階。
+## Current status
+**`NO_ACTIVE_CANDIDATE`**
 
-## Public app
-https://bachikoljunior-blip.github.io/Q/
+現在、商品として開発承認された案はありません。
+
+EXP001〜004は終了しました。EXP004は、既存のReimburseOpsとbuyer・入力・判定ルール・出力・料金モデルがほぼ同一だったため、追加検証を待たず停止しました。
 
 ## Resume order
 1. [`AGENTS.md`](AGENTS.md)
 2. [`PROJECT_STATE.md`](PROJECT_STATE.md)
-3. [`DECISIONS.md`](DECISIONS.md)
-4. [`experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md`](experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md)
-5. [`research/PAID_PAIN_SCORECARD_2026-08-29.md`](research/PAID_PAIN_SCORECARD_2026-08-29.md)
+3. [`research/ACTIVE_CANDIDATE.json`](research/ACTIVE_CANDIDATE.json)
+4. [`research/PREBUILD_GATE.md`](research/PREBUILD_GATE.md)
+5. [`DECISIONS.md`](DECISIONS.md)
+6. [`research/EXACT_MATCH_SWEEP_2026-08-30.md`](research/EXACT_MATCH_SWEEP_2026-08-30.md)
 
-## Product
-The browser app reads:
-- Amazon FBA reimbursements CSV/TSV/TXT
-- Seller sourcing-cost CSV
+## Build rule
+次の新商品コードは `product/` 配下にだけ作ります。
 
-It detects:
-- potential cost-basis under-reimbursement
-- missing cost records
-- inconsistent valuations
-- estimated 60-day re-evaluation deadline
-- reversals
-- records requiring reason review
+`research/ACTIVE_CANDIDATE.json` の `build_approved` が `true` になるまで、`product/` へ実装しません。
 
-It exports a flagged CSV and Japanese re-evaluation draft.
+承認には、最低12検索、直接競合5件、代替5件、workflow overlap matrix、具体的な集客証拠、単価計算、未解決差への外部証拠が必要です。
 
-## Competition
-Direct and adjacent alternatives already exist: Amazon's official portal, Japanese managed recovery services, global self-service tools, and domestic Amazon management software. EXP004 is testing only the no-login, browser-local, small-seller Japanese workflow.
+## Closed experiments
+- EXP001: individualized AI service — zero-touch違反
+- EXP002: AI handoff template — 無料代替・課金理由不足
+- EXP003: subtitle preflight — 直接競合多数
+- EXP004: FBA reimbursement cost audit — exact workflow competitorあり
 
-## Privacy
-Uploaded report contents and costs are processed in the browser and are not sent to this project's server. Only anonymous event counts are used for validation.
-
-## Important
-This is a diagnostic experiment, not an Amazon claim-filing service. It does not guarantee eligibility, reimbursement, deadline, or recovery amount. No payment, SP-API, AI/OCR, or automatic filing is built before validation gates pass.
+## Public page
+GitHub Pagesは、現在「公開中の商品なし」と表示します。終了した実験を現行商品として宣伝しません。
