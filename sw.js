@@ -1,6 +1,7 @@
-const CACHE = 'fba-cost-audit-v2';
+const CACHE = 'fba-cost-audit-v3';
 const CORE = [
   './', './index.html', './styles.css', './app.js', './app-core.js', './app-audit.js', './app-ui.js', './guide.html',
+  './fba-reimbursement-cost.html', './fba-reimbursement-deadline.html',
   './privacy.html', './stats.html', './manifest.webmanifest', './icon.svg'
 ];
 
