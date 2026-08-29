@@ -19,21 +19,52 @@ High-ticket individualized AI service violates the zero-touch constraint.
 Subtitle/SRT preflight, auto-fix, AI proofreading, and NLE integration already have numerous free and paid competitors. Market demand exists, but there is no defensible wedge.
 
 ## 2026-08-29 — Permanent action-first response rule
-The user should never have to repeat “do the work in the same answer.”
-When a flaw is discovered, complete stop/change/research/implementation/check/state update before the response.
+The user should never have to repeat “do the work in the same answer.” When a flaw is discovered, complete stop/change/research/check/state update before responding.
 
-## 2026-08-29 — Select EXP004: Amazon.co.jp FBA reimbursement cost audit
-**Decision:** Test a browser-local self-service audit for small Japanese FBA sellers.
+## 2026-08-29 — Select EXP004 for falsification testing
+A browser-local Amazon.co.jp FBA reimbursement cost audit was built as a free test, not a paid-product commitment.
 
-**Evidence:**
-- Amazon changed pre-order lost/damaged reimbursement to manufacturing/sourcing cost in 2025.
-- Re-evaluation has a 60-day window.
-- Japanese managed recovery services charge 25–30% of recovered funds.
-- A major Japanese provider currently targets monthly sales of ¥10M+ and has paused new service onboarding.
-- Global self-service software proves the workflow can be sold at a flat monthly fee.
+## 2026-08-30 — Kill EXP004
+**Decision:** Stop EXP004 immediately. Do not wait for 100 visitors, add paid features, market it, or revive it without new evidence.
 
-**Wedge:**
-Amazon.co.jp-specific, Japanese UI and case draft, CSV-only/no account access, local processing, immediate use by smaller sellers, transparent deterministic rules.
+**Reason:** ReimburseOps already provides nearly the same buyer workflow and commercial model:
+- reimbursement CSV + sourcing-cost CSV
+- automatic mapping
+- missing cost
+- payout below 90% of sourcing cost × quantity
+- inconsistent valuation
+- landed-cost warning
+- no Amazon login/API keys
+- no success fee
+- export/case text/60-day alerts
+- flat monthly pricing
 
-**Guardrail:**
-This is not a claim-filing service and does not guarantee eligibility or recovery. If real-report compatibility or paid intent fails, stop before building SP-API, payments, or broader recovery engines.
+The remaining localization/privacy differences are insufficient without measured willingness to switch or prepay. EXP004 also had zero external usage evidence at closure.
+
+## 2026-08-30 — Exact workflow duplicate veto is mandatory
+**Decision:** No fifth product implementation until `research/PREBUILD_GATE.md` passes and `research/ACTIVE_CANDIDATE.json` has `build_approved=true`.
+
+**Required:**
+- exact buyer/input/processing/output/price definition
+- at least 12 Japanese/English searches
+- at least 5 direct competitors and 5 substitutes
+- workflow overlap matrix
+- acquisition evidence
+- unit economics
+- differentiator evidence
+
+**Reject by default:**
+- an existing product overlaps 70%+ of the workflow
+- free/OSS/first-party tools deliver the main outcome
+- the only differences are Japanese localization, lower price, browser-local processing or no login
+
+The veto can be overridden only by external evidence for the unresolved difference: paid preorders, qualified current spenders with switching intent, repeated public complaints, or measured owned distribution.
+
+## 2026-08-30 — Use truthful product status labels
+Ideas and research are not products. Every status must be one of:
+`NO_ACTIVE_CANDIDATE`, `RESEARCH_ONLY`, `OFFER_TEST`, `BUILD_APPROVED`, `LIVE_FREE_MVP`, `LIVE_PAID_PRODUCT`, `CLOSED`.
+
+Current status: `NO_ACTIVE_CANDIDATE`.
+
+## 2026-08-30 — Distribution-first discovery
+The next candidate search starts in paid app/plugin marketplaces or other channels with visible demand and acquisition, not from an easy-to-build feature. If no candidate passes the gate, maintaining no active candidate is the correct decision.
