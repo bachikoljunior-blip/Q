@@ -1,0 +1,36 @@
+{
+  "generated_at_jst": "2026-08-29T22:40:22+09:00",
+  "experiment_start": "2026-08-29",
+  "elapsed_days": 0,
+  "source": "public aggregate CounterAPI counters",
+  "privacy": "No uploaded seller data or file contents are collected.",
+  "metrics": {
+    "pageview": 0,
+    "unique-visitor": 0,
+    "sample-loaded": 0,
+    "report-loaded": 0,
+    "cost-loaded": 0,
+    "audit-run": 0,
+    "shortfall-found": 0,
+    "deadline-found": 0,
+    "audit-export": 0,
+    "claim-pack-copy": 0,
+    "claim-pack-download": 0,
+    "monthly-interest": 0
+  },
+  "derived": {
+    "audit_rate_percent": null,
+    "export_or_case_actions": 0,
+    "action_rate_percent": null,
+    "monthly_interest_rate_percent": null
+  },
+  "gate": {
+    "required_unique_devices": 100,
+    "required_audits": 30,
+    "required_export_or_case_actions": 10,
+    "required_monthly_interest": 5
+  },
+  "decision": "COLLECTING",
+  "acquisition_flag": "OK",
+  "recommendation": "有料版を作らず、実利用の母数を集める。"
+}
