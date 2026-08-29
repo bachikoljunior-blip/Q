@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'research/tools/marketplace_scan.py'
+      - 'research/tools/filter_marketplace_scan.py'
       - '.github/workflows/marketplace_scan.yml'
   workflow_dispatch:
   schedule:
@@ -26,8 +27,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check scanner syntax
+        run: |
+          python -m py_compile research/tools/marketplace_scan.py
+          python -m py_compile research/tools/filter_marketplace_scan.py
+
       - name: Run public marketplace scan
-        run: python research/tools/marketplace_scan.py
+        run: |
+          python research/tools/marketplace_scan.py
+          python research/tools/filter_marketplace_scan.py
 
       - name: Validate scanner outputs
         run: |
@@ -35,25 +43,40 @@ jobs:
           import json
           from pathlib import Path
 
-          json_path = Path('research/marketplace_scan/latest.json')
-          md_path = Path('research/marketplace_scan/latest.md')
-          assert json_path.is_file(), 'missing latest.json'
-          assert md_path.is_file(), 'missing latest.md'
-          data = json.loads(json_path.read_text(encoding='utf-8'))
+          paths = [
+              Path('research/marketplace_scan/latest.json'),
+              Path('research/marketplace_scan/latest.md'),
+              Path('research/marketplace_scan/shortlist.json'),
+              Path('research/marketplace_scan/shortlist.md'),
+          ]
+          for path in paths:
+              assert path.is_file(), f'missing {path}'
+
+          data = json.loads(paths[0].read_text(encoding='utf-8'))
+          shortlist = json.loads(paths[2].read_text(encoding='utf-8'))
           assert data['schema_version'] == 1
           assert isinstance(data['records'], list)
           assert len(data['records']) >= 10, 'scan returned too few records'
           assert 'never auto-approve' in data['purpose']
-          markdown = md_path.read_text(encoding='utf-8')
-          assert 'PREBUILD_GATE' in markdown
-          print(f"validated {len(data['records'])} marketplace records")
+          assert shortlist['status'] == 'DISCOVERY_SIGNALS_ONLY'
+          assert shortlist['build_approved'] is False
+          assert isinstance(shortlist['records'], list)
+          assert len(shortlist['records']) >= 5, 'relevance filter returned too few records'
+          markdown = paths[3].read_text(encoding='utf-8')
+          assert 'PREBUILD_GATE' not in markdown or '実装禁止' in markdown
+          assert 'build_approved=false' in markdown
+          print(f"validated {len(data['records'])} records; shortlisted {len(shortlist['records'])}")
           PY
 
       - name: Commit changed research snapshot
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add research/marketplace_scan/latest.json research/marketplace_scan/latest.md
+          git add \
+            research/marketplace_scan/latest.json \
+            research/marketplace_scan/latest.md \
+            research/marketplace_scan/shortlist.json \
+            research/marketplace_scan/shortlist.md
           if git diff --cached --quiet; then
             echo 'No marketplace-scan changes.'
             exit 0
