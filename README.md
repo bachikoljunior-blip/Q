@@ -1,26 +1,36 @@
-# つづきから — AI引き継ぎパック
+# Q — zero-touch income project
 
-長いAIプロジェクトを、会話履歴に依存せず別セッション・別AIへ持ち運ぶための静的Webアプリです。
+目標: **手取り月20万円以上を、本人の継続労働への依存を小さくして構築する。**
 
-## MVPでできること
-- 目標、現在地、制約、決定、次の行動を入力
-- `START_HERE.md` / `PROJECT_STATE.md` / `DECISIONS.md` / `CONTEXT.md` / `RESUME_PROMPT.txt` を生成
-- 表示中ファイル、統合Markdown、JSONバックアップを保存
-- 下書きを端末内へ自動保存
-- 長い会話から項目を抜くためのAI用プロンプトを生成
-- PWAとしてホーム画面へ追加
-- 公開カウンターで匿名の検証数字を確認
+現在の実験は `EXP004 — Amazon.co.jp FBA補てん原価監査`。
 
-入力本文は外部送信しません。ページ表示や生成などのイベント名だけをMVP検証用の公開カウンターへ送ります。
+## Public app
+https://bachikoljunior-blip.github.io/Q/
 
-## 開く
-GitHub Pagesがmain/rootで有効なら、以下で公開されます。
+## Resume order
+1. [`AGENTS.md`](AGENTS.md)
+2. [`PROJECT_STATE.md`](PROJECT_STATE.md)
+3. [`DECISIONS.md`](DECISIONS.md)
+4. [`experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md`](experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md)
+5. [`research/PAID_PAIN_SCORECARD_2026-08-29.md`](research/PAID_PAIN_SCORECARD_2026-08-29.md)
 
-`https://bachikoljunior-blip.github.io/Q/`
+## Product
+The browser app reads:
+- Amazon FBA reimbursements CSV/TSV/TXT
+- Seller sourcing-cost CSV
 
-検証ダッシュボード:
+It detects:
+- potential cost-basis under-reimbursement
+- missing cost records
+- inconsistent valuations
+- estimated 60-day re-evaluation deadline
+- reversals
+- records requiring reason review
 
-`https://bachikoljunior-blip.github.io/Q/stats.html`
+It exports a flagged CSV and Japanese re-evaluation draft.
 
-## 実験
-詳細は `experiments/EXP002_TSUZUKIKARA.md` を参照。
+## Privacy
+Uploaded report contents and costs are processed in the browser and are not sent to this project's server. Only anonymous event counts are used for validation.
+
+## Important
+This is a diagnostic experiment, not an Amazon claim-filing service. It does not guarantee eligibility, reimbursement, deadline, or recovery amount.
