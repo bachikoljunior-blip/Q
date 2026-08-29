@@ -1,6 +1,6 @@
 # START HERE
 
-最終更新: 2026-08-29
+最終更新: 2026-08-30
 
 ## Mission
 zero-touchで手取り月20万円以上を作り、生活のための労働を不要にする。
@@ -8,23 +8,27 @@ zero-touchで手取り月20万円以上を作り、生活のための労働を�
 ## Read first
 1. `AGENTS.md`
 2. `PROJECT_STATE.md`
-3. `DECISIONS.md`
-4. `experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md`
-5. `research/PAID_PAIN_SCORECARD_2026-08-29.md`
+3. `research/ACTIVE_CANDIDATE.json`
+4. `research/PREBUILD_GATE.md`
+5. `DECISIONS.md`
+6. `research/EXACT_MATCH_SWEEP_2026-08-30.md`
 
 ## Current truth
-- EXP001: closed
-- EXP002: closed
-- EXP003: closed
-- EXP004: live validation
-- Public app: https://bachikoljunior-blip.github.io/Q/
+- EXP001: CLOSED
+- EXP002: CLOSED
+- EXP003: CLOSED
+- EXP004: CLOSED
+- Active candidate: none
+- Status: `NO_ACTIVE_CANDIDATE`
+- New product code is forbidden until `build_approved=true`
 
 ## Do not repeat
-- Do not ask the user for the constraints already recorded.
-- Do not restart “つづきから” or subtitle QA.
-- Do not build generic templates, wrappers, or “AI-powered” features without paid-pain evidence.
+- Do not ask for constraints already recorded.
+- Do not revive a closed experiment because code already exists.
+- Do not infer viability from “market exists”. Search the exact buyer/input/processing/output workflow.
+- Do not treat Japanese localization, lower price, no-login or local processing as sufficient differentiation without external evidence.
 - Do not reply with a plan while executable work remains.
 - When a weakness is found, correct it in the same work cycle.
 
 ## Immediate resume
-Read `PROJECT_STATE.md` and execute its `Immediate next action`. Update state before responding.
+Run the marketplace-first candidate search under `research/PREBUILD_GATE.md`. If no candidate passes, keep `NO_ACTIVE_CANDIDATE`; do not create a fifth weak product.
