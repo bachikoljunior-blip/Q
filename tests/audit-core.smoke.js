@@ -66,7 +66,10 @@ assert.strictEqual(context.classifyReason('倉庫破損', 900, '').costBased, tr
 
 assert.strictEqual(context.normalizeKey(' sku-1 '), 'SKU-1');
 assert.strictEqual(context.classifyReason('Damaged_Warehouse', 800, '').costBased, true);
+assert.strictEqual(context.classifyReason('Lost_Inbound', 800, '').costBased, true);
 assert.strictEqual(context.classifyReason('Customer_Return', 800, '').costBased, false);
+assert.strictEqual(context.classifyReason('Damaged_Outbound', 800, '').costBased, false);
+assert.strictEqual(context.classifyReason('Damaged', 800, '').costBased, false);
 assert.strictEqual(context.classifyReason('Reimbursement_Reversal', -800, 'R1').type, 'reversal');
 assert.strictEqual(context.costDefinitionWarning('送料込み landed cost'), true);
 assert.strictEqual(context.costDefinitionWarning('商品本体のみ'), false);
