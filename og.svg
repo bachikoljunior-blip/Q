@@ -1,18 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#f7f8fb"/>
-  <rect x="70" y="80" width="1060" height="470" rx="32" fill="#fff" stroke="#dbe1ea" stroke-width="3"/>
-  <rect x="115" y="120" width="80" height="80" rx="22" fill="#111827"/>
-  <text x="155" y="176" text-anchor="middle" font-family="sans-serif" font-size="48" font-weight="800" fill="#fff">続</text>
-  <text x="218" y="176" font-family="sans-serif" font-size="36" font-weight="800" fill="#111827">つづきから</text>
-  <text x="115" y="330" font-family="sans-serif" font-size="72" font-weight="800" fill="#111827">AIに同じ説明を、</text>
-  <text x="115" y="420" font-family="sans-serif" font-size="72" font-weight="800" fill="#2563eb">もうしない。</text>
-  <text x="118" y="500" font-family="sans-serif" font-size="30" fill="#64748b">目標・決定・次の一手を、別セッション・別AIへ。</text>
-  <rect x="835" y="130" width="230" height="330" rx="30" fill="#fff" stroke="#dbe1ea" stroke-width="3"/>
-  <g font-family="sans-serif" font-size="22" font-weight="800" text-anchor="middle">
-    <rect x="875" y="165" width="153" height="44" rx="12" fill="#f0f3f8"/><text x="951" y="195" fill="#475569">START</text>
-    <rect x="875" y="227" width="153" height="44" rx="12" fill="#dbeafe"/><text x="951" y="257" fill="#1d4ed8">STATE</text>
-    <rect x="875" y="289" width="153" height="44" rx="12" fill="#f0f3f8"/><text x="951" y="319" fill="#475569">DECISIONS</text>
-    <rect x="875" y="351" width="153" height="44" rx="12" fill="#f0f3f8"/><text x="951" y="381" fill="#475569">CONTEXT</text>
-    <rect x="875" y="413" width="153" height="44" rx="12" fill="#f0f3f8"/><text x="951" y="443" fill="#475569">RESUME</text>
-  </g>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07101c"/><stop offset="1" stop-color="#0f2a3e"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1030" cy="80" r="260" fill="#38d99c" opacity=".08"/>
+  <circle cx="120" cy="590" r="300" fill="#63a8ff" opacity=".08"/>
+  <rect x="78" y="78" width="74" height="74" rx="20" fill="#38d99c"/>
+  <text x="115" y="132" text-anchor="middle" font-size="54" font-weight="900" font-family="Arial,sans-serif" fill="#07101c">¥</text>
+  <text x="78" y="248" font-size="70" font-weight="800" font-family="Arial,'Noto Sans JP',sans-serif" fill="#edf6ff">FBA補てん原価監査</text>
+  <text x="78" y="334" font-size="43" font-weight="700" font-family="Arial,'Noto Sans JP',sans-serif" fill="#38d99c">補てん額と仕入原価を60秒で照合</text>
+  <text x="78" y="411" font-size="31" font-family="Arial,'Noto Sans JP',sans-serif" fill="#9db0c5">Amazonログイン不要 · ブラウザ内処理 · CSV / TSV / TXT</text>
+  <rect x="78" y="474" width="475" height="78" rx="18" fill="#38d99c"/>
+  <text x="315" y="524" text-anchor="middle" font-size="30" font-weight="800" font-family="Arial,'Noto Sans JP',sans-serif" fill="#07101c">原価割れ・期限・未登録を確認</text>
 </svg>
