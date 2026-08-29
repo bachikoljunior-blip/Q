@@ -1,6 +1,6 @@
 # PROJECT STATE
 
-最終更新: 2026-08-29
+最終更新: 2026-08-30
 
 ## Goal
 本人の継続労働への依存が小さい**手取り月20万円以上**を可能な限り早く構築し、生活のための労働を不要にする。
@@ -14,141 +14,97 @@
 - 過去会話より、このリポジトリの最新状態を優先する
 
 ## Permanent execution rule
-ユーザーへ「次に進めます」と返して作業を止めない。
+ユーザーへ計画だけ返して作業を止めない。許可済み範囲では、同一サイクル内で調査→反証→中止/変更→実行→検査→状態更新まで終えてから一度だけ返す。
 
-許可済みの範囲では、1つの作業サイクル内で次を完了する:
-1. 弱点・競合・無料代替を先に調べる
-2. 弱い案をその場で中止する
-3. 次の候補へ移る
-4. 実装できる部分を実装する
-5. 自動検査・公開確認を行う
-6. このファイルへ結果と次のゲートを記録する
-7. その後に一度だけユーザーへ返す
+## Current status
+**`NO_ACTIVE_CANDIDATE`**
 
-評価順:
-**支払意思 > 金銭的痛み > 無料代替との差 > 自動集客 > zero-touch > 作りやすさ**
-
-## Closed experiments
-- EXP001 — 高単価AI個別サービス: 個別対応が増えるため終了
-- EXP002 — つづきから: テンプレート整形中心で無料代替が強いため終了
-- EXP003 — 字幕Preflight: QA・自動修正・AI校閲・NLE連携まで競合が多いため終了
+現在、商品として確定・開発承認された案はない。これは失敗を隠す表現ではなく、弱い5案目を作らないための正確な状態。
 
 ## Current phase
-**Phase 5: EXP004を無料の反証テストとして公開し、実ファイル適合・利用・支払意思を測る**
+**Phase 6: exact-match-first / distribution-first discovery**
 
-## EXP004 — FBA補てん原価監査
-Amazon.co.jpの補てんレポートと出品者の仕入原価表をブラウザ内で照合し、次を抽出する:
-- 注文前の倉庫内紛失・破損と推定できる行
-- 補てん額が仕入原価を下回る候補
-- 原価未登録
-- 同一SKU・理由の評価額ばらつき
-- 補てん後60日までの残日数候補
-- 取消・逆仕訳
-- 注文後・購入者返品・理由不明の要確認行
+次の案は `research/PREBUILD_GATE.md` を通過するまで実装しない。
 
-出力:
-- 指摘CSV
-- 再評価依頼の日本語下書き
-- 原価CSVひな形
+評価順:
+1. exact workflowの直接競合
+2. 支払意思
+3. 金銭的痛み・期限・義務
+4. 既存/無料代替との差
+5. 具体的な集客経路
+6. zero-touch
+7. 単価×顧客数
+8. 作りやすさ
 
-プライバシー:
-- Amazonログイン/SP-API不要
-- CSV本文・SKU・原価・補てん額はサーバーへ送信しない
-- 匿名イベント数だけ計測
+## Closed experiments
+### EXP001 — 高単価AI個別サービス
+個別対応が顧客数に比例するため終了。
 
-## Competition correction
-EXP004は独自発明ではない。
+### EXP002 — つづきから
+固定テンプレート整形中心で、無料代替が強く、月額課金の必然性がないため終了。
 
-確認済み:
-- Amazon公式の「在庫の問題と補てん」ポータル
-- Picaro、Goaltech等の国内回収代行
-- ReimburseOps、ReimbursementPro等の海外セルフサービス/回収製品
-- 国内総合Amazon管理ツール「マカド！」には還付・補償の取りこぼし検出がある
+### EXP003 — 字幕Preflight
+字幕QA、自動修正、AI校閲、NLE連携まで既存無料/有料製品が多数あるため終了。
 
-したがって、EXP004を「競合がいない本命」とは扱わない。
-残る差は以下の組み合わせだけ:
-- アカウント接続なし
-- ブラウザ内ローカル処理
-- Amazon.co.jp向け日本語/英語列名・円・日本語下書き
-- 小規模セラーが登録なしで即利用
-- 成功報酬なし
+### EXP004 — FBA補てん原価監査
+**2026-08-30終了。追加検証・集客・課金開発を停止。**
 
-この差が**無料利用理由**にはなっても、**月額課金理由**になるとは未証明。
+終了理由:
+- ReimburseOpsが同じbuyerへ、同じFBA補てんCSVと原価CSVを入力させる
+- 列自動認識、missing cost、90% under-reimbursement、同一商品の評価ばらつき、landed-cost警告を提供
+- no Amazon login / no API keys / no success fee
+- export、case-ready text、60-day alert、$19/月まで提供
 
-## Public assets
-- App: https://bachikoljunior-blip.github.io/Q/
-- Guide: https://bachikoljunior-blip.github.io/Q/guide.html
-- Cost article: https://bachikoljunior-blip.github.io/Q/fba-reimbursement-cost.html
-- Deadline article: https://bachikoljunior-blip.github.io/Q/fba-reimbursement-deadline.html
-- Metrics: https://bachikoljunior-blip.github.io/Q/stats.html
+buyer・input・processing・output・privacy positioning・pricing modelの重複が90%超。日本語、円、ローカル処理、日本語下書きだけでは月額課金差として弱い。
 
-実装済み:
-- CSV/TSV/TXT読込
-- 引用符・カンマ入りCSV対応
-- 日本語/英語ヘッダー推定 + 手動マッピング
-- 安全側の理由分類（Lost/Damaged + Warehouse/Inboundのみ原価基準候補）
-- Outbound/購入者返品/理由不明を要確認へ分離
-- 原価差、原価未登録、評価額ばらつき、期限候補、取消の抽出
-- 指摘CSV、申請下書き、原価ひな形、サンプル
-- PWA、検索ページ、匿名検証画面
-- Nodeロジックテスト、構文検査、静的検査、HTTPスモーク
+開始時点の匿名指標も訪問0、監査0、利用意向0で、継続を正当化する外部証拠はない。
 
-## Business hypothesis — unproven
-有料候補（Gate通過後のみ）:
-- 月次の複数レポート監査
-- 期限通知
-- 在庫元帳・返品・納品差異・返送レポートとの照合
-- 証憑不足チェック
-- 案件別の証拠パック
-- 複数アカウント
-- Amazon.co.jpの理由コード/方針変更追従
+## Corrective actions completed 2026-08-30
+- EXP004を `CLOSED` へ変更
+- exact-match competitor sweepを実施し、FBA、Amazon flat-file修復、Shopify CSV修復、楽天CSV、AI YouTube自動化、Amazon入金照合を直接競合で棄却
+- `research/EXACT_MATCH_SWEEP_2026-08-30.md` を追加
+- `research/PREBUILD_GATE.md` を追加
+- `research/ACTIVE_CANDIDATE.json` を `build_approved=false` で追加
+- `AGENTS.md` にexact-match vetoとstatus languageを固定
+- 弱い公開実験の検索通知・日次指標収集を停止する
+- 公開トップを「現在、公開中の商品なし」に変更する
+- 新商品コードはGate通過後に `product/` 配下だけへ作る
 
-価格仮説:
-- ¥2,980/月 → 月商20万円に約68契約
-- ¥4,980/月 → 月商20万円に約41契約
+## Why no fifth build was started
+今回の検索では、次のworkflowにも直接競合が複数あった:
+- Amazon flat-file processing report修復
+- Shopify CSV import修復
+- 楽天RMS CSV一括編集/変換
+- AI YouTube完全自動投稿
+- Amazon settlement/COGS損益照合
 
-手取り20万円には決済手数料・インフラ・税を考慮してさらに必要。
-決済、SP-API、自動申請、AI/OCRは作らない。
+「競合があるから全部不可能」ではない。ただし、未解決差への前払い・乗換意思・反復不満がない状態で同じworkflowを作るのは禁止した。
 
-## Validation gates
-最初の100ユニーク端末で:
-- 監査実行30以上
-- 指摘CSVまたは下書き保存10以上
-- 月額版希望5以上
-- 実ファイルの列マッピング失敗率が許容範囲
-- 重大な誤判定0
+## Next search boundary
+次は広いアイデア出しではなく、**既存の有料marketplaceで、購入・レビュー・検索需要が見える場所**から探す。
 
-終了/変更条件:
-- 監査実行率30%未満
-- 保存率10%未満
-- 月額版希望5%未満
-- 実レポートへ安全に適合できない
-- マカド！等の国内製品が同じセルフサービス価値を十分安く提供
-- Amazon公式機能が原価差監査と期限通知まで代替
-- 小規模セラーの平均差額が料金に見合わない
-- 規約/申請リスクをzero-touchで安全に扱えない
+優先:
+- アプリ/プラグインmarketplaceの低評価・未解決レビュー
+- 既存有料商品の一機能ではなく、繰り返し不満が残る具体的workflow
+- 自動集客面が最初から存在するカテゴリ
 
-## Wider market scan result
-ファイル変換、字幕、EC移行、会計インポート、OCR、住所検証、入札アラート、YouTube分析、PDF/KDP等を広く再調査したが、現時点でEXP004より**明確に競合が弱く、支払意思が強く、zero-touchで、月20万円へ届く**候補は確認できなかった。
+候補を選ぶ前に:
+- 12検索以上
+- direct competitors 5件以上
+- substitutes 5件以上
+- overlap matrix
+- duplicate veto PASS
+- acquisition evidence
+- unit economics
+- differentiator evidence
 
-これはEXP004が勝てる証明ではない。弱い次案を無理に作らないための判断。
+を `research/ACTIVE_CANDIDATE.json` に記録する。
 
-## Human-only remaining gate
-AIだけでは発生させられないもの:
-- 第三者の実ファイル
-- 実際の監査利用
-- 実回収差額
-- 支払意思
-
-それ以外の市場調査、実装、テスト、検索導線、計測、状態保存は実施済み。
+## Human-only boundary
+候補が `OFFER_TEST` に進んだ後、第三者の予約購入・支払意思・実利用だけは外部ユーザーが必要。それ以前の競合調査、比較、棄却、仕様、検査、状態保存はAI側で完了させる。
 
 ## Immediate next action
-1. 最新mainのGitHub ActionsとPages deploymentを完了確認
-2. 公開サンプル監査と出力を確認
-3. 自然流入を100ユニークまで計測
-4. 実ファイルで列名不足が出た場合、本文や個人情報を収集せずヘッダー別名だけ追加
-5. Gateを超えるまで追加機能・決済・SP-API・AIを作らない
-6. EXP004より強いpaid-painが見つかった場合だけ、同一サイクル内で比較してピボット
+**新規実装は禁止。marketplace-firstで候補を調査し、PREBUILD GATEを完全通過した1案だけを `BUILD_APPROVED` にする。通過案がなければ `NO_ACTIVE_CANDIDATE` を維持する。**
 
 ## Resume instruction
-このファイルを正本にする。EXP001〜003へ戻らない。ユーザーに既知条件を再質問しない。弱点を見つけたら、その回答内で中止・代替調査・実行・記録まで終える。
+`AGENTS.md` → このファイル → `research/ACTIVE_CANDIDATE.json` → `research/PREBUILD_GATE.md` → `DECISIONS.md` の順で読む。EXP001〜004へ戻らない。弱点を見つけた場合は、その回答内で反証・中止・代替調査・記録まで終える。
