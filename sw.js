@@ -1,23 +1,11 @@
-const CACHE = 'tsuzukikara-v2';
-const ASSETS = [
-  './',
-  './index.html',
-  './styles.css',
-  './app.js',
-  './guide.html',
-  './stats.html',
-  './privacy.html',
-  './manifest.webmanifest',
-  './icon.svg',
-  './og.svg'
+const CACHE = 'fba-cost-audit-v2';
+const CORE = [
+  './', './index.html', './styles.css', './app.js', './app-core.js', './app-audit.js', './app-ui.js', './guide.html',
+  './privacy.html', './stats.html', './manifest.webmanifest', './icon.svg'
 ];
 
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE)
-      .then(cache => cache.addAll(ASSETS))
-      .then(() => self.skipWaiting())
-  );
+  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', event => {
@@ -29,23 +17,16 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  const request = event.request;
-  if (request.method !== 'GET' || new URL(request.url).origin !== self.location.origin) return;
+  const url = new URL(event.request.url);
+  if (event.request.method !== 'GET' || url.origin !== self.location.origin) return;
 
   event.respondWith(
-    fetch(request)
+    fetch(event.request)
       .then(response => {
-        if (response.ok) {
-          const copy = response.clone();
-          caches.open(CACHE).then(cache => cache.put(request, copy));
-        }
+        const copy = response.clone();
+        caches.open(CACHE).then(cache => cache.put(event.request, copy));
         return response;
       })
-      .catch(async () => {
-        const cached = await caches.match(request);
-        if (cached) return cached;
-        if (request.mode === 'navigate') return caches.match('./index.html');
-        throw new Error('offline and not cached');
-      })
+      .catch(() => caches.match(event.request).then(cached => cached || caches.match('./index.html')))
   );
 });
