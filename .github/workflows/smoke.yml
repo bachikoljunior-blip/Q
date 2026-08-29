@@ -41,9 +41,13 @@ jobs:
           class Parser(HTMLParser):
               pass
 
-          required = [
-              'index.html', 'styles.css', 'app.js', 'app-core.js', 'app-audit.js', 'app-ui.js', 'guide.html', 'privacy.html',
-              'stats.html', 'manifest.webmanifest', 'sw.js', 'sitemap.xml',
+          pages = [
+              'index.html', 'guide.html', 'fba-reimbursement-cost.html',
+              'fba-reimbursement-deadline.html', 'privacy.html', 'stats.html'
+          ]
+          required = pages + [
+              'styles.css', 'app.js', 'app-core.js', 'app-audit.js', 'app-ui.js',
+              'manifest.webmanifest', 'sw.js', 'sitemap.xml',
               'PROJECT_STATE.md', 'AGENTS.md',
               'experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md',
               'research/PAID_PAIN_SCORECARD_2026-08-29.md',
@@ -52,11 +56,14 @@ jobs:
           for name in required:
               assert Path(name).is_file(), f'missing {name}'
 
-          for name in ['index.html', 'guide.html', 'privacy.html', 'stats.html']:
+          for name in pages:
               Parser().feed(Path(name).read_text(encoding='utf-8'))
 
           json.loads(Path('manifest.webmanifest').read_text(encoding='utf-8'))
-          ET.parse('sitemap.xml')
+          tree = ET.parse('sitemap.xml')
+          xml_text = Path('sitemap.xml').read_text(encoding='utf-8')
+          for name in ['fba-reimbursement-cost.html', 'fba-reimbursement-deadline.html']:
+              assert name in xml_text, f'sitemap missing {name}'
 
           html = Path('index.html').read_text(encoding='utf-8')
           app = ''.join(Path(name).read_text(encoding='utf-8') for name in ['app-core.js','app-audit.js','app-ui.js'])
@@ -90,6 +97,8 @@ jobs:
           grep -q 'FBA補てん原価監査' /tmp/index.html
           curl -fsS http://127.0.0.1:8765/app-audit.js | grep -q 'auditData'
           curl -fsS http://127.0.0.1:8765/guide.html | grep -q '仕入原価表'
+          curl -fsS http://127.0.0.1:8765/fba-reimbursement-cost.html | grep -q '仕入原価より低い'
+          curl -fsS http://127.0.0.1:8765/fba-reimbursement-deadline.html | grep -q '60日期限'
           curl -fsS http://127.0.0.1:8765/stats.html | grep -q 'EXP004'
 
       - name: Check anonymous counter endpoint
