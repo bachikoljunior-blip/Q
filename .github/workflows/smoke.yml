@@ -60,13 +60,14 @@ jobs:
               Parser().feed(Path(name).read_text(encoding='utf-8'))
 
           json.loads(Path('manifest.webmanifest').read_text(encoding='utf-8'))
-          tree = ET.parse('sitemap.xml')
+          ET.parse('sitemap.xml')
           xml_text = Path('sitemap.xml').read_text(encoding='utf-8')
           for name in ['fba-reimbursement-cost.html', 'fba-reimbursement-deadline.html']:
               assert name in xml_text, f'sitemap missing {name}'
 
           html = Path('index.html').read_text(encoding='utf-8')
-          app = ''.join(Path(name).read_text(encoding='utf-8') for name in ['app-core.js','app-audit.js','app-ui.js'])
+          parts = {name: Path(name).read_text(encoding='utf-8') for name in ['app-core.js','app-audit.js','app-ui.js']}
+          app = ''.join(parts.values())
           for element_id in [
               'reportFile', 'costFile', 'mapping', 'auditBtn', 'results',
               'summaryGrid', 'resultBody', 'exportFlagsBtn',
@@ -80,6 +81,7 @@ jobs:
           ]:
               assert marker in app, f'missing app marker: {marker}'
 
+          assert parts['app-ui.js'].count('record.shortfall > 0') >= 2, 'summary and claim pack must honor threshold'
           assert '字幕Preflight' not in html, 'obsolete EXP003 site still present'
           assert 'FBA補てん原価監査' in html
           print('static validation passed')
