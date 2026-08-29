@@ -22,27 +22,58 @@ SCAN_DIR = ROOT / "research" / "marketplace_scan"
 SOURCE = SCAN_DIR / "shortlist.json"
 OUT_JSON = SCAN_DIR / "complaints.json"
 OUT_MD = SCAN_DIR / "complaints.md"
-USER_AGENT = "Q-wordpress-complaint-research/1.0 (+https://github.com/bachikoljunior-blip/Q)"
+USER_AGENT = "Q-wordpress-complaint-research/1.1 (+https://github.com/bachikoljunior-blip/Q)"
+
+PREFERRED_SLUGS = {
+    "events-manager",
+    "eventin",
+    "wp-event-manager",
+    "ameliabooking",
+    "events-manager-for-woocommerce",
+    "woocommerce-services",
+    "woocommerce-shipping",
+    "woocommerce-pdf-invoices-packing-slips",
+    "woocommerce-delivery-notes",
+}
 
 CLUSTERS: dict[str, tuple[str, ...]] = {
-    "update_breakage": ("update", "upgrade", "fatal", "critical", "crash", "broke", "broken", "site down", "error after"),
+    "booking_integrity": (
+        "overbook",
+        "double book",
+        "ticket spaces",
+        "booked spaces",
+        "bookings not counting",
+        "booking count",
+        "availability does not",
+        "availability not",
+        "available spaces",
+        "sold-out tickets available",
+        "sold out tickets available",
+        "capacity mismatch",
+        "seat count",
+    ),
+    "update_breakage": ("after update", "after upgrade", "fatal", "critical error", "crash", "broke", "broken", "site down"),
     "label_purchase": ("label", "postage", "shipment", "carrier", "shipping"),
-    "wrong_weight_rate": ("weight", "rate", "price", "charge", "cost", "dimension", "package"),
-    "address_validation": ("address", "postcode", "zip", "international", "country", "state"),
+    "wrong_weight_rate": ("wrong weight", "wrong rate", "wrong price", "wrong charge", "dimension", "package weight"),
+    "address_validation": ("address", "postcode", "zip code", "international", "country", "state field"),
     "bulk_workflow": ("bulk", "batch", "multiple", "many", "mass"),
-    "pdf_email": ("pdf", "invoice", "attachment", "blank", "corrupt", "email"),
-    "subscription_renewal": ("subscription", "renewal", "recurring", "payment", "cancel"),
-    "booking_conflict": ("booking", "appointment", "slot", "availability", "calendar", "conflict"),
+    "pdf_email": ("pdf", "invoice", "attachment", "blank page", "corrupt", "email-attached"),
+    "subscription_renewal": ("subscription", "renewal", "recurring payment", "recurring order"),
+    "booking_conflict": ("booking", "appointment", "slot", "availability", "calendar conflict", "double-book"),
     "import_export": ("import", "export", "csv", "xml", "mapping", "column"),
     "accessibility_compliance": ("accessibility", "wcag", "screen reader", "keyboard", "ada", "eaa"),
     "tax_invoice_compliance": ("tax", "vat", "gst", "invoice number", "credit note", "compliance"),
     "sync_connection": ("sync", "connection", "connect", "oauth", "disconnect", "stuck"),
-    "missing_feature": ("missing", "removed", "no option", "feature request", "can’t", "cannot", "unable"),
+    "missing_feature": ("missing", "removed", "no option", "feature request", "cannot", "unable"),
 }
 
 TOPIC_PATTERN = re.compile(
     r'<a[^>]+href=["\'](?P<url>https://wordpress\.org/support/topic/[^"\']+)["\'][^>]*>(?P<title>.*?)</a>',
     flags=re.I | re.S,
+)
+RELATIVE_TIME = re.compile(
+    r"^(?:\d+\s+(?:second|minute|hour|day|week|month|year)s?(?:,\s*\d+\s+(?:day|week|month)s?)?\s+ago|yesterday|today)$",
+    flags=re.I,
 )
 
 
@@ -68,9 +99,11 @@ def topic_rows(page: str, source: str) -> list[dict[str, str]]:
     seen: set[str] = set()
     rows: list[dict[str, str]] = []
     for match in TOPIC_PATTERN.finditer(page):
-        url = match.group("url").rstrip("/") + "/"
+        # Reply timestamps also link to /topic/.../#post-N. Collapse fragments so
+        # one forum topic is counted once, not once per reply.
+        url = match.group("url").split("#", 1)[0].rstrip("/") + "/"
         title = clean(match.group("title"))
-        if not title or url in seen:
+        if not title or RELATIVE_TIME.fullmatch(title) or url in seen:
             continue
         seen.add(url)
         rows.append({"title": title, "url": url, "source": source})
@@ -83,14 +116,15 @@ def classify(title: str) -> list[str]:
     return hits or ["other"]
 
 
-def candidate_plugins(data: dict[str, Any], limit: int = 24) -> list[dict[str, Any]]:
+def candidate_plugins(data: dict[str, Any], limit: int = 30) -> list[dict[str, Any]]:
     records = [record for record in data.get("records", []) if record.get("ecosystem") == "wordpress"]
 
-    def priority(record: dict[str, Any]) -> tuple[int, float]:
+    def priority(record: dict[str, Any]) -> tuple[int, int, float]:
         rating = record.get("rating")
         unresolved = int(record.get("unresolved_support") or 0)
+        preferred = int(str(record.get("slug_or_key") or "") in PREFERRED_SLUGS)
         weak_or_open = int((isinstance(rating, (int, float)) and rating <= 4.0) or unresolved >= 3)
-        return weak_or_open, float(record.get("adjusted_score") or 0)
+        return preferred, weak_or_open, float(record.get("adjusted_score") or 0)
 
     records.sort(key=priority, reverse=True)
     return records[:limit]
@@ -129,7 +163,7 @@ def main() -> int:
             for cluster in topic["clusters"]:
                 cluster_counts[cluster] += 1
                 global_clusters[cluster] += 1
-                if len(global_titles[cluster]) < 20:
+                if len(global_titles[cluster]) < 30:
                     global_titles[cluster].append(
                         {
                             "plugin": str(record.get("name") or slug),
@@ -156,11 +190,12 @@ def main() -> int:
 
     now = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).replace(microsecond=0)
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_jst": now.isoformat(),
         "status": "DISCOVERY_EVIDENCE_ONLY",
         "build_approved": False,
         "global_cluster_counts": dict(global_clusters.most_common()),
+        "cluster_examples": dict(global_titles),
         "plugins": output_plugins,
     }
     OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -172,12 +207,12 @@ def main() -> int:
         "",
         "**Status: DISCOVERY_EVIDENCE_ONLY / build_approved=false**",
         "",
-        "> 公開support/reviewのタイトルだけを機械収集した一次スクリーニング。",
-        "> 同じクラスタが多くても、同じ問題・支払意思・未解決差を意味しない。本文確認とexact-match gateが必須。",
+        "> 公開support/reviewのトピックタイトルを1トピック1件に正規化した一次スクリーニング。",
+        "> クラスタ数だけでは同じ問題・支払意思・未解決差を証明しない。本文確認とexact-match gateが必須。",
         "",
         "## Cross-plugin clusters",
         "",
-        "| Cluster | Topic titles matched |",
+        "| Cluster | Unique topics matched |",
         "|---|---:|",
     ]
     for cluster, count in global_clusters.most_common():
@@ -185,14 +220,19 @@ def main() -> int:
 
     lines.extend(["", "## Plugin queues", ""])
     for plugin in sorted(output_plugins, key=lambda row: row["topic_count"], reverse=True):
-        clusters = ", ".join(f"{key}:{value}" for key, value in list(plugin["cluster_counts"].items())[:6]) or "none"
+        clusters = ", ".join(f"{key}:{value}" for key, value in list(plugin["cluster_counts"].items())[:7]) or "none"
         lines.append(
-            f"### {plugin['plugin']} — topics {plugin['topic_count']}, rating {plugin.get('rating')}, active {plugin.get('active_installs')}"
+            f"### {plugin['plugin']} — unique topics {plugin['topic_count']}, rating {plugin.get('rating')}, active {plugin.get('active_installs')}"
         )
         lines.append("")
         lines.append(f"Clusters: {clusters}")
         lines.append("")
-        for topic in plugin["topics"][:12]:
+        prioritized = sorted(
+            plugin["topics"],
+            key=lambda item: ("booking_integrity" in item["clusters"], item["clusters"] != ["other"]),
+            reverse=True,
+        )
+        for topic in prioritized[:15]:
             cluster_text = ", ".join(topic["clusters"])
             lines.append(f"- [{topic['title']}]({topic['url']}) — {topic['source']} / {cluster_text}")
         if plugin["errors"]:
@@ -210,7 +250,7 @@ def main() -> int:
         ]
     )
     OUT_MD.write_text("\n".join(lines), encoding="utf-8")
-    print(f"mined {sum(item['topic_count'] for item in output_plugins)} public topic titles across {len(output_plugins)} plugins")
+    print(f"mined {sum(item['topic_count'] for item in output_plugins)} unique public topics across {len(output_plugins)} plugins")
     return 0
 
 
