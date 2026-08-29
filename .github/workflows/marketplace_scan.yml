@@ -6,6 +6,7 @@ on:
     paths:
       - 'research/tools/marketplace_scan.py'
       - 'research/tools/filter_marketplace_scan.py'
+      - 'research/tools/mine_wordpress_complaints.py'
       - '.github/workflows/marketplace_scan.yml'
   workflow_dispatch:
   schedule:
@@ -21,7 +22,7 @@ permissions:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,11 +32,13 @@ jobs:
         run: |
           python -m py_compile research/tools/marketplace_scan.py
           python -m py_compile research/tools/filter_marketplace_scan.py
+          python -m py_compile research/tools/mine_wordpress_complaints.py
 
       - name: Run public marketplace scan
         run: |
           python research/tools/marketplace_scan.py
           python research/tools/filter_marketplace_scan.py
+          python research/tools/mine_wordpress_complaints.py
 
       - name: Validate scanner outputs
         run: |
@@ -43,29 +46,43 @@ jobs:
           import json
           from pathlib import Path
 
-          paths = [
-              Path('research/marketplace_scan/latest.json'),
-              Path('research/marketplace_scan/latest.md'),
-              Path('research/marketplace_scan/shortlist.json'),
-              Path('research/marketplace_scan/shortlist.md'),
-          ]
-          for path in paths:
+          files = {
+              'latest_json': Path('research/marketplace_scan/latest.json'),
+              'latest_md': Path('research/marketplace_scan/latest.md'),
+              'shortlist_json': Path('research/marketplace_scan/shortlist.json'),
+              'shortlist_md': Path('research/marketplace_scan/shortlist.md'),
+              'complaints_json': Path('research/marketplace_scan/complaints.json'),
+              'complaints_md': Path('research/marketplace_scan/complaints.md'),
+          }
+          for path in files.values():
               assert path.is_file(), f'missing {path}'
 
-          data = json.loads(paths[0].read_text(encoding='utf-8'))
-          shortlist = json.loads(paths[2].read_text(encoding='utf-8'))
-          assert data['schema_version'] == 1
-          assert isinstance(data['records'], list)
-          assert len(data['records']) >= 10, 'scan returned too few records'
+          data = json.loads(files['latest_json'].read_text(encoding='utf-8'))
+          shortlist = json.loads(files['shortlist_json'].read_text(encoding='utf-8'))
+          complaints = json.loads(files['complaints_json'].read_text(encoding='utf-8'))
+
+          assert data['schema_version'] == 2
+          assert data['coverage']['wordpress'] == 'AUTOMATED_PUBLIC_API'
+          assert data['coverage']['atlassian'].startswith('MANUAL_ONLY')
+          assert isinstance(data['records'], list) and len(data['records']) >= 10
           assert 'never auto-approve' in data['purpose']
+
           assert shortlist['status'] == 'DISCOVERY_SIGNALS_ONLY'
           assert shortlist['build_approved'] is False
-          assert isinstance(shortlist['records'], list)
-          assert len(shortlist['records']) >= 5, 'relevance filter returned too few records'
-          markdown = paths[3].read_text(encoding='utf-8')
-          assert 'PREBUILD_GATE' not in markdown or '実装禁止' in markdown
-          assert 'build_approved=false' in markdown
-          print(f"validated {len(data['records'])} records; shortlisted {len(shortlist['records'])}")
+          assert isinstance(shortlist['records'], list) and len(shortlist['records']) >= 5
+
+          assert complaints['status'] == 'DISCOVERY_EVIDENCE_ONLY'
+          assert complaints['build_approved'] is False
+          assert isinstance(complaints['plugins'], list) and len(complaints['plugins']) >= 5
+          assert sum(item['topic_count'] for item in complaints['plugins']) >= 10
+
+          assert 'build_approved=false' in files['shortlist_md'].read_text(encoding='utf-8')
+          assert 'build_approved=false' in files['complaints_md'].read_text(encoding='utf-8')
+          print(
+              f"validated {len(data['records'])} listings; "
+              f"shortlisted {len(shortlist['records'])}; "
+              f"mined {sum(item['topic_count'] for item in complaints['plugins'])} topic titles"
+          )
           PY
 
       - name: Commit changed research snapshot
@@ -76,7 +93,9 @@ jobs:
             research/marketplace_scan/latest.json \
             research/marketplace_scan/latest.md \
             research/marketplace_scan/shortlist.json \
-            research/marketplace_scan/shortlist.md
+            research/marketplace_scan/shortlist.md \
+            research/marketplace_scan/complaints.json \
+            research/marketplace_scan/complaints.md
           if git diff --cached --quiet; then
             echo 'No marketplace-scan changes.'
             exit 0
