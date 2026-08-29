@@ -1,0 +1,58 @@
+name: Marketplace-first discovery scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 18 * * 0'
+
+concurrency:
+  group: marketplace-first-discovery
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run public marketplace scan
+        run: python research/tools/marketplace_scan.py
+
+      - name: Validate scanner outputs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          json_path = Path('research/marketplace_scan/latest.json')
+          md_path = Path('research/marketplace_scan/latest.md')
+          assert json_path.is_file(), 'missing latest.json'
+          assert md_path.is_file(), 'missing latest.md'
+          data = json.loads(json_path.read_text(encoding='utf-8'))
+          assert data['schema_version'] == 1
+          assert isinstance(data['records'], list)
+          assert len(data['records']) >= 10, 'scan returned too few records'
+          assert 'never auto-approve' in data['purpose']
+          markdown = md_path.read_text(encoding='utf-8')
+          assert 'PREBUILD_GATE' in markdown
+          print(f"validated {len(data['records'])} marketplace records")
+          PY
+
+      - name: Commit changed research snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/marketplace_scan/latest.json research/marketplace_scan/latest.md
+          if git diff --cached --quiet; then
+            echo 'No marketplace-scan changes.'
+            exit 0
+          fi
+          git commit -m 'Update marketplace-first discovery snapshot'
+          git pull --rebase origin main
+          git push origin HEAD:main
