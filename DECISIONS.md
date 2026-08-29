@@ -1,32 +1,39 @@
 # DECISIONS
 
-## 2026-08-25 — Repository as persistent memory
-GitHub repository `Q` をこのプロジェクトの正本として使う。長い会話や別セッションでも現在地を復元できるようにする。
+## 2026-08-25 — Q is the source of truth
+GitHub repository `bachikoljunior-blip/Q` is the persistent project memory. Existing unrelated content may be discarded.
 
-## 2026-08-25 — Existing repository content may be discarded
-ユーザーの明示的許可により、Q の旧プロジェクト内容は保持不要。この収益化プロジェクト専用リポジトリとして扱う。
-
-## 2026-08-25 — Do not optimize for investment income first
-新規投入可能額が月0〜10万円なので、現フェーズでは投資を月20万円達成の主エンジンにしない。週18時間の人的資本を事業構築へ優先する。
-
-## 2026-08-25 — Discover skill through market experiments
-得意分野は内省だけで決めず、制作速度、利用、支払意思、継続性を小さな市場実験で測る。
-
-## 2026-08-25 — Validate before scaling automation
-売れない大規模システムを先に作らない。ただし最終条件が無人運営なので、検証MVPも顧客ごとの個別対応を必要としない形にする。
+## 2026-08-25 — Investment is not the initial engine
+With ¥0–100k/month of new capital, financial investments cannot reach the target quickly enough. Build scalable business income first and invest profits later.
 
 ## 2026-08-25 — Zero-touch is non-negotiable
-個別営業、面談、ヒアリング、顧客別納品を主戦略にしない。顧客数と本人作業量を切り離す。
+No primary strategy based on calls, meetings, direct sales, interviews, or customer-specific delivery. Customer count must not linearly increase the owner's work.
 
 ## 2026-08-27 — Kill EXP001
-高単価AI個別サービスは、最初の売上が早くても本人時間が顧客数に比例するため終了。短期現金が必要で本人が条件変更しない限り再開しない。
+High-ticket individualized AI service violates the zero-touch constraint.
 
-## 2026-08-27 — Select EXP002 “つづきから”
-最初の無人MVPとして、AIプロジェクトの引き継ぎパック生成ツールを選択。
+## 2026-08-29 — Kill EXP002
+“つづきから” is mostly deterministic template filling, has strong free substitutes, and lacks recurring-payment necessity.
 
-**Reason:** ユーザー自身の実需、短期実装、外部情報に依存しない価値、無人提供、有料競合による市場検証が揃うため。
+## 2026-08-29 — Kill EXP003
+Subtitle/SRT preflight, auto-fix, AI proofreading, and NLE integration already have numerous free and paid competitors. Market demand exists, but there is no defensible wedge.
 
-**Guardrail:** 競合が強い。無料利用と有料意向を14〜30日で測り、数字が弱ければ執着しない。
+## 2026-08-29 — Permanent action-first response rule
+The user should never have to repeat “do the work in the same answer.”
+When a flaw is discovered, complete stop/change/research/implementation/check/state update before the response.
 
-## 2026-08-27 — Build before asking more questions
-既知の条件で安全に進められるため、追加のアイデア出しをユーザーへ要求せず、静的MVP、PWA、匿名計測、公開検証画面まで実装する。
+## 2026-08-29 — Select EXP004: Amazon.co.jp FBA reimbursement cost audit
+**Decision:** Test a browser-local self-service audit for small Japanese FBA sellers.
+
+**Evidence:**
+- Amazon changed pre-order lost/damaged reimbursement to manufacturing/sourcing cost in 2025.
+- Re-evaluation has a 60-day window.
+- Japanese managed recovery services charge 25–30% of recovered funds.
+- A major Japanese provider currently targets monthly sales of ¥10M+ and has paused new service onboarding.
+- Global self-service software proves the workflow can be sold at a flat monthly fee.
+
+**Wedge:**
+Amazon.co.jp-specific, Japanese UI and case draft, CSV-only/no account access, local processing, immediate use by smaller sellers, transparent deterministic rules.
+
+**Guardrail:**
+This is not a claim-filing service and does not guarantee eligibility or recovery. If real-report compatibility or paid intent fails, stop before building SP-API, payments, or broader recovery engines.
