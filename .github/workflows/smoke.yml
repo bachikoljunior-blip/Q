@@ -1,12 +1,13 @@
-name: EXP004 smoke test
+name: Q governance gate
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 concurrency:
-  group: exp004-smoke-${{ github.ref }}
+  group: q-governance-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -19,18 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check JavaScript syntax
-        run: |
-          node --check app.js
-          node --check app-core.js
-          node --check app-audit.js
-          node --check app-ui.js
-          node --check sw.js
+      - name: Enforce exact-match prebuild gate
+        run: python scripts/check_prebuild_gate.py
 
-      - name: Run audit core smoke
-        run: node tests/audit-core.smoke.js
-
-      - name: Validate static files
+      - name: Validate project files and closed public page
         run: |
           python - <<'PY'
           import json
@@ -41,53 +34,45 @@ jobs:
           class Parser(HTMLParser):
               pass
 
-          pages = [
-              'index.html', 'guide.html', 'fba-reimbursement-cost.html',
-              'fba-reimbursement-deadline.html', 'privacy.html', 'stats.html'
-          ]
-          required = pages + [
-              'styles.css', 'app.js', 'app-core.js', 'app-audit.js', 'app-ui.js',
-              'manifest.webmanifest', 'sw.js', 'sitemap.xml',
-              'PROJECT_STATE.md', 'AGENTS.md',
+          required = [
+              'index.html', 'robots.txt', 'sitemap.xml',
+              'AGENTS.md', 'START_HERE.md', 'PROJECT_STATE.md', 'DECISIONS.md', 'README.md',
+              'research/ACTIVE_CANDIDATE.json',
+              'research/PREBUILD_GATE.md',
+              'research/EXACT_MATCH_SWEEP_2026-08-30.md',
               'experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md',
-              'research/PAID_PAIN_SCORECARD_2026-08-29.md',
-              'tests/audit-core.smoke.js'
+              'scripts/check_prebuild_gate.py'
           ]
           for name in required:
               assert Path(name).is_file(), f'missing {name}'
 
-          for name in pages:
-              Parser().feed(Path(name).read_text(encoding='utf-8'))
-
-          json.loads(Path('manifest.webmanifest').read_text(encoding='utf-8'))
-          ET.parse('sitemap.xml')
-          xml_text = Path('sitemap.xml').read_text(encoding='utf-8')
-          for name in ['fba-reimbursement-cost.html', 'fba-reimbursement-deadline.html']:
-              assert name in xml_text, f'sitemap missing {name}'
-
           html = Path('index.html').read_text(encoding='utf-8')
-          parts = {name: Path(name).read_text(encoding='utf-8') for name in ['app-core.js','app-audit.js','app-ui.js']}
-          app = ''.join(parts.values())
-          for element_id in [
-              'reportFile', 'costFile', 'mapping', 'auditBtn', 'results',
-              'summaryGrid', 'resultBody', 'exportFlagsBtn',
-              'copyClaimPackBtn', 'paidInterestBtn'
-          ]:
-              assert f'id="{element_id}"' in html, f'missing DOM id: {element_id}'
+          Parser().feed(html)
+          assert '現在、公開中の商品はありません' in html
+          assert 'NO_ACTIVE_CANDIDATE' in html
+          assert 'noindex' in html
+          assert 'FBA補てん原価監査 — Amazon.co.jp向け無料CSVチェッカー' not in html
 
-          for marker in [
-              'parseDelimited', 'classifyReason', 'auditData',
-              'buildClaimPack', 'fba-reimbursement-cost-audit'
-          ]:
-              assert marker in app, f'missing app marker: {marker}'
+          robots = Path('robots.txt').read_text(encoding='utf-8')
+          assert 'Disallow: /' in robots
 
-          assert parts['app-ui.js'].count('record.shortfall > 0') >= 2, 'summary and claim pack must honor threshold'
-          assert '字幕Preflight' not in html, 'obsolete EXP003 site still present'
-          assert 'FBA補てん原価監査' in html
-          print('static validation passed')
+          root = ET.parse('sitemap.xml').getroot()
+          assert not list(root), 'closed experiment URLs must not remain in sitemap'
+
+          active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
+          assert active['status'] == 'NO_ACTIVE_CANDIDATE'
+          assert active['build_approved'] is False
+
+          state = Path('PROJECT_STATE.md').read_text(encoding='utf-8')
+          assert 'EXP004' in state and '終了' in state
+          assert 'NO_ACTIVE_CANDIDATE' in state
+
+          experiment = Path('experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md').read_text(encoding='utf-8')
+          assert '状態: **CLOSED**' in experiment
+          print('governance/static validation passed')
           PY
 
-      - name: Serve and smoke HTTP
+      - name: Serve public page and smoke HTTP
         run: |
           python -m http.server 8765 --bind 127.0.0.1 >/tmp/http.log 2>&1 &
           server_pid=$!
@@ -96,15 +81,5 @@ jobs:
             curl -fsS http://127.0.0.1:8765/index.html >/tmp/index.html && break
             sleep 1
           done
-          grep -q 'FBA補てん原価監査' /tmp/index.html
-          curl -fsS http://127.0.0.1:8765/app-audit.js | grep -q 'auditData'
-          curl -fsS http://127.0.0.1:8765/guide.html | grep -q '仕入原価表'
-          curl -fsS http://127.0.0.1:8765/fba-reimbursement-cost.html | grep -q '仕入原価より低い'
-          curl -fsS http://127.0.0.1:8765/fba-reimbursement-deadline.html | grep -q '60日期限'
-          curl -fsS http://127.0.0.1:8765/stats.html | grep -q 'EXP004'
-
-      - name: Check anonymous counter endpoint
-        run: |
-          curl --retry 2 --connect-timeout 10 -fsS \
-            'https://counterapi.com/api/bachikoljunior-blip.github.io/fba-reimbursement-cost-audit/pageview?readOnly=true' \
-            | python -c 'import json,sys; data=json.load(sys.stdin); assert "value" in data; print(data)'
+          grep -q '現在、公開中の商品はありません' /tmp/index.html
+          grep -q 'NO_ACTIVE_CANDIDATE' /tmp/index.html
