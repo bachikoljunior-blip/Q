@@ -1,22 +1,30 @@
-# START HERE — 不労月収20万円プロジェクト
+# START HERE
 
-最終更新: 2026-08-27
+最終更新: 2026-08-29
 
-## 目的
-月20万円の、本人の継続労働への依存が小さい収入を可能な限り早く作る。月20万円は生活のための労働を不要にする最低ライン。
+## Mission
+zero-touchで手取り月20万円以上を作り、生活のための労働を不要にする。
 
-## 読む順番
-1. `PROJECT_STATE.md`
-2. `DECISIONS.md`
-3. 現在の実験: `experiments/EXP002_TSUZUKIKARA.md`
-4. 長期原則: `INCOME20_PROJECT.md`
+## Read first
+1. `AGENTS.md`
+2. `PROJECT_STATE.md`
+3. `DECISIONS.md`
+4. `experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md`
+5. `research/PAID_PAIN_SCORECARD_2026-08-29.md`
 
-## 現在地
-個別受託をやめ、無人販売型の最初の実験「つづきから — AI引き継ぎパック」の無料MVPを実装した。公開・実機確認と14日検証へ進む。
+## Current truth
+- EXP001: closed
+- EXP002: closed
+- EXP003: closed
+- EXP004: live validation
+- Public app: https://bachikoljunior-blip.github.io/Q/
 
-## AIへのルール
-- 個別サービス案へ勝手に戻さない。
-- 「人と原則関わらない」「顧客数に比例して作業を増やさない」を必須条件にする。
-- 作るだけで終わらず、流入→利用→保存→有料意向を数字で測る。
-- 30日ごとに弱い実験を切る。
-- セッション終了時に`PROJECT_STATE.md`を更新する。
+## Do not repeat
+- Do not ask the user for the constraints already recorded.
+- Do not restart “つづきから” or subtitle QA.
+- Do not build generic templates, wrappers, or “AI-powered” features without paid-pain evidence.
+- Do not reply with a plan while executable work remains.
+- When a weakness is found, correct it in the same work cycle.
+
+## Immediate resume
+Read `PROJECT_STATE.md` and execute its `Immediate next action`. Update state before responding.
