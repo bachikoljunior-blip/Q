@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Marketplace-first discovery scanner.
 
-Collects public listing signals from WordPress.org and Atlassian Marketplace.
-It does not approve products. It only surfaces listings/queries that deserve
-manual exact-workflow review under research/PREBUILD_GATE.md.
+Automates WordPress.org plugin-directory discovery using its public API. The
+Atlassian Marketplace V2 search API was retired and now returns HTTP 410, while
+V3 public search is not available as a drop-in unauthenticated replacement.
+Atlassian remains a manual web-research surface and is explicitly recorded as
+such instead of producing misleading SCAN_ERROR rows.
+
+This scanner never approves a product. It only surfaces listings that deserve
+review under research/PREBUILD_GATE.md.
 """
 
 from __future__ import annotations
@@ -19,11 +24,11 @@ import urllib.parse
 import urllib.request
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT_DIR = ROOT / "research" / "marketplace_scan"
-USER_AGENT = "Q-marketplace-research/1.0 (+https://github.com/bachikoljunior-blip/Q)"
+USER_AGENT = "Q-marketplace-research/1.1 (+https://github.com/bachikoljunior-blip/Q)"
 
 WORDPRESS_TERMS = [
     "woocommerce bank transfer",
@@ -40,21 +45,6 @@ WORDPRESS_TERMS = [
     "woocommerce accounting",
 ]
 
-ATLASSIAN_TERMS = [
-    "worklog audit",
-    "access review",
-    "attachment management",
-    "backup restore",
-    "bulk export",
-    "compliance evidence",
-    "configuration audit",
-    "data quality",
-    "duplicate detection",
-    "permission audit",
-    "SLA audit",
-    "timesheet reconciliation",
-]
-
 
 @dataclass
 class Record:
@@ -65,7 +55,6 @@ class Record:
     url: str
     rating: float | None = None
     ratings_count: int | None = None
-    installs: int | None = None
     active_installs: int | None = None
     downloads: int | None = None
     support_threads: int | None = None
@@ -81,31 +70,15 @@ def fetch_json(url: str, retries: int = 3) -> Any:
     last_error: Exception | None = None
     for attempt in range(retries):
         try:
-            req = urllib.request.Request(
+            request = urllib.request.Request(
                 url,
                 headers={"Accept": "application/json", "User-Agent": USER_AGENT},
             )
-            with urllib.request.urlopen(req, timeout=30) as response:
+            with urllib.request.urlopen(request, timeout=30) as response:
                 return json.loads(response.read().decode("utf-8"))
-        except Exception as exc:  # network errors should not kill the whole scan
-            last_error = exc
-            time.sleep(1.5 * (attempt + 1))
-    raise RuntimeError(f"failed to fetch {url}: {last_error}")
-
-
-def fetch_text(url: str, retries: int = 2) -> str:
-    last_error: Exception | None = None
-    for attempt in range(retries):
-        try:
-            req = urllib.request.Request(
-                url,
-                headers={"Accept": "text/html,*/*", "User-Agent": USER_AGENT},
-            )
-            with urllib.request.urlopen(req, timeout=30) as response:
-                return response.read().decode("utf-8", errors="replace")
         except Exception as exc:
             last_error = exc
-            time.sleep(1.0 * (attempt + 1))
+            time.sleep(1.5 * (attempt + 1))
     raise RuntimeError(f"failed to fetch {url}: {last_error}")
 
 
@@ -133,8 +106,8 @@ def float_or_none(value: Any) -> float | None:
         return None
 
 
-def wp_query_url(term: str, per_page: int) -> str:
-    params: list[tuple[str, str]] = [
+def query_url(term: str, per_page: int) -> str:
+    parameters: list[tuple[str, str]] = [
         ("action", "query_plugins"),
         ("request[search]", term),
         ("request[page]", "1"),
@@ -157,30 +130,16 @@ def wp_query_url(term: str, per_page: int) -> str:
         ("request[fields][last_updated]", "1"),
         ("request[fields][short_description]", "1"),
     ]
-    return "https://api.wordpress.org/plugins/info/1.2/?" + urllib.parse.urlencode(params)
+    return "https://api.wordpress.org/plugins/info/1.2/?" + urllib.parse.urlencode(parameters)
 
 
-def wordpress_records(per_page: int) -> list[Record]:
+def collect_wordpress(per_page: int) -> list[Record]:
     records: list[Record] = []
     for term in WORDPRESS_TERMS:
-        try:
-            payload = fetch_json(wp_query_url(term, per_page))
-        except Exception as exc:
-            records.append(
-                Record(
-                    ecosystem="wordpress",
-                    query=term,
-                    name="SCAN_ERROR",
-                    slug_or_key="",
-                    url="",
-                    notes=str(exc),
-                )
-            )
-            continue
-
+        payload = fetch_json(query_url(term, per_page))
         for plugin in payload.get("plugins", []):
-            rating_pct = float_or_none(plugin.get("rating"))
-            rating = rating_pct / 20.0 if rating_pct is not None else None
+            rating_percent = float_or_none(plugin.get("rating"))
+            rating = rating_percent / 20.0 if rating_percent is not None else None
             active = int_or_none(plugin.get("active_installs"))
             support = int_or_none(plugin.get("support_threads"))
             resolved = int_or_none(plugin.get("support_threads_resolved"))
@@ -188,20 +147,20 @@ def wordpress_records(per_page: int) -> list[Record]:
             if support is not None and resolved is not None:
                 unresolved = max(0, support - resolved)
 
-            # Discovery score: installed demand + unresolved support + weak ratings.
-            demand = math.log10(max(active or 0, 0) + 10)
+            demand = math.log10((active or 0) + 10)
             review_weight = math.log10((int_or_none(plugin.get("num_ratings")) or 0) + 2)
             rating_gap = max(0.0, 4.6 - (rating or 5.0))
             support_gap = math.log10((unresolved or 0) + 1)
             score = demand * 2.0 + review_weight + rating_gap * 2.0 + support_gap * 1.5
+            slug = str(plugin.get("slug") or "")
 
             records.append(
                 Record(
                     ecosystem="wordpress",
                     query=term,
                     name=clean_text(plugin.get("name"), 120),
-                    slug_or_key=str(plugin.get("slug") or ""),
-                    url=str(plugin.get("homepage") or f"https://wordpress.org/plugins/{plugin.get('slug', '')}/"),
+                    slug_or_key=slug,
+                    url=f"https://wordpress.org/plugins/{slug}/",
                     rating=round(rating, 2) if rating is not None else None,
                     ratings_count=int_or_none(plugin.get("num_ratings")),
                     active_installs=active,
@@ -209,7 +168,7 @@ def wordpress_records(per_page: int) -> list[Record]:
                     support_threads=support,
                     support_resolved=resolved,
                     last_updated=str(plugin.get("last_updated") or "") or None,
-                    pricing_model="free-directory / possible external pro",
+                    pricing_model="free directory; external Pro may exist",
                     description=clean_text(plugin.get("short_description")),
                     signal_score=round(score, 3),
                     notes=(f"unresolved_support={unresolved}" if unresolved is not None else "support data unavailable"),
@@ -219,122 +178,11 @@ def wordpress_records(per_page: int) -> list[Record]:
     return records
 
 
-def first_match(patterns: Iterable[str], text: str, cast: str = "str") -> Any:
-    for pattern in patterns:
-        match = re.search(pattern, text, flags=re.I | re.S)
-        if not match:
-            continue
-        value = html.unescape(re.sub(r"<[^>]+>", " ", match.group(1))).strip()
-        if cast == "int":
-            return int_or_none(value)
-        if cast == "float":
-            return float_or_none(value)
-        return clean_text(value, 240)
-    return None
-
-
-def atlassian_records(max_per_query: int) -> list[Record]:
-    records: list[Record] = []
-    seen: set[tuple[str, str]] = set()
-    for term in ATLASSIAN_TERMS:
-        url = "https://marketplace.atlassian.com/rest/2/addons/search/brief?" + urllib.parse.urlencode({"q": term})
-        try:
-            payload = fetch_json(url)
-        except Exception as exc:
-            records.append(
-                Record(
-                    ecosystem="atlassian",
-                    query=term,
-                    name="SCAN_ERROR",
-                    slug_or_key="",
-                    url="",
-                    notes=str(exc),
-                )
-            )
-            continue
-
-        addons = payload.get("addons", [])[:max_per_query]
-        for addon in addons:
-            key = str(addon.get("key") or "")
-            if not key or (term, key) in seen:
-                continue
-            seen.add((term, key))
-            alt = ((addon.get("_links") or {}).get("alternate") or {}).get("href") or ""
-            page_url = urllib.parse.urljoin("https://marketplace.atlassian.com", alt)
-            rating = None
-            ratings_count = None
-            installs = None
-            pricing = None
-            description = ""
-            notes = ""
-            try:
-                page = fetch_text(page_url)
-                # Marketplace rendering changes often; keep multiple loose fallbacks.
-                installs = first_match(
-                    [
-                        r"INSTALLS\s*</?[^>]*>\s*([0-9,]+)",
-                        r"INSTALLS[\s\S]{0,180}?([0-9][0-9,]*)",
-                        r'"installCount"\s*:\s*([0-9]+)',
-                    ],
-                    page,
-                    "int",
-                )
-                rating = first_match(
-                    [
-                        r"OVERALL RATINGS[\s\S]{0,140}?([0-5](?:\.[0-9]+)?)\s*</",
-                        r'"averageRating"\s*:\s*([0-5](?:\.[0-9]+)?)',
-                    ],
-                    page,
-                    "float",
-                )
-                ratings_count = first_match(
-                    [
-                        r"OVERALL RATINGS[\s\S]{0,220}?\(([0-9,]+)\)",
-                        r'"reviewCount"\s*:\s*([0-9]+)',
-                    ],
-                    page,
-                    "int",
-                )
-                pricing = first_match(
-                    [r"Payment model[\s\S]{0,120}?<[^>]+>\s*([^<]+)<", r'"paymentModel"\s*:\s*"([^"]+)"'],
-                    page,
-                )
-                description = first_match(
-                    [r"## Key highlights of the app\s*([^<\n]{10,260})", r'<meta[^>]+name="description"[^>]+content="([^"]+)"'],
-                    page,
-                ) or ""
-            except Exception as exc:
-                notes = f"listing fetch failed: {exc}"
-
-            demand = math.log10((installs or 0) + 10)
-            review_weight = math.log10((ratings_count or 0) + 2)
-            rating_gap = max(0.0, 4.5 - (rating or 5.0))
-            score = demand * 2.1 + review_weight + rating_gap * 2.2
-            records.append(
-                Record(
-                    ecosystem="atlassian",
-                    query=term,
-                    name=clean_text(addon.get("name"), 120),
-                    slug_or_key=key,
-                    url=page_url,
-                    rating=round(rating, 2) if rating is not None else None,
-                    ratings_count=ratings_count,
-                    installs=installs,
-                    pricing_model=pricing,
-                    description=description,
-                    signal_score=round(score, 3),
-                    notes=notes,
-                )
-            )
-            time.sleep(0.15)
-    return records
-
-
 def dedupe(records: list[Record]) -> list[Record]:
     best: dict[tuple[str, str], Record] = {}
     queries: dict[tuple[str, str], set[str]] = {}
     for record in records:
-        key = (record.ecosystem, record.slug_or_key or f"ERROR:{record.query}")
+        key = (record.ecosystem, record.slug_or_key)
         queries.setdefault(key, set()).add(record.query)
         current = best.get(key)
         if current is None or record.signal_score > current.signal_score:
@@ -356,9 +204,14 @@ def write_outputs(records: list[Record]) -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     now = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).replace(microsecond=0)
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_jst": now.isoformat(),
         "purpose": "surface marketplace listings for manual exact-workflow review; never auto-approve builds",
+        "coverage": {
+            "wordpress": "AUTOMATED_PUBLIC_API",
+            "atlassian": "MANUAL_ONLY_V2_RETIRED_2026-06-30",
+            "atlassian_note": "V2 search returns HTTP 410. V3 is not used without a verified public unauthenticated search contract.",
+        },
         "records": [asdict(record) for record in records],
     }
     (OUT_DIR / "latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -368,30 +221,34 @@ def write_outputs(records: list[Record]) -> None:
         "",
         f"最終更新: {now.isoformat()}",
         "",
-        "> これは候補発見用の機械スキャン。点数は商品価値や差別化の証明ではない。",
-        "> 上位でも PREBUILD_GATE のexact-match検索・重複表・集客・採算を通るまで実装禁止。",
+        "> 候補発見用の機械スキャン。点数は商品価値や差別化の証明ではない。",
+        "> PREBUILD_GATEのexact-match検索・重複表・集客・採算を通るまで実装禁止。",
+        "",
+        "## Coverage",
+        "",
+        "- WordPress.org: public APIで自動収集",
+        "- Atlassian Marketplace: manual-only。V2検索APIは2026-06-30に終了しHTTP 410。公開V3検索契約を確認できるまで自動カバレッジを主張しない",
         "",
         "## Top signals",
         "",
-        "| # | Ecosystem | Listing | Query | Installs/active | Rating | Ratings | Unresolved/support | Score |",
-        "|---:|---|---|---|---:|---:|---:|---|---:|",
+        "| # | Listing | Query | Active | Rating | Ratings | Unresolved/support | Score |",
+        "|---:|---|---|---:|---:|---:|---|---:|",
     ]
     for index, record in enumerate(records[:60], 1):
-        demand = record.active_installs if record.active_installs is not None else record.installs
         support = record.notes.replace("|", "/")
         name = record.name.replace("|", "/")
         query = record.query.replace("|", "/")
         lines.append(
-            f"| {index} | {record.ecosystem} | [{name}]({record.url}) | {query} | {fmt_int(demand)} | "
+            f"| {index} | [{name}]({record.url}) | {query} | {fmt_int(record.active_installs)} | "
             f"{fmt_float(record.rating)} | {fmt_int(record.ratings_count)} | {support} | {record.signal_score:.3f} |"
         )
 
     lines.extend(
         [
             "",
-            "## Required next step for any surfaced listing",
+            "## Required next step",
             "",
-            "1. 低評価・support thread・forumから同一の未解決不満を抽出する。",
+            "1. 低評価レビュー・未解決supportから同一の未解決不満を抽出する。",
             "2. 不満をbuyer/input/processing/outputへ変換する。",
             "3. 同じworkflowを日本語・英語・marketplace・OSSで最低12検索する。",
             "4. direct competitor 5件、substitute 5件、overlap matrixを作る。",
@@ -405,11 +262,8 @@ def write_outputs(records: list[Record]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--wp-per-query", type=int, default=24)
-    parser.add_argument("--atlassian-per-query", type=int, default=12)
     args = parser.parse_args()
-
-    records = wordpress_records(max(5, min(args.wp_per_query, 50)))
-    records.extend(atlassian_records(max(3, min(args.atlassian_per_query, 25))))
+    records = collect_wordpress(max(5, min(args.wp_per_query, 50)))
     write_outputs(dedupe(records))
     return 0
 
