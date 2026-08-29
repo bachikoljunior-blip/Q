@@ -1,1 +1,58 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>検証数字 — 字幕Preflight</title><link rel="stylesheet" href="styles.css"><style>.stats-main{width:min(900px,calc(100% - 32px));margin:60px auto}.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:18px}.stat strong{display:block;font-size:2rem}.stat span{color:var(--muted)}@media(max-width:650px){.stats-grid{grid-template-columns:1fr 1fr}}</style></head><body><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">字</span><span>字幕Preflight</span></a><a class="ghost small" href="index.html">戻る</a></header><main class="stats-main"><div class="eyebrow">EXP003 DASHBOARD</div><h1>検証数字</h1><p>本文は記録せず、操作イベント数だけを測ります。</p><div class="stats-grid" id="grid"></div><section class="faq"><h2>判定</h2><p>最初の100ユニーク端末で、チェック実行率30%以上、SRT/レポート保存率10%以上、仕事利用意向5%以上を最低目安にします。届かなければ追加開発せず降格します。</p></section></main><script>const ms=[['view','ユニーク端末'],['check','チェック'],['autofix','自動修正'],['download_srt','SRT保存'],['download_report','レポート保存'],['paid_interest','仕事利用意向']],ns='bachikoljunior-blip.github.io',a='subtitle-preflight';Promise.all(ms.map(async([k,l])=>{let r=await fetch(`https://counterapi.com/api/${ns}/${a}/${k}?readOnly=true`),d=await r.json();return[l,+d.value||0]})).then(x=>grid.innerHTML=x.map(([l,v])=>`<article class="stat"><strong>${v}</strong><span>${l}</span></article>`).join('')).catch(()=>grid.textContent='取得できませんでした');</script></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <meta name="robots" content="noindex">
+  <title>EXP004検証数字 — FBA補てん原価監査</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.stat{padding:20px;background:var(--surface-2);border:1px solid var(--line);border-radius:16px}.stat strong{display:block;font-size:2rem}.stat span{color:var(--muted)}.criteria{margin-top:28px;padding:20px;background:var(--surface-2);border-radius:16px}.status{padding:10px 12px;margin:16px 0;color:var(--muted);background:var(--surface-2);border-radius:10px}@media(max-width:650px){.stats-grid{grid-template-columns:1fr 1fr}}@media(max-width:400px){.stats-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">¥</span><span>FBA補てん原価監査</span></a>
+    <a class="ghost small" href="index.html">ツールへ戻る</a>
+  </header>
+  <main class="stats-main">
+    <div class="eyebrow">EXP004 PUBLIC DASHBOARD</div>
+    <h1>検証数字</h1>
+    <p>本文を含まない簡易カウンターです。不正操作や重複は可能なので、傾向を見る補助指標として使います。</p>
+    <div class="status" id="status">数字を取得中…</div>
+    <div class="stats-grid" id="statsGrid"></div>
+    <section class="criteria">
+      <h2>継続・撤退ルール</h2>
+      <ul>
+        <li>最初の100ユニーク端末で監査実行30件以上。</li>
+        <li>指摘CSVまたは下書き保存10件以上。</li>
+        <li>月額版希望5件以上。</li>
+        <li>実ファイルで誤判定が多い、または日本語セルフサービスの優位性が消えた場合は即修正・撤退。</li>
+        <li>需要が出ても、手取り月20万円に必要な単価×契約数が成立しなければ拡大しない。</li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    const metrics = [
+      ['pageview','ページ表示'],['unique-visitor','ユニーク端末'],['sample-loaded','サンプル利用'],
+      ['report-loaded','補てんレポート読込'],['cost-loaded','原価表読込'],['audit-run','監査実行'],
+      ['shortfall-found','差額候補あり'],['deadline-found','期限候補あり'],['audit-export','指摘CSV保存'],
+      ['claim-pack-copy','下書きコピー'],['claim-pack-download','下書き保存'],['monthly-interest','月額版希望']
+    ];
+    const ns='bachikoljunior-blip.github.io', action='fba-reimbursement-cost-audit';
+    async function readMetric(key){
+      const url=`https://counterapi.com/api/${ns}/${action}/${encodeURIComponent(key)}?readOnly=true`;
+      const response=await fetch(url); if(!response.ok) throw new Error('fetch failed');
+      const data=await response.json(); return Number(data.value||0);
+    }
+    Promise.all(metrics.map(async ([key,label])=>({key,label,value:await readMetric(key)})))
+      .then(rows=>{
+        document.getElementById('statsGrid').innerHTML=rows.map(row=>`<article class="stat"><strong>${row.value.toLocaleString('ja-JP')}</strong><span>${row.label}</span></article>`).join('');
+        document.getElementById('status').textContent=`最終取得: ${new Date().toLocaleString('ja-JP')}`;
+      })
+      .catch(()=>{document.getElementById('status').textContent='カウンターを取得できませんでした。時間を置いて再読み込みしてください。';});
+  </script>
+</body>
+</html>
