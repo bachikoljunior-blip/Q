@@ -1,12 +1,12 @@
 {
-  "name": "つづきから — AI引き継ぎパック",
-  "short_name": "つづきから",
-  "description": "AIプロジェクトの目標・現在地・決定・次の一手をMarkdownで持ち運ぶ",
-  "start_url": "./index.html",
+  "name": "FBA補てん原価監査",
+  "short_name": "FBA原価監査",
+  "description": "Amazon.co.jpのFBA補てん額と仕入原価をブラウザ内で照合",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f7f8fb",
-  "theme_color": "#111827",
+  "background_color": "#07101c",
+  "theme_color": "#08111f",
   "icons": [
     {
       "src": "icon.svg",
