@@ -1,6 +1,6 @@
 # Marketplace shortlist — discovery signals only
 
-最終更新: 2026-08-30T08:50:27+09:00
+最終更新: 2026-08-30T08:54:30+09:00
 
 **Status: DISCOVERY_SIGNALS_ONLY / build_approved=false**
 
