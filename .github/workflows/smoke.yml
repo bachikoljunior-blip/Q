@@ -1,40 +1,95 @@
-name: EXP003 smoke test
+name: EXP004 smoke test
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+
       - name: Check JavaScript syntax
-        run: node --check app.js
-      - name: Validate EXP003 static files
+        run: |
+          node --check app.js
+          node --check app-core.js
+          node --check app-audit.js
+          node --check app-ui.js
+          node --check sw.js
+
+      - name: Run audit core smoke
+        run: node tests/audit-core.smoke.js
+
+      - name: Validate static files
         run: |
           python - <<'PY'
-          from pathlib import Path
+          import json
+          import xml.etree.ElementTree as ET
           from html.parser import HTMLParser
-          class P(HTMLParser): pass
-          for n in ['index.html','styles.css','app.js','privacy.html','stats.html']:
-              assert Path(n).is_file(), n
-          html=Path('index.html').read_text(encoding='utf-8'); P().feed(html)
-          for i in ['srtInput','checkBtn','fixBtn','result','issues','proInterestBtn']:
-              assert f'id="{i}"' in html, i
-          js=Path('app.js').read_text(encoding='utf-8')
-          for token in ['function parse','function inspect','function safeFix','subtitle-preflight']:
-              assert token in js, token
-          print('EXP003 static validation passed')
+          from pathlib import Path
+
+          class Parser(HTMLParser):
+              pass
+
+          required = [
+              'index.html', 'styles.css', 'app.js', 'app-core.js', 'app-audit.js', 'app-ui.js', 'guide.html', 'privacy.html',
+              'stats.html', 'manifest.webmanifest', 'sw.js', 'sitemap.xml',
+              'PROJECT_STATE.md', 'AGENTS.md',
+              'experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md',
+              'research/PAID_PAIN_SCORECARD_2026-08-29.md',
+              'tests/audit-core.smoke.js'
+          ]
+          for name in required:
+              assert Path(name).is_file(), f'missing {name}'
+
+          for name in ['index.html', 'guide.html', 'privacy.html', 'stats.html']:
+              Parser().feed(Path(name).read_text(encoding='utf-8'))
+
+          json.loads(Path('manifest.webmanifest').read_text(encoding='utf-8'))
+          ET.parse('sitemap.xml')
+
+          html = Path('index.html').read_text(encoding='utf-8')
+          app = ''.join(Path(name).read_text(encoding='utf-8') for name in ['app-core.js','app-audit.js','app-ui.js'])
+          for element_id in [
+              'reportFile', 'costFile', 'mapping', 'auditBtn', 'results',
+              'summaryGrid', 'resultBody', 'exportFlagsBtn',
+              'copyClaimPackBtn', 'paidInterestBtn'
+          ]:
+              assert f'id="{element_id}"' in html, f'missing DOM id: {element_id}'
+
+          for marker in [
+              'parseDelimited', 'classifyReason', 'auditData',
+              'buildClaimPack', 'fba-reimbursement-cost-audit'
+          ]:
+              assert marker in app, f'missing app marker: {marker}'
+
+          assert '字幕Preflight' not in html, 'obsolete EXP003 site still present'
+          assert 'FBA補てん原価監査' in html
+          print('static validation passed')
           PY
+
       - name: Serve and smoke HTTP
         run: |
           python -m http.server 8765 --bind 127.0.0.1 >/tmp/http.log 2>&1 &
-          pid=$!; trap 'kill $pid' EXIT; sleep 1
-          curl -fsS http://127.0.0.1:8765/ | grep -q '字幕Preflight'
-          curl -fsS http://127.0.0.1:8765/app.js | grep -q 'safeFix'
-      - name: Check counter endpoint
+          server_pid=$!
+          trap 'kill $server_pid' EXIT
+          for i in {1..10}; do
+            curl -fsS http://127.0.0.1:8765/index.html >/tmp/index.html && break
+            sleep 1
+          done
+          grep -q 'FBA補てん原価監査' /tmp/index.html
+          curl -fsS http://127.0.0.1:8765/app-audit.js | grep -q 'auditData'
+          curl -fsS http://127.0.0.1:8765/guide.html | grep -q '仕入原価表'
+          curl -fsS http://127.0.0.1:8765/stats.html | grep -q 'EXP004'
+
+      - name: Check anonymous counter endpoint
         run: |
-          curl --retry 2 --connect-timeout 10 -fsS 'https://counterapi.com/api/bachikoljunior-blip.github.io/subtitle-preflight/view?readOnly=true' | python -c 'import json,sys; d=json.load(sys.stdin); assert "value" in d'
+          curl --retry 2 --connect-timeout 10 -fsS \
+            'https://counterapi.com/api/bachikoljunior-blip.github.io/fba-reimbursement-cost-audit/pageview?readOnly=true' \
+            | python -c 'import json,sys; data=json.load(sys.stdin); assert "value" in data; print(data)'
