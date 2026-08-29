@@ -12,14 +12,19 @@
 - no primary strategy requiring calls, meetings, or custom delivery
 
 ## Strategy
-1. Search only paid-pain markets.
-2. Verify current competitors and free substitutes before coding.
-3. Select a narrow self-service wedge.
-4. Build deterministic MVP where rules are enough.
-5. Measure use and paid intent.
-6. Add payment/automation only after gates pass.
-7. Kill weak experiments without sunk-cost bias.
-8. Convert profits into diversified long-term assets after business cash flow exists.
+1. Start from a paid marketplace or other channel with visible demand and acquisition.
+2. Define the exact buyer → input → processing → output → price workflow.
+3. Search Japanese and English direct competitors before any build.
+4. Reject 70%+ workflow duplicates unless the unresolved difference has external evidence.
+5. Do not treat localization, low price, no-login or browser-local processing as sufficient differentiation by themselves.
+6. Record the decision in `research/ACTIVE_CANDIDATE.json`.
+7. Do not create new product code until `build_approved=true`.
+8. After approval, build the smallest zero-touch offer/MVP and measure real use and paid intent.
+9. Add payment and deeper automation only after explicit gates pass.
+10. Kill weak experiments without sunk-cost bias.
+11. Convert profits into diversified long-term assets after business cash flow exists.
 
-## Current experiment
-See `PROJECT_STATE.md`.
+## Current status
+`NO_ACTIVE_CANDIDATE`
+
+EXP001–004 are closed. See `PROJECT_STATE.md`, `research/PREBUILD_GATE.md`, and `research/EXACT_MATCH_SWEEP_2026-08-30.md`.
