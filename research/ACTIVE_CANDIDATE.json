@@ -3,6 +3,7 @@
   "last_reviewed_jst": "2026-08-31T07:20:00+09:00",
   "status": "LIVE_FREE_MVP",
   "candidate_id": "EXP005_SCRIPT_OVERLAP_AUDIT",
+  "candidate_origin": "INDEPENDENT_LOW_COST_MVP",
   "name": "台本かぶり監査",
   "build_approved": true,
   "exact_workflow": "複数のYouTube台本を持つ制作者がTXT/MD/SRT/VTT/CSVまたは本文を端末へ入れる → 日本語文字n-gram・語彙・冒頭/締め・文長構造・反復文をブラウザ内で比較 → 台本ペアの類似度、反復箇所、修正優先順位、CSV/JSONを受け取る → 無料MVP",
@@ -25,5 +26,5 @@
   "kill_criteria": ["公開後30日で外部利用イベントが20件未満","分析完了率が30%未満","再訪または複数ファイル利用が5件未満","検索流入も所有チャネル利用も発生しない","無料の完全同一代替が出る"],
   "evidence_review": {"queue_file":"research/discovery_queue/latest.json","review_file":"research/discovery_queue/reviewed_2026-08-30.json","source_sha256":"1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1","source_item_count":90,"reviewed_item_count":90,"wordpress_rows":21,"app_store_rows":69,"promoted_signal_ids":[]},
   "public_url": "https://bachikoljunior-blip.github.io/Q/product/script-overlap-audit/",
-  "reason": "Zero-cost, reversible free MVP for a narrow pre-publishing workflow. Commercial demand remains unproven."
+  "reason": "Zero-cost, reversible free MVP independent of the closed 90-row queue. Commercial demand remains unproven."
 }
