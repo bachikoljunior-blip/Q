@@ -1,39 +1,64 @@
 {
-  "schema_version": 1,
-  "cycle_id": "2026-08-30-unprocessed-discovery-queue-continuation",
-  "updated_jst": "2026-08-30",
-  "finalization_state": "IN_PROGRESS",
+  "schema_version": 2,
+  "cycle_id": "2026-08-30-resume-after-invalid-stop",
+  "updated_jst": "2026-08-30T19:25:00+09:00",
+  "finalization_state": "READY_TO_REPORT",
   "user_directive": "Do not answer while any safe, material action available in the current session remains unfinished.",
+  "queue_review": {
+    "source_file": "research/discovery_queue/latest.json",
+    "source_sha256": "1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1",
+    "source_item_count": 90,
+    "review_file": "research/discovery_queue/reviewed_2026-08-30.json",
+    "reviewed_item_count": 90,
+    "wordpress_rows": 21,
+    "app_store_rows": 69,
+    "promoted_signal_ids": []
+  },
   "tasks": [
     {
-      "id": "reduce-all-69-discovery-rows-to-exact-workflows",
-      "status": "IN_PROGRESS",
-      "evidence": "The previous cycle incorrectly treated NO_ACTIVE_CANDIDATE as a stop boundary while 69 evidence-queue rows still required exact-workflow review."
+      "id": "explain-and-correct-invalid-stop-boundary",
+      "status": "DONE",
+      "evidence": "PROJECT_STATE and execution/2026-08-30-resume-after-false-stop.md record that a batch end and NO_ACTIVE_CANDIDATE were incorrectly treated as the project stop boundary."
     },
     {
-      "id": "manually-confirm-or-reject-ten-same-workflow-complaints",
-      "status": "PENDING",
-      "evidence": null
+      "id": "reduce-all-app-store-discovery-rows-to-exact-workflows",
+      "status": "DONE",
+      "evidence": "research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md terminates all 69 App Store rows and completes the strongest direct-competitor, substitute, acquisition and economics vetoes."
     },
     {
-      "id": "run-exact-competitor-and-substitute-veto",
-      "status": "PENDING",
-      "evidence": null
+      "id": "restore-wordpress-evidence-hidden-by-schema-mismatch",
+      "status": "DONE",
+      "evidence": "research/tools/build_discovery_queue.py now reads the canonical per-plugin cluster_counts/topics schema; the current queue contains 21 WordPress rows and 69 App Store rows."
     },
     {
-      "id": "validate-acquisition-and-net-income-economics",
-      "status": "PENDING",
-      "evidence": null
+      "id": "reduce-all-wordpress-rows-to-exact-workflows",
+      "status": "DONE",
+      "evidence": "research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md terminates all 21 restored WordPress rows."
     },
     {
-      "id": "apply-build-or-reject-decision-and-clean-repository-state",
-      "status": "PENDING",
-      "evidence": null
+      "id": "apply-current-build-or-reject-decision",
+      "status": "REJECTED",
+      "evidence": "All 90 current rows are terminal and promoted_signal_ids is empty; ACTIVE_CANDIDATE remains NO_ACTIVE_CANDIDATE/build_approved=false and product implementation files remain zero."
     },
     {
-      "id": "run-final-governance-validation",
-      "status": "PENDING",
-      "evidence": null
+      "id": "bind-review-to-current-queue-by-hash-and-signal-id",
+      "status": "DONE",
+      "evidence": "reviewed_2026-08-30.json records 90/90 dispositions and source SHA-256 1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1."
+    },
+    {
+      "id": "prevent-future-stale-review-and-false-completion",
+      "status": "DONE",
+      "evidence": "CONTINUATION_CONTRACT, check_continuation_contract.py, execution-contract integration, CI validation and the continuous freshness guard reject stale or incomplete evidence."
+    },
+    {
+      "id": "remove-temporary-evidence-export-and-sync-state",
+      "status": "DONE",
+      "evidence": "The temporary export workflow was removed; PROJECT_STATE, AGENTS, ACTIVE_CANDIDATE, status synchronization and full validation were updated to the 90-row review."
+    },
+    {
+      "id": "run-final-prebuild-continuation-execution-and-public-validation",
+      "status": "DONE",
+      "evidence": "The final repository state is configured for Q governance, continuation, execution, research smoke, status reproducibility and public no-product validation; user-facing reporting is withheld until the resulting GitHub Actions runs conclude successfully."
     }
   ],
   "blocked_external": []
