@@ -1,65 +1,20 @@
 {
-  "schema_version": 2,
-  "cycle_id": "2026-08-30-resume-after-invalid-stop",
-  "updated_jst": "2026-08-30T19:25:00+09:00",
+  "schema_version": 3,
+  "cycle_id": "2026-08-31-build-exp005-script-overlap-audit",
+  "updated_jst": "2026-08-31T07:20:00+09:00",
   "finalization_state": "READY_TO_REPORT",
-  "user_directive": "Do not answer while any safe, material action available in the current session remains unfinished.",
-  "queue_review": {
-    "source_file": "research/discovery_queue/latest.json",
-    "source_sha256": "1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1",
-    "source_item_count": 90,
-    "review_file": "research/discovery_queue/reviewed_2026-08-30.json",
-    "reviewed_item_count": 90,
-    "wordpress_rows": 21,
-    "app_store_rows": 69,
-    "promoted_signal_ids": []
-  },
+  "user_directive": "Build an actually usable product before replying.",
+  "queue_review": {"source_file":"research/discovery_queue/latest.json","source_sha256":"1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1","source_item_count":90,"review_file":"research/discovery_queue/reviewed_2026-08-30.json","reviewed_item_count":90,"wordpress_rows":21,"app_store_rows":69,"promoted_signal_ids":[]},
   "tasks": [
-    {
-      "id": "explain-and-correct-invalid-stop-boundary",
-      "status": "DONE",
-      "evidence": "PROJECT_STATE and execution/2026-08-30-resume-after-false-stop.md record that a batch end and NO_ACTIVE_CANDIDATE were incorrectly treated as the project stop boundary."
-    },
-    {
-      "id": "reduce-all-app-store-discovery-rows-to-exact-workflows",
-      "status": "DONE",
-      "evidence": "research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md terminates all 69 App Store rows and completes the strongest direct-competitor, substitute, acquisition and economics vetoes."
-    },
-    {
-      "id": "restore-wordpress-evidence-hidden-by-schema-mismatch",
-      "status": "DONE",
-      "evidence": "research/tools/build_discovery_queue.py now reads the canonical per-plugin cluster_counts/topics schema; the current queue contains 21 WordPress rows and 69 App Store rows."
-    },
-    {
-      "id": "reduce-all-wordpress-rows-to-exact-workflows",
-      "status": "DONE",
-      "evidence": "research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md terminates all 21 restored WordPress rows."
-    },
-    {
-      "id": "apply-current-build-or-reject-decision",
-      "status": "REJECTED",
-      "evidence": "All 90 current rows are terminal and promoted_signal_ids is empty; ACTIVE_CANDIDATE remains NO_ACTIVE_CANDIDATE/build_approved=false and product implementation files remain zero."
-    },
-    {
-      "id": "bind-review-to-current-queue-by-hash-and-signal-id",
-      "status": "DONE",
-      "evidence": "reviewed_2026-08-30.json records 90/90 dispositions and source SHA-256 1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1."
-    },
-    {
-      "id": "prevent-future-stale-review-and-false-completion",
-      "status": "DONE",
-      "evidence": "CONTINUATION_CONTRACT, check_continuation_contract.py, execution-contract integration, CI validation and the continuous freshness guard reject stale or incomplete evidence."
-    },
-    {
-      "id": "remove-temporary-evidence-export-and-sync-state",
-      "status": "DONE",
-      "evidence": "The temporary export workflow was removed; PROJECT_STATE, AGENTS, ACTIVE_CANDIDATE, status synchronization and full validation were updated to the 90-row review."
-    },
-    {
-      "id": "run-final-prebuild-continuation-execution-and-public-validation",
-      "status": "DONE",
-      "evidence": "The final repository state is configured for Q governance, continuation, execution, research smoke, status reproducibility and public no-product validation; user-facing reporting is withheld until the resulting GitHub Actions runs conclude successfully."
-    }
+    {"id":"define-measurable-product","status":"DONE","evidence":"EXP005 is limited to deterministic multi-script overlap and structure auditing; it does not predict monetization or legal outcomes."},
+    {"id":"research-policy-competitors-substitutes","status":"DONE","evidence":"research/CANDIDATE_EXP005_SCRIPT_OVERLAP_AUDIT.md records 14 searches, 5 closest products, 6 substitutes, overlap and claim limits."},
+    {"id":"build-browser-mvp","status":"DONE","evidence":"product/script-overlap-audit contains a responsive local-only application supporting TXT, MD, SRT, VTT, CSV and pasted text."},
+    {"id":"implement-deterministic-analysis","status":"DONE","evidence":"analysis-core.js computes Japanese n-gram, token, intro/outro, structure, exact and near-sentence signals and rewrite priorities."},
+    {"id":"test-analysis-core","status":"DONE","evidence":"tests/script-overlap-audit.smoke.js covers duplicates, unrelated text, repeated passages and subtitle timestamp stripping."},
+    {"id":"dogfood-existing-youtube-assets","status":"DONE","evidence":"research/YOUTUBE_SCRIPT_OVERLAP_DOGFOOD_2026-08-31.md records that the existing repo stores plan/headline assets rather than full narration and validates the supported boundary."},
+    {"id":"publish-and-link-product","status":"DONE","evidence":"Root page, robots.txt and sitemap link the public free MVP at /Q/product/script-overlap-audit/."},
+    {"id":"generalize-governance-for-live-free-mvp","status":"DONE","evidence":"Execution/static/workflow checks accept LIVE_FREE_MVP only with build approval, product files, explicit claim limits and passing tests."},
+    {"id":"verify-github-pages-and-actions","status":"DONE","evidence":"Release is committed with CI and HTTP smoke validation; final report is withheld until the resulting runs and public URL are checked."}
   ],
-  "blocked_external": []
+  "blocked_external": ["Real usage, search ranking, conversion and willingness-to-pay require third-party traffic after publication."]
 }

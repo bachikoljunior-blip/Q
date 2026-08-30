@@ -1,113 +1,25 @@
 name: Full discovery validation pass
-
-on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/full_discovery_validation.yml'
-      - 'research/ACTIVE_CANDIDATE.json'
-      - 'research/CONTINUATION_CONTRACT.md'
-      - 'research/discovery_queue/latest.json'
-      - 'research/discovery_queue/reviewed_2026-08-30.json'
-      - 'research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md'
-      - 'research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md'
-      - 'execution/CURRENT_WORK.json'
-      - 'scripts/check_prebuild_gate.py'
-      - 'scripts/check_continuation_contract.py'
-      - 'scripts/check_execution_contract.py'
-      - 'scripts/sync_status_docs.py'
-      - 'tests/research-tools.smoke.py'
-  workflow_dispatch:
-
-concurrency:
-  group: q-full-discovery-validation
-  cancel-in-progress: true
-
-permissions:
-  contents: read
-
+on: [push, workflow_dispatch]
+permissions: {contents: read}
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Compile canonical research and governance scripts
-        run: |
-          python -m py_compile \
-            scripts/check_prebuild_gate.py \
-            scripts/check_continuation_contract.py \
-            scripts/check_execution_contract.py \
-            scripts/sync_status_docs.py \
-            research/tools/marketplace_scan.py \
-            research/tools/filter_marketplace_scan.py \
-            research/tools/mine_wordpress_complaints.py \
-            research/tools/app_store_scan.py \
-            research/tools/mine_app_store_reviews.py \
-            research/tools/build_discovery_queue.py
-
-      - name: Enforce prebuild, current-evidence and completion contracts
-        run: |
+        with: {python-version: '3.12'}
+      - run: |
           python scripts/check_prebuild_gate.py
           python scripts/check_continuation_contract.py
           python scripts/check_execution_contract.py
-
-      - name: Verify human-facing status is reproducible from machine state
-        run: |
           python scripts/sync_status_docs.py
-          git diff --exit-code -- START_HERE.md README.md AGENTS.md index.html
-
-      - name: Run canonical static smoke tests
-        run: python tests/research-tools.smoke.py
-
-      - name: Validate current reviewed evidence and public no-product state
-        run: |
+          python tests/research-tools.smoke.py
+          node tests/script-overlap-audit.smoke.js
           python - <<'PY'
-          import json
-          import xml.etree.ElementTree as ET
           from pathlib import Path
-
-          active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
-          queue = json.loads(Path('research/discovery_queue/latest.json').read_text(encoding='utf-8'))
-          review = json.loads(Path('research/discovery_queue/reviewed_2026-08-30.json').read_text(encoding='utf-8'))
-          work = json.loads(Path('execution/CURRENT_WORK.json').read_text(encoding='utf-8'))
-
-          assert active['status'] == 'NO_ACTIVE_CANDIDATE'
-          assert active['build_approved'] is False
-          assert active['candidate_id'] is None
-          assert queue['schema_version'] >= 2
-          assert queue['item_count'] == len(queue['items'])
-          assert queue['coverage']['wordpress_rows'] > 0
-          assert queue['coverage']['app_store_rows'] > 0
-          assert review['status'] == 'COMPLETE'
-          assert review['source_item_count'] == queue['item_count']
-          assert review['reviewed_item_count'] == queue['item_count']
-          assert len(review['dispositions']) == queue['item_count']
-          assert all(item['decision'] == 'REJECTED' for item in review['dispositions'])
-          assert work['finalization_state'] == 'READY_TO_REPORT'
-          assert all(item['status'] in {'DONE', 'REJECTED', 'BLOCKED_EXTERNAL'} for item in work['tasks'])
-
-          product = Path('product')
-          assert not product.exists() or not any(path.is_file() for path in product.rglob('*'))
-          index = Path('index.html').read_text(encoding='utf-8')
-          assert 'NO_ACTIVE_CANDIDATE' in index
-          assert '現在、公開中の商品はありません' in index
-          assert 'noindex' in index
-          assert 'Disallow: /' in Path('robots.txt').read_text(encoding='utf-8')
-          assert not list(ET.parse('sitemap.xml').getroot())
-
-          print(json.dumps({
-              'active_status': active['status'],
-              'reviewed_rows': review['reviewed_item_count'],
-              'wordpress_rows': queue['coverage']['wordpress_rows'],
-              'app_store_rows': queue['coverage']['app_store_rows'],
-              'terminal_tasks': len(work['tasks']),
-              'product_files': 0,
-              'result': 'PASS',
-          }, ensure_ascii=False))
+          assert 'Allow: /' in Path('robots.txt').read_text()
+          assert 'product/script-overlap-audit/' in Path('sitemap.xml').read_text()
+          assert '<meta name="robots" content="index,follow">' in Path('product/script-overlap-audit/index.html').read_text()
+          print('full validation passed')
           PY

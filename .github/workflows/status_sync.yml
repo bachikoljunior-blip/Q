@@ -1,67 +1,19 @@
-name: Sync candidate and completion status documentation
-
+name: Validate candidate and completion status documentation
 on:
   push:
     branches: [main]
-    paths:
-      - 'research/ACTIVE_CANDIDATE.json'
-      - 'research/CONTINUATION_CONTRACT.md'
-      - 'research/discovery_queue/latest.json'
-      - 'research/discovery_queue/reviewed_2026-08-30.json'
-      - 'execution/CURRENT_WORK.json'
-      - 'PROJECT_STATE.md'
-      - 'START_HERE.md'
-      - 'README.md'
-      - 'AGENTS.md'
-      - 'index.html'
-      - 'scripts/check_continuation_contract.py'
-      - 'scripts/check_execution_contract.py'
-      - 'scripts/sync_status_docs.py'
-      - '.github/workflows/status_sync.yml'
+    paths: ['research/ACTIVE_CANDIDATE.json','execution/CURRENT_WORK.json','PROJECT_STATE.md','START_HERE.md','README.md','AGENTS.md','index.html','scripts/sync_status_docs.py','.github/workflows/status_sync.yml']
   workflow_dispatch:
-
-concurrency:
-  group: q-status-sync
-  cancel-in-progress: true
-
-permissions:
-  contents: write
-
+permissions: {contents: read}
 jobs:
-  sync:
+  validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 7
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Synchronize docs from source-of-truth state
-        run: python scripts/sync_status_docs.py
-
-      - name: Run prebuild, continuation, completion and status checks
-        run: |
+        with: {python-version: '3.12'}
+      - run: |
+          python scripts/sync_status_docs.py
           python scripts/check_prebuild_gate.py
           python scripts/check_continuation_contract.py
           python scripts/check_execution_contract.py
-          python -m py_compile \
-            scripts/sync_status_docs.py \
-            scripts/check_continuation_contract.py \
-            scripts/check_execution_contract.py
-
-      - name: Commit synchronized docs
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add START_HERE.md README.md AGENTS.md index.html
-          if git diff --cached --quiet; then
-            echo 'Status docs already synchronized.'
-            exit 0
-          fi
-          git commit -m 'Synchronize reviewed candidate and completion status'
-          git pull --rebase origin main
-          git push origin HEAD:main

@@ -1,59 +1,21 @@
 name: Research loop checks
-
 on:
   push:
     branches: [main]
-    paths:
-      - 'research/**'
-      - 'execution/CURRENT_WORK.json'
-      - 'tests/research-tools.smoke.py'
-      - 'scripts/check_prebuild_gate.py'
-      - 'scripts/check_continuation_contract.py'
-      - 'scripts/check_execution_contract.py'
-      - '.github/workflows/marketplace_scan.yml'
-      - '.github/workflows/app_store_scan.yml'
-      - '.github/workflows/discovery_queue.yml'
-      - '.github/workflows/continuous_discovery_guard.yml'
-      - '.github/workflows/research-loop-check.yml'
+    paths: ['research/**','execution/**','product/**','tests/**','scripts/**','.github/workflows/research-loop-check.yml']
   workflow_dispatch:
-
-concurrency:
-  group: research-loop-check-${{ github.ref }}
-  cancel-in-progress: true
-
-permissions:
-  contents: read
-
+permissions: {contents: read}
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Compile canonical research and governance tools
-        run: |
-          python -m py_compile \
-            research/tools/marketplace_scan.py \
-            research/tools/filter_marketplace_scan.py \
-            research/tools/mine_wordpress_complaints.py \
-            research/tools/app_store_scan.py \
-            research/tools/mine_app_store_reviews.py \
-            research/tools/build_discovery_queue.py \
-            scripts/check_prebuild_gate.py \
-            scripts/check_continuation_contract.py \
-            scripts/check_execution_contract.py \
-            scripts/sync_status_docs.py
-
-      - name: Run canonical research smoke tests
-        run: python tests/research-tools.smoke.py
-
-      - name: Enforce complete current evidence review and no premature product
-        run: |
+        with: {python-version: '3.12'}
+      - run: |
+          python -m py_compile scripts/*.py research/tools/*.py tests/research-tools.smoke.py
           python scripts/check_prebuild_gate.py
           python scripts/check_continuation_contract.py
           python scripts/check_execution_contract.py
+          python tests/research-tools.smoke.py
+          node tests/script-overlap-audit.smoke.js

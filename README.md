@@ -1,29 +1,15 @@
 # Q — zero-touch income project
 
-目標: **手取り月20万円以上を、本人の継続労働への依存を小さくして構築する。**
+Status: **`LIVE_FREE_MVP`**  
+Current product: **台本かぶり監査**  
+Live URL: **https://bachikoljunior-blip.github.io/Q/product/script-overlap-audit/**
 
-Current status: **`NO_ACTIVE_CANDIDATE`**  
-Build approved: **false**  
-Current work: **`READY_TO_REPORT`**  
-Evidence review: **90/90 rows current**  
-現在、公開中の商品はありません。
+複数のYouTube台本・字幕を端末内で比較し、重複・同型化と修正優先順位を返す無料MVPです。
 
-## Source of truth
-1. [`AGENTS.md`](AGENTS.md)
-2. [`PROJECT_STATE.md`](PROJECT_STATE.md)
-3. [`research/ACTIVE_CANDIDATE.json`](research/ACTIVE_CANDIDATE.json)
-4. [`execution/CURRENT_WORK.json`](execution/CURRENT_WORK.json)
-5. [`research/CONTINUATION_CONTRACT.md`](research/CONTINUATION_CONTRACT.md)
-6. [`research/discovery_queue/latest.json`](research/discovery_queue/latest.json)
-7. [`research/discovery_queue/reviewed_2026-08-30.json`](research/discovery_queue/reviewed_2026-08-30.json)
-8. [`research/PREBUILD_GATE.md`](research/PREBUILD_GATE.md)
-9. [`DECISIONS.md`](DECISIONS.md)
+## Truth
+- 無料、登録不要、入力はサーバーへ送信しない。
+- YouTube収益化、著作権侵害、審査結果を判定しない。
+- 有料需要、顧客、売上、月20万円は未証明。
 
-## Enforcement
-- Exact buyer/input/processing/output competitors are searched before implementation.
-- `product/` code is prohibited while `build_approved=false`.
-- Research scans never auto-approve a product.
-- Queue content and review dispositions must match one-for-one by SHA-256 and signal ID.
-- A response cycle cannot finalize with unfinished material tasks or stale discovery evidence.
-- Closing a candidate removes its executable build/deploy/metrics/indexing artifacts.
-- EXP001–004, security voice trainer and Jira Automation Guard are closed.
+## Tests
+`node tests/script-overlap-audit.smoke.js` / `python scripts/check_prebuild_gate.py` / `python scripts/check_continuation_contract.py` / `python scripts/check_execution_contract.py`

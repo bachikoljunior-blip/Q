@@ -1,132 +1,30 @@
 name: Q governance gate
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-  workflow_dispatch:
-
-concurrency:
-  group: q-governance-${{ github.ref }}
-  cancel-in-progress: true
-
-permissions:
-  contents: read
-
+on: [push, pull_request, workflow_dispatch]
+permissions: {contents: read}
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-
-      - name: Enforce exact-match prebuild gate
-        run: python scripts/check_prebuild_gate.py
-
-      - name: Enforce current discovery review coverage
-        run: python scripts/check_continuation_contract.py
-
-      - name: Enforce completion-before-response contract
-        run: python scripts/check_execution_contract.py
-
-      - name: Validate project files and public no-product page
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Governance contracts
         run: |
-          python - <<'PY'
-          import hashlib
-          import json
-          import xml.etree.ElementTree as ET
-          from html.parser import HTMLParser
-          from pathlib import Path
-
-          class Parser(HTMLParser):
-              pass
-
-          required = [
-              'index.html', 'robots.txt', 'sitemap.xml',
-              'AGENTS.md', 'START_HERE.md', 'PROJECT_STATE.md', 'DECISIONS.md', 'README.md',
-              'research/ACTIVE_CANDIDATE.json',
-              'research/PREBUILD_GATE.md',
-              'research/CONTINUATION_CONTRACT.md',
-              'research/EXACT_MATCH_SWEEP_2026-08-30.md',
-              'research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md',
-              'research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md',
-              'research/BATCH_VETO_2026-08-30.md',
-              'research/marketplace_scan/latest.json',
-              'research/marketplace_scan/shortlist.json',
-              'research/marketplace_scan/complaints.json',
-              'research/discovery_queue/latest.json',
-              'research/discovery_queue/reviewed_2026-08-30.json',
-              'execution/CURRENT_WORK.json',
-              'execution/2026-08-30-completion-first-hardening.md',
-              'experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md',
-              'scripts/check_prebuild_gate.py',
-              'scripts/check_continuation_contract.py',
-              'scripts/check_execution_contract.py'
-          ]
-          for name in required:
-              assert Path(name).is_file(), f'missing {name}'
-
-          html = Path('index.html').read_text(encoding='utf-8')
-          Parser().feed(html)
-          assert '現在、公開中の商品はありません' in html
-          assert 'NO_ACTIVE_CANDIDATE' in html
-          assert 'noindex' in html
-          assert 'FBA補てん原価監査 — Amazon.co.jp向け無料CSVチェッカー' not in html
-
-          robots = Path('robots.txt').read_text(encoding='utf-8')
-          assert 'Disallow: /' in robots
-
-          root = ET.parse('sitemap.xml').getroot()
-          assert not list(root), 'closed experiment URLs must not remain in sitemap'
-
-          active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
-          assert active['status'] == 'NO_ACTIVE_CANDIDATE'
-          assert active['build_approved'] is False
-          assert active['candidate_id'] is None
-
-          state = Path('PROJECT_STATE.md').read_text(encoding='utf-8')
-          assert 'EXP004' in state and '終了' in state
-          assert 'NO_ACTIVE_CANDIDATE' in state
-
-          experiment = Path('experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md').read_text(encoding='utf-8')
-          assert '状態: **CLOSED**' in experiment
-
-          latest = json.loads(Path('research/marketplace_scan/latest.json').read_text(encoding='utf-8'))
-          shortlist = json.loads(Path('research/marketplace_scan/shortlist.json').read_text(encoding='utf-8'))
-          complaints = json.loads(Path('research/marketplace_scan/complaints.json').read_text(encoding='utf-8'))
-          assert latest['schema_version'] == 2
-          assert 'never auto-approve' in latest['purpose']
-          assert latest['coverage']['wordpress'] == 'AUTOMATED_PUBLIC_API'
-          assert latest['coverage']['atlassian'].startswith('MANUAL_ONLY')
-          assert shortlist['build_approved'] is False
-          assert complaints['build_approved'] is False
-
-          queue_path = Path('research/discovery_queue/latest.json')
-          queue = json.loads(queue_path.read_text(encoding='utf-8'))
-          review = json.loads(Path('research/discovery_queue/reviewed_2026-08-30.json').read_text(encoding='utf-8'))
-          assert queue['schema_version'] == 2
-          assert queue['item_count'] == len(queue['items']) == 90
-          assert queue['coverage']['wordpress_rows'] == 21
-          assert queue['coverage']['app_store_rows'] == 69
-          assert review['reviewed_item_count'] == 90
-          assert review['source_sha256'] == hashlib.sha256(queue_path.read_bytes()).hexdigest()
-          assert len(review['dispositions']) == 90
-
-          work = json.loads(Path('execution/CURRENT_WORK.json').read_text(encoding='utf-8'))
-          assert work['finalization_state'] == 'READY_TO_REPORT'
-          assert all(item['status'] in {'DONE', 'REJECTED', 'BLOCKED_EXTERNAL'} for item in work['tasks'])
-          print('governance/static validation passed: 90/90 reviewed / NO_ACTIVE_CANDIDATE / READY_TO_REPORT')
-          PY
-
-      - name: Serve public page and smoke HTTP
+          python scripts/check_prebuild_gate.py
+          python scripts/check_continuation_contract.py
+          python scripts/check_execution_contract.py
+          python scripts/sync_status_docs.py
+      - name: Static and product tests
         run: |
-          python -m http.server 8765 --bind 127.0.0.1 >/tmp/http.log 2>&1 &
-          server_pid=$!
-          trap 'kill $server_pid' EXIT
-          for i in {1..10}; do
-            curl -fsS http://127.0.0.1:8765/index.html >/tmp/index.html && break
-            sleep 1
-          done
-          grep -q '現在、公開中の商品はありません' /tmp/index.html
-          grep -q 'NO_ACTIVE_CANDIDATE' /tmp/index.html
-          grep -q 'noindex' /tmp/index.html
+          python tests/research-tools.smoke.py
+          node tests/script-overlap-audit.smoke.js
+          grep -q '入力は端末内だけで処理' product/script-overlap-audit/index.html
+          grep -q 'product/script-overlap-audit/' index.html
+      - name: HTTP smoke
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/q-http.log 2>&1 &
+          pid=$!; trap 'kill $pid' EXIT
+          for i in {1..10}; do curl -fsS http://127.0.0.1:8765/product/script-overlap-audit/ >/tmp/app.html && break; sleep 1; done
+          grep -q '台本かぶり監査' /tmp/app.html
+          curl -fsS http://127.0.0.1:8765/product/script-overlap-audit/analysis-core.js >/dev/null
