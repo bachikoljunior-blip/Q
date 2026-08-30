@@ -13,18 +13,6 @@
 - 自動販売・自動提供・自動決済・自動解約を最終形にする
 - 過去会話より、このリポジトリの最新状態を優先する
 
-## Completion-before-response rule
-A final answer is forbidden while a safe material action remains.
-
-回答前に `execution/CURRENT_WORK.json` の全material taskを `DONE`、`REJECTED`、`BLOCKED_EXTERNAL` のいずれかへ終端させ、次を実行する:
-
-```text
-python scripts/check_prebuild_gate.py
-python scripts/check_execution_contract.py
-```
-
-弱点を発見した場合、その回答内で中止/修正、exact competitor確認、実行系の削除、CI修正、状態更新、再検証まで完了する。ユーザーへ同じ完了指示を再度言わせない。
-
 ## Current status
 
 **`NO_ACTIVE_CANDIDATE`**  
@@ -34,13 +22,93 @@ Paid customers: **0**
 Revenue: **¥0**  
 Product implementation files: **0**
 
-現在、販売中・公開中・開発承認済み・調査継続中の商品候補はない。
-
-これは「何もしない」という意味ではない。現在の候補batchを実装前に反証し、通過案が0だったという正確な結果。弱い商品を作ったことにしない。
+販売中・公開中・開発承認済みの商品はない。これは目標完了ではなく、**現在の構造化証拠90行をすべて実装前に精査し、Gate通過が0だった**という状態である。
 
 Machine source of truth:
 - `research/ACTIVE_CANDIDATE.json`
 - `execution/CURRENT_WORK.json`
+- `research/discovery_queue/latest.json`
+- `research/discovery_queue/reviewed_2026-08-30.json`
+
+## Why work appeared to stop
+
+停止理由は外部制約ではなく、内部の完了判定と調査パイプラインの欠陥だった。
+
+1. 一つの候補batchが終わったことを、手取り月20万円の全体目標の停止境界として扱っていた。
+2. `NO_ACTIVE_CANDIDATE` のまま、当時のApp Store evidence queue 69行を `NEEDS_EXACT_WORKFLOW` で残していた。
+3. WordPress minerが出す `cluster_counts/topics` と、queue builderが読んでいた旧 `clusters/examples` が不一致で、WordPress evidenceがキューから全件消えていた。
+4. `CURRENT_WORK.json` と実際に作成済みの精査記録が同期していなかった。
+
+このため、「完了」と説明できる状態ではなかった。
+
+## Corrective work completed
+
+### App Store evidence
+
+`research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md` で69/69行を精査した。
+
+10件以上の同一未解決workflowが確認できたのは次の4 family:
+- SPI登録後の営業電話・メール: 27件
+- 音域測定の倍音・ノイズ・オクターブ誤認: 16件
+- FP3の法改正未反映・誤答: 13件
+- カウントダウンwidget/通知の日跨ぎ更新失敗: 12件
+
+4 familyすべてが直接競合、無料代替、継続監修、獲得経路、採算のいずれかでGate不通過となった。
+
+### WordPress evidence
+
+`research/tools/build_discovery_queue.py` のschema mismatchを修正し、落ちていた21行を復元した。
+
+`research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md` で21/21行を精査した。主なexact workflow family:
+- WooCommerce請求書PDF生成・添付整合
+- 予約空き枠・重複・外部カレンダー同期
+- CSV/XML/注文/ユーザーimport-export整合
+- 配送ラベル・国際住所preflight
+- 税計算監査
+- plugin更新後のfatal/checkout regression
+- subscription renewal health
+
+すべて、既存中核機能・直接競合・無料/first-party代替・法令/配送/API/schema保守・顧客別support負荷により棄却した。
+
+### Current evidence coverage
+
+- App Store rows: **69 reviewed / 69 terminal**
+- WordPress rows: **21 reviewed / 21 terminal**
+- Current queue: **90 reviewed / 90 terminal**
+- Promoted candidates: **0**
+- Product code: **0**
+
+レビューは件数だけでなく、`research/discovery_queue/latest.json` のSHA-256とsignal ID順序へ固定されている。キュー内容が変われば以前のreviewは無効となる。
+
+## Continuation contract
+
+`research/CONTINUATION_CONTRACT.md` と `scripts/check_continuation_contract.py` を追加した。
+
+有効な回答境界には、少なくとも次が必要:
+- current queueとreview recordのSHA-256一致
+- queue全行とdispositionの1対1一致
+- review件数とsource件数の一致
+- promoted candidateと`ACTIVE_CANDIDATE`の整合
+- `CURRENT_WORK.json`の全material task終端
+- Prebuild Gate、continuation contract、execution contractの全PASS
+
+新しい証拠が入ってreviewが古くなると、CIは失敗し、「以前のbatchが終わったから完了」という扱いを拒否する。
+
+`.github/workflows/continuous_discovery_guard.yml` は定期的にcurrent evidenceとreviewを照合し、古いreviewを成功扱いにしない。
+
+## Completion-before-response rule
+
+A final answer is forbidden while a safe material action remains.
+
+回答前に次を実行する:
+
+```text
+python scripts/check_prebuild_gate.py
+python scripts/check_continuation_contract.py
+python scripts/check_execution_contract.py
+```
+
+弱点を発見した場合、その回答内で中止/修正、exact competitor確認、実行系の削除、CI修正、状態更新、再検証まで完了する。`NO_ACTIVE_CANDIDATE` は、未処理証拠や内部不整合が残る場合の停止理由にならない。
 
 ## Closed experiments and leads
 
@@ -54,48 +122,15 @@ Machine source of truth:
 字幕QA、自動修正、AI校閲、NLE連携まで既存無料/有料製品が多数あるため終了。
 
 ### EXP004 — FBA補てん原価監査
-ReimburseOpsとbuyer/input/processing/output/privacy/pricingが90%超重複したため終了。公開物・検索通知・指標収集も停止済み。残っていたmetrics collectorも削除した。
+ReimburseOpsとbuyer/input/processing/output/privacy/pricingが90%超重複したため終了。公開物・検索通知・指標収集も停止済み。
 
 ### SECURITY_PRACTICAL_VOICE_TRAINER
-2026-08-30終了。市場規模、合法的な現行rubric、反復するexact pain、身体実技を音声だけで測れる妥当性、acquisitionのいずれもGateを通過しなかった。
+市場規模、合法的な現行rubric、反復するexact pain、身体実技を音声だけで測れる妥当性、acquisitionのいずれもGateを通過しなかった。
 
 ### JIRA_AUTOMATION_GUARD
-2026-08-30終了。`ajat` がAutomation rule JSON export、local snapshot diff、CI drift、reports/runbooksまで提供しておりexact competitor vetoが発動した。
-
-実行済み:
-- product code削除
-- public experiment削除
-- approval/build/finalize/indexing/metrics/tracking/hardening workflows削除
-- publisher/state/metrics/tracking scripts削除
-- smoke/metrics tests削除
-- automatic candidate re-promotion workflow/tool削除
-
-Archival decision recordだけを残し、閉じた候補がworkflowから復活しない状態にした。
-
-## Current candidate batch — completed and rejected
-
-`research/BATCH_VETO_2026-08-30.md` に、次を実装前に比較・棄却した記録を保存:
-
-1. Jira permission drift / access-review evidence
-2. Jira long-term audit retention / evidence vault
-3. Confluence page owner / expiry / attestation
-4. Confluence external-user offboarding / access impact
-5. WooCommerce webhook failure / replay
-6. WordPress staging-production settings diff
-7. WordPress update-impact preflight
-8. Figma Japanese typography / kinsoku QA
-9. shift/pay backup and payslip mismatch
-
-判定理由:
-- exact paid competitor
-- free/first-party core substitute
-- same buyer outcome already supplied
-- repeated exact pain/acquisition evidence不足
-- legal/schema/support burdenがzero-touchに不適合
+`ajat` がAutomation rule JSON export、local snapshot diff、CI drift、reports/runbooksまで提供しておりexact competitor vetoが発動した。
 
 ## Discovery automation — canonical state
-
-稼働を許可するresearch-only pipeline:
 
 ### WordPress marketplace
 - `research/tools/marketplace_scan.py`
@@ -103,22 +138,18 @@ Archival decision recordだけを残し、閉じた候補がworkflowから復活
 - `research/tools/mine_wordpress_complaints.py`
 - `.github/workflows/marketplace_scan.yml`
 
-`research/marketplace_scan` を書くworkflowはこの1本だけ。旧 `marketplace-scan.yml` と競合scannerは削除した。現在のcanonical outputはschema v2。
-
 ### Japanese App Store
 - `research/tools/app_store_scan.py`
 - `research/tools/mine_app_store_reviews.py`
 - `.github/workflows/app_store_scan.yml`
 
-### Cross-source evidence queue
+### Cross-source queue and review freshness
 - `research/tools/build_discovery_queue.py`
 - `.github/workflows/discovery_queue.yml`
+- `scripts/check_continuation_contract.py`
+- `.github/workflows/continuous_discovery_guard.yml`
 
-これらはsignal/evidenceを集めるだけで、`ACTIVE_CANDIDATE`を変更せず、product codeを作らない。
-
-Hard-codedで棄却済み候補を再検索・再昇格していたexact-match queue/deep-dive/auto-syncは削除した。candidate選定は、最新evidenceからexact workflowを定義してから行う。
-
-Atlassian Marketplace V2検索APIはHTTP 410で終了しているため、自動カバレッジを偽装せずmanual-onlyと記録する。
+Research automationはsignalを集めるだけで、`ACTIVE_CANDIDATE`を変更せず、product codeを作らない。候補昇格にはPREBUILD_GATEが必要。
 
 ## Machine enforcement
 
@@ -128,22 +159,27 @@ Atlassian Marketplace V2検索APIはHTTP 410で終了しているため、自動
 - 70%以上の重複をoverride evidenceなしで禁止
 - non-live public pageをno-product/noindexへ固定
 
+### `scripts/check_continuation_contract.py`
+- queueとreviewのSHA-256、件数、signal ID、順序を検査
+- current queueの全行がterminal dispositionを持つことを検査
+- promoted candidateとACTIVE_CANDIDATEの整合を検査
+- stale reviewを失敗にする
+
 ### `scripts/check_execution_contract.py`
 - current workに未完了taskがないこと
-- `READY_TO_REPORT` であること
+- continuation contractがPASSすること
 - `NO_ACTIVE_CANDIDATE / build_approved=false`
 - product files 0
 - closed candidateの実行系が残っていないこと
-- marketplace generated evidence writerが1本だけであること
-- completion invariantがAGENTSに存在すること
-- batch vetoとexecution recordが存在すること
+- generated evidence writerの一意性
 
 ### GitHub Actions
 - `Q governance gate`
 - `Research loop checks`
 - `Full discovery validation pass`
 - `Sync candidate and completion status documentation`
-- canonical marketplace/App Store/discovery queue workflows
+- `Continuous discovery freshness guard`
+- canonical Marketplace/App Store/discovery queue workflows
 
 ## Existing YouTube asset
 
@@ -157,7 +193,7 @@ Atlassian Marketplace V2検索APIはHTTP 410で終了しているため、自動
 
 ## External-only boundaries
 
-内部作業を止める口実にしてはいけない。AI/connected toolsだけでは作れない外部事実は次:
+内部作業を止める口実にはしない。AI/connected toolsだけでは生成できない外部事実:
 - real paid preorder/purchase
 - measured live CAC/conversion
 - actual marketplace ranking/search volume
@@ -170,7 +206,7 @@ Atlassian Marketplace V2検索APIはHTTP 410で終了しているため、自動
 
 新規実装は禁止。
 
-次のcycleでは、最新complaint本文から**同一buyer・同一input・同一未解決outcomeが10件以上**ある狭いworkflowだけを抽出し、12検索、closest paid products 5件、substitutes 5件、overlap、acquisition、手取り採算を同一cycleで完了する。通過案がなければ `NO_ACTIVE_CANDIDATE` を維持する。
+新しいMarketplace/App Store evidenceが現在のreview hashを変えた時点で、作業状態は未完了へ戻る。新規行を同一buyer・同一input・同一未解決outcomeへ還元し、10件閾値、12検索、直接競合5件、代替5件、overlap、acquisition、手取り採算を同一cycleで完了する。通過案がなければ `NO_ACTIVE_CANDIDATE` を維持する。
 
 ## Resume order
 
@@ -178,8 +214,8 @@ Atlassian Marketplace V2検索APIはHTTP 410で終了しているため、自動
 2. `PROJECT_STATE.md`
 3. `research/ACTIVE_CANDIDATE.json`
 4. `execution/CURRENT_WORK.json`
-5. `research/PREBUILD_GATE.md`
-6. `research/BATCH_VETO_2026-08-30.md`
-7. `DECISIONS.md`
-
-EXP001〜004、security voice trainer、Jira Automation Guardを新しい外部証拠なしに復活させない。
+5. `research/CONTINUATION_CONTRACT.md`
+6. `research/discovery_queue/latest.json`
+7. `research/discovery_queue/reviewed_2026-08-30.json`
+8. `research/PREBUILD_GATE.md`
+9. `DECISIONS.md`
