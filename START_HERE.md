@@ -27,7 +27,7 @@ zero-touchで手取り月20万円以上を作り、生活のための労働を�
 - New product code is forbidden until `build_approved=true`
 - Current work: `READY_TO_REPORT` / terminal tasks 7
 
-Reason: The security practical/oral voice trainer was closed before build. At JPY 2,980 and a 15% App Store commission it would need about 948 annual sales before tax and other costs, equal to roughly 14.6% of the entire FY2025 traffic-guidance level-2 special-course cohort. Ten repeated direct buyer complaints for solo speech-scored practice were not found, legally usable current practical rubrics were not secured, 2026 practical content changed, voice cannot validate physical performance, and App Store acquisition was unproven. Marketplace complaint triage also found exact or adjacent paid products for invoice integrity, booking/checkout monitoring, tax auditing, accessibility monitoring and CSV import/export workflows. No candidate currently passes PREBUILD_GATE.
+Reason: EXP001-004, the security practical/oral voice trainer and Jira Automation Guard are closed. Jira Automation Guard failed the exact-competitor veto after an existing product was found with the same Jira Automation JSON export, local snapshot diff, CI drift, reporting and runbook outcomes. The current nine-workflow candidate batch was also rejected before build because of exact paid competitors, free or first-party substitutes, insufficient repeated exact pain or acquisition evidence, or legal, schema and support burdens incompatible with zero-touch operation. No candidate currently passes PREBUILD_GATE.
 
 ## Do not repeat
 - Do not ask for constraints already recorded.
