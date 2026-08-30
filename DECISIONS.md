@@ -32,12 +32,12 @@ A browser-local Amazon.co.jp FBA reimbursement cost audit was built as a free te
 The remaining localization/privacy differences are insufficient without measured willingness to switch or prepay. EXP004 had no external usage evidence at closure.
 
 ## 2026-08-30 — Exact workflow duplicate veto is mandatory
-No fifth product implementation until `research/PREBUILD_GATE.md` passes and `research/ACTIVE_CANDIDATE.json` has `build_approved=true`.
+No product implementation until `research/PREBUILD_GATE.md` passes and `research/ACTIVE_CANDIDATE.json` has `build_approved=true`.
 
 Required:
 - exact buyer/input/processing/output/price definition
 - at least 12 Japanese/English searches
-- at least 5 direct competitors and 5 substitutes
+- at least 5 closest paid products/direct competitors and 5 substitutes
 - workflow overlap matrix
 - acquisition evidence
 - unit economics
@@ -82,9 +82,9 @@ Candidate search begins in paid app/plugin marketplaces or other channels with v
 Detailed record: `research/SECURITY_PRACTICAL_VOICE_TRAINER_2026-08-30.md`.
 
 ## 2026-08-30 — Automate marketplace discovery, never marketplace approval
-**Decision:** Use a weekly public marketplace scanner to surface demand/complaint signals, but prohibit it from approving a build.
+**Decision:** Use public marketplace scanners to surface demand/complaint signals, but prohibit them from approving a build.
 
-**Execution:** WordPress listing scan, relevance filter and support/review-title miner were added under `research/tools/`, with generated snapshots under `research/marketplace_scan/`.
+**Execution:** WordPress listing scan, relevance filter, support/review miner, Japanese App Store scan and cross-source queue were added under `research/tools/`.
 
 Atlassian Marketplace is marked manual-only because its V2 search API was retired. Missing automatic coverage must not be represented as completed research.
 
@@ -92,16 +92,70 @@ Atlassian Marketplace is marked manual-only because its V2 search API was retire
 **Decision:** Do not promote any current scanner cluster into `ACTIVE_CANDIDATE`.
 
 Rejected exact/adjacent workflows:
-- WooCommerce invoice numbering/missing-PDF audit — SleekView and invoice products already provide core result
-- booking/checkout synthetic canary — CashFlowCanary, CheckOO, Sentrix and booking vendors overlap; cross-plugin support burden is high
-- WooCommerce tax auditor — TaxDebug already provides the exact audit layer; ongoing compliance risk is high
-- accessibility regression monitor — multiple free and paid scanners/monitors
-- CSV import/export integrity monitor — crowded and adapter-heavy
-- generic checkout/store-health monitoring — exact products already exist
+- WooCommerce invoice numbering/missing-PDF audit
+- booking/checkout synthetic canary
+- WooCommerce tax auditor
+- accessibility regression monitor
+- CSV import/export integrity monitor
+- generic checkout/store-health monitoring
 
 Detailed record: `research/MARKETPLACE_COMPLAINT_TRIAGE_2026-08-30.md`.
 
 ## 2026-08-30 — Research status is machine-enforced
 `scripts/check_prebuild_gate.py` requires even a research-only lead to include an exact workflow, 12 searches, substitutes, evidence, economics and kill criteria. Build approval requires structured competitor buyer/input/process/output/price records and overlap percentages. A 70%+ overlap cannot pass without external override evidence.
 
-Current status: `NO_ACTIVE_CANDIDATE`, `build_approved=false`.
+## 2026-08-30 — Kill JIRA_AUTOMATION_GUARD after exact competitor discovery
+**Decision:** Close the Jira Automation Guard free MVP and remove all executable/public experiment artifacts.
+
+**Reason:** `ajat` already provides Jira Automation rule JSON export, local snapshots/diff, CI drift detection, inventory/risk/workflow reports and readable runbooks. This invalidates the earlier duplicate-veto PASS.
+
+**Execution:**
+- product code and public MVP removed
+- build/approval/finalize/indexing/metrics/tracking/hardening workflows removed
+- publisher/state/metrics/tracking scripts removed
+- tests removed
+- automatic research-candidate re-promotion removed
+- archival decision record retained
+
+A closed candidate must not retain automation capable of rebuilding, publishing, measuring or re-approving it.
+
+## 2026-08-30 — Completion-before-response is a machine-enforced invariant
+**Decision:** The user must never need to repeat the instruction to finish executable work before answering.
+
+**Rules:**
+- a final answer is forbidden while a safe material action remains
+- every current-cycle task must terminate as `DONE`, `REJECTED` or `BLOCKED_EXTERNAL`
+- finding a flaw creates same-cycle cleanup, competitor search, repair, state update and retest work
+- `NO_ACTIVE_CANDIDATE` does not permit stopping while an unreviewed material batch or repository inconsistency remains
+- only facts genuinely requiring a third party/account/event may be external blockers
+
+**Execution:**
+- added `execution/CURRENT_WORK.json`
+- added `scripts/check_execution_contract.py`
+- integrated the contract into governance, research, status-sync and full-validation CI
+- updated `AGENTS.md` and `scripts/sync_status_docs.py` so the invariant survives future status synchronization
+
+## 2026-08-30 — One writer per generated evidence namespace
+**Decision:** Generated research data must have one canonical writer.
+
+Two workflows were writing `research/marketplace_scan/latest.json` with incompatible schemas, causing governance failures and unreliable state. The conflicting workflow/scanner was deleted. `.github/workflows/marketplace_scan.yml` is now the only writer and produces schema v2.
+
+## 2026-08-30 — Reject the complete current candidate batch before build
+**Decision:** Keep `NO_ACTIVE_CANDIDATE`; do not create an offer, LP, payment or MVP from the current queue.
+
+Rejected:
+- Jira permission drift/access reviews
+- Jira audit retention/evidence vaults
+- Confluence owner/expiry/attestation
+- Confluence external-user offboarding/access reports
+- WooCommerce webhook retry/replay
+- WordPress staging-production settings diff
+- WordPress update-impact preflight
+- Figma Japanese typography/kinsoku QA
+- shift/pay backup and payslip mismatch
+
+Reasons were exact paid competition, free/first-party substitutes, same outcome already supplied, insufficient repeated exact pain/acquisition, or zero-touch-incompatible legal/schema/support burden.
+
+Detailed record: `research/BATCH_VETO_2026-08-30.md`.
+
+Current status: `NO_ACTIVE_CANDIDATE`, `build_approved=false`, product files 0, revenue ¥0.
