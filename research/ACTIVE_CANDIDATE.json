@@ -1,132 +1,19 @@
 {
   "schema_version": 2,
   "last_reviewed_jst": "2026-08-30",
-  "status": "RESEARCH_ONLY",
-  "candidate_id": "SECURITY_PRACTICAL_VOICE_TRAINER",
-  "name": "警備検定 実技・口述ひとり練習トレーナー",
+  "status": "NO_ACTIVE_CANDIDATE",
+  "candidate_id": null,
+  "name": null,
   "build_approved": false,
-  "exact_workflow": "Japanese security-certification candidate selects a practical/oral procedure, speaks it into an iPhone, receives on-device keyword/order/time scoring plus missed-step drills and timed mock oral exams, then pays a one-time mobile-app price.",
-  "search_queries": [
-    "交通誘導警備業務2級 実技 口述 練習 音声 アプリ",
-    "交通誘導警備業務2級 実技 口述 模擬試験 オンライン",
-    "交通誘導警備業務2級 実技 動画 教材 価格",
-    "交通誘導警備業務2級 口述 対策 教材",
-    "site:play.google.com 交通誘導警備業務2級 試験対策 アプリ",
-    "交通誘導警備業務2級 実技 アプリ",
-    "交通誘導警備業務2級 口述 アプリ",
-    "交通誘導警備業務2級 実技 オンライン講座",
-    "警備員 資格 試験 アプリ 交通誘導警備業務2級",
-    "交通誘導警備業務2級 特別講習 受講者数 年間",
-    "警備業務検定 受験者数 交通誘導 2級 年間",
-    "site:npa.go.jp 警備業 交通誘導警備業務2級 合格者数",
-    "App Store 交通誘導警備業務2級 試験対策",
-    "交通誘導警備業務2級 事前講習 価格"
-  ],
+  "exact_workflow": null,
+  "search_queries": [],
   "direct_competitors": [],
-  "adjacent_paid_products": [
-    {
-      "name": "交通誘導警備業務2級 試験対策アプリ",
-      "type": "paid academic quiz app",
-      "price": "JPY 800",
-      "overlap": ["same exam buyer", "mobile self-study"],
-      "missing": ["practical/oral speech scoring"]
-    },
-    {
-      "name": "交通誘導警備業務2級試験対策クイズ",
-      "type": "freemium academic quiz app",
-      "overlap": ["same exam buyer", "mock exams", "weakness analysis"],
-      "missing": ["practical/oral speech scoring"]
-    },
-    {
-      "name": "交通誘導警備業務検定2級 試験対策 問題集",
-      "type": "academic question app",
-      "overlap": ["same exam buyer", "offline mobile study"],
-      "missing": ["practical/oral training"]
-    },
-    {
-      "name": "警備検定学習 交通誘導・施設警備1級2級",
-      "type": "multi-exam academic app",
-      "overlap": ["security certification buyer", "mobile study"],
-      "missing": ["practical training explicitly excluded"]
-    }
-  ],
-  "substitutes": [
-    {
-      "name": "交通誘導警備業務2級 教本",
-      "price": "JPY 3300",
-      "type": "textbook"
-    },
-    {
-      "name": "交通誘導警備業務2級 1-day pre-course",
-      "price": "JPY 6600",
-      "type": "in-person course"
-    },
-    {
-      "name": "交通誘導警備業務2級 member two-day pre-course",
-      "price": "JPY 10560",
-      "type": "in-person course"
-    },
-    {
-      "name": "警備業務2級共通編 実技DVD",
-      "price": "JPY 27300",
-      "type": "video training"
-    },
-    {
-      "name": "施設警備業務2級 実技DVD",
-      "price": "JPY 54600",
-      "type": "adjacent practical video training"
-    },
-    {
-      "name": "coworker/instructor role-play",
-      "price": "time or employer training cost",
-      "type": "human practice"
-    }
-  ],
+  "substitutes": [],
   "overlap_matrix_complete": false,
   "duplicate_veto": "NOT_EVALUATED",
-  "differentiator_evidence": [
-    {
-      "type": "adjacent-product gap",
-      "evidence": "Multiple mobile apps focus on academic questions; at least one explicitly says practical training is not covered."
-    },
-    {
-      "type": "review complaint",
-      "evidence": "Public reviews of an existing paid app complain that questions are too easy or unlike the real exam wording."
-    },
-    {
-      "type": "high-price substitute",
-      "evidence": "Paid courses and practical DVDs show spending on practical preparation, but not on this exact workflow."
-    }
-  ],
-  "acquisition_evidence": [
-    {
-      "channel": "Apple App Store search",
-      "status": "UNPROVEN",
-      "evidence": "Several exam-prep apps and reviews exist, but practical/oral query volume and attainable ranking are not measured."
-    }
-  ],
-  "economics": {
-    "status": "UNPROVEN",
-    "hypothetical_price_jpy_one_time": 2980,
-    "gross_sales_needed_per_month_for_200k": 68,
-    "annual_sales_needed": 816,
-    "support_model": "self-service mobile app",
-    "unknowns": [
-      "exact annual candidate count",
-      "practical-prep conversion rate",
-      "store fee",
-      "content review cost",
-      "legal right to use current practical rubrics",
-      "update burden after exam changes"
-    ]
-  },
-  "kill_criteria": [
-    "No legally usable and current practical/oral rubric",
-    "Fewer than 10 repeated public complaints about solo practical/oral practice",
-    "No measurable acquisition demand beyond academic quiz searches",
-    "Annual reachable market cannot support at least 816 one-time sales at JPY 2980",
-    "Qualified content review would create ongoing per-customer or high fixed labor",
-    "An exact speech-scored competitor is found with 70 percent or greater workflow overlap"
-  ],
-  "reason": "Paid exam-prep behavior and an apparent practical-training gap exist, but exact demand, content rights, accuracy, distribution and economics are not yet proven. Implementation remains prohibited."
+  "differentiator_evidence": [],
+  "acquisition_evidence": [],
+  "economics": null,
+  "kill_criteria": [],
+  "reason": "The security practical/oral voice trainer was closed before build. At JPY 2,980 and a 15% App Store commission it would need about 948 annual sales before tax and other costs, equal to roughly 14.6% of the entire FY2025 traffic-guidance level-2 special-course cohort. Ten repeated direct buyer complaints for solo speech-scored practice were not found, legally usable current practical rubrics were not secured, 2026 practical content changed, voice cannot validate physical performance, and App Store acquisition was unproven. Marketplace complaint triage also found exact or adjacent paid products for invoice integrity, booking/checkout monitoring, tax auditing, accessibility monitoring and CSV import/export workflows. No candidate currently passes PREBUILD_GATE."
 }
