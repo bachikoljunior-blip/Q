@@ -126,4 +126,4 @@ Do not request fresh confirmation for work already authorized.
 EXP001, EXP002, EXP003, EXP004, SECURITY_PRACTICAL_VOICE_TRAINER and JIRA_AUTOMATION_GUARD are closed. Do not revive them without new external evidence that passes the full gate.
 
 ## Current status
-`NO_ACTIVE_CANDIDATE` — the current 90-row evidence queue has been reviewed 90/90 and produced no approved offer or build. This is not completion of the ¥200,000/month goal. Continue marketplace-first research when the queue changes; do not create a weak product.
+`NO_ACTIVE_CANDIDATE` — no candidate is currently approved for an offer or build. The current evidence queue is reviewed 90/90 and is bound to the recorded SHA-256. New queue bytes reopen work automatically; do not create a weak product.

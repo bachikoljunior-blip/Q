@@ -10,9 +10,11 @@ zero-touchで手取り月20万円以上を作り、生活のための労働を�
 2. `PROJECT_STATE.md`
 3. `research/ACTIVE_CANDIDATE.json`
 4. `execution/CURRENT_WORK.json`
-5. `research/PREBUILD_GATE.md`
-6. `research/BATCH_VETO_2026-08-30.md`
-7. `DECISIONS.md`
+5. `research/CONTINUATION_CONTRACT.md`
+6. `research/discovery_queue/latest.json`
+7. `research/discovery_queue/reviewed_2026-08-30.json`
+8. `research/PREBUILD_GATE.md`
+9. `DECISIONS.md`
 
 ## Current truth
 - EXP001: CLOSED
@@ -25,9 +27,10 @@ zero-touchで手取り月20万円以上を作り、生活のための労働を�
 - Build approved: **false**
 - Live product: none
 - New product code is forbidden until `build_approved=true`
-- Current work: `READY_TO_REPORT` / terminal tasks 7
+- Current work: `READY_TO_REPORT` / terminal tasks 9/9
+- Current evidence review: 90/90 rows / source SHA-256 `1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1`
 
-Reason: EXP001-004, the security practical/oral voice trainer and Jira Automation Guard are closed. Jira Automation Guard failed the exact-competitor veto after an existing product was found with the same Jira Automation JSON export, local snapshot diff, CI drift, reporting and runbook outcomes. The current nine-workflow candidate batch was also rejected before build because of exact paid competitors, free or first-party substitutes, insufficient repeated exact pain or acquisition evidence, or legal, schema and support burdens incompatible with zero-touch operation. No candidate currently passes PREBUILD_GATE.
+Reason: The earlier stop was invalid because 69 App Store evidence rows remained unprocessed and a schema mismatch had silently omitted 21 WordPress rows. The queue builder was repaired, all 90 current rows were reduced to exact workflows, repeated complaints were manually confirmed where present, and the strongest families were checked against direct products, substitutes, acquisition constraints and net-income economics. Every row was rejected because of exact or free substitutes, first-party/platform ownership, legal/content/schema/integration maintenance, support burden, insufficient same-workflow evidence, or unsupported acquisition economics. No candidate currently passes PREBUILD_GATE.
 
 ## Do not repeat
 - Do not ask for constraints already recorded.
@@ -37,7 +40,8 @@ Reason: EXP001-004, the security practical/oral voice trainer and Jira Automatio
 - Do not call a research lead a product.
 - A final answer is forbidden while any safe material action remains.
 - The user must never need to repeat the completion directive.
+- New queue bytes invalidate the old review; stale evidence is a failed continuation contract.
 - When a weakness is found, correct it, clean stale executables, rerun checks and update state in the same work cycle.
 
 ## Immediate resume
-marketplace evidenceから候補を探すが、Gate通過前にLP・MVP・商品コードを作らない。
+新しい証拠が現在のreview hashと一致しなくなったら未完了へ戻し、Gate通過前にLP・MVP・商品コードを作らない。
