@@ -1,19 +1,25 @@
 {
-  "schema_version": 1,
-  "reviewed_at_jst": "2026-08-30T17:20:00+09:00",
+  "schema_version": 2,
+  "reviewed_at_jst": "2026-08-30T19:20:00+09:00",
   "source_file": "research/discovery_queue/latest.json",
-  "source_generated_at_jst": "2026-08-30T09:21:50+09:00",
-  "source_sha256": "a17e9336b184dddd869700a5348d58fe4b2ef20dabdd361dd442e01bbba94509",
-  "source_item_count": 69,
-  "reviewed_item_count": 69,
+  "source_generated_at_jst": "2026-08-30T19:11:35+09:00",
+  "source_schema_version": 2,
+  "source_sha256": "1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1",
+  "source_item_count": 90,
+  "reviewed_item_count": 90,
   "status": "COMPLETE",
   "result": "NO_ACTIVE_CANDIDATE",
   "build_approved": false,
   "promoted_signal_ids": [],
+  "review_records": [
+    "research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md",
+    "research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md"
+  ],
   "dispositions": [
     {
       "row": 1,
-      "signal_id": "app_store:jp:1599770798:missing_feature",
+      "signal_id": "app_store:1452780835:missing_feature",
+      "source": "app_store_jp",
       "app": "OKBアプリ 大垣共立銀行-貯金＆通帳管理・口座の残高照会",
       "cluster": "missing_feature",
       "matched_items_machine": 110,
@@ -25,7 +31,8 @@
     },
     {
       "row": 2,
-      "signal_id": "app_store:jp:1594343044:missing_feature",
+      "signal_id": "app_store:1594343044:missing_feature",
+      "source": "app_store_jp",
       "app": "SPI言語・非言語 就活問題集 -適性検査SPI3対応-",
       "cluster": "missing_feature",
       "matched_items_machine": 89,
@@ -37,7 +44,8 @@
     },
     {
       "row": 3,
-      "signal_id": "app_store:jp:1022770828:missing_feature",
+      "signal_id": "app_store:919998681:missing_feature",
+      "source": "app_store_jp",
       "app": "あと何日 カウントダウン&カウントアップタイマー",
       "cluster": "missing_feature",
       "matched_items_machine": 87,
@@ -49,7 +57,8 @@
     },
     {
       "row": 4,
-      "signal_id": "app_store:jp:1083804886:missing_feature",
+      "signal_id": "app_store:1083804886:missing_feature",
+      "source": "app_store_jp",
       "app": "ELSA Speak：パーソナライズされた英会話アプリ",
       "cluster": "missing_feature",
       "matched_items_machine": 84,
@@ -61,7 +70,8 @@
     },
     {
       "row": 5,
-      "signal_id": "app_store:jp:1287761277:missing_feature",
+      "signal_id": "app_store:1287761277:missing_feature",
+      "source": "app_store_jp",
       "app": "ウォレットプラス/残高照会・収入や貯蓄/資産・現金の支出管理",
       "cluster": "missing_feature",
       "matched_items_machine": 83,
@@ -73,7 +83,8 @@
     },
     {
       "row": 6,
-      "signal_id": "app_store:jp:1435435090:missing_feature",
+      "signal_id": "app_store:1435435090:missing_feature",
+      "source": "app_store_jp",
       "app": "ポケカラ－Pokekara 本格採点カラオケアプリ",
       "cluster": "missing_feature",
       "matched_items_machine": 80,
@@ -85,7 +96,8 @@
     },
     {
       "row": 7,
-      "signal_id": "app_store:jp:355554941:missing_feature",
+      "signal_id": "app_store:355554941:missing_feature",
+      "source": "app_store_jp",
       "app": "SoundHound音楽検索の認識とプレーヤー",
       "cluster": "missing_feature",
       "matched_items_machine": 79,
@@ -97,7 +109,8 @@
     },
     {
       "row": 8,
-      "signal_id": "app_store:jp:1012782429:missing_feature",
+      "signal_id": "app_store:1012782429:missing_feature",
+      "source": "app_store_jp",
       "app": "シフト管理ならシフト手帳！バイトのシフトも給料計算も一括管理",
       "cluster": "missing_feature",
       "matched_items_machine": 78,
@@ -109,7 +122,8 @@
     },
     {
       "row": 9,
-      "signal_id": "app_store:jp:717639970:missing_feature",
+      "signal_id": "app_store:717639970:missing_feature",
+      "source": "app_store_jp",
       "app": "ハヤえもん - 音楽プレーヤー",
       "cluster": "missing_feature",
       "matched_items_machine": 77,
@@ -121,7 +135,8 @@
     },
     {
       "row": 10,
-      "signal_id": "app_store:jp:946148859:missing_feature",
+      "signal_id": "app_store:946148859:missing_feature",
+      "source": "app_store_jp",
       "app": "「カラオケ診断」音域に合う曲が分かる 採点やボイトレ アプリ",
       "cluster": "missing_feature",
       "matched_items_machine": 77,
@@ -133,7 +148,8 @@
     },
     {
       "row": 11,
-      "signal_id": "app_store:jp:1474247169:missing_feature",
+      "signal_id": "app_store:1474247169:missing_feature",
+      "source": "app_store_jp",
       "app": "シフト給料計算カレンダー",
       "cluster": "missing_feature",
       "matched_items_machine": 75,
@@ -145,7 +161,8 @@
     },
     {
       "row": 12,
-      "signal_id": "app_store:jp:690126418:missing_feature",
+      "signal_id": "app_store:690126418:missing_feature",
+      "source": "app_store_jp",
       "app": "シフトボード：バイトの給料計算とシフト管理",
       "cluster": "missing_feature",
       "matched_items_machine": 74,
@@ -157,7 +174,8 @@
     },
     {
       "row": 13,
-      "signal_id": "app_store:jp:1457341117:missing_feature",
+      "signal_id": "app_store:1457341117:missing_feature",
+      "source": "app_store_jp",
       "app": "分析採点JOYSOUND-カラオケ採点＆練習・カラオケアプリ",
       "cluster": "missing_feature",
       "matched_items_machine": 76,
@@ -169,7 +187,8 @@
     },
     {
       "row": 14,
-      "signal_id": "app_store:jp:842849113:missing_feature",
+      "signal_id": "app_store:842849113:missing_feature",
+      "source": "app_store_jp",
       "app": "Google スプレッドシート",
       "cluster": "missing_feature",
       "matched_items_machine": 72,
@@ -181,7 +200,8 @@
     },
     {
       "row": 15,
-      "signal_id": "app_store:jp:1473622331:missing_feature",
+      "signal_id": "app_store:1473622331:missing_feature",
+      "source": "app_store_jp",
       "app": "シフト管理と給料計算のシフトカレンダー:バイトの勤務表にも",
       "cluster": "missing_feature",
       "matched_items_machine": 72,
@@ -193,7 +213,8 @@
     },
     {
       "row": 16,
-      "signal_id": "app_store:jp:509993510:missing_feature",
+      "signal_id": "app_store:509993510:missing_feature",
+      "source": "app_store_jp",
       "app": "Smule: カラオケ録音＆デュエットを楽しもう",
       "cluster": "missing_feature",
       "matched_items_machine": 71,
@@ -205,7 +226,8 @@
     },
     {
       "row": 17,
-      "signal_id": "app_store:jp:1525159784:missing_feature",
+      "signal_id": "app_store:1525159784:missing_feature",
+      "source": "app_store_jp",
       "app": "みんなの銀行-お金管理・後払い・預金(貯金)・残高確認",
       "cluster": "missing_feature",
       "matched_items_machine": 71,
@@ -217,7 +239,8 @@
     },
     {
       "row": 18,
-      "signal_id": "app_store:jp:1412338894:missing_feature",
+      "signal_id": "app_store:1412338894:missing_feature",
+      "source": "app_store_jp",
       "app": "ScanGuru ドキュメント スキャン、PDF変換、OCR",
       "cluster": "missing_feature",
       "matched_items_machine": 66,
@@ -229,7 +252,8 @@
     },
     {
       "row": 19,
-      "signal_id": "app_store:jp:938452600:missing_feature",
+      "signal_id": "app_store:938452600:missing_feature",
+      "source": "app_store_jp",
       "app": "うたスマ Movie - 採点カラオケ歌い放題&練習",
       "cluster": "missing_feature",
       "matched_items_machine": 65,
@@ -241,7 +265,21 @@
     },
     {
       "row": 20,
-      "signal_id": "app_store:jp:1243777555:missing_feature",
+      "signal_id": "wordpress:woocommerce-pdf-invoices-packing-slips:pdf_email",
+      "source": "wordpress",
+      "plugin": "PDF Invoices & Packing Slips for WooCommerce",
+      "cluster": "pdf_email",
+      "matched_items_machine": 33,
+      "workflow_family": "WOOCOMMERCE_INVOICE_INTEGRITY",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE_AND_PLUGIN_SPECIFIC",
+      "reason": "PDF生成・自動添付・番号整合の反復不満は確認したが、主要PDF請求書プラグイン自身と代替製品が同じ成果を提供し、メール/テンプレート/購読連携ごとの継続サポートが必要。"
+    },
+    {
+      "row": 21,
+      "signal_id": "app_store:1243777555:missing_feature",
+      "source": "app_store_jp",
       "app": "英検®トレーニング - 2級から3級に対応",
       "cluster": "missing_feature",
       "matched_items_machine": 55,
@@ -252,8 +290,9 @@
       "reason": "英検音声練習は既存教材・アプリと重複し、現行問題/採点根拠の保守が必要。"
     },
     {
-      "row": 21,
-      "signal_id": "app_store:jp:1286609883:missing_feature",
+      "row": 22,
+      "signal_id": "app_store:1286609883:missing_feature",
+      "source": "app_store_jp",
       "app": "AI英会話スピーク - スピーキング練習で発音や英語を勉強",
       "cluster": "missing_feature",
       "matched_items_machine": 54,
@@ -264,8 +303,9 @@
       "reason": "発音/会話AIの直接競合が多数。"
     },
     {
-      "row": 22,
-      "signal_id": "app_store:jp:1083804886:voice_or_speech",
+      "row": 23,
+      "signal_id": "app_store:1083804886:voice_or_speech",
+      "source": "app_store_jp",
       "app": "ELSA Speak：パーソナライズされた英会話アプリ",
       "cluster": "voice_or_speech",
       "matched_items_machine": 52,
@@ -276,8 +316,9 @@
       "reason": "発音/会話AIの直接競合が多数。"
     },
     {
-      "row": 23,
-      "signal_id": "app_store:jp:1012782429:data_loss_sync",
+      "row": 24,
+      "signal_id": "app_store:1012782429:data_loss_sync",
+      "source": "app_store_jp",
       "app": "シフト管理ならシフト手帳！バイトのシフトも給料計算も一括管理",
       "cluster": "data_loss_sync",
       "matched_items_machine": 50,
@@ -288,8 +329,9 @@
       "reason": "バックアップ/移行を含む同一成果アプリがあり、既に棄却済み。"
     },
     {
-      "row": 24,
-      "signal_id": "app_store:jp:1208537657:missing_feature",
+      "row": 25,
+      "signal_id": "app_store:1452819345:missing_feature",
+      "source": "app_store_jp",
       "app": "FP3級学科試験対策問題集",
       "cluster": "missing_feature",
       "matched_items_machine": 49,
@@ -300,8 +342,9 @@
       "reason": "法改正対応需要は確認したが、2026対応アプリ多数。法令・問題の継続監修が必須。"
     },
     {
-      "row": 25,
-      "signal_id": "app_store:jp:1491877489:missing_feature",
+      "row": 26,
+      "signal_id": "app_store:1127823827:missing_feature",
+      "source": "app_store_jp",
       "app": "簿記3級 解説付き問題集",
       "cluster": "missing_feature",
       "matched_items_machine": 46,
@@ -312,8 +355,9 @@
       "reason": "誤答/広告は散発的で、同一未解決ワークフロー10件に未達。"
     },
     {
-      "row": 26,
-      "signal_id": "app_store:jp:1467762324:missing_feature",
+      "row": 27,
+      "signal_id": "app_store:1538724073:missing_feature",
+      "source": "app_store_jp",
       "app": "Scan Shot: 文書をスキャンしてPDFに変換する",
       "cluster": "missing_feature",
       "matched_items_machine": 49,
@@ -324,8 +368,9 @@
       "reason": "実質は週額/自動課金・エクスポート制限。不透明価格以外の差分なし。"
     },
     {
-      "row": 27,
-      "signal_id": "app_store:jp:1490127814:missing_feature",
+      "row": 28,
+      "signal_id": "app_store:1470791891:missing_feature",
+      "source": "app_store_jp",
       "app": "看護師 ナースのシフト管理ならシフトナby看護師ワーカー",
       "cluster": "missing_feature",
       "matched_items_machine": 45,
@@ -336,8 +381,9 @@
       "reason": "職種特化シフトも同一成果・求人誘導・法令保守で棄却済み。"
     },
     {
-      "row": 28,
-      "signal_id": "app_store:jp:1493541866:missing_feature",
+      "row": 29,
+      "signal_id": "app_store:1071489704:missing_feature",
+      "source": "app_store_jp",
       "app": "共通テストカウントダウン",
       "cluster": "missing_feature",
       "matched_items_machine": 42,
@@ -348,8 +394,9 @@
       "reason": "ウィジェット/通知が日跨ぎ更新されない需要は確認したが直接競合多数。"
     },
     {
-      "row": 29,
-      "signal_id": "app_store:jp:1466078910:voice_or_speech",
+      "row": 30,
+      "signal_id": "app_store:1683939483:voice_or_speech",
+      "source": "app_store_jp",
       "app": "英語発音トレーニング",
       "cluster": "voice_or_speech",
       "matched_items_machine": 41,
@@ -360,8 +407,9 @@
       "reason": "発音認識・採点の直接競合/無料代替がある。"
     },
     {
-      "row": 30,
-      "signal_id": "app_store:jp:1490127785:missing_feature",
+      "row": 31,
+      "signal_id": "app_store:1479568229:missing_feature",
+      "source": "app_store_jp",
       "app": "介護職員のシフト管理ならシフトカイゴby介護ワーカー",
       "cluster": "missing_feature",
       "matched_items_machine": 43,
@@ -372,8 +420,9 @@
       "reason": "職種特化シフトも同一成果・求人誘導・法令保守で棄却済み。"
     },
     {
-      "row": 31,
-      "signal_id": "app_store:jp:1566432300:content_too_easy_or_shallow",
+      "row": 32,
+      "signal_id": "app_store:1483106543:content_too_easy_or_shallow",
+      "source": "app_store_jp",
       "app": "燃費記録簿 超カンタンな愛車の燃費記録アプリ",
       "cluster": "content_too_easy_or_shallow",
       "matched_items_machine": 33,
@@ -384,8 +433,9 @@
       "reason": "大半が肯定レビュー/一般要望で、同一有料痛点ではない。"
     },
     {
-      "row": 32,
-      "signal_id": "app_store:jp:637237326:missing_feature",
+      "row": 33,
+      "signal_id": "app_store:1208536253:missing_feature",
+      "source": "app_store_jp",
       "app": "子供の知育ゲーム｜ごっこランド お店屋さん体験の子供アプリ",
       "cluster": "missing_feature",
       "matched_items_machine": 31,
@@ -396,8 +446,9 @@
       "reason": "削除コンテンツ・音声不具合など当該アプリ固有。"
     },
     {
-      "row": 33,
-      "signal_id": "app_store:jp:1208537657:accuracy_mismatch",
+      "row": 34,
+      "signal_id": "app_store:1452819345:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "FP3級学科試験対策問題集",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 31,
@@ -408,8 +459,22 @@
       "reason": "法改正/誤答の反復需要はあるが最新対応競合多数、監修保守が構造的。"
     },
     {
-      "row": 34,
-      "signal_id": "app_store:jp:946148859:voice_or_speech",
+      "row": 35,
+      "signal_id": "wordpress:ameliabooking:booking_conflict",
+      "source": "wordpress",
+      "plugin": "Booking for Appointments and Events Calendar – Amelia",
+      "cluster": "booking_conflict",
+      "matched_items_machine": 33,
+      "workflow_family": "BOOKING_AVAILABILITY_SYNC",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE_AND_SUPPORT_BURDEN",
+      "reason": "空き枠・重複・誤サービス割当の反復不満はあるが、競合予約製品とチャネルマネージャーの中核機能。複数予約データモデルへの対応が顧客数に比例する。"
+    },
+    {
+      "row": 36,
+      "signal_id": "app_store:946148859:voice_or_speech",
+      "source": "app_store_jp",
       "app": "「カラオケ診断」音域に合う曲が分かる 採点やボイトレ アプリ",
       "cluster": "voice_or_speech",
       "matched_items_machine": 26,
@@ -420,8 +485,9 @@
       "reason": "倍音/ノイズ/オクターブ誤認需要は確認したが同一成果競合多数。"
     },
     {
-      "row": 35,
-      "signal_id": "app_store:jp:946148859:accuracy_mismatch",
+      "row": 37,
+      "signal_id": "app_store:946148859:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "「カラオケ診断」音域に合う曲が分かる 採点やボイトレ アプリ",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 26,
@@ -432,8 +498,22 @@
       "reason": "倍音/ノイズ/オクターブ誤認需要は確認したが同一成果競合多数。"
     },
     {
-      "row": 36,
-      "signal_id": "app_store:jp:1473622331:accuracy_mismatch",
+      "row": 38,
+      "signal_id": "wordpress:wp-all-import:import_export",
+      "source": "wordpress",
+      "plugin": "WP All Import – Drag & Drop Import for CSV, XML, Excel & Google Sheets",
+      "cluster": "import_export",
+      "matched_items_machine": 29,
+      "workflow_family": "IMPORT_PREFLIGHT_CUSTOM_FIELDS",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE_AND_INTEGRATION_BURDEN",
+      "reason": "画像・カスタムフィールド・文字列・cron取込の欠落/変形は反復するが、preview/mapping/dry-runは既存import製品の中核。テーマ/プラグイン別フィールド対応が必要。"
+    },
+    {
+      "row": 39,
+      "signal_id": "app_store:1473622331:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "シフト管理と給料計算のシフトカレンダー:バイトの勤務表にも",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 25,
@@ -444,8 +524,9 @@
       "reason": "給与計算誤差は既存候補で評価・棄却済み。"
     },
     {
-      "row": 37,
-      "signal_id": "app_store:jp:1457341117:voice_or_speech",
+      "row": 40,
+      "signal_id": "app_store:1457341117:voice_or_speech",
+      "source": "app_store_jp",
       "app": "分析採点JOYSOUND-カラオケ採点＆練習・カラオケアプリ",
       "cluster": "voice_or_speech",
       "matched_items_machine": 26,
@@ -453,11 +534,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_FIRST_PARTY_OR_LICENSE",
-      "reason": "音声入力/採点は既存サービス内部問題。"
+      "reason": "採点/遅延/曲ライセンスは既存サービス内部問題。"
     },
     {
-      "row": 38,
-      "signal_id": "app_store:jp:717639970:data_loss_sync",
+      "row": 41,
+      "signal_id": "app_store:717639970:data_loss_sync",
+      "source": "app_store_jp",
       "app": "ハヤえもん - 音楽プレーヤー",
       "cluster": "data_loss_sync",
       "matched_items_machine": 23,
@@ -465,23 +547,25 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_FIRST_PARTY_DATA_BUG",
-      "reason": "アプリ内曲/画像/マーカー消失。第三者救済不可、10件同一成果にも未達。"
+      "reason": "アプリ内データ消失・移行問題。外部ツールは内部ライブラリを復元できない。"
     },
     {
-      "row": 39,
-      "signal_id": "app_store:jp:1594343044:accuracy_mismatch",
+      "row": 42,
+      "signal_id": "app_store:1594343044:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "SPI言語・非言語 就活問題集 -適性検査SPI3対応-",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 23,
       "workflow_family": "SPI_PRIVACY",
-      "same_workflow_complaints_manually_confirmed": 27,
+      "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_FREE_EXACT_SUBSTITUTE",
-      "reason": "営業電話/誤答不満。登録不要無料SPIアプリ・Web・書籍で回避可能。"
+      "reason": "誤答不満はあるが無料問題集/書籍/公式対策で代替可能。"
     },
     {
-      "row": 40,
-      "signal_id": "app_store:jp:1594343044:offline_privacy",
+      "row": 43,
+      "signal_id": "app_store:1594343044:offline_privacy",
+      "source": "app_store_jp",
       "app": "SPI言語・非言語 就活問題集 -適性検査SPI3対応-",
       "cluster": "offline_privacy",
       "matched_items_machine": 22,
@@ -489,11 +573,12 @@
       "same_workflow_complaints_manually_confirmed": 27,
       "decision": "REJECTED",
       "veto": "REJECT_FREE_EXACT_SUBSTITUTE",
-      "reason": "個人情報登録後の電話/メールは反復するが、登録不要無料代替が直接存在。"
+      "reason": "電話番号不要/営業電話なし需要は確認したが、登録不要無料代替がある。"
     },
     {
-      "row": 41,
-      "signal_id": "app_store:jp:1286609883:voice_or_speech",
+      "row": 44,
+      "signal_id": "app_store:1286609883:voice_or_speech",
+      "source": "app_store_jp",
       "app": "AI英会話スピーク - スピーキング練習で発音や英語を勉強",
       "cluster": "voice_or_speech",
       "matched_items_machine": 21,
@@ -504,8 +589,9 @@
       "reason": "発音/会話AIの直接競合が多数。"
     },
     {
-      "row": 42,
-      "signal_id": "app_store:jp:1083804886:accuracy_mismatch",
+      "row": 45,
+      "signal_id": "app_store:1083804886:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "ELSA Speak：パーソナライズされた英会話アプリ",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 21,
@@ -513,11 +599,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_EXACT_DUPLICATE",
-      "reason": "採点精度不満だが同一成果競合・無料代替が多数。"
+      "reason": "発音判定の精度不満だが直接競合多数。"
     },
     {
-      "row": 43,
-      "signal_id": "app_store:jp:1490127814:content_too_easy_or_shallow",
+      "row": 46,
+      "signal_id": "app_store:1470791891:content_too_easy_or_shallow",
+      "source": "app_store_jp",
       "app": "看護師 ナースのシフト管理ならシフトナby看護師ワーカー",
       "cluster": "content_too_easy_or_shallow",
       "matched_items_machine": 21,
@@ -525,11 +612,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_PRIOR_VETO",
-      "reason": "職種特化シフトも同一成果・法令保守で棄却済み。"
+      "reason": "職種特化シフトの要望混在。既存アプリ多数。"
     },
     {
-      "row": 44,
-      "signal_id": "app_store:jp:1286609883:accuracy_mismatch",
+      "row": 47,
+      "signal_id": "app_store:1286609883:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "AI英会話スピーク - スピーキング練習で発音や英語を勉強",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 20,
@@ -537,11 +625,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_EXACT_DUPLICATE",
-      "reason": "採点精度不満だが同一成果競合・無料代替が多数。"
+      "reason": "発音/会話AIの直接競合が多数。"
     },
     {
-      "row": 45,
-      "signal_id": "app_store:jp:509993510:voice_or_speech",
+      "row": 48,
+      "signal_id": "app_store:509993510:voice_or_speech",
+      "source": "app_store_jp",
       "app": "Smule: カラオケ録音＆デュエットを楽しもう",
       "cluster": "voice_or_speech",
       "matched_items_machine": 18,
@@ -549,11 +638,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_FIRST_PARTY_OR_LICENSE",
-      "reason": "録音品質はサービス内部/端末差の問題。"
+      "reason": "録音品質はプラットフォーム内部/端末依存。"
     },
     {
-      "row": 46,
-      "signal_id": "app_store:jp:690126418:accuracy_mismatch",
+      "row": 49,
+      "signal_id": "app_store:690126418:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "シフトボード：バイトの給料計算とシフト管理",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 18,
@@ -561,11 +651,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_PRIOR_VETO",
-      "reason": "給与見込/実績差は既存候補で評価・棄却済み。"
+      "reason": "給与計算誤差は同一成果アプリ/法令保守で棄却済み。"
     },
     {
-      "row": 47,
-      "signal_id": "app_store:jp:950179303:missing_feature",
+      "row": 50,
+      "signal_id": "app_store:1462853977:missing_feature",
+      "source": "app_store_jp",
       "app": "シフト勤務カレンダー：仕事とスケジュールをシンプルに管理",
       "cluster": "missing_feature",
       "matched_items_machine": 18,
@@ -573,11 +664,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_PRIOR_VETO",
-      "reason": "シフト表示/周期機能は既存多数、差分不足。"
+      "reason": "シフト表示/共有/予定の一般要望。既存アプリ多数。"
     },
     {
-      "row": 48,
-      "signal_id": "app_store:jp:1566432300:missing_feature",
+      "row": 51,
+      "signal_id": "app_store:1483106543:missing_feature",
+      "source": "app_store_jp",
       "app": "燃費記録簿 超カンタンな愛車の燃費記録アプリ",
       "cluster": "missing_feature",
       "matched_items_machine": 18,
@@ -585,11 +677,38 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_INSUFFICIENT_SAME_WORKFLOW",
-      "reason": "部分給油/移行等は散発的、10件同一痛点なし。"
+      "reason": "要望が分散し、同一未解決workflow10件に未達。"
     },
     {
-      "row": 49,
-      "signal_id": "app_store:jp:1243777555:voice_or_speech",
+      "row": 52,
+      "signal_id": "wordpress:wp-import-export-lite:import_export",
+      "source": "wordpress",
+      "plugin": "WP Import Export Lite",
+      "cluster": "import_export",
+      "matched_items_machine": 50,
+      "workflow_family": "IMPORT_EXPORT_INTEGRITY",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE_AND_INTEGRATION_BURDEN",
+      "reason": "CSV取込・画像・HTML・設定の欠落/不一致は反復するが、同一成果のimport/export製品が多数あり、対象スキーマごとのサポート負荷が大きい。"
+    },
+    {
+      "row": 53,
+      "signal_id": "wordpress:woo-order-export-lite:import_export",
+      "source": "wordpress",
+      "plugin": "Advanced Order Export For WooCommerce",
+      "cluster": "import_export",
+      "matched_items_machine": 34,
+      "workflow_family": "ORDER_EXPORT_INTEGRITY",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE",
+      "reason": "注文・返金・数量・カスタム項目・分析値を正しく出力する需要はあるが、当該製品を含む注文export製品の主機能そのもの。"
+    },
+    {
+      "row": 54,
+      "signal_id": "app_store:1243777555:voice_or_speech",
+      "source": "app_store_jp",
       "app": "英検®トレーニング - 2級から3級に対応",
       "cluster": "voice_or_speech",
       "matched_items_machine": 17,
@@ -597,11 +716,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_EXACT_DUPLICATE_AND_CONTENT",
-      "reason": "英検音声/採点は既存教材・アプリと重複、現行基準保守が必要。"
+      "reason": "英検音声練習は教材/アプリ多数、現行内容の監修が必要。"
     },
     {
-      "row": 50,
-      "signal_id": "app_store:jp:1491877489:accuracy_mismatch",
+      "row": 55,
+      "signal_id": "app_store:1127823827:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "簿記3級 解説付き問題集",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 16,
@@ -609,11 +729,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_INSUFFICIENT_SAME_WORKFLOW",
-      "reason": "誤答は散発的で10件未達、無料教材/書籍も強い。"
+      "reason": "同一誤答/改正workflow10件に未達。"
     },
     {
-      "row": 51,
-      "signal_id": "app_store:jp:1490127785:content_too_easy_or_shallow",
+      "row": 56,
+      "signal_id": "app_store:1479568229:content_too_easy_or_shallow",
+      "source": "app_store_jp",
       "app": "介護職員のシフト管理ならシフトカイゴby介護ワーカー",
       "cluster": "content_too_easy_or_shallow",
       "matched_items_machine": 19,
@@ -621,11 +742,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_PRIOR_VETO",
-      "reason": "職種特化シフトも同一成果・法令保守で棄却済み。"
+      "reason": "職種特化シフトの要望混在。既存アプリ多数。"
     },
     {
-      "row": 52,
-      "signal_id": "app_store:jp:355554941:accuracy_mismatch",
+      "row": 57,
+      "signal_id": "app_store:355554941:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "SoundHound音楽検索の認識とプレーヤー",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 15,
@@ -633,11 +755,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_FREE_EXACT_SUBSTITUTE",
-      "reason": "認識精度不満だが無料の同一成果代替がある。"
+      "reason": "曲認識はShazam/Google等の無料代替がある。"
     },
     {
-      "row": 53,
-      "signal_id": "app_store:jp:1012782429:accuracy_mismatch",
+      "row": 58,
+      "signal_id": "app_store:1012782429:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "シフト管理ならシフト手帳！バイトのシフトも給料計算も一括管理",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 15,
@@ -645,11 +768,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_PRIOR_VETO",
-      "reason": "給与計算誤差は既存候補で評価・棄却済み。"
+      "reason": "給与計算誤差は既存候補で棄却済み。"
     },
     {
-      "row": 54,
-      "signal_id": "app_store:jp:1436921770:missing_feature",
+      "row": 59,
+      "signal_id": "app_store:1136430679:missing_feature",
+      "source": "app_store_jp",
       "app": "Viva Engage",
       "cluster": "missing_feature",
       "matched_items_machine": 70,
@@ -657,11 +781,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_MISCLASSIFIED_FIRST_PARTY",
-      "reason": "CSV需要ではなく起動/写真/通知等のMicrosoft製品固有不具合。"
+      "reason": "起動・添付・通知等のMicrosoft製品固有問題。CSV変換需要ではない。"
     },
     {
-      "row": 55,
-      "signal_id": "app_store:jp:1466078910:missing_feature",
+      "row": 60,
+      "signal_id": "app_store:1683939483:missing_feature",
+      "source": "app_store_jp",
       "app": "英語発音トレーニング",
       "cluster": "missing_feature",
       "matched_items_machine": 15,
@@ -669,11 +794,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_EXACT_DUPLICATE",
-      "reason": "無料を含む発音練習の直接競合がある。"
+      "reason": "発音練習/採点の直接競合多数。"
     },
     {
-      "row": 56,
-      "signal_id": "app_store:jp:1474247169:accuracy_mismatch",
+      "row": 61,
+      "signal_id": "app_store:1474247169:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "シフト給料計算カレンダー",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 14,
@@ -681,11 +807,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_PRIOR_VETO",
-      "reason": "給与計算誤差は既存候補で評価・棄却済み。"
+      "reason": "給与計算誤差は既存候補で棄却済み。"
     },
     {
-      "row": 57,
-      "signal_id": "app_store:jp:1412338894:accuracy_mismatch",
+      "row": 62,
+      "signal_id": "app_store:1412338894:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "ScanGuru ドキュメント スキャン、PDF変換、OCR",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 13,
@@ -693,11 +820,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_EXACT_DUPLICATE",
-      "reason": "OCR精度/課金不満。買い切り・無料・標準スキャナが多数。"
+      "reason": "OCR/PDFスキャナは標準/無料/買い切り代替多数。"
     },
     {
-      "row": 58,
-      "signal_id": "app_store:jp:1435435090:voice_or_speech",
+      "row": 63,
+      "signal_id": "app_store:1435435090:voice_or_speech",
+      "source": "app_store_jp",
       "app": "ポケカラ－Pokekara 本格採点カラオケアプリ",
       "cluster": "voice_or_speech",
       "matched_items_machine": 13,
@@ -705,11 +833,25 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_FIRST_PARTY_OR_LICENSE",
-      "reason": "音声遅延/採点は既存サービス内部問題。"
+      "reason": "録音/採点は既存カラオケサービス内部・楽曲権利領域。"
     },
     {
-      "row": 59,
-      "signal_id": "app_store:jp:950179303:content_too_easy_or_shallow",
+      "row": 64,
+      "signal_id": "wordpress:import-users-from-csv-with-meta:import_export",
+      "source": "wordpress",
+      "plugin": "Import and export users and customers",
+      "cluster": "import_export",
+      "matched_items_machine": 45,
+      "workflow_family": "USER_IMPORT_META_INTEGRITY",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE_AND_SCHEMA_BURDEN",
+      "reason": "ユーザー数・role・meta・画像の欠落は反復するが、複数のuser import/export製品が同じ成果を提供し、会員プラグイン別schema対応が必要。"
+    },
+    {
+      "row": 65,
+      "signal_id": "app_store:1462853977:content_too_easy_or_shallow",
+      "source": "app_store_jp",
       "app": "シフト勤務カレンダー：仕事とスケジュールをシンプルに管理",
       "cluster": "content_too_easy_or_shallow",
       "matched_items_machine": 12,
@@ -717,11 +859,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_PRIOR_VETO",
-      "reason": "シフト機能の浅さは既存多数、差分不足。"
+      "reason": "一般要望で同一有料痛点ではない。"
     },
     {
-      "row": 60,
-      "signal_id": "app_store:jp:1243777555:accuracy_mismatch",
+      "row": 66,
+      "signal_id": "app_store:1243777555:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "英検®トレーニング - 2級から3級に対応",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 12,
@@ -729,11 +872,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_EXACT_DUPLICATE_AND_CONTENT",
-      "reason": "英検採点/解説は既存競合・現行内容保守。"
+      "reason": "教材/採点の競合多数、現行内容監修が必要。"
     },
     {
-      "row": 61,
-      "signal_id": "app_store:jp:1457341117:accuracy_mismatch",
+      "row": 67,
+      "signal_id": "app_store:1457341117:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "分析採点JOYSOUND-カラオケ採点＆練習・カラオケアプリ",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 13,
@@ -741,11 +885,25 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_FIRST_PARTY_OR_LICENSE",
-      "reason": "採点誤差は既存カラオケプラットフォーム内部問題。"
+      "reason": "採点はサービス固有・楽曲権利領域。"
     },
     {
-      "row": 62,
-      "signal_id": "app_store:jp:1474247169:data_loss_sync",
+      "row": 68,
+      "signal_id": "wordpress:users-customers-import-export-for-wp-woocommerce:import_export",
+      "source": "wordpress",
+      "plugin": "Export and Import Users and Customers",
+      "cluster": "import_export",
+      "matched_items_machine": 36,
+      "workflow_family": "USER_IMPORT_META_INTEGRITY",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE_AND_SCHEMA_BURDEN",
+      "reason": "ユーザー、membership、profile field、画像の欠落は反復するが、同一成果製品が複数あり、外部会員schemaごとの対応が必要。"
+    },
+    {
+      "row": 69,
+      "signal_id": "app_store:1474247169:data_loss_sync",
+      "source": "app_store_jp",
       "app": "シフト給料計算カレンダー",
       "cluster": "data_loss_sync",
       "matched_items_machine": 11,
@@ -753,11 +911,25 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_PRIOR_VETO",
-      "reason": "データ消失/バックアップも既存候補で評価・棄却済み。"
+      "reason": "backup/移行を含む既存シフトアプリ多数。"
     },
     {
-      "row": 63,
-      "signal_id": "app_store:jp:1467762324:data_loss_sync",
+      "row": 70,
+      "signal_id": "wordpress:order-import-export-for-woocommerce:import_export",
+      "source": "wordpress",
+      "plugin": "Order Export & Order Import for WooCommerce",
+      "cluster": "import_export",
+      "matched_items_machine": 39,
+      "workflow_family": "ORDER_IMPORT_EXPORT_INTEGRITY",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE_AND_SCHEMA_BURDEN",
+      "reason": "注文移行の停止・欠落・delimiter・税率問題は反復するが、注文import/export製品の中核機能であり、HPOS/税/顧客ID互換性の保守が必要。"
+    },
+    {
+      "row": 71,
+      "signal_id": "app_store:1538724073:data_loss_sync",
+      "source": "app_store_jp",
       "app": "Scan Shot: 文書をスキャンしてPDFに変換する",
       "cluster": "data_loss_sync",
       "matched_items_machine": 12,
@@ -765,11 +937,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_EXACT_DUPLICATE",
-      "reason": "データ消失/課金不満。買い切り・標準代替あり。"
+      "reason": "PDF保存/exportはスキャナ製品の中核、無料代替あり。"
     },
     {
-      "row": 64,
-      "signal_id": "app_store:jp:842849113:data_loss_sync",
+      "row": 72,
+      "signal_id": "app_store:842849113:data_loss_sync",
+      "source": "app_store_jp",
       "app": "Google スプレッドシート",
       "cluster": "data_loss_sync",
       "matched_items_machine": 10,
@@ -777,11 +950,12 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_FIRST_PARTY_OR_SUBSTITUTE",
-      "reason": "Google Sheets同期/保存問題。Web/PC/Excel/Numbersで代替。"
+      "reason": "Google製品固有の同期/編集問題。"
     },
     {
-      "row": 65,
-      "signal_id": "app_store:jp:1525159784:accuracy_mismatch",
+      "row": 73,
+      "signal_id": "app_store:1525159784:accuracy_mismatch",
+      "source": "app_store_jp",
       "app": "みんなの銀行-お金管理・後払い・預金(貯金)・残高確認",
       "cluster": "accuracy_mismatch",
       "matched_items_machine": 10,
@@ -789,23 +963,25 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_FIRST_PARTY_OR_POLICY",
-      "reason": "銀行固有の残高/入出金/認証誤表示。"
+      "reason": "銀行固有の残高/審査/本人確認問題。"
     },
     {
-      "row": 66,
-      "signal_id": "app_store:jp:1490127785:data_loss_sync",
-      "app": "介護職員のシフト管理ならシフトカイゴby介護ワーカー",
-      "cluster": "data_loss_sync",
-      "matched_items_machine": 10,
-      "workflow_family": "SHIFT_PAY",
-      "same_workflow_complaints_manually_confirmed": 0,
+      "row": 74,
+      "signal_id": "wordpress:woocommerce-delivery-notes:pdf_email",
+      "source": "wordpress",
+      "plugin": "Print Invoice & Delivery Notes for WooCommerce",
+      "cluster": "pdf_email",
+      "matched_items_machine": 23,
+      "workflow_family": "WOOCOMMERCE_INVOICE_INTEGRITY",
+      "same_workflow_complaints_manually_confirmed": 10,
       "decision": "REJECTED",
-      "veto": "REJECT_PRIOR_VETO",
-      "reason": "データ移行/消失も既存候補で評価・棄却済み。"
+      "veto": "REJECT_EXACT_DUPLICATE_AND_PLUGIN_SPECIFIC",
+      "reason": "PDF生成・添付・文字方向・欠落項目の反復不満はあるが、既存請求書プラグイン群が主要成果を提供し、テンプレート/言語/購読連携の個別対応が必要。"
     },
     {
-      "row": 67,
-      "signal_id": "app_store:jp:1062967960:missing_feature",
+      "row": 75,
+      "signal_id": "app_store:1336710387:missing_feature",
+      "source": "app_store_jp",
       "app": "マネーフォワード クラウド経費",
       "cluster": "missing_feature",
       "matched_items_machine": 57,
@@ -813,23 +989,51 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_INSUFFICIENT_AND_CROWDED",
-      "reason": "経費アプリのUX/OCR不満が混在。同一10件未達、経費/OCR市場は既存多数。"
+      "reason": "領収書OCR・承認・交通費等の要望混在。経費SaaS/OCR競合多数。"
     },
     {
-      "row": 68,
-      "signal_id": "app_store:jp:1062967960:accuracy_mismatch",
-      "app": "マネーフォワード クラウド経費",
-      "cluster": "accuracy_mismatch",
-      "matched_items_machine": 12,
-      "workflow_family": "EXPENSE_OCR",
+      "row": 76,
+      "signal_id": "wordpress:woocommerce-shipping:label_purchase",
+      "source": "wordpress",
+      "plugin": "WooCommerce Shipping",
+      "cluster": "label_purchase",
+      "matched_items_machine": 38,
+      "workflow_family": "SHIPPING_LABEL_PREFLIGHT",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_FIRST_PARTY_AND_EXACT_SUBSTITUTES",
+      "reason": "ラベル購入・印刷・国際配送・carrier optionの失敗は反復するが、WooCommerce Shipping/ShipStation/Sendcloud等の配送製品内部の成果で、carrier/API例外対応が重い。"
+    },
+    {
+      "row": 77,
+      "signal_id": "wordpress:woocommerce-services:tax_invoice_compliance",
+      "source": "wordpress",
+      "plugin": "WooCommerce Tax (formerly WooCommerce Shipping & Tax)",
+      "cluster": "tax_invoice_compliance",
+      "matched_items_machine": 35,
+      "workflow_family": "TAX_CALCULATION_AUDIT",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_FIRST_PARTY_LEGAL_AND_EXACT_SUBSTITUTES",
+      "reason": "税率0化・免税・配送税・住所基準の誤計算は反復するが、税エンジン/会計連携の中核領域。国・地域法令と税責任の継続保守が必要。"
+    },
+    {
+      "row": 78,
+      "signal_id": "wordpress:woo-advanced-shipment-tracking:label_purchase",
+      "source": "wordpress",
+      "plugin": "Advanced Shipment Tracking for WooCommerce",
+      "cluster": "label_purchase",
+      "matched_items_machine": 13,
+      "workflow_family": "SHIPMENT_TRACKING",
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
-      "veto": "REJECT_INSUFFICIENT_AND_CROWDED",
-      "reason": "OCR/金額誤認は散発的。同一10件未達、直接競合多数。"
+      "veto": "REJECT_MISCLASSIFIED",
+      "reason": "例は追跡リンク・carrier追加・メール表示であり、shipping label購入という同一workflowではない。"
     },
     {
-      "row": 69,
-      "signal_id": "app_store:jp:1234323314:missing_feature",
+      "row": 79,
+      "signal_id": "app_store:1349091131:missing_feature",
+      "source": "app_store_jp",
       "app": "タイピングの練習",
       "cluster": "missing_feature",
       "matched_items_machine": 12,
@@ -837,7 +1041,150 @@
       "same_workflow_complaints_manually_confirmed": 0,
       "decision": "REJECTED",
       "veto": "REJECT_INSUFFICIENT_AND_FREE_SUBSTITUTES",
-      "reason": "ふりがな/Enter操作要望は各10件未達、無料タイピング教材多数。"
+      "reason": "同一workflow10件に未達、無料Web/アプリ多数。"
+    },
+    {
+      "row": 80,
+      "signal_id": "wordpress:woocommerce-delivery-notes:update_breakage",
+      "source": "wordpress",
+      "plugin": "Print Invoice & Delivery Notes for WooCommerce",
+      "cluster": "update_breakage",
+      "matched_items_machine": 10,
+      "workflow_family": "WORDPRESS_UPDATE_BREAKAGE",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_PRIOR_EXACT_DUPLICATE",
+      "reason": "更新後のfatal/critical errorは10件確認したが、staging、safe update、visual regression、rollback製品が既に存在し、当該プラグイン固有の互換性支援になる。"
+    },
+    {
+      "row": 81,
+      "signal_id": "wordpress:yith-woocommerce-subscription:subscription_renewal",
+      "source": "wordpress",
+      "plugin": "YITH WooCommerce Subscription",
+      "cluster": "subscription_renewal",
+      "matched_items_machine": 27,
+      "workflow_family": "SUBSCRIPTION_RENEWAL_HEALTH",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_CORE_FEATURE_AND_INTEGRATION_BURDEN",
+      "reason": "renewal order未生成・status不更新・failed payment・自動更新不良は反復するが、WooCommerce/YITH/Flexible Subscriptions/AutomateWoo等の中核機能と重複し、gateway・subscription plugin別対応が必要。"
+    },
+    {
+      "row": 82,
+      "signal_id": "wordpress:woocommerce-services:label_purchase",
+      "source": "wordpress",
+      "plugin": "WooCommerce Tax (formerly WooCommerce Shipping & Tax)",
+      "cluster": "label_purchase",
+      "matched_items_machine": 19,
+      "workflow_family": "SHIPPING_TAX_PLUGIN",
+      "same_workflow_complaints_manually_confirmed": 0,
+      "decision": "REJECTED",
+      "veto": "REJECT_MISCLASSIFIED",
+      "reason": "税・shipping zone・旧サービス移行が混在し、label purchaseの同一workflow10件を満たさない。"
+    },
+    {
+      "row": 83,
+      "signal_id": "wordpress:woocommerce-shipping:address_validation",
+      "source": "wordpress",
+      "plugin": "WooCommerce Shipping",
+      "cluster": "address_validation",
+      "matched_items_machine": 13,
+      "workflow_family": "INTERNATIONAL_ADDRESS_PREFLIGHT",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE_AND_CARRIER_BURDEN",
+      "reason": "国際住所検証・電話番号・origin address・label作成失敗は反復するが、address validation/shipping製品とcarrier APIが同じ成果を提供し、国別例外保守が必要。"
+    },
+    {
+      "row": 84,
+      "signal_id": "wordpress:wp-hotel-booking:booking_conflict",
+      "source": "wordpress",
+      "plugin": "WP Hotel Booking",
+      "cluster": "booking_conflict",
+      "matched_items_machine": 17,
+      "workflow_family": "HOTEL_BOOKING_UI",
+      "same_workflow_complaints_manually_confirmed": 0,
+      "decision": "REJECTED",
+      "veto": "REJECT_INSUFFICIENT_SAME_WORKFLOW",
+      "reason": "booking form非表示、価格、検索、ボタンなどが混在し、同一buyer/input/outputの10件に未達。"
+    },
+    {
+      "row": 85,
+      "signal_id": "wordpress:motopress-hotel-booking-lite:booking_conflict",
+      "source": "wordpress",
+      "plugin": "MotoPress Hotel Booking",
+      "cluster": "booking_conflict",
+      "matched_items_machine": 23,
+      "workflow_family": "HOTEL_AVAILABILITY_SYNC",
+      "same_workflow_complaints_manually_confirmed": 8,
+      "decision": "REJECTED",
+      "veto": "REJECT_INSUFFICIENT_AND_EXACT_SUBSTITUTES",
+      "reason": "availability/iCal/外部予約連携の不満はあるが10件未達で、channel manager/booking製品の中核機能でもある。"
+    },
+    {
+      "row": 86,
+      "signal_id": "wordpress:yoast-seo-settings-xml-csv-import:import_export",
+      "source": "wordpress",
+      "plugin": "WP All Import – Import SEO Settings for Yoast SEO",
+      "cluster": "import_export",
+      "matched_items_machine": 20,
+      "workflow_family": "SEO_IMPORT_MAPPING",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_PLUGIN_SPECIFIC_EXACT_DUPLICATE",
+      "reason": "SEO meta/identifier/category取込の欠落は反復するが、WP All Import add-on自身の中核機能であり、Yoast/schema固有の保守になる。"
+    },
+    {
+      "row": 87,
+      "signal_id": "wordpress:woocommerce-shipstation-integration:import_export",
+      "source": "wordpress",
+      "plugin": "ShipStation for WooCommerce",
+      "cluster": "import_export",
+      "matched_items_machine": 12,
+      "workflow_family": "SHIPSTATION_ORDER_SYNC",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_FIRST_PARTY_INTEGRATION",
+      "reason": "注文・重量・bundle・timezoneのsync/export欠落は反復するが、ShipStation integration内部の修正領域で、第三者監査はAPI差異とsupport負荷が高い。"
+    },
+    {
+      "row": 88,
+      "signal_id": "wordpress:order-export-and-more-for-woocommerce:import_export",
+      "source": "wordpress",
+      "plugin": "Order Export for WooCommerce",
+      "cluster": "import_export",
+      "matched_items_machine": 20,
+      "workflow_family": "ORDER_EXPORT_INTEGRITY",
+      "same_workflow_complaints_manually_confirmed": 10,
+      "decision": "REJECTED",
+      "veto": "REJECT_EXACT_DUPLICATE",
+      "reason": "注文欠落・日付filter・権限・文字化けの反復需要はあるが、注文export製品の主機能そのもの。"
+    },
+    {
+      "row": 89,
+      "signal_id": "app_store:1336710387:accuracy_mismatch",
+      "source": "app_store_jp",
+      "app": "マネーフォワード クラウド経費",
+      "cluster": "accuracy_mismatch",
+      "matched_items_machine": 12,
+      "workflow_family": "EXPENSE_OCR",
+      "same_workflow_complaints_manually_confirmed": 0,
+      "decision": "REJECTED",
+      "veto": "REJECT_INSUFFICIENT_AND_CROWDED",
+      "reason": "経費/OCR/税区分の不満混在。競合多数。"
+    },
+    {
+      "row": 90,
+      "signal_id": "app_store:1479568229:data_loss_sync",
+      "source": "app_store_jp",
+      "app": "介護職員のシフト管理ならシフトカイゴby介護ワーカー",
+      "cluster": "data_loss_sync",
+      "matched_items_machine": 10,
+      "workflow_family": "SHIFT_PAY",
+      "same_workflow_complaints_manually_confirmed": 0,
+      "decision": "REJECTED",
+      "veto": "REJECT_PRIOR_VETO",
+      "reason": "既存シフトアプリ/backup機能で代替、既に棄却済み。"
     }
   ]
 }
