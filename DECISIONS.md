@@ -59,14 +59,49 @@ Candidate search begins in paid app/plugin marketplaces or other channels with v
 
 **Execution:** marker, code guard, Claude hooks and CI were added in the YouTube repository. Resume requires a non-sensitive/non-impersonating, materially varied format reviewed against the then-current policy.
 
-## 2026-08-30 — Advance one lead to RESEARCH_ONLY, not to product
-**Decision:** Track `SECURITY_PRACTICAL_VOICE_TRAINER` as the only research lead. Do not build or publish an offer yet.
+## 2026-08-30 — Track security practical voice trainer as RESEARCH_ONLY
+**Decision:** Investigate `SECURITY_PRACTICAL_VOICE_TRAINER` without building or publishing an offer.
 
-**Evidence:** paid exam apps, paid textbooks, paid pre-courses and high-priced practical DVDs prove spending on security-certification preparation. Existing mobile apps primarily cover academic questions; some explicitly exclude practical training.
+**Evidence at entry:** paid academic exam apps, paid textbooks, courses and practical DVDs proved spending on security-certification preparation. Existing apps mainly covered academic questions and some explicitly excluded practical training.
 
-**Blockers:** exact speech-practice demand, legally usable/current rubrics, qualified content review, market size, App Store acquisition and one-time-price economics are unproven.
+**Required before advancement:** direct practical/oral demand, usable/current rubrics, qualified content review, acquisition evidence and take-home economics.
 
-Current status: `RESEARCH_ONLY`, `build_approved=false`.
+## 2026-08-30 — Kill SECURITY_PRACTICAL_VOICE_TRAINER
+**Decision:** Close the lead before prototype, landing page, preorder or App Store spending. Return to `NO_ACTIVE_CANDIDATE`.
+
+**Reasons:**
+- FY2025 traffic-guidance level-2 special courses had 6,489 attendees
+- at a hypothetical ¥2,980 one-time price and 15% App Store commission, ¥2.4M/year before tax and all other costs requires about 948 sales/year or 79/month
+- that is about 14.6% of the entire annual relevant cohort; the earlier 816-sales estimate did not meet the take-home target
+- ten repeated target-buyer complaints for solo, speech-scored practical/oral practice were not found
+- no complete, legally usable, current practical rubric was secured
+- part of the practical examination changed in 2026, creating continuing qualified-review burden
+- speech recognition cannot validate the physical performance being examined
+- App Store demand/CAC for practical preparation remained unmeasured
+
+Detailed record: `research/SECURITY_PRACTICAL_VOICE_TRAINER_2026-08-30.md`.
+
+## 2026-08-30 — Automate marketplace discovery, never marketplace approval
+**Decision:** Use a weekly public marketplace scanner to surface demand/complaint signals, but prohibit it from approving a build.
+
+**Execution:** WordPress listing scan, relevance filter and support/review-title miner were added under `research/tools/`, with generated snapshots under `research/marketplace_scan/`.
+
+Atlassian Marketplace is marked manual-only because its V2 search API was retired. Missing automatic coverage must not be represented as completed research.
+
+## 2026-08-30 — Reject current marketplace complaint clusters
+**Decision:** Do not promote any current scanner cluster into `ACTIVE_CANDIDATE`.
+
+Rejected exact/adjacent workflows:
+- WooCommerce invoice numbering/missing-PDF audit — SleekView and invoice products already provide core result
+- booking/checkout synthetic canary — CashFlowCanary, CheckOO, Sentrix and booking vendors overlap; cross-plugin support burden is high
+- WooCommerce tax auditor — TaxDebug already provides the exact audit layer; ongoing compliance risk is high
+- accessibility regression monitor — multiple free and paid scanners/monitors
+- CSV import/export integrity monitor — crowded and adapter-heavy
+- generic checkout/store-health monitoring — exact products already exist
+
+Detailed record: `research/MARKETPLACE_COMPLAINT_TRIAGE_2026-08-30.md`.
 
 ## 2026-08-30 — Research status is machine-enforced
-`scripts/check_prebuild_gate.py` now requires even a research-only lead to include an exact workflow, 12 searches, substitutes, evidence, economics and kill criteria. Build approval requires structured competitor buyer/input/process/output/price records and overlap percentages. A 70%+ overlap cannot pass without external override evidence.
+`scripts/check_prebuild_gate.py` requires even a research-only lead to include an exact workflow, 12 searches, substitutes, evidence, economics and kill criteria. Build approval requires structured competitor buyer/input/process/output/price records and overlap percentages. A 70%+ overlap cannot pass without external override evidence.
+
+Current status: `NO_ACTIVE_CANDIDATE`, `build_approved=false`.
