@@ -89,4 +89,4 @@ Do not request fresh confirmation for work already authorized.
 EXP001, EXP002, EXP003 and EXP004 are closed. Do not revive them without new external evidence that passes the full gate.
 
 ## Current status
-`RESEARCH_ONLY` — `SECURITY_PRACTICAL_VOICE_TRAINER` is the only research lead. It is not a product and `build_approved=false`. Read `PROJECT_STATE.md` and `research/ACTIVE_CANDIDATE.json`; apply the kill criteria before any offer or implementation.
+`NO_ACTIVE_CANDIDATE` — no candidate is currently approved for an offer or build. Continue marketplace-first research; do not create a fifth weak product.
