@@ -91,6 +91,8 @@ forbidden_paths = [
     ".github/workflows/candidate-deep-dive.yml",
     ".github/workflows/marketplace-scan.yml",
     ".github/workflows/export_research_evidence.yml",
+    ".github/workflows/temp_export_current_review.yml",
+    ".github/workflows/temp_repair_review_ids.yml",
     "research/tools/approve_jira_automation_guard.py",
     "research/tools/sync_active_research.py",
     "research/tools/exact_match_queue.py",
@@ -129,6 +131,10 @@ required_contract_phrases = [
     "## Completion-before-response invariant",
     "A final answer is forbidden while a safe material action remains",
     "The user must never need to repeat the completion directive",
+    "## Execution reality",
+    "GitHub Actions are deterministic scanners and guards, not an autonomous product strategist",
+    "A scheduled guard must never be described as the project continuing by itself",
+    "no model reasoning or repository work continues unless a concrete connected automation actually runs and records an output",
 ]
 for phrase in required_contract_phrases:
     if phrase not in agents:
