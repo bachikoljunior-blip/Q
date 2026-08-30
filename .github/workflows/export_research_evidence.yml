@@ -20,6 +20,7 @@ jobs:
           mkdir -p evidence
           cp research/discovery_queue/latest.json evidence/discovery_queue.json
           cp research/discovery_queue/latest.md evidence/discovery_queue.md
+          sha256sum research/discovery_queue/latest.json > evidence/discovery_queue.sha256
           cp research/discovery_queue/reviewed_2026-08-30.json evidence/reviewed_2026-08-30.json
           cp research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md evidence/exact_workflow_reduction.md
           cp research/ACTIVE_CANDIDATE.json evidence/active_candidate.json
