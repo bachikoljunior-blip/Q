@@ -5,11 +5,13 @@ on:
     branches: [main]
     paths:
       - 'research/**'
+      - 'execution/CURRENT_WORK.json'
       - 'tests/research-tools.smoke.py'
-      - '.github/workflows/marketplace-scan.yml'
-      - '.github/workflows/exact-match-queue.yml'
-      - '.github/workflows/candidate-deep-dive.yml'
-      - '.github/workflows/sync-research-candidate.yml'
+      - 'scripts/check_prebuild_gate.py'
+      - 'scripts/check_execution_contract.py'
+      - '.github/workflows/marketplace_scan.yml'
+      - '.github/workflows/app_store_scan.yml'
+      - '.github/workflows/discovery_queue.yml'
       - '.github/workflows/research-loop-check.yml'
   workflow_dispatch:
 
@@ -23,7 +25,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
 
@@ -31,35 +33,23 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Compile research tools
+      - name: Compile canonical research and governance tools
         run: |
           python -m py_compile \
-            research/tools/marketplace_signal_scan.py \
-            research/tools/exact_match_queue.py \
-            research/tools/deep_dive_candidate.py \
-            research/tools/sync_active_research.py \
-            scripts/check_prebuild_gate.py
+            research/tools/marketplace_scan.py \
+            research/tools/filter_marketplace_scan.py \
+            research/tools/mine_wordpress_complaints.py \
+            research/tools/app_store_scan.py \
+            research/tools/mine_app_store_reviews.py \
+            research/tools/build_discovery_queue.py \
+            scripts/check_prebuild_gate.py \
+            scripts/check_execution_contract.py \
+            scripts/sync_status_docs.py
 
-      - name: Run research smoke tests
+      - name: Run canonical research smoke tests
         run: python tests/research-tools.smoke.py
 
-      - name: Enforce no premature product
+      - name: Enforce completion and no premature product
         run: |
           python scripts/check_prebuild_gate.py
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
-          assert active['build_approved'] is False
-          assert active['status'] in {'NO_ACTIVE_CANDIDATE', 'RESEARCH_ONLY'}
-          assert not Path('product').exists() or not any(Path('product').rglob('*'))
-          for required in [
-              'research/PREBUILD_GATE.md',
-              'research/tools/marketplace_signal_scan.py',
-              'research/tools/exact_match_queue.py',
-              'research/tools/deep_dive_candidate.py',
-              'research/tools/sync_active_research.py',
-          ]:
-              assert Path(required).is_file(), required
-          print({'status': active['status'], 'candidate': active.get('candidate_id')})
-          PY
+          python scripts/check_execution_contract.py
