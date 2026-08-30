@@ -1,0 +1,86 @@
+name: Japanese App Store discovery scan
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/tools/app_store_scan.py'
+      - 'research/tools/mine_app_store_reviews.py'
+      - '.github/workflows/app_store_scan.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '43 18 * * 2'
+
+concurrency:
+  group: japanese-app-store-discovery
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check scanner syntax
+        run: |
+          python -m py_compile research/tools/app_store_scan.py
+          python -m py_compile research/tools/mine_app_store_reviews.py
+
+      - name: Run App Store scan and review mining
+        run: |
+          python research/tools/app_store_scan.py
+          python research/tools/mine_app_store_reviews.py
+
+      - name: Validate outputs and non-approval guarantee
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          paths = [
+              Path('research/app_store_scan/latest.json'),
+              Path('research/app_store_scan/latest.md'),
+              Path('research/app_store_scan/reviews.json'),
+              Path('research/app_store_scan/reviews.md'),
+          ]
+          for path in paths:
+              assert path.is_file(), f'missing {path}'
+
+          scan = json.loads(paths[0].read_text(encoding='utf-8'))
+          reviews = json.loads(paths[2].read_text(encoding='utf-8'))
+          active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
+
+          assert scan['status'] == 'DISCOVERY_SIGNALS_ONLY'
+          assert scan['build_approved'] is False
+          assert 'never auto-approve' in scan['purpose']
+          assert len(scan['queries']) >= 20
+          assert isinstance(scan['records'], list)
+          assert reviews['status'] == 'DISCOVERY_EVIDENCE_ONLY'
+          assert reviews['build_approved'] is False
+          assert isinstance(reviews['apps'], list)
+          assert active['build_approved'] is False, 'scanner must not grant build approval'
+          print(f"validated {len(scan['records'])} apps and {len(reviews['apps'])} review queues")
+          PY
+
+      - name: Commit changed research snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            research/app_store_scan/latest.json \
+            research/app_store_scan/latest.md \
+            research/app_store_scan/reviews.json \
+            research/app_store_scan/reviews.md
+          if git diff --cached --quiet; then
+            echo 'No App Store scan changes.'
+            exit 0
+          fi
+          git commit -m 'Update Japanese App Store discovery snapshot'
+          git pull --rebase origin main
+          git push origin HEAD:main
