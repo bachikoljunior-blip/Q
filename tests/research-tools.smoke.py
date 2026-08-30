@@ -2,9 +2,13 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+
+from check_continuation_contract import validate as validate_continuation
 
 active = json.loads((ROOT / 'research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
 assert active['status'] == 'NO_ACTIVE_CANDIDATE'
@@ -26,11 +30,16 @@ reviews = json.loads((ROOT / 'research/app_store_scan/reviews.json').read_text(e
 assert app['build_approved'] is False
 assert reviews['build_approved'] is False
 
-queue_path = ROOT / 'research/discovery_queue/latest.json'
-if queue_path.is_file():
-    queue = json.loads(queue_path.read_text(encoding='utf-8'))
-    assert queue['build_approved'] is False
-    assert all(item['status'] == 'NEEDS_EXACT_WORKFLOW' for item in queue.get('items', []))
+queue = json.loads((ROOT / 'research/discovery_queue/latest.json').read_text(encoding='utf-8'))
+assert queue['schema_version'] == 2
+assert queue['build_approved'] is False
+assert queue['item_count'] == len(queue['items']) == 90
+assert queue['coverage']['wordpress_rows'] == 21
+assert queue['coverage']['app_store_rows'] == 69
+assert all(item['status'] == 'NEEDS_EXACT_WORKFLOW' for item in queue['items'])
+continuation = validate_continuation(ROOT, emit=False)
+assert continuation['queue_rows'] == continuation['reviewed_rows'] == 90
+assert continuation['promoted_rows'] == 0
 
 canonical = ROOT / '.github/workflows/marketplace_scan.yml'
 assert canonical.is_file()
@@ -43,6 +52,7 @@ for forbidden in [
     '.github/workflows/build-jira-guard.yml',
     '.github/workflows/finalize-jira-guard-state.yml',
     '.github/workflows/jira-guard-metrics.yml',
+    '.github/workflows/export_research_evidence.yml',
     'research/tools/approve_jira_automation_guard.py',
     'research/tools/sync_active_research.py',
     'research/tools/exact_match_queue.py',
@@ -52,7 +62,15 @@ for forbidden in [
 ]:
     assert not (ROOT / forbidden).exists(), forbidden
 
-assert (ROOT / 'research/BATCH_VETO_2026-08-30.md').is_file()
-assert (ROOT / 'execution/CURRENT_WORK.json').is_file()
+for required in [
+    'research/BATCH_VETO_2026-08-30.md',
+    'research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md',
+    'research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md',
+    'research/CONTINUATION_CONTRACT.md',
+    'research/discovery_queue/reviewed_2026-08-30.json',
+    'execution/CURRENT_WORK.json',
+    'scripts/check_continuation_contract.py',
+]:
+    assert (ROOT / required).is_file(), required
 
-print('canonical research pipeline smoke passed')
+print('canonical research pipeline smoke passed: 90/90 queue rows reviewed')
