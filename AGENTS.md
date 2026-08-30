@@ -4,10 +4,13 @@
 Read in this order:
 1. `PROJECT_STATE.md`
 2. `research/ACTIVE_CANDIDATE.json`
-3. `research/PREBUILD_GATE.md`
-4. `execution/CURRENT_WORK.json`
-5. `DECISIONS.md`
-6. Current research / experiment files
+3. `research/discovery_queue/latest.json`
+4. `research/discovery_queue/reviewed_2026-08-30.json`
+5. `research/CONTINUATION_CONTRACT.md`
+6. `research/PREBUILD_GATE.md`
+7. `execution/CURRENT_WORK.json`
+8. `DECISIONS.md`
+9. Current research / experiment files
 
 Conversation memory is secondary.
 
@@ -32,7 +35,14 @@ Before a user-facing report:
 4. `NO_ACTIVE_CANDIDATE` is not permission to stop while an unreviewed material candidate batch or repository inconsistency remains.
 5. The only valid stop boundary is a fact or action that genuinely requires an external person/account/event, such as a real purchase, measured live CAC, credentials not connected, or legally granted content rights. Record the exact boundary; do not use it to excuse unfinished internal work.
 6. Do not say the project is complete when only a cleanup, research step, free MVP, or test is complete.
-7. Run `python scripts/check_prebuild_gate.py` and `python scripts/check_execution_contract.py` before reporting completion of a cycle.
+7. The current discovery queue SHA, row count and signal IDs must exactly match its terminal review record under `research/CONTINUATION_CONTRACT.md`.
+8. Run all three before reporting completion of a cycle:
+
+```text
+python scripts/check_prebuild_gate.py
+python scripts/check_continuation_contract.py
+python scripts/check_execution_contract.py
+```
 
 ## Truthful status language
 Always state one exact status:
@@ -76,6 +86,7 @@ For `RESEARCH_ONLY`, do not preserve a lead merely because no exact competitor w
 ## Repository enforcement
 - `research/ACTIVE_CANDIDATE.json` is the machine-readable build decision.
 - `execution/CURRENT_WORK.json` is the machine-readable completion decision for the current cycle.
+- `research/discovery_queue/latest.json` is the current evidence batch; `reviewed_2026-08-30.json` must cover its exact bytes and every `signal_id` before `READY_TO_REPORT`.
 - New product code must be placed under `product/`.
 - Do not create files under `product/` while `build_approved=false`.
 - Research automation belongs under `research/tools/`.
@@ -108,4 +119,4 @@ Do not request fresh confirmation for work already authorized.
 EXP001, EXP002, EXP003, EXP004, SECURITY_PRACTICAL_VOICE_TRAINER and JIRA_AUTOMATION_GUARD are closed. Do not revive them without new external evidence that passes the full gate.
 
 ## Current status
-`NO_ACTIVE_CANDIDATE` — no candidate is currently approved for an offer or build. Continue marketplace-first research; do not create a weak product.
+`NO_ACTIVE_CANDIDATE` — the current 90-row evidence queue has been reviewed 90/90 and produced no approved offer or build. This is not completion of the ¥200,000/month goal. Continue marketplace-first research when the queue changes; do not create a weak product.
