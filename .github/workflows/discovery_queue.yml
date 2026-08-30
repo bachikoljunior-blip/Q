@@ -1,0 +1,63 @@
+name: Build marketplace discovery evidence queue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/tools/build_discovery_queue.py'
+      - 'research/marketplace_scan/complaints.json'
+      - 'research/app_store_scan/reviews.json'
+      - '.github/workflows/discovery_queue.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '17 20 * * 2'
+
+concurrency:
+  group: marketplace-discovery-evidence-queue
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build evidence queue
+        run: |
+          python -m py_compile research/tools/build_discovery_queue.py
+          python research/tools/build_discovery_queue.py
+
+      - name: Validate queue remains non-approving
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          queue = json.loads(Path('research/discovery_queue/latest.json').read_text(encoding='utf-8'))
+          active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
+          assert queue['status'] == 'EVIDENCE_QUEUE_ONLY'
+          assert queue['build_approved'] is False
+          assert isinstance(queue['items'], list)
+          assert all(row['status'] == 'NEEDS_EXACT_WORKFLOW' for row in queue['items'])
+          assert active['build_approved'] is False
+          print(f"validated {len(queue['items'])} non-approved evidence rows")
+          PY
+
+      - name: Commit queue snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/discovery_queue/latest.json research/discovery_queue/latest.md
+          if git diff --cached --quiet; then
+            echo 'No discovery queue changes.'
+            exit 0
+          fi
+          git commit -m 'Update marketplace discovery evidence queue'
+          git pull --rebase origin main
+          git push origin HEAD:main
