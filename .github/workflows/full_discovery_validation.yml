@@ -1,0 +1,172 @@
+name: Full discovery validation pass
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/full_discovery_validation.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: q-full-discovery-validation
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Synchronize status and enforce prebuild gate
+        run: |
+          python scripts/sync_status_docs.py
+          python scripts/check_prebuild_gate.py
+
+      - name: Compile all research and governance scripts
+        run: |
+          python -m py_compile \
+            scripts/check_prebuild_gate.py \
+            scripts/sync_status_docs.py \
+            research/tools/marketplace_scan.py \
+            research/tools/mine_marketplace_complaints.py \
+            research/tools/app_store_scan.py \
+            research/tools/mine_app_store_reviews.py \
+            research/tools/build_discovery_queue.py
+
+      - name: Run current discovery scans
+        run: |
+          python research/tools/marketplace_scan.py
+          python research/tools/mine_marketplace_complaints.py
+          python research/tools/app_store_scan.py
+          python research/tools/mine_app_store_reviews.py
+          python research/tools/build_discovery_queue.py
+
+      - name: Validate no product can be silently approved
+        run: |
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
+          app = json.loads(Path('research/app_store_scan/latest.json').read_text(encoding='utf-8'))
+          reviews = json.loads(Path('research/app_store_scan/reviews.json').read_text(encoding='utf-8'))
+          queue = json.loads(Path('research/discovery_queue/latest.json').read_text(encoding='utf-8'))
+          market = json.loads(Path('research/marketplace_scan/latest.json').read_text(encoding='utf-8'))
+          complaints = json.loads(Path('research/marketplace_scan/complaints.json').read_text(encoding='utf-8'))
+
+          assert active['status'] == 'NO_ACTIVE_CANDIDATE'
+          assert active['build_approved'] is False
+          assert app['build_approved'] is False
+          assert reviews['build_approved'] is False
+          assert queue['build_approved'] is False
+          assert all(item['status'] == 'NEEDS_EXACT_WORKFLOW' for item in queue['items'])
+
+          product = Path('product')
+          assert not product.exists() or not any(path.is_file() for path in product.rglob('*'))
+
+          index = Path('index.html').read_text(encoding='utf-8')
+          assert 'NO_ACTIVE_CANDIDATE' in index
+          assert '現在、公開中の商品はありません' in index
+          assert 'noindex' in index
+          assert 'Disallow: /' in Path('robots.txt').read_text(encoding='utf-8')
+          assert not list(ET.parse('sitemap.xml').getroot())
+
+          Path('/tmp/validation.json').write_text(json.dumps({
+              'active_status': active['status'],
+              'app_store_queries': len(app.get('queries') or []),
+              'app_store_apps': len(app.get('records') or []),
+              'app_store_shortlist': len(app.get('shortlist') or []),
+              'app_review_queues': len(reviews.get('apps') or []),
+              'wordpress_records': len(market.get('records') or []),
+              'wordpress_complaint_items': len(complaints.get('items') or []),
+              'evidence_queue_items': len(queue.get('items') or []),
+              'product_files': 0,
+          }, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(Path('/tmp/validation.json').read_text())
+          PY
+
+      - name: Write durable validation record
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path('/tmp/validation.json').read_text(encoding='utf-8'))
+          now = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).replace(microsecond=0)
+          lines = [
+              '# 2026-08-30 — continuation full validation',
+              '',
+              f'実行時刻: {now.isoformat()}',
+              '',
+              '## Result',
+              '',
+              '- Project status: `NO_ACTIVE_CANDIDATE`',
+              '- Build approved: `false`',
+              '- Public live product: none',
+              '- Product implementation files: 0',
+              '- Governance/prebuild checks: PASS',
+              '- Status-document synchronization: PASS',
+              '- Public no-product/noindex/robots/sitemap checks: PASS',
+              '',
+              '## Discovery execution',
+              '',
+              f"- App Store queries: {data['app_store_queries']}",
+              f"- App Store unique apps collected: {data['app_store_apps']}",
+              f"- App Store shortlist rows: {data['app_store_shortlist']}",
+              f"- App review queues mined: {data['app_review_queues']}",
+              f"- WordPress marketplace records: {data['wordpress_records']}",
+              f"- WordPress complaint/support items: {data['wordpress_complaint_items']}",
+              f"- Cross-marketplace evidence queue rows: {data['evidence_queue_items']}",
+              '',
+              '## Decisions enforced',
+              '',
+              '- SECURITY_PRACTICAL_VOICE_TRAINER is CLOSED; no LP/MVP/app was built.',
+              '- WordPress high-volume complaint clusters were screened and none promoted.',
+              '- Discovery outputs remain evidence only and cannot edit ACTIVE_CANDIDATE.',
+              '- No fifth product is created until exact outcome, competitor, acquisition and economics gates pass.',
+              '',
+              '## External evidence still unavailable to automation',
+              '',
+              '- paid preorder or purchase',
+              '- marketplace ranking/conversion/CAC',
+              '- rights or qualified domain-review agreement',
+              '- third-party retention and support burden',
+              '',
+          ]
+          path = Path('execution/2026-08-30-continuation-validation.md')
+          path.parent.mkdir(parents=True, exist_ok=True)
+          path.write_text('\n'.join(lines), encoding='utf-8')
+          PY
+
+      - name: Commit generated evidence and validation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            START_HERE.md README.md AGENTS.md index.html \
+            research/marketplace_scan/latest.json \
+            research/marketplace_scan/latest.md \
+            research/marketplace_scan/complaints.json \
+            research/marketplace_scan/complaints.md \
+            research/app_store_scan/latest.json \
+            research/app_store_scan/latest.md \
+            research/app_store_scan/reviews.json \
+            research/app_store_scan/reviews.md \
+            research/discovery_queue/latest.json \
+            research/discovery_queue/latest.md \
+            execution/2026-08-30-continuation-validation.md
+          if git diff --cached --quiet; then
+            echo 'No generated changes.'
+            exit 0
+          fi
+          git commit -m 'Record full marketplace discovery validation pass'
+          git pull --rebase origin main
+          git push origin HEAD:main
