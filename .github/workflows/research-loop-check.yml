@@ -8,10 +8,12 @@ on:
       - 'execution/CURRENT_WORK.json'
       - 'tests/research-tools.smoke.py'
       - 'scripts/check_prebuild_gate.py'
+      - 'scripts/check_continuation_contract.py'
       - 'scripts/check_execution_contract.py'
       - '.github/workflows/marketplace_scan.yml'
       - '.github/workflows/app_store_scan.yml'
       - '.github/workflows/discovery_queue.yml'
+      - '.github/workflows/continuous_discovery_guard.yml'
       - '.github/workflows/research-loop-check.yml'
   workflow_dispatch:
 
@@ -43,13 +45,15 @@ jobs:
             research/tools/mine_app_store_reviews.py \
             research/tools/build_discovery_queue.py \
             scripts/check_prebuild_gate.py \
+            scripts/check_continuation_contract.py \
             scripts/check_execution_contract.py \
             scripts/sync_status_docs.py
 
       - name: Run canonical research smoke tests
         run: python tests/research-tools.smoke.py
 
-      - name: Enforce completion and no premature product
+      - name: Enforce complete current evidence review and no premature product
         run: |
           python scripts/check_prebuild_gate.py
+          python scripts/check_continuation_contract.py
           python scripts/check_execution_contract.py
