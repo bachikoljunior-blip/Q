@@ -5,7 +5,18 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/full_discovery_validation.yml'
+      - 'research/ACTIVE_CANDIDATE.json'
+      - 'research/CONTINUATION_CONTRACT.md'
+      - 'research/discovery_queue/latest.json'
+      - 'research/discovery_queue/reviewed_2026-08-30.json'
+      - 'research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md'
+      - 'research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md'
+      - 'execution/CURRENT_WORK.json'
+      - 'scripts/check_prebuild_gate.py'
+      - 'scripts/check_continuation_contract.py'
       - 'scripts/check_execution_contract.py'
+      - 'scripts/sync_status_docs.py'
+      - 'tests/research-tools.smoke.py'
   workflow_dispatch:
 
 concurrency:
@@ -13,7 +24,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   validate:
@@ -21,23 +32,16 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Synchronize status and enforce governance
-        run: |
-          python scripts/sync_status_docs.py
-          python scripts/check_prebuild_gate.py
-          python scripts/check_execution_contract.py
-
       - name: Compile canonical research and governance scripts
         run: |
           python -m py_compile \
             scripts/check_prebuild_gate.py \
+            scripts/check_continuation_contract.py \
             scripts/check_execution_contract.py \
             scripts/sync_status_docs.py \
             research/tools/marketplace_scan.py \
@@ -47,10 +51,21 @@ jobs:
             research/tools/mine_app_store_reviews.py \
             research/tools/build_discovery_queue.py
 
+      - name: Enforce prebuild, current-evidence and completion contracts
+        run: |
+          python scripts/check_prebuild_gate.py
+          python scripts/check_continuation_contract.py
+          python scripts/check_execution_contract.py
+
+      - name: Verify human-facing status is reproducible from machine state
+        run: |
+          python scripts/sync_status_docs.py
+          git diff --exit-code -- START_HERE.md README.md AGENTS.md index.html
+
       - name: Run canonical static smoke tests
         run: python tests/research-tools.smoke.py
 
-      - name: Validate current generated evidence without rewriting it
+      - name: Validate current reviewed evidence and public no-product state
         run: |
           python - <<'PY'
           import json
@@ -58,31 +73,27 @@ jobs:
           from pathlib import Path
 
           active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
-          app = json.loads(Path('research/app_store_scan/latest.json').read_text(encoding='utf-8'))
-          reviews = json.loads(Path('research/app_store_scan/reviews.json').read_text(encoding='utf-8'))
           queue = json.loads(Path('research/discovery_queue/latest.json').read_text(encoding='utf-8'))
-          market = json.loads(Path('research/marketplace_scan/latest.json').read_text(encoding='utf-8'))
-          shortlist = json.loads(Path('research/marketplace_scan/shortlist.json').read_text(encoding='utf-8'))
-          complaints = json.loads(Path('research/marketplace_scan/complaints.json').read_text(encoding='utf-8'))
+          review = json.loads(Path('research/discovery_queue/reviewed_2026-08-30.json').read_text(encoding='utf-8'))
           work = json.loads(Path('execution/CURRENT_WORK.json').read_text(encoding='utf-8'))
 
           assert active['status'] == 'NO_ACTIVE_CANDIDATE'
           assert active['build_approved'] is False
           assert active['candidate_id'] is None
-          assert app['build_approved'] is False
-          assert reviews['build_approved'] is False
-          assert queue['build_approved'] is False
-          assert all(item['status'] == 'NEEDS_EXACT_WORKFLOW' for item in queue.get('items', []))
-          assert market['schema_version'] == 2
-          assert 'never auto-approve' in market['purpose']
-          assert shortlist['build_approved'] is False
-          assert complaints['build_approved'] is False
+          assert queue['schema_version'] >= 2
+          assert queue['item_count'] == len(queue['items'])
+          assert queue['coverage']['wordpress_rows'] > 0
+          assert queue['coverage']['app_store_rows'] > 0
+          assert review['status'] == 'COMPLETE'
+          assert review['source_item_count'] == queue['item_count']
+          assert review['reviewed_item_count'] == queue['item_count']
+          assert len(review['dispositions']) == queue['item_count']
+          assert all(item['decision'] == 'REJECTED' for item in review['dispositions'])
           assert work['finalization_state'] == 'READY_TO_REPORT'
           assert all(item['status'] in {'DONE', 'REJECTED', 'BLOCKED_EXTERNAL'} for item in work['tasks'])
 
           product = Path('product')
           assert not product.exists() or not any(path.is_file() for path in product.rglob('*'))
-
           index = Path('index.html').read_text(encoding='utf-8')
           assert 'NO_ACTIVE_CANDIDATE' in index
           assert '現在、公開中の商品はありません' in index
@@ -90,85 +101,13 @@ jobs:
           assert 'Disallow: /' in Path('robots.txt').read_text(encoding='utf-8')
           assert not list(ET.parse('sitemap.xml').getroot())
 
-          Path('/tmp/validation.json').write_text(json.dumps({
+          print(json.dumps({
               'active_status': active['status'],
-              'app_store_queries': len(app.get('queries') or []),
-              'app_store_apps': len(app.get('records') or []),
-              'app_store_shortlist': len(app.get('shortlist') or []),
-              'app_review_queues': len(reviews.get('apps') or []),
-              'wordpress_records': len(market.get('records') or []),
-              'wordpress_complaint_topics': sum(item.get('topic_count', 0) for item in complaints.get('plugins', [])),
-              'evidence_queue_items': len(queue.get('items') or []),
-              'product_files': 0,
+              'reviewed_rows': review['reviewed_item_count'],
+              'wordpress_rows': queue['coverage']['wordpress_rows'],
+              'app_store_rows': queue['coverage']['app_store_rows'],
               'terminal_tasks': len(work['tasks']),
-          }, ensure_ascii=False, indent=2), encoding='utf-8')
-          print(Path('/tmp/validation.json').read_text())
+              'product_files': 0,
+              'result': 'PASS',
+          }, ensure_ascii=False))
           PY
-
-      - name: Write durable validation record
-        run: |
-          python - <<'PY'
-          import datetime as dt
-          import json
-          from pathlib import Path
-
-          data = json.loads(Path('/tmp/validation.json').read_text(encoding='utf-8'))
-          now = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).replace(microsecond=0)
-          lines = [
-              '# 2026-08-30 — final completion validation',
-              '',
-              f'実行時刻: {now.isoformat()}',
-              '',
-              '## Result',
-              '',
-              '- Project status: `NO_ACTIVE_CANDIDATE`',
-              '- Build approved: `false`',
-              '- Public live product: none',
-              '- Product implementation files: 0',
-              '- Prebuild gate: PASS',
-              '- Completion contract: PASS',
-              '- Canonical research smoke: PASS',
-              '- Public no-product/noindex/robots/sitemap checks: PASS',
-              '',
-              '## Evidence snapshot',
-              '',
-              f"- App Store queries: {data['app_store_queries']}",
-              f"- App Store unique apps collected: {data['app_store_apps']}",
-              f"- App Store shortlist rows: {data['app_store_shortlist']}",
-              f"- App review queues mined: {data['app_review_queues']}",
-              f"- WordPress marketplace records: {data['wordpress_records']}",
-              f"- WordPress complaint topics: {data['wordpress_complaint_topics']}",
-              f"- Cross-marketplace evidence queue rows: {data['evidence_queue_items']}",
-              f"- Terminal current-work tasks: {data['terminal_tasks']}",
-              '',
-              '## Decisions enforced',
-              '',
-              '- EXP001-004, security voice trainer and Jira Automation Guard remain closed.',
-              '- Closed-candidate executable workflows/scripts/tests/indexing are absent.',
-              '- One canonical writer owns research/marketplace_scan.',
-              '- Discovery outputs cannot edit ACTIVE_CANDIDATE or create product code.',
-              '- No product is created until exact outcome, competitor, acquisition and economics gates pass.',
-              '',
-          ]
-          path = Path('execution/2026-08-30-final-validation.md')
-          path.parent.mkdir(parents=True, exist_ok=True)
-          path.write_text('\n'.join(lines), encoding='utf-8')
-          PY
-
-      - name: Re-run governance after status synchronization
-        run: |
-          python scripts/check_prebuild_gate.py
-          python scripts/check_execution_contract.py
-
-      - name: Commit status and validation record only
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add START_HERE.md README.md AGENTS.md index.html execution/2026-08-30-final-validation.md
-          if git diff --cached --quiet; then
-            echo 'No validation changes.'
-            exit 0
-          fi
-          git commit -m 'Record final completion validation'
-          git pull --rebase origin main
-          git push origin HEAD:main
