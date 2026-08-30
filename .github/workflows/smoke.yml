@@ -23,12 +23,16 @@ jobs:
       - name: Enforce exact-match prebuild gate
         run: python scripts/check_prebuild_gate.py
 
+      - name: Enforce current discovery review coverage
+        run: python scripts/check_continuation_contract.py
+
       - name: Enforce completion-before-response contract
         run: python scripts/check_execution_contract.py
 
       - name: Validate project files and public no-product page
         run: |
           python - <<'PY'
+          import hashlib
           import json
           import xml.etree.ElementTree as ET
           from html.parser import HTMLParser
@@ -42,15 +46,21 @@ jobs:
               'AGENTS.md', 'START_HERE.md', 'PROJECT_STATE.md', 'DECISIONS.md', 'README.md',
               'research/ACTIVE_CANDIDATE.json',
               'research/PREBUILD_GATE.md',
+              'research/CONTINUATION_CONTRACT.md',
               'research/EXACT_MATCH_SWEEP_2026-08-30.md',
+              'research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md',
+              'research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md',
               'research/BATCH_VETO_2026-08-30.md',
               'research/marketplace_scan/latest.json',
               'research/marketplace_scan/shortlist.json',
               'research/marketplace_scan/complaints.json',
+              'research/discovery_queue/latest.json',
+              'research/discovery_queue/reviewed_2026-08-30.json',
               'execution/CURRENT_WORK.json',
               'execution/2026-08-30-completion-first-hardening.md',
               'experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md',
               'scripts/check_prebuild_gate.py',
+              'scripts/check_continuation_contract.py',
               'scripts/check_execution_contract.py'
           ]
           for name in required:
@@ -91,10 +101,21 @@ jobs:
           assert shortlist['build_approved'] is False
           assert complaints['build_approved'] is False
 
+          queue_path = Path('research/discovery_queue/latest.json')
+          queue = json.loads(queue_path.read_text(encoding='utf-8'))
+          review = json.loads(Path('research/discovery_queue/reviewed_2026-08-30.json').read_text(encoding='utf-8'))
+          assert queue['schema_version'] == 2
+          assert queue['item_count'] == len(queue['items']) == 90
+          assert queue['coverage']['wordpress_rows'] == 21
+          assert queue['coverage']['app_store_rows'] == 69
+          assert review['reviewed_item_count'] == 90
+          assert review['source_sha256'] == hashlib.sha256(queue_path.read_bytes()).hexdigest()
+          assert len(review['dispositions']) == 90
+
           work = json.loads(Path('execution/CURRENT_WORK.json').read_text(encoding='utf-8'))
           assert work['finalization_state'] == 'READY_TO_REPORT'
           assert all(item['status'] in {'DONE', 'REJECTED', 'BLOCKED_EXTERNAL'} for item in work['tasks'])
-          print('governance/static validation passed: NO_ACTIVE_CANDIDATE / READY_TO_REPORT')
+          print('governance/static validation passed: 90/90 reviewed / NO_ACTIVE_CANDIDATE / READY_TO_REPORT')
           PY
 
       - name: Serve public page and smoke HTTP
