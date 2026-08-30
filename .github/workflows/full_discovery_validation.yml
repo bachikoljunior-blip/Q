@@ -18,7 +18,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
@@ -47,19 +47,10 @@ jobs:
             research/tools/mine_app_store_reviews.py \
             research/tools/build_discovery_queue.py
 
-      - name: Run current discovery scans
-        run: |
-          python research/tools/marketplace_scan.py
-          python research/tools/filter_marketplace_scan.py
-          python research/tools/mine_wordpress_complaints.py
-          python research/tools/app_store_scan.py
-          python research/tools/mine_app_store_reviews.py
-          python research/tools/build_discovery_queue.py
-
-      - name: Run canonical smoke tests
+      - name: Run canonical static smoke tests
         run: python tests/research-tools.smoke.py
 
-      - name: Validate no product can be silently approved
+      - name: Validate current generated evidence without rewriting it
         run: |
           python - <<'PY'
           import json
@@ -139,7 +130,7 @@ jobs:
               '- Canonical research smoke: PASS',
               '- Public no-product/noindex/robots/sitemap checks: PASS',
               '',
-              '## Discovery execution',
+              '## Evidence snapshot',
               '',
               f"- App Store queries: {data['app_store_queries']}",
               f"- App Store unique apps collected: {data['app_store_apps']}",
@@ -164,34 +155,20 @@ jobs:
           path.write_text('\n'.join(lines), encoding='utf-8')
           PY
 
-      - name: Re-run governance after generated outputs
+      - name: Re-run governance after status synchronization
         run: |
           python scripts/check_prebuild_gate.py
           python scripts/check_execution_contract.py
 
-      - name: Commit generated evidence and validation
+      - name: Commit status and validation record only
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
-            START_HERE.md README.md AGENTS.md index.html \
-            research/marketplace_scan/latest.json \
-            research/marketplace_scan/latest.md \
-            research/marketplace_scan/shortlist.json \
-            research/marketplace_scan/shortlist.md \
-            research/marketplace_scan/complaints.json \
-            research/marketplace_scan/complaints.md \
-            research/app_store_scan/latest.json \
-            research/app_store_scan/latest.md \
-            research/app_store_scan/reviews.json \
-            research/app_store_scan/reviews.md \
-            research/discovery_queue/latest.json \
-            research/discovery_queue/latest.md \
-            execution/2026-08-30-final-validation.md
+          git add START_HERE.md README.md AGENTS.md index.html execution/2026-08-30-final-validation.md
           if git diff --cached --quiet; then
-            echo 'No generated changes.'
+            echo 'No validation changes.'
             exit 0
           fi
-          git commit -m 'Record final discovery and completion validation'
+          git commit -m 'Record final completion validation'
           git pull --rebase origin main
           git push origin HEAD:main
