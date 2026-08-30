@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Aggregate marketplace complaint signals into a manual evidence queue.
+"""Aggregate marketplace complaint signals into an exact-workflow review queue.
 
 The queue is deliberately not a candidate selector. It cannot edit
-ACTIVE_CANDIDATE.json or create product code.
+ACTIVE_CANDIDATE.json or create product code. WordPress rows are emitted per
+plugin+cluster so a broad global label cannot masquerade as one workflow.
 """
 
 from __future__ import annotations
@@ -19,15 +20,19 @@ OUT_DIR = ROOT / "research" / "discovery_queue"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 WORDPRESS_CLUSTERS = {
-    "invoice_pdf",
     "import_export",
-    "booking",
-    "subscription",
-    "accessibility",
-    "shipping",
-    "payments",
-    "email_delivery",
-    "permissions",
+    "tax_invoice_compliance",
+    "label_purchase",
+    "update_breakage",
+    "missing_feature",
+    "booking_conflict",
+    "pdf_email",
+    "sync_connection",
+    "subscription_renewal",
+    "bulk_workflow",
+    "address_validation",
+    "accessibility_compliance",
+    "wrong_weight_rate",
 }
 APP_CLUSTERS = {
     "accuracy_mismatch",
@@ -46,32 +51,58 @@ def load(path: Path) -> dict[str, Any] | None:
 
 
 def wordpress_queue(data: dict[str, Any] | None) -> list[dict[str, Any]]:
+    """Return actionable WordPress rows using the canonical complaint schema.
+
+    The old implementation looked for ``clusters``/``examples`` while the
+    canonical miner writes ``global_cluster_counts``/``cluster_examples`` and
+    per-plugin ``cluster_counts``/``topics``. That mismatch silently dropped
+    every WordPress complaint from the discovery queue.
+    """
     if not data:
         return []
-    clusters = data.get("clusters") or {}
-    examples = data.get("examples") or {}
+
     rows: list[dict[str, Any]] = []
-    for cluster in WORDPRESS_CLUSTERS:
-        count = int(clusters.get(cluster) or 0)
-        if count < 10:
-            continue
-        rows.append(
-            {
-                "source": "wordpress",
-                "signal_id": f"wordpress:{cluster}",
-                "cluster": cluster,
-                "matched_items": count,
-                "status": "NEEDS_EXACT_WORKFLOW",
-                "examples": list(examples.get(cluster) or [])[:12],
-                "required_next_evidence": [
-                    "read examples and define one buyer/input/processing/output outcome",
-                    "separate plugin-specific bugs from a cross-product workflow",
-                    "find 5 direct products and 5 substitutes",
-                    "reject if the outcome is already included in dominant plugins",
-                    "quantify marketplace query/install/review acquisition",
-                ],
-            }
-        )
+    for plugin in data.get("plugins") or []:
+        counts = plugin.get("cluster_counts") or {}
+        topics = plugin.get("topics") or []
+        for cluster in sorted(WORDPRESS_CLUSTERS):
+            count = int(counts.get(cluster) or 0)
+            if count < 10:
+                continue
+            examples = [
+                {
+                    "title": topic.get("title"),
+                    "url": topic.get("url"),
+                    "source": topic.get("source"),
+                    "clusters": topic.get("clusters") or [],
+                }
+                for topic in topics
+                if cluster in (topic.get("clusters") or [])
+            ][:12]
+            rows.append(
+                {
+                    "source": "wordpress",
+                    "signal_id": f"wordpress:{plugin.get('slug')}:{cluster}",
+                    "cluster": cluster,
+                    "plugin": plugin.get("plugin"),
+                    "slug": plugin.get("slug"),
+                    "plugin_url": plugin.get("listing_url"),
+                    "active_installs": plugin.get("active_installs"),
+                    "store_rating": plugin.get("rating"),
+                    "store_rating_count": plugin.get("ratings_count"),
+                    "unresolved_support": plugin.get("unresolved_support"),
+                    "matched_items": count,
+                    "status": "NEEDS_EXACT_WORKFLOW",
+                    "examples": examples,
+                    "required_next_evidence": [
+                        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+                        "separate first-party/plugin-specific defects from a standalone product workflow",
+                        "define buyer, input, processing, output and price",
+                        "find 5 direct products and 5 substitutes",
+                        "quantify marketplace acquisition and support burden",
+                    ],
+                }
+            )
     return rows
 
 
@@ -86,7 +117,8 @@ def app_store_queue(data: dict[str, Any] | None) -> list[dict[str, Any]]:
             if count < 10:
                 continue
             examples = [
-                review for review in app.get("reviews") or []
+                review
+                for review in app.get("reviews") or []
                 if cluster in (review.get("clusters") or [])
             ][:12]
             rows.append(
@@ -120,11 +152,23 @@ def score(row: dict[str, Any]) -> float:
     source_bonus = 2 if row.get("source") == "app_store_jp" else 1
     paid_bonus = 2 if (row.get("price_jpy") or 0) > 0 else 0
     ratings = int(row.get("store_rating_count") or 0)
-    return round(count ** 0.5 + source_bonus + paid_bonus + min(ratings, 10000) ** 0.25, 3)
+    installs = int(row.get("active_installs") or 0)
+    unresolved = int(row.get("unresolved_support") or 0)
+    return round(
+        count ** 0.5
+        + source_bonus
+        + paid_bonus
+        + min(ratings, 10000) ** 0.25
+        + min(installs, 100000) ** 0.12
+        + min(unresolved, 100) ** 0.35,
+        3,
+    )
 
 
 def main() -> int:
-    rows = wordpress_queue(load(WORDPRESS)) + app_store_queue(load(APPSTORE))
+    wordpress = wordpress_queue(load(WORDPRESS))
+    app_store = app_store_queue(load(APPSTORE))
+    rows = wordpress + app_store
     for row in rows:
         row["discovery_score"] = score(row)
     rows.sort(key=lambda row: row["discovery_score"], reverse=True)
@@ -132,16 +176,25 @@ def main() -> int:
     now = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).replace(microsecond=0)
     active = json.loads((ROOT / "research" / "ACTIVE_CANDIDATE.json").read_text(encoding="utf-8"))
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_jst": now.isoformat(),
         "status": "EVIDENCE_QUEUE_ONLY",
         "build_approved": False,
         "active_candidate_status": active.get("status"),
         "item_count": len(rows),
+        "coverage": {
+            "wordpress_rows": len(wordpress),
+            "app_store_rows": len(app_store),
+            "wordpress_schema": "per-plugin cluster_counts/topics",
+            "app_store_schema": "per-app cluster_counts/reviews",
+        },
         "items": rows,
         "warning": "A complaint cluster is not a product candidate. Exact workflow, competition, acquisition and economics gates remain mandatory.",
     }
-    (OUT_DIR / "latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (OUT_DIR / "latest.json").write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     lines = [
         "# Marketplace discovery queue — evidence only",
@@ -152,18 +205,22 @@ def main() -> int:
         "",
         "> Complaint count is not a candidate and not a product. Each row must be reduced to one exact workflow and pass PREBUILD_GATE.",
         "",
-        f"Queue items: {len(rows)}",
+        f"- WordPress rows: {len(wordpress)}",
+        f"- App Store rows: {len(app_store)}",
+        f"- Total queue items: {len(rows)}",
         "",
-        "| # | Source | Cluster / app | Matches | Score | State |",
+        "| # | Source | Cluster / product | Matches | Score | State |",
         "|---:|---|---|---:|---:|---|",
     ]
-    for index, row in enumerate(rows[:80], start=1):
+    for index, row in enumerate(rows[:120], start=1):
         label = row.get("cluster") or "unknown"
-        if row.get("app"):
-            label += f" — {row['app']}"
+        product = row.get("app") or row.get("plugin")
+        if product:
+            label += f" — {product}"
         label = str(label).replace("|", "\\|")
         lines.append(
-            f"| {index} | {row.get('source')} | {label} | {row.get('matched_items')} | {row.get('discovery_score')} | NEEDS_EXACT_WORKFLOW |"
+            f"| {index} | {row.get('source')} | {label} | {row.get('matched_items')} | "
+            f"{row.get('discovery_score')} | NEEDS_EXACT_WORKFLOW |"
         )
     lines.extend(
         [
@@ -180,7 +237,7 @@ def main() -> int:
         ]
     )
     (OUT_DIR / "latest.md").write_text("\n".join(lines), encoding="utf-8")
-    print(f"queued {len(rows)} evidence clusters")
+    print(f"queued {len(rows)} evidence clusters ({len(wordpress)} WordPress, {len(app_store)} App Store)")
     return 0
 
 
