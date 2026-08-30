@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "last_reviewed_jst": "2026-08-30T19:20:00+09:00",
   "status": "NO_ACTIVE_CANDIDATE",
   "candidate_id": null,
@@ -10,20 +10,20 @@
   "direct_competitors": [],
   "substitutes": [],
   "overlap_matrix_complete": false,
-  "duplicate_veto": "NO_CANDIDATE_PASSED",
+  "duplicate_veto": "NOT_EVALUATED",
   "differentiator_evidence": [],
   "acquisition_evidence": [],
   "economics": null,
   "kill_criteria": [],
-  "evidence_batch": {
+  "evidence_review": {
     "queue_file": "research/discovery_queue/latest.json",
-    "queue_sha256": "1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1",
-    "queue_rows": 90,
-    "app_store_rows": 69,
+    "review_file": "research/discovery_queue/reviewed_2026-08-30.json",
+    "source_sha256": "1a4232788a9bebaccc91a1d218ffc2597a3636d447b0ba7bd1f394bf47d727d1",
+    "source_item_count": 90,
+    "reviewed_item_count": 90,
     "wordpress_rows": 21,
-    "reviewed_rows": 90,
-    "promoted_rows": 0,
-    "review_file": "research/discovery_queue/reviewed_2026-08-30.json"
+    "app_store_rows": 69,
+    "promoted_signal_ids": []
   },
-  "reason": "The current schema-v2 discovery queue was reviewed 90/90 against its exact SHA-256: 69 Japanese App Store rows and 21 restored WordPress plugin/complaint rows. Four App Store workflow families and seven WordPress workflow families reached the repeated-complaint threshold, but every one failed at least one mandatory gate: exact paid/free/first-party overlap, platform-specific defects, legal/content/carrier/schema maintenance, support burden that scales with customers, or unsupported acquisition and net-income economics. No signal was promoted, no product code or offer is approved, and the hand-take-home JPY 200,000/month goal remains unachieved."
+  "reason": "The earlier stop was invalid because 69 App Store evidence rows remained unprocessed and a schema mismatch had silently omitted 21 WordPress rows. The queue builder was repaired, all 90 current rows were reduced to exact workflows, repeated complaints were manually confirmed where present, and the strongest families were checked against direct products, substitutes, acquisition constraints and net-income economics. Every row was rejected because of exact or free substitutes, first-party/platform ownership, legal/content/schema/integration maintenance, support burden, insufficient same-workflow evidence, or unsupported acquisition economics. No candidate currently passes PREBUILD_GATE."
 }
