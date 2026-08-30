@@ -5,8 +5,12 @@ on:
     branches: [main]
     paths:
       - 'research/ACTIVE_CANDIDATE.json'
+      - 'research/CONTINUATION_CONTRACT.md'
+      - 'research/discovery_queue/latest.json'
+      - 'research/discovery_queue/reviewed_2026-08-30.json'
       - 'execution/CURRENT_WORK.json'
       - 'PROJECT_STATE.md'
+      - 'scripts/check_continuation_contract.py'
       - 'scripts/sync_status_docs.py'
       - '.github/workflows/status_sync.yml'
   workflow_dispatch:
@@ -27,14 +31,21 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Synchronize docs from source-of-truth state
         run: python scripts/sync_status_docs.py
 
-      - name: Run prebuild, completion and status checks
+      - name: Run prebuild, continuation, completion and status checks
         run: |
           python scripts/check_prebuild_gate.py
+          python scripts/check_continuation_contract.py
           python scripts/check_execution_contract.py
-          python -m py_compile scripts/sync_status_docs.py
+          python -m py_compile \
+            scripts/sync_status_docs.py \
+            scripts/check_continuation_contract.py
 
       - name: Commit synchronized docs
         run: |
@@ -45,6 +56,6 @@ jobs:
             echo 'Status docs already synchronized.'
             exit 0
           fi
-          git commit -m 'Synchronize human-facing candidate and completion status'
+          git commit -m 'Synchronize reviewed candidate and completion status'
           git pull --rebase origin main
           git push origin HEAD:main
