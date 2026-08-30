@@ -9,22 +9,31 @@
 - main device: iPhone
 - no coding background, but AI/GitHub orchestration experience
 - low direct-sales tolerance
-- no primary strategy requiring calls, meetings, or custom delivery
-
-## Strategy
-1. Start from a paid marketplace or other channel with visible demand and acquisition.
-2. Define the exact buyer → input → processing → output → price workflow.
-3. Search Japanese and English direct competitors before any build.
-4. Reject 70%+ workflow duplicates unless the unresolved difference has external evidence.
-5. Do not treat localization, low price, no-login or browser-local processing as sufficient differentiation by themselves.
-6. Record the decision in `research/ACTIVE_CANDIDATE.json`.
-7. Do not create new product code until `build_approved=true`.
-8. After approval, build the smallest zero-touch offer/MVP and measure real use and paid intent.
-9. Add payment and deeper automation only after explicit gates pass.
-10. Kill weak experiments without sunk-cost bias.
-11. Convert profits into diversified long-term assets after business cash flow exists.
+- no primary strategy requiring calls, meetings or custom delivery
 
 ## Current status
-`NO_ACTIVE_CANDIDATE`
+`NO_ACTIVE_CANDIDATE` / `build_approved=false`
 
-EXP001–004 are closed. See `PROJECT_STATE.md`, `research/PREBUILD_GATE.md`, and `research/EXACT_MATCH_SWEEP_2026-08-30.md`.
+EXP001〜004と警備検定音声トレーナーleadは終了。現在、商品・販売ページ・MVP・決済はない。
+
+## Strategy
+1. Start from existing marketplace demand and repeated unresolved complaints.
+2. Define exact buyer + input + processing + output + price model.
+3. Verify direct competitors and substitutes before offer or code.
+4. Reject 70%+ workflow duplicates unless switching/prepayment evidence exists.
+5. Confirm the proposed input can actually measure the promised outcome.
+6. Prove acquisition and economics before build approval.
+7. Build deterministic, self-service products only after the machine-readable gate passes.
+8. Measure paid use and retention; kill weak products without sunk-cost bias.
+9. Convert profits into diversified long-term assets after business cash flow exists.
+
+## Discovery automation
+- WordPress marketplace listing/support/review scans
+- Japanese App Store listing/price/rating/review scans
+- automated status documentation sync
+- GitHub Actions prebuild governance
+
+These systems collect evidence only. They cannot approve a build or generate fake demand.
+
+## Current experiment
+None. See `PROJECT_STATE.md` and `research/ACTIVE_CANDIDATE.json`.
