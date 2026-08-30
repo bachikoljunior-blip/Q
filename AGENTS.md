@@ -1,26 +1,26 @@
 # AGENTS.md — Q project operating contract
 
 ## Source of truth
-Read in this order:
 1. `PROJECT_STATE.md`
 2. `research/ACTIVE_CANDIDATE.json`
 3. `research/PREBUILD_GATE.md`
 4. `DECISIONS.md`
-5. Current research / experiment files
+5. Current research under `research/`
 
 Conversation memory is secondary.
 
 ## User communication rule
-The user has explicitly required:
+The user has explicitly required, repeatedly:
 - Do not drip-feed plans.
 - Do not end with “next I will”.
 - Do not ask again for facts already stored.
 - Complete every safe action available in the current session before replying.
-- When a flaw is found, stop/change/research/check/update in the same work cycle.
 - Reply once, after execution.
 
-## Truthful status language
-Always state one exact status:
+Repeating this failure is a project defect, not a communication preference.
+
+## Status language
+Use exactly one:
 - `NO_ACTIVE_CANDIDATE`
 - `RESEARCH_ONLY`
 - `OFFER_TEST`
@@ -29,52 +29,54 @@ Always state one exact status:
 - `LIVE_PAID_PRODUCT`
 - `CLOSED`
 
-Do not call an idea, research note, landing page or free falsification test a paid “product”.
+Never describe `RESEARCH_ONLY` or `OFFER_TEST` as a built product.
 
-## Exact-match competitor veto
-Before implementation, follow `research/PREBUILD_GATE.md`.
+## Product-selection gate
+Never build because an idea is easy, automatic, localized, private, cheap, or novel-sounding.
 
-Mandatory minimum:
-1. Define buyer + exact input + processing + output + price model.
-2. Run at least 12 Japanese/English exact-workflow searches.
-3. Record at least 5 direct competitors and 5 substitutes.
-4. Complete a buyer/input/processing/output/pricing overlap matrix.
-5. Prove a concrete acquisition path and unit economics.
+Before implementation, prove:
+1. exact buyer/input/processing/output/price workflow
+2. 12+ varied exact-match searches
+3. 5+ direct competitors and 5+ substitutes
+4. structured workflow overlap matrix
+5. no 70%+ duplicate unless external override evidence exists
+6. people currently pay for the result
+7. pain affects money, deadlines, compliance, or recurring labor
+8. free/first-party alternatives do not fully solve the selected wedge
+9. a specific acquisition path exists
+10. unit economics can reach take-home ¥200k without owner work scaling linearly
 
-Reject the candidate when:
-- an existing product overlaps at least 70% of the workflow,
-- free/open-source/first-party tools provide the main outcome,
-- or the only differences are Japanese localization, lower price, local processing or no login.
-
-A duplicate veto may be overridden only by evidence for the unresolved difference: paid preorders, qualified current spenders with switching intent, repeated public complaints, or measured owned distribution. “Market exists” is not product validation.
-
-## Repository enforcement
-- `research/ACTIVE_CANDIDATE.json` is the machine-readable build decision.
-- New product code must be placed under `product/`.
-- Do not create files under `product/` while `build_approved=false`.
-- Research automation belongs under `research/tools/`.
-- Do not publish a new landing page until status is at least `OFFER_TEST`.
+“Japanese”, “cheaper”, “no login”, “local processing” and “AI-powered” are not sufficient differentiators by themselves.
 
 ## Same-cycle correction
 When a weakness is found:
 - stop the weak path,
-- search exact competitors,
-- reject or revise,
-- execute all safe work still possible,
+- research the replacement,
+- execute the replacement where possible,
 - run checks,
 - update state,
 - then report.
 
 Do not request fresh confirmation for work already authorized.
 
+## Repository enforcement
+- `research/ACTIVE_CANDIDATE.json` is machine-checked.
+- `build_approved=false` forbids implementation files under `product/`.
+- `RESEARCH_ONLY` still requires 12 searches, substitutes, evidence, economics and kill criteria.
+- `BUILD_APPROVED` requires structured competitor overlap percentages and economic inputs.
+- Public pages must not present research or closed experiments as products.
+
+## Existing YouTube asset
+`bachikoljunior-blip/youtube` is policy-paused as of 2026-08-30.
+
+The current automated synthetic “former accounting/HR” persona discusses finance/tax/career, while current YouTube monetization policy explicitly disallows AI personas presenting human expertise on sensitive topics. Do not restart generation, upload, scheduling or optimization for that tactic. Analytics and preservation are allowed. Resume only through the gate written in that repository's `AUTOMATION_PAUSED.md`.
+
 ## Safety and truthfulness
-- Never guarantee income, eligibility, reimbursement, legal compliance, tax treatment or platform approval.
+- Never guarantee income, eligibility, reimbursement, legal compliance, tax treatment, exam accuracy, platform approval or monetization.
 - Prefer deterministic checks over AI where rules are enough.
 - Show uncertainty and source dates.
-- Do not automate claims or actions that could create duplicate/invalid submissions without an explicit safe design.
+- Do not automate claims, filings, exam content or platform actions that could create harmful errors without a safe design.
+- Do not invent external demand, sales, qualifications, copyrighted rights or real users.
 
-## Closed experiments
-EXP001, EXP002, EXP003 and EXP004 are closed. Do not revive them without new external evidence that passes the full gate.
-
-## Current status
-Read `PROJECT_STATE.md`. There is currently no active product candidate.
+## Current experiment status
+Read `PROJECT_STATE.md`. EXP001–004 are closed. The only current lead is `RESEARCH_ONLY`; it is not a product and must not be implemented before the gate passes.
