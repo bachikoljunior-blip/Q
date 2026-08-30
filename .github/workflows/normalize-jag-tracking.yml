@@ -1,0 +1,61 @@
+name: Normalize Jira Guard live tracking
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/normalize_jag_tracking.py'
+      - '.github/workflows/normalize-jag-tracking.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: normalize-jag-tracking
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Isolate production metrics
+        run: python scripts/normalize_jag_tracking.py
+
+      - name: Validate tracking boundary
+        run: |
+          node --check product/jira-automation-guard/app.js
+          node --check app.js
+          python - <<'PY'
+          from pathlib import Path
+          for name in ['product/jira-automation-guard/app.js','app.js']:
+              text=Path(name).read_text(encoding='utf-8')
+              assert "jira-automation-guard-live-v1" in text
+              assert "location.hostname" in text
+              assert "no-track" in text
+          for name in ['product/jira-automation-guard/stats.html','stats.html']:
+              assert "jira-automation-guard-live-v1" in Path(name).read_text(encoding='utf-8')
+          print('tracking boundary valid')
+          PY
+
+      - name: Commit normalized tracking
+        run: |
+          git add product/jira-automation-guard/app.js product/jira-automation-guard/stats.html app.js stats.html
+          if git diff --cached --quiet; then
+            echo 'Tracking already normalized'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Isolate Jira Guard live metrics from local tests [skip ci]'
+          git pull --rebase origin main
+          git push
