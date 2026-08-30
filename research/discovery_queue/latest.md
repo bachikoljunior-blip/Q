@@ -1,14 +1,16 @@
 # Marketplace discovery queue — evidence only
 
-最終更新: 2026-08-30T09:21:50+09:00
+最終更新: 2026-08-30T19:11:35+09:00
 
 **Status: EVIDENCE_QUEUE_ONLY / build_approved=false**
 
 > Complaint count is not a candidate and not a product. Each row must be reduced to one exact workflow and pass PREBUILD_GATE.
 
-Queue items: 69
+- WordPress rows: 21
+- App Store rows: 69
+- Total queue items: 90
 
-| # | Source | Cluster / app | Matches | Score | State |
+| # | Source | Cluster / product | Matches | Score | State |
 |---:|---|---|---:|---:|---|
 | 1 | app_store_jp | missing_feature — OKBアプリ 大垣共立銀行-貯金＆通帳管理・口座の残高照会 | 110 | 22.488 | NEEDS_EXACT_WORKFLOW |
 | 2 | app_store_jp | missing_feature — SPI言語・非言語 就活問題集 -適性検査SPI3対応- | 89 | 21.434 | NEEDS_EXACT_WORKFLOW |
@@ -29,56 +31,77 @@ Queue items: 69
 | 17 | app_store_jp | missing_feature — みんなの銀行-お金管理・後払い・預金(貯金)・残高確認 | 71 | 20.426 | NEEDS_EXACT_WORKFLOW |
 | 18 | app_store_jp | missing_feature — ScanGuru ドキュメント スキャン、PDF変換、OCR | 66 | 20.124 | NEEDS_EXACT_WORKFLOW |
 | 19 | app_store_jp | missing_feature — うたスマ Movie - 採点カラオケ歌い放題&練習 | 65 | 20.062 | NEEDS_EXACT_WORKFLOW |
-| 20 | app_store_jp | missing_feature — 英検®トレーニング - 2級から3級に対応 | 55 | 19.416 | NEEDS_EXACT_WORKFLOW |
-| 21 | app_store_jp | missing_feature — AI英会話スピーク - スピーキング練習で発音や英語を勉強 | 54 | 19.348 | NEEDS_EXACT_WORKFLOW |
-| 22 | app_store_jp | voice_or_speech — ELSA Speak：パーソナライズされた英会話アプリ | 52 | 19.211 | NEEDS_EXACT_WORKFLOW |
-| 23 | app_store_jp | data_loss_sync — シフト管理ならシフト手帳！バイトのシフトも給料計算も一括管理 | 50 | 19.071 | NEEDS_EXACT_WORKFLOW |
-| 24 | app_store_jp | missing_feature — FP3級学科試験対策問題集 | 49 | 19.0 | NEEDS_EXACT_WORKFLOW |
-| 25 | app_store_jp | missing_feature — 簿記3級 解説付き問題集 | 46 | 18.782 | NEEDS_EXACT_WORKFLOW |
-| 26 | app_store_jp | missing_feature — Scan Shot: 文書をスキャンしてPDFに変換する | 49 | 18.744 | NEEDS_EXACT_WORKFLOW |
-| 27 | app_store_jp | missing_feature — 看護師 ナースのシフト管理ならシフトナby看護師ワーカー | 45 | 18.708 | NEEDS_EXACT_WORKFLOW |
-| 28 | app_store_jp | missing_feature — 共通テストカウントダウン | 42 | 18.481 | NEEDS_EXACT_WORKFLOW |
-| 29 | app_store_jp | voice_or_speech — 英語発音トレーニング | 41 | 18.371 | NEEDS_EXACT_WORKFLOW |
-| 30 | app_store_jp | missing_feature — 介護職員のシフト管理ならシフトカイゴby介護ワーカー | 43 | 18.183 | NEEDS_EXACT_WORKFLOW |
-| 31 | app_store_jp | content_too_easy_or_shallow — 燃費記録簿 超カンタンな愛車の燃費記録アプリ | 33 | 17.745 | NEEDS_EXACT_WORKFLOW |
-| 32 | app_store_jp | missing_feature — 子供の知育ゲーム｜ごっこランド お店屋さん体験の子供アプリ | 31 | 17.568 | NEEDS_EXACT_WORKFLOW |
-| 33 | app_store_jp | accuracy_mismatch — FP3級学科試験対策問題集 | 31 | 17.568 | NEEDS_EXACT_WORKFLOW |
-| 34 | app_store_jp | voice_or_speech — 「カラオケ診断」音域に合う曲が分かる 採点やボイトレ アプリ | 26 | 17.099 | NEEDS_EXACT_WORKFLOW |
-| 35 | app_store_jp | accuracy_mismatch — 「カラオケ診断」音域に合う曲が分かる 採点やボイトレ アプリ | 26 | 17.099 | NEEDS_EXACT_WORKFLOW |
-| 36 | app_store_jp | accuracy_mismatch — シフト管理と給料計算のシフトカレンダー:バイトの勤務表にも | 25 | 17.0 | NEEDS_EXACT_WORKFLOW |
-| 37 | app_store_jp | voice_or_speech — 分析採点JOYSOUND-カラオケ採点＆練習・カラオケアプリ | 26 | 16.895 | NEEDS_EXACT_WORKFLOW |
-| 38 | app_store_jp | data_loss_sync — ハヤえもん - 音楽プレーヤー | 23 | 16.796 | NEEDS_EXACT_WORKFLOW |
-| 39 | app_store_jp | accuracy_mismatch — SPI言語・非言語 就活問題集 -適性検査SPI3対応- | 23 | 16.796 | NEEDS_EXACT_WORKFLOW |
-| 40 | app_store_jp | offline_privacy — SPI言語・非言語 就活問題集 -適性検査SPI3対応- | 22 | 16.69 | NEEDS_EXACT_WORKFLOW |
-| 41 | app_store_jp | voice_or_speech — AI英会話スピーク - スピーキング練習で発音や英語を勉強 | 21 | 16.583 | NEEDS_EXACT_WORKFLOW |
-| 42 | app_store_jp | accuracy_mismatch — ELSA Speak：パーソナライズされた英会話アプリ | 21 | 16.583 | NEEDS_EXACT_WORKFLOW |
-| 43 | app_store_jp | content_too_easy_or_shallow — 看護師 ナースのシフト管理ならシフトナby看護師ワーカー | 21 | 16.583 | NEEDS_EXACT_WORKFLOW |
-| 44 | app_store_jp | accuracy_mismatch — AI英会話スピーク - スピーキング練習で発音や英語を勉強 | 20 | 16.472 | NEEDS_EXACT_WORKFLOW |
-| 45 | app_store_jp | voice_or_speech — Smule: カラオケ録音＆デュエットを楽しもう | 18 | 16.243 | NEEDS_EXACT_WORKFLOW |
-| 46 | app_store_jp | accuracy_mismatch — シフトボード：バイトの給料計算とシフト管理 | 18 | 16.243 | NEEDS_EXACT_WORKFLOW |
-| 47 | app_store_jp | missing_feature — シフト勤務カレンダー：仕事とスケジュールをシンプルに管理 | 18 | 16.243 | NEEDS_EXACT_WORKFLOW |
-| 48 | app_store_jp | missing_feature — 燃費記録簿 超カンタンな愛車の燃費記録アプリ | 18 | 16.243 | NEEDS_EXACT_WORKFLOW |
-| 49 | app_store_jp | voice_or_speech — 英検®トレーニング - 2級から3級に対応 | 17 | 16.123 | NEEDS_EXACT_WORKFLOW |
-| 50 | app_store_jp | accuracy_mismatch — 簿記3級 解説付き問題集 | 16 | 16.0 | NEEDS_EXACT_WORKFLOW |
-| 51 | app_store_jp | content_too_easy_or_shallow — 介護職員のシフト管理ならシフトカイゴby介護ワーカー | 19 | 15.985 | NEEDS_EXACT_WORKFLOW |
-| 52 | app_store_jp | accuracy_mismatch — SoundHound音楽検索の認識とプレーヤー | 15 | 15.873 | NEEDS_EXACT_WORKFLOW |
-| 53 | app_store_jp | accuracy_mismatch — シフト管理ならシフト手帳！バイトのシフトも給料計算も一括管理 | 15 | 15.873 | NEEDS_EXACT_WORKFLOW |
-| 54 | app_store_jp | missing_feature — Viva Engage | 70 | 15.847 | NEEDS_EXACT_WORKFLOW |
-| 55 | app_store_jp | missing_feature — 英語発音トレーニング | 15 | 15.841 | NEEDS_EXACT_WORKFLOW |
-| 56 | app_store_jp | accuracy_mismatch — シフト給料計算カレンダー | 14 | 15.742 | NEEDS_EXACT_WORKFLOW |
-| 57 | app_store_jp | accuracy_mismatch — ScanGuru ドキュメント スキャン、PDF変換、OCR | 13 | 15.606 | NEEDS_EXACT_WORKFLOW |
-| 58 | app_store_jp | voice_or_speech — ポケカラ－Pokekara 本格採点カラオケアプリ | 13 | 15.606 | NEEDS_EXACT_WORKFLOW |
-| 59 | app_store_jp | content_too_easy_or_shallow — シフト勤務カレンダー：仕事とスケジュールをシンプルに管理 | 12 | 15.464 | NEEDS_EXACT_WORKFLOW |
-| 60 | app_store_jp | accuracy_mismatch — 英検®トレーニング - 2級から3級に対応 | 12 | 15.464 | NEEDS_EXACT_WORKFLOW |
-| 61 | app_store_jp | accuracy_mismatch — 分析採点JOYSOUND-カラオケ採点＆練習・カラオケアプリ | 13 | 15.401 | NEEDS_EXACT_WORKFLOW |
-| 62 | app_store_jp | data_loss_sync — シフト給料計算カレンダー | 11 | 15.317 | NEEDS_EXACT_WORKFLOW |
-| 63 | app_store_jp | data_loss_sync — Scan Shot: 文書をスキャンしてPDFに変換する | 12 | 15.208 | NEEDS_EXACT_WORKFLOW |
-| 64 | app_store_jp | data_loss_sync — Google スプレッドシート | 10 | 15.162 | NEEDS_EXACT_WORKFLOW |
-| 65 | app_store_jp | accuracy_mismatch — みんなの銀行-お金管理・後払い・預金(貯金)・残高確認 | 10 | 15.162 | NEEDS_EXACT_WORKFLOW |
-| 66 | app_store_jp | data_loss_sync — 介護職員のシフト管理ならシフトカイゴby介護ワーカー | 10 | 14.788 | NEEDS_EXACT_WORKFLOW |
-| 67 | app_store_jp | missing_feature — マネーフォワード クラウド経費 | 57 | 13.383 | NEEDS_EXACT_WORKFLOW |
-| 68 | app_store_jp | accuracy_mismatch — マネーフォワード クラウド経費 | 12 | 9.298 | NEEDS_EXACT_WORKFLOW |
-| 69 | app_store_jp | missing_feature — タイピングの練習 | 12 | 8.794 | NEEDS_EXACT_WORKFLOW |
+| 20 | wordpress | pdf_email — PDF Invoices & Packing Slips for WooCommerce | 33 | 19.681 | NEEDS_EXACT_WORKFLOW |
+| 21 | app_store_jp | missing_feature — 英検®トレーニング - 2級から3級に対応 | 55 | 19.416 | NEEDS_EXACT_WORKFLOW |
+| 22 | app_store_jp | missing_feature — AI英会話スピーク - スピーキング練習で発音や英語を勉強 | 54 | 19.348 | NEEDS_EXACT_WORKFLOW |
+| 23 | app_store_jp | voice_or_speech — ELSA Speak：パーソナライズされた英会話アプリ | 52 | 19.211 | NEEDS_EXACT_WORKFLOW |
+| 24 | app_store_jp | data_loss_sync — シフト管理ならシフト手帳！バイトのシフトも給料計算も一括管理 | 50 | 19.071 | NEEDS_EXACT_WORKFLOW |
+| 25 | app_store_jp | missing_feature — FP3級学科試験対策問題集 | 49 | 19.0 | NEEDS_EXACT_WORKFLOW |
+| 26 | app_store_jp | missing_feature — 簿記3級 解説付き問題集 | 46 | 18.782 | NEEDS_EXACT_WORKFLOW |
+| 27 | app_store_jp | missing_feature — Scan Shot: 文書をスキャンしてPDFに変換する | 49 | 18.744 | NEEDS_EXACT_WORKFLOW |
+| 28 | app_store_jp | missing_feature — 看護師 ナースのシフト管理ならシフトナby看護師ワーカー | 45 | 18.708 | NEEDS_EXACT_WORKFLOW |
+| 29 | app_store_jp | missing_feature — 共通テストカウントダウン | 42 | 18.481 | NEEDS_EXACT_WORKFLOW |
+| 30 | app_store_jp | voice_or_speech — 英語発音トレーニング | 41 | 18.371 | NEEDS_EXACT_WORKFLOW |
+| 31 | app_store_jp | missing_feature — 介護職員のシフト管理ならシフトカイゴby介護ワーカー | 43 | 18.183 | NEEDS_EXACT_WORKFLOW |
+| 32 | app_store_jp | content_too_easy_or_shallow — 燃費記録簿 超カンタンな愛車の燃費記録アプリ | 33 | 17.745 | NEEDS_EXACT_WORKFLOW |
+| 33 | app_store_jp | missing_feature — 子供の知育ゲーム｜ごっこランド お店屋さん体験の子供アプリ | 31 | 17.568 | NEEDS_EXACT_WORKFLOW |
+| 34 | app_store_jp | accuracy_mismatch — FP3級学科試験対策問題集 | 31 | 17.568 | NEEDS_EXACT_WORKFLOW |
+| 35 | wordpress | booking_conflict — Booking for Appointments and Events Calendar – Amelia | 33 | 17.243 | NEEDS_EXACT_WORKFLOW |
+| 36 | app_store_jp | voice_or_speech — 「カラオケ診断」音域に合う曲が分かる 採点やボイトレ アプリ | 26 | 17.099 | NEEDS_EXACT_WORKFLOW |
+| 37 | app_store_jp | accuracy_mismatch — 「カラオケ診断」音域に合う曲が分かる 採点やボイトレ アプリ | 26 | 17.099 | NEEDS_EXACT_WORKFLOW |
+| 38 | wordpress | import_export — WP All Import – Drag & Drop Import for CSV, XML, Excel & Google Sheets | 29 | 17.022 | NEEDS_EXACT_WORKFLOW |
+| 39 | app_store_jp | accuracy_mismatch — シフト管理と給料計算のシフトカレンダー:バイトの勤務表にも | 25 | 17.0 | NEEDS_EXACT_WORKFLOW |
+| 40 | app_store_jp | voice_or_speech — 分析採点JOYSOUND-カラオケ採点＆練習・カラオケアプリ | 26 | 16.895 | NEEDS_EXACT_WORKFLOW |
+| 41 | app_store_jp | data_loss_sync — ハヤえもん - 音楽プレーヤー | 23 | 16.796 | NEEDS_EXACT_WORKFLOW |
+| 42 | app_store_jp | accuracy_mismatch — SPI言語・非言語 就活問題集 -適性検査SPI3対応- | 23 | 16.796 | NEEDS_EXACT_WORKFLOW |
+| 43 | app_store_jp | offline_privacy — SPI言語・非言語 就活問題集 -適性検査SPI3対応- | 22 | 16.69 | NEEDS_EXACT_WORKFLOW |
+| 44 | app_store_jp | voice_or_speech — AI英会話スピーク - スピーキング練習で発音や英語を勉強 | 21 | 16.583 | NEEDS_EXACT_WORKFLOW |
+| 45 | app_store_jp | accuracy_mismatch — ELSA Speak：パーソナライズされた英会話アプリ | 21 | 16.583 | NEEDS_EXACT_WORKFLOW |
+| 46 | app_store_jp | content_too_easy_or_shallow — 看護師 ナースのシフト管理ならシフトナby看護師ワーカー | 21 | 16.583 | NEEDS_EXACT_WORKFLOW |
+| 47 | app_store_jp | accuracy_mismatch — AI英会話スピーク - スピーキング練習で発音や英語を勉強 | 20 | 16.472 | NEEDS_EXACT_WORKFLOW |
+| 48 | app_store_jp | voice_or_speech — Smule: カラオケ録音＆デュエットを楽しもう | 18 | 16.243 | NEEDS_EXACT_WORKFLOW |
+| 49 | app_store_jp | accuracy_mismatch — シフトボード：バイトの給料計算とシフト管理 | 18 | 16.243 | NEEDS_EXACT_WORKFLOW |
+| 50 | app_store_jp | missing_feature — シフト勤務カレンダー：仕事とスケジュールをシンプルに管理 | 18 | 16.243 | NEEDS_EXACT_WORKFLOW |
+| 51 | app_store_jp | missing_feature — 燃費記録簿 超カンタンな愛車の燃費記録アプリ | 18 | 16.243 | NEEDS_EXACT_WORKFLOW |
+| 52 | wordpress | import_export — WP Import Export Lite | 50 | 16.173 | NEEDS_EXACT_WORKFLOW |
+| 53 | wordpress | import_export — Advanced Order Export For WooCommerce | 34 | 16.137 | NEEDS_EXACT_WORKFLOW |
+| 54 | app_store_jp | voice_or_speech — 英検®トレーニング - 2級から3級に対応 | 17 | 16.123 | NEEDS_EXACT_WORKFLOW |
+| 55 | app_store_jp | accuracy_mismatch — 簿記3級 解説付き問題集 | 16 | 16.0 | NEEDS_EXACT_WORKFLOW |
+| 56 | app_store_jp | content_too_easy_or_shallow — 介護職員のシフト管理ならシフトカイゴby介護ワーカー | 19 | 15.985 | NEEDS_EXACT_WORKFLOW |
+| 57 | app_store_jp | accuracy_mismatch — SoundHound音楽検索の認識とプレーヤー | 15 | 15.873 | NEEDS_EXACT_WORKFLOW |
+| 58 | app_store_jp | accuracy_mismatch — シフト管理ならシフト手帳！バイトのシフトも給料計算も一括管理 | 15 | 15.873 | NEEDS_EXACT_WORKFLOW |
+| 59 | app_store_jp | missing_feature — Viva Engage | 70 | 15.847 | NEEDS_EXACT_WORKFLOW |
+| 60 | app_store_jp | missing_feature — 英語発音トレーニング | 15 | 15.841 | NEEDS_EXACT_WORKFLOW |
+| 61 | app_store_jp | accuracy_mismatch — シフト給料計算カレンダー | 14 | 15.742 | NEEDS_EXACT_WORKFLOW |
+| 62 | app_store_jp | accuracy_mismatch — ScanGuru ドキュメント スキャン、PDF変換、OCR | 13 | 15.606 | NEEDS_EXACT_WORKFLOW |
+| 63 | app_store_jp | voice_or_speech — ポケカラ－Pokekara 本格採点カラオケアプリ | 13 | 15.606 | NEEDS_EXACT_WORKFLOW |
+| 64 | wordpress | import_export — Import and export users and customers | 45 | 15.522 | NEEDS_EXACT_WORKFLOW |
+| 65 | app_store_jp | content_too_easy_or_shallow — シフト勤務カレンダー：仕事とスケジュールをシンプルに管理 | 12 | 15.464 | NEEDS_EXACT_WORKFLOW |
+| 66 | app_store_jp | accuracy_mismatch — 英検®トレーニング - 2級から3級に対応 | 12 | 15.464 | NEEDS_EXACT_WORKFLOW |
+| 67 | app_store_jp | accuracy_mismatch — 分析採点JOYSOUND-カラオケ採点＆練習・カラオケアプリ | 13 | 15.401 | NEEDS_EXACT_WORKFLOW |
+| 68 | wordpress | import_export — Export and Import Users and Customers | 36 | 15.324 | NEEDS_EXACT_WORKFLOW |
+| 69 | app_store_jp | data_loss_sync — シフト給料計算カレンダー | 11 | 15.317 | NEEDS_EXACT_WORKFLOW |
+| 70 | wordpress | import_export — Order Export & Order Import for WooCommerce | 39 | 15.271 | NEEDS_EXACT_WORKFLOW |
+| 71 | app_store_jp | data_loss_sync — Scan Shot: 文書をスキャンしてPDFに変換する | 12 | 15.208 | NEEDS_EXACT_WORKFLOW |
+| 72 | app_store_jp | data_loss_sync — Google スプレッドシート | 10 | 15.162 | NEEDS_EXACT_WORKFLOW |
+| 73 | app_store_jp | accuracy_mismatch — みんなの銀行-お金管理・後払い・預金(貯金)・残高確認 | 10 | 15.162 | NEEDS_EXACT_WORKFLOW |
+| 74 | wordpress | pdf_email — Print Invoice & Delivery Notes for WooCommerce | 23 | 14.977 | NEEDS_EXACT_WORKFLOW |
+| 75 | app_store_jp | data_loss_sync — 介護職員のシフト管理ならシフトカイゴby介護ワーカー | 10 | 14.788 | NEEDS_EXACT_WORKFLOW |
+| 76 | wordpress | label_purchase — WooCommerce Shipping | 38 | 14.766 | NEEDS_EXACT_WORKFLOW |
+| 77 | wordpress | tax_invoice_compliance — WooCommerce Tax (formerly WooCommerce Shipping & Tax) | 35 | 14.098 | NEEDS_EXACT_WORKFLOW |
+| 78 | wordpress | label_purchase — Advanced Shipment Tracking for WooCommerce | 13 | 13.754 | NEEDS_EXACT_WORKFLOW |
+| 79 | app_store_jp | missing_feature — マネーフォワード クラウド経費 | 57 | 13.383 | NEEDS_EXACT_WORKFLOW |
+| 80 | wordpress | update_breakage — Print Invoice & Delivery Notes for WooCommerce | 10 | 13.344 | NEEDS_EXACT_WORKFLOW |
+| 81 | wordpress | subscription_renewal — YITH WooCommerce Subscription | 27 | 12.915 | NEEDS_EXACT_WORKFLOW |
+| 82 | wordpress | label_purchase — WooCommerce Tax (formerly WooCommerce Shipping & Tax) | 19 | 12.541 | NEEDS_EXACT_WORKFLOW |
+| 83 | wordpress | address_validation — WooCommerce Shipping | 13 | 12.207 | NEEDS_EXACT_WORKFLOW |
+| 84 | wordpress | booking_conflict — WP Hotel Booking | 17 | 11.878 | NEEDS_EXACT_WORKFLOW |
+| 85 | wordpress | booking_conflict — MotoPress Hotel Booking | 23 | 11.655 | NEEDS_EXACT_WORKFLOW |
+| 86 | wordpress | import_export — WP All Import – Import SEO Settings for Yoast SEO | 20 | 10.575 | NEEDS_EXACT_WORKFLOW |
+| 87 | wordpress | import_export — ShipStation for WooCommerce | 12 | 9.929 | NEEDS_EXACT_WORKFLOW |
+| 88 | wordpress | import_export — Order Export for WooCommerce | 20 | 9.896 | NEEDS_EXACT_WORKFLOW |
+| 89 | app_store_jp | accuracy_mismatch — マネーフォワード クラウド経費 | 12 | 9.298 | NEEDS_EXACT_WORKFLOW |
+| 90 | app_store_jp | missing_feature — タイピングの練習 | 12 | 8.794 | NEEDS_EXACT_WORKFLOW |
 
 ## Promotion rule
 

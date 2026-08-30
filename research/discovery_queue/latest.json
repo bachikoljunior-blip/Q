@@ -1,10 +1,16 @@
 {
-  "schema_version": 1,
-  "generated_at_jst": "2026-08-30T09:21:50+09:00",
+  "schema_version": 2,
+  "generated_at_jst": "2026-08-30T19:11:35+09:00",
   "status": "EVIDENCE_QUEUE_ONLY",
   "build_approved": false,
   "active_candidate_status": "NO_ACTIVE_CANDIDATE",
-  "item_count": 69,
+  "item_count": 90,
+  "coverage": {
+    "wordpress_rows": 21,
+    "app_store_rows": 69,
+    "wordpress_schema": "per-plugin cluster_counts/topics",
+    "app_store_schema": "per-app cluster_counts/reviews"
+  },
   "items": [
     {
       "source": "app_store_jp",
@@ -2629,6 +2635,134 @@
       "discovery_score": 20.062
     },
     {
+      "source": "wordpress",
+      "signal_id": "wordpress:woocommerce-pdf-invoices-packing-slips:pdf_email",
+      "cluster": "pdf_email",
+      "plugin": "PDF Invoices & Packing Slips for WooCommerce",
+      "slug": "woocommerce-pdf-invoices-packing-slips",
+      "plugin_url": "https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/",
+      "active_installs": 300000,
+      "store_rating": 5.0,
+      "store_rating_count": 1862,
+      "unresolved_support": 12,
+      "matched_items": 33,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "500 Internal Server Error / blank page",
+          "url": "https://wordpress.org/support/topic/500-internal-server-error-blank-page/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "How to translate PDF invoice using WPML",
+          "url": "https://wordpress.org/support/topic/how-to-translate-pdf-invoice-using-wpml/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Bulk PDF Print No longer working",
+          "url": "https://wordpress.org/support/topic/bulk-pdf-print-no-longer-working/",
+          "source": "support",
+          "clusters": [
+            "bulk_workflow",
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Bulk actions PDF Invoice",
+          "url": "https://wordpress.org/support/topic/bulk-actions-pdf-invoice/",
+          "source": "support",
+          "clusters": [
+            "bulk_workflow",
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Invoice PDF is missing from the order processing email",
+          "url": "https://wordpress.org/support/topic/invoice-pdf-is-missing-from-the-order-processing-email/",
+          "source": "support",
+          "clusters": [
+            "pdf_email",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "Invoice numbers occasionally skipped and reassigned",
+          "url": "https://wordpress.org/support/topic/invoice-numbers-occasionally-skipped-and-reassigned/",
+          "source": "support",
+          "clusters": [
+            "pdf_email",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Unable to Enable PDF Invoice Plugin",
+          "url": "https://wordpress.org/support/topic/unable-to-enable-pdf-invoice-plugin/",
+          "source": "support",
+          "clusters": [
+            "pdf_email",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "One Subscription always gets same invoice number",
+          "url": "https://wordpress.org/support/topic/one-subscription-always-gets-same-invoice-number/",
+          "source": "support",
+          "clusters": [
+            "pdf_email",
+            "subscription_renewal",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "High frontend load time on init caused by WPO_WCPDF::load_classes",
+          "url": "https://wordpress.org/support/topic/high-frontend-load-time-on-init-caused-by-wpo_wcpdfload_classes/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Logo Not Displaying in PDF Invoices & Packing Slips",
+          "url": "https://wordpress.org/support/topic/logo-not-displaying-in-pdf-invoices-packing-slips/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Showing Taxes On Invoice",
+          "url": "https://wordpress.org/support/topic/showing-taxes-on-invoice/",
+          "source": "support",
+          "clusters": [
+            "pdf_email",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Invoice date generation clarification",
+          "url": "https://wordpress.org/support/topic/invoice-date-generation-clarification/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 19.681
+    },
+    {
       "source": "app_store_jp",
       "signal_id": "app_store:1471082810:missing_feature",
       "cluster": "missing_feature",
@@ -4585,6 +4719,128 @@
       "discovery_score": 17.568
     },
     {
+      "source": "wordpress",
+      "signal_id": "wordpress:ameliabooking:booking_conflict",
+      "cluster": "booking_conflict",
+      "plugin": "Booking for Appointments and Events Calendar – Amelia",
+      "slug": "ameliabooking",
+      "plugin_url": "https://wordpress.org/plugins/ameliabooking/",
+      "active_installs": 90000,
+      "store_rating": 4.6,
+      "store_rating_count": 785,
+      "unresolved_support": 2,
+      "matched_items": 33,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Request for Hook – Customer Creation during Booking Flow",
+          "url": "https://wordpress.org/support/topic/request-for-hook-customer-creation-during-booking-flow/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "how to set either fixed slots to book or make this logic work for an overlap",
+          "url": "https://wordpress.org/support/topic/how-to-set-either-fixed-slots-to-book-or-make-this-logic-work-for-an-overlap/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Multiple event bookings",
+          "url": "https://wordpress.org/support/topic/multiple-event-bookings/",
+          "source": "support",
+          "clusters": [
+            "bulk_workflow",
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Bookings going into wrong service",
+          "url": "https://wordpress.org/support/topic/bookings-going-into-wrong-service/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Available booking times on the website",
+          "url": "https://wordpress.org/support/topic/available-booking-times-on-the-website/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Problem with timeslots",
+          "url": "https://wordpress.org/support/topic/problem-with-timeslots/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "massive problems with sticky header (amelia booking plugin)",
+          "url": "https://wordpress.org/support/topic/massive-problems-with-sticky-header-amelia-booking-plugin/",
+          "source": "support",
+          "clusters": [
+            "bulk_workflow",
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Prevent Same-Day Bookings in Amelia (WordPress)",
+          "url": "https://wordpress.org/support/topic/prevent-same-day-bookings-in-amelia-wordpress/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Amelia 9.x – Waitlist slots greyed out on calendar, can’t book from front-end",
+          "url": "https://wordpress.org/support/topic/amelia-9-x-waitlist-slots-greyed-out-on-calendar-cant-book-from-front-end/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Setting Fixed Time Slots Per Service in Amelia (Without Categories or Employees)",
+          "url": "https://wordpress.org/support/topic/setting-fixed-time-slots-per-service-in-amelia-without-categories-or-employees/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Excellent Support from Amelia Booking Plugin",
+          "url": "https://wordpress.org/support/topic/excellent-support-from-amelia-booking-plugin/",
+          "source": "review",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Amelia event bookings",
+          "url": "https://wordpress.org/support/topic/amelia-event-bookings/",
+          "source": "review",
+          "clusters": [
+            "booking_conflict"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 17.243
+    },
+    {
       "source": "app_store_jp",
       "signal_id": "app_store:1270775274:voice_or_speech",
       "cluster": "voice_or_speech",
@@ -4885,6 +5141,129 @@
         "quantify App Store query/ranking/conversion/CAC"
       ],
       "discovery_score": 17.099
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:wp-all-import:import_export",
+      "cluster": "import_export",
+      "plugin": "WP All Import – Drag & Drop Import for CSV, XML, Excel & Google Sheets",
+      "slug": "wp-all-import",
+      "plugin_url": "https://wordpress.org/plugins/wp-all-import/",
+      "active_installs": 100000,
+      "store_rating": 4.7,
+      "store_rating_count": 1962,
+      "unresolved_support": 0,
+      "matched_items": 29,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "[Official] Read before requesting support for WP All Import on WordPress.org",
+          "url": "https://wordpress.org/support/topic/officia-read-before-requesting-support-for-wp-all-import-on-wordpressorg/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "I have over 100,000 posts to import, can this plugin handle it?",
+          "url": "https://wordpress.org/support/topic/i-have-over-100000-posts-to-import-can-this-plugin-handle-it/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "How to import locations csv file",
+          "url": "https://wordpress.org/support/topic/how-to-import-locations-csv-file/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Import into pods relationship field",
+          "url": "https://wordpress.org/support/topic/import-into-pods-relationship-field/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Elementor pages not Import properly",
+          "url": "https://wordpress.org/support/topic/elementor-pages-not-import-properly/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "It won’t import the Image or the Published Date",
+          "url": "https://wordpress.org/support/topic/it-wont-import-the-image-or-the-published-date/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Images are being imported but not embedded on post",
+          "url": "https://wordpress.org/support/topic/images-are-being-imported-but-not-embedded-on-post/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "JSON-LD Tag Corrupted During WordPress Import",
+          "url": "https://wordpress.org/support/topic/json-ld-tag-corrupted-during-wordpress-import/",
+          "source": "support",
+          "clusters": [
+            "pdf_email",
+            "import_export"
+          ]
+        },
+        {
+          "title": "Problem importing content with \\u \\n …. characters",
+          "url": "https://wordpress.org/support/topic/problem-importing-content-with-u-n-characters/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Import stuck at “triggered = 1” via cron — works manually, fails silently",
+          "url": "https://wordpress.org/support/topic/mport-stuck-at-triggered-1-via-cron-works-manually-fails-silently/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "sync_connection"
+          ]
+        },
+        {
+          "title": "import ignores one column",
+          "url": "https://wordpress.org/support/topic/import-ignores-one-column/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "issue in WP import plugin – Google sheet not connecting",
+          "url": "https://wordpress.org/support/topic/issue-in-wp-import-plugin-google-sheet-not-connecting/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "sync_connection"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 17.022
     },
     {
       "source": "app_store_jp",
@@ -6778,6 +7157,250 @@
       "discovery_score": 16.243
     },
     {
+      "source": "wordpress",
+      "signal_id": "wordpress:wp-import-export-lite:import_export",
+      "cluster": "import_export",
+      "plugin": "WP Import Export Lite",
+      "slug": "wp-import-export-lite",
+      "plugin_url": "https://wordpress.org/plugins/wp-import-export-lite/",
+      "active_installs": 40000,
+      "store_rating": 4.0,
+      "store_rating_count": 113,
+      "unresolved_support": 2,
+      "matched_items": 50,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Problem exporting Content",
+          "url": "https://wordpress.org/support/topic/problem-exporting-content/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Wp-admin wp import export htaccess warning message",
+          "url": "https://wordpress.org/support/topic/wp-admin-wp-import-export-htaccess-warning-message-2/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Update link URLs on import",
+          "url": "https://wordpress.org/support/topic/update-link-urls-on-import/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "import file not work.",
+          "url": "https://wordpress.org/support/topic/import-file-not-work/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Is there a way to export and import featured images of posts?",
+          "url": "https://wordpress.org/support/topic/is-there-a-way-to-export-and-import-featured-images-of-posts/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Help importing documents",
+          "url": "https://wordpress.org/support/topic/help-importing-documents/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Exported file does not match preview",
+          "url": "https://wordpress.org/support/topic/exported-file-does-not-match-preview/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Exporting and importing HTML from Classic Editor",
+          "url": "https://wordpress.org/support/topic/exporting-and-importing-html-from-classic-editor/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Variation images Not Importing Woocomerce",
+          "url": "https://wordpress.org/support/topic/variation-images-not-importing-woocomerce/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Error when trying to import / upload CSV file",
+          "url": "https://wordpress.org/support/topic/error-when-trying-to-import-upload-csv-file/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Export with Settings Issue",
+          "url": "https://wordpress.org/support/topic/export-with-settings-issue/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Cannot access IMPORT page?",
+          "url": "https://wordpress.org/support/topic/cannot-access-import-page/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "missing_feature"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 16.173
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:woo-order-export-lite:import_export",
+      "cluster": "import_export",
+      "plugin": "Advanced Order Export For WooCommerce",
+      "slug": "woo-order-export-lite",
+      "plugin_url": "https://wordpress.org/plugins/woo-order-export-lite/",
+      "active_installs": 100000,
+      "store_rating": 5.0,
+      "store_rating_count": 350,
+      "unresolved_support": 1,
+      "matched_items": 34,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Export from frontend",
+          "url": "https://wordpress.org/support/topic/export-from-frontend/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Subscription Plugin + Advanced Order Export",
+          "url": "https://wordpress.org/support/topic/subscription-plugin-advanced-order-export/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal",
+            "import_export"
+          ]
+        },
+        {
+          "title": "How to display all the information in a WooCommerce CSV export",
+          "url": "https://wordpress.org/support/topic/how-to-display-all-the-information-in-a-woocommerce-csv-export/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Plugin won’t create export – generates error",
+          "url": "https://wordpress.org/support/topic/plugin-wont-create-export-generates-error/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Export Orders and Checkout Fields Together",
+          "url": "https://wordpress.org/support/topic/export-orders-and-checkout-fields-together/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Exact Export Settings Required to Match WooCommerce Analytics (Item-wise Sales )",
+          "url": "https://wordpress.org/support/topic/exact-export-settings-required-to-match-woocommerce-analytics-item-wise-sales/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Little Glitch In Our Export",
+          "url": "https://wordpress.org/support/topic/little-glitch-in-our-export-2/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Products in multiple quantity when export",
+          "url": "https://wordpress.org/support/topic/products-in-multiple-quantity-when-export/",
+          "source": "support",
+          "clusters": [
+            "bulk_workflow",
+            "import_export"
+          ]
+        },
+        {
+          "title": "Export Numéro de facture",
+          "url": "https://wordpress.org/support/topic/export-numero-de-facture/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Fatal error if export refunds",
+          "url": "https://wordpress.org/support/topic/fatal-error-if-export-refunds/",
+          "source": "support",
+          "clusters": [
+            "update_breakage",
+            "import_export"
+          ]
+        },
+        {
+          "title": "Exporting fields from Event Tickets from Tribe",
+          "url": "https://wordpress.org/support/topic/exporting-fields-from-event-tickets-from-tribe/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "export custom_checkout_fields",
+          "url": "https://wordpress.org/support/topic/export-custom_checkout_fields/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 16.137
+    },
+    {
       "source": "app_store_jp",
       "signal_id": "app_store:1471082810:voice_or_speech",
       "cluster": "voice_or_speech",
@@ -8221,6 +8844,129 @@
       "discovery_score": 15.606
     },
     {
+      "source": "wordpress",
+      "signal_id": "wordpress:import-users-from-csv-with-meta:import_export",
+      "cluster": "import_export",
+      "plugin": "Import and export users and customers",
+      "slug": "import-users-from-csv-with-meta",
+      "plugin_url": "https://wordpress.org/plugins/import-users-from-csv-with-meta/",
+      "active_installs": 70000,
+      "store_rating": 4.7,
+      "store_rating_count": 256,
+      "unresolved_support": 0,
+      "matched_items": 45,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Woocommerce address fields import but do not show in user profile",
+          "url": "https://wordpress.org/support/topic/woocommerce-address-fields-import-but-do-not-show-in-user-profile/",
+          "source": "support",
+          "clusters": [
+            "address_validation",
+            "import_export"
+          ]
+        },
+        {
+          "title": "Import Button missing on Import page since update",
+          "url": "https://wordpress.org/support/topic/import-button-missing-on-import-page-since-update/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "Frontend Export with Multi-Word xProfile fields issue",
+          "url": "https://wordpress.org/support/topic/frontend-export-with-multi-word-xprofile-fields-issue/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "i cannot import 1246 users",
+          "url": "https://wordpress.org/support/topic/i-cannot-import-1246-users/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "Mismatch in User Import vs Total Users",
+          "url": "https://wordpress.org/support/topic/mismatch-in-user-import-vs-total-users/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "User Export only exports column headers",
+          "url": "https://wordpress.org/support/topic/user-export-only-exports-column-headers/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Plugin stopped working 4 months ago and now only import a fraction of the CSV",
+          "url": "https://wordpress.org/support/topic/plugin-stopped-working-4-months-ago-and-now-only-import-a-fraction-of-the-csv/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Importing memberships into PMPro (again)",
+          "url": "https://wordpress.org/support/topic/importing-memberships-into-pmpro-again/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "date format exported ACF",
+          "url": "https://wordpress.org/support/topic/date-format-exported-acf/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "User Roles Not Importing as Set in CSV and on Import Screen",
+          "url": "https://wordpress.org/support/topic/user-roles-not-importing-as-set-in-csv-and-on-import-screen/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Can I import profile images?",
+          "url": "https://wordpress.org/support/topic/can-i-import-profile-images/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "User import completes but custom fields / meta not populating correctly",
+          "url": "https://wordpress.org/support/topic/user-import-completes-but-custom-fields-meta-not-populating-correctly/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 15.522
+    },
+    {
       "source": "app_store_jp",
       "signal_id": "app_store:381672587:content_too_easy_or_shallow",
       "cluster": "content_too_easy_or_shallow",
@@ -8649,6 +9395,127 @@
       "discovery_score": 15.401
     },
     {
+      "source": "wordpress",
+      "signal_id": "wordpress:users-customers-import-export-for-wp-woocommerce:import_export",
+      "cluster": "import_export",
+      "plugin": "Export and Import Users and Customers",
+      "slug": "users-customers-import-export-for-wp-woocommerce",
+      "plugin_url": "https://wordpress.org/plugins/users-customers-import-export-for-wp-woocommerce/",
+      "active_installs": 60000,
+      "store_rating": 4.8,
+      "store_rating_count": 440,
+      "unresolved_support": 0,
+      "matched_items": 36,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Demo csv – Invalid file type. Please upload a valid import file.",
+          "url": "https://wordpress.org/support/topic/demo-csv-invalid-file-type-please-upload-a-valid-import-file/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Can I edit the exported file before import again?",
+          "url": "https://wordpress.org/support/topic/can-i-edit-the-exported-file-before-import-again/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "What’s the limit of users one can export with the free plugin",
+          "url": "https://wordpress.org/support/topic/whats-the-limit-of-users-one-can-export-with-the-free-plugin/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Importing with comma is ok, with semicolon to me didn’t worked",
+          "url": "https://wordpress.org/support/topic/importing-with-comma-is-ok-with-semicolon-to-me-didnt-worked/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "User Import Progress Stagnated",
+          "url": "https://wordpress.org/support/topic/user-import-progress-stagnated/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Non exporting special fields",
+          "url": "https://wordpress.org/support/topic/non-exporting-special-fields/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Not Importing User",
+          "url": "https://wordpress.org/support/topic/not-importing-user/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "How to export users by group membership?",
+          "url": "https://wordpress.org/support/topic/how-to-export-users-by-group-membership/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Error when importing: Invalid order IDs in call to read_multiple()",
+          "url": "https://wordpress.org/support/topic/error-when-importing-invalid-order-ids-in-call-to-read_multiple/",
+          "source": "support",
+          "clusters": [
+            "bulk_workflow",
+            "import_export"
+          ]
+        },
+        {
+          "title": "User export does not include membership status",
+          "url": "https://wordpress.org/support/topic/user-export-does-not-include-membership-status/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Import error",
+          "url": "https://wordpress.org/support/topic/import-error-65/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "No profile picture on imported users",
+          "url": "https://wordpress.org/support/topic/no-profile-picture-on-imported-users/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 15.324
+    },
+    {
       "source": "app_store_jp",
       "signal_id": "app_store:903825183:data_loss_sync",
       "cluster": "data_loss_sync",
@@ -8782,6 +9649,129 @@
         "quantify App Store query/ranking/conversion/CAC"
       ],
       "discovery_score": 15.317
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:order-import-export-for-woocommerce:import_export",
+      "cluster": "import_export",
+      "plugin": "Order Export & Order Import for WooCommerce",
+      "slug": "order-import-export-for-woocommerce",
+      "plugin_url": "https://wordpress.org/plugins/order-import-export-for-woocommerce/",
+      "active_installs": 60000,
+      "store_rating": 4.7,
+      "store_rating_count": 336,
+      "unresolved_support": 0,
+      "matched_items": 39,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Orders Will Not Import Between Sites",
+          "url": "https://wordpress.org/support/topic/orders-will-not-import-between-sites/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Any priority import orders or users first?",
+          "url": "https://wordpress.org/support/topic/any-priority-import-orders-or-users-first/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Does Pro version correctly assign customer_id on import with HPOS (not guest)",
+          "url": "https://wordpress.org/support/topic/does-pro-version-correctly-assign-customer_id-on-import-with-hpos-not-guest/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Import freezes after 60 orders",
+          "url": "https://wordpress.org/support/topic/import-freezes-after-60-orders/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Number of order can be export and import",
+          "url": "https://wordpress.org/support/topic/number-of-order-can-be-export-and-import/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Little Glitch In Our Export",
+          "url": "https://wordpress.org/support/topic/little-glitch-in-our-export/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Export Ignores Delimiter Specified in Step 5",
+          "url": "https://wordpress.org/support/topic/export-ignores-delimiter-specified-in-step-5/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Import fails on order known to exist",
+          "url": "https://wordpress.org/support/topic/import-fails-on-order-known-to-exist/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Strange fields in export",
+          "url": "https://wordpress.org/support/topic/strange-fields-in-export/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Deprecated and called incorrectly called warnings when exporting",
+          "url": "https://wordpress.org/support/topic/deprecated-and-called-incorrectly-called-warnings-when-exporting/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Order import – missing shipping VAT rate",
+          "url": "https://wordpress.org/support/topic/order-import-missing-shipping-vat-rate/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "import_export",
+            "tax_invoice_compliance",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "Create custom column in export list",
+          "url": "https://wordpress.org/support/topic/create-custom-column-in-export-list/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 15.271
     },
     {
       "source": "app_store_jp",
@@ -9196,6 +10186,131 @@
       "discovery_score": 15.162
     },
     {
+      "source": "wordpress",
+      "signal_id": "wordpress:woocommerce-delivery-notes:pdf_email",
+      "cluster": "pdf_email",
+      "plugin": "Print Invoice & Delivery Notes for WooCommerce",
+      "slug": "woocommerce-delivery-notes",
+      "plugin_url": "https://wordpress.org/plugins/woocommerce-delivery-notes/",
+      "active_installs": 30000,
+      "store_rating": 4.4,
+      "store_rating_count": 137,
+      "unresolved_support": 11,
+      "matched_items": 23,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Security Advisory – Update Print Invoices & Delivery Notes for WooCommerce",
+          "url": "https://wordpress.org/support/topic/security-advisory-update-print-invoices-delivery-notes-for-woocommerce/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Arabic text reversal in email-attached invoices",
+          "url": "https://wordpress.org/support/topic/arabic-text-reversal-in-email-attached-invoices/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "[Bug+Fix] Frontend crash printing invoice WP_Filesystem() called without credent",
+          "url": "https://wordpress.org/support/topic/bugfix-frontend-crash-printing-invoice-wp_filesystem-called-without-credent/",
+          "source": "support",
+          "clusters": [
+            "update_breakage",
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "taking “tax” out of the invoice title",
+          "url": "https://wordpress.org/support/topic/taking-tax-out-of-the-invoice-title/",
+          "source": "support",
+          "clusters": [
+            "pdf_email",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Default Invoice in Newest Version is Bad",
+          "url": "https://wordpress.org/support/topic/default-invoice-in-newest-version-is-bad/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Changing invoice number",
+          "url": "https://wordpress.org/support/topic/changing-invoice-number/",
+          "source": "support",
+          "clusters": [
+            "pdf_email",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Invoice PDFs print Language wrong direction",
+          "url": "https://wordpress.org/support/topic/invoice-pdfs-print-language-wrong-direction/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Fatal error printing single invoice/packing slip",
+          "url": "https://wordpress.org/support/topic/fatal-error-printing-single-invoice-packing-slip/",
+          "source": "support",
+          "clusters": [
+            "update_breakage",
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "The email attachment is a PDF file containing Chinese gibberish",
+          "url": "https://wordpress.org/support/topic/the-email-attachment-is-a-pdf-file-containing-chinese-gibberish/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Order Manager cannot Print Invoices",
+          "url": "https://wordpress.org/support/topic/order-manager-cannot-print-invoices/",
+          "source": "support",
+          "clusters": [
+            "pdf_email",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "Adding Custom Fields to Invoice",
+          "url": "https://wordpress.org/support/topic/adding-custom-fields-to-invoice/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Dowbnload PDF button gives 404 error",
+          "url": "https://wordpress.org/support/topic/dowbnload-pdf-button-gives-404-error/",
+          "source": "support",
+          "clusters": [
+            "pdf_email"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 14.977
+    },
+    {
       "source": "app_store_jp",
       "signal_id": "app_store:693475274:data_loss_sync",
       "cluster": "data_loss_sync",
@@ -9316,6 +10431,375 @@
         "quantify App Store query/ranking/conversion/CAC"
       ],
       "discovery_score": 14.788
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:woocommerce-shipping:label_purchase",
+      "cluster": "label_purchase",
+      "plugin": "WooCommerce Shipping",
+      "slug": "woocommerce-shipping",
+      "plugin_url": "https://wordpress.org/plugins/woocommerce-shipping/",
+      "active_installs": 70000,
+      "store_rating": 2.1,
+      "store_rating_count": 17,
+      "unresolved_support": 5,
+      "matched_items": 38,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Concerning Shipping Label Receipts",
+          "url": "https://wordpress.org/support/topic/concerning-shipping-label-receipts/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "International USPS labels don’t print 4×6 anymore",
+          "url": "https://wordpress.org/support/topic/international-usps-labels-dont-print-4x6-anymore/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Can’t print international label",
+          "url": "https://wordpress.org/support/topic/cant-print-international-label/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Not able to purchase a shipping label",
+          "url": "https://wordpress.org/support/topic/not-able-to-purchase-a-shipping-label/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Errors when creating shipping label",
+          "url": "https://wordpress.org/support/topic/errors-when-creating-shipping-label/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Label being purchased with wrong weight",
+          "url": "https://wordpress.org/support/topic/label-being-purchased-with-wrong-weight/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "wrong_weight_rate"
+          ]
+        },
+        {
+          "title": "Venmo payments refuse shipping addresses",
+          "url": "https://wordpress.org/support/topic/venmo-payments-refuse-shipping-addresses/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Shipping Validation on Checkout is Overwhelming",
+          "url": "https://wordpress.org/support/topic/shipping-validation-on-checkout-is-overwhelming/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "OAuth Error With WooCommerce Shipping Plugin, since Thursday",
+          "url": "https://wordpress.org/support/topic/oauth-error-with-woocommerce-shipping-plugin-since-thursday/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "sync_connection"
+          ]
+        },
+        {
+          "title": "Need Adult Signature Restricted Delivery option for USPS Shipping",
+          "url": "https://wordpress.org/support/topic/need-adult-signature-restricted-delivery-option-for-usps-shipping-2/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "WooCommerce Shipping UPS options not populating",
+          "url": "https://wordpress.org/support/topic/woocommerce-shipping-ups-options-not-populating/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Can no longer purchase shipping labels due to error message",
+          "url": "https://wordpress.org/support/topic/can-no-longer-purchase-shipping-labels-due-to-error-message/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 14.766
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:woocommerce-services:tax_invoice_compliance",
+      "cluster": "tax_invoice_compliance",
+      "plugin": "WooCommerce Tax (formerly WooCommerce Shipping & Tax)",
+      "slug": "woocommerce-services",
+      "plugin_url": "https://wordpress.org/plugins/woocommerce-services/",
+      "active_installs": 500000,
+      "store_rating": 2.0,
+      "store_rating_count": 105,
+      "unresolved_support": 0,
+      "matched_items": 35,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Odd Standard Tax Rate Entries Being Created – Quebec QST being reset to 0",
+          "url": "https://wordpress.org/support/topic/odd-standard-tax-rate-entries-being-created-quebec-qst-being-reset-to-0/",
+          "source": "support",
+          "clusters": [
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Quebec City taxes are all getting 0% since new update.",
+          "url": "https://wordpress.org/support/topic/quebec-city-taxes-are-all-getting-0-since-new-update/",
+          "source": "support",
+          "clusters": [
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Incorrect tax in tax-exempt state + mismatch in order totals",
+          "url": "https://wordpress.org/support/topic/incorrect-tax-in-tax-exempt-state-mismatch-in-order-totals/",
+          "source": "support",
+          "clusters": [
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "TaxJar _log() writes to debug.log unconditionally, no toggle",
+          "url": "https://wordpress.org/support/topic/taxjar-_log-writes-to-debug-log-unconditionally-no-toggle/",
+          "source": "support",
+          "clusters": [
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Support for tax exemption",
+          "url": "https://wordpress.org/support/topic/support-for-tax-exemption/",
+          "source": "support",
+          "clusters": [
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "“Shipping tax class” setting not working?",
+          "url": "https://wordpress.org/support/topic/shipping-tax-class-setting-not-working/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Automated Tax “Standard” tax rates change in Tax Name 10.14 update",
+          "url": "https://wordpress.org/support/topic/automated-tax-standard-tax-rates-change-in-tax-name-10-14-update/",
+          "source": "support",
+          "clusters": [
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Automated Tax Option Not Given (Spain)",
+          "url": "https://wordpress.org/support/topic/automated-tax-option-not-given-spain/",
+          "source": "support",
+          "clusters": [
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Cannot update WC Tax Data (“An error occurred while refreshing service data.”)",
+          "url": "https://wordpress.org/support/topic/cannot-update-wc-tax-data-an-error-occurred-while-refreshing-service-data/",
+          "source": "support",
+          "clusters": [
+            "tax_invoice_compliance",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "Tax not Showing when Shipping Option Selected",
+          "url": "https://wordpress.org/support/topic/tax-not-showing-when-shipping-option-selected/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Error: The Woocommrce Tax server returned HTTP code: 0",
+          "url": "https://wordpress.org/support/topic/error-the-woocommrce-tax-server-returned-http-code-0/",
+          "source": "support",
+          "clusters": [
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "calculating tax based on billing address",
+          "url": "https://wordpress.org/support/topic/calculating-tax-based-on-billing-address/",
+          "source": "support",
+          "clusters": [
+            "address_validation",
+            "tax_invoice_compliance"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 14.098
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:woo-advanced-shipment-tracking:label_purchase",
+      "cluster": "label_purchase",
+      "plugin": "Advanced Shipment Tracking for WooCommerce",
+      "slug": "woo-advanced-shipment-tracking",
+      "plugin_url": "https://wordpress.org/plugins/woo-advanced-shipment-tracking/",
+      "active_installs": 70000,
+      "store_rating": 4.5,
+      "store_rating_count": 353,
+      "unresolved_support": 1,
+      "matched_items": 13,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "DPD UK shipping carrier tracking link incorrect",
+          "url": "https://wordpress.org/support/topic/dpd-uk-shipping-carrier-tracking-link-incorrect/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "tracking of amazon shipping",
+          "url": "https://wordpress.org/support/topic/tracking-of-amazon-shipping/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Outdated Template File in Woo Advanced Shipment Tracking Plugin",
+          "url": "https://wordpress.org/support/topic/outdated-template-file-in-woo-advanced-shipment-tracking-plugin/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Add Daewoo Fastex Pakistan in Shipping Carriers",
+          "url": "https://wordpress.org/support/topic/add-daewoo-fastex-pakistan-in-shipping-carriers/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Shipment tracking information not showing in “Shipped” customer email",
+          "url": "https://wordpress.org/support/topic/shipment-tracking-information-not-showing-in-shipped-customer-email/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Why the shipment tracking is not progressi\\ng",
+          "url": "https://wordpress.org/support/topic/why-the-shipment-tracking-is-not-progressing/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "How to remove the shipment tracking section from customer completed order emails",
+          "url": "https://wordpress.org/support/topic/how-to-remove-the-shipment-tracking-section-from-customer-completed-order-emails/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Enable Shipping Carriers – no shipping carriers",
+          "url": "https://wordpress.org/support/topic/enable-shipping-carriers-no-shipping-carriers/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Shipping method available in trackship",
+          "url": "https://wordpress.org/support/topic/shipping-method-available-in-trackship/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Very effective shipment tracking tool",
+          "url": "https://wordpress.org/support/topic/very-effective-shipment-tracking-tool/",
+          "source": "review",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Best free shipping tracking plugin",
+          "url": "https://wordpress.org/support/topic/best-free-shipping-tracking-plugin/",
+          "source": "review",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Streamline Order Tracking Easily with Advanced Shipment Tracking for WooCommerce",
+          "url": "https://wordpress.org/support/topic/streamline-order-tracking-easily-with-advanced-shipment-tracking-for-woocommerce/",
+          "source": "review",
+          "clusters": [
+            "label_purchase"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 13.754
     },
     {
       "source": "app_store_jp",
@@ -9453,6 +10937,1099 @@
         "quantify App Store query/ranking/conversion/CAC"
       ],
       "discovery_score": 13.383
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:woocommerce-delivery-notes:update_breakage",
+      "cluster": "update_breakage",
+      "plugin": "Print Invoice & Delivery Notes for WooCommerce",
+      "slug": "woocommerce-delivery-notes",
+      "plugin_url": "https://wordpress.org/plugins/woocommerce-delivery-notes/",
+      "active_installs": 30000,
+      "store_rating": 4.4,
+      "store_rating_count": 137,
+      "unresolved_support": 11,
+      "matched_items": 10,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "[Bug+Fix] Frontend crash printing invoice WP_Filesystem() called without credent",
+          "url": "https://wordpress.org/support/topic/bugfix-frontend-crash-printing-invoice-wp_filesystem-called-without-credent/",
+          "source": "support",
+          "clusters": [
+            "update_breakage",
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Fatal error: Undefined constant FS_CHMOD_FILE when printing",
+          "url": "https://wordpress.org/support/topic/fatal-error-undefined-constant-fs_chmod_file-when-printing/",
+          "source": "support",
+          "clusters": [
+            "update_breakage"
+          ]
+        },
+        {
+          "title": "PHP fatal error since update to 7.2.0",
+          "url": "https://wordpress.org/support/topic/php-fatal-error-since-update-to-7-2-0/",
+          "source": "support",
+          "clusters": [
+            "update_breakage"
+          ]
+        },
+        {
+          "title": "Fatal error printing single invoice/packing slip",
+          "url": "https://wordpress.org/support/topic/fatal-error-printing-single-invoice-packing-slip/",
+          "source": "support",
+          "clusters": [
+            "update_breakage",
+            "pdf_email"
+          ]
+        },
+        {
+          "title": "Critical Error When Printing Delivery Notes and Translation Issues",
+          "url": "https://wordpress.org/support/topic/critical-error-when-printing-delivery-notes-and-translation-issues/",
+          "source": "support",
+          "clusters": [
+            "update_breakage"
+          ]
+        },
+        {
+          "title": "Critical Error when updating from 5.9.0 to 7.1.2",
+          "url": "https://wordpress.org/support/topic/critical-error-when-updating-from-5-9-0-to-7-1-2-need-help/",
+          "source": "support",
+          "clusters": [
+            "update_breakage"
+          ]
+        },
+        {
+          "title": "Version 7.x Fatal error from class-wp-filesystem-ftpext.php",
+          "url": "https://wordpress.org/support/topic/version-7-x-fatal-error-from-class-wp-filesystem-ftpext-php/",
+          "source": "support",
+          "clusters": [
+            "update_breakage"
+          ]
+        },
+        {
+          "title": "Subject: Fatal count(null) error when attaching PDF to WooCommerce Subscriptions",
+          "url": "https://wordpress.org/support/topic/subject-fatal-countnull-error-when-attaching-pdf-to-woocommerce-subscriptions/",
+          "source": "support",
+          "clusters": [
+            "update_breakage",
+            "pdf_email",
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "Forcing broken updates even when auto update is disabled",
+          "url": "https://wordpress.org/support/topic/forcing-broken-updates-even-when-auto-update-is-disabled/",
+          "source": "support",
+          "clusters": [
+            "update_breakage"
+          ]
+        },
+        {
+          "title": "Sadly after update v7.0 it is unusable.",
+          "url": "https://wordpress.org/support/topic/sadly-after-update-v7-0-it-is-unusable/",
+          "source": "review",
+          "clusters": [
+            "update_breakage"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 13.344
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:yith-woocommerce-subscription:subscription_renewal",
+      "cluster": "subscription_renewal",
+      "plugin": "YITH WooCommerce Subscription",
+      "slug": "yith-woocommerce-subscription",
+      "plugin_url": "https://wordpress.org/plugins/yith-woocommerce-subscription/",
+      "active_installs": 6000,
+      "store_rating": 3.0,
+      "store_rating_count": 46,
+      "unresolved_support": 2,
+      "matched_items": 27,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Subscription not available on Variabile Products",
+          "url": "https://wordpress.org/support/topic/subscription-not-available-on-variabile-products/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "Subscriptions’ sub-orders are not created",
+          "url": "https://wordpress.org/support/topic/subscriptions-sub-orders-are-not-created/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "(Issue-Free Version) Expiry Date Not Showing for – YITH WooCommerce Subscription",
+          "url": "https://wordpress.org/support/topic/issue-free-version-expiry-date-not-showing-for-yith-woocommerce-subscription/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "Fatal error on order cancellation – missing method in Subscription plugin",
+          "url": "https://wordpress.org/support/topic/fatal-error-on-order-cancellation-missing-method-in-subscription-plugin/",
+          "source": "support",
+          "clusters": [
+            "update_breakage",
+            "subscription_renewal",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "YITH WooCommerce Subscription – renewals not being generated",
+          "url": "https://wordpress.org/support/topic/yith-woocommerce-subscription-renewals-not-being-generated/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "short code for subscription",
+          "url": "https://wordpress.org/support/topic/short-code-for-subscription/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "subscriptions table status is not changing",
+          "url": "https://wordpress.org/support/topic/subscriptions-table-status-is-not-changing/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "Subscription product Doesn’t work with Discount Coupons.",
+          "url": "https://wordpress.org/support/topic/subscription-product-doesnt-work-with-discount-coupons/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "Change renewal reminder date",
+          "url": "https://wordpress.org/support/topic/change-renewal-reminder-date/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "Payment plugin with free version of Yith Woocommerce subscription",
+          "url": "https://wordpress.org/support/topic/payment-plugin-with-free-version-of-yith-woocommerce-subscription/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        },
+        {
+          "title": "Deactivating when subscriptions active",
+          "url": "https://wordpress.org/support/topic/deactivating-when-subscriptions-active/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Vaulting Check for renewal",
+          "url": "https://wordpress.org/support/topic/vaulting-check-for-renewal/",
+          "source": "support",
+          "clusters": [
+            "subscription_renewal"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 12.915
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:woocommerce-services:label_purchase",
+      "cluster": "label_purchase",
+      "plugin": "WooCommerce Tax (formerly WooCommerce Shipping & Tax)",
+      "slug": "woocommerce-services",
+      "plugin_url": "https://wordpress.org/plugins/woocommerce-services/",
+      "active_installs": 500000,
+      "store_rating": 2.0,
+      "store_rating_count": 105,
+      "unresolved_support": 0,
+      "matched_items": 19,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Plugin Error with address verification and labels",
+          "url": "https://wordpress.org/support/topic/plugin-error-with-address-verification-and-labels/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        },
+        {
+          "title": "“Shipping tax class” setting not working?",
+          "url": "https://wordpress.org/support/topic/shipping-tax-class-setting-not-working/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Tax not Showing when Shipping Option Selected",
+          "url": "https://wordpress.org/support/topic/tax-not-showing-when-shipping-option-selected/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Support for migrating to WooCommerce Shipping",
+          "url": "https://wordpress.org/support/topic/support-for-migrating-to-woocommerce-shipping/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "USPS shipping category mismatch while generating label",
+          "url": "https://wordpress.org/support/topic/usps-shipping-category-mismatch-while-generating-label/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "No settings for WooCommerce Shipping & Tax",
+          "url": "https://wordpress.org/support/topic/no-settings-for-woocommerce-shipping-tax/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Shipping & Tax not calculating taxes automatically",
+          "url": "https://wordpress.org/support/topic/shipping-tax-not-calculating-taxes-automatically-2/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Shipping & Tax not calculating taxes automatically",
+          "url": "https://wordpress.org/support/topic/shipping-tax-not-calculating-taxes-automatically/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "No shipping options were found",
+          "url": "https://wordpress.org/support/topic/no-shipping-options-were-found-42/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Shipping Zone order?",
+          "url": "https://wordpress.org/support/topic/shipping-zone-order/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Woo Shipping keeps asking for payment method — it’s there!!",
+          "url": "https://wordpress.org/support/topic/woo-shipping-keeps-asking-for-payment-method-its-there/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        },
+        {
+          "title": "Shipping method not showing up in a Zone",
+          "url": "https://wordpress.org/support/topic/shipping-method-not-showing-up-in-a-zone/",
+          "source": "support",
+          "clusters": [
+            "label_purchase"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 12.541
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:woocommerce-shipping:address_validation",
+      "cluster": "address_validation",
+      "plugin": "WooCommerce Shipping",
+      "slug": "woocommerce-shipping",
+      "plugin_url": "https://wordpress.org/plugins/woocommerce-shipping/",
+      "active_installs": 70000,
+      "store_rating": 2.1,
+      "store_rating_count": 17,
+      "unresolved_support": 5,
+      "matched_items": 13,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "International USPS labels don’t print 4×6 anymore",
+          "url": "https://wordpress.org/support/topic/international-usps-labels-dont-print-4x6-anymore/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Forbidden: You have reached the maximum number of origin addresses for this site",
+          "url": "https://wordpress.org/support/topic/forbidden-you-have-reached-the-maximum-number-of-origin-addresses-for-this-site/",
+          "source": "support",
+          "clusters": [
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Can’t print international label",
+          "url": "https://wordpress.org/support/topic/cant-print-international-label/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Venmo payments refuse shipping addresses",
+          "url": "https://wordpress.org/support/topic/venmo-payments-refuse-shipping-addresses/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Incorrect International Addresses Defaultng to Domestic",
+          "url": "https://wordpress.org/support/topic/incorrect-international-addresses-defaultng-to-domestic/",
+          "source": "support",
+          "clusters": [
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Can’t Ship International",
+          "url": "https://wordpress.org/support/topic/cant-ship-international/",
+          "source": "support",
+          "clusters": [
+            "address_validation"
+          ]
+        },
+        {
+          "title": "France order for $402.50 – message: International shipments exceeding $2,500",
+          "url": "https://wordpress.org/support/topic/france-order-for-402-50-message-international-shipments-exceeding-2500/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Can’t create labels for international addresses that don’t validate",
+          "url": "https://wordpress.org/support/topic/cant-create-labels-for-international-addresses-that-dont-validate/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        },
+        {
+          "title": "v2.1.4 Failed Address Verification = No Rates Returned",
+          "url": "https://wordpress.org/support/topic/v2-1-4-failed-address-verification-no-rates-returned/",
+          "source": "support",
+          "clusters": [
+            "address_validation"
+          ]
+        },
+        {
+          "title": "International Numbers Not Supported, Prevents Validating Address",
+          "url": "https://wordpress.org/support/topic/international-numbers-not-supported-prevents-validating-address/",
+          "source": "support",
+          "clusters": [
+            "address_validation"
+          ]
+        },
+        {
+          "title": "Unverified Address",
+          "url": "https://wordpress.org/support/topic/unverified-address/",
+          "source": "support",
+          "clusters": [
+            "address_validation"
+          ]
+        },
+        {
+          "title": "International Orders Often Not Charged Shipping",
+          "url": "https://wordpress.org/support/topic/international-orders-often-not-charged-shipping/",
+          "source": "support",
+          "clusters": [
+            "label_purchase",
+            "address_validation"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 12.207
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:wp-hotel-booking:booking_conflict",
+      "cluster": "booking_conflict",
+      "plugin": "WP Hotel Booking",
+      "slug": "wp-hotel-booking",
+      "plugin_url": "https://wordpress.org/plugins/wp-hotel-booking/",
+      "active_installs": 7000,
+      "store_rating": 3.7,
+      "store_rating_count": 67,
+      "unresolved_support": 1,
+      "matched_items": 17,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Missing Total Price in Booking form",
+          "url": "https://wordpress.org/support/topic/missing-total-price-in-booking-form/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "Spelling error on the Hotel Booking Page",
+          "url": "https://wordpress.org/support/topic/spelling-error-on-the-hotel-booking-page/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Booking invalid",
+          "url": "https://wordpress.org/support/topic/booking-invalid/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Error While Booking",
+          "url": "https://wordpress.org/support/topic/error-while-booking/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "[NSFW] Booking Calendar and Form is not showing",
+          "url": "https://wordpress.org/support/topic/booking-calendar-and-form-is-not-showing-2/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Booking Calendar and Form is not showing",
+          "url": "https://wordpress.org/support/topic/booking-calendar-and-form-is-not-showing/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Individual room page booking button not working",
+          "url": "https://wordpress.org/support/topic/individual-room-page-booking-button-not-working/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Booking Blocked Room",
+          "url": "https://wordpress.org/support/topic/booking-blocked-room/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Booking form not visible on room details page",
+          "url": "https://wordpress.org/support/topic/booking-form-not-visible-on-room-details-page/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Just availability calendar",
+          "url": "https://wordpress.org/support/topic/just-availability-calendar/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Issues with booking",
+          "url": "https://wordpress.org/support/topic/issues-with-booking/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "WP Hotel Booking Search Defaults",
+          "url": "https://wordpress.org/support/topic/wp-hotel-booking-search-defaults/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 11.878
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:motopress-hotel-booking-lite:booking_conflict",
+      "cluster": "booking_conflict",
+      "plugin": "MotoPress Hotel Booking",
+      "slug": "motopress-hotel-booking-lite",
+      "plugin_url": "https://wordpress.org/plugins/motopress-hotel-booking-lite/",
+      "active_installs": 10000,
+      "store_rating": 3.7,
+      "store_rating_count": 65,
+      "unresolved_support": 0,
+      "matched_items": 23,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Booking multiple accommodations vs single full-property booking",
+          "url": "https://wordpress.org/support/topic/booking-multiple-accommodations-vs-single-full-property-booking/",
+          "source": "support",
+          "clusters": [
+            "bulk_workflow",
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "In pogress bookings",
+          "url": "https://wordpress.org/support/topic/in-pogress-bookings/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Motopress hotel booking iCal validation problem",
+          "url": "https://wordpress.org/support/topic/motopress-hotel-booking-ical-validation-problem-2/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "View Booking Link Not WOrking",
+          "url": "https://wordpress.org/support/topic/view-booking-link-not-working/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Availability Search",
+          "url": "https://wordpress.org/support/topic/availability-search/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Calendar not working for availability search",
+          "url": "https://wordpress.org/support/topic/calendar-not-working-for-availability-search/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Motopress/hotel booking lite/ featured image doesn’t show in my website",
+          "url": "https://wordpress.org/support/topic/motopress-hotel-booking-lite-featured-image-doesnt-show-in-my-website/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Payment failed but redirects to the ”booking confirmed” page",
+          "url": "https://wordpress.org/support/topic/payment-failed-but-redirects-to-the-booking-confirmed-page/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Appointment Scheduling Calendar Not Working",
+          "url": "https://wordpress.org/support/topic/appointment-scheduling-calendar-not-working/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "send a request for accommodation availability",
+          "url": "https://wordpress.org/support/topic/send-a-request-for-accommodation-availability/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "How to display one month as a default in search availability?",
+          "url": "https://wordpress.org/support/topic/how-to-display-one-month-as-a-default-in-search-availability/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict"
+          ]
+        },
+        {
+          "title": "Connect out to other booking platform",
+          "url": "https://wordpress.org/support/topic/connect-out-to-other-booking-platform/",
+          "source": "support",
+          "clusters": [
+            "booking_conflict",
+            "sync_connection"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 11.655
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:yoast-seo-settings-xml-csv-import:import_export",
+      "cluster": "import_export",
+      "plugin": "WP All Import – Import SEO Settings for Yoast SEO",
+      "slug": "yoast-seo-settings-xml-csv-import",
+      "plugin_url": "https://wordpress.org/plugins/yoast-seo-settings-xml-csv-import/",
+      "active_installs": 20000,
+      "store_rating": 2.8,
+      "store_rating_count": 11,
+      "unresolved_support": 0,
+      "matched_items": 20,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Import meta for product taxonomy",
+          "url": "https://wordpress.org/support/topic/import-meta-for-product-taxonomy/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Yoast AddOn breaks import process",
+          "url": "https://wordpress.org/support/topic/yoast-addon-breaks-import-process/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Can’t selectively update ONLY Yost data on update import?",
+          "url": "https://wordpress.org/support/topic/cant-selectively-update-only-yost-data-on-update-import/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "WP Import All CLI support (update?)",
+          "url": "https://wordpress.org/support/topic/wp-import-all-cli-support-update/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "from where to get data to import",
+          "url": "https://wordpress.org/support/topic/from-where-to-get-data-to-import/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Import Product identifier (ISBN/EAN) not working",
+          "url": "https://wordpress.org/support/topic/import-product-identifier-isbn-ean-not-working/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Formatting CSV or Excel for SEO of images and posts",
+          "url": "https://wordpress.org/support/topic/formatting-csv-or-excel-for-seo-of-images-and-posts/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Importing of all SEO doesn’t work",
+          "url": "https://wordpress.org/support/topic/importing-of-all-seo-doesnt-work/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "WP Import All CLI support",
+          "url": "https://wordpress.org/support/topic/wp-import-all-cli-support/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Import ISBN/GTIN/EAN",
+          "url": "https://wordpress.org/support/topic/import-isbn-gtin-ean/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "no YOAST block when importing categories",
+          "url": "https://wordpress.org/support/topic/no-yoast-block-when-importing-categories/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Incorrect stock date after import",
+          "url": "https://wordpress.org/support/topic/incorrect-stock-date-after-import/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 10.575
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:woocommerce-shipstation-integration:import_export",
+      "cluster": "import_export",
+      "plugin": "ShipStation for WooCommerce",
+      "slug": "woocommerce-shipstation-integration",
+      "plugin_url": "https://wordpress.org/plugins/woocommerce-shipstation-integration/",
+      "active_installs": 40000,
+      "store_rating": 3.3,
+      "store_rating_count": 13,
+      "unresolved_support": 0,
+      "matched_items": 12,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Many “Order has been exported to Shipstation” notes",
+          "url": "https://wordpress.org/support/topic/many-order-has-been-exported-to-shipstation-notes/",
+          "source": "support",
+          "clusters": [
+            "bulk_workflow",
+            "import_export"
+          ]
+        },
+        {
+          "title": "API Mode “REST” is Forced (vs XML)",
+          "url": "https://wordpress.org/support/topic/api-mode-rest-is-forced-vs-xml/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Orders not syncing — timezone bug in XML export date handling still in 4.9.2",
+          "url": "https://wordpress.org/support/topic/orders-not-syncing-timezone-bug-in-xml-export-date-handling-still-in-4-9-2/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "sync_connection"
+          ]
+        },
+        {
+          "title": "Possible bug: Timezone conversion missing in export date handling",
+          "url": "https://wordpress.org/support/topic/possible-bug-timezone-conversion-missing-in-export-date-handling/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "[Dev] Order Importing",
+          "url": "https://wordpress.org/support/topic/dev-order-importing/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Can this plugin import ShipStation orders to my website?",
+          "url": "https://wordpress.org/support/topic/can-this-plugin-import-shipstation-orders-to-my-website/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Missing ShipNotify XML input",
+          "url": "https://wordpress.org/support/topic/missing-shipnotify-xml-input/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "v4.4.5 Woo Product Bundles import issue",
+          "url": "https://wordpress.org/support/topic/v4-4-5-woo-product-bundles-import-issue/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Shipstation stopped importing orders from Woo",
+          "url": "https://wordpress.org/support/topic/shipstation-stopped-importing-orders-from-woo/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "No importing weights",
+          "url": "https://wordpress.org/support/topic/no-importing-weights/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Exclude an Order with a Specific SKU to be exported to shipstation",
+          "url": "https://wordpress.org/support/topic/exclude-an-order-with-a-specific-sku-to-be-exported-to-shipstation/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Some Orders not Exporting",
+          "url": "https://wordpress.org/support/topic/some-orders-not-exporting/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 9.929
+    },
+    {
+      "source": "wordpress",
+      "signal_id": "wordpress:order-export-and-more-for-woocommerce:import_export",
+      "cluster": "import_export",
+      "plugin": "Order Export for WooCommerce",
+      "slug": "order-export-and-more-for-woocommerce",
+      "plugin_url": "https://wordpress.org/plugins/order-export-and-more-for-woocommerce/",
+      "active_installs": 2000,
+      "store_rating": 3.8,
+      "store_rating_count": 14,
+      "unresolved_support": 0,
+      "matched_items": 20,
+      "status": "NEEDS_EXACT_WORKFLOW",
+      "examples": [
+        {
+          "title": "Orders do not appear when exporting",
+          "url": "https://wordpress.org/support/topic/orders-do-not-appear-when-exporting/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Simple Export in csv Product/Client/Total",
+          "url": "https://wordpress.org/support/topic/simple-export-in-csv-product-client-total/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Export dosen’t work for editor user",
+          "url": "https://wordpress.org/support/topic/export-dosent-work-for-editor-user/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Export Sort By Issue",
+          "url": "https://wordpress.org/support/topic/export-sort-by-issue/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Can’t export anything!! Please help! Syntax error!",
+          "url": "https://wordpress.org/support/topic/cant-export-anything-please-help-syntax-error/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "tax_invoice_compliance"
+          ]
+        },
+        {
+          "title": "Export to Excel?",
+          "url": "https://wordpress.org/support/topic/export-to-excel-14/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Working fix to export accented / non-western characters",
+          "url": "https://wordpress.org/support/topic/working-fix-to-export-accented-non-western-characters/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "company name on order export",
+          "url": "https://wordpress.org/support/topic/company-name-on-order-export/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Order Export Start Date Not Working",
+          "url": "https://wordpress.org/support/topic/order-export-start-date-not-working/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "Problem exporting Persian language",
+          "url": "https://wordpress.org/support/topic/problem-exporting-persian-language-2/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        },
+        {
+          "title": "When i exported, it cannot read Thai language",
+          "url": "https://wordpress.org/support/topic/when-i-exported-it-cannot-read-thai-language/",
+          "source": "support",
+          "clusters": [
+            "import_export",
+            "missing_feature"
+          ]
+        },
+        {
+          "title": "Import orders",
+          "url": "https://wordpress.org/support/topic/import-orders/",
+          "source": "support",
+          "clusters": [
+            "import_export"
+          ]
+        }
+      ],
+      "required_next_evidence": [
+        "confirm ten titles describe one repeated buyer/input/outcome, not a generic plugin category",
+        "separate first-party/plugin-specific defects from a standalone product workflow",
+        "define buyer, input, processing, output and price",
+        "find 5 direct products and 5 substitutes",
+        "quantify marketplace acquisition and support burden"
+      ],
+      "discovery_score": 9.896
     },
     {
       "source": "app_store_jp",
