@@ -23,6 +23,13 @@ The user has explicitly required:
 - When a flaw is found, stop/change/research/check/update in the same work cycle.
 - Reply once, after execution.
 
+## Execution reality
+- GitHub Actions are deterministic scanners and guards, not an autonomous product strategist.
+- A scheduled guard must never be described as the project continuing by itself.
+- After a user-facing response, no model reasoning or repository work continues unless a concrete connected automation actually runs and records an output.
+- “Continuous” may mean scheduled data collection or validation only. It may be described as autonomous product progress only when the workflow itself performs candidate reduction, exact competitor and substitute research, acquisition and economics evaluation, a state transition, and records terminal evidence.
+- `READY_TO_REPORT` is a communication boundary for one work cycle. It is not completion of the income goal and is not evidence that another work cycle is running.
+
 ## Completion-before-response invariant
 A final answer is forbidden while a safe material action remains.
 
