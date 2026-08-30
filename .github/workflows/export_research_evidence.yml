@@ -1,0 +1,33 @@
+name: Export research evidence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/export_research_evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bundle current research evidence
+        run: |
+          mkdir -p evidence
+          cp research/discovery_queue/latest.json evidence/discovery_queue.json
+          cp research/discovery_queue/latest.md evidence/discovery_queue.md
+          cp research/app_store_scan/reviews.json evidence/app_store_reviews.json
+          cp research/app_store_scan/reviews.md evidence/app_store_reviews.md
+          cp research/app_store_scan/latest.json evidence/app_store_scan.json
+          cp research/marketplace_scan/complaints.json evidence/wordpress_complaints.json
+          cp research/marketplace_scan/latest.json evidence/wordpress_marketplace.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q-research-evidence
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 1
