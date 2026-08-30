@@ -1,0 +1,123 @@
+name: Build and publish Jira Automation Guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'product/jira-automation-guard/**'
+      - 'tests/jira-automation-guard.smoke.js'
+      - 'scripts/publish_jira_automation_guard.py'
+      - 'research/ACTIVE_CANDIDATE.json'
+      - '.github/workflows/build-jira-guard.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: build-jira-automation-guard
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate approved build scope
+        run: |
+          python scripts/check_prebuild_gate.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          active=json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
+          assert active['status']=='BUILD_APPROVED'
+          assert active['build_approved'] is True
+          assert active['candidate_id']=='jira-automation-rule-guard'
+          assert active['approval_scope']=='FREE_MVP_ONLY'
+          assert active['approved_build']['path']=='product/jira-automation-guard'
+          assert 'payment' in active['approved_build']['forbidden']
+          print(active['approved_build'])
+          PY
+
+      - name: Check product source
+        run: |
+          python -m py_compile scripts/publish_jira_automation_guard.py
+          node --check product/jira-automation-guard/core.js
+          node --check product/jira-automation-guard/app.js
+          node tests/jira-automation-guard.smoke.js
+
+      - name: Publish deterministic GitHub Pages release
+        run: python scripts/publish_jira_automation_guard.py
+
+      - name: Validate release output
+        run: |
+          python scripts/check_prebuild_gate.py
+          node --check core.js
+          node --check app.js
+          node tests/jira-automation-guard.smoke.js
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+          class Parser(HTMLParser): pass
+          files=['index.html','styles.css','core.js','app.js','privacy.html','stats.html','sample-before.json','sample-after.json','manifest.webmanifest','icon.svg','og.svg','robots.txt','sitemap.xml']
+          for name in files: assert Path(name).is_file(), name
+          for name in ['index.html','privacy.html','stats.html']: Parser().feed(Path(name).read_text(encoding='utf-8'))
+          for name in ['sample-before.json','sample-after.json','manifest.webmanifest']: json.loads(Path(name).read_text(encoding='utf-8'))
+          ET.parse('sitemap.xml')
+          html=Path('index.html').read_text(encoding='utf-8')
+          assert 'Jira Automation Guard' in html
+          assert 'https://bachikoljunior-blip.github.io/Q/' in html
+          for old in ['FBA補てん原価監査','字幕Preflight','つづきから']: assert old not in html
+          sync=Path('research/tools/sync_active_research.py').read_text(encoding='utf-8')
+          assert 'approved candidate preserved' in sync
+          print('release output valid')
+          PY
+
+      - name: Smoke local HTTP
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/http.log 2>&1 &
+          pid=$!
+          trap 'kill $pid' EXIT
+          for i in {1..10}; do
+            curl -fsS http://127.0.0.1:8765/ >/tmp/index.html && break
+            sleep 1
+          done
+          grep -q 'Jira Automation Guard' /tmp/index.html
+          curl -fsS http://127.0.0.1:8765/core.js | grep -q 'buildReport'
+          curl -fsS http://127.0.0.1:8765/sample-before.json | python -m json.tool >/dev/null
+          curl -fsS http://127.0.0.1:8765/privacy.html | grep -q '入力JSON'
+          curl -fsS http://127.0.0.1:8765/stats.html | grep -q '有料開発Gate'
+
+      - name: Commit published release and governance updates
+        run: |
+          git add \
+            index.html styles.css core.js app.js privacy.html stats.html \
+            sample-before.json sample-after.json manifest.webmanifest icon.svg og.svg \
+            robots.txt sitemap.xml \
+            research/tools/sync_active_research.py tests/research-tools.smoke.py \
+            .github/workflows/marketplace-scan.yml \
+            .github/workflows/exact-match-queue.yml \
+            .github/workflows/candidate-deep-dive.yml \
+            .github/workflows/sync-research-candidate.yml \
+            .github/workflows/research-loop-check.yml \
+            .github/workflows/approve-jira-guard.yml \
+            .github/workflows/smoke.yml
+          if git diff --cached --quiet; then
+            echo 'Published release already current'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Publish Jira Automation Guard free MVP [skip ci]'
+          git pull --rebase origin main
+          git push
