@@ -6,6 +6,8 @@ import json
 import sys
 from pathlib import Path
 
+from check_continuation_contract import ContinuationContractError, validate as validate_continuation
+
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / "execution" / "CURRENT_WORK.json"
 ACTIVE = ROOT / "research" / "ACTIVE_CANDIDATE.json"
@@ -59,6 +61,11 @@ for index, task in enumerate(tasks, 1):
     if not task.get("id") or not task.get("evidence"):
         fail(f"tasks[{index}] requires id and evidence")
 
+try:
+    continuation = validate_continuation(ROOT, emit=False)
+except (ContinuationContractError, OSError, ValueError) as exc:
+    fail(f"continuation review is stale or incomplete: {exc}")
+
 if active.get("build_approved") is not False:
     fail("this completed cycle must keep build_approved=false")
 if active.get("status") != "NO_ACTIVE_CANDIDATE":
@@ -83,6 +90,7 @@ forbidden_paths = [
     ".github/workflows/exact-match-queue.yml",
     ".github/workflows/candidate-deep-dive.yml",
     ".github/workflows/marketplace-scan.yml",
+    ".github/workflows/export_research_evidence.yml",
     "research/tools/approve_jira_automation_guard.py",
     "research/tools/sync_active_research.py",
     "research/tools/exact_match_queue.py",
@@ -100,7 +108,7 @@ forbidden_paths = [
 ]
 remaining = [path for path in forbidden_paths if (ROOT / path).exists()]
 if remaining:
-    fail("closed or conflicting automation remains: " + ", ".join(remaining))
+    fail("closed, temporary, or conflicting automation remains: " + ", ".join(remaining))
 
 workflow_dir = ROOT / ".github" / "workflows"
 writers: list[str] = []
@@ -128,7 +136,12 @@ for phrase in required_contract_phrases:
 
 for required in [
     "research/BATCH_VETO_2026-08-30.md",
+    "research/EXACT_WORKFLOW_REDUCTION_2026-08-30.md",
+    "research/WORDPRESS_EXACT_WORKFLOW_REDUCTION_2026-08-30.md",
+    "research/CONTINUATION_CONTRACT.md",
+    "research/discovery_queue/reviewed_2026-08-30.json",
     "execution/2026-08-30-completion-first-hardening.md",
+    "scripts/check_continuation_contract.py",
     "tests/research-tools.smoke.py",
 ]:
     if not (ROOT / required).is_file():
@@ -137,6 +150,9 @@ for required in [
 print(json.dumps({
     "cycle_id": contract.get("cycle_id"),
     "terminal_tasks": len(tasks),
+    "reviewed_queue_rows": continuation["reviewed_rows"],
+    "wordpress_rows": continuation["wordpress_rows"],
+    "app_store_rows": continuation["app_store_rows"],
     "marketplace_writers": writers,
     "product_files": 0,
     "result": "PASS",
