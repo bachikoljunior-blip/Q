@@ -1,10 +1,11 @@
-name: Sync candidate status documentation
+name: Sync candidate and completion status documentation
 
 on:
   push:
     branches: [main]
     paths:
       - 'research/ACTIVE_CANDIDATE.json'
+      - 'execution/CURRENT_WORK.json'
       - 'PROJECT_STATE.md'
       - 'scripts/sync_status_docs.py'
       - '.github/workflows/status_sync.yml'
@@ -20,18 +21,19 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 7
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Synchronize docs from ACTIVE_CANDIDATE
+      - name: Synchronize docs from source-of-truth state
         run: python scripts/sync_status_docs.py
 
-      - name: Run prebuild and status checks
+      - name: Run prebuild, completion and status checks
         run: |
           python scripts/check_prebuild_gate.py
+          python scripts/check_execution_contract.py
           python -m py_compile scripts/sync_status_docs.py
 
       - name: Commit synchronized docs
@@ -43,6 +45,6 @@ jobs:
             echo 'Status docs already synchronized.'
             exit 0
           fi
-          git commit -m 'Synchronize human-facing candidate status'
+          git commit -m 'Synchronize human-facing candidate and completion status'
           git pull --rebase origin main
           git push origin HEAD:main
