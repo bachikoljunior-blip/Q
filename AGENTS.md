@@ -5,8 +5,9 @@ Read in this order:
 1. `PROJECT_STATE.md`
 2. `research/ACTIVE_CANDIDATE.json`
 3. `research/PREBUILD_GATE.md`
-4. `DECISIONS.md`
-5. Current research / experiment files
+4. `execution/CURRENT_WORK.json`
+5. `DECISIONS.md`
+6. Current research / experiment files
 
 Conversation memory is secondary.
 
@@ -18,6 +19,20 @@ The user has explicitly required:
 - Complete every safe action available in the current session before replying.
 - When a flaw is found, stop/change/research/check/update in the same work cycle.
 - Reply once, after execution.
+
+## Completion-before-response invariant
+A final answer is forbidden while a safe material action remains.
+
+The user must never need to repeat the completion directive.
+
+Before a user-facing report:
+1. Read the source-of-truth files and inspect the current repository, not only the conversation summary.
+2. Finish, reject, or mark `BLOCKED_EXTERNAL` every material task in `execution/CURRENT_WORK.json`.
+3. A flaw discovered during the cycle creates work inside the same cycle: remove the weak path, find exact competitors/substitutes, clean stale code/workflows/metrics/indexing, repair tests, update state, and rerun validation.
+4. `NO_ACTIVE_CANDIDATE` is not permission to stop while an unreviewed material candidate batch or repository inconsistency remains.
+5. The only valid stop boundary is a fact or action that genuinely requires an external person/account/event, such as a real purchase, measured live CAC, credentials not connected, or legally granted content rights. Record the exact boundary; do not use it to excuse unfinished internal work.
+6. Do not say the project is complete when only a cleanup, research step, free MVP, or test is complete.
+7. Run `python scripts/check_prebuild_gate.py` and `python scripts/check_execution_contract.py` before reporting completion of a cycle.
 
 ## Truthful status language
 Always state one exact status:
@@ -38,7 +53,7 @@ Before implementation, follow `research/PREBUILD_GATE.md`.
 Mandatory minimum:
 1. Define buyer + exact input + processing + output + price model.
 2. Run at least 12 Japanese/English exact-workflow searches.
-3. Record at least 5 direct competitors and 5 substitutes.
+3. Record at least 5 direct/closest paid products and 5 substitutes.
 4. Complete a buyer/input/processing/output/pricing overlap matrix.
 5. Prove a concrete acquisition path and unit economics.
 
@@ -60,11 +75,14 @@ For `RESEARCH_ONLY`, do not preserve a lead merely because no exact competitor w
 
 ## Repository enforcement
 - `research/ACTIVE_CANDIDATE.json` is the machine-readable build decision.
+- `execution/CURRENT_WORK.json` is the machine-readable completion decision for the current cycle.
 - New product code must be placed under `product/`.
 - Do not create files under `product/` while `build_approved=false`.
 - Research automation belongs under `research/tools/`.
 - Do not publish a new landing page until status is at least `OFFER_TEST`.
 - Public pages must not present a research lead as an available product.
+- When a candidate is closed, delete its executable build/deploy/metrics/indexing automation, not only its product directory. Archival decision records may remain.
+- Only one workflow may write each generated evidence namespace.
 
 ## Same-cycle correction
 When a weakness is found:
@@ -73,6 +91,7 @@ When a weakness is found:
 - apply the kill criteria,
 - reject or revise,
 - execute all safe work still possible,
+- remove stale executable artifacts,
 - run checks,
 - update state,
 - then report.
@@ -85,8 +104,8 @@ Do not request fresh confirmation for work already authorized.
 - Show uncertainty and source dates.
 - Do not automate claims or actions that could create duplicate/invalid submissions without an explicit safe design.
 
-## Closed experiments
-EXP001, EXP002, EXP003 and EXP004 are closed. Do not revive them without new external evidence that passes the full gate.
+## Closed experiments and leads
+EXP001, EXP002, EXP003, EXP004, SECURITY_PRACTICAL_VOICE_TRAINER and JIRA_AUTOMATION_GUARD are closed. Do not revive them without new external evidence that passes the full gate.
 
 ## Current status
-`NO_ACTIVE_CANDIDATE` — no candidate is currently approved for an offer or build. Continue marketplace-first research; do not create a fifth weak product.
+`NO_ACTIVE_CANDIDATE` — no candidate is currently approved for an offer or build. Continue marketplace-first research; do not create a weak product.
