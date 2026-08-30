@@ -27,24 +27,14 @@ A browser-local Amazon.co.jp FBA reimbursement cost audit was built as a free te
 ## 2026-08-30 — Kill EXP004
 **Decision:** Stop EXP004 immediately. Do not wait for 100 visitors, add paid features, market it, or revive it without new evidence.
 
-**Reason:** ReimburseOps already provides nearly the same buyer workflow and commercial model:
-- reimbursement CSV + sourcing-cost CSV
-- automatic mapping
-- missing cost
-- payout below 90% of sourcing cost × quantity
-- inconsistent valuation
-- landed-cost warning
-- no Amazon login/API keys
-- no success fee
-- export/case text/60-day alerts
-- flat monthly pricing
+**Reason:** ReimburseOps already provides nearly the same buyer workflow and commercial model: reimbursement CSV + sourcing-cost CSV, automatic mapping, missing cost, under-reimbursement rules, inconsistent valuation, no Amazon login/API keys, no success fee, export/case text/alerts, and flat monthly pricing.
 
-The remaining localization/privacy differences are insufficient without measured willingness to switch or prepay. EXP004 also had zero external usage evidence at closure.
+The remaining localization/privacy differences are insufficient without measured willingness to switch or prepay. EXP004 had no external usage evidence at closure.
 
 ## 2026-08-30 — Exact workflow duplicate veto is mandatory
-**Decision:** No fifth product implementation until `research/PREBUILD_GATE.md` passes and `research/ACTIVE_CANDIDATE.json` has `build_approved=true`.
+No fifth product implementation until `research/PREBUILD_GATE.md` passes and `research/ACTIVE_CANDIDATE.json` has `build_approved=true`.
 
-**Required:**
+Required:
 - exact buyer/input/processing/output/price definition
 - at least 12 Japanese/English searches
 - at least 5 direct competitors and 5 substitutes
@@ -53,18 +43,30 @@ The remaining localization/privacy differences are insufficient without measured
 - unit economics
 - differentiator evidence
 
-**Reject by default:**
-- an existing product overlaps 70%+ of the workflow
-- free/OSS/first-party tools deliver the main outcome
-- the only differences are Japanese localization, lower price, browser-local processing or no login
-
-The veto can be overridden only by external evidence for the unresolved difference: paid preorders, qualified current spenders with switching intent, repeated public complaints, or measured owned distribution.
+Reject by default when an existing product overlaps 70%+, free/OSS/first-party tools deliver the main outcome, or differences are only Japanese localization, lower price, browser-local processing or no login.
 
 ## 2026-08-30 — Use truthful product status labels
 Ideas and research are not products. Every status must be one of:
 `NO_ACTIVE_CANDIDATE`, `RESEARCH_ONLY`, `OFFER_TEST`, `BUILD_APPROVED`, `LIVE_FREE_MVP`, `LIVE_PAID_PRODUCT`, `CLOSED`.
 
-Current status: `NO_ACTIVE_CANDIDATE`.
-
 ## 2026-08-30 — Distribution-first discovery
-The next candidate search starts in paid app/plugin marketplaces or other channels with visible demand and acquisition, not from an easy-to-build feature. If no candidate passes the gate, maintaining no active candidate is the correct decision.
+Candidate search begins in paid app/plugin marketplaces or other channels with visible demand and acquisition, not from an easy-to-build feature. If no candidate passes the gate, no build is the correct decision.
+
+## 2026-08-30 — Hard-pause the existing automated YouTube finance persona
+**Decision:** Stop generation, upload, scheduling and optimization for the current `bachikoljunior-blip/youtube` tactic. Preserve analytics and existing data.
+
+**Reason:** Current official YouTube monetization policy disallows AI personas presenting themselves as human experts on sensitive topics including finances and legal issues. The channel configuration uses a synthetic “former corporate accounting/HR” persona for money, tax and career guidance, plus an automated template pipeline.
+
+**Execution:** marker, code guard, Claude hooks and CI were added in the YouTube repository. Resume requires a non-sensitive/non-impersonating, materially varied format reviewed against the then-current policy.
+
+## 2026-08-30 — Advance one lead to RESEARCH_ONLY, not to product
+**Decision:** Track `SECURITY_PRACTICAL_VOICE_TRAINER` as the only research lead. Do not build or publish an offer yet.
+
+**Evidence:** paid exam apps, paid textbooks, paid pre-courses and high-priced practical DVDs prove spending on security-certification preparation. Existing mobile apps primarily cover academic questions; some explicitly exclude practical training.
+
+**Blockers:** exact speech-practice demand, legally usable/current rubrics, qualified content review, market size, App Store acquisition and one-time-price economics are unproven.
+
+Current status: `RESEARCH_ONLY`, `build_approved=false`.
+
+## 2026-08-30 — Research status is machine-enforced
+`scripts/check_prebuild_gate.py` now requires even a research-only lead to include an exact workflow, 12 searches, substitutes, evidence, economics and kill criteria. Build approval requires structured competitor buyer/input/process/output/price records and overlap percentages. A 70%+ overlap cannot pass without external override evidence.
