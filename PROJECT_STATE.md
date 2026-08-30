@@ -13,32 +13,34 @@
 - 自動販売・自動提供・自動決済・自動解約を最終形にする
 - 過去会話より、このリポジトリの最新状態を優先する
 
-## Permanent execution rule
-ユーザーへ計画だけ返して作業を止めない。許可済み範囲では、同一サイクル内で調査→反証→中止/変更→実行→検査→状態更新まで終えてから一度だけ返す。
+## Completion-before-response rule
+A final answer is forbidden while a safe material action remains.
+
+回答前に `execution/CURRENT_WORK.json` の全material taskを `DONE`、`REJECTED`、`BLOCKED_EXTERNAL` のいずれかへ終端させ、次を実行する:
+
+```text
+python scripts/check_prebuild_gate.py
+python scripts/check_execution_contract.py
+```
+
+弱点を発見した場合、その回答内で中止/修正、exact competitor確認、実行系の削除、CI修正、状態更新、再検証まで完了する。ユーザーへ同じ完了指示を再度言わせない。
 
 ## Current status
-**`NO_ACTIVE_CANDIDATE`**
+
+**`NO_ACTIVE_CANDIDATE`**  
+Build approved: **false**  
+Live product: **none**  
+Paid customers: **0**  
+Revenue: **¥0**  
+Product implementation files: **0**
 
 現在、販売中・公開中・開発承認済み・調査継続中の商品候補はない。
 
-これは停止や先送りではない。exact workflow、需要、差別化、集客、採算のいずれかを満たさない案を5個目として作らないための正確な状態。
+これは「何もしない」という意味ではない。現在の候補batchを実装前に反証し、通過案が0だったという正確な結果。弱い商品を作ったことにしない。
 
-正本: `research/ACTIVE_CANDIDATE.json`
-
-## Current phase
-**Phase 8: automated marketplace discovery + exact-workflow rejection**
-
-次の案は `research/PREBUILD_GATE.md` を完全通過するまで実装・LP公開・決済テストしない。
-
-評価順:
-1. exact workflowの直接競合
-2. 支払意思
-3. 金銭的痛み・期限・義務
-4. 既存/無料代替との差
-5. 具体的な集客経路
-6. zero-touch
-7. 手取り20万円までの単価×顧客数
-8. 作りやすさ
+Machine source of truth:
+- `research/ACTIVE_CANDIDATE.json`
+- `execution/CURRENT_WORK.json`
 
 ## Closed experiments and leads
 
@@ -52,113 +54,132 @@
 字幕QA、自動修正、AI校閲、NLE連携まで既存無料/有料製品が多数あるため終了。
 
 ### EXP004 — FBA補てん原価監査
-ReimburseOpsとbuyer/input/processing/output/privacy/pricingが90%超重複したため終了。公開物・検索通知・指標収集も停止済み。
+ReimburseOpsとbuyer/input/processing/output/privacy/pricingが90%超重複したため終了。公開物・検索通知・指標収集も停止済み。残っていたmetrics collectorも削除した。
 
-### SECURITY_PRACTICAL_VOICE_TRAINER — 警備検定 実技・口述ひとり練習トレーナー
-**2026-08-30にRESEARCH_ONLYからCLOSED。実装・LP・予約販売へ進めない。**
+### SECURITY_PRACTICAL_VOICE_TRAINER
+2026-08-30終了。市場規模、合法的な現行rubric、反復するexact pain、身体実技を音声だけで測れる妥当性、acquisitionのいずれもGateを通過しなかった。
 
-終了理由:
-- 2025年度の交通誘導警備業務2級特別講習は6,489人
-- 買切り¥2,980、App Store手数料15%の仮定でも、年手取り¥240万円には税・返金・開発費等を除く前に約948販売が必要
-- これは関連年間受講者全体の約14.6%で、無名の新規アプリとして非現実的
-- 以前の816販売計算は粗い売上計算で、手取り目標を満たさない
-- 「一人で口述・実技練習したい」という対象者本人の反復する公開不満を10件確認できなかった
-- 現行の完全な実技採点基準を合法的に使用できる根拠を確保できなかった
-- 2026年に実技内容の一部変更があり、継続的な有資格レビューが必要
-- 音声採点では旗・誘導棒・立ち位置・動作・対車両タイミング等の身体技能を判定できない
-- App Store上には学科対策需要があるが、実技・口述専用の獲得需要/CACは未証明
-
-詳細: `research/SECURITY_PRACTICAL_VOICE_TRAINER_2026-08-30.md`
-
-## Existing asset action — YouTube tactic remains hard-paused
-
-`bachikoljunior-blip/youtube` の現行自動投稿方式は2026-08-30にhard-pause済み。
-
-理由:
-- mass-produced / repetitive / template-based contentの収益化リスク
-- 合成の「元経理・人事」ペルソナが金融・税・キャリアを助言する構成
+### JIRA_AUTOMATION_GUARD
+2026-08-30終了。`ajat` がAutomation rule JSON export、local snapshot diff、CI drift、reports/runbooksまで提供しておりexact competitor vetoが発動した。
 
 実行済み:
-- `youtube/AUTOMATION_PAUSED.md`
-- generation/upload/reschedule/retitle等のcode-level hard guard
-- pause reminder hooks
-- pause guard CI
-- 既存動画・分析データは削除せず保全
+- product code削除
+- public experiment削除
+- approval/build/finalize/indexing/metrics/tracking/hardening workflows削除
+- publisher/state/metrics/tracking scripts削除
+- smoke/metrics tests削除
+- automatic candidate re-promotion workflow/tool削除
 
-分析は許可するが、現行形式の新しい動画在庫を増やさない。
+Archival decision recordだけを残し、閉じた候補がworkflowから復活しない状態にした。
 
-## Marketplace discovery automation completed
+## Current candidate batch — completed and rejected
 
-実装済み:
+`research/BATCH_VETO_2026-08-30.md` に、次を実装前に比較・棄却した記録を保存:
+
+1. Jira permission drift / access-review evidence
+2. Jira long-term audit retention / evidence vault
+3. Confluence page owner / expiry / attestation
+4. Confluence external-user offboarding / access impact
+5. WooCommerce webhook failure / replay
+6. WordPress staging-production settings diff
+7. WordPress update-impact preflight
+8. Figma Japanese typography / kinsoku QA
+9. shift/pay backup and payslip mismatch
+
+判定理由:
+- exact paid competitor
+- free/first-party core substitute
+- same buyer outcome already supplied
+- repeated exact pain/acquisition evidence不足
+- legal/schema/support burdenがzero-touchに不適合
+
+## Discovery automation — canonical state
+
+稼働を許可するresearch-only pipeline:
+
+### WordPress marketplace
 - `research/tools/marketplace_scan.py`
 - `research/tools/filter_marketplace_scan.py`
 - `research/tools/mine_wordpress_complaints.py`
 - `.github/workflows/marketplace_scan.yml`
 
-自動化内容:
-- WordPress.orgの公開APIから需要・評価・support signalを収集
-- 広すぎる検索結果を関連性で絞る
-- 公開support/reviewトピックを1トピック1件へ正規化してクラスタ化
-- weekly/manual/pushで再実行
-- 出力は必ず `build_approved=false`
+`research/marketplace_scan` を書くworkflowはこの1本だけ。旧 `marketplace-scan.yml` と競合scannerは削除した。現在のcanonical outputはschema v2。
 
-Atlassian Marketplace V2検索APIは終了しHTTP 410となったため、自動カバレッジを偽装せずmanual-onlyとして記録。
+### Japanese App Store
+- `research/tools/app_store_scan.py`
+- `research/tools/mine_app_store_reviews.py`
+- `.github/workflows/app_store_scan.yml`
 
-出力:
-- `research/marketplace_scan/latest.*`
-- `research/marketplace_scan/shortlist.*`
-- `research/marketplace_scan/complaints.*`
+### Cross-source evidence queue
+- `research/tools/build_discovery_queue.py`
+- `.github/workflows/discovery_queue.yml`
 
-## Marketplace complaint triage result
+これらはsignal/evidenceを集めるだけで、`ACTIVE_CANDIDATE`を変更せず、product codeを作らない。
 
-`research/MARKETPLACE_COMPLAINT_TRIAGE_2026-08-30.md` に記録。
+Hard-codedで棄却済み候補を再検索・再昇格していたexact-match queue/deep-dive/auto-syncは削除した。candidate選定は、最新evidenceからexact workflowを定義してから行う。
 
-棄却済み:
-- WooCommerce請求書番号・欠落PDF監査
-- WooCommerce予約在庫/overbooking canary
-- WooCommerce税額監査
-- WordPressアクセシビリティ継続監視
-- WordPress CSV import/export完全性監視
-- WooCommerce checkout/store-health synthetic monitor
-
-理由:
-- SleekView、CashFlowCanary、CheckOO、TaxDebug、AccessGuard/Warder等、exactまたは主要成果が同じ有料/無料製品が存在
-- booking/importの横断対応はプラグイン別adapterとsupport負荷が大きい
-- 税務・アクセシビリティは継続法令対応と責任リスクが高い
-
-support件数が多いこと自体を商品承認に使わない。
+Atlassian Marketplace V2検索APIはHTTP 410で終了しているため、自動カバレッジを偽装せずmanual-onlyと記録する。
 
 ## Machine enforcement
 
-`scripts/check_prebuild_gate.py` とGitHub Actionsが次を強制:
-- `build_approved=false` の間、`product/` に商品コード禁止
-- `RESEARCH_ONLY` でもexact workflow、12検索、代替、根拠、採算、kill criteria必須
-- `OFFER_TEST` は価格・buyer action・流入元・成功基準・終了日必須
-- `BUILD_APPROVED` は直接競合5件、代替5件、構造化overlap matrix、集客、採算が必須
-- 70%以上重複は外部override evidenceなしでは不可
-- 非live状態の公開ページは「商品なし」かつnoindex
-- discovery scannerは候補を自動承認できない
+### `scripts/check_prebuild_gate.py`
+- `build_approved=false` 中の `product/` を禁止
+- RESEARCH_ONLY/OFFER_TEST/BUILD_APPROVEDの証拠要件を検査
+- 70%以上の重複をoverride evidenceなしで禁止
+- non-live public pageをno-product/noindexへ固定
 
-## Human-only boundary
-AIだけでは捏造できないもの:
-- 前払い/予約購入
-- 現在競合へ課金している購入者の乗換意思
-- 実広告のCAC
-- 実ストア検索ボリューム
-- legally usableな専門コンテンツ権利
-- 実利用・売上
+### `scripts/check_execution_contract.py`
+- current workに未完了taskがないこと
+- `READY_TO_REPORT` であること
+- `NO_ACTIVE_CANDIDATE / build_approved=false`
+- product files 0
+- closed candidateの実行系が残っていないこと
+- marketplace generated evidence writerが1本だけであること
+- completion invariantがAGENTSに存在すること
+- batch vetoとexecution recordが存在すること
 
-それ以前の検索、比較、棄却、scanner、CI、状態保存は実行済み。
+### GitHub Actions
+- `Q governance gate`
+- `Research loop checks`
+- `Full discovery validation pass`
+- `Sync candidate and completion status documentation`
+- canonical marketplace/App Store/discovery queue workflows
 
-## Immediate next action
-**新規実装は禁止。**
+## Existing YouTube asset
 
-1. marketplace scannerの上位クラスタから、complaint本文で同一未解決workflowが10件以上あるものだけを抽出
-2. buyer/input/processing/output/priceを1文に固定
-3. 日本語・英語・marketplace・OSSで12検索以上
-4. direct competitor 5件、substitute 5件、overlap matrixを作る
-5. duplicate veto、集客、手取り採算を通過した場合のみ `RESEARCH_ONLY` → `OFFER_TEST` または `BUILD_APPROVED`
-6. 通過案がなければ `NO_ACTIVE_CANDIDATE` を維持し、商品を作ったふりをしない
+`bachikoljunior-blip/youtube` の現行自動投稿方式はhard-pauseを維持。
 
-## Resume instruction
-`AGENTS.md` → このファイル → `research/ACTIVE_CANDIDATE.json` → `research/PREBUILD_GATE.md` → `research/MARKETPLACE_COMPLAINT_TRIAGE_2026-08-30.md` → `DECISIONS.md` の順で読む。EXP001〜004とsecurity voice trainerへ戻らない。弱点を見つけた場合は、その回答内で反証・中止・代替調査・記録まで終える。
+理由:
+- mass-produced / repetitive / template-based contentの収益化リスク
+- 合成の「元経理・人事」ペルソナが金融・税・キャリアを助言する構成
+
+新しい動画在庫を現行形式で増やさない。既存動画と分析データは保全。
+
+## External-only boundaries
+
+内部作業を止める口実にしてはいけない。AI/connected toolsだけでは作れない外部事実は次:
+- real paid preorder/purchase
+- measured live CAC/conversion
+- actual marketplace ranking/search volume
+- specialist content rights or qualified review agreement
+- third-party retention/support burden
+
+現在はGate通過offerがないため、これらを取るためのLP/決済を先に作らない。
+
+## Immediate resume boundary
+
+新規実装は禁止。
+
+次のcycleでは、最新complaint本文から**同一buyer・同一input・同一未解決outcomeが10件以上**ある狭いworkflowだけを抽出し、12検索、closest paid products 5件、substitutes 5件、overlap、acquisition、手取り採算を同一cycleで完了する。通過案がなければ `NO_ACTIVE_CANDIDATE` を維持する。
+
+## Resume order
+
+1. `AGENTS.md`
+2. `PROJECT_STATE.md`
+3. `research/ACTIVE_CANDIDATE.json`
+4. `execution/CURRENT_WORK.json`
+5. `research/PREBUILD_GATE.md`
+6. `research/BATCH_VETO_2026-08-30.md`
+7. `DECISIONS.md`
+
+EXP001〜004、security voice trainer、Jira Automation Guardを新しい外部証拠なしに復活させない。
