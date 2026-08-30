@@ -1,0 +1,85 @@
+name: Continuous discovery review guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/discovery_queue/latest.json'
+      - 'research/discovery_queue/reviewed_2026-08-30.json'
+      - 'research/ACTIVE_CANDIDATE.json'
+      - 'research/CONTINUATION_CONTRACT.md'
+      - 'scripts/check_continuation_contract.py'
+      - 'execution/CURRENT_WORK.json'
+      - '.github/workflows/continuous_discovery_guard.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+concurrency:
+  group: continuous-discovery-review-guard
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate the current queue has an exact terminal review
+        id: continuation
+        shell: bash
+        run: |
+          set +e
+          python scripts/check_continuation_contract.py > /tmp/continuation.log 2>&1
+          status=$?
+          cat /tmp/continuation.log
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Open or update stale-review issue
+        if: steps.continuation.outputs.status != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          title='Q: current discovery evidence requires exact-workflow review'
+          issue_number="$(gh issue list --state open --search "${title} in:title" --json number --jq '.[0].number // empty')"
+          {
+            echo 'The canonical discovery queue no longer matches its terminal review record.'
+            echo
+            echo "Commit: ${GITHUB_SHA}"
+            echo "Workflow run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            echo
+            echo '```text'
+            cat /tmp/continuation.log
+            echo '```'
+            echo
+            echo 'This is unfinished internal work. Do not report READY_TO_REPORT until every current signal_id has one terminal disposition and the queue SHA matches.'
+          } > /tmp/issue-body.md
+          if [ -n "$issue_number" ]; then
+            gh issue comment "$issue_number" --body-file /tmp/issue-body.md
+          else
+            gh issue create --title "$title" --body-file /tmp/issue-body.md
+          fi
+          exit 1
+
+      - name: Close resolved stale-review issue
+        if: steps.continuation.outputs.status == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          title='Q: current discovery evidence requires exact-workflow review'
+          issue_number="$(gh issue list --state open --search "${title} in:title" --json number --jq '.[0].number // empty')"
+          if [ -n "$issue_number" ]; then
+            gh issue close "$issue_number" --comment 'The current queue SHA and all signal IDs now match a complete terminal review.'
+          fi
