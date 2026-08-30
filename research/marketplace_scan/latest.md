@@ -1,6 +1,6 @@
 # Marketplace-first scan
 
-最終更新: 2026-08-30T16:23:50+09:00
+最終更新: 2026-08-31T06:07:29+09:00
 
 > 候補発見用の機械スキャン。点数は商品価値や差別化の証明ではない。
 > PREBUILD_GATEのexact-match検索・重複表・集客・採算を通るまで実装禁止。
@@ -14,28 +14,28 @@
 
 | # | Listing | Query | Active | Rating | Ratings | Unresolved/support | Score |
 |---:|---|---|---:|---:|---:|---|---:|
-| 1 | [WooCommerce PayPal Payments](https://wordpress.org/plugins/woocommerce-paypal-payments/) | woocommerce accessibility; woocommerce fraud; woocommerce invoice; woocommerce order export; woocommerce returns; woocommerce shipping label; woocommerce subscription | 800,000 | 2.80 | 577 | unresolved_support=23 | 20.239 |
-| 2 | [WooCommerce](https://wordpress.org/plugins/woocommerce/) | woocommerce bank transfer; woocommerce booking; woocommerce csv import; woocommerce order export; woocommerce returns; woocommerce shipping label; woocommerce subscription | 7,000,000 | 4.50 | 4,820 | unresolved_support=35 | 19.908 |
-| 3 | [Elementor Website Builder – more than just a page builder](https://wordpress.org/plugins/elementor/) | woocommerce accessibility | 10,000,000 | 4.50 | 7,297 | unresolved_support=11 | 19.682 |
+| 1 | [WooCommerce PayPal Payments](https://wordpress.org/plugins/woocommerce-paypal-payments/) | woocommerce accessibility; woocommerce fraud; woocommerce invoice; woocommerce order export; woocommerce returns; woocommerce shipping label; woocommerce subscription | 800,000 | 2.80 | 577 | unresolved_support=24 | 20.266 |
+| 2 | [Elementor Website Builder – more than just a page builder](https://wordpress.org/plugins/elementor/) | woocommerce accessibility | 10,000,000 | 4.50 | 7,297 | unresolved_support=12 | 19.734 |
+| 3 | [WooCommerce](https://wordpress.org/plugins/woocommerce/) | woocommerce bank transfer; woocommerce booking; woocommerce csv import; woocommerce order export; woocommerce returns; woocommerce shipping label; woocommerce subscription | 7,000,000 | 4.50 | 4,820 | unresolved_support=23 | 19.644 |
 | 4 | [Google for WooCommerce](https://wordpress.org/plugins/google-listings-and-ads/) | woocommerce returns | 800,000 | 2.70 | 266 | unresolved_support=10 | 19.596 |
 | 5 | [Yoast SEO – Advanced SEO with real-time guidance and built-in AI](https://wordpress.org/plugins/wordpress-seo/) | woocommerce csv import | 10,000,000 | 4.80 | 27,819 | unresolved_support=1 | 18.896 |
 | 6 | [WooCommerce Stripe Payment Gateway](https://wordpress.org/plugins/woocommerce-gateway-stripe/) | woocommerce booking; woocommerce fraud; woocommerce returns; woocommerce subscription | 700,000 | 3.10 | 236 | unresolved_support=13 | 18.786 |
 | 7 | [WooCommerce Tax (formerly WooCommerce Shipping & Tax)](https://wordpress.org/plugins/woocommerce-services/) | woocommerce invoice; woocommerce returns; woocommerce shipping label; woocommerce subscription | 500,000 | 2.00 | 105 | unresolved_support=0 | 18.627 |
-| 8 | [Rank Math SEO – AI SEO Tools to Dominate SEO Rankings](https://wordpress.org/plugins/seo-by-rank-math/) | woocommerce csv import | 4,000,000 | 4.80 | 7,496 | unresolved_support=6 | 18.347 |
+| 8 | [Rank Math SEO – AI SEO Tools to Dominate SEO Rankings](https://wordpress.org/plugins/seo-by-rank-math/) | woocommerce csv import | 4,000,000 | 4.80 | 7,497 | unresolved_support=6 | 18.347 |
 | 9 | [Web Accessibility (formally known as Ally) – WCAG Scanning, Guided Fixes, Usability Widget](https://wordpress.org/plugins/pojo-accessibility/) | woocommerce accessibility | 500,000 | 2.90 | 162 | unresolved_support=3 | 17.916 |
 | 10 | [WooCommerce Square](https://wordpress.org/plugins/woocommerce-square/) | woocommerce csv import; woocommerce shipping label; woocommerce subscription | 80,000 | 2.10 | 121 | unresolved_support=1 | 17.348 |
 | 11 | [WooPayments: Integrated WooCommerce Payments](https://wordpress.org/plugins/woocommerce-payments/) | woocommerce fraud; woocommerce order export; woocommerce reconciliation; woocommerce returns; woocommerce subscription | 800,000 | 3.40 | 167 | unresolved_support=2 | 17.150 |
 | 12 | [WooCommerce Shipping](https://wordpress.org/plugins/woocommerce-shipping/) | woocommerce fraud; woocommerce invoice; woocommerce returns; woocommerce shipping label | 70,000 | 2.10 | 17 | unresolved_support=5 | 17.136 |
 | 13 | [Complianz GDPR/CCPA Cookie Consent Banner](https://wordpress.org/plugins/complianz-gdpr/) | woocommerce accessibility | 1,000,000 | 4.70 | 1,655 | unresolved_support=17 | 17.102 |
-| 14 | [MailPoet – Newsletters, Email Marketing, and Automation](https://wordpress.org/plugins/mailpoet/) | woocommerce subscription | 500,000 | 4.40 | 1,432 | unresolved_support=11 | 16.573 |
-| 15 | [All in One SEO – AI SEO Plugin to Boost SEO Rankings & Traffic (Schema, Local SEO, Sitemap & SEO Insights)](https://wordpress.org/plugins/all-in-one-seo-pack/) | woocommerce csv import | 2,000,000 | 4.70 | 5,201 | unresolved_support=0 | 16.318 |
+| 14 | [MailPoet – Newsletters, Email Marketing, and Automation](https://wordpress.org/plugins/mailpoet/) | woocommerce subscription | 500,000 | 4.40 | 1,432 | unresolved_support=12 | 16.625 |
+| 15 | [All in One SEO – AI SEO Plugin to Boost SEO Rankings & Traffic (Schema, Local SEO, Sitemap & SEO Insights)](https://wordpress.org/plugins/all-in-one-seo-pack/) | woocommerce csv import | 2,000,000 | 4.70 | 5,202 | unresolved_support=0 | 16.318 |
 | 16 | [Ultimate Addons for Elementor – Widgets, Templates, WooCommerce & Header Footer Builder](https://wordpress.org/plugins/header-footer-elementor/) | woocommerce accessibility | 2,000,000 | 4.90 | 2,525 | unresolved_support=0 | 16.005 |
 | 17 | [YITH WooCommerce Wishlist](https://wordpress.org/plugins/yith-woocommerce-wishlist/) | woocommerce accessibility; woocommerce returns | 400,000 | 3.90 | 262 | unresolved_support=3 | 15.929 |
 | 18 | [PDF Invoices & Packing Slips for WooCommerce](https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/) | woocommerce bank transfer; woocommerce invoice; woocommerce order export; woocommerce reconciliation; woocommerce returns; woocommerce shipping label; woocommerce subscription | 300,000 | 5.00 | 1,862 | unresolved_support=12 | 15.896 |
 | 19 | [Tutor LMS – eLearning and online course solution](https://wordpress.org/plugins/tutor/) | woocommerce bank transfer | 100,000 | 4.40 | 587 | unresolved_support=36 | 15.523 |
 | 20 | [Spam protection, Honeypot, Anti-Spam by CleanTalk](https://wordpress.org/plugins/cleantalk-spam-protect/) | woocommerce accessibility; woocommerce booking | 200,000 | 4.80 | 3,209 | unresolved_support=7 | 15.463 |
 | 21 | [Mollie Payments for WooCommerce](https://wordpress.org/plugins/mollie-payments-for-woocommerce/) | woocommerce accessibility; woocommerce bank transfer; woocommerce fraud; woocommerce reconciliation | 100,000 | 3.50 | 70 | unresolved_support=7 | 15.412 |
-| 22 | [Events Manager – Calendar, Bookings, Tickets, and more!](https://wordpress.org/plugins/events-manager/) | woocommerce booking | 60,000 | 4.20 | 547 | unresolved_support=33 | 15.393 |
+| 22 | [Events Manager – Calendar, Bookings, Tickets, and more!](https://wordpress.org/plugins/events-manager/) | woocommerce booking | 60,000 | 4.20 | 547 | unresolved_support=34 | 15.412 |
 | 23 | [Mercado Pago payments for WooCommerce](https://wordpress.org/plugins/woocommerce-mercadopago/) | woocommerce bank transfer; woocommerce fraud | 100,000 | 3.90 | 692 | unresolved_support=1 | 14.693 |
 | 24 | [Variation Swatches for WooCommerce](https://wordpress.org/plugins/woo-variation-swatches/) | woocommerce accessibility | 300,000 | 4.80 | 919 | unresolved_support=1 | 14.370 |
 | 25 | [Payment Plugins for Stripe WooCommerce](https://wordpress.org/plugins/woo-stripe-payment/) | woocommerce bank transfer; woocommerce returns; woocommerce subscription | 100,000 | 4.80 | 301 | unresolved_support=14 | 14.246 |

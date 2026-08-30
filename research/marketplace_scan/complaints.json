@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at_jst": "2026-08-30T16:25:39+09:00",
+  "generated_at_jst": "2026-08-31T06:09:18+09:00",
   "status": "DISCOVERY_EVIDENCE_ONLY",
   "build_approved": false,
   "global_cluster_counts": {
@@ -3660,7 +3660,7 @@
       "active_installs": 60000,
       "rating": 4.2,
       "ratings_count": 547,
-      "unresolved_support": 33,
+      "unresolved_support": 34,
       "topic_count": 120,
       "cluster_counts": {
         "other": 102,
@@ -3673,6 +3673,14 @@
         "accessibility_compliance": 1
       },
       "topics": [
+        {
+          "title": "Empty dbem_events_page causes rewrite rule generation to hijack the current post",
+          "url": "https://wordpress.org/support/topic/empty-dbem_events_page-causes-rewrite-rule-generation-to-hijack-the-current-post/",
+          "source": "support",
+          "clusters": [
+            "other"
+          ]
+        },
         {
           "title": "Events Manager Pro requires Users to have Address, City…",
           "url": "https://wordpress.org/support/topic/events-manager-pro-requires-users-to-have-address-city/",
@@ -4141,14 +4149,6 @@
         {
           "title": "double slash in paths to chart-umd js",
           "url": "https://wordpress.org/support/topic/double-slash-in-paths-to-chart-umd-js/",
-          "source": "support",
-          "clusters": [
-            "other"
-          ]
-        },
-        {
-          "title": "Tags an Categories pages not showing Recurrent Events",
-          "url": "https://wordpress.org/support/topic/tags-an-categories-pages-not-showing-recurrent-events/",
           "source": "support",
           "clusters": [
             "other"

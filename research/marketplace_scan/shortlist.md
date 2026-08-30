@@ -1,6 +1,6 @@
 # Marketplace shortlist — discovery signals only
 
-最終更新: 2026-08-30T16:23:50+09:00
+最終更新: 2026-08-31T06:07:29+09:00
 
 **Status: DISCOVERY_SIGNALS_ONLY / build_approved=false**
 
@@ -14,7 +14,7 @@
 | 1 | [WooCommerce Tax (formerly WooCommerce Shipping & Tax)](https://wordpress.org/plugins/woocommerce-services/) · [reviews/support](https://wordpress.org/support/plugin/woocommerce-services/) | shipping label | 500,000 | 2.00 | 105 | 0 | large installed base, low rating | 28.712 |
 | 2 | [WooCommerce Shipping](https://wordpress.org/plugins/woocommerce-shipping/) · [reviews/support](https://wordpress.org/support/plugin/woocommerce-shipping/) | shipping label | 70,000 | 2.10 | 17 | 5 | established installed base, low rating, unresolved support signal | 27.672 |
 | 3 | [Web Accessibility (formally known as Ally) – WCAG Scanning, Guided Fixes, Usability Widget](https://wordpress.org/plugins/pojo-accessibility/) · [reviews/support](https://wordpress.org/support/plugin/pojo-accessibility/) | accessibility | 500,000 | 2.90 | 162 | 3 | large installed base, low rating, unresolved support signal | 27.652 |
-| 4 | [Events Manager – Calendar, Bookings, Tickets, and more!](https://wordpress.org/plugins/events-manager/) · [reviews/support](https://wordpress.org/support/plugin/events-manager/) | booking | 60,000 | 4.20 | 547 | 33 | established installed base, many unresolved support threads | 24.750 |
+| 4 | [Events Manager – Calendar, Bookings, Tickets, and more!](https://wordpress.org/plugins/events-manager/) · [reviews/support](https://wordpress.org/support/plugin/events-manager/) | booking | 60,000 | 4.20 | 547 | 34 | established installed base, many unresolved support threads | 24.791 |
 | 5 | [PDF Invoices & Packing Slips for WooCommerce](https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/) · [reviews/support](https://wordpress.org/support/plugin/woocommerce-pdf-invoices-packing-slips/) | invoice | 300,000 | 5.00 | 1,862 | 12 | large installed base, many unresolved support threads | 24.501 |
 | 6 | [Print Invoice & Delivery Notes for WooCommerce](https://wordpress.org/plugins/woocommerce-delivery-notes/) · [reviews/support](https://wordpress.org/support/plugin/woocommerce-delivery-notes/) | accounting, invoice | 30,000 | 4.40 | 137 | 11 | established installed base, many unresolved support threads | 22.398 |
 | 7 | [YITH WooCommerce Subscription](https://wordpress.org/plugins/yith-woocommerce-subscription/) · [reviews/support](https://wordpress.org/support/plugin/yith-woocommerce-subscription/) | subscription | 6,000 | 3.00 | 46 | 2 | low rating | 21.946 |

@@ -1,6 +1,6 @@
 # WordPress complaint mining — discovery evidence only
 
-最終更新: 2026-08-30T16:25:39+09:00
+最終更新: 2026-08-31T06:09:18+09:00
 
 **Status: DISCOVERY_EVIDENCE_ONLY / build_approved=false**
 
