@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail CI when the current work cycle is unfinished or closed work can revive itself."""
+"""Fail CI for unfinished work, stale evidence, or false autonomous-work claims."""
 from __future__ import annotations
 
 import json
