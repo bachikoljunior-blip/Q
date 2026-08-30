@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/full_discovery_validation.yml'
+      - 'scripts/check_execution_contract.py'
   workflow_dispatch:
 
 concurrency:
@@ -17,24 +18,31 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Synchronize status and enforce prebuild gate
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Synchronize status and enforce governance
         run: |
           python scripts/sync_status_docs.py
           python scripts/check_prebuild_gate.py
+          python scripts/check_execution_contract.py
 
-      - name: Compile all research and governance scripts
+      - name: Compile canonical research and governance scripts
         run: |
           python -m py_compile \
             scripts/check_prebuild_gate.py \
+            scripts/check_execution_contract.py \
             scripts/sync_status_docs.py \
             research/tools/marketplace_scan.py \
-            research/tools/mine_marketplace_complaints.py \
+            research/tools/filter_marketplace_scan.py \
+            research/tools/mine_wordpress_complaints.py \
             research/tools/app_store_scan.py \
             research/tools/mine_app_store_reviews.py \
             research/tools/build_discovery_queue.py
@@ -42,10 +50,14 @@ jobs:
       - name: Run current discovery scans
         run: |
           python research/tools/marketplace_scan.py
-          python research/tools/mine_marketplace_complaints.py
+          python research/tools/filter_marketplace_scan.py
+          python research/tools/mine_wordpress_complaints.py
           python research/tools/app_store_scan.py
           python research/tools/mine_app_store_reviews.py
           python research/tools/build_discovery_queue.py
+
+      - name: Run canonical smoke tests
+        run: python tests/research-tools.smoke.py
 
       - name: Validate no product can be silently approved
         run: |
@@ -59,14 +71,23 @@ jobs:
           reviews = json.loads(Path('research/app_store_scan/reviews.json').read_text(encoding='utf-8'))
           queue = json.loads(Path('research/discovery_queue/latest.json').read_text(encoding='utf-8'))
           market = json.loads(Path('research/marketplace_scan/latest.json').read_text(encoding='utf-8'))
+          shortlist = json.loads(Path('research/marketplace_scan/shortlist.json').read_text(encoding='utf-8'))
           complaints = json.loads(Path('research/marketplace_scan/complaints.json').read_text(encoding='utf-8'))
+          work = json.loads(Path('execution/CURRENT_WORK.json').read_text(encoding='utf-8'))
 
           assert active['status'] == 'NO_ACTIVE_CANDIDATE'
           assert active['build_approved'] is False
+          assert active['candidate_id'] is None
           assert app['build_approved'] is False
           assert reviews['build_approved'] is False
           assert queue['build_approved'] is False
-          assert all(item['status'] == 'NEEDS_EXACT_WORKFLOW' for item in queue['items'])
+          assert all(item['status'] == 'NEEDS_EXACT_WORKFLOW' for item in queue.get('items', []))
+          assert market['schema_version'] == 2
+          assert 'never auto-approve' in market['purpose']
+          assert shortlist['build_approved'] is False
+          assert complaints['build_approved'] is False
+          assert work['finalization_state'] == 'READY_TO_REPORT'
+          assert all(item['status'] in {'DONE', 'REJECTED', 'BLOCKED_EXTERNAL'} for item in work['tasks'])
 
           product = Path('product')
           assert not product.exists() or not any(path.is_file() for path in product.rglob('*'))
@@ -85,9 +106,10 @@ jobs:
               'app_store_shortlist': len(app.get('shortlist') or []),
               'app_review_queues': len(reviews.get('apps') or []),
               'wordpress_records': len(market.get('records') or []),
-              'wordpress_complaint_items': len(complaints.get('items') or []),
+              'wordpress_complaint_topics': sum(item.get('topic_count', 0) for item in complaints.get('plugins', [])),
               'evidence_queue_items': len(queue.get('items') or []),
               'product_files': 0,
+              'terminal_tasks': len(work['tasks']),
           }, ensure_ascii=False, indent=2), encoding='utf-8')
           print(Path('/tmp/validation.json').read_text())
           PY
@@ -102,7 +124,7 @@ jobs:
           data = json.loads(Path('/tmp/validation.json').read_text(encoding='utf-8'))
           now = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).replace(microsecond=0)
           lines = [
-              '# 2026-08-30 — continuation full validation',
+              '# 2026-08-30 — final completion validation',
               '',
               f'実行時刻: {now.isoformat()}',
               '',
@@ -112,8 +134,9 @@ jobs:
               '- Build approved: `false`',
               '- Public live product: none',
               '- Product implementation files: 0',
-              '- Governance/prebuild checks: PASS',
-              '- Status-document synchronization: PASS',
+              '- Prebuild gate: PASS',
+              '- Completion contract: PASS',
+              '- Canonical research smoke: PASS',
               '- Public no-product/noindex/robots/sitemap checks: PASS',
               '',
               '## Discovery execution',
@@ -123,28 +146,28 @@ jobs:
               f"- App Store shortlist rows: {data['app_store_shortlist']}",
               f"- App review queues mined: {data['app_review_queues']}",
               f"- WordPress marketplace records: {data['wordpress_records']}",
-              f"- WordPress complaint/support items: {data['wordpress_complaint_items']}",
+              f"- WordPress complaint topics: {data['wordpress_complaint_topics']}",
               f"- Cross-marketplace evidence queue rows: {data['evidence_queue_items']}",
+              f"- Terminal current-work tasks: {data['terminal_tasks']}",
               '',
               '## Decisions enforced',
               '',
-              '- SECURITY_PRACTICAL_VOICE_TRAINER is CLOSED; no LP/MVP/app was built.',
-              '- WordPress high-volume complaint clusters were screened and none promoted.',
-              '- Discovery outputs remain evidence only and cannot edit ACTIVE_CANDIDATE.',
-              '- No fifth product is created until exact outcome, competitor, acquisition and economics gates pass.',
-              '',
-              '## External evidence still unavailable to automation',
-              '',
-              '- paid preorder or purchase',
-              '- marketplace ranking/conversion/CAC',
-              '- rights or qualified domain-review agreement',
-              '- third-party retention and support burden',
+              '- EXP001-004, security voice trainer and Jira Automation Guard remain closed.',
+              '- Closed-candidate executable workflows/scripts/tests/indexing are absent.',
+              '- One canonical writer owns research/marketplace_scan.',
+              '- Discovery outputs cannot edit ACTIVE_CANDIDATE or create product code.',
+              '- No product is created until exact outcome, competitor, acquisition and economics gates pass.',
               '',
           ]
-          path = Path('execution/2026-08-30-continuation-validation.md')
+          path = Path('execution/2026-08-30-final-validation.md')
           path.parent.mkdir(parents=True, exist_ok=True)
           path.write_text('\n'.join(lines), encoding='utf-8')
           PY
+
+      - name: Re-run governance after generated outputs
+        run: |
+          python scripts/check_prebuild_gate.py
+          python scripts/check_execution_contract.py
 
       - name: Commit generated evidence and validation
         run: |
@@ -154,6 +177,8 @@ jobs:
             START_HERE.md README.md AGENTS.md index.html \
             research/marketplace_scan/latest.json \
             research/marketplace_scan/latest.md \
+            research/marketplace_scan/shortlist.json \
+            research/marketplace_scan/shortlist.md \
             research/marketplace_scan/complaints.json \
             research/marketplace_scan/complaints.md \
             research/app_store_scan/latest.json \
@@ -162,11 +187,11 @@ jobs:
             research/app_store_scan/reviews.md \
             research/discovery_queue/latest.json \
             research/discovery_queue/latest.md \
-            execution/2026-08-30-continuation-validation.md
+            execution/2026-08-30-final-validation.md
           if git diff --cached --quiet; then
             echo 'No generated changes.'
             exit 0
           fi
-          git commit -m 'Record full marketplace discovery validation pass'
+          git commit -m 'Record final discovery and completion validation'
           git pull --rebase origin main
           git push origin HEAD:main
