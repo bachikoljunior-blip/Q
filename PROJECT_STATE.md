@@ -17,20 +17,18 @@
 ユーザーへ計画だけ返して作業を止めない。許可済み範囲では、同一サイクル内で調査→反証→中止/変更→実行→検査→状態更新まで終えてから一度だけ返す。
 
 ## Current status
-**`RESEARCH_ONLY`**
+**`NO_ACTIVE_CANDIDATE`**
 
-現在、販売中・公開中・開発承認済みの商品はない。
+現在、販売中・公開中・開発承認済み・調査継続中の商品候補はない。
 
-調査中の唯一のlead:
-- candidate: `SECURITY_PRACTICAL_VOICE_TRAINER`
-- name: 警備検定 実技・口述ひとり練習トレーナー
-- build approved: **false**
-- source of truth: `research/ACTIVE_CANDIDATE.json`
+これは停止や先送りではない。exact workflow、需要、差別化、集客、採算のいずれかを満たさない案を5個目として作らないための正確な状態。
 
-`RESEARCH_ONLY` は商品ではない。決済・LP・MVP・アプリ実装へ進んでいない。
+正本: `research/ACTIVE_CANDIDATE.json`
 
 ## Current phase
-**Phase 7: marketplace-first evidence acquisition + existing-asset risk shutdown**
+**Phase 8: automated marketplace discovery + exact-workflow rejection**
+
+次の案は `research/PREBUILD_GATE.md` を完全通過するまで実装・LP公開・決済テストしない。
 
 評価順:
 1. exact workflowの直接競合
@@ -39,10 +37,11 @@
 4. 既存/無料代替との差
 5. 具体的な集客経路
 6. zero-touch
-7. 単価×顧客数
+7. 手取り20万円までの単価×顧客数
 8. 作りやすさ
 
-## Closed experiments
+## Closed experiments and leads
+
 ### EXP001 — 高単価AI個別サービス
 個別対応が顧客数に比例するため終了。
 
@@ -55,90 +54,111 @@
 ### EXP004 — FBA補てん原価監査
 ReimburseOpsとbuyer/input/processing/output/privacy/pricingが90%超重複したため終了。公開物・検索通知・指標収集も停止済み。
 
-## Critical existing-asset action — YouTube tactic paused
+### SECURITY_PRACTICAL_VOICE_TRAINER — 警備検定 実技・口述ひとり練習トレーナー
+**2026-08-30にRESEARCH_ONLYからCLOSED。実装・LP・予約販売へ進めない。**
 
-`bachikoljunior-blip/youtube` の現行自動投稿方式を2026-08-30にhard-pauseした。
+終了理由:
+- 2025年度の交通誘導警備業務2級特別講習は6,489人
+- 買切り¥2,980、App Store手数料15%の仮定でも、年手取り¥240万円には税・返金・開発費等を除く前に約948販売が必要
+- これは関連年間受講者全体の約14.6%で、無名の新規アプリとして非現実的
+- 以前の816販売計算は粗い売上計算で、手取り目標を満たさない
+- 「一人で口述・実技練習したい」という対象者本人の反復する公開不満を10件確認できなかった
+- 現行の完全な実技採点基準を合法的に使用できる根拠を確保できなかった
+- 2026年に実技内容の一部変更があり、継続的な有資格レビューが必要
+- 音声採点では旗・誘導棒・立ち位置・動作・対車両タイミング等の身体技能を判定できない
+- App Store上には学科対策需要があるが、実技・口述専用の獲得需要/CACは未証明
+
+詳細: `research/SECURITY_PRACTICAL_VOICE_TRAINER_2026-08-30.md`
+
+## Existing asset action — YouTube tactic remains hard-paused
+
+`bachikoljunior-blip/youtube` の現行自動投稿方式は2026-08-30にhard-pause済み。
 
 理由:
-- YouTube現行収益化ポリシーは mass-produced / generic / repetitive / template-based contentを不適格とする
-- AI-generated personaが金融・法律等のsensitive topicで人間の専門家として助言するチャンネルは収益化不可と明示
-- 現行設定は「元・事業会社の経理／人事」を名乗る合成音声ペルソナが、お金・税金・キャリアを自動解説する
+- mass-produced / repetitive / template-based contentの収益化リスク
+- 合成の「元経理・人事」ペルソナが金融・税・キャリアを助言する構成
 
 実行済み:
 - `youtube/AUTOMATION_PAUSED.md`
 - generation/upload/reschedule/retitle等のcode-level hard guard
-- Claude SessionStart/UserPrompt/PostCompactへのpause reminder
+- pause reminder hooks
 - pause guard CI
 - 既存動画・分析データは削除せず保全
 
-分析系ツールだけは許可。新しい動画在庫を増やさない。
+分析は許可するが、現行形式の新しい動画在庫を増やさない。
 
-## Marketplace sweep completed
+## Marketplace discovery automation completed
 
-`research/MARKETPLACE_SWEEP_2026-08-30.md` に記録。
+実装済み:
+- `research/tools/marketplace_scan.py`
+- `research/tools/filter_marketplace_scan.py`
+- `research/tools/mine_wordpress_complaints.py`
+- `.github/workflows/marketplace_scan.yml`
 
-Exact workflowで棄却済み:
-- kintone invoice registration monitor
-- Confluence/Jira Japanese proofreading/search/business-day
-- Shopify Japanese address/carrier/remote-island rules
-- kintone security audit
-- Canva Japanese typography/furigana
-- Framer slug/CMS audit/backup
-- Stripe qualified invoice
-- tender alerts
-- YouTube AI compliance audit
-- worker payslip discrepancy audit
+自動化内容:
+- WordPress.orgの公開APIから需要・評価・support signalを収集
+- 広すぎる検索結果を関連性で絞る
+- 公開support/reviewトピックを1トピック1件へ正規化してクラスタ化
+- weekly/manual/pushで再実行
+- 出力は必ず `build_approved=false`
 
-理由はexact paid competition、first-party/free substitutes、distribution/economics不成立のいずれか。
+Atlassian Marketplace V2検索APIは終了しHTTP 410となったため、自動カバレッジを偽装せずmanual-onlyとして記録。
 
-## Research-only lead — security practical/oral trainer
+出力:
+- `research/marketplace_scan/latest.*`
+- `research/marketplace_scan/shortlist.*`
+- `research/marketplace_scan/complaints.*`
 
-Exact workflow under study:
+## Marketplace complaint triage result
 
-`受験者が実技・口述手順を選ぶ → iPhoneへ話す → 端末内音声認識で必須語・順序・時間を採点 → 抜けた手順の反復と模擬口述を受け取る → 買切りアプリ`
+`research/MARKETPLACE_COMPLAINT_TRIAGE_2026-08-30.md` に記録。
 
-Paid evidence:
-- ¥800 paid exam app
-- freemium/free academic apps
-- ¥3,300 textbook
-- ¥6,600〜¥10,560 pre-courses
-- adjacent practical DVDs ¥27,300〜¥54,600
+棄却済み:
+- WooCommerce請求書番号・欠落PDF監査
+- WooCommerce予約在庫/overbooking canary
+- WooCommerce税額監査
+- WordPressアクセシビリティ継続監視
+- WordPress CSV import/export完全性監視
+- WooCommerce checkout/store-health synthetic monitor
 
-Gap evidence:
-- current apps focus on academic questions
-- at least one app explicitly excludes practical training
-- reviews complain about difficulty/real-exam mismatch
-- 2026 practical exam changes show update burden and currentness matter
+理由:
+- SleekView、CashFlowCanary、CheckOO、TaxDebug、AccessGuard/Warder等、exactまたは主要成果が同じ有料/無料製品が存在
+- booking/importの横断対応はプラグイン別adapterとsupport負荷が大きい
+- 税務・アクセシビリティは継続法令対応と責任リスクが高い
 
-Not build-approved because:
-- no exact speech-scored practical app confirmed, but also no five exact direct competitors for a complete overlap matrix
-- legally usable/current practical rubrics are not secured
-- qualification/content-review authority is unverified
-- voice cannot validate physical performance
-- practical query volume, annual candidate count and CAC are unmeasured
-- hypothetical ¥2,980 one-time price needs about 68 sales/month, unproven
+support件数が多いこと自体を商品承認に使わない。
 
-## Machine enforcement strengthened
+## Machine enforcement
 
-`scripts/check_prebuild_gate.py` now enforces:
-- `RESEARCH_ONLY` still requires named buyer/workflow, 12 searches, 5 substitutes, evidence, economics and kill criteria
-- `OFFER_TEST` requires price, buyer action, traffic source, threshold and end date
-- `BUILD_APPROVED` requires structured competitor records with buyer/input/process/output/price and overlap percentage
-- any competitor overlap ≥70% requires explicit override evidence
-- product code remains forbidden while build_approved=false
-- public page may not imply a research lead is a live product
+`scripts/check_prebuild_gate.py` とGitHub Actionsが次を強制:
+- `build_approved=false` の間、`product/` に商品コード禁止
+- `RESEARCH_ONLY` でもexact workflow、12検索、代替、根拠、採算、kill criteria必須
+- `OFFER_TEST` は価格・buyer action・流入元・成功基準・終了日必須
+- `BUILD_APPROVED` は直接競合5件、代替5件、構造化overlap matrix、集客、採算が必須
+- 70%以上重複は外部override evidenceなしでは不可
+- 非live状態の公開ページは「商品なし」かつnoindex
+- discovery scannerは候補を自動承認できない
 
 ## Human-only boundary
-AI alone cannot create:
-- actual App Store search-volume/CAC evidence
-- legal access to current practical rubrics
-- qualified practical-content review
-- real reservation purchases, app purchases or usage
+AIだけでは捏造できないもの:
+- 前払い/予約購入
+- 現在競合へ課金している購入者の乗換意思
+- 実広告のCAC
+- 実ストア検索ボリューム
+- legally usableな専門コンテンツ権利
+- 実利用・売上
 
-Everything before those external facts—search, comparison, rejection, schema, code guard and state persistence—has been executed.
+それ以前の検索、比較、棄却、scanner、CI、状態保存は実行済み。
 
 ## Immediate next action
-**Do not build.** Acquire the missing evidence for `SECURITY_PRACTICAL_VOICE_TRAINER` through public-source market sizing, practical-content rights/currentness review and exact speech-practice competitor search. If any kill criterion triggers, set `CLOSED` and return to `NO_ACTIVE_CANDIDATE` in the same cycle. Move to `OFFER_TEST` only after the evidence in `research/ACTIVE_CANDIDATE.json` supports it.
+**新規実装は禁止。**
+
+1. marketplace scannerの上位クラスタから、complaint本文で同一未解決workflowが10件以上あるものだけを抽出
+2. buyer/input/processing/output/priceを1文に固定
+3. 日本語・英語・marketplace・OSSで12検索以上
+4. direct competitor 5件、substitute 5件、overlap matrixを作る
+5. duplicate veto、集客、手取り採算を通過した場合のみ `RESEARCH_ONLY` → `OFFER_TEST` または `BUILD_APPROVED`
+6. 通過案がなければ `NO_ACTIVE_CANDIDATE` を維持し、商品を作ったふりをしない
 
 ## Resume instruction
-`AGENTS.md` → this file → `research/ACTIVE_CANDIDATE.json` → `research/PREBUILD_GATE.md` → `research/MARKETPLACE_SWEEP_2026-08-30.md` → `DECISIONS.md`. EXP001〜004へ戻らない。弱点を見つけた場合は、その回答内で反証・中止・代替調査・記録まで終える。
+`AGENTS.md` → このファイル → `research/ACTIVE_CANDIDATE.json` → `research/PREBUILD_GATE.md` → `research/MARKETPLACE_COMPLAINT_TRIAGE_2026-08-30.md` → `DECISIONS.md` の順で読む。EXP001〜004とsecurity voice trainerへ戻らない。弱点を見つけた場合は、その回答内で反証・中止・代替調査・記録まで終える。
