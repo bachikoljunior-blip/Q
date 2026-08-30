@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Synchronize human-facing status docs from ACTIVE_CANDIDATE.json.
+"""Synchronize human-facing status docs from the machine-readable Q state.
 
-This prevents stale product labels and preserves the completion-before-response
-contract whenever status files are regenerated.
+ACTIVE_CANDIDATE.json owns the build decision, CURRENT_WORK.json owns the
+current-cycle completion decision, and the discovery review record proves that
+the current evidence queue has been reduced to terminal dispositions.
 """
 
 from __future__ import annotations
@@ -14,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ACTIVE_PATH = ROOT / "research" / "ACTIVE_CANDIDATE.json"
 WORK_PATH = ROOT / "execution" / "CURRENT_WORK.json"
+REVIEW_PATH = ROOT / "research" / "discovery_queue" / "reviewed_2026-08-30.json"
 STATE_PATH = ROOT / "PROJECT_STATE.md"
 START_PATH = ROOT / "START_HERE.md"
 README_PATH = ROOT / "README.md"
@@ -21,21 +23,21 @@ AGENTS_PATH = ROOT / "AGENTS.md"
 INDEX_PATH = ROOT / "index.html"
 
 LIVE_STATUSES = {"LIVE_FREE_MVP", "LIVE_PAID_PRODUCT"}
+TERMINAL_TASKS = {"DONE", "REJECTED", "BLOCKED_EXTERNAL"}
 
 
-def load_active() -> dict:
-    return json.loads(ACTIVE_PATH.read_text(encoding="utf-8"))
-
-
-def load_work() -> dict:
-    return json.loads(WORK_PATH.read_text(encoding="utf-8"))
+def load_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def candidate_lines(active: dict) -> list[str]:
     status = active["status"]
     name = active.get("name")
     candidate_id = active.get("candidate_id")
-    lines = [f"- Status: `{status}`", f"- Build approved: **{str(bool(active.get('build_approved'))).lower()}**"]
+    lines = [
+        f"- Status: `{status}`",
+        f"- Build approved: **{str(bool(active.get('build_approved'))).lower()}**",
+    ]
     if candidate_id:
         lines.append(f"- Candidate: `{candidate_id}`")
     if name:
@@ -45,15 +47,17 @@ def candidate_lines(active: dict) -> list[str]:
     return lines
 
 
-def write_start(active: dict, work: dict) -> None:
-    status = active["status"]
+def write_start(active: dict, work: dict, review: dict) -> None:
     reason = active.get("reason") or "See PROJECT_STATE.md."
+    terminal = sum(item.get("status") in TERMINAL_TASKS for item in work.get("tasks", []))
+    reviewed = int(review.get("reviewed_item_count") or 0)
+    source_count = int(review.get("source_item_count") or 0)
+    source_hash = str(review.get("source_sha256") or "unknown")
     lead_line = (
         "候補の不足証拠とkill criteriaを同じcycleで処理する。"
         if active.get("candidate_id")
-        else "marketplace evidenceから候補を探すが、Gate通過前にLP・MVP・商品コードを作らない。"
+        else "新しい証拠が現在のreview hashと一致しなくなったら未完了へ戻し、Gate通過前にLP・MVP・商品コードを作らない。"
     )
-    terminal = sum(item.get("status") in {"DONE", "REJECTED", "BLOCKED_EXTERNAL"} for item in work.get("tasks", []))
     text = "\n".join(
         [
             "# START HERE",
@@ -68,9 +72,11 @@ def write_start(active: dict, work: dict) -> None:
             "2. `PROJECT_STATE.md`",
             "3. `research/ACTIVE_CANDIDATE.json`",
             "4. `execution/CURRENT_WORK.json`",
-            "5. `research/PREBUILD_GATE.md`",
-            "6. `research/BATCH_VETO_2026-08-30.md`",
-            "7. `DECISIONS.md`",
+            "5. `research/CONTINUATION_CONTRACT.md`",
+            "6. `research/discovery_queue/latest.json`",
+            "7. `research/discovery_queue/reviewed_2026-08-30.json`",
+            "8. `research/PREBUILD_GATE.md`",
+            "9. `DECISIONS.md`",
             "",
             "## Current truth",
             "- EXP001: CLOSED",
@@ -81,7 +87,8 @@ def write_start(active: dict, work: dict) -> None:
             "- JIRA_AUTOMATION_GUARD: CLOSED",
             *candidate_lines(active),
             "- New product code is forbidden until `build_approved=true`",
-            f"- Current work: `{work.get('finalization_state')}` / terminal tasks {terminal}",
+            f"- Current work: `{work.get('finalization_state')}` / terminal tasks {terminal}/{len(work.get('tasks', []))}",
+            f"- Current evidence review: {reviewed}/{source_count} rows / source SHA-256 `{source_hash}`",
             "",
             f"Reason: {reason}",
             "",
@@ -93,6 +100,7 @@ def write_start(active: dict, work: dict) -> None:
             "- Do not call a research lead a product.",
             "- A final answer is forbidden while any safe material action remains.",
             "- The user must never need to repeat the completion directive.",
+            "- New queue bytes invalidate the old review; stale evidence is a failed continuation contract.",
             "- When a weakness is found, correct it, clean stale executables, rerun checks and update state in the same work cycle.",
             "",
             "## Immediate resume",
@@ -103,7 +111,7 @@ def write_start(active: dict, work: dict) -> None:
     START_PATH.write_text(text, encoding="utf-8")
 
 
-def write_readme(active: dict, work: dict) -> None:
+def write_readme(active: dict, work: dict, review: dict) -> None:
     status = active["status"]
     live = status in LIVE_STATUSES
     product_text = "公開商品あり。PROJECT_STATEを参照。" if live else "現在、公開中の商品はありません。"
@@ -116,6 +124,7 @@ def write_readme(active: dict, work: dict) -> None:
             f"Current status: **`{status}`**  ",
             f"Build approved: **{str(bool(active.get('build_approved'))).lower()}**  ",
             f"Current work: **`{work.get('finalization_state')}`**  ",
+            f"Evidence review: **{review.get('reviewed_item_count')}/{review.get('source_item_count')} rows current**  ",
             product_text,
             "",
             "## Source of truth",
@@ -123,14 +132,18 @@ def write_readme(active: dict, work: dict) -> None:
             "2. [`PROJECT_STATE.md`](PROJECT_STATE.md)",
             "3. [`research/ACTIVE_CANDIDATE.json`](research/ACTIVE_CANDIDATE.json)",
             "4. [`execution/CURRENT_WORK.json`](execution/CURRENT_WORK.json)",
-            "5. [`research/PREBUILD_GATE.md`](research/PREBUILD_GATE.md)",
-            "6. [`DECISIONS.md`](DECISIONS.md)",
+            "5. [`research/CONTINUATION_CONTRACT.md`](research/CONTINUATION_CONTRACT.md)",
+            "6. [`research/discovery_queue/latest.json`](research/discovery_queue/latest.json)",
+            "7. [`research/discovery_queue/reviewed_2026-08-30.json`](research/discovery_queue/reviewed_2026-08-30.json)",
+            "8. [`research/PREBUILD_GATE.md`](research/PREBUILD_GATE.md)",
+            "9. [`DECISIONS.md`](DECISIONS.md)",
             "",
             "## Enforcement",
             "- Exact buyer/input/processing/output competitors are searched before implementation.",
             "- `product/` code is prohibited while `build_approved=false`.",
             "- Research scans never auto-approve a product.",
-            "- A response cycle cannot finalize with unfinished material tasks.",
+            "- Queue content and review dispositions must match one-for-one by SHA-256 and signal ID.",
+            "- A response cycle cannot finalize with unfinished material tasks or stale discovery evidence.",
             "- Closing a candidate removes its executable build/deploy/metrics/indexing artifacts.",
             "- EXP001–004, security voice trainer and Jira Automation Guard are closed.",
             "",
@@ -139,7 +152,7 @@ def write_readme(active: dict, work: dict) -> None:
     README_PATH.write_text(text, encoding="utf-8")
 
 
-def sync_agents(active: dict) -> None:
+def sync_agents(active: dict, review: dict) -> None:
     text = AGENTS_PATH.read_text(encoding="utf-8")
     status = active["status"]
     candidate = active.get("candidate_id")
@@ -152,7 +165,8 @@ def sync_agents(active: dict) -> None:
     else:
         body = (
             f"`{status}` — no candidate is currently approved for an offer or build. "
-            "Continue marketplace-first research; do not create a weak product.\n"
+            f"The current evidence queue is reviewed {review.get('reviewed_item_count')}/{review.get('source_item_count')} "
+            "and is bound to the recorded SHA-256. New queue bytes reopen work automatically; do not create a weak product.\n"
         )
     replacement = "## Current status\n" + body
     if "## Current status" in text:
@@ -170,12 +184,14 @@ def sync_index(active: dict) -> None:
     INDEX_PATH.write_text(text, encoding="utf-8")
 
 
-def validate(active: dict, work: dict) -> None:
+def validate(active: dict, work: dict, review: dict) -> None:
     status = active["status"]
     state = STATE_PATH.read_text(encoding="utf-8")
     assert f"`{status}`" in state or f"**{status}**" in state, "PROJECT_STATE status mismatch"
     assert work.get("finalization_state") == "READY_TO_REPORT"
-    assert all(item.get("status") in {"DONE", "REJECTED", "BLOCKED_EXTERNAL"} for item in work.get("tasks", []))
+    assert all(item.get("status") in TERMINAL_TASKS for item in work.get("tasks", []))
+    assert review.get("status") == "COMPLETE"
+    assert review.get("reviewed_item_count") == review.get("source_item_count")
     start = START_PATH.read_text(encoding="utf-8")
     readme = README_PATH.read_text(encoding="utf-8")
     agents = AGENTS_PATH.read_text(encoding="utf-8")
@@ -183,20 +199,32 @@ def validate(active: dict, work: dict) -> None:
     for text, name in [(start, "START_HERE"), (readme, "README"), (agents, "AGENTS"), (index, "index")]:
         assert status in text, f"{name} status mismatch"
     assert "The user must never need to repeat the completion directive" in agents
+    assert "check_continuation_contract.py" in agents
     if not active.get("build_approved"):
         product = ROOT / "product"
         assert not product.exists() or not any(p.is_file() for p in product.rglob("*"))
 
 
 def main() -> int:
-    active = load_active()
-    work = load_work()
-    write_start(active, work)
-    write_readme(active, work)
-    sync_agents(active)
+    active = load_json(ACTIVE_PATH)
+    work = load_json(WORK_PATH)
+    review = load_json(REVIEW_PATH)
+    write_start(active, work, review)
+    write_readme(active, work, review)
+    sync_agents(active, review)
     sync_index(active)
-    validate(active, work)
-    print(json.dumps({"status": active["status"], "work": work["finalization_state"], "synced": True}, ensure_ascii=False))
+    validate(active, work, review)
+    print(
+        json.dumps(
+            {
+                "status": active["status"],
+                "work": work["finalization_state"],
+                "reviewed_rows": review["reviewed_item_count"],
+                "synced": True,
+            },
+            ensure_ascii=False,
+        )
+    )
     return 0
 
 
