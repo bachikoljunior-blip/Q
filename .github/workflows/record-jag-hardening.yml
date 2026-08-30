@@ -1,0 +1,63 @@
+name: Record Jira Guard release hardening
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/record_jag_release_hardening.py'
+      - '.github/workflows/record-jag-hardening.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: record-jag-release-hardening
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate release and update state
+        run: |
+          python scripts/check_prebuild_gate.py
+          node tests/jira-automation-guard.smoke.js
+          python tests/jira-guard-metrics.smoke.py
+          python scripts/record_jag_release_hardening.py
+
+      - name: Validate canonical truth
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          state=Path('PROJECT_STATE.md').read_text(encoding='utf-8')
+          assert '## Release hardening — 2026-08-30' in state
+          assert 'jira-automation-guard-live-v1' in state
+          assert 'FREE_MVP_ONLY' in state
+          assert 'Paid customers: 0' in state
+          assert 'Revenue: ¥0' in state
+          assert Path('execution/2026-08-30-jira-guard-release-hardening.md').is_file()
+          print('hardening state valid')
+          PY
+
+      - name: Commit hardening record
+        run: |
+          git add PROJECT_STATE.md execution/2026-08-30-jira-guard-release-hardening.md
+          if git diff --cached --quiet; then
+            echo 'Hardening record already current'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Record Jira Guard release hardening [skip ci]'
+          git pull --rebase origin main
+          git push
