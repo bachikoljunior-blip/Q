@@ -17,6 +17,25 @@ def fail(message: str) -> None:
     raise SystemExit(1)
 
 
+def git_add_blocks(text: str) -> list[str]:
+    """Return shell git-add commands, including backslash-continued lines."""
+    lines = text.splitlines()
+    blocks: list[str] = []
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if not line.strip().startswith("git add"):
+            index += 1
+            continue
+        block = line
+        while block.rstrip().endswith("\\") and index + 1 < len(lines):
+            index += 1
+            block += "\n" + lines[index]
+        blocks.append(block)
+        index += 1
+    return blocks
+
+
 if not CONTRACT.is_file():
     fail("execution/CURRENT_WORK.json is missing")
 if not ACTIVE.is_file():
@@ -85,9 +104,9 @@ if remaining:
 
 workflow_dir = ROOT / ".github" / "workflows"
 writers: list[str] = []
-for workflow in workflow_dir.glob("*.yml"):
+for workflow in sorted(workflow_dir.glob("*.yml")):
     text = workflow.read_text(encoding="utf-8")
-    if "research/marketplace_scan" in text and "contents: write" in text and "git push" in text:
+    if any("research/marketplace_scan/" in block for block in git_add_blocks(text)):
         writers.append(workflow.name)
 if writers != ["marketplace_scan.yml"]:
     fail(f"research/marketplace_scan must have one canonical writer; found {writers}")
