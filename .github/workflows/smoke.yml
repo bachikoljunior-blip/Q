@@ -23,7 +23,7 @@ jobs:
       - name: Enforce exact-match prebuild gate
         run: python scripts/check_prebuild_gate.py
 
-      - name: Validate project files and closed public page
+      - name: Validate project files and public no-product page
         run: |
           python - <<'PY'
           import json
@@ -40,6 +40,9 @@ jobs:
               'research/ACTIVE_CANDIDATE.json',
               'research/PREBUILD_GATE.md',
               'research/EXACT_MATCH_SWEEP_2026-08-30.md',
+              'research/marketplace_scan/latest.json',
+              'research/marketplace_scan/shortlist.json',
+              'research/marketplace_scan/complaints.json',
               'experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md',
               'scripts/check_prebuild_gate.py'
           ]
@@ -49,7 +52,6 @@ jobs:
           html = Path('index.html').read_text(encoding='utf-8')
           Parser().feed(html)
           assert '現在、公開中の商品はありません' in html
-          assert 'NO_ACTIVE_CANDIDATE' in html
           assert 'noindex' in html
           assert 'FBA補てん原価監査 — Amazon.co.jp向け無料CSVチェッカー' not in html
 
@@ -60,16 +62,26 @@ jobs:
           assert not list(root), 'closed experiment URLs must not remain in sitemap'
 
           active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
-          assert active['status'] == 'NO_ACTIVE_CANDIDATE'
-          assert active['build_approved'] is False
+          allowed_nonbuild = {'NO_ACTIVE_CANDIDATE', 'RESEARCH_ONLY', 'OFFER_TEST'}
+          if active['build_approved']:
+              assert active['status'] in {'BUILD_APPROVED', 'LIVE_FREE_MVP', 'LIVE_PAID_PRODUCT'}
+          else:
+              assert active['status'] in allowed_nonbuild
 
           state = Path('PROJECT_STATE.md').read_text(encoding='utf-8')
           assert 'EXP004' in state and '終了' in state
-          assert 'NO_ACTIVE_CANDIDATE' in state
+          assert active['status'] in state, 'PROJECT_STATE must name the active status'
 
           experiment = Path('experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md').read_text(encoding='utf-8')
           assert '状態: **CLOSED**' in experiment
-          print('governance/static validation passed')
+
+          latest = json.loads(Path('research/marketplace_scan/latest.json').read_text(encoding='utf-8'))
+          shortlist = json.loads(Path('research/marketplace_scan/shortlist.json').read_text(encoding='utf-8'))
+          complaints = json.loads(Path('research/marketplace_scan/complaints.json').read_text(encoding='utf-8'))
+          assert latest['purpose'].endswith('never auto-approve builds')
+          assert shortlist['build_approved'] is False
+          assert complaints['build_approved'] is False
+          print(f"governance/static validation passed: {active['status']}")
           PY
 
       - name: Serve public page and smoke HTTP
@@ -82,4 +94,4 @@ jobs:
             sleep 1
           done
           grep -q '現在、公開中の商品はありません' /tmp/index.html
-          grep -q 'NO_ACTIVE_CANDIDATE' /tmp/index.html
+          grep -q 'noindex' /tmp/index.html
