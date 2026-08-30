@@ -1,0 +1,65 @@
+name: Research loop checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/**'
+      - 'tests/research-tools.smoke.py'
+      - '.github/workflows/marketplace-scan.yml'
+      - '.github/workflows/exact-match-queue.yml'
+      - '.github/workflows/candidate-deep-dive.yml'
+      - '.github/workflows/sync-research-candidate.yml'
+      - '.github/workflows/research-loop-check.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: research-loop-check-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile research tools
+        run: |
+          python -m py_compile \
+            research/tools/marketplace_signal_scan.py \
+            research/tools/exact_match_queue.py \
+            research/tools/deep_dive_candidate.py \
+            research/tools/sync_active_research.py \
+            scripts/check_prebuild_gate.py
+
+      - name: Run research smoke tests
+        run: python tests/research-tools.smoke.py
+
+      - name: Enforce no premature product
+        run: |
+          python scripts/check_prebuild_gate.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
+          assert active['build_approved'] is False
+          assert active['status'] in {'NO_ACTIVE_CANDIDATE', 'RESEARCH_ONLY'}
+          assert not Path('product').exists() or not any(Path('product').rglob('*'))
+          for required in [
+              'research/PREBUILD_GATE.md',
+              'research/tools/marketplace_signal_scan.py',
+              'research/tools/exact_match_queue.py',
+              'research/tools/deep_dive_candidate.py',
+              'research/tools/sync_active_research.py',
+          ]:
+              assert Path(required).is_file(), required
+          print({'status': active['status'], 'candidate': active.get('candidate_id')})
+          PY
