@@ -78,7 +78,8 @@ jobs:
           latest = json.loads(Path('research/marketplace_scan/latest.json').read_text(encoding='utf-8'))
           shortlist = json.loads(Path('research/marketplace_scan/shortlist.json').read_text(encoding='utf-8'))
           complaints = json.loads(Path('research/marketplace_scan/complaints.json').read_text(encoding='utf-8'))
-          assert latest['purpose'].endswith('never auto-approve builds')
+          assert latest.get('status') in {'RESEARCH_ONLY', 'DISCOVERY_SIGNALS_ONLY'}
+          assert isinstance(latest.get('clusters', latest.get('records', [])), list)
           assert shortlist['build_approved'] is False
           assert complaints['build_approved'] is False
           print(f"governance/static validation passed: {active['status']}")
