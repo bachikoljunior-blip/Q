@@ -1,84 +1,118 @@
-# Marketplace-first scan
+# Marketplace signal scan
 
-最終更新: 2026-08-30T08:59:24+09:00
+最終更新: 2026-08-30T09:21:45+00:00
 
-> 候補発見用の機械スキャン。点数は商品価値や差別化の証明ではない。
-> PREBUILD_GATEのexact-match検索・重複表・集客・採算を通るまで実装禁止。
+## Status
 
-## Coverage
+**RESEARCH_ONLY — この出力だけでは商品実装を承認しない。**
 
-- WordPress.org: public APIで自動収集
-- Atlassian Marketplace: manual-only。V2検索APIは2026-06-30に終了しHTTP 410。公開V3検索契約を確認できるまで自動カバレッジを主張しない
+公開API・RSS・GitHub Issuesから、既存ユーザーが繰り返し言及する不満語を収集した。
+候補を作る場合は、ここから exact workflow を1つ定義し、PREBUILD_GATE.md の12検索・競合5件・代替5件・重複表・集客・採算を別途通す。
 
-## Top signals
+## Repeated pain clusters
 
-| # | Listing | Query | Active | Rating | Ratings | Unresolved/support | Score |
-|---:|---|---|---:|---:|---:|---|---:|
-| 1 | [WooCommerce PayPal Payments](https://wordpress.org/plugins/woocommerce-paypal-payments/) | woocommerce accessibility; woocommerce fraud; woocommerce invoice; woocommerce order export; woocommerce returns; woocommerce shipping label; woocommerce subscription | 800,000 | 2.80 | 577 | unresolved_support=23 | 20.239 |
-| 2 | [WooCommerce](https://wordpress.org/plugins/woocommerce/) | woocommerce bank transfer; woocommerce booking; woocommerce csv import; woocommerce order export; woocommerce returns; woocommerce shipping label; woocommerce subscription | 7,000,000 | 4.50 | 4,820 | unresolved_support=35 | 19.908 |
-| 3 | [Elementor Website Builder – more than just a page builder](https://wordpress.org/plugins/elementor/) | woocommerce accessibility | 10,000,000 | 4.50 | 7,297 | unresolved_support=11 | 19.682 |
-| 4 | [Google for WooCommerce](https://wordpress.org/plugins/google-listings-and-ads/) | woocommerce returns | 800,000 | 2.70 | 266 | unresolved_support=10 | 19.596 |
-| 5 | [Yoast SEO – Advanced SEO with real-time guidance and built-in AI](https://wordpress.org/plugins/wordpress-seo/) | woocommerce csv import | 10,000,000 | 4.80 | 27,819 | unresolved_support=1 | 18.896 |
-| 6 | [WooCommerce Stripe Payment Gateway](https://wordpress.org/plugins/woocommerce-gateway-stripe/) | woocommerce booking; woocommerce fraud; woocommerce returns; woocommerce subscription | 700,000 | 3.10 | 235 | unresolved_support=12 | 18.736 |
-| 7 | [WooCommerce Tax (formerly WooCommerce Shipping & Tax)](https://wordpress.org/plugins/woocommerce-services/) | woocommerce invoice; woocommerce returns; woocommerce shipping label; woocommerce subscription | 500,000 | 2.00 | 105 | unresolved_support=0 | 18.627 |
-| 8 | [Rank Math SEO – AI SEO Tools to Dominate SEO Rankings](https://wordpress.org/plugins/seo-by-rank-math/) | woocommerce csv import | 4,000,000 | 4.80 | 7,496 | unresolved_support=6 | 18.347 |
-| 9 | [Web Accessibility (formally known as Ally) – WCAG Scanning, Guided Fixes, Usability Widget](https://wordpress.org/plugins/pojo-accessibility/) | woocommerce accessibility | 500,000 | 2.90 | 162 | unresolved_support=3 | 17.916 |
-| 10 | [WooCommerce Square](https://wordpress.org/plugins/woocommerce-square/) | woocommerce csv import; woocommerce shipping label; woocommerce subscription | 80,000 | 2.10 | 121 | unresolved_support=1 | 17.348 |
-| 11 | [WooPayments: Integrated WooCommerce Payments](https://wordpress.org/plugins/woocommerce-payments/) | woocommerce fraud; woocommerce order export; woocommerce reconciliation; woocommerce returns; woocommerce subscription | 800,000 | 3.40 | 167 | unresolved_support=2 | 17.150 |
-| 12 | [WooCommerce Shipping](https://wordpress.org/plugins/woocommerce-shipping/) | woocommerce fraud; woocommerce invoice; woocommerce returns; woocommerce shipping label | 70,000 | 2.10 | 17 | unresolved_support=5 | 17.136 |
-| 13 | [Complianz GDPR/CCPA Cookie Consent Banner](https://wordpress.org/plugins/complianz-gdpr/) | woocommerce accessibility | 1,000,000 | 4.70 | 1,655 | unresolved_support=17 | 17.102 |
-| 14 | [MailPoet – Newsletters, Email Marketing, and Automation](https://wordpress.org/plugins/mailpoet/) | woocommerce subscription | 500,000 | 4.40 | 1,432 | unresolved_support=11 | 16.573 |
-| 15 | [All in One SEO – AI SEO Plugin to Boost SEO Rankings & Traffic (Schema, Local SEO, Sitemap & SEO Insights)](https://wordpress.org/plugins/all-in-one-seo-pack/) | woocommerce csv import | 2,000,000 | 4.70 | 5,201 | unresolved_support=0 | 16.318 |
-| 16 | [Ultimate Addons for Elementor – Widgets, Templates, WooCommerce & Header Footer Builder](https://wordpress.org/plugins/header-footer-elementor/) | woocommerce accessibility | 2,000,000 | 4.90 | 2,525 | unresolved_support=0 | 16.005 |
-| 17 | [YITH WooCommerce Wishlist](https://wordpress.org/plugins/yith-woocommerce-wishlist/) | woocommerce accessibility | 400,000 | 3.90 | 262 | unresolved_support=3 | 15.929 |
-| 18 | [PDF Invoices & Packing Slips for WooCommerce](https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/) | woocommerce bank transfer; woocommerce invoice; woocommerce order export; woocommerce reconciliation; woocommerce returns; woocommerce shipping label; woocommerce subscription | 300,000 | 5.00 | 1,862 | unresolved_support=12 | 15.896 |
-| 19 | [Tutor LMS – eLearning and online course solution](https://wordpress.org/plugins/tutor/) | woocommerce bank transfer | 100,000 | 4.40 | 587 | unresolved_support=36 | 15.523 |
-| 20 | [Spam protection, Honeypot, Anti-Spam by CleanTalk](https://wordpress.org/plugins/cleantalk-spam-protect/) | woocommerce accessibility; woocommerce booking | 200,000 | 4.80 | 3,209 | unresolved_support=7 | 15.463 |
-| 21 | [Mollie Payments for WooCommerce](https://wordpress.org/plugins/mollie-payments-for-woocommerce/) | woocommerce accessibility; woocommerce bank transfer; woocommerce fraud; woocommerce reconciliation | 100,000 | 3.50 | 70 | unresolved_support=7 | 15.412 |
-| 22 | [Events Manager – Calendar, Bookings, Tickets, and more!](https://wordpress.org/plugins/events-manager/) | woocommerce booking | 60,000 | 4.20 | 547 | unresolved_support=33 | 15.393 |
-| 23 | [Mercado Pago payments for WooCommerce](https://wordpress.org/plugins/woocommerce-mercadopago/) | woocommerce bank transfer; woocommerce fraud | 100,000 | 3.90 | 692 | unresolved_support=1 | 14.693 |
-| 24 | [Variation Swatches for WooCommerce](https://wordpress.org/plugins/woo-variation-swatches/) | woocommerce accessibility | 300,000 | 4.80 | 919 | unresolved_support=1 | 14.370 |
-| 25 | [Payment Plugins for Stripe WooCommerce](https://wordpress.org/plugins/woo-stripe-payment/) | woocommerce bank transfer; woocommerce returns; woocommerce subscription | 100,000 | 4.80 | 301 | unresolved_support=15 | 14.288 |
-| 26 | [PayPal Enterprise Payments (formerly Braintree) for WooCommerce](https://wordpress.org/plugins/woocommerce-gateway-paypal-powered-by-braintree/) | woocommerce fraud | 10,000 | 2.60 | 50 | unresolved_support=1 | 14.168 |
-| 27 | [Amazon Pay for WooCommerce](https://wordpress.org/plugins/woocommerce-gateway-amazon-payments-advanced/) | woocommerce bank transfer; woocommerce fraud | 10,000 | 2.50 | 27 | unresolved_support=1 | 14.115 |
-| 28 | [FiboSearch – Ajax Search for WooCommerce](https://wordpress.org/plugins/ajax-search-for-woocommerce/) | woocommerce accessibility; woocommerce returns | 100,000 | 4.90 | 1,814 | unresolved_support=1 | 13.711 |
-| 29 | [Product Feed Manager for WooCommerce – CTXFeed – Support 220+ Shopping & Social Channels](https://wordpress.org/plugins/webappick-product-feed-for-woocommerce/) | woocommerce booking; woocommerce invoice; woocommerce order export; woocommerce shipping label; woocommerce subscription | 80,000 | 4.60 | 829 | unresolved_support=3 | 13.629 |
-| 30 | [Product Feed PRO for WooCommerce by AdTribes – Product Feeds for WooCommerce](https://wordpress.org/plugins/woo-product-feed-pro/) | woocommerce returns; woocommerce shipping label; woocommerce subscription | 80,000 | 4.70 | 1,064 | unresolved_support=2 | 13.550 |
-| 31 | [Booking for Appointments and Events Calendar – Amelia](https://wordpress.org/plugins/ameliabooking/) | woocommerce booking | 90,000 | 4.60 | 785 | unresolved_support=2 | 13.520 |
-| 32 | [WP All Import – Import SEO Settings for Yoast SEO](https://wordpress.org/plugins/yoast-seo-settings-xml-csv-import/) | woocommerce csv import | 20,000 | 2.80 | 11 | unresolved_support=0 | 13.316 |
-| 33 | [WP All Import – Drag & Drop Import for CSV, XML, Excel & Google Sheets](https://wordpress.org/plugins/wp-all-import/) | woocommerce csv import | 100,000 | 4.70 | 1,962 | unresolved_support=0 | 13.293 |
-| 34 | [Revolut Gateway for WooCommerce](https://wordpress.org/plugins/revolut-gateway-for-woocommerce/) | woocommerce fraud | 6,000 | 3.20 | 45 | unresolved_support=5 | 13.197 |
-| 35 | [WP Import Export Lite](https://wordpress.org/plugins/wp-import-export-lite/) | woocommerce csv import | 40,000 | 4.00 | 113 | unresolved_support=2 | 13.181 |
-| 36 | [YITH WooCommerce Subscription](https://wordpress.org/plugins/yith-woocommerce-subscription/) | woocommerce subscription | 6,000 | 3.00 | 46 | unresolved_support=2 | 13.155 |
-| 37 | [Print Invoice & Delivery Notes for WooCommerce](https://wordpress.org/plugins/woocommerce-delivery-notes/) | woocommerce accounting; woocommerce booking; woocommerce invoice | 30,000 | 4.40 | 137 | unresolved_support=11 | 13.116 |
-| 38 | [WooCommerce Payfast Gateway](https://wordpress.org/plugins/woocommerce-payfast-gateway/) | woocommerce subscription | 30,000 | 3.00 | 7 | unresolved_support=0 | 13.109 |
-| 39 | [Brevo for WooCommerce](https://wordpress.org/plugins/woocommerce-sendinblue-newsletter-subscription/) | woocommerce subscription | 30,000 | 3.40 | 53 | unresolved_support=0 | 13.095 |
-| 40 | [Advanced Order Export For WooCommerce](https://wordpress.org/plugins/woo-order-export-lite/) | woocommerce accounting; woocommerce order export | 100,000 | 5.00 | 350 | unresolved_support=1 | 12.998 |
-| 41 | [Customer Reviews for WooCommerce](https://wordpress.org/plugins/customer-reviews-woocommerce/) | woocommerce accessibility; woocommerce csv import; woocommerce order export; woocommerce returns | 80,000 | 4.80 | 1,529 | unresolved_support=0 | 12.991 |
-| 42 | [ShipStation for WooCommerce](https://wordpress.org/plugins/woocommerce-shipstation-integration/) | woocommerce returns; woocommerce shipping label | 40,000 | 3.30 | 13 | unresolved_support=0 | 12.980 |
-| 43 | [FOX – Currency Switcher Professional for WooCommerce](https://wordpress.org/plugins/woocommerce-currency-switcher/) | woocommerce booking; woocommerce returns | 50,000 | 4.40 | 250 | unresolved_support=2 | 12.915 |
-| 44 | [Advanced Shipment Tracking for WooCommerce](https://wordpress.org/plugins/woo-advanced-shipment-tracking/) | woocommerce csv import; woocommerce shipping label | 70,000 | 4.50 | 353 | unresolved_support=1 | 12.892 |
-| 45 | [Sendcloud Shipping](https://wordpress.org/plugins/sendcloud-connected-shipping/) | woocommerce shipping label | 5,000 | 2.80 | 12 | unresolved_support=2 | 12.861 |
-| 46 | [WP All Export – Drag & Drop Export to Any Custom CSV, XML & Excel](https://wordpress.org/plugins/wp-all-export/) | woocommerce order export | 100,000 | 4.50 | 413 | unresolved_support=0 | 12.818 |
-| 47 | [Booster for WooCommerce – PDF Invoices, Abandoned Cart, Variation Swatches & 100+ Tools](https://wordpress.org/plugins/woocommerce-jetpack/) | woocommerce accessibility; woocommerce invoice | 30,000 | 4.60 | 533 | unresolved_support=4 | 12.731 |
-| 48 | [Online Scheduling and Appointment Booking System – Bookly](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/) | woocommerce booking | 60,000 | 4.40 | 575 | unresolved_support=0 | 12.718 |
-| 49 | [Payment Plugins for PayPal WooCommerce](https://wordpress.org/plugins/pymntpl-paypal-woocommerce/) | woocommerce fraud; woocommerce shipping label; woocommerce subscription | 80,000 | 4.90 | 125 | unresolved_support=2 | 12.626 |
-| 50 | [Custom Order Numbers for WooCommerce](https://wordpress.org/plugins/custom-order-numbers-for-woocommerce/) | woocommerce accounting | 20,000 | 4.20 | 25 | unresolved_support=12 | 12.505 |
-| 51 | [Colissimo shipping methods for WooCommerce](https://wordpress.org/plugins/colissimo-shipping-methods-for-woocommerce/) | woocommerce returns; woocommerce shipping label | 10,000 | 3.70 | 28 | unresolved_support=5 | 12.445 |
-| 52 | [Product Import Export for WooCommerce – Import Export Product CSV Suite](https://wordpress.org/plugins/product-import-export-for-woo/) | woocommerce csv import | 80,000 | 4.60 | 413 | unresolved_support=0 | 12.424 |
-| 53 | [Japanized for WooCommerce](https://wordpress.org/plugins/woocommerce-for-japan/) | woocommerce bank transfer | 10,000 | 3.30 | 21 | unresolved_support=1 | 12.414 |
-| 54 | [Germanized for WooCommerce](https://wordpress.org/plugins/woocommerce-germanized/) | woocommerce bank transfer; woocommerce booking; woocommerce csv import; woocommerce invoice; woocommerce order export; woocommerce returns; woocommerce shipping label; woocommerce subscription | 70,000 | 4.80 | 495 | unresolved_support=0 | 12.387 |
-| 55 | [HUSKY – Products Filter for WooCommerce Professional](https://wordpress.org/plugins/woocommerce-products-filter/) | woocommerce returns | 80,000 | 4.60 | 336 | unresolved_support=0 | 12.335 |
-| 56 | [Login & Register Forms – Popup, Slider, Profile & WooCommerce](https://wordpress.org/plugins/easy-login-woocommerce/) | woocommerce shipping label | 40,000 | 4.80 | 254 | unresolved_support=2 | 12.328 |
-| 57 | [Advanced Product Fields (Product Addons) for WooCommerce](https://wordpress.org/plugins/advanced-product-fields-for-woocommerce/) | woocommerce subscription | 50,000 | 4.80 | 282 | unresolved_support=1 | 12.303 |
-| 58 | [Export and Import Users and Customers](https://wordpress.org/plugins/users-customers-import-export-for-wp-woocommerce/) | woocommerce csv import; woocommerce order export | 60,000 | 4.80 | 440 | unresolved_support=0 | 12.202 |
-| 59 | [Jetpack CRM – Clients, Leads, Invoices, Billing, Email Marketing, & Automation](https://wordpress.org/plugins/zero-bs-crm/) | woocommerce invoice | 30,000 | 4.30 | 152 | unresolved_support=1 | 12.194 |
-| 60 | [Import and export users and customers](https://wordpress.org/plugins/import-users-from-csv-with-meta/) | woocommerce csv import; woocommerce order export | 70,000 | 4.70 | 256 | unresolved_support=0 | 12.102 |
+| 順位 | cluster | mentions | source count | score |
+|---:|---|---:|---:|---:|
+| 1 | `support_burden` | 1550 | 3 | 2635.0 |
+| 2 | `reliability` | 1279 | 3 | 2174.3 |
+| 3 | `permission_audit` | 800 | 3 | 1360.0 |
+| 4 | `export_import` | 734 | 3 | 1247.8 |
+| 5 | `privacy_local` | 597 | 3 | 1014.9 |
+| 6 | `documentation` | 474 | 3 | 805.8 |
+| 7 | `schedule_alert` | 460 | 3 | 782.0 |
+| 8 | `version_diff` | 317 | 3 | 538.9 |
+| 9 | `pricing` | 300 | 3 | 510.0 |
+| 10 | `validation` | 154 | 3 | 261.8 |
+| 11 | `bulk_scale` | 128 | 3 | 217.6 |
+| 12 | `multi_site` | 59 | 3 | 100.3 |
 
-## Required next step
+## Highest-signal WordPress plugins
 
-1. 低評価レビュー・未解決supportから同一の未解決不満を抽出する。
-2. 不満をbuyer/input/processing/outputへ変換する。
-3. 同じworkflowを日本語・英語・marketplace・OSSで最低12検索する。
-4. direct competitor 5件、substitute 5件、overlap matrixを作る。
-5. duplicate vetoを通過しなければ棄却する。
+| plugin | installs | rating | unresolved support | signal |
+|---|---:|---:|---:|---:|
+| [UpdraftPlus: WP Backup & Migration Plugin](https://wordpress.org/plugins/updraftplus/) | 3,000,000 | 4.80 | 6 | 823.6 |
+| [Meta for WooCommerce](https://wordpress.org/plugins/facebook-for-woocommerce/) | 400,000 | 2.10 | 11 | 506.6 |
+| [WooCommerce PayPal Payments](https://wordpress.org/plugins/woocommerce-paypal-payments/) | 800,000 | 2.80 | 23 | 418.8 |
+| [WooCommerce Stripe Payment Gateway](https://wordpress.org/plugins/woocommerce-gateway-stripe/) | 700,000 | 3.10 | 12 | 361.7 |
+| [All-in-One WP Migration and Backup](https://wordpress.org/plugins/all-in-one-wp-migration/) | 5,000,000 | 4.50 | 2 | 325.2 |
+| [Google for WooCommerce](https://wordpress.org/plugins/google-listings-and-ads/) | 800,000 | 2.70 | 10 | 323.5 |
+| [WooCommerce](https://wordpress.org/plugins/woocommerce/) | 7,000,000 | 4.50 | 35 | 317.5 |
+| [WooPayments: Integrated WooCommerce Payments](https://wordpress.org/plugins/woocommerce-payments/) | 800,000 | 3.40 | 2 | 289.7 |
+| [Backuply – Backup, Restore, Migrate and Clone](https://wordpress.org/plugins/backuply/) | 600,000 | 4.50 | 1 | 251.1 |
+| [All-In-One Security (AIOS) – Security and Firewall](https://wordpress.org/plugins/all-in-one-wp-security-and-firewall/) | 1,000,000 | 4.70 | 3 | 248.3 |
+| [WordPress Importer](https://wordpress.org/plugins/wordpress-importer/) | 2,000,000 | 3.10 | 1 | 248.1 |
+| [Wordfence Security – Firewall, Malware Scan, and Login Security](https://wordpress.org/plugins/wordfence/) | 5,000,000 | 4.70 | 40 | 246.0 |
+| [MailPoet – Newsletters, Email Marketing, and Automation](https://wordpress.org/plugins/mailpoet/) | 500,000 | 4.40 | 11 | 210.6 |
+| [WooCommerce Tax (formerly WooCommerce Shipping & Tax)](https://wordpress.org/plugins/woocommerce-services/) | 500,000 | 2.00 | 0 | 201.5 |
+| [Site Kit by Google – Analytics, Search Console, AdSense, Speed](https://wordpress.org/plugins/google-site-kit/) | 5,000,000 | 4.20 | 13 | 198.8 |
+| [Converter for Media – Optimize images | Convert WebP & AVIF](https://wordpress.org/plugins/webp-converter-for-media/) | 500,000 | 4.90 | 1 | 194.6 |
+| [BackWPup – WordPress Backup & Restore Plugin](https://wordpress.org/plugins/backwpup/) | 400,000 | 4.00 | 1 | 174.6 |
+| [Jetpack – WP Security, Backup, Speed, & Growth](https://wordpress.org/plugins/jetpack/) | 3,000,000 | 3.70 | 3 | 173.3 |
+| [PDF Invoices & Packing Slips for WooCommerce](https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/) | 300,000 | 5.00 | 12 | 171.7 |
+| [Forminator Forms – Contact Form, Payment Form & Custom Form Builder](https://wordpress.org/plugins/forminator/) | 600,000 | 4.80 | 13 | 167.8 |
+
+## Highest-signal Atlassian apps
+
+| app | reviews fetched | low ratings | signal |
+|---|---:|---:|---:|
+| [Rewind Backups for Confluence](https://marketplace.atlassian.com/apps/rewind-backups-confluence) | 40 | 1 | 169.5 |
+| [Rewind Backups for Jira](https://marketplace.atlassian.com/apps/rewind-backups) | 40 | 3 | 163.5 |
+| [Zephyr - Test Management and Automation for Jira](https://marketplace.atlassian.com/apps/com.kanoah.test-manager) | 40 | 10 | 163.0 |
+| [Configuration Manager for Jira (CMJ)](https://marketplace.atlassian.com/apps/com.botronsoft.jira.configurationmanager) | 40 | 13 | 158.5 |
+| [Power Scripts - Jira Workflow Automation](https://marketplace.atlassian.com/apps/com.keplerrominfo.jira.plugins.jjupin) | 40 | 1 | 152.0 |
+| [Insight Assets Backup & Migration](https://marketplace.atlassian.com/apps/tw-insight-backup) | 30 | 1 | 140.0 |
+| [(AI powered) Automated Release Notes & Reports for Jira](https://marketplace.atlassian.com/apps/amoeboids.releasenotes) | 40 | 6 | 137.5 |
+| [Easy PDF Export, Word Export, HTML Export, with Automation](https://marketplace.atlassian.com/apps/boja.jira.pdf.com) | 27 | 5 | 110.5 |
+| [JSU Automation Suite for Jira Workflows](https://marketplace.atlassian.com/apps/com.googlecode.jira-suite-utilities) | 40 | 9 | 102.0 |
+| [Time to SLA](https://marketplace.atlassian.com/apps/plugin.tts) | 40 | 2 | 93.0 |
+| [Smart Configuration: Documentation for Jira](https://marketplace.atlassian.com/apps/com.eis.jira.plugins.jiradoc) | 40 | 1 | 90.0 |
+| [Better Excel Automation for Jira (free!)](https://marketplace.atlassian.com/apps/com.midori.jira.plugin.excelautomation) | 32 | 4 | 88.5 |
+| [Software Configuration Management Toolkit](https://marketplace.atlassian.com/apps/com.deniz.jira.versioning) | 22 | 7 | 85.0 |
+| [Better PDF Automation for Jira (free!)](https://marketplace.atlassian.com/apps/com.midori.jira.plugin.pdfautomation) | 36 | 0 | 82.5 |
+| [Copy Space for Confluence](https://marketplace.atlassian.com/apps/ac-copy-space) | 30 | 12 | 81.0 |
+| [Revyz Command Center for Jira (Backup Configuration Restore)](https://marketplace.atlassian.com/apps/io.revyz.jira-app.br.app) | 19 | 0 | 68.5 |
+| [Katalon - Test Automation for Jira](https://marketplace.atlassian.com/apps/com.katalon.katalon-jira-plugin) | 35 | 14 | 57.5 |
+| [GitProtect.io for Jira (Backup, Restore, Data Management)](https://marketplace.atlassian.com/apps/io.gitprotect.jira-v1) | 13 | 1 | 52.5 |
+| [SharePoint Connector for Jira Automation](https://marketplace.atlassian.com/apps/team-files-office-sharepoint-excel-365-for-jira) | 19 | 3 | 33.5 |
+| [Automated Release Notes](https://marketplace.atlassian.com/apps/release-notes) | 16 | 6 | 30.0 |
+
+## Engaged public issue threads
+
+- [Coordenação Claude ⇄ Codex (war room)](https://github.com/galaxie-works/galaxie-toolbox/issues/133) — comments: 2500
+- [ [요청] AgentSpace: OpenClaw 에이전트를 위한 자체 호스팅 채팅 방](https://github.com/jhl-labs/sepilot-wiki/issues/317) — comments: 2500
+- [Alice modernization running status](https://github.com/rysweet/drinkme/issues/1) — comments: 2138
+- [Eatme agentic Alice user QA workstream](https://github.com/rysweet/drinkme/issues/2) — comments: 2088
+- [roachtest: cluster_creation failed](https://github.com/cockroachdb/cockroach/issues/159237) — comments: 2059
+- [爱可可老师24小时热门分享](https://github.com/fly51fly/aicoco/issues/3) — comments: 1909
+- [release-26.3: roachtest: cluster_creation failed](https://github.com/cockroachdb/cockroach/issues/171764) — comments: 1899
+- [Autopilot control: durable queue, worker leases, recovery and repository maintenance](https://github.com/ys2mm422yb-max/DungeonVeil/issues/376) — comments: 1808
+- [raindrop connect zapier](https://github.com/null395922/hexonote/issues/1) — comments: 1725
+- [roachtest: cluster_creation failed](https://github.com/cockroachdb/cockroach/issues/171104) — comments: 1579
+- [[AGENT-HUB] 중앙 명령·완료 보고 허브 — Rollover 2026-08-24](https://github.com/seungjae3908-source/seungjae20260713/issues/660) — comments: 1531
+- [[BUG] Instantly hitting usage limits with Max subscription](https://github.com/anthropics/claude-code/issues/16157) — comments: 1491
+- [roachtest: cluster_creation failed](https://github.com/cockroachdb/cockroach/issues/169158) — comments: 1329
+- [Announcements (maybe blog is more accurate)](https://github.com/PySimpleGUI/PySimpleGUI/issues/142) — comments: 1310
+- [Submit Your MCP Servers here](https://github.com/chatmcp/mcpso/issues/1) — comments: 1167
+- [[BOUNTY $200] WORKFLOW: n8n + Claude Code — automated weekly dev summary](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5) — comments: 1080
+- [DWVSCPS ENERGY FAMILY TRUST™ – OWNERSHIP
+R. E. STOCKFORD JR / 15389089 CANADA INC.
+Trademark: DWV STOCKFORD CONTAMINATE PIPELINE SHELL INC™
+Patent-Pending (Government of Canada)
+TRUST VAULT: DWVSCPS_TRUST_VAULT_2026](https://github.com/dwvshell/Richard/issues/1) — comments: 1070
+- [release-26.2: roachtest: cluster_creation failed](https://github.com/cockroachdb/cockroach/issues/172635) — comments: 1003
+- [Transform Landing Page for Technical Audience](https://github.com/Statse/super-shepherd/issues/33) — comments: 997
+- [[Architecture Audit] Instruction-Dependent Gate Enforcement Reality](https://github.com/whatrune/sd-prompt-studio/issues/251) — comments: 954
+- [[BUG] Claude Max plan session limits exhausted abnormally fast since March 23, 2026 (CLI usage)](https://github.com/anthropics/claude-code/issues/38335) — comments: 837
+- [Xenios Final Website Parallel Build Command Center](https://github.com/teamxenios/xenios-website/issues/44) — comments: 808
+- [Upcoming changes to the tado° API](https://github.com/home-assistant/core/issues/151223) — comments: 806
+- [Champion "default interface methods" (16.3, Core 3)](https://github.com/dotnet/csharplang/issues/52) — comments: 763
+- [[ PARENT THREAD ] SQAG — Rolling Work Queue](https://github.com/Swooshz-com/swooshz-quote-auto-generator/issues/143) — comments: 739
+
+## Collection errors
+
+- none
+
+## Guardrail
+
+高いsignal scoreは、需要や差別化の証明ではない。人気商品のバグや一般的な要望も含む。
+このファイルから自動でBUILD_APPROVEDへ進めない。
