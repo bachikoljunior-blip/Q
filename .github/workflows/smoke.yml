@@ -16,12 +16,15 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 7
     steps:
       - uses: actions/checkout@v4
 
       - name: Enforce exact-match prebuild gate
         run: python scripts/check_prebuild_gate.py
+
+      - name: Enforce completion-before-response contract
+        run: python scripts/check_execution_contract.py
 
       - name: Validate project files and public no-product page
         run: |
@@ -40,11 +43,15 @@ jobs:
               'research/ACTIVE_CANDIDATE.json',
               'research/PREBUILD_GATE.md',
               'research/EXACT_MATCH_SWEEP_2026-08-30.md',
+              'research/BATCH_VETO_2026-08-30.md',
               'research/marketplace_scan/latest.json',
               'research/marketplace_scan/shortlist.json',
               'research/marketplace_scan/complaints.json',
+              'execution/CURRENT_WORK.json',
+              'execution/2026-08-30-completion-first-hardening.md',
               'experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md',
-              'scripts/check_prebuild_gate.py'
+              'scripts/check_prebuild_gate.py',
+              'scripts/check_execution_contract.py'
           ]
           for name in required:
               assert Path(name).is_file(), f'missing {name}'
@@ -52,6 +59,7 @@ jobs:
           html = Path('index.html').read_text(encoding='utf-8')
           Parser().feed(html)
           assert '現在、公開中の商品はありません' in html
+          assert 'NO_ACTIVE_CANDIDATE' in html
           assert 'noindex' in html
           assert 'FBA補てん原価監査 — Amazon.co.jp向け無料CSVチェッカー' not in html
 
@@ -62,15 +70,13 @@ jobs:
           assert not list(root), 'closed experiment URLs must not remain in sitemap'
 
           active = json.loads(Path('research/ACTIVE_CANDIDATE.json').read_text(encoding='utf-8'))
-          allowed_nonbuild = {'NO_ACTIVE_CANDIDATE', 'RESEARCH_ONLY', 'OFFER_TEST'}
-          if active['build_approved']:
-              assert active['status'] in {'BUILD_APPROVED', 'LIVE_FREE_MVP', 'LIVE_PAID_PRODUCT'}
-          else:
-              assert active['status'] in allowed_nonbuild
+          assert active['status'] == 'NO_ACTIVE_CANDIDATE'
+          assert active['build_approved'] is False
+          assert active['candidate_id'] is None
 
           state = Path('PROJECT_STATE.md').read_text(encoding='utf-8')
           assert 'EXP004' in state and '終了' in state
-          assert active['status'] in state, 'PROJECT_STATE must name the active status'
+          assert 'NO_ACTIVE_CANDIDATE' in state
 
           experiment = Path('experiments/EXP004_FBA_REIMBURSEMENT_COST_AUDIT.md').read_text(encoding='utf-8')
           assert '状態: **CLOSED**' in experiment
@@ -78,11 +84,17 @@ jobs:
           latest = json.loads(Path('research/marketplace_scan/latest.json').read_text(encoding='utf-8'))
           shortlist = json.loads(Path('research/marketplace_scan/shortlist.json').read_text(encoding='utf-8'))
           complaints = json.loads(Path('research/marketplace_scan/complaints.json').read_text(encoding='utf-8'))
-          assert latest.get('status') in {'RESEARCH_ONLY', 'DISCOVERY_SIGNALS_ONLY'}
-          assert isinstance(latest.get('clusters', latest.get('records', [])), list)
+          assert latest['schema_version'] == 2
+          assert 'never auto-approve' in latest['purpose']
+          assert latest['coverage']['wordpress'] == 'AUTOMATED_PUBLIC_API'
+          assert latest['coverage']['atlassian'].startswith('MANUAL_ONLY')
           assert shortlist['build_approved'] is False
           assert complaints['build_approved'] is False
-          print(f"governance/static validation passed: {active['status']}")
+
+          work = json.loads(Path('execution/CURRENT_WORK.json').read_text(encoding='utf-8'))
+          assert work['finalization_state'] == 'READY_TO_REPORT'
+          assert all(item['status'] in {'DONE', 'REJECTED', 'BLOCKED_EXTERNAL'} for item in work['tasks'])
+          print('governance/static validation passed: NO_ACTIVE_CANDIDATE / READY_TO_REPORT')
           PY
 
       - name: Serve public page and smoke HTTP
@@ -95,4 +107,5 @@ jobs:
             sleep 1
           done
           grep -q '現在、公開中の商品はありません' /tmp/index.html
+          grep -q 'NO_ACTIVE_CANDIDATE' /tmp/index.html
           grep -q 'noindex' /tmp/index.html
