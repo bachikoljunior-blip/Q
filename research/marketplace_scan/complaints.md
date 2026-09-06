@@ -1,6 +1,6 @@
 # WordPress complaint mining — discovery evidence only
 
-最終更新: 2026-08-31T06:09:18+09:00
+最終更新: 2026-09-07T05:26:32+09:00
 
 **Status: DISCOVERY_EVIDENCE_ONLY / build_approved=false**
 
@@ -11,19 +11,19 @@
 
 | Cluster | Unique topics matched |
 |---|---:|
-| other | 1956 |
-| import_export | 301 |
-| tax_invoice_compliance | 93 |
-| label_purchase | 89 |
-| update_breakage | 88 |
-| missing_feature | 80 |
-| booking_conflict | 78 |
-| pdf_email | 76 |
-| sync_connection | 41 |
-| subscription_renewal | 38 |
-| bulk_workflow | 32 |
-| address_validation | 31 |
-| accessibility_compliance | 17 |
+| other | 1866 |
+| import_export | 304 |
+| pdf_email | 104 |
+| tax_invoice_compliance | 90 |
+| missing_feature | 83 |
+| update_breakage | 80 |
+| label_purchase | 73 |
+| booking_conflict | 57 |
+| subscription_renewal | 39 |
+| sync_connection | 36 |
+| bulk_workflow | 35 |
+| address_validation | 33 |
+| accessibility_compliance | 19 |
 | wrong_weight_rate | 3 |
 
 ## Plugin queues
@@ -50,9 +50,13 @@ Clusters: other:65, tax_invoice_compliance:35, label_purchase:19, address_valida
 
 ### PDF Invoices & Packing Slips for WooCommerce — unique topics 122, rating 5.0, active 300000
 
-Clusters: other:81, pdf_email:33, missing_feature:7, tax_invoice_compliance:5, bulk_workflow:3, subscription_renewal:3, update_breakage:2
+Clusters: other:79, pdf_email:35, missing_feature:8, tax_invoice_compliance:5, bulk_workflow:3, subscription_renewal:2, update_breakage:1
 
 - [500 Internal Server Error / blank page](https://wordpress.org/support/topic/500-internal-server-error-blank-page/) — support / pdf_email
+- [PDF is rendered incorrectly](https://wordpress.org/support/topic/pdf-is-rendered-incorrectly/) — support / pdf_email
+- [Unable to open image](https://wordpress.org/support/topic/unable-to-open-image-3/) — support / missing_feature
+- [Shop logo doesn’t appear in generated PDF invoice](https://wordpress.org/support/topic/shop-logo-doesnt-appear-in-generated-pdf-invoice/) — support / pdf_email
+- [Unable to generate PDF](https://wordpress.org/support/topic/unable-to-generate-pdf-3/) — support / pdf_email, missing_feature
 - [Bulk edit not working](https://wordpress.org/support/topic/bulk-edit-not-working-5/) — support / bulk_workflow
 - [How to translate PDF invoice using WPML](https://wordpress.org/support/topic/how-to-translate-pdf-invoice-using-wpml/) — support / pdf_email
 - [Bulk PDF Print No longer working](https://wordpress.org/support/topic/bulk-pdf-print-no-longer-working/) — support / bulk_workflow, pdf_email
@@ -63,14 +67,10 @@ Clusters: other:81, pdf_email:33, missing_feature:7, tax_invoice_compliance:5, b
 - [Invoice numbers occasionally skipped and reassigned](https://wordpress.org/support/topic/invoice-numbers-occasionally-skipped-and-reassigned/) — support / pdf_email, tax_invoice_compliance
 - [Unable to Enable PDF Invoice Plugin](https://wordpress.org/support/topic/unable-to-enable-pdf-invoice-plugin/) — support / pdf_email, missing_feature
 - [One Subscription always gets same invoice number](https://wordpress.org/support/topic/one-subscription-always-gets-same-invoice-number/) — support / pdf_email, subscription_renewal, tax_invoice_compliance
-- [High frontend load time on init caused by WPO_WCPDF::load_classes](https://wordpress.org/support/topic/high-frontend-load-time-on-init-caused-by-wpo_wcpdfload_classes/) — support / pdf_email
-- [Logo Not Displaying in PDF Invoices & Packing Slips](https://wordpress.org/support/topic/logo-not-displaying-in-pdf-invoices-packing-slips/) — support / pdf_email
-- [Showing Taxes On Invoice](https://wordpress.org/support/topic/showing-taxes-on-invoice/) — support / pdf_email, tax_invoice_compliance
-- [Missing icons on order overview page](https://wordpress.org/support/topic/missing-icons-on-order-overview-page/) — support / missing_feature
 
 ### Print Invoice & Delivery Notes for WooCommerce — unique topics 122, rating 4.4, active 30000
 
-Clusters: other:81, pdf_email:23, update_breakage:10, missing_feature:7, tax_invoice_compliance:3, address_validation:3, label_purchase:3
+Clusters: other:82, pdf_email:23, update_breakage:10, missing_feature:6, tax_invoice_compliance:3, address_validation:3, label_purchase:3
 
 - [Security Advisory – Update Print Invoices & Delivery Notes for WooCommerce](https://wordpress.org/support/topic/security-advisory-update-print-invoices-delivery-notes-for-woocommerce/) — support / pdf_email
 - [Arabic text reversal in email-attached invoices](https://wordpress.org/support/topic/arabic-text-reversal-in-email-attached-invoices/) — support / pdf_email
@@ -127,26 +127,6 @@ Clusters: other:99, accessibility_compliance:9, missing_feature:4, sync_connecti
 - [Crashed my website, I wouldn’t suggest it](https://wordpress.org/support/topic/crashed-my-website-i-wouldnt-suggest-it/) — review / update_breakage
 - [Caching is causing massive problems](https://wordpress.org/support/topic/caching-is-causing-massive-problems/) — review / bulk_workflow
 - [Why Ally Is One of the Most Powerful Tools for Web Accessibility Today](https://wordpress.org/support/topic/why-ally-is-one-of-the-most-powerful-tools-for-web-accessibility-today/) — review / accessibility_compliance
-
-### Booster for WooCommerce – PDF Invoices, Abandoned Cart, Variation Swatches & 100+ Tools — unique topics 121, rating 4.6, active 30000
-
-Clusters: other:98, update_breakage:8, pdf_email:7, label_purchase:4, tax_invoice_compliance:3, import_export:2, bulk_workflow:2
-
-- [How to Delete Packing Slip PDF Files](https://wordpress.org/support/topic/how-to-delete-packing-slip-pdf-files/) — support / pdf_email
-- [export booster settings- wrong file format](https://wordpress.org/support/topic/export-booster-settings-wrong-file-format/) — support / import_export
-- [Shipping Methods By Products](https://wordpress.org/support/topic/shipping-methods-by-products/) — support / label_purchase
-- [EU VAT Number only shows shortcode](https://wordpress.org/support/topic/eu-vat-number-only-shows-shortcode/) — support / tax_invoice_compliance
-- [All of your support pages are broken](https://wordpress.org/support/topic/all-of-your-support-pages-are-broken/) — support / update_breakage
-- [Export issue, Pro support is broken.](https://wordpress.org/support/topic/export-issue-pro-support-is-broken/) — support / update_breakage, import_export
-- [Image size on Invoice](https://wordpress.org/support/topic/image-size-on-invoice-2/) — support / pdf_email
-- [allow users to use PDF Invoicing & Packing Slips?](https://wordpress.org/support/topic/allow-users-to-use-pdf-invoicing-packing-slips/) — support / pdf_email
-- [How to change the MSRP label to RRP](https://wordpress.org/support/topic/how-to-change-the-msrp-label-to-rrp/) — support / label_purchase
-- [[wcj_tcpdf_pagebreak] shortcode doesn’t work anymore](https://wordpress.org/support/topic/wcj_tcpdf_pagebreak-shortcode-doesnt-work-anymore/) — support / pdf_email
-- [shortcode shipping phone](https://wordpress.org/support/topic/shortcode-shipping-phone/) — support / label_purchase
-- [Booster Currency Switcher Broken Again in latest version!](https://wordpress.org/support/topic/booster-currency-switcher-broken-again-in-latest-version/) — support / update_breakage
-- [Shipping icons error on multisites](https://wordpress.org/support/topic/shipping-icons-error-on-multisites/) — support / label_purchase
-- [Fatal error when Order Quantities is activated](https://wordpress.org/support/topic/fatal-error-when-order-quantities-is-activated/) — support / update_breakage, tax_invoice_compliance
-- [Critical Error when editing content](https://wordpress.org/support/topic/critical-error-when-editing-content/) — support / update_breakage
 
 ### WP Hotel Booking — unique topics 121, rating 3.7, active 7000
 
@@ -210,8 +190,9 @@ Clusters: other:87, import_export:29, tax_invoice_compliance:3, update_breakage:
 
 ### Events Manager – Calendar, Bookings, Tickets, and more! — unique topics 120, rating 4.2, active 60000
 
-Clusters: other:102, update_breakage:6, booking_conflict:3, missing_feature:3, sync_connection:3, tax_invoice_compliance:2, address_validation:1
+Clusters: other:101, update_breakage:6, booking_conflict:3, missing_feature:3, sync_connection:3, tax_invoice_compliance:2, import_export:1
 
+- [Unknown column ‘event_archetype’ in ‘field list’](https://wordpress.org/support/topic/unknown-column-event_archetype-in-field-list/) — support / import_export
 - [Events Manager Pro requires Users to have Address, City…](https://wordpress.org/support/topic/events-manager-pro-requires-users-to-have-address-city/) — support / address_validation
 - [PHP Fatal error: Uncaught Error: Class “EM_Admin_Notice”](https://wordpress.org/support/topic/php-fatal-error-uncaught-error-class-em_admin_notice/) — support / update_breakage
 - [Date change booking status](https://wordpress.org/support/topic/date-change-booking-status/) — support / booking_conflict
@@ -226,11 +207,10 @@ Clusters: other:102, update_breakage:6, booking_conflict:3, missing_feature:3, s
 - [Can’t get google maps to connect](https://wordpress.org/support/topic/cant-get-google-maps-to-connect-2/) — support / sync_connection
 - [Missing plugin name in dashboard](https://wordpress.org/support/topic/https-marijawordpress-test-arnes-si/) — support / missing_feature
 - [7.3.7.3 resulted in a critical error](https://wordpress.org/support/topic/7-3-7-3-resulted-in-a-critical-error/) — support / update_breakage
-- [Fatal error in version 7.3.7](https://wordpress.org/support/topic/fatal-error-in-version-7-3-7/) — support / update_breakage
 
 ### Booking for Appointments and Events Calendar – Amelia — unique topics 120, rating 4.6, active 90000
 
-Clusters: other:75, booking_conflict:33, bulk_workflow:4, update_breakage:4, missing_feature:3, sync_connection:2, import_export:2
+Clusters: other:76, booking_conflict:32, bulk_workflow:4, update_breakage:4, missing_feature:3, sync_connection:2, import_export:2
 
 - [Request for Hook – Customer Creation during Booking Flow](https://wordpress.org/support/topic/request-for-hook-customer-creation-during-booking-flow/) — support / booking_conflict
 - [how to set either fixed slots to book or make this logic work for an overlap](https://wordpress.org/support/topic/how-to-set-either-fixed-slots-to-book-or-make-this-logic-work-for-an-overlap/) — support / booking_conflict
@@ -268,49 +248,29 @@ Clusters: other:68, import_export:50, missing_feature:3, tax_invoice_compliance:
 - [Importing selectable attributes to Hivepress listing](https://wordpress.org/support/topic/importing-selectable-attributes-to-hivepress-listing/) — support / import_export
 - [Text Error on Import](https://wordpress.org/support/topic/text-error-on-import/) — support / import_export
 
-### MotoPress Hotel Booking — unique topics 120, rating 3.7, active 10000
+### Event Booking Manager for WooCommerce – Sell Tickets, Event Registration, RSVP & Event Calendar — unique topics 120, rating 4.5, active 7000
 
-Clusters: other:91, booking_conflict:23, tax_invoice_compliance:3, sync_connection:2, bulk_workflow:1, update_breakage:1, missing_feature:1
+Clusters: other:102, update_breakage:5, bulk_workflow:4, booking_conflict:3, import_export:3, sync_connection:2, missing_feature:2
 
-- [Booking multiple accommodations vs single full-property booking](https://wordpress.org/support/topic/booking-multiple-accommodations-vs-single-full-property-booking/) — support / bulk_workflow, booking_conflict
-- [In pogress bookings](https://wordpress.org/support/topic/in-pogress-bookings/) — support / booking_conflict
-- [Motopress hotel booking iCal validation problem](https://wordpress.org/support/topic/motopress-hotel-booking-ical-validation-problem-2/) — support / booking_conflict
-- [New update is causing an fatal error](https://wordpress.org/support/topic/new-update-is-causing-an-fatal-error/) — support / update_breakage
-- [Reservation not send email to administrator](https://wordpress.org/support/topic/reservation-not-send-email-to-administrator/) — support / tax_invoice_compliance
-- [the calendar does not send the reservation confirmation to the administrator or](https://wordpress.org/support/topic/the-calendar-does-not-send-the-reservation-confirmation-to-the-administrator-or/) — support / tax_invoice_compliance
-- [View Booking Link Not WOrking](https://wordpress.org/support/topic/view-booking-link-not-working/) — support / booking_conflict
-- [Reservations link issues](https://wordpress.org/support/topic/reservations-link-issues/) — support / tax_invoice_compliance
-- [How long does it take to sync calendars?](https://wordpress.org/support/topic/how-long-does-it-take-to-sync-calendars/) — support / sync_connection
-- [Availability Search](https://wordpress.org/support/topic/availability-search/) — support / booking_conflict
-- [Calendar not working for availability search](https://wordpress.org/support/topic/calendar-not-working-for-availability-search/) — support / booking_conflict
-- [Motopress/hotel booking lite/ featured image doesn’t show in my website](https://wordpress.org/support/topic/motopress-hotel-booking-lite-featured-image-doesnt-show-in-my-website/) — support / booking_conflict
-- [Payment failed but redirects to the ”booking confirmed” page](https://wordpress.org/support/topic/payment-failed-but-redirects-to-the-booking-confirmed-page/) — support / booking_conflict
-- [Appointment Scheduling Calendar Not Working](https://wordpress.org/support/topic/appointment-scheduling-calendar-not-working/) — support / booking_conflict
-- [send a request for accommodation availability](https://wordpress.org/support/topic/send-a-request-for-accommodation-availability/) — support / booking_conflict
-
-### Advanced Shipment Tracking for WooCommerce — unique topics 120, rating 4.5, active 70000
-
-Clusters: other:99, label_purchase:13, missing_feature:3, import_export:2, sync_connection:2, update_breakage:1, pdf_email:1
-
-- [DPD UK shipping carrier tracking link incorrect](https://wordpress.org/support/topic/dpd-uk-shipping-carrier-tracking-link-incorrect/) — support / label_purchase
-- [Header missing error](https://wordpress.org/support/topic/header-missing-error/) — support / missing_feature
-- [tracking of amazon shipping](https://wordpress.org/support/topic/tracking-of-amazon-shipping/) — support / label_purchase
-- [Outdated Template File in Woo Advanced Shipment Tracking Plugin](https://wordpress.org/support/topic/outdated-template-file-in-woo-advanced-shipment-tracking-plugin/) — support / label_purchase
-- [csv import stuck on importing](https://wordpress.org/support/topic/csv-import-stuck-on-importing/) — support / import_export, sync_connection
-- [Issue with plugin / Critical Error](https://wordpress.org/support/topic/issue-with-plugin-critical-error/) — support / update_breakage
-- [Add Daewoo Fastex Pakistan in Shipping Carriers](https://wordpress.org/support/topic/add-daewoo-fastex-pakistan-in-shipping-carriers/) — support / label_purchase
-- [Shipment tracking information not showing in “Shipped” customer email](https://wordpress.org/support/topic/shipment-tracking-information-not-showing-in-shipped-customer-email/) — support / label_purchase
-- [Why the shipment tracking is not progressi\ng](https://wordpress.org/support/topic/why-the-shipment-tracking-is-not-progressing/) — support / label_purchase
-- [Feature Request](https://wordpress.org/support/topic/feature-request-1077/) — support / missing_feature
-- [Status Bar Stuck on ‘Shipped’ in ‘Completed Order’ Email](https://wordpress.org/support/topic/status-bar-stuck-on-shipped-in-completed-order-email/) — support / sync_connection
-- [How to remove the shipment tracking section from customer completed order emails](https://wordpress.org/support/topic/how-to-remove-the-shipment-tracking-section-from-customer-completed-order-emails/) — support / label_purchase
-- [Enable Shipping Carriers – no shipping carriers](https://wordpress.org/support/topic/enable-shipping-carriers-no-shipping-carriers/) — support / label_purchase
-- [Shipping method available in trackship](https://wordpress.org/support/topic/shipping-method-available-in-trackship/) — support / label_purchase
-- [Unable to Disable AST Tracking in Emails and Remove Completed/Partially Shipped](https://wordpress.org/support/topic/unable-to-disable-ast-tracking-in-emails-and-remove-completed-partially-shipped/) — support / missing_feature
+- [Too many duplicate email-templates](https://wordpress.org/support/topic/too-many-duplicate-email-templates/) — support / bulk_workflow
+- [Attendee list is not correct & Syncing doesn’t help](https://wordpress.org/support/topic/attendee-list-is-not-correct-syncing-doesnt-help/) — support / sync_connection
+- [Issues with Event Display and Ticket Availability](https://wordpress.org/support/topic/issues-with-event-display-and-ticket-availability-2/) — support / booking_conflict
+- [Add multiple tickets for the same event but not the same date](https://wordpress.org/support/topic/add-multiple-tickets-for-the-same-event-but-not-the-same-date/) — support / bulk_workflow
+- [Add multiple tickets but not in the same time](https://wordpress.org/support/topic/add-multiple-tickets-but-not-in-the-same-time/) — support / bulk_workflow
+- [Capacity/Attendees column is wrong](https://wordpress.org/support/topic/capacity-attendees-column-is-wrong/) — support / import_export
+- [4.3.1 Crashing the site](https://wordpress.org/support/topic/4-3-1-crashing-the-site/) — support / update_breakage
+- [[BUG] Fatal Error & Content Loss on PHP 8.x](https://wordpress.org/support/topic/bug-fatal-error-content-loss-on-php-8-x/) — support / update_breakage
+- [Unable to set an event start date before today](https://wordpress.org/support/topic/unable-to-set-an-event-start-date-before-today/) — support / missing_feature
+- [Columns Layout broken](https://wordpress.org/support/topic/columns-layout-broken/) — support / update_breakage, import_export
+- [Event list Capacity column, doesn’t show correct availability](https://wordpress.org/support/topic/event-list-capacity-column-doesnt-show-correct-availability/) — support / booking_conflict, import_export
+- [layout event list broken after update to 5.1.5](https://wordpress.org/support/topic/layout-event-list-broken-after-update-to-5-1-5/) — support / update_breakage
+- [Fatal error inside plugin](https://wordpress.org/support/topic/fatal-error-inside-plugin/) — support / update_breakage
+- [missing products](https://wordpress.org/support/topic/missing-products-16/) — support / missing_feature
+- [Payments are denied due to Stripe and WooPayments disconnect or mismatch](https://wordpress.org/support/topic/payments-are-denied-due-to-stripe-and-woopayments-disconnect-or-mismatch/) — support / sync_connection
 
 ### Export and Import Users and Customers — unique topics 120, rating 4.8, active 60000
 
-Clusters: other:81, import_export:36, missing_feature:4, bulk_workflow:2, update_breakage:1, tax_invoice_compliance:1
+Clusters: other:82, import_export:35, missing_feature:4, bulk_workflow:2, update_breakage:1, tax_invoice_compliance:1
 
 - [Demo csv – Invalid file type. Please upload a valid import file.](https://wordpress.org/support/topic/demo-csv-invalid-file-type-please-upload-a-valid-import-file/) — support / import_export
 - [Can I edit the exported file before import again?](https://wordpress.org/support/topic/can-i-edit-the-exported-file-before-import-again/) — support / import_export
@@ -327,6 +287,26 @@ Clusters: other:81, import_export:36, missing_feature:4, bulk_workflow:2, update
 - [Import error](https://wordpress.org/support/topic/import-error-65/) — support / import_export
 - [No profile picture on imported users](https://wordpress.org/support/topic/no-profile-picture-on-imported-users/) — support / import_export
 - [Error “Invalid file type. Only CSV are allowed.”](https://wordpress.org/support/topic/error-invalid-file-type-only-csv-are-allowed/) — support / import_export
+
+### WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels — unique topics 120, rating 4.9, active 50000
+
+Clusters: other:81, pdf_email:33, missing_feature:6, tax_invoice_compliance:5, subscription_renewal:2, label_purchase:2, bulk_workflow:1
+
+- [Payment Method Not Showing on the Invoice and the order interface](https://wordpress.org/support/topic/payment-method-not-showing-on-the-invoice-and-the-order-interface/) — support / pdf_email
+- [Bulk generate or download Not working](https://wordpress.org/support/topic/bulk-generate-or-download-not-working/) — support / bulk_workflow
+- [Cannot download invoice pdf](https://wordpress.org/support/topic/cannot-download-invoice-pdf/) — support / pdf_email, missing_feature
+- [Unable to print or download invoice](https://wordpress.org/support/topic/unable-to-print-or-download-invoice-2/) — support / pdf_email, missing_feature
+- [The invoice is displaying an unexpected code.](https://wordpress.org/support/topic/the-invoice-is-displaying-an-unexpected-code/) — support / pdf_email
+- [PLug in not showing PDF icons](https://wordpress.org/support/topic/plug-in-not-showing-pdf-icons/) — support / pdf_email
+- [Inquiry about attaching full Terms & Conditions to the Invoice PDF](https://wordpress.org/support/topic/inquiry-about-attaching-full-terms-conditions-to-the-invoice-pdf/) — support / pdf_email
+- [Translate Variation – Product invoice](https://wordpress.org/support/topic/translate-499/) — support / pdf_email
+- [cannot be adjusted, and the print settings have also become very difficult](https://wordpress.org/support/topic/cannot-be-adjusted-and-the-print-settings-have-also-become-very-difficult/) — support / missing_feature
+- [WooCommerce Product Add-Ons Ultimate Meta showing in invoice](https://wordpress.org/support/topic/woocommerce-product-add-ons-ultimate-meta-showing-in-invoice/) — support / pdf_email
+- [Regenerate all invoices from scratch](https://wordpress.org/support/topic/regenerate-all-invoices-from-scratch/) — support / pdf_email
+- [Logo not working on Emails and Download PDF](https://wordpress.org/support/topic/logo-not-working-on-emails-and-download-pdf/) — support / pdf_email
+- [unable to print or download invoice from mobile device](https://wordpress.org/support/topic/unable-to-print-or-download-invoice-from-mobile-device/) — support / pdf_email, missing_feature
+- [I want to generate invoice number in a sequence](https://wordpress.org/support/topic/i-want-to-generate-invoice-number-in-a-sequence/) — support / pdf_email, tax_invoice_compliance
+- [Price incl. tax](https://wordpress.org/support/topic/price-incl-tax/) — support / tax_invoice_compliance
 
 ### Order Export & Order Import for WooCommerce — unique topics 120, rating 4.7, active 60000
 
@@ -428,10 +408,12 @@ Clusters: other:63, address_validation:7, bulk_workflow:6, missing_feature:4, ta
 - [New Update Broke Paypal Redirect](https://wordpress.org/support/topic/new-update-broke-paypal-redirect/) — support / update_breakage
 - [Plugin has broken](https://wordpress.org/support/topic/plugin-has-broken/) — support / update_breakage
 
-### WooCommerce Shipping — unique topics 80, rating 2.1, active 70000
+### WooCommerce Shipping — unique topics 81, rating 2.0, active 70000
 
-Clusters: label_purchase:38, other:29, address_validation:13, tax_invoice_compliance:4, sync_connection:3, missing_feature:3, update_breakage:2
+Clusters: label_purchase:38, other:30, address_validation:13, tax_invoice_compliance:4, sync_connection:3, missing_feature:3, update_breakage:2
 
+- [WooCommerce Shipping plug in issues](https://wordpress.org/support/topic/woocommerce-shipping-plug-in-issues/) — support / label_purchase
+- [WooCommerce Shipping 2.3.15 – intermittent HTTP code 0 and label delays](https://wordpress.org/support/topic/woocommerce-shipping-2-3-15-intermittent-http-code-0-and-label-delays/) — support / label_purchase
 - [Concerning Shipping Label Receipts](https://wordpress.org/support/topic/concerning-shipping-label-receipts/) — support / label_purchase
 - [International USPS labels don’t print 4×6 anymore](https://wordpress.org/support/topic/international-usps-labels-dont-print-4x6-anymore/) — support / label_purchase, address_validation
 - [Forbidden: You have reached the maximum number of origin addresses for this site](https://wordpress.org/support/topic/forbidden-you-have-reached-the-maximum-number-of-origin-addresses-for-this-site/) — support / address_validation
@@ -445,12 +427,10 @@ Clusters: label_purchase:38, other:29, address_validation:13, tax_invoice_compli
 - [Can’t Ship International](https://wordpress.org/support/topic/cant-ship-international/) — support / address_validation
 - [OAuth Error With WooCommerce Shipping Plugin, since Thursday](https://wordpress.org/support/topic/oauth-error-with-woocommerce-shipping-plugin-since-thursday/) — support / label_purchase, sync_connection
 - [Need Adult Signature Restricted Delivery option for USPS Shipping](https://wordpress.org/support/topic/need-adult-signature-restricted-delivery-option-for-usps-shipping-2/) — support / label_purchase
-- [WooCommerce Shipping UPS options not populating](https://wordpress.org/support/topic/woocommerce-shipping-ups-options-not-populating/) — support / label_purchase
-- [Can no longer purchase shipping labels due to error message](https://wordpress.org/support/topic/can-no-longer-purchase-shipping-labels-due-to-error-message/) — support / label_purchase
 
 ### PDF Invoices Italian Add-on for WooCommerce — unique topics 77, rating 4.6, active 4000
 
-Clusters: other:66, pdf_email:5, tax_invoice_compliance:3, bulk_workflow:1, label_purchase:1, update_breakage:1, accessibility_compliance:1
+Clusters: other:67, pdf_email:5, tax_invoice_compliance:2, bulk_workflow:1, label_purchase:1, update_breakage:1, accessibility_compliance:1
 
 - [PDF Invoices & Packing Slips for WooCommerce version 6 : WARNING.](https://wordpress.org/support/topic/pdf-invoices-packing-slips-for-woocommerce-version-6-warning/) — support / pdf_email
 - [Template custom ricevute non rilevato](https://wordpress.org/support/topic/template-custom-ricevute-non-rilevato/) — support / tax_invoice_compliance
@@ -461,12 +441,12 @@ Clusters: other:66, pdf_email:5, tax_invoice_compliance:3, bulk_workflow:1, labe
 - [Label Partita IVA o Codice Fiscale](https://wordpress.org/support/topic/label-partita-iva-o-codice-fiscale/) — support / label_purchase
 - [“Fatal error” dopo l’aggiornamento del plugin](https://wordpress.org/support/topic/fatal-error-dopo-laggiornamento-del-plugin/) — support / update_breakage
 - [Invoice with PayPal](https://wordpress.org/support/topic/invoice-with-paypal/) — support / pdf_email
-- [IVA per l’Italia privati/imprese, IVA Europa EXTRA UE](https://wordpress.org/support/topic/iva-per-litalia-privati-imprese-iva-europa-extra-ue/) — support / tax_invoice_compliance
 - [Il miglior adattamento per i mercati italiani](https://wordpress.org/support/topic/il-miglior-adattamento-per-i-mercati-italiani/) — review / accessibility_compliance
+- [Dicitura esenzione IVA per gli acquisti Extra UE](https://wordpress.org/support/topic/dicitura-esenzione-iva-per-gli-acquisti-extra-ue/) — support / other
+- [Cambio validità / rimozione campi per utenti stranieri](https://wordpress.org/support/topic/cambio-validita-rimozione-campi-per-utenti-stranieri/) — support / other
 - [PHP error: Deprecated: date_create() (Plugin v0.9.4.7)](https://wordpress.org/support/topic/php-error-deprecated-date_create-plugin-v0-9-4-7/) — support / other
 - [inversione di campi](https://wordpress.org/support/topic/inversione-di-campi/) — support / other
 - [San Marino](https://wordpress.org/support/topic/san-marino-2/) — support / other
-- [Errore php](https://wordpress.org/support/topic/errore-php/) — support / other
 
 ### ShipStation for WooCommerce — unique topics 74, rating 3.3, active 40000
 
@@ -528,26 +508,6 @@ Clusters: other:36, import_export:20, tax_invoice_compliance:2, missing_feature:
 - [Import not changing Yoast values.](https://wordpress.org/support/topic/import-not-changing-yoast-values/) — support / import_export
 - [Can I import Meta keywords](https://wordpress.org/support/topic/can-i-import-meta-keywords/) — support / import_export
 
-### Sendcloud Shipping — unique topics 40, rating 2.8, active 5000
-
-Clusters: other:31, update_breakage:4, sync_connection:3, tax_invoice_compliance:1, import_export:1, label_purchase:1
-
-- [Updating to 1.0.29 trows a fatal error.](https://wordpress.org/support/topic/updating-to-1-0-30-also-trows-a-fatal-error/) — support / update_breakage
-- [Fatal error after update to 1.0.29](https://wordpress.org/support/topic/fatal-error-after-update-to-1-0-29/) — support / update_breakage
-- [Fatal error after activating plugin](https://wordpress.org/support/topic/fatal-error-after-activating-plugin-3/) — support / update_breakage, tax_invoice_compliance
-- [Problem order import by api](https://wordpress.org/support/topic/problem-order-import-by-api/) — support / import_export
-- [Cloudflare Bot Fighting Mode – Sendcloud Sync Issued](https://wordpress.org/support/topic/cloudflare-bot-fighting-mode-sendcloud-sync-issued/) — support / sync_connection
-- [Pre-order product’s aren’t synced](https://wordpress.org/support/topic/pre-order-products-arent-synced/) — support / sync_connection
-- [Fatal error: Uncaught Error: Call to a member function get_meta() on bool](https://wordpress.org/support/topic/fatal-error-uncaught-error-call-to-a-member-function-get_meta-on-bool/) — support / update_breakage
-- [SendCloud makes shipping easy](https://wordpress.org/support/topic/sendcloud-makes-shipping-easy/) — review / label_purchase
-- [Unreliable; loses connections, Unacceptable customer service](https://wordpress.org/support/topic/unreliable-loses-connections-unacceptable-customer-service/) — review / sync_connection
-- [Vulnerability in 1.0.31 version](https://wordpress.org/support/topic/vulnerability-in-1-0-31-version/) — support / other
-- [Forced Overlay](https://wordpress.org/support/topic/forced-overlay-2/) — support / other
-- [Bug on 1.0.29](https://wordpress.org/support/topic/bug-on-1-0-29/) — support / other
-- [Legacy REST API enabled without consult after installing the plugin](https://wordpress.org/support/topic/legacy-rest-api-enabled-without-consult-after-installing-the-plugin/) — support / other
-- [Woocommerce email designer not working](https://wordpress.org/support/topic/woocommerce-email-designer-not-working/) — support / other
-- [V2 plugin not available](https://wordpress.org/support/topic/v2-plugin-not-available/) — support / other
-
 ### Blacklist Manager – WooCommerce Anti-Fraud, Blacklist & Checkout Verification — unique topics 40, rating 3.8, active 2000
 
 Clusters: other:37, missing_feature:2, subscription_renewal:1, accessibility_compliance:1
@@ -567,6 +527,46 @@ Clusters: other:37, missing_feature:2, subscription_renewal:1, accessibility_com
 - [Call to undefined function get_real_customer_ip](https://wordpress.org/support/topic/call-to-undefined-function-get_real_customer_ip/) — support / other
 - [Customer can still order after I block them](https://wordpress.org/support/topic/customer-can-still-order-after-i-block-them/) — support / other
 - [Omg! Again u add to menu item with ADS](https://wordpress.org/support/topic/omg-again-u-add-to-menu-item-with-ads/) — support / other
+
+### Flexible Refund for WooCommerce – EU One Click Return — unique topics 38, rating 3.7, active 2000
+
+Clusters: other:35, accessibility_compliance:1, address_validation:1, bulk_workflow:1
+
+- [https://keyboardco-com.lhr.stackstaging.com/](https://wordpress.org/support/topic/https-keyboardco-com-lhr-stackstaging-com/) — support / accessibility_compliance
+- [Change Recipient address for admin notification](https://wordpress.org/support/topic/change-recipient-address-for-admin-notification/) — support / address_validation
+- [Bulk refund](https://wordpress.org/support/topic/bulk-refund/) — support / bulk_workflow
+- [note](https://wordpress.org/support/topic/note-6/) — support / other
+- [Plugin Translation](https://wordpress.org/support/topic/plugin-translation-138/) — support / other
+- [Changing Recipient Email](https://wordpress.org/support/topic/changing-recipient-email-2/) — support / other
+- [Paytrail support?](https://wordpress.org/support/topic/paytrail-support-2/) — support / other
+- [Fields being repeated](https://wordpress.org/support/topic/fields-being-repeated/) — support / other
+- [Form editor does not work](https://wordpress.org/support/topic/form-editor-does-not-work/) — support / other
+- [HTTP ERROR 403](https://wordpress.org/support/topic/http-error-403-7/) — support / other
+- [Can we add a fee when refunding an order?](https://wordpress.org/support/topic/can-we-add-a-fee-when-refunding-an-order/) — support / other
+- [REFUND STATUS: UNKNOWN](https://wordpress.org/support/topic/refund-status-unknown-2/) — support / other
+- [Integration awesome support and ATUM](https://wordpress.org/support/topic/integration-awesome-support-and-atum/) — support / other
+- [HTML in product title](https://wordpress.org/support/topic/html-in-product-title/) — support / other
+- [2](https://wordpress.org/support/topic/bulk-refund/page/2/) — support / other
+
+### Import WooCommerce Suite for Products, Orders, Coupons, Reviews, and Customers | WP Ultimate CSV Importer — unique topics 15, rating 2.3, active 4000
+
+Clusters: other:9, import_export:5, update_breakage:1
+
+- [critical error](https://wordpress.org/support/topic/critical-error-754/) — support / update_breakage
+- [import csv and update cronjob](https://wordpress.org/support/topic/import-csv-and-update-cronjob/) — support / import_export
+- [Import has created duplicate imports & total product / updates do not match](https://wordpress.org/support/topic/import-has-created-duplicate-imports-total-product-updates-do-not-match/) — support / import_export
+- [how to import/export woocommerce setting?](https://wordpress.org/support/topic/how-to-import-export-woocommerce-setting/) — support / import_export
+- [Can I import posts to WooCommerce products?](https://wordpress.org/support/topic/can-i-import-posts-to-woocommerce-products/) — support / import_export
+- [import has slowed](https://wordpress.org/support/topic/import-has-slowed/) — support / import_export
+- [GCP server](https://wordpress.org/support/topic/gcp-server/) — support / other
+- [Variable Products](https://wordpress.org/support/topic/variable-products-59/) — support / other
+- [Transfer Drupal Shop Products into Woocommerce or any Drupal Nodes into WP](https://wordpress.org/support/topic/transfer-drupal-shop-products-into-woocommerce-or-any-drupal-nodes-into-wp/) — support / other
+- [Doesn’t works.](https://wordpress.org/support/topic/doesnt-works-22/) — review / other
+- [não funciona](https://wordpress.org/support/topic/nao-funciona-48/) — review / other
+- [Sencillo y práctico](https://wordpress.org/support/topic/sencillo-y-practico-6/) — review / other
+- [The plugin is great](https://wordpress.org/support/topic/the-plugin-is-great-5/) — review / other
+- [Doesn't work](https://wordpress.org/support/topic/doesnt-work-1372/) — review / other
+- [Hard to use and no instructions](https://wordpress.org/support/topic/hard-to-use-and-no-instructions/) — review / other
 
 ### WP All Export – Order Export for WooCommerce — unique topics 11, rating 3.9, active 3000
 
@@ -599,7 +599,7 @@ Clusters: other:6, import_export:3, missing_feature:1
 - [erreur critique](https://wordpress.org/support/topic/erreur-critique-9/) — review / other
 - [Très simple et utile !](https://wordpress.org/support/topic/tres-simple-et-utile/) — review / other
 
-### One Accessibility — unique topics 2, rating 3.5, active 200
+### One Accessibility – WordPress Accessibility Plugin & ADA Compliance Widget — unique topics 2, rating 3.5, active 200
 
 Clusters: other:2
 
