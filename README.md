@@ -1,15 +1,33 @@
-# Q — zero-touch income project
+# YouTube制作・収益改善
 
-Status: **`LIVE_FREE_MVP`**  
-Current product: **台本かぶり監査**  
-Live URL: **https://bachikoljunior-blip.github.io/Q/product/script-overlap-audit/**
+面白さ、自然な日本語、役ごとの声、初見の分かりやすさ、スピーカー再生、サムネイル、タイトルと概要欄、収益判断を、制作の途中や新しいセッションでも引き継ぐためのスキルです。
 
-複数のYouTube台本・字幕を端末内で比較し、重複・同型化と修正優先順位を返す無料MVPです。
+## 使い方
 
-## Truth
-- 無料、登録不要、入力はサーバーへ送信しない。
-- YouTube収益化、著作権侵害、審査結果を判定しない。
-- 有料需要、顧客、売上、月20万円は未証明。
+新しいセッションで、このQリポジトリを開き、次のように依頼できます。
 
-## Tests
-`node tests/script-overlap-audit.smoke.js` / `python scripts/check_prebuild_gate.py` / `python scripts/check_continuation_contract.py` / `python scripts/check_execution_contract.py`
+> QのAGENTS.mdとYouTube制作・収益改善スキルを読んで、これまでの制作条件を引き継いで動画を作って。
+
+スキルが利用可能な環境では、`$youtube-revenue-production` を明示して依頼する方法もあります。単にリポジトリへ保存しただけで、あらゆる環境に自動インストールされるものではありません。
+
+## 内容
+
+- [スキル本体](skills/youtube-revenue-production/SKILL.md)：制作条件と、依頼・修正・納品の扱い。
+- [制作レビュー](skills/youtube-revenue-production/references/production-review.md)：面白さ、初見の理解、日本語と声。
+- [収益判断](skills/youtube-revenue-production/references/revenue.md)：仮定と実測の分離、費用回収、公開後の改善。
+- [音声と納品](skills/youtube-revenue-production/references/audio-delivery.md)：ファイル検査、実聴、端末の確認を区別。
+- [制作記録のひな形](skills/youtube-revenue-production/assets/PROJECT_STATE.template.md)：指摘と未完了を次のセッションへ引き継ぐ記録。
+
+ファイルを検査したこと、耳で聞いたこと、端末で再生したこと、視聴者が面白いと評価したことを分けて扱います。「保証できない」で収益の検討を終えず、判断に必要な条件と計算を示します。タイトルと概要欄は、求められた返信にも完成文を出します。
+
+このスキルは既存の動画ファイルそのものを復元するものではありません。制作を続ける際は、案件の台本・素材・制作記録を併せて渡してください。
+
+## 検査用コード
+
+`scripts/inspect_media.py` はPython標準ライブラリ、FFmpeg、ffprobeを使います。入力ファイルは変更せず、指定した検査レポートだけを書きます。使い方と判定の限界は「音声と納品」を参照してください。
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+スキルの版を更新するときは、SKILL.md、参照資料、音声検査コードの関係を保ちます。特定の題材・音声サービス・動画尺・RPMを全案件へ固定しません。

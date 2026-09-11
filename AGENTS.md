@@ -1,28 +1,13 @@
-# AGENTS.md — Q operating contract
+# Qで作業するエージェントへ
 
-## Source of truth
-`PROJECT_STATE.md` → `research/ACTIVE_CANDIDATE.json` → `execution/CURRENT_WORK.json` → current candidate record → gates/tests.
+このリポジトリはYouTube制作の品質と収益判断を引き継ぐスキルを管理する。
 
-## Execution reality
-- GitHub Actions are deterministic scanners, tests and guards, not an autonomous product strategist.
-- After a response, no model reasoning continues unless a connected automation actually runs and records output.
-- `READY_TO_REPORT` closes one execution cycle; it does not mean the income goal is complete.
+YouTube動画の制作・改稿・納品・収益改善を始める場合は、まず `skills/youtube-revenue-production/SKILL.md` を読む。対応する案件に制作記録があれば併せて読む。新しいセッションでも、最新の指摘だけに目的を置き換えない。
 
-## Completion-before-response invariant
-Finish, reject or mark external every material task before reporting. A flaw found during the cycle creates same-cycle repair work. Run prebuild, continuation and execution checks.
+基本条件は、面白さ優先、初見で分かる構成、自然な日本語、必要な役の区別、対象端末で再生できる動画、内容に合うサムネイル、完成したタイトル・概要欄、具体的な収益判断。今回の依頼が狭ければ、その範囲に必要な作業だけ行う。題材や尺を固定しない。
 
-## Current status
-`LIVE_FREE_MVP` — EXP005 台本かぶり監査 is public and free. It is not a paid-product validation.
+新しい案件は `projects/<案件名>/PROJECT_STATE.md` などで、指摘、版、確認結果、未完了、次の作業を保持する。個人情報、認証情報、非公開の分析数値を公開リポジトリへ入れない。動画・音声の大容量素材は、利用可能な適切な保存先に置いて案件記録から参照する。
 
-## Product rules
-- Product code lives under `product/` only when `build_approved=true`.
-- `LIVE_FREE_MVP` requires measurable output, explicit claim limits, kill criteria, tests and a public page.
-- Do not claim monetization prediction, copyright determination or income guarantee.
-- Do not collect user scripts server-side in this MVP.
-- Paid build requires real use and willingness-to-pay evidence.
+音声検査の変更時は `python3 -m unittest discover -s tests -v` を実行する。これはファイル検査用コードの検証であり、実際の日本語音声の自然さや視聴者の面白さ評価を代替しない。
 
-## User constraints
-No individual sales, calls, meetings or customer-specific delivery as the main model. Keep user-required actions to account/KYC/payment steps that cannot be delegated.
-
-## Closed experiments
-EXP001–004, SECURITY_PRACTICAL_VOICE_TRAINER and JIRA_AUTOMATION_GUARD remain closed without new external evidence.
+ユーザーは2026-09-11の作成時にQの既存内容を置き換え、mainを使用することを許可した。この許可は今回の初期置き換えに限り、将来の別案件の削除・公開・課金へ拡張しない。
