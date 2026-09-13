@@ -1,0 +1,28 @@
+name: Validate game
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  game:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run test:journey
+      - run: npm run build
+      - run: npm run package
+      - name: Verify the standalone build is current
+        run: git diff --exit-code -- release/Q-ash-pilgrim.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Q-ash-pilgrim
+          path: |
+            dist/
+            release/Q-ash-pilgrim.html

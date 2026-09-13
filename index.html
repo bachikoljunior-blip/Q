@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#111e23" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="description" content="風の向こうで、消えた火が待っている。Q — 灰の巡礼。スマートフォン向けのオープンワールドアクションRPG。" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <title>Q — 灰の巡礼</title>
+</head>
+<body>
+  <canvas id="world" aria-label="灰の巡礼の3Dフィールド" tabindex="0"></canvas>
+  <div id="vignette"></div><div id="hurt"></div>
+  <section id="title-screen">
+    <header class="title-top"><span>AN OPEN WORLD JOURNEY</span><span>第一章 ── 残り火の谷</span></header>
+    <div class="title-content"><span class="eyebrow">THE ASH PILGRIM</span><h1>Q</h1><h2>灰の巡礼</h2><div class="title-rule"></div><p>世界が火を失った日、<br>あなたの手だけが、まだ温かかった。</p>
+      <button id="start" class="primary" disabled>世界を描いています…</button><button id="continue" class="text-button hidden">旅をつづける</button>
+    </div>
+    <footer class="title-bottom"><span>風の向こうへ。道は、あなたが決める。</span><button id="title-settings" class="text-button">操作・設定</button><span class="version">DEVELOPMENT BUILD · 0.1</span></footer>
+  </section>
+  <main id="hud" class="hidden">
+    <div class="vitals"><div class="sigil">Q</div><div class="vital-bars"><div class="vital-label"><span id="rank">巡礼者 · Lv.1</span><span id="hp-text">120 / 120</span></div><div class="bar hp"><i id="hp"></i></div><div class="bar stamina"><i id="stamina"></i></div><div class="bar energy"><i id="energy"></i></div></div></div>
+    <div class="compass"><span id="heading">W &nbsp; · &nbsp; N &nbsp; · &nbsp; E</span><span id="waypoint">◆</span></div>
+    <nav class="top-actions"><button id="map-button" aria-label="地図を開く"><span>⌖</span><small>地図</small></button><button id="pack-button" aria-label="旅の記録を開く"><span>☷</span><small>旅の記録</small></button><button id="pause-button" aria-label="設定を開く"><span>Ⅱ</span><small>休止</small></button></nav>
+    <div class="quest"><span class="eyebrow">MAIN JOURNEY</span><h3 id="quest-title">消えた火をたどって</h3><p id="quest-text">集落の灯守と話す</p></div>
+    <div id="location"><small>ASHEN VALE</small><h2>残り火の谷</h2><i></i></div>
+    <div id="toast" role="status" aria-live="polite"></div><div id="target-tag"></div>
+    <div id="boss" class="hidden"><small id="boss-name">灰冠の番人</small><div class="bar"><i id="boss-hp"></i></div></div>
+    <button id="interact" class="hidden"><kbd>E</kbd><span>調べる</span></button>
+    <div id="combat-hint"></div>
+    <div class="bottom-info"><span id="region">残り火の谷</span><span id="time">黎明</span><span id="currency">✧ 0</span></div>
+    <div id="joystick" aria-label="移動スティック"><div id="stick"></div><span>移動</span></div>
+    <div id="camera-zone" aria-label="ドラッグでカメラを回す"></div>
+    <div id="touch-actions">
+      <button id="heal-button" class="action small"><b>♜</b><small>回復 <span id="potions">3</span></small></button>
+      <button id="jump-button" class="action small"><b>↑</b><small>跳躍</small></button>
+      <button id="skill-button" class="action"><b>✧</b><small>残火</small></button>
+      <button id="dodge-button" class="action"><b>⤴</b><small>回避</small></button>
+      <button id="attack-button" class="action attack"><b>⚔</b><small>斬撃</small></button>
+      <button id="parry-button" class="action small"><b>◇</b><small>受け流し</small></button>
+      <button id="lock-button" class="action small"><b>⊙</b><small>注視</small></button>
+    </div>
+    <div id="desktop-hints">W A S D 移動 &nbsp; · &nbsp; ドラッグ 視点 &nbsp; · &nbsp; J 斬撃 &nbsp; · &nbsp; Space 回避 &nbsp; · &nbsp; K 受け流し &nbsp; · &nbsp; L 残火 &nbsp; · &nbsp; F 注視</div>
+    <div id="enemy-labels"></div><div id="damage-numbers"></div>
+  </main>
+  <div id="panel-backdrop" class="hidden"><section id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title"><button id="close-panel" class="close" aria-label="閉じる">×</button><span id="panel-kicker" class="eyebrow"></span><h2 id="panel-title"></h2><div id="panel-body"></div></section></div>
+  <div id="death-screen" class="hidden"><span class="eyebrow">THE FIRE REMEMBERS</span><h2>火は、まだ消えない。</h2><p>失ったのは灰の欠片の一部。灯火があなたを呼んでいる。</p><button id="respawn" class="primary">灯火から立ち上がる</button></div>
+  <div id="fatal" class="hidden" role="alert"><h2>世界を開けませんでした</h2><p id="fatal-message"></p><button onclick="location.reload()">もう一度読み込む</button></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+import { build } from 'esbuild';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+const r=await build({entryPoints:['src/main.js'],bundle:true,format:'iife',minify:true,target:'es2022',write:false,outfile:'game.js',legalComments:'inline'});
+let html=await readFile('index.html','utf8');
+const script=r.outputFiles.find(f=>f.path.endsWith('.js')).text;
+const css=r.outputFiles.find(f=>f.path.endsWith('.css')).text;
+const icon=await readFile('public/icon.svg','utf8');
+html=html.replace(/<link rel="manifest"[^>]*>/,'').replace('./icon.svg','data:image/svg+xml,'+encodeURIComponent(icon));
+html=html.replace('<script type="module" src="/src/main.js"></script>',()=>'<style>'+css+'</style><script>'+script.replace(/<\/script/gi,'<\\/script')+'</script>');
+await mkdir('release',{recursive:true});
+await writeFile('release/Q-ash-pilgrim.html',html);
+console.log(`Created release/Q-ash-pilgrim.html (${Math.round(Buffer.byteLength(html)/1024)} KiB, self-contained, no network required).`);
