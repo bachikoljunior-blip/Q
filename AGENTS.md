@@ -1,7 +1,7 @@
 # Q — 灰の巡礼
 
 Qの主目的はスマートフォン向けオープンワールドアクションRPGの制作。
-2026-09-13のユーザー指示で、旧リポジトリの内容をゲームへ置き換えた。
+2026-09-13のユーザー指示で、旧リポジトリの内容をゲームへ置き換えた。完成期限は2026-09-20までの1週間以内。ユーザーは完成まで制作を続け、適宜mainへ反映することを指示している。試作の提出期限に読み替えない。品質目標の達成は未確認であり、根拠のない完成保証はしない。
 
 着手時は README.md と docs/PROJECT_STATE.md を読む。現行のゲームはブラウザーで遊べる第一章の開発版。Elden Ring、The Witcher 3、Breath of the Wild、Skyrim、Red Dead Redemption 2、Ghost of Tsushima、Cyberpunk 2077、Horizon Forbidden West、Dragon’s Dogma 2、Kingdom Come: Deliverance II を品質目標としている。実測や実プレイに基づかず、これらに匹敵した、完成した、面白さを確認したと記録しない。
 

@@ -1,5 +1,8 @@
 // Automated policy reading enemy state; not a human playtest or device benchmark.
 import {Game,PLACES,distance} from '../src/core.js';
+import {findPath} from '../src/navigation.js';
+import {lineClear} from '../src/spatial.js';
+const navigation={path:[],goal:null};
 const g=new Game(),log=[];let failed=false,t=0;
 function tickToward(goal,combat=true){
   const p=g.player;
@@ -16,7 +19,11 @@ function tickToward(goal,combat=true){
   }else g.locked=null;
   let x=aim.x-p.x,z=aim.z-p.z,d=Math.hypot(x,z);if(d>.1){x/=d;z/=d;}else{x=z=0;}
   if(away){x=-x;z=-z;}
-  for(const o of g.obstacles){const od=distance(p,o),r=o.r+2;if(od<r&&od>.01){const nx=(p.x-o.x)/od,nz=(p.z-o.z)/od;x+=nx*(r-od)*1.8-nz*.4;z+=nz*(r-od)*1.8+nx*.4;}}
+  if(!away&&distance(p,aim)>1&&!lineClear(p,aim,g.obstacles,.56)){
+    if(!navigation.path.length||!navigation.goal||distance(aim,navigation.goal)>3){navigation.path=findPath(p,aim,g.obstacles);navigation.goal={x:aim.x,z:aim.z};}
+    while(navigation.path.length&&distance(p,navigation.path[0])<.5)navigation.path.shift();
+    const node=navigation.path[0];if(node){const length=distance(p,node);x=(node.x-p.x)/length;z=(node.z-p.z)/length;}
+  }else navigation.path=[];
   g.tick(1/60,{x,z});t+=1/60;
   g.events.length=0;
 }

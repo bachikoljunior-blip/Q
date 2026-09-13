@@ -1,4 +1,5 @@
 import * as T from 'three';
+import { cameraFraction } from './spatial.js';
 import { PLACES, heightAt, random, WORLD_SEED, clamp, distance, riverX, inWater } from './core.js';
 
 const C = { stone:0x697b78, dark:0x293a40, gold:0xcdb57a, wood:0x514840, leaf:0x566c53 };
@@ -84,10 +85,11 @@ export class SceneView {
     this.motes.position.set(p.x,Math.max(0,p.y),p.z);this.motes.rotation.y=this.t*.005;this.motes.position.y+=Math.sin(this.t*.4);this.clouds.forEach((c,i)=>c.position.x+=dt*(.25+i*.01));
     for(let i=this.effects.length-1;i>=0;i--){const e=this.effects[i];e.life-=dt;if(e.life<=0){this.scene.remove(e.m);e.m.geometry.dispose();e.m.material.dispose();this.effects.splice(i,1);continue;}e.m.material.opacity=e.life/e.total;if(e.vel){const a=e.m.geometry.attributes.position;for(let j=0;j<a.count;j++){e.vel[j*3+1]-=dt*8;a.setXYZ(j,a.getX(j)+e.vel[j*3]*dt,a.getY(j)+e.vel[j*3+1]*dt,a.getZ(j)+e.vel[j*3+2]*dt);}a.needsUpdate=true;}else e.m.scale.setScalar(1+(1-e.life/e.total)*(e.type==='skill'?13:6));}
     if(playing){const target=new T.Vector3(p.x,p.y+1.6,p.z);const lock=this.game.enemies.find(e=>e.id===this.game.locked);if(lock&&!lock.dead){const yaw=Math.atan2(p.x-lock.x,p.z-lock.z);this.yaw+=Math.atan2(Math.sin(yaw-this.yaw),Math.cos(yaw-this.yaw))*dt*4;target.lerp(new T.Vector3(lock.x,lock.y+1.5,lock.z),.2);}
-      const d=this.zoom*(innerHeight>innerWidth?1.12:1);const desired=new T.Vector3(p.x+Math.sin(this.yaw)*Math.cos(this.pitch)*d,p.y+1.7+Math.sin(this.pitch)*d,p.z+Math.cos(this.yaw)*Math.cos(this.pitch)*d);desired.y=Math.max(desired.y,heightAt(desired.x,desired.z)+1.2);for(const o of this.game.obstacles)if(o.type==='house'&&Math.hypot(desired.x-o.x,desired.z-o.z)<o.r+1)desired.y=Math.max(desired.y,heightAt(o.x,o.z)+6.5);this.camera.position.lerp(desired,1-Math.exp(-dt*9));if(this.shake>0){this.shake=Math.max(0,this.shake-dt);this.camera.position.x+=(Math.random()-.5)*this.shake;this.camera.position.y+=(Math.random()-.5)*this.shake;}this.camera.lookAt(target);
+      const d=this.zoom*(innerHeight>innerWidth?1.12:1);const desired=new T.Vector3(p.x+Math.sin(this.yaw)*Math.cos(this.pitch)*d,p.y+1.7+Math.sin(this.pitch)*d,p.z+Math.cos(this.yaw)*Math.cos(this.pitch)*d);const fraction=cameraFraction(target,desired,this.game.obstacles,heightAt);desired.lerpVectors(target,desired,fraction);this.camera.position.lerp(desired,this.cameraSnap?1:1-Math.exp(-dt*9));this.cameraSnap=false;const safe=cameraFraction(target,this.camera.position,this.game.obstacles,heightAt);if(safe<1)this.camera.position.lerpVectors(target,this.camera.position,safe);if(this.shake>0){this.shake=Math.max(0,this.shake-dt);this.camera.position.x+=(Math.random()-.5)*this.shake;this.camera.position.y+=(Math.random()-.5)*this.shake;}this.camera.lookAt(target);
     }else{this.camera.position.set(-15+Math.sin(this.t*.025)*3,22,120);this.camera.lookAt(12,6,-48);}
     this.renderer.render(this.scene,this.camera);
   }
+  snapCamera(){this.cameraSnap=true;this.shake=0;}
   project(x,y,z){const p=new T.Vector3(x,y,z).project(this.camera);return{x:(p.x*.5+.5)*innerWidth,y:(-p.y*.5+.5)*innerHeight,visible:p.z<1&&p.z>-1};}
   setQuality(quality){this.settings.quality=quality;this.renderer.setPixelRatio(Math.min(devicePixelRatio,quality==='high'?1.7:quality==='low'?1:1.35));this.renderer.shadowMap.enabled=quality!=='low';this.resize();}
 }
