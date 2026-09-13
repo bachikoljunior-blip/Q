@@ -17,6 +17,39 @@ export function lineClear(a, b, obstacles, padding = 0) {
   return !obstacles.some(o => segmentCircle(a, b, o, padding) !== null);
 }
 
+// Intersect a segment with the sides AND caps of an upright solid cylinder.
+export function segmentCylinder(a, b, cylinder, padding = 0) {
+  const dx=b.x-a.x,dz=b.z-a.z,dy=b.y-a.y;
+  const ox=a.x-cylinder.x,oz=a.z-cylinder.z,r=cylinder.r+padding;
+  const length2=dx*dx+dz*dz,c=ox*ox+oz*oz-r*r;
+  let enter=0,exit=1;
+  if(length2<1e-12){if(c>0)return null;}
+  else{
+    const projection=ox*dx+oz*dz,discriminant=projection*projection-length2*c;
+    if(discriminant<0)return null;
+    const root=Math.sqrt(discriminant);
+    enter=Math.max(enter,(-projection-root)/length2);exit=Math.min(exit,(-projection+root)/length2);
+  }
+  const bottom=cylinder.y-padding,top=cylinder.y+cylinder.height+padding;
+  if(Math.abs(dy)<1e-12){if(a.y<bottom||a.y>top)return null;}
+  else{const t0=(bottom-a.y)/dy,t1=(top-a.y)/dy;enter=Math.max(enter,Math.min(t0,t1));exit=Math.min(exit,Math.max(t0,t1));}
+  return enter<=exit&&enter>=0&&enter<=1?enter:null;
+}
+
+export function segmentTerrain(a,b,floorAt,padding=.1){
+  const length=Math.hypot(b.x-a.x,b.y-a.y,b.z-a.z),steps=Math.max(1,Math.ceil(length/.2));
+  for(let i=0;i<=steps;i++){
+    const t=i/steps,x=a.x+(b.x-a.x)*t,y=a.y+(b.y-a.y)*t,z=a.z+(b.z-a.z)*t;
+    if(y<floorAt(x,z)+padding){
+      let low=Math.max(0,(i-1)/steps),high=t;
+      for(let j=0;j<5;j++){const mid=(low+high)/2,mx=a.x+(b.x-a.x)*mid,mz=a.z+(b.z-a.z)*mid;
+        if(a.y+(b.y-a.y)*mid<floorAt(mx,mz)+padding)high=mid;else low=mid;}
+      return high;
+    }
+  }
+  return null;
+}
+
 export function moveCircle(actor, dx, dz, obstacles, radius = .48) {
   // Substeps keep a fast roll from tunnelling through a small collider.
   const steps = Math.max(1, Math.ceil(Math.hypot(dx, dz) / Math.max(.2, radius * .7)));
@@ -65,10 +98,9 @@ export function steerAround(actor, goal, obstacles, radius = .48) {
 export function cameraFraction(target, desired, obstacles, floorAt) {
   let fraction = 1;
   for (const o of obstacles) {
-    const t = segmentCircle(target, desired, o, .35);
+    const t = segmentCylinder(target,desired,{...o,y:floorAt(o.x,o.z),height:o.height??o.r*1.5},.35);
     if (t === null) continue;
-    const y = target.y + (desired.y - target.y) * t, base = floorAt(o.x, o.z);
-    if (y > base - .4 && y < base + (o.height ?? o.r * 1.5) + .4) fraction = Math.min(fraction, Math.max(.05, t - .045));
+    fraction = Math.min(fraction, Math.max(.05, t - .045));
   }
   const length = Math.hypot(desired.x - target.x, desired.y - target.y, desired.z - target.z);
   const steps = Math.max(1, Math.ceil(length / .3));

@@ -33,7 +33,9 @@ export function findPath(start, goal, obstacles, radius=.48) {
   }
   const source=attach(start),target=attach(goal);if(source===null||target===null)return [];
   const open=new MinHeap(),cost=new Map([[source,0]]),parent=new Map(),closed=new Set();
-  const destination=point(target),heuristic=id=>{const p=point(id);return Math.hypot(p.x-destination.x,p.z-destination.z);};
+  // Octile distance matches this eight-direction grid. Euclidean distance
+  // explores too many equivalent detours on a journey across the entire valley.
+  const destination=point(target),heuristic=id=>{const p=point(id),dx=Math.abs(p.x-destination.x),dz=Math.abs(p.z-destination.z);return Math.max(dx,dz)+(Math.SQRT2-1)*Math.min(dx,dz);};
   open.push({id:source,f:heuristic(source)});let visited=0;
   while(open.items.length&&visited++<14000){
     const {id}=open.pop();if(closed.has(id))continue;

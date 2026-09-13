@@ -10,3 +10,5 @@
 
 .weapon-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.weapon-card{padding:16px;border:1px solid #77867855;background:#20302e66}.weapon-card.equipped{border-color:#c8b77c;background:#85764522}.weapon-card h3{margin:0 0 8px;font-size:16px}.weapon-card p{font-size:13px;line-height:1.7;min-height:68px}.weapon-card small{display:block;color:#b4bbae;font-size:12px;margin-bottom:12px}.weapon-card button{width:100%;min-height:44px;font-size:12px}.bottom-info #weapon-label{color:#c8b77c}.npc-label{position:absolute;transform:translate(-50%,-100%);font-size:12px;color:#ecdbad;white-space:nowrap;text-shadow:0 2px 5px #000;pointer-events:none}
 @media(max-width:600px){.weapon-list{grid-template-columns:1fr}.weapon-card p{min-height:0;margin:6px 0}.weapon-card{padding:14px}.bottom-info #weapon-label{display:none}}
+
+#heal-button.drinking{border-color:#a1e5bf;background:linear-gradient(0deg,#75bd9970 var(--drink-progress),#152227a8 var(--drink-progress));box-shadow:0 0 16px #80c7a525}.workshop-status{color:#e1cd9e!important}

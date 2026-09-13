@@ -3,7 +3,7 @@ import {distance} from '../src/core.js';
 import {findPath} from '../src/navigation.js';
 import {lineClear} from '../src/spatial.js';
 export function createPilot(g){
-const navigation={path:[],goal:null},clock={value:0};
+const navigation={path:[],goal:null,nextAttempt:0},clock={value:0};
 function tickToward(goal,combat=true){
   const p=g.player;
   const foes=g.enemies.filter(e=>!e.dead&&e.state!=='sealed'&&distance(e,p)<17).sort((a,b)=>distance(a,p)-distance(b,p));
@@ -21,7 +21,7 @@ function tickToward(goal,combat=true){
   let x=aim.x-p.x,z=aim.z-p.z,d=Math.hypot(x,z);if(d>.1){x/=d;z/=d;}else{x=z=0;}
   if(away){x=-x;z=-z;}
   if(!away&&distance(p,aim)>1&&!lineClear(p,aim,g.obstacles,.56)){
-    if(!navigation.path.length||!navigation.goal||distance(aim,navigation.goal)>3){navigation.path=findPath(p,aim,g.obstacles);navigation.goal={x:aim.x,z:aim.z};}
+    if(!navigation.goal||distance(aim,navigation.goal)>3||(!navigation.path.length&&clock.value>=navigation.nextAttempt)){navigation.path=findPath(p,aim,g.obstacles);navigation.goal={x:aim.x,z:aim.z};navigation.nextAttempt=clock.value+.5;}
     while(navigation.path.length&&distance(p,navigation.path[0])<.5)navigation.path.shift();
     const node=navigation.path[0];if(node){const length=distance(p,node);x=(node.x-p.x)/length;z=(node.z-p.z)/length;}
   }else navigation.path=[];

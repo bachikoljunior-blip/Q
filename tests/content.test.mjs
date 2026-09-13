@@ -9,11 +9,11 @@ function ranger(g,z=111){const e=g.enemies.find(e=>e.type==='ranger');Object.ass
 
 test('spear hits at extended range but misses a side target outside its narrow arc',()=>{
   const g=quiet();g.weapons.push('spear');assert(g.equipWeapon('spear'));const [front,side]=g.enemies;
-  Object.assign(front,{dead:false,x:0,z:105.8,hp:100,state:'recover',timer:5});Object.assign(side,{dead:false,x:3,z:104,hp:100,state:'recover',timer:5});
+  Object.assign(front,{dead:false,x:0,z:105.8,y:groundAt(0,105.8),hp:100,state:'recover',timer:5});Object.assign(side,{dead:false,x:3,z:104,y:groundAt(3,104),hp:100,state:'recover',timer:5});
   g.locked=front.id;g.attack();step(g,.3);assert(front.hp<100);assert.equal(side.hp,100);assert.equal(g.player.stamina,82);
 });
 test('greatsword commits more time and stamina before dealing its heavier hit',()=>{
-  const g=quiet();g.weapons.push('greatsword');g.equipWeapon('greatsword');const e=g.enemies[0];Object.assign(e,{dead:false,x:0,z:103.5,hp:200,state:'recover',timer:5});
+  const g=quiet();g.weapons.push('greatsword');g.equipWeapon('greatsword');const e=g.enemies[0];Object.assign(e,{dead:false,x:0,z:103.5,y:groundAt(0,103.5),hp:200,state:'recover',timer:5});
   g.attack();assert.equal(g.player.stamina,71);step(g,.35);assert.equal(e.hp,200);assert.equal(g.equipWeapon('sword'),false);step(g,.2);assert(Math.abs(e.hp-(200-26*1.7))<.001);step(g,.4);assert(g.equipWeapon('sword'));assert.equal(g.equipWeapon('unknown'),false);
 });
 test('ranger aims before releasing an arrow, which takes time to reach its target',()=>{
@@ -42,7 +42,7 @@ test('crossing supplies require defeating the camp, and delivery has two persist
     const crate=g.pickups.find(l=>l.id===SUPPLY_ID),guard=g.enemies.find(e=>e.encounter==='crossing');guard.dead=false;place(g,crate);assert.equal(g.interact(crate),false);assert.equal(g.supplies,false);guard.dead=true;g.interact(crate);assert(g.supplies);assert.equal(g.quest().target.id,SENA.id);
     assert.equal(g.resolveCrossing(choice),false);place(g,SENA);assert(g.resolveCrossing(choice));const ash=g.player.ash;assert.equal(g.resolveCrossing(choice),false);assert.equal(g.player.ash,ash);
     const h=new Game(g.serialize());assert.equal(h.crossingChoice,choice);assert(h.weapons.includes('spear'));assert.equal(h.trackedQuest,'main');
-    if(choice==='haven'){g.player.hp=10;g.player.potions=1;g.heal();assert.equal(g.player.hp,90);}else{g.player.potions=0;place(g,PLACES[0]);g.interact(PLACES[0]);assert.equal(g.player.potions,4);}
+    if(choice==='haven'){g.player.hp=10;g.player.potions=1;g.heal();step(g,.7);assert.equal(g.player.hp,90);}else{g.player.potions=0;place(g,PLACES[0]);g.interact(PLACES[0]);assert.equal(g.player.potions,4);}
   }
 });
 test('legacy save unlocks weapons earned at beacons and cannot restore unknown equipment',()=>{

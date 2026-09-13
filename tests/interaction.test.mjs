@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { Game, KEEPER, PLACES, heightAt, distance } from '../src/core.js';
-import { cameraFraction, moveCircle, segmentCircle } from '../src/spatial.js';
+import { cameraFraction, moveCircle, segmentCircle, lineClear } from '../src/spatial.js';
+import { findPath } from '../src/navigation.js';
 const step=(g,t,input={})=>{for(let i=0;i<Math.round(t*60);i++)g.tick(1/60,input);};
 const quiet=()=>{const g=new Game();g.enemies.forEach(e=>e.dead=true);g.obstacles=[];return g;};
 
@@ -16,12 +17,12 @@ test('defensive buffering wins over held attack and clears on interruption',()=>
 });
 test('locked target controls the first hit even with a closer enemy behind',()=>{
   const g=quiet(),[front,back]=g.enemies;
-  Object.assign(front,{dead:false,x:0,z:104,hp:100,state:'recover',timer:5});
-  Object.assign(back,{dead:false,x:0,z:99,hp:100,state:'recover',timer:5});
+  Object.assign(front,{dead:false,x:0,z:104,y:heightAt(0,104),hp:100,state:'recover',timer:5});
+  Object.assign(back,{dead:false,x:0,z:99,y:heightAt(0,99),hp:100,state:'recover',timer:5});
   g.locked=front.id;g.attack();step(g,.23,{x:1});assert.equal(front.hp,74);assert.equal(back.hp,100);
 });
 test('melee and residual flame cannot damage through a solid wall',()=>{
-  const g=quiet(),e=g.enemies[0];Object.assign(e,{dead:false,x:0,z:104,hp:100,state:'recover',timer:5});
+  const g=quiet(),e=g.enemies[0];Object.assign(e,{dead:false,x:0,z:104,y:heightAt(0,104),hp:100,state:'recover',timer:5});
   g.obstacles=[{x:0,z:102.5,r:.65,type:'pillar'}];g.player.angle=0;g.attack();step(g,.25);g.skill();assert.equal(e.hp,100);
   Object.assign(e,{state:'strike',timer:.2,hit:false,angle:Math.PI});g.tickEnemy(e,.02);assert.equal(g.player.hp,120);
 });
@@ -66,4 +67,10 @@ test('camera probes shorten at a wall or ridge, and clear space retains full dis
   assert(segmentCircle(target,desired,wall)===.4);assert(cameraFraction(target,desired,[wall],()=>0)<.4);
   assert.equal(cameraFraction(target,desired,[],()=>0),1);assert(cameraFraction(target,desired,[],(x,z)=>z>4&&z<6?5:0)<.5);
   assert.equal(cameraFraction({...target,y:10},{...desired,y:10},[wall],()=>0),1);
+});
+
+test('a full-valley route leaves the crown enclosure and reaches the opposite world edge',()=>{
+  const g=new Game(),start=PLACES[4],goal={x:-230,z:170},path=findPath(start,goal,g.obstacles);
+  assert(path.length>0,'bounded search must find this reachable long route');assert.deepEqual(path.at(-1),goal);
+  let previous=start;for(const point of path){assert(lineClear(previous,point,g.obstacles,.48));previous=point;}
 });
