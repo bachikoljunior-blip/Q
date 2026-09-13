@@ -1,4 +1,4 @@
-import { lineClear } from './spatial.js';
+import { lineClear, indexObstacles, queryObstacles } from './spatial.js';
 
 class MinHeap {
   items = [];
@@ -20,9 +20,9 @@ export function findPath(start, goal, obstacles, radius=.48) {
   const top=Math.max(-282,Math.floor((Math.min(start.z,goal.z)-margin)/cell)*cell);
   const right=Math.min(280,Math.max(start.x,goal.x)+margin),bottom=Math.min(220,Math.max(start.z,goal.z)+margin);
   const width=Math.floor((right-left)/cell)+1,height=Math.floor((bottom-top)/cell)+1;
-  const nearby=obstacles.filter(o=>o.x+o.r+radius>=left&&o.x-o.r-radius<=right&&o.z+o.r+radius>=top&&o.z-o.r-radius<=bottom);
+  const nearby=indexObstacles(queryObstacles(obstacles,left-radius,top-radius,right+radius,bottom+radius).filter(o=>o.x+o.r+radius>=left&&o.x-o.r-radius<=right&&o.z+o.r+radius>=top&&o.z-o.r-radius<=bottom));
   const point=id=>({x:left+(id%width)*cell,z:top+Math.floor(id/width)*cell});
-  const valid=p=>p.x>=-280&&p.x<=280&&p.z>=-282&&p.z<=220&&!nearby.some(o=>Math.hypot(p.x-o.x,p.z-o.z)<o.r+radius+.08);
+  const valid=p=>p.x>=-280&&p.x<=280&&p.z>=-282&&p.z<=220&&!queryObstacles(nearby,p.x-radius-.08,p.z-radius-.08,p.x+radius+.08,p.z+radius+.08).some(o=>Math.hypot(p.x-o.x,p.z-o.z)<o.r+radius+.08);
   function attach(p){
     const x=Math.round((p.x-left)/cell),z=Math.round((p.z-top)/cell);let best=null,distance=Infinity;
     for(let dz=-2;dz<=2;dz++)for(let dx=-2;dx<=2;dx++){

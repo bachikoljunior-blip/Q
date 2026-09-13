@@ -1,9 +1,10 @@
 // Deterministic world and combat simulation. No DOM or rendering dependencies.
-import { moveCircle, steerAround, lineClear } from './spatial.js';
+import { moveCircle, steerAround, lineClear, indexObstacles, queryObstacles } from './spatial.js';
 import { findPath } from './navigation.js';
 import { WEAPONS, SENA, EAST_CAMP, SUPPLY_ID, crossingText } from './content.js';
 import { segmentCylinder, segmentTerrain } from './spatial.js';
 import { captureRuntime, restoreRuntime } from './runtime-state.js';
+import { createWoodland } from './woodland.js';
 export const WORLD_SEED = 87123;
 export const SAVE_VERSION = 1;
 export const TAU = Math.PI * 2;
@@ -56,7 +57,9 @@ export function makeWorld() {
   // Preserve stable IDs while moving generated items out of solid scenery.
   for(const item of pickups)moveCircle(item,0,0,obstacles,.8);
   for(const e of enemies){moveCircle(e,0,0,obstacles,e.type==='boss'?1.2:.48);e.homeX=e.x;e.homeZ=e.z;e.y=heightAt(e.x,e.z);}
-  return {enemies,pickups,obstacles};
+  const trees=createWoodland(random(WORLD_SEED+33),{places:PLACES,bridges:BRIDGES,npcs:[KEEPER,SENA],camp:EAST_CAMP,obstacles,enemies,pickups,inWater});
+  for(const tree of trees)obstacles.push({id:tree.id,x:tree.x,z:tree.z,r:.24,height:tree.h*.76,type:'tree'});
+  return {enemies,pickups,trees,obstacles:indexObstacles(obstacles)};
 }
 export class Game {
   constructor(save=null) {
@@ -188,7 +191,7 @@ export class Game {
       arrow.life-=dt;if(arrow.life<=0)continue;
       const from={x:arrow.x,y:arrow.y,z:arrow.z},to={x:arrow.x+arrow.vx*dt,y:arrow.y+arrow.vy*dt,z:arrow.z+arrow.vz*dt};
       const terrain=segmentTerrain(from,to,groundAt,.1);let first=terrain??1.01,target=terrain===null?null:'wall';
-      for(const o of this.obstacles){const t=segmentCylinder(from,to,{...o,y:heightAt(o.x,o.z),height:o.height??o.r*1.5},.08);if(t!==null&&t<first){first=t;target='wall';}}
+      for(const o of queryObstacles(this.obstacles,Math.min(from.x,to.x)-.08,Math.min(from.z,to.z)-.08,Math.max(from.x,to.x)+.08,Math.max(from.z,to.z)+.08)){const t=segmentCylinder(from,to,{...o,y:heightAt(o.x,o.z),height:o.height??o.r*1.5},.08);if(t!==null&&t<first){first=t;target='wall';}}
       const victims=arrow.owner==='player'?this.enemies.filter(e=>!e.dead):[p];
       for(const victim of victims){const body=victim.type==='boss'?4.7:victim.type==='wolf'?1.35:2.1;const t=segmentCylinder(from,to,{...victim,y:victim.y+.15,height:body-.15,r:victim.type==='boss'?1.25:.48},.12);if(t!==null&&t<first){first=t;target=victim;}}
       const impact=target?first:1;arrow.x=from.x+(to.x-from.x)*impact;arrow.y=from.y+(to.y-from.y)*impact;arrow.z=from.z+(to.z-from.z)*impact;

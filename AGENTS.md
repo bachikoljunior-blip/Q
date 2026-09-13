@@ -5,7 +5,7 @@ Qの主目的はスマートフォン向けオープンワールドアクショ�
 
 着手時は README.md と docs/PROJECT_STATE.md を読む。現行のゲームはブラウザーで遊べる第一章の開発版。Elden Ring、The Witcher 3、Breath of the Wild、Skyrim、Red Dead Redemption 2、Ghost of Tsushima、Cyberpunk 2077、Horizon Forbidden West、Dragon’s Dogma 2、Kingdom Come: Deliverance II を品質目標としている。実測や実プレイに基づかず、これらに匹敵した、完成した、面白さを確認したと記録しない。
 
-- src/core.js は描画に依存しないゲームルール。src/content.js は武器と副クエストの定義。src/spatial.js / src/navigation.js は衝突と経路。src/runtime-state.js は途中動作・敵・矢の保存。src/scene.js はThree.jsによる3D描画。src/main.js は操作、画面、進行保存。src/audio.js は手続き的な環境音と効果音。
+- src/core.js は描画に依存しないゲームルール。src/content.js は武器と副クエストの定義。src/spatial.js / src/navigation.js は衝突と経路。src/runtime-state.js は途中動作・敵・矢の保存。src/save-store.js はブラウザー保存の検証・復旧。src/woodland.js は描画と衝突で共用する木の配置。src/scene.js はThree.jsによる3D描画。src/main.js は操作、画面、進行保存。src/audio.js は手続き的な環境音と効果音。
 - 操作、進行、保存の変更では該当する振る舞いを npm test で確認する。進行変更では npm run test:journey と npm run test:crossing も実行する。保存・経路変更では npm run test:session で30分相当の継続シミュレーションも行う。細かな表示だけの変更に不要な単体テストを増やさない。
 - 成果物は npm run build と npm run package で生成する。release/Q-ash-pilgrim.html は依存ファイルが不要な起動版。生成物はソース変更と一致させる。
 - 品質確認はビルド、ロジックテスト、ブラウザー操作、スマホ実機、プレイヤー評価を区別する。できなかった確認は理由とともに残す。

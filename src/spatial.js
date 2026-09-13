@@ -1,3 +1,27 @@
+// Static broad phase, shared by movement, visibility, arrows and camera probes.
+// Arrays without an index remain supported for small or temporary fixtures.
+const obstacleIndices=new WeakMap();
+export function indexObstacles(obstacles,cellSize=16){
+  const cells=new Map(),order=new Map(obstacles.map((o,i)=>[o,i]));
+  for(const obstacle of obstacles){
+    const minX=Math.floor((obstacle.x-obstacle.r)/cellSize),maxX=Math.floor((obstacle.x+obstacle.r)/cellSize);
+    const minZ=Math.floor((obstacle.z-obstacle.r)/cellSize),maxZ=Math.floor((obstacle.z+obstacle.r)/cellSize);
+    for(let z=minZ;z<=maxZ;z++)for(let x=minX;x<=maxX;x++){
+      const key=`${x},${z}`;let bucket=cells.get(key);if(!bucket){bucket=[];cells.set(key,bucket);}bucket.push(obstacle);
+    }
+  }
+  obstacleIndices.set(obstacles,{cells,cellSize,order,count:obstacles.length});return obstacles;
+}
+export function queryObstacles(obstacles,minX,minZ,maxX=minX,maxZ=minZ){
+  let index=obstacleIndices.get(obstacles);if(!index)return obstacles;
+  if(index.count!==obstacles.length){indexObstacles(obstacles,index.cellSize);index=obstacleIndices.get(obstacles);}
+  const {cells,cellSize}=index,left=Math.floor(minX/cellSize),right=Math.floor(maxX/cellSize),top=Math.floor(minZ/cellSize),bottom=Math.floor(maxZ/cellSize);
+  if(left===right&&top===bottom)return cells.get(`${left},${top}`)||[];
+  if((right-left+1)*(bottom-top+1)>4096)return obstacles;
+  const found=new Set();for(let z=top;z<=bottom;z++)for(let x=left;x<=right;x++)for(const o of cells.get(`${x},${z}`)||[])found.add(o);
+  return [...found].sort((a,b)=>index.order.get(a)-index.order.get(b));
+}
+
 // Shared horizontal collision for actors, melee visibility and camera probes.
 export function segmentCircle(a, b, circle, padding = 0) {
   const dx = b.x - a.x, dz = b.z - a.z;
@@ -14,7 +38,7 @@ export function segmentCircle(a, b, circle, padding = 0) {
 }
 
 export function lineClear(a, b, obstacles, padding = 0) {
-  return !obstacles.some(o => segmentCircle(a, b, o, padding) !== null);
+  return !queryObstacles(obstacles,Math.min(a.x,b.x)-padding,Math.min(a.z,b.z)-padding,Math.max(a.x,b.x)+padding,Math.max(a.z,b.z)+padding).some(o => segmentCircle(a, b, o, padding) !== null);
 }
 
 // Intersect a segment with the sides AND caps of an upright solid cylinder.
@@ -57,7 +81,7 @@ export function moveCircle(actor, dx, dz, obstacles, radius = .48) {
     actor.x += dx / steps; actor.z += dz / steps;
     for (let pass = 0; pass < 3; pass++) {
       let overlap = false;
-      for (const o of obstacles) {
+      for (const o of queryObstacles(obstacles,actor.x-radius,actor.z-radius,actor.x+radius,actor.z+radius)) {
         const x = actor.x - o.x, z = actor.z - o.z, d = Math.hypot(x, z), r = radius + o.r;
         if (d >= r) continue;
         const inverse = d > 1e-6 ? 1 / d : 0;
@@ -78,7 +102,7 @@ export function steerAround(actor, goal, obstacles, radius = .48) {
   const nx = dx / d, nz = dz / d;
   const probe = { x: actor.x + nx * Math.min(d, 5), z: actor.z + nz * Math.min(d, 5) };
   let nearest = null, first = Infinity;
-  for (const o of obstacles) {
+  for (const o of queryObstacles(obstacles,Math.min(actor.x,probe.x)-radius-.4,Math.min(actor.z,probe.z)-radius-.4,Math.max(actor.x,probe.x)+radius+.4,Math.max(actor.z,probe.z)+radius+.4)) {
     const t = segmentCircle(actor, probe, o, radius + .4);
     if (t !== null && t < first) { nearest = o; first = t; }
   }
@@ -97,7 +121,7 @@ export function steerAround(actor, goal, obstacles, radius = .48) {
 
 export function cameraFraction(target, desired, obstacles, floorAt) {
   let fraction = 1;
-  for (const o of obstacles) {
+  for (const o of queryObstacles(obstacles,Math.min(target.x,desired.x)-.35,Math.min(target.z,desired.z)-.35,Math.max(target.x,desired.x)+.35,Math.max(target.z,desired.z)+.35)) {
     const t = segmentCylinder(target,desired,{...o,y:floorAt(o.x,o.z),height:o.height??o.r*1.5},.35);
     if (t === null) continue;
     fraction = Math.min(fraction, Math.max(.05, t - .045));

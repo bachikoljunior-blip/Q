@@ -1,7 +1,8 @@
 // Measures displayed frame intervals only while the game is actively played.
 // This is a browser observation, not a GPU timer or a synthetic device score.
 export class FrameMetrics {
-  constructor(limit=900){this.limit=limit;this.frames=[];this.totalFrames=0;this.totalMs=0;}
+  constructor(limit=900){this.limit=limit;this.reset();}
+  reset(){this.frames=[];this.totalFrames=0;this.totalMs=0;}
   record(ms){if(!Number.isFinite(ms)||ms<=0)return;this.frames.push(ms);if(this.frames.length>this.limit)this.frames.shift();this.totalFrames++;this.totalMs+=ms;}
   snapshot(){
     if(!this.frames.length)return null;

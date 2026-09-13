@@ -53,3 +53,7 @@ import {FrameMetrics} from '../src/performance.js';
 test('frame measurements include slow active frames and report their actual intervals',()=>{
   const m=new FrameMetrics();assert.equal(m.snapshot(),null);for(let i=0;i<60;i++)m.record(1000/60);for(let i=0;i<30;i++)m.record(1000/30);const s=m.snapshot();assert(Math.abs(s.averageFps-45)<.001);assert(Math.abs(s.p95FrameMs-1000/30)<.001);m.record(200);assert.equal(m.snapshot().worstFrameMs,200);assert.equal(m.snapshot().framesOver50Ms,1);
 });
+test('a new display setting starts a separate frame measurement window',()=>{
+  const m=new FrameMetrics();for(let i=0;i<60;i++)m.record(1000/20);m.reset();assert.equal(m.snapshot(),null);
+  for(let i=0;i<60;i++)m.record(1000/60);const s=m.snapshot();assert(Math.abs(s.averageFps-60)<.001);assert.equal(s.totalFrames,60);assert(Math.abs(s.totalPlaySeconds-1)<.001);
+});

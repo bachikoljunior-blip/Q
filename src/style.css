@@ -12,3 +12,5 @@
 @media(max-width:600px){.weapon-list{grid-template-columns:1fr}.weapon-card p{min-height:0;margin:6px 0}.weapon-card{padding:14px}.bottom-info #weapon-label{display:none}}
 
 #heal-button.drinking{border-color:#a1e5bf;background:linear-gradient(0deg,#75bd9970 var(--drink-progress),#152227a8 var(--drink-progress));box-shadow:0 0 16px #80c7a525}.workshop-status{color:#e1cd9e!important}
+
+#save-status{font-family:inherit;font-size:14px;line-height:1.7;letter-spacing:0;margin:12px 0;color:#f2d9a2}.title-content #import-title-save{font-size:12px;letter-spacing:1px;padding:8px}
