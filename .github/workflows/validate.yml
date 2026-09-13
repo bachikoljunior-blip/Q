@@ -17,6 +17,7 @@ jobs:
       - run: npm test
       - run: npm run test:journey
       - run: npm run test:crossing
+      - run: npm run test:forge
       - run: npm run test:session
       - run: npm run build
       - run: npm run package

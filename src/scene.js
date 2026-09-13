@@ -1,4 +1,5 @@
 import * as T from 'three';
+import { VillageScene } from './village-scene.js';
 import { cameraFraction } from './spatial.js';
 import { WEAPONS, SENA, EAST_CAMP } from './content.js';
 import { PLACES, BRIDGES, groundAt, heightAt, random, WORLD_SEED, clamp, distance, riverX, inWater } from './core.js';
@@ -11,7 +12,7 @@ function mesh(geometry,mat,parent,pos=[0,0,0],scale=[1,1,1],shadow=false){const 
 function addBox(parent,color,x,y,z,sx,sy,sz,shadow=false){return mesh(box,material(color),parent,[x,y,z],[sx,sy,sz],shadow);}
 
 function humanoid(type='player'){
-  const g=new T.Group(),body=new T.Group();g.add(body);const player=type==='player',boss=type==='boss',npc=type==='npc',ranger=type==='ranger';
+  const g=new T.Group(),body=new T.Group();g.add(body);const player=type==='player',boss=type==='boss',npc=['npc','smith','healer'].includes(type),ranger=type==='ranger';
   const armor=material(player?0x788e94:npc?0x797565:boss?0x26383c:ranger?0x8a735a:0x596569,{metalness:.35,roughness:.52});
   const cloth=material(player?0x3c6268:npc?0xb29569:boss?0x262d36:0x51484a);const leather=material(0x303f41);const gold=material(C.gold,{metalness:.65,roughness:.35});
   mesh(sphere,armor,body,[0,1.18,0],[.34,.46,.23],true);
@@ -29,7 +30,10 @@ function humanoid(type='player'){
   const sword=new T.Group();sword.position.set(0,-.65,0);arms[1].add(sword);mesh(box,gold,sword,[0,-.07,0],[.35,.07,.13],true);mesh(box,material(0xced8d4,{metalness:.75,roughness:.25}),sword,[0,-.73,.02],[.09,1.2,.055],true);mesh(cone,gold,sword,[0,-1.4,.02],[.07,.22,.05]);
   const capeGeo=new T.PlaneGeometry(.95,1.35,5,7);const cape=mesh(capeGeo,new T.MeshStandardMaterial({color:player?0x4c7473:boss?0x354149:0x766b5e,side:T.DoubleSide,roughness:1}),body,[0,1.15,-.27]);cape.rotation.x=-.13;cape.userData.base=Float32Array.from(capeGeo.attributes.position.array);
   if(boss){for(const s of [-1,1]){const horn=mesh(cone,gold,body,[s*.29,2.25,0],[.08,.8,.1],true);horn.rotation.z=-s*.45;mesh(cone,gold,body,[s*.45,2.44,0],[.045,.34,.06],true);}g.scale.setScalar(2.3);}
-  if(npc){sword.visible=false;mesh(cylinder,gold,arms[1],[0,-.6,0],[.04,1.8,.04]);mesh(sphere,material(0xffdb93,{emissive:0xf7ad48,emissiveIntensity:2}),arms[1],[0,.35,0],[.14,.19,.14]);}
+  if(npc)sword.visible=false;
+  if(type==='smith'){mesh(box,material(0x6c4732),body,[0,1.03,.245],[.52,.8,.04]);mesh(cylinder,material(C.wood),arms[1],[0,-.7,0],[.04,.6,.04]);mesh(box,material(C.stone),arms[1],[0,-1,0],[.34,.18,.18]);}
+  if(type==='healer'){mesh(cylinder,material(0x887651),body,[0,1,-.43],[.3,.6,.25]);for(const side of [-1,1])mesh(cone,material(0x7caa91),body,[side*.13,1.48,-.44],[.13,.6,.08]);}
+  if(type==='npc'){sword.visible=false;mesh(cylinder,gold,arms[1],[0,-.6,0],[.04,1.8,.04]);mesh(sphere,material(0xffdb93,{emissive:0xf7ad48,emissiveIntensity:2}),arms[1],[0,.35,0],[.14,.19,.14]);}
   let spear=null,flask=null;
   if(player){spear=new T.Group();spear.position.set(0,-.6,0);arms[1].add(spear);mesh(cylinder,material(0x4b3f31),spear,[0,-.4,0],[.035,2.7,.035],true);mesh(cone,material(0xc8d9d0,{metalness:.7,roughness:.3}),spear,[0,-1.95,0],[.11,.45,.11],true).rotation.z=Math.PI;spear.visible=false;}
   if(player){flask=new T.Group();flask.position.set(0,-.72,.06);arms[1].add(flask);mesh(sphere,material(0x84bca0,{metalness:.25,roughness:.3,emissive:0x254539,emissiveIntensity:.5}),flask,[0,0,0],[.12,.17,.12],true);mesh(cylinder,gold,flask,[0,.18,0],[.05,.1,.05]);flask.visible=false;}
@@ -46,6 +50,8 @@ export class SceneView {
     this.rng=random(WORLD_SEED);this.t=0;this.yaw=.06;this.pitch=.3;this.zoom=9;this.shake=0;this.effects=[];this.enemyModels=new Map();this.beacons=new Map();this.lootModels=new Map();this.sway={value:0};
     this.createSky();this.createTerrain();this.createMountains();this.createVegetation();this.createWater();this.createStructures();this.createCrossing();this.createParticles();
     this.player=humanoid();this.scene.add(this.player.g);this.npc=humanoid('npc');this.npc.g.position.set(7,heightAt(7,80),80);this.npc.g.rotation.y=1.4;this.scene.add(this.npc.g);this.sena=humanoid('npc');this.sena.g.position.set(SENA.x,heightAt(SENA.x,SENA.z),SENA.z);this.sena.g.rotation.y=-1.5;this.scene.add(this.sena.g);
+    this.residentModels=new Map();for(const n of game.residents){const model=humanoid(n.role);this.residentModels.set(n.id,model);this.scene.add(model.g);}
+    this.village=new VillageScene(this.scene,this.player);
     this.telegraphRing=new T.RingGeometry(.7,1,32);this.telegraphArc=new T.RingGeometry(.04,1,32,1,-Math.PI/2-1.5,3);
     for(const e of game.enemies){const m=e.type==='wolf'?wolf():humanoid(e.type);this.scene.add(m.g);this.enemyModels.set(e.id,m);const ringGeo=this.telegraphArc;m.telegraph=mesh(ringGeo,new T.MeshBasicMaterial({color:0xf39855,transparent:true,opacity:.5,side:T.DoubleSide,depthWrite:false}),this.scene);m.telegraph.rotation.x=-Math.PI/2;m.telegraph.visible=false;if(e.type==='ranger'){const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute([0,0,0,0,0,0],3));m.aimLine=new T.Line(geo,new T.LineBasicMaterial({color:0xf1af75,transparent:true,opacity:.65}));m.aimLine.visible=false;this.scene.add(m.aimLine);}}
     for(const item of game.pickups){const g=new T.Group();g.position.set(item.x,heightAt(item.x,item.z),item.z);if(item.type==='chest'||item.type==='supplies'){addBox(g,0x584c3a,0,.35,0,1.2,.65,.72,true);for(const x of [-.4,.4])addBox(g,C.gold,x,.4,0,.08,.72,.76);addBox(g,C.gold,0,.4,.39,.18,.18,.06);}else{for(let i=0;i<3;i++){const leaf=mesh(cone,material(item.type==='relic'?0xa7cab7:0x7caa91,{emissive:item.type==='relic'?0x7dc9a2:0x234831,emissiveIntensity:.7}),g,[(i-1)*.17,.42,0],[.17,.85,.09]);leaf.rotation.z=(i-1)*.4;}mesh(sphere,material(0xcee5bc,{emissive:0xb4dca1,emissiveIntensity:1}),g,[0,.8,0],[.075,.075,.075]);}this.scene.add(g);this.lootModels.set(item.id,g);}
@@ -96,6 +102,8 @@ export class SceneView {
     m.body.position.y=e.dodge>0?.35:Math.sin(phase*2)*.025*(moving?1:.2);m.body.rotation.x=e.dodge>0?-.9:0;
   }
   update(dt,playing){this.t+=dt;this.sway.value=this.t;const p=this.game.player;this.player.g.position.set(p.x,p.y,p.z);this.player.g.rotation.y=p.angle;this.animateModel(this.player,p,dt);this.player.sword.visible=p.healTimer<=0&&p.weaponType!=='spear';this.player.flask.visible=p.healTimer>0;this.player.sword.scale.set(p.weaponType==='greatsword'?2.4:1,p.weaponType==='greatsword'?1.45:1,p.weaponType==='greatsword'?1.3:1);this.player.spear.visible=p.healTimer<=0&&p.weaponType==='spear';this.animateModel(this.npc,{moving:false},dt);this.animateModel(this.sena,{moving:false},dt);this.roadCamp.visible=this.game.crossingChoice==='road';this.havenSupplies.visible=this.game.crossingChoice==='haven';
+    this.village.update(this.game,dt,this.t);
+    for(const n of this.game.residents){const m=this.residentModels.get(n.id);m.g.visible=distance(n,p)<90;if(m.g.visible){m.g.position.set(n.x,n.y,n.z);m.g.rotation.y=n.angle;this.animateModel(m,n,dt);if(!n.moving&&distance(n,p)>=3.7&&n.role==='smith')m.arms[1].rotation.x=-.6-Math.max(0,Math.sin(this.t*3))*1.3;}}
     const night=(Math.sin((this.game.day-.04)*Math.PI*2)+1)/2;const daylight=.25+night*.75;this.ambient.intensity=1+daylight*1.25;this.sun.intensity=daylight*3;this.skyMaterial.uniforms.top.value.set(0x284252).lerp(new T.Color(0x648d98),daylight);this.skyMaterial.uniforms.bottom.value.set(0x697a83).lerp(new T.Color(this.game.ending==='release'?0xcac9b1:0xc3bfa3),daylight);this.scene.fog.color.copy(this.skyMaterial.uniforms.bottom.value);this.sun.position.set(p.x-75,p.y+100,p.z-50);this.sun.target.position.set(p.x,p.y,p.z);
     for(const e of this.game.enemies){const m=this.enemyModels.get(e.id);m.g.visible=!e.dead&&distance(e,p)<105;if(m.g.visible){m.g.position.set(e.x,e.y,e.z);m.g.rotation.y=e.angle;this.animateModel(m,e,dt);if(e.state==='stagger')m.body.rotation.z=Math.sin(this.t*35)*.06;else m.body.rotation.z=0;}m.telegraph.visible=m.g.visible&&e.type!=='ranger'&&['windup','strike'].includes(e.state);if(m.telegraph.visible){const r=e.type==='boss'?(e.radial?9:6.5):e.type==='wolf'?2.5:3.3;m.telegraph.geometry=e.radial?this.telegraphRing:this.telegraphArc;m.telegraph.rotation.set(-Math.PI/2,0,e.angle);m.telegraph.position.set(e.x,e.y+.1,e.z);m.telegraph.scale.setScalar(r);m.telegraph.material.opacity=e.state==='strike'?.8:.13+(1-e.timer/e.windupMax)*.5;}if(m.aimLine){m.aimLine.visible=m.g.visible&&e.state==='windup'&&!!e.aim;if(m.aimLine.visible){const points=m.aimLine.geometry.attributes.position;points.setXYZ(0,e.x,e.y+1.45,e.z);points.setXYZ(1,e.aim.x,e.aim.y,e.aim.z);points.needsUpdate=true;m.aimLine.geometry.computeBoundingSphere();}}}
     const arrows=this.game.projectiles;this.arrowShafts.count=this.arrowTips.count=arrows.length;
@@ -111,6 +119,7 @@ export class SceneView {
     }else{this.camera.position.set(-15+Math.sin(this.t*.025)*3,22,120);this.camera.lookAt(12,6,-48);}
     this.renderer.render(this.scene,this.camera);
   }
+  ringBell(id){this.village.ring(id);}
   snapCamera(){this.cameraSnap=true;this.shake=0;}
   project(x,y,z){const p=new T.Vector3(x,y,z).project(this.camera);return{x:(p.x*.5+.5)*innerWidth,y:(-p.y*.5+.5)*innerHeight,visible:p.z<1&&p.z>-1};}
   setQuality(quality){this.settings.quality=quality;this.renderer.setPixelRatio(Math.min(devicePixelRatio,quality==='high'?1.7:quality==='low'?1:1.35));this.renderer.shadowMap.enabled=quality!=='low';if(this.grass)this.grass.count=Math.min(this.grassCapacity,quality==='low'?4500:quality==='medium'?9000:this.grassCapacity);this.motes?.geometry.setDrawRange(0,quality==='low'?90:quality==='medium'?180:300);this.resize();}

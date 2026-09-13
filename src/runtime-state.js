@@ -1,4 +1,5 @@
 import { moveCircle } from './spatial.js';
+import { routineFor } from './village.js';
 
 const finite=(value,fallback,min,max)=>Number.isFinite(value)?Math.max(min,Math.min(max,value)):fallback;
 const playerTimers={attack:1,comboWindow:2,dodge:.42,parry:.48,invulnerable:2,skillCooldown:4,staminaDelay:1,healTimer:.9};
@@ -12,6 +13,7 @@ export function captureRuntime(game){
     attackHit:game.attackHit===true,dodgeDir:game.dodgeDir?{...game.dodgeDir}:null,locked:game.locked,
     enemies:game.enemies.filter(e=>!e.dead).map(e=>({...pick(e,['id','x','z','angle','hp','state','timer','cooldown','poise','attackCount','radial','hit','windupMax','stagger']),aim:e.aim?{...e.aim}:null})),
     projectiles:game.projectiles.map(a=>({...a})),
+    residents:game.residents.map(n=>pick(n,['id','x','z','angle'])),
   };
 }
 
@@ -52,6 +54,13 @@ export function restoreRuntime(game,runtime,groundAt){
     enemy.route=null;enemy.avoid=null;
   }
   game.locked=game.enemies.some(e=>e.id===runtime.locked&&!e.dead)?runtime.locked:null;
+  const residents=Array.isArray(runtime.residents)?runtime.residents.slice(0,game.residents.length):[];
+  for(const n of game.residents){
+    const saved=residents.find(v=>v&&v.id===n.id);if(!saved)continue;
+    n.x=finite(saved.x,n.homeX,-12,12);n.z=finite(saved.z,n.homeZ,70,101);
+    moveCircle(n,0,0,game.obstacles,.48);n.y=groundAt(n.x,n.z);
+    n.angle=finite(saved.angle,0,-1e7,1e7);n.activity=routineFor(n,game.day).activity;n.route=null;n.moving=false;
+  }
   game.projectiles=[];game.projectileId=0;
   for(const saved of (Array.isArray(runtime.projectiles)?runtime.projectiles:[]).slice(0,48)){
     if(!saved||!['x','y','z','vx','vy','vz','life','damage'].every(k=>Number.isFinite(saved[k])))continue;
