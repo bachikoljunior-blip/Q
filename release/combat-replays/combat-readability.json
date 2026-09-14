@@ -1,0 +1,2306 @@
+{
+  "formatVersion": 1,
+  "gameVersion": "0.15.0",
+  "fixedStepHz": 60,
+  "note": "Deterministic rule and warning replay; no rendered screen, touch, audio, device-performance or player-quality observation.",
+  "scenarios": [
+    {
+      "id": "knight-no-response",
+      "initial": {
+        "version": 1,
+        "gatherings": {
+          "hearth": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          },
+          "road-watch": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          }
+        },
+        "expedition": {
+          "visited": false,
+          "started": false,
+          "handle": false,
+          "opened": false,
+          "reported": false
+        },
+        "bells": {
+          "started": false,
+          "discovered": false,
+          "read": false,
+          "step": 0,
+          "solved": false,
+          "reported": false,
+          "cooldown": 0
+        },
+        "runtime": {
+          "version": 1,
+          "time": 0,
+          "player": {
+            "y": 3.82588413684564,
+            "vertical": 0,
+            "grounded": true,
+            "stamina": 100,
+            "energy": 100,
+            "combo": 0,
+            "healDone": false,
+            "attack": 0,
+            "comboWindow": 0,
+            "dodge": 0,
+            "parry": 0,
+            "invulnerable": 0,
+            "skillCooldown": 0,
+            "staminaDelay": 0,
+            "healTimer": 0
+          },
+          "attackHit": false,
+          "dodgeDir": null,
+          "locked": null,
+          "enemies": [
+            {
+              "id": "enemy-1",
+              "x": -10,
+              "z": 26,
+              "angle": 0,
+              "hp": 105,
+              "state": "windup",
+              "timer": 0.85,
+              "cooldown": 0,
+              "attackCount": 0,
+              "radial": false,
+              "hit": false,
+              "windupMax": 0.85,
+              "stagger": 0,
+              "aim": null
+            }
+          ],
+          "projectiles": [],
+          "residents": [
+            {
+              "id": "smith-ren",
+              "x": 9,
+              "z": 98,
+              "angle": 0
+            },
+            {
+              "id": "healer-io",
+              "x": -8,
+              "z": 89,
+              "angle": 0
+            },
+            {
+              "id": "patient-nagi",
+              "x": -3,
+              "z": 77,
+              "angle": 0
+            },
+            {
+              "id": "porter-tou",
+              "x": 8,
+              "z": 76,
+              "angle": 0
+            },
+            {
+              "id": "traveler-asa",
+              "x": 148,
+              "z": 38,
+              "angle": 0
+            },
+            {
+              "id": "scout-yuno",
+              "x": 142,
+              "z": 41,
+              "angle": 0
+            },
+            {
+              "id": "courier-naru",
+              "x": -398,
+              "z": -25,
+              "angle": 0
+            }
+          ]
+        },
+        "dead": false,
+        "player": {
+          "x": -10,
+          "z": 28.6,
+          "angle": 3.141592653589793,
+          "hp": 120,
+          "level": 1,
+          "xp": 0,
+          "ash": 0,
+          "herbs": 0,
+          "potions": 3,
+          "weapon": 0,
+          "weaponType": "sword",
+          "vigor": 0,
+          "agility": 0
+        },
+        "day": 0.16,
+        "lit": [
+          "haven"
+        ],
+        "discovered": [
+          "haven"
+        ],
+        "talked": false,
+        "bossDefeated": false,
+        "ending": null,
+        "checkpoint": "haven",
+        "relic": false,
+        "relicDelivered": false,
+        "weapons": [
+          "sword"
+        ],
+        "metSena": false,
+        "crossingStarted": false,
+        "supplies": false,
+        "crossingChoice": null,
+        "trackedQuest": "main",
+        "taken": [],
+        "defeated": [
+          "enemy-0",
+          "enemy-2",
+          "enemy-3",
+          "enemy-4",
+          "enemy-5",
+          "enemy-6",
+          "enemy-7",
+          "enemy-8",
+          "enemy-9",
+          "enemy-10",
+          "enemy-11",
+          "enemy-12",
+          "enemy-13",
+          "enemy-14",
+          "enemy-15",
+          "enemy-16",
+          "enemy-17",
+          "enemy-18",
+          "enemy-19",
+          "enemy-20",
+          "enemy-21",
+          "enemy-22",
+          "enemy-23",
+          "enemy-24",
+          "enemy-25",
+          "enemy-26",
+          "salt-guard",
+          "salt-hound",
+          "salt-archer"
+        ]
+      },
+      "run": {
+        "actions": [],
+        "frames": 100,
+        "samples": [
+          {
+            "frame": 0,
+            "seconds": 0,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.85,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.8秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 6,
+            "seconds": 0.1,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.75,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.8秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 12,
+            "seconds": 0.2,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.65,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.7秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 18,
+            "seconds": 0.3,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.55,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.6秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 24,
+            "seconds": 0.4,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.45,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.5秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 30,
+            "seconds": 0.5,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.35,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.3秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 36,
+            "seconds": 0.6,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.25,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.3秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 42,
+            "seconds": 0.7,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.15,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.1秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 48,
+            "seconds": 0.8,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.05,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 今 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 51,
+            "seconds": 0.85,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "strike",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 今 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 52,
+            "seconds": 0.867,
+            "primary": null
+          },
+          {
+            "frame": 54,
+            "seconds": 0.9,
+            "primary": null
+          },
+          {
+            "frame": 60,
+            "seconds": 1,
+            "primary": null
+          },
+          {
+            "frame": 66,
+            "seconds": 1.1,
+            "primary": null
+          },
+          {
+            "frame": 72,
+            "seconds": 1.2,
+            "primary": null
+          },
+          {
+            "frame": 78,
+            "seconds": 1.3,
+            "primary": null
+          },
+          {
+            "frame": 84,
+            "seconds": 1.4,
+            "primary": null
+          },
+          {
+            "frame": 90,
+            "seconds": 1.5,
+            "primary": null
+          },
+          {
+            "frame": 96,
+            "seconds": 1.6,
+            "primary": null
+          }
+        ],
+        "events": [
+          {
+            "frame": 50,
+            "type": "enemySwing",
+            "amount": null,
+            "id": "enemy-1"
+          },
+          {
+            "frame": 51,
+            "type": "hurt",
+            "amount": 22,
+            "id": null
+          }
+        ],
+        "outcome": {
+          "playerHp": 98,
+          "playerDead": false,
+          "activeEnemies": [
+            {
+              "id": "enemy-1",
+              "type": "knight",
+              "state": "recover",
+              "hp": 105
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "knight-dodge",
+      "initial": {
+        "version": 1,
+        "gatherings": {
+          "hearth": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          },
+          "road-watch": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          }
+        },
+        "expedition": {
+          "visited": false,
+          "started": false,
+          "handle": false,
+          "opened": false,
+          "reported": false
+        },
+        "bells": {
+          "started": false,
+          "discovered": false,
+          "read": false,
+          "step": 0,
+          "solved": false,
+          "reported": false,
+          "cooldown": 0
+        },
+        "runtime": {
+          "version": 1,
+          "time": 0,
+          "player": {
+            "y": 3.82588413684564,
+            "vertical": 0,
+            "grounded": true,
+            "stamina": 100,
+            "energy": 100,
+            "combo": 0,
+            "healDone": false,
+            "attack": 0,
+            "comboWindow": 0,
+            "dodge": 0,
+            "parry": 0,
+            "invulnerable": 0,
+            "skillCooldown": 0,
+            "staminaDelay": 0,
+            "healTimer": 0
+          },
+          "attackHit": false,
+          "dodgeDir": null,
+          "locked": null,
+          "enemies": [
+            {
+              "id": "enemy-1",
+              "x": -10,
+              "z": 26,
+              "angle": 0,
+              "hp": 105,
+              "state": "windup",
+              "timer": 0.85,
+              "cooldown": 0,
+              "attackCount": 0,
+              "radial": false,
+              "hit": false,
+              "windupMax": 0.85,
+              "stagger": 0,
+              "aim": null
+            }
+          ],
+          "projectiles": [],
+          "residents": [
+            {
+              "id": "smith-ren",
+              "x": 9,
+              "z": 98,
+              "angle": 0
+            },
+            {
+              "id": "healer-io",
+              "x": -8,
+              "z": 89,
+              "angle": 0
+            },
+            {
+              "id": "patient-nagi",
+              "x": -3,
+              "z": 77,
+              "angle": 0
+            },
+            {
+              "id": "porter-tou",
+              "x": 8,
+              "z": 76,
+              "angle": 0
+            },
+            {
+              "id": "traveler-asa",
+              "x": 148,
+              "z": 38,
+              "angle": 0
+            },
+            {
+              "id": "scout-yuno",
+              "x": 142,
+              "z": 41,
+              "angle": 0
+            },
+            {
+              "id": "courier-naru",
+              "x": -398,
+              "z": -25,
+              "angle": 0
+            }
+          ]
+        },
+        "dead": false,
+        "player": {
+          "x": -10,
+          "z": 28.6,
+          "angle": 3.141592653589793,
+          "hp": 120,
+          "level": 1,
+          "xp": 0,
+          "ash": 0,
+          "herbs": 0,
+          "potions": 3,
+          "weapon": 0,
+          "weaponType": "sword",
+          "vigor": 0,
+          "agility": 0
+        },
+        "day": 0.16,
+        "lit": [
+          "haven"
+        ],
+        "discovered": [
+          "haven"
+        ],
+        "talked": false,
+        "bossDefeated": false,
+        "ending": null,
+        "checkpoint": "haven",
+        "relic": false,
+        "relicDelivered": false,
+        "weapons": [
+          "sword"
+        ],
+        "metSena": false,
+        "crossingStarted": false,
+        "supplies": false,
+        "crossingChoice": null,
+        "trackedQuest": "main",
+        "taken": [],
+        "defeated": [
+          "enemy-0",
+          "enemy-2",
+          "enemy-3",
+          "enemy-4",
+          "enemy-5",
+          "enemy-6",
+          "enemy-7",
+          "enemy-8",
+          "enemy-9",
+          "enemy-10",
+          "enemy-11",
+          "enemy-12",
+          "enemy-13",
+          "enemy-14",
+          "enemy-15",
+          "enemy-16",
+          "enemy-17",
+          "enemy-18",
+          "enemy-19",
+          "enemy-20",
+          "enemy-21",
+          "enemy-22",
+          "enemy-23",
+          "enemy-24",
+          "enemy-25",
+          "enemy-26",
+          "salt-guard",
+          "salt-hound",
+          "salt-archer"
+        ]
+      },
+      "run": {
+        "actions": [
+          {
+            "frame": 42,
+            "name": "dodge",
+            "args": [
+              1,
+              0
+            ]
+          }
+        ],
+        "frames": 100,
+        "samples": [
+          {
+            "frame": 0,
+            "seconds": 0,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.85,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.8秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 6,
+            "seconds": 0.1,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.75,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.8秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 12,
+            "seconds": 0.2,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.65,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.7秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 18,
+            "seconds": 0.3,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.55,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.6秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 24,
+            "seconds": 0.4,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.45,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.5秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 30,
+            "seconds": 0.5,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.35,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.3秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 36,
+            "seconds": 0.6,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.25,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.3秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 42,
+            "seconds": 0.7,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.15,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.1秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 48,
+            "seconds": 0.8,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.05,
+              "distance": 3.053,
+              "text": "火を失った兵 · 正面 今 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 51,
+            "seconds": 0.85,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "strike",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0,
+              "distance": 3.538,
+              "text": "火を失った兵 · 正面 今 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 52,
+            "seconds": 0.867,
+            "primary": null
+          },
+          {
+            "frame": 54,
+            "seconds": 0.9,
+            "primary": null
+          },
+          {
+            "frame": 60,
+            "seconds": 1,
+            "primary": null
+          },
+          {
+            "frame": 66,
+            "seconds": 1.1,
+            "primary": null
+          },
+          {
+            "frame": 72,
+            "seconds": 1.2,
+            "primary": null
+          },
+          {
+            "frame": 78,
+            "seconds": 1.3,
+            "primary": null
+          },
+          {
+            "frame": 84,
+            "seconds": 1.4,
+            "primary": null
+          },
+          {
+            "frame": 90,
+            "seconds": 1.5,
+            "primary": null
+          },
+          {
+            "frame": 96,
+            "seconds": 1.6,
+            "primary": null
+          }
+        ],
+        "events": [
+          {
+            "frame": 42,
+            "type": "input",
+            "name": "dodge",
+            "accepted": true
+          },
+          {
+            "frame": 50,
+            "type": "enemySwing",
+            "amount": null,
+            "id": "enemy-1"
+          }
+        ],
+        "outcome": {
+          "playerHp": 120,
+          "playerDead": false,
+          "activeEnemies": [
+            {
+              "id": "enemy-1",
+              "type": "knight",
+              "state": "recover",
+              "hp": 105
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "knight-parry",
+      "initial": {
+        "version": 1,
+        "gatherings": {
+          "hearth": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          },
+          "road-watch": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          }
+        },
+        "expedition": {
+          "visited": false,
+          "started": false,
+          "handle": false,
+          "opened": false,
+          "reported": false
+        },
+        "bells": {
+          "started": false,
+          "discovered": false,
+          "read": false,
+          "step": 0,
+          "solved": false,
+          "reported": false,
+          "cooldown": 0
+        },
+        "runtime": {
+          "version": 1,
+          "time": 0,
+          "player": {
+            "y": 3.82588413684564,
+            "vertical": 0,
+            "grounded": true,
+            "stamina": 100,
+            "energy": 100,
+            "combo": 0,
+            "healDone": false,
+            "attack": 0,
+            "comboWindow": 0,
+            "dodge": 0,
+            "parry": 0,
+            "invulnerable": 0,
+            "skillCooldown": 0,
+            "staminaDelay": 0,
+            "healTimer": 0
+          },
+          "attackHit": false,
+          "dodgeDir": null,
+          "locked": null,
+          "enemies": [
+            {
+              "id": "enemy-1",
+              "x": -10,
+              "z": 26,
+              "angle": 0,
+              "hp": 105,
+              "state": "windup",
+              "timer": 0.85,
+              "cooldown": 0,
+              "attackCount": 0,
+              "radial": false,
+              "hit": false,
+              "windupMax": 0.85,
+              "stagger": 0,
+              "aim": null
+            }
+          ],
+          "projectiles": [],
+          "residents": [
+            {
+              "id": "smith-ren",
+              "x": 9,
+              "z": 98,
+              "angle": 0
+            },
+            {
+              "id": "healer-io",
+              "x": -8,
+              "z": 89,
+              "angle": 0
+            },
+            {
+              "id": "patient-nagi",
+              "x": -3,
+              "z": 77,
+              "angle": 0
+            },
+            {
+              "id": "porter-tou",
+              "x": 8,
+              "z": 76,
+              "angle": 0
+            },
+            {
+              "id": "traveler-asa",
+              "x": 148,
+              "z": 38,
+              "angle": 0
+            },
+            {
+              "id": "scout-yuno",
+              "x": 142,
+              "z": 41,
+              "angle": 0
+            },
+            {
+              "id": "courier-naru",
+              "x": -398,
+              "z": -25,
+              "angle": 0
+            }
+          ]
+        },
+        "dead": false,
+        "player": {
+          "x": -10,
+          "z": 28.6,
+          "angle": 3.141592653589793,
+          "hp": 120,
+          "level": 1,
+          "xp": 0,
+          "ash": 0,
+          "herbs": 0,
+          "potions": 3,
+          "weapon": 0,
+          "weaponType": "sword",
+          "vigor": 0,
+          "agility": 0
+        },
+        "day": 0.16,
+        "lit": [
+          "haven"
+        ],
+        "discovered": [
+          "haven"
+        ],
+        "talked": false,
+        "bossDefeated": false,
+        "ending": null,
+        "checkpoint": "haven",
+        "relic": false,
+        "relicDelivered": false,
+        "weapons": [
+          "sword"
+        ],
+        "metSena": false,
+        "crossingStarted": false,
+        "supplies": false,
+        "crossingChoice": null,
+        "trackedQuest": "main",
+        "taken": [],
+        "defeated": [
+          "enemy-0",
+          "enemy-2",
+          "enemy-3",
+          "enemy-4",
+          "enemy-5",
+          "enemy-6",
+          "enemy-7",
+          "enemy-8",
+          "enemy-9",
+          "enemy-10",
+          "enemy-11",
+          "enemy-12",
+          "enemy-13",
+          "enemy-14",
+          "enemy-15",
+          "enemy-16",
+          "enemy-17",
+          "enemy-18",
+          "enemy-19",
+          "enemy-20",
+          "enemy-21",
+          "enemy-22",
+          "enemy-23",
+          "enemy-24",
+          "enemy-25",
+          "enemy-26",
+          "salt-guard",
+          "salt-hound",
+          "salt-archer"
+        ]
+      },
+      "run": {
+        "actions": [
+          {
+            "frame": 42,
+            "name": "parry",
+            "args": []
+          }
+        ],
+        "frames": 100,
+        "samples": [
+          {
+            "frame": 0,
+            "seconds": 0,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.85,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.8秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 6,
+            "seconds": 0.1,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.75,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.8秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 12,
+            "seconds": 0.2,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.65,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.7秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 18,
+            "seconds": 0.3,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.55,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.6秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 24,
+            "seconds": 0.4,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.45,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.5秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 30,
+            "seconds": 0.5,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.35,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.3秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 36,
+            "seconds": 0.6,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.25,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.3秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 42,
+            "seconds": 0.7,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.15,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 0.1秒 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 48,
+            "seconds": 0.8,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "windup",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0.05,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 今 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 51,
+            "seconds": 0.85,
+            "primary": {
+              "sourceId": "enemy-1",
+              "sourceType": "knight",
+              "source": "火を失った兵",
+              "stage": "strike",
+              "kind": "melee",
+              "response": "回避 / 受け流し",
+              "direction": "正面",
+              "timeToImpact": 0,
+              "distance": 2.6,
+              "text": "火を失った兵 · 正面 今 · 回避 / 受け流し"
+            }
+          },
+          {
+            "frame": 52,
+            "seconds": 0.867,
+            "primary": null
+          },
+          {
+            "frame": 54,
+            "seconds": 0.9,
+            "primary": null
+          },
+          {
+            "frame": 60,
+            "seconds": 1,
+            "primary": null
+          },
+          {
+            "frame": 66,
+            "seconds": 1.1,
+            "primary": null
+          },
+          {
+            "frame": 72,
+            "seconds": 1.2,
+            "primary": null
+          },
+          {
+            "frame": 78,
+            "seconds": 1.3,
+            "primary": null
+          },
+          {
+            "frame": 84,
+            "seconds": 1.4,
+            "primary": null
+          },
+          {
+            "frame": 90,
+            "seconds": 1.5,
+            "primary": null
+          },
+          {
+            "frame": 96,
+            "seconds": 1.6,
+            "primary": null
+          }
+        ],
+        "events": [
+          {
+            "frame": 42,
+            "type": "input",
+            "name": "parry",
+            "accepted": true
+          },
+          {
+            "frame": 50,
+            "type": "enemySwing",
+            "amount": null,
+            "id": "enemy-1"
+          },
+          {
+            "frame": 51,
+            "type": "perfect",
+            "amount": null,
+            "id": null
+          }
+        ],
+        "outcome": {
+          "playerHp": 120,
+          "playerDead": false,
+          "activeEnemies": [
+            {
+              "id": "enemy-1",
+              "type": "knight",
+              "state": "stagger",
+              "hp": 87
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "boss-grounded",
+      "initial": {
+        "version": 1,
+        "gatherings": {
+          "hearth": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          },
+          "road-watch": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          }
+        },
+        "expedition": {
+          "visited": false,
+          "started": false,
+          "handle": false,
+          "opened": false,
+          "reported": false
+        },
+        "bells": {
+          "started": false,
+          "discovered": false,
+          "read": false,
+          "step": 0,
+          "solved": false,
+          "reported": false,
+          "cooldown": 0
+        },
+        "runtime": {
+          "version": 1,
+          "time": 0,
+          "player": {
+            "y": 11.761979175694007,
+            "vertical": 0,
+            "grounded": true,
+            "stamina": 100,
+            "energy": 100,
+            "combo": 0,
+            "healDone": false,
+            "attack": 0,
+            "comboWindow": 0,
+            "dodge": 0,
+            "parry": 0,
+            "invulnerable": 0,
+            "skillCooldown": 0,
+            "staminaDelay": 0,
+            "healTimer": 0
+          },
+          "attackHit": false,
+          "dodgeDir": null,
+          "locked": null,
+          "enemies": [
+            {
+              "id": "enemy-23",
+              "x": 4,
+              "z": -247,
+              "angle": 0,
+              "hp": 640,
+              "state": "windup",
+              "timer": 1.35,
+              "cooldown": 0,
+              "attackCount": 0,
+              "radial": true,
+              "hit": false,
+              "windupMax": 1.35,
+              "stagger": 0,
+              "aim": null
+            }
+          ],
+          "projectiles": [],
+          "residents": [
+            {
+              "id": "smith-ren",
+              "x": 9,
+              "z": 98,
+              "angle": 0
+            },
+            {
+              "id": "healer-io",
+              "x": -8,
+              "z": 89,
+              "angle": 0
+            },
+            {
+              "id": "patient-nagi",
+              "x": -3,
+              "z": 77,
+              "angle": 0
+            },
+            {
+              "id": "porter-tou",
+              "x": 8,
+              "z": 76,
+              "angle": 0
+            },
+            {
+              "id": "traveler-asa",
+              "x": 148,
+              "z": 38,
+              "angle": 0
+            },
+            {
+              "id": "scout-yuno",
+              "x": 142,
+              "z": 41,
+              "angle": 0
+            },
+            {
+              "id": "courier-naru",
+              "x": -398,
+              "z": -25,
+              "angle": 0
+            }
+          ]
+        },
+        "dead": false,
+        "player": {
+          "x": 4,
+          "z": -242,
+          "angle": 3.141592653589793,
+          "hp": 120,
+          "level": 1,
+          "xp": 0,
+          "ash": 0,
+          "herbs": 0,
+          "potions": 3,
+          "weapon": 0,
+          "weaponType": "sword",
+          "vigor": 0,
+          "agility": 0
+        },
+        "day": 0.16,
+        "lit": [
+          "haven",
+          "grove",
+          "flood",
+          "ruins"
+        ],
+        "discovered": [
+          "haven"
+        ],
+        "talked": false,
+        "bossDefeated": false,
+        "ending": null,
+        "checkpoint": "haven",
+        "relic": false,
+        "relicDelivered": false,
+        "weapons": [
+          "sword"
+        ],
+        "metSena": false,
+        "crossingStarted": false,
+        "supplies": false,
+        "crossingChoice": null,
+        "trackedQuest": "main",
+        "taken": [],
+        "defeated": [
+          "enemy-0",
+          "enemy-1",
+          "enemy-2",
+          "enemy-3",
+          "enemy-4",
+          "enemy-5",
+          "enemy-6",
+          "enemy-7",
+          "enemy-8",
+          "enemy-9",
+          "enemy-10",
+          "enemy-11",
+          "enemy-12",
+          "enemy-13",
+          "enemy-14",
+          "enemy-15",
+          "enemy-16",
+          "enemy-17",
+          "enemy-18",
+          "enemy-19",
+          "enemy-20",
+          "enemy-21",
+          "enemy-22",
+          "enemy-24",
+          "enemy-25",
+          "enemy-26",
+          "salt-guard",
+          "salt-hound",
+          "salt-archer"
+        ]
+      },
+      "run": {
+        "actions": [],
+        "frames": 110,
+        "samples": [
+          {
+            "frame": 0,
+            "seconds": 0,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 1.35,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 1.4秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 6,
+            "seconds": 0.1,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 1.25,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 1.3秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 12,
+            "seconds": 0.2,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 1.15,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 1.1秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 18,
+            "seconds": 0.3,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 1.05,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 1.1秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 24,
+            "seconds": 0.4,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.95,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.9秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 30,
+            "seconds": 0.5,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.85,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.8秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 36,
+            "seconds": 0.6,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.75,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.8秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 42,
+            "seconds": 0.7,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.65,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.7秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 48,
+            "seconds": 0.8,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.55,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.6秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 54,
+            "seconds": 0.9,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.45,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.5秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 60,
+            "seconds": 1,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.35,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.3秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 66,
+            "seconds": 1.1,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.25,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.3秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 72,
+            "seconds": 1.2,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.15,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.1秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 78,
+            "seconds": 1.3,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.05,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 今 · 跳躍"
+            }
+          },
+          {
+            "frame": 81,
+            "seconds": 1.35,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "strike",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 今 · 跳躍"
+            }
+          },
+          {
+            "frame": 82,
+            "seconds": 1.367,
+            "primary": null
+          },
+          {
+            "frame": 84,
+            "seconds": 1.4,
+            "primary": null
+          },
+          {
+            "frame": 90,
+            "seconds": 1.5,
+            "primary": null
+          },
+          {
+            "frame": 96,
+            "seconds": 1.6,
+            "primary": null
+          },
+          {
+            "frame": 102,
+            "seconds": 1.7,
+            "primary": null
+          },
+          {
+            "frame": 108,
+            "seconds": 1.8,
+            "primary": null
+          }
+        ],
+        "events": [
+          {
+            "frame": 80,
+            "type": "enemySwing",
+            "amount": null,
+            "id": "enemy-23"
+          },
+          {
+            "frame": 81,
+            "type": "hurt",
+            "amount": 34,
+            "id": null
+          }
+        ],
+        "outcome": {
+          "playerHp": 86,
+          "playerDead": false,
+          "activeEnemies": [
+            {
+              "id": "enemy-23",
+              "type": "boss",
+              "state": "recover",
+              "hp": 640
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "boss-jump",
+      "initial": {
+        "version": 1,
+        "gatherings": {
+          "hearth": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          },
+          "road-watch": {
+            "phase": "idle",
+            "beat": 0,
+            "choice": null
+          }
+        },
+        "expedition": {
+          "visited": false,
+          "started": false,
+          "handle": false,
+          "opened": false,
+          "reported": false
+        },
+        "bells": {
+          "started": false,
+          "discovered": false,
+          "read": false,
+          "step": 0,
+          "solved": false,
+          "reported": false,
+          "cooldown": 0
+        },
+        "runtime": {
+          "version": 1,
+          "time": 0,
+          "player": {
+            "y": 11.761979175694007,
+            "vertical": 0,
+            "grounded": true,
+            "stamina": 100,
+            "energy": 100,
+            "combo": 0,
+            "healDone": false,
+            "attack": 0,
+            "comboWindow": 0,
+            "dodge": 0,
+            "parry": 0,
+            "invulnerable": 0,
+            "skillCooldown": 0,
+            "staminaDelay": 0,
+            "healTimer": 0
+          },
+          "attackHit": false,
+          "dodgeDir": null,
+          "locked": null,
+          "enemies": [
+            {
+              "id": "enemy-23",
+              "x": 4,
+              "z": -247,
+              "angle": 0,
+              "hp": 640,
+              "state": "windup",
+              "timer": 1.35,
+              "cooldown": 0,
+              "attackCount": 0,
+              "radial": true,
+              "hit": false,
+              "windupMax": 1.35,
+              "stagger": 0,
+              "aim": null
+            }
+          ],
+          "projectiles": [],
+          "residents": [
+            {
+              "id": "smith-ren",
+              "x": 9,
+              "z": 98,
+              "angle": 0
+            },
+            {
+              "id": "healer-io",
+              "x": -8,
+              "z": 89,
+              "angle": 0
+            },
+            {
+              "id": "patient-nagi",
+              "x": -3,
+              "z": 77,
+              "angle": 0
+            },
+            {
+              "id": "porter-tou",
+              "x": 8,
+              "z": 76,
+              "angle": 0
+            },
+            {
+              "id": "traveler-asa",
+              "x": 148,
+              "z": 38,
+              "angle": 0
+            },
+            {
+              "id": "scout-yuno",
+              "x": 142,
+              "z": 41,
+              "angle": 0
+            },
+            {
+              "id": "courier-naru",
+              "x": -398,
+              "z": -25,
+              "angle": 0
+            }
+          ]
+        },
+        "dead": false,
+        "player": {
+          "x": 4,
+          "z": -242,
+          "angle": 3.141592653589793,
+          "hp": 120,
+          "level": 1,
+          "xp": 0,
+          "ash": 0,
+          "herbs": 0,
+          "potions": 3,
+          "weapon": 0,
+          "weaponType": "sword",
+          "vigor": 0,
+          "agility": 0
+        },
+        "day": 0.16,
+        "lit": [
+          "haven",
+          "grove",
+          "flood",
+          "ruins"
+        ],
+        "discovered": [
+          "haven"
+        ],
+        "talked": false,
+        "bossDefeated": false,
+        "ending": null,
+        "checkpoint": "haven",
+        "relic": false,
+        "relicDelivered": false,
+        "weapons": [
+          "sword"
+        ],
+        "metSena": false,
+        "crossingStarted": false,
+        "supplies": false,
+        "crossingChoice": null,
+        "trackedQuest": "main",
+        "taken": [],
+        "defeated": [
+          "enemy-0",
+          "enemy-1",
+          "enemy-2",
+          "enemy-3",
+          "enemy-4",
+          "enemy-5",
+          "enemy-6",
+          "enemy-7",
+          "enemy-8",
+          "enemy-9",
+          "enemy-10",
+          "enemy-11",
+          "enemy-12",
+          "enemy-13",
+          "enemy-14",
+          "enemy-15",
+          "enemy-16",
+          "enemy-17",
+          "enemy-18",
+          "enemy-19",
+          "enemy-20",
+          "enemy-21",
+          "enemy-22",
+          "enemy-24",
+          "enemy-25",
+          "enemy-26",
+          "salt-guard",
+          "salt-hound",
+          "salt-archer"
+        ]
+      },
+      "run": {
+        "actions": [
+          {
+            "frame": 60,
+            "name": "jump",
+            "args": []
+          }
+        ],
+        "frames": 110,
+        "samples": [
+          {
+            "frame": 0,
+            "seconds": 0,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 1.35,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 1.4秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 6,
+            "seconds": 0.1,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 1.25,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 1.3秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 12,
+            "seconds": 0.2,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 1.15,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 1.1秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 18,
+            "seconds": 0.3,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 1.05,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 1.1秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 24,
+            "seconds": 0.4,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.95,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.9秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 30,
+            "seconds": 0.5,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.85,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.8秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 36,
+            "seconds": 0.6,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.75,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.8秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 42,
+            "seconds": 0.7,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.65,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.7秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 48,
+            "seconds": 0.8,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.55,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.6秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 54,
+            "seconds": 0.9,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.45,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.5秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 60,
+            "seconds": 1,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.35,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.3秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 66,
+            "seconds": 1.1,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.25,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.3秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 72,
+            "seconds": 1.2,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.15,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 0.1秒 · 跳躍"
+            }
+          },
+          {
+            "frame": 78,
+            "seconds": 1.3,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "windup",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0.05,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 今 · 跳躍"
+            }
+          },
+          {
+            "frame": 81,
+            "seconds": 1.35,
+            "primary": {
+              "sourceId": "enemy-23",
+              "sourceType": "boss",
+              "source": "灰冠の番人",
+              "stage": "strike",
+              "kind": "shockwave",
+              "response": "跳躍",
+              "direction": "周囲",
+              "timeToImpact": 0,
+              "distance": 5,
+              "text": "灰冠の番人 · 周囲 今 · 跳躍"
+            }
+          },
+          {
+            "frame": 82,
+            "seconds": 1.367,
+            "primary": null
+          },
+          {
+            "frame": 84,
+            "seconds": 1.4,
+            "primary": null
+          },
+          {
+            "frame": 90,
+            "seconds": 1.5,
+            "primary": null
+          },
+          {
+            "frame": 96,
+            "seconds": 1.6,
+            "primary": null
+          },
+          {
+            "frame": 102,
+            "seconds": 1.7,
+            "primary": null
+          },
+          {
+            "frame": 108,
+            "seconds": 1.8,
+            "primary": null
+          }
+        ],
+        "events": [
+          {
+            "frame": 60,
+            "type": "input",
+            "name": "jump",
+            "accepted": true
+          },
+          {
+            "frame": 80,
+            "type": "enemySwing",
+            "amount": null,
+            "id": "enemy-23"
+          }
+        ],
+        "outcome": {
+          "playerHp": 120,
+          "playerDead": false,
+          "activeEnemies": [
+            {
+              "id": "enemy-23",
+              "type": "boss",
+              "state": "recover",
+              "hp": 640
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

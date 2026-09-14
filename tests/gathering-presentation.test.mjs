@@ -40,6 +40,10 @@ test('earned mid-conversation saves produce collision-free over-shoulder staging
   }
 });
 
+test('the gathering panel routes focus to the scene view instead of shadowing it with state',()=>{
+  const main=readFileSync(new URL('../src/main.js',import.meta.url),'utf8');assert.match(main,/const gathering=gatheringView\(game,id\)/);assert.doesNotMatch(main,/const view=gatheringView\(game,id\)/);assert.doesNotMatch(main,/invitation:view\.status/);assert.match(main,/view\?\.focusGathering\(id\)/);
+});
+
 test('world cues follow moving residents, switch speaker rings and hide after completing or changing saves',()=>{
   for(const d of GATHERINGS){let g=fixture(d),view=new GatheringScene(new T.Scene(),groundAt);g.gatherings[d.id]={phase:'talking',beat:0,choice:null};view.update(g);assert(view.markers.get(d.lines[0].actor).base.visible);assert.equal([...view.markers.values()].filter(m=>m.group.visible&&m.base.visible).length,1);
     assert(gatheringAction(g,d.id,'next'));g=new Game(g.serialize());view.update(g);assert(view.markers.get(d.lines[1].actor).base.visible);const n=g.residents.find(n=>n.id===d.actors[0].id);n.x+=2;view.update(g);assert.equal(view.markers.get(n.id).group.position.x,n.x);assert.equal([...view.markers.values()].filter(m=>m.group.visible&&m.base.visible).length,0);
