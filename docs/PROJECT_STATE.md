@@ -1,5 +1,16 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-14 戦闘HUDの実画面投影接続（main・所有者限定Site反映完了）
+
+- 反映対象は検証済みtree `ab8d49f5844875cace1223f14f83604c8b35c015`。実装head `919a479ea8bec1c999a842b4904ebf494ec7d101` を [PR #20](https://github.com/bachikoljunior-blip/Q/pull/20) の通常mergeでmain `533e8de028b684db6d300ec5a382d8658a4bdc88` へ反映した。force pushなし。PRのCI [34853416331](https://github.com/bachikoljunior-blip/Q/actions/runs/34853416331) / [34853412738](https://github.com/bachikoljunior-blip/Q/actions/runs/34853412738)、mainのCI [34853556866](https://github.com/bachikoljunior-blip/Q/actions/runs/34853556866) / [34853556304](https://github.com/bachikoljunior-blip/Q/actions/runs/34853556304) はすべてsuccess。親のローカルHEADも同じmain・treeへfast-forward済み。
+- 同じmainソースを既存Site project `appgprj_6aa6871ebd648191802ba2398d06115b` へnon-force pushした。検証済みarchiveは11ファイル・2,652,160 bytes、SHA-256 `6b87e03d90f931df3bfab424fb1e1a22b91f23d2822f460b7bcccefbc813b834`。保存版17は `appgprj_6aa6871ebd648191802ba2398d06115b~appgver_4c82382491bc81919f6751302c4613c2`。
+- private deployment `appgdep_6aa7ffeb45b48191ae22518931d32899` は2026-09-14 14:08:52.002338 UTCに`succeeded`。URLは従来の `https://q-ash-pilgrim.juurooo.chatgpt.site` を維持し、別Siteは作成していない。owner-onlyを要求するprivate deployのbackend検証成功を公開範囲の根拠とする。秘密のbypass tokenを露出させるリスクを避けるため配信後の`get_site`は実行せず、所有者・外部閲覧者・グループ各件数の独立した再読取は未実施。認証情報はファイル、remote URL、Git設定へ保存していない。
+- v2 Ultraの実作業受理は `/root/ultra_v2_integrator`、独立座標レビューは `/root/ultra_v2_integrator/camera_contract_review`、数学確認は `/root/ultra_v2_integrator/camera_contract_review/math_check`。3担当とも実引数は `reasoning_effort=ultra`、`fork_turns=none`、model省略で、実装・比較・レビュー結果を上記treeへ接続した。Ultra指定受理は確認済みだが、各担当と親のbackend上の実効強度は独立確認不能。`ULTRA-CHILDREN-20260914-v3` に従い、親の強度は成果受理の阻害条件にしていない。
+- 横断確認の固定commit証拠は親への別報告に限定し、他作品の内容をQ repoへ転記しない。v3取得後の再照合は実行ポリシーに拒否されたため、現時点の三作品すべてについて新指示後の受理・実成果を結ぶ完全な横断証拠は未確定。Qからautomation変更は行っていない。
+- main・配信完了後も期限判断は**根拠不足**。正式WebGLピクセル、カメラ遮蔽時と縦横画面のHUD可読性、タッチ、音、iOS/Android実機のFPS・発熱・30分実プレイ、外部プレイヤー比較、複数章・地域・屋内、商用品質の造形・アニメーション・演技・音響、ネイティブ配布は未確認または未完了。投影契約4/4と自動試験120件の成功を、指定10作品相当の完成証拠へ読み替えない。
+- 次の再開地点は、正式previewまたは許可された実機経路が利用可能なら同一保存・同一4カメラ条件を縦横画面、タッチ、音、遮蔽、30分性能で観測すること。利用不能なら拒否を迂回・反復せず、複数敵と画面外攻撃の警告優先順位および入力競合を、実HUD bridgeと固定再生の両方で改善・比較する。小機能数やlogic試験数だけで未検証領域を埋めない。
+- この節の追記は `docs/PROJECT_STATE.md` だけを変える結果記録で、ゲームコード、asset、config、単体版、配信archiveは変更しない。通常のdocs-only PR/CIでmainへ反映し、この記録だけを理由に保存版17を再生成・再配信しない。
+
 ## 2026-09-14 戦闘HUDの実画面投影接続（main反映前チェックポイント）
 
 ### 受理・正本・継続判定
