@@ -17,6 +17,16 @@ export const SALT_JOURNEY=Object.freeze({
   reward:{ash:120,xp:100,herbs:4},
   inscription:'取っ手は西の見張り場に残した。北の岩棚か南の塩原を回れ。巻上げ機を直せば、石門を抜けて谷へ帰れる。道が開いたら、この板に印を刻んでくれ。—— 運び手 ナル',
 });
+export const SALT_COURIER=Object.freeze({
+  id:'courier-naru',name:'運び手ナルと話す',label:'運び手 ナル',role:'courier',type:'npc',x:-398,z:-25,
+  // Alternating work sites force the courier through the repaired gate instead of teleporting an aftermath prop.
+  routines:[
+    {until:.23,x:-398,z:-25,activity:'見張り場の荷をまとめる'},
+    {until:.48,x:-247,z:16,activity:'谷側へ塩袋を届ける'},
+    {until:.73,x:-365,z:-39,activity:'貯水槽で荷を積み直す'},
+    {until:1,x:-272,z:0,activity:'石門の轍を確かめる'},
+  ],
+});
 export const SALT_TARGETS=[SALT_JOURNEY.board,SALT_JOURNEY.handle,SALT_JOURNEY.winch];
 export const saltObstacles=()=>[
   {...SALT_JOURNEY.gate},

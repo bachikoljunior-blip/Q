@@ -37,7 +37,7 @@ function humanoid(type='player'){
   if(npc)sword.visible=false;
   if(type==='smith'){mesh(box,material(0x6c4732),body,[0,1.03,.245],[.52,.8,.04]);mesh(cylinder,material(C.wood),arms[1],[0,-.7,0],[.04,.6,.04]);mesh(box,material(C.stone),arms[1],[0,-1,0],[.34,.18,.18]);}
   if(type==='healer'){mesh(cylinder,material(0x887651),body,[0,1,-.43],[.3,.6,.25]);for(const side of [-1,1])mesh(cone,material(0x7caa91),body,[side*.13,1.48,-.44],[.13,.6,.08]);}
-  if(['porter','traveler'].includes(type)){const pack=mesh(box,material(0x75654e),body,[0,1.2,-.38],[.43,.52,.25],true);for(const side of [-1,1])addBox(pack,0xc4b48a,side*.22,.05,.26,.05,.72,.05);}
+  if(['porter','traveler','courier'].includes(type)){const pack=mesh(box,material(type==='courier'?0x8b7654:0x75654e),body,[0,1.2,-.38],[.43,.52,.25],true);for(const side of [-1,1])addBox(pack,0xc4b48a,side*.22,.05,.26,.05,.72,.05);}
   if(type==='patient')g.scale.setScalar(.94);
   if(type==='scout'){mesh(cylinder,material(0x586d62),body,[0,1.18,-.38],[.3,.62,.22]);mesh(cylinder,material(C.wood),arms[1],[0,-.8,0],[.035,1.5,.035]);}
   if(type==='npc'){sword.visible=false;mesh(cylinder,gold,arms[1],[0,-.6,0],[.04,1.8,.04]);mesh(sphere,material(0xffdb93,{emissive:0xf7ad48,emissiveIntensity:2}),arms[1],[0,.35,0],[.14,.19,.14]);}

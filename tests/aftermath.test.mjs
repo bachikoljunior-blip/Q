@@ -7,7 +7,7 @@ const at=(g,t,dx=1)=>Object.assign(g.player,{x:t.x+dx,z:t.z,y:groundAt(t.x+dx,t.
 const tick=(g,seconds)=>{for(let i=0;i<seconds*60;i++)g.tick(1/60);};
 
 test('delivery choice activates only its own two aftermath residents',()=>{
-  const g=new Game();assert.equal(g.residents.length,6);assert.equal(g.npcs().length,4);
+  const g=new Game();assert.equal(g.residents.length,7);assert.equal(g.npcs().length,4);
   for(const choice of ['haven','road']){
     g.crossingChoice=choice;const active=g.residents.filter(n=>residentActive(g,n));
     assert.deepEqual(active.filter(n=>n.branch).map(n=>n.branch),[choice,choice]);

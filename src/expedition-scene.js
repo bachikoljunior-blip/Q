@@ -35,11 +35,14 @@ export class ExpeditionScene {
       add(new T.CylinderGeometry(.12,.18,2.1,5),stone,this.root,p.x,groundAt(p.x,p.z)+1.05,p.z);
       add(new T.BoxGeometry(.7,.35,.08),brass,this.root,p.x,groundAt(p.x,p.z)+1.7,p.z);
     }
+    this.cargo=new T.Group();this.cargo.position.set(-250,groundAt(-250,13),13);this.root.add(this.cargo);
+    for(const [x,z] of [[0,0],[.8,.25],[-.65,.22]]){add(new T.BoxGeometry(.75,.55,.9),wood,this.cargo,x,.28,z);add(new T.TorusGeometry(.3,.035,5,12),brass,this.cargo,x,.31,z+.46);}
   }
   update(game){
     this.solids.get(SALT_JOURNEY.gate.id).visible=!game.expedition.opened;
     this.handle.visible=!game.expedition.handle;
     this.wheel.rotation.z=game.expedition.opened?Math.PI*.65:0;
     this.seal.visible=game.expedition.reported;
+    this.cargo.visible=game.expedition.reported;
   }
 }

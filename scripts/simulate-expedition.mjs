@@ -8,7 +8,7 @@ import { createPilot } from './pilot.mjs';
 
 const logs=[];
 for(const route of J.routes){
-  let g=new Game(),pilot=createPilot(g),elapsed=0,reloads=0,steps=0;
+  let g=new Game(),pilot=createPilot(g),elapsed=0,reloads=0,steps=0,courierRange=null;
   const now=()=>elapsed+pilot.time;
   const reload=()=>{const saved=g.serialize(),x=g.player.x,z=g.player.z;elapsed+=pilot.time;g=new Game(saved);pilot=createPilot(g);reloads++;assert(Math.abs(g.player.x-x)<1e-7&&Math.abs(g.player.z-z)<1e-7);assert.equal(g.expedition.opened,saved.expedition.opened);};
   const step=target=>{pilot.tickToward(target);steps++;assert(!g.player.dead,`died on ${route.id}`);if(steps%787===0)reload();};
@@ -23,10 +23,11 @@ for(const route of J.routes){
   travel({x:-268,z:0});travel(J.board);settle();assert(g.interact(J.board));reload();assert(g.expedition.reported);
   const completionSeconds=now();
   if(route.id==='north'){
-    const until=now()+1800,patrol=[J.winch,J.handle,...J.routes[1].points.slice(1,-1).reverse(),J.board];let next=0;
-    while(now()<until){const target=patrol[next%patrol.length];step(target);if(distance(g.player,target)<3)next++;}
+    const until=now()+1800,patrol=[J.winch,J.handle,...J.routes[1].points.slice(1,-1).reverse(),J.board];let next=0,minX=Infinity,maxX=-Infinity;
+    while(now()<until){const target=patrol[next%patrol.length];step(target);if(distance(g.player,target)<3)next++;const courier=g.residents.find(n=>n.role==='courier');minX=Math.min(minX,courier.x);maxX=Math.max(maxX,courier.x);}
     assert(next>=20,'patrol stalled');assert(g.expedition.reported);assert(lineClear({x:-300,z:0},{x:-266,z:0},g.obstacles));
+    assert(minX<-340&&maxX>-280,`courier failed to use shortcut: ${minX}..${maxX}`);courierRange={minX:Math.round(minX),maxX:Math.round(maxX)};
   }
-  logs.push({route:route.id,completionSeconds:Math.round(completionSeconds),simulatedSeconds:Math.round(now()),reloads,steps,hp:Math.round(g.player.hp),reported:g.expedition.reported});
+  logs.push({route:route.id,completionSeconds:Math.round(completionSeconds),simulatedSeconds:Math.round(now()),reloads,steps,hp:Math.round(g.player.hp),reported:g.expedition.reported,courierRange});
 }
 console.log(JSON.stringify({passed:true,renderingTested:false,routes:logs},null,2));

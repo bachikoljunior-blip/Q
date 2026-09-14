@@ -58,7 +58,8 @@ export function restoreRuntime(game,runtime,groundAt){
   const residents=Array.isArray(runtime.residents)?runtime.residents.slice(0,game.residents.length):[];
   for(const n of game.residents){
     const saved=residents.find(v=>v&&v.id===n.id);if(!saved)continue;
-    n.x=finite(saved.x,n.homeX,Math.max(-280,n.homeX-30),Math.min(280,n.homeX+30));n.z=finite(saved.z,n.homeZ,Math.max(-282,n.homeZ-30),Math.min(220,n.homeZ+30));
+    const roaming=n.role==='courier';
+    n.x=finite(saved.x,n.homeX,roaming?WORLD_BOUNDS.minX:Math.max(-280,n.homeX-30),roaming?WORLD_BOUNDS.maxX:Math.min(280,n.homeX+30));n.z=finite(saved.z,n.homeZ,roaming?WORLD_BOUNDS.minZ:Math.max(-282,n.homeZ-30),roaming?WORLD_BOUNDS.maxZ:Math.min(220,n.homeZ+30));
     moveCircle(n,0,0,game.obstacles,.48);n.y=groundAt(n.x,n.z);
     n.angle=finite(saved.angle,0,-1e7,1e7);n.activity=routineFor(n,game.day).activity;n.route=null;n.moving=false;
   }

@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as T from 'three';
 import { Game, groundAt } from '../src/core.js';
-import { SALT_JOURNEY as J, SALT_TARGETS, WORLD_BOUNDS, saltObstacles } from '../src/world-regions.js';
+import { SALT_COURIER, SALT_JOURNEY as J, SALT_TARGETS, WORLD_BOUNDS, saltObstacles } from '../src/world-regions.js';
 import { restoreExpedition } from '../src/expedition.js';
+import { residentSpeech, routineFor } from '../src/village.js';
 import { ExpeditionScene } from '../src/expedition-scene.js';
 import { lineClear, moveCircle } from '../src/spatial.js';
 import { findPath } from '../src/navigation.js';
@@ -67,5 +68,24 @@ test('discovery records once and scene gate state matches the shared collision d
   const scene=new ExpeditionScene(new T.Scene(),groundAt);scene.update(g);
   assert.equal(scene.solids.size,saltObstacles().length);assert(scene.solids.get(J.gate.id).visible);
   for(const o of saltObstacles()){const node=scene.solids.get(o.id);assert.equal(node.position.x,o.x);assert.equal(node.position.z,o.z);assert.equal(node.geometry.parameters.radiusBottom,o.r);}
-  claimHandle(g);near(g,J.winch);g.interact(J.winch);scene.update(g);assert(!scene.solids.get(J.gate.id).visible);assert(!scene.handle.visible);
+  claimHandle(g);near(g,J.winch);g.interact(J.winch);scene.update(g);assert(!scene.solids.get(J.gate.id).visible);assert(!scene.handle.visible);assert(!scene.cargo.visible);
+  near(g,J.board);g.interact(J.board);scene.update(g);assert(scene.cargo.visible);
+});
+test('Naru only appears after opening and physically carries cargo both ways through the gate',()=>{
+  let g=new Game(),n=g.residents.find(v=>v.id===SALT_COURIER.id);
+  assert(n);assert(!g.npcs().includes(n));near(g,n);assert(!g.interact(n));
+  claimHandle(g);near(g,J.winch);assert(g.interact(J.winch));
+  n=g.residents.find(v=>v.id===SALT_COURIER.id);assert(g.npcs().includes(n));
+  near(g,{x:0,z:101});g.day=.3;
+  for(let i=0;i<110*60;i++)g.tick(1/60);
+  assert(n.x>-280,`courier did not cross east: ${n.x}, ${n.z}`);assert.equal(n.activity,routineFor(n,g.day).activity);
+  const saved=g.serialize(),before={x:n.x,z:n.z};g=new Game(saved);n=g.residents.find(v=>v.id===SALT_COURIER.id);
+  assert(Math.hypot(n.x-before.x,n.z-before.z)<1e-6);assert(g.npcs().includes(n));
+  g.day=.55;for(let i=0;i<110*60;i++)g.tick(1/60);
+  assert(n.x<-340,`courier did not return west: ${n.x}, ${n.z}`);
+});
+test('Naru explains the unreported opening, completed route and both endings',()=>{
+  const g=new Game(),n=g.residents.find(v=>v.id===SALT_COURIER.id);g.expedition.handle=g.expedition.opened=true;
+  assert(residentSpeech(g,n).includes('帰還の印'));g.expedition.reported=true;assert(residentSpeech(g,n).includes('石門'));
+  g.ending='release';assert(residentSpeech(g,n).includes('次の谷'));g.ending='restore';assert(residentSpeech(g,n).includes('夜道'));
 });

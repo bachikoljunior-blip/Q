@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {Game,groundAt,distance} from '../src/core.js';
-import {WIND_SHRINE,WIND_BELLS,BELL_ORDER,BELL_VERSE,routineFor,residentSpeech} from '../src/village.js';
+import {WIND_SHRINE,WIND_BELLS,BELL_ORDER,BELL_VERSE,routineFor,residentActive,residentSpeech} from '../src/village.js';
 import {VillageScene} from '../src/village-scene.js';
 import * as T from 'three';
 
@@ -48,7 +48,7 @@ test('resident conversation uses the moving resident, not a spoofed or obsolete 
 
 test('residents follow day routines on walkable ground, stop near the player, and flee approaching enemies',()=>{
   const g=new Game();at(g,{x:0,z:113});g.day=.3;wait(g,15);
-  for(const n of g.residents.filter(n=>!n.branch)){assert(distance(n,routineFor(n,g.day))<.6);assert.equal(n.y,groundAt(n.x,n.z));assert(g.obstacles.every(o=>distance(n,o)>=o.r+.47));}
+  for(const n of g.residents.filter(n=>residentActive(g,n))){assert(distance(n,routineFor(n,g.day))<.6);assert.equal(n.y,groundAt(n.x,n.z));assert(g.obstacles.every(o=>distance(n,o)>=o.r+.47));}
   const io=g.residents[1];at(g,io);const before={x:io.x,z:io.z};g.day=.6;wait(g,2);assert(distance(io,before)<.001);
   const enemy=g.enemies[0];Object.assign(enemy,{x:io.x+8,z:io.z,state:'stagger',timer:5});g.tick(1/60);
   assert.equal(io.activity,'火のそばへ避難');assert(io.moving);
@@ -58,9 +58,9 @@ test('resident save resumes positions, drops navigation caches, and rejects inva
   const g=new Game();at(g,{x:0,z:113});g.day=.3;wait(g,3);const s=g.serialize(),loaded=new Game(s);
   for(let i=0;i<2;i++){assert(distance(g.residents[i],loaded.residents[i])<.0001);assert.equal(loaded.residents[i].route,null);}
   s.bells={reported:true,solved:false,step:Infinity,cooldown:-5};s.runtime.residents=[{id:'healer-io',x:Infinity,z:-9999},{id:'unknown',x:0,z:0}];
-  const bad=new Game(s);assert(!bad.bells.reported);assert.equal(bad.bells.step,0);assert.equal(bad.bells.cooldown,0);assert.equal(bad.residents.length,6);
+  const bad=new Game(s);assert(!bad.bells.reported);assert.equal(bad.bells.step,0);assert.equal(bad.bells.cooldown,0);assert.equal(bad.residents.length,7);
   assert(bad.residents.every(n=>Number.isFinite(n.y)&&Math.abs(n.x-n.homeX)<=30&&Math.abs(n.z-n.homeZ)<=30));
-  delete s.bells;delete s.runtime.residents;const legacy=new Game(s);assert.equal(legacy.dodgeCost(),25);assert.equal(legacy.residents.length,6);assert(!legacy.bells.started);
+  delete s.bells;delete s.runtime.residents;const legacy=new Game(s);assert.equal(legacy.dodgeCost(),25);assert.equal(legacy.residents.length,7);assert(!legacy.bells.started);
 });
 
 test('healer dialogue reflects delivery choice and blacksmith reflects the restored furnace',()=>{

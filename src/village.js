@@ -1,3 +1,5 @@
+import { SALT_COURIER } from './world-regions.js';
+
 // Original village routines and an optional, text-readable exploration puzzle.
 export const RESIDENTS=[
   {id:'smith-ren',name:'鍛冶師レンと話す',label:'鍛冶師 レン',role:'smith',x:9,z:98},
@@ -6,6 +8,7 @@ export const RESIDENTS=[
   {id:'porter-tou',name:'荷運びトウと話す',label:'荷運び トウ',role:'porter',branch:'haven',x:8,z:76},
   {id:'traveler-asa',name:'旅人アサと話す',label:'旅人 アサ',role:'traveler',branch:'road',x:148,z:38},
   {id:'scout-yuno',name:'斥候ユノと話す',label:'斥候 ユノ',role:'scout',branch:'road',x:142,z:41},
+  SALT_COURIER,
 ];
 export const ROAD_CACHE={id:'road-cache',name:'旅人の薬箱を使う',label:'旅人の薬箱',type:'cache',x:151,z:39};
 export const WIND_SHRINE={id:'wind-shrine',name:'風読みの碑文を読む',label:'三響の祠',en:'THE THREEFOLD CHIME',type:'inscription',x:-155,z:-120};
@@ -28,8 +31,9 @@ export function restoreBells(source){
   return b;
 }
 export function createResidents(groundAt){return RESIDENTS.map(n=>({...n,type:'npc',homeX:n.x,homeZ:n.z,y:groundAt(n.x,n.z),angle:0,moving:false,activity:'仕事',route:null}));}
-export function residentActive(game,n){return !n.branch||game.crossingChoice===n.branch;}
+export function residentActive(game,n){return n.role==='courier'?game.expedition.opened:!n.branch||game.crossingChoice===n.branch;}
 export function routineFor(n,day){
+  if(n.role==='courier')return SALT_COURIER.routines.find(r=>day<r.until)||SALT_COURIER.routines.at(-1);
   if(n.role==='smith'){
     if(day<.25)return{x:9,z:98,activity:'炉の手入れ'};
     if(day<.52)return{x:10,z:94,activity:'鍛錬'};
@@ -99,6 +103,12 @@ export function forgeText(game){
 }
 export function residentSpeech(game,n){
   const night=game.day>=.76;
+  if(n.role==='courier'){
+    if(game.ending==='release')return '北の空から、灰ではなく朝の色が降りてきた。開いた道を次の谷までつなぐよ。名のない荷でも、待つ人はいるから。';
+    if(game.ending==='restore')return '王冠の火が戻ったなら、夜道の荷も動かせる。門を閉ざすためじゃない。帰れる場所を増やすために運ぶんだ。';
+    if(game.expedition.reported)return night?'昼のうちに塩と水を二往復できた。今夜は伝言板に、次に通る人のための道順を足しておく。':'あの取っ手を戻してくれた人だね。見ての通り、石門を抜けて荷を運べる。迂回で一日かかった道が、今は谷までひと続きだ。';
+    return '取っ手を戻したのは、あんたか。先に荷を通して轍を確かめる。谷側の伝言板に帰還の印を刻めば、他の運び手もこの道を使える。';
+  }
   if(n.role==='smith'){
     if(game.bells.reported)return night?'昼に打った道具を磨く、この時間が好きなんだ。あんたが戻した風を、次の旅人の刃へ渡しておくよ。':'炉に風が通る。鉄が、前より素直に伸びるんだ。あの鈴は歩く人のためのものだ。谷の先まで連れていってくれ。';
     if(game.bells.solved)return '今、炉の灰がふっと舞った。祠の鐘を鳴らしてきたんだな。あの三つの響きが、谷の風をつなぎ直してくれた。';
