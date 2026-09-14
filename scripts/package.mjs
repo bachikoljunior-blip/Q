@@ -1,6 +1,6 @@
 import { build } from 'esbuild';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-const r=await build({entryPoints:['src/main.js'],bundle:true,format:'iife',minify:true,target:'es2022',write:false,outfile:'game.js',legalComments:'inline'});
+const r=await build({entryPoints:['src/main.js'],bundle:true,format:'iife',minify:true,target:'es2022',write:false,outfile:'game.js',legalComments:'inline',loader:{'.glb':'dataurl'}});
 let html=await readFile('index.html','utf8');
 const script=r.outputFiles.find(f=>f.path.endsWith('.js')).text;
 const css=r.outputFiles.find(f=>f.path.endsWith('.css')).text;

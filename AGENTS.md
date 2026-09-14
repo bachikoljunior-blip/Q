@@ -5,6 +5,8 @@ Qの主目的はスマートフォン向けオープンワールドアクショ�
 
 着手時は README.md と docs/PROJECT_STATE.md を読む。現行のゲームはブラウザーで遊べる第一章の開発版。Elden Ring、The Witcher 3、Breath of the Wild、Skyrim、Red Dead Redemption 2、Ghost of Tsushima、Cyberpunk 2077、Horizon Forbidden West、Dragon’s Dogma 2、Kingdom Come: Deliverance II を品質目標としている。実測や実プレイに基づかず、これらに匹敵した、完成した、面白さを確認したと記録しない。
 
+ユーザーは、適宜期限内に達成できるか考え、届かないと判断したら制作方法が間違っていることを疑うよう指示した。各main反映前と阻害事項の発生時に、残作業・確認できた制作速度・検証待ちから期限への見通しを更新する。見通しが崩れたら優先順位、素材の調達、実装方法、検証方法を再検討し、代案を実装・比較してから継続を判断する。現在の方法が遅いことを、全ての方法が不可能である根拠にしない。同時に、方法変更だけを期限内達成の保証にしない。判断と根拠は docs/PRODUCTION_METHOD.md と docs/PROJECT_STATE.md へ残す。
+
 - src/core.js は描画に依存しないゲームルール。src/content.js は武器と副クエストの定義。src/spatial.js / src/navigation.js は衝突と経路。src/runtime-state.js は途中動作・敵・矢の保存。src/save-store.js はブラウザー保存の検証・復旧。src/woodland.js は描画と衝突で共用する木の配置。src/scene.js はThree.jsによる3D描画。src/main.js は操作、画面、進行保存。src/audio.js は手続き的な環境音と効果音。
 - 操作、進行、保存の変更では該当する振る舞いを npm test で確認する。進行変更では npm run test:journey と npm run test:crossing も実行する。保存・経路変更では npm run test:session で30分相当の継続シミュレーションも行う。細かな表示だけの変更に不要な単体テストを増やさない。
 - 成果物は npm run build と npm run package で生成し、npm run test:artifacts で遅延チャンクと単体版を検査する。release/Q-ash-pilgrim.html は依存ファイルが不要な起動版。生成物はソース変更と一致させる。
@@ -15,3 +17,5 @@ Qの主目的はスマートフォン向けオープンワールドアクショ�
 - 既存作品のキャラクター・音楽・マップ・固有の美術をコピーしない。制作した素材の出所と第三者ライセンスを維持する。
 - docs/PROJECT_STATE.md に進行、検証結果、欠点、次の作業を残す。品質目標を小規模な初期版へ勝手に縮小しない。
 - .openai/hosting.json はこのゲームのプレイ用Siteを指す。同じIDを使う。GitHub Qがゲームのソースであり、Sitesの閲覧範囲は所有者限定。認証情報をコードやGit設定へ保存しない。
+- 人物素材は src/assets/characters/provenance.json の版・出所・ライセンスを維持する。src/character-motion.js は保存された動作時間から姿勢を選び、src/rigged-actor.js は描画だけを更新する。骨格アニメーションから移動やダメージを二重に発生させない。
+- npm run test:artifacts が artifacts/latest-site.json に記録した配信用コピーをSitesへ渡す。過去のハッシュ付き生成物が残ったdistをそのまま包まない。ソースと一致するモデルの配信・単体版への埋込みを検査する。

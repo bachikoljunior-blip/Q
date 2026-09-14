@@ -1,0 +1,52 @@
+{
+  "author": "Kay Lousberg",
+  "license": "CC0-1.0",
+  "repository": "https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures",
+  "revision": "672074b73ba276876a19e8816ecdc5241817ab47",
+  "modifications": "Selected gameplay clips; removed non-joint animation and root movement; compacted unused accessors and buffers. Textures and character geometry retained.",
+  "files": [
+    {
+      "file": "pilgrim.glb",
+      "sourceFile": "Rogue_Hooded.glb",
+      "originalSha256": "93e6e25213009952276d9cf34f5d96a243767334c66f280db0433ddfabb91545",
+      "sha256": "5d2efc98503e2c65d514c50dfd38230d5fd7f3f68fe009b258059090eba42b43",
+      "bytes": 1101740,
+      "animations": [
+        "1H_Melee_Attack_Chop",
+        "1H_Melee_Attack_Slice_Diagonal",
+        "1H_Melee_Attack_Slice_Horizontal",
+        "2H_Melee_Attack_Chop",
+        "2H_Melee_Attack_Slice",
+        "2H_Melee_Attack_Spin",
+        "2H_Melee_Attack_Stab",
+        "Block",
+        "Death_A",
+        "Dodge_Forward",
+        "Hit_A",
+        "Idle",
+        "Interact",
+        "Jump_Idle",
+        "Running_A",
+        "Spellcast_Raise",
+        "Use_Item",
+        "Walking_A"
+      ]
+    },
+    {
+      "file": "knight.glb",
+      "sourceFile": "Knight.glb",
+      "originalSha256": "60428e3abc09ba83e595d256e3af8c5c976b46cdae599f0802fc82b4a3445168",
+      "sha256": "f180c151389649cac0b6ba18c63bbd9fab44986c9077fdbbc57802b43ee4a7aa",
+      "bytes": 380204,
+      "animations": []
+    },
+    {
+      "file": "keeper.glb",
+      "sourceFile": "Mage.glb",
+      "originalSha256": "cf898585da33fab50c724d31605fb931eb2912e6d2280092141e98ca81ad507d",
+      "sha256": "7d429d2504cfd0a43a08ae48d04bd0527617ea13ea156075e228ecf2ca195d12",
+      "bytes": 310744,
+      "animations": []
+    }
+  ]
+}
