@@ -1,4 +1,5 @@
 import * as T from 'three';
+import { bakeStaticTransforms } from './static-transforms.js';
 import { gatheringStage } from './gathering-presentation.js';
 import { GatheringScene } from './gathering-scene.js';
 import { ExpeditionScene } from './expedition-scene.js';
@@ -61,7 +62,9 @@ export class SceneView {
     this.camera=new T.PerspectiveCamera(54,innerWidth/innerHeight,.1,1100);this.renderer=new T.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});this.renderer.setPixelRatio(Math.min(devicePixelRatio,settings.quality==='high'?1.7:settings.quality==='low'?1:1.35));this.renderer.setSize(innerWidth,innerHeight);this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.12;this.renderer.shadowMap.enabled=settings.quality!=='low';this.renderer.shadowMap.type=T.PCFSoftShadowMap;
     this.ambient=new T.HemisphereLight(0xc6dfe0,0x526552,2.1);this.scene.add(this.ambient);this.sun=new T.DirectionalLight(0xffddaa,3);this.sun.position.set(-80,100,-70);this.sun.castShadow=true;this.sun.shadow.mapSize.set(1024,1024);Object.assign(this.sun.shadow.camera,{left:-35,right:35,top:35,bottom:-35,near:1,far:220});this.sun.shadow.bias=-.0008;this.sun.shadow.normalBias=.04;this.scene.add(this.sun,this.sun.target);
     this.rng=random(WORLD_SEED);this.t=0;this.yaw=.06;this.gatheringFocus=null;this.pitch=.3;this.zoom=9;this.shake=0;this.effects=[];this.enemyModels=new Map();this.beacons=new Map();this.lootModels=new Map();this.sway={value:0};
-    this.createSky();this.createTerrain();this.createMountains();this.createVegetation();this.createWater();this.createStructures();this.createCrossing();this.createParticles();
+    this.createSky();
+    for(const method of ['createTerrain','createMountains','createVegetation','createWater'])this.createStaticScenery(method);
+    this.createStructures();this.createStaticScenery('createCrossing');this.createParticles();
     this.player=createRiggedActor(characters,'player');this.scene.add(this.player.g);this.npc=createRiggedActor(characters,'npc');this.npc.g.position.set(7,heightAt(7,80),80);this.npc.g.rotation.y=1.4;this.scene.add(this.npc.g);this.sena=createRiggedActor(characters,'npc');this.sena.g.position.set(SENA.x,heightAt(SENA.x,SENA.z),SENA.z);this.sena.g.rotation.y=-1.5;this.scene.add(this.sena.g);
     this.residentModels=new Map();for(const n of game.residents){const model=humanoid(n.role);this.residentModels.set(n.id,model);this.scene.add(model.g);}
     this.village=new VillageScene(this.scene,this.player);this.expeditionScene=new ExpeditionScene(this.scene,groundAt);this.expeditionScene.update(game);this.gatheringScene=new GatheringScene(this.scene,groundAt);this.gatheringScene.update(game);
@@ -72,6 +75,9 @@ export class SceneView {
     this.slash=mesh(new T.RingGeometry(1.4,2.6,36,1,0,Math.PI*1.4),new T.MeshBasicMaterial({color:0xffe4ae,transparent:true,opacity:.65,side:T.DoubleSide,depthWrite:false}),this.scene);this.slash.rotation.x=-Math.PI/2;this.slash.visible=false;
     this.resize=()=>{this.camera.aspect=innerWidth/innerHeight;this.camera.updateProjectionMatrix();this.renderer.setSize(innerWidth,innerHeight);};addEventListener('resize',this.resize);this.setQuality(settings.quality);
   }
+  // Only these construction methods contain immutable local transforms. Do not
+  // include sky/clouds, actors, loot, effects, beacon animations or quest scenes.
+  createStaticScenery(method){const first=this.scene.children.length;this[method]();bakeStaticTransforms(...this.scene.children.slice(first));}
   createSky(){const skyGeo=new T.SphereGeometry(850,24,12);this.skyMaterial=new T.ShaderMaterial({side:T.BackSide,depthWrite:false,uniforms:{top:{value:new T.Color(0x50747e)},bottom:{value:new T.Color(0xd0caae)}},vertexShader:'varying vec3 vPosition; void main(){vPosition=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:'uniform vec3 top;uniform vec3 bottom;varying vec3 vPosition;void main(){float h=normalize(vPosition).y;gl_FragColor=vec4(mix(bottom,top,pow(max(h,0.),.6)),1.);}'});mesh(skyGeo,this.skyMaterial,this.scene);
     this.sunDisc=mesh(new T.SphereGeometry(1,16,12),new T.MeshBasicMaterial({color:0xffeac0}),this.scene,[-270,190,-450],[19,19,19]);
     const ring=mesh(new T.TorusGeometry(20,.55,5,70),material(0xe6c98c,{emissive:0x8a7445,emissiveIntensity:.4}),this.scene,[4,65,-268]);ring.rotation.y=.05;this.crownHalo=ring;
@@ -91,13 +97,16 @@ export class SceneView {
     }
   }
 
-  createStructures(){for(const o of this.game.obstacles.filter(o=>o.type==='house')){const g=new T.Group();g.position.set(o.x,heightAt(o.x,o.z),o.z);this.scene.add(g);addBox(g,0x9b9d85,0,1.75,0,5.7,3.5,4.8,true);for(const x of [-2.9,2.9])for(const z of [-2.45,2.45])addBox(g,C.wood,x,1.7,z,.2,3.7,.2);const roof=mesh(new T.ConeGeometry(1,1,4),material(0x4c6365),g,[0,4.4,0],[4.8,2.1,4.1],true);roof.rotation.y=Math.PI/4;addBox(g,0x3b443d,0,.95,2.42,1.3,1.9,.08);for(const x of [-1.8,1.8])addBox(g,0xd2a56e,x,1.9,2.44,.64,.75,.07);addBox(g,C.stone,1.8,4.5,-1,1,2.9,.9,true);}
+  createStructures(){for(const o of this.game.obstacles.filter(o=>o.type==='house')){const g=new T.Group();g.position.set(o.x,heightAt(o.x,o.z),o.z);this.scene.add(g);addBox(g,0x9b9d85,0,1.75,0,5.7,3.5,4.8,true);for(const x of [-2.9,2.9])for(const z of [-2.45,2.45])addBox(g,C.wood,x,1.7,z,.2,3.7,.2);const roof=mesh(new T.ConeGeometry(1,1,4),material(0x4c6365),g,[0,4.4,0],[4.8,2.1,4.1],true);roof.rotation.y=Math.PI/4;addBox(g,0x3b443d,0,.95,2.42,1.3,1.9,.08);for(const x of [-1.8,1.8])addBox(g,0xd2a56e,x,1.9,2.44,.64,.75,.07);addBox(g,C.stone,1.8,4.5,-1,1,2.9,.9,true);bakeStaticTransforms(g);}
     for(const p of PLACES){const g=new T.Group();g.position.set(p.x,heightAt(p.x,p.z),p.z);this.scene.add(g);const boss=p.type==='boss';mesh(new T.CylinderGeometry(boss?10:3.4,boss?11:3.8,.5,12),material(C.stone),g,[0,.2,0]);mesh(new T.CylinderGeometry(1.1,1.35,.75,8),material(0x536460),g,[0,.68,0]);const flame=mesh(new T.IcosahedronGeometry(1,1),new T.MeshStandardMaterial({color:0xf3d28a,emissive:0xffb340,emissiveIntensity:2,transparent:true,opacity:.95}),g,[0,1.55,0],[.24,.76,.24]);const glow=new T.PointLight(0xf7c17b,6,13,2);glow.position.y=2;g.add(glow);const ring=mesh(new T.TorusGeometry(1.4,.027,4,36),material(C.gold,{emissive:0xc79c4e,emissiveIntensity:.8}),g,[0,1.8,0]);const beam=mesh(new T.CylinderGeometry(.045,.28,28,8,1,true),new T.MeshBasicMaterial({color:0xf8dca0,transparent:true,opacity:.12,side:T.DoubleSide,depthWrite:false}),g,[0,15,0]);this.beacons.set(p.id,{g,flame,glow,ring,beam});
       if(p.type!=='camp'){
         const n=boss?10:6,r=boss?13:7;for(let i=0;i<n;i++){const a=i/n*Math.PI*2,x=Math.cos(a)*r,z=Math.sin(a)*r,h=boss?14:(i%3===0?7:4.4);addBox(g,C.stone,x,h/2,z,1.35,h,1.35,true);addBox(g,0x7e8980,x,h+.3,z,1.8,.6,1.8);if(i%2===0)mesh(new T.ConeGeometry(.6,2,4),material(C.dark),g,[x,h+1.7,z]);}
         const arch=new T.Mesh(new T.TorusGeometry(boss?9:5,boss?.95:.65,5,24,Math.PI),material(C.stone));arch.position.set(0,boss?13:6,-(boss?9:5));arch.rotation.z=0;g.add(arch);for(const side of [-1,1])addBox(g,C.stone,side*(boss?9:5),boss?6.5:3,-(boss?9:5),boss?1.9:1.3,boss?13:6,1.7,true);
         if(p.id==='ruins'){const tower=mesh(new T.CylinderGeometry(4,5,17,8,1,true),material(0x667a79),g,[-13,8,-9]);mesh(new T.TorusGeometry(4.3,.4,4,8),material(C.gold),g,[-13,16.4,-9]).rotation.x=Math.PI/2;for(let j=0;j<5;j++)addBox(g,C.dark,-13+Math.sin(j*1.26)*4.1,12,-9+Math.cos(j*1.26)*4.1,.5,2.1,.4);}
       }
+      // The beacon group stays mutable; bake only its stonework, not its live
+      // flame, light, rotating ring or beam. Their exact hierarchy is retained.
+      bakeStaticTransforms(...g.children.filter(child=>![flame,glow,ring,beam].includes(child)));
     }
     // Cloth trail markers make the northern route readable from ground level.
     for(const z of [60,10,-45,-107,-196]){const x=-6+Math.sin(z*.035)*7,y=heightAt(x,z);addBox(this.scene,C.wood,x,y+2,z,.12,4,.12);const flag=mesh(new T.PlaneGeometry(1.3,.85,3,2),material(0xbeb28b,{side:T.DoubleSide}),this.scene,[x+.67,y+3.4,z]);flag.rotation.y=.25;}
