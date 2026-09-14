@@ -16,3 +16,5 @@
 #save-status{font-family:inherit;font-size:14px;line-height:1.7;letter-spacing:0;margin:12px 0;color:#f2d9a2}.title-content #import-title-save{font-size:12px;letter-spacing:1px;padding:8px}
 
 .gathering-cast{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.gathering-person{padding:12px;border:1px solid #77867866;background:#182827}.gathering-person small{display:block;color:#c2c8bd;margin-bottom:6px;font-size:12px}.gathering-person strong{font-size:15px;overflow-wrap:anywhere}.gathering-person.current{border-color:#edfff1;border-left-width:5px;background:#30443b}.gathering-progress{font-size:13px;color:#e1cd9e!important}.gathering-history{margin:20px 0;border-top:1px solid #77867866}.gathering-history summary{min-height:44px;padding:14px 0;cursor:pointer;color:#e1cd9e}.gathering-history div{padding:14px 0;border-top:1px solid #77867833}.gathering-history p{margin:8px 0}.npc-label{white-space:pre-line;text-align:center;line-height:1.5}.npc-label.gathering-speaker{color:#edfff1;font-weight:700}
+
+#combat-hint{white-space:pre-line;text-align:center;line-height:1.6;max-width:90%;letter-spacing:1px}

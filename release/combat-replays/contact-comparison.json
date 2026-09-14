@@ -1,0 +1,152 @@
+{
+  "date": "2026-09-14",
+  "baselineCommit": "5b2ede88a7d08ae7c271a305cf015c55fdf33d9e",
+  "environment": "functions JavaScript V8; repository pure modules transformed only at ES module imports/exports; production HUD functions executed with a minimal text sink",
+  "note": "Selected laboratory counterexamples, no render, touch, audio, physical device or external player observation. Candidate not packaged or deployed.",
+  "baseline": [
+    {
+      "firstHurt": 0.016666666666666666,
+      "hp": 98,
+      "id": "melee-hit",
+      "matchesContact": true,
+      "predictedTime": 0,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "melee-away",
+      "matchesContact": false,
+      "predictedTime": 0,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "melee-out-of-range",
+      "matchesContact": false,
+      "predictedTime": 0,
+      "warning": true
+    },
+    {
+      "firstHurt": 0.23333333333333334,
+      "hp": 100,
+      "id": "arrow-hit",
+      "matchesContact": true,
+      "predictedTime": 0.263,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "arrow-overhead",
+      "matchesContact": false,
+      "predictedTime": 0.263,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "arrow-cover",
+      "matchesContact": false,
+      "predictedTime": 0.263,
+      "warning": true
+    },
+    {
+      "firstHurt": 0.8333333333333334,
+      "hp": 100,
+      "id": "bow-hit",
+      "matchesContact": true,
+      "predictedTime": 0.3,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "bow-miss",
+      "matchesContact": false,
+      "predictedTime": 0.3,
+      "warning": true
+    },
+    {
+      "expectedPrimary": "火を失った兵 · 背後 0.1秒 · 回避 / 受け流し",
+      "hp": 98,
+      "id": "hud-priority",
+      "initialHud": "衝撃波 — 跳んでかわす",
+      "matchesContact": false
+    }
+  ],
+  "candidate": [
+    {
+      "firstHurt": 0.016666666666666666,
+      "hp": 98,
+      "id": "melee-hit",
+      "matchesContact": true,
+      "predictedTime": 0,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "melee-away",
+      "matchesContact": true,
+      "predictedTime": null,
+      "warning": false
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "melee-out-of-range",
+      "matchesContact": true,
+      "predictedTime": null,
+      "warning": false
+    },
+    {
+      "firstHurt": 0.23333333333333334,
+      "hp": 100,
+      "id": "arrow-hit",
+      "matchesContact": true,
+      "predictedTime": 0.232,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "arrow-overhead",
+      "matchesContact": true,
+      "predictedTime": null,
+      "warning": false
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "arrow-cover",
+      "matchesContact": true,
+      "predictedTime": null,
+      "warning": false
+    },
+    {
+      "firstHurt": 0.8333333333333334,
+      "hp": 100,
+      "id": "bow-hit",
+      "matchesContact": true,
+      "predictedTime": 0.806,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "bow-miss",
+      "matchesContact": true,
+      "predictedTime": null,
+      "warning": false
+    },
+    {
+      "expectedPrimary": "火を失った兵 · 背後 0.1秒 · 回避 / 受け流し",
+      "hp": 98,
+      "id": "hud-priority",
+      "initialHud": "火を失った兵 · 背後 0.1秒 · 回避 / 受け流し\n続く攻撃：灰冠の番人 · 周囲 · 跳躍",
+      "matchesContact": true
+    }
+  ]
+}
