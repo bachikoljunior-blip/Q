@@ -139,7 +139,7 @@ export class Game {
     const p=this.player;if(p.dead||p.invulnerable>0)return 'evade';
     const origin=incoming||enemy;
     if(p.parry>.19&&origin&&Math.abs(angleDelta(Math.atan2(origin.x-p.x,origin.z-p.z),p.angle))<1.7){if(!projectile)this.hurtEnemy(enemy,this.damageAmount()*.7,1.6);p.energy=Math.min(100,p.energy+22);p.stamina=Math.min(100,p.stamina+20);this.emit('perfect');this.notify('受け流し成功');return 'parry';}
-    amount*=this.assist?.55:1;p.hp=Math.max(0,p.hp-amount);p.invulnerable=.55;p.attack=0;p.healTimer=0;this.emit('hurt',{amount});if(p.hp<=0){p.dead=true;this.clearActionBuffer();p.ash=Math.floor(p.ash*.8);this.emit('death');}return 'hit';
+    amount*=this.assist?.55:1;p.hp=Math.max(0,p.hp-amount);p.invulnerable=.55;p.attack=0;p.healTimer=0;this.emit('hurt',{amount,sourceId:enemy?.id||null});if(p.hp<=0){p.dead=true;this.clearActionBuffer();p.ash=Math.floor(p.ash*.8);this.emit('death');}return 'hit';
   }
   tick(dt,input={}) {
     if(this.player.dead)return;dt=clamp(dt,0,.05);const p=this.player;this.time+=dt;this.day=(this.day+dt/720)%1;

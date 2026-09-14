@@ -29,17 +29,21 @@ test('camera fallback has normalized front, side and rear directions without mut
 });
 
 test('projected screen x overrides azimuth fallback for visible threats',()=>{
-  assert.equal(screenDirectionFromProjection({x:100,visible:true},1000,'背後'),'左');
-  assert.equal(screenDirectionFromProjection({x:500,visible:true},1000,'背後'),'正面');
-  assert.equal(screenDirectionFromProjection({x:900,visible:true},1000,'背後'),'右');
-  assert.equal(screenDirectionFromProjection({x:500,visible:false},1000,'背後'),'背後');
+  assert.equal(screenDirectionFromProjection({x:100,y:300,visible:true},1000,600,'背後'),'左');
+  assert.equal(screenDirectionFromProjection({x:500,y:300,visible:true},1000,600,'背後'),'正面');
+  assert.equal(screenDirectionFromProjection({x:900,y:300,visible:true},1000,600,'背後'),'右');
+  assert.equal(screenDirectionFromProjection({x:-1,y:300,visible:true},1000,600,'背後'),'左外');
+  assert.equal(screenDirectionFromProjection({x:1001,y:300,visible:true},1000,600,'背後'),'右外');
+  assert.equal(screenDirectionFromProjection({x:500,y:-1,visible:true},1000,600,'背後'),'上外');
+  assert.equal(screenDirectionFromProjection({x:500,y:601,visible:true},1000,600,'背後'),'下外');
+  assert.equal(screenDirectionFromProjection({x:500,y:300,visible:false},1000,600,'左'),'背後');
 });
 
 test('production combat HUD receives camera yaw and renders actionable screen-relative cues',()=>{
   const {game,enemy}=fixture();enemy.x=2.6;enemy.z=0;enemy.angle=-Math.PI/2;const attributes={},classes=new Map(),element={textContent:'',setAttribute:(key,value)=>attributes[key]=value,classList:{toggle:(key,value)=>classes.set(key,value)}};
-  const view=renderCombatHint(element,game,{cameraYaw:Math.PI/2,project:()=>({x:500,visible:true}),viewportWidth:1000});
-  assert.equal(view.primary.direction,'右');assert.equal(view.primary.screenDirection,'正面');assert.match(element.textContent,/↑ .+ · 画面前方 0\.8秒 · 回避 \/ 受け流し/);assert.equal(attributes['data-direction'],'正面');assert.equal(classes.get('urgent'),false);
-  const main=readFileSync(new URL('../src/main.js',import.meta.url),'utf8');assert.match(main,/renderCombatHint\(\$\('combat-hint'\),game,\{cameraYaw:view\.yaw,project:position=>view\.project\(position\.x,position\.y,position\.z\),viewportWidth:innerWidth\}\)/);
+  const view=renderCombatHint(element,game,{cameraYaw:Math.PI/2,project:()=>({x:500,y:300,visible:true}),viewportWidth:1000,viewportHeight:600});
+  assert.equal(view.primary.direction,'右');assert.equal(view.primary.screenDirection,'正面');assert.match(element.textContent,/待機 0\.6秒 → 回避\n↑ .+ · 画面前方 0\.8秒/);assert.doesNotMatch(element.textContent,/回避 \/ 受け流し/);assert.equal(attributes['data-direction'],'正面');assert.equal(attributes['data-next-action'],'dodge');assert.equal(classes.get('urgent'),false);
+  const main=readFileSync(new URL('../src/main.js',import.meta.url),'utf8');assert.match(main,/renderCombatHud\(\$\('combat-hint'\),\{dodge:\$\('dodge-button'\),parry:\$\('parry-button'\),jump:\$\('jump-button'\)\},game,\{cameraYaw:view\.yaw,project:position=>view\.project\(position\.x,position\.y,position\.z\),viewportWidth:innerWidth,viewportHeight:innerHeight\}\)/);
 });
 
 test('boss radial attacks name jump as the distinct response',()=>{

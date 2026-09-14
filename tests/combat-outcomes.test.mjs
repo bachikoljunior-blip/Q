@@ -9,5 +9,6 @@ test('warnings and production HUD agree with actual contact in independent count
   for(const result of results.filter(r=>r.firstHurt!==null&&r.firstHurt!==undefined)){
     assert(Math.abs(result.firstHurt-result.predictedTime)<=2/60,JSON.stringify(result));
   }
-  assert.match(results.at(-1).initialHud,/続く攻撃：◎ 灰冠の番人/);
+  assert.match(results.at(-1).initialHud,/次：回避 · 画面外あり/);
+  assert.match(results.at(-1).initialHud,/◎ 灰冠の番人/);
 });
