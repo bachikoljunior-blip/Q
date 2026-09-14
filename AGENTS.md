@@ -7,7 +7,7 @@ Qの主目的はスマートフォン向けオープンワールドアクショ�
 
 - src/core.js は描画に依存しないゲームルール。src/content.js は武器と副クエストの定義。src/spatial.js / src/navigation.js は衝突と経路。src/runtime-state.js は途中動作・敵・矢の保存。src/save-store.js はブラウザー保存の検証・復旧。src/woodland.js は描画と衝突で共用する木の配置。src/scene.js はThree.jsによる3D描画。src/main.js は操作、画面、進行保存。src/audio.js は手続き的な環境音と効果音。
 - 操作、進行、保存の変更では該当する振る舞いを npm test で確認する。進行変更では npm run test:journey と npm run test:crossing も実行する。保存・経路変更では npm run test:session で30分相当の継続シミュレーションも行う。細かな表示だけの変更に不要な単体テストを増やさない。
-- 成果物は npm run build と npm run package で生成する。release/Q-ash-pilgrim.html は依存ファイルが不要な起動版。生成物はソース変更と一致させる。
+- 成果物は npm run build と npm run package で生成し、npm run test:artifacts で遅延チャンクと単体版を検査する。release/Q-ash-pilgrim.html は依存ファイルが不要な起動版。生成物はソース変更と一致させる。
 - 品質確認はビルド、ロジックテスト、ブラウザー操作、スマホ実機、プレイヤー評価を区別する。できなかった確認は理由とともに残す。
 - src/village.js は住民の生活行動と鐘の探索クエスト、src/village-scene.js はその描画。住民・鐘・報酬の変更では npm run test:forge も実行する。三つの鐘を解いた状態と報告して報酬を得た状態を区別し、既存セーブを維持する。
 - 薬草の配達後は、選んだ届け先に対応する住民だけが活動する。反対側の住民や旅人の薬箱を偽の対象データで操作可能にしない。分岐変更では npm run test:crossing の両経路を徒歩で確認する。

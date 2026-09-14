@@ -1,6 +1,5 @@
 import './style.css';
 import { Game, PLACES, heightAt, distance, clamp, angleDelta } from './core.js';
-import { SceneView } from './scene.js';
 import { Soundscape } from './audio.js';
 import { WEAPONS, SENA, EAST_CAMP, crossingText } from './content.js';
 import { WIND_SHRINE, WIND_BELLS, ROAD_CACHE, BELL_VERSE, forgeText, residentSpeech, canWorkWith } from './village.js';
@@ -16,7 +15,7 @@ try{const s=JSON.parse(storage?.getItem(SETTINGS_KEY));if(s&&typeof s==='object'
 const saveMessages={recovered:'前回の保存を読めなかったため、ひとつ前の正常な旅の記録を復元しました。',invalid:'旅の記録を読めません。書き出したセーブがあれば、ここから読み込めます。',unavailable:'この端末では自動保存を使えません。旅の記録からセーブを書き出して保管してください。'};
 if(saveMessages[loadedSave.status]){$('save-status').textContent=saveMessages[loadedSave.status];$('save-status').classList.remove('hidden');}
 if(!['low','medium','high'].includes(settings.quality))settings.quality='medium';settings.volume=clamp(Number(settings.volume)||0,0,1);settings.sensitivity=clamp(Number(settings.sensitivity)||1,.5,2);
-let game=new Game(stored),view,playing=false,paused=false,panelType='',lastFrame=0,accumulator=0,saveTimer=0,hudTimer=0,toastTimer=0,locationTimer=0,warningTimer=0,walkTimer=0;
+let game=new Game(stored),view,viewPromise,frameStarted=false,playing=false,paused=false,panelType='',lastFrame=0,accumulator=0,saveTimer=0,hudTimer=0,toastTimer=0,locationTimer=0,warningTimer=0,walkTimer=0;
 game.assist=!!settings.assist;const audio=new Soundscape();audio.volume=settings.volume;audio.music=settings.music;
 const input={x:0,z:0,sprint:false},keys=new Set(),stick={x:0,y:0},camera={id:null,x:0,y:0};let stickId=null,attackHeld=false,lastPad=[];const buttonPointers=new Map();
 const svgPaths={attack:'M5 19 19 5M14 4l6 0v6M4 15l5 5M7 17l-4 4',dodge:'M4 13a8 8 0 1 1 8 7M4 13V7m0 6h6M12 8l3 4-3 4',skill:'m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z',parry:'m12 3 8 4v6c0 4-8 8-8 8s-8-4-8-8V7Z',jump:'m6 11 6-7 6 7M12 4v15M6 21h12',heal:'M9 3h6M10 3v5L6 16q-2 5 6 5t6-5l-4-8V3M8 14h8',lock:'M3 8V3h5m8 0h5v5m0 8v5h-5m-8 0H3v-5M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8'};
@@ -30,19 +29,38 @@ function clearInput(){game.clearActionBuffer();buttonPointers.clear();for(const 
 function closePanel(){paused=false;panelType='';$('panel-backdrop').classList.add('hidden');clearInput();if(playing){$('world').focus({preventScroll:true});audio.start();}}
 function panel(kind,kicker,title,html){clearInput();paused=true;panelType=kind;$('panel-kicker').textContent=kicker;$('panel-title').textContent=title;$('panel-body').innerHTML=html;$('panel-backdrop').classList.remove('hidden');$('close-panel').focus({preventScroll:true});}
 function activate(name,fn){$(name).addEventListener('click',fn);}
-function startGame(fresh){if(fresh){game=new Game();game.assist=!!settings.assist;view.game=game;}playing=true;paused=false;$('title-screen').classList.add('hidden');$('hud').classList.remove('hidden');clearInput();audio.start();view.camera.position.set(game.player.x,game.player.y+5,game.player.z+10);view.yaw=.05;showLocation(PLACES[0]);if(!game.talked)notify('左で移動、右をドラッグで視点。灯守ミラを探そう。');const saved=save();$('world').focus();return saved;}
+function setLaunchControls(disabled){for(const id of ['start','continue','import-title-save'])$(id).disabled=disabled;}
+async function ensureView(trigger){
+  if(view)return true;
+  if(viewPromise)return viewPromise;
+  const button=trigger?.tagName==='BUTTON'?trigger:$('start'),label=button.textContent;
+  setLaunchControls(true);button.textContent='世界を描いています…';button.setAttribute('aria-busy','true');
+  viewPromise=import('./scene.js').then(({SceneView})=>{
+    view=new SceneView($('world'),game,settings);
+    if(!frameStarted){frameStarted=true;requestAnimationFrame(frame);}
+    return true;
+  }).catch(error=>{
+    console.error(error);viewPromise=undefined;
+    $('fatal-message').textContent='WebGL 2に対応したブラウザーで開いてください。別のアプリを閉じて読み直すと改善することがあります。詳細: '+error.message;
+    $('fatal').classList.remove('hidden');
+    return false;
+  }).finally(()=>{setLaunchControls(false);button.textContent=label;button.removeAttribute('aria-busy');});
+  return viewPromise;
+}
+async function startGame(fresh,trigger){if(fresh){game=new Game();game.assist=!!settings.assist;}if(!await ensureView(trigger))return null;view.game=game;playing=true;paused=false;$('title-screen').classList.add('hidden');$('hud').classList.remove('hidden');clearInput();audio.start();view.camera.position.set(game.player.x,game.player.y+5,game.player.z+10);view.yaw=.05;showLocation(PLACES[0]);if(!game.talked)notify('左で移動、右をドラッグで視点。灯守ミラを探そう。');const saved=save();$('world').focus();return saved;}
 function showLocation(p){$('location').querySelector('small').textContent=p.en;$('location').querySelector('h2').textContent=p.name;$('location').style.opacity='1';locationTimer=4.5;}
-activate('start',()=>{if(stored&&stored.version===1){panel('new','A NEW JOURNEY','新しい旅を始める',`<p>現在の旅のセーブを、新しい旅に置き換えます。</p><div class="panel-actions"><button id="confirm-new" class="primary">新しい旅を始める</button><button id="cancel-new">戻る</button></div>`);activate('confirm-new',()=>{closePanel();startGame(true);});activate('cancel-new',closePanel);}else startGame(true);});
-activate('continue',()=>startGame(false));activate('close-panel',closePanel);
+activate('start',()=>{if(stored&&stored.version===1){panel('new','A NEW JOURNEY','新しい旅を始める',`<p>現在の旅のセーブを、新しい旅に置き換えます。</p><div class="panel-actions"><button id="confirm-new" class="primary">新しい旅を始める</button><button id="cancel-new">戻る</button></div>`);activate('confirm-new',()=>{closePanel();startGame(true,$('start'));});activate('cancel-new',closePanel);}else startGame(true,$('start'));});
+activate('continue',()=>startGame(false,$('continue')));activate('close-panel',closePanel);
 activate('import-title-save',()=>$('title-save-file').click());$('title-save-file').onchange=e=>{importSaveFile(e.target.files[0]);e.target.value='';};
 async function importSaveFile(file){
-  if(!file||!view)return;
+  if(!file)return;
   try{
     if(file.size>100000)throw Error('セーブファイルが大きすぎます。');
     let data;try{data=JSON.parse(await file.text());}catch{throw Error('灰の巡礼のセーブファイルを選んでください。');}
     if(!isSaveData(data))throw Error('灰の巡礼の有効なセーブファイルを選んでください。');
-    const candidate=new Game(data);candidate.assist=!!settings.assist;game=candidate;stored=candidate.serialize();view.game=game;view.snapCamera();
-    let saved;if(playing){saved=save();closePanel();}else saved=startGame(false);
+    const candidate=new Game(data);candidate.assist=!!settings.assist;game=candidate;stored=candidate.serialize();
+    let saved;if(playing){view.game=game;view.snapCamera();saved=save();closePanel();}else saved=await startGame(false,$('import-title-save'));
+    if(saved===null)return;
     $('save-status').classList.add('hidden');notify(saved?'旅の記録を読み込んだ':'記録を読み込みましたが、端末に保存できません。セーブファイルを保管してください。');
   }catch(error){if(playing)notify(error.message);else{$('save-status').textContent=error.message;$('save-status').classList.remove('hidden');}}
 }
@@ -82,7 +100,7 @@ function drawMap(){const c=$('map-canvas'),ctx=c.getContext('2d'),W=600,H=650;c.
 function mapPanel(){panel('map','A LAND WITHOUT A KING','灰冠の地',`<div class="map-layout"><canvas id="map-canvas" class="world-map" aria-label="谷の地図。北に灰冠の門、西に琥珀の森、東に水殿、中央北に廃塔。"></canvas><div class="map-places">${PLACES.map(p=>`<button class="map-place ${game.lit.includes(p.id)?'active':''}" id="place-${p.id}">${p.name}<small>${game.lit.includes(p.id)?'灯火へ移動':game.discovered.includes(p.id)?'発見済み · 火は消えている':'未踏の地'}</small></button>`).join('')}<p class="subtle">赤い矢印は現在地。ともした灯火には、敵が近くにいなければ移動できます。</p></div></div>`);drawMap();for(const p of PLACES)activate(`place-${p.id}`,()=>{if(game.lit.includes(p.id)){if(game.fastTravel(p.id)){closePanel();save();showLocation(p);}}else notify(`${p.name}までは約 ${Math.round(distance(game.player,p))} m`);});}
 function settingsPanel(){const measured=frameMetrics.snapshot();panel('settings','REST A MOMENT','操作と設定',`<div class="setting-row"><span>描画品質<small>動きが重いときは「軽量」に</small></span><select id="quality"><option value="low">軽量</option><option value="medium">標準</option><option value="high">高品質</option></select></div><div class="setting-row"><span>音量</span><select id="volume"><option value="0">消音</option><option value="0.25">小</option><option value="0.45">標準</option><option value="0.8">大</option></select></div><div class="setting-row"><span>音楽</span><select id="music"><option value="true">あり</option><option value="false">環境音のみ</option></select></div><div class="setting-row"><span>カメラ感度</span><select id="sensitivity"><option value="0.6">低め</option><option value="1">標準</option><option value="1.6">高め</option></select></div><div class="setting-row"><span>旅人の加護<small>受けるダメージを軽減する</small></span><select id="assist"><option value="false">なし</option><option value="true">あり</option></select></div><div class="journal"><h3>この端末での動作</h3><p id="performance-summary">${measured?`直近 ${measured.windowSeconds.toFixed(1)} 秒：平均 ${measured.averageFps.toFixed(1)} fps · 遅いフレーム ${measured.p95FrameMs.toFixed(1)} ms（95%点）`:'旅を始めると、実際に表示されたフレームの間隔を記録します。'}</p><p class="subtle">動きが重いときは描画品質を下げて確認できます。画質・画面の大きさを変えると計測をやり直します。休止中の時間は含めません。</p><button id="export-performance" ${measured?'':'disabled'}>動作の記録を書き出す</button></div><div class="control-grid"><span>スマホ：左スティックで移動<br>右の空いている場所をドラッグで視点<br>各アクションボタンをタップ<br>スティックを大きく倒すと走る</span><span>PC：WASD 移動 / Shift 走る<br>J 斬撃 / Space 回避 / K 受け流し<br>L 残火 / R 回復 / Q 跳躍 / F 注視<br>E 調べる / M 地図 / I 記録 / Esc 休止</span></div><p class="subtle">ゲームパッドにも対応。左スティックで移動、右で視点。A 回避 / X 斬撃 / Y 残火 / B 調べる。<br>横向きで広く見渡せます。縦向きでも遊べます。</p><div class="panel-actions"><button id="settings-close" class="primary">${playing?'旅に戻る':'戻る'}</button><button id="fullscreen">全画面にする</button>${playing?'<button id="to-title">保存してタイトルへ</button>':''}</div>`);
     for(const k of ['quality','volume','music','sensitivity','assist']){if($(k).querySelector(`option[value="${settings[k]}"]`))$(k).value=String(settings[k]);$(k).onchange=()=>{settings[k]=['volume','sensitivity'].includes(k)?Number($(k).value):['music','assist'].includes(k)?$(k).value==='true':$(k).value;game.assist=settings.assist;audio.setVolume(settings.volume);audio.music=settings.music;if(k==='quality'){view?.setQuality(settings.quality);resetMeasurements();}saveSettings();};}
-    activate('export-performance',()=>{const report={game:'Q — 灰の巡礼',version:'0.7.0',recordedAt:new Date().toISOString(),browser:navigator.userAgent,viewport:{width:innerWidth,height:innerHeight,devicePixelRatio},quality:settings.quality,frames:frameMetrics.snapshot(),progress:{region:$('region').textContent,level:game.player.level},note:'Browser frame intervals during active play since the last quality or viewport change; not a GPU timer. No account or save data included.'};const url=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='Q-device-performance.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+    activate('export-performance',()=>{const report={game:'Q — 灰の巡礼',version:'0.8.0',recordedAt:new Date().toISOString(),browser:navigator.userAgent,viewport:{width:innerWidth,height:innerHeight,devicePixelRatio},quality:settings.quality,frames:frameMetrics.snapshot(),progress:{region:$('region').textContent,level:game.player.level},note:'Browser frame intervals during active play since the last quality or viewport change; not a GPU timer. No account or save data included.'};const url=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='Q-device-performance.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
     activate('settings-close',closePanel);activate('fullscreen',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{notify('この端末ではブラウザーの全画面操作を使ってください');}});if(playing)activate('to-title',()=>{save();stored=game.serialize();closePanel();playing=false;$('hud').classList.add('hidden');$('title-screen').classList.remove('hidden');$('continue').classList.remove('hidden');});}
 function endingChoice(){panel('ending-choice','THE LAST EMBER','火を、誰のものにするか',`<p class="dialogue-text">王のいない王冠に、最後の火が残っている。谷を照らすことも、誰にも縛られない風に返すこともできる。</p><button class="choice" id="ending-restore">王冠に火を戻す<span>集落の夜を、確かな灯りで照らす。灯守たちが火を守り継ぐ。</span></button><button class="choice" id="ending-release">火を風に放つ<span>王冠の力を手放し、谷のすべての人に小さな火を分ける。</span></button>`);for(const k of ['restore','release'])activate(`ending-${k}`,()=>{game.chooseEnding(k);save();closePanel();});}
 function ending(choice){panel('ending','CHAPTER I · COMPLETE',choice==='release'?'名もなき火の朝':'火を継ぐ人たち',`<p class="dialogue-text">${choice==='release'?'火は、無数の光になって谷を渡った。<br>誰のものでもない温もりが、一つずつ窓にともる。<br><br>王冠は空になった。<br>それでも、この朝を寒いと言う者はいなかった。':'王冠に戻った火は、かつてより小さかった。<br>ミラはそれを見て、初めて笑った。<br><br>「一人で守らなくても、いいんだね」<br>新しい灯守たちの夜が、静かに始まった。'}</p><p>第一章「残り火の谷」完了。谷の探索は引き続き楽しめます。</p><div class="panel-actions"><button id="ending-close" class="primary">風のつづきを歩く</button></div>`);activate('ending-close',closePanel);}
@@ -125,11 +143,11 @@ function updateHud(){const p=game.player;$('hp').style.transform=`scaleX(${p.hp/
   for(const npc of [...game.npcs(),...(game.bells.discovered?WIND_BELLS:[])]){let el=$(`npc-${npc.id}`);if(!el){el=document.createElement('div');el.id=`npc-${npc.id}`;el.className='npc-label';$('enemy-labels').append(el);}const point=view.project(npc.x,heightAt(npc.x,npc.z)+2.7,npc.z);el.style.display=point.visible&&distance(game.player,npc)<18?'block':'none';el.style.left=`${point.x}px`;el.style.top=`${point.y}px`;el.textContent=npc.label|| (npc.id==='ferryman'?'渡し守 セナ':npc.id==='keeper'?'灯守 ミラ':npc.name);}
   for(const e of game.enemies){let el=$(`health-${e.id}`);if(!el){el=document.createElement('div');el.id=`health-${e.id}`;el.className='enemy-health';el.innerHTML='<span></span><i><b></b></i>';$('enemy-labels').append(el);}const v=view.project(e.x,e.y+(e.type==='wolf'?1.8:2.55),e.z),visible=!e.dead&&e.type!=='boss'&&distance(p,e)<20&&v.visible;el.style.display=visible?'block':'none';if(visible){el.style.left=`${v.x}px`;el.style.top=`${v.y}px`;el.querySelector('span').textContent=e.type==='wolf'?'灰を喰う獣':e.type==='ranger'?'岸辺の弓兵':'火を失った兵';el.querySelector('b').style.transform=`scaleX(${e.hp/e.maxHp})`;}}
 }
-function frame(now){requestAnimationFrame(frame);const frameMs=now-(lastFrame||now),dt=Math.min(frameMs/1000,.05);lastFrame=now;if(!view||document.hidden)return;if(playing&&!paused&&!game.player.dead){frameMetrics.record(frameMs);readInput(dt);accumulator+=dt;while(accumulator>=1/60){game.tick(1/60,input);accumulator-=1/60;}saveTimer+=dt;if(saveTimer>15){save();saveTimer=0;}walkTimer-=dt;if(game.player.moving&&game.player.grounded&&walkTimer<=0){audio.noise(.05,.025,500);walkTimer=input.sprint?.24:.35;}}else accumulator=0;
+function frame(now){requestAnimationFrame(frame);const frameMs=now-(lastFrame||now),dt=Math.min(frameMs/1000,.05);lastFrame=now;if(!view||document.hidden||!playing)return;if(!paused&&!game.player.dead){frameMetrics.record(frameMs);readInput(dt);accumulator+=dt;while(accumulator>=1/60){game.tick(1/60,input);accumulator-=1/60;}saveTimer+=dt;if(saveTimer>15){save();saveTimer=0;}walkTimer-=dt;if(game.player.moving&&game.player.grounded&&walkTimer<=0){audio.noise(.05,.025,500);walkTimer=input.sprint?.24:.35;}}else accumulator=0;
   handleEvents();view.update(dt,playing);if(playing){hudTimer+=dt;if(hudTimer>.075){updateHud();hudTimer=0;}const combat=game.enemies.some(e=>!e.dead&&['chase','windup','strike'].includes(e.state)&&distance(e,game.player)<15);if(!paused)audio.tick(game.time,combat);}
   if(toastTimer>0&&(toastTimer-=dt)<=0)$('toast').style.opacity='0';if(locationTimer>0&&(locationTimer-=dt)<=0)$('location').style.opacity='0';if(warningTimer>0&&(warningTimer-=dt)<=0)$('combat-hint').textContent='';
 }
-try{view=new SceneView($('world'),game,settings);$('start').disabled=false;$('import-title-save').disabled=false;$('start').textContent='旅を始める';if(stored&&stored.version===1)$('continue').classList.remove('hidden');requestAnimationFrame(frame);}catch(e){console.error(e);$('fatal-message').textContent='WebGL 2に対応したブラウザーで開いてください。別のアプリを閉じて読み直すと改善することがあります。詳細: '+e.message;$('fatal').classList.remove('hidden');}
+if(stored&&stored.version===1)$('continue').classList.remove('hidden');
 
 // Optional agent access to the same visible journal and crafting actions.
 if(document.modelContext?.registerTool){

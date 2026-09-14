@@ -9,6 +9,7 @@
 ## 遊ぶ
 
 - [プレイ版を開く](https://q-ash-pilgrim.juurooo.chatgpt.site)（所有者限定）。
+- タイトル画面は先に軽量表示し、「旅を始める」「旅をつづける」またはセーブ読込を選んだ時点で3D世界を読み込みます。タイトルへ戻った後は3D描画を休止します。
 - PCでは [単体起動版](release/Q-ash-pilgrim.html) をダウンロードし、WebGL 2対応ブラウザーで開くこともできます。単体版は外部CDN・画像・音声への通信を必要としません。
 - スマートフォンはプレイ用URLから開いてください。横向き・縦向きのレイアウトを実装しています。ストア向けのAPK/IPAはまだありません。
 - セーブは端末のブラウザーに保存します。消費したスタミナ・残火、回復や攻撃の途中、敵の残り体力と矢も引き継ぎます。旧バージョンのセーブも読込可能です。ひとつ前の正常な記録を残し、保存が壊れた場合に復旧します。タイトルからファイルを読み込むこともできます。「旅の記録」からJSONで書き出し・読み込みができます。
@@ -58,11 +59,12 @@ npm run test:forge
 npm run test:session
 npm run build
 npm run package
+npm run test:artifacts
 ```
 
 開発サーバーはViteの出力するURLを開きます。通常環境でスマホ確認する場合は同じネットワークからPCのアドレスへ接続します。公開用の静的出力は `dist/`、外部依存が不要な単体版は `release/Q-ash-pilgrim.html` です。Sourcesと生成物を変更したら両方を更新してください。
 
-Three.js 0.186.0を固定しています。[描画にはWebGL 2が必要](https://threejs.org/docs/pages/WebGLRenderer.html)です。Vite 7.3.1を固定し、package-lock.jsonを管理しています。ゲーム状態は60 Hzの固定ステップ、描画はrequestAnimationFrameです。多数の木・岩・草はInstancedMeshで描きます。この制作環境では実機のフレームレートは未測定です。設定の「この端末での動作」は、遊んでいる間の実フレーム間隔を計測し、JSONで書き出せます。画質と画面サイズを変えた場合は別の計測としてやり直します。
+Three.js 0.186.0を固定しています。[描画にはWebGL 2が必要](https://threejs.org/docs/pages/WebGLRenderer.html)です。Vite 7.3.1を固定し、package-lock.jsonを管理しています。配信版ではThree.jsと3Dシーンを遅延チャンクへ分け、単体版ではネットワーク不要の1ファイルへ再結合します。ゲーム状態は60 Hzの固定ステップ、描画はrequestAnimationFrameです。多数の木・岩・草はInstancedMeshで描きます。この制作環境では実機のフレームレートは未測定です。設定の「この端末での動作」は、遊んでいる間の実フレーム間隔を計測し、JSONで書き出せます。画質と画面サイズを変えた場合は別の計測としてやり直します。
 
 第三者のコードのライセンスは [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt) を参照してください。
 

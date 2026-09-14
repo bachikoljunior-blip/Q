@@ -21,6 +21,7 @@ jobs:
       - run: npm run test:session
       - run: npm run build
       - run: npm run package
+      - run: npm run test:artifacts
       - name: Verify the standalone build is current
         run: git diff --exit-code -- release/Q-ash-pilgrim.html
       - uses: actions/upload-artifact@v4
