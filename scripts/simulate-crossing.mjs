@@ -5,6 +5,7 @@ import {Game,BRIDGES,distance} from '../src/core.js';
 import {SENA,SUPPLY_ID} from '../src/content.js';
 import {ROAD_CACHE} from '../src/village.js';
 import {createPilot} from './pilot.mjs';
+import {playGathering} from './gathering-pilot.mjs';
 
 const results=[];
 for(const choice of ['haven','road']){
@@ -19,6 +20,6 @@ for(const choice of ['haven','road']){
   const witness=g.residents.find(n=>n.branch===choice);assert(pilot.travel(witness,120),`must see the ${choice} aftermath`);assert(g.interact(witness));
   if(choice==='road'){assert(pilot.travel(ROAD_CACHE,60),'must reach the road medicine cache');assert(g.interact(ROAD_CACHE));assert.equal(g.player.potions,4);}
   const loaded=new Game(g.serialize());assert.equal(loaded.crossingChoice,choice);assert.equal(loaded.player.weaponType,'spear');assert(loaded.npcs().some(n=>n.branch===choice));assert(!loaded.npcs().some(n=>n.branch&&n.branch!==choice));
-  results.push({choice,seconds:Math.round(pilot.time),level:g.player.level,hp:Math.round(g.player.hp),potions:g.player.potions,witness:witness.id,campDefeated:g.enemies.filter(e=>e.encounter==='crossing'&&e.dead).length});
+  results.push({choice,gatherings:choice==='road'?playGathering(g.serialize(),'road-watch'):[],seconds:Math.round(pilot.time),level:g.player.level,hp:Math.round(g.player.hp),potions:g.player.potions,witness:witness.id,campDefeated:g.enemies.filter(e=>e.encounter==='crossing'&&e.dead).length});
 }
 console.log(JSON.stringify({passed:true,results},null,2));

@@ -1,3 +1,4 @@
+import { gatheringGoal, gatheringSpeech } from './gatherings.js';
 import { SALT_COURIER } from './world-regions.js';
 
 // Original village routines and an optional, text-readable exploration puzzle.
@@ -58,10 +59,10 @@ export function tickVillage(game,dt,groundAt){
   }
   for(const n of game.residents){
     if(!residentActive(game,n)){n.moving=false;continue;}
-    const afraid=game.threatened(n,13),goal=afraid?{x:0,z:86,activity:'火のそばへ避難'}:routineFor(n,game.day);
+    const gathering=gatheringGoal(game,n),afraid=game.threatened(n,13),goal=afraid?{x:0,z:86,activity:'火のそばへ避難'}:gathering||routineFor(n,game.day);
     const d=distance(n,goal),nearPlayer=distance(game.player,n)<3.7;
     n.activity=goal.activity;n.moving=false;
-    if(d>.45&&(!nearPlayer||afraid)){
+    if(d>.45&&(!nearPlayer||afraid||gathering)){
       const x=n.x,z=n.z;game.moveEnemy(n,goal,afraid?3:1.7,dt);
       const dx=n.x-x,dz=n.z-z;n.moving=Math.hypot(dx,dz)>.001;
       if(n.moving)n.angle=Math.atan2(dx,dz);
@@ -102,6 +103,7 @@ export function forgeText(game){
   return '集落の鍛冶師が、風の入らない炉を見つめている。';
 }
 export function residentSpeech(game,n){
+  const shared=gatheringSpeech(game,n);if(shared)return shared;
   const night=game.day>=.76;
   if(n.role==='courier'){
     if(game.ending==='release')return '北の空から、灰ではなく朝の色が降りてきた。開いた道を次の谷までつなぐよ。名のない荷でも、待つ人はいるから。';

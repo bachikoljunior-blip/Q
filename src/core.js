@@ -8,6 +8,7 @@ import { createWoodland } from './woodland.js';
 import { WIND_SHRINE, WIND_BELLS, ROAD_CACHE, createResidents, createBells, restoreBells, tickVillage, startForge, reportForge, interactShrine, forgeText, residentActive, useRoadCache } from './village.js';
 import { WORLD_BOUNDS, SALT_JOURNEY, SALT_TARGETS, saltObstacles } from './world-regions.js';
 import { createExpedition, restoreExpedition, applyExpeditionWorld, tickExpedition, expeditionQuest, interactExpedition } from './expedition.js';
+import { createGatherings, restoreGatherings, tickGatherings } from './gatherings.js';
 export const WORLD_SEED = 87123;
 export const SAVE_VERSION = 1;
 export const TAU = Math.PI * 2;
@@ -73,7 +74,7 @@ export class Game {
     Object.assign(this,makeWorld());
     this.player={x:0,z:101,y:heightAt(0,101),angle:Math.PI,hp:120,maxHp:120,stamina:100,energy:100,level:1,xp:0,ash:0,herbs:0,potions:3,weapon:0,weaponType:'sword',vigor:0,agility:0,attack:0,combo:0,comboWindow:0,dodge:0,parry:0,invulnerable:0,skillCooldown:0,staminaDelay:0,vertical:0,grounded:true,healTimer:0,healDone:false,dead:false};
     this.time=0;this.day=.16;this.events=[];this.lit=['haven'];this.discovered=['haven'];this.talked=false;this.bossDefeated=false;this.ending=null;this.checkpoint='haven';this.relic=false;this.relicDelivered=false;this.assist=false;this.locked=null;this.pendingAction=null;this.weapons=['sword'];this.crossingStarted=false;this.metSena=false;this.supplies=false;this.crossingChoice=null;this.trackedQuest='main';this.projectiles=[];this.projectileId=0;
-    this.residents=createResidents(groundAt);this.bells=createBells();this.expedition=createExpedition();
+    this.residents=createResidents(groundAt);this.bells=createBells();this.expedition=createExpedition();this.gatherings=createGatherings();
     if(save) this.restore(save);
   }
   emit(type,data={}) { this.events.push({type,...data}); }
@@ -154,7 +155,7 @@ export class Game {
     p.energy=Math.min(100,p.energy+3.5*dt);
     for(const place of PLACES)if(distance(p,place)<30&&!this.discovered.includes(place.id)){this.discovered.push(place.id);this.emit('discover',{place});this.reward(15,25);this.emit('save');}
     const lock=this.enemies.find(e=>e.id===this.locked&&!e.dead);if(lock&&distance(p,lock)<26){p.angle=Math.atan2(lock.x-p.x,lock.z-p.z);}else this.locked=null;
-    for(const e of this.enemies){if(p.dead)break;this.tickEnemy(e,dt);}if(!p.dead){this.tickProjectiles(dt);if(!p.dead){tickVillage(this,dt,groundAt);tickExpedition(this);}}
+    for(const e of this.enemies){if(p.dead)break;this.tickEnemy(e,dt);}if(!p.dead){this.tickProjectiles(dt);if(!p.dead){tickVillage(this,dt,groundAt);tickExpedition(this);tickGatherings(this);}}
   }
   tickEnemy(e,dt) {
     if(e.dead)return;const p=this.player,d=distance(e,p),boss=e.type==='boss',wolf=e.type==='wolf';e.timer=Math.max(0,e.timer-dt);e.cooldown=Math.max(0,e.cooldown-dt);
@@ -266,7 +267,7 @@ export class Game {
   respawn(){const p=this.player,s=PLACES.find(s=>s.id===this.checkpoint)||PLACES[0];this.clearTransient();this.projectiles=[];p.x=s.x;p.z=s.z+7;moveCircle(p,0,0,this.obstacles);p.y=groundAt(p.x,p.z);p.hp=p.maxHp;p.stamina=100;p.energy=100;p.potions=Math.max(this.crossingChoice==='road'?4:3,p.potions);p.dead=false;p.invulnerable=2;p.skillCooldown=0;for(const e of this.enemies){if(!e.dead){e.x=e.homeX;e.z=e.homeZ;e.y=heightAt(e.x,e.z);e.hp=e.maxHp;e.poise=180;e.state='idle';e.timer=0;e.cooldown=1;e.attackCount=0;e.radial=false;e.hit=false;e.avoid=null;e.route=null;}}this.emit('save');}
   chooseEnding(choice){if(!this.bossDefeated||this.ending||!['restore','release'].includes(choice))return false;this.ending=choice;this.reward(200,120);this.emit('ending',{choice});this.emit('save');return true;}
   quest(){if(this.trackedQuest==='expedition'&&!this.expedition.reported)return expeditionQuest(this);if(this.trackedQuest==='forge'&&!this.bells.reported)return{title:'風の入らない炉',text:forgeText(this),target:this.bells.solved?this.residents[0]:WIND_SHRINE};if(this.trackedQuest==='crossing'&&!this.crossingChoice)return{title:'川の向こうの約束',text:crossingText(this),target:this.supplies?SENA:EAST_CAMP};if(this.ending&&!this.expedition.reported)return expeditionQuest(this);if(this.ending)return{title:'風のつづきを歩く',text:'残された宝箱と遺物を探す',target:null};if(this.bossDefeated)return{title:'火の行く先',text:'王冠の火に触れ、谷の未来を選ぶ',target:PLACES[4]};if(this.lit.length===4)return{title:'灰冠の番人',text:'北の門へ。番人を倒して火を取り戻す',target:PLACES[4]};if(!this.talked)return{title:'消えた火をたどって',text:'集落の灯守ミラと話す',target:{x:7,z:80}};return{title:'三つの残り火',text:`谷の灯火をともす ${this.lit.length-1} / 3`,target:PLACES.filter(s=>s.type==='beacon'&&!this.lit.includes(s.id)).sort((a,b)=>distance(this.player,a)-distance(this.player,b))[0]};}
-  serialize(){const p=this.player;return{version:SAVE_VERSION,expedition:{...this.expedition},bells:{...this.bells},runtime:captureRuntime(this),dead:p.dead,player:Object.fromEntries(['x','z','angle','hp','level','xp','ash','herbs','potions','weapon','weaponType','vigor','agility'].map(k=>[k,p[k]])),day:this.day,lit:[...this.lit],discovered:[...this.discovered],talked:this.talked,bossDefeated:this.bossDefeated,ending:this.ending,checkpoint:this.checkpoint,relic:this.relic,relicDelivered:this.relicDelivered,weapons:[...this.weapons],metSena:this.metSena,crossingStarted:this.crossingStarted,supplies:this.supplies,crossingChoice:this.crossingChoice,trackedQuest:this.trackedQuest,taken:this.pickups.filter(l=>l.taken).map(l=>l.id),defeated:this.enemies.filter(e=>e.dead).map(e=>e.id)};}
+  serialize(){const p=this.player;return{version:SAVE_VERSION,gatherings:JSON.parse(JSON.stringify(this.gatherings)),expedition:{...this.expedition},bells:{...this.bells},runtime:captureRuntime(this),dead:p.dead,player:Object.fromEntries(['x','z','angle','hp','level','xp','ash','herbs','potions','weapon','weaponType','vigor','agility'].map(k=>[k,p[k]])),day:this.day,lit:[...this.lit],discovered:[...this.discovered],talked:this.talked,bossDefeated:this.bossDefeated,ending:this.ending,checkpoint:this.checkpoint,relic:this.relic,relicDelivered:this.relicDelivered,weapons:[...this.weapons],metSena:this.metSena,crossingStarted:this.crossingStarted,supplies:this.supplies,crossingChoice:this.crossingChoice,trackedQuest:this.trackedQuest,taken:this.pickups.filter(l=>l.taken).map(l=>l.id),defeated:this.enemies.filter(e=>e.dead).map(e=>e.id)};}
   restore(s){
     if(!s||s.version!==SAVE_VERSION||!s.player||typeof s.player!=='object')return false;
     this.expedition=restoreExpedition(s.expedition);applyExpeditionWorld(this);
@@ -279,7 +280,7 @@ export class Game {
     this.talked=!!s.talked;this.bossDefeated=!!s.bossDefeated;this.ending=this.bossDefeated&&['restore','release'].includes(s.ending)?s.ending:null;this.relic=!!s.relic;this.relicDelivered=this.relic&&s.relicDelivered===true;this.day=Number.isFinite(s.day)?clamp(s.day,0,1):.16;
     this.crossingStarted=s.crossingStarted===true;this.metSena=s.metSena===true;this.supplies=s.supplies===true;this.crossingChoice=this.supplies&&['haven','road'].includes(s.crossingChoice)?s.crossingChoice:null;this.trackedQuest=s.trackedQuest==='crossing'&&!this.crossingChoice&&(this.crossingStarted||this.supplies)?'crossing':'main';
     if(s.trackedQuest==='expedition'&&!this.expedition.reported)this.trackedQuest='expedition';
-    this.bells=restoreBells(s.bells);if(s.trackedQuest==='forge'&&!this.bells.reported&&(this.bells.started||this.bells.discovered))this.trackedQuest='forge';
+    this.bells=restoreBells(s.bells);this.gatherings=restoreGatherings(this,s.gatherings);if(s.trackedQuest==='forge'&&!this.bells.reported&&(this.bells.started||this.bells.discovered))this.trackedQuest='forge';
     this.weapons=[...new Set(['sword',...(Array.isArray(s.weapons)?s.weapons:[]).filter(id=>Object.hasOwn(WEAPONS,id)),...(this.lit.includes('grove')||this.crossingStarted||this.crossingChoice?['spear']:[]),...(this.lit.includes('ruins')?['greatsword']:[])])];p.weaponType=this.weapons.includes(v.weaponType)?v.weaponType:'sword';
     for(const l of this.pickups)l.taken=Array.isArray(s.taken)&&s.taken.includes(l.id);for(const e of this.enemies){e.dead=(Array.isArray(s.defeated)&&s.defeated.includes(e.id))||(e.type==='boss'&&this.bossDefeated);if(e.dead)e.hp=0;}moveCircle(p,0,0,this.obstacles);p.y=groundAt(p.x,p.z);restoreRuntime(this,s.runtime,groundAt);if(s.dead===true)this.respawn();return true;
   }
