@@ -3,6 +3,7 @@
 import assert from 'node:assert/strict';
 import {Game,BRIDGES,distance} from '../src/core.js';
 import {SENA,SUPPLY_ID} from '../src/content.js';
+import {ROAD_CACHE} from '../src/village.js';
 import {createPilot} from './pilot.mjs';
 
 const results=[];
@@ -14,7 +15,10 @@ for(const choice of ['haven','road']){
   while(!g.supplies&&pilot.time<end&&!g.player.dead){pilot.tickToward(crate);if(distance(g.player,crate)<3)g.interact(crate);}
   assert(g.supplies,'camp must be defeated and supplies collected');
   for(const point of [{x:bridge.x+22,z:bridge.z},{x:bridge.x-22,z:bridge.z},SENA])assert(pilot.travel(point,90),'must bring supplies back on foot');
-  assert(g.resolveCrossing(choice));const loaded=new Game(g.serialize());assert.equal(loaded.crossingChoice,choice);assert.equal(loaded.player.weaponType,'spear');
-  results.push({choice,seconds:Math.round(pilot.time),level:g.player.level,hp:Math.round(g.player.hp),potions:g.player.potions,campDefeated:g.enemies.filter(e=>e.encounter==='crossing'&&e.dead).length});
+  assert(g.resolveCrossing(choice));
+  const witness=g.residents.find(n=>n.branch===choice);assert(pilot.travel(witness,120),`must see the ${choice} aftermath`);assert(g.interact(witness));
+  if(choice==='road'){assert(pilot.travel(ROAD_CACHE,60),'must reach the road medicine cache');assert(g.interact(ROAD_CACHE));assert.equal(g.player.potions,4);}
+  const loaded=new Game(g.serialize());assert.equal(loaded.crossingChoice,choice);assert.equal(loaded.player.weaponType,'spear');assert(loaded.npcs().some(n=>n.branch===choice));assert(!loaded.npcs().some(n=>n.branch&&n.branch!==choice));
+  results.push({choice,seconds:Math.round(pilot.time),level:g.player.level,hp:Math.round(g.player.hp),potions:g.player.potions,witness:witness.id,campDefeated:g.enemies.filter(e=>e.encounter==='crossing'&&e.dead).length});
 }
 console.log(JSON.stringify({passed:true,results},null,2));

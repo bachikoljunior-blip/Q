@@ -12,7 +12,7 @@ function mesh(geometry,mat,parent,pos=[0,0,0],scale=[1,1,1],shadow=false){const 
 function addBox(parent,color,x,y,z,sx,sy,sz,shadow=false){return mesh(box,material(color),parent,[x,y,z],[sx,sy,sz],shadow);}
 
 function humanoid(type='player'){
-  const g=new T.Group(),body=new T.Group();g.add(body);const player=type==='player',boss=type==='boss',npc=['npc','smith','healer'].includes(type),ranger=type==='ranger';
+  const g=new T.Group(),body=new T.Group();g.add(body);const player=type==='player',boss=type==='boss',ranger=type==='ranger',npc=!player&&!boss&&!ranger;
   const armor=material(player?0x788e94:npc?0x797565:boss?0x26383c:ranger?0x8a735a:0x596569,{metalness:.35,roughness:.52});
   const cloth=material(player?0x3c6268:npc?0xb29569:boss?0x262d36:0x51484a);const leather=material(0x303f41);const gold=material(C.gold,{metalness:.65,roughness:.35});
   mesh(sphere,armor,body,[0,1.18,0],[.34,.46,.23],true);
@@ -33,6 +33,9 @@ function humanoid(type='player'){
   if(npc)sword.visible=false;
   if(type==='smith'){mesh(box,material(0x6c4732),body,[0,1.03,.245],[.52,.8,.04]);mesh(cylinder,material(C.wood),arms[1],[0,-.7,0],[.04,.6,.04]);mesh(box,material(C.stone),arms[1],[0,-1,0],[.34,.18,.18]);}
   if(type==='healer'){mesh(cylinder,material(0x887651),body,[0,1,-.43],[.3,.6,.25]);for(const side of [-1,1])mesh(cone,material(0x7caa91),body,[side*.13,1.48,-.44],[.13,.6,.08]);}
+  if(['porter','traveler'].includes(type)){const pack=mesh(box,material(0x75654e),body,[0,1.2,-.38],[.43,.52,.25],true);for(const side of [-1,1])addBox(pack,0xc4b48a,side*.22,.05,.26,.05,.72,.05);}
+  if(type==='patient')g.scale.setScalar(.94);
+  if(type==='scout'){mesh(cylinder,material(0x586d62),body,[0,1.18,-.38],[.3,.62,.22]);mesh(cylinder,material(C.wood),arms[1],[0,-.8,0],[.035,1.5,.035]);}
   if(type==='npc'){sword.visible=false;mesh(cylinder,gold,arms[1],[0,-.6,0],[.04,1.8,.04]);mesh(sphere,material(0xffdb93,{emissive:0xf7ad48,emissiveIntensity:2}),arms[1],[0,.35,0],[.14,.19,.14]);}
   let spear=null,flask=null;
   if(player){spear=new T.Group();spear.position.set(0,-.6,0);arms[1].add(spear);mesh(cylinder,material(0x4b3f31),spear,[0,-.4,0],[.035,2.7,.035],true);mesh(cone,material(0xc8d9d0,{metalness:.7,roughness:.3}),spear,[0,-1.95,0],[.11,.45,.11],true).rotation.z=Math.PI;spear.visible=false;}
@@ -103,7 +106,7 @@ export class SceneView {
   }
   update(dt,playing){this.t+=dt;this.sway.value=this.t;const p=this.game.player;this.player.g.position.set(p.x,p.y,p.z);this.player.g.rotation.y=p.angle;this.animateModel(this.player,p,dt);this.player.sword.visible=p.healTimer<=0&&p.weaponType!=='spear';this.player.flask.visible=p.healTimer>0;this.player.sword.scale.set(p.weaponType==='greatsword'?2.4:1,p.weaponType==='greatsword'?1.45:1,p.weaponType==='greatsword'?1.3:1);this.player.spear.visible=p.healTimer<=0&&p.weaponType==='spear';this.animateModel(this.npc,{moving:false},dt);this.animateModel(this.sena,{moving:false},dt);this.roadCamp.visible=this.game.crossingChoice==='road';this.havenSupplies.visible=this.game.crossingChoice==='haven';
     this.village.update(this.game,dt,this.t);
-    for(const n of this.game.residents){const m=this.residentModels.get(n.id);m.g.visible=distance(n,p)<90;if(m.g.visible){m.g.position.set(n.x,n.y,n.z);m.g.rotation.y=n.angle;this.animateModel(m,n,dt);if(!n.moving&&distance(n,p)>=3.7&&n.role==='smith')m.arms[1].rotation.x=-.6-Math.max(0,Math.sin(this.t*3))*1.3;}}
+    const activeResidents=new Set(this.game.npcs().map(n=>n.id));for(const n of this.game.residents){const m=this.residentModels.get(n.id);m.g.visible=activeResidents.has(n.id)&&distance(n,p)<90;if(m.g.visible){m.g.position.set(n.x,n.y,n.z);m.g.rotation.y=n.angle;this.animateModel(m,n,dt);if(!n.moving&&distance(n,p)>=3.7&&n.role==='smith')m.arms[1].rotation.x=-.6-Math.max(0,Math.sin(this.t*3))*1.3;}}
     const night=(Math.sin((this.game.day-.04)*Math.PI*2)+1)/2;const daylight=.25+night*.75;this.ambient.intensity=1+daylight*1.25;this.sun.intensity=daylight*3;this.skyMaterial.uniforms.top.value.set(0x284252).lerp(new T.Color(0x648d98),daylight);this.skyMaterial.uniforms.bottom.value.set(0x697a83).lerp(new T.Color(this.game.ending==='release'?0xcac9b1:0xc3bfa3),daylight);this.scene.fog.color.copy(this.skyMaterial.uniforms.bottom.value);this.sun.position.set(p.x-75,p.y+100,p.z-50);this.sun.target.position.set(p.x,p.y,p.z);
     for(const e of this.game.enemies){const m=this.enemyModels.get(e.id);m.g.visible=!e.dead&&distance(e,p)<105;if(m.g.visible){m.g.position.set(e.x,e.y,e.z);m.g.rotation.y=e.angle;this.animateModel(m,e,dt);if(e.state==='stagger')m.body.rotation.z=Math.sin(this.t*35)*.06;else m.body.rotation.z=0;}m.telegraph.visible=m.g.visible&&e.type!=='ranger'&&['windup','strike'].includes(e.state);if(m.telegraph.visible){const r=e.type==='boss'?(e.radial?9:6.5):e.type==='wolf'?2.5:3.3;m.telegraph.geometry=e.radial?this.telegraphRing:this.telegraphArc;m.telegraph.rotation.set(-Math.PI/2,0,e.angle);m.telegraph.position.set(e.x,e.y+.1,e.z);m.telegraph.scale.setScalar(r);m.telegraph.material.opacity=e.state==='strike'?.8:.13+(1-e.timer/e.windupMax)*.5;}if(m.aimLine){m.aimLine.visible=m.g.visible&&e.state==='windup'&&!!e.aim;if(m.aimLine.visible){const points=m.aimLine.geometry.attributes.position;points.setXYZ(0,e.x,e.y+1.45,e.z);points.setXYZ(1,e.aim.x,e.aim.y,e.aim.z);points.needsUpdate=true;m.aimLine.geometry.computeBoundingSphere();}}}
     const arrows=this.game.projectiles;this.arrowShafts.count=this.arrowTips.count=arrows.length;

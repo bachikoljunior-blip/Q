@@ -5,7 +5,7 @@ import { WEAPONS, SENA, EAST_CAMP, SUPPLY_ID, crossingText } from './content.js'
 import { segmentCylinder, segmentTerrain } from './spatial.js';
 import { captureRuntime, restoreRuntime } from './runtime-state.js';
 import { createWoodland } from './woodland.js';
-import { WIND_SHRINE, WIND_BELLS, createResidents, createBells, restoreBells, tickVillage, startForge, reportForge, interactShrine, forgeText } from './village.js';
+import { WIND_SHRINE, WIND_BELLS, ROAD_CACHE, createResidents, createBells, restoreBells, tickVillage, startForge, reportForge, interactShrine, forgeText, residentActive, useRoadCache } from './village.js';
 export const WORLD_SEED = 87123;
 export const SAVE_VERSION = 1;
 export const TAU = Math.PI * 2;
@@ -219,23 +219,25 @@ export class Game {
     const dir=e.route?.length?{x:(aim.x-e.x)/length,z:(aim.z-e.z)/length}:steerAround(e,aim,this.obstacles,radius);
     moveCircle(e,dir.x*speed*dt,dir.z*speed*dt,this.obstacles,radius);
   }
-  npcs(){return [KEEPER,SENA,...this.residents];}
+  npcs(){return [KEEPER,SENA,...this.residents.filter(n=>residentActive(this,n))];}
   startForgeQuest(){return startForge(this);}
   reportForgeQuest(){return reportForge(this);}
   nearestInteract(){
     const p=this.player,candidates=[];
     for(const npc of this.npcs())if(distance(p,npc)<4.7)candidates.push(npc);
     for(const t of [WIND_SHRINE,...WIND_BELLS])if(distance(p,t)<3.2)candidates.push(t);
+    if(this.crossingChoice==='road'&&distance(p,ROAD_CACHE)<3.2)candidates.push(ROAD_CACHE);
     for(const s of PLACES){if(distance(p,s)<5.5)candidates.push({...s,name:s.type==='boss'?(this.bossDefeated?'王冠の火に触れる':'封印を調べる'):this.lit.includes(s.id)?`${s.name}で休む`:'灯火をともす'});}
     for(const l of this.pickups)if(!l.taken&&distance(p,l)<3.2)candidates.push({...l,name:l.type==='herb'?'露草を摘む':l.type==='relic'?'巡礼の遺物を拾う':l.type==='supplies'?'薬草の荷を取り戻す':'宝箱を開ける'});
     return candidates.filter(t=>this.canReach(p,t)).sort((a,b)=>distance(p,a)-distance(p,b))[0]||null;
   }
   interact(target=this.nearestInteract()) {
     if(!target||this.player.dead)return false;const p=this.player;
-    const canonical=this.npcs().find(n=>n.id===target.id)||[WIND_SHRINE,...WIND_BELLS].find(n=>n.id===target.id)||PLACES.find(s=>s.id===target.id)||this.pickups.find(l=>l.id===target.id&&!l.taken);
+    const canonical=this.npcs().find(n=>n.id===target.id)||[WIND_SHRINE,...WIND_BELLS,...(this.crossingChoice==='road'?[ROAD_CACHE]:[])].find(n=>n.id===target.id)||PLACES.find(s=>s.id===target.id)||this.pickups.find(l=>l.id===target.id&&!l.taken);
     if(!canonical||distance(p,canonical)>=(canonical.type==='npc'?4.7:['herb','chest','relic','supplies','bell','inscription'].includes(canonical.type)?3.2:5.5)||!this.canReach(p,canonical))return false;
     target=canonical;
     if(target.type==='bell'||target.type==='inscription')return interactShrine(this,target);
+    if(target.type==='cache')return useRoadCache(this);
     if(target.type==='npc'){if(target.id===KEEPER.id)this.talked=true;else if(target.id===SENA.id)this.metSena=true;this.emit('dialogue',{npc:target.id});this.emit('save');return true;}
     if(['herb','chest','relic','supplies'].includes(target.type)){const item=this.pickups.find(l=>l.id===target.id);if(!item||item.taken)return;if(item.type==='supplies'&&this.enemies.some(e=>!e.dead&&e.encounter==='crossing')){this.notify('荷を守る兵を退けよう');return false;}item.taken=true;if(item.type==='herb'){p.herbs++;this.notify(`露草 ×1（所持 ${p.herbs}）`);}else if(item.type==='relic'){this.relic=true;this.reward(45,60);this.notify('巡礼の遺物 — ミラへ届けよう');}else if(item.type==='supplies'){this.supplies=true;this.notify('薬草の荷を取り戻した — セナに届けよう');}else{this.reward(45,35);p.herbs+=2;this.notify('灰の欠片 +45 · 露草 +2');}this.emit('loot',{x:item.x,z:item.z});this.emit('save');return;}
     if(target.type==='boss'){if(this.bossDefeated&&!this.ending)this.emit('endingChoice');else this.notify(this.ending?'谷には新しい風が吹いている':this.lit.length<4?`三つの灯火をともすと封印が解ける（${this.lit.length-1}/3）`:'灰冠の番人があなたを待っている');return;}
