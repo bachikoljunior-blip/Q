@@ -24,7 +24,7 @@ function enemyThreat(game,enemy){
   const response=radial?'跳躍':ranged?'横移動 / 回避':'回避 / 受け流し';
   const kind=radial?'shockwave':ranged?'bow':'melee';
   const timeToImpact=(enemy.state==='windup'?enemy.timer:0)+(flight?.timeToImpact||0);
-  return {sourceId:enemy.id,sourceType:enemy.type,source:labels[enemy.type]||'敵',stage:enemy.state,kind,response,direction:radial?'周囲':directionFrom(player,enemy),timeToImpact:round(timeToImpact),distance:round(d)};
+  return {sourceId:enemy.id,sourceType:enemy.type,source:labels[enemy.type]||'敵',position:{x:enemy.x,y:enemy.y+(enemy.type==='boss'?2.2:enemy.type==='wolf'?.8:1.2),z:enemy.z},stage:enemy.state,kind,response,direction:radial?'周囲':directionFrom(player,enemy),timeToImpact:round(timeToImpact),distance:round(d)};
 }
 
 export function forecastProjectileContact(game,arrow,horizon){
@@ -52,7 +52,26 @@ function projectileThreat(game,arrow,deferCover=false){
   if(!deferCover&&forecast?.target!==player)return null;
   const t=forecast?.timeToImpact??fraction*horizon;
   const source=game.enemies.find(enemy=>enemy.id===arrow.owner);
-  return {...(deferCover?{trajectory:arrow,horizon}:{}),sourceId:arrow.owner,sourceType:source?.type||'ranger',source:labels[source?.type]||'矢',stage:'flight',kind:'arrow',response:'横移動 / 回避',direction:directionFrom(player,arrow),timeToImpact:round(t),distance:round(distance(player,arrow))};
+  return {...(deferCover?{trajectory:arrow,horizon}:{}),sourceId:arrow.owner,sourceType:source?.type||'ranger',source:labels[source?.type]||'矢',position:{x:arrow.x,y:arrow.y,z:arrow.z},stage:'flight',kind:'arrow',response:'横移動 / 回避',direction:directionFrom(player,arrow),timeToImpact:round(t),distance:round(distance(player,arrow))};
+}
+
+export function cameraFacingAngle(cameraYaw){return angleDelta(cameraYaw+Math.PI,0);}
+
+export function cameraRelativeDirection(player,point,cameraYaw){
+  if(Math.hypot(point.x-player.x,point.z-player.z)<1e-6)return '正面';
+  const delta=angleDelta(Math.atan2(point.x-player.x,point.z-player.z),cameraFacingAngle(cameraYaw)),absolute=Math.abs(delta);
+  if(absolute<Math.PI/4)return '正面';
+  if(absolute>Math.PI*3/4)return '背後';
+  // Three.js screen x has the opposite sign to the x/z bearing delta.
+  return delta>0?'左':'右';
+}
+
+export function screenDirectionFromProjection(point,viewportWidth,fallback='背後'){
+  if(!point||point.visible===false||!Number.isFinite(point.x)||!Number.isFinite(viewportWidth)||viewportWidth<=0)return fallback;
+  const normalized=point.x/viewportWidth;
+  if(normalized<.42)return '左';
+  if(normalized>.58)return '右';
+  return '正面';
 }
 
 export function combatPresentation(game){
@@ -79,8 +98,21 @@ export function combatPresentation(game){
 }
 
 /** Current trajectories against the current player position; not a forecast of future movement. */
-export function renderCombatHint(element,game){
-  const presentation=combatPresentation(game),{primary,threats}=presentation,second=threats[1];
-  element.textContent=primary?primary.text+(second?`\n続く攻撃：${second.source} · ${second.direction} · ${second.response}`:''):'';
-  return presentation;
+export function renderCombatHint(element,game,{cameraYaw,project,viewportWidth}={}){
+  const presentation=combatPresentation(game),screenRelative=typeof project==='function'||Number.isFinite(cameraYaw);
+  const displayDirection=threat=>{
+    if(threat.direction==='周囲')return '周囲';
+    const fallback=Number.isFinite(cameraYaw)?cameraRelativeDirection(game.player,threat.position,cameraYaw):threat.direction;
+    if(typeof project!=='function')return fallback;
+    let point;try{point=project(threat.position);}catch{return fallback;}
+    return screenDirectionFromProjection(point,viewportWidth,fallback);
+  };
+  const threats=presentation.threats.map(threat=>({...threat,screenDirection:displayDirection(threat)})),primary=threats[0]||null,second=threats[1];
+  const directionLabel=direction=>direction==='周囲'?'周囲':screenRelative?direction==='正面'?'画面前方':direction==='背後'?'画面外・背後':`画面${direction}`:direction;
+  const glyph=direction=>({正面:'↑',右:'→',背後:'↓',左:'←',周囲:'◎'})[direction]||'◇';
+  const line=threat=>{const time=threat.timeToImpact<=.05?'今':`${threat.timeToImpact.toFixed(1)}秒`;return `${glyph(threat.screenDirection)} ${threat.source} · ${directionLabel(threat.screenDirection)} ${time} · ${threat.response}`;};
+  element.textContent=primary?line(primary)+(second?`\n続く攻撃：${line(second)}`:''):'';
+  element.setAttribute('data-direction',primary?.screenDirection||'');
+  element.classList.toggle('urgent',!!primary&&primary.timeToImpact<=.35);
+  return {...presentation,primary,threats};
 }

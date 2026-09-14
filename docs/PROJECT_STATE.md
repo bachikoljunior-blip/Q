@@ -1,5 +1,40 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-14 戦闘HUDの実画面投影接続（main反映前チェックポイント）
+
+### 受理・正本・継続判定
+
+- 2026-09-14 13:20:58 UTCに開始。確定比較基点は `9c5dd6a61dba5cb0b040e11aa52edb73028fb630`、隔離worktreeは `Q-ultra-v2`、branchは `work/ultra-integrator-v2-20260914`。開始時のHEAD・`origin/main`・`ls-remote main`はすべて基点と一致し、未反映差分はなかった。`AGENTS.md`、`README.md`、`docs/PROJECT_STATE.md`、`docs/COMPLETION.md`、`docs/PRODUCTION_METHOD.md`、`docs/RECOVERY.md`を全文確認した。
+- 直前のゲーム実装はPR #19でmain `64f278e8292d9afc43cb2c9a2394204e65edd928`へ反映、結果記録は `8ce5662`、v2方針は基点へ反映済み。基点の [CI #67](https://github.com/bachikoljunior-blip/Q/actions/runs/34847234883) はsuccess。直前の所有者限定Siteは保存版16、deployment `appgdep_6aa7eb3704d081919080a5499c484a26` がsucceededで、待機中のpush・merge・配信は記録上ない。旧ゲーム系統の開いたPR #3/#13は今回の対象ではない。この安全な完了地点から制作を**継続**し、全環境の停止は断定しない。
+- 終了前照合でmainが `3e0448ca8f449942c51a6d04a94094b1783823ef` へ進んだことを検出。基点後の変更は `AGENTS.md` の12行追加・12行削除だけで、ゲーム・試験・生成物と今回の19ファイルに競合なし。新正本 `ULTRA-CHILDREN-20260914-v3` を全文で読み、ローカルbranchをfast-forwardした。最新mainの [CI #68](https://github.com/bachikoljunior-blip/Q/actions/runs/34850086328) は41秒でsuccess、artifact digestは `sha256:d63d369eff4ea48781eaed8d580b1af069c3c649dccd8f94a15848cc745314cd`。実装比較の固定基点は9c5、統合対象の最新mainは3e0448cと区別する。
+- 本作業の単独Ultra統合担当は受理ID `/root/ultra_v2_integrator`。親が渡した実引数は `reasoning_effort=ultra`、`fork_turns=none`、model省略。計画、継続/期限判定、調査、設計、実装、試験判断、レビュー、統合・main/Sites手順、記録・報告案の全実作業をこの担当が実行した。Ultra指定受理は確認済み、実効強度は独立確認不能。v3に従い親の強度を阻害条件にしない。
+- 匿名化した座標・カメラ契約だけを渡した独立評価は受理ID `/root/ultra_v2_integrator/camera_contract_review`。実引数は `reasoning_effort=ultra`、`fork_turns=none`、model省略、コード編集なし。`yaw + π` の方位契約は正しいが、厳密な画面指示には投影座標が必要として条件付き採用を返した。その指摘を候補の作り直しに反映。Ultra指定受理は確認済み、実効強度は独立確認不能。
+- 同評価担当が追加した数学確認は受理ID `/root/ultra_v2_integrator/camera_contract_review/math_check`。実引数は `reasoning_effort=ultra`、`fork_turns=none`、model省略、コード編集なし。役割は座標契約の独立数学検証で、`cameraFacing = normalize(yaw + π)`、`[-π, π]` 正規化、境界試験の必要性と、厳密な画面方向には投影が必要という結論を確認した。投影を採用し、左右符号の具体例は描画規約依存のためそのまま採用しなかった。Ultra指定受理は確認済み、実効強度は独立確認不能。
+
+### 期限判定と方法変更
+
+- 継続確認直後もmain反映前も、「2026-09-20までに指定10作品に劣らない完成品にできる」という判定は**根拠不足**。残りは6暦日以下だが、現在は第一章のWeb開発版で、複数章・地域・屋内と反応の密度、商用品質の独自造形・アニメーション・音響・演技、iOS/Android実機のタッチ・30分安定性・発熱・FPS、外部プレイヤーの同条件比較、ネイティブ配布が残る。正式previewは直前正本でmailbox不在のままで、同じ拒否を反復せず未確認とした。
+- 既存の機能単位はUIモデル2分12秒、地域ロジック10分、二場面16分、戦闘監査・修正20分、描画変換修正11分39秒等の実測はあるが、商用品質の全章・素材制作・実機検証の速度ではない。今回は開始から最終ゲーム生成物検査まで32分39秒だが、正本読取・比較・手戻り・全自動検査・最新main統合を含む一つのHUD接続修正であり、全体速度へ外挿しない。過去の会話接続の局所変数バグ、重い戦闘候補の26,134 ms/2000→1,265 msへの再設計、試験fixture失敗、容量/生成再試行の手戻りも残工程に織り込む。したがって期限保証と品質到達の主張は行わない。
+- 前回の小規模な固定風景最適化の次は、計測項目の追加ではなく、カメラと戦闘HUDが食い違う実ゲーム機能を選んだ。基点は巡礼者の向きから「正面/左/右/背後」を決め、自由カメラ旋回中も表示が変わらなかった。同じプレイヤー、近接予兆、敵位置を固定し、Three.js `PerspectiveCamera(54°, 1600×900)`、実シーンと同じpitch `.3`・zoom `9`・配置/`lookAt`式でカメラだけ4方向へ回した。
+- 比較結果は基点の画面契約一致1/4、候補4/4、変更した方向3/4。投影Xは順に1056.894、800、543.106、800 pxで、候補は「右/正面/左/正面」と一致。初案の `cameraYaw + π` だけで分類する方式は、カメラと主人公の間にいる敵を画面中央でなく背後とするため撤回。警告対象の3D位置を実際の `view.project`へ渡し、投影Xで画面左/中央/右を決め、投影不能時だけ正規化したカメラ方位へ戻る候補を**採用**。矢印、画面方向文字、2件目の残り時間、0.35秒以下の強調クラスをHUDへ接続した。ゲーム状態は比較前後で不変。
+
+### 実装、手戻り、検証結果
+
+- 主な実装は `src/combat-presentation.js` の警告対象3D位置と画面方向変換、`src/main.js` の実 `view.yaw`/`view.project`接続、`src/style.css`/`index.html` の可視HUD、同条件比較 `scripts/compare-combat-view.mjs`、接続・投影・不変試験。v0.16.0へ更新し、単体版と戦闘再生記録を再生成した。
+- 手戻りは分離して記録する。(1) 基点時間取得で `/usr/bin/time` 不在のため1回失敗し、shell組込みの `time` へ変更。(2) 初回焦点試験は新しい第2警告の矢印に旧正規表現が対応せず8/9、1件失敗。実テキスト契約へ更新後10/10。(3) 方位角だけの初案は自己試験4/4だったが、独立指摘とThree.js実投影で誤りを確認して廃棄・投影方式へ再実装。(4) 終了前fetchの初回呼出しは30秒で全出力を返さなかったが、後続の読取で更新済みoriginとAGENTS-only差分を確定し、二重編集なしでfast-forwardした。
+- 最終ゲーム差分で `npm ci` 成功（13秒）、`npm run compare:combat-view` 成功（0.748秒、4シナリオ）、終了直前の `npm test` **120件・失敗0**（Node 2.962秒、shell 3.344秒）、`npm run test:journey` 成功（119秒相当の章末）、`npm run test:crossing` 成功（配達両分岐と相談の両選択）、`npm run test:forge` 成功（鐘報告と相談の両選択）、`npm run test:session` 成功（30分相当、108000step、138再読込、死亡0）、`npm run test:expedition` 成功（北・南両経路、北は1908秒相当/153再読込）。最終必須シミュレーション5本は並行実行ですべてexit 0。
+- `npm run review:combat` は5シナリオの二重再生と結果検査に成功（0.771秒）。近接無反応はHP 98、回避/受け流しは120、ボス地上待機は86、跳躍は120。ルールと表示データの証拠で、画面・タッチ・音・面白さの証拠ではない。
+- `npm run build` 成功（Vite本体2.00秒、shell 2.559秒）、`npm run package` 成功、`npm run test:artifacts` 成功。初期JS 117.16 kB、描画81.51 kB、Three.js 619.57 kB、JS合計799 KiB、3チャンク、3モデル。単体版は3,252,190 bytes（3176 KiB）、基点の3,250,346 bytesより1,844 bytes増、SHA-256 `83050cbd04bfd80453ffabb831d8754581963714731896d0e14f5fe6f1591f79`。ソース指紋は `sha256:35bdc3c29b470640d8392249432401f85aac9206d20778f221f76ac9d28d4da6`。固定ステージ `artifacts/site-7C2w6u` は現行dist 10ファイルと `.openai/hosting.json` の計11ファイル、遅延チャンク・モデル・単体版・指紋一致を検査済み。Three.jsの500 kB超警告は残る。
+- `git diff --check` は成功。ただし正式WebGLピクセル、カメラ遮蔽中の表示、縦/横画面の文字重なり、タッチ、音、iOS/Android実機性能、30分実プレイ、外部プレイヤー比較は未確認。投影契約4/4を画面の見やすさや指定品質到達に読み替えない。
+- 最終ゲーム生成物の検査完了は2026-09-14 13:53:37 UTC（開始から32分39秒）、記録・独立評価の受理確認を含む終了観測は13:58:32 UTC（開始から37分34秒）。すべての検証コマンドは終了し、継続中のnpm・git・previewプロセス、PID、tool sessionはない。
+
+### 未実行のmain・Sites反映と固定条件
+
+- このUltra担当はcommit、remote push、PR作成/merge、Sites保存/配信、automation変更を実行していない。現在の最新main/branch HEADは `3e0448ca8f449942c51a6d04a94094b1783823ef`、検証済み実装は未commitの19ファイル差分。反映直前に `ls-remote`とfetchを再実行し、mainが3e0448cから動いていたら反映を止め、新しいUltra統合判定に戻す。動いていなければ指定19ファイルだけをcommitし、今回branchへnon-force push、mainをbaseとする正規PRのpush/PR CI両方を成功させる。
+- merge直前に最新mainが引き続き3e0448c、PR headが検証済み確定commit、必須checksがsuccessであることを再確認。expected head付きの通常merge、forceなしで反映し、後続mainが実装commitを祖先に含み、merge treeが検証済みtreeと一致することを再取得で確認。main CIの全工程successと追跡単体版の一致を確認する。
+- その後に同じ確定mainだけを既存Sites sourceへnon-force pushし、再生成した `artifacts/latest-site.json` の指す現行10 distファイルと `.openai/hosting.json` を公式梱包する。既存project `appgprj_6aa6871ebd648191802ba2398d06115b`、URL `https://q-ash-pilgrim.juurooo.chatgpt.site`、owner一人・外部閲覧者0・グループ0を保持し、別Siteを作らない。保存版とdeploymentが `succeeded`、配信ソースSHAが後続main、archiveが11ファイル、配信後の閲覧範囲がowner-onlyであることをreadbackするまで「配信済み」と扱わない。
+- `ULTRA-CHILDREN-20260914-v3` のautomation判定/変更はgame2の既存Ultra統合担当の専任であり、本Q実装単位では未実行。実行済みと代筆せず、本リポジトリの差分に他作品の確認結果を記録しない。
+
 ## 2026-09-14 描画実作業の継続チェックポイント（反映・配信完了）
 
 - 正本基点: `0a657936f41580ff26f1f787d5c8f63535102d9d`。前回終了記録はmain・配信完了、ゲーム全体は未達。最新mainのCI成功と既存PRを照合し、旧系統のPR #3/#13は今回の反映対象外。外部環境の全プロセス状態は観測不能であり、停止を捏造しない。

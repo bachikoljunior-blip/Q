@@ -41,7 +41,7 @@ export function buildCombatReview(){
   assert(scenarios[0].run.outcome.playerHp<120);assert.equal(scenarios[1].run.outcome.playerHp,120);assert.equal(scenarios[2].run.outcome.playerHp,120);assert(scenarios[2].run.events.some(event=>event.type==='perfect'));
   assert(scenarios[3].run.outcome.playerHp<120);assert.equal(scenarios[4].run.outcome.playerHp,120);
   for(const scenario of scenarios){assert.deepEqual(run(scenario.initial,scenario.run.actions,scenario.run.frames),scenario.run);assert(scenario.run.samples.some(sample=>sample.primary));}
-  return {formatVersion:1,gameVersion:'0.15.0',fixedStepHz:60,note:'Deterministic rule and warning replay; no rendered screen, touch, audio, device-performance or player-quality observation.',scenarios};
+  return {formatVersion:1,gameVersion:'0.16.0',fixedStepHz:60,note:'Deterministic rule and warning replay; no rendered screen, touch, audio, device-performance or player-quality observation.',scenarios};
 }
 
 if(process.argv[1]&&import.meta.url===new URL(process.argv[1],'file:').href){
