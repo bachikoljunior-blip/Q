@@ -73,7 +73,7 @@ npm run test:artifacts
 
 公開用の静的出力は `dist/`、外部依存が不要な単体版は `release/Q-ash-pilgrim.html` です。Sourcesと生成物を変更したら両方を更新してください。
 
-Three.js 0.186.0を固定しています。[描画にはWebGL 2が必要](https://threejs.org/docs/pages/WebGLRenderer.html)です。Vite 7.3.1を固定し、package-lock.jsonを管理しています。配信版ではThree.jsと3Dシーンを遅延チャンクへ分け、単体版ではネットワーク不要の1ファイルへ再結合します。ゲーム状態は60 Hzの固定ステップ、描画はrequestAnimationFrameです。多数の木・岩・草はInstancedMeshで描きます。この制作環境では実機のフレームレートは未測定です。設定の「この端末での動作」は、遊んでいる間の実フレーム間隔を計測し、JSONで書き出せます。画質と画面サイズを変えた場合は別の計測としてやり直します。
+Three.js 0.186.0を固定しています。[描画にはWebGL 2が必要](https://threejs.org/docs/pages/WebGLRenderer.html)です。Vite 7.3.1を固定し、package-lock.jsonを管理しています。配信版ではThree.jsと3Dシーンを遅延チャンクへ分け、単体版ではネットワーク不要の1ファイルへ再結合します。ゲーム状態は60 Hzの固定ステップ、描画はrequestAnimationFrameです。多数の木・岩・草はInstancedMeshで描きます。この制作環境では実機のフレームレートは未測定です。設定の「この端末での動作」は、遊んでいる間のブラウザーの描画フレーム間隔を計測し、JSONで書き出せます。直近と全期間の遅延を分け、ソースの指紋・開始地点と視点・描画数を記録します。「計測をやり直す」で比較を始められ、新しい旅・セーブ読込・設定や画面サイズの変更は別計測になります。
 
 第三者のコードのライセンスは [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt) を参照してください。
 

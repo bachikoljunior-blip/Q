@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir, stat } from 'node:fs/promises';
+import { buildIdentity } from './build-identity.mjs';
 
 const stage=JSON.parse(await readFile('artifacts/latest-site.json','utf8'));
 const root=`${stage.root}/dist`,manifest=JSON.parse(await readFile('dist/.vite/manifest.json','utf8'));
@@ -21,6 +22,9 @@ assert(jsAssets.some(name=>name.startsWith('three-')),'Three.js vendor chunk is 
 const totalJs=(await Promise.all(jsAssets.map(async name=>(await stat(`${root}/assets/${name}`)).size))).reduce((a,b)=>a+b,0);
 
 const standalone=await readFile('release/Q-ash-pilgrim.html','utf8');
+const identity=await buildIdentity();
+assert(entry.includes(identity.sourceFingerprint),'production measurement identity differs from app source');
+assert(standalone.includes(identity.sourceFingerprint),'standalone measurement identity differs from app source');
 assert(!/<script[^>]+src=/.test(standalone),'standalone build contains an external script');
 assert(!/<link[^>]+(?:stylesheet|manifest)/.test(standalone),'standalone build contains an external stylesheet or manifest');
 assert(!/import\(["']\.\/assets\//.test(standalone),'standalone build contains an unresolved production chunk import');
