@@ -1,11 +1,11 @@
 # 制作状況 — 2026-09-13
 
-## 2026-09-14 v0.17.0 — 複数脅威から一つの次手へ（main反映前チェックポイント）
+## 2026-09-14 v0.17.0 — 複数脅威から一つの次手へ（main・所有者限定Site反映完了）
 
 ### 受理・継続・期限判断
 
 - 本作業は2026-09-14 14:51:53 UTCに開始。開始時の最新main、隔離worktree HEAD、指定baseはすべて `89398313469f6f7c16e8a5c83cf95c6f58fae0cc`、tree `8f8def5626fd8f698cc109948cdded2be439a6a9`。branch `work/ultra-combat-priority-20260914`、未反映差分なしから開始した。指定6文書を該当SHAから全文確認し、`ULTRA-CHILDREN-20260914-v3` を適用。前回のPR #20実装、ゲームmain、結果記録PR #21、所有者限定Site保存版17/deploymentは完了済みで、pendingのpush・PR・CI・Sites操作はない安全な続きと判断した。
-- 単独の実進行・統合担当は受理ID `/root/ultra_combat_priority_integrator`。親からの実引数は `reasoning_effort=ultra`、`fork_turns=none`、model省略。計画、調査、実装、試験、統合、remote・Sites、記録を当担する。Ultra指定の受理は確認、backend上の実効強度は独立確認不能。
+- 単独の実進行・統合担当は受理ID `/root/ultra_combat_priority_integrator`。親からの実引数は `reasoning_effort=ultra`、`fork_turns=none`、model省略。計画、調査、実装、試験、統合、remote・Sites、記録を担当する。Ultra指定の受理は確認、backend上の実効強度は独立確認不能。
 - 独立した期限・方法レビューは `/root/ultra_combat_priority_integrator/deadline_method_review`、複数脅威・入力契約の反例監査は `/root/ultra_combat_priority_integrator/priority_contract_review`、実装名を隠したA/Bのblindレビューは `/root/ultra_combat_priority_integrator/blind_combat_review`。3担当とも `reasoning_effort=ultra`、`fork_turns=none`、model省略で受理し、共有worktreeを編集せず評価を返した。反例監査が示した3脅威、同時刻の実接触順、無敵中の無害な矢、X/Y/depth画面外、早すぎる防御、入力順序差、古いpendingを受入条件へ反映。blindレビューは匿名候補を、考慮3/3、単一次手、追従・両入力順HP 120、状態不変によりbounded logic/HUD bridgeでPASSとした一方、正式画面・端末品質は判定不能、48脅威host費用は実機性能承認に使えないとした。
 - 継続直後と実装後の期限判断は**根拠不足**で、「2026-09-20までに指定10作品に劣らない完成品を作れる」とは判断しない。実績のある局所単位はUI 2分12秒、地域logic 10分、2場面16分、戦闘修正20分、描画修正11分39秒、HUD生成32分39秒、反映・配信まで47分54秒だが、複数章・地域・屋内、商用品質の造形・アニメーション・演技・音響、native配布、正式画面・実機・外部比較の制作速度ではない。会話bridge不具合、重い矢予測の26,134 ms/2,000回から1,265 msへの再設計、容量・生成の手戻りも残工程に含める。
 - 方法を「三本目の警告行を追加」から、実接触候補 → 実HUD bridge → 同一フレーム入力調停 → 実Game tick結果を一つの固定fixtureで通す縦切りへ変更。正式previewは一度だけstartし、`sites-previewd mailbox is unavailable`で失敗。再試行、サービスの代替、別URLの迂回は行わず、以後はDOM/HUD・clip投影・入力状態の再現検査と明記する。
@@ -18,11 +18,12 @@
 - この安全性の代償として、48矢がすべて同時に潜在的に接触するhost上の250回比較は、2件へ打ち切る基点相当 `.1041 ms/回`、全件を接触確認する候補 `1.0996 ms/回`、約10.563倍。現行HUD更新は約13 Hzのためhost上では採用するが、物理スマホのFPS・電力・発熱の証拠ではない。正式実機で問題が出た場合は、同時脅威を落とさないbatch接触予測へ手戻りする。
 - `npm run review:combat` を5→9シナリオへ更新。各シナリオは初期save+明示fixture、390×844投影、実HUD bridge、入力調停、Game tickを通し、2回再生が完全一致。三脅威無反応HP 98、HUD追従HP 120、attack/parry両順ともHP 120・parry選択を記録。これはWebGLピクセル、実browserイベント、物理タッチ、音、iOS/Android、外部評価の証拠ではない。
 
-### 検証完了・反映待ち
+### 検証・main・配信結果
 
-- `npm ci` は11.033秒で成功。最終差分で焦点A/B `.733秒`、`npm test` 131件 `.2.979秒`、journey `.610秒`、crossing `2.240秒`、forge `2.486秒`、30分相当108,000 step・138 reloadのsession `5.607秒`、西部両経路expedition `5.153秒`、9戦闘を2回ずつ固定再生するcombat review `.689秒`、build `2.302秒`、package `.342秒`、artifact検査 `.234秒` がすべて成功。単体版は3,256,811 bytes（3180 KiB）、SHA-256 `9ba40eed41e9f56e3d3291292de5e8b4e399769323c61fc1bebfe605f42203d0`。固定stage `artifacts/site-HZsTUW` は`.openai/hosting.json`を含む11ファイル、公開distは10ファイル・JS 3 chunks・803 KiB・model 3件。build source fingerprintは `sha256:d0d660d02ecde089a19e73370ad025e9a77eab2fc227fa73cbe9eadcdc7592c4`。
-- 未完了操作は、検証済み差分のcommit、正規branch/PR、push/PR CI、最新main・expected head・mergeable再照合、通常merge、main再取得・tree/祖先・main CI、既存所有者限定Siteへの同一mainソースpush・固定stageの正式archive保存・private deployment、結果のdocs-only反映。旧PR #3/#13は反映しない。
-- 正確な再開地点は、検証済み差分をcommitし、最新mainを正規GitHubで再照合して反映すること。正式previewが復旧した場合の最初の画面検査は同じ三脅威save・390×844縦画面と横画面で、表示重なり、待機→防御切替、移動+視点+防御の複数指、無音/音有りを古旧同条件で比べること。
+- `npm ci` は11.033秒で成功。最終差分で焦点A/B `0.733秒`、`npm test` 131件 `2.979秒`、journey `0.610秒`、crossing `2.240秒`、forge `2.486秒`、30分相当108,000 step・138 reloadのsession `5.607秒`、西部両経路expedition `5.153秒`、9戦闘を2回ずつ固定再生するcombat review `0.689秒`、build `2.302秒`、package `0.342秒`、artifact検査 `0.234秒` がすべて成功。単体版は3,256,811 bytes（3180 KiB）、SHA-256 `9ba40eed41e9f56e3d3291292de5e8b4e399769323c61fc1bebfe605f42203d0`。固定stage `artifacts/site-HZsTUW` は`.openai/hosting.json`を含む11ファイル、公開distは10ファイル・JS 3 chunks・803 KiB・model 3件。build source fingerprintは `sha256:d0d660d02ecde089a19e73370ad025e9a77eab2fc227fa73cbe9eadcdc7592c4`。
+- 検証済みローカルhead `262dd2810cb652fad1933279a690fd14173a8f9e` と同じtree `2d65b796ad33fa90271c201f427833af8e5d16af` を正規GitHub上の実装head `948e090d4f2dbec7ede59b89ff897b4f5164aaad` に作成し、[PR #22](https://github.com/bachikoljunior-blip/Q/pull/22) で通常merge。通常Git pushは認証入力不可で終了128だったため、接続済み経路へ切り替えた。push CI [34863090620](https://github.com/bachikoljunior-blip/Q/actions/runs/34863090620)、PR CI [34863121781](https://github.com/bachikoljunior-blip/Q/actions/runs/34863121781) はsuccess。merge直前にmain `89398313469f6f7c16e8a5c83cf95c6f58fae0cc`、expected head、mergeableを再照合し、ゲームmain `81d788e0c9efe057af5ad4c0ad2aa84cd5b5f091` へ反映した。main treeは同じ `2d65b796ad33fa90271c201f427833af8e5d16af`、両親は基点と実装head。main CI [34863253178](https://github.com/bachikoljunior-blip/Q/actions/runs/34863253178) とPages [34863251474](https://github.com/bachikoljunior-blip/Q/actions/runs/34863251474) はsuccess。再取得したmainでhead、tree、実装headの祖先包含を確認した。force pushなし、旧PR #3/#13は反映していない。
+- 同じゲームmainを既存Site sourceの `533e8de028b684db6d300ec5a382d8658a4bdc88` から `81d788e0c9efe057af5ad4c0ad2aa84cd5b5f091` へnon-force pushし、source HEADを再読取した。検証済み固定stageから正式packagerで作ったarchiveは11ファイル・2,652,160 bytes、保存時SHA-256 `e758e0816d1e34e5ec024c4d5dd8c3f258bb349e9394336a205b19fbc891f077`。初回packagingだけシステム`/tmp`不在で終了1となり、stageを変更せずworkspace内一時領域へ切り替えて `0.252秒` で成功した。保存版18は `appgprj_6aa6871ebd648191802ba2398d06115b~appgver_9774e47950b481919b301798497f6afa`、private deployment `appgdep_6aa815276f80819183f70bcf42c79910` は2026-09-14 15:39:30.629305 UTCに`succeeded`。URLは従来の `https://q-ash-pilgrim.juurooo.chatgpt.site`。別Site作成、公開範囲変更、force push、資格情報の表示・保存は行っていない。owner-only backend検査を通したprivate deployであり、秘密bypass tokenを含み得る`get_site`は呼んでいない。
+- ゲーム実装、必須検証、生成、main反映、既存Site配信に既知の未完了操作はない。本節の後続mainはこの実結果のdocs-only記録で、ゲーム、asset、`release/Q-ash-pilgrim.html`、固定stage、配信archiveを変えないため再配信しない。正確な再開地点は、正式previewが復旧した場合に同じ三脅威saveを390×844縦画面と横画面で開き、表示重なり、待機→防御切替、移動+視点+防御の複数指、無音/音有りを古旧同条件で比べること。利用不能が続く場合は、全脅威を落とさないbatch接触予測を候補化し、同じfixtureで安全性とhost費用を比較する。
 
 ## 2026-09-14 戦闘HUDの実画面投影接続（main・所有者限定Site反映完了）
 
