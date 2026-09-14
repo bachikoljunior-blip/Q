@@ -7,6 +7,7 @@ permissions:
 jobs:
   game:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,11 +24,11 @@ jobs:
       - run: npm run build
       - run: npm run package
       - run: npm run test:artifacts
-      - name: Verify the standalone build is current
-        run: git diff --exit-code -- release/Q-ash-pilgrim.html
       - uses: actions/upload-artifact@v4
         with:
           name: Q-ash-pilgrim
           path: |
             dist/
             release/Q-ash-pilgrim.html
+      - name: Verify the standalone build is current
+        run: git diff --quiet --exit-code -- release/Q-ash-pilgrim.html

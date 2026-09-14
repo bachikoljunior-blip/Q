@@ -119,7 +119,7 @@ export class Game {
     if(heightAt(p.x,p.z)-heightAt(oldX,oldZ)>1.2&&p.grounded){p.x=oldX;p.z=oldZ;}
   }
   attack() {
-    const p=this.player,w=this.weaponStats();if(p.dead||p.dodge>0||p.attack>0||p.healTimer>0||p.stamina<w.cost)return false;
+    const p=this.player,w=this.weaponStats();if(p.dead||p.dodge>0||p.attack>0||p.parry>0||p.healTimer>0||p.stamina<w.cost)return false;
     p.combo=p.comboWindow>0?(p.combo+1)%3:0;p.comboWindow=w.duration+.54;p.attack=w.duration;p.attackDuration=w.duration;p.stamina-=w.cost;p.staminaDelay=.65;p.parry=0;this.attackHit=false;
     const available=this.enemies.filter(e=>!e.dead&&!(e.type==='boss'&&this.lit.length<4)&&distance(p,e)<w.reach+1.5&&this.canReach(p,e));
     const target=available.find(e=>e.id===this.locked)||available.sort((a,b)=>distance(p,a)-distance(p,b))[0];
