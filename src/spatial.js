@@ -1,3 +1,4 @@
+import { WORLD_BOUNDS } from './world-regions.js';
 // Static broad phase, shared by movement, visibility, arrows and camera probes.
 // Arrays without an index remain supported for small or temporary fixtures.
 const obstacleIndices=new WeakMap();
@@ -91,8 +92,8 @@ export function moveCircle(actor, dx, dz, obstacles, radius = .48) {
       }
       if (!overlap) break;
     }
-    actor.x = Math.max(-280, Math.min(280, actor.x));
-    actor.z = Math.max(-282, Math.min(220, actor.z));
+    actor.x = Math.max(WORLD_BOUNDS.minX, Math.min(WORLD_BOUNDS.maxX, actor.x));
+    actor.z = Math.max(WORLD_BOUNDS.minZ, Math.min(WORLD_BOUNDS.maxZ, actor.z));
   }
 }
 

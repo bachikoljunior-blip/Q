@@ -19,6 +19,7 @@ jobs:
       - run: npm run test:crossing
       - run: npm run test:forge
       - run: npm run test:session
+      - run: npm run test:expedition
       - run: npm run build
       - run: npm run package
       - run: npm run test:artifacts

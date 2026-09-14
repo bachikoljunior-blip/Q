@@ -1,6 +1,7 @@
 import { moveCircle } from './spatial.js';
 import { routineFor } from './village.js';
 
+import { WORLD_BOUNDS } from './world-regions.js';
 const finite=(value,fallback,min,max)=>Number.isFinite(value)?Math.max(min,Math.min(max,value)):fallback;
 const playerTimers={attack:1,comboWindow:2,dodge:.42,parry:.48,invulnerable:2,skillCooldown:4,staminaDelay:1,healTimer:.9};
 const enemyStates=new Set(['idle','chase','windup','strike','recover','stagger','return','sealed']);
@@ -39,8 +40,8 @@ export function restoreRuntime(game,runtime,groundAt){
   }
   for(const enemy of game.enemies){
     const saved=byId.get(enemy.id);if(enemy.dead||!saved)continue;
-    enemy.x=finite(saved.x,enemy.homeX,Math.max(-280,enemy.homeX-50),Math.min(280,enemy.homeX+50));
-    enemy.z=finite(saved.z,enemy.homeZ,Math.max(-282,enemy.homeZ-50),Math.min(220,enemy.homeZ+50));
+    enemy.x=finite(saved.x,enemy.homeX,Math.max(WORLD_BOUNDS.minX,enemy.homeX-50),Math.min(WORLD_BOUNDS.maxX,enemy.homeX+50));
+    enemy.z=finite(saved.z,enemy.homeZ,Math.max(WORLD_BOUNDS.minZ,enemy.homeZ-50),Math.min(WORLD_BOUNDS.maxZ,enemy.homeZ+50));
     moveCircle(enemy,0,0,game.obstacles,enemy.type==='boss'?1.2:.48);enemy.y=groundAt(enemy.x,enemy.z);
     enemy.angle=finite(saved.angle,enemy.angle,-1e7,1e7);enemy.hp=finite(saved.hp,enemy.maxHp,1,enemy.maxHp);
     enemy.state=enemyStates.has(saved.state)?saved.state:'idle';
@@ -49,7 +50,7 @@ export function restoreRuntime(game,runtime,groundAt){
     enemy.poise=finite(saved.poise,180,0,180);enemy.attackCount=Math.floor(finite(saved.attackCount,0,0,1e7));
     enemy.radial=enemy.type==='boss'&&saved.radial===true;enemy.hit=saved.hit===true;
     enemy.windupMax=finite(saved.windupMax,1,.01,5);enemy.stagger=finite(saved.stagger,0,0,3);
-    if(saved.aim&&['x','y','z'].every(k=>Number.isFinite(saved.aim[k]))&&Math.abs(saved.aim.x)<=340&&Math.abs(saved.aim.z)<=340&&Math.abs(saved.aim.y)<=200)enemy.aim={...pick(saved.aim,['x','y','z'])};
+    if(saved.aim&&['x','y','z'].every(k=>Number.isFinite(saved.aim[k]))&&saved.aim.x>=WORLD_BOUNDS.minX-60&&saved.aim.x<=WORLD_BOUNDS.maxX+60&&saved.aim.z>=WORLD_BOUNDS.minZ-60&&saved.aim.z<=WORLD_BOUNDS.maxZ+60&&Math.abs(saved.aim.y)<=200)enemy.aim={...pick(saved.aim,['x','y','z'])};
     else if(enemy.type==='ranger'&&['windup','strike'].includes(enemy.state)){enemy.state='recover';enemy.timer=.5;}
     enemy.route=null;enemy.avoid=null;
   }
@@ -66,7 +67,7 @@ export function restoreRuntime(game,runtime,groundAt){
     if(!saved||!['x','y','z','vx','vy','vz','life','damage'].every(k=>Number.isFinite(saved[k])))continue;
     if(saved.owner!=='player'&&!game.enemies.some(e=>e.id===saved.owner))continue;
     const speed=Math.hypot(saved.vx,saved.vy,saved.vz);
-    if(speed<.1||speed>35||Math.abs(saved.x)>340||saved.z< -340||saved.z>280||Math.abs(saved.y)>200||saved.life<=0)continue;
+    if(speed<.1||speed>35||saved.x<WORLD_BOUNDS.minX-60||saved.x>WORLD_BOUNDS.maxX+60||saved.z<WORLD_BOUNDS.minZ-60||saved.z>WORLD_BOUNDS.maxZ+60||Math.abs(saved.y)>200||saved.life<=0)continue;
     game.projectiles.push({...pick(saved,['x','y','z','vx','vy','vz','owner']),id:++game.projectileId,life:Math.min(2.3,saved.life),damage:finite(saved.damage,20,0,500)});
   }
   return true;
