@@ -18,6 +18,21 @@ export function gatheringPresentation(game,id){
   };
 }
 
+export function gatheringStage(game,id){
+  const p=gatheringPresentation(game,id);if(!p?.speakerId)return null;
+  const d=GATHERINGS.find(d=>d.id===id),actors=d.actors.map(a=>game.residents.find(n=>n.id===a.id));
+  if(actors.some(n=>!n))return null;
+  const center={x:actors.reduce((s,n)=>s+n.x,0)/actors.length,z:actors.reduce((s,n)=>s+n.z,0)/actors.length};
+  let dx=game.player.x-center.x,dz=game.player.z-center.z,length=Math.hypot(dx,dz);
+  if(length<.6){dx=actors[0].z-actors.at(-1).z;dz=actors.at(-1).x-actors[0].x;length=Math.hypot(dx,dz)||1;}
+  dx/=length;dz/=length;
+  const spread=Math.max(...actors.map(n=>Math.hypot(n.x-center.x,n.z-center.z)));
+  const distance=Math.max(6.5,spread*2.4);
+  return {id,speakerId:p.speakerId,target:{x:center.x,z:center.z},camera:{x:center.x+dx*distance,z:center.z+dz*distance},
+    playerAngle:Math.atan2(center.x-game.player.x,center.z-game.player.z),
+    actorAngles:Object.fromEntries(actors.map(n=>[n.id,Math.atan2(game.player.x-n.x,game.player.z-n.z)]))};
+}
+
 export function actorGatheringCue(game,actorId){
   const d=GATHERINGS.find(d=>d.actors.some(a=>a.id===actorId));
   if(!d)return null;

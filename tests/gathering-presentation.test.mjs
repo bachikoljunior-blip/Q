@@ -1,9 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as T from 'three';
+import {readFileSync} from 'node:fs';
 import {Game,groundAt} from '../src/core.js';
 import {GATHERINGS} from '../src/gathering-content.js';
-import {gatheringPresentation,actorGatheringCue} from '../src/gathering-presentation.js';
+import {gatheringPresentation,actorGatheringCue,gatheringStage} from '../src/gathering-presentation.js';
+import {cameraFraction} from '../src/spatial.js';
 import {GatheringScene} from '../src/gathering-scene.js';
 import {gatheringAction} from '../src/gatherings.js';
 
@@ -27,6 +29,15 @@ test('shared presentation exposes invitations, exactly one current speaker and o
 
 test('locked, distant, dead and interrupted scenes do not show a false active speaker',()=>{
   for(const d of GATHERINGS){let g=new Game();assert.equal(gatheringPresentation(g,d.id),null);g=fixture(d);g.gatherings[d.id]={phase:'talking',beat:1,choice:null};g.projectiles.push({owner:'enemy-0',x:d.x,z:d.z,life:2});assert.equal(gatheringPresentation(g,d.id).speakerId,null);assert(actorGatheringCue(g,d.actors[0].id).text.includes('中断'));g.projectiles=[];g.player.x+=50;assert.equal(actorGatheringCue(g,d.actors[0].id),null);g.player.x=d.x;g.player.dead=true;assert.equal(actorGatheringCue(g,d.actors[0].id),null);}
+});
+
+test('earned mid-conversation saves produce collision-free over-shoulder staging without mutating game state',()=>{
+  for(const [file,id]of [['hearth-middle.json','hearth'],['road-watch-middle.json','road-watch']]){
+    const g=new Game(JSON.parse(readFileSync(new URL('../release/review-saves/'+file,import.meta.url)))),before=JSON.stringify(g.serialize()),stage=gatheringStage(g,id);
+    assert(stage);assert(g.residents.some(n=>n.id===stage.speakerId));assert(Object.values(stage.actorAngles).every(Number.isFinite));assert(Number.isFinite(stage.playerAngle));
+    const target={...stage.target,y:groundAt(stage.target.x,stage.target.z)+1.45},camera={...stage.camera,y:groundAt(stage.camera.x,stage.camera.z)+3.2};
+    assert(cameraFraction(target,camera,g.obstacles,groundAt)>.9);assert.equal(JSON.stringify(g.serialize()),before);
+  }
 });
 
 test('world cues follow moving residents, switch speaker rings and hide after completing or changing saves',()=>{
