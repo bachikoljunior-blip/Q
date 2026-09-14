@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,groundAt} from '../src/core.js';
-import {combatPresentation} from '../src/combat-presentation.js';
+import {BRIDGES,Game,groundAt} from '../src/core.js';
+import {combatPresentation,forecastProjectileContact} from '../src/combat-presentation.js';
 
 function fixture(){
   const g=new Game();g.enemies.forEach(e=>e.dead=true);g.obstacles=[];
@@ -29,4 +29,27 @@ test('a near-expiry arrow still warns when it will hit on its final live step',(
   assert.equal(combatPresentation(g).active,true);g.tick(1/60);assert.equal(g.player.hp,100);
   const expired=fixture();expired.projectiles=[{id:1,owner:'attacker',x:-.8,z:86,y:expired.player.y+1,vx:19,vy:0,vz:0,life:.01,damage:20}];
   assert.equal(combatPresentation(expired).active,false);expired.tick(1/60);assert.equal(expired.player.hp,120);
+});
+
+
+test('bridge-edge and ground-grazing warnings match live 60 Hz projectile contacts',()=>{
+  const offsetsX=[-22,-21.45,-13.5,13.5,21.45,22],offsetsZ=[-2.7,-2.64,0,2.64,2.7];
+  let checked=0;
+  for(const bridge of BRIDGES)for(const ox of offsetsX)for(const oz of offsetsZ)for(const direction of [-1,1]){
+    const g=fixture(),target={x:bridge.x+ox,z:bridge.z+oz};
+    Object.assign(g.player,{x:target.x,z:target.z,y:groundAt(target.x,target.z),hp:120,invulnerable:0});
+    const start={x:target.x-direction*12,z:target.z},aimY=g.player.y+1.05,startY=groundAt(start.x,start.z)+1.45;
+    const dx=target.x-start.x,dy=aimY-startY,dz=target.z-start.z,length=Math.hypot(dx,dy,dz);
+    const arrow={id:checked+1,owner:'terrain-audit',x:start.x,y:startY,z:start.z,vx:dx/length*19,vy:dy/length*19,vz:dz/length*19,life:2,damage:20};
+    const immutable=JSON.stringify(arrow),forecast=forecastProjectileContact(g,arrow,1.8);
+    assert.equal(JSON.stringify(arrow),immutable,'forecast must not mutate its input');
+    g.projectiles=[{...arrow}];const warned=combatPresentation(g).active;
+    let hit=false;
+    for(let frame=0;frame<120&&g.projectiles.length;frame++){
+      g.tick(1/60);if(g.events.some(event=>event.type==='hurt'))hit=true;g.events=[];
+    }
+    assert.equal(warned,hit,`bridge ${bridge.z}, offset ${ox}/${oz}, direction ${direction}, forecast ${forecast?.target==='wall'?'wall':forecast?.target?'player':'clear'}`);
+    checked++;
+  }
+  assert.equal(checked,120);
 });
