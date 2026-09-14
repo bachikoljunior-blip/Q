@@ -2,6 +2,7 @@
 // Laboratory fixtures; no browser, touch, audio, physical-device or player-quality observation.
 import * as core from '../src/core.js';
 import * as combat from '../src/combat-presentation.js';
+import {renderCombatHud} from '../src/combat-hud.js';
 import {readFileSync} from 'node:fs';
 const compare=(get,mainSource)=>{
  const {Game,groundAt,PLACES,distance,angleDelta,clamp,heightAt}=get("src/core.js");
@@ -35,13 +36,13 @@ const compare=(get,mainSource)=>{
   results.push({id:kind,warning:warning.active,predictedTime:warning.primary?.timeToImpact??null,hp:game.player.hp,firstHurt,matchesContact:warning.active===(firstHurt!==null)});
  }
  const {game,enemy}=setup('hud'),nodes=new Map();
- function node(){return {style:{setProperty(){}},classList:{toggle(){},add(){},remove(){}},setAttribute(){},querySelector(){return node()},append(){},textContent:''};}
+ function node(){return {style:{setProperty(){}},classList:{toggle(){},add(){},remove(){}},setAttribute(){},removeAttribute(){},querySelector(){return node()},append(){},textContent:''};}
  const $=id=>{if(!nodes.has(id))nodes.set(id,node());return nodes.get(id)};
- const scope={game,$,...presentation,warningTimer:0,innerWidth:1000,audio:{play(){}},view:{yaw:0,project:()=>({visible:false,x:0,y:0}),effect(){}},PLACES,distance,angleDelta,clamp,heightAt,actorGatheringCue:()=>null,regionAt:()=>null,WIND_BELLS:[],SALT_JOURNEY:{id:'salt'},setTimeout:()=>0,document:{createElement:node}};
+ const scope={game,$,...presentation,renderCombatHud,warningTimer:0,innerWidth:1000,innerHeight:600,combatHintView:null,audio:{play(){}},view:{yaw:0,project:()=>({visible:false,x:0,y:0}),effect(){}},PLACES,distance,angleDelta,clamp,heightAt,actorGatheringCue:()=>null,regionAt:()=>null,WIND_BELLS:[],SALT_JOURNEY:{id:'salt'},setTimeout:()=>0,document:{createElement:node}};
  const start=mainSource.indexOf('function handleEvents()'),end=mainSource.indexOf('function frame(now)',start);if(start<0||end<start)throw Error("Missing production HUD seam");
  const handlers=new Function("scope","with(scope){"+mainSource.slice(start,end)+";return {handleEvents,updateHud};}")(scope);
  handlers.handleEvents();handlers.updateHud();
- const expected=node();presentation.renderCombatHint(expected,game,{cameraYaw:scope.view.yaw,project:position=>scope.view.project(position.x,position.y,position.z),viewportWidth:scope.innerWidth});const initialHud=$('combat-hint').textContent;
+ const expected=node();presentation.renderCombatHint(expected,game,{cameraYaw:scope.view.yaw,project:position=>scope.view.project(position.x,position.y,position.z),viewportWidth:scope.innerWidth,viewportHeight:scope.innerHeight});const initialHud=$('combat-hint').textContent;
  for(let f=0;f<20;f++){game.tick(1/60);handlers.handleEvents();scope.warningTimer=Math.max(0,scope.warningTimer-1/60);handlers.updateHud();}
  results.push({id:'hud-priority',initialHud,expectedPrimary:expected.textContent,matchesContact:initialHud===expected.textContent,hp:game.player.hp});
  return results;

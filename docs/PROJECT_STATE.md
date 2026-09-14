@@ -1,5 +1,29 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-14 v0.17.0 — 複数脅威から一つの次手へ（main反映前チェックポイント）
+
+### 受理・継続・期限判断
+
+- 本作業は2026-09-14 14:51:53 UTCに開始。開始時の最新main、隔離worktree HEAD、指定baseはすべて `89398313469f6f7c16e8a5c83cf95c6f58fae0cc`、tree `8f8def5626fd8f698cc109948cdded2be439a6a9`。branch `work/ultra-combat-priority-20260914`、未反映差分なしから開始した。指定6文書を該当SHAから全文確認し、`ULTRA-CHILDREN-20260914-v3` を適用。前回のPR #20実装、ゲームmain、結果記録PR #21、所有者限定Site保存版17/deploymentは完了済みで、pendingのpush・PR・CI・Sites操作はない安全な続きと判断した。
+- 単独の実進行・統合担当は受理ID `/root/ultra_combat_priority_integrator`。親からの実引数は `reasoning_effort=ultra`、`fork_turns=none`、model省略。計画、調査、実装、試験、統合、remote・Sites、記録を当担する。Ultra指定の受理は確認、backend上の実効強度は独立確認不能。
+- 独立した期限・方法レビューは `/root/ultra_combat_priority_integrator/deadline_method_review`、複数脅威・入力契約の反例監査は `/root/ultra_combat_priority_integrator/priority_contract_review`、実装名を隠したA/Bのblindレビューは `/root/ultra_combat_priority_integrator/blind_combat_review`。3担当とも `reasoning_effort=ultra`、`fork_turns=none`、model省略で受理し、共有worktreeを編集せず評価を返した。反例監査が示した3脅威、同時刻の実接触順、無敵中の無害な矢、X/Y/depth画面外、早すぎる防御、入力順序差、古いpendingを受入条件へ反映。blindレビューは匿名候補を、考慮3/3、単一次手、追従・両入力順HP 120、状態不変によりbounded logic/HUD bridgeでPASSとした一方、正式画面・端末品質は判定不能、48脅威host費用は実機性能承認に使えないとした。
+- 継続直後と実装後の期限判断は**根拠不足**で、「2026-09-20までに指定10作品に劣らない完成品を作れる」とは判断しない。実績のある局所単位はUI 2分12秒、地域logic 10分、2場面16分、戦闘修正20分、描画修正11分39秒、HUD生成32分39秒、反映・配信まで47分54秒だが、複数章・地域・屋内、商用品質の造形・アニメーション・演技・音響、native配布、正式画面・実機・外部比較の制作速度ではない。会話bridge不具合、重い矢予測の26,134 ms/2,000回から1,265 msへの再設計、容量・生成の手戻りも残工程に含める。
+- 方法を「三本目の警告行を追加」から、実接触候補 → 実HUD bridge → 同一フレーム入力調停 → 実Game tick結果を一つの固定fixtureで通す縦切りへ変更。正式previewは一度だけstartし、`sites-previewd mailbox is unavailable`で失敗。再試行、サービスの代替、別URLの迂回は行わず、以後はDOM/HUD・clip投影・入力状態の再現検査と明記する。
+
+### 実装と同条件比較
+
+- `combat-presentation.js` は表示2件へ切る前に実在候補を検証。矢は固有 `hazardId`、敵→矢の実ゲーム接触順、丸め前impact時刻/フレーム、当たるまで残る現在の無敵を使う。実投影のX/Y境界外とdepth外を画面外に分け、同時帯は致死、画面外、衝撃波、実接触順で集約する。複数脅威は回避、単一の正面近接は受け流し、衝撃波は跳躍を次手とし、有効窓までは待機、スタミナや硬直で安全操作がなければ対応不能を出す。副行に異なる操作語を出さない。
+- `combat-hud.js` は上記決定と実HUD文字・data属性・防御ボタン一つの強調を結ぶ。`combat-input.js` はタッチ、キーボード、ゲームパッド、攻撃長押しを一描画フレームの意図集合へまとめ、表示防御→固定防御順→攻撃で1操作だけを60 Hzルールへ渡す。新しく表示されたjumpを古いpending parryが拒む場合は、そのpendingだけを入替える。回避方向はそのフレームのスティック・キー・パッド合成後に消費する。blur、hidden、pagehide、パネル、移動、死亡でキューとGameのpendingを消去する。
+- 390×844、yaw 0、pitch .3、zoom 9、前方兵 `.10秒`、画面右外の兵 `.11秒`、背後のボス衝撃波 `.12秒` を固定。v0.16相当は2/3のみ表示しbossを落とし、「回避 / 受け流し」を2行で指示。受け流しに従うとHP 86。候補は3/3を意思決定へ入れ、画面外・同時3件・詳細外1件と「次：回避」だけを出し、同じtickでHP 120。attack/parryの到着順によるHP差は22から0。確認6項目改善、ロジック逆行0、表示前後のゲーム状態不変。固定fixture SHA-256は `12b23dfe7351ffdfbe93dc51e1485765961e569ebb3ef5e5ddd22a7225bd4699`。
+- この安全性の代償として、48矢がすべて同時に潜在的に接触するhost上の250回比較は、2件へ打ち切る基点相当 `.1041 ms/回`、全件を接触確認する候補 `1.0996 ms/回`、約10.563倍。現行HUD更新は約13 Hzのためhost上では採用するが、物理スマホのFPS・電力・発熱の証拠ではない。正式実機で問題が出た場合は、同時脅威を落とさないbatch接触予測へ手戻りする。
+- `npm run review:combat` を5→9シナリオへ更新。各シナリオは初期save+明示fixture、390×844投影、実HUD bridge、入力調停、Game tickを通し、2回再生が完全一致。三脅威無反応HP 98、HUD追従HP 120、attack/parry両順ともHP 120・parry選択を記録。これはWebGLピクセル、実browserイベント、物理タッチ、音、iOS/Android、外部評価の証拠ではない。
+
+### 検証完了・反映待ち
+
+- `npm ci` は11.033秒で成功。最終差分で焦点A/B `.733秒`、`npm test` 131件 `.2.979秒`、journey `.610秒`、crossing `2.240秒`、forge `2.486秒`、30分相当108,000 step・138 reloadのsession `5.607秒`、西部両経路expedition `5.153秒`、9戦闘を2回ずつ固定再生するcombat review `.689秒`、build `2.302秒`、package `.342秒`、artifact検査 `.234秒` がすべて成功。単体版は3,256,811 bytes（3180 KiB）、SHA-256 `9ba40eed41e9f56e3d3291292de5e8b4e399769323c61fc1bebfe605f42203d0`。固定stage `artifacts/site-HZsTUW` は`.openai/hosting.json`を含む11ファイル、公開distは10ファイル・JS 3 chunks・803 KiB・model 3件。build source fingerprintは `sha256:d0d660d02ecde089a19e73370ad025e9a77eab2fc227fa73cbe9eadcdc7592c4`。
+- 未完了操作は、検証済み差分のcommit、正規branch/PR、push/PR CI、最新main・expected head・mergeable再照合、通常merge、main再取得・tree/祖先・main CI、既存所有者限定Siteへの同一mainソースpush・固定stageの正式archive保存・private deployment、結果のdocs-only反映。旧PR #3/#13は反映しない。
+- 正確な再開地点は、検証済み差分をcommitし、最新mainを正規GitHubで再照合して反映すること。正式previewが復旧した場合の最初の画面検査は同じ三脅威save・390×844縦画面と横画面で、表示重なり、待機→防御切替、移動+視点+防御の複数指、無音/音有りを古旧同条件で比べること。
+
 ## 2026-09-14 戦闘HUDの実画面投影接続（main・所有者限定Site反映完了）
 
 - 反映対象は検証済みtree `ab8d49f5844875cace1223f14f83604c8b35c015`。実装head `919a479ea8bec1c999a842b4904ebf494ec7d101` を [PR #20](https://github.com/bachikoljunior-blip/Q/pull/20) の通常mergeでmain `533e8de028b684db6d300ec5a382d8658a4bdc88` へ反映した。force pushなし。PRのCI [34853416331](https://github.com/bachikoljunior-blip/Q/actions/runs/34853416331) / [34853412738](https://github.com/bachikoljunior-blip/Q/actions/runs/34853412738)、mainのCI [34853556866](https://github.com/bachikoljunior-blip/Q/actions/runs/34853556866) / [34853556304](https://github.com/bachikoljunior-blip/Q/actions/runs/34853556304) はすべてsuccess。親のローカルHEADも同じmain・treeへfast-forward済み。

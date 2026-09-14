@@ -26,14 +26,14 @@ export function compareCombatView(){
     const target=new T.Vector3(player.x,player.y+1.6,player.z);
     camera.position.set(player.x+Math.sin(cameraYaw)*Math.cos(pitch)*d,player.y+1.7+Math.sin(pitch)*d,player.z+Math.cos(cameraYaw)*Math.cos(pitch)*d);camera.lookAt(target);camera.updateMatrixWorld();
     const project=position=>{const point=new T.Vector3(position.x,position.y,position.z).project(camera);return{x:(point.x*.5+.5)*viewportWidth,y:(-point.y*.5+.5)*viewportHeight,visible:point.z<1&&point.z>-1};};
-    const element={textContent:'',setAttribute(){},classList:{toggle(){}}},candidate=renderCombatHint(element,game,{cameraYaw,project,viewportWidth}).primary.screenDirection,point=project(combatPresentation(game).primary.position);
+    const element={textContent:'',setAttribute(){},classList:{toggle(){}}},candidate=renderCombatHint(element,game,{cameraYaw,project,viewportWidth,viewportHeight}).primary.screenDirection,point=project(combatPresentation(game).primary.position);
     return {id,cameraYaw,expected,projectedX:Math.round(point.x*1000)/1000,baseline:combatPresentation(game).primary.direction,candidate};
   });
   assert.deepEqual(scenarios.map(s=>s.baseline),['右','右','右','右']);
   assert.deepEqual(scenarios.map(s=>s.candidate),scenarios.map(s=>s.expected));
   const attributes={},classes=new Map(),element={textContent:'',setAttribute:(key,value)=>attributes[key]=value,classList:{toggle:(key,value)=>classes.set(key,value)}};
-  renderCombatHint(element,game,{cameraYaw:-Math.PI/2,project:()=>({x:viewportWidth/2,visible:true}),viewportWidth});
-  assert.match(element.textContent,/^↑ .+画面前方/);assert.equal(attributes['data-direction'],'正面');assert.equal(classes.get('urgent'),false);
+  renderCombatHint(element,game,{cameraYaw:-Math.PI/2,project:()=>({x:viewportWidth/2,y:viewportHeight/2,visible:true}),viewportWidth,viewportHeight});
+  assert.match(element.textContent,/^待機 .+ → 回避\n↑ .+画面前方/);assert.equal(attributes['data-direction'],'正面');assert.equal(classes.get('urgent'),false);
   assert.equal(JSON.stringify(game.serialize()),before);
   return {baselineRef:'9c5dd6a61dba5cb0b040e11aa52edb73028fb630',sameGameState:true,projectionContract:'Three.js PerspectiveCamera(54deg, 1600x900), scene camera position/lookAt formula, pitch=.3, zoom=9',scenarioCount:scenarios.length,baselineScreenContractMatches:scenarios.filter(s=>s.baseline===s.expected).length,candidateScreenContractMatches:scenarios.filter(s=>s.candidate===s.expected).length,changedDirections:scenarios.filter(s=>s.baseline!==s.candidate).length,scenarios,hudText:element.textContent,stateUnchanged:true,note:'Pure threat model, Three.js clip projection and minimal DOM sink only; no WebGL pixels, touch, audio, physical-device performance or player-quality observation.'};
 }
