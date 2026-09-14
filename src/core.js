@@ -98,6 +98,11 @@ export class Game {
     const from={x:a.x,y:ay+Math.min(reach,1.2),z:a.z},to={x:b.x,y:by+Math.min(body,1.2),z:b.z};
     return segmentTerrain(from,to,heightAt,.04)===null;
   }
+  meleeContact(enemy,target=this.player){
+    const range=enemy.type==='boss'?(enemy.radial?9:6.5):enemy.type==='wolf'?2.5:3.3;
+    const facing=Math.abs(angleDelta(Math.atan2(target.x-enemy.x,target.z-enemy.z),enemy.angle));
+    return distance(enemy,target)<range&&(enemy.radial||facing<1.5)&&(!enemy.radial||target.grounded)&&this.canStrike(enemy,target);
+  }
   atSafeFire(){return !this.player.dead&&!this.threatened()&&PLACES.some(s=>this.lit.includes(s.id)&&distance(this.player,s)<8);}
   actionIdle(){const p=this.player;return !p.dead&&p.grounded&&['attack','dodge','parry','healTimer'].every(key=>p[key]<=0);}
   canCraft(){return this.actionIdle()&&!this.threatened();}
@@ -114,7 +119,7 @@ export class Game {
     if(heightAt(p.x,p.z)-heightAt(oldX,oldZ)>1.2&&p.grounded){p.x=oldX;p.z=oldZ;}
   }
   attack() {
-    const p=this.player,w=this.weaponStats();if(p.dead||p.dodge>0||p.attack>0||p.healTimer>0||p.stamina<w.cost)return false;
+    const p=this.player,w=this.weaponStats();if(p.dead||p.dodge>0||p.attack>0||p.parry>0||p.healTimer>0||p.stamina<w.cost)return false;
     p.combo=p.comboWindow>0?(p.combo+1)%3:0;p.comboWindow=w.duration+.54;p.attack=w.duration;p.attackDuration=w.duration;p.stamina-=w.cost;p.staminaDelay=.65;p.parry=0;this.attackHit=false;
     const available=this.enemies.filter(e=>!e.dead&&!(e.type==='boss'&&this.lit.length<4)&&distance(p,e)<w.reach+1.5&&this.canReach(p,e));
     const target=available.find(e=>e.id===this.locked)||available.sort((a,b)=>distance(p,a)-distance(p,b))[0];
@@ -167,7 +172,7 @@ export class Game {
     }
     if(e.state==='strike'){
       if(e.type==='ranger'){if(!e.hit){e.hit=true;this.fireArrow(e);}if(e.timer<=0){e.state='recover';e.timer=1.15;}return;}
-      if(!e.hit){e.hit=true;const range=boss?(e.radial?9:6.5):wolf?2.5:3.3;const facing=Math.abs(angleDelta(Math.atan2(p.x-e.x,p.z-e.z),e.angle));if(d<range&&(e.radial||facing<1.5)&&(!e.radial||p.grounded)&&this.canStrike(e,p))this.hurtPlayer(boss?34:wolf?14:22,e);}
+      if(!e.hit){e.hit=true;if(this.meleeContact(e))this.hurtPlayer(boss?34:wolf?14:22,e);}
       if(e.timer<=0&&e.state==='strike'){e.state='recover';e.timer=boss?.85:wolf?.9:1.1;}return;
     }
     if(e.state==='recover'){if(e.timer<=0){e.state='chase';e.cooldown=.35;}return;}
@@ -190,21 +195,28 @@ export class Game {
     }
     e.y=groundAt(e.x,e.z);
   }
-  fireArrow(e){
+  createEnemyArrow(e){
     if(!e.aim||this.projectiles.length>=48)return;
     const y=e.y+1.45,dx=e.aim.x-e.x,dy=e.aim.y-y,dz=e.aim.z-e.z,length=Math.hypot(dx,dy,dz)||1;
-    this.projectiles.push({id:++this.projectileId,x:e.x,y,z:e.z,vx:dx/length*19,vy:dy/length*19,vz:dz/length*19,life:2.3,owner:e.id,damage:20});this.emit('arrow');
+    return {x:e.x,y,z:e.z,vx:dx/length*19,vy:dy/length*19,vz:dz/length*19,life:2.3,owner:e.id,damage:20};
+  }
+  fireArrow(e){
+    const arrow=this.createEnemyArrow(e);if(!arrow)return;
+    this.projectiles.push({...arrow,id:++this.projectileId});this.emit('arrow');
+  }
+  projectileContact(arrow,dt){
+      const from={x:arrow.x,y:arrow.y,z:arrow.z},to={x:arrow.x+arrow.vx*dt,y:arrow.y+arrow.vy*dt,z:arrow.z+arrow.vz*dt};
+      const terrain=segmentTerrain(from,to,groundAt,.1);let first=terrain??1.01,target=terrain===null?null:'wall';
+      for(const o of queryObstacles(this.obstacles,Math.min(from.x,to.x)-.08,Math.min(from.z,to.z)-.08,Math.max(from.x,to.x)+.08,Math.max(from.z,to.z)+.08)){const t=segmentCylinder(from,to,{...o,y:heightAt(o.x,o.z),height:o.height??o.r*1.5},.08);if(t!==null&&t<first){first=t;target='wall';}}
+      const victims=arrow.owner==='player'?this.enemies.filter(e=>!e.dead):[this.player];
+      for(const victim of victims){const body=victim.type==='boss'?4.7:victim.type==='wolf'?1.35:2.1;const t=segmentCylinder(from,to,{...victim,y:victim.y+.15,height:body-.15,r:victim.type==='boss'?1.25:.48},.12);if(t!==null&&t<first){first=t;target=victim;}}
+    return {from,to,target,fraction:target?first:1};
   }
   tickProjectiles(dt){
     const p=this.player;
     for(const arrow of this.projectiles){
       arrow.life-=dt;if(arrow.life<=0)continue;
-      const from={x:arrow.x,y:arrow.y,z:arrow.z},to={x:arrow.x+arrow.vx*dt,y:arrow.y+arrow.vy*dt,z:arrow.z+arrow.vz*dt};
-      const terrain=segmentTerrain(from,to,groundAt,.1);let first=terrain??1.01,target=terrain===null?null:'wall';
-      for(const o of queryObstacles(this.obstacles,Math.min(from.x,to.x)-.08,Math.min(from.z,to.z)-.08,Math.max(from.x,to.x)+.08,Math.max(from.z,to.z)+.08)){const t=segmentCylinder(from,to,{...o,y:heightAt(o.x,o.z),height:o.height??o.r*1.5},.08);if(t!==null&&t<first){first=t;target='wall';}}
-      const victims=arrow.owner==='player'?this.enemies.filter(e=>!e.dead):[p];
-      for(const victim of victims){const body=victim.type==='boss'?4.7:victim.type==='wolf'?1.35:2.1;const t=segmentCylinder(from,to,{...victim,y:victim.y+.15,height:body-.15,r:victim.type==='boss'?1.25:.48},.12);if(t!==null&&t<first){first=t;target=victim;}}
-      const impact=target?first:1;arrow.x=from.x+(to.x-from.x)*impact;arrow.y=from.y+(to.y-from.y)*impact;arrow.z=from.z+(to.z-from.z)*impact;
+      const {from,to,target,fraction:impact}=this.projectileContact(arrow,dt);arrow.x=from.x+(to.x-from.x)*impact;arrow.y=from.y+(to.y-from.y)*impact;arrow.z=from.z+(to.z-from.z)*impact;
       if(target){
         if(target===p){const source=this.enemies.find(e=>e.id===arrow.owner);const result=this.hurtPlayer(arrow.damage,source,true,{x:from.x-arrow.vx*.1,z:from.z-arrow.vz*.1});if(result==='parry'){arrow.owner='player';const dx=source&&!source.dead?source.x-p.x:-arrow.vx,dy=source&&!source.dead?source.y+1.2-arrow.y:-arrow.vy,dz=source&&!source.dead?source.z-p.z:-arrow.vz,length=Math.hypot(dx,dy,dz)||1;arrow.vx=dx/length*25;arrow.vy=dy/length*25;arrow.vz=dz/length*25;arrow.damage=this.damageAmount()*1.5;arrow.life=2;continue;}}
         else if(target!=='wall')this.hurtEnemy(target,arrow.damage,1.1);

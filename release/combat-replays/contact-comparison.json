@@ -1,0 +1,195 @@
+{
+  "date": "2026-09-14",
+  "baselineCommit": "5b2ede88a7d08ae7c271a305cf015c55fdf33d9e",
+  "environment": "functions JavaScript V8; repository pure modules transformed only at ES module imports/exports; production HUD functions executed with a minimal text sink",
+  "note": "Selected laboratory counterexamples, no render, touch, audio, physical device or external player observation. Candidate not packaged or deployed.",
+  "baseline": [
+    {
+      "firstHurt": 0.016666666666666666,
+      "hp": 98,
+      "id": "melee-hit",
+      "matchesContact": true,
+      "predictedTime": 0,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "melee-away",
+      "matchesContact": false,
+      "predictedTime": 0,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "melee-out-of-range",
+      "matchesContact": false,
+      "predictedTime": 0,
+      "warning": true
+    },
+    {
+      "firstHurt": 0.23333333333333334,
+      "hp": 100,
+      "id": "arrow-hit",
+      "matchesContact": true,
+      "predictedTime": 0.263,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "arrow-overhead",
+      "matchesContact": false,
+      "predictedTime": 0.263,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "arrow-cover",
+      "matchesContact": false,
+      "predictedTime": 0.263,
+      "warning": true
+    },
+    {
+      "firstHurt": 0.8333333333333334,
+      "hp": 100,
+      "id": "bow-hit",
+      "matchesContact": true,
+      "predictedTime": 0.3,
+      "warning": true
+    },
+    {
+      "firstHurt": null,
+      "hp": 120,
+      "id": "bow-miss",
+      "matchesContact": false,
+      "predictedTime": 0.3,
+      "warning": true
+    },
+    {
+      "expectedPrimary": "火を失った兵 · 背後 0.1秒 · 回避 / 受け流し",
+      "hp": 98,
+      "id": "hud-priority",
+      "initialHud": "衝撃波 — 跳んでかわす",
+      "matchesContact": false
+    }
+  ],
+  "candidate": [
+    {
+      "id": "melee-hit",
+      "warning": true,
+      "predictedTime": 0,
+      "hp": 98,
+      "firstHurt": 0.016666666666666666,
+      "matchesContact": true
+    },
+    {
+      "id": "melee-away",
+      "warning": false,
+      "predictedTime": null,
+      "hp": 120,
+      "firstHurt": null,
+      "matchesContact": true
+    },
+    {
+      "id": "melee-out-of-range",
+      "warning": false,
+      "predictedTime": null,
+      "hp": 120,
+      "firstHurt": null,
+      "matchesContact": true
+    },
+    {
+      "id": "arrow-hit",
+      "warning": true,
+      "predictedTime": 0.232,
+      "hp": 100,
+      "firstHurt": 0.23333333333333334,
+      "matchesContact": true
+    },
+    {
+      "id": "arrow-overhead",
+      "warning": false,
+      "predictedTime": null,
+      "hp": 120,
+      "firstHurt": null,
+      "matchesContact": true
+    },
+    {
+      "id": "arrow-cover",
+      "warning": false,
+      "predictedTime": null,
+      "hp": 120,
+      "firstHurt": null,
+      "matchesContact": true
+    },
+    {
+      "id": "bow-hit",
+      "warning": true,
+      "predictedTime": 0.806,
+      "hp": 100,
+      "firstHurt": 0.8333333333333334,
+      "matchesContact": true
+    },
+    {
+      "id": "bow-miss",
+      "warning": false,
+      "predictedTime": null,
+      "hp": 120,
+      "firstHurt": null,
+      "matchesContact": true
+    },
+    {
+      "id": "hud-priority",
+      "initialHud": "火を失った兵 · 背後 0.1秒 · 回避 / 受け流し\n続く攻撃：灰冠の番人 · 周囲 · 跳躍",
+      "expectedPrimary": "火を失った兵 · 背後 0.1秒 · 回避 / 受け流し",
+      "matchesContact": true,
+      "hp": 98
+    }
+  ],
+  "hostCpuComparison": [
+    {
+      "arrows": 48,
+      "calls": 2000,
+      "elapsedMs": 225,
+      "revision": "qBaseline",
+      "threats": 48
+    },
+    {
+      "arrows": 48,
+      "calls": 2000,
+      "elapsedMs": 26134,
+      "revision": "qCandidate",
+      "threats": 41
+    },
+    {
+      "arrows": 48,
+      "calls": 2000,
+      "displayed": 2,
+      "elapsedMs": 1265,
+      "revision": "candidate-selective-cover"
+    }
+  ],
+  "additionalV8Checks": [
+    {
+      "name": "held attack cannot cancel an accepted parry before an imminent hit",
+      "passed": true
+    },
+    {
+      "name": "a blocked urgent arrow does not hide later unblocked arrows",
+      "passed": true
+    },
+    {
+      "name": "a near-expiry arrow still warns when it will hit on its final live step",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Fixed 60 Hz, stationary laboratory targets; future movement is not predicted.",
+    "Terrain contact sampling differs over long prediction rays and actual fixed steps; grazing-surface cases still need investigation.",
+    "Only two visible imminent threats receive full cover tests; all blocked candidates can still require additional work.",
+    "Host CPU sample is not phone performance."
+  ]
+}
