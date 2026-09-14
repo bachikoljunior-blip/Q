@@ -1,6 +1,6 @@
 {
   "name": "q-ash-pilgrim",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "private": true,
   "type": "module",
   "description": "Q — 灰の巡礼 / mobile open-world action RPG",
@@ -18,7 +18,8 @@
     "test:forge": "node scripts/simulate-forge.mjs",
     "test:expedition": "node scripts/simulate-expedition.mjs",
     "review:saves": "node scripts/simulate-forge.mjs --review-saves && node scripts/simulate-crossing.mjs --review-saves",
-    "review:combat": "node scripts/review-combat.mjs"
+    "review:combat": "node scripts/review-combat.mjs",
+    "compare:combat-view": "node scripts/compare-combat-view.mjs"
   },
   "dependencies": {
     "three": "0.186.0"

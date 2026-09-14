@@ -37,13 +37,13 @@ const compare=(get,mainSource)=>{
  const {game,enemy}=setup('hud'),nodes=new Map();
  function node(){return {style:{setProperty(){}},classList:{toggle(){},add(){},remove(){}},setAttribute(){},querySelector(){return node()},append(){},textContent:''};}
  const $=id=>{if(!nodes.has(id))nodes.set(id,node());return nodes.get(id)};
- const scope={game,$,...presentation,warningTimer:0,audio:{play(){}},view:{yaw:0,project:()=>({visible:false,x:0,y:0}),effect(){}},PLACES,distance,angleDelta,clamp,heightAt,actorGatheringCue:()=>null,regionAt:()=>null,WIND_BELLS:[],SALT_JOURNEY:{id:'salt'},setTimeout:()=>0,document:{createElement:node}};
+ const scope={game,$,...presentation,warningTimer:0,innerWidth:1000,audio:{play(){}},view:{yaw:0,project:()=>({visible:false,x:0,y:0}),effect(){}},PLACES,distance,angleDelta,clamp,heightAt,actorGatheringCue:()=>null,regionAt:()=>null,WIND_BELLS:[],SALT_JOURNEY:{id:'salt'},setTimeout:()=>0,document:{createElement:node}};
  const start=mainSource.indexOf('function handleEvents()'),end=mainSource.indexOf('function frame(now)',start);if(start<0||end<start)throw Error("Missing production HUD seam");
  const handlers=new Function("scope","with(scope){"+mainSource.slice(start,end)+";return {handleEvents,updateHud};}")(scope);
  handlers.handleEvents();handlers.updateHud();
- const primary=presentation.combatPresentation(game).primary,initialHud=$('combat-hint').textContent;
+ const expected=node();presentation.renderCombatHint(expected,game,{cameraYaw:scope.view.yaw,project:position=>scope.view.project(position.x,position.y,position.z),viewportWidth:scope.innerWidth});const initialHud=$('combat-hint').textContent;
  for(let f=0;f<20;f++){game.tick(1/60);handlers.handleEvents();scope.warningTimer=Math.max(0,scope.warningTimer-1/60);handlers.updateHud();}
- results.push({id:'hud-priority',initialHud,expectedPrimary:primary.text,matchesContact:initialHud.includes(primary.text),hp:game.player.hp});
+ results.push({id:'hud-priority',initialHud,expectedPrimary:expected.textContent,matchesContact:initialHud===expected.textContent,hp:game.player.hp});
  return results;
 };
 export function combatOutcomes(){return compare(path=>path==='src/core.js'?core:combat,readFileSync(new URL('../src/main.js',import.meta.url),'utf8'));}
