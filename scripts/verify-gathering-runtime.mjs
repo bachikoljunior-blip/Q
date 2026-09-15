@@ -45,10 +45,28 @@ const mutations = [
     after: "if(gatheringAction(game,id,c.id)){save();if(false)showGathering(id);}",
   },
   {
-    id: 'completed-history-duplicated',
-    expected: /middle consultation must expose exactly one completed history line/,
+    id: 'completed-history-trailing-duplicated',
+    expected: /completed consultation history must have exact line count/,
     before: "presentation.history.map(l=>'<div><strong>'+l.speaker+'</strong><p>'+l.text+'</p></div>').join('')",
-    after: "presentation.history.flatMap(l=>[l,l]).map(l=>'<div><strong>'+l.speaker+'</strong><p>'+l.text+'</p></div>').join('')",
+    after: "(s.phase==='done'?[...presentation.history,presentation.history.at(-1)]:presentation.history).map(l=>'<div><strong>'+l.speaker+'</strong><p>'+l.text+'</p></div>').join('')",
+  },
+  {
+    id: 'multi-line-history-reversed',
+    expected: /advanced consultation history order must match exact authored sequence/,
+    before: "presentation.history.map(l=>'<div><strong>'+l.speaker+'</strong><p>'+l.text+'</p></div>').join('')",
+    after: "[...presentation.history].reverse().map(l=>'<div><strong>'+l.speaker+'</strong><p>'+l.text+'</p></div>').join('')",
+  },
+  {
+    id: 'second-history-speaker-corrupted',
+    expected: /advanced consultation history speakers must match exactly/,
+    before: "presentation.history.map(l=>'<div><strong>'+l.speaker+'</strong><p>'+l.text+'</p></div>').join('')",
+    after: "presentation.history.map((l,i)=>'<div><strong>'+(i===1?'誤った話者':l.speaker)+'</strong><p>'+l.text+'</p></div>').join('')",
+  },
+  {
+    id: 'second-history-text-corrupted',
+    expected: /advanced consultation history full texts must match exactly/,
+    before: "presentation.history.map(l=>'<div><strong>'+l.speaker+'</strong><p>'+l.text+'</p></div>').join('')",
+    after: "presentation.history.map((l,i)=>'<div><strong>'+l.speaker+'</strong><p>'+(i===1?'誤った本文':l.text)+'</p></div>').join('')",
   },
 ];
 
