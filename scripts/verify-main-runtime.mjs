@@ -22,13 +22,13 @@ async function bounded(run) {
 const mutations = [
   {
     id: 'launch-ignores-interruption', scenario: 'deferred-scene-blur',
-    before: "if(interrupted){settingsPanel();audio.suspend();}",
-    after: "if(false){settingsPanel();audio.suspend();}",
+    before: "if(interrupted){settingsPanel();suspendSound();}",
+    after: "if(false){settingsPanel();suspendSound();}",
   },
   {
     id: 'active-import-ignores-interruption', scenario: 'active-save-import-and-invalid-file',
-    before: "saved=save();if(interrupted){settingsPanel();audio.suspend();}else closePanel();",
-    after: "saved=save();if(false){settingsPanel();audio.suspend();}else closePanel();",
+    before: "saved=save();if(interrupted){settingsPanel();suspendSound();}else closePanel();",
+    after: "saved=save();if(false){settingsPanel();suspendSound();}else closePanel();",
   },
   {
     id: 'main-does-not-clear-pointer-owner', scenario: 'launch-input-pause-resume',

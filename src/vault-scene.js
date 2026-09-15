@@ -1,7 +1,9 @@
 import * as T from 'three';
 import { VAULT_SLICES, vaultAnimationState, vaultByWarden } from './vault-slices.js';
+import { surfaceMaterial } from './environment-materials.js';
+import { chamferBox, createBrazier, createStele, block, part, batchProp } from './environment-models.js';
 
-const box = new T.BoxGeometry(1, 1, 1), cylinder = new T.CylinderGeometry(1, 1, 1, 10), crystal = new T.OctahedronGeometry(1, 0);
+const box = chamferBox(), cylinder = new T.CylinderGeometry(.96, 1, 1, 14, 4), crystal = new T.OctahedronGeometry(1, 0);
 const styles = Object.freeze({
   ember: Object.freeze({ stone: 0x633b32, accent: 0xe2763f, emissive: 0x8b321b, light: 0xff8448, warden: 0xa84b2d, wardenAccent: 0xff9b52 }),
   tide: Object.freeze({ stone: 0x315f67, accent: 0x72d2cb, emissive: 0x235d62, light: 0x76e4dd, warden: 0x3a8e96, wardenAccent: 0x8ef4e7 }),
@@ -31,18 +33,19 @@ export class VaultScene {
     this.groups = new Map(); this.altars = new Map();
     for (const slice of VAULT_SLICES) {
       const group = new T.Group(), y = groundAt(slice.center.x, slice.center.z); group.position.set(0, y, 0); group.userData.vaultId = slice.id; scene.add(group);
-      const style = styles[slice.theme], texture = textures[slice.theme], stone = standard(style.stone, texture ? { map: texture } : {}), dark = standard(0x252a2d), accent = standard(style.accent, { emissive: style.emissive, emissiveIntensity: 1.5 });
+      const style = styles[slice.theme], texture = textures[slice.theme], stone = surfaceMaterial('stone',style.stone, texture ? { map: texture } : {}), dark = surfaceMaterial('metal',0x414746), accent = surfaceMaterial('metal',style.accent, { unique:true,emissive: style.emissive, emissiveIntensity: 1.5 });
       const floor = mesh(terrainFloor(slice, groundAt, y), stone, group); floor.userData.assetRole = 'terrain-floor';
       for (const wall of slice.walls) {
         const pillar = mesh(cylinder, stone, group, [wall.x, groundAt(wall.x, wall.z) - y + wall.height / 2, wall.z], [wall.r, wall.height, wall.r]); pillar.userData.assetRole = 'closed-space-wall';
         mesh(crystal, accent, pillar, [0, .58, 0], [.22, .32, .22]);
+        const courses=new T.Group();pillar.add(courses);for(let row=0;row<5;row++){const ring=part(courses,new T.TorusGeometry(.965,.025,4,14),dark,[0,-.46+row*.22,0],[1,1,1],[Math.PI/2,0,0]);ring.scale.y=.65;}for(const side of[-1,1])block(courses,stone,[side*.55,0,.76],[.23,.86,.12]);batchProp(courses);
       }
       for (const prop of slice.props) {
         const holder = new T.Group(); holder.position.set(prop.x, groundAt(prop.x, prop.z) - y, prop.z); holder.userData.assetRole = `prop:${prop.kind}`; holder.userData.propId = prop.id; group.add(holder);
         if (prop.kind === 'brazier') {
-          mesh(cylinder, dark, holder, [0, .45, 0], [.42, .9, .42]); mesh(crystal, accent, holder, [0, 1.18, 0], [.34, .62, .34]);
+          const bowl=createBrazier(style.stone);bowl.scale.set(.8,.85,.8);holder.add(bowl);mesh(crystal, accent, holder, [0, 1.18, 0], [.27, .56, .27]);
         } else {
-          mesh(box, stone, holder, [0, 1.35, 0], [.92, 2.7, .48]); mesh(box, accent, holder, [0, 1.46, .255], [.38, 1.55, .035]);
+          const stele=createStele(style.stone,accent);stele.scale.set(.9,.96,.7);holder.add(stele);
         }
       }
       const altar = new T.Group(); altar.position.set(slice.focus.x, groundAt(slice.focus.x, slice.focus.z) - y + .02, slice.focus.z); altar.userData.assetRole = 'memory-altar'; altar.userData.nonSolid = 'flush-floor-marker'; group.add(altar);
@@ -65,6 +68,9 @@ export class VaultScene {
 
 export function decorateVaultWarden(model, enemy, textures = {}) {
   const slice = vaultByWarden(enemy.id); if (!slice) return model;
+  // Authored wardens already carry theme geometry bound to their animated bones.
+  // Keep a state handle for the scene, without an unbound second shield/crown.
+  if(model.pelvis){model.vaultAdornment={nativeDetailed:true,group:model.body,crown:model.g.getObjectByName('crown'),state:'guard'};return model;}
   const style = styles[slice.theme], texture = textures[slice.theme], color = style.warden, accent = style.wardenAccent;
   const group = new T.Group(), plate = standard(color, texture ? { map: texture, metalness: .3, roughness: .52 } : { metalness: .3, roughness: .52 }), glow = standard(accent, { emissive: color, emissiveIntensity: 1.8 });
   const shield = mesh(new T.CylinderGeometry(.72, .72, .13, 8), plate, group, [-.75, 1.2, .05], [1, 1, 1]); shield.rotation.z = Math.PI / 2;
@@ -81,6 +87,7 @@ const poses = Object.freeze({
 });
 export function animateVaultWarden(model, enemy, time) {
   const adornment = model.vaultAdornment; if (!adornment) return null;
+  if(adornment.nativeDetailed){adornment.state=vaultAnimationState(enemy);return adornment.state;}
   const state = vaultAnimationState(enemy), pose = poses[state]; adornment.state = state;
   adornment.shield.rotation.x = pose.shield + Math.sin(time * 3) * .04; adornment.crown.scale.setScalar(pose.crown); adornment.crown.rotation.z = time * (state === 'charge' ? 2.5 : .55); adornment.eye.scale.z = pose.eye;
   adornment.group.position.y = pose.bob + Math.sin(time * (state === 'prowl' ? 8 : 2)) * .025;

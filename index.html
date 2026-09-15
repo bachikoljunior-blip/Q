@@ -13,12 +13,26 @@
 <body>
   <canvas id="world" aria-label="灰の巡礼の3Dフィールド" tabindex="0"></canvas>
   <div id="vignette"></div><div id="hurt"></div>
-  <section id="title-screen">
-    <header class="title-top"><span>AN OPEN WORLD JOURNEY</span><span>第一章 ── 残り火の谷</span></header>
-    <div class="title-content"><span class="eyebrow">THE ASH PILGRIM</span><h1>Q</h1><h2>灰の巡礼</h2><div class="title-rule"></div><p>世界が火を失った日、<br>あなたの手だけが、まだ温かかった。</p>
-      <button id="start" class="primary">旅を始める</button><button id="continue" class="text-button hidden">旅をつづける</button><button id="import-title-save" class="text-button">セーブファイルを読み込む</button><input id="title-save-file" type="file" accept="application/json,.json" hidden><p id="save-status" class="hidden" role="status"></p>
+  <section id="title-screen" aria-labelledby="title-heading">
+    <div class="title-art" role="img" aria-label="北の門のタイトルイラスト。灰の谷を見下ろす巡礼者の手に残る火と、廃墟の上で燃え続ける王冠。"></div>
+    <div class="title-atmosphere" aria-hidden="true"><div class="title-mist title-mist-far"></div><div class="title-mist title-mist-near"></div><div class="title-emberlight"></div></div>
+    <canvas id="title-embers" aria-hidden="true"></canvas>
+    <div class="title-shade" aria-hidden="true"></div>
+    <header class="title-top"><span class="title-world">灰冠の地<span class="title-top-line" aria-hidden="true"></span>ASHEN REALM</span><span>第一章 <i aria-hidden="true">/</i> 残り火の谷</span></header>
+    <div class="title-content">
+      <div class="title-identity"><span class="eyebrow">THE ASH PILGRIM</span><div class="title-mark"><span class="title-orbit" aria-hidden="true"></span><h1 id="title-heading" aria-label="Q — 灰の巡礼">Q</h1><span class="title-spark" aria-hidden="true"></span></div><h2 aria-hidden="true">灰の巡礼</h2><div class="title-rule" aria-hidden="true"></div></div>
+      <p class="title-story">世界が火を失った日、<br>あなたの手だけが、まだ温かかった。</p>
+      <nav class="title-menu" aria-label="旅の開始">
+        <button id="continue" class="primary title-launch hidden">旅をつづける</button>
+        <button id="start" class="primary title-launch">旅を始める</button>
+        <button id="import-title-save" class="text-button">セーブファイルを読み込む</button>
+        <input id="title-save-file" type="file" accept="application/json,.json" hidden>
+      </nav>
+      <p id="save-status" class="hidden" role="status" aria-live="polite"></p>
+      <p id="title-loading" class="title-loading hidden" role="status" aria-live="polite">北の空へ、道をつないでいます<span aria-hidden="true">…</span></p>
     </div>
-    <footer class="title-bottom"><span>風の向こうへ。道は、あなたが決める。</span><button id="title-settings" class="text-button">操作・設定</button><span id="build-version" class="version">DEVELOPMENT BUILD</span></footer>
+    <div class="title-scene-note" aria-hidden="true"><span>王を失っても、</span><span>王冠は燃え続ける。</span></div>
+    <footer class="title-bottom"><span class="title-art-caption">北の門</span><div class="title-utilities"><button id="title-sound" class="text-button" aria-pressed="false">音を入れる</button><button id="title-settings" class="text-button">操作・設定</button></div><span id="build-version" class="version">DEVELOPMENT BUILD</span></footer>
   </section>
   <main id="hud" class="hidden">
     <div class="vitals"><div class="sigil">Q</div><div class="vital-bars"><div class="vital-label"><span id="rank">巡礼者 · Lv.1</span><span id="hp-text">120 / 120</span></div><div class="bar hp"><i id="hp"></i></div><div class="bar stamina"><i id="stamina"></i></div><div class="bar energy"><i id="energy"></i></div></div></div>

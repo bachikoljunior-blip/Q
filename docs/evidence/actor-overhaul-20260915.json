@@ -1,0 +1,270 @@
+{
+  "agent": "/root/ultra_q_presentation_overhaul/actor_overhaul",
+  "baseCommit": "0a1d905ff9000976d143baac630dbde60fe676e3",
+  "assetProduction": {
+    "startedAt": "2026-09-15T08:43:05.880379+00:00",
+    "definition": "First authored procedural model/texture recipe edit through frozen geometry/appearance source and provenance hash; excludes animation implementation and validation afterwards.",
+    "endedAt": "2026-09-15T08:52:12.349062+00:00",
+    "elapsedMs": 546468.6830000001
+  },
+  "limitations": [
+    "No WebGL pixels, real-device performance, or visual acceptance captured.",
+    "Imported CC0 GLBs remain available with original provenance; authored actor models are a separate source-based asset family.",
+    "Stylized authored mesh surfaces use rigid single-joint weights and low-cost material microstructure, not scanned photorealistic characters or facial performance.",
+    "Contacts are presentation-only two-bone sagittal IK on a bounded +/-0.18 local height neighborhood, not full-body physics, obstacle collision, or terrain-normal foot alignment.",
+    "Cadence is tied to distance only inside continuous locomotion; on speed/motion transitions the stride is not persistent world-space foot locking.",
+    "Live hit recoil inferred from observed HP decrease is visual-only; unseen past hits do not replay on load. Combat action phases still follow saved gameplay timers.",
+    "No production gameplay rules, movement, damage, save schema, or imported CC0 asset bytes changed."
+  ],
+  "rework": [
+    {
+      "phase": "assetProduction",
+      "changes": "Reduced initial per-joint draw submission (32–51 meshes humans / 38 wolf) by binding authored surfaces to bones and merging skin geometry per material."
+    },
+    {
+      "phase": "implementation",
+      "changes": "Corrected unreachable long-stride ankle targets by lowering pelvis; normalized phase to actor scale and wolf stance fraction; guards for non-player spear state; grounded corpse limbs/capes; separate archer recovery pose."
+    },
+    {
+      "phase": "focused tests",
+      "changes": "First formal focused run 9/11: ambiguous material-name lookup in test fixture and identical archer release/recovery. Next 10/11: fixed overstrict patient absolute pivot-height assertion to scale-normalized adult skeletal proportion. Final 11/11. Exploratory numerical probes also drove the contact/corpse corrections listed above."
+    }
+  ],
+  "implementation": {
+    "startedAt": "2026-09-15T08:52:12.349077+00:00",
+    "endedAt": "2026-09-15T09:00:05.155241+00:00",
+    "elapsedMs": 472806.16400000005,
+    "definition": "Motion controller, semantic timer mapping, focused tests, and local corrective passes after the geometry recipe was frozen; includes test/rework time, does not overlap assetProduction."
+  },
+  "validation": {
+    "startedAt": "2026-09-15T09:00:05.155256+00:00",
+    "endedAt": "2026-09-15T09:00:06.089740+00:00",
+    "monotonicElapsedMs": 934.498,
+    "exitCode": 0,
+    "command": "node --test tests/detailed-actors.test.mjs tests/characters.test.mjs",
+    "summary": "t counter world displacement and teleportation does not invent a high-speed stride (8.114142ms)\n✔ saved gameplay actions reconstruct the same articulated pose and impact phase without advancing gameplay (292.481452ms)\n✔ windup, release, recovery, hit, live death and settled reload are distinct finite poses for every enemy family (70.9709ms)\n✔ authored geometry recipe matches provenance and preserves separate third-party attribution (6.931907ms)\nℹ tests 11\nℹ suites 0\nℹ pass 11\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 866.292061\n",
+    "browserModuleBundle": {
+      "exitCode": 0,
+      "minifiedBytesIncludingThree": 362526,
+      "write": false,
+      "meaning": "Browser-target esbuild graph compilation only; no renderer, browser, or GPU execution."
+    }
+  },
+  "sourceHashes": {
+    "src/actor-models.js": "5ec2974ea886844f2622de6f06308247d4526d91c87493b431d93b5cd496af45",
+    "src/character-motion.js": "73583953e2cf0aa91cb8d1a192180c816ead4d5a7931fc9e07c9bad31d20a427",
+    "src/assets/characters/detailed-geometry.js": "47d3f9502e2a050d1f7a8336a13162b500d40363c486eb6be0d97c9a3e8625b7",
+    "src/assets/characters/detailed-provenance.json": "0b99d13e2c390d288edc10db06708f6f7c06b521e508a5e0ba63aeb6f39c22f2",
+    "tests/detailed-actors.test.mjs": "0c4e4b88cdda1ab4b9c9cb842fa01887648340213c385adde2dc87cce0ac8088"
+  },
+  "deadlineAssessment": {
+    "deadline": "2026-09-20",
+    "judgment": "NO-GO / evidence insufficient",
+    "reason": "This finite authored-art/motion slice has no WebGL screen comparison or real-device/perceptual acceptance; broader chapter, art, performance, native distribution and ten-reference acceptance remain outside its evidence. No baseline-equivalent prior asset-production interval exists, so no speedup or quality-parity claim is made."
+  },
+  "geometryInventory": [
+    {
+      "type": "player",
+      "bones": 21,
+      "totalMeshObjects": 20,
+      "totalTriangles": 7062,
+      "idleVisibleMeshDraws": 12,
+      "idleVisibleTriangles": 6540
+    },
+    {
+      "type": "npc",
+      "bones": 18,
+      "totalMeshObjects": 10,
+      "totalTriangles": 5944,
+      "idleVisibleMeshDraws": 10,
+      "idleVisibleTriangles": 5944
+    },
+    {
+      "type": "sena",
+      "bones": 18,
+      "totalMeshObjects": 10,
+      "totalTriangles": 6112,
+      "idleVisibleMeshDraws": 10,
+      "idleVisibleTriangles": 6112
+    },
+    {
+      "type": "smith",
+      "bones": 18,
+      "totalMeshObjects": 9,
+      "totalTriangles": 5568,
+      "idleVisibleMeshDraws": 9,
+      "idleVisibleTriangles": 5568
+    },
+    {
+      "type": "healer",
+      "bones": 18,
+      "totalMeshObjects": 9,
+      "totalTriangles": 6296,
+      "idleVisibleMeshDraws": 9,
+      "idleVisibleTriangles": 6296
+    },
+    {
+      "type": "patient",
+      "bones": 17,
+      "totalMeshObjects": 8,
+      "totalTriangles": 5528,
+      "idleVisibleMeshDraws": 8,
+      "idleVisibleTriangles": 5528
+    },
+    {
+      "type": "porter",
+      "bones": 18,
+      "totalMeshObjects": 8,
+      "totalTriangles": 5708,
+      "idleVisibleMeshDraws": 8,
+      "idleVisibleTriangles": 5708
+    },
+    {
+      "type": "scout",
+      "bones": 18,
+      "totalMeshObjects": 9,
+      "totalTriangles": 6056,
+      "idleVisibleMeshDraws": 9,
+      "idleVisibleTriangles": 6056
+    },
+    {
+      "type": "traveler",
+      "bones": 18,
+      "totalMeshObjects": 8,
+      "totalTriangles": 5836,
+      "idleVisibleMeshDraws": 8,
+      "idleVisibleTriangles": 5836
+    },
+    {
+      "type": "courier",
+      "bones": 18,
+      "totalMeshObjects": 8,
+      "totalTriangles": 5656,
+      "idleVisibleMeshDraws": 8,
+      "idleVisibleTriangles": 5656
+    },
+    {
+      "type": "soldier",
+      "bones": 18,
+      "totalMeshObjects": 11,
+      "totalTriangles": 6172,
+      "idleVisibleMeshDraws": 11,
+      "idleVisibleTriangles": 6172
+    },
+    {
+      "type": "ranger",
+      "bones": 21,
+      "totalMeshObjects": 10,
+      "totalTriangles": 6336,
+      "idleVisibleMeshDraws": 10,
+      "idleVisibleTriangles": 6336
+    },
+    {
+      "type": "wolf",
+      "bones": 23,
+      "totalMeshObjects": 6,
+      "totalTriangles": 6808,
+      "idleVisibleMeshDraws": 6,
+      "idleVisibleTriangles": 6808
+    },
+    {
+      "type": "boss",
+      "bones": 19,
+      "totalMeshObjects": 12,
+      "totalTriangles": 6668,
+      "idleVisibleMeshDraws": 12,
+      "idleVisibleTriangles": 6668
+    }
+  ],
+  "productionActorInventory": {
+    "player": 1,
+    "staticKeepers": [
+      "Mira",
+      "Sena"
+    ],
+    "residents": [
+      {
+        "id": "smith-ren",
+        "role": "smith"
+      },
+      {
+        "id": "healer-io",
+        "role": "healer"
+      },
+      {
+        "id": "patient-nagi",
+        "role": "patient"
+      },
+      {
+        "id": "porter-tou",
+        "role": "porter"
+      },
+      {
+        "id": "traveler-asa",
+        "role": "traveler"
+      },
+      {
+        "id": "scout-yuno",
+        "role": "scout"
+      },
+      {
+        "id": "courier-naru",
+        "role": "courier"
+      }
+    ],
+    "enemyFamilies": {
+      "wolf": 15,
+      "knight": 15,
+      "boss": 1,
+      "ranger": 3
+    },
+    "wardens": [
+      {
+        "id": "ember-vault-warden",
+        "vaultId": "ember-vault"
+      },
+      {
+        "id": "tide-vault-warden",
+        "vaultId": "tide-vault"
+      },
+      {
+        "id": "gale-vault-warden",
+        "vaultId": "gale-vault"
+      },
+      {
+        "id": "moss-vault-warden",
+        "vaultId": "moss-vault"
+      }
+    ],
+    "stateCoverage": {
+      "humanoid": [
+        "idle",
+        "walk",
+        "run",
+        "attack sword/spear/greatsword",
+        "windup",
+        "strike",
+        "recover",
+        "parry",
+        "drink",
+        "dodge",
+        "airborne",
+        "hit",
+        "sealed",
+        "live death",
+        "settled death"
+      ],
+      "wolf": [
+        "idle",
+        "walk",
+        "run",
+        "windup",
+        "strike",
+        "recover",
+        "hit",
+        "live death",
+        "settled death"
+      ]
+    }
+  }
+}

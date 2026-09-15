@@ -1,5 +1,13 @@
 # 人間の準備に依存しない検証工程
 
+## 2026-09-15のpresentation境界
+
+`tests/presentation-main.test.mjs` は本番mainへgesture音開始・準備中再クリック取消・遅延返答・start/pause/returnを接続して検査する。titleを可視化してからcontrollerをactiveにする順序をfixture契約で検査し、数値の縦横viewportは実layout確認と呼ばない。actor/environment試験は実Three geometry、bone、ground-height呼出、tree近遠partitionとbounds、保存済み死亡/番人themeを検査するがWebGL shaderはcompileしない。
+
+vault移動音はmainの旧固定周期cueからSoundscapeの距離/接地/表面選択へ移った。vault runtime fixtureは本番mainが移動stateをaudio.updateへ渡すこと、audio固有試験は距離とstone cueを検査する。既存vault unlock/damage/save、ambient retry/dedupe/ABAの保証を維持する。48 kHz decoder模擬、3 stem常駐、voice上限、非同期取消、mute/hidden/blur/pagehide/resumeを検査する。数値PCM解析は音の実聴ではない。
+
+正式preview statusはmailbox不在で終了し、別server・別browser・CI描画へ迂回していない。前後gameplay screenshot、物理touch、FPS、音の聴取結果は存在しない。原画の匿名レビューと本番codeの独立レビューをそれぞれの範囲で記録する。
+
 2026-09-15の指示「人間は介入しません」を適用する。人間へ端末、アカウント、スクリーンショット、評価者の用意を求めず、許可された検証と独立制作を進める。ゲームの完成基準と期限を変えず、取得できない実画面・実機・人間の評価を未確認のまま残す。
 
 ## 実行するもの

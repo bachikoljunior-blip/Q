@@ -2,6 +2,8 @@ import * as T from 'three';
 import { GATHERINGS } from './gathering-content.js';
 import { actorGatheringCue } from './gathering-presentation.js';
 import { gatheringAvailable } from './gatherings.js';
+import { surfaceMaterial } from './environment-materials.js';
+import { createCrate, createHerb, createLantern, beam } from './environment-models.js';
 
 export class GatheringScene{
   constructor(scene,groundAt){
@@ -12,12 +14,12 @@ export class GatheringScene{
       const group=new T.Group(),mark=new T.Mesh(diamond,this.cueMaterial),base=new T.Mesh(ring,this.cueMaterial);
       mark.position.y=2.65;base.rotation.x=-Math.PI/2;base.position.y=.09;group.add(mark,base);scene.add(group);group.visible=false;this.markers.set(a.id,{group,mark,base});
     }
-    const wood=new T.MeshStandardMaterial({color:0x766450,roughness:.9}),leaf=new T.MeshStandardMaterial({color:0x86ac86}),gold=new T.MeshStandardMaterial({color:0xe1bc79,emissive:0xae642a,emissiveIntensity:.5});
+    const wood=surfaceMaterial('wood',0x766450);
     for(const d of GATHERINGS)for(const choice of d.choices){
       const g=new T.Group();g.position.set(d.x,groundAt(d.x,d.z+3),d.z+3);scene.add(g);this.props.set(d.id+'/'+choice.id,g);
-      const shelf=new T.Mesh(new T.BoxGeometry(1.3,.6,.6),wood);shelf.position.y=.3;shelf.castShadow=true;g.add(shelf);
-      if(choice.prop==='herbs')for(const x of [-.4,0,.4]){const herb=new T.Mesh(new T.ConeGeometry(.15,.65,6),leaf);herb.position.set(x,.9,0);g.add(herb);}
-      else {const pole=new T.Mesh(new T.CylinderGeometry(.06,.06,1.6,6),wood);pole.position.y=1.4;g.add(pole);const lamp=new T.Mesh(new T.OctahedronGeometry(.25),gold);lamp.position.y=2.2;g.add(lamp);}
+      g.add(createCrate({width:1.3,height:.6,depth:.6}));
+      if(choice.prop==='herbs')for(const x of [-.4,0,.4]){const herb=createHerb({pot:true});herb.scale.setScalar(.8);herb.position.set(x,.63,0);g.add(herb);}
+      else {beam(g,wood,[0,.6,0],[0,2.3,0],.05);beam(g,wood,[0,2.28,0],[.45,2.28,0],.035);const lamp=createLantern();lamp.position.set(.4,1.62,0);g.add(lamp);}
     }
   }
   update(game){

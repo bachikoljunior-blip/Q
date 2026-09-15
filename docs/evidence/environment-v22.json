@@ -1,0 +1,372 @@
+{
+  "schema": 1,
+  "base": "0a1d905ff9000976d143baac630dbde60fe676e3",
+  "actorDependency": "76044d23f7f7ef5d989b75ce27a156bd14f380eb",
+  "owner": "/root/ultra_q_presentation_overhaul/environment_overhaul",
+  "assetProduction": {
+    "started": "2026-09-15T08:44:05.476Z",
+    "firstImportReady": "2026-09-15T08:50:26.708Z",
+    "wallMs": 381232,
+    "measurement": "Host Date.now plus filesystem mtime for the final initial recipe write. 381232 ms covers only initial original packed material fields and geometry recipes through first import-ready checkpoint. It excludes later asset modifications and must not be reported as complete T_asset.",
+    "scope": "Initial material and geometry recipe authoring only; not total asset production",
+    "completeAssetProductionWallMs": null
+  },
+  "materialAssets": [
+    {
+      "id": "earth",
+      "kind": "runtime original mathematical DataTexture; packed linear RGB albedo and alpha roughness",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 65536,
+      "sha256": "cb6bd6f85900a01fd7904e8a6483c74a56d3d886aecec66f2d5e454e26bd76b9",
+      "provenance": "Project-original code-native mathematical material field; no photograph, model, external image, AI image generator or network download",
+      "license": "Original project source; no third-party asset license asserted"
+    },
+    {
+      "id": "stone",
+      "kind": "runtime original mathematical DataTexture; packed linear RGB albedo and alpha roughness",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 65536,
+      "sha256": "4775f6f1dc1b8ef0f1e6491d67d996fc9cec1a73a9bc2c2abda79d49fae43b3f",
+      "provenance": "Project-original code-native mathematical material field; no photograph, model, external image, AI image generator or network download",
+      "license": "Original project source; no third-party asset license asserted"
+    },
+    {
+      "id": "wood",
+      "kind": "runtime original mathematical DataTexture; packed linear RGB albedo and alpha roughness",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 65536,
+      "sha256": "26cd2ed8ff7d6b5e6d12a825f62f09fb5a81938c4d148b3bf2da783bb7fd729c",
+      "provenance": "Project-original code-native mathematical material field; no photograph, model, external image, AI image generator or network download",
+      "license": "Original project source; no third-party asset license asserted"
+    },
+    {
+      "id": "bark",
+      "kind": "runtime original mathematical DataTexture; packed linear RGB albedo and alpha roughness",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 65536,
+      "sha256": "516337a3cbdf347c4d4773306d3046b778d73749411f141d0ff879054255558d",
+      "provenance": "Project-original code-native mathematical material field; no photograph, model, external image, AI image generator or network download",
+      "license": "Original project source; no third-party asset license asserted"
+    },
+    {
+      "id": "leaf",
+      "kind": "runtime original mathematical DataTexture; packed linear RGB albedo and alpha roughness",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 65536,
+      "sha256": "d2a96f09bf22562603e5faec0ab427c7b57eba89deff4d96700fca4574e0c192",
+      "provenance": "Project-original code-native mathematical material field; no photograph, model, external image, AI image generator or network download",
+      "license": "Original project source; no third-party asset license asserted"
+    },
+    {
+      "id": "cloth",
+      "kind": "runtime original mathematical DataTexture; packed linear RGB albedo and alpha roughness",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 65536,
+      "sha256": "407e15bc35c797101c7a27b361798c9199c63ce39dafc0bde6f4fea64c0eefda",
+      "provenance": "Project-original code-native mathematical material field; no photograph, model, external image, AI image generator or network download",
+      "license": "Original project source; no third-party asset license asserted"
+    },
+    {
+      "id": "metal",
+      "kind": "runtime original mathematical DataTexture; packed linear RGB albedo and alpha roughness",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 65536,
+      "sha256": "d227bda5ff0c28e9a00c0e669f34abce22d101ec9cedafd44bc24c3577dff187",
+      "provenance": "Project-original code-native mathematical material field; no photograph, model, external image, AI image generator or network download",
+      "license": "Original project source; no third-party asset license asserted"
+    },
+    {
+      "id": "water",
+      "kind": "runtime original mathematical DataTexture; packed linear RGB albedo and alpha roughness",
+      "dimensions": [
+        128,
+        128
+      ],
+      "bytes": 65536,
+      "sha256": "2370a9dde34f4fce4c18c7b0acfa4a001bac477224e4fad6c1f40c4d8ed60a51",
+      "provenance": "Project-original code-native mathematical material field; no photograph, model, external image, AI image generator or network download",
+      "license": "Original project source; no third-party asset license asserted"
+    }
+  ],
+  "limits": [
+    "Structural and shader-source checks do not compile GLSL or produce WebGL pixels.",
+    "No browser, GPU, physical device, frame time, touch, listening, photorealism or external quality comparison was validated by this work.",
+    "All-instance triangle bounds include invisible actors and hidden equipment and ignore renderer frustum/distance culling.",
+    "Near/far trees update after at least 12 metres of travel; no transition fade. High/medium radii are 80/52 metres; low uses only distant geometry.",
+    "No collision, terrain-height function, navigation, progression, save schema or tree/grass random stream changes.",
+    "Fire and memory energy retain stylized emissive geometry. No real fluid simulation, screen-space reflection/refraction, volumetric ray marching, imported photogrammetry or photorealistic asset quality is asserted.",
+    "Runtime material base payload is 524288 bytes for eight shared 128x128 RGBA fields; full mip chains would add approximately one third. No compressed texture download bytes were added."
+  ],
+  "coverage": [
+    "earth/path/salt ground and wet riverbanks",
+    "layered crag mountains and irregular rocks",
+    "root-flared branched trunks, whorled conifers, clustered broadleaf crowns, articulated grass blades, foliage/cloth wind",
+    "flowing rippled water, plank bridges and diagonal braces",
+    "plaster/stone/timber village houses with gabled overlapping slate roofs and leaded windows",
+    "segmented stone arches, ruins, beacon bowls and directional/sky atmospheric lighting",
+    "clinker boat, pitched cloth tents, spoked-wheel cart, chests, plank-and-band cargo crates, compound-leaf herbs, caged lanterns",
+    "lathed bells/metal rims/clappers/bracing, engraved shrine, masonry forge and horned metal anvil",
+    "salt rock columns, stone gate/cistern/courses, job board, handle cargo, rope drum and braced winch",
+    "gathering crates/herb pots/lanterns",
+    "four vault terrain stone, coursed walls, pedestal braziers, engraved steles and flush memory altar",
+    "all production actor constructors wired to actor-owned detailed model; render-only death tail and bone-bound themed warden presentation"
+  ],
+  "graph": {
+    "measured": "2026-09-15T09:04:51.989Z",
+    "method": "Real production SceneView graph and Three geometry arrays in Node. Renderer boundary only updates native matrices; no WebGL/GPU.",
+    "nodes": 2878,
+    "meshes": 1576,
+    "uniqueGeometries": 723,
+    "uniqueMaterials": 215,
+    "textureObjects": 12,
+    "knownCPUPixelBytes": 589824,
+    "uniqueGeometryTriangles": 361302,
+    "instancedMeshes": 10,
+    "lights": 12,
+    "shadowCastingLights": 1,
+    "shadowCastingMeshes": 1260,
+    "samples": [
+      {
+        "quality": "high",
+        "player": [
+          0,
+          80
+        ],
+        "allInstancesTriangleUpperBound": 808786,
+        "nearCounts": [
+          40,
+          68,
+          6
+        ]
+      },
+      {
+        "quality": "high",
+        "player": [
+          -105,
+          0
+        ],
+        "allInstancesTriangleUpperBound": 810378,
+        "nearCounts": [
+          70,
+          4,
+          68
+        ]
+      },
+      {
+        "quality": "high",
+        "player": [
+          -300,
+          -130
+        ],
+        "allInstancesTriangleUpperBound": 804888,
+        "nearCounts": [
+          20,
+          34,
+          3
+        ]
+      },
+      {
+        "quality": "high",
+        "player": [
+          170,
+          -200
+        ],
+        "allInstancesTriangleUpperBound": 814998,
+        "nearCounts": [
+          68,
+          136,
+          0
+        ]
+      },
+      {
+        "quality": "medium",
+        "player": [
+          0,
+          80
+        ],
+        "allInstancesTriangleUpperBound": 707442,
+        "nearCounts": [
+          20,
+          40,
+          0
+        ]
+      },
+      {
+        "quality": "medium",
+        "player": [
+          -105,
+          0
+        ],
+        "allInstancesTriangleUpperBound": 707678,
+        "nearCounts": [
+          33,
+          0,
+          33
+        ]
+      },
+      {
+        "quality": "medium",
+        "player": [
+          -300,
+          -130
+        ],
+        "allInstancesTriangleUpperBound": 704352,
+        "nearCounts": [
+          5,
+          10,
+          0
+        ]
+      },
+      {
+        "quality": "medium",
+        "player": [
+          170,
+          -200
+        ],
+        "allInstancesTriangleUpperBound": 709296,
+        "nearCounts": [
+          29,
+          58,
+          0
+        ]
+      },
+      {
+        "quality": "low",
+        "player": [
+          0,
+          80
+        ],
+        "allInstancesTriangleUpperBound": 680822,
+        "nearCounts": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "quality": "low",
+        "player": [
+          -105,
+          0
+        ],
+        "allInstancesTriangleUpperBound": 680822,
+        "nearCounts": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "quality": "low",
+        "player": [
+          -300,
+          -130
+        ],
+        "allInstancesTriangleUpperBound": 680822,
+        "nearCounts": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "quality": "low",
+        "player": [
+          170,
+          -200
+        ],
+        "allInstancesTriangleUpperBound": 680822,
+        "nearCounts": [
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "sourceAssets": [
+    {
+      "path": "src/environment-materials.js",
+      "bytes": 6330,
+      "sha256": "b0979d61d9cc93a91f6d4c764c0b478cea7b0a5f2df1bd997cf44b7ec7bbe43a",
+      "provenance": "Project-original code-native deterministic material/geometry recipes; no third-party source copied"
+    },
+    {
+      "path": "src/environment-models.js",
+      "bytes": 15213,
+      "sha256": "0b1fcd7aa5738c9cb254a12c51fce1358dcc6c88169b3471b8d7a5ffae84e8fe",
+      "provenance": "Project-original code-native deterministic material/geometry recipes; no third-party source copied"
+    }
+  ],
+  "rework": [
+    "First focused expedition test found replacing CylinderGeometry removed the shared radiusBottom metadata; changed to a sculpted cylinder that preserves exact original radius/height contract.",
+    "Initial all-instance bound 1,636,958 led to lower segment geometry, shared prop templates, and disjoint near/far instanced LOD; no device-performance improvement claimed.",
+    "New test fixture initially compared unused instance capacity and used wrong death enum; fixed expected active ranges and existing death state without changing production rules."
+  ],
+  "validation": {
+    "environmentContractTests": "4/4 passed",
+    "staticGraphAndExpeditionTests": "10/10 passed",
+    "fullUnitSuite": "185/185 passed in 20,918.846 ms; Node production graph/logic contracts, no rendered pixel proof",
+    "shallowCheckoutPortableFocusedTests": "4/4 passed after replacing git-history dependency with captured base hashes"
+  },
+  "seededPlacementBaseline": {
+    "sourceCommit": "0a1d905ff9000976d143baac630dbde60fe676e3",
+    "method": "Captured from the real base SceneView constructor with original grass/tree/particle RNG stream, before runtime animation; active tree ranges only.",
+    "trees": [
+      {
+        "count": 805,
+        "matrices": "0d513ef1b4451f8d91f455262156316a12713abddd0cc00fe40aac4c89406390",
+        "colors": null
+      },
+      {
+        "count": 1154,
+        "matrices": "ce866a2e8fc6789ef85893c5aa00138635f844be86aea712d47c7d7cb0bcaa09",
+        "colors": null
+      },
+      {
+        "count": 228,
+        "matrices": "e01c423b57bf445b49f0c71f3fe987b0559a51d62cfe0cd74e72397aaa3d8dad",
+        "colors": "36ef7707dad9cd389903def59c7cef242799d046945d6dbe7ce869ee1193b964"
+      }
+    ],
+    "grassMatrices": "2ac1915bb1ac7b8f572746f38587963432d6d970d0afe30e0cdf8caf433157e8",
+    "grassColors": "b1baea9cd6c1a2d1a1622f75883008d5df84a0e7e8cf02007e7ea4aac948e39e",
+    "particles": "dfdcbae753e8cc1aeff225f32742a75da3b6cfec9754a3c12cacdba70f1820c2"
+  },
+  "implementation": {
+    "started": "2026-09-15T08:50:26.708Z",
+    "testsCompleted": "2026-09-15T09:06:09.336Z",
+    "description": "Scene integration, per-family prop integration, actor wiring, graph/LOD rework, focused and complete unit suite. Build/package/deployment belong to the integration owner."
+  },
+  "assetRework": {
+    "separatelyTimed": false,
+    "wallMs": null,
+    "work": [
+      "Reduced branch and foliage geometry segment counts and lobes",
+      "Added distant tree geometry and shared prop geometry templates",
+      "Added derivative surface relief shader"
+    ],
+    "measurement": "These later asset edits were interleaved with scene integration, LOD implementation and validation. Their durations were not separately captured. The implementation interval therefore contains mixed asset rework and code/test work; no total asset-time or exclusive implementation-time claim is supported."
+  }
+}

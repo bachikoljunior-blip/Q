@@ -78,11 +78,11 @@ test('actual scenery graph stays identical through actor, weather, effects, qual
   assert.equal(baseCounts.multiplyMatrices, candidateCounts.multiplyMatrices);
   for (const slice of VAULT_SLICES) {
     const enemy = candidate.game.enemies.find(item => item.id === slice.warden.id), model = candidate.enemyModels.get(slice.warden.id);
-    assert.equal(model.type, 'soldier'); assert(model.vaultAdornment, `${slice.id}: parsed soldier model was not decorated`);
+    assert.equal(model.type, 'soldier'); assert(model.vaultAdornment?.nativeDetailed, `${slice.id}: authored warden must use bone-bound theme geometry`);assert.equal(model.g.userData.theme,slice.theme);assert(model.vaultAdornment.crown);
     const poses = new Set();
     for (const state of ['idle', 'chase', 'windup', 'strike']) {
       Object.assign(candidate.game.player, { x: slice.center.x, z: slice.center.z }); Object.assign(enemy, { state, dead: false, x: slice.warden.x, z: slice.warden.z }); candidate.update(1 / 60, true);
-      const adornment = model.vaultAdornment; poses.add([adornment.state, adornment.shield.rotation.x, adornment.crown.scale.x, adornment.eye.scale.z, adornment.group.position.y].join(':'));
+      const adornment = model.vaultAdornment;poses.add([adornment.state,model.chest.rotation.x,model.arms[1].rotation.x,model.elbows[1].rotation.x,model.pelvis.position.y].join(':'));
     }
     assert.equal(poses.size, 4, `${slice.id}: SceneView did not drive all four warden poses`);
   }

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "asset": "north-gate-v22.png",
+  "type": "original-generated-title-illustration",
+  "production": {
+    "mode": "built-in image_gen.imagegen",
+    "generationStartedAt": "2026-09-15T08:41:56.589Z",
+    "generationCompletedAt": "2026-09-15T08:42:27.662Z",
+    "generationWallMs": 31073,
+    "importCompletedAt": "2026-09-15T08:43:45.702Z",
+    "clock": "Date.now UTC wall clock; no monotonic-clock guarantee",
+    "assetProductionWallMs": 153521,
+    "assetProductionCompletedAt": "2026-09-15T08:44:30.110397+00:00",
+    "note": "Asset span includes generation, original import/provenance, optimization and derivative hash; implementation began during this span, so intervals overlap and must not be summed."
+  },
+  "prompt": "Use case: illustration-story.\nAsset type: original title-screen illustration for the Japanese fantasy action RPG \"Q — 灰の巡礼\"; intended as title artwork, not a screenshot.\nPrimary request: A moving, richly detailed cinematic matte painting of a lone ash pilgrim approaching a ruined northern gate, with a burning crown above the gate and a mist-covered valley stretching into the distance.\nScene/backdrop: Ancient black-gray stone northern gate standing on a crag above an ashen valley; chipped masonry, broken upper arches, immense but believable scale. A small ancient crown floats or is suspended above the gate's central breach, smoldering with orange embers. Cold gray-teal dawn, long vapor ribbons in the valley, barely visible ruin silhouettes. Wind carries ash; the world has lost most of its fire.\nSubject: ONE lone pilgrim seen from behind in the lower center-right, a worn dark desaturated teal hooded travel cloak, layered practical cloth/leather armor, simple straight steel sword held downward in right hand. Human proportions, readable silhouette, cloak lifted slightly by wind. One tiny warm ember glowing in the open left hand. No visible face. The pilgrim should occupy around 23% of image height, head around x 62%, y 59%; crown around x 69%, y 25%; all key story elements remain in central-right region.\nStyle/medium: Original high-end dark fantasy cinematic illustration, grounded materials, painterly cinematic realism, precise atmospheric perspective, filmic tonal range. Restrained painterly texture visible in cloth, hammered metal, wet chipped slate and ash. Striking composition and sense of journey.\nComposition/framing: Widescreen 16:9, 2304x1296 if supported. Deep foreground-to-background layers; the whole left 42% is quiet DARK negative space with soft slate mist and very subtle rock forms for bright title typography. The gate, crown, pilgrim and path form a strong triangular composition in the RIGHT 58%. Let the sword/feet terminate before bottom 12% so mobile title crop remains usable. Right side brighter than left, ash silhouettes at bottom. Avoid bright or detailed objects in the left 42%.\nLighting/mood: Cool dawn sky rim light on the cloak and broken gate; warm crown ember reflections on near stone, faint ember handlight. Awe, melancholy and anticipation. Rich blacks without crushed detail. Mist enhances scale; not uniformly foggy.\nConstraints: No typography, no letters, no logo, no border, no UI, no interface elements, no watermarks. No second character, no dragon, no giant fiery portal, no maps, no stock fantasy symbols, no copied franchise architecture, no modern items. One crown only, one straight sword only. Preserve dark calm space for title UI. Return the generated original asset with the available output file path.",
+  "references": [],
+  "authorship": "Generated specifically for Q; no third-party reference image or franchise-specific subject used. Legal authorship is not independently adjudicated.",
+  "limitations": [
+    "Title illustration, not gameplay pixels or an assertion that the playable world matches the illustration.",
+    "Generated PNG retained without raster editing.",
+    "Requested 2304×1296; tool returned 1672×941."
+  ],
+  "bytes": 2222845,
+  "sha256": "1a722a36a27431bb76e204717cef94146364971f417fab11aaf22ebaeb12e499",
+  "width": 1672,
+  "height": 941,
+  "derivative": {
+    "file": "north-gate-v22.webp",
+    "operation": "Lossy WebP format optimization; same 1672×941 pixel dimensions, no crop, compositing or art editing",
+    "encoder": "Pillow 12.3.0",
+    "quality": 85,
+    "method": 6,
+    "bytes": 162962,
+    "sha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a",
+    "completedAt": "2026-09-15T08:44:30.110397+00:00"
+  }
+}

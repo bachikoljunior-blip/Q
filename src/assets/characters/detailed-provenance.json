@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "assetFamily": "Q authored articulated actors",
+  "origin": "Original procedural geometry, costumes, surface microstructure and equipment authored for this Q implementation. No external models, photographs, scans or image-generation output incorporated in this family.",
+  "license": "Project-authored source under repository terms; not a claim of independently adjudicated authorship.",
+  "recipe": {
+    "file": "detailed-geometry.js",
+    "sha256": "47d3f9502e2a050d1f7a8336a13162b500d40363c486eb6be0d97c9a3e8625b7",
+    "bytes": 22165
+  },
+  "separateUnmodifiedAssets": "The adjacent pilgrim.glb, knight.glb, keeper.glb and provenance.json preserve Kay Lousberg CC0 attribution. They are not the source of the new procedural bodies.",
+  "families": [
+    "player",
+    "npc (Mira)",
+    "sena",
+    "smith",
+    "healer",
+    "patient",
+    "porter",
+    "scout",
+    "traveler",
+    "courier",
+    "soldier (knight)",
+    "ranger (archer)",
+    "wolf",
+    "boss"
+  ],
+  "wardenThemes": [
+    "ember",
+    "tide",
+    "gale",
+    "moss"
+  ],
+  "surfaceRecipes": {
+    "kind": "64x64 RGBA deterministic runtime DataTexture",
+    "materials": [
+      "cloth weave",
+      "leather grain",
+      "worn metal",
+      "skin microstructure"
+    ],
+    "externalBytes": 0
+  },
+  "geometryMethod": "Adult human and canine surfaces bound to articulated bones; skin draws merged per material; independently visible weapons and deforming cloak stay separate."
+}

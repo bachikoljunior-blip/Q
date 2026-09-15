@@ -64,9 +64,13 @@ export async function runVaultRuntimeScenario(compiled, slice, viewport) {
   await runtime.document.emit('keyup', { code: 'KeyW' }); assert(distance(game.player, slice.focus) < 3.2, `${slice.id}: production movement did not reach the memory`);
   await key(runtime, 'KeyE', 1); assert.equal(game.vaults[slice.id].claimed, true); assert.equal(runtime.element('panel-title').textContent, slice.name); assert.equal(runtime.element('panel-body').querySelector('.dialogue-text').textContent, slice.result); milestones.push(snapshot('result-visible', game));
   const claimedRaw = runtime.values.get(SAVE_KEY); assert(claimedRaw); assert.notEqual(sha256(claimedRaw), sha256(initialRaw)); const claimed = JSON.parse(claimedRaw); assert.equal(claimed.vaults[slice.id].claimed, true); assert(claimed.defeated.includes(slice.warden.id)); milestones.push({ id: 'saved', saveSha256: sha256(claimedRaw), saveBytes: Buffer.byteLength(claimedRaw) });
-  const types = new Set(runtime.soundCalls.map(call => call.type)); for (const type of ['vaultEnter', 'vaultAlert', 'vaultStep', 'enemySwing', 'hit', 'vaultSeal', 'vaultClaim']) assert(types.has(type), `${slice.id}: missing production audio event ${type}`);
+  const types = new Set(runtime.soundCalls.map(call => call.type)); for (const type of ['vaultEnter', 'vaultAlert', 'enemySwing', 'hit', 'vaultSeal', 'vaultClaim']) assert(types.has(type), `${slice.id}: missing production audio event ${type}`);
+  // Footstep cadence now belongs to the real Soundscape, whose own tests cover
+  // surface selection and distance thresholds. This boundary verifies that the
+  // actual entry supplies moving, grounded positions inside this vault.
+  assert(runtime.soundUpdates.some(call=>call.moving&&call.grounded&&!call.paused&&Math.hypot(call.x-slice.center.x,call.z-slice.center.z)<8), `${slice.id}: no locomotion input reached Soundscape`);
   assert(runtime.soundCalls.some(call => call.type === 'ambient' && call.theme === slice.theme), `${slice.id}: missing active ambient theme`);
-  const cues = new Set(runtime.soundCalls.map(call => vaultCueForEvent(call.type, call)).filter(Boolean)); assert.deepEqual(cues, new Set(['step', 'alert', 'swing', 'impact', 'claim', 'seal']));
+  const cues = new Set(runtime.soundCalls.map(call => vaultCueForEvent(call.type, call)).filter(Boolean)); assert.deepEqual(cues, new Set(['alert', 'swing', 'impact', 'claim', 'seal']));
   await runtime.click('vault-result-close'); await runtime.click('pause-button'); await runtime.click('to-title'); assert.equal(runtime.state.playing, false); assert.equal(runtime.audioRunning, false); assert.equal(runtime.soundCalls.at(-1).type, 'ambient'); assert.equal(runtime.soundCalls.at(-1).theme, null);
   const fresh = createMainRuntime(compiled, { saveRaw: claimedRaw, viewport }); assert.equal(fresh.values.get(SAVE_KEY), claimedRaw, 'fresh VM must receive unchanged SaveStore bytes');
   const pending = fresh.click('continue'); fresh.scene.resolve(); await pending; await fresh.flush(); const restored = fresh.view.game;

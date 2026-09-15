@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "date": "2026-09-15",
+  "baseCommit": "0a1d905ff9000976d143baac630dbde60fe676e3",
+  "version": "0.21.0",
+  "userInstruction": "全てのモデルとアニメーションとリアリスティックに凝って。タイトル画面がワクワクしない。サウンドも豪華にして",
+  "deadlineAssessment": {
+    "deadline": "2026-09-20",
+    "afterInspection": "NO-GO / evidence insufficient",
+    "beforeIntegration": "NO-GO / evidence insufficient",
+    "fullyVerifiedAcceptanceAreas": 0,
+    "acceptanceAreas": 7,
+    "formalComparisons": 0,
+    "requiredComparisons": 10,
+    "reason": "No complete-project production velocity or obtainable device/perceptual acceptance evidence supports the fixed target. Local authored-asset timings do not estimate all remaining chapters, regions, acting, native distribution, external comparison or rework."
+  },
+  "delegation": {
+    "requestArguments": {
+      "reasoning_effort": "ultra",
+      "fork_turns": "none",
+      "model": "omitted"
+    },
+    "receiptScope": "Actual requested arguments and accepted canonical task names; no separate UUID or effective backend strength was returned. Parent receipt relayed by parent; child receipts observed by integration owner.",
+    "tasks": [
+      {
+        "task": "/root/ultra_q_presentation_overhaul",
+        "role": "inventory, direction, integration, relevant tests, exact GitHub publication and reporting; parent mechanically owns Site operations"
+      },
+      {
+        "task": "/root/ultra_q_presentation_overhaul/actor_overhaul",
+        "commit": "76044d23f7f7ef5d989b75ce27a156bd14f380eb",
+        "evidence": "docs/evidence/actor-overhaul-20260915.json"
+      },
+      {
+        "task": "/root/ultra_q_presentation_overhaul/title_overhaul",
+        "commit": "db8ddc181419e296438889f563e74954aa800cb3",
+        "evidence": "docs/TITLE_CINEMATIC_V22.md"
+      },
+      {
+        "task": "/root/ultra_q_presentation_overhaul/audio_overhaul",
+        "commit": "4989171e932f966dc9d7a102168d35e7f2ad528b",
+        "evidence": "docs/evidence/audio-production-20260915.json"
+      },
+      {
+        "task": "/root/ultra_q_presentation_overhaul/environment_overhaul",
+        "commits": [
+          "bbc8c9f95fe4ee3a1b0a3c7c6ff05109b113b69c",
+          "6ba752b652e28d4b60acf5ba513ee98b4dd51cde"
+        ],
+        "evidence": "docs/evidence/environment-v22.json"
+      },
+      {
+        "task": "/root/ultra_q_presentation_overhaul/independent_review",
+        "role": "Anonymous original title-image critique followed separately by code integration review",
+        "result": "Portrait crop and pending audio/return-to-title activation issues corrected. Final technical GO; no rendered-gameplay or listening verdict."
+      }
+    ]
+  },
+  "validation": {
+    "boundary": "Real game, production entrypoint, real Three object geometry and audio scheduling contracts; DOM/renderer/AudioContext are explicit Node mocks. No WebGL, physical touch, device performance or human listening.",
+    "unit": {
+      "passed": 207,
+      "failed": 0,
+      "durationMs": 22862.100021
+    },
+    "main": {
+      "scenarios": 16,
+      "negativeControls": 3,
+      "detections": 6
+    },
+    "gatherings": {
+      "scenarios": 4,
+      "launches": 8,
+      "reloads": 8,
+      "negativeControls": 7,
+      "detections": 28
+    },
+    "vaults": {
+      "scenarios": 8,
+      "freshReloads": 8
+    },
+    "journeySeconds": 119,
+    "forgeSeconds": 103,
+    "session": {
+      "fixedSteps": 108000,
+      "reloads": 138,
+      "objectives": 81,
+      "deaths": 0
+    },
+    "otherGates": [
+      "crossings",
+      "expeditions",
+      "combat readability 9 cases",
+      "touch comparison 20+20 cases",
+      "archived GLB decode",
+      "new actor/material/tree partition/lifecycle contracts",
+      "vault asset regeneration 14/14",
+      "soundscape provenance 4 assets/24 cues",
+      "build 67 modules",
+      "exact source/dist/stage/standalone bytes"
+    ],
+    "sourceFingerprint": "sha256:dab97635b4b3fb05ef7874199c7946e2687dff9c61abe6e005ee9e72d0354d8c"
+  },
+  "delivery": {
+    "standaloneBytes": 4298574,
+    "standaloneSha256": "f35fa585710e8fc19efa01a312633386afb851c27ca0b921d7d3bab4598089a1",
+    "stagedFiles": 26,
+    "stagedBytes": 3410985,
+    "initialJsBytesBefore": 141158,
+    "initialJsBytesAfter": 161642,
+    "initialJsBudgetBefore": 150000,
+    "initialJsBudgetAfter": 165000,
+    "budgetAuthority": "Only scripts/verify-artifacts.mjs used the old 150000 engineering transfer guard; no AGENTS, completion or user fixed acceptance criterion specified it. Fixed quality/performance acceptance remains unmet and unchanged. 3D stays lazy; no modulepreload.",
+    "newBinaryRuntimeAssets": 5,
+    "newBinaryRuntimeBytes": 1662852,
+    "preservedVaultBinaryAssets": 14,
+    "preservedVaultBinaryBytes": 891845,
+    "archivedGlbRuntimeCount": 0,
+    "publication": "Pending normal PR, CI, merge and same owner-only Site update at this pre-publication checkpoint."
+  },
+  "limitations": [
+    "Official preview status failed: sites-previewd mailbox unavailable at /tmp/sites-previewd/requests. No alternate server/browser/CI route used.",
+    "Title is an original illustrated cinematic opening, not a captured or newly realtime-rendered title scene; real game world camera remains the existing camera after lazy scene load.",
+    "New actors are articulated authored low-poly recipes with single-joint skin weights and local ground-aware IK, not photogrammetry, facial acting, motion capture or physical full-body foot planting.",
+    "High-quality full-instance scene triangle upper bound at fixed sample points is 804888–814998 versus previous 365549; low is 680822. These are uncullled structural bounds including hidden equipment, not GPU frame counts. Device performance and shader compilation remain unverified.",
+    "Known texture base CPU pixels 589824 bytes plus mipmaps. Tree LOD switches without fades and may visibly pop.",
+    "Score is original synthetic/electronic music, not orchestral recordings. Retained new decoded samples 18587052 bytes; resampling and serial decoding limit cache churn but real device transient memory and subjective sound remain unmeasured.",
+    "No improvement percentage or strict asset-method adoption claim; environment later asset rework was not separately timed."
+  ]
+}

@@ -17,6 +17,8 @@ jobs:
       - run: npm ci
       - name: Verify deterministic asset provenance
         run: node scripts/generate-vault-assets.mjs --verify
+      - name: Verify original score and effect asset provenance
+        run: node scripts/verify-soundscape.mjs
       - name: Verify production entrypoint and fault sensitivity
         run: node scripts/verify-main-runtime.mjs
       - name: Preserve application-boundary evidence
