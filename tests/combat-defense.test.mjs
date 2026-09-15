@@ -1,12 +1,23 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {BRIDGES,Game,groundAt} from '../src/core.js';
-import {combatPresentation,forecastProjectileContact} from '../src/combat-presentation.js';
+import {combatPresentation,forecastProjectileContact,forecastProjectileContacts} from '../src/combat-presentation.js';
+import {indexObstacles} from '../src/spatial.js';
 
 function fixture(){
   const g=new Game();g.enemies.forEach(e=>e.dead=true);g.obstacles=[];
   Object.assign(g.player,{x:0,z:86,y:groundAt(0,86),angle:Math.PI});g.events=[];
   return g;
+}
+function sequentialForecast(game,arrow,horizon,metrics){
+  const simulated={...arrow};let elapsed=0;
+  while(elapsed+1e-9<horizon){
+    const step=Math.min(1/60,horizon-elapsed);if(simulated.life-step<=0)break;
+    const contact=game.projectileContact(simulated,step);metrics.exactFrames++;
+    if(contact.target)return {target:contact.target,timeToImpact:elapsed+contact.fraction*step};
+    simulated.x=contact.to.x;simulated.y=contact.to.y;simulated.z=contact.to.z;simulated.life-=step;elapsed+=step;
+  }
+  return null;
 }
 test('held attack cannot cancel an accepted parry before an imminent hit',()=>{
   const g=fixture(),e=g.enemies.find(e=>e.type==='knight');
@@ -29,6 +40,24 @@ test('a near-expiry arrow still warns when it will hit on its final live step',(
   assert.equal(combatPresentation(g).active,true);g.tick(1/60);assert.equal(g.player.hp,100);
   const expired=fixture();expired.projectiles=[{id:1,owner:'attacker',x:-.8,z:86,y:expired.player.y+1,vx:19,vy:0,vz:0,life:.01,damage:20}];
   assert.equal(combatPresentation(expired).active,false);expired.tick(1/60);assert.equal(expired.player.hp,120);
+});
+
+test('a 48-arrow batch preserves sequential contact results with shared static prediction',()=>{
+  const g=fixture(),p=g.player,requests=Array.from({length:48},(_,index)=>({arrow:{id:index+1,owner:'attacker',x:p.x+(index%3-1)*.15,y:p.y+1,z:p.z+5+index*.03,vx:0,vy:0,vz:-20,life:2,damage:20},horizon:1.8}));
+  const before=JSON.stringify(g.serialize()),sequentialMetrics={exactFrames:0},expected=requests.map(({arrow,horizon})=>sequentialForecast(g,arrow,horizon,sequentialMetrics)),batchMetrics={},actual=forecastProjectileContacts(g,requests,{metrics:batchMetrics});
+  assert.deepEqual(actual,expected);assert.equal(JSON.stringify(g.serialize()),before);assert.equal(sequentialMetrics.exactFrames,761);assert.equal(batchMetrics.exactFrames,48);assert.equal(batchMetrics.fallbackFrames,0);assert.equal(batchMetrics.sharedBodies,1);assert(batchMetrics.terrainSamples<sequentialMetrics.exactFrames*2);
+  g.obstacles=[{x:p.x,z:p.z+2.5,r:.4,height:6}];const coveredExpected=requests.map(({arrow,horizon})=>sequentialForecast(g,arrow,horizon,{exactFrames:0})),coveredMetrics={},coveredActual=forecastProjectileContacts(g,requests,{metrics:coveredMetrics});
+  assert.deepEqual(coveredActual,coveredExpected);assert(coveredActual.every(contact=>contact?.target==='wall'));assert.equal(coveredMetrics.sharedObstacles,1);assert.equal(coveredMetrics.fallbackFrames,0);
+});
+
+test('a tangent obstacle remains a conservative batch candidate',()=>{
+  const g=fixture(),p=g.player,arrow={id:81,owner:'hostile',x:0,y:p.y+1,z:87.5,vx:0,vy:0,vz:-1,life:1.9,damage:20};
+  g.obstacles=indexObstacles([{x:.48,z:87.08333343333334,r:.4,height:6}]);
+  const expected=sequentialForecast(g,arrow,1.8,{exactFrames:0}),metrics={},actual=forecastProjectileContacts(g,[{arrow,horizon:1.8}],{metrics})[0];
+  assert.deepEqual(actual,expected);assert.equal(actual?.target,'wall');assert(metrics.exactFrames>0);
+  g.projectiles=[{...arrow}];assert.equal(combatPresentation(g,{limit:Infinity}).active,false);
+  for(let frame=0;frame<120;frame++)g.tick(1/60);
+  assert.equal(g.player.hp,120);assert.equal(g.projectiles.length,0);assert(g.events.some(event=>event.type==='arrowBreak'));
 });
 
 

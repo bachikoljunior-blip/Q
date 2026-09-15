@@ -1,9 +1,13 @@
-import {angleDelta,distance} from './core.js';
-import {segmentCylinder} from './spatial.js';
+import {angleDelta,distance,groundAt,heightAt} from './core.js';
+import {queryObstacles,segmentCylinder} from './spatial.js';
 
 const labels={boss:'灰冠の番人',ranger:'弓兵',wolf:'灰を喰う獣',knight:'火を失った兵'};
 const round=value=>Math.round(value*1000)/1000;
 const REACTION_CLUSTER=.18;
+// A long broad-phase segment can round a mathematical tangent just outside a
+// cylinder even though one of the live 60 Hz segments rounds it inside. Inflate
+// only the candidate search; the live contact routine still decides the result.
+const FORECAST_GUARD=1e-6;
 const actionLabels={dodge:'回避',parry:'受け流し',jump:'跳躍'};
 const actionLead={dodge:.3,parry:.28,jump:.62};
 
@@ -31,18 +35,90 @@ function enemyThreat(game,enemy,contactOrder){
   return {hazardId:enemy.id,sourceId:enemy.id,contactOrder:ranged?game.enemies.length+game.projectiles.length+contactOrder:contactOrder,contactPhase:ranged?'projectile':'enemy',sourceType:enemy.type,source:labels[enemy.type]||'敵',position:{x:enemy.x,y:enemy.y+(enemy.type==='boss'?2.2:enemy.type==='wolf'?.8:1.2),z:enemy.z},stage:enemy.state,kind,response,damage,lethal:damage>=player.hp,direction:radial?'周囲':directionFrom(player,enemy),impactTime,timeToImpact:round(impactTime),distance:round(d)};
 }
 
-export function forecastProjectileContact(game,arrow,horizon){
-  // Advance an immutable copy with the same 60 Hz lifetime/contact order as
-  // tickProjectiles. A single long ray can disagree at bridge and terrain seams.
-  const simulated={...arrow};let elapsed=0;
-  while(elapsed+1e-9<horizon){
-    const step=Math.min(1/60,horizon-elapsed);
-    if(simulated.life-step<=0)break;
-    const contact=game.projectileContact(simulated,step);
-    if(contact.target)return {target:contact.target,timeToImpact:elapsed+contact.fraction*step};
-    simulated.x=contact.to.x;simulated.y=contact.to.y;simulated.z=contact.to.z;simulated.life-=step;elapsed+=step;
+const projectileBody=actor=>({
+  ...actor,
+  y:actor.y+.15,
+  height:(actor.type==='boss'?4.7:actor.type==='wolf'?1.35:2.1)-.15,
+  r:actor.type==='boss'?1.25:.48,
+});
+
+function staticContactTime(game,arrow,horizon,knownPlayerImpactTime,bodyCache,obstacleCache,metrics){
+  let first=Number.isFinite(knownPlayerImpactTime)?knownPlayerImpactTime:Infinity;
+  if(Number.isFinite(knownPlayerImpactTime)){if(metrics)metrics.reusedPlayerImpacts++;}
+  else{
+    const victims=arrow.owner==='player'?game.enemies.filter(enemy=>!enemy.dead):[game.player],fullTo={x:arrow.x+arrow.vx*horizon,y:arrow.y+arrow.vy*horizon,z:arrow.z+arrow.vz*horizon};
+    for(const victim of victims){
+      let body=bodyCache.get(victim);if(!body){body=projectileBody(victim);bodyCache.set(victim,body);}
+      const fraction=segmentCylinder(arrow,fullTo,body,.12+FORECAST_GUARD);if(metrics)metrics.bodySweeps++;
+      if(fraction!==null)first=Math.min(first,fraction*horizon);
+    }
   }
-  return null;
+  const scanTime=Math.min(horizon,first),scanTo={x:arrow.x+arrow.vx*scanTime,y:arrow.y+arrow.vy*scanTime,z:arrow.z+arrow.vz*scanTime};
+  const obstacleGuard=.08+FORECAST_GUARD;
+  for(const obstacle of queryObstacles(game.obstacles,Math.min(arrow.x,scanTo.x)-obstacleGuard,Math.min(arrow.z,scanTo.z)-obstacleGuard,Math.max(arrow.x,scanTo.x)+obstacleGuard,Math.max(arrow.z,scanTo.z)+obstacleGuard)){
+    let body=obstacleCache.get(obstacle);if(!body){body={...obstacle,y:heightAt(obstacle.x,obstacle.z),height:obstacle.height??obstacle.r*1.5};obstacleCache.set(obstacle,body);}
+    const fraction=segmentCylinder(arrow,scanTo,body,obstacleGuard);if(metrics)metrics.obstacleSweeps++;
+    if(fraction!==null)first=Math.min(first,fraction*scanTime);
+  }
+  return first;
+}
+
+function terrainContact(from,to,startFloor,metrics){
+  const length=Math.hypot(to.x-from.x,to.y-from.y,to.z-from.z),steps=Math.max(1,Math.ceil(length/.2));let endFloor=startFloor,endMatchesNext=false;
+  for(let index=0;index<=steps;index++){
+    const fraction=index/steps,x=from.x+(to.x-from.x)*fraction,y=from.y+(to.y-from.y)*fraction,z=from.z+(to.z-from.z)*fraction;
+    let floor;if(index===0&&Number.isFinite(startFloor))floor=startFloor;else{floor=groundAt(x,z);if(metrics)metrics.terrainSamples++;}
+    if(index===steps){endFloor=floor;endMatchesNext=x===to.x&&z===to.z;}
+    if(y<floor+.1){
+      let low=Math.max(0,(index-1)/steps),high=fraction;
+      for(let iteration=0;iteration<5;iteration++){
+        const middle=(low+high)/2,middleX=from.x+(to.x-from.x)*middle,middleZ=from.z+(to.z-from.z)*middle;
+        if(metrics)metrics.terrainSamples++;if(from.y+(to.y-from.y)*middle<groundAt(middleX,middleZ)+.1)high=middle;else low=middle;
+      }
+      return {fraction:high,endFloor,endMatchesNext};
+    }
+  }
+  return {fraction:null,endFloor,endMatchesNext};
+}
+
+/**
+ * Forecast several immutable trajectories together. Static cylinders are swept
+ * once per trajectory and their bodies are shared across the batch. Terrain is
+ * still sampled in the exact 60 Hz segments used by tickProjectiles; the one
+ * segment that can contain a static hit is delegated back to the live contact
+ * routine so collision ordering and boundary ties remain identical.
+ */
+export function forecastProjectileContacts(game,requests,{metrics:reportedMetrics}={}){
+  const metrics=reportedMetrics?{trajectories:requests.length,reusedPlayerImpacts:0,bodySweeps:0,obstacleSweeps:0,terrainFrames:0,terrainSamples:0,exactFrames:0,fallbackFrames:0}:null;
+  const bodyCache=new Map(),obstacleCache=new Map();
+  const results=requests.map(({arrow,horizon,playerImpactTime})=>{
+    if(!arrow||arrow.life<=0||!Number.isFinite(horizon)||horizon<=0)return null;
+    const simulated={...arrow};let elapsed=0,fallback=false,terrainFloor;
+    const staticTime=staticContactTime(game,arrow,horizon,playerImpactTime,bodyCache,obstacleCache,metrics);
+    while(elapsed+1e-9<horizon){
+      const step=Math.min(1/60,horizon-elapsed);if(simulated.life-step<=0)break;
+      const reachesStatic=staticTime<=elapsed+step+1e-12;
+      if(reachesStatic||fallback){
+        const contact=game.projectileContact(simulated,step);if(metrics){metrics.exactFrames++;if(fallback)metrics.fallbackFrames++;}
+        if(contact.target)return {target:contact.target,timeToImpact:elapsed+contact.fraction*step};
+        fallback=true;simulated.x=contact.to.x;simulated.y=contact.to.y;simulated.z=contact.to.z;
+      }else{
+        const from={x:simulated.x,y:simulated.y,z:simulated.z},to={x:simulated.x+simulated.vx*step,y:simulated.y+simulated.vy*step,z:simulated.z+simulated.vz*step};
+        const terrain=terrainContact(from,to,terrainFloor,metrics);if(metrics)metrics.terrainFrames++;
+        if(terrain.fraction!==null)return {target:'wall',timeToImpact:elapsed+terrain.fraction*step};
+        terrainFloor=terrain.endMatchesNext?terrain.endFloor:undefined;
+        simulated.x=to.x;simulated.y=to.y;simulated.z=to.z;
+      }
+      simulated.life-=step;elapsed+=step;
+    }
+    return null;
+  });
+  if(reportedMetrics)Object.assign(reportedMetrics,metrics,{sharedBodies:bodyCache.size,sharedObstacles:obstacleCache.size});
+  return results;
+}
+
+export function forecastProjectileContact(game,arrow,horizon){
+  return forecastProjectileContacts(game,[{arrow,horizon}])[0];
 }
 
 function projectileThreat(game,arrow,deferCover=false,contactOrder=0){
@@ -50,13 +126,13 @@ function projectileThreat(game,arrow,deferCover=false,contactOrder=0){
   const player=game.player,horizon=Math.min((Math.ceil(arrow.life*60-1e-9)-1)/60,1.8);if(horizon<=0)return null;
   const to={x:arrow.x+arrow.vx*horizon,y:arrow.y+arrow.vy*horizon,z:arrow.z+arrow.vz*horizon};
   // Cheap body broad phase before replaying the exact live-frame contact order.
-  const fraction=segmentCylinder(arrow,to,{...player,y:player.y+.15,height:1.95,r:.48},.12);
+  const fraction=segmentCylinder(arrow,to,{...player,y:player.y+.15,height:1.95,r:.48},.12+FORECAST_GUARD);
   if(fraction===null)return null;
   const forecast=deferCover?null:forecastProjectileContact(game,arrow,horizon);
   if(!deferCover&&forecast?.target!==player)return null;
   const t=forecast?.timeToImpact??fraction*horizon;
   const source=game.enemies.find(enemy=>enemy.id===arrow.owner);
-  return {...(deferCover?{trajectory:arrow,horizon}:{}),hazardId:`arrow-${arrow.id??contactOrder}`,sourceId:arrow.owner,contactOrder,contactPhase:'projectile',sourceType:source?.type||'ranger',source:labels[source?.type]||'矢',position:{x:arrow.x,y:arrow.y,z:arrow.z},stage:'flight',kind:'arrow',response:'横移動 / 回避',damage:arrow.damage,lethal:arrow.damage>=player.hp,direction:directionFrom(player,arrow),impactTime:t,timeToImpact:round(t),distance:round(distance(player,arrow))};
+  return {...(deferCover?{trajectory:arrow,horizon,playerImpactTime:fraction*horizon}:{}),hazardId:`arrow-${arrow.id??contactOrder}`,sourceId:arrow.owner,contactOrder,contactPhase:'projectile',sourceType:source?.type||'ranger',source:labels[source?.type]||'矢',position:{x:arrow.x,y:arrow.y,z:arrow.z},stage:'flight',kind:'arrow',response:'横移動 / 回避',damage:arrow.damage,lethal:arrow.damage>=player.hp,direction:directionFrom(player,arrow),impactTime:t,timeToImpact:round(t),distance:round(distance(player,arrow))};
 }
 
 export function cameraFacingAngle(cameraYaw){return angleDelta(cameraYaw+Math.PI,0);}
@@ -127,19 +203,22 @@ export function combatDecision(game,threats){
   return {state,action:state==='act'?desiredAction:null,nextAction:desiredAction,label:actionLabels[desiredAction],waitSeconds,threatCount:cluster.length,hiddenThreatCount:Math.max(0,cluster.length-2),coverHazardIds:[...cluster].sort(impactOrder).map(threat=>threat.hazardId),offscreen:cluster.some(threat=>offscreen(threat.screenDirection))};
 }
 
-export function combatPresentation(game,{limit=2}={}){
+export function combatPresentation(game,{limit=2,projectileForecaster=forecastProjectileContacts,forecastMetrics}={}){
   if(!game||game.player.dead)return {active:false,primary:null,threats:[]};
   const candidates=[];
   game.enemies.forEach((enemy,index)=>{const threat=enemyThreat(game,enemy,index);if(threat)candidates.push(threat);});
   game.projectiles.forEach((arrow,index)=>{const threat=projectileThreat(game,arrow,true,game.enemies.length+index);if(threat)candidates.push(threat);});
   candidates.sort(impactOrder);
-  // Validate current projectile cover before the HUD bridge classifies and
-  // prioritizes every real candidate. In normal play the ranged cast is small.
+  // Batch every current trajectory against shared static bodies before the HUD
+  // bridge classifies all real candidates. No threat is dropped for speed.
+  const deferred=candidates.filter(candidate=>candidate.trajectory);
+  const forecasts=projectileForecaster(game,deferred.map(candidate=>({arrow:candidate.trajectory,horizon:candidate.horizon,playerImpactTime:candidate.playerImpactTime})),{metrics:forecastMetrics});
+  const forecastByCandidate=new Map(deferred.map((candidate,index)=>[candidate,forecasts[index]]));
   const threats=[];
   for(const candidate of candidates){
-    const {trajectory,horizon,...threat}=candidate;
+    const {trajectory,horizon,playerImpactTime,...threat}=candidate;
     if(trajectory){
-      const forecast=forecastProjectileContact(game,trajectory,horizon);
+      const forecast=forecastByCandidate.get(candidate);
       if(forecast?.target!==game.player)continue;
       threat.impactTime=forecast.timeToImpact;threat.timeToImpact=round(forecast.timeToImpact);
     }
@@ -156,8 +235,8 @@ export function combatPresentation(game,{limit=2}={}){
 }
 
 /** Current trajectories against the current player position; not a forecast of future movement. */
-export function renderCombatHint(element,game,{cameraYaw,project,viewportWidth,viewportHeight}={}){
-  const presentation=combatPresentation(game,{limit:Infinity}),screenRelative=typeof project==='function'||Number.isFinite(cameraYaw);
+export function renderCombatHint(element,game,{cameraYaw,project,viewportWidth,viewportHeight,projectileForecaster=forecastProjectileContacts,forecastMetrics}={}){
+  const presentation=combatPresentation(game,{limit:Infinity,projectileForecaster,forecastMetrics}),screenRelative=typeof project==='function'||Number.isFinite(cameraYaw);
   const displayDirection=threat=>{
     if(threat.direction==='周囲')return '周囲';
     const fallback=Number.isFinite(cameraYaw)?cameraRelativeDirection(game.player,threat.position,cameraYaw):threat.direction;
