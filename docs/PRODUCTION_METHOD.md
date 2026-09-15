@@ -191,3 +191,18 @@ v0.16.0は攻撃予測を時間順の2件で打ち切ってから画面座標を
 手戻りは、浮動小数点の厳密等値1件、旧 `clearInput()` source契約1件、CSS外座標・固定0のsame-frame指標・untracked JSONを見落とすCI、capture失敗、非同期開始race、save import race、gamepad権限例外、比較範囲不足を順に修正した。隔離branch作成01:19:05 UTCから最初の独立レビュー修正済み比較01:38 UTCまでは約19分。追加レビュー、全検証、文書、PR、配信は別で、全体制作速度の根拠にはしない。詳細は `docs/TOUCH_INPUT_AUDIT.md`。
 
 期限判断は厳格に**NO-GO（根拠付きで「できる」と言えない）**。完成表の7領域はいずれもend-to-endの受入証拠が揃わず、残る複数章、地域・屋内、商用品質の造形・演技・音響、実画面、物理タッチ、実機性能、30分実プレイ、native配布、外部比較には実測した制作速度も確保済みの端末・評価者もない。小さいJS単位の速度をこの残量へ外挿せず、次は正式previewまたは許可されたiPhone/Androidと外部評価者を確保し、固定save・縦横・60秒場面と別途30分継続を採取して重大不具合を修正・再測定する。必要資源を確保できなければ、未解決依存として停止判断へ上げる。
+
+
+## 2026-09-15：source文字列の相談接続確認から徒歩saveの実入口gateへ
+
+継続確認直後の期限判断は**NO-GO（根拠付きで「できる」と言えない）**。最新main `1bd56c95271611cbe8b1d92bab5e0e89b1bb6752` はv0.19のゲームと実entrypoint検証を含み、未反映制作や対象PRはなく、open PRは使用禁止の旧#3/#13だけだった。残る複数章・地域・屋内、商用品質の美術・演技・音響、native配布、正式画面、物理touch、実聴、iOS/Android性能、30分実プレイ、外部比較には完成範囲の実測速度と受入証拠が揃っていない。
+
+疑った前提は、相談の純粋な状態・配置試験と `main.js` のsource文字列検査が、実際のUIからSceneView境界までの接続を代表すること。v0.14ではこの前提により局所変数のshadowingを見逃していた。代案は、徒歩で獲得済みの二つのmiddle saveを実main bundleへ入れ、実Game / SaveStore / lifecycle listener / 動的UIを通してSceneView呼出しを記録し、同じmainの隔離copyへ接続欠陥を入れて旧検査と検出力を比較する方式。正式previewの利用不能を画面合格へ読み替えず、人間の準備も開始条件にしない。
+
+hearth / road-watch × 390×844 / 844×390の4条件で、SaveStore continueとタイトルraw JSON importの8起動、その選択saveの8 reloadを完走した。現在話者2 / 3、既読が正確に一件だけであることとその話者・全文、次話者3 / 3、選択結果、open / leaveの状態・save不変、blur / hidden→visible / BFCache中のpanel維持、`focusGathering` のid / null呼出しと次updateのモデル化focus、終了後のloop再開を確認。二経路の完成save hashは各場面で一致した。数値寸法はviewport fixtureであり、縦横のCSS画面ではない。
+
+同じ隔離mainへfocus呼出しなし、focus解除なし、選択結果再描画なし、既読履歴の重複を一つずつ入れた。既存の相談6検証は各欠陥で通過したが、新gateは4欠陥×二場面×二寸法の16/16を欠陥別assertionで検出。最終全検証内runではbundle 25.891 ms、正条件は一場面二経路・二reloadごとに215.194–256.118 ms、旧6検証は欠陥ごと409.008–431.755 ms、新gateの各早期検出は31.346–68.687 ms。検査範囲と停止位置が違うため速度倍率を出さない。branch作成04:19:32 UTCからこの焦点gate成功04:51 UTCまで約31分で、文書、全検証、CI、main反映は含まない。
+
+手戻りは、初案がhost側でもう一度 `gatheringStage` を計算してSceneView実行と混同し得たため削除し、呼出し記録だけへ限定したこと。さらにopen / leaveの無副作用、話者・進捗・既読履歴のexact条件、raw save bytesの入力と、話者stageが有効な途中会話を一度閉じて再び開く経路を追加した。再開確認を1描画frameだけで判定した初回は固定stepの浮動小数点境界でGame tickに達せず4条件とも失敗し、最初のframeのモデル化focus=nullと2 frame内のGame進行を別々に確認するよう修正した。その後、fixture自身の `focusGathering→snapCamera` をproduction SceneViewの実行証拠と誤読し得るためsnap記録を接続証拠から削除し、focus / update呼出しだけに狭めた。最終独立レビューは、履歴の一部文字列だけでは重複を検出せず、saveの静的import失敗が診断JSON前に停止すると指摘した。履歴の件数・話者・全文と重複負例、欠落・破損・hash不一致の診断JSON回帰を追加した。title importのevent handlerが内部Promiseを返さない点も、SceneView解決後の最終状態assertで完了を確認するfixture契約として区別した。実production欠陥は今回再現せず、確定したのは旧gateの検出穴。
+
+新gateは、同じentrypointで接続退行を検出できるため採用する。これは実SceneView構築・カメラ画面、DOM hit test、native event、物理touch、実聴、実機性能、実プレイや外部比較の証拠ではない。期限判断はNO-GOのままで、検出力改善を完成品質や制作速度へ外挿しない。次はready saveから相談開始、人物が実際に集まるmain loop、talking遷移と途中saveを同じ入口へ接続する。

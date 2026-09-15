@@ -24,6 +24,15 @@ jobs:
           name: Q-main-runtime-evidence
           path: artifacts/main-runtime-report.json
           if-no-files-found: warn
+      - name: Verify saved consultations through the production entrypoint
+        run: node scripts/verify-gathering-runtime.mjs
+      - name: Preserve consultation-boundary evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Q-gathering-runtime-evidence
+          path: artifacts/gathering-runtime-report.json
+          if-no-files-found: error
       - run: npm test
       - run: npm run test:journey
       - run: npm run test:crossing

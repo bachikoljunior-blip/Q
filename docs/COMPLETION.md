@@ -130,3 +130,10 @@ pointer capture失敗時に要素外で指を離すと攻撃長押し・移動�
 端末動作JSONをschema 3へ更新し、production adapterが観測したviewport、pointer種別、channel、action、同時数、移動距離、capture失敗、解除理由を集計する。raw座標は出力しない。タイトルの固定開発版番号も `BUILD_INFO.version` へ接続した。詳細と証拠境界は [タッチ入力監査](TOUCH_INPUT_AUDIT.md) に記録する。
 
 この変更で正式WebGL画面、物理タッチ、音の実聴、iOS/AndroidのFPS・メモリ・電力・発熱・30分実プレイ、外部評価、複数章・商用品質の美術／演技／音響、native配布は確認・完成していない。完成表の7領域はいずれもend-to-end証拠が揃わず、2026-09-20までに指定10作品と同等以上へ到達できるとは根拠付きで判断できない。
+
+
+## v0.19.0以後の相談実入口gate
+
+徒歩・戦闘・依頼を経て生成した二つの相談途中saveを、本番mainのSaveStore continueとタイトルJSON importから読み、実interact、住民panel、動的相談panel、選択、保存、終了、reloadへ通す検証を追加した。二場面×二数値寸法で8起動・8 reloadが成功し、旧6検証が見逃すfocus、focus解除、選択結果再描画、既読履歴重複の4欠陥を16/16条件で検出した。実ゲームsourceとbuild入力は変更しておらず、v0.19.0のゲーム成果は同じ。
+
+これはNode内のElement/EventTarget、SceneView呼出し記録、音呼出し記録による入口接続の証拠。production SceneView / WebGL、DOM/CSS hit test、native event、物理touch、実聴、実機性能、人間の実プレイ・外部比較ではない。完成表の未確認項目とNO-GO期限判断は変わらない。
