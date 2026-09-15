@@ -1,16 +1,18 @@
 # 制作状況 — 2026-09-13
 
-## 2026-09-15 — 全モデル・動作・タイトル・音響を統合、公開前検証完了
+## 2026-09-15 — 全モデル・動作・タイトル・音響をmain / owner-only Siteへ反映完了
 
 最新の直接指定「全てのモデルとアニメーションとリアリスティックに凝って。タイトル画面がワクワクしない。サウンドも豪華にして」に対応。継続は完了checkpoint `0a1d905ff9000976d143baac630dbde60fe676e3` から新しい有限の改修として再開。初回fetch時は他の現行未merge制作・別writerなし。旧PR #3/#13、他repository、automationは変更していない。
 
 主人公1、NPC9、敵34（狼15、騎士15〔番人4を含む〕、射手3、boss1）を本番の関節付き新モデルへ接続。14の人物・獣recipeと4番人theme、歩行・走行・武器別攻撃・被弾・回避・死亡等を点検・改修した。地表、山岩、樹木草、水橋、家屋遺構、村・遠征・集い・vaultの小物も形状と材質を更新。タイトルは主人公・北門・王冠のオリジナル画、灰と光の動き、縦横構成を備え、音は48秒の3層楽曲と24効果音をgestureから開始する。
 
-**207/207 tests、main 16 / fault 3 / detection 6、gathering 4 / launch 8 / reload 8 / fault 7 / detection 28、vault 8 + fresh reload 8、全既存gameplay/build/package gate成功。** 詳細は [PRESENTATION_OVERHAUL.md](PRESENTATION_OVERHAUL.md) と [machine-readable evidence](evidence/presentation-overhaul-20260915.json)。packageは4,298,574 B、SHA256 `f35fa585710e8fc19efa01a312633386afb851c27ca0b921d7d3bab4598089a1`。このcheckpoint時点では通常PR/CI/mainと同一owner-only Site反映が次作業。
+**207/207 tests、main 16 / fault 3 / detection 6、gathering 4 / launch 8 / reload 8 / fault 7 / detection 28、vault 8 + fresh reload 8、全既存gameplay/build/package gate成功。** 詳細は [PRESENTATION_OVERHAUL.md](PRESENTATION_OVERHAUL.md) と [machine-readable evidence](evidence/presentation-overhaul-20260915.json)。packageは4,298,574 B、SHA256 `f35fa585710e8fc19efa01a312633386afb851c27ca0b921d7d3bab4598089a1`。通常PR #35をmerge済み。gameplay main `cf6462677cd9791f72e364530f5caea516996d01`、candidate CI `34952011458`・main CI `34952221339`・Pages `34952220338` はsuccess。09:25:09 UTCに同一Site version **22**、deployment `appgdep_6aa90edabd6881919c7b45e40dbc0cff` がsucceeded、URLは https://q-ash-pilgrim.juurooo.chatgpt.site 。sourceは上記mainと一致し、custom owner1/editor0/group0/external0をreadbackした。具体的なarchive・source・version・公開範囲はevidenceへ記録した。
 
 着手確認直後とmain反映前の2026-09-20判断は **NO-GO / evidence insufficient**。完成受入0/7、固定10作品比較0/10を維持。正式previewの監督mailbox不在で、WebGL画面、音の実聴、物理touch、実機FPS、外部評価は未確認。初期JSは141,158→161,642 B、全instance triangle上限は旧365,549からhigh804,888–814,998へ増加し、端末速度維持を主張しない。人体・背景は写実方向の構造改修でありphotoreal完成ではない。タイトル画は実ゲームのスクリーンショットではない。
 
 実作業はUltra指定の統合担当 `/root/ultra_q_presentation_overhaul` とactor/title/audio/environment/independent_review子が担当。実spawnは全て `reasoning_effort=ultra, fork_turns=none, model omitted`、受理されたcanonical IDとcommit・検証を上記evidenceへ対応付けた。親は所有者必須のSite操作のみ機械的に実行する。内部実効強度や別UUIDは返っておらず断定しない。
+
+今回の有限改修の実装・検証・通常main統合・同一Site反映は完了。この追記は公開結果だけのdocs reflectionであり、ゲーム配信bytesを変更せず同じpayloadを再deployしない。次の制作では本節を継続地点とし、固定完成目標が未達であることと未確認の描画/端末・音の品質を優先して期限・方法を再評価する。人間の準備待ち、別のserver/browserによる拒否迂回、旧PR #3/#13や旧ゲームへの復帰は行わない。
 
 ## 2026-09-15 08:15 UTC — asset-first四遭遇をmain / owner-only Siteへ反映完了
 

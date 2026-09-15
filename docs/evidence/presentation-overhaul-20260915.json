@@ -116,7 +116,49 @@
     "preservedVaultBinaryAssets": 14,
     "preservedVaultBinaryBytes": 891845,
     "archivedGlbRuntimeCount": 0,
-    "publication": "Pending normal PR, CI, merge and same owner-only Site update at this pre-publication checkpoint."
+    "publication": {
+      "status": "succeeded",
+      "gameplayMain": "cf6462677cd9791f72e364530f5caea516996d01",
+      "candidate": "2bbf6abfc44ca4bae12b1e4597f17c85e1c9e358",
+      "validatedTree": "54dd3c749d4b91a4ee4577f0a166e5291d55b2b1",
+      "localCheckpoint": "9428c962715d52da1c81e35764c0385ad1d9f5d2",
+      "pullRequest": 35,
+      "candidateCI": 34952011458,
+      "mainCI": 34952221339,
+      "pagesCI": 34952220338,
+      "allCIConclusion": "success",
+      "siteProject": "appgprj_6aa6871ebd648191802ba2398d06115b",
+      "siteVersion": 22,
+      "siteVersionId": "appgprj_6aa6871ebd648191802ba2398d06115b~appgver_cdcfe8e8675081919162162d0b239757",
+      "deployment": "appgdep_6aa90edabd6881919c7b45e40dbc0cff",
+      "deploymentStatus": "succeeded",
+      "deployedAt": "2026-09-15T09:25:09.433202+00:00",
+      "url": "https://q-ash-pilgrim.juurooo.chatgpt.site",
+      "sourceCommit": "cf6462677cd9791f72e364530f5caea516996d01",
+      "sourcePush": "Parent owner-only ordinary fast-forward b29023674863978aad94194ef4f68ad35c59ed26 -> cf6462677cd9791f72e364530f5caea516996d01, followed by literal HEAD readback. Credential not persisted.",
+      "audience": {
+        "accessMode": "custom",
+        "policyRevision": 1,
+        "owners": 1,
+        "editors": 0,
+        "groups": 0,
+        "externalVisitors": 0
+      },
+      "archive": {
+        "verifiedMemberCount": 27,
+        "verifiedMemberBytes": 3411091,
+        "allLocalMemberBytesMatchStage": true,
+        "submittedGzipBytes": 2502616,
+        "submittedGzipSha256": "b097684fe63053f21fdf476877993592350132245198c0a374bccd1db6f9b5ed",
+        "localExpandedTarBytes": 3440640,
+        "localExpandedTarSha256": "7bad39c61291d416d02ea5f8928407f250c5d1a7958c981cc19788cb2d92cc88",
+        "returnedStorageFormat": "tar",
+        "returnedStorageBytes": 3440640,
+        "returnedStorageSha256": "5b6e88b0cfc81b047db2856839295e41d90e8acead71fe374e3f538b1a17cc20",
+        "note": "Record local gzip, expanded tar and connector storage hashes separately. Connector storage tar has a different hash, possibly due to archive metadata normalization; backend member contents were not independently downloaded. Exact-member check applies to submitted local archive. Native saved version/source and successful deployment were read back."
+      },
+      "workflow": "Combined save/deploy tool unavailable; exactly one native save_site_version followed by deploy_private_site_version, same-ID status to terminal, then same-Site audience readback. No duplicate identical deployment for this documentation reflection."
+    }
   },
   "limitations": [
     "Official preview status failed: sites-previewd mailbox unavailable at /tmp/sites-previewd/requests. No alternate server/browser/CI route used.",
