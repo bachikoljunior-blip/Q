@@ -56,7 +56,7 @@ HTMLは要素の登録・生成を検査するための限定parserで、browser
 
 - 本番mainをbundleした入口でSceneView読込を一回だけ要求し、読込完了まで旅を始めない。
 - 実Gameの最寄り人物を `interact` し、次frameのevent処理、住民panel、動的生成された「皆で話す」を経て相談panelを開く。相談関数を直接呼ばない。
-- 2 / 3では現在行の全文と既読1行、3 / 3では現在行の全文と既読2行、choice直後のdoneと別runtime reloadでは履歴3行全部を区別する。期待する各 `{speaker,text}` はproductionの表示計算から独立して固定し、段階ごとの件数、話者、全文、順序付き配列のdeep-equalを要求する。open / leaveはGameとsaveを変更せず、next / choiceは正規saveへ残り、最終choiceをreloadで復元する。
+- 2 / 3では現在行の全文と既読1行、3 / 3では現在行の全文と既読2行、choice直後のdoneと別runtime reloadでは履歴3行全部を区別する。期待する各 `{speaker,text}` はproductionの表示計算から独立して固定し、段階ごとの件数はequal、話者・全文multisetと順序付き配列はdeepEqualを要求する。open / leaveはGameとsaveを変更せず、next / choiceは正規saveへ残り、最終choiceをreloadで復元する。
 - SceneView呼出し記録へ正規の `focusGathering(id)` が届き、次の `update` で同じモデル化focusを観測する。blur、hidden→visible、BFCacheのpagehide→pageshow中も開いた相談を保持し、閉じると `focusGathering(null)` を記録して音の開始要求とGame loopを再開する。
 - 選択後の保存を新しいruntimeへ読み直し、結果panelと選択を復元する。continueとtitle importの完成save SHA-256が一致する。
 
@@ -64,6 +64,6 @@ SceneViewはcreate / focus / updateの呼出し記録だけで、fixtureが保�
 
 PR #30時点は旧 `gathering-presentation.test.mjs` 6検証が通るようsource文字列を残したまま、(1) focus呼出し、(2) focus解除、(3) 選択結果の再描画、(4) 既読履歴の重複を一つずつ混入した。旧検証が4/4を見逃し、新gateが二場面×二寸法の16/16を検出した結果自体は有効。ただしbeat 1の一行しかexactに検査せず、複数行reverseが通ったため、履歴全体の順序・話者・全文exactを証明していなかった。
 
-PR #31では履歴負例をdone後段だけのduplicate、複数行reverse、2件目誤話者、2件目誤全文へ分解し、focus / release / rerenderと合わせて7件とした。旧6検証は7/7を通過し、新gateは7欠陥×二場面×二寸法の28/28を欠陥固有assertionで検出する。production側reverseを独立注入した再監査でもexit 1、`passed:false`、順序assertionで拒否した。fixture例外、compile失敗、別assertionの失敗、旧検証自体の失敗は検出に数えない。runの入力hash、経路、host時間、失敗診断は `artifacts/gathering-runtime-report.json` に保存し、save欠落・parse失敗・hash不一致もreport初期化後の `try/finally` 内で捕捉する。3つの異常入力を別processで入れ、exit失敗後も `passed:false` と欠陥別診断をJSONへ残す回帰試験を通す。CIは `Q-gathering-runtime-evidence` をalways-uploadし、JSONがなければupload stepも失敗する。
+PR #31では履歴負例をdone後段だけのduplicate、複数行reverse、2件目誤話者、2件目誤全文へ分解し、focus / release / rerenderと合わせて7件とした。7 mutationそれぞれで旧6検証が6/6通過し、新gateは7欠陥×二場面×二寸法の28/28を欠陥固有assertionで検出する。production側reverseを独立注入した再監査でもexit 1、`passed:false`、順序assertionで拒否した。fixture例外、compile失敗、別assertionの失敗、旧検証自体の失敗は検出に数えない。runの入力hash、経路、host時間、失敗診断は `artifacts/gathering-runtime-report.json` に保存し、save欠落・parse失敗・hash不一致もreport初期化後の `try/finally` 内で捕捉する。3つの異常入力を別processで入れ、exit失敗後も `passed:false` と欠陥別診断をJSONへ残す回帰試験を通す。CIは `Q-gathering-runtime-evidence` をalways-uploadし、JSONがなければupload stepも失敗する。
 
-このgateで確認したのは本番main、Game、SaveStore、lifecycle listener、生成UIとSceneView呼出し境界の接続。browser DOM/CSS/hit test/native event、実SceneView/WebGLのカメラ画面、物理touch、実聴、実機性能、人間の実プレイ、外部比較は未確認のまま。次の自動作業はgate件数を増やすのでなく、権利・出典・hash manifest付きasset、閉じた空間、整合するprop、固有enemy、animation、ambient / SFXを含む完成縦切り二本A/Bを通常entrypoint / save / buildへ実装し、制作・回帰・package時間、失敗、増加bytes、再利用率を測ること。保存やゲームルールを短絡する一般向け機能は追加しない。人間の準備は開始条件にせず、取得不能な証拠は未確認として残す。
+このgateで確認したのは本番main、Game、SaveStore、lifecycle listener、生成UIとSceneView呼出し境界の接続。browser DOM/CSS/hit test/native event、実SceneView/WebGLのカメラ画面、物理touch、実聴、実機性能、人間の実プレイ、外部比較は未確認のまま。次の自動作業はgate件数を増やすのでなく、[制作方法](PRODUCTION_METHOD.md)で定義したasset-firstの同等scope完成縦切り二本A/Bを、通常entrypoint→移動→戦闘→目的interaction→結果→save→fresh-runtime reloadまで実装し、source / buildの非zero asset差分、wall time、失敗、増加bytes、再利用率を測ること。保存やゲームルールを短絡する一般向け機能は追加しない。人間の準備は開始条件にせず、取得不能な証拠は未確認として残す。

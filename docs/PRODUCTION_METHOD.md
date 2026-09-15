@@ -17,7 +17,7 @@
 
 新工程は3欠陥を各向き全て検出した。これは意図的な負例であり、現在のゲームに新しい3不具合が存在したという意味ではない。初回の実装では、開始handlerと続行handlerのPromise返却差をfixture呼出し側が見落とし、待ち順を修正した。実ゲームをfixtureに合わせて変更していない。旧方式と新版の全制作所要時間は揃っておらず、制作速度の改善倍率は算出しない。個別runの時間は[自律検証記録](AUTONOMOUS_VALIDATION.md)とCI artifactに保存する。
 
-画面、物理touch、音の実聴、iPhone/Android性能、30分実プレイ、外部比較は合格へ変更しない。今回の変更は待ち依存と接続検証の穴を減らすが、固定10作品の完成品質と9月20日の期限に「できる」と言える根拠はまだない。main前にも同じ残量・速度・手戻り・未確認・配信待ちを再評価する。次の自動作業は実entrypointから保存済み相談の呼出しを再生し、過去に見逃した会話UI→SceneViewの接続を、既存の徒歩獲得saveと独立した負例で確認する。正式画面経路が利用可能になった場合はその範囲のQAを併行して回復させる。
+画面、物理touch、音の実聴、iPhone/Android性能、30分実プレイ、外部比較は合格へ変更しない。今回の変更は待ち依存と接続検証の穴を減らすが、固定10作品の完成品質と9月20日の期限に「できる」と言える根拠はまだない。main前にも同じ残量・速度・手戻り・未確認・配信待ちを再評価する。保存済み相談の実entrypoint gateはPR #30 / #31で検証・補強済み。現在の次作業は、本書末尾で定義するasset-firstの同等scope完成縦切り二本A/Bを制作し、全経路とwall timeを測ること。正式画面経路が利用可能になった場合はその範囲のQAを併行して回復させる。
 
 ## 毎回の判断
 
@@ -203,8 +203,10 @@ hearth / road-watch × 390×844 / 844×390の4条件で、SaveStore continueと�
 
 PR #30時点ではbeat 1の既読一行だけを件数・話者・全文で検査し、focus呼出しなし、focus解除なし、選択結果再描画なし、履歴重複の4負例について、既存相談6検証の通過と新gateの4×二場面×二寸法=16/16検出を得た。この選んだ4負例の結果自体は再現したが、独立最終監査で複数行reverseが旧gateも新gateも通過した。「相談履歴全体が順序までexact」という主張には、この負例とassertionでは不足していた。
 
-PR #31ではhearth / road-watch各3行の `{speaker,text}` をproduction表示から独立した期待配列へ固定した。beat 1は1行、beat 2は2行、choice直後のdoneと別runtime reloadは3行全体を、件数、話者multiset、全文multiset、順序付き配列deep-equalで確認する。current行も各beatで全文一致を要求する。負例は元のfocus / release / rerenderに、doneの後段だけduplicate、複数行reverse、2件目誤話者、2件目誤全文を加えた7件。旧6検証は7/7を通過し、新gateは7×二場面×二寸法=28/28を想定した欠陥固有assertionで検出した。独立したproduction側reverse注入もexit 1、`passed:false`、順序assertionとなった。save欠落・破損・hash不一致は別process 3/3で失敗JSONを残し、CI artifact不在はerrorとする。
+PR #31ではhearth / road-watch各3行の `{speaker,text}` をproduction表示から独立した期待配列へ固定した。beat 1は1行、beat 2は2行、choice直後のdoneと別runtime reloadは3行全体を、件数のequal、話者・全文multisetと順序付き配列deep-equalで確認する。current行も各beatで全文一致を要求する。負例は元のfocus / release / rerenderに、doneの後段だけduplicate、複数行reverse、2件目誤話者、2件目誤全文を加えた7件。7 mutationそれぞれで旧6検証が6/6通過し、新gateは7×二場面×二寸法=28/28を想定した欠陥固有assertionで検出した。独立したproduction側reverse注入もexit 1、`passed:false`、順序assertionとなった。save欠落・破損・hash不一致は別process 3/3で失敗JSONを残し、CI artifact不在はerrorとする。
 
 手戻りは、初案がhost側でもう一度 `gatheringStage` を計算してSceneView実行と混同し得たため削除し、呼出し記録だけへ限定したこと。open / leaveの無副作用、raw save bytes、途中会話のclose / reopenも追加した。再開確認を1描画frameだけで判定した初回は固定stepの浮動小数点境界でGame tickに達せず4条件とも失敗し、最初のframeのモデル化focus=nullと2 frame内のGame進行を別々に確認するよう修正した。その後、fixture自身の `focusGathering→snapCamera` をproduction SceneViewの実行証拠と誤読し得るためsnap記録を接続証拠から削除した。PR #30の履歴修正を十分と受理したことも手戻りに含め、PR #31で複数行の完全一致へ直した。実production欠陥は今回再現せず、確定したのは旧gateとPR #30 gateの検出穴。
 
-修正後gateは、同じentrypointで接続退行を検出できる限定gateとして採用する。これは実SceneView構築・カメラ画面、DOM hit test、native event、物理touch、実聴、実機性能、実プレイや外部比較の証拠ではない。期限判断はNO-GOのままで、検出力改善を完成品質や制作速度へ外挿しない。次はgate追加を反復せず、権利・hash manifest付きasset、閉空間、prop 8、固有enemy、4 animation state、ambient 1、SFX 6を含む完成縦切り二本A/Bを通常entrypoint / save / buildへ実装する。`T_asset`、`T_A`、`T_B`、回帰・package時間、失敗・revert、増加bytes、再利用数を測り、Bで専用state machineを増やさず `T_B <= 0.75*T_A`、二本main-readyが4時間以内、修正loop 1以下を方式採用条件にする。人間の準備は開始条件にせず、未取得証拠は未確認とする。
+修正後gateは、同じentrypointで接続退行を検出できる限定gateとして採用する。これは実SceneView構築・カメラ画面、DOM hit test、native event、物理touch、実聴、実機性能、実プレイや外部比較の証拠ではない。期限判断はNO-GOのままで、検出力改善を完成品質や制作速度へ外挿しない。
+
+次はgate追加を反復せず、asset-firstの同等scope完成縦切り二本A/Bを実装する。各sliceは権利・出典・hash manifest付きasset、閉空間1、prop 8、固有enemy 1、4 animation state、ambient 1、SFX 6を含み、通常entrypoint→移動→戦闘→目的interaction→結果→save→fresh-runtime reloadを完走し、source / build artifactに非zeroのasset差分を残す。`T_A` / `T_B` は各sliceの最初のasset取得または固有edit開始から全local回帰・build・package・artifact検査成功までのwall time。`T_asset` はその内数で、取得開始からprovenance / license / hash検査済みimportまで。A開始から二本を含むPR required CI成功までの統合wall timeはasset、実装、全回帰、build、package、artifact検査、CI待ちを含む。repair loopは各sliceの最初の全local検証失敗後の修正・全再実行を1回と数える。再利用率はBで使うproduction asset / component総数を分母、Aまたは既存成果から無改変再利用した数を分子とする。採用条件はA/B同等scope、provenance完備、既存回帰の失敗0、各slice repair loop 1以下、B専用state machine追加なし、`T_B <= 0.75*T_A`、統合wall time 4時間以内。人間の準備は開始条件にせず、未取得証拠は未確認とする。

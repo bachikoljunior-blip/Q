@@ -136,6 +136,6 @@ pointer capture失敗時に要素外で指を離すと攻撃長押し・移動�
 
 徒歩・戦闘・依頼を経て生成した二つの相談途中saveを、本番mainのSaveStore continueとタイトルJSON importから読み、実interact、住民panel、動的相談panel、選択、保存、終了、reloadへ通す検証を追加した。二場面×二数値寸法で8起動・8 reloadが成功した。PR #30時点の4欠陥・16/16は、focus、focus解除、選択結果再描画、履歴重複という選んだ負例には成立したが、1行時点しかexactに見ず、複数行reverseが通るため「全履歴の件数・順序・話者・全文exact」を証明していなかった。
 
-PR #31で期待する3行をproduction表示から独立して全文固定し、beat 1の1行、beat 2の2行、done直後と別runtime reloadの3行を、件数・話者・全文・順序付き配列のdeep-equalで検査する。focus、focus解除、rerender、done後段duplicate、reverse、2件目誤話者、2件目誤全文の7欠陥は旧6検証をすべて通過し、新gateが二場面×二寸法の28/28を欠陥固有assertionで検出した。実ゲームsourceとbuild入力は変更しておらず、v0.19.0のゲーム成果は同じ。
+PR #31で期待する3行をproduction表示から独立して全文固定し、beat 1の1行、beat 2の2行、done直後と別runtime reloadの3行を、件数のequal、話者・全文multisetと順序付き配列のdeepEqualで検査する。focus、focus解除、rerender、done後段duplicate、reverse、2件目誤話者、2件目誤全文の7 mutationそれぞれで旧6検証が6/6通過し、新gateが二場面×二寸法の28/28を欠陥固有assertionで検出した。実ゲームsourceとbuild入力は変更しておらず、v0.19.0のゲーム成果は同じ。
 
-これはNode内のElement/EventTarget、SceneView呼出し記録、音呼出し記録による入口接続の証拠。production SceneView / WebGL、DOM/CSS hit test、native event、物理touch、実聴、実機性能、人間の実プレイ・外部比較ではない。完成表7領域のend-to-end合格は0/7、指定10作品との取得済み比較は0/10で、期限判断はNO-GO。次は人間の準備を待たず、権利・hash manifest付きasset、閉空間、prop、固有enemy、animation、ambient / SFXを含む完成縦切り二本A/Bを実source / buildへ入れ、制作速度と再利用率を測る。
+これはNode内のElement/EventTarget、SceneView呼出し記録、音呼出し記録による入口接続の証拠。production SceneView / WebGL、DOM/CSS hit test、native event、物理touch、実聴、実機性能、人間の実プレイ・外部比較ではない。完成表7領域のend-to-end合格は0/7、指定10作品との取得済み比較は0/10で、期限判断はNO-GO。次は人間の準備を待たず、[制作方法](PRODUCTION_METHOD.md)で同等scope・完走経路・wall time・repair / reuse定義を固定したasset-first完成縦切り二本A/Bを実source / buildへ入れ、制作速度と再利用率を測る。
