@@ -1,5 +1,35 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-15 05:26 UTC — PR #30の独立最終監査、履歴exactness修正、main反映完了
+
+### 結論と正規GitHub readback
+
+監査結果は、**相談実入口gateの限定範囲では修正後GO、2026-09-20の完成品質にはNO-GO**。最初の監査でPR #30の「相談履歴が件数・順序・話者・全文exact」という記録をそのまま受理せず、複数行を逆順にした隔離mainを旧gateが通す反例を得た。この時点の判定を限定NO-GOとし、文書だけで閉じずgateを修正した。productionの相談履歴そのものに欠陥を発見した結果ではなく、主張を支える検出力の欠落である。
+
+- [PR #30](https://github.com/bachikoljunior-blip/Q/pull/30) はbase `1bd56c95271611cbe8b1d92bab5e0e89b1bb6752`、head `f2b688c4c69e9009db639ffe02af2bd3fd66fbd2`、merge/main `c2b14a418794ebdc0af45cf4fab213bb5f6383a8`。merge commitの親と、head / mergeのtree一致を正規APIとgit fetchで再取得した。[PR run 34930761369](https://github.com/bachikoljunior-blip/Q/actions/runs/34930761369) と [main run 34930934391](https://github.com/bachikoljunior-blip/Q/actions/runs/34930934391) はsuccessで、各26 stepがsuccess。PRの相談artifactはID `10381721449`、2,200 bytes、digest `sha256:2f3fe724ef961d2a149d5b5bace611793c080d7380333602e0854765676ec2d5`。
+- 修正は [PR #31](https://github.com/bachikoljunior-blip/Q/pull/31)、head `dfa135466deb485aa11a6b770b0dcdf8c8dffc56`、merge/main `c0a8e202bb583416c47921d6d9b7f9c0e61b7328`。変更は `scripts/verify-gathering-runtime.mjs` と `tests/gathering-runtime-scenarios.mjs` の2ファイルだけ。[PR run 34932539671](https://github.com/bachikoljunior-blip/Q/actions/runs/34932539671) と [main run 34932710085](https://github.com/bachikoljunior-blip/Q/actions/runs/34932710085) はsuccessで、各26 stepがsuccess。mainの相談artifactはID `10381823980`、3,262 bytes、digest `sha256:fc1c7f1f3493e6e12e53f660597b2c308434e5ec10242cc18cf3ff9d43d7bf28`。merge commitのtree `710575d7cf5fa97b90f52478c672ed6ccbb6c51a` は検証済みPR headのtreeと一致する。
+- 旧PR #3/#13は参照・mergeせず、force push、新規automation、既存automation変更、Site audience変更を行っていない。
+
+### 4主張の監査と修正後の検出力
+
+PR #30の4主張は範囲を分けて評価した。(a) save欠落、JSON破損、raw SHA-256不一致の3/3でprocessが失敗し、`passed:false` と個別診断をJSONへ残すこと、およびworkflowのalways-uploadがartifact不在をerrorにすることをコードと別processで確認した。(c) 選んだ4 mutationについて旧6検証が通過し、新gateが二場面×二数値寸法の16/16を欠陥別assertionで検出した算術自体は再現した。ただし元の履歴mutationは「全履歴exact」を十分に反証せず、(b)の一般的な主張は過剰だった。(d) production entrypointから実interact、住民panel、動的相談UI、SceneViewのfocus / release呼出し境界、close / reopen、blur / hidden / BFCache、choice save / 別runtime reloadを追跡saveで確認した。
+
+修正後はhearth / road-watchそれぞれの3行を、productionの表示計算から独立した期待配列へ全文固定した。beat 1では1行、beat 2では2行、choice直後のdoneと別runtime reloadでは3行全体を、件数、話者multiset、全文multiset、順序付き `{speaker,text}` 配列の `deepEqual` で検査する。current行もbeat 1 / beat 2で全文一致を要求する。負例はfocus欠落、focus解除欠落、選択後rerender欠落、done後段だけの重複、複数行reverse、2行目の誤話者、2行目の誤全文の7件。旧6検証は7件すべてを通し、新gateは7欠陥×二場面×二寸法の**28/28**を、それぞれ想定した欠陥固有assertionで検出した。さらにproduction側の履歴を逆順にする独立注入でもexit 1、`passed:false`、順序assertionで拒否した。fixture例外、compile失敗、別assertionは検出数へ含めていない。
+
+修正候補で `npm ci`（16 packages）、相談gate 4正条件・8起動・8 reload・7負例・28検出、異常save 3/3、main entrypoint 16条件・6負例検出、`npm test` 166/166、journey 119秒、crossing、forge、session 108,000 step / 138 reload / 死亡0、expedition南北、8 review saveの再生成一致、combat 9/9、touch縦横各20/20、build、package、artifact検査を再実行して成功した。追跡生成物はclean。独立Ultra監査は最初の反例でNO-GOを出し、修正差分、焦点試験、逆順注入を再検査して限定GOへ更新した。
+
+この合格範囲はNode内の限定Element / EventTarget、実main / Game / SaveStore / lifecycle listener、生成HTMLとSceneView呼出しspyの境界まで。production `SceneView` 内部、Three.js / WebGLの画面、browser DOM / CSS / hit test / native event、物理touch、音の実聴、iOS / Android性能、人間の30分実プレイ、外部比較は実行しておらず、未確認のまま。数値390×844 / 844×390も実画面の縦横証拠ではない。
+
+### Site、期限評価、次の自動制作
+
+PR #30 / #31はゲームsource、`public`、`index.html`、package / lock、Vite、build identity / package script、追跡単体版を変えていない。既存Site source `688bee48ac6b8d753133541b3e727b4629ee2e34` からの全配信入力差分は0、source fingerprintは同じ `sha256:540218237d5b40d8907935df41e009808af7ba747c0cc26d1c41373905413bb7`。そのため再配信しない。正式readbackはproject `appgprj_6aa6871ebd648191802ba2398d06115b`、version 20、deployment `appgdep_6aa8a98615f88191bd6a117f0e235600` succeeded、custom owner-only、owner 1、external / group / editor 0。
+
+期限評価は厳格なNO-GO。現状は一章、一地域約0.371 km²、武器3、敵30体・4種、主要NPC 9、相談2場面・全6発話・4選択、同じCC0 pack由来のGLB 3で、画像・音声fileとnative packageは0。完成表7領域はend-to-end合格0/7、指定10作品との取得済み比較は0/10。最初のゲームcommitから最後のゲーム変更までは約38時間33分を使ってなお一章で、最後のゲーム変更からPR #30 mergeまで約2時間50分はゲーム入力を増やさずgate中心だった。期限時刻が未指定なので残時間を一値に偽らないが、main run 34932710085完了から2026-09-20 00:00–23:59 UTCまでは約114–139時間。残る複数章・地域・屋内、商用品質の美術・animation・演技・音響、native配布と上記の未取得証拠に対し、完成速度の実績がないため「到達可能」とする根拠はない。
+
+次の自動制作はgate追加の反復ではなく、**asset-firstの完成縦切り二本A/B**とする。各sliceに権利・出典・hash manifest付きasset、閉じた空間1、整合するprop 8、固有enemy 1、4 animation state、ambient 1、SFX 6を入れ、通常entrypointとsaveで遊べる実source / build差分を作る。`T_asset`、`T_A`、`T_B`、回帰・package時間、失敗・revert、増加bytes、再利用部品数を保存する。A/Bとも実build artifactへ入り、provenance完備、既存回帰0、Bで新しい専用state machineを増やさず `T_B <= 0.75*T_A`、二本のmain-ready化が4時間以内かつ修正loop 1以下を方式採用条件にする。通っても未取得の画面・端末・外部証拠を期限GOへ読み替えない。人間や外部評価者の準備は開始条件にせず、取得不能な証拠は未確認として残す。
+
+正規読取、gate監査、品質評価はそれぞれ `/root/ultra_q_consult_final_audit/github_readback_ultra`、`gate_audit_ultra`、`quality_ultra` が `fork_turns="none"`、`reasoning_effort="ultra"`、model省略で担当した。設定不一致で開始した初期spawnは直ちに中断し、その出力を証拠・判断へ使用していない。
+
 ## 2026-09-15 04:28 UTC — 徒歩saveから相談UI・SceneView呼出し境界を実入口で検証（main反映前）
 
 ### 継続確認と期限判断
