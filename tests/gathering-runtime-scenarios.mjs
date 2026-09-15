@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
 import { createMainRuntime } from './main-runtime-fixture.mjs';
 
 const SAVE_KEY = 'q-ash-pilgrim-v1';
@@ -9,7 +10,8 @@ const definitions = [
     id: 'hearth', file: 'hearth-middle.json', title: '炉を囲む約束',
     speaker: '薬師 イオ', finalSpeaker: '鍛冶師 レン', choice: 'medicine',
     expectedInputSha256: 'a0c99ac8a633ec29d48b647b12c448851d99e5d0daf593f47cac09444d53c5be',
-    historyText: '風が戻った炉で', currentText: '鍋は直してもらった', futureText: 'どちらから始めよう',
+    historySpeaker: '鍛冶師 レン',
+    historyText: '風が戻った炉で、最初に何を作るか迷っていた。刃を打つつもりだったが、イオの鍋も底が抜けていてな。', currentText: '鍋は直してもらった', futureText: 'どちらから始めよう',
     result: '炉のそばに薬棚を作り、旅へ持ち出す露草を分けてもらった。',
     continueInterruption: 'blur', importInterruption: 'hidden',
   },
@@ -17,14 +19,18 @@ const definitions = [
     id: 'road-watch', file: 'road-watch-middle.json', title: '夜道の目印',
     speaker: '斥候 ユノ', finalSpeaker: '旅人 アサ', choice: 'light',
     expectedInputSha256: '71eb65aad4de50b5ef9c906f7601ba7165b699a5233dddbd1489aad87fcde5de',
-    historyText: '昨夜、灯りを見失った', currentText: '着いたときには', futureText: '残った木材で',
+    historySpeaker: '旅人 アサ',
+    historyText: '昨夜、灯りを見失った親子を連れてきた。ここが見える距離でも、灰が舞うと道の縁が消える。', currentText: '着いたときには', futureText: '残った木材で',
     result: '野営地のそばに高い灯りが立った。アサは夜ごと灰を払いに来る。',
     continueInterruption: 'bfcache', importInterruption: 'blur',
   },
 ];
 
 for (const definition of definitions) {
-  const bytes = await readFile(new URL('../release/review-saves/' + definition.file, import.meta.url));
+  const input = process.env.Q_GATHERING_SAVE_DIR
+    ? join(process.env.Q_GATHERING_SAVE_DIR, definition.file)
+    : new URL('../release/review-saves/' + definition.file, import.meta.url);
+  const bytes = await readFile(input);
   definition.raw = bytes.toString('utf8');
   definition.save = JSON.parse(bytes);
   definition.inputSha256 = createHash('sha256').update(bytes).digest('hex');
@@ -92,6 +98,10 @@ async function openGathering(runtime, definition) {
   assert.equal(runtime.element('panel-body').querySelector('.dialogue-speaker').textContent, definition.speaker);
   assert.equal(runtime.element('panel-body').querySelector('.gathering-progress').textContent, '2 / 3');
   const history = runtime.element('panel-body').querySelector('.gathering-history').textContent;
+  const historyLines = runtime.element('panel-body').querySelector('.gathering-history').querySelectorAll('div');
+  assert.equal(historyLines.length, 1, 'middle consultation must expose exactly one completed history line');
+  assert.equal(historyLines[0].querySelector('strong').textContent, definition.historySpeaker);
+  assert.equal(historyLines[0].querySelector('p').textContent, definition.historyText);
   assert.match(history, new RegExp(definition.historyText));
   assert.doesNotMatch(history, new RegExp(definition.currentText));
   assert.doesNotMatch(history, new RegExp(definition.futureText));

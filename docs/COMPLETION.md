@@ -134,6 +134,6 @@ pointer capture失敗時に要素外で指を離すと攻撃長押し・移動�
 
 ## v0.19.0以後の相談実入口gate
 
-徒歩・戦闘・依頼を経て生成した二つの相談途中saveを、本番mainのSaveStore continueとタイトルJSON importから読み、実interact、住民panel、動的相談panel、選択、保存、終了、reloadへ通す検証を追加した。二場面×二数値寸法で8起動・8 reloadが成功し、旧6検証が見逃すfocus、focus解除、選択結果再描画の3欠陥を12/12条件で検出した。実ゲームsourceとbuild入力は変更しておらず、v0.19.0のゲーム成果は同じ。
+徒歩・戦闘・依頼を経て生成した二つの相談途中saveを、本番mainのSaveStore continueとタイトルJSON importから読み、実interact、住民panel、動的相談panel、選択、保存、終了、reloadへ通す検証を追加した。二場面×二数値寸法で8起動・8 reloadが成功し、旧6検証が見逃すfocus、focus解除、選択結果再描画、既読履歴重複の4欠陥を16/16条件で検出した。実ゲームsourceとbuild入力は変更しておらず、v0.19.0のゲーム成果は同じ。
 
 これはNode内のElement/EventTarget、SceneView呼出し記録、音呼出し記録による入口接続の証拠。production SceneView / WebGL、DOM/CSS hit test、native event、物理touch、実聴、実機性能、人間の実プレイ・外部比較ではない。完成表の未確認項目とNO-GO期限判断は変わらない。

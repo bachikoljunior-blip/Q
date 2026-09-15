@@ -32,7 +32,7 @@ jobs:
         with:
           name: Q-gathering-runtime-evidence
           path: artifacts/gathering-runtime-report.json
-          if-no-files-found: warn
+          if-no-files-found: error
       - run: npm test
       - run: npm run test:journey
       - run: npm run test:crossing

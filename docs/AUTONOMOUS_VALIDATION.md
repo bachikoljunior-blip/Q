@@ -56,12 +56,12 @@ HTMLは要素の登録・生成を検査するための限定parserで、browser
 
 - 本番mainをbundleした入口でSceneView読込を一回だけ要求し、読込完了まで旅を始めない。
 - 実Gameの最寄り人物を `interact` し、次frameのevent処理、住民panel、動的生成された「皆で話す」を経て相談panelを開く。相談関数を直接呼ばない。
-- 2 / 3の現在話者、既読一件だけの履歴、3 / 3の次話者、選択結果を区別する。開く操作はGameと保存を変更せず、選択だけが正規saveへ残る。
+- 2 / 3の現在話者、既読が正確に一件だけであることとその話者・全文、3 / 3の次話者、選択結果を区別する。開く操作はGameと保存を変更せず、選択だけが正規saveへ残る。
 - SceneView呼出し記録へ正規の `focusGathering(id)` が届き、次の `update` で同じモデル化focusを観測する。blur、hidden→visible、BFCacheのpagehide→pageshow中も開いた相談を保持し、閉じると `focusGathering(null)` を記録して音の開始要求とGame loopを再開する。
 - 選択後の保存を新しいruntimeへ読み直し、結果panelと選択を復元する。continueとtitle importの完成save SHA-256が一致する。
 
 SceneViewはcreate / focus / updateの呼出し記録だけで、fixtureが保持するfocusは境界契約のモデルである。production `SceneView.focusGathering` の内部効果、`SceneView.update`、Three.js、WebGL rendererは実行しない。既存の純粋配置試験は別に維持するが、その結果を入口からカメラが実行された証拠に足さない。数値viewportもCSSレイアウトや縦横画面の証拠ではない。
 
-旧 `gathering-presentation.test.mjs` 6検証が通るようsource文字列を残したまま、(1) focus呼出し、(2) focus解除、(3) 選択結果の再描画を一つずつ無効にする。旧検証は3/3を見逃し、新しいgateは各欠陥を二場面×二寸法の12/12条件で欠陥別のassertionとして検出した。fixture例外、compile失敗、別assertionの失敗、旧検証自体の失敗は検出に数えない。runの入力hash、経路、host時間、失敗診断は `artifacts/gathering-runtime-report.json` に保存し、CIは `Q-gathering-runtime-evidence` として常にuploadを試みる。
+旧 `gathering-presentation.test.mjs` 6検証が通るようsource文字列を残したまま、(1) focus呼出し、(2) focus解除、(3) 選択結果の再描画、(4) 既読履歴の重複を一つずつ混入する。旧検証は4/4を見逃し、新しいgateは各欠陥を二場面×二寸法の16/16条件で欠陥別のassertionとして検出した。fixture例外、compile失敗、別assertionの失敗、旧検証自体の失敗は検出に数えない。runの入力hash、経路、host時間、失敗診断は `artifacts/gathering-runtime-report.json` に保存し、save欠落・parse失敗・hash不一致もreport初期化後の `try/finally` 内で捕捉する。3つの異常入力を別processで入れ、exit失敗後も `passed:false` と欠陥別診断をJSONへ残す回帰試験を通す。CIは `Q-gathering-runtime-evidence` をalways-uploadし、JSONがなければupload stepも失敗する。
 
 このgateで確認したのは本番main、Game、SaveStore、lifecycle listener、生成UIとSceneView呼出し境界の接続。browser DOM/CSS/hit test/native event、実SceneView/WebGLのカメラ画面、物理touch、実聴、実機性能、人間の実プレイ、外部比較は未確認のまま。次の自動作業は徒歩獲得したready saveから相談開始、人物の集合、talkingへの遷移、途中保存を同じ入口で検査すること。保存やゲームルールを短絡する一般向け機能は追加しない。

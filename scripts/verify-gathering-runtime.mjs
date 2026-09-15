@@ -2,17 +2,17 @@ import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
 import { performance } from 'node:perf_hooks';
 import { compileMain } from '../tests/main-runtime-fixture.mjs';
-import { gatheringScenarios, gatheringViewports } from '../tests/gathering-runtime-scenarios.mjs';
 import { buildIdentity } from './build-identity.mjs';
 
 const root = new URL('../', import.meta.url).pathname;
-const reportPath = join(root, 'artifacts/gathering-runtime-report.json');
+const reportPath = process.env.Q_GATHERING_REPORT_PATH
+  ? resolve(process.env.Q_GATHERING_REPORT_PATH)
+  : join(root, 'artifacts/gathering-runtime-report.json');
 await mkdir(join(root, 'artifacts'), { recursive: true });
-const temporary = await mkdtemp(join(root, 'artifacts/gathering-runtime-controls-'));
-const source = await readFile(join(root, 'src/main.js'), 'utf8');
+let temporary;
 
 async function bounded(run) {
   let timer;
@@ -44,6 +44,12 @@ const mutations = [
     before: "if(gatheringAction(game,id,c.id)){save();showGathering(id);}",
     after: "if(gatheringAction(game,id,c.id)){save();if(false)showGathering(id);}",
   },
+  {
+    id: 'completed-history-duplicated',
+    expected: /middle consultation must expose exactly one completed history line/,
+    before: "presentation.history.map(l=>'<div><strong>'+l.speaker+'</strong><p>'+l.text+'</p></div>').join('')",
+    after: "presentation.history.flatMap(l=>[l,l]).map(l=>'<div><strong>'+l.speaker+'</strong><p>'+l.text+'</p></div>').join('')",
+  },
 ];
 
 const report = {
@@ -51,8 +57,6 @@ const report = {
   evidence: 'Tracked walking-earned save through production main consultation UI and SceneView call boundary; controlled fault sensitivity',
   passed: false,
   host: { node: process.version, platform: process.platform, arch: process.arch },
-  build: await buildIdentity(root),
-  mainSourceSha256: createHash('sha256').update(source).digest('hex'),
   viewportMeaning: 'Numeric fixture inputs only; no CSS layout, pixels, hit testing or rendered viewport claim',
   boundaries: [
     'Real production main bundle, Game, SaveStore, lifecycle listeners and dynamically generated consultation controls',
@@ -73,6 +77,11 @@ const report = {
 };
 
 try {
+  temporary = await mkdtemp(join(root, 'artifacts/gathering-runtime-controls-'));
+  const source = await readFile(join(root, 'src/main.js'), 'utf8');
+  report.build = await buildIdentity(root);
+  report.mainSourceSha256 = createHash('sha256').update(source).digest('hex');
+  const { gatheringScenarios, gatheringViewports } = await import('../tests/gathering-runtime-scenarios.mjs');
   const compileStarted = performance.now();
   const compiled = await compileMain();
   report.compileMs = performance.now() - compileStarted;
@@ -139,5 +148,5 @@ try {
   throw error;
 } finally {
   await writeFile(reportPath, JSON.stringify(report, null, 2) + '\n');
-  await rm(temporary, { recursive: true, force: true });
+  if (temporary) await rm(temporary, { recursive: true, force: true });
 }
