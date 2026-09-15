@@ -89,7 +89,7 @@ export async function compileMain({ mutate } = {}) {
   const contents = mutate ? mutate(source) : source;
   const result = await build({
     stdin: { contents, resolveDir: new URL('src/', root).pathname, sourcefile: 'main.js', loader: 'js' },
-    bundle: true, write: false, format: 'iife', platform: 'browser', logLevel: 'silent',
+    bundle: true, write: false, format: 'iife', platform: 'browser', logLevel: 'silent', loader: { '.mp4': 'empty' },
     plugins: [{ name: 'explicit-device-boundaries', setup(builder) {
       builder.onResolve({ filter: /^\.\/(style\.css|scene\.js|audio\.js|title-cinematic\.js)$/ }, args => ({ path: args.path, namespace: 'boundary' }));
       builder.onLoad({ filter: /.*/, namespace: 'boundary' }, args => ({ contents:

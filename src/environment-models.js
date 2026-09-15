@@ -58,8 +58,12 @@ export function createLantern(){
 }
 export function createHouse(){
   if(propTemplates.has('house'))return propTemplates.get('house').clone(true);
-  const g=new T.Group(),{stone,wood,darkWood}=palette(),plaster=surfaceMaterial('stone',0xc1b89b),roof=surfaceMaterial('stone',0x4c6467),dark=surfaceMaterial('wood',0x292e2a);g.userData.environmentFamily='house';
+  const g=new T.Group(),{stone,wood,darkWood}=palette(),plaster=surfaceMaterial('stone',0xb9ad93,{finish:'plaster',worldScale:2.3}),roof=surfaceMaterial('stone',0x4c6467),dark=surfaceMaterial('wood',0x292e2a);g.userData.environmentFamily='house';
   block(g,stone,[0,.25,0],[5.7,.5,4.8]);block(g,plaster,[0,1.95,0],[5.65,3.1,4.75]);
+  // Close the previously open gable: the roof now has supporting walls and
+  // timber joinery rather than floating slate rows over an empty triangle.
+  const gable=new T.BufferGeometry();gable.setAttribute('position',new T.Float32BufferAttribute([-2.825,3.5,2.38,2.825,3.5,2.38,0,5.2,2.38,2.825,3.5,-2.38,-2.825,3.5,-2.38,0,5.2,-2.38],3));gable.setAttribute('uv',new T.Float32BufferAttribute([0,0,1,0,.5,1,0,0,1,0,.5,1],2));gable.computeVertexNormals();part(g,gable,plaster);
+  for(const z of[-2.405,2.405]){block(g,darkWood,[0,4.18,z],[.14,1.9,.16]);for(const side of[-1,1])beam(g,wood,[side*2.7,3.51,z],[0,5.16,z],.052);}
   for(const x of[-2.82,0,2.82])for(const z of[-2.4,2.4])block(g,wood,[x,1.85,z],[.18,3.5,.17]);for(const y of[.6,2.9])for(const z of[-2.42,2.42])block(g,darkWood,[0,y,z],[5.8,.15,.17]);
   for(const side of[-1,1])for(const z of[-2.43,2.43])beam(g,wood,[side*2.72,.68,z],[side*.12,2.82,z],.065);
   // Gabled slate roof with overlapping shingle rows and real raised ridge.

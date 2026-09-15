@@ -1,0 +1,135 @@
+{
+  "base": "c33be61a3f50fa5d703e9c1fcf39a8140bc04507",
+  "scope": [
+    "real title video",
+    "all 14 actor recipes and 4 guardian themes",
+    "terrain/rock/vegetation/buildings/props/water/sky/light/shadows/VFX",
+    "game HUD/menus/touch layout"
+  ],
+  "status": "validated candidate before normal main merge and same-Site deployment",
+  "agents": {
+    "integrator": "/root/ultra_q_title_video",
+    "actors": "/root/ultra_q_title_video/actors_ps4_ultra",
+    "actorIndependent": "/root/ultra_q_title_video/actors_ps4_ultra/actor_review_ultra",
+    "world": "/root/ultra_q_title_video/world_ps4_ultra",
+    "ui": "/root/ultra_q_title_video/ui_ps4_ultra",
+    "independent": "/root/ultra_q_title_video/independent_review_ultra"
+  },
+  "spawnArguments": {
+    "reasoning_effort": "ultra",
+    "fork_turns": "none",
+    "model": "omitted"
+  },
+  "acceptedCanonicalIds": true,
+  "hiddenEffectiveEffortVerified": false,
+  "sourceUnits": {
+    "title": "9ee654f",
+    "actor": "bcaf9a8e624e76caf22a4e3d33b32df5d45a6871",
+    "world": "14a5f92ec230a7b44349d78e983a6de8c0b806f2",
+    "worldNormalRepair": "d8a93928593f1bf52192cf51645e09d7592279e1",
+    "ui": [
+      "32110a4978778d1312f49fd023795e7d54ae0fb8",
+      "92b8d1f3c5b9f3f814a6680b180a5ffbfa762e31"
+    ]
+  },
+  "localValidation": {
+    "passed": true,
+    "commands": 19,
+    "tests": 223,
+    "wallSeconds": 72.543,
+    "startedAt": "2026-09-15T11:48:20.660542+00:00",
+    "completedAt": "2026-09-15T11:49:33.204048+00:00",
+    "report": "docs/evidence/title-video/validation.json",
+    "note": "review:saves regenerated the existing optional vault defaults/wardens; retained previously tracked earned-save fixtures to preserve their exact original hashes. Main/gathering gates ran against and retain those original fixtures."
+  },
+  "delivery": {
+    "initialJsBytes": 163175,
+    "initialJsBudgetUnchanged": 165000,
+    "jsChunks": 3,
+    "cssBytes": 58545,
+    "mediaAddedBytes": 3178191,
+    "environmentAddedBytes": 3403723,
+    "standaloneBytes": 13117027,
+    "standaloneSha256": "9084b7091f7627d971902cb8046492e357af468c43899ee1d8624b39a44eaaf9",
+    "stage": {
+      "root": "artifacts/site-pbDL1e",
+      "files": [
+        "assets/ember-ambient-DxlfqX62.wav",
+        "assets/ember-stone-CGtrIuNR.png",
+        "assets/forest_floor_diff_1k-FrvyY1gs.jpg",
+        "assets/gale-ambient-Bk5IsviT.wav",
+        "assets/gale-stone-DFcyxpvg.png",
+        "assets/index-BNB_oobF.js",
+        "assets/index-DX2EUndK.css",
+        "assets/moss-ambient-P9AOr4W8.wav",
+        "assets/moss-stone-DiwO4PmY.png",
+        "assets/north-gate-v22-M69S2yqx.webp",
+        "assets/north-gate-v23-BAPO0H9x.mp4",
+        "assets/pilgrim-foley-CW54U_6w.wav",
+        "assets/pilgrim-harmony-BW3Pcfnr.mp3",
+        "assets/pilgrim-motif-yb4axZNo.mp3",
+        "assets/pilgrim-pulse-DgX4WFEi.mp3",
+        "assets/rock_face_03_diff_1k-Clx6WbHJ.jpg",
+        "assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg",
+        "assets/scene-DCq_U147.js",
+        "assets/shared-alert-JeJkFdAY.wav",
+        "assets/shared-claim-BPXeWqKz.wav",
+        "assets/shared-impact-DwWqEia4.wav",
+        "assets/shared-seal-slkiLvkd.wav",
+        "assets/shared-step-D8_A5LtE.wav",
+        "assets/shared-swing-BkmUzsmF.wav",
+        "assets/three-D8l53BxU.js",
+        "assets/tide-ambient-BP0Z0aTJ.wav",
+        "assets/tide-stone-COv3Sj_E.png",
+        "icon.svg",
+        "index.html",
+        "manifest.webmanifest"
+      ]
+    },
+    "initialPosterBytes": 162962,
+    "videoLoading": "Website video source stays absent until document load plus 300ms and only while active/visible/focused/motion-enabled/non-Save-Data. Standalone embeds the entire video and photos upfront."
+  },
+  "independentReview": {
+    "media": "anonymous A/B actual encoded frames and crops, all 288 decoded frames; final seam ratio1.003258 to max matching internal IDR; no material frame blocker",
+    "resolved": [
+      "queued intentional pause event poisoning blur/focus resume",
+      "320px portrait jump/joystick overlap",
+      "triplanar normal green orientation vs unflipped albedo UV"
+    ],
+    "actor": "independent full sequence numerical/source contact, return-pose, dodge/revival and UV seam review recorded in ACTOR_REALISM_V23.md",
+    "remainingMaterialBlockersInReviewedScope": 0
+  },
+  "preview": {
+    "executionProfile": "managed-linux",
+    "configured": false,
+    "command": "sites-preview status",
+    "exitCode": 1,
+    "output": "sites-previewd mailbox is unavailable at /tmp/sites-previewd/requests: No such file or directory (os error 2)",
+    "alternatePathUsed": false
+  },
+  "quality": {
+    "deadline": "2026-09-20",
+    "deadlineDecision": "NO-GO / evidence insufficient",
+    "completionAcceptancePassed": 0,
+    "completionAcceptanceTotal": 7,
+    "namedGameComparisonsPassed": 0,
+    "namedGameComparisonsTotal": 10,
+    "unverified": [
+      "WebGL pixels",
+      "native shader compilation",
+      "actual video playback perception",
+      "physical touch",
+      "actual audio listening",
+      "iOS/Android memory and FPS",
+      "PS4-era perceptual parity"
+    ],
+    "unchangedGameRulesAndSaves": true
+  },
+  "publication": {
+    "projectId": "appgprj_6aa6871ebd648191802ba2398d06115b",
+    "url": "https://q-ash-pilgrim.juurooo.chatgpt.site",
+    "previousVersion": 22,
+    "audience": "owner1/editor0/group0/external0",
+    "status": "pending"
+  }
+}

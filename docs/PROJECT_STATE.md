@@ -1,5 +1,21 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-15 — タイトル映像と画面全体の写実方向改修（統合候補）
+
+最新原文「タイトル画面は映像あるといいな」「モデル、アニメはps4のリアリスティック描画のゲームくらいのクオリティがいいな」「モデルというか画面に映るもの全て」を受領。基点c33be61a3f50fa5d703e9c1fcf39a8140bc04507から単独writer・排他worktreeで制作。人物だけでなく地形/岩/草木/建築小物/水空/光影/VFX/カメラ/HUD/メニューを棚卸しし、以下の一貫した有限改修を行った。カメラの移動・遮蔽・既存保存/進行と前回の48秒三層音楽/24効果音を保持する。
+
+- 北門原画から12秒・720p・24fps・無音H.264の動くイラストを作成。3,178,191 B、poster-first遅延読込、停止ボタン、非表示/ゲーム開始でdecoder source解放、減動/節約通信と拒否fallbackを実装。[詳細](TITLE_VIDEO_V23.md)。
+- 全14actor recipe/4guardian themeに連続形状・多関節weight、顔/指/靴・獣のhock/tail、材質・outward normal、足固定と遷移を適用。parry終了snap、横歩き/方向転換の滑り、dodge/revival残留poseを具体的に修正。写真計測/モーキャプ/商用顔演技ではない。[詳細](ACTOR_REALISM_V23.md)。
+- Poly Haven CC0原byteの地表/岩albedoとGL normalを3枚共有（3,403,723 B）。天空と水/金属反射、太陽と影の方向、接地と植生陰影、家のgable壁、控えめな風・粒子・光柱を更新。既存地形高/障害物/配置/カメラルールは維持。3枚のmip込みRGBA推計約16 MiB＋接地map256 KiB、追加画面pass0、実機コストは未測定。[出所と分類](../src/assets/environment/provenance.json)。
+- HUDと会話/装備/記録/設定/地図/死亡画面を一貫した文字階層・余白・材質へ整理。panelヘッダ固定と本文スクロール、縮小しないtouch操作、320px狭幅のjump/stick重なりを修正。[詳細](UI_PRESENTATION_V23.md)。
+
+独立Ultraは実encoded媒体の匿名frame/crop/全288decode、title lifecycle、UI幾何を点検し、遅延pause競合と狭幅重なりを指摘→修正readback済み。actorにも別Ultraの接地/全pose sequence/normal監査を適用。採用はこれらの限定範囲で、WebGL画面・実再生/実聴・物理touch・実機memory/FPS・PS4知覚品質の合格ではない。親の公式Sites statusはmailbox不在、別server/browser/CIで迂回しない。
+
+着手直後とmain前の期限2026-09-20判断は **NO-GO / evidence insufficient**。完成0/7、固定10作品比較0/10、複数章/地域・演技・native配布/実機・正式画面と外部比較の残量は未解決。一関節・数式texture・小機能追加のみの従来方法を見直し、本物の動画、CC0写真素材、shared deformationと接地、画面全体の階層へ作業を変更したが、期限到達を保証する同等scope速度/画面証拠はない。[方法と実測](PRODUCTION_METHOD.md)。
+
+全実作業は /root/ultra_q_title_video と actors_ps4_ultra / world_ps4_ultra / ui_ps4_ultra / independent_review_ultra（およびactor_review_ultra）が担当。実spawnは全て reasoning_effort=ultra / fork_turns=none / model omitted、受理canonical IDと成果SHAを各記録へ対応付ける。親は所有者専用Sites操作のみ機械的に実行する。旧PR3/13・別repo・automation・公開範囲は変更しない。全結合19command / 223 tests成功、validation wall 72.543秒。初期JS 163,175 B（165,000上限と3chunk維持）、CSS 58,545 B、単体版 13,117,027 B / SHA256 `9084b7091f7627d971902cb8046492e357af468c43899ee1d8624b39a44eaaf9`。結合全instance triangle上限low653,066 / high777,132–787,242、mesh1590は描画前構造であってFPSではない。実測と担当/修正対応は [統合証拠](evidence/visual-overhaul-v23.json)。現在のcheckpointは通常PR/必須CI/mainと同一Site反映。最終結果は同節へ追記する。
+
+
 ## 2026-09-15 — 全モデル・動作・タイトル・音響をmain / owner-only Siteへ反映完了
 
 最新の直接指定「全てのモデルとアニメーションとリアリスティックに凝って。タイトル画面がワクワクしない。サウンドも豪華にして」に対応。継続は完了checkpoint `0a1d905ff9000976d143baac630dbde60fe676e3` から新しい有限の改修として再開。初回fetch時は他の現行未merge制作・別writerなし。旧PR #3/#13、他repository、automationは変更していない。

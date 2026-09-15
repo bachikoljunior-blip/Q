@@ -6,7 +6,7 @@ import { advanceTitleEmbers, createTitleEmbers, mountTitleCinematic, titleCanvas
 
 // Explicit device boundary: records drawing calls and manually schedules frames.
 // It cannot render CSS, hit-test DOM, or establish browser/device performance.
-function titleBoundary({ reduced = false, canvasAvailable = true } = {}) {
+function titleBoundary({ reduced = false, canvasAvailable = true, videoAvailable = false, saveData = false, loaded = true, queuedPause = false } = {}) {
   class Events {
     listeners = new Map();
     addEventListener(name, callback) { if (!this.listeners.has(name)) this.listeners.set(name, new Set()); this.listeners.get(name).add(callback); }
@@ -17,22 +17,31 @@ function titleBoundary({ reduced = false, canvasAvailable = true } = {}) {
     const items = new Set();
     return { add: (...names) => names.forEach(name => items.add(name)), remove: (...names) => names.forEach(name => items.delete(name)), contains: name => items.has(name), toggle(name, value) { const next = value ?? !items.has(name); if (next) items.add(name); else items.delete(name); return next; } };
   };
-  const win = new Events(), doc = new Events(), motion = new Events(), root = new Events();
+  const win = new Events(), doc = new Events(), motion = new Events(), root = new Events(), connection = new Events();
+  const timers = new Map(), plays = [];
   const frames = new Map(), drawings = [], css = new Map(), cues = [];
   let nextId = 0, focused = true;
   win.devicePixelRatio = 3; win.requestAnimationFrame = callback => { frames.set(++nextId, callback); return nextId; };
   win.cancelAnimationFrame = id => frames.delete(id);
   motion.matches = reduced; win.matchMedia = () => motion;
+  connection.saveData = saveData; win.navigator = { connection };
+  win.setTimeout = callback => { timers.set(++nextId, callback); return nextId; }; win.clearTimeout = id => timers.delete(id);
+  doc.readyState = loaded ? 'complete' : 'loading';
   doc.defaultView = win; doc.hidden = false; doc.hasFocus = () => focused;
   const context = { setTransform() {}, clearRect() { drawings.push('clear'); }, beginPath() {}, arc(...args) { drawings.push(args); }, fill() {} };
   const canvas = { getContext: () => canvasAvailable ? context : null };
-  const nodes = Object.fromEntries(['start', 'continue', 'import-title-save', 'title-settings', 'title-loading'].map(id => { const item = new Events(); item.classList = classes(); item.disabled = false; return [id, item]; }));
+  const nodes = Object.fromEntries(['start', 'continue', 'import-title-save', 'title-settings', 'title-loading', 'title-motion'].map(id => { const item = new Events(); item.classList = classes(); item.disabled = false; item.attributes = new Map(); item.setAttribute = (name,value) => item.attributes.set(name,value); return [id, item]; }));
   nodes.continue.classList.add('hidden'); nodes['title-loading'].classList.add('hidden');
+  const video = new Events(); video.paused = true; video.src = ''; video.loads = 0; video.pauses = 0;
+  video.play = () => { video.paused = false; return new Promise((resolve, reject) => plays.push({ resolve, reject })); };
+  video.pause = () => { video.pauses++; if (!video.paused) { video.paused = true; if (queuedPause) queueMicrotask(() => video.emit('pause')); else video.emit('pause'); } };
+  video.load = () => { video.loads++; }; video.removeAttribute = name => { if (name === 'src') video.src = ''; };
   root.ownerDocument = doc; root.classList = classes(); root.style = { setProperty: (name, value) => css.set(name, value) };
-  root.querySelector = selector => selector === '#title-embers' ? canvas : nodes[selector.slice(1)] || null;
+  root.querySelector = selector => selector === '#title-embers' ? canvas : selector === '#title-video' ? (videoAvailable ? video : null) : nodes[selector.slice(1)] || null;
   root.getBoundingClientRect = () => ({ left: 0, top: 0, width: 390, height: 844 });
-  const api = mountTitleCinematic({ root, onCue: cue => cues.push(cue) });
-  return { api, root, win, doc, motion, frames, drawings, nodes, cues, css,
+  const api = mountTitleCinematic({ root, videoSource: videoAvailable ? '/clip.mp4' : '', onCue: cue => cues.push(cue) });
+  return { api, root, win, doc, motion, video, timers, plays, connection, frames, drawings, nodes, cues, css,
+    timersRun() { const callbacks = [...timers.values()]; timers.clear(); for (const callback of callbacks) callback(); },
     frame(now) { const callbacks = [...frames.values()]; frames.clear(); for (const callback of callbacks) callback(now); },
     focus(value) { focused = value; win.emit(value ? 'focus' : 'blur'); },
     reduce(value) { motion.matches = value; motion.emit('change', { matches: value }); },
@@ -119,7 +128,86 @@ test('title illustration provenance fixes source, optimized payload and deployed
     assert.equal(data.length, bytes); assert.equal(createHash('sha256').update(data).digest('hex'), hash);
   }
   assert(derivative.bytes < 500000);
+  const movie = await readFile(new URL(`../${provenance.video.file}`, import.meta.url));
+  assert.equal(movie.length, provenance.video.bytes);
+  assert.equal(createHash('sha256').update(movie).digest('hex'), provenance.video.sha256);
+  assert.equal(movie.toString('ascii',4,8), 'ftyp');
+  const decoded=JSON.parse(await readFile(new URL('../docs/evidence/title-video/decode.json',import.meta.url),'utf8'));
+  assert.equal(decoded.sha256,provenance.video.sha256); assert.equal(decoded.decodedFrames,288);
+  assert.equal(decoded.audioStreams,0); assert(decoded.fastStart && decoded.passed);
   const css = await readFile(new URL('../src/style.css', import.meta.url), 'utf8');
   assert(css.includes(`url('./assets/title/${derivative.file}')`));
   assert(!css.includes(`url('./assets/title/${provenance.asset}')`));
+});
+
+const flushMedia = async () => { await Promise.resolve(); await Promise.resolve(); };
+
+test('encoded title waits for poster/load, owns one play request, and disables extra canvas rendering after playback', async () => {
+  const b = titleBoundary({ videoAvailable: true, loaded: false });
+  assert.equal(b.video.src, ''); assert.equal(b.timers.size, 0);
+  b.win.emit('load'); assert.equal(b.timers.size, 1);
+  b.api.setActive(true); assert.equal(b.timers.size, 1);
+  b.timersRun(); assert.equal(b.video.src, '/clip.mp4'); assert.equal(b.plays.length, 1);
+  assert(b.video.muted && b.video.playsInline && b.video.defaultMuted);
+  assert(!b.root.classList.contains('has-video'), 'poster stays visible until real play promise succeeds');
+  b.api.setActive(true); b.timersRun(); assert.equal(b.plays.length, 1);
+  b.plays[0].resolve(); await flushMedia();
+  assert(b.root.classList.contains('has-video')); assert.equal(b.frames.size, 0);
+  b.nodes['title-motion'].emit('click'); assert(b.video.paused); assert(b.root.classList.contains('is-still'));
+  assert.equal(b.nodes['title-motion'].attributes.get('aria-pressed'), 'true');
+  b.nodes['title-motion'].emit('click'); b.timersRun(); assert.equal(b.plays.length, 2);
+  b.plays[1].resolve(); await flushMedia(); b.api.dispose();
+});
+
+test('reduced motion, data saving, title deactivate and disposal prevent media fetch or release decoder source', async () => {
+  for (const option of [{ reduced: true }, { saveData: true }]) {
+    const b = titleBoundary({ videoAvailable: true, ...option });
+    b.timersRun(); assert.equal(b.video.src, ''); assert.equal(b.plays.length, 0); assert.equal(b.frames.size, 0);
+    assert(b.nodes['title-motion'].disabled); b.api.dispose();
+  }
+  const b = titleBoundary({ videoAvailable: true });
+  b.api.setActive(false); b.timersRun(); assert.equal(b.plays.length, 0);
+  b.api.setActive(true); b.timersRun(); b.plays[0].resolve(); await flushMedia();
+  b.doc.hidden = true; b.doc.emit('visibilitychange');
+  assert.equal(b.video.src, ''); assert.equal(b.video.loads, 1); assert(b.video.paused); assert(!b.root.classList.contains('has-video'));
+  b.doc.hidden = false; b.doc.emit('visibilitychange'); b.timersRun(); assert.equal(b.plays.length, 2);
+  b.connection.saveData = true; b.connection.emit('change'); assert.equal(b.video.src, '');
+  b.plays[1].reject(Error('aborted by load')); await flushMedia();
+  b.connection.saveData = false; b.connection.emit('change'); b.timersRun(); assert.equal(b.plays.length, 3);
+  b.api.dispose(); b.plays[2].resolve(); await flushMedia();
+  assert.equal(b.video.src, ''); assert.equal(b.timers.size, 0); assert.equal(b.frames.size, 0);
+  for (const target of [b.video,b.connection,b.win,b.doc,...Object.values(b.nodes)]) assert([...target.listeners.values()].every(set => set.size === 0));
+});
+
+test('rejected autoplay and decode error keep poster/buttons usable and gesture retry handles play-promise ABA ownership', async () => {
+  const b = titleBoundary({ videoAvailable: true }); b.timersRun();
+  b.plays[0].reject(Error('NotAllowedError')); await flushMedia();
+  assert.equal(b.video.src, ''); assert(!b.root.classList.contains('has-video'));
+  b.nodes.start.emit('click'); assert.deepEqual(b.cues, ['start']);
+  assert.equal(b.nodes['title-motion'].textContent, '動きを再開する');
+  b.nodes['title-motion'].emit('click'); assert.equal(b.plays.length, 2, 'retry is inside the actual gesture');
+  b.api.setActive(false); b.api.setActive(true); b.timersRun(); assert.equal(b.plays.length, 3);
+  b.plays[2].resolve(); await flushMedia(); assert(b.root.classList.contains('has-video'));
+  const pauses=b.video.pauses; b.plays[1].resolve(); await flushMedia();
+  assert.equal(b.video.pauses, pauses); assert(b.root.classList.contains('has-video'), 'stale success cannot hide or stop a new owner');
+  b.video.emit('error'); assert.equal(b.video.src, ''); assert(!b.root.classList.contains('has-video'));
+  b.api.dispose();
+});
+
+test('encoded title is decorative and retains matched portrait/landscape crop without loading through markup', async () => {
+  const html=await readFile(new URL('../index.html', import.meta.url),'utf8');
+  const tag=html.match(/<video id="title-video"[^>]*>/)?.[0];
+  assert(tag); for(const attribute of ['muted','playsinline','loop','preload="none"','aria-hidden="true"','tabindex="-1"'])assert(tag.includes(attribute));
+  assert(!/\ssrc=/.test(tag)); assert(html.includes('id="title-motion"'));
+  const css=await readFile(new URL('../src/style.css', import.meta.url),'utf8');
+  for(const crop of ['object-position:68% 50%','object-position:72% 28%','object-fit:contain;object-position:100% 50%'])assert(css.includes(crop));
+});
+
+test('queued deliberate pause cannot block focus resume or a new media owner', async () => {
+  const b=titleBoundary({ videoAvailable: true, queuedPause: true }); b.timersRun(); b.plays[0].resolve(); await flushMedia();
+  b.focus(false); b.focus(true); await flushMedia(); b.timersRun();
+  assert.equal(b.plays.length,2); b.plays[1].resolve(); await flushMedia(); assert(!b.video.paused);
+  b.focus(false); b.focus(true); b.timersRun(); b.plays[2].resolve(); await flushMedia();
+  assert.equal(b.nodes['title-motion'].textContent,'動きを止める'); assert(!b.video.paused);
+  b.api.dispose(); await flushMedia();
 });

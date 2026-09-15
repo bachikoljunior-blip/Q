@@ -1,0 +1,431 @@
+{
+  "schema": 1,
+  "base": "c33be61a3f50fa5d703e9c1fcf39a8140bc04507",
+  "retrieved": "2026-09-15",
+  "assets": [
+    {
+      "path": "src/assets/environment/forest_floor_diff_1k.jpg",
+      "source": "https://polyhaven.com/a/forest_floor",
+      "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/forest_floor/forest_floor_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "authors": [
+        "eye-candy.xyz"
+      ],
+      "bytes": 1329853,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b",
+      "md5": "d67f308e4b8be6a65989e8dc76ec40fe",
+      "modifications": "None. Byte-identical original 1K JPEG. No cropping, re-encoding or generated source art.",
+      "mapRole": "sRGB diffuse albedo"
+    },
+    {
+      "path": "src/assets/environment/rock_face_03_diff_1k.jpg",
+      "source": "https://polyhaven.com/a/rock_face_03",
+      "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face_03/rock_face_03_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "authors": [
+        "Dario Barresi (photography)",
+        "Rico Cilliers (processing)"
+      ],
+      "bytes": 927082,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d",
+      "md5": "e4c34abb1aad5befe12754fad507147a",
+      "modifications": "None. Byte-identical original 1K JPEG. No cropping, re-encoding or generated source art.",
+      "mapRole": "sRGB diffuse albedo"
+    },
+    {
+      "path": "src/assets/environment/rock_face_03_nor_gl_1k.jpg",
+      "source": "https://polyhaven.com/a/rock_face_03",
+      "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face_03/rock_face_03_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "authors": [
+        "Dario Barresi (photography)",
+        "Rico Cilliers (processing)"
+      ],
+      "bytes": 1146788,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0",
+      "md5": "cbd30858439ece391480c5e67e09de89",
+      "modifications": "None. Byte-identical original 1K JPEG. No cropping, re-encoding or generated source art.",
+      "mapRole": "linear OpenGL tangent-space normal"
+    }
+  ],
+  "sourceBytes": 3403723,
+  "textureBudget": {
+    "sourceTextures": 3,
+    "pixelsPerTexture": 1048576,
+    "rgba8BaseBytes": 12582912,
+    "rgba8WithFullMipBytes": 16777212,
+    "contactMapBytes": 262144,
+    "notes": "RGBA8 estimate only, not measured browser/GPU residency. Original fallback 128px material fields remain shared."
+  },
+  "provenance": "Public primary asset pages identify Poly Haven CC0 photographic texture sources. Terrain/geometry, sky/water/metal reflection model, contact bake and all other material fields are project-authored code. No imported scanned mesh or PS4-equivalent quality is asserted.",
+  "coverage": [
+    {
+      "family": "terrain / paths / riverbanks / salt",
+      "change": "Original CC0 2.1m-wide forest albedo at world scale, path/slope/salt material weights, original 512-square static ground contact from existing obstacles; no height or collision changes."
+    },
+    {
+      "family": "mountains / rocks / architecture stone",
+      "change": "CC0 2.7m-wide rock albedo plus matching GL normal via triplanar sampling; inverse-scale correction for instanced world normals. Original geometry retained."
+    },
+    {
+      "family": "trees / grass / herbs",
+      "change": "Material root-to-tip ambient shading and modest back-light response, lower wind amplitude, three near-tree instanced shadow groups. LOD radii/counts/geometry and every seeded tree/grass placement retained."
+    },
+    {
+      "family": "houses / structures",
+      "change": "Closed open gables with supporting wall faces and timber bracing, original non-photographic plaster finish, unified material and directional light. No new solid locations."
+    },
+    {
+      "family": "wood / cloth / cargo / boat / bridge / tent / village / expedition / vault props",
+      "change": "Shared normal-space correction, quieter relief and roughness hierarchy, analytic sky reflection on metallic surfaces. Existing object shapes and specific vault maps/accents retained."
+    },
+    {
+      "family": "water / sky / atmosphere",
+      "change": "Animated world-space water normals and Fresnel-weighted analytic sky reflection; coherent angular sun with same directional shadow direction, layered sky cloud field, player-centred horizon, lower exposure/hemisphere fill and distance fog. No framebuffer reflection/refraction or volumetric pass."
+    },
+    {
+      "family": "particles / beacon VFX",
+      "change": "Lower ambient mote size/opacity and beacon shaft opacity. Existing combat cues, flames, memory crystals and halo remain stylized."
+    },
+    {
+      "family": "camera",
+      "change": "Existing third-person, focus conversation, lock-on and collision-safe camera preserved. Sky centre now follows player across the wide western map; no gameplay camera rule changes."
+    }
+  ],
+  "renderBudgets": {
+    "measuredAt": "2026-09-15T11:35:13.118Z",
+    "base": {
+      "head": "c33be61a3f50fa5d703e9c1fcf39a8140bc04507",
+      "method": "Real unmodified baseline SceneView/Three graph; triangle counts include Mesh only and all instances, excluding points/lines, no WebGL/culling",
+      "samples": [
+        {
+          "quality": "low",
+          "player": [
+            0,
+            80
+          ],
+          "meshes": 1576,
+          "triangles": 680822
+        },
+        {
+          "quality": "low",
+          "player": [
+            -105,
+            0
+          ],
+          "meshes": 1576,
+          "triangles": 680822
+        },
+        {
+          "quality": "low",
+          "player": [
+            -300,
+            -130
+          ],
+          "meshes": 1576,
+          "triangles": 680822
+        },
+        {
+          "quality": "low",
+          "player": [
+            170,
+            -200
+          ],
+          "meshes": 1576,
+          "triangles": 680822
+        },
+        {
+          "quality": "medium",
+          "player": [
+            0,
+            80
+          ],
+          "meshes": 1576,
+          "triangles": 707442
+        },
+        {
+          "quality": "medium",
+          "player": [
+            -105,
+            0
+          ],
+          "meshes": 1576,
+          "triangles": 707678
+        },
+        {
+          "quality": "medium",
+          "player": [
+            -300,
+            -130
+          ],
+          "meshes": 1576,
+          "triangles": 704352
+        },
+        {
+          "quality": "medium",
+          "player": [
+            170,
+            -200
+          ],
+          "meshes": 1576,
+          "triangles": 709296
+        },
+        {
+          "quality": "high",
+          "player": [
+            0,
+            80
+          ],
+          "meshes": 1576,
+          "triangles": 808786
+        },
+        {
+          "quality": "high",
+          "player": [
+            -105,
+            0
+          ],
+          "meshes": 1576,
+          "triangles": 810378
+        },
+        {
+          "quality": "high",
+          "player": [
+            -300,
+            -130
+          ],
+          "meshes": 1576,
+          "triangles": 804888
+        },
+        {
+          "quality": "high",
+          "player": [
+            170,
+            -200
+          ],
+          "meshes": 1576,
+          "triangles": 814998
+        }
+      ],
+      "measuredCheckoutHead": "cf6462677cd9791f72e364530f5caea516996d01",
+      "sourceEquivalence": "git diff cf6462677cd9791f72e364530f5caea516996d01 c33be61a3f50fa5d703e9c1fcf39a8140bc04507 -- src tests returned empty; c33be61 is a documentation-only update."
+    },
+    "graph": {
+      "nodes": 2863,
+      "meshes": 1561,
+      "lights": 12,
+      "shadowLights": 1
+    },
+    "samples": [
+      {
+        "quality": "low",
+        "player": [
+          0,
+          80
+        ],
+        "meshes": 1561,
+        "triangles": 680814,
+        "nearShadowInstances": 0
+      },
+      {
+        "quality": "low",
+        "player": [
+          -105,
+          0
+        ],
+        "meshes": 1561,
+        "triangles": 680814,
+        "nearShadowInstances": 0
+      },
+      {
+        "quality": "low",
+        "player": [
+          -300,
+          -130
+        ],
+        "meshes": 1561,
+        "triangles": 680814,
+        "nearShadowInstances": 0
+      },
+      {
+        "quality": "low",
+        "player": [
+          170,
+          -200
+        ],
+        "meshes": 1561,
+        "triangles": 680814,
+        "nearShadowInstances": 0
+      },
+      {
+        "quality": "medium",
+        "player": [
+          0,
+          80
+        ],
+        "meshes": 1561,
+        "triangles": 707434,
+        "nearShadowInstances": 60
+      },
+      {
+        "quality": "medium",
+        "player": [
+          -105,
+          0
+        ],
+        "meshes": 1561,
+        "triangles": 707670,
+        "nearShadowInstances": 66
+      },
+      {
+        "quality": "medium",
+        "player": [
+          -300,
+          -130
+        ],
+        "meshes": 1561,
+        "triangles": 704344,
+        "nearShadowInstances": 15
+      },
+      {
+        "quality": "medium",
+        "player": [
+          170,
+          -200
+        ],
+        "meshes": 1561,
+        "triangles": 709288,
+        "nearShadowInstances": 87
+      },
+      {
+        "quality": "high",
+        "player": [
+          0,
+          80
+        ],
+        "meshes": 1561,
+        "triangles": 808778,
+        "nearShadowInstances": 114
+      },
+      {
+        "quality": "high",
+        "player": [
+          -105,
+          0
+        ],
+        "meshes": 1561,
+        "triangles": 810370,
+        "nearShadowInstances": 142
+      },
+      {
+        "quality": "high",
+        "player": [
+          -300,
+          -130
+        ],
+        "meshes": 1561,
+        "triangles": 804880,
+        "nearShadowInstances": 57
+      },
+      {
+        "quality": "high",
+        "player": [
+          170,
+          -200
+        ],
+        "meshes": 1561,
+        "triangles": 814990,
+        "nearShadowInstances": 204
+      }
+    ],
+    "method": "Production SceneView constructors, Three Mesh/index/instance arrays in Node. Counts are all-instance upper bounds, no culling, renderer, GLSL compilation or GPU. Points/lines excluded. Actor baseline remains untouched in this branch.",
+    "limits": {
+      "extraFullscreenPasses": 0,
+      "shadowLights": 1,
+      "nearTreeShadowGroups": 3,
+      "pixelRatioCaps": [
+        1,
+        1.35,
+        1.7
+      ],
+      "grassCaps": [
+        4500,
+        9000,
+        "capacity"
+      ],
+      "treeDetailRadii": [
+        0,
+        52,
+        80
+      ],
+      "albedoTaps": 3,
+      "stoneAdditionalNormalTaps": 3,
+      "terrainAdditionalContactTaps": 1,
+      "drawComparison": "1576 -> 1561 mesh nodes; actual draws depend on visibility, shadow passes and driver. Near-tree shadows add at most 3 instanced groups to the existing sun pass."
+    }
+  },
+  "timings": {
+    "measurement": "Host UTC clock and filesystem birth/mtime. Durations below are bounded observations, not a claim of full exclusive T_asset or a throughput prediction.",
+    "sourceAssetProduction": {
+      "method": "Selected and downloaded existing primary CC0 sources; no image/model generation or source art modifications.",
+      "firstAssetFirstByte": "2026-09-15T11:26:36.683Z",
+      "lastAssetReady": "2026-09-15T11:27:53.599Z",
+      "observedAcquisitionIntervalMs": 76916,
+      "exclusiveTotalMs": null,
+      "exclusion": "Search, licensing review, API metadata requests and latency before first asset byte were not separately timed."
+    },
+    "coding": {
+      "firstCodeWriteStarted": "2026-09-15T11:28:49.857Z",
+      "finalSourceEdit": "2026-09-15T11:38:33.745Z",
+      "wallIntervalMs": 583888,
+      "exclusiveTotalMs": null,
+      "includes": "Interleaved code authoring, deterministic contact recipe, source inspection, graph measurements, rework and test waiting."
+    },
+    "rework": {
+      "exclusiveWallMs": null,
+      "events": [
+        "Photo material installation/program key was corrected to preserve explicit vault texture overrides and plaster; found during code inspection before regression gate.",
+        "Old static-transform regression referenced removed cloud[0]; replaced it with animated sky-uniform progress and included the mutable sky in transform exclusions. Initial targeted run: 13 pass/1 fail; fixed static gate: 2/2 pass.",
+        "Source image inspection confirmed bright leaf litter and brown rock; restored a distinct pale salt-region blend before freeze."
+      ]
+    },
+    "verification": {
+      "newEnvironmentContractsMs": 164.588725,
+      "staticTransformGateMs": 17960.985364,
+      "fullUnitSuiteMs": 23177.130512,
+      "viteBuildReportedMs": 1840,
+      "method": "Durations reported by node --test and Vite, excluding tool transport. No device/render benchmark."
+    }
+  },
+  "verification": {
+    "newFocusedTests": "5/5",
+    "existingEnvironmentTests": "4/4; frozen original tree/grass/particle hashes and all LOD partitions preserved",
+    "staticTransformGate": "2/2; 90 frames of baked vs unbaked Three object matrices, not rendered frames",
+    "fullUnitSuite": "212/212, exit 0",
+    "build": "73 modules, all 3 JPEG files emitted byte-identically as delayed environment imports",
+    "integrationOwnership": "Standalone JPEG support, full packaging/artifact gates, actor/title/UI integration, PR/main and Sites belong exclusively to the integrator."
+  },
+  "limitations": [
+    "No actual WebGL draw, native shader compilation, browser image decoding, visual screen comparison, touch or iOS/Android FPS/memory/power measurement occurred.",
+    "The three photo texture files add 3,403,723 network bytes and approximately 16 MiB RGBA8+mip residency plus a 256 KiB single-channel contact field; smartphone impact is unmeasured.",
+    "Stone has three additional normal texture taps; terrain has one contact tap; near trees enter the existing directional shadow pass. Equal triangles do not establish equal frame time.",
+    "Wood, cloth, bark and leaf materials, tree/grass/rock/architecture meshes, flames and other small props still use authored code-native simplifications. No imported photogrammetric mesh, actor facial performance, real fluid simulation, baked GI or screen-space reflection.",
+    "The sky reflection is an analytic lighting approximation and does not reflect scene objects. Ground contact is static soft shading from obstacle centres, not dynamic actor shadow or SSAO.",
+    "Completion acceptance remains 0/7 and fixed ten-game comparison remains 0/10. PS4-quality equivalence is not claimed."
+  ]
+}

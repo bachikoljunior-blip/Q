@@ -5,8 +5,8 @@
   "license": "Project-authored source under repository terms; not a claim of independently adjudicated authorship.",
   "recipe": {
     "file": "detailed-geometry.js",
-    "sha256": "47d3f9502e2a050d1f7a8336a13162b500d40363c486eb6be0d97c9a3e8625b7",
-    "bytes": 22165
+    "sha256": "ac0fbfee1f3361e8be329df980dc60db8a8eec1d6b0dcf883c396cff79f9993e",
+    "bytes": 29327
   },
   "separateUnmodifiedAssets": "The adjacent pilgrim.glb, knight.glb, keeper.glb and provenance.json preserve Kay Lousberg CC0 attribution. They are not the source of the new procedural bodies.",
   "families": [
@@ -37,9 +37,23 @@
       "cloth weave",
       "leather grain",
       "worn metal",
-      "skin microstructure"
+      "skin microstructure",
+      "eye surface roughness"
     ],
-    "externalBytes": 0
+    "externalBytes": 0,
+    "channels": {
+      "R": "height",
+      "G": "roughness",
+      "B": "unused",
+      "A": "opaque"
+    }
   },
-  "geometryMethod": "Adult human and canine surfaces bound to articulated bones; skin draws merged per material; independently visible weapons and deforming cloak stay separate."
+  "geometryMethod": "Continuous shaped torso, sleeves, trouser legs, boots, digits and canine trunk/tail. Smooth multi-joint weights across joint collars, explicit human spine/digits and canine hocks; UV seams retain averaged normals. Armor/equipment stay rigid. Material batches and immutable geometry shared across instances; bones and deforming cape independent. All material batches within an actor share one skeleton palette; each actor has independent cloned bones.",
+  "animationRecipe": {
+    "file": "../../actor-models.js",
+    "sha256": "835be3e889666c05a46d82c97aaad0ba08d447a02ef76f145dc6c3ba7432b55e",
+    "bytes": 20155,
+    "origin": "Original analytic poses and visual-only contact/transition logic. No motion capture imported."
+  },
+  "qualityBoundary": "Original analytic modelling, not photogrammetry, scan-derived anatomy or imported mocap. CPU topology/weight/contact checks do not establish WebGL appearance, device FPS or PS4/flagship parity."
 }

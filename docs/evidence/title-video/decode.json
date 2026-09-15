@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "decodedFrames": 288,
+  "decodePath": "ffprobe count_frames and ffmpeg decode of every frame; RGB analysis at 320x180",
+  "codec": "h264",
+  "profile": "High",
+  "level": 31,
+  "pixelFormat": "yuv420p",
+  "width": 1280,
+  "height": 720,
+  "durationSeconds": 12.0,
+  "bitrate": 2118794,
+  "audioStreams": 0,
+  "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+  ],
+  "fastStart": true,
+  "adjacentFrameMeanAbsRgb": {
+    "min": 0.05822916701436043,
+    "median": 0.33905091881752014,
+    "p95": 0.4933072626590729,
+    "max": 1.1777315139770508
+  },
+  "seamMeanAbsRgb": 1.1815682649612427,
+  "internalIdrMeanAbsRgb": [
+    1.1207176446914673,
+    1.1777315139770508,
+    1.1669386625289917,
+    1.1451504230499268,
+    1.1683796644210815
+  ],
+  "seamVsMaximumInternalIdr": 1.003257746726362,
+  "sha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c",
+  "limitation": "Decoded moving video and seam evidence only; not browser playback, iOS/Android decoder performance, perceived title excitement, or PS4 parity."
+}

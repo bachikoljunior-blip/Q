@@ -33,7 +33,7 @@ test('actual scenery graph stays identical through actor, weather, effects, qual
   assert.equal(candidate.scene.matrixAutoUpdate, true);
   const excluded = [candidate.camera, candidate.sun, candidate.sun.target, candidate.player.g,
     candidate.npc.g, candidate.sena.g, candidate.crownHalo, candidate.motes, candidate.slash,
-    candidate.arrowShafts, candidate.arrowTips, ...candidate.clouds, ...candidate.lootModels.values(),
+    candidate.arrowShafts, candidate.arrowTips, candidate.sky, ...candidate.clouds, ...candidate.lootModels.values(),
     ...candidate.residentModels.values(), ...candidate.enemyModels.values(),
     ...[...candidate.village.bells.values()].map(b => b.swing), candidate.village.flame, candidate.village.charm,
     candidate.expeditionScene.root, ...[...candidate.gatheringScene.markers.values()].map(m => m.group)].map(n => n.g || n);
@@ -51,7 +51,7 @@ test('actual scenery graph stays identical through actor, weather, effects, qual
   }
   const before = JSON.stringify(candidate.game.serialize());
   candidate.scene.updateMatrixWorld(); assert.equal(JSON.stringify(candidate.game.serialize()), before);
-  const initialCloud = candidate.clouds[0].position.x, initialHalo = candidate.crownHalo.rotation.z;
+  const initialSkyTime = candidate.skyMaterial.uniforms.qAtmosphereTime.value, initialHalo = candidate.crownHalo.rotation.z;
   for (let frame = 0; frame < 90; frame++) {
     exerciseView(baseline, frame); exerciseView(candidate, frame);
     const left = nodesOf(baseline.scene), right = nodesOf(candidate.scene);
@@ -68,7 +68,7 @@ test('actual scenery graph stays identical through actor, weather, effects, qual
       assert.deepEqual(new T.Box3().setFromObject(a[index]), new T.Box3().setFromObject(node));
     }
   }
-  assert.notEqual(candidate.clouds[0].position.x, initialCloud); assert.notEqual(candidate.crownHalo.rotation.z, initialHalo);
+  assert(candidate.skyMaterial.uniforms.qAtmosphereTime.value > initialSkyTime); assert.notEqual(candidate.crownHalo.rotation.z, initialHalo);
   assert(candidate.sway.value > 0); assert(candidate.effects.length > 0);
   assert.equal(appearanceDigest(baseline), appearanceDigest(candidate));
   const baseCounts = matrixWork(() => baseline.scene.updateMatrixWorld());

@@ -13,14 +13,20 @@ const TAU=Math.PI*2;
  */
 export function createDetailedActor(type='player',options={}){
   const g=buildActorGeometry(type,options),family=g.userData.family,get=name=>g.getObjectByName(name);
-  const actor={g,type:family,body:get('body'),pelvis:get('pelvis'),chest:get('chest'),neck:get('neck'),head:get('head'),
+  const actor={g,type:family,body:get('body'),pelvis:get('pelvis'),chest:get('chest'),spine:get('spine'),neck:get('neck'),head:get('head'),
     arms:[get('arm-0'),get('arm-1')].filter(Boolean),legs:Array.from({length:family==='wolf'?4:2},(_,i)=>get(`leg-${i}`)),
     knees:Array.from({length:family==='wolf'?4:2},(_,i)=>get(`knee-${i}`)),feet:Array.from({length:family==='wolf'?4:2},(_,i)=>get(`foot-${i}`)),
     elbows:[get('elbow-0'),get('elbow-1')].filter(Boolean),hands:[get('hand-0'),get('hand-1')].filter(Boolean),
     sword:get('sword'),greatsword:get('greatsword'),spear:get('spear'),flask:get('flask'),cape:get('cape'),
     phase:0,time:0,speed:0,lastPosition:null,lastHp:null,lastDead:null,deathAge:Infinity,hitAge:Infinity,
-    groundHeight:options.groundHeight,contacts:[],motion:{state:'idle',phase:0},rest:[]};
+    groundHeight:options.groundHeight,contacts:[],plants:[],travelDirection:{x:0,z:1},poseTransition:null,motion:{state:'idle',phase:0},rest:[]};
   g.traverse(n=>{if(n.isBone)actor.rest.push({node:n,position:n.position.clone(),rotation:n.rotation.clone(),scale:n.scale.clone()});});
+  actor.previousPose=actor.rest.map(({node})=>({position:node.position.clone(),quaternion:node.quaternion.clone(),scale:node.scale.clone()}));
+  actor.transitionPose=actor.previousPose.map(p=>({position:p.position.clone(),quaternion:p.quaternion.clone(),scale:p.scale.clone()}));
+  actor.hocks=actor.legs.map((_,i)=>get(`hock-${i}`));
+  actor.digits=Array.from({length:2},(_,hand)=>Array.from({length:5},(_,finger)=>({root:get(`finger-${hand}-${finger}`),tip:get(`finger-tip-${hand}-${finger}`)})));
+  actor.tailBones=Array.from({length:3},(_,i)=>get(`tail-${i}`));
+  actor.eyelids=[get('eyelid-0'),get('eyelid-1')];
   actor.animate=(state={},dt=0)=>animateDetailedActor(actor,state,dt);
   actor.animate({},0);return actor;
 }
@@ -40,31 +46,52 @@ export function strideContact(phase,stride,lift,stance=.62){
 }
 function reset(actor){for(const rest of actor.rest){rest.node.position.copy(rest.position);rest.node.rotation.copy(rest.rotation);rest.node.scale.copy(rest.scale);}}
 function contacts(actor,state,motion){
-  const wolf=actor.type==='wolf',moving=['walk','run'].includes(motion.state),run=motion.state==='run';
+  const wolf=actor.type==='wolf',evading=motion.state==='dodge',moving=actor.speed>.15||['walk','run'].includes(motion.state),run=motion.state==='run'||actor.speed>7;
   const stride=moving?clamp(actor.speed/actor.g.scale.y*(wolf?.12:.11),.28,wolf?.75:.92):0,lift=run?.16:moving?.10:0;
   const scale=actor.g.scale.y,worldY=Number.isFinite(state.y)?state.y:actor.g.position.y,angle=actor.g.rotation.y;
-  actor.contacts.length=0;
-  const targets=[];
+  const cosine=Math.cos(angle),sine=Math.sin(angle),direction=actor.travelDirection;
+  const localDX=cosine*direction.x-sine*direction.z,localDZ=sine*direction.x+cosine*direction.z;
+  if(evading)actor.plants.length=0;
+  actor.contacts.length=0;const targets=[];
   for(let i=0;i<actor.legs.length;i++){
-    const leg=actor.legs[i],phase=actor.phase+(wolf?(i===0||i===3?0:.5):i*.5),foot=strideContact(phase,stride,lift,wolf?.57:.62);
-    // Reposition the swing foot on the locally sampled slope while stance feet
-    // retain zero lift. No collision body or game position is changed.
-    const side=leg.position.x,localZ=leg.position.z+foot.z,wx=actor.g.position.x+Math.cos(angle)*side*scale+Math.sin(angle)*localZ*scale,wz=actor.g.position.z-Math.sin(angle)*side*scale+Math.cos(angle)*localZ*scale;
+    const leg=actor.legs[i],phase=actor.phase+(wolf?(i===0||i===3?0:.5):i*.5),foot=evading?{z:(i===0?-.26:.24)*Math.sin(motion.phase*Math.PI),lift:.045*Math.sin(motion.phase*Math.PI),contact:false}:strideContact(phase,stride,lift,wolf?.57:.62);
+    const side=leg.position.x+localDX*foot.z,localZ=leg.position.z+localDZ*foot.z;
+    let wx=actor.g.position.x+(cosine*side+sine*localZ)*scale,wz=actor.g.position.z+(-sine*side+cosine*localZ)*scale;
+    let contact=!evading&&(foot.contact||!moving);const plant=actor.plants[i];
+    const yawDelta=plant?Math.atan2(Math.sin(angle-plant.angle),Math.cos(angle-plant.angle)):0;
+    let turn=plant?.turn;
+    if(!moving&&!evading&&plant&&Math.abs(yawDelta)>.55&&!turn&&!actor.plants.some(p=>p?.turn))turn={age:0,x:plant.x,z:plant.z};
+    if(turn){
+      turn.age+=actor.frameDelta;const progress=clamp(turn.age/.18),weight=smooth(progress);
+      wx=mix(turn.x,wx,weight);wz=mix(turn.z,wz,weight);foot.lift=Math.sin(progress*Math.PI)*.06;contact=false;foot.contact=false;
+      if(progress===1)turn=null;
+    }
+    // A stance anchor is in world space. Facing can turn independently of travel
+    // during target lock, so a local-z-only counter stride cannot keep feet fixed.
+    if(contact&&plant?.contact){wx=plant.x;wz=plant.z;}
+    const footAngle=contact&&plant?.contact?plant.angle:angle;
+    actor.plants[i]={x:wx,z:wz,angle:footAngle,contact,turn};
     const sampled=actor.groundHeight?.(wx,wz),terrain=Number.isFinite(sampled)?clamp((sampled-worldY)/scale,-.18,.18):0;
     const ankleHeight=(wolf?.126:.109)+terrain+foot.lift;
-    const targetZ=foot.z-(actor.body.position.z||0);
-    targets.push({foot,terrain,ankleHeight,targetZ});
-    // Lower the pelvis for long strides / downhill contacts before solving any
-    // limb, so a mathematically unreachable ankle does not float over the floor.
-    const reach=(wolf?.72:.88)-.002;
-    actor.pelvis.position.y=Math.min(actor.pelvis.position.y,ankleHeight+Math.sqrt(Math.max(.01,reach*reach-targetZ*targetZ))-leg.position.y-actor.body.position.y);
+    const dx=(wx-actor.g.position.x)/scale,dz=(wz-actor.g.position.z)/scale;
+    const targetX=cosine*dx-sine*dz-leg.position.x;
+    const targetZ=sine*dx+cosine*dz-leg.position.z-(actor.body.position.z||0);
+    const hock=actor.hocks[i],hockAngle=hock?-.64:0;
+    const lower=hock?Math.hypot(.21+.15*Math.cos(hockAngle),.15*Math.sin(hockAngle)):wolf?.36:.435;
+    const lowerOffset=hock?Math.atan2(.15*Math.sin(hockAngle),.21+.15*Math.cos(hockAngle)):0;
+    targets.push({foot,contact,footAngle,terrain,ankleHeight,targetX,targetZ,hock,hockAngle,lower,lowerOffset});
+    const reach=(wolf?.36:.445)+lower-.002;
+    actor.pelvis.position.y=Math.min(actor.pelvis.position.y,ankleHeight+Math.sqrt(Math.max(.01,reach*reach-targetZ*targetZ-targetX*targetX))-leg.position.y-actor.body.position.y);
   }
   for(let i=0;i<actor.legs.length;i++){
-    const leg=actor.legs[i],{foot,terrain,ankleHeight,targetZ}=targets[i];
+    const leg=actor.legs[i],{foot,contact,footAngle,terrain,ankleHeight,targetX,targetZ,hock,hockAngle,lower,lowerOffset}=targets[i];
     const targetY=ankleHeight-actor.pelvis.position.y-leg.position.y-actor.body.position.y;
-    const pose=solveLegTarget(wolf?.36:.445,wolf?.36:.435,targetY,targetZ);
-    leg.rotation.x=pose.hip;actor.knees[i].rotation.x=pose.knee;actor.feet[i].rotation.x=pose.ankle;
-    actor.contacts.push({contact:foot.contact||!moving,terrain,lift:foot.lift,targetY,targetZ});
+    const roll=Math.atan2(targetX,-targetY),pose=solveLegTarget(wolf?.36:.445,lower,-Math.hypot(targetX,targetY),targetZ);
+    leg.rotation.set(pose.hip,0,roll,'ZXY');actor.knees[i].rotation.x=pose.knee-lowerOffset;
+    const ankle=actor.feet[i];ankle.quaternion.copy(leg.quaternion).multiply(actor.knees[i].quaternion);
+    if(hock){hock.rotation.x=hockAngle;ankle.quaternion.multiply(hock.quaternion);}
+    ankle.quaternion.invert();ankle.rotateY(footAngle-angle);
+    actor.contacts.push({contact,terrain,lift:foot.lift,targetY,targetZ,targetX});
   }
 }
 function poseArms(actor,rx=0,lx=0,rz=-.07,lz=.07,re=.18,le=.18){
@@ -133,7 +160,6 @@ function humanoidPose(actor,state,motion){
     actor.chest.rotation.x=-.19*recoil;actor.chest.rotation.z=.065*recoil;actor.neck.rotation.x=.13*recoil;actor.pelvis.position.y-=.045*recoil;
   }
   if(motion.state==='sealed'){poseArms(actor,-.23,-.1,-.1,.1,.48,.32);actor.head.rotation.x=.18;actor.chest.rotation.x=.04;}
-  contacts(actor,state,motion);
   if(motion.state==='airborne')for(let i=0;i<2;i++){actor.legs[i].rotation.x=-.3-i*.18;actor.knees[i].rotation.x=.55+i*.3;actor.feet[i].rotation.x=-.15;}
   if(motion.state==='death'){
     const fall=smooth(actor.deathAge/.8),floorHeight=['ranger','porter','courier','traveler','npc','sena'].includes(actor.type)?.34:.2;
@@ -149,16 +175,48 @@ function wolfPose(actor,state,motion){
   actor.pelvis.position.y=.816+(move?Math.cos(actor.phase*TAU*2)*.023:breath*.006);
   actor.chest.scale.x=1+breath*.009;actor.neck.rotation.x=move?-.1:Math.sin(actor.time*.55)*.045;
   actor.head.rotation.y=move?0:Math.sin(actor.time*.36)*.08;
-  for(let i=0;i<3;i++){const tail=actor.g.getObjectByName(`tail-${i}`);tail.rotation.x=(i===0?.9:.16)+Math.sin(actor.time*2.3-i*.8)*.075;tail.rotation.z=Math.sin(actor.time*1.3-i*.55)*.065;}
+  for(let i=0;i<3;i++){const tail=actor.tailBones[i];tail.rotation.x=(i===0?.9:.16)+Math.sin(actor.time*2.3-i*.8)*.075;tail.rotation.z=Math.sin(actor.time*1.3-i*.55)*.065;}
   if(motion.state==='windup'){actor.pelvis.position.y-=.13*smooth(p);actor.neck.rotation.x=.25*smooth(p);actor.g.getObjectByName('jaw').rotation.x=.15*smooth(p);}
   if(motion.state==='strike'){actor.chest.rotation.x=-.16*(1-p);actor.neck.rotation.x=-.48*(1-p);actor.g.getObjectByName('jaw').rotation.x=.48*Math.sin(p*Math.PI);}
   if(motion.state==='recover'){actor.neck.rotation.x=mix(-.12,0,smooth(p));actor.head.rotation.x=.05*(1-p);}
   if(motion.state==='hit'){const recoil=Math.sin((.15+p*.85)*Math.PI);actor.chest.rotation.z=.13*recoil;actor.neck.rotation.y=-.22*recoil;actor.pelvis.position.y-=.06*recoil;}
-  contacts(actor,state,motion);
   if(motion.state==='death'){
     const fall=smooth(actor.deathAge/.65);actor.pelvis.rotation.z=Math.PI*.47*fall;actor.pelvis.position.y=mix(.816,.325,fall);actor.neck.rotation.x=.25*fall;
     for(let i=0;i<4;i++){actor.legs[i].rotation.x=-.26;actor.knees[i].rotation.x=.6;actor.feet[i].rotation.x=0;}
   }
+}
+function articulateHandsAndSpine(actor,state,motion){
+  if(actor.type==='wolf')return;
+  const blinkPhase=(actor.time+actor.type.length*.19)%4.7,blink=motion.state==='death'?1:['idle','walk','run'].includes(motion.state)?Math.max(0,1-Math.abs(blinkPhase-.13)/.095):0;
+  for(const lid of actor.eyelids)if(lid)lid.position.y-=blink*.015;
+  if(actor.spine){actor.spine.rotation.x=actor.chest.rotation.x*.32;actor.spine.rotation.y=actor.chest.rotation.y*.28;actor.spine.rotation.z=actor.chest.rotation.z*.28;actor.chest.rotation.x*=.68;actor.chest.rotation.y*=.72;actor.chest.rotation.z*=.72;}
+  for(let hand=0;hand<2;hand++)for(let finger=0;finger<5;finger++){
+    const {root,tip}=actor.digits[hand][finger];
+    if(!root||!tip)continue;
+    const held=hand===1?(!!actor.sword||['npc','sena','scout','smith'].includes(actor.type)||motion.state==='drink'):
+      actor.type==='ranger'||state.weaponType==='greatsword'||state.weaponType==='spear';
+    const curl=motion.state==='death'?.26:held?.92:.18;
+    root.rotation.x+=(finger===4?.6:1)*curl;tip.rotation.x=curl*.86;
+  }
+}
+function blendPassiveTransition(actor,previous,motion,delta){
+  const passive=['idle','walk','run','recover','sealed'].includes(motion.state);
+  if(delta===0||!passive||previous.state==='death'){actor.poseTransition=null;return;}
+  if(previous.state!==motion.state){
+    for(let i=0;i<actor.rest.length;i++){const from=actor.previousPose[i],to=actor.transitionPose[i];to.position.copy(from.position);to.quaternion.copy(from.quaternion);to.scale.copy(from.scale);}
+    actor.poseTransition={age:0,from:actor.transitionPose};
+  }
+  const transition=actor.poseTransition;if(!transition?.from)return;
+  transition.age+=delta;const weight=smooth(transition.age/.16);
+  for(let i=0;i<actor.rest.length;i++){
+    const node=actor.rest[i].node;
+    // Contacts solve after the blend. Mixing their solution would unplant feet.
+    if(/^(leg|knee|foot|hock)-/.test(node.name)||node.name==='body')continue;
+    node.position.lerpVectors(transition.from[i].position,node.position,weight);
+    node.quaternion.slerp(transition.from[i].quaternion,1-weight);
+    node.scale.lerpVectors(transition.from[i].scale,node.scale,weight);
+  }
+  if(weight===1)actor.poseTransition=null;
 }
 function animateCape(actor,motion){
   if(!actor.cape)return;
@@ -171,23 +229,30 @@ function animateCape(actor,motion){
     pos.setZ(i,mix(base[i*3+2]-hem*actor.speed*.01+wave,-.115,fall));pos.setX(i,x+Math.sin(actor.time*2.1-y*2)*.016*hem);
     pos.setY(i,Math.max(y,-actor.pelvis.position.y+.06));
   }
-  pos.needsUpdate=true;
+  pos.needsUpdate=true;actor.cape.geometry.computeVertexNormals();
 }
 export function animateDetailedActor(actor,state={},dt=0){
-  const delta=Number.isFinite(dt)?clamp(dt,0,.1):0;actor.time+=delta;
-  const valid=Number.isFinite(state.x)&&Number.isFinite(state.z),last=actor.lastPosition;
-  const travelled=last&&valid?Math.hypot(state.x-last.x,state.z-last.z):0;
+  const delta=Number.isFinite(dt)?clamp(dt,0,.1):0;actor.time+=delta;actor.frameDelta=delta;
+  const x=Number.isFinite(state.x)?state.x:actor.g.position.x,z=Number.isFinite(state.z)?state.z:actor.g.position.z;
+  const valid=Number.isFinite(x)&&Number.isFinite(z),last=actor.lastPosition;
+  const travelled=last&&valid?Math.hypot(x-last.x,z-last.z):0;
   const teleported=travelled>Math.max(2,delta*25);
   actor.speed=last&&delta>0&&!teleported?Math.min(18,travelled/delta):0;
-  if(valid)actor.lastPosition={x:state.x,z:state.z};
-  if(last&&!teleported&&travelled>0){const stride=clamp(actor.speed/actor.g.scale.y*(actor.type==='wolf'?.12:.11),.28,actor.type==='wolf'?.75:.92);actor.phase=(actor.phase+travelled/actor.g.scale.y/(stride/(actor.type==='wolf'?.57:.62)))%1;}
+  if(last&&travelled>1e-6&&!teleported){actor.travelDirection.x=(x-last.x)/travelled;actor.travelDirection.z=(z-last.z)/travelled;}
+  if(!last||teleported||delta===0)actor.plants.length=0;
+  if(valid)actor.lastPosition={x,z};
+  if(last&&delta>0&&!teleported&&travelled>0){const stride=clamp(actor.speed/actor.g.scale.y*(actor.type==='wolf'?.12:.11),.28,actor.type==='wolf'?.75:.92);actor.phase=(actor.phase+travelled/actor.g.scale.y/(stride/(actor.type==='wolf'?.57:.62)))%1;}
   if(Number.isFinite(state.hp)){if(actor.lastHp!==null&&state.hp<actor.lastHp)actor.hitAge=0;actor.lastHp=state.hp;}
   actor.hitAge+=delta;
   // A death seen live falls once; an actor first seen already dead starts settled.
   if(state.dead){if(Number.isFinite(state.deathElapsed))actor.deathAge=Math.max(0,state.deathElapsed);else{if(actor.lastDead===false)actor.deathAge=0;actor.deathAge+=delta;}}else actor.deathAge=Infinity;
   if(Object.hasOwn(state,'dead'))actor.lastDead=!!state.dead;
+  const previous=actor.motion;for(let i=0;i<actor.rest.length;i++){const node=actor.rest[i].node,pose=actor.previousPose[i];pose.position.copy(node.position);pose.quaternion.copy(node.quaternion);pose.scale.copy(node.scale);}
   reset(actor);const motion=detailedMotion({...state,type:state.type||actor.type},actor.speed);actor.motion=motion;
   if(actor.type==='wolf')wolfPose(actor,state,motion);else humanoidPose(actor,state,motion);
+  articulateHandsAndSpine(actor,state,motion);blendPassiveTransition(actor,previous,motion,delta);
+  if(!['death','airborne'].includes(motion.state))contacts(actor,state,motion);else{actor.plants.length=0;actor.contacts.length=0;}
+
   for(const [weapon,node]of [['sword',actor.sword],['greatsword',actor.greatsword],['spear',actor.spear]])if(node)node.visible=motion.state!=='drink'&&weapon===(state.weaponType||'sword');
   if(actor.flask)actor.flask.visible=motion.state==='drink';
   animateCape(actor,motion);return motion;

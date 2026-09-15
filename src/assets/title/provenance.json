@@ -34,5 +34,30 @@
     "bytes": 162962,
     "sha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a",
     "completedAt": "2026-09-15T08:44:30.110397+00:00"
+  },
+  "video": {
+    "type": "original-offline-rendered-animated-illustration",
+    "source": "src/assets/title/north-gate-v22.png",
+    "sourceSha256": "1a722a36a27431bb76e204717cef94146364971f417fab11aaf22ebaeb12e499",
+    "file": "src/assets/title/north-gate-v23.mp4",
+    "sha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c",
+    "bytes": 3178191,
+    "durationSeconds": 12,
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "frames": 288,
+    "audioStreams": 0,
+    "recipe": "Periodic slow camera orbit and breathing push, layered valley vapor, localized crown/hand firelight, edge-faded drifting ash. All trajectories use integer harmonics of the loop. Original art remains unedited.",
+    "claimBoundary": "Animated title illustration, not gameplay, live filming, volumetric reconstruction, or proof of PS4 visual parity.",
+    "encoder": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+    "generatorSha256": "1ac061e2d851ab6bbe743f7c176f17d315fe95dffb548b3388002f2681ed61d1",
+    "generator": "scripts/render-title-video.py",
+    "evidence": "docs/evidence/title-video/media.json",
+    "references": [
+      "https://webkit.org/blog/6784/new-video-policies-for-ios/",
+      "https://developer.chrome.com/blog/play-request-was-interrupted",
+      "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play"
+    ]
   }
 }
