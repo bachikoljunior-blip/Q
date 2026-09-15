@@ -12,7 +12,7 @@
 
 ### 4主張の監査と修正後の検出力
 
-PR #30の4主張は範囲を分けて評価した。(a) save欠落、JSON破損、raw SHA-256不一致の3/3でprocessが失敗し、`passed:false` と個別診断をJSONへ残すこと、およびworkflowのalways-uploadがartifact不在をerrorにすることをコードと別processで確認した。(c) 選んだ4 mutationについて旧6検証が通過し、新gateが二場面×二数値寸法の16/16を欠陥別assertionで検出した算術自体は再現した。ただし元の履歴mutationは「全履歴exact」を十分に反証せず、(b)の一般的な主張は過剰だった。(d) production entrypointから実interact、住民panel、動的相談UI、SceneViewのfocus / release呼出し境界、close / reopen、blur / hidden / BFCache、choice save / 別runtime reloadを追跡saveで確認した。
+PR #30の4主張は範囲を分けて評価した。(a) save欠落、JSON破損、raw SHA-256不一致の3/3でprocessが失敗し、`passed:false` と個別診断をJSONへ残すことを別processで確認した。workflowのalways-uploadがartifact不在をerrorにすることは `.github/workflows/validate.yml` の設定を読取確認したもので、artifact欠落を注入した実行結果ではない。(c) 選んだ4 mutationについて旧6検証が通過し、新gateが二場面×二数値寸法の16/16を欠陥別assertionで検出した算術自体は再現した。ただし元の履歴mutationは「全履歴exact」を十分に反証せず、(b)の一般的な主張は過剰だった。(d) production entrypointから実interact、住民panel、動的相談UI、SceneViewのfocus / release呼出し境界、close / reopen、blur / hidden / BFCache、choice save / 別runtime reloadを追跡saveで確認した。
 
 修正後はhearth / road-watchそれぞれの3行を、productionの表示計算から独立した期待配列へ全文固定した。beat 1では1行、beat 2では2行、choice直後のdoneと別runtime reloadでは3行全体を、件数、話者multiset、全文multiset、順序付き `{speaker,text}` 配列の `deepEqual` で検査する。current行もbeat 1 / beat 2で全文一致を要求する。負例はfocus欠落、focus解除欠落、選択後rerender欠落、done後段だけの重複、複数行reverse、2行目の誤話者、2行目の誤全文の7件。旧6検証は7件すべてを通し、新gateは7欠陥×二場面×二寸法の**28/28**を、それぞれ想定した欠陥固有assertionで検出した。さらにproduction側の履歴を逆順にする独立注入でもexit 1、`passed:false`、順序assertionで拒否した。fixture例外、compile失敗、別assertionは検出数へ含めていない。
 

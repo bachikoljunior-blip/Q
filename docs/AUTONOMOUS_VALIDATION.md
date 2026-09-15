@@ -56,7 +56,7 @@ HTMLは要素の登録・生成を検査するための限定parserで、browser
 
 - 本番mainをbundleした入口でSceneView読込を一回だけ要求し、読込完了まで旅を始めない。
 - 実Gameの最寄り人物を `interact` し、次frameのevent処理、住民panel、動的生成された「皆で話す」を経て相談panelを開く。相談関数を直接呼ばない。
-- 2 / 3では現在行の全文と既読1行、3 / 3では現在行の全文と既読2行、choice直後のdoneと別runtime reloadでは履歴3行全部を区別する。期待する各 `{speaker,text}` はproductionの表示計算から独立して固定し、段階ごとの件数、話者、全文、順序付き配列のdeep-equalを要求する。開く操作はGameと保存を変更せず、選択だけが正規saveへ残る。
+- 2 / 3では現在行の全文と既読1行、3 / 3では現在行の全文と既読2行、choice直後のdoneと別runtime reloadでは履歴3行全部を区別する。期待する各 `{speaker,text}` はproductionの表示計算から独立して固定し、段階ごとの件数、話者、全文、順序付き配列のdeep-equalを要求する。open / leaveはGameとsaveを変更せず、next / choiceは正規saveへ残り、最終choiceをreloadで復元する。
 - SceneView呼出し記録へ正規の `focusGathering(id)` が届き、次の `update` で同じモデル化focusを観測する。blur、hidden→visible、BFCacheのpagehide→pageshow中も開いた相談を保持し、閉じると `focusGathering(null)` を記録して音の開始要求とGame loopを再開する。
 - 選択後の保存を新しいruntimeへ読み直し、結果panelと選択を復元する。continueとtitle importの完成save SHA-256が一致する。
 
