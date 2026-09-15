@@ -6,7 +6,7 @@
     "terrain/rock/vegetation/buildings/props/water/sky/light/shadows/VFX",
     "game HUD/menus/touch layout"
   ],
-  "status": "validated candidate before normal main merge and same-Site deployment",
+  "status": "implementation, required CI, normal main integration and same owner-only Site version 23 deployment completed",
   "agents": {
     "integrator": "/root/ultra_q_title_video",
     "actors": "/root/ultra_q_title_video/actors_ps4_ultra",
@@ -23,7 +23,7 @@
   "acceptedCanonicalIds": true,
   "hiddenEffectiveEffortVerified": false,
   "sourceUnits": {
-    "title": "9ee654f",
+    "title": "9ee654f6503672420ec7086ebae938b76a952275",
     "actor": "bcaf9a8e624e76caf22a4e3d33b32df5d45a6871",
     "world": "14a5f92ec230a7b44349d78e983a6de8c0b806f2",
     "worldNormalRepair": "d8a93928593f1bf52192cf51645e09d7592279e1",
@@ -130,6 +130,79 @@
     "url": "https://q-ash-pilgrim.juurooo.chatgpt.site",
     "previousVersion": 22,
     "audience": "owner1/editor0/group0/external0",
-    "status": "pending"
-  }
+    "status": "succeeded",
+    "version": 23,
+    "versionId": "appgprj_6aa6871ebd648191802ba2398d06115b~appgver_c1e5e3930ba08191971b31b5e069a9a7",
+    "deploymentId": "appgdep_6aa93515d90c81919955b9a14ff7d118",
+    "updatedAt": "2026-09-15T12:08:03.714368+00:00",
+    "source": "f11819aceea515d166846e4bf85082bf2e51e9d1",
+    "previousSource": "cf6462677cd9791f72e364530f5caea516996d01",
+    "sourceAncestorCheck": true,
+    "normalSourcePush": true,
+    "sourceRemoteAndHeadReadback": true,
+    "siteStatus": "active",
+    "currentUserRole": "owner",
+    "accessMode": "custom",
+    "policyRevision": 1,
+    "versionAndAudienceReadback": true,
+    "archive": {
+      "archive": "/workspace/scratch/e72662e3b71f/Q-title-video-v23/artifacts/q-site-v23.tar.gz",
+      "bytes": 9078774,
+      "sha256": "b0446ce21a14b5aa818b7ec7b61ffc21f40edae3254cae2a2e7c6fcb7ee8666d",
+      "files": 31,
+      "payloadBytes": 10035702,
+      "sameMediaBytes": true,
+      "allFilesExact": true,
+      "manifest": {
+        "project_id": "appgprj_6aa6871ebd648191802ba2398d06115b",
+        "static": {
+          "directory": "dist"
+        }
+      },
+      "manifestLocation": "dist/.openai/hosting.json",
+      "packager": "official package-site.mjs / package-site.sh with TMPDIR override for missing /tmp"
+    },
+    "archiveStorageReported": {
+      "format": "tar",
+      "files": 31,
+      "bytes": 10065920,
+      "contentHash": "sha256:4c11325e33e26d26306a10704701a4c2fbfb7e9f571dd28432f9cc37fbcaf9cd"
+    },
+    "archiveHashScope": "Local gzip archive SHA256 and native Site storage tar content_hash are separate values; deployed file bytes were not independently fetched. Local source/dist/stage/standalone/archive payload bytes were compared exactly.",
+    "parentOnlyOperations": true,
+    "samePayloadRedeployedForDocs": false
+  },
+  "git": {
+    "localValidatedCandidate": "d858a13b7f80ebf4415411d081f7a85eb2417e7a",
+    "validatedTree": "380cf9643f37b51acaaf34100c6bcd057157dd78",
+    "changedFiles": 47,
+    "allUploadedBlobShasMatch": true,
+    "remoteTreeMatches": true,
+    "pullRequest": 37,
+    "pullRequestUrl": "https://github.com/bachikoljunior-blip/Q/pull/37",
+    "head": "7e0f87f42d5276fac8e42eb2ca384a5e9cdc1177",
+    "gameplayMain": "f11819aceea515d166846e4bf85082bf2e51e9d1",
+    "mergeMethod": "merge",
+    "mergeParents": [
+      "c33be61a3f50fa5d703e9c1fcf39a8140bc04507",
+      "7e0f87f42d5276fac8e42eb2ca384a5e9cdc1177"
+    ],
+    "mainTreeMatches": true,
+    "prCi": {
+      "run": 34966310358,
+      "status": "success",
+      "successfulSteps": 30
+    },
+    "mainCi": {
+      "run": 34966565640,
+      "status": "success",
+      "successfulSteps": 30
+    },
+    "pages": {
+      "run": 34966564176,
+      "status": "success"
+    },
+    "remoteReadback": true
+  },
+  "nextCheckpoint": "This bounded visual/title improvement is integrated and deployed. Before further work, reassess the still-unmet 2026-09-20 quality/scale goals and obtain authorized rendered/device evidence when available; do not use an alternate preview route or treat structure/tests as PS4 parity."
 }
