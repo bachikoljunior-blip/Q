@@ -1,7 +1,7 @@
 import { build } from 'esbuild';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { buildIdentity } from './build-identity.mjs';
-const r=await build({entryPoints:['src/main.js'],bundle:true,format:'iife',minify:true,target:'es2022',write:false,outfile:'game.js',legalComments:'inline',loader:{'.glb':'dataurl'},define:{__Q_BUILD_INFO__:JSON.stringify(await buildIdentity())}});
+const r=await build({entryPoints:['src/main.js'],bundle:true,format:'iife',minify:true,target:'es2022',write:false,outfile:'game.js',legalComments:'inline',loader:{'.glb':'dataurl','.png':'dataurl','.wav':'dataurl'},define:{__Q_BUILD_INFO__:JSON.stringify(await buildIdentity())}});
 let html=await readFile('index.html','utf8');
 const script=r.outputFiles.find(f=>f.path.endsWith('.js')).text;
 const css=r.outputFiles.find(f=>f.path.endsWith('.css')).text;

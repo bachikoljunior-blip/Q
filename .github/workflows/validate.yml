@@ -15,6 +15,8 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
+      - name: Verify deterministic asset provenance
+        run: node scripts/generate-vault-assets.mjs --verify
       - name: Verify production entrypoint and fault sensitivity
         run: node scripts/verify-main-runtime.mjs
       - name: Preserve application-boundary evidence
@@ -32,6 +34,15 @@ jobs:
         with:
           name: Q-gathering-runtime-evidence
           path: artifacts/gathering-runtime-report.json
+          if-no-files-found: error
+      - name: Verify asset-slice journeys through the production entrypoint
+        run: npm run test:vaults
+      - name: Preserve asset-slice runtime evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Q-vault-runtime-evidence
+          path: artifacts/vault-runtime-report.json
           if-no-files-found: error
       - run: npm test
       - run: npm run test:journey

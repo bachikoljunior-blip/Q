@@ -9,6 +9,7 @@ import { WIND_SHRINE, WIND_BELLS, ROAD_CACHE, createResidents, createBells, rest
 import { WORLD_BOUNDS, SALT_JOURNEY, SALT_TARGETS, saltObstacles } from './world-regions.js';
 import { createExpedition, restoreExpedition, applyExpeditionWorld, tickExpedition, expeditionQuest, interactExpedition } from './expedition.js';
 import { createGatherings, restoreGatherings, tickGatherings } from './gatherings.js';
+import { VAULT_SLICES, availableVaultTargets, claimVaultMemory, createVaultProgress, inVaultFootprint, restoreVaultProgress, tickVaultSlices, vaultAt, vaultByWarden, vaultObstacles } from './vault-slices.js';
 export const WORLD_SEED = 87123;
 export const SAVE_VERSION = 1;
 export const TAU = Math.PI * 2;
@@ -38,7 +39,7 @@ export const inRiver = (x,z) => Math.abs(x-riverX(z))<9 && z>-205 && z<220;
 export const inWater = (x,z) => inRiver(x,z) && !BRIDGES.some(b=>Math.abs(z-b.z)<2.65&&Math.abs(x-b.x)<21.5);
 export function makeWorld() {
   const rng=random(WORLD_SEED), enemies=[], pickups=[], obstacles=[];
-  const spawn=(x,z,type='knight')=>{ const boss=type==='boss',wolf=type==='wolf'; enemies.push({id:`enemy-${enemies.length}`,x,z,homeX:x,homeZ:z,y:heightAt(x,z),angle:rng()*TAU,type,hp:boss?640:wolf?64:105,maxHp:boss?640:wolf?64:105,state:'idle',timer:rng()*2,cooldown:1,attackCount:0,hit:false,stagger:0,dead:false}); };
+  const spawn=(x,z,type='knight',overrides={})=>{ const boss=type==='boss',wolf=type==='wolf',maxHp=overrides.maxHp??(boss?640:wolf?64:105); enemies.push({id:`enemy-${enemies.length}`,x,z,homeX:x,homeZ:z,y:heightAt(x,z),angle:rng()*TAU,type,hp:maxHp,maxHp,state:'idle',timer:rng()*2,cooldown:1,attackCount:0,hit:false,stagger:0,dead:false,...overrides}); };
   spawn(2,47,'wolf');spawn(-10,26,'knight');spawn(34,16,'wolf');spawn(-48,36,'wolf');
   for(const p of PLACES.filter(p=>p.type==='beacon')) { spawn(p.x+8,p.z+5);spawn(p.x-6,p.z-9,'wolf'); }
   for(let i=0;i<16;i++) { const x=(rng()-.5)*345,z=20-rng()*230; if(PLACES.some(p=>distance({x,z},p)<30)||inRiver(x,z))continue;spawn(x,z,i%3?'wolf':'knight'); }
@@ -61,20 +62,28 @@ export function makeWorld() {
   // Preserve stable IDs while moving generated items out of solid scenery.
   for(const item of pickups)moveCircle(item,0,0,obstacles,.8);
   for(const e of enemies){moveCircle(e,0,0,obstacles,e.type==='boss'?1.2:.48);e.homeX=e.x;e.homeZ=e.z;e.y=heightAt(e.x,e.z);}
-  const trees=createWoodland(random(WORLD_SEED+33),{places:PLACES,bridges:BRIDGES,npcs:[KEEPER,SENA],camp:EAST_CAMP,obstacles,enemies,pickups,inWater});
+  const trees=createWoodland(random(WORLD_SEED+33),{places:PLACES,bridges:BRIDGES,npcs:[KEEPER,SENA],camp:EAST_CAMP,obstacles,enemies,pickups,inWater}).filter(tree=>!inVaultFootprint(tree));
+  // Rendering still consumes the stable legacy rock order (including hidden
+  // footprint conflicts) so procedural rotations and later grass stay exact.
+  const rockVisuals=obstacles.filter(obstacle=>obstacle.type==='rock').map(obstacle=>({...obstacle,hidden:inVaultFootprint(obstacle)}));
+  for(let i=obstacles.length-1;i>=0;i--)if(obstacles[i].type==='rock'&&inVaultFootprint(obstacles[i]))obstacles.splice(i,1);
+  for(let i=pickups.length-1;i>=0;i--)if(inVaultFootprint(pickups[i]))pickups.splice(i,1);
+  for(let i=enemies.length-1;i>=0;i--)if(inVaultFootprint(enemies[i]))enemies.splice(i,1);
+  obstacles.push(...vaultObstacles());
   for(const tree of trees)obstacles.push({id:tree.id,x:tree.x,z:tree.z,r:.24,height:tree.h*.76,type:'tree'});
   for(const bell of WIND_BELLS)for(const side of [-1,1])obstacles.push({id:`${bell.id}-post-${side}`,x:bell.x+side*.95,z:bell.z,r:.18,height:3.6,type:'bellpost'});
   obstacles.push({x:9,z:100,r:.75,height:1.5,type:'furnace'},{x:10,z:92,r:.65,height:1.12,type:'anvil'},{x:WIND_SHRINE.x,z:WIND_SHRINE.z-1.2,r:.82,height:1.6,type:'tablet'});
   obstacles.push(...saltObstacles());
   for(const definition of SALT_JOURNEY.encounters){spawn(definition.x,definition.z,definition.type);const e=enemies.at(-1);e.id=definition.id;e.encounter=SALT_JOURNEY.id;if(e.type==='ranger')e.hp=e.maxHp=82;moveCircle(e,0,0,obstacles);e.homeX=e.x;e.homeZ=e.z;e.y=groundAt(e.x,e.z);}
-  return {enemies,pickups,trees,obstacles:indexObstacles(obstacles)};
+  for(const slice of VAULT_SLICES){spawn(slice.warden.x,slice.warden.z,slice.warden.type,{id:slice.warden.id,encounter:slice.id,vaultId:slice.id,maxHp:slice.warden.maxHp,hp:slice.warden.maxHp});const e=enemies.at(-1);moveCircle(e,0,0,obstacles);e.homeX=e.x;e.homeZ=e.z;e.y=groundAt(e.x,e.z);}
+  return {enemies,pickups,trees,rockVisuals,obstacles:indexObstacles(obstacles)};
 }
 export class Game {
   constructor(save=null) {
     Object.assign(this,makeWorld());
     this.player={x:0,z:101,y:heightAt(0,101),angle:Math.PI,hp:120,maxHp:120,stamina:100,energy:100,level:1,xp:0,ash:0,herbs:0,potions:3,weapon:0,weaponType:'sword',vigor:0,agility:0,attack:0,combo:0,comboWindow:0,dodge:0,parry:0,invulnerable:0,skillCooldown:0,staminaDelay:0,vertical:0,grounded:true,healTimer:0,healDone:false,dead:false};
     this.time=0;this.day=.16;this.events=[];this.lit=['haven'];this.discovered=['haven'];this.talked=false;this.bossDefeated=false;this.ending=null;this.checkpoint='haven';this.relic=false;this.relicDelivered=false;this.assist=false;this.locked=null;this.pendingAction=null;this.weapons=['sword'];this.crossingStarted=false;this.metSena=false;this.supplies=false;this.crossingChoice=null;this.trackedQuest='main';this.projectiles=[];this.projectileId=0;
-    this.residents=createResidents(groundAt);this.bells=createBells();this.expedition=createExpedition();this.gatherings=createGatherings();
+    this.residents=createResidents(groundAt);this.bells=createBells();this.expedition=createExpedition();this.gatherings=createGatherings();this.vaults=createVaultProgress();this.vaultAlerts=new Set();
     if(save) this.restore(save);
   }
   emit(type,data={}) { this.events.push({type,...data}); }
@@ -107,7 +116,7 @@ export class Game {
   actionIdle(){const p=this.player;return !p.dead&&p.grounded&&['attack','dodge','parry','healTimer'].every(key=>p[key]<=0);}
   canCraft(){return this.actionIdle()&&!this.threatened();}
   canUpgrade(){return this.atSafeFire()&&this.actionIdle();}
-  threatened(point=this.player,radius=18){return this.enemies.some(e=>!e.dead&&!(e.type==='boss'&&this.lit.length<4)&&distance(e,point)<radius)||this.projectiles.some(a=>a.owner!=='player'&&a.life>0&&distance(a,point)<12);}
+  threatened(point=this.player,radius=18){return this.enemies.some(e=>!e.dead&&e.state!=='sealed'&&!(e.type==='boss'&&this.lit.length<4)&&distance(e,point)<radius)||this.projectiles.some(a=>a.owner!=='player'&&a.life>0&&distance(a,point)<12);}
   weaponStats(){return WEAPONS[this.player.weaponType]||WEAPONS.sword;}
   damageAmount(){return (26+this.player.weapon*8+(this.player.level-1)*2)*this.weaponStats().damage;}
   unlockWeapon(id){if(!WEAPONS[id]||this.weapons.includes(id))return;this.weapons.push(id);this.notify(`${WEAPONS[id].name}を手に入れた — 旅の記録で装備`);this.emit('save');}
@@ -121,7 +130,7 @@ export class Game {
   attack() {
     const p=this.player,w=this.weaponStats();if(p.dead||p.dodge>0||p.attack>0||p.parry>0||p.healTimer>0||p.stamina<w.cost)return false;
     p.combo=p.comboWindow>0?(p.combo+1)%3:0;p.comboWindow=w.duration+.54;p.attack=w.duration;p.attackDuration=w.duration;p.stamina-=w.cost;p.staminaDelay=.65;p.parry=0;this.attackHit=false;
-    const available=this.enemies.filter(e=>!e.dead&&!(e.type==='boss'&&this.lit.length<4)&&distance(p,e)<w.reach+1.5&&this.canReach(p,e));
+    const available=this.enemies.filter(e=>!e.dead&&e.state!=='sealed'&&!(e.type==='boss'&&this.lit.length<4)&&distance(p,e)<w.reach+1.5&&this.canReach(p,e));
     const target=available.find(e=>e.id===this.locked)||available.sort((a,b)=>distance(p,a)-distance(p,b))[0];
     if(target)p.angle=Math.atan2(target.x-p.x,target.z-p.z);
     this.emit('swing',{combo:p.combo});return true;
@@ -130,11 +139,11 @@ export class Game {
   dodge(dx=0,dz=0) {const p=this.player,cost=this.dodgeCost();if(p.dead||p.dodge>0||p.stamina<cost)return false;p.dodge=.42;p.invulnerable=.32;p.stamina-=cost;p.staminaDelay=.8;p.healTimer=0;p.attack=0;p.parry=0;const m=Math.hypot(dx,dz);this.dodgeDir=m>.1?{x:dx/m,z:dz/m}:{x:Math.sin(p.angle),z:Math.cos(p.angle)};this.emit('dodge');return true;}
   parry() {const p=this.player;if(p.dead||p.dodge>0||p.attack>0||p.parry>0||p.healTimer>0||p.stamina<18)return false;p.parry=.48;p.stamina-=18;p.staminaDelay=.5;this.emit('parry');return true;}
   jump(){const p=this.player;if(p.dead||!p.grounded||p.healTimer>0||p.stamina<8)return false;p.vertical=7.5;p.grounded=false;p.stamina-=8;return true;}
-  skill(){const p=this.player;if(p.dead||p.healTimer>0||p.energy<40||p.skillCooldown>0)return false;p.energy-=40;p.skillCooldown=4;p.attack=0;this.emit('skill',{x:p.x,z:p.z});for(const e of this.enemies)if(!e.dead&&distance(e,p)<9&&this.canStrike(p,e))this.hurtEnemy(e,this.damageAmount()*1.7,1.1);return true;}
+  skill(){const p=this.player;if(p.dead||p.healTimer>0||p.energy<40||p.skillCooldown>0)return false;p.energy-=40;p.skillCooldown=4;p.attack=0;this.emit('skill',{x:p.x,z:p.z});for(const e of this.enemies)if(!e.dead&&e.state!=='sealed'&&distance(e,p)<9&&this.canStrike(p,e))this.hurtEnemy(e,this.damageAmount()*1.7,1.1);return true;}
   canHeal(){return this.actionIdle()&&this.player.potions>0&&this.player.hp<this.player.maxHp;}
   heal(){const p=this.player;if(!this.canHeal())return false;p.potions--;p.healTimer=.9;p.healDone=false;this.clearActionBuffer();this.emit('drink');this.emit('save');return true;}
   finishHeal(){const p=this.player;p.healDone=true;p.hp=Math.min(p.maxHp,p.hp+65+p.vigor*10+(this.crossingChoice==='haven'?15:0));this.emit('heal');this.emit('save');this.notify('露の霊薬 — 生命力を回復');}
-  hurtEnemy(e,amount,stagger=.35) {if(e.dead||(e.type==='boss'&&this.lit.length<4))return;e.hp=Math.max(0,e.hp-amount);if(e.type==='boss'&&stagger<1.5){e.poise=(e.poise??180)-amount*.55;if(e.poise<=0){stagger=1.3;e.poise=180;}else stagger=0;}if(stagger>0){e.stagger=stagger;e.state='stagger';e.timer=stagger;}this.emit('hit',{id:e.id,x:e.x,z:e.z,amount:Math.round(amount)});if(e.hp<=0){e.dead=true;e.state='dead';this.reward(e.type==='boss'?220:e.type==='knight'?28:15,e.type==='boss'?220:28);this.emit('kill',{id:e.id,x:e.x,z:e.z});if(this.locked===e.id)this.locked=null;if(e.type==='boss'){this.bossDefeated=true;this.notify('灰冠の番人を倒した — 王冠の火を調べる');this.emit('save');}}}
+  hurtEnemy(e,amount,stagger=.35) {if(e.dead||e.state==='sealed'||(e.type==='boss'&&this.lit.length<4))return;e.hp=Math.max(0,e.hp-amount);if(e.type==='boss'&&stagger<1.5){e.poise=(e.poise??180)-amount*.55;if(e.poise<=0){stagger=1.3;e.poise=180;}else stagger=0;}if(stagger>0){e.stagger=stagger;e.state='stagger';e.timer=stagger;}this.emit('hit',{id:e.id,vaultId:e.vaultId,x:e.x,z:e.z,amount:Math.round(amount)});if(e.hp<=0){e.dead=true;e.state='dead';this.reward(e.type==='boss'?220:e.type==='knight'?28:15,e.type==='boss'?220:28);this.emit('kill',{id:e.id,vaultId:e.vaultId,x:e.x,z:e.z});if(vaultByWarden(e.id)){this.emit('vaultSeal',{vaultId:e.vaultId,id:e.id,x:e.x,z:e.z});this.emit('save');}if(this.locked===e.id)this.locked=null;if(e.type==='boss'){this.bossDefeated=true;this.notify('灰冠の番人を倒した — 王冠の火を調べる');this.emit('save');}}}
   hurtPlayer(amount,enemy,projectile=false,incoming=null) {
     const p=this.player;if(p.dead||p.invulnerable>0)return 'evade';
     const origin=incoming||enemy;
@@ -147,7 +156,7 @@ export class Game {
     for(const key of ['attack','comboWindow','dodge','parry','invulnerable','skillCooldown','staminaDelay','healTimer'])p[key]=Math.max(0,p[key]-dt);
     if(drinking&&p.healTimer<=.28&&!p.healDone)this.finishHeal();
     const pending=this.pendingAction;if(pending){if(this.time>pending.expires)this.pendingAction=null;else if(this[pending.name](...pending.args))this.pendingAction=null;}
-    const locked=this.enemies.find(e=>e.id===this.locked&&!e.dead);if(locked&&distance(p,locked)<26)p.angle=Math.atan2(locked.x-p.x,locked.z-p.z);else this.locked=null;
+    const locked=this.enemies.find(e=>e.id===this.locked&&!e.dead&&e.state!=='sealed');if(locked&&distance(p,locked)<26)p.angle=Math.atan2(locked.x-p.x,locked.z-p.z);else this.locked=null;
     const weapon=this.weaponStats();
     if(p.attack>0&&!this.attackHit&&p.attack<weapon.duration-weapon.hitTime){this.attackHit=true;for(const e of this.enemies) {if(e.dead||distance(e,p)>(weapon.reach+(e.type==='boss'?1.4:0))||!this.canStrike(p,e))continue;const angle=Math.atan2(e.x-p.x,e.z-p.z);if(Math.abs(angleDelta(angle,p.angle))<weapon.arc)this.hurtEnemy(e,this.damageAmount()*weapon.combo[p.combo],p.weaponType==='greatsword'?.7:.35);}}
     let dx=input.x||0,dz=input.z||0;const len=Math.hypot(dx,dz);if(len>1){dx/=len;dz/=len;}
@@ -159,16 +168,17 @@ export class Game {
     if(p.staminaDelay<=0)p.stamina=Math.min(100,p.stamina+(29+p.agility*2)*dt);
     p.energy=Math.min(100,p.energy+3.5*dt);
     for(const place of PLACES)if(distance(p,place)<30&&!this.discovered.includes(place.id)){this.discovered.push(place.id);this.emit('discover',{place});this.reward(15,25);this.emit('save');}
-    const lock=this.enemies.find(e=>e.id===this.locked&&!e.dead);if(lock&&distance(p,lock)<26){p.angle=Math.atan2(lock.x-p.x,lock.z-p.z);}else this.locked=null;
-    for(const e of this.enemies){if(p.dead)break;this.tickEnemy(e,dt);}if(!p.dead){this.tickProjectiles(dt);if(!p.dead){tickVillage(this,dt,groundAt);tickExpedition(this);tickGatherings(this);}}
+    const lock=this.enemies.find(e=>e.id===this.locked&&!e.dead&&e.state!=='sealed');if(lock&&distance(p,lock)<26){p.angle=Math.atan2(lock.x-p.x,lock.z-p.z);}else this.locked=null;
+    for(const e of this.enemies){if(p.dead)break;this.tickEnemy(e,dt);}if(!p.dead){this.tickProjectiles(dt);if(!p.dead){tickVillage(this,dt,groundAt);tickExpedition(this);tickGatherings(this);tickVaultSlices(this);}}
   }
   tickEnemy(e,dt) {
     if(e.dead)return;const p=this.player,d=distance(e,p),boss=e.type==='boss',wolf=e.type==='wolf';e.timer=Math.max(0,e.timer-dt);e.cooldown=Math.max(0,e.cooldown-dt);
+    if(e.vaultId&&vaultAt(p)?.id!==e.vaultId){e.state='sealed';if(this.locked===e.id)this.locked=null;return;}
     if(boss&&this.lit.length<4){e.state='sealed';return;}
     if(e.state==='sealed')e.state='idle';
     if(e.state==='stagger'){if(e.timer<=0){e.state='recover';e.timer=.45;}return;}
     if(e.state==='windup'){
-      if(e.timer<=0){e.state='strike';e.timer=.22;e.hit=false;this.emit('enemySwing',{id:e.id});}return;
+      if(e.timer<=0){e.state='strike';e.timer=.22;e.hit=false;this.emit('enemySwing',{id:e.id,vaultId:e.vaultId});}return;
     }
     if(e.state==='strike'){
       if(e.type==='ranger'){if(!e.hit){e.hit=true;this.fireArrow(e);}if(e.timer<=0){e.state='recover';e.timer=1.15;}return;}
@@ -247,16 +257,18 @@ export class Game {
     if(this.crossingChoice==='road'&&distance(p,ROAD_CACHE)<3.2)candidates.push(ROAD_CACHE);
     for(const s of PLACES){if(distance(p,s)<5.5)candidates.push({...s,name:s.type==='boss'?(this.bossDefeated?'王冠の火に触れる':'封印を調べる'):this.lit.includes(s.id)?`${s.name}で休む`:'灯火をともす'});}
     for(const l of this.pickups)if(!l.taken&&distance(p,l)<3.2)candidates.push({...l,name:l.type==='herb'?'露草を摘む':l.type==='relic'?'巡礼の遺物を拾う':l.type==='supplies'?'薬草の荷を取り戻す':'宝箱を開ける'});
+    for(const target of availableVaultTargets(this))if(distance(p,target)<3.2)candidates.push(target);
     return candidates.filter(t=>this.canReach(p,t)).sort((a,b)=>distance(p,a)-distance(p,b))[0]||null;
   }
   interact(target=this.nearestInteract()) {
     if(!target||this.player.dead)return false;const p=this.player;
-    const canonical=this.npcs().find(n=>n.id===target.id)||[...SALT_TARGETS,WIND_SHRINE,...WIND_BELLS,...(this.crossingChoice==='road'?[ROAD_CACHE]:[])].find(n=>n.id===target.id)||PLACES.find(s=>s.id===target.id)||this.pickups.find(l=>l.id===target.id&&!l.taken);
-    if(!canonical||distance(p,canonical)>=(canonical.type==='npc'?4.7:['herb','chest','relic','supplies','bell','inscription','expedition'].includes(canonical.type)?3.2:5.5)||!this.canReach(p,canonical))return false;
+    const canonical=this.npcs().find(n=>n.id===target.id)||[...SALT_TARGETS,WIND_SHRINE,...WIND_BELLS,...(this.crossingChoice==='road'?[ROAD_CACHE]:[]),...availableVaultTargets(this)].find(n=>n.id===target.id)||PLACES.find(s=>s.id===target.id)||this.pickups.find(l=>l.id===target.id&&!l.taken);
+    if(!canonical||distance(p,canonical)>=(canonical.type==='npc'?4.7:['herb','chest','relic','supplies','bell','inscription','expedition','vault-memory'].includes(canonical.type)?3.2:5.5)||!this.canReach(p,canonical))return false;
     target=canonical;
     if(target.type==='expedition')return interactExpedition(this,target.id);
     if(target.type==='bell'||target.type==='inscription')return interactShrine(this,target);
     if(target.type==='cache')return useRoadCache(this);
+    if(target.type==='vault-memory')return claimVaultMemory(this,target);
     if(target.type==='npc'){if(target.id===KEEPER.id)this.talked=true;else if(target.id===SENA.id)this.metSena=true;this.emit('dialogue',{npc:target.id});this.emit('save');return true;}
     if(['herb','chest','relic','supplies'].includes(target.type)){const item=this.pickups.find(l=>l.id===target.id);if(!item||item.taken)return;if(item.type==='supplies'&&this.enemies.some(e=>!e.dead&&e.encounter==='crossing')){this.notify('荷を守る兵を退けよう');return false;}item.taken=true;if(item.type==='herb'){p.herbs++;this.notify(`露草 ×1（所持 ${p.herbs}）`);}else if(item.type==='relic'){this.relic=true;this.reward(45,60);this.notify('巡礼の遺物 — ミラへ届けよう');}else if(item.type==='supplies'){this.supplies=true;this.notify('薬草の荷を取り戻した — セナに届けよう');}else{this.reward(45,35);p.herbs+=2;this.notify('灰の欠片 +45 · 露草 +2');}this.emit('loot',{x:item.x,z:item.z});this.emit('save');return;}
     if(target.type==='boss'){if(this.bossDefeated&&!this.ending)this.emit('endingChoice');else this.notify(this.ending?'谷には新しい風が吹いている':this.lit.length<4?`三つの灯火をともすと封印が解ける（${this.lit.length-1}/3）`:'灰冠の番人があなたを待っている');return;}
@@ -279,7 +291,7 @@ export class Game {
   respawn(){const p=this.player,s=PLACES.find(s=>s.id===this.checkpoint)||PLACES[0];this.clearTransient();this.projectiles=[];p.x=s.x;p.z=s.z+7;moveCircle(p,0,0,this.obstacles);p.y=groundAt(p.x,p.z);p.hp=p.maxHp;p.stamina=100;p.energy=100;p.potions=Math.max(this.crossingChoice==='road'?4:3,p.potions);p.dead=false;p.invulnerable=2;p.skillCooldown=0;for(const e of this.enemies){if(!e.dead){e.x=e.homeX;e.z=e.homeZ;e.y=heightAt(e.x,e.z);e.hp=e.maxHp;e.poise=180;e.state='idle';e.timer=0;e.cooldown=1;e.attackCount=0;e.radial=false;e.hit=false;e.avoid=null;e.route=null;}}this.emit('save');}
   chooseEnding(choice){if(!this.bossDefeated||this.ending||!['restore','release'].includes(choice))return false;this.ending=choice;this.reward(200,120);this.emit('ending',{choice});this.emit('save');return true;}
   quest(){if(this.trackedQuest==='expedition'&&!this.expedition.reported)return expeditionQuest(this);if(this.trackedQuest==='forge'&&!this.bells.reported)return{title:'風の入らない炉',text:forgeText(this),target:this.bells.solved?this.residents[0]:WIND_SHRINE};if(this.trackedQuest==='crossing'&&!this.crossingChoice)return{title:'川の向こうの約束',text:crossingText(this),target:this.supplies?SENA:EAST_CAMP};if(this.ending&&!this.expedition.reported)return expeditionQuest(this);if(this.ending)return{title:'風のつづきを歩く',text:'残された宝箱と遺物を探す',target:null};if(this.bossDefeated)return{title:'火の行く先',text:'王冠の火に触れ、谷の未来を選ぶ',target:PLACES[4]};if(this.lit.length===4)return{title:'灰冠の番人',text:'北の門へ。番人を倒して火を取り戻す',target:PLACES[4]};if(!this.talked)return{title:'消えた火をたどって',text:'集落の灯守ミラと話す',target:{x:7,z:80}};return{title:'三つの残り火',text:`谷の灯火をともす ${this.lit.length-1} / 3`,target:PLACES.filter(s=>s.type==='beacon'&&!this.lit.includes(s.id)).sort((a,b)=>distance(this.player,a)-distance(this.player,b))[0]};}
-  serialize(){const p=this.player;return{version:SAVE_VERSION,gatherings:JSON.parse(JSON.stringify(this.gatherings)),expedition:{...this.expedition},bells:{...this.bells},runtime:captureRuntime(this),dead:p.dead,player:Object.fromEntries(['x','z','angle','hp','level','xp','ash','herbs','potions','weapon','weaponType','vigor','agility'].map(k=>[k,p[k]])),day:this.day,lit:[...this.lit],discovered:[...this.discovered],talked:this.talked,bossDefeated:this.bossDefeated,ending:this.ending,checkpoint:this.checkpoint,relic:this.relic,relicDelivered:this.relicDelivered,weapons:[...this.weapons],metSena:this.metSena,crossingStarted:this.crossingStarted,supplies:this.supplies,crossingChoice:this.crossingChoice,trackedQuest:this.trackedQuest,taken:this.pickups.filter(l=>l.taken).map(l=>l.id),defeated:this.enemies.filter(e=>e.dead).map(e=>e.id)};}
+  serialize(){const p=this.player;return{version:SAVE_VERSION,gatherings:JSON.parse(JSON.stringify(this.gatherings)),expedition:{...this.expedition},bells:{...this.bells},vaults:JSON.parse(JSON.stringify(this.vaults)),runtime:captureRuntime(this),dead:p.dead,player:Object.fromEntries(['x','z','angle','hp','level','xp','ash','herbs','potions','weapon','weaponType','vigor','agility'].map(k=>[k,p[k]])),day:this.day,lit:[...this.lit],discovered:[...this.discovered],talked:this.talked,bossDefeated:this.bossDefeated,ending:this.ending,checkpoint:this.checkpoint,relic:this.relic,relicDelivered:this.relicDelivered,weapons:[...this.weapons],metSena:this.metSena,crossingStarted:this.crossingStarted,supplies:this.supplies,crossingChoice:this.crossingChoice,trackedQuest:this.trackedQuest,taken:this.pickups.filter(l=>l.taken).map(l=>l.id),defeated:this.enemies.filter(e=>e.dead).map(e=>e.id)};}
   restore(s){
     if(!s||s.version!==SAVE_VERSION||!s.player||typeof s.player!=='object')return false;
     this.expedition=restoreExpedition(s.expedition);applyExpeditionWorld(this);
@@ -292,8 +304,15 @@ export class Game {
     this.talked=!!s.talked;this.bossDefeated=!!s.bossDefeated;this.ending=this.bossDefeated&&['restore','release'].includes(s.ending)?s.ending:null;this.relic=!!s.relic;this.relicDelivered=this.relic&&s.relicDelivered===true;this.day=Number.isFinite(s.day)?clamp(s.day,0,1):.16;
     this.crossingStarted=s.crossingStarted===true;this.metSena=s.metSena===true;this.supplies=s.supplies===true;this.crossingChoice=this.supplies&&['haven','road'].includes(s.crossingChoice)?s.crossingChoice:null;this.trackedQuest=s.trackedQuest==='crossing'&&!this.crossingChoice&&(this.crossingStarted||this.supplies)?'crossing':'main';
     if(s.trackedQuest==='expedition'&&!this.expedition.reported)this.trackedQuest='expedition';
-    this.bells=restoreBells(s.bells);this.gatherings=restoreGatherings(this,s.gatherings);if(s.trackedQuest==='forge'&&!this.bells.reported&&(this.bells.started||this.bells.discovered))this.trackedQuest='forge';
+    this.bells=restoreBells(s.bells);this.gatherings=restoreGatherings(this,s.gatherings);this.vaults=restoreVaultProgress(s.vaults,Array.isArray(s.defeated)?s.defeated:[]);if(s.trackedQuest==='forge'&&!this.bells.reported&&(this.bells.started||this.bells.discovered))this.trackedQuest='forge';
     this.weapons=[...new Set(['sword',...(Array.isArray(s.weapons)?s.weapons:[]).filter(id=>Object.hasOwn(WEAPONS,id)),...(this.lit.includes('grove')||this.crossingStarted||this.crossingChoice?['spear']:[]),...(this.lit.includes('ruins')?['greatsword']:[])])];p.weaponType=this.weapons.includes(v.weaponType)?v.weaponType:'sword';
-    for(const l of this.pickups)l.taken=Array.isArray(s.taken)&&s.taken.includes(l.id);for(const e of this.enemies){e.dead=(Array.isArray(s.defeated)&&s.defeated.includes(e.id))||(e.type==='boss'&&this.bossDefeated);if(e.dead)e.hp=0;}moveCircle(p,0,0,this.obstacles);p.y=groundAt(p.x,p.z);restoreRuntime(this,s.runtime,groundAt);if(s.dead===true)this.respawn();return true;
+    for(const l of this.pickups)l.taken=Array.isArray(s.taken)&&s.taken.includes(l.id);for(const e of this.enemies){e.dead=(Array.isArray(s.defeated)&&s.defeated.includes(e.id))||(e.type==='boss'&&this.bossDefeated);if(e.dead)e.hp=0;}
+    // New authored solids can overlap coordinates from an older save. Preserve
+    // an already-clear position exactly, otherwise converge across touching
+    // colliders instead of leaving the player embedded after one projection.
+    const overlaps=()=>queryObstacles(this.obstacles,p.x-.48,p.z-.48,p.x+.48,p.z+.48).some(o=>distance(p,o)<o.r+.48-1e-4);
+    for(let pass=0;pass<12&&overlaps();pass++)moveCircle(p,0,0,this.obstacles);
+    if(overlaps()){const safe=PLACES.find(place=>place.id===this.checkpoint)||PLACES[0];p.x=safe.x;p.z=safe.z+7;moveCircle(p,0,0,this.obstacles);}
+    p.y=groundAt(p.x,p.z);restoreRuntime(this,s.runtime,groundAt);if(s.dead===true)this.respawn();return true;
   }
 }

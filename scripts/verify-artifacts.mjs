@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir, stat } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { buildIdentity } from './build-identity.mjs';
 
 const stage=JSON.parse(await readFile('artifacts/latest-site.json','utf8'));
@@ -38,4 +39,27 @@ for(const name of ['pilgrim','knight','keeper']){
   assert(!entry.includes(output),'character assets must stay out of the title chunk');
 }
 
-console.log(`Verified staged production build: initial ${Math.round(entryBytes/1024)} KiB, ${jsAssets.length} JS chunks, ${Math.round(totalJs/1024)} KiB JS, 3 models; identical models embedded in standalone.`);
+const provenance=JSON.parse(await readFile('src/assets/vaults/provenance.json','utf8'));
+assert.equal(provenance.schemaVersion,1,'unsupported vault asset provenance schema');
+const generator=await readFile(provenance.generator);
+assert.equal(createHash('sha256').update(generator).digest('hex'),provenance.generatorSha256,'vault asset generator differs from provenance');
+const provenanceFiles=provenance.assets.map(asset=>asset.file).sort();
+const manifestFiles=Object.keys(manifest).filter(key=>key.startsWith('src/assets/vaults/')&&key!=='src/assets/vaults/provenance.json').map(key=>key.split('/').at(-1)).sort();
+assert.deepEqual(manifestFiles,provenanceFiles,'emitted vault assets differ from the provenance inventory');
+let vaultBytes=0;
+for(const asset of provenance.assets){
+  const sourcePath=`src/assets/vaults/${asset.file}`,source=await readFile(sourcePath);
+  const digest=createHash('sha256').update(source).digest('hex');
+  assert.equal(source.length,asset.bytes,`source byte count differs from provenance: ${asset.file}`);
+  assert.equal(digest,asset.sha256,`source hash differs from provenance: ${asset.file}`);
+  assert.equal(asset.generator,provenance.generator,`asset generator differs from inventory: ${asset.file}`);
+  assert.equal(asset.license,'Project-original deterministic procedural asset; no third-party source material',`asset license is not explicit: ${asset.file}`);
+  const output=manifest[sourcePath]?.file;
+  assert(output,`missing emitted vault asset ${asset.file}`);
+  assert((await readFile(`dist/${output}`)).equals(source),`build output differs from source: ${asset.file}`);
+  assert((await readFile(`${root}/${output}`)).equals(source),`staged output differs from source: ${asset.file}`);
+  assert(embedded.some(data=>data.equals(source)),`standalone does not embed the complete ${asset.file}`);
+  vaultBytes+=source.length;
+}
+
+console.log(`Verified staged production build: initial ${Math.round(entryBytes/1024)} KiB, ${jsAssets.length} JS chunks, ${Math.round(totalJs/1024)} KiB JS, 3 models and ${provenance.assets.length} vault assets (${vaultBytes} bytes); source, build, staged output and standalone bytes agree.`);

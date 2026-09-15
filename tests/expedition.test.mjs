@@ -8,6 +8,7 @@ import { residentSpeech, routineFor } from '../src/village.js';
 import { ExpeditionScene } from '../src/expedition-scene.js';
 import { lineClear, moveCircle } from '../src/spatial.js';
 import { findPath } from '../src/navigation.js';
+import { VAULT_SLICES } from '../src/vault-slices.js';
 
 const near=(g,t)=>{Object.assign(g.player,{x:t.x,z:t.z+1,y:groundAt(t.x,t.z+1)});g.clearTransient();};
 const clearGuards=g=>{for(const e of g.enemies.filter(e=>e.encounter===J.id))g.hurtEnemy(e,e.hp);};
@@ -15,9 +16,10 @@ const claimHandle=g=>{clearGuards(g);near(g,J.handle);assert(g.interact(J.handle
 const left={x:-300,z:0},right={x:-266,z:0};
 
 test('salt region adds stable actors without replacing valley IDs or random woodland',()=>{
-  const g=new Game();assert.equal(g.enemies.length,30);assert.equal(g.pickups.length,63);assert.equal(g.trees.length,814);
+  const g=new Game();assert.equal(g.enemies.length,27+VAULT_SLICES.length+J.encounters.length);assert.equal(g.pickups.length,63);assert.equal(g.trees.length,805);
   assert.deepEqual(g.enemies.slice(0,27).map(e=>e.id),Array.from({length:27},(_,i)=>`enemy-${i}`));
-  assert.deepEqual(g.enemies.slice(27).map(e=>e.id),J.encounters.map(e=>e.id));
+  assert.deepEqual(g.enemies.slice(27,27+J.encounters.length).map(e=>e.id),J.encounters.map(e=>e.id));
+  assert.deepEqual(g.enemies.slice(-VAULT_SLICES.length).map(e=>e.id),VAULT_SLICES.map(slice=>slice.warden.id));
   for(const t of [...SALT_TARGETS,...J.routes.flatMap(r=>r.points)]){
     assert(Number.isFinite(groundAt(t.x,t.z)));assert(t.x>=WORLD_BOUNDS.minX);
     assert(!g.obstacles.some(o=>Math.hypot(t.x-o.x,t.z-o.z)<o.r+.48),t.id||JSON.stringify(t));

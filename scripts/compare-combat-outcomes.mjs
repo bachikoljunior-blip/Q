@@ -2,6 +2,7 @@
 // Laboratory fixtures; no browser, touch, audio, physical-device or player-quality observation.
 import * as core from '../src/core.js';
 import * as combat from '../src/combat-presentation.js';
+import { vaultAt } from '../src/vault-slices.js';
 import {renderCombatHud} from '../src/combat-hud.js';
 import {readFileSync} from 'node:fs';
 const compare=(get,mainSource)=>{
@@ -38,7 +39,7 @@ const compare=(get,mainSource)=>{
  const {game,enemy}=setup('hud'),nodes=new Map();
  function node(){return {style:{setProperty(){}},classList:{toggle(){},add(){},remove(){}},setAttribute(){},removeAttribute(){},querySelector(){return node()},append(){},textContent:''};}
  const $=id=>{if(!nodes.has(id))nodes.set(id,node());return nodes.get(id)};
- const scope={game,$,...presentation,renderCombatHud,warningTimer:0,innerWidth:1000,innerHeight:600,combatHintView:null,audio:{play(){}},view:{yaw:0,project:()=>({visible:false,x:0,y:0}),effect(){}},PLACES,distance,angleDelta,clamp,heightAt,actorGatheringCue:()=>null,regionAt:()=>null,WIND_BELLS:[],SALT_JOURNEY:{id:'salt'},setTimeout:()=>0,document:{createElement:node}};
+ const scope={game,$,...presentation,renderCombatHud,vaultAt,warningTimer:0,innerWidth:1000,innerHeight:600,combatHintView:null,audio:{play(){}},view:{yaw:0,project:()=>({visible:false,x:0,y:0}),effect(){}},PLACES,distance,angleDelta,clamp,heightAt,actorGatheringCue:()=>null,regionAt:()=>null,WIND_BELLS:[],SALT_JOURNEY:{id:'salt'},setTimeout:()=>0,document:{createElement:node}};
  const start=mainSource.indexOf('function handleEvents()'),end=mainSource.indexOf('function frame(now)',start);if(start<0||end<start)throw Error("Missing production HUD seam");
  const handlers=new Function("scope","with(scope){"+mainSource.slice(start,end)+";return {handleEvents,updateHud};}")(scope);
  handlers.handleEvents();handlers.updateHud();

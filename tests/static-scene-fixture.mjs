@@ -25,6 +25,7 @@ const rendererModule = 'data:text/javascript,' + encodeURIComponent(`
   }
 `);
 const assetStub = 'data:text/javascript,' + encodeURIComponent('export function loadCharacterAssets(){throw new Error("Node fixture must provide parsed assets");}');
+const vaultTextureStub = 'data:text/javascript,' + encodeURIComponent('export function loadVaultTextures(){return Promise.resolve({});}');
 const bakeStub = 'data:text/javascript,' + encodeURIComponent('export function bakeStaticTransforms(){}');
 let characters;
 
@@ -37,6 +38,7 @@ export async function createScenePair({ baselineRef } = {}) {
       if ([sceneURL, baselineURL].includes(context.parentURL)) {
         if (specifier === 'three') return { url: rendererModule, shortCircuit: true };
         if (specifier === './character-assets.js') return { url: assetStub, shortCircuit: true };
+        if (specifier === './vault-textures.js') return { url: vaultTextureStub, shortCircuit: true };
         if (!baselineRef && context.parentURL === baselineURL && specifier === './static-transforms.js') return { url: bakeStub, shortCircuit: true };
       }
       return nextResolve(specifier, context);

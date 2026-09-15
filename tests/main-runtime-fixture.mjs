@@ -99,9 +99,10 @@ export async function compileMain({ mutate } = {}) {
   });
   return { code: result.outputFiles[0].text, html: await readFile(new URL('index.html', root), 'utf8') };
 }
-export function createMainRuntime(compiled, { save, storageFailure = false, viewport = { width: 390, height: 844 } } = {}) {
-  const window = new Target(), document = new Target(), events = [], errors = [], tools = new Map();
-  const values = new Map(save ? [['q-ash-pilgrim-v1', JSON.stringify(save)]] : []);
+export function createMainRuntime(compiled, { save, saveRaw, storageFailure = false, allowTimers = false, viewport = { width: 390, height: 844 } } = {}) {
+  const window = new Target(), document = new Target(), events = [], errors = [], tools = new Map(), soundCalls = [];
+  const initialSave = saveRaw ?? (save ? JSON.stringify(save) : null);
+  const values = new Map(initialSave === null ? [] : [['q-ash-pilgrim-v1', initialSave]]);
   const storage = {
     getItem: key => values.get(key) ?? null,
     setItem(key, value) { if (storageFailure) throw Error('fixture storage quota'); values.set(key, String(value)); },
@@ -122,7 +123,9 @@ export function createMainRuntime(compiled, { save, storageFailure = false, view
     Soundscape: class {
       start() { audioRunning = true; events.push('audio:start'); }
       suspend() { audioRunning = false; events.push('audio:suspend'); }
-      setVolume() {} tick() {} play() {} noise() {}
+      setVolume() {} tick() {} noise() {}
+      setVault(theme) { if (this.vaultTheme !== theme) { this.vaultTheme = theme; soundCalls.push({ type: 'ambient', theme }); } }
+      play(type, data = {}) { soundCalls.push({ type, vaultId: data.vaultId ?? null, id: data.id ?? null }); }
     },
     async createSceneView(canvas, game, settings) {
       sceneCalls++; events.push('scene:requested'); await scene.promise;
@@ -154,13 +157,13 @@ export function createMainRuntime(compiled, { save, storageFailure = false, view
     requestAnimationFrame: callback => { frames.push(callback); return frames.length; },
     performance: { now: () => now },
     console: { error: error => errors.push(error.message) },
-    setTimeout() { throw Error('Unmodelled timeout: this scenario needs an explicit timer fixture'); },
+    setTimeout() { if (allowTimers) return 0; throw Error('Unmodelled timeout: this scenario needs an explicit timer fixture'); },
     AbortController, __devices: devices,
   });
   new Script(compiled.code, { filename: 'production-main-with-device-boundaries.js' }).runInContext(context);
   const element = id => { const el = document.getElementById(id); if (!el) throw Error('Missing production element: ' + id); return el; };
   return {
-    document, window, scene, events, errors, values, element,
+    document, window, scene, events, errors, values, soundCalls, element,
     get view() { return view; }, get sceneCalls() { return sceneCalls; }, get audioRunning() { return audioRunning; },
     get state() { return tools.get('read_pilgrim_journey').execute(); },
     setPadFailure(value) { padFailure = value; },

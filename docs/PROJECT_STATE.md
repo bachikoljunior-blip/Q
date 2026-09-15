@@ -1,5 +1,35 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-15 07:57 UTC — asset-first四遭遇、前向きC/D比較、レビュー修正（GitHub反映前）
+
+### 継続分類、担当、期限判断
+
+継続分類は **STOPPED → RESUMED**。`origin/main` は期待値どおり `411f3c55aa3ebf8dc167a7ab6ca89673fcd16486` のcleanな完了check pointで、現行ゲームの未merge PR・remote branch・別writerはなく、固定目標は未達だったため制作を再開した。旧ゲームのPR #3/#13、他repository、automationには触れていない。担当は `/root/ultra_q_asset_slice`、requested reasoning effortは `ultra`。直接の独立read-only review二件はともに `fork_turns=none`、`reasoning_effort=ultra`、`model` omittedで起動した。
+
+期限2026-09-20への厳格評価は **NO-GO / evidence insufficient**。この時点から期限時刻の幅までは約112–136時間だが、現状は一章、連続map一つ、外接矩形740×502 m（gross 0.37148 km²、net playable area未測定）、武器3、敵34体（従来30 + knight派生の番兵4）、名前付きNPC定義9、相談2場面・本編lines 6・4選択、CC0 GLB 3、project生成PNG 4 / WAV 10、native package 0。完成表7領域のend-to-end合格は0/7、指定10作品とのformal comparisonは0/10。残る複数章・地域・屋内、商用品質の造形・animation・演技・音響、native配布、正式画面、物理touch、実聴、実機性能、30分human play、外部比較には完成範囲の実測速度がなく、下記の局所slice速度を外挿して「完成できる」とはいえない。
+
+### 実payloadと保存経路
+
+asset-first案を実source/buildへ入れた。熾火・潮錆・風蝕・苔影の四つのvaultは、地形に追従する天井なしの環状壁19と入口1、brazier 4 + stele 4の**配置8件**、同じsoldier rigをtheme別の材質・装飾・名前で区別した番兵1、`guard / prowl / charge / release` の手続き的構造pose 4、ambient WAV 1、共有SFX WAV 6、固有resultを持つ。固有model / animation clip / AIを四体分制作したという意味ではない。通常titleからkeyboardで移動し、enter、複数hitのcombat、番兵swing、memory interaction、result、save、title、別のfresh VM Continueへ通す二数値寸法×四vaultの8経路を実装した。
+
+`src/assets/vaults/` は決定論的generatorによるtileable PNG 4、ambient WAV 4、shared SFX WAV 6の14 binary / 891,845 bytesと、generator・個別hash・project-original宣言を持つprovenance JSON。generator SHA-256は `510e879ff8b04acc587aa564dd87f03f68f129e20b0f66fc40699bc57a5fe506`、provenance SHA-256は `99ae69f4532462911c610a67a6e8418cac5d1a180afcbb4015bbd430b8c2335b`。hashと再生成は確認したが、法的著作者性を独立判定した結果ではない。
+
+独立reviewが指摘した、(1) malformed saveのclaimed / entered矛盾、(2) 番兵撃破からmemory取得または15秒autosaveまでの保存欠落、(3) 旧save位置が新壁へ1.078 m埋まる一回projection、(4) ambient開始失敗後のsame-theme retry抑止、(5) 同key decode待ちSFXの多重start、(6) combat警告の番兵名の一般化を `ab007cf` で修正した。そのdedupeをambient loopにも適用した初版には、退出・同theme再進入がdecode待ち中に重なるとstale requestが共有sourceを止めるABA raceがあり、独立再reviewで検出した。loopは世代ごとに別source、one-shotだけを待機中dedupeする `db77361` と遅延再進入回帰で修正した。位置移行はclearな座標を変えず最大12回で収束し、なお重なると既存checkpointへ戻す。修正後のfocused 15/15と全gateを通した。
+
+### 前向きC/D比較と採否
+
+当初のEmber/Tide計時はTide固有recipeがB開始より前に存在したため**無効**で、速度根拠に使わない。C=`gale-vault` は最初の固有edit前 `2026-09-15T07:32:11.533Z` から、sealed番兵review修正を含む同一full local gate成功 `07:40:52.362Z` まで `T_C=520,829 ms`。commit `da5f4db9eef4f0db20ed887203de07527fd1e4a0` にfreezeし、そこにmoss参照が0であることを確認した。D=`moss-vault` はfreeze後 `07:41:03.122Z` から同じgate成功 `07:44:41.068Z` まで `T_D=217,946 ms`。commitは `79a18c9c241fe1704377f7fbbf54fe782fd31dc6`。`T_D/T_C=0.4184598` で局所目標 `<=0.75` を通り、二interval合計は738,775 ms、C開始からD終了までは749,535 ms。これは同一hostの `Date.now` wall clockでmonotonic clockではなく、clock補正は観測していない。
+
+定義したfull gateは両方とも初回exit 0なのでformal failure / repair loopはC=0 / D=0。ただし「修正0」とはせず、full gate前のfocused / reviewer修正をC=4、D=2と別記する。`T_asset` は個別計時せず各T内にしかboundできないため**欠測**。Dで使うasset IDは固有2 + 共有6の8、無改変reuseは6/8=75%、bytesは117,570/311,342=37.764%。componentは明示した12項目中、無改変8、edit 4で8/12=66.667%、assetとcomponentを合わせたitem基準は14/20=70%。D専用state machineは増やしていない。前向きreuse速度仮説は局所合格だが、欠測 `T_asset` と未完のrequired CI endpointがあるため方式全体のstrict adoptionはまだNO-GO。
+
+### 最終local gate、証拠境界、配信判断
+
+review修正後fingerprintは `sha256:58024fad006c1d91125df3bb46ab4193df5537feddfe73b7c5a6a3160d240517`。`npm test` 181/181、main runtime 16条件・3負例・6検出、相談runtime 4条件・8起動・8 reload・7負例・28検出、vault 4本×二数値寸法=8/8・fresh reload 8、chapter journey 119秒、crossing両choice、forge 103秒、30分相当108,000 step / 138 reload / 81 objective / death 0、expedition north / south、combat 9、production touch adapter portrait / landscape各20/20、62-module build、package、artifact exactnessが成功。初期entryは138 KiB、JS 3 chunks / 827 KiB、GLB 3、vault asset 14。単体版は4,471,098 bytes、SHA-256 `c62c86c20e71a7695be4b9f83365c02b76bdee7f9e21ee8637b1b4cf66459d33`。
+
+これはNode VM内のproduction main / Game / SaveStore / keyboard接続、SceneView / Soundscape呼出し境界、selected progressのfresh-runtime復元、Three object構造、低層audio fetch / decode / connect / start契約、source / dist / stage / standaloneのasset byte一致。production WebGL pixels、DOM/CSS/native event、物理touch、decoded/heard device audio、実iOS/Android性能、人間の実プレイ、外部比較ではない。高品質設定の従来world recordはvault footprint外で保持したが、grass配列の詰め直しによりlow / medium capでは従来範囲外のbladeがそれぞれ53 / 109増える。木は旧814からfootprint 9本を除いた805で、全既存tree/pickup/enemy IDの置換はない。
+
+基点から実装candidate `db77361` までの変更48ファイルの正確なlist、比較分母、hash、gate結果は [`docs/evidence/asset-vertical-slice-20260915.json`](evidence/asset-vertical-slice-20260915.json) に固定した。現時点の実装candidateは `db77361`、GitHub PR / CI / merge / remote mainは未確定。payloadが変わったため、次checkpointはremote main再取得→fresh branch push→通常PR→required CI→expected-head merge→remote main包含確認→同じowner-only Siteへの固定stage配信→project/version/deployment/audience readback。既存Site version 20とcustom owner-only（owner 1、editor / group / external 0）は配信完了まで維持する。
+
 ## 2026-09-15 05:26 UTC — PR #30の独立最終監査、履歴exactness修正、main反映完了
 
 ### 結論と正規GitHub readback

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import * as T from 'three';
 import { bakeStaticTransforms } from '../src/static-transforms.js';
 import { createScenePair, nodesOf, exerciseView, matrixWork, appearanceDigest } from './static-scene-fixture.mjs';
+import { inVaultFootprint, VAULT_SLICES } from '../src/vault-slices.js';
 
 test('baked local transforms retain native world updates, parent motion and explicit local rebaking', () => {
   const scene = new T.Scene(), group = new T.Group(), child = new T.Mesh(new T.BoxGeometry(), new T.MeshStandardMaterial());
@@ -21,6 +22,9 @@ test('baked local transforms retain native world updates, parent motion and expl
 
 test('actual scenery graph stays identical through actor, weather, effects, quality, light and parent updates', async () => {
   const [baseline, candidate] = await createScenePair();
+  assert.equal(candidate.vaultScene.groups.size, VAULT_SLICES.length); for (const group of candidate.vaultScene.groups.values()) { assert(group.children.some(node => node.userData.assetRole === 'terrain-floor')); assert.equal(group.children.filter(node => node.userData.assetRole?.startsWith('prop:')).length, 8); }
+  const instance = new T.Matrix4(), position = new T.Vector3();
+  for (let index = 0; index < candidate.grass.count; index++) { candidate.grass.getMatrixAt(index, instance); position.setFromMatrixPosition(instance); assert.equal(inVaultFootprint(position), false, `grass ${index} intersects a vault`); }
   const a = nodesOf(baseline.scene), b = nodesOf(candidate.scene);
   assert.equal(a.length, b.length);
   assert.equal(appearanceDigest(baseline), appearanceDigest(candidate));
@@ -72,4 +76,14 @@ test('actual scenery graph stays identical through actor, weather, effects, qual
   assert.equal(baseCounts.compose - candidateCounts.compose, baked.length);
   // Scene's forced native world traversal intentionally remains unchanged.
   assert.equal(baseCounts.multiplyMatrices, candidateCounts.multiplyMatrices);
+  for (const slice of VAULT_SLICES) {
+    const enemy = candidate.game.enemies.find(item => item.id === slice.warden.id), model = candidate.enemyModels.get(slice.warden.id);
+    assert.equal(model.type, 'soldier'); assert(model.vaultAdornment, `${slice.id}: parsed soldier model was not decorated`);
+    const poses = new Set();
+    for (const state of ['idle', 'chase', 'windup', 'strike']) {
+      Object.assign(candidate.game.player, { x: slice.center.x, z: slice.center.z }); Object.assign(enemy, { state, dead: false, x: slice.warden.x, z: slice.warden.z }); candidate.update(1 / 60, true);
+      const adornment = model.vaultAdornment; poses.add([adornment.state, adornment.shield.rotation.x, adornment.crown.scale.x, adornment.eye.scale.z, adornment.group.position.y].join(':'));
+    }
+    assert.equal(poses.size, 4, `${slice.id}: SceneView did not drive all four warden poses`);
+  }
 });

@@ -45,7 +45,7 @@ export function restoreRuntime(game,runtime,groundAt){
     moveCircle(enemy,0,0,game.obstacles,enemy.type==='boss'?1.2:.48);enemy.y=groundAt(enemy.x,enemy.z);
     enemy.angle=finite(saved.angle,enemy.angle,-1e7,1e7);enemy.hp=finite(saved.hp,enemy.maxHp,1,enemy.maxHp);
     enemy.state=enemyStates.has(saved.state)?saved.state:'idle';
-    if(enemy.state==='sealed'&&(enemy.type!=='boss'||game.lit.length>=4))enemy.state='idle';
+    if(enemy.state==='sealed'&&!enemy.vaultId&&(enemy.type!=='boss'||game.lit.length>=4))enemy.state='idle';
     enemy.timer=finite(saved.timer,0,0,5);enemy.cooldown=finite(saved.cooldown,0,0,5);
     enemy.poise=finite(saved.poise,180,0,180);enemy.attackCount=Math.floor(finite(saved.attackCount,0,0,1e7));
     enemy.radial=enemy.type==='boss'&&saved.radial===true;enemy.hit=saved.hit===true;
@@ -54,7 +54,7 @@ export function restoreRuntime(game,runtime,groundAt){
     else if(enemy.type==='ranger'&&['windup','strike'].includes(enemy.state)){enemy.state='recover';enemy.timer=.5;}
     enemy.route=null;enemy.avoid=null;
   }
-  game.locked=game.enemies.some(e=>e.id===runtime.locked&&!e.dead)?runtime.locked:null;
+  game.locked=game.enemies.some(e=>e.id===runtime.locked&&!e.dead&&e.state!=='sealed')?runtime.locked:null;
   const residents=Array.isArray(runtime.residents)?runtime.residents.slice(0,game.residents.length):[];
   for(const n of game.residents){
     const saved=residents.find(v=>v&&v.id===n.id);if(!saved)continue;
