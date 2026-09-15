@@ -10,8 +10,11 @@ const definitions = [
     id: 'hearth', file: 'hearth-middle.json', title: '炉を囲む約束',
     speaker: '薬師 イオ', finalSpeaker: '鍛冶師 レン', choice: 'medicine',
     expectedInputSha256: 'a0c99ac8a633ec29d48b647b12c448851d99e5d0daf593f47cac09444d53c5be',
-    historySpeaker: '鍛冶師 レン',
-    historyText: '風が戻った炉で、最初に何を作るか迷っていた。刃を打つつもりだったが、イオの鍋も底が抜けていてな。', currentText: '鍋は直してもらった', futureText: 'どちらから始めよう',
+    expectedHistory: [
+      { speaker: '鍛冶師 レン', text: '風が戻った炉で、最初に何を作るか迷っていた。刃を打つつもりだったが、イオの鍋も底が抜けていてな。' },
+      { speaker: '薬師 イオ', text: '鍋は直してもらった。今度は、村の外で傷つく人にもこの火を分けたい。持ち歩ける薬か、帰り道の道具か。' },
+      { speaker: '鍛冶師 レン', text: 'どちらから始めよう。道を歩いてきたあんたの話を聞かせてくれ。' },
+    ],
     result: '炉のそばに薬棚を作り、旅へ持ち出す露草を分けてもらった。',
     continueInterruption: 'blur', importInterruption: 'hidden',
   },
@@ -19,8 +22,11 @@ const definitions = [
     id: 'road-watch', file: 'road-watch-middle.json', title: '夜道の目印',
     speaker: '斥候 ユノ', finalSpeaker: '旅人 アサ', choice: 'light',
     expectedInputSha256: '71eb65aad4de50b5ef9c906f7601ba7165b699a5233dddbd1489aad87fcde5de',
-    historySpeaker: '旅人 アサ',
-    historyText: '昨夜、灯りを見失った親子を連れてきた。ここが見える距離でも、灰が舞うと道の縁が消える。', currentText: '着いたときには', futureText: '残った木材で',
+    expectedHistory: [
+      { speaker: '旅人 アサ', text: '昨夜、灯りを見失った親子を連れてきた。ここが見える距離でも、灰が舞うと道の縁が消える。' },
+      { speaker: '斥候 ユノ', text: '着いたときには子どもの足が冷えきっていたよ。渡してくれた薬草で温めたけれど、辿り着けない人もいるんだろうね。' },
+      { speaker: '旅人 アサ', text: '残った木材で高い灯りを立てるか、途中に休める場所を作るか。実際に歩いた君なら、どちらを先にする？' },
+    ],
     result: '野営地のそばに高い灯りが立った。アサは夜ごと灰を払いに来る。',
     continueInterruption: 'bfcache', importInterruption: 'blur',
   },
@@ -43,6 +49,19 @@ for (const definition of definitions) {
 
 const hidden = (runtime, id) => runtime.element(id).classList.contains('hidden');
 const normalized = value => JSON.parse(JSON.stringify(value));
+
+function assertRenderedHistory(runtime, expected, stage) {
+  const history = runtime.element('panel-body').querySelector('.gathering-history');
+  assert(history, stage + ' must expose consultation history');
+  const actual = history.querySelectorAll('div').map(row => ({
+    speaker: row.querySelector('strong').textContent,
+    text: row.querySelector('p').textContent,
+  }));
+  assert.equal(actual.length, expected.length, stage + ' history must have exact line count');
+  assert.deepEqual(actual.map(line => line.speaker).sort(), expected.map(line => line.speaker).sort(), stage + ' history speakers must match exactly');
+  assert.deepEqual(actual.map(line => line.text).sort(), expected.map(line => line.text).sort(), stage + ' history full texts must match exactly');
+  assert.deepEqual(actual, expected, stage + ' history order must match exact authored sequence');
+}
 
 async function launch(compiled, viewport, save, route, raw = JSON.stringify(save)) {
   const runtime = createMainRuntime(compiled, route === 'continue' ? { save: normalized(save), viewport } : { viewport });
@@ -96,15 +115,9 @@ async function openGathering(runtime, definition) {
   const sceneUpdate = runtime.view.sceneUpdates.at(-1);
   assert.equal(sceneUpdate.focus, definition.id);
   assert.equal(runtime.element('panel-body').querySelector('.dialogue-speaker').textContent, definition.speaker);
+  assert.equal(runtime.element('panel-body').querySelector('.dialogue-text').textContent, definition.expectedHistory[1].text);
   assert.equal(runtime.element('panel-body').querySelector('.gathering-progress').textContent, '2 / 3');
-  const history = runtime.element('panel-body').querySelector('.gathering-history').textContent;
-  const historyLines = runtime.element('panel-body').querySelector('.gathering-history').querySelectorAll('div');
-  assert.equal(historyLines.length, 1, 'middle consultation must expose exactly one completed history line');
-  assert.equal(historyLines[0].querySelector('strong').textContent, definition.historySpeaker);
-  assert.equal(historyLines[0].querySelector('p').textContent, definition.historyText);
-  assert.match(history, new RegExp(definition.historyText));
-  assert.doesNotMatch(history, new RegExp(definition.currentText));
-  assert.doesNotMatch(history, new RegExp(definition.futureText));
+  assertRenderedHistory(runtime, definition.expectedHistory.slice(0, 1), 'middle consultation');
 }
 
 async function reloadCompleted(compiled, viewport, save, definition) {
@@ -116,6 +129,7 @@ async function reloadCompleted(compiled, viewport, save, definition) {
   await runtime.flush();
   await runtime.click('gathering-open');
   assert.match(runtime.element('panel-body').textContent, new RegExp(definition.result));
+  assertRenderedHistory(runtime, definition.expectedHistory, 'reloaded completed consultation');
   assert.equal(runtime.view.gatheringFocus, definition.id);
   runtime.frames();
   assert.equal(runtime.view.sceneUpdates.at(-1).focus, definition.id);
@@ -152,7 +166,9 @@ async function complete(compiled, viewport, definition, route, interruption) {
   await runtime.click('gathering-next');
   assert.equal(runtime.view.game.gatherings[definition.id].beat, 2);
   assert.equal(runtime.element('panel-body').querySelector('.dialogue-speaker').textContent, definition.finalSpeaker);
+  assert.equal(runtime.element('panel-body').querySelector('.dialogue-text').textContent, definition.expectedHistory[2].text);
   assert.equal(runtime.element('panel-body').querySelector('.gathering-progress').textContent, '3 / 3');
+  assertRenderedHistory(runtime, definition.expectedHistory.slice(0, 2), 'advanced consultation');
   assert.equal(runtime.view.gatheringFocus, definition.id);
   runtime.frames();
   assert.deepEqual(runtime.view.sceneUpdates.at(-1), { focus: definition.id });
@@ -160,6 +176,7 @@ async function complete(compiled, viewport, definition, route, interruption) {
   await runtime.click('gathering-' + definition.choice);
   assert.deepEqual(normalized(runtime.view.game.gatherings[definition.id]), { phase: 'done', beat: 2, choice: definition.choice });
   assert.match(runtime.element('panel-body').textContent, new RegExp(definition.result), 'selected gathering result must rerender');
+  assertRenderedHistory(runtime, definition.expectedHistory, 'completed consultation');
   const stored = normalized(JSON.parse(runtime.values.get(SAVE_KEY)));
   assert.deepEqual(stored.gatherings[definition.id], { phase: 'done', beat: 2, choice: definition.choice });
   runtime.frames();
