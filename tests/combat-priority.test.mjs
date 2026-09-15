@@ -120,7 +120,7 @@ test('HUD does not advertise a blocked defense and exposes an unavoidable state'
 test('dodge consumes the current-frame direction and cleared inputs cannot fire later',()=>{
   const game=cleanGame(),queue=new CombatInputQueue(),presentation={decision:{action:'dodge'}};queue.push('dodge');const result=queue.flush(game,presentation,{x:1,z:0});assert.equal(result.selected,'dodge');assert.deepEqual(game.dodgeDir,{x:1,z:0});
   const other=cleanGame();other.player.attack=.5;queue.push('attack');queue.clear();other.clearActionBuffer();assert.equal(queue.flush(other,null).selected,null);tick(other,30);assert.equal(other.pendingAction,null);
-  const main=readFileSync(new URL('../src/main.js',import.meta.url),'utf8'),conversion=main.indexOf('input.x=x*Math.cos(a)+z*Math.sin(a)'),flush=main.indexOf('combatInputs.flush(game,combatHintView,input)');assert(conversion>=0&&flush>conversion);assert.match(main,/pagehide'.+clearInput\(\);save\(\)/);
+  const main=readFileSync(new URL('../src/main.js',import.meta.url),'utf8'),conversion=main.indexOf('input.x=x*Math.cos(a)+z*Math.sin(a)'),flush=main.indexOf('combatInputs.flush(game,combatHintView,input)');assert(conversion>=0&&flush>conversion);assert.match(main,/pagehide'.+clearInput\('pagehide'\);save\(\)/);
 });
 
 test('invulnerability suppression keeps the exact boundary and distinct arrow hazard IDs',()=>{

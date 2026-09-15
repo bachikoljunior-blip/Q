@@ -906,3 +906,44 @@ main反映前の判断も「根拠不足」。ただし今回の確定実装は�
 期限判断は引き続き根拠不足であり、次回も方法見直し対象。配信の停滞と計測の識別・集計不足は解消したが、指定10作品相当の完成品質、複数章・美術・演技・音の残量と実測速度、画面・タッチ・音・物理端末性能・外部プレイヤー比較の証拠は揃っていない。今回の人工入力比較や114試験を体験品質合格へ読み替えない。
 
 次回は、最新mainと未保存編集を照合し、既存配信がこのゲーム実装を含むことを確認する。正式な画面環境が使用可能なら固定セーブを起点に同じ端末・設定・経路の60秒比較と別途30分継続を行い、ソース指紋・開始セーブ・画面記録・端末情報を対応させて、操作と描画の不具合を優先修正する。サービス不在なら同じstartを繰り返さず、必要な環境を未解消として記録する。独立制作では既存の会話・戦闘場面の描画負荷を同一条件で分解し、採用前後のCPU処理・描画数・メモリ保持を区別して調べる。計測機能の追加だけを繰り返さず、得られた問題へ実際の修正を結び付ける。
+
+
+## 2026-09-15 01:19 UTC — v0.19.0 production pointer経路の監査（反映前チェックポイント）
+
+### 継続確認・正本・期限判断
+
+remoteを再取得し、正本mainは `72bbf152199341adc69f291817c6e58211d4ef27`、tree `e3b3f9da14ea61ded4827a56d5a29c488b50cb4e`。v0.18.0のゲーム実装、133試験、実装PR #24、結果記録PR #25、CI成功、既存所有者限定Site version 19の成功を確認した。未完了PRは旧ゲーム系統の#3/#13だけで、使用・mergeしない。automationは直接指定どおりgame2=false、Q=true、survival=falseの正式readback済みで差分がないため、再保存・新規作成・他設定変更をしていない。
+
+継続判断は制作継続、期限判断は厳格な**NO-GO**。2026-09-20までに指定10作品に劣らない完成品質を、残作業、実測速度、手戻り、画面・タッチ・音・実機性能・外部評価・配信待ち込みで根拠付きに「できる」とは言えない。完成表7領域の全てにend-to-end証拠が不足する。実装が0%という意味や、あらゆる方法での論理的不可能を証明する判断ではないが、現方式を順調と扱う根拠はない。
+
+疑う前提は、ロジック試験が実体験を代表する、分単位のJS修正速度を複数章と商用品質の美術・演技・音へ外挿できる、Node host時間がスマートフォン性能を表す、端末・正式preview・外部評価者を待ちなしで確保できる、所有者限定Web版がnative配布と完成を代替する、並列化で観察→修正→再試験の直列依存を消せる、versionやtest件数が完成度を示す、というもの。
+
+### Ultra起動証拠と正式経路
+
+本制作単位は `task=/root/ultra_q_v19_integrator`、`requested_reasoning_effort=ultra`、`fork_turns=none`、model省略で受理された。統合担当から独立読取のrepo/CI/Site/期限/方法レビューとtouch差分レビューを同じくmodel省略・ultra・forkなしで起動した。実効推論強度は外部から独立測定できないため、受理された指定を記録する。
+
+managed-linuxの正式Sites手順を設定し、公式依存導入に成功。編集前に既存project `appgprj_6aa6871ebd648191802ba2398d06115b` をreadbackし、version 19、所有者一人のみのcustomアクセス、外部閲覧者・許可グループ0を確認した。正式previewの一度の正規startは監督サービスのmailbox不在でexit 1。再試行、サービス置換、直接サーバー、別URL、アクセス回避は行っていない。
+
+公式readback付属の1200×750静的スクリーンショットではタイトルと致命エラー表示なしだけを観察したが、表示版0.15は配信version 19 / game 0.18.0と一致しない。スクリーンショットの鮮度を証明できない一方、正本 `index.html` にも別の固定0.16が残っていたため、build identityに接続しない実装不具合として動的 `BUILD_INFO.version` 表示へ修正した。これは正式gameplay画面や配信byteの版確認ではない。
+
+### 方法変更・実装・焦点結果
+
+正式preview、迂回browser、追加frame項目だけ、audio fake、native移行、production adapterの5案を比較し、今回の有限単位はproduction adapterと端末証拠の共通経路を採用した。`src/main.js` の実listenerを `src/touch-controls.js` へ抽出し、同じadapterから端末動作JSON schema 3へviewport、pointer種別・channel・action・同時数・移動距離・capture失敗・解除理由をraw座標なしで出す。
+
+390×844 / 844×390、DPR 3、三脅威、60 Hz、40 frameで、直接入力とadapterへ移動・camera・回避の3 pointerを渡す経路を各20回比較。serialized state digest、HP、stamina、選択・accepted操作、入力、cameraが20/20一致。回避HP 120、無反応98、最大同時touch 3、attack/parry二順序はともに受け流し・HP 120・状態一致・差0、残留入力0。Node `EventTarget` の対象へ直接dispatchするため、DOM/CSS hit test、browser固有event、物理三指、画面を確認した結果ではない。
+
+独立レビューでcapture失敗時の要素外releaseによる入力残留、遅延3D開始・save読込中の画面離脱後にactive/audioへ戻るrace、タイトルimportへのpause伝播欠落、死亡中hidden後のaudio再開欠落、BFCache復帰、gamepad権限例外、比較項目不足、CSS外fixture座標、固定0の指標、untracked生成物を見落とすCIを発見・修正した。capture失敗時の即rollbackとdocument-level end fallback、lifecycle世代pause、ユーザー操作内のaudio再開、安全なgamepad読取、比較全項目一致、tracked/porcelain gateを追加。焦点10件成功、各向き20/20を再確認。初回の浮動小数点厳密比較1件と旧source契約1件も手戻りとして残す。詳細は `docs/TOUCH_INPUT_AUDIT.md`。
+
+### 最終local検証と反映前の状態
+
+独立最終レビューはsource差分GO。最終sourceから `npm ci` exit 0（16 package、9秒）、焦点10/10、`npm test` 143/143・失敗0（Node 2.703秒）を確認した。`test:journey` は119秒相当・ending release、`test:crossing` はhaven/roadとroad相談両択、`test:forge` は103秒相当・4 reload・相談両択・`renderingTested:false`、`test:session` は30分相当108,000 step・138 reload・死亡0・objectives 81・max save 8,112 bytes、`test:expedition` は北1,908秒相当/153 reloadと南106秒/15 reload・`renderingTested:false`。この5本は独立processで並行実行したためwall timeを制作速度に使わない。
+
+`review:combat` は9場面のHP `[98,120,120,86,120,98,120,120,120]`、`compare:touch` は縦横各20/20、回避HP 120、無反応98、最大同時touch 3、入力順HP差0でexit 0。`compare:combat-priority` も出力一致・回帰0、48矢の最終host runは逐次1.0626→batch 0.8258 ms/回（中央値22.3%減、1.287倍、候補勝ち9/9）。直前の別runはhost変動で候補勝ち8/9だったため、固定改善率や端末性能として扱わない。
+
+最終 `build` はVite 1.85秒、initial 131.11 kB、scene 81.51 kB、Three.js 619.57 kB。500 kB超警告は残る。`package` は3,266,506 bytes（3190 KiB）の単体版を生成し、SHA-256 `74c95e286e7c115725562a57169b5939a78f5088eb8edaf73418bb4d325c7e95`。`test:artifacts` はinitial 128 KiB、3 JS chunk / 813 KiB、3 model、`.openai/hosting.json`を含む11ファイルを `artifacts/site-OXJ4Qa` へ固定し、両生成物の同一modelとsource fingerprint `sha256:540218237d5b40d8907935df41e009808af7ba747c0cc26d1c41373905413bb7` を確認。touch記録SHA-256は `7502fa2be55fd6fd8dcc7d7a09015a37e39a18c4fa3675aeb366e71362832a02`。`git diff --check` もexit 0。
+
+自動検証で確認したのはルール、進行、保存、production listener、Node event dispatch、生成物一致。正式WebGL画面、browser hit test / PointerEvent、物理タッチ、音の実聴、iOS/Android実機性能、30分実プレイ、外部評価は未確認のまま。反映前の期限判断もNO-GOで変更なし。
+
+現時点の未完了は、candidate commit、通常branch/PR/CI/merge、remote main包含確認、検証済みmainの既存owner-only Site保存・private配信・readback。本チェックポイントだけで反映・配信済みとは扱わない。
+
+次の具体作業は、まず上記を完了する。その後は正式previewまたは許可されたiPhone Safari / Android Chromeを確保し、同じ48矢と三脅威saveを縦横各60秒、別途30分継続で実操作する。source fingerprint、開始save、画面、音、pointer集計、frame-time、端末/OS/browser、メモリ・電力・発熱を対応させ、重大不具合を修正して同条件再測定する。外部playerには操作、被弾理由、画面・音、探索、指定10作との差をblind条件で評価してもらう。確保できない場合は必要な権限・端末・担当者・日程を未解決依存として停止判断へ上げ、同種ロジック件数で代用しない。

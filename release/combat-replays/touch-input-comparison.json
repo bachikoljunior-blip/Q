@@ -1,0 +1,319 @@
+{
+  "formatVersion": 1,
+  "gameVersion": "0.19.0",
+  "baseRef": "72bbf152199341adc69f291817c6e58211d4ef27",
+  "fixedStepHz": 60,
+  "frames": {
+    "threeThreat": 40,
+    "sameFrameOrder": 30
+  },
+  "checks": {
+    "portraitMatches": true,
+    "landscapeMatches": true,
+    "displayedDodgeSurvives": true,
+    "negativeControlTakesDamage": true,
+    "threeChannelsOverlap": true,
+    "inputOrderStable": true,
+    "noResidualInput": true,
+    "synchronousEnqueueObserved": true
+  },
+  "viewports": [
+    {
+      "viewport": {
+        "id": "portrait",
+        "width": 390,
+        "height": 844,
+        "devicePixelRatio": 3
+      },
+      "rounds": 20,
+      "matchingRuns": 20,
+      "direct": {
+        "digest": "965cfe0b121443ecd4a4f3d2f4170ede1dfe6fa9a660d00bf7a5c967a22ecfc8",
+        "hp": 120,
+        "stamina": 84.867,
+        "selected": "dodge",
+        "accepted": true,
+        "enqueuedSynchronously": true,
+        "input": {
+          "x": 0.992809,
+          "z": 0.119712,
+          "sprint": true
+        },
+        "camera": {
+          "yaw": -0.12,
+          "pitch": 0.34
+        },
+        "evidence": null,
+        "residual": null
+      },
+      "pointer": {
+        "digest": "965cfe0b121443ecd4a4f3d2f4170ede1dfe6fa9a660d00bf7a5c967a22ecfc8",
+        "hp": 120,
+        "stamina": 84.867,
+        "selected": "dodge",
+        "accepted": true,
+        "enqueuedSynchronously": true,
+        "input": {
+          "x": 0.992809,
+          "z": 0.119712,
+          "sprint": true
+        },
+        "camera": {
+          "yaw": -0.12,
+          "pitch": 0.34
+        },
+        "evidence": {
+          "schemaVersion": 1,
+          "resetReason": "binding-created",
+          "durationMs": 16.667,
+          "viewports": [
+            {
+              "reason": "binding-created",
+              "width": 390,
+              "height": 844,
+              "devicePixelRatio": 3,
+              "orientation": "portrait"
+            }
+          ],
+          "events": {
+            "pointerdown": 3,
+            "pointermove": 1,
+            "pointerup": 3
+          },
+          "pointerTypes": {
+            "touch": 7
+          },
+          "channels": {
+            "movement": 2,
+            "camera": 3,
+            "action": 2
+          },
+          "actions": {
+            "dodge": 1
+          },
+          "rejected": {},
+          "captureFailures": {},
+          "clearReasons": {},
+          "gestureDistanceCssPx": {
+            "camera": 22.361
+          },
+          "simultaneousChannels": {
+            "camera+movement": 2,
+            "action+camera+movement": 1
+          },
+          "maxConcurrentPointers": 3,
+          "maxConcurrentTouchPointers": 3,
+          "clearedActivePointers": 0,
+          "activePointers": 0,
+          "note": "Pointer Events observed by the production adapter, aggregated without serializing raw coordinates. This is not proof of physical touch accuracy or browser-rendered pixels.",
+          "enqueuedSynchronously": true
+        },
+        "residual": {
+          "stick": {
+            "x": 0,
+            "y": 0
+          },
+          "stickId": null,
+          "cameraId": null,
+          "actionPointers": 0,
+          "attackHeld": false
+        }
+      },
+      "noResponse": {
+        "hp": 98,
+        "digest": "c3a0a8495d80dac78326c0150e23f757cdd7c2df05efffc746cf8a1719cb1c50",
+        "viewport": "portrait"
+      },
+      "orders": [
+        {
+          "order": [
+            "attack",
+            "parry"
+          ],
+          "selected": "parry",
+          "hp": 120,
+          "digest": "37a3ee5409771ba8798be967901e4523a60633851bb7cab65831d96f8fae4dc6",
+          "residual": {
+            "stick": {
+              "x": 0,
+              "y": 0
+            },
+            "stickId": null,
+            "cameraId": null,
+            "actionPointers": 0,
+            "attackHeld": false
+          }
+        },
+        {
+          "order": [
+            "parry",
+            "attack"
+          ],
+          "selected": "parry",
+          "hp": 120,
+          "digest": "37a3ee5409771ba8798be967901e4523a60633851bb7cab65831d96f8fae4dc6",
+          "residual": {
+            "stick": {
+              "x": 0,
+              "y": 0
+            },
+            "stickId": null,
+            "cameraId": null,
+            "actionPointers": 0,
+            "attackHeld": false
+          }
+        }
+      ],
+      "orderHpSpread": 0
+    },
+    {
+      "viewport": {
+        "id": "landscape",
+        "width": 844,
+        "height": 390,
+        "devicePixelRatio": 3
+      },
+      "rounds": 20,
+      "matchingRuns": 20,
+      "direct": {
+        "digest": "965cfe0b121443ecd4a4f3d2f4170ede1dfe6fa9a660d00bf7a5c967a22ecfc8",
+        "hp": 120,
+        "stamina": 84.867,
+        "selected": "dodge",
+        "accepted": true,
+        "enqueuedSynchronously": true,
+        "input": {
+          "x": 0.992809,
+          "z": 0.119712,
+          "sprint": true
+        },
+        "camera": {
+          "yaw": -0.12,
+          "pitch": 0.34
+        },
+        "evidence": null,
+        "residual": null
+      },
+      "pointer": {
+        "digest": "965cfe0b121443ecd4a4f3d2f4170ede1dfe6fa9a660d00bf7a5c967a22ecfc8",
+        "hp": 120,
+        "stamina": 84.867,
+        "selected": "dodge",
+        "accepted": true,
+        "enqueuedSynchronously": true,
+        "input": {
+          "x": 0.992809,
+          "z": 0.119712,
+          "sprint": true
+        },
+        "camera": {
+          "yaw": -0.12,
+          "pitch": 0.34
+        },
+        "evidence": {
+          "schemaVersion": 1,
+          "resetReason": "binding-created",
+          "durationMs": 16.667,
+          "viewports": [
+            {
+              "reason": "binding-created",
+              "width": 844,
+              "height": 390,
+              "devicePixelRatio": 3,
+              "orientation": "landscape"
+            }
+          ],
+          "events": {
+            "pointerdown": 3,
+            "pointermove": 1,
+            "pointerup": 3
+          },
+          "pointerTypes": {
+            "touch": 7
+          },
+          "channels": {
+            "movement": 2,
+            "camera": 3,
+            "action": 2
+          },
+          "actions": {
+            "dodge": 1
+          },
+          "rejected": {},
+          "captureFailures": {},
+          "clearReasons": {},
+          "gestureDistanceCssPx": {
+            "camera": 22.361
+          },
+          "simultaneousChannels": {
+            "camera+movement": 2,
+            "action+camera+movement": 1
+          },
+          "maxConcurrentPointers": 3,
+          "maxConcurrentTouchPointers": 3,
+          "clearedActivePointers": 0,
+          "activePointers": 0,
+          "note": "Pointer Events observed by the production adapter, aggregated without serializing raw coordinates. This is not proof of physical touch accuracy or browser-rendered pixels.",
+          "enqueuedSynchronously": true
+        },
+        "residual": {
+          "stick": {
+            "x": 0,
+            "y": 0
+          },
+          "stickId": null,
+          "cameraId": null,
+          "actionPointers": 0,
+          "attackHeld": false
+        }
+      },
+      "noResponse": {
+        "hp": 98,
+        "digest": "c3a0a8495d80dac78326c0150e23f757cdd7c2df05efffc746cf8a1719cb1c50",
+        "viewport": "landscape"
+      },
+      "orders": [
+        {
+          "order": [
+            "attack",
+            "parry"
+          ],
+          "selected": "parry",
+          "hp": 120,
+          "digest": "37a3ee5409771ba8798be967901e4523a60633851bb7cab65831d96f8fae4dc6",
+          "residual": {
+            "stick": {
+              "x": 0,
+              "y": 0
+            },
+            "stickId": null,
+            "cameraId": null,
+            "actionPointers": 0,
+            "attackHeld": false
+          }
+        },
+        {
+          "order": [
+            "parry",
+            "attack"
+          ],
+          "selected": "parry",
+          "hp": 120,
+          "digest": "37a3ee5409771ba8798be967901e4523a60633851bb7cab65831d96f8fae4dc6",
+          "residual": {
+            "stick": {
+              "x": 0,
+              "y": 0
+            },
+            "stickId": null,
+            "cameraId": null,
+            "actionPointers": 0,
+            "attackHeld": false
+          }
+        }
+      ],
+      "orderHpSpread": 0
+    }
+  ],
+  "note": "Direct CombatInputQueue input is compared with events dispatched through the production touch adapter on Node EventTarget. This does not observe a browser PointerEvent implementation, element hit-testing, CSS layout, WebGL pixels, physical touch, audio, device performance, or external player quality."
+}
