@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "recordedAt": "2026-09-15T08:01:00Z",
+  "recordedAt": "2026-09-15T08:15:45Z",
   "task": {
     "canonicalId": "/root/ultra_q_asset_slice",
     "requestedReasoningEffort": "ultra",
@@ -30,10 +30,26 @@
     "cFreeze": "da5f4db9eef4f0db20ed887203de07527fd1e4a0",
     "dFreeze": "79a18c9c241fe1704377f7fbbf54fe782fd31dc6",
     "reviewRepair": "ab007cfbcadcc73633dd6d944a31f39a251af140",
-    "integrationHead": null,
-    "pullRequest": null,
-    "mergeCommit": null,
-    "remoteMain": null,
+    "integrationHead": "90116481415398b5fb3fd036987794f2cb96b15a",
+    "pullRequest": {
+      "number": 33,
+      "url": "https://github.com/bachikoljunior-blip/Q/pull/33",
+      "changedFiles": 54,
+      "additions": 1666,
+      "deletions": 266,
+      "requiredCi": {
+        "runId": 34945210989,
+        "url": "https://github.com/bachikoljunior-blip/Q/actions/runs/34945210989",
+        "status": "success",
+        "terminalUtc": "2026-09-15T08:08:21Z",
+        "jobs": 1,
+        "jobName": "game",
+        "listedSteps": 27,
+        "headSha": "90116481415398b5fb3fd036987794f2cb96b15a"
+      }
+    },
+    "mergeCommit": "b29023674863978aad94194ef4f68ad35c59ed26",
+    "remoteMain": "b29023674863978aad94194ef4f68ad35c59ed26",
     "ambientAbaRepair": "db77361a8736fa658a4349e6529adaa16dfcf4bb",
     "implementationChangedFiles": [
       ".github/workflows/validate.yml",
@@ -84,7 +100,28 @@
       "tests/vault-runtime.test.mjs",
       "tests/vaults.test.mjs",
       "vite.config.js"
-    ]
+    ],
+    "localEvidenceHead": "bd1e91b40c5efc93443f094a8f5893d1d8f1fd9e",
+    "mergeTree": "fff2dad5e0b609e4d1d83875d7f0004c91a9b2d6",
+    "mainReflection": {
+      "branchHeadIsAncestor": true,
+      "verifiedBranchTreeEqualsMergeTree": true,
+      "validateRun": {
+        "runId": 34945437814,
+        "url": "https://github.com/bachikoljunior-blip/Q/actions/runs/34945437814",
+        "status": "success",
+        "terminalUtc": "2026-09-15T08:10:53Z",
+        "jobs": 1,
+        "jobName": "game",
+        "listedSteps": 27
+      },
+      "pagesRun": {
+        "runId": 34945436799,
+        "url": "https://github.com/bachikoljunior-blip/Q/actions/runs/34945436799",
+        "status": "success",
+        "terminalUtc": "2026-09-15T08:10:16Z"
+      }
+    }
   },
   "method": {
     "name": "asset-first equal-scope prospective C/D vertical-slice comparison",
@@ -175,12 +212,12 @@
     },
     "integration": {
       "initialSliceStartUtc": "2026-09-15T06:33:34.925Z",
-      "requiredCiCompletedUtc": null,
-      "elapsedMs": null,
+      "requiredCiCompletedUtc": "2026-09-15T08:08:21Z",
+      "elapsedMs": 5686075,
       "targetMs": 14400000,
-      "passesTarget": null
+      "passesTarget": true
     },
-    "strictAdoption": "no-go pending required CI and missing T_asset; the prospective D/C reuse-speed hypothesis passed locally"
+    "strictAdoption": "no-go because T_asset is missing; the prospective D/C reuse-speed hypothesis and the separately measured under-four-hour integration target passed"
   },
   "payload": {
     "sourceFingerprint": "sha256:58024fad006c1d91125df3bb46ab4193df5537feddfe73b7c5a6a3160d240517",
@@ -274,10 +311,26 @@
   "site": {
     "project": "appgprj_6aa6871ebd648191802ba2398d06115b",
     "url": "https://q-ash-pilgrim.juurooo.chatgpt.site",
-    "currentVersion": 20,
-    "deployment": "appgdep_6aa8a98615f88191bd6a117f0e235600",
-    "status": "pending changed-payload deployment",
-    "audienceMustRemain": "custom owner-only; owner 1, editor/group/external 0"
+    "version": 21,
+    "versionId": "appgprj_6aa6871ebd648191802ba2398d06115b~appgver_942558f2f7308191925bd6bab2b8ab36",
+    "sourceCommit": "b29023674863978aad94194ef4f68ad35c59ed26",
+    "deployment": "appgdep_6aa8fe5007308191b603020dd0623ab4",
+    "status": "succeeded",
+    "deploymentCompletedUtc": "2026-09-15T08:14:21.752487Z",
+    "archive": {
+      "localTarBytes": 1759614,
+      "localTarSha256": "3e83ae57a1c0e95f6e175ec305269763007ef4d71986211b585e5469322f1fbd",
+      "storedFileCount": 25,
+      "storedSizeBytes": 3584000,
+      "storedContentHash": "sha256:69378ee663f14403e353709616ed30f56cde75959cc9f234d5760abf6ccf2d98"
+    },
+    "audience": {
+      "accessMode": "custom",
+      "owners": 1,
+      "editors": 0,
+      "groups": 0,
+      "externalVisitors": 0
+    }
   },
   "reviewRepair": {
     "initialFindingsFixed": 6,
