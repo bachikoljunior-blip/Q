@@ -1,5 +1,22 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-15 03:29 UTC — 人間不介入の自動検証をmainへ反映完了
+
+最新指示「人間は介入しません」をAGENTS、制作方法、完成条件、復旧手順へ反映した。人間の端末・アカウント・画像・評価者の準備を制作全体の開始条件から外し、AI側の許可済み自動工程を継続する。実機・実聴・実プレイ・外部比較は未確認のまま。以下の古い「main反映前」記録は、この節の完了結果で更新する。
+
+- 実装と検証の [PR #28](https://github.com/bachikoljunior-blip/Q/pull/28) を通常mergeし、mainは `e6d5c9523c1dbf3c57112da8a31ea03e01cc21bb`。local候補 `d99c25306b76718efeb4e26389f8a7bd3fafb445` と正規GitHub Git Dataの候補 `c91cd280f62b131a9a404bf8a5e324688b95644a` は、12 blobを各SHAで照合し、tree `06fb02ecb6f54ff9ac26a42a684470b32d43c7f7` が完全一致した。remoteからそのtreeを再取得した。既知のGitHub対話認証不在へ同じpush失敗を繰り返さず、接続済み正規APIを利用し、認証情報を保存していない。
+- [PR Validate run 34924944854](https://github.com/bachikoljunior-blip/Q/actions/runs/34924944854) / job `104240895050` は全24step success。直前のmain `dfa9fb076d66553021c9f9d8687a1c9e123ba25f`、PR head、mergeable=true、CI successを再読取し、expected head付き・非forceでmergeした。新mainの親に候補を含み、treeが検証済みtreeと一致することをAPIとgit fetchで確認した。旧PR #3/#13は未使用・未merge。
+- [main Validate run 34925085745](https://github.com/bachikoljunior-blip/Q/actions/runs/34925085745) / job `104241324326` も全24step success。新entrypointの16条件と3負例×2入力寸法の6検出、159単体検証、journey/crossing/forge/session/expedition、combat記録、touch比較と追跡鮮度、build、package、artifact検査、単体版の追跡鮮度、uploadを通った。権限や必須工程を削除して通していない。
+- PRの `Q-main-runtime-evidence` artifactはID `10379522118`、ZIP 1,626 bytes、digest `sha256:2023719cbd298e4272bee633d89796e8d8b8eea9aa0cd9ec3ee1c5f2d317751c`。runごとのhost条件、ソース指紋、16条件と負例の結果を保存する。この値はZIPのdigestであり、JSON単体やゲームsourceのhashとは分ける。
+- 独立UltraレビューはGO、別processでの16条件も16/16成功。CI順序の指摘を修正し、故障を入れた隔離copyでもexit 1かつ `passed:false` の診断JSON保存を実証した。5秒制限は非同期待ちだけで、同期無限loopまで止める保証ではない。既存CIの10分上限を維持する。
+- 既存Siteの正式readbackはversion20、source `688bee48ac6b8d753133541b3e727b4629ee2e34`、deployment `appgdep_6aa8a98615f88191bd6a117f0e235600` succeeded、owner一人で外部閲覧者・編集者・groupなし。ゲームsource・全build入力・追跡単体版はその配信sourceから差分0、source fingerprintは同じ `sha256:540218237d5b40d8907935df41e009808af7ba747c0cc26d1c41373905413bb7`。新しいSite版や配信は不要。正式previewのstatusはmailbox不在でexit 1のままで、start再試行・環境変更・別経路へのアクセス迂回はしていない。
+
+実測の工程待ちはPR Validateの作成03:25:50から完了03:26:30まで40秒、main mergeは03:28頃、main全検証確認は03:28:50。03:06:11の初期調査からこのmain確認まで22分39秒を要し、調査・実装・fixture修正・CI順序修正・独立レビュー・文書・remote反映を含む。旧方式による同じ全作業の実測がないため、全制作速度の改善率は主張しない。今回の配信待ちは0で、将来のゲーム変更時に常に0になるとは扱わない。
+
+継続判断は、正規に実行可能な独立制作を継続。main前と反映後の期限判断は**根拠不足（NO-GO）**のまま。指定10作品に劣らない完成品質と期限2026-09-20は維持するが、残る複数章・地域・屋内、美術・演技・音響、native配布、正式画面・物理touch・実聴・iPhone/Android性能・30分実プレイ・外部比較には完成範囲の実測速度と受入証拠が揃っていない。今回の検出力改善を大作相当の完成や実機合格へ読み替えない。
+
+ゲームと検証コードの未反映差分、未完了push・配信はない。本結果記録だけを通常文書PRとして保存する。次の自動制作は、既存の徒歩獲得saveから相談UI→SceneViewの実呼出しを同じentrypointで検査し、過去に見逃した接続不良を独立した負例で確認する。正式previewの復旧証拠が出れば公式画面QAも戻す。人間へ作業を依頼せず、取得不能の証拠は未確認として保持する。automation game2=false / Q=true / survival=falseは変更・新規作成しない。
+
 ## 2026-09-15 — 人間不介入の工程修正と実entrypoint検証（main反映前）
 
 最新ユーザー原文は「人間は介入しません」。人間の端末・アカウント・スクリーンショット・評価者の準備待ちを、制作全体の開始・継続条件から外す。過去の本ファイルにある「確保できなければ停止判断へ上げる」という次作業は、AGENTS.mdの2026-09-15指定と本節で更新する。画面・実機・実聴・外部評価は未確認を維持し、自動検証で合格に代用しない。
