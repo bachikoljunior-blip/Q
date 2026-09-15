@@ -1,13 +1,14 @@
 // Deterministic production-bridge replays. Three projection and the actual HUD
 // and input arbiter run here; WebGL pixels, browser events and hardware do not.
 import assert from 'node:assert/strict';
-import {mkdirSync,writeFileSync} from 'node:fs';
+import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import * as T from 'three';
 import {Game,heightAt,groundAt} from '../src/core.js';
 import {renderCombatHud} from '../src/combat-hud.js';
 import {CombatInputQueue} from '../src/combat-input.js';
 
 const viewport={width:390,height:844,cameraYaw:0,pitch:.3,zoom:9,pointerType:'touch'};
+const GAME_VERSION=JSON.parse(readFileSync(new URL('../package.json',import.meta.url),'utf8')).version;
 const fixturePatches={
   'three-threat':{player:{x:0,z:86,angle:0,hp:120,stamina:100},enemies:[{id:'enemy-1',x:0,z:88.6,timer:.1},{id:'enemy-4',x:2.6,z:86,timer:.11},{id:'enemy-23',x:0,z:81,timer:.12,radial:true}]},
   'front-threat':{player:{x:0,z:86,angle:0,hp:120,stamina:100},enemies:[{id:'enemy-1',x:0,z:88.6,timer:.1}]},
@@ -78,7 +79,7 @@ export function buildCombatReview(){
   assert(scenarios[3].run.outcome.playerHp<120);assert.equal(scenarios[4].run.outcome.playerHp,120);assert.equal(scenarios[5].run.outcome.playerHp,98);assert.equal(scenarios[6].run.outcome.playerHp,120);assert.equal(scenarios[6].run.events.find(event=>event.type==='input').selected,'dodge');
   for(const scenario of scenarios){assert.deepEqual(run(scenario.initial,scenario.plan),scenario.run);assert(scenario.run.samples.some(sample=>sample.threats.length));}
   const inputPair=scenarios.slice(7);assert.deepEqual(inputPair.map(scenario=>scenario.run.outcome.playerHp),[120,120]);assert.deepEqual(inputPair.map(scenario=>scenario.run.events.find(event=>event.type==='input').selected),['parry','parry']);assert.deepEqual(inputPair[0].run.events.filter(event=>event.type!=='input'),inputPair[1].run.events.filter(event=>event.type!=='input'));
-  return {formatVersion:2,gameVersion:'0.18.0',fixedStepHz:60,viewport,fixturePatches,note:'Deterministic Game ticks, explicit laboratory fixture patches, Three clip projection, production HUD bridge and cross-channel input arbitration. No WebGL pixels, browser event dispatch, audio, physical touch device, iOS/Android performance or external player-quality observation.',scenarios};
+  return {formatVersion:2,gameVersion:GAME_VERSION,fixedStepHz:60,viewport,fixturePatches,note:'Deterministic Game ticks, explicit laboratory fixture patches, Three clip projection, production HUD bridge and cross-channel input arbitration. No WebGL pixels, browser event dispatch, audio, physical touch device, iOS/Android performance or external player-quality observation.',scenarios};
 }
 
 if(process.argv[1]&&import.meta.url===new URL(process.argv[1],'file:').href){

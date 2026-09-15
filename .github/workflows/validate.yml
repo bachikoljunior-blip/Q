@@ -21,14 +21,22 @@ jobs:
       - run: npm run test:forge
       - run: npm run test:session
       - run: npm run test:expedition
+      - run: npm run review:combat
+      - name: Verify the review records are tracked
+        run: git ls-files --error-unmatch release/combat-replays/combat-readability.json release/combat-replays/touch-input-comparison.json
+      - run: npm run compare:touch
+      - name: Verify the review records are current
+        run: test -z "$(git status --porcelain --untracked-files=all -- release/combat-replays/combat-readability.json release/combat-replays/touch-input-comparison.json)"
       - run: npm run build
       - run: npm run package
       - run: npm run test:artifacts
+      - name: Verify the standalone build is current
+        run: |
+          git ls-files --error-unmatch release/Q-ash-pilgrim.html
+          test -z "$(git status --porcelain --untracked-files=all -- release/Q-ash-pilgrim.html)"
       - uses: actions/upload-artifact@v4
         with:
           name: Q-ash-pilgrim
           path: |
             dist/
             release/Q-ash-pilgrim.html
-      - name: Verify the standalone build is current
-        run: git diff --quiet --exit-code -- release/Q-ash-pilgrim.html
