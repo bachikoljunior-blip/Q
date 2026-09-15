@@ -947,3 +947,17 @@ managed-linuxの正式Sites手順を設定し、公式依存導入に成功。�
 現時点の未完了は、candidate commit、通常branch/PR/CI/merge、remote main包含確認、検証済みmainの既存owner-only Site保存・private配信・readback。本チェックポイントだけで反映・配信済みとは扱わない。
 
 次の具体作業は、まず上記を完了する。その後は正式previewまたは許可されたiPhone Safari / Android Chromeを確保し、同じ48矢と三脅威saveを縦横各60秒、別途30分継続で実操作する。source fingerprint、開始save、画面、音、pointer集計、frame-time、端末/OS/browser、メモリ・電力・発熱を対応させ、重大不具合を修正して同条件再測定する。外部playerには操作、被弾理由、画面・音、探索、指定10作との差をblind条件で評価してもらう。確保できない場合は必要な権限・端末・担当者・日程を未解決依存として停止判断へ上げ、同種ロジック件数で代用しない。
+
+
+### main・owner-only Site反映の完了 — 2026-09-15 02:13 UTC
+
+- ローカル確定候補 `d3d3c46859fef41c17260a5364954aee2e50b187` と、接続済みGitHubの正規Git Data経路で作成したPR先端 `8c9139f9a35399eaea9c4009a248de10883dff49` は、どちらも検証済みtree `2d18317429f629fc0b7836de3ec1ed6ee543adad` と完全一致する。通常git pushは対話認証を取得できず失敗したが、22 blobすべてをローカルGit blob SHAと照合し、基点treeから作成したremote treeも同じSHAであることを再取得して確認した。Git認証情報をファイルや設定へ保存していない。
+- [PR #26](https://github.com/bachikoljunior-blip/Q/pull/26) のValidate run [34919966532](https://github.com/bachikoljunior-blip/Q/actions/runs/34919966532)、job `104225658986` は全22工程success。headと基点main `72bbf152199341adc69f291817c6e58211d4ef27` の不変、mergeable=true、expected headを再確認して通常mergeした。結果mainは `688bee48ac6b8d753133541b3e727b4629ee2e34`。PR先端が祖先で、main treeが検証済みtreeと一致することをfetch後に確認した。旧PR #3/#13は使用・mergeしていない。
+- merge後mainのValidate run [34920075333](https://github.com/bachikoljunior-blip/Q/actions/runs/34920075333)、job `104226003049` は、143試験、全進行・保存継続、戦闘review、touch比較、生成記録の追跡・freshness、build、package、artifact検査、単体版freshness、uploadを含め全22工程success。Pages run [34920073775](https://github.com/bachikoljunior-blip/Q/actions/runs/34920073775) もbuild `104225999944`、deploy `104226103386`、report `104226103418` がsuccess。
+- merge後mainのdetached checkoutからVite buildを再実行し、公式Sites packagerで配信tarを作成した。初回はシステム `/tmp` 不在で失敗し、作業領域内の一時ディレクトリをその梱包操作だけへ指定して再実行した。ローカル圧縮tarは16 entry、SHA-256 `2a9aac84ea7c03a515aad94bd12a7a5289c31072b9429295bc55c1f5337e59c1`。Sites保存後のarchive storageは12 file、2,672,640 bytes、content hash `sha256:8018ab2ec60f186aa168c6ba3ff4d4eff4037c12f479130ddc10d8c4b9ff9b80` で、ディレクトリentryを含むローカルtar件数と保存後file数を同一指標として扱わない。
+- exact main `688bee48ac6b8d753133541b3e727b4629ee2e34` を既存Site sourceのmainへ非force pushし、push後の `git rev-parse --verify HEAD` も同じSHA。既存project `appgprj_6aa6871ebd648191802ba2398d06115b` のversion 20 `appgprj_6aa6871ebd648191802ba2398d06115b~appgver_02bc65144c74819190d84abc4c516ac4` を保存し、deployment `appgdep_6aa8a98615f88191bd6a117f0e235600` は02:12:32 UTCにsucceeded。readbackでもsource SHA、version 20、deployment、[既存プレイ版](https://q-ash-pilgrim.juurooo.chatgpt.site) が一致し、custom accessはowner一人、editor/group/external visitor 0のまま。別Site作成、公開範囲変更、force push、認証情報保存は行っていない。
+- 本節の文書追加はゲーム、build入力、生成単体版、Site artifactを変更しないため、別versionや再配信を作らない。automationも正式readback済みのgame2=false、Q=true、survival=falseから変更せず、再保存・新規作成・他設定変更をしていない。
+
+今回確認したのは、ロジック、production pointer adapterへの直接event dispatch、保存・進行、生成物、PR/CI/main包含、owner-only配信の一致である。正式previewは一度の正規試行でmailbox不在だったため、正式WebGL gameplay画面、DOM hit test、browser `PointerEvent`、物理touch、音の実聴、iPhone/AndroidのFPS・メモリ・電力・発熱・30分実プレイ、外部player比較は未確認。古い静的タイトル画像を新しいgameplay証拠とは扱わない。
+
+期限判断は反映・配信後も厳格な**NO-GO**。指定10作品に劣らない完成品質へ2026-09-20までに到達できると、残量・実測速度・手戻り・未取得の受入証拠を込みで根拠付きに言えない。次の最優先はロジック追加ではなく、正式previewまたは許可された実機と外部評価者の確保である。同じ固定saveを縦横各60秒と別途30分で実操作し、画面・音・production pointer集計・frame-time・端末条件を一つの記録へ対応させ、重大不具合を修正して同条件再測定する。9月20日以前に必要資源と日程を確保できなければ、未解決依存として停止判断へ上げる。
