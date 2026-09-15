@@ -4,7 +4,7 @@ import { build } from 'esbuild';
 
 // A deliberately bounded application-boundary fixture, not a browser or DOM
 // implementation. No CSS layout, hit testing, native event ordering, WebGL or
-// audio device is simulated. Unknown elements/methods are not auto-created.
+// audio device or title effect renderer is simulated. Unknown elements/methods are not auto-created.
 class Target {
   listeners = new Map();
   addEventListener(type, listener) {
@@ -91,16 +91,17 @@ export async function compileMain({ mutate } = {}) {
     stdin: { contents, resolveDir: new URL('src/', root).pathname, sourcefile: 'main.js', loader: 'js' },
     bundle: true, write: false, format: 'iife', platform: 'browser', logLevel: 'silent',
     plugins: [{ name: 'explicit-device-boundaries', setup(builder) {
-      builder.onResolve({ filter: /^\.\/(style\.css|scene\.js|audio\.js)$/ }, args => ({ path: args.path, namespace: 'boundary' }));
+      builder.onResolve({ filter: /^\.\/(style\.css|scene\.js|audio\.js|title-cinematic\.js)$/ }, args => ({ path: args.path, namespace: 'boundary' }));
       builder.onLoad({ filter: /.*/, namespace: 'boundary' }, args => ({ contents:
         args.path.endsWith('scene.js') ? 'export const createSceneView=(...args)=>__devices.createSceneView(...args);' :
-        args.path.endsWith('audio.js') ? 'export const Soundscape=__devices.Soundscape;' : '', loader: 'js' }));
+        args.path.endsWith('audio.js') ? 'export const Soundscape=__devices.Soundscape;' :
+        args.path.endsWith('title-cinematic.js') ? 'export const mountTitleCinematic=__devices.mountTitleCinematic;' : '', loader: 'js' }));
     } }],
   });
   return { code: result.outputFiles[0].text, html: await readFile(new URL('index.html', root), 'utf8') };
 }
-export function createMainRuntime(compiled, { save, saveRaw, storageFailure = false, allowTimers = false, viewport = { width: 390, height: 844 } } = {}) {
-  const window = new Target(), document = new Target(), events = [], errors = [], tools = new Map(), soundCalls = [];
+export function createMainRuntime(compiled, { save, saveRaw, storageFailure = false, allowTimers = false, audioStartGate = null, viewport = { width: 390, height: 844 } } = {}) {
+  const window = new Target(), document = new Target(), events = [], errors = [], tools = new Map(), soundCalls = [], soundUpdates = [], titleState = { active: true, saveAvailable: false, launching: false };
   const initialSave = saveRaw ?? (save ? JSON.stringify(save) : null);
   const values = new Map(initialSave === null ? [] : [['q-ash-pilgrim-v1', initialSave]]);
   const storage = {
@@ -117,13 +118,19 @@ export function createMainRuntime(compiled, { save, saveRaw, storageFailure = fa
   document.modelContext = { registerTool(tool) { tools.set(tool.name, tool); } };
   document.getElementById('joystick').box = { left: 20, top: viewport.height - 150, width: 120, height: 120 };
   window.localStorage = storage;
-  let view, sceneCalls = 0, now = 0, frames = [], audioRunning = false, padFailure = false;
+  let view, sceneCalls = 0, now = 0, frames = [], audioRunning = false, audioGeneration = 0, padFailure = false;
   const scene = deferred();
   const devices = {
+    mountTitleCinematic({root}) {
+      if(root.id!=='title-screen')throw Error('Title must mount on the production title root');
+      return {setActive(value){if(value&&root.classList.contains('hidden'))throw Error('Title must be visible before activation measures its canvas');titleState.active=value;},setSaveAvailable(value){titleState.saveAvailable=value;},setLaunching(value){titleState.launching=value;},dispose(){titleState.active=false;}};
+    },
     Soundscape: class {
-      start() { audioRunning = true; events.push('audio:start'); }
-      suspend() { audioRunning = false; events.push('audio:suspend'); }
-      setVolume() {} tick() {} noise() {}
+      get active() { return audioRunning; }
+      start() { const generation=audioGeneration;if(audioStartGate)return audioStartGate.promise.then(()=>{if(generation!==audioGeneration)return false;audioRunning=true;events.push('audio:start');return true;});audioRunning = true; events.push('audio:start'); return Promise.resolve(true); }
+      suspend() { audioGeneration++;audioRunning = false; events.push('audio:suspend'); }
+      setVolume() {} tick() {} noise() {} setMusic(value) { this.music=value; } setMode(value) { this.mode=value; }
+      update(game,dt,options) { const p=game.player;soundUpdates.push({x:p.x,y:p.y,z:p.z,moving:p.moving,grounded:p.grounded,dt,...options}); }
       setVault(theme) { if (this.vaultTheme !== theme) { this.vaultTheme = theme; soundCalls.push({ type: 'ambient', theme }); } }
       play(type, data = {}) { soundCalls.push({ type, vaultId: data.vaultId ?? null, id: data.id ?? null }); }
     },
@@ -139,9 +146,9 @@ export function createMainRuntime(compiled, { save, saveRaw, storageFailure = fa
         snapCamera() {},
         setQuality() {}, ringBell() {}, effect() {},
         project() { return { x: viewport.width / 2, y: viewport.height / 2, visible: false, depth: 0 }; },
-        update() {
+        update(dt) {
           this.updates++;
-          this.sceneUpdates.push({ focus: this.gatheringFocus });
+          this.lastUpdateDt=dt;this.sceneUpdates.push({ focus: this.gatheringFocus });
           // Only the public focus/update call boundary is recorded here.
           // Production SceneView focus effects and rendering remain explicit boundaries.
         },
@@ -163,7 +170,7 @@ export function createMainRuntime(compiled, { save, saveRaw, storageFailure = fa
   new Script(compiled.code, { filename: 'production-main-with-device-boundaries.js' }).runInContext(context);
   const element = id => { const el = document.getElementById(id); if (!el) throw Error('Missing production element: ' + id); return el; };
   return {
-    document, window, scene, events, errors, values, soundCalls, element,
+    document, window, scene, events, errors, values, soundCalls, soundUpdates, titleState, element,
     get view() { return view; }, get sceneCalls() { return sceneCalls; }, get audioRunning() { return audioRunning; },
     get state() { return tools.get('read_pilgrim_journey').execute(); },
     setPadFailure(value) { padFailure = value; },

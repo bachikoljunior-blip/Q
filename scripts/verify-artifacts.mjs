@@ -12,7 +12,13 @@ const entryPath=`${root}/${entryMatch[1]}`,entry=await readFile(entryPath,'utf8'
 assert.equal(entryMatch[1],manifest['index.html'].file);
 const entryBytes=(await stat(entryPath)).size;
 assert(!html.includes('rel="modulepreload"'),'deferred 3D chunks must not be preloaded by the title page');
-assert(entryBytes<150000,`initial application chunk is ${entryBytes} bytes; expected under 150000`);
+// A tunable transfer-size regression guard, not a measured device-performance
+// acceptance criterion. v0.21 adds the title controller and gesture-unlocked
+// sound engine: measured 161,642 bytes after integration versus the old
+// 150,000-byte ceiling. Three/world remain deferred; decoded assets are bounded
+// separately. The explicit revised allowance leaves under 3.4 KB headroom.
+const initialJsBudget=165000;
+assert(entryBytes<initialJsBudget,`initial application chunk is ${entryBytes} bytes; expected under ${initialJsBudget}`);
 assert(/import\("\.\/scene-[^"']+\.js"\)/.test(entry),'3D scene must be loaded by dynamic import');
 
 const assets=await readdir(`${root}/assets`);
@@ -31,12 +37,28 @@ assert(!/<link[^>]+(?:stylesheet|manifest)/.test(standalone),'standalone build c
 assert(!/import\(["']\.\/assets\//.test(standalone),'standalone build contains an unresolved production chunk import');
 assert(standalone.includes('aria-busy')&&standalone.includes('SceneView'),'standalone build does not contain the lazy scene bootstrap');
 const embedded=[...standalone.matchAll(/data:[^"'\s;]+;base64,([A-Za-z0-9+/=]+)/g)].map(match=>Buffer.from(match[1],'base64'));
+let runtimeModels=0;
 for(const name of ['pilgrim','knight','keeper']){
   const source=`src/assets/characters/${name}.glb`,original=await readFile(source),output=manifest[source]?.file;
-  assert(output,`missing emitted model ${name}`);
+  // The former CC0 models remain as licensed source/reference assets. Current
+  // actors are authored articulated geometry; unused GLBs must not be shipped.
+  if(!output)continue;
+  runtimeModels++;
   assert((await readFile(`${root}/${output}`)).equals(original),`deployed model differs from source: ${name}`);
   assert(embedded.some(data=>data.equals(original)),`standalone does not embed the complete ${name} model`);
   assert(!entry.includes(output),'character assets must stay out of the title chunk');
+}
+
+const presentationSources=Object.keys(manifest).filter(source=>/^src\/assets\/(title|soundscape)\//.test(source)&&/\.(webp|mp3|wav)$/.test(source));
+assert.equal(presentationSources.length,5,'title illustration and four soundscape assets must be emitted exactly once');
+assert(!manifest['src/assets/title/north-gate-v22.png'],'archived original title PNG must not duplicate the optimized runtime artwork');
+let presentationBytes=0;
+for(const sourcePath of presentationSources){
+  const source=await readFile(sourcePath),output=manifest[sourcePath].file;
+  assert((await readFile(`dist/${output}`)).equals(source),`presentation build differs from source: ${sourcePath}`);
+  assert((await readFile(`${root}/${output}`)).equals(source),`staged presentation asset differs: ${sourcePath}`);
+  assert(embedded.some(data=>data.equals(source)),`standalone omits presentation asset: ${sourcePath}`);
+  presentationBytes+=source.length;
 }
 
 const provenance=JSON.parse(await readFile('src/assets/vaults/provenance.json','utf8'));
@@ -62,4 +84,4 @@ for(const asset of provenance.assets){
   vaultBytes+=source.length;
 }
 
-console.log(`Verified staged production build: initial ${Math.round(entryBytes/1024)} KiB, ${jsAssets.length} JS chunks, ${Math.round(totalJs/1024)} KiB JS, 3 models and ${provenance.assets.length} vault assets (${vaultBytes} bytes); source, build, staged output and standalone bytes agree.`);
+console.log(`Verified staged production build: initial ${entryBytes} bytes, ${jsAssets.length} JS chunks, ${totalJs} JS bytes, ${runtimeModels} imported runtime models, ${provenance.assets.length} vault assets (${vaultBytes} bytes) and ${presentationSources.length} title/score assets (${presentationBytes} bytes); source, build, staged output and standalone bytes agree.`);

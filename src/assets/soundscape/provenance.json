@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "title": "Pilgrim / The Fire Remembers",
+  "origin": "Original project-authored score and deterministic synthesized PCM; AI-assisted code composition. No real instruments, orchestral recording, human performance, borrowed melody, stock sample, or external audio model.",
+  "license": "Project-original assets, created for use, modification and redistribution with Q; no third-party sample license applies. This provenance is not an independent legal authorship determination.",
+  "generator": "scripts/generate-soundscape.py",
+  "generatorSha256": "cb51761c672d06323c68ced7017de194cf56165ae733249a9bc1b4a8f8ec0695",
+  "recipe": {
+    "seed": "0x51415348",
+    "tempoBpm": 80,
+    "bars": 16,
+    "meter": "4/4",
+    "key": "D minor with added ninths",
+    "stemLoopSeconds": 48,
+    "synthesis": "detuned additive harmonic bed, inharmonic struck resonators, original modal motif and arpeggios, membrane/noise percussion, circular early reflections",
+    "encoder": "ffmpeg libmp3lame; MP3 stereo 48k / mono 32k; mono PCM16 foley"
+  },
+  "assets": [
+    {
+      "file": "pilgrim-harmony.mp3",
+      "durationSeconds": 48,
+      "channels": 2,
+      "sampleRate": 22050,
+      "pcmPeak": 0.78,
+      "pcmRms": 0.14417162887579493,
+      "purpose": "pilgrim-harmony",
+      "bytes": 288594,
+      "sha256": "9ad667bf90a66e98402a6753917e2f9ce883497b1f1edbca66c3a88462abb36c"
+    },
+    {
+      "file": "pilgrim-motif.mp3",
+      "durationSeconds": 48,
+      "channels": 1,
+      "sampleRate": 22050,
+      "pcmPeak": 0.78,
+      "pcmRms": 0.1419265563450547,
+      "purpose": "pilgrim-motif",
+      "bytes": 192463,
+      "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4"
+    },
+    {
+      "file": "pilgrim-pulse.mp3",
+      "durationSeconds": 48,
+      "channels": 1,
+      "sampleRate": 22050,
+      "pcmPeak": 0.78,
+      "pcmRms": 0.10506282582984348,
+      "purpose": "pilgrim-pulse",
+      "bytes": 192463,
+      "sha256": "c5bbaa8d3d0a45bf2a52a935f7eb90147a19fc8c43ea2d9e3f73d966371b1333"
+    },
+    {
+      "file": "pilgrim-foley.wav",
+      "durationSeconds": 18.737551020408162,
+      "channels": 1,
+      "sampleRate": 22050,
+      "pcmPeak": 0.82,
+      "pcmRms": 0.09203769598162127,
+      "purpose": "24 original synthesized foley / signature cues",
+      "bytes": 826370,
+      "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+    }
+  ],
+  "cuesSha256": "da729e0c95ef506d2ca32dfba5691910afb51ec24519ffa978f108eacaf6e280",
+  "totalBytes": 1499890,
+  "toolchain": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+    "reproducibility": "Exact-byte regeneration is checked on the recorded toolchain only. Cross-host validation checks committed hash, sizes, bounds and source provenance; it does not promise cross-version MP3 identity."
+  }
+}

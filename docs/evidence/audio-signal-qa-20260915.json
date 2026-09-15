@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "boundary": "ffmpeg decoded committed PCM/MP3 numerical signal analysis. Review is an offline music-only mix, not captured gameplay, actual Web Audio rendering, physical listening, mobile performance or comparative quality evidence.",
+  "assets": [
+    {
+      "file": "pilgrim-harmony.mp3",
+      "decodedFrames": 1058400,
+      "decodedSeconds": 48.0,
+      "sampleRate": 22050,
+      "channels": 2,
+      "decodedPeak": 0.7420286536216736,
+      "decodedRms": 0.13695231080055237,
+      "clippedSamples": 0,
+      "loopBoundaryJump": 0.017596356570720673,
+      "adjacentSampleDelta99thPercentile": 0.04118448495864868,
+      "loopBoundaryWithinP99": true
+    },
+    {
+      "file": "pilgrim-motif.mp3",
+      "decodedFrames": 1058400,
+      "decodedSeconds": 48.0,
+      "sampleRate": 22050,
+      "channels": 1,
+      "decodedPeak": 0.7403414249420166,
+      "decodedRms": 0.13485023379325867,
+      "clippedSamples": 0,
+      "loopBoundaryJump": 0.011728493496775627,
+      "adjacentSampleDelta99thPercentile": 0.09618641436100006,
+      "loopBoundaryWithinP99": true
+    },
+    {
+      "file": "pilgrim-pulse.mp3",
+      "decodedFrames": 1058400,
+      "decodedSeconds": 48.0,
+      "sampleRate": 22050,
+      "channels": 1,
+      "decodedPeak": 0.7421373128890991,
+      "decodedRms": 0.09964697062969208,
+      "clippedSamples": 0,
+      "loopBoundaryJump": 0.004887763410806656,
+      "adjacentSampleDelta99thPercentile": 0.06268620491027832,
+      "loopBoundaryWithinP99": true
+    },
+    {
+      "file": "pilgrim-foley.wav",
+      "decodedFrames": 413163,
+      "decodedSeconds": 18.737551020408162,
+      "sampleRate": 22050,
+      "channels": 1,
+      "decodedPeak": 0.819976806640625,
+      "decodedRms": 0.09203489869832993,
+      "clippedSamples": 0
+    }
+  ],
+  "review": {
+    "file": "docs/evidence/audio-score-review.mp3",
+    "durationSeconds": 48,
+    "segments": [
+      {
+        "from": 0,
+        "to": 16,
+        "mode": "title"
+      },
+      {
+        "from": 16,
+        "to": 32,
+        "mode": "exploration"
+      },
+      {
+        "from": 32,
+        "to": 48,
+        "mode": "combat"
+      }
+    ],
+    "peak": 0.18865931011398246,
+    "rms": 0.025591789957739246,
+    "sha256": "df8329fb7ecb8888d7e80a710d5b625600c6d928e25b42cf3c34e52b1d51ea23"
+  },
+  "decodedRetainedAssetBytesAt22050Hz": 18587052
+}

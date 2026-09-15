@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "baseCommit": "0a1d905ff9000976d143baac630dbde60fe676e3",
+  "capturedAt": "2026-09-15T08:44:28.349Z",
+  "boundary": "Real Three objects / renderer stub. No WebGL pixels, browser, device or perceptual score.",
+  "nodes": 2868,
+  "meshObjects": 1721,
+  "uniqueGeometry": 338,
+  "uniqueMaterial": 225,
+  "texturedMaterials": 3,
+  "geometryTriangles": 143058.99999999994,
+  "playerType": "player",
+  "residentTypes": [
+    "smith",
+    "healer",
+    "patient",
+    "porter",
+    "traveler",
+    "scout",
+    "courier"
+  ],
+  "enemyTypes": [
+    "wolf",
+    "soldier",
+    "boss",
+    "ranger"
+  ],
+  "motionSamples": [
+    {
+      "frame": 0,
+      "player": [
+        0,
+        0,
+        0
+      ],
+      "limbs": null,
+      "game": 7996
+    },
+    {
+      "frame": 12,
+      "player": [
+        0,
+        0,
+        0
+      ],
+      "limbs": null,
+      "game": 10949
+    },
+    {
+      "frame": 24,
+      "player": [
+        0,
+        0,
+        0
+      ],
+      "limbs": null,
+      "game": 10957
+    },
+    {
+      "frame": 60,
+      "player": [
+        0,
+        0,
+        0
+      ],
+      "limbs": null,
+      "game": 10926
+    },
+    {
+      "frame": 120,
+      "player": [
+        0,
+        0,
+        0
+      ],
+      "limbs": null,
+      "game": 10827
+    }
+  ],
+  "allInstanceTriangleUpperBound": 365549.0000000001,
+  "lightCount": 12
+}

@@ -1,0 +1,54 @@
+{
+  "assetWorkStartedAt": "2026-09-15T08:42:55.783710+00:00",
+  "scope": "Original 48-second adaptive score stems, original synthesized SFX atlas, production audio mixer and lifecycle",
+  "comparison": "No same-scope prior asset production interval exists; do not claim speed improvement.",
+  "assetProductionSegments": [
+    {
+      "start": "2026-09-15T08:42:55.783710+00:00",
+      "end": "2026-09-15T08:44:53.422140+00:00",
+      "scope": "Generator authoring, PCM composition, MP3 encoding, first provenance manifest emitted; end from manifest filesystem wall-clock timestamp."
+    },
+    {
+      "start": "2026-09-15T08:51:30.622841+00:00",
+      "end": "2026-09-15T08:51:36.116668+00:00",
+      "scope": "Record encoder and numerical toolchain; regenerate same score / foley payload and provenance."
+    },
+    {
+      "start": "2026-09-15T08:57:27.387246+00:00",
+      "end": "2026-09-15T08:57:31.907276+00:00",
+      "scope": "Normalize score stems to consistent 0.78 PCM peak after objective first-mix gain analysis; regenerate source assets and hashes."
+    }
+  ],
+  "assetReworkStartedAt": "2026-09-15T08:51:30.622841+00:00",
+  "integrationStartedAt": "2026-09-15T08:44:53.422140+00:00",
+  "assetProductionMilliseconds": 127652,
+  "signalQaStartedAt": "2026-09-15T08:56:07.929405+00:00",
+  "normalizationReworkStartedAt": "2026-09-15T08:57:27.387246+00:00",
+  "integrationAndFocusedValidationEndedAt": "2026-09-15T08:59:14.804442+00:00",
+  "totalWorkWallMilliseconds": 979021,
+  "integrationReworkValidationMilliseconds": 851369,
+  "timingBoundary": "Local wall-clock intervals. Asset authoring/encoding segments end at emitted provenance file timestamps; remaining time includes integration, focused tests, signal QA, review mix rendering and evidence writing. No prior equal-scope timing baseline; no speed-improvement or whole-project deadline inference.",
+  "focusedValidation": {
+    "command": "node --test tests/soundscape-lifecycle.test.mjs tests/vault-file-audio.test.mjs tests/vaults.test.mjs",
+    "passed": 11,
+    "failed": 0,
+    "reportedHostDurationMs": 730.224562,
+    "scope": "Actual audio module bundled and executed against explicit fetch and Web Audio node-contract mocks; existing vault file-bank and game/scene-object regressions. No device listening or real browser."
+  },
+  "rework": [
+    "Test setup first lacked linked dependencies, then lacked PNG loader; corrected without changing production imports.",
+    "Sequential decode invalidated old test resolve order and footsteps test crossed running stride threshold; fixture corrected.",
+    "Integrator identified device-rate decode inflation; production now compacts to authored rate, sequentially decodes long stems and tests 48 kHz override.",
+    "Initial measured mix levels had excess headroom; score assets normalized and regenerated; QA preview refreshed."
+  ],
+  "catalogDecision": {
+    "provider": "HeyGen stock catalog",
+    "candidateIds": [
+      "44e70acf4acd4e75911973a891873949",
+      "b15d9d7a903e41829f7fea3a20515769"
+    ],
+    "termsSource": "https://www.heygen.com/terms",
+    "result": "Not used: item-level redistribution rights for game files not established. No source audio downloaded."
+  },
+  "deadlineAssessment": "Quality goal remains evidence-insufficient / NO-GO for the whole project. This finite audio asset and lifecycle improvement does not establish commercial-score quality, real device acceptance, or completion by 2026-09-20."
+}
