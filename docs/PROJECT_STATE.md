@@ -1,5 +1,51 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-15 v0.18.0 — 単独Ultra最終監査（main反映前チェックポイント）
+
+### 復旧、最新正本、停止・期限判定
+
+- 単独の最終検証・統合担当は `/root/ultra_q_v18_finalize`。親からの実引数は `requested_reasoning_effort=ultra`、`fork_turns=none`、model省略で、計画、判断、レビュー、検証、修復、GitHub/Site統合、記録を担当する。直前担当 `/root/ultra_q_v18_recovery` はfinalを返さず消失したが、作業場所にはcleanな実装commit `3a37ef2b39e112fa4654fa0f1b1ff66486ce8436`（親 `ab7eebfb5b296fa28cbddf6cfda5b95099e5e9ef`）と生成済み単体版が残った。停止原因の新しい観測はなく、引継ぎ済みの利用上限停止を越えて断定しない。確定commitから安全に継続し、実装を作り直していない。
+- 2026-09-15の再取得でもremote mainは `ab7eebfb5b296fa28cbddf6cfda5b95099e5e9ef`。最新完了PRはdocs-only #23（head `fb44d71555f1839502880f136be06f1c0808f925`、Validate game run `34863873664` success）で、その後の先行main変更はない。開いているPRは旧ゲーム系統の #3/#13だけで、両方とも現在mergeable false、今回の対象外。対象remote branch `perf/batched-projectile-forecast-20260914` は基点 `ab7eebf` を指していたため、今後のpushはそのfast-forwardだけを許可する。force push、保護回避、#3/#13のmergeは行わない。main `ab7eebf` 自体はdocs-only直接更新のため、関連するPR workflow runとcombined statusは空だった。
+- automationは前担当の直接readbackでgame2 `6aa4047ea44c8191aa35d6c428969a7a=false`、Q `6aa72048f4388191a7448b249cf6578d=true`、survival `6aa71e69ffec81919e059ecff6d98f82=false` と最新直接指定どおり。完了済み切替を再保存せず、他設定や新規automationへ触れていない。既存owner-only Siteはproject `appgprj_6aa6871ebd648191802ba2398d06115b`、version 18、deployment `appgdep_6aa815276f80819183f70bcf42c79910` succeededから継続する。
+- 継続直後、監査後、main反映前の期限判断はすべて**根拠不足**。「2026-09-20までに指定10作品に劣らない完成品質を達成できる」とは根拠付きで判断できない。複数章・地域・屋内、商用品質の造形・演技・音響、native配布、正式WebGL画面、縦横の物理タッチ、iOS/AndroidのFPS・memory・電力・発熱・30分実プレイ、外部プレイヤー同条件比較の残量と実測制作速度がない。局所host最適化や試験数をこれらの品質証拠へ読み替えない。
+
+### 差分監査、方法比較、採否
+
+- `3a37ef2` の14ファイルを基点と比較した。現行HUDが既に計算した人物交差時刻を各矢で再利用し、障害物は軌道ごとに一度sweepしてbodyをbatch内共有する。地形は従来と同じ60 Hz区間・`.2 m` sample・5回二分探索を手動継続し、人物または障害物への接触候補を含み得る区間を本番 `projectileContact` へ戻す。接線丸めの候補漏れだけ `1e-6` 保守的に広げ、実接触順の最終判断は変更しない。一般24,000条件と実HUD候補へ寄せた48,749条件の一時決定論的逐次差分監査は、対象と接触時刻の不一致0。固定試験は48矢、遮蔽48矢、接線、橋端・地面すれすれ120軌道を含む。追加コード修正は不要と判断した。
+- production計時fixtureは390×844、30 enemy slotを全dead、`obstacles=[]`、playerへ交差する48矢。同じ現行HUDにv0.17逐次相当forecasterまたは候補を注入した比較で、旧成果物そのものを実行した比較ではない。完全一致を実測したのはHUD文字、48件のhazard ID、impact frame、画面方向、decision、serialized game state。production経路は新しい人物body共有ではなく既存の人物交差48件を再利用する。`projectileContact` は761→48回だが、残る地形713区間・標高sample 1,474は手動判定を続ける。壁fixtureは結果一致と障害物body共有の正しさだけを確認し、速度は測っていない。
+- 引継ぎ時に確認された交互測定9標本×250回は1.2675→0.9922 ms/回、21.7%減、約1.278倍。最終担当の独立再実行2 runは1.1137→0.8500 ms/回（23.7%減、1.310倍）と1.1176→0.8800 ms/回（21.3%減、1.270倍）で、各runとも候補勝ち9/9。host負荷変動があるため固定改善率を保証せず、スマートフォンFPS、電力、発熱、体験品質へ外挿しない。疑った前提「全候補を失わないには全矢を全60 Hz区間で完全 `projectileContact` 再生する必要がある」に対し、局所host費用を下げながら固定・差分条件の出力を維持したため候補方式を採用する。ただし期限判断は更新しない。
+
+### 最終ローカル検証と未確認領域
+
+- `npm ci` はexit 0（8.44秒）。焦点 `node --test tests/combat-defense.test.mjs` は6/6、逐次差分の一時監査は上記72,749条件で不一致0。`npm test` は133/133、失敗0（Node 3.912秒、process 4.262秒）。`test:journey` は119秒相当・ending release、`test:crossing` はhaven/roadと相談両択、`test:forge` は103秒相当・4 reload・相談両択・`renderingTested:false`、`test:session` は30分相当108,000 step・138 reload・死亡0・objectives 81・max save 8,112 bytes、`test:expedition` は北1,908秒相当/153 reloadと南106秒/15 reload・`renderingTested:false`、`review:combat` は9場面のHP `[98,120,120,86,120,98,120,120,120]` で、すべてexit 0。7本は独立processで並行実行したためwall timeを制作速度に使わない。
+- `npm run build` は40 modules、1.74秒、初期entry 123.82 kB、scene 81.51 kB、Three 619.57 kBでexit 0。500 kB超warningは既知。`npm run package` はexit 0、単体版3,259,276 bytes（3183 KiB）、SHA-256 `fdc6fb819d94e4e15f8c1211f88608d734ed9ceab0fbb2596bcf138ab4215efa`。`npm run test:artifacts` はexit 0、固定stage `artifacts/site-3etR6d` は公開10ファイルと `.openai/hosting.json` の計11ファイル、JS 3 chunks・806 KiB、model 3件、source fingerprint `sha256:9624cb4752c1ad4ab8837f36274116c32e042f206bbbdc546b31947f7d8923af`。再生成後のtracked差分は文書だけで、READMEと単体版は `3a37ef2` の内容から変わらない。
+- 正式previewは直前担当が一度だけ実行し、`sites-previewd mailbox is unavailable at /tmp/sites-previewd/requests: No such file or directory (os error 2)` でexit 1と記録済み。同じ制作単位で再試行、別URL、dev server、browserによる迂回はしない。したがってWebGLピクセル、ブラウザー実イベント、タッチ、音、物理端末、外部プレイヤー評価は未確認で、上記logic/DOM/Three投影/生成検証と分離する。
+- この時点の実装commitは `3a37ef2`、基点は `ab7eebf`。文書補正を含む最終candidate SHA、PR/CI、merge後main、Site version/deployment/readbackは未確定。確定後にdocs-only結果記録へ実値を追記する。次作業は、通常PR/CI/expected-head mergeとremote main包含確認、既存owner-only Siteへの検証済み固定stage配信・readback。配信後も期限判断は根拠不足で、正式経路が復旧すれば同じ48矢/3脅威を縦横画面・タッチ・音・端末測定・外部比較へ移し、復旧しなければ迂回せず正当な実機/外部評価経路または同一場面のnative配布候補との所要時間比較を優先する。
+
+## 2026-09-14 v0.18.0 — 48脅威の人物・障害物候補batch/shared予測（main反映前チェックポイント）
+
+### 復旧、継続・期限判定
+
+- 今回の単独実進行・統合担当は `/root/ultra_q_v18_recovery`。親からの実引数は `requested_reasoning_effort=ultra`、`fork_turns=none`、model省略。計画、調査、実装、検証、GitHub/Site統合、記録を担当する。直前担当 `/root/ultra_q_v18_integrator` は受理直後に `You've hit your usage limit ... try again at Sep 21st, 2026 7:01 AM` で停止した。旧作業場所 `/workspace/scratch/e72662e3b71f/Q-ultra-v18` は消失しており、未保存差分は回収不能。GitHubのbranch・commit・PRを先に照合したが、この担当の確定成果はなく、開いているのは対象外の旧PR #3/#13だけだった。このためremote main `ab7eebfb5b296fa28cbddf6cfda5b95099e5e9ef` から新しい隔離clone・branch `perf/batched-projectile-forecast-20260914` を作成した。同じ上限エラーを再試行せず、以後は実装、検証、remote反映をcommit単位で保全する。
+- automationは直接readbackでQ `6aa72048f4388191a7448b249cf6578d=enabled`、game2 `6aa4047ea44c8191aa35d6c428969a7a=disabled`、survival `6aa71e69ffec81919e059ecff6d98f82=disabled` を確認。指定状態と一致するため更新せず、他項目・新規automationにも触れていない。既存Siteは同じproject `appgprj_6aa6871ebd648191802ba2398d06115b`、owner-only、保存版18、deployment `appgdep_6aa815276f80819183f70bcf42c79910` succeededから継続する。
+- 継続直後と候補検証後の期限判断はいずれも**根拠不足**で、「2026-09-20までに指定10作品に劣らない完成品質を達成できる」とは判定しない。残る複数章・地域・屋内、商用品質の造形・アニメーション・演技・音響、native配布、正式WebGL画面、portrait/landscapeの物理タッチ、iOS/AndroidのFPS・memory・電力・発熱・30分実プレイ、外部プレイヤーの同条件比較について、残量と実測制作速度がない。既知の速度は局所的なlogic/HUD修正で、上記制作・検証速度へ外挿しない。今回も比較scriptの接続誤りを一度修正した手戻りがあり、配信待ちも未解消領域として扱う。
+- 疑った前提は「48矢を一件ずつ60 Hzで終点まで完全再生してもhost費用を許容できる」。代案は脅威を落とさず、既存のplayer broad-phase時刻を再利用し、障害物bodyをbatch内で共有して軌道ごと一度sweepし、人物または障害物への接触候補を含み得る一フレームだけを本番の `projectileContact` へ委譲する方式。地形は従来の60 Hz区間を保ち、連続区間の同一端点だけ共有する。候補推定が外れた場合は残りを従来の逐次exact予測へfallbackする。画面・タッチ・音・端末品質をlogic最適化で改善したとは扱わない。
+
+### 同条件比較、時間・手戻り・品質証拠
+
+- 390×844、48本すべてがplayer接触候補、30 enemy slotは全dead、`obstacles=[]` の固定fixtureを、v0.17逐次oracleとv0.18 batchの同一production HUD経路へ注入。HUD全文、48件のhazard ID、impact frame、画面方向、判断、serialized game stateが一致。逐次は `projectileContact` 761回、batchは既存player impact再利用48、body sweep 0、`projectileContact` 48回、terrain frame 713、terrain sample 1,474、fallback 0。壁で遮られた48本でも全件wall一致・共有obstacle body 1だが、これは正しさ試験で速度測定条件ではない。player impactを事前計算しない汎用batch試験ではplayer body 1を48軌道で共有した。別の決定的な960軌道診断でも589接触の対象/時刻が一致したが、これは補助診断で正式端末試験ではない。
+- 接線回帰修正後の最終測定は9 sample×各250回、旧/新を10 blockで交互実行。run Aの逐次full HUD中央値 `1.1008 ms/回`、batch `0.8530 ms/回`、削減率 `22.5%`、速度比 `1.291x`、batch勝ち9/9。各sampleの逐次/batchは `1.2738/.9167`、`1.1008/.8835`、`1.0305/.8227`、`1.1299/.7947`、`1.1309/.8876`、`1.0685/.8530`、`1.1025/.8532`、`1.0329/.7561`、`1.0779/.7927 ms/回`。直後のrun Bも `1.0805→0.8486 ms/回`、`21.5%`減、`1.273x`、batch勝ち9/9で、各sampleは `1.1564/.9216`、`.9906/.7524`、`.9986/.8426`、`1.0805/.8486`、`1.0621/.8346`、`.9846/.7706`、`1.1946/1.0138`、`1.1059/.9003`、`1.1949/1.0603`。host変動を隠さず、最終実装2 runの測定削減幅は `21.5–22.5%` とする。同一host内の比較だけを採用し、過去runの絶対時間や端末FPSとは比較しない。
+- 実装開始は2026-09-14 23:24:28.422 UTC、候補・焦点検証・比較確定は23:33:24.973 UTCで8分57秒。最初の人物・障害物候補フレーム限定案には地形端点の重複が残ったため共有を追加。非採用案の一時測定ログは保存しておらず、その効果量は証拠に使わない。比較の初回は旧/新の両方が新batch経路を通る接続誤りで無効とし、逐次oracleを同一HUDへ明示注入して再測定した。さらに独立レビューが長区間の接線丸めによる障害物候補漏れを発見。候補sweepだけ `1e-6` 保守的に広げ、実 `projectileContact` が最終判断する方式へ修正し、固定接線fixtureを回帰試験へ追加した。修正後の一時診断では接線近傍65,526条件と実速度19/25・世界座標100,000条件で、逐次との差はactiveのfalse positive/negative、impact frameとも0。永続試験は固定接線fixtureであり、大量診断の生成scriptは保存していない。旧v0.17の制作時間とこのレビュー以降の全作業時間は独立計測がないため、制作速度の改善率は主張しない。
+- `npm ci` は最初の `/usr/bin/time` 不在でnpm開始前に終了1、shell組込み `time` へ変更した初回は31.08秒、接線修正後の最終再実行は9.38秒で成功。最終差分の `npm test` は133件・失敗0（Node 3.605秒、shell 4.08秒）。journeyは119秒相当・ending release（real 1.18秒）、crossingはhaven/roadと相談両択（2.58秒）、forgeは103秒相当・4 reload・相談両択・`renderingTested:false`（2.56秒）、sessionは30分相当108,000 step・138 reload・死亡0・objectives 81・max save 8,112 bytes（6.76秒）、expeditionは北1908秒相当/153 reloadと南106秒/15 reloadの両経路・`renderingTested:false`（6.37秒）、9戦闘reviewはHP `[98,120,120,86,120,98,120,120,120]`（1.88秒）で、すべてexit 0。これら7本は並列実行したためshell wall timeを制作速度に使わない。
+- 最終buildは40 modules、Vite 1.81秒・shell 2.35秒、初期entry 123.82 kB、scene 81.51 kB、Three 619.57 kBで、500 kB超warningは残る。packageは0.61秒、単体版3,259,276 bytes（3183 KiB）、SHA-256 `fdc6fb819d94e4e15f8c1211f88608d734ed9ceab0fbb2596bcf138ab4215efa`。artifact検査は0.48秒、固定stage `artifacts/site-3aeJac` は公開10ファイルと `.openai/hosting.json` の計11ファイル、JS 3 chunks・計806 KiB、model 3件、build source fingerprint `sha256:9624cb4752c1ad4ab8837f36274116c32e042f206bbbdc546b31947f7d8923af` で、すべてexit 0。
+- 正式previewは一度だけ実行し、`sites-previewd mailbox is unavailable at /tmp/sites-previewd/requests: No such file or directory (os error 2)` で終了1。再試行・別URL・dev server・browser迂回は行っていない。したがって正式画面、タッチ、音、実機性能、外部評価は未確認であり、自動logic検証と明確に分離する。
+
+### main・配信前の固定条件
+
+- 成果SHA、PR/CI、結果main、Site保存版/deploymentは未確定。最新remote mainを反映直前に再確認し、対象差分だけをcommit・non-force push、正規PRとCI、expected head付き通常mergeで反映する。merge後はremote mainが成果headを祖先に含み、検証treeとmain treeが一致することを再取得で確認する。PR #3/#13はmergeしない。
+- 検証済みmainだけを既存Site sourceへnon-force pushし、既存 `.openai/hosting.json` と固定stageを公式手順で保存・private deployする。URL、project、owner-only範囲を維持し、別Siteを作らず、認証情報を保存しない。配信結果をreadbackした後、正確なSHA/PR/CI/version/deploymentをdocs-only結果記録へ追記する。
+- 代案はboundedなhost logic費用を同条件で下げたため採用するが、期限判断は変わらない。次は正式経路が復旧すれば同じ48矢/3脅威saveを縦横画面でタッチ・音・FPS・memory・電力・発熱とともに比較する。利用不能ならアクセスを迂回せず、正当な実機/外部評価経路の確保または同一場面のnative配布候補との比較を優先し、さらにlogic試験数を増やすだけで未確認領域を埋めない。
+
 ## 2026-09-14 v0.17.0 — 複数脅威から一つの次手へ（main・所有者限定Site反映完了）
 
 ### 受理・継続・期限判断

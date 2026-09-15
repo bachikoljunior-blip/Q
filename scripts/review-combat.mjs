@@ -78,7 +78,7 @@ export function buildCombatReview(){
   assert(scenarios[3].run.outcome.playerHp<120);assert.equal(scenarios[4].run.outcome.playerHp,120);assert.equal(scenarios[5].run.outcome.playerHp,98);assert.equal(scenarios[6].run.outcome.playerHp,120);assert.equal(scenarios[6].run.events.find(event=>event.type==='input').selected,'dodge');
   for(const scenario of scenarios){assert.deepEqual(run(scenario.initial,scenario.plan),scenario.run);assert(scenario.run.samples.some(sample=>sample.threats.length));}
   const inputPair=scenarios.slice(7);assert.deepEqual(inputPair.map(scenario=>scenario.run.outcome.playerHp),[120,120]);assert.deepEqual(inputPair.map(scenario=>scenario.run.events.find(event=>event.type==='input').selected),['parry','parry']);assert.deepEqual(inputPair[0].run.events.filter(event=>event.type!=='input'),inputPair[1].run.events.filter(event=>event.type!=='input'));
-  return {formatVersion:2,gameVersion:'0.17.0',fixedStepHz:60,viewport,fixturePatches,note:'Deterministic Game ticks, explicit laboratory fixture patches, Three clip projection, production HUD bridge and cross-channel input arbitration. No WebGL pixels, browser event dispatch, audio, physical touch device, iOS/Android performance or external player-quality observation.',scenarios};
+  return {formatVersion:2,gameVersion:'0.18.0',fixedStepHz:60,viewport,fixturePatches,note:'Deterministic Game ticks, explicit laboratory fixture patches, Three clip projection, production HUD bridge and cross-channel input arbitration. No WebGL pixels, browser event dispatch, audio, physical touch device, iOS/Android performance or external player-quality observation.',scenarios};
 }
 
 if(process.argv[1]&&import.meta.url===new URL(process.argv[1],'file:').href){

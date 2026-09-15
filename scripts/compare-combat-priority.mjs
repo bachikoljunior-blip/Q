@@ -10,7 +10,7 @@ import {cameraRelativeDirection,combatPresentation} from '../src/combat-presenta
 import {renderCombatHud} from '../src/combat-hud.js';
 import {CombatInputQueue} from '../src/combat-input.js';
 
-const BASE='89398313469f6f7c16e8a5c83cf95c6f58fae0cc',viewport={width:390,height:844,yaw:0,pitch:.3,zoom:9};
+const BASE='89398313469f6f7c16e8a5c83cf95c6f58fae0cc',OPTIMIZATION_BASE='ab7eebfb5b296fa28cbddf6cfda5b95099e5e9ef',viewport={width:390,height:844,yaw:0,pitch:.3,zoom:9};
 
 function arm(enemy,{x,z,timer,radial=false}){Object.assign(enemy,{dead:false,x,z,homeX:x,homeZ:z,y:groundAt(x,z),angle:Math.atan2(-x,86-z),state:'windup',timer,windupMax:timer,cooldown:0,radial,hit:false,stagger:0});return enemy;}
 function setup(multiple=true){
@@ -26,7 +26,7 @@ function project(game){
   return position=>{const point=new T.Vector3(position.x,position.y,position.z).project(camera);return{x:(point.x*.5+.5)*width,y:(-point.y*.5+.5)*height,visible:point.z<1&&point.z>-1};};
 }
 function node(){const attributes={},classes=new Map();return {attributes,classes,element:{textContent:'',setAttribute:(key,value)=>attributes[key]=value,removeAttribute:key=>delete attributes[key],classList:{toggle:(key,value)=>classes.set(key,!!value)}}};}
-function candidateHud(game){const hint=node(),controls=Object.fromEntries(['dodge','parry','jump'].map(name=>[name,node()])),view=renderCombatHud(hint.element,Object.fromEntries(Object.entries(controls).map(([name,target])=>[name,target.element])),game,{cameraYaw:viewport.yaw,project:project(game),viewportWidth:viewport.width,viewportHeight:viewport.height});return {hint,controls,view};}
+function candidateHud(game,projectileForecaster,forecastMetrics){const hint=node(),controls=Object.fromEntries(['dodge','parry','jump'].map(name=>[name,node()])),view=renderCombatHud(hint.element,Object.fromEntries(Object.entries(controls).map(([name,target])=>[name,target.element])),game,{cameraYaw:viewport.yaw,project:project(game),viewportWidth:viewport.width,viewportHeight:viewport.height,projectileForecaster,forecastMetrics});return {hint,controls,view};}
 
 function baselineHud(game){
   const projection=project(game),presentation=combatPresentation(game,{limit:2}),display=threat=>{
@@ -42,10 +42,33 @@ function orderOutcome(order,candidate){const {game}=setup(false),hud=candidateHu
   else for(const action of order)selected.push(game.requestAction(action,{x:1,z:0})?action:null);
   return {selected,...run(game)};
 }
+function sequentialProjectileForecaster(game,requests,{metrics:reportedMetrics}={}){
+  const metrics=reportedMetrics?{trajectories:requests.length,exactFrames:0}:null;
+  const results=requests.map(({arrow,horizon})=>{const simulated={...arrow};let elapsed=0;
+    while(elapsed+1e-9<horizon){const step=Math.min(1/60,horizon-elapsed);if(simulated.life-step<=0)break;const contact=game.projectileContact(simulated,step);if(metrics)metrics.exactFrames++;
+      if(contact.target)return {target:contact.target,timeToImpact:elapsed+contact.fraction*step};
+      simulated.x=contact.to.x;simulated.y=contact.to.y;simulated.z=contact.to.z;simulated.life-=step;elapsed+=step;
+    }return null;
+  });
+  if(reportedMetrics)Object.assign(reportedMetrics,metrics);return results;
+}
+const median=values=>{const ordered=[...values].sort((a,b)=>a-b),middle=Math.floor(ordered.length/2);return ordered.length%2?ordered[middle]:(ordered[middle-1]+ordered[middle])/2;};
 function measureThreatScan(){
   const game=new Game();game.enemies.forEach(enemy=>enemy.dead=true);game.obstacles=[];const p=game.player;game.projectiles=Array.from({length:48},(_,index)=>({id:index+1,owner:'enemy-1',x:p.x+(index%3-1)*.15,y:p.y+1,z:p.z+5+index*.03,vx:0,vy:0,vz:-20,life:2,damage:20}));
-  for(let index=0;index<10;index++){baselineHud(game);candidateHud(game);}const iterations=250,time=fn=>{const start=performance.now();for(let index=0;index<iterations;index++)fn(game);return performance.now()-start;},baselineMs=time(baselineHud),candidateMs=time(candidateHud);
-  return {fixture:'30 enemy slots / 48 intersecting arrows',iterations,hostOnly:true,baselineMs:Math.round(baselineMs*1000)/1000,candidateMs:Math.round(candidateMs*1000)/1000,baselinePerCallMs:Math.round(baselineMs/iterations*10000)/10000,candidatePerCallMs:Math.round(candidateMs/iterations*10000)/10000,ratio:Math.round(candidateMs/baselineMs*1000)/1000};
+  const state=JSON.stringify(game.serialize()),sequentialMetrics={},batchMetrics={},sequential=candidateHud(game,sequentialProjectileForecaster,sequentialMetrics),batch=candidateHud(game,undefined,batchMetrics),summary=hud=>({text:hud.hint.element.textContent,threats:hud.view.allThreats.map(threat=>[threat.hazardId,threat.impactFrame,threat.screenDirection]),decision:hud.view.decision});
+  assert.deepEqual(summary(batch),summary(sequential));assert.equal(JSON.stringify(game.serialize()),state);
+  for(let index=0;index<12;index++){candidateHud(game,sequentialProjectileForecaster);candidateHud(game);}
+  const iterations=250,blocksPerSample=10,iterationsPerBlock=iterations/blocksPerSample,sampleCount=9,time=fn=>{const start=performance.now();for(let index=0;index<iterationsPerBlock;index++)fn();return performance.now()-start;},samples=[];
+  for(let sample=0;sample<sampleCount;sample++){
+    let sequentialMs=0,batchMs=0;
+    for(let block=0;block<blocksPerSample;block++){
+      if((sample+block)%2===0){sequentialMs+=time(()=>candidateHud(game,sequentialProjectileForecaster));batchMs+=time(()=>candidateHud(game));}
+      else{batchMs+=time(()=>candidateHud(game));sequentialMs+=time(()=>candidateHud(game,sequentialProjectileForecaster));}
+    }
+    samples.push({sample:sample+1,sequentialMs:Math.round(sequentialMs*1000)/1000,batchMs:Math.round(batchMs*1000)/1000,sequentialPerCallMs:Math.round(sequentialMs/iterations*10000)/10000,batchPerCallMs:Math.round(batchMs/iterations*10000)/10000,ratio:Math.round(sequentialMs/batchMs*1000)/1000});
+  }
+  const sequentialPerCallMedian=median(samples.map(sample=>sample.sequentialMs))/iterations,batchPerCallMedian=median(samples.map(sample=>sample.batchMs))/iterations;
+  return {fixture:'30 enemy slots / 48 intersecting arrows',optimizationBaseRef:OPTIMIZATION_BASE,iterationsPerSample:iterations,blocksPerSample,sampleCount,hostOnly:true,semanticsIdentical:true,sequentialMetrics,batchMetrics,sequentialPerCallMedianMs:Math.round(sequentialPerCallMedian*10000)/10000,batchPerCallMedianMs:Math.round(batchPerCallMedian*10000)/10000,speedup:Math.round(sequentialPerCallMedian/batchPerCallMedian*1000)/1000,reductionPercent:Math.round((1-batchPerCallMedian/sequentialPerCallMedian)*1000)/10,batchFasterSamples:samples.filter(sample=>sample.batchMs<sample.sequentialMs).length,samples};
 }
 
 export function compareCombatPriority({measure=false}={}){
