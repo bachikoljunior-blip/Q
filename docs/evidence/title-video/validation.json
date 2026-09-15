@@ -1,0 +1,193 @@
+{
+  "startedAt": "2026-09-15T11:48:20.660542+00:00",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "scripts/verify-title-video.py"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 3.463,
+      "tail": "{\"passed\": true, \"decodedFrames\": 288, \"decodePath\": \"ffprobe count_frames and ffmpeg decode of every frame; RGB analysis at 320x180\", \"codec\": \"h264\", \"profile\": \"High\", \"level\": 31, \"pixelFormat\": \"yuv420p\", \"width\": 1280, \"height\": 720, \"durationSeconds\": 12.0, \"bitrate\": 2118794, \"audioStreams\": 0, \"boxes\": [\"ftyp\", \"moov\", \"free\", \"mdat\"], \"fastStart\": true, \"adjacentFrameMeanAbsRgb\": {\"min\": 0.05822916701436043, \"median\": 0.33905091881752014, \"p95\": 0.4933072626590729, \"max\": 1.1777315139770508}, \"seamMeanAbsRgb\": 1.1815682649612427, \"internalIdrMeanAbsRgb\": [1.1207176446914673, 1.1777315139770508, 1.1669386625289917, 1.1451504230499268, 1.1683796644210815], \"seamVsMaximumInternalIdr\": 1.003257746726362, \"sha256\": \"31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c\", \"limitation\": \"Decoded moving video and seam evidence only; not browser playback, iOS/Android decoder performance, perceived title excitement, or PS4 parity.\"}\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/generate-vault-assets.mjs",
+        "--verify"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.194,
+      "tail": "{\"passed\":true,\"assets\":14,\"bytes\":891845}\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-soundscape.mjs"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.07,
+      "tail": "{\"passed\":true,\"scope\":\"Committed asset hashes, source provenance, WAV header, cue bounds and encoded payload; not decoded media or heard device audio\",\"files\":4,\"cues\":24,\"bytes\":1499890}\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-main-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 3.237,
+      "tail": "{\n  \"passed\": true,\n  \"scenarios\": 16,\n  \"negativeControls\": 3,\n  \"detections\": 6,\n  \"sourceFingerprint\": \"sha256:540ff6727505aea1c92e7321695982002bc2155fb5694adc648c2faa42831077\",\n  \"report\": \"artifacts/main-runtime-report.json\"\n}\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-gathering-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 7.017,
+      "tail": "{\n  \"passed\": true,\n  \"scenarios\": 4,\n  \"launchPaths\": 8,\n  \"reloads\": 8,\n  \"negativeControls\": 7,\n  \"detections\": 28,\n  \"sourceFingerprint\": \"sha256:540ff6727505aea1c92e7321695982002bc2155fb5694adc648c2faa42831077\",\n  \"report\": \"artifacts/gathering-runtime-report.json\"\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:vaults"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 7.625,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 test:vaults\n> node scripts/verify-vault-runtime.mjs\n\n{\n  \"passed\": true,\n  \"slices\": 4,\n  \"scenarios\": 8,\n  \"reloads\": 8,\n  \"sourceFingerprint\": \"sha256:540ff6727505aea1c92e7321695982002bc2155fb5694adc648c2faa42831077\",\n  \"report\": \"artifacts/vault-runtime-report.json\"\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 24.202,
+      "tail": "ss-vault (844x390) (1154.236628ms)\n\u2714 each vault is a reachable closed-space contract with eight props and a unique four-state warden (164.470279ms)\n\u2714 vault scene follows playable terrain and gives each warden four distinct structural poses (275.314347ms)\n\u2714 warden defeat gates one canonical memory reward and exact progress survives reload (392.806946ms)\n\u2714 legacy positions overlapping new vault walls converge to a collision-free restore (160.953431ms)\n\u2714 warden combat warnings use their authored encounter identity (67.03905ms)\n\u2714 three bells use inscription order, reject wrong notes, preserve partial progress and reward only once (137.539925ms)\n\u2714 shrine can be discovered and solved before meeting Ren; replaying bells cannot grant extra rewards (53.800029ms)\n\u2714 bell interactions validate identity, actual distance, walls, idle hands and nearby danger (30.389936ms)\n\u2714 resident conversation uses the moving resident, not a spoofed or obsolete home position (32.606635ms)\n\u2714 residents follow day routines on walkable ground, stop near the player, and flee approaching enemies (73.478673ms)\n\u2714 resident save resumes positions, drops navigation caches, and rejects invalid puzzle state (117.609355ms)\n\u2714 healer dialogue reflects delivery choice and blacksmith reflects the restored furnace (30.190741ms)\n\u2714 village render graph reflects bell progress and reward without requiring a WebGL context (116.909979ms)\n\u2714 every rendered tree has a matching solid trunk and keeps people and loot reachable (90.635336ms)\n\u2714 spatial cells do not miss obstacles at negative coordinates, borders or inside large radii (0.341617ms)\n\u2714 indexed ray and camera results match a full scan across the valley (223.38112ms)\n\u2139 tests 223\n\u2139 suites 0\n\u2139 pass 223\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 24014.534441\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:journey"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.587,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 test:journey\n> node scripts/simulate-journey.mjs\n\n{\n  \"passed\": true,\n  \"seconds\": 119,\n  \"ending\": \"release\",\n  \"log\": [\n    {\n      \"place\": \"grove\",\n      \"lit\": true,\n      \"time\": 30,\n      \"hp\": 132,\n      \"position\": [\n        -104.63277335627005,\n        -1.936194890541654\n      ]\n    },\n    {\n      \"place\": \"flood\",\n      \"lit\": true,\n      \"time\": 69,\n      \"hp\": 144,\n      \"position\": [\n        107.14946112707904,\n        -81.06032194280256\n      ]\n    },\n    {\n      \"place\": \"ruins\",\n      \"lit\": true,\n      \"time\": 99,\n      \"hp\": 156,\n      \"position\": [\n        -48.19220848595377,\n        -170.9939923034948\n      ]\n    },\n    {\n      \"boss\": true,\n      \"time\": 117,\n      \"hp\": 168,\n      \"level\": 5,\n      \"weapon\": 3,\n      \"dead\": false\n    }\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:crossing"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 1.177,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 test:crossing\n> node scripts/simulate-crossing.mjs\n\n{\n  \"passed\": true,\n  \"results\": [\n    {\n      \"choice\": \"haven\",\n      \"gatherings\": [],\n      \"seconds\": 90,\n      \"level\": 2,\n      \"hp\": 132,\n      \"potions\": 3,\n      \"witness\": \"patient-nagi\",\n      \"campDefeated\": 3\n    },\n    {\n      \"choice\": \"road\",\n      \"gatherings\": [\n        {\n          \"id\": \"road-watch\",\n          \"choice\": \"light\",\n          \"seconds\": 67,\n          \"reloads\": 5,\n          \"hp\": 132\n        },\n        {\n          \"id\": \"road-watch\",\n          \"choice\": \"rest\",\n          \"seconds\": 67,\n          \"reloads\": 5,\n          \"hp\": 132\n        }\n      ],\n      \"seconds\": 66,\n      \"level\": 2,\n      \"hp\": 132,\n      \"potions\": 4,\n      \"witness\": \"traveler-asa\",\n      \"campDefeated\": 3\n    }\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:forge"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 1.111,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 test:forge\n> node scripts/simulate-forge.mjs\n\n{\n  \"passed\": true,\n  \"seconds\": 103,\n  \"reloads\": 4,\n  \"level\": 2,\n  \"hp\": 132,\n  \"bellReward\": true,\n  \"gatherings\": [\n    {\n      \"id\": \"hearth\",\n      \"choice\": \"medicine\",\n      \"seconds\": 67,\n      \"reloads\": 5,\n      \"hp\": 132\n    },\n    {\n      \"id\": \"hearth\",\n      \"choice\": \"tools\",\n      \"seconds\": 67,\n      \"reloads\": 5,\n      \"hp\": 132\n    }\n  ],\n  \"renderingTested\": false\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:session"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 5.741,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 test:session\n> node scripts/simulate-session.mjs\n\n{\"simulationMinutes\":5,\"objectives\":30,\"totalObjectives\":81,\"reloads\":23,\"deaths\":0}\n{\"simulationMinutes\":10,\"objectives\":76,\"totalObjectives\":81,\"reloads\":46,\"deaths\":0}\n{\"simulationMinutes\":15,\"objectives\":81,\"totalObjectives\":81,\"reloads\":69,\"deaths\":0}\n{\"simulationMinutes\":20,\"objectives\":81,\"totalObjectives\":81,\"reloads\":92,\"deaths\":0}\n{\"simulationMinutes\":25,\"objectives\":81,\"totalObjectives\":81,\"reloads\":115,\"deaths\":0}\n{\n  \"passed\": true,\n  \"simulationMinutes\": 30,\n  \"fixedSteps\": 108000,\n  \"reloads\": 138,\n  \"deaths\": 0,\n  \"objectives\": 81,\n  \"patrolStops\": 25,\n  \"lit\": 4,\n  \"ending\": \"release\",\n  \"crossing\": \"haven\",\n  \"loot\": 63,\n  \"maxArrows\": 1,\n  \"maxSaveBytes\": 9158,\n  \"note\": \"No rendering, audio, touch or real-device performance measurement.\"\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:expedition"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 5.195,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 test:expedition\n> node scripts/simulate-expedition.mjs\n\n{\n  \"passed\": true,\n  \"renderingTested\": false,\n  \"routes\": [\n    {\n      \"route\": \"north\",\n      \"completionSeconds\": 108,\n      \"simulatedSeconds\": 1908,\n      \"reloads\": 153,\n      \"steps\": 114154,\n      \"hp\": 132,\n      \"reported\": true,\n      \"courierRange\": {\n        \"minX\": -398,\n        \"maxX\": -247\n      }\n    },\n    {\n      \"route\": \"south\",\n      \"completionSeconds\": 106,\n      \"simulatedSeconds\": 106,\n      \"reloads\": 15,\n      \"steps\": 6039,\n      \"hp\": 132,\n      \"reported\": true,\n      \"courierRange\": null\n    }\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "review:saves"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 1.981,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 review:saves\n> node scripts/simulate-forge.mjs --review-saves && node scripts/simulate-crossing.mjs --review-saves\n\n{\n  \"passed\": true,\n  \"seconds\": 103,\n  \"reloads\": 4,\n  \"level\": 2,\n  \"hp\": 132,\n  \"bellReward\": true,\n  \"gatherings\": [\n    {\n      \"id\": \"hearth\",\n      \"choice\": \"medicine\",\n      \"seconds\": 67,\n      \"reloads\": 5,\n      \"hp\": 132\n    },\n    {\n      \"id\": \"hearth\",\n      \"choice\": \"tools\",\n      \"seconds\": 67,\n      \"reloads\": 5,\n      \"hp\": 132\n    }\n  ],\n  \"renderingTested\": false\n}\n{\n  \"passed\": true,\n  \"results\": [\n    {\n      \"choice\": \"haven\",\n      \"gatherings\": [],\n      \"seconds\": 90,\n      \"level\": 2,\n      \"hp\": 132,\n      \"potions\": 3,\n      \"witness\": \"patient-nagi\",\n      \"campDefeated\": 3\n    },\n    {\n      \"choice\": \"road\",\n      \"gatherings\": [\n        {\n          \"id\": \"road-watch\",\n          \"choice\": \"light\",\n          \"seconds\": 67,\n          \"reloads\": 5,\n          \"hp\": 132\n        },\n        {\n          \"id\": \"road-watch\",\n          \"choice\": \"rest\",\n          \"seconds\": 67,\n          \"reloads\": 5,\n          \"hp\": 132\n        }\n      ],\n      \"seconds\": 66,\n      \"level\": 2,\n      \"hp\": 132,\n      \"potions\": 4,\n      \"witness\": \"traveler-asa\",\n      \"campDefeated\": 3\n    }\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "review:combat"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.752,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 review:combat\n> node scripts/review-combat.mjs\n\n{\n  \"passed\": true,\n  \"formatVersion\": 2,\n  \"scenarios\": [\n    {\n      \"id\": \"knight-no-response\",\n      \"hp\": 98,\n      \"events\": 2,\n      \"samples\": 61\n    },\n    {\n      \"id\": \"knight-dodge\",\n      \"hp\": 120,\n      \"events\": 3,\n      \"samples\": 53\n    },\n    {\n      \"id\": \"knight-parry\",\n      \"hp\": 120,\n      \"events\": 4,\n      \"samples\": 61\n    },\n    {\n      \"id\": \"boss-grounded\",\n      \"hp\": 86,\n      \"events\": 2,\n      \"samples\": 88\n    },\n    {\n      \"id\": \"boss-jump\",\n      \"hp\": 120,\n      \"events\": 2,\n      \"samples\": 88\n    },\n    {\n      \"id\": \"three-threat-no-response\",\n      \"hp\": 98,\n      \"events\": 4,\n      \"samples\": 14\n    },\n    {\n      \"id\": \"three-threat-follow-hud\",\n      \"hp\": 120,\n      \"events\": 5,\n      \"samples\": 8\n    },\n    {\n      \"id\": \"same-frame-attack-parry-touch-first\",\n      \"hp\": 120,\n      \"events\": 4,\n      \"samples\": 11\n    },\n    {\n      \"id\": \"same-frame-attack-parry-keyboard-first\",\n      \"hp\": 120,\n      \"events\": 4,\n      \"samples\": 11\n    }\n  ],\n  \"note\": \"Deterministic Game ticks, explicit laboratory fixture patches, Three clip projection, production HUD bridge and cross-channel input arbitration. No WebGL pixels, browser event dispatch, audio, physical touch device, iOS/Android performance or external player-quality observation.\"\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "compare:combat-priority"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 5.322,
+      "tail": "s\": 0.9926,\n        \"ratio\": 1.308\n      },\n      {\n        \"sample\": 2,\n        \"sequentialMs\": 314.716,\n        \"batchMs\": 255.022,\n        \"sequentialPerCallMs\": 1.2589,\n        \"batchPerCallMs\": 1.0201,\n        \"ratio\": 1.234\n      },\n      {\n        \"sample\": 3,\n        \"sequentialMs\": 300.498,\n        \"batchMs\": 247.821,\n        \"sequentialPerCallMs\": 1.202,\n        \"batchPerCallMs\": 0.9913,\n        \"ratio\": 1.213\n      },\n      {\n        \"sample\": 4,\n        \"sequentialMs\": 271.721,\n        \"batchMs\": 248.506,\n        \"sequentialPerCallMs\": 1.0869,\n        \"batchPerCallMs\": 0.994,\n        \"ratio\": 1.093\n      },\n      {\n        \"sample\": 5,\n        \"sequentialMs\": 306.748,\n        \"batchMs\": 222.856,\n        \"sequentialPerCallMs\": 1.227,\n        \"batchPerCallMs\": 0.8914,\n        \"ratio\": 1.376\n      },\n      {\n        \"sample\": 6,\n        \"sequentialMs\": 280.429,\n        \"batchMs\": 241.239,\n        \"sequentialPerCallMs\": 1.1217,\n        \"batchPerCallMs\": 0.965,\n        \"ratio\": 1.162\n      },\n      {\n        \"sample\": 7,\n        \"sequentialMs\": 298.075,\n        \"batchMs\": 230.263,\n        \"sequentialPerCallMs\": 1.1923,\n        \"batchPerCallMs\": 0.9211,\n        \"ratio\": 1.294\n      },\n      {\n        \"sample\": 8,\n        \"sequentialMs\": 316.023,\n        \"batchMs\": 226.396,\n        \"sequentialPerCallMs\": 1.2641,\n        \"batchPerCallMs\": 0.9056,\n        \"ratio\": 1.396\n      },\n      {\n        \"sample\": 9,\n        \"sequentialMs\": 292.644,\n        \"batchMs\": 259.256,\n        \"sequentialPerCallMs\": 1.1706,\n        \"batchPerCallMs\": 1.037,\n        \"ratio\": 1.129\n      }\n    ]\n  },\n  \"note\": \"Laboratory comparison only; host timing is not device performance. Browser pixels, touch hardware, audio, iOS/Android performance and external player quality were not observed.\"\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "compare:touch"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 1.574,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 compare:touch\n> node scripts/compare-touch-input.mjs\n\n{\n  \"passed\": true,\n  \"rounds\": 20,\n  \"viewports\": [\n    {\n      \"id\": \"portrait\",\n      \"matches\": \"20/20\",\n      \"hp\": 120,\n      \"negativeHp\": 98,\n      \"maxTouchPointers\": 3,\n      \"orderHpSpread\": 0\n    },\n    {\n      \"id\": \"landscape\",\n      \"matches\": \"20/20\",\n      \"hp\": 120,\n      \"negativeHp\": 98,\n      \"maxTouchPointers\": 3,\n      \"orderHpSpread\": 0\n    }\n  ],\n  \"note\": \"Direct CombatInputQueue input is compared with events dispatched through the production touch adapter on Node EventTarget. This does not observe a browser PointerEvent implementation, element hit-testing, CSS layout, WebGL pixels, physical touch, audio, device performance, or external player quality.\"\n}\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 2.366,
+      "tail": "Fcyxpvg.png                 17.05 kB\ndist/assets/tide-stone-COv3Sj_E.png                 17.27 kB\ndist/assets/moss-stone-DiwO4PmY.png                 17.33 kB\ndist/assets/shared-alert-JeJkFdAY.wav               21.21 kB\ndist/assets/shared-seal-slkiLvkd.wav                30.91 kB\ndist/assets/shared-claim-BPXeWqKz.wav               39.73 kB\ndist/assets/north-gate-v22-M69S2yqx.webp           162.96 kB\ndist/assets/tide-ambient-BP0Z0aTJ.wav              176.44 kB\ndist/assets/ember-ambient-DxlfqX62.wav             176.44 kB\ndist/assets/gale-ambient-Bk5IsviT.wav              176.44 kB\ndist/assets/moss-ambient-P9AOr4W8.wav              176.44 kB\ndist/assets/pilgrim-motif-yb4axZNo.mp3             192.46 kB\ndist/assets/pilgrim-pulse-DgX4WFEi.mp3             192.46 kB\ndist/assets/pilgrim-harmony-BW3Pcfnr.mp3           288.59 kB\ndist/assets/pilgrim-foley-CW54U_6w.wav             826.37 kB\ndist/assets/rock_face_03_diff_1k-Clx6WbHJ.jpg      927.08 kB\ndist/assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg  1,146.79 kB\ndist/assets/forest_floor_diff_1k-FrvyY1gs.jpg    1,329.85 kB\ndist/assets/north-gate-v23-BAPO0H9x.mp4          3,178.19 kB\ndist/assets/index-DX2EUndK.css                      58.55 kB \u2502 gzip:  13.25 kB\ndist/assets/scene-DCq_U147.js                       98.07 kB \u2502 gzip:  36.31 kB\ndist/assets/index-BNB_oobF.js                      163.18 kB \u2502 gzip:  62.23 kB\ndist/assets/three-D8l53BxU.js                      571.24 kB \u2502 gzip: 144.24 kB\n\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n\u2713 built in 1.95s\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "package"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.54,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 package\n> node scripts/package.mjs\n\nCreated release/Q-ash-pilgrim.html (12810 KiB, self-contained, no network required).\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:artifacts"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.387,
+      "tail": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> q-ash-pilgrim@0.21.0 test:artifacts\n> node scripts/stage-site.mjs && node scripts/verify-artifacts.mjs\n\n{\"root\":\"artifacts/site-pbDL1e\",\"files\":30}\nVerified staged production build: initial 163175 bytes, 3 JS chunks, 832484 JS bytes, 0 imported runtime models, 14 vault assets (891845 bytes) and 6 title/score assets (4841043 bytes); source, build, staged output and standalone bytes agree.\n"
+    }
+  ],
+  "passed": true,
+  "wallSeconds": 72.543,
+  "completedAt": "2026-09-15T11:49:33.204048+00:00"
+}

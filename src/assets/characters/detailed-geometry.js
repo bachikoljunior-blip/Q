@@ -23,7 +23,7 @@ const profiles = {
 };
 const textures = new Map(), materials = new Map();
 const shapes = {
-  sphere:new T.SphereGeometry(1,12,8), fineSphere:new T.SphereGeometry(1,16,10),
+  sphere:new T.SphereGeometry(1,12,8), smallSphere:new T.SphereGeometry(1,8,6), mediumSphere:new T.SphereGeometry(1,10,6),
   box:new T.BoxGeometry(1,1,1), cylinder:new T.CylinderGeometry(1,1,1,10),
   cone:new T.ConeGeometry(1,1,7), ring:new T.TorusGeometry(1,.085,5,16),
 };
@@ -33,8 +33,11 @@ function microtexture(kind){
   for(let y=0;y<n;y++)for(let x=0;x<n;x++){
     const h=((x*73856093)^(y*19349663))>>>0,noise=(h%127)/127;
     const weave=kind==='cloth'?Math.sin(x*Math.PI/2)*Math.cos(y*Math.PI/2):kind==='metal'?Math.sin(x*.7+y*.09):Math.sin(x*.6)*Math.cos(y*.8);
-    const value=Math.round(192+noise*42+weave*18), i=(y*n+x)*4;
-    data[i]=data[i+1]=data[i+2]=value;data[i+3]=255;
+    // R stores height, G stores roughness. Skin/oiled leather must not share
+    // the fabric's near-white roughness response or millimetre-scale weave.
+    const i=(y*n+x)*4,rough=kind==='eye'?.19:kind==='metal'?.49:kind==='skin'?.61:kind==='leather'?.77:.94;
+    data[i]=Math.round(128+(noise-.5)*42+weave*(kind==='cloth'?25:12));
+    data[i+1]=Math.round(255*Math.min(1,rough+(noise-.5)*.12));data[i+2]=128;data[i+3]=255;
   }
   const texture=new T.DataTexture(data,n,n,T.RGBAFormat);texture.name=`Q ${kind} microstructure`;
   texture.wrapS=texture.wrapT=T.RepeatWrapping;texture.magFilter=T.LinearFilter;texture.minFilter=T.LinearMipmapLinearFilter;
@@ -42,8 +45,8 @@ function microtexture(kind){
 }
 function surface(kind,color){
   const key=`${kind}/${color}`;if(materials.has(key))return materials.get(key);
-  const mat=new T.MeshStandardMaterial({name:`Q ${kind}`,color,roughness:kind==='metal'?.62:kind==='skin'?.9:.98,
-    metalness:kind==='metal'?.72:0,bumpMap:microtexture(kind),bumpScale:kind==='cloth'?.009:kind==='leather'?.005:.002,
+  const mat=new T.MeshStandardMaterial({name:`Q ${kind}`,color,roughness:1,
+    metalness:kind==='metal'?.86:0,bumpMap:microtexture(kind),bumpScale:kind==='eye'?0:kind==='cloth'?.0014:kind==='leather'?.0008:kind==='skin'?.00018:.00035,
     roughnessMap:microtexture(kind)});
   if(kind==='cloth')mat.side=T.DoubleSide;materials.set(key,mat);return mat;
 }
@@ -51,16 +54,76 @@ function group(parent,name,x=0,y=0,z=0){const g=new T.Bone();g.name=name;g.posit
 function mesh(parent,geometry,material,position=[0,0,0],scale=[1,1,1],rotation){
   const m=new T.Mesh(geometry,material);m.position.set(...position);m.scale.set(...scale);if(rotation)m.rotation.set(...rotation);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;
 }
-function ellipsoid(parent,mat,p,s){return mesh(parent,shapes.sphere,mat,p,s);}
+function ellipsoid(parent,mat,p,s){return mesh(parent,Math.max(...s)<.032?shapes.smallSphere:Math.max(...s)<.11?shapes.mediumSphere:shapes.sphere,mat,p,s);}
 function beam(parent,mat,a,b,r=.025,r2=r){
   const va=new T.Vector3(...a),vb=new T.Vector3(...b),delta=vb.clone().sub(va);
   const m=mesh(parent,new T.CylinderGeometry(r2,r,delta.length(),8),mat,va.clone().add(vb).multiplyScalar(.5).toArray());m.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),delta.normalize());return m;
 }
+function smoothWrappedNormals(geometry,segments){
+  const normal=geometry.attributes.normal;
+  for(let first=0;first<normal.count;first+=segments+1){
+    const last=first+segments;if(last>=normal.count)break;
+    let x=normal.getX(first)+normal.getX(last),y=normal.getY(first)+normal.getY(last),z=normal.getZ(first)+normal.getZ(last);
+    const length=Math.hypot(x,y,z)||1;x/=length;y/=length;z/=length;
+    normal.setXYZ(first,x,y,z);normal.setXYZ(last,x,y,z);
+  }
+  return geometry;
+}
 function shell(rings,segments=16){
   const position=[],uv=[],indices=[];
   rings.forEach(([y,rx,rz,offset=0],j)=>{for(let i=0;i<=segments;i++){const a=i/segments*Math.PI*2;position.push(Math.sin(a)*rx,y,Math.cos(a)*rz+offset);uv.push(i/segments,j/(rings.length-1));}});
-  for(let j=0;j<rings.length-1;j++)for(let i=0;i<segments;i++){const a=j*(segments+1)+i,b=a+segments+1;indices.push(a,b,a+1,b,b+1,a+1);}
-  const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(position,3));geo.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geo.setIndex(indices);geo.computeVertexNormals();return geo;
+  for(let j=0;j<rings.length-1;j++)for(let i=0;i<segments;i++){const a=j*(segments+1)+i,b=a+segments+1;indices.push(a,a+1,b,b,a+1,b+1);}
+  const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(position,3));geo.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geo.setIndex(indices);geo.computeVertexNormals();return smoothWrappedNormals(geo,segments);
+}
+// Continuous shaped surfaces carry deformation rules until material batching.
+// Ring density follows shape changes and joints, not a blanket subdivision pass.
+function tailored(parent,mat,rings,deform,segments=12,fold=0){
+  const geometry=shell(rings,segments),position=geometry.attributes.position;
+  if(fold)for(let i=0;i<position.count;i++){
+    const x=position.getX(i),y=position.getY(i),z=position.getZ(i),a=Math.atan2(x,z);
+    const amount=fold*Math.sin(a*5+y*31)*Math.sin(a*3-y*19);
+    position.setXYZ(i,x*(1+amount),y,z*(1+amount));
+  }
+  geometry.computeVertexNormals();smoothWrappedNormals(geometry,segments);const result=mesh(parent,geometry,mat);result.userData.deform=deform;return result;
+}
+function faceSurface(){
+  const geometry=new T.SphereGeometry(1,20,16),v=geometry.attributes.position;
+  const bump=(x,y,cx,cy,sx,sy)=>Math.exp(-(((x-cx)/sx)**2+((y-cy)/sy)**2));
+  for(let i=0;i<v.count;i++){
+    const rawY=v.getY(i),front=Math.max(0,v.getZ(i)),y=.041+rawY*.157;
+    const jaw=rawY<-.12?1-.19*Math.min(1,(-rawY-.12)/.64):1;
+    const x=v.getX(i)*.12*jaw;let z=v.getZ(i)*.112;
+    // Brow, recessed sockets, cheek planes, bridge/tip, philtrum and chin.
+    if(front>0){const relief=.017*bump(x,y,0,.018,.020,.060)+.030*bump(x,y,0,-.005,.028,.020)
+      +.009*bump(x,y,0,-.078,.054,.028)+.008*bump(x,y,0,-.043,.048,.018)
+      +.009*bump(x,y,-.065,.000,.032,.030)+.009*bump(x,y,.065,.000,.032,.030)
+      -.012*bump(x,y,-.046,.050,.030,.020)-.012*bump(x,y,.046,.050,.030,.020)
+      +.010*bump(x,y,-.044,.078,.042,.012)+.010*bump(x,y,.044,.078,.042,.012);
+      z+=relief*Math.pow(front,.4);}
+    v.setXYZ(i,x,y,z);
+  }
+  geometry.computeVertexNormals();return smoothWrappedNormals(geometry,20);
+}
+function bootGeometry(sole=false){
+  // Ankle, instep, arch, toe box and heel. No rectangular floating sole.
+  const geometry=new T.SphereGeometry(1,12,8),v=geometry.attributes.position;
+  for(let i=0;i<v.count;i++){
+    const x=v.getX(i),y=v.getY(i),z=v.getZ(i),toe=(z+1)*.5;
+    v.setXYZ(i,x*(.068+.011*Math.sin(toe*Math.PI)),sole?-.098+y*.010:Math.max(-.087,-.039+y*.063-(toe>.55?(toe-.55)*.037:0)),.050+z*.143);
+  }
+  geometry.computeVertexNormals();return smoothWrappedNormals(geometry,12);
+}
+function handGeometry(hand,m,side,index,skin){
+  const mat=skin?m.skin:m.leather;
+  tailored(hand,mat,[[-.105,.029,.021,.012],[-.083,.045,.025,.012],[-.047,.045,.027,.008],[-.015,.032,.024,0],[.009,.028,.024,0]],null,10);
+  for(let finger=0;finger<5;finger++){
+    const thumb=finger===4,length=thumb?.061:[.077,.087,.082,.065][finger];
+    const root=group(hand,`finger-${index}-${finger}`,thumb?-side*.043:(finger-1.5)*.022,-(thumb?.035:.087),.013);
+    if(thumb){root.rotation.z=-side*.65;root.rotation.x=-.26;}
+    const tip=group(root,`finger-tip-${index}-${finger}`,0,-length*.5,0),radius=thumb?.014:.0105;
+    tailored(root,mat,[[-length,.002,.002,0],[-length*.9,radius*.73,radius*.77,0],[-length*.55,radius*.9,radius*.95,0],[-length*.43,radius,radius,0],[-length*.12,radius,radius,0],[.003,radius*.9,radius*.9,0]],
+      {axis:'y',joints:[root.name,tip.name],centres:[-length*.5],widths:[length*.3]},6);
+  }
 }
 function cloakGeometry(long=false){
   const positions=[],uv=[],indices=[],w=8,h=12,length=long?1.48:1.15;
@@ -106,10 +169,11 @@ function pack(chest,m,role){
 function makeHuman(type,options){
   const profile=profiles[type]||profiles.npc,p={...profile};if(options.theme&&themes[options.theme]){p.metal=themes[options.theme][0];p.cloth=themes[options.theme][0];}
   const m={};for(const k of ['cloth','leather','metal','skin'])m[k]=surface(k,p[k]);
-  Object.assign(m,{hair:surface('cloth',p.hair),trim:surface('metal',options.theme?themes[options.theme][1]:0xb59b69),wood:surface('leather',0x514333),dark:surface('leather',0x27282a),paper:surface('cloth',0xc6baa0),eye:surface('skin',0x372f25)});
-  const g=new T.Group();g.name=`Q detailed ${type}`;const body=group(g,'body'),pelvis=group(body,'pelvis',0,.985,0),chest=group(pelvis,'chest');
+  Object.assign(m,{hair:surface('cloth',p.hair),trim:surface('metal',options.theme?themes[options.theme][1]:0xb59b69),wood:surface('leather',0x514333),dark:surface('leather',0x27282a),paper:surface('cloth',0xc6baa0),eye:surface('eye',0x372f25),eyeWhite:surface('eye',0xb8b2a5)});
+  const g=new T.Group();g.name=`Q detailed ${type}`;const body=group(g,'body'),pelvis=group(body,'pelvis',0,.985,0),spine=group(pelvis,'spine',0,.18,0),chest=group(spine,'chest',0,-.18,0);
   const width=p.broad?1.13:p.slight?.94:1;
-  mesh(chest,shell([[-.13,.23,.15],[0,.222,.15],[.12,.20,.137],[.32,.255,.16],[.48,.285,.147],[.55,.16,.115]]),m.cloth,[0,0,0],[width,1,1]);
+  const torso=tailored(chest,m.cloth,[[-.15,.224,.146],[-.04,.222,.145],[.10,.191,.129],[.20,.216,.146],[.33,.255,.163],[.43,.263,.155],[.49,.26,.137],[.54,.175,.104],[.57,.081,.073]],
+    {axis:'y',joints:['pelvis','spine','chest'],centres:[.09,.31],widths:[.18,.20],ascending:true},18,.025);torso.scale.x=width;
   mesh(pelvis,shell([[-.24,.235,.17],[-.13,.239,.166],[.01,.222,.155]]),m.cloth);
   mesh(chest,shell([[-.015,.23,.17],[.053,.23,.17]]),m.leather);
   mesh(chest,shapes.box,m.trim,[.01,.019,.18],[.073,.065,.022]);
@@ -123,13 +187,14 @@ function makeHuman(type,options){
   }
   const neck=group(chest,'neck',0,.6,0);ellipsoid(neck,m.skin,[0,.018,0],[.08,.12,.078]);
   const head=group(neck,'head',0,.16,0);
-  ellipsoid(head,m.skin,[0,.038,0],[.12,.159,.12]);
-  ellipsoid(head,m.skin,[0,-.047,.049],[.093,.089,.096]);
-  ellipsoid(head,m.skin,[0,.014,.115],[.028,.055,.049]);
+  mesh(head,faceSurface(),m.skin);
+  for(const s of [-1,1])ellipsoid(head,m.dark,[s*.015,-.017,.133],[.007,.004,.005]);
   for(const s of [-1,1]){
     ellipsoid(head,m.skin,[s*.12,.019,0],[.022,.042,.03]);
-    ellipsoid(head,m.dark,[s*.049,.052,.109],[.027,.014,.012]);
-    ellipsoid(head,m.eye,[s*.048,.053,.12],[.008,.01,.006]);
+    ellipsoid(head,m.eyeWhite,[s*.046,.050,.100],[.022,.008,.010]);
+    ellipsoid(head,m.eye,[s*.046,.050,.109],[.008,.008,.003]);
+    const lid=group(head,`eyelid-${s===-1?0:1}`,s*.046,.058,.100);
+    mesh(lid,new T.SphereGeometry(1,10,4,0,Math.PI*2,0,Math.PI*.5),m.skin,[0,0,0],[.023,.014,.011]);
     beam(head,m.hair,[s*.025,.078,.109],[s*.079,.073,.096],.007);
   }
   beam(head,m.leather,[-.026,-.055,.124],[.027,-.055,.124],.004);
@@ -148,22 +213,29 @@ function makeHuman(type,options){
   const arms=[],legs=[];
   for(const [i,s]of [-1,1].entries()){
     const shoulder=group(chest,`arm-${i}`,s*.313*width,.46,0),elbow=group(shoulder,`elbow-${i}`,0,-.33,0),hand=group(elbow,`hand-${i}`,0,-.31,0);
-    ellipsoid(shoulder,p.armored?m.metal:m.cloth,[s*.019,-.037,-.004],[.128,.124,.137]);
-    mesh(shoulder,new T.CylinderGeometry(.085,.07,.28,10),m.cloth,[0,-.18,0]);
-    ellipsoid(elbow,m.cloth,[0,0,0],[.076,.085,.077]);
-    mesh(elbow,new T.CylinderGeometry(.073,.052,.26,10),p.armored?m.metal:m.cloth,[0,-.15,0]);
-    mesh(elbow,shapes.cylinder,m.leather,[0,-.274,0],[.058,.045,.059]);
-    ellipsoid(hand,type==='patient'?m.skin:m.leather,[0,-.057,.017],[.055,.077,.042]);
-    ellipsoid(hand,m.skin,[-s*.047,-.04,.034],[.019,.044,.023]);
+    // One sleeve runs through shoulder, elbow and wrist; weights blend only
+    // across anatomical joint collars, while rigid armor stays on its bone.
+    tailored(shoulder,m.cloth,[[-.643,.039,.038],[-.60,.047,.043],[-.52,.061,.059],[-.43,.067,.066],[-.37,.060,.059],[-.33,.061,.063],[-.29,.068,.069],[-.20,.085,.083],[-.11,.091,.089],[-.04,.109,.108],[.035,.080,.083],[.065,.018,.025]],
+      {axis:'y',joints:['chest',shoulder.name,elbow.name,hand.name],centres:[.010,-.33,-.62],widths:[.14,.16,.09]},12,.035);
+    if(p.armored){
+      mesh(shoulder,new T.SphereGeometry(1,12,6,0,Math.PI*2,0,Math.PI*.62),m.metal,[s*.017,-.035,0],[.122,.113,.122]);
+      tailored(elbow,m.metal,[[-.268,.051,.054],[-.23,.060,.062],[-.10,.071,.074],[-.065,.069,.073]],null,12);
+    }
+    mesh(elbow,shapes.cylinder,m.leather,[0,-.274,0],[.055,.035,.054]);
+    handGeometry(hand,m,s,i,type==='patient'||!p.armored);
     arms.push(shoulder);
     const hip=group(pelvis,`leg-${i}`,s*.133,0,0),knee=group(hip,`knee-${i}`,0,-.445,0),foot=group(knee,`foot-${i}`,0,-.435,0);
-    mesh(hip,new T.CylinderGeometry(.112,.078,.385,10),m.cloth,[0,-.21,0]);
-    ellipsoid(knee,p.armored?m.metal:m.cloth,[0,0,.012],[.08,.088,.089]);
-    mesh(knee,new T.CylinderGeometry(.077,.055,.38,10),m.leather,[0,-.21,0]);
-    if(p.armored)mesh(knee,new T.CylinderGeometry(.079,.058,.25,10,1,true,Math.PI*1.55,Math.PI*.9),m.metal,[0,-.16,.01]);
-    ellipsoid(foot,m.leather,[0,-.042,.067],[.079,.068,.149]);
-    mesh(foot,shapes.box,m.dark,[0,-.096,.061],[.155,.025,.265]);
-    beam(knee,m.trim,[-.068,-.1,.054],[.068,-.1,.054],.009);legs.push(hip);
+    tailored(hip,m.cloth,[[-.66,.064,.069],[-.56,.078,.080],[-.49,.070,.073],[-.445,.070,.079,.004],[-.40,.078,.079],[-.31,.098,.093],[-.18,.116,.112,-.008],[-.06,.12,.120,-.014],[.04,.101,.108]],
+      {axis:'y',joints:['pelvis',hip.name,knee.name],centres:[-.035,-.445],widths:[.16,.18]},12,.033);
+    tailored(knee,m.leather,[[-.453,.052,.061,.018],[-.405,.053,.061,.004],[-.34,.056,.061],[-.24,.078,.077],[-.14,.079,.080],[-.095,.074,.075]],
+      {axis:'y',joints:[knee.name,foot.name],centres:[-.407],widths:[.105]},12,.018);
+    if(p.armored){
+      ellipsoid(knee,m.metal,[0,-.006,.061],[.074,.073,.044]);
+      mesh(knee,new T.CylinderGeometry(.078,.059,.21,10,1,true,Math.PI*1.55,Math.PI*.9),m.metal,[0,-.19,.01]);
+    }
+    mesh(foot,bootGeometry(),m.leather);mesh(foot,bootGeometry(true),m.dark);
+    for(let row=0;row<3;row++)beam(foot,m.dark,[-.026,-.001-row*.013,.015+row*.027],[.026,-.001-row*.013,.021+row*.027],.003);
+    beam(knee,m.trim,[-.062,-.13,.058],[.062,-.13,.058],.007);legs.push(hip);
   }
   const right=g.getObjectByName('hand-1'),left=g.getObjectByName('hand-0');
   if(['player','soldier','boss'].includes(type)){
@@ -227,8 +299,9 @@ function makeHuman(type,options){
 function makeWolf(){
   const g=new T.Group();g.name='Q detailed wolf';const body=group(g,'body'),pelvis=group(body,'pelvis',0,.86,0),chest=group(pelvis,'chest');
   const fur=surface('cloth',0x626861),dark=surface('cloth',0x454e4b),light=surface('cloth',0x929488),leather=surface('leather',0x272e2d),eye=surface('skin',0xb08d4d),tooth=surface('skin',0xc5bca2);
-  ellipsoid(chest,fur,[0,-.006,-.04],[.24,.31,.57]);ellipsoid(chest,dark,[0,.12,-.075],[.19,.21,.55]);
-  ellipsoid(chest,light,[0,-.07,.34],[.227,.29,.29]);ellipsoid(pelvis,fur,[0,.018,-.39],[.248,.269,.282]);
+  const trunk=tailored(chest,fur,[[-.68,.025,.025],[-.58,.17,.17],[-.4,.239,.26,-.015],[-.16,.20,.265,-.015],[.06,.196,.28],[.30,.234,.302],[.45,.16,.22],[.53,.035,.045]],
+    {axis:'y',joints:['pelvis','chest'],centres:[-.18],widths:[.50],ascending:true},16,.022);trunk.rotation.x=Math.PI/2;
+  ellipsoid(chest,dark,[0,.178,-.075],[.16,.098,.48]);ellipsoid(chest,light,[0,-.095,.34],[.18,.20,.23]);
   const neck=group(chest,'neck',0,.11,.41);ellipsoid(neck,fur,[0,.078,.098],[.22,.29,.27]);
   for(let i=0;i<8;i++){const a=i/8*Math.PI*2;mesh(neck,shapes.cone,i%2?dark:fur,[Math.sin(a)*.17,Math.cos(a)*.2,.0],[.082,.21,.075],[.6,0,-a]);}
   const head=group(neck,'head',0,.18,.2);ellipsoid(head,fur,[0,0,.05],[.175,.174,.24]);
@@ -240,14 +313,16 @@ function makeWolf(){
     mesh(jaw,shapes.cone,tooth,[s*.061,.03,.189],[.009,.046,.008]);
   }
   for(let i=0;i<4;i++){
-    const s=i%2===0?-1:1,front=i<2,hip=group(pelvis,`leg-${i}`,s*.18,-.018,front?.34:-.39),knee=group(hip,`knee-${i}`,0,-.36,0),foot=group(knee,`foot-${i}`,0,-.36,0);
-    ellipsoid(hip,fur,[0,-.105,front?0:-.035],[front?.083:.111,.22,.105]);mesh(hip,shapes.cylinder,fur,[0,-.24,0],[.061,.23,.069]);
-    ellipsoid(knee,fur,[0,0,0],[.061,.074,.07]);mesh(knee,new T.CylinderGeometry(.045,.032,.32,8),front?fur:dark,[0,-.18,0]);
+    const s=i%2===0?-1:1,front=i<2,hip=group(pelvis,`leg-${i}`,s*.18,-.018,front?.34:-.39),knee=group(hip,`knee-${i}`,0,-.36,0),hock=front?null:group(knee,`hock-${i}`,0,-.21,0),foot=group(hock||knee,`foot-${i}`,0,front?-.36:-.15,0);
+    tailored(hip,fur,[[-.74,.029,.032],[-.68,.036,.043],[-.56,.040,.047],[-.42,.043,.055],[-.36,.054,.066],[-.28,.062,.074],[-.16,front?.075:.101,.105,front?0:-.035],[-.035,front?.075:.105,.100],[.035,.032,.043]],
+      {axis:'y',joints:front?['pelvis',hip.name,knee.name,foot.name]:['pelvis',hip.name,knee.name,hock.name,foot.name],centres:front?[-.015,-.36,-.70]:[-.015,-.36,-.57,-.70],widths:front?[.16,.15,.09]:[.16,.15,.14,.09]},10,.025);
     ellipsoid(foot,light,[0,-.058,.044],[.067,.069,.105]);
     for(const x of [-.033,0,.033])ellipsoid(foot,leather,[x,-.071,.111],[.013,.019,.027]);
   }
-  let tail=group(pelvis,'tail-0',0,.02,-.55);tail.rotation.x=.9;
-  for(let i=0;i<3;i++){if(i)tail=group(tail,`tail-${i}`,0,-.23,0);mesh(tail,new T.CylinderGeometry(.083-i*.018,.072-i*.022,.26,9),i===2?dark:fur,[0,-.125,0]);}
+  const tail=group(pelvis,'tail-0',0,.02,-.55);tail.rotation.x=.9;
+  const tail1=group(tail,'tail-1',0,-.23,0);group(tail1,'tail-2',0,-.23,0);
+  tailored(tail,fur,[[-.73,.004,.004],[-.64,.029,.028],[-.53,.048,.046],[-.46,.057,.056],[-.35,.068,.062],[-.23,.076,.073],[-.12,.080,.077],[.02,.070,.070]],
+    {axis:'y',joints:['tail-0','tail-1','tail-2'],centres:[-.23,-.46],widths:[.22,.22]},10,.06);
   g.userData.modelKind='articulated-quadruped';g.userData.family='wolf';return g;
 }
 // Merge only direct, non-animated mesh children; articulated transforms survive.
@@ -255,16 +330,16 @@ function makeWolf(){
 function batchJointMeshes(root){
   for(const child of [...root.children])if(child.isGroup||child.isBone)batchJointMeshes(child);
   const batches=new Map();
-  for(const child of [...root.children])if(child.isMesh&&!child.userData.dynamicSurface){
+  for(const child of [...root.children])if(child.isMesh&&!child.userData.dynamicSurface&&!child.userData.deform){
     child.updateMatrix();const geo=child.geometry.clone().applyMatrix4(child.matrix);const key=child.material;
     if(!batches.has(key))batches.set(key,[]);batches.get(key).push(geo);root.remove(child);
   }
   for(const [mat,geometries]of batches){const merged=mergeGeometries(geometries,false);if(!merged)throw Error(`Actor geometry merge failed: ${root.name}`);mesh(root,merged,mat);for(const geo of geometries)geo.dispose();}
 }
 // Bind the authored joint surfaces into shared material skin batches. The geometry
-// retains the original joint weights; only draw submission is combined. Weapons
+// includes blended shoulder/elbow/wrist, pelvis/knee/ankle and spine weights. Weapons
 // with independent visibility and the deforming cape retain their own meshes.
-function bindRigidSkin(root){
+function bindArticulatedSkin(root){
   root.updateMatrixWorld(true);const inverseRoot=root.matrixWorld.clone().invert(),bones=[];
   root.traverse(n=>{if(n.isBone)bones.push(n);});
   const batches=new Map(),remove=[];
@@ -274,7 +349,22 @@ function bindRigidSkin(root){
     const boneIndex=bones.indexOf(n.parent);if(boneIndex<0)return;
     const geometry=n.geometry.clone().applyMatrix4(inverseRoot.clone().multiply(n.matrixWorld));
     const count=geometry.attributes.position.count,indices=new Uint16Array(count*4),weights=new Float32Array(count*4);
-    for(let i=0;i<count;i++){indices[i*4]=boneIndex;weights[i*4]=1;}
+    const rule=n.userData.deform;
+    for(let i=0;i<count;i++){
+      let influences=[[boneIndex,1]];
+      if(rule){
+        const coordinate=n.geometry.attributes.position.getComponent(i,rule.axis==='x'?0:rule.axis==='z'?2:1);
+        const values=rule.joints.map(()=>0);values[0]=1;
+        for(let j=0;j<rule.centres.length;j++){
+          const direction=rule.ascending?1:-1;
+          const u=Math.max(0,Math.min(1,.5+direction*(coordinate-rule.centres[j])/rule.widths[j]));
+          const blend=u*u*(3-2*u),remaining=values[j];values[j]=remaining*(1-blend);values[j+1]=remaining*blend;
+        }
+        influences=values.map((w,j)=>[bones.findIndex(b=>b.name===rule.joints[j]),w]).filter(([,w])=>w>0);
+        if(influences.some(([index])=>index<0))throw Error('Unknown authored deform joint');
+      }
+      for(let j=0;j<influences.length;j++){indices[i*4+j]=influences[j][0];weights[i*4+j]=influences[j][1];}
+    }
     geometry.setAttribute('skinIndex',new T.Uint16BufferAttribute(indices,4));geometry.setAttribute('skinWeight',new T.Float32BufferAttribute(weights,4));
     if(!batches.has(n.material))batches.set(n.material,[]);batches.get(n.material).push(geometry);remove.push(n);
   });
@@ -294,8 +384,12 @@ export function buildActorGeometry(type='player',options={}){
   if(!ACTOR_FAMILIES.includes(type))throw Error(`Unknown Q actor family: ${type}`);
   if(options.theme&&!themes[options.theme])throw Error(`Unknown Q actor theme: ${options.theme}`);
   const key=`${type}/${options.theme||''}`;
-  if(!templates.has(key)){const template=type==='wolf'?makeWolf():makeHuman(type,options);batchJointMeshes(template);bindRigidSkin(template);templates.set(key,template);}
+  if(!templates.has(key)){const template=type==='wolf'?makeWolf():makeHuman(type,options);batchJointMeshes(template);bindArticulatedSkin(template);templates.set(key,template);}
   const model=cloneSkeleton(templates.get(key));
+  // SkeletonUtils clones each material skin's Skeleton separately. All these
+  // batches have the same bone order and bind transform; keep one palette per
+  // actor so adding fingers does not multiply matrix updates by material count.
+  let palette;model.traverse(node=>{if(node.isSkinnedMesh){if(!palette)palette=node.skeleton;else node.skeleton=palette;}});
   const cape=model.getObjectByName('cape');if(cape){cape.geometry=cape.geometry.clone();cape.userData.base=Float32Array.from(cape.geometry.attributes.position.array);}
   return model;
 }

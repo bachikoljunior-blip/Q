@@ -1,6 +1,7 @@
 import './style.css';
 import { Game, PLACES, heightAt, distance, clamp, angleDelta } from './core.js';
 import { Soundscape } from './audio.js';
+import titleVideoSource from './assets/title/north-gate-v23.mp4';
 import { mountTitleCinematic } from './title-cinematic.js';
 import { WEAPONS, SENA, EAST_CAMP, crossingText } from './content.js';
 import { WIND_SHRINE, WIND_BELLS, ROAD_CACHE, BELL_VERSE, forgeText, residentSpeech, canWorkWith } from './village.js';
@@ -31,7 +32,7 @@ if(saveMessages[loadedSave.status]){$('save-status').textContent=saveMessages[lo
 if(!['low','medium','high'].includes(settings.quality))settings.quality='medium';settings.volume=clamp(Number(settings.volume)||0,0,1);settings.sensitivity=clamp(Number(settings.sensitivity)||1,.5,2);
 let game=new Game(stored),view,viewPromise,frameStarted=false,playing=false,paused=false,panelType='',lastFrame=0,accumulator=0,saveTimer=0,hudTimer=0,toastTimer=0,locationTimer=0,pointerControls=null;
 game.assist=!!settings.assist;const audio=new Soundscape();audio.volume=settings.volume;audio.music=settings.music;
-const title=mountTitleCinematic({root:$('title-screen'),onCue:cue=>{if(cue==='focus'&&audio.active)audio.play('uiFocus');}});
+const title=mountTitleCinematic({root:$('title-screen'),videoSource:titleVideoSource,onCue:cue=>{if(cue==='focus'&&audio.active)audio.play('uiFocus');}});
 title.setSaveAvailable(!!stored&&stored.version===1);
 let titleSoundRequest=0,titleSoundPending=false;
 function titleSoundLabel(on){titleSoundPending=false;$('title-sound').removeAttribute('aria-busy');$('title-sound').setAttribute('aria-pressed',String(on));$('title-sound').textContent=on?'音を止める':'音を入れる';}

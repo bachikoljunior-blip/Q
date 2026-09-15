@@ -14,7 +14,7 @@
   <canvas id="world" aria-label="灰の巡礼の3Dフィールド" tabindex="0"></canvas>
   <div id="vignette"></div><div id="hurt"></div>
   <section id="title-screen" aria-labelledby="title-heading">
-    <div class="title-art" role="img" aria-label="北の門のタイトルイラスト。灰の谷を見下ろす巡礼者の手に残る火と、廃墟の上で燃え続ける王冠。"></div>
+    <div class="title-art" role="img" aria-label="北の門を描いた動くタイトルイラスト。灰の谷を見下ろす巡礼者の手に残る火と、廃墟の上で燃え続ける王冠。"><video id="title-video" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"></video></div>
     <div class="title-atmosphere" aria-hidden="true"><div class="title-mist title-mist-far"></div><div class="title-mist title-mist-near"></div><div class="title-emberlight"></div></div>
     <canvas id="title-embers" aria-hidden="true"></canvas>
     <div class="title-shade" aria-hidden="true"></div>
@@ -32,7 +32,7 @@
       <p id="title-loading" class="title-loading hidden" role="status" aria-live="polite">北の空へ、道をつないでいます<span aria-hidden="true">…</span></p>
     </div>
     <div class="title-scene-note" aria-hidden="true"><span>王を失っても、</span><span>王冠は燃え続ける。</span></div>
-    <footer class="title-bottom"><span class="title-art-caption">北の門</span><div class="title-utilities"><button id="title-sound" class="text-button" aria-pressed="false">音を入れる</button><button id="title-settings" class="text-button">操作・設定</button></div><span id="build-version" class="version">DEVELOPMENT BUILD</span></footer>
+    <footer class="title-bottom"><span class="title-art-caption">北の門</span><div class="title-utilities"><button id="title-motion" class="text-button" aria-pressed="false">動きを止める</button><button id="title-sound" class="text-button" aria-pressed="false">音を入れる</button><button id="title-settings" class="text-button">操作・設定</button></div><span id="build-version" class="version">DEVELOPMENT BUILD</span></footer>
   </section>
   <main id="hud" class="hidden">
     <div class="vitals"><div class="sigil">Q</div><div class="vital-bars"><div class="vital-label"><span id="rank">巡礼者 · Lv.1</span><span id="hp-text">120 / 120</span></div><div class="bar hp"><i id="hp"></i></div><div class="bar stamina"><i id="stamina"></i></div><div class="bar energy"><i id="energy"></i></div></div></div>

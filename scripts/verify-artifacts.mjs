@@ -49,8 +49,8 @@ for(const name of ['pilgrim','knight','keeper']){
   assert(!entry.includes(output),'character assets must stay out of the title chunk');
 }
 
-const presentationSources=Object.keys(manifest).filter(source=>/^src\/assets\/(title|soundscape)\//.test(source)&&/\.(webp|mp3|wav)$/.test(source));
-assert.equal(presentationSources.length,5,'title illustration and four soundscape assets must be emitted exactly once');
+const presentationSources=Object.keys(manifest).filter(source=>/^src\/assets\/(title|soundscape)\//.test(source)&&/\.(webp|mp3|wav|mp4)$/.test(source));
+assert.equal(presentationSources.length,6,'title poster/video and four soundscape assets must be emitted exactly once');
 assert(!manifest['src/assets/title/north-gate-v22.png'],'archived original title PNG must not duplicate the optimized runtime artwork');
 let presentationBytes=0;
 for(const sourcePath of presentationSources){
@@ -59,6 +59,18 @@ for(const sourcePath of presentationSources){
   assert((await readFile(`${root}/${output}`)).equals(source),`staged presentation asset differs: ${sourcePath}`);
   assert(embedded.some(data=>data.equals(source)),`standalone omits presentation asset: ${sourcePath}`);
   presentationBytes+=source.length;
+}
+
+const environment=JSON.parse(await readFile('src/assets/environment/provenance.json','utf8'));
+const environmentFiles=Object.keys(manifest).filter(source=>source.startsWith('src/assets/environment/')&&source.endsWith('.jpg')).sort();
+assert.deepEqual(environmentFiles,environment.assets.map(asset=>asset.path).sort(),'environment source inventory differs from emitted assets');
+for(const asset of environment.assets){
+  const original=await readFile(asset.path),output=manifest[asset.path]?.file;
+  assert.equal(original.length,asset.bytes); assert.equal(createHash('sha256').update(original).digest('hex'),asset.sha256);
+  assert.equal(asset.license,'CC0-1.0'); assert(output);
+  assert((await readFile(`dist/${output}`)).equals(original)); assert((await readFile(`${root}/${output}`)).equals(original));
+  assert(embedded.some(data=>data.equals(original)),`standalone omits environment source: ${asset.path}`);
+  assert(!entry.includes(output),'environment photos must stay behind the scene import');
 }
 
 const provenance=JSON.parse(await readFile('src/assets/vaults/provenance.json','utf8'));

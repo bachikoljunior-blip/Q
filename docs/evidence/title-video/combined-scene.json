@@ -1,0 +1,113 @@
+{
+  "scope": "Combined actor+world Three object all-mesh/all-instance upper bounds, excluding points/lines; not browser culling, shadow-pass draw counts, shader cost, rendered pixels or FPS",
+  "samples": [
+    {
+      "quality": "low",
+      "player": [
+        0,
+        80
+      ],
+      "meshes": 1590,
+      "triangles": 653066
+    },
+    {
+      "quality": "low",
+      "player": [
+        -105,
+        0
+      ],
+      "meshes": 1590,
+      "triangles": 653066
+    },
+    {
+      "quality": "low",
+      "player": [
+        -300,
+        -130
+      ],
+      "meshes": 1590,
+      "triangles": 653066
+    },
+    {
+      "quality": "low",
+      "player": [
+        170,
+        -200
+      ],
+      "meshes": 1590,
+      "triangles": 653066
+    },
+    {
+      "quality": "medium",
+      "player": [
+        0,
+        80
+      ],
+      "meshes": 1590,
+      "triangles": 679686
+    },
+    {
+      "quality": "medium",
+      "player": [
+        -105,
+        0
+      ],
+      "meshes": 1590,
+      "triangles": 679922
+    },
+    {
+      "quality": "medium",
+      "player": [
+        -300,
+        -130
+      ],
+      "meshes": 1590,
+      "triangles": 676596
+    },
+    {
+      "quality": "medium",
+      "player": [
+        170,
+        -200
+      ],
+      "meshes": 1590,
+      "triangles": 681540
+    },
+    {
+      "quality": "high",
+      "player": [
+        0,
+        80
+      ],
+      "meshes": 1590,
+      "triangles": 781030
+    },
+    {
+      "quality": "high",
+      "player": [
+        -105,
+        0
+      ],
+      "meshes": 1590,
+      "triangles": 782622
+    },
+    {
+      "quality": "high",
+      "player": [
+        -300,
+        -130
+      ],
+      "meshes": 1590,
+      "triangles": 777132
+    },
+    {
+      "quality": "high",
+      "player": [
+        170,
+        -200
+      ],
+      "meshes": 1590,
+      "triangles": 787242
+    }
+  ]
+}

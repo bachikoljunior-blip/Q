@@ -31,10 +31,15 @@ export function advanceTitleEmbers(particles, deltaSeconds, elapsedSeconds = 0) 
   return particles;
 }
 
-export function mountTitleCinematic({ root, onCue = () => {} } = {}) {
+export function mountTitleCinematic({ root, onCue = () => {}, videoSource = '' } = {}) {
   if (!root) throw new TypeError('A title root is required');
   const doc = root.ownerDocument, win = doc.defaultView;
   const canvas = root.querySelector('#title-embers');
+  const video = root.querySelector('#title-video'), motionButton = root.querySelector('#title-motion');
+  const connection = win.navigator?.connection;
+  let userPaused = false, saveData = !!connection?.saveData, mediaBlocked = false, mediaReady = false;
+  let videoPending = false, videoGeneration = 0, sourceAttached = false, loadTimer = null;
+  let pageLoaded = doc.readyState === 'complete';
   // A decorative canvas may be unavailable while semantic controls remain usable.
   let context = null;
   try { context = canvas?.getContext?.('2d', { alpha: true }) || null; } catch { /* optional decoration */ }
@@ -49,7 +54,50 @@ export function mountTitleCinematic({ root, onCue = () => {} } = {}) {
     target.addEventListener(name, handler, options);
     listeners.push(() => target.removeEventListener(name, handler, options));
   };
-  const canAnimate = () => !disposed && active && !doc.hidden && !pageHidden && !blurred && !reduced && !!context;
+  const motionAllowed = () => !disposed && active && !doc.hidden && !pageHidden && !blurred && !reduced && !saveData && !userPaused;
+  const canAnimate = () => motionAllowed() && !mediaReady && !!context;
+  function motionLabel() {
+    if (!motionButton) return;
+    const paused = userPaused || reduced || saveData;
+    motionButton.setAttribute('aria-pressed', String(paused));
+    motionButton.textContent = reduced || saveData ? '静止画で表示中' : userPaused || mediaBlocked ? '動きを再開する' : '動きを止める';
+    motionButton.disabled = reduced || saveData;
+  }
+  function stopVideo(release) {
+    if (loadTimer !== null) win.clearTimeout(loadTimer);
+    loadTimer = null; videoGeneration++; videoPending = false;
+    video?.pause?.();
+    if (release && sourceAttached) {
+      sourceAttached = false; video.removeAttribute('src'); video.load();
+      mediaReady = false; root.classList.remove('has-video');
+    }
+  }
+  function playVideo() {
+    if (!video || !videoSource || !motionAllowed() || mediaBlocked || videoPending || (!video.paused && sourceAttached)) return;
+    const generation = ++videoGeneration;
+    if (!sourceAttached) { video.src = videoSource; sourceAttached = true; }
+    video.muted = true; video.defaultMuted = true; video.playsInline = true;
+    videoPending = true;
+    let pending;
+    try { pending = video.play(); } catch (error) { pending = Promise.reject(error); }
+    Promise.resolve(pending).then(() => {
+      if (generation !== videoGeneration) return;
+      videoPending = false;
+      if (!motionAllowed()) { stopVideo(!active); return; }
+      mediaReady = true; root.classList.add('has-video'); synchronize();
+    }, () => {
+      if (generation !== videoGeneration) return;
+      videoPending = false; mediaBlocked = true; stopVideo(true); synchronize();
+    });
+  }
+  function synchronizeVideo() {
+    motionLabel();
+    if (!video || !videoSource) return;
+    if (!motionAllowed()) { stopVideo(disposed || !active || pageHidden || doc.hidden || reduced || saveData); return; }
+    if (mediaBlocked || !pageLoaded || videoPending || loadTimer !== null || (!video.paused && sourceAttached)) return;
+    // First paint and the small poster load finish before any MP4 source is attached.
+    loadTimer = win.setTimeout(() => { loadTimer = null; playVideo(); }, sourceAttached ? 0 : 300);
+  }
   function cancelFrame() {
     if (frameId !== null) win.cancelAnimationFrame(frameId);
     frameId = null; previousTime = null;
@@ -112,10 +160,24 @@ export function mountTitleCinematic({ root, onCue = () => {} } = {}) {
   }
   function synchronize() {
     const shouldAnimate = canAnimate();
-    root.classList.toggle('is-still', !shouldAnimate);
+    root.classList.toggle('is-still', !motionAllowed());
     if (!shouldAnimate) { cancelFrame(); clearParallax(); if (reduced) paint(); }
     else if (frameId === null) frameId = win.requestAnimationFrame(frame);
+    synchronizeVideo();
   }
+  if (video) {
+    listen(video, 'error', () => { if (!sourceAttached || disposed) return; mediaBlocked = true; stopVideo(true); synchronize(); });
+    // A browser or low-power policy may pause a previously accepted autoplay.
+    listen(video, 'pause', () => { if (video.paused && motionAllowed() && sourceAttached && !videoPending && loadTimer === null) { mediaBlocked = true; motionLabel(); } });
+  }
+  if (motionButton) listen(motionButton, 'click', () => {
+    if (disposed || reduced || saveData) return;
+    if (mediaBlocked) { mediaBlocked = false; userPaused = false; playVideo(); }
+    else { userPaused = !userPaused; if (!userPaused) playVideo(); }
+    synchronize();
+  });
+  if (connection?.addEventListener) listen(connection, 'change', () => { saveData = !!connection.saveData; synchronize(); });
+  listen(win, 'load', () => { pageLoaded = true; synchronize(); });
   const resetPointer = () => { pointerX = pointerY = 0; };
   listen(root, 'pointermove', event => {
     if (!canAnimate() || event.pointerType !== 'mouse' || event.buttons) return;
@@ -156,7 +218,7 @@ export function mountTitleCinematic({ root, onCue = () => {} } = {}) {
     },
     dispose() {
       if (disposed) return;
-      disposed = true; active = false; cancelFrame();
+      disposed = true; active = false; cancelFrame(); stopVideo(true);
       for (const remove of listeners) remove();
       clearParallax();
       root.classList.add('is-still');
