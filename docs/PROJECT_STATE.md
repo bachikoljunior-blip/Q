@@ -1,6 +1,6 @@
-# 制作状況 — 2026-09-13
+# 制作状況 — 2026-09-15
 
-## 2026-09-15 — タイトル映像と画面全体の写実方向改修（統合候補）
+## 2026-09-15 — タイトル映像と画面全体の写実方向改修をmain / owner-only Siteへ反映完了
 
 最新原文「タイトル画面は映像あるといいな」「モデル、アニメはps4のリアリスティック描画のゲームくらいのクオリティがいいな」「モデルというか画面に映るもの全て」を受領。基点c33be61a3f50fa5d703e9c1fcf39a8140bc04507から単独writer・排他worktreeで制作。人物だけでなく地形/岩/草木/建築小物/水空/光影/VFX/カメラ/HUD/メニューを棚卸しし、以下の一貫した有限改修を行った。カメラの移動・遮蔽・既存保存/進行と前回の48秒三層音楽/24効果音を保持する。
 
@@ -13,7 +13,11 @@
 
 着手直後とmain前の期限2026-09-20判断は **NO-GO / evidence insufficient**。完成0/7、固定10作品比較0/10、複数章/地域・演技・native配布/実機・正式画面と外部比較の残量は未解決。一関節・数式texture・小機能追加のみの従来方法を見直し、本物の動画、CC0写真素材、shared deformationと接地、画面全体の階層へ作業を変更したが、期限到達を保証する同等scope速度/画面証拠はない。[方法と実測](PRODUCTION_METHOD.md)。
 
-全実作業は /root/ultra_q_title_video と actors_ps4_ultra / world_ps4_ultra / ui_ps4_ultra / independent_review_ultra（およびactor_review_ultra）が担当。実spawnは全て reasoning_effort=ultra / fork_turns=none / model omitted、受理canonical IDと成果SHAを各記録へ対応付ける。親は所有者専用Sites操作のみ機械的に実行する。旧PR3/13・別repo・automation・公開範囲は変更しない。全結合19command / 223 tests成功、validation wall 72.543秒。初期JS 163,175 B（165,000上限と3chunk維持）、CSS 58,545 B、単体版 13,117,027 B / SHA256 `9084b7091f7627d971902cb8046492e357af468c43899ee1d8624b39a44eaaf9`。結合全instance triangle上限low653,066 / high777,132–787,242、mesh1590は描画前構造であってFPSではない。実測と担当/修正対応は [統合証拠](evidence/visual-overhaul-v23.json)。現在のcheckpointは通常PR/必須CI/mainと同一Site反映。最終結果は同節へ追記する。
+全実作業は /root/ultra_q_title_video と actors_ps4_ultra / world_ps4_ultra / ui_ps4_ultra / independent_review_ultra（およびactor_review_ultra）が担当。実spawnは全て reasoning_effort=ultra / fork_turns=none / model omitted、受理canonical IDと成果SHAを各記録へ対応付ける。親は所有者専用Sites操作のみ機械的に実行する。旧PR3/13・別repo・automation・公開範囲は変更しない。全結合19command / 223 tests成功、validation wall 72.543秒。初期JS 163,175 B（165,000上限と3chunk維持）、CSS 58,545 B、単体版 13,117,027 B / SHA256 `9084b7091f7627d971902cb8046492e357af468c43899ee1d8624b39a44eaaf9`。結合全instance triangle上限low653,066 / high777,132–787,242、mesh1590は描画前構造であってFPSではない。実測と担当/修正対応は [統合証拠](evidence/visual-overhaul-v23.json)。[PR #37](https://github.com/bachikoljunior-blip/Q/pull/37) を通常merge済み。PR head `7e0f87f42d5276fac8e42eb2ca384a5e9cdc1177`、gameplay main `f11819aceea515d166846e4bf85082bf2e51e9d1`、tree `380cf9643f37b51acaaf34100c6bcd057157dd78` は検証候補と完全一致。PR CI `34966310358` とmain CI `34966565640` は各30 step成功、Pages `34966564176` も成功。
+
+12:08:03 UTCに同一Site **version 23**、deployment `appgdep_6aa93515d90c81919955b9a14ff7d118` がsucceeded。URLは https://q-ash-pilgrim.juurooo.chatgpt.site 。正規source readbackは上記gameplay mainと一致、custom owner1/editor0/group0/external0・policy revision1を保持した。公式packageの31fileは固定stageとbyte一致し、local gzip archiveは9,078,774 B / SHA256 `b0446ce21a14b5aa818b7ec7b61ffc21f40edae3254cae2a2e7c6fcb7ee8666d`。native storageのtar形式hashは別項目として証拠へ記録し、配信先を独立downloadしてbyte照合した主張ではない。
+
+今回の有限改修の実装・必須検証・通常main統合・同一Site反映は完了。今回の公開結果追記は3文書だけで、ゲームpayloadを変えず再deployしない。次checkpointはこの結果を継続点として、未達の固定品質/規模と2026-09-20期限を再評価し、公式経路が利用可能になった時点で描画・実機・外部比較の証拠を得ること。人間の準備待ちや別preview経路での迂回に置き換えない。
 
 
 ## 2026-09-15 — 全モデル・動作・タイトル・音響をmain / owner-only Siteへ反映完了

@@ -15,3 +15,5 @@
 実装・媒体制作・統合は `/root/ultra_q_title_video`、独立reviewは上記子が担当。全spawn指定は `reasoning_effort=ultra, fork_turns=none, model omitted`。requested settingの受理と具体的成果を記録し、非公開の実効強度は断定しない。Sitesの所有者操作は親が子の確定操作だけを実行する。
 
 実装根拠は [WebKitの無音video/playsinline方針](https://webkit.org/blog/6784/new-video-policies-for-ios/)、[Chromeの非同期play/pause/load解説](https://developer.chrome.com/blog/play-request-was-interrupted)、[play()のPromise仕様](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play)。これらは今回の端末で再生成功した証拠ではない。
+
+[PR #37](https://github.com/bachikoljunior-blip/Q/pull/37)、gameplay main `f11819aceea515d166846e4bf85082bf2e51e9d1` に通常統合済み。PR/main必須CI成功後、2026-09-15 12:08:03 UTCに同じowner-only Site version **23**へ反映。deployment `appgdep_6aa93515d90c81919955b9a14ff7d118` はsucceeded、sourceと公開範囲を正規readbackした。URLは https://q-ash-pilgrim.juurooo.chatgpt.site 。公開記録追記では映像・配信payloadを変更せず再deployしない。公式preview mailboxは不在のままで、Site上の実再生・端末性能・PS4相当の知覚品質は未確認。
