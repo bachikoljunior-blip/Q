@@ -1,5 +1,33 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-15 08:15 UTC — asset-first四遭遇をmain / owner-only Siteへ反映完了
+
+### 継続・担当・期限
+
+継続分類は **STOPPED → RESUMED**。開始時の `origin/main` はcleanな完了checkpoint `411f3c55aa3ebf8dc167a7ab6ca89673fcd16486` で、現行ゲームの未merge実装、remote制作branch、別writerはなく、固定目標は未達だったため再開した。担当は `/root/ultra_q_asset_slice`、requested reasoning effortは `ultra`。独立read-only review二件は `fork_turns=none`、`reasoning_effort=ultra`、`model` omittedで起動した。旧ゲームPR #3/#13、他repository、automationには触れていない。
+
+2026-09-20への厳格判断は反映後も **NO-GO / evidence insufficient**。一章、連続map一つ、740×502 mの外接矩形（gross 0.37148 km²、net playable area未測定）、武器3、敵34体、名前付きNPC定義9、相談2場面・本編lines 6・4選択、CC0 GLB 3、project生成PNG 4 / WAV 10、native package 0である。完成表はend-to-end 0/7、指定10作品とのformal comparisonは0/10。残る複数章・地域・屋内、商用品質のasset / animation / acting / audio、native配布、正式画面、物理touch、実聴、実機性能、30分human play、外部比較には完成範囲の実測速度と確保済みの受入経路がない。局所sliceの速度と4時間内統合を、残作業全体の完成速度へ外挿しない。
+
+### 実装、比較、最終検証
+
+熾火・潮錆・風蝕・苔影の四vaultを実payloadへ追加した。各vaultは地形追従のopen-roof環状壁19と入口1、brazier 4 + stele 4の配置8件、theme別の材質・装飾・名前を持つ同一soldier-rig番兵1、手続き的構造pose `guard / prowl / charge / release` 4、ambient WAV 1、共有SFX WAV 6、固有memory / resultを持つ。固有model・animation clip・AIを四体分制作したという主張ではない。通常title / new gameからkeyboard移動、enter、複数hit combat、番兵swing、memory interaction、result、save、title、別fresh VM Continueまでを、四vault×portrait / landscape数値寸法の8経路と8 reloadで完走した。
+
+project生成assetはtileable PNG 4、ambient WAV 4、shared SFX WAV 6の14 binary / 891,845 bytes。generator SHA-256は `510e879ff8b04acc587aa564dd87f03f68f129e20b0f66fc40699bc57a5fe506`、provenance SHA-256は `99ae69f4532462911c610a67a6e8418cac5d1a180afcbb4015bbd430b8c2335b`。最終fingerprintは `sha256:58024fad006c1d91125df3bb46ab4193df5537feddfe73b7c5a6a3160d240517`、単体版は4,471,098 bytes / SHA-256 `c62c86c20e71a7695be4b9f83365c02b76bdee7f9e21ee8637b1b4cf66459d33`。
+
+事前作業が混じるEmber/Tide計時は無効。clean prospective比較はC=`gale-vault` がsealed番兵修正とfull gateを含む `T_C=520,829 ms`、freeze `da5f4db9eef4f0db20ed887203de07527fd1e4a0`。Cにmoss参照が0であることを確認してからD=`moss-vault` を開始し、`T_D=217,946 ms`、freeze `79a18c9c241fe1704377f7fbbf54fe782fd31dc6`。`T_D/T_C=0.4184598` で局所目標 `<=0.75` を通った。Dの無改変reuseはasset ID 6/8=75%、bytes 117,570/311,342=37.764%、component 8/12=66.667%、両item合計14/20=70%。formal full-gate failure / repair loopはC=0 / D=0だが、full gate前のfocused / reviewer iterationはC=4 / D=2。`T_asset` を独立計時していないため、前向きreuse速度仮説と統合4時間条件は合格しても方式全体のstrict adoptionは **NO-GO**。
+
+独立reviewのsave正規化、撃破直後save、旧座標の反復移行、ambient retry、one-shot待機dedupe、番兵名に関する6指摘を修正し、その後に生じたambient退出・同theme再進入のABA raceも、loop世代ごとの独立sourceとone-shot限定dedupeへ分けて修正した。最終full local gateはgenerator再生成・hash、main runtime 16条件 / 3負例 / 6検出、相談runtime 4条件 / 8起動 / 8 reload / 7負例 / 28検出、vault 8/8 + fresh reload 8、`npm test` 181/181、journey 119秒、crossing両choice、forge 103秒、30分相当108,000 step / 138 reload / 81 objective / death 0、expedition南北、combat 9、touch portrait / landscape各20/20、62-module build、package、source / dist / stage / standalone byte一致をすべて通した。
+
+### GitHub mainとSiteの正規反映
+
+基点から実装candidateまでの48ファイルと最終値は [`docs/evidence/asset-vertical-slice-20260915.json`](evidence/asset-vertical-slice-20260915.json) に固定した。local evidence headは `bd1e91b40c5efc93443f094a8f5893d1d8f1fd9e`。接続GitHubへそのtree `fff2dad5e0b609e4d1d83875d7f0004c91a9b2d6` をexactに一commitで載せたremote headは `90116481415398b5fb3fd036987794f2cb96b15a`。[PR #33](https://github.com/bachikoljunior-blip/Q/pull/33) は54ファイル、+1,666 / -266。[required CI 34945210989](https://github.com/bachikoljunior-blip/Q/actions/runs/34945210989) はhead一致、job `game` と列挙27 stepがsuccessになった。開始 `2026-09-15T06:33:34.925Z` からrequired CI終端 `08:08:21Z` までの統合wall timeは5,686,075 ms（94分46.075秒）で、4時間条件を通る。
+
+merge直前にmain=`411f3c55...`、PR head、clean mergeableを再取得し、expected head付きの通常mergeを行った。merge / implementation mainは `b29023674863978aad94194ef4f68ad35c59ed26`、親はbaseとremote head、treeは検証済み `fff2dad5...` とexact一致し、headがmainの祖先であることをfetch後に確認した。[main Validate game 34945437814](https://github.com/bachikoljunior-blip/Q/actions/runs/34945437814) はjob `game` と列挙27 stepがsuccess、[Pages 34945436799](https://github.com/bachikoljunior-blip/Q/actions/runs/34945436799) もsuccess。
+
+同じSite sourceのmainを `688bee48...` からexact merge `b2902367...` へ非forceでfast-forwardし、検証済みstageを公式packagerで保存した。ローカルtarは1,759,614 bytes / SHA-256 `3e83ae57a1c0e95f6e175ec305269763007ef4d71986211b585e5469322f1fbd`。保存後は25 file / 3,584,000 bytes / content hash `sha256:69378ee663f14403e353709616ed30f56cde75959cc9f234d5760abf6ccf2d98` で、圧縮tarと保存後展開値を同一指標として扱わない。既存project `appgprj_6aa6871ebd648191802ba2398d06115b` のversion 21 `appgprj_6aa6871ebd648191802ba2398d06115b~appgver_942558f2f7308191925bd6bab2b8ab36`、deployment `appgdep_6aa8fe5007308191b603020dd0623ab4` は `2026-09-15T08:14:21.752487Z` にsucceeded。[既存プレイ版](https://q-ash-pilgrim.juurooo.chatgpt.site) のreadbackはversion / source / deploymentが一致し、accessはcustom owner-only、owner 1、editor / group / external visitor 0のまま。別Site作成、audience変更、force push、認証情報保存は行っていない。
+
+この最終反映文書だけの変更ではfingerprintと単体版hashが同一なので再配信しない。自動証拠はNode VMのproduction main / Game / SaveStore / keyboard、SceneView / Soundscape呼出し境界、Three object構造、低層audio契約、build / package inclusionまで。production `createSceneView → TextureLoader → material` の実行、full Soundscapeでのdecode / start、WebGL pixels、browser DOM / CSS / native event、物理touch、実聴、実iOS / Android性能、30分human play、外部10作品比較、native packageは未確認。次の正確なcheckpointは、production `createSceneView` と`Soundscape`を通常entrypointから実行するtexture / audio bridge gateをfault injection付きで作り、正式preview経路が使える時点で同じsaveの画面・音・frame-timeを取得し、その後に最初のformal外部比較を一作品分行うこと。取得不能な証拠を合格扱いせず、制作は人間待ちを開始条件にしない。
+
 ## 2026-09-15 07:57 UTC — asset-first四遭遇、前向きC/D比較、レビュー修正（GitHub反映前）
 
 ### 継続分類、担当、期限判断
