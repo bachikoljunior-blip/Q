@@ -1,6 +1,6 @@
 {
   "formatVersion": 2,
-  "gameVersion": "0.19.0",
+  "gameVersion": "0.20.0",
   "fixedStepHz": 60,
   "viewport": {
     "width": 390,
@@ -92,6 +92,24 @@
           "solved": false,
           "reported": false,
           "cooldown": 0
+        },
+        "vaults": {
+          "ember-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "tide-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "gale-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "moss-vault": {
+            "entered": false,
+            "claimed": false
+          }
         },
         "runtime": {
           "version": 1,
@@ -250,7 +268,11 @@
           "enemy-26",
           "salt-guard",
           "salt-hound",
-          "salt-archer"
+          "salt-archer",
+          "ember-vault-warden",
+          "tide-vault-warden",
+          "gale-vault-warden",
+          "moss-vault-warden"
         ]
       },
       "plan": {},
@@ -1391,6 +1413,24 @@
           "reported": false,
           "cooldown": 0
         },
+        "vaults": {
+          "ember-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "tide-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "gale-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "moss-vault": {
+            "entered": false,
+            "claimed": false
+          }
+        },
         "runtime": {
           "version": 1,
           "time": 0,
@@ -1548,7 +1588,11 @@
           "enemy-26",
           "salt-guard",
           "salt-hound",
-          "salt-archer"
+          "salt-archer",
+          "ember-vault-warden",
+          "tide-vault-warden",
+          "gale-vault-warden",
+          "moss-vault-warden"
         ]
       },
       "plan": {
@@ -2545,6 +2589,24 @@
           "reported": false,
           "cooldown": 0
         },
+        "vaults": {
+          "ember-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "tide-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "gale-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "moss-vault": {
+            "entered": false,
+            "claimed": false
+          }
+        },
         "runtime": {
           "version": 1,
           "time": 0,
@@ -2702,7 +2764,11 @@
           "enemy-26",
           "salt-guard",
           "salt-hound",
-          "salt-archer"
+          "salt-archer",
+          "ember-vault-warden",
+          "tide-vault-warden",
+          "gale-vault-warden",
+          "moss-vault-warden"
         ]
       },
       "plan": {
@@ -3871,6 +3937,24 @@
           "reported": false,
           "cooldown": 0
         },
+        "vaults": {
+          "ember-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "tide-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "gale-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "moss-vault": {
+            "entered": false,
+            "claimed": false
+          }
+        },
         "runtime": {
           "version": 1,
           "time": 0,
@@ -4028,7 +4112,11 @@
           "enemy-26",
           "salt-guard",
           "salt-hound",
-          "salt-archer"
+          "salt-archer",
+          "ember-vault-warden",
+          "tide-vault-warden",
+          "gale-vault-warden",
+          "moss-vault-warden"
         ]
       },
       "plan": {
@@ -5720,6 +5808,24 @@
           "reported": false,
           "cooldown": 0
         },
+        "vaults": {
+          "ember-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "tide-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "gale-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "moss-vault": {
+            "entered": false,
+            "claimed": false
+          }
+        },
         "runtime": {
           "version": 1,
           "time": 0,
@@ -5877,7 +5983,11 @@
           "enemy-26",
           "salt-guard",
           "salt-hound",
-          "salt-archer"
+          "salt-archer",
+          "ember-vault-warden",
+          "tide-vault-warden",
+          "gale-vault-warden",
+          "moss-vault-warden"
         ]
       },
       "plan": {
@@ -7578,6 +7688,24 @@
           "reported": false,
           "cooldown": 0
         },
+        "vaults": {
+          "ember-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "tide-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "gale-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "moss-vault": {
+            "entered": false,
+            "claimed": false
+          }
+        },
         "runtime": {
           "version": 1,
           "time": 0,
@@ -7765,7 +7893,11 @@
           "enemy-26",
           "salt-guard",
           "salt-hound",
-          "salt-archer"
+          "salt-archer",
+          "ember-vault-warden",
+          "tide-vault-warden",
+          "gale-vault-warden",
+          "moss-vault-warden"
         ]
       },
       "plan": {
@@ -8188,6 +8320,24 @@
           "reported": false,
           "cooldown": 0
         },
+        "vaults": {
+          "ember-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "tide-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "gale-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "moss-vault": {
+            "entered": false,
+            "claimed": false
+          }
+        },
         "runtime": {
           "version": 1,
           "time": 0,
@@ -8375,7 +8525,11 @@
           "enemy-26",
           "salt-guard",
           "salt-hound",
-          "salt-archer"
+          "salt-archer",
+          "ember-vault-warden",
+          "tide-vault-warden",
+          "gale-vault-warden",
+          "moss-vault-warden"
         ]
       },
       "plan": {
@@ -8599,6 +8753,24 @@
           "reported": false,
           "cooldown": 0
         },
+        "vaults": {
+          "ember-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "tide-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "gale-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "moss-vault": {
+            "entered": false,
+            "claimed": false
+          }
+        },
         "runtime": {
           "version": 1,
           "time": 0,
@@ -8756,7 +8928,11 @@
           "enemy-26",
           "salt-guard",
           "salt-hound",
-          "salt-archer"
+          "salt-archer",
+          "ember-vault-warden",
+          "tide-vault-warden",
+          "gale-vault-warden",
+          "moss-vault-warden"
         ]
       },
       "plan": {
@@ -9051,6 +9227,24 @@
           "reported": false,
           "cooldown": 0
         },
+        "vaults": {
+          "ember-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "tide-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "gale-vault": {
+            "entered": false,
+            "claimed": false
+          },
+          "moss-vault": {
+            "entered": false,
+            "claimed": false
+          }
+        },
         "runtime": {
           "version": 1,
           "time": 0,
@@ -9208,7 +9402,11 @@
           "enemy-26",
           "salt-guard",
           "salt-hound",
-          "salt-archer"
+          "salt-archer",
+          "ember-vault-warden",
+          "tide-vault-warden",
+          "gale-vault-warden",
+          "moss-vault-warden"
         ]
       },
       "plan": {

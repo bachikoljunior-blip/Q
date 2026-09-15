@@ -67,3 +67,11 @@ PR #30時点は旧 `gathering-presentation.test.mjs` 6検証が通るようsourc
 PR #31では履歴負例をdone後段だけのduplicate、複数行reverse、2件目誤話者、2件目誤全文へ分解し、focus / release / rerenderと合わせて7件とした。7 mutationそれぞれで旧6検証が6/6通過し、新gateは7欠陥×二場面×二寸法の28/28を欠陥固有assertionで検出する。production側reverseを独立注入した再監査でもexit 1、`passed:false`、順序assertionで拒否した。fixture例外、compile失敗、別assertionの失敗、旧検証自体の失敗は検出に数えない。runの入力hash、経路、host時間、失敗診断は `artifacts/gathering-runtime-report.json` に保存し、save欠落・parse失敗・hash不一致もreport初期化後の `try/finally` 内で捕捉する。3つの異常入力を別processで入れ、exit失敗後も `passed:false` と欠陥別診断をJSONへ残す回帰試験を通す。CIは `Q-gathering-runtime-evidence` をalways-uploadし、JSONがなければupload stepも失敗する。
 
 このgateで確認したのは本番main、Game、SaveStore、lifecycle listener、生成UIとSceneView呼出し境界の接続。browser DOM/CSS/hit test/native event、実SceneView/WebGLのカメラ画面、物理touch、実聴、実機性能、人間の実プレイ、外部比較は未確認のまま。次の自動作業はgate件数を増やすのでなく、[制作方法](PRODUCTION_METHOD.md)で定義したasset-firstの同等scope完成縦切り二本A/Bを、通常entrypoint→移動→戦闘→目的interaction→結果→save→fresh-runtime reloadまで実装し、source / buildの非zero asset差分、wall time、失敗、増加bytes、再利用率を測ること。保存やゲームルールを短絡する一般向け機能は追加しない。人間の準備は開始条件にせず、取得不能な証拠は未確認として残す。
+
+## asset付きvaultを通常entrypointから検査する
+
+`npm run test:vaults` はproduction `src/main.js` をbundleし、熾火・潮錆・風蝕・苔影の四vaultを390×844 / 844×390の二数値寸法で別VMへ起動する。titleから新しい旅を開始し、keyboard listenerで入口まで移動、番兵の複数hit戦闘とswing、memory interaction、result、save、title復帰、同じraw saveを別fresh VMのContinueへ通す。四vault×二寸法の8 scenario / 8 reloadをCI artifact `Q-vault-runtime-evidence` に残し、source fingerprintとscenario結果を対応させる。
+
+SceneViewとSoundscapeは呼出しを記録するdevice境界であり、WebGL pixelやdevice audioを出さない。数値viewportはCSS layout、native PointerEvent、物理touchの証拠ではない。別試験でThree objectの地形追従・壁・prop・4構造pose、低層file audioのfetch / decode / connect / start、同key待ちの一回start、ambient retry gateを確認するが、production `TextureLoader` のpixel表示、production `Soundscape` から聞こえる出力、スマートフォン性能は未確認とする。
+
+`node scripts/generate-vault-assets.mjs --verify` は14 binary / 891,845 bytesを再生成結果、provenance、SHA-256と照合する。`test:artifacts` は同じ14 assetのsource / dist / fixed stage / standalone埋込みbyteが一致することを要求する。これらは生成手順とbyte identityであり、美術・音響品質、法的著作者性の独立判定、指定作品との比較ではない。

@@ -1,5 +1,6 @@
 import {angleDelta,distance,groundAt,heightAt} from './core.js';
 import {queryObstacles,segmentCylinder} from './spatial.js';
+import {vaultByWarden} from './vault-slices.js';
 
 const labels={boss:'灰冠の番人',ranger:'弓兵',wolf:'灰を喰う獣',knight:'火を失った兵'};
 const round=value=>Math.round(value*1000)/1000;
@@ -32,7 +33,7 @@ function enemyThreat(game,enemy,contactOrder){
   const kind=radial?'shockwave':ranged?'bow':'melee';
   const impactTime=(enemy.state==='windup'?enemy.timer:0)+(flight?.impactTime??flight?.timeToImpact??0);
   const damage=radial||enemy.type==='boss'?34:enemy.type==='wolf'?14:enemy.type==='ranger'?20:22;
-  return {hazardId:enemy.id,sourceId:enemy.id,contactOrder:ranged?game.enemies.length+game.projectiles.length+contactOrder:contactOrder,contactPhase:ranged?'projectile':'enemy',sourceType:enemy.type,source:labels[enemy.type]||'敵',position:{x:enemy.x,y:enemy.y+(enemy.type==='boss'?2.2:enemy.type==='wolf'?.8:1.2),z:enemy.z},stage:enemy.state,kind,response,damage,lethal:damage>=player.hp,direction:radial?'周囲':directionFrom(player,enemy),impactTime,timeToImpact:round(impactTime),distance:round(d)};
+  return {hazardId:enemy.id,sourceId:enemy.id,contactOrder:ranged?game.enemies.length+game.projectiles.length+contactOrder:contactOrder,contactPhase:ranged?'projectile':'enemy',sourceType:enemy.type,source:vaultByWarden(enemy.id)?.wardenName||labels[enemy.type]||'敵',position:{x:enemy.x,y:enemy.y+(enemy.type==='boss'?2.2:enemy.type==='wolf'?.8:1.2),z:enemy.z},stage:enemy.state,kind,response,damage,lethal:damage>=player.hp,direction:radial?'周囲':directionFrom(player,enemy),impactTime,timeToImpact:round(impactTime),distance:round(d)};
 }
 
 const projectileBody=actor=>({

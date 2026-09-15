@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-15T08:01:00Z",
+  "task": {
+    "canonicalId": "/root/ultra_q_asset_slice",
+    "requestedReasoningEffort": "ultra",
+    "directReviewers": [
+      {
+        "task": "q_slice_architecture_review",
+        "forkTurns": "none",
+        "model": "omitted",
+        "reasoningEffort": "ultra",
+        "role": "read-only architecture and state review"
+      },
+      {
+        "task": "q_asset_validation_review",
+        "forkTurns": "none",
+        "model": "omitted",
+        "reasoningEffort": "ultra",
+        "role": "read-only provenance, artifact, and timing review"
+      }
+    ]
+  },
+  "continuation": {
+    "classification": "stopped-then-resumed",
+    "basis": "Remote main was a clean, fully integrated checkpoint with no current writer or unmerged current-game implementation, while the fixed completion goal remained unmet."
+  },
+  "git": {
+    "base": "411f3c55aa3ebf8dc167a7ab6ca89673fcd16486",
+    "cFreeze": "da5f4db9eef4f0db20ed887203de07527fd1e4a0",
+    "dFreeze": "79a18c9c241fe1704377f7fbbf54fe782fd31dc6",
+    "reviewRepair": "ab007cfbcadcc73633dd6d944a31f39a251af140",
+    "integrationHead": null,
+    "pullRequest": null,
+    "mergeCommit": null,
+    "remoteMain": null,
+    "ambientAbaRepair": "db77361a8736fa658a4349e6529adaa16dfcf4bb",
+    "implementationChangedFiles": [
+      ".github/workflows/validate.yml",
+      "package-lock.json",
+      "package.json",
+      "release/Q-ash-pilgrim.html",
+      "release/combat-replays/combat-readability.json",
+      "release/combat-replays/touch-input-comparison.json",
+      "scripts/compare-combat-outcomes.mjs",
+      "scripts/generate-vault-assets.mjs",
+      "scripts/package.mjs",
+      "scripts/verify-artifacts.mjs",
+      "scripts/verify-vault-runtime.mjs",
+      "src/assets/vaults/ember-ambient.wav",
+      "src/assets/vaults/ember-stone.png",
+      "src/assets/vaults/gale-ambient.wav",
+      "src/assets/vaults/gale-stone.png",
+      "src/assets/vaults/moss-ambient.wav",
+      "src/assets/vaults/moss-stone.png",
+      "src/assets/vaults/provenance.json",
+      "src/assets/vaults/shared-alert.wav",
+      "src/assets/vaults/shared-claim.wav",
+      "src/assets/vaults/shared-impact.wav",
+      "src/assets/vaults/shared-seal.wav",
+      "src/assets/vaults/shared-step.wav",
+      "src/assets/vaults/shared-swing.wav",
+      "src/assets/vaults/tide-ambient.wav",
+      "src/assets/vaults/tide-stone.png",
+      "src/audio.js",
+      "src/combat-presentation.js",
+      "src/core.js",
+      "src/file-audio-bank.js",
+      "src/main.js",
+      "src/runtime-state.js",
+      "src/scene.js",
+      "src/vault-asset-urls.js",
+      "src/vault-audio-cues.js",
+      "src/vault-scene.js",
+      "src/vault-slices.js",
+      "src/vault-textures.js",
+      "tests/expedition.test.mjs",
+      "tests/main-runtime-fixture.mjs",
+      "tests/static-scene-fixture.mjs",
+      "tests/static-transforms.test.mjs",
+      "tests/vault-assets.test.mjs",
+      "tests/vault-file-audio.test.mjs",
+      "tests/vault-runtime-scenarios.mjs",
+      "tests/vault-runtime.test.mjs",
+      "tests/vaults.test.mjs",
+      "vite.config.js"
+    ]
+  },
+  "method": {
+    "name": "asset-first equal-scope prospective C/D vertical-slice comparison",
+    "invalidComparison": "The earlier Ember/Tide timing is inadmissible because Tide-specific generation work existed before the claimed B start.",
+    "clock": "Date.now wall clock on one host; not monotonic; no clock adjustment was observed.",
+    "tAsset": null,
+    "tAssetStatus": "missing: asset-only interval was not separately instrumented and is only bounded within each slice interval",
+    "c": {
+      "id": "gale-vault",
+      "startUtc": "2026-09-15T07:32:11.533Z",
+      "endUtc": "2026-09-15T07:40:52.362Z",
+      "elapsedMs": 520829,
+      "sourceFingerprint": "sha256:91a2f7aba74ad6be3c7211cd8914305dbf2cf83c45bf29fee3f63dff60e18d70",
+      "assetsAtFreeze": {
+        "count": 12,
+        "bytes": 698073
+      },
+      "sliceSpecificBytes": 193496,
+      "standalone": {
+        "bytes": 4211575,
+        "sha256": "ec5045050bd3959d6258bbf74374462d36a9e1d854776c773564f2f19c3f04a0"
+      },
+      "formalFullGateFailures": 0,
+      "formalRepairLoops": 0,
+      "focusedOrReviewRepairIterations": 4
+    },
+    "d": {
+      "id": "moss-vault",
+      "startUtc": "2026-09-15T07:41:03.122Z",
+      "endUtc": "2026-09-15T07:44:41.068Z",
+      "elapsedMs": 217946,
+      "sourceFingerprint": "sha256:d8b8e50efd642b312ee9dddbe0907402eef6f6296983f2f391a9ca3f4616b8e1",
+      "assetsAtFreeze": {
+        "count": 14,
+        "bytes": 891845
+      },
+      "sliceSpecificBytes": 193772,
+      "standalone": {
+        "bytes": 4470572,
+        "sha256": "7a2931420673ad989ee984391240a5572b42911c9eae1da8eadc0ef75d48607b"
+      },
+      "formalFullGateFailures": 0,
+      "formalRepairLoops": 0,
+      "focusedOrReviewRepairIterations": 2
+    },
+    "comparison": {
+      "sumElapsedMs": 738775,
+      "cStartToDEndMs": 749535,
+      "dToCRatio": 0.4184598015855492,
+      "targetRatio": 0.75,
+      "passesSpeedTarget": true,
+      "dStandaloneDeltaBytes": 258997,
+      "assetReuse": {
+        "unchangedIds": 6,
+        "totalIds": 8,
+        "ratio": 0.75,
+        "unchangedBytes": 117570,
+        "totalBytes": 311342,
+        "byteRatio": 0.37764077382486333
+      },
+      "componentReuse": {
+        "unchangedCount": 8,
+        "totalCount": 12,
+        "ratio": 0.6666666666666666,
+        "unchanged": [
+          "src/core.js",
+          "src/main.js",
+          "src/runtime-state.js",
+          "src/scene.js",
+          "src/audio.js",
+          "src/file-audio-bank.js",
+          "src/vault-audio-cues.js",
+          "src/vault-textures.js"
+        ],
+        "edited": [
+          "scripts/generate-vault-assets.mjs",
+          "src/vault-slices.js",
+          "src/vault-asset-urls.js",
+          "src/vault-scene.js"
+        ]
+      },
+      "combinedItemReuse": {
+        "unchangedCount": 14,
+        "totalCount": 20,
+        "ratio": 0.7
+      },
+      "dedicatedDStateMachineAdded": false
+    },
+    "integration": {
+      "initialSliceStartUtc": "2026-09-15T06:33:34.925Z",
+      "requiredCiCompletedUtc": null,
+      "elapsedMs": null,
+      "targetMs": 14400000,
+      "passesTarget": null
+    },
+    "strictAdoption": "no-go pending required CI and missing T_asset; the prospective D/C reuse-speed hypothesis passed locally"
+  },
+  "payload": {
+    "sourceFingerprint": "sha256:58024fad006c1d91125df3bb46ab4193df5537feddfe73b7c5a6a3160d240517",
+    "standalone": {
+      "bytes": 4471098,
+      "sha256": "c62c86c20e71a7695be4b9f83365c02b76bdee7f9e21ee8637b1b4cf66459d33"
+    },
+    "assets": {
+      "binaryCount": 14,
+      "binaryBytes": 891845,
+      "pngTextures": 4,
+      "ambientWav": 4,
+      "sharedSfxWav": 6,
+      "provenanceBytes": 5432
+    },
+    "generatorSha256": "510e879ff8b04acc587aa564dd87f03f68f129e20b0f66fc40699bc57a5fe506",
+    "provenanceSha256": "99ae69f4532462911c610a67a6e8418cac5d1a180afcbb4015bbd430b8c2335b"
+  },
+  "finalLocalGate": {
+    "passed": true,
+    "unitTests": {
+      "passed": 181,
+      "failed": 0
+    },
+    "mainRuntime": {
+      "scenarios": 16,
+      "negativeControls": 3,
+      "detections": 6
+    },
+    "gatheringRuntime": {
+      "scenarios": 4,
+      "launchPaths": 8,
+      "reloads": 8,
+      "negativeControls": 7,
+      "detections": 28
+    },
+    "vaultRuntime": {
+      "slices": 4,
+      "numericViewportScenarios": 8,
+      "freshRuntimeReloads": 8
+    },
+    "journeySeconds": 119,
+    "forgeSeconds": 103,
+    "session": {
+      "minutes": 30,
+      "fixedSteps": 108000,
+      "reloads": 138,
+      "objectives": 81,
+      "deaths": 0
+    },
+    "expeditionRoutes": [
+      "north",
+      "south"
+    ],
+    "combatScenarios": 9,
+    "touchMatches": {
+      "portrait": "20/20",
+      "landscape": "20/20"
+    },
+    "build": {
+      "modules": 62,
+      "initialEntryKiB": 138,
+      "jsChunks": 3,
+      "totalJsKiB": 827,
+      "models": 3,
+      "vaultAssets": 14
+    },
+    "artifactIdentity": "source, dist, staged output, and standalone asset bytes agree"
+  },
+  "evidenceBoundary": {
+    "proves": "Production main/Game/SaveStore/keyboard flow inside a Node VM, selected vault progress across fresh-runtime reload, deterministic asset provenance bytes, scene object structure, low-level fetch/decode/connect/start contract, build and standalone inclusion.",
+    "doesNotProve": [
+      "production WebGL pixels",
+      "browser DOM/CSS layout or native events",
+      "physical touch",
+      "decoded or heard device audio",
+      "real iOS/Android performance",
+      "human play",
+      "external quality comparisons",
+      "native packaging",
+      "independent legal authorship determination"
+    ]
+  },
+  "deadline": {
+    "date": "2026-09-20",
+    "result": "NO-GO / evidence insufficient",
+    "completionAreasEndToEndPassed": "0/7",
+    "formalTargetComparisons": "0/10",
+    "basis": "One chapter and one 0.37148 km2 gross rectangular-bound world remain far below the fixed target; net playable area, multi-chapter content, commercial-grade art/animation/acting/audio, native packaging, screen/touch/audio/device/human evidence, and all ten external comparisons remain absent. The measured slice speed cannot be extrapolated to those gaps."
+  },
+  "site": {
+    "project": "appgprj_6aa6871ebd648191802ba2398d06115b",
+    "url": "https://q-ash-pilgrim.juurooo.chatgpt.site",
+    "currentVersion": 20,
+    "deployment": "appgdep_6aa8a98615f88191bd6a117f0e235600",
+    "status": "pending changed-payload deployment",
+    "audienceMustRemain": "custom owner-only; owner 1, editor/group/external 0"
+  },
+  "reviewRepair": {
+    "initialFindingsFixed": 6,
+    "introducedAbaRaceFoundAndFixed": true,
+    "focusedGateFirstFailure": "warning-name regression fixture lacked the authored facing angle; fixture repaired",
+    "fullSharedGateRunsAfterReview": 2,
+    "finalFullSharedGatePassed": true
+  }
+}

@@ -23,11 +23,11 @@
 
 | 領域 | 確認する具体的な体験 | 現状 |
 |---|---|---|
-| 操作と戦闘 | 複数指で移動・視点・防御を両立でき、被弾理由と反撃機会が分かる | 複数脅威とproduction pointer adapterは実HUD bridgeと固定再生で検証。DOM hit test・実画面・物理複数指・実機は未確認 |
-| 探索と自由 | 視界・地形・音から目的地を見つけ、複数の経路と手段を選べる | 一地域の初期実装 |
+| 操作と戦闘 | 複数指で移動・視点・防御を両立でき、被弾理由と反撃機会が分かる | 既存戦闘と番兵4体、production pointer adapter、vault 8経路をNode固定再生で検証。DOM hit test・実画面・物理複数指・実機は未確認 |
+| 探索と自由 | 視界・地形・音から目的地を見つけ、複数の経路と手段を選べる | 一地域の初期実装にvault 4か所を追加。net可遊面積と初見の発見性は未測定 |
 | 世界の反応と物語 | 行動と選択が住民、環境、報酬、その後の会話へ反映される | 小規模。制作継続 |
-| 美術・動き・音 | 観察と操作に耐える人物・風景・演技・効果音・音楽を一貫して提示 | 一部人物を骨格付き素材へ移行。画面未確認、他は簡易形状・手続き的な音 |
-| 安定性 | 中断復帰、回転、長時間プレイ、保存の持ち運びで進行を失わない | ロジック確認のみ。実機計測なし |
+| 美術・動き・音 | 観察と操作に耐える人物・風景・演技・効果音・音楽を一貫して提示 | CC0 GLB 3、生成PNG 4、生成PCM WAV 10をbuildへ接続。画面・実聴は未確認、他は簡易形状・手続き生成 |
+| 安定性 | 中断復帰、回転、長時間プレイ、保存の持ち運びで進行を失わない | 番兵撃破即時save、旧座標移行、fresh-runtime vault reloadと30分相当logicを確認。実機計測なし |
 | 比較の根拠 | 指定の10作品について比較する場面と評価軸を明示し、実プレイの評価を残す | 未実施。自己採点で代用しない |
 | 配布 | 遊べるビルドがソースと一致し、対象端末から起動できる | 所有者限定Web版を配信。実機確認・ネイティブ版は未完 |
 
@@ -139,3 +139,11 @@ pointer capture失敗時に要素外で指を離すと攻撃長押し・移動�
 PR #31で期待する3行をproduction表示から独立して全文固定し、beat 1の1行、beat 2の2行、done直後と別runtime reloadの3行を、件数のequal、話者・全文multisetと順序付き配列のdeepEqualで検査する。focus、focus解除、rerender、done後段duplicate、reverse、2件目誤話者、2件目誤全文の7 mutationそれぞれで旧6検証が6/6通過し、新gateが二場面×二寸法の28/28を欠陥固有assertionで検出した。実ゲームsourceとbuild入力は変更しておらず、v0.19.0のゲーム成果は同じ。
 
 これはNode内のElement/EventTarget、SceneView呼出し記録、音呼出し記録による入口接続の証拠。production SceneView / WebGL、DOM/CSS hit test、native event、物理touch、実聴、実機性能、人間の実プレイ・外部比較ではない。完成表7領域のend-to-end合格は0/7、指定10作品との取得済み比較は0/10で、期限判断はNO-GO。次は人間の準備を待たず、[制作方法](PRODUCTION_METHOD.md)で同等scope・完走経路・wall time・repair / reuse定義を固定したasset-first完成縦切り二本A/Bを実source / buildへ入れ、制作速度と再利用率を測る。
+
+## 0.20.0で進めた範囲
+
+熾火・潮錆・風蝕・苔影のvault四か所を追加した。各所は天井なしの環状壁と入口、brazier 4 + stele 4の配置、theme別の番兵、4構造pose、固有memory result、ambient WAV 1と共有SFX WAV 6を持つ。PNG 4、ambient WAV 4、SFX WAV 6はrepository内の決定論的generatorから作り、generator・個別byte数・SHA-256・project-original宣言をprovenanceへ固定した。通常title→keyboard移動→combat→memory→result→save→別fresh VM reloadを四vault×二数値寸法で完走した。
+
+独立reviewで見つかった、claimed / enteredの矛盾save、番兵撃破直後の保存欠落、旧座標と新壁の衝突、ambient失敗後のretry抑止、decode待ちSFXの多重start、警告名の一般化を修正。さらに初回修正が作ったambient退出・同theme再進入のABA raceを再reviewで検出し、loop sourceを世代ごとに分けた。最終local gateは181/181、vault 8/8、既存chapter / side quest / 30分相当save / combat / touch / build / package / artifact exactnessまで成功した。
+
+clean prospective比較はC=520,829 ms、D=217,946 ms、比0.41846で再利用速度条件0.75以下を通った。ただし最初のEmber/Tide計時は事前作業混入で無効、`T_asset` は欠測。WebGL画面、browser CSS / native event、物理touch、実聴、iOS/Android性能、人間の30分実プレイ、外部比較、native packageは未確認・未完。完成表7領域はend-to-end 0/7、指定10作品とのformal comparisonは0/10で、期限判断はNO-GOのまま。
