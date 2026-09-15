@@ -1,5 +1,25 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-15 v0.18.0 — batch予測のmain・所有者限定Site反映完了
+
+### 復旧成果、検証済みtree、通常統合
+
+- 単独Ultra最終担当 `/root/ultra_q_v18_finalize` は、消失した前担当が残したcleanな実装commit `3a37ef2b39e112fa4654fa0f1b1ff66486ce8436`（base `ab7eebfb5b296fa28cbddf6cfda5b95099e5e9ef`）から再開した。実引数は `requested_reasoning_effort=ultra`、`fork_turns=none`、model省略。復旧理由は引継ぎ済みの利用上限停止を越えて断定せず、同じ機能を重複実装していない。監査文書を含むlocal candidateは `2719955406cb551778b7b47730db5094abd7b961`、remote PR headは `4da11d1c8f0427d4b721c3622311d18b78fd2e39` で、treeはいずれも `feb3c68803b623114d53e18e85aa6cee7d60f9c5` と一致した。ローカルGitの通常pushは認証用username不在でexit 128となったため、認証情報を保存せず接続済みGitHub Git Data APIで同じtreeをnon-force更新した。
+- PR #24は14ファイル、+424/-212。branch pushのValidate game run `34912478157` / job `104202803989`、PR run `34912533324` / job `104202978873` はともにsuccess。PR CIはcheckout/setup、`npm ci`、`npm test`、journey、crossing、forge、session、expedition、build、package、artifact検査、tracked単体版一致、artifact uploadの全stepがsuccessだった。merge直前にbase `ab7eebf`、expected head `4da11d1`、mergeable、CI successを再取得し、forceや保護回避なしで通常mergeした。旧PR #3/#13はopen・unmergedのまま使用していない。
+- 2026-09-15 00:18:35 UTCのmerge後mainは `9572430c7ebb1c35106f64da98ebc2bbf9ac4176`、parentsは `ab7eebf` と `4da11d1`、treeは検証済み `feb3c688` と完全一致し、実装headを祖先に含む。mainのValidate game run `34912646082` / job `104203333323` とPages run `34912645550` はsuccess。Pages jobs `104203334717`、`104203439197`、`104203439259` もsuccessだった。
+- 最終local検証は `npm ci` exit 0、焦点6/6、`npm test` 133/133、journey/crossing/forge/session/expedition、`review:combat` 9/9、build、package、artifact検査がすべてexit 0。30分sessionは108,000 step、138 reload、死亡0、objectives 81、max save 8,112 bytes。単体版は3,259,276 bytes、SHA-256 `fdc6fb819d94e4e15f8c1211f88608d734ed9ceab0fbb2596bcf138ab4215efa`。一般24,000条件とproduction候補へ寄せた48,749条件の一時逐次差分監査も対象・接触時刻の不一致0だった。詳細な原結果と、これらが画面・実機証拠ではない区別は直下の最終監査節に固定した。
+
+### owner-only Site version 19とreadback
+
+- 検証済みmain `9572430` を既存project `appgprj_6aa6871ebd648191802ba2398d06115b` の既存source `main` へ `81d788e` からnon-force pushし、直後のlocal `HEAD` とremote branchが完全な `9572430c7ebb1c35106f64da98ebc2bbf9ac4176` で一致した。短期credentialはper-command HTTP headerだけに使用し、remote URL、Git設定、ファイルへ保存していない。execution profile読取は `managed-linux`、`configured:false` で、source・依存関係の変更なし。
+- 検証済み固定stageを公式Sites packagerで梱包した。初回は環境に `/tmp` がなく `mktemp` でexit 1だったため、workspace内の一時領域を明示して同じpackagerを再実行しexit 0。local gzip archiveは961,356 bytes、SHA-256 `d49a3896382c7cff36489c45a94f8edcaec195a1718fbb0b501dc9a4703641d6`。Sites保存readbackではversion 19、ID `appgprj_6aa6871ebd648191802ba2398d06115b~appgver_730a9ab626488191817e73858678a208`、source `9572430c7ebb1c35106f64da98ebc2bbf9ac4176`、canonical archive `sha256:365d3f749df8eced0df641bcca81645540c42653850c925fdb699ad60fe49bff`、11 files、2,662,400 bytes。local gzip値とbackend保存値を同じhash/sizeとは扱わない。
+- 既知のowner-only Siteにprivate deployを実行し、deployment `appgdep_6aa8909787448191bd7f33fce0557f52` を同じproject/version IDでreadbackした。2026-09-15 00:26:22 UTCに `succeeded`、failureなし、production URLは既存の `https://q-ash-pilgrim.juurooo.chatgpt.site`。private操作の所有者限定検査を通過しており、別Site作成、公開範囲変更、認証情報保存はない。automationは引継ぎ済みのgame2=false、Q=true、survival=falseが指定と一致したため更新していない。
+
+### 採否、期限判断、残る確認
+
+- 採用したのは、現行HUDで既に得た人物交差48件を再利用し、障害物bodyをbatch内共有し、人物または障害物への接触候補を本番判定へ限定して戻す案。production計時fixtureは `obstacles=[]` で、壁fixtureは正しさだけを確認した。`projectileContact` は761→48回だが地形713区間・1,474 sampleは手動判定を継続する。同じ現行HUDへv0.17逐次相当forecasterを注入した比較であり旧成果物そのものではない。完全一致を実測したのはHUD文字、hazard ID、impact frame、画面方向、decision、serialized game state。引継ぎ測定1.2675→0.9922 ms/回は21.7%減・約1.278倍、独立再測定2 runは1.1137→0.8500（23.7%、1.310倍）と1.1176→0.8800（21.3%、1.270倍）、各9/9勝ち。固定改善率、端末FPS、体験品質へ外挿しない。
+- main・Site反映後も、2026-09-20までに指定10作品に劣らない完成品質へ到達できるという期限判断は**根拠不足**。複数章・地域・屋内、商用品質の造形・アニメーション・演技・音響、native配布、正式WebGLピクセル、縦横の物理タッチ、iOS/AndroidのFPS・memory・電力・発熱・30分実プレイ、外部プレイヤー同条件比較の残量と実測制作速度がない。正式previewは前担当の一度のmailbox不在失敗から再試行・迂回していない。次は正式経路復旧時に同じ48矢/3脅威saveを画面・タッチ・音・実機・外部比較へ移し、復旧しなければ正当な実機/外部評価経路または同一場面のnative候補との所要時間比較を優先する。logic試験数や局所速度だけで完成品質の不足を埋めない。
+
 ## 2026-09-15 v0.18.0 — 単独Ultra最終監査（main反映前チェックポイント）
 
 ### 復旧、最新正本、停止・期限判定
