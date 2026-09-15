@@ -1,5 +1,37 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-15 — 人間不介入の工程修正と実entrypoint検証（main反映前）
+
+最新ユーザー原文は「人間は介入しません」。人間の端末・アカウント・スクリーンショット・評価者の準備待ちを、制作全体の開始・継続条件から外す。過去の本ファイルにある「確保できなければ停止判断へ上げる」という次作業は、AGENTS.mdの2026-09-15指定と本節で更新する。画面・実機・実聴・外部評価は未確認を維持し、自動検証で合格に代用しない。
+
+### 継続確認と方式判断
+
+正規git fetchと接続済みGitHubで最新main `dfa9fb076d66553021c9f9d8687a1c9e123ba25f`、tree `75eb12264c6deac780da7d7aabf7313a5fad42ff` を再取得した。PR #26/#27とゲーム実装main `688bee48ac6b8d753133541b3e727b4629ee2e34` が包含済み。最新mainのValidate run `34920572965` とPages run `34920572016` はsuccess。既存作業場所はcleanで、remote branchに新しい未反映制作はなく、open PRは対象外の旧#3/#13だけ。これらはmergeしない。前担当の完了報告と親の排他的引継ぎを受け、同じゲームの独立した検証単位を継続する。外部の全プロセス状態は観測できず、ローカルpsも/proc不在で取得不能だったため、全環境の停止まで断定していない。
+
+継続確認直後の期限評価は**根拠不足（NO-GO）**。2026-09-20までにElden Ring、The Witcher 3、Breath of the Wild、Skyrim、Red Dead Redemption 2、Ghost of Tsushima、Cyberpunk 2077、Horizon Forbidden West、Dragon’s Dogma 2、Kingdom Come: Deliverance IIに劣らない完成品質へ到達できると、残量・実測速度・手戻り・未検証と配信待ちを含め根拠付きに言えない。複数章・地域・屋内、美術・演技・音響、native配布と7受入領域の証拠が残る。人間を待てば解消するという前提と、純粋関数/source文字列検査が実アプリ接続を代表するという前提を疑った。
+
+正式skillの調査ではcloud browser用の正規実行toolは存在するが、それだけで前回のpreview監督サービス不在が復旧した証拠にはならない。Site所有者の親が依頼した正式statusを一回実行し、exit 1、原文 `sites-previewd mailbox is unavailable at /tmp/sites-previewd/requests: No such file or directory (os error 2)` を返した。親はstart/stop/環境変更をせず、子もSite運用を代行していない。前回失敗から新しいstart・直接server・別URL・browser/CI移転を行わず、この不足を人間へ移さず、ゲームsourceのローカル/CI実行として許可され、以前から利用できるNode検証を採用した。親の正規Site readbackはactive、version20、custom accessでowner一人・editors/groups/external visitors 0。既存deploymentはsucceeded、failure_message=nullで未完了配信はない。version readbackのsourceは `688bee48ac6b8d753133541b3e727b4629ee2e34`、archiveは `sha256:8018ab2ec60f186aa168c6ba3ff4d4eff4037c12f479130ddc10d8c4b9ff9b80`、12 files / 2,672,640 bytes。
+
+### 実装と比較結果
+
+本番 `src/main.js` を既存esbuildでbundleし、実際のイベント登録とGame・保存・入力・lifecycleを実行する統合fixtureを追加した。HTML要素・SceneView・Soundscapeは明示した限定fixtureで、未知APIや存在しない要素を自動で通さない。開始、移動/視点/攻撃、中断・再開、BFCache、非同期scene/save、無効file、読込失敗、storage/gamepad例外を2入力寸法で16/16確認。模擬counterを端末性能として保存しない。実装は `tests/main-runtime-fixture.mjs`、`tests/main-runtime-scenarios.mjs`、`tests/main-runtime.test.mjs` と `scripts/verify-main-runtime.mjs`。
+
+同じsourceへ「開始後に中断を無視」「遊戯中save読込後に中断を無視」「mainからpointer所有権を解除しない」の3欠陥を一箇所ずつ入れた負例を比較。隔離copyの既存touch/lifecycle 9検証は3条件とも通過した一方、実entrypoint検証は3条件×2入力寸法の6/6をassertionで検出した。実ゲームに3不具合を新規発見したという結果ではない。既存検証の盲点を具体的に検出できたので、この工程を採用する。全画面・全不具合の保証ではない。
+
+`npm ci` は16 packages・12秒でexit 0。`npm test` は159/159、失敗0、Node測定2.807秒。初回の新規16検証だけの測定は1.312秒。最初の比較runはbundle 25.501 ms、16条件合計1,080.100 ms、旧9検証は各143.542–150.379 ms、該当負例検出は各41.896–100.075 ms。測定範囲が違うため速度倍率を出さない。03:06:11–03:11:56 UTCの観測区間は5分45秒で、調査・初期実装・Promise待ち順の修正・16検証成功を含む。文書、独立レビュー、全CI、main反映までの所要時間や、全完成範囲の制作速度ではない。
+
+手戻りはfixture側で続行handlerのPromise完了を待ってからsceneを解決しようとした待ち順の誤り。scene解決とhandler完了待ちを正しい順へ修正し、非同期待ち5秒とworkflow10分の上限、失敗JSON保存を追加した。ゲームsourceをfixtureへ合わせて書き換えていない。文書patchの行一致失敗も適用前に止まり、正しい文脈へ修正した。独立レビューで、npm testが先に失敗すると新しい報告工程へ進めず失敗JSONを残せないCI順序を指摘された。報告を作る新gateとalways uploadをnpm testの前へ移し、既存必須工程を削除せず修正した。
+
+CIは既存 `Validate game` の読取権限と全必須工程を維持し、新検証・負例比較・`Q-main-runtime-evidence` artifactを追加。AGENTS、README、COMPLETION、PRODUCTION_METHOD、RECOVERYには人間待ちを外す規則と証拠境界を保存した。実行方法と具体比較は `docs/AUTONOMOUS_VALIDATION.md`。
+
+### 担当、配信、残る項目
+
+単独の計画・調査・実装・検証・判断・統合・報告担当は `/root/ultra_q_no_human`。親が実引数 `reasoning_effort="ultra"`、`fork_turns="none"`、model省略でspawnして受理された。独立読取レビュー担当 `/root/ultra_q_no_human/autonomous_review` も同じ実引数で受理され、差分・方法・検証の監査を担当する。実効推論強度は外部独立測定できないため、受理された指定の事実として記録する。親は連絡と所有者専権の機械的読取だけを担当し、新機能、素材制作、Site再配信は今回不要。
+
+ゲームsource、public、HTML、package/lock、Vite設定、build identity/package script、追跡単体版の差分は0。source fingerprintは前回配信と同じ `sha256:540218237d5b40d8907935df41e009808af7ba747c0cc26d1c41373905413bb7`。したがってgame version 0.19.0と既存owner-only Site version20（source `688bee48ac6b8d753133541b3e727b4629ee2e34`、deployment `appgdep_6aa8a98615f88191bd6a117f0e235600` の前回succeededを今回もreadback）を維持し、不要なSite保存・再配信をしない。今回の変更をゲーム機能改善や新配信として数えない。automationの引継ぎ状態game2=false / Q=true / survival=falseは変更せず、新規作成・再保存もしない。
+
+独立最終レビューはGO。別担当の再実行も16/16、失敗0、1.161秒で成功した。意図的欠陥を隔離copyに入れて検証script自体を実行し、exit 1でもJSONが残り `passed:false` / `ERR_ASSERTION` になることを確認した。5秒は非同期待ちの上限であり、同期VM無限loopを割り込む保証ではない。その場合の最終上限は既存workflowの10分。この時点で未完了なのは通常PR/全必須CI/mergeとremote main包含の確認。main前の期限判断は引き続き根拠不足。自動検証の接続証拠が増え、人間待ちによる制作全体の停止条件は外れたが、正式WebGL画面、browser DOM/hit test/native PointerEvent、物理touch、実聴、iPhone/AndroidのFPS・メモリ・電力・発熱、30分実プレイ、外部player比較は未確認で、残量と全工程の実測速度は足りない。次はこの確定単位をmainへ反映し、その後、既存の徒歩獲得saveを入力に相談UI→SceneViewの実呼出しを同じ自動工程で検査する。正式画面経路に復旧の実証拠が出た場合は公式手順に戻す。人間への準備依頼で終えない。
+
 ## 2026-09-15 v0.18.0 — batch予測のmain・所有者限定Site反映完了
 
 ### 復旧成果、検証済みtree、通常統合

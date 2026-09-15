@@ -57,6 +57,7 @@ Node.js 22.12以降または対応する新しい版を使います。この制�
 npm ci
 npm run dev
 npm test
+node scripts/verify-main-runtime.mjs
 npm run test:journey
 npm run test:crossing
 npm run test:forge
@@ -74,6 +75,8 @@ npm run test:artifacts
 開発サーバーはViteの出力するURLを開きます。通常環境でスマホ確認する場合は同じネットワークからPCのアドレスへ接続します。相談の新旧表示を同じ条件で確認するための [自動徒歩で生成した検証用セーブ](release/review-saves/README.md) もあります。通常の記録を先に書き出してから読み込んでください。戦闘表示と入力結果は [再現可能な戦闘比較記録](release/combat-replays/README.md) で同条件に揃えられます。production adapterの入力監査は [タッチ入力監査](docs/TOUCH_INPUT_AUDIT.md) に記録しています。いずれも実画面・物理タッチ・面白さの評価を代用するものではありません。
 
 公開用の静的出力は `dist/`、外部依存が不要な単体版は `release/Q-ash-pilgrim.html` です。Sourcesと生成物を変更したら両方を更新してください。
+
+制作は人間の準備を開始条件とせず、許可済みの自動工程で進めます。本番入口の開始・保存・中断復帰の接続は [自律検証工程](docs/AUTONOMOUS_VALIDATION.md) で検査します。これはNode内の明示した模擬境界による検証で、ブラウザー画面・実機・音の実聴・人間の比較評価の証拠とは分けます。ChatGPT Workの監督付き環境では、上の一般開発手順から直接serverを起動せず、正式Sites手順に従います。
 
 Three.js 0.186.0を固定しています。[描画にはWebGL 2が必要](https://threejs.org/docs/pages/WebGLRenderer.html)です。Vite 7.3.1を固定し、package-lock.jsonを管理しています。配信版ではThree.jsと3Dシーンを遅延チャンクへ分け、単体版ではネットワーク不要の1ファイルへ再結合します。ゲーム状態は60 Hzの固定ステップ、描画はrequestAnimationFrameです。多数の木・岩・草はInstancedMeshで描きます。この制作環境では実機のフレームレートは未測定です。設定の「この端末での動作」は、遊んでいる間のブラウザーの描画フレーム間隔を計測し、JSONで書き出せます。直近と全期間の遅延を分け、ソースの指紋・開始地点と視点・描画数、production adapterが観測したpointerの集計を記録します。「計測をやり直す」で比較を始められ、新しい旅・セーブ読込・設定や画面サイズの変更は別計測になります。
 
