@@ -127,11 +127,21 @@ export function createMainRuntime(compiled, { save, storageFailure = false, view
     async createSceneView(canvas, game, settings) {
       sceneCalls++; events.push('scene:requested'); await scene.promise;
       view = {
-        game, yaw: 0, pitch: .4, zoom: 10, updates: 0,
+        game, yaw: 0, pitch: .4, zoom: 10, updates: 0, gatheringFocus: null,
+        focusCalls: [], sceneUpdates: [],
         camera: { position: { x: 0, y: 0, z: 0, set(x, y, z) { Object.assign(this, { x, y, z }); } } },
-        focusGathering() {}, snapCamera() {}, setQuality() {}, ringBell() {}, effect() {},
+        focusGathering(id) {
+          this.gatheringFocus = id; this.focusCalls.push(id);
+        },
+        snapCamera() {},
+        setQuality() {}, ringBell() {}, effect() {},
         project() { return { x: viewport.width / 2, y: viewport.height / 2, visible: false, depth: 0 }; },
-        update() { this.updates++; },
+        update() {
+          this.updates++;
+          this.sceneUpdates.push({ focus: this.gatheringFocus });
+          // Only the public focus/update call boundary is recorded here.
+          // Production SceneView focus effects and rendering remain explicit boundaries.
+        },
         renderer: { info: { render: { calls: 0, triangles: 0 }, memory: { geometries: 0, textures: 0 } }, domElement: { width: viewport.width, height: viewport.height }, getPixelRatio: () => 1, shadowMap: { enabled: false } },
       };
       return view;
@@ -164,7 +174,8 @@ export function createMainRuntime(compiled, { save, storageFailure = false, view
     },
     async importFile(data, { delayed, title = true } = {}) {
       const input = element(title ? 'title-save-file' : 'save-file');
-      input.files = [{ size: 1000, text: () => delayed ? delayed.promise : Promise.resolve(JSON.stringify(data)) }];
+      const text = typeof data === 'string' ? data : JSON.stringify(data);
+      input.files = [{ size: Buffer.byteLength(text), text: () => delayed ? delayed.promise : Promise.resolve(text) }];
       await input.emit('change');
     },
   };

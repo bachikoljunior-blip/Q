@@ -1,5 +1,34 @@
 # 制作状況 — 2026-09-13
 
+## 2026-09-15 04:28 UTC — 徒歩saveから相談UI・SceneView呼出し境界を実入口で検証（main反映前）
+
+### 継続確認と期限判断
+
+正規originをfetchし、最新main `1bd56c95271611cbe8b1d92bab5e0e89b1bb6752`、cleanな既存作業場所、remote branch、接続済みGitHubのPRを照合した。open PRは対象外の旧#3/#13だけで、mergeも利用もしない。新しい未反映制作branchはなく、前Ultra担当が記録した「徒歩獲得saveから相談UI→SceneViewの実呼出しを同じentrypointで検査」から競合せず再開した。`/proc` 不在で外部の全process停止までは観測できないため、全writer停止とは断定していない。automationの既知状態game2=false / Q=true / survival=falseは変更せず、新規automationも作成していない。
+
+継続直後の期限判断は**NO-GO（根拠付きで「できる」と言えない）**。2026-09-20までにElden Ring、The Witcher 3、Breath of the Wild、Skyrim、Red Dead Redemption 2、Ghost of Tsushima、Cyberpunk 2077、Horizon Forbidden West、Dragon’s Dogma 2、Kingdom Come: Deliverance IIに劣らない完成品質へ到達できると、残量、同種作業の実測速度、手戻り、未検証、配信待ちを含めて立証できない。複数章・地域・屋内、商用品質の美術・演技・音響、native配布、正式画面、物理touch、実聴、iOS/Android性能、30分実プレイ、外部player比較の完成範囲と受入証拠が残る。未確認を不可能とは断定しないが、順調や達成可能とも扱わない。
+
+疑った前提は、相談の純粋な状態・配置試験と `main.js` のsource文字列検査が、UIからSceneView境界までの実接続を代表すること。v0.14で局所変数shadowingを見逃した実績がある。個別ロジック試験の追加ではなく、追跡済み徒歩saveを本番entrypointへ流し、隔離copyの接続欠陥に対する旧新gateの検出力を同条件で比較する案を採用した。
+
+### 実装、実接続、負例比較
+
+- `tests/main-runtime-fixture.mjs` の明示SceneView境界を、`focusGathering` のid / null呼出しとupdate時のモデル化focusを記録するだけのspyへ変更。production SceneViewの内部効果やWebGLは実行しない。title importは追跡saveのraw bytesを渡せる。
+- `tests/gathering-runtime-scenarios.mjs` / `gathering-runtime.test.mjs` は、`hearth-middle.json`（SHA-256 `a0c99ac8a633ec29d48b647b12c448851d99e5d0daf593f47cac09444d53c5be`）と `road-watch-middle.json`（`71eb65aad4de50b5ef9c906f7601ba7165b699a5233dddbd1489aad87fcde5de`）を使用し、raw hashを期待値に固定する。相談関数を直接呼ばず、SceneView遅延読込、`interact`、次frameのevent、住民panel、動的生成された「皆で話す」、相談panel、選択、終了、reloadを実main bundleで通す。
+- 二場面×390×844 / 844×390の4条件、continue / title importの8起動と選択後の8 reloadが成功。2 / 3の現在話者と既読一件だけの履歴、3 / 3の次話者、選択結果、open / leaveのGame・save不変、話者stageが有効な途中会話を閉じて再び開く経路、blur / hidden→visible / BFCacheで開いたpanelの維持、`focusGathering` のid / null呼出しと次updateのモデル化focus、audio開始要求、loop再開を確認。二経路の完成save hashは各場面で一致した。
+- `scripts/verify-gathering-runtime.mjs` は同じmainの隔離copyへ、focus呼出しなし、focus解除なし、選択結果再描画なしを一つずつ入れる。従来の `gathering-presentation.test.mjs` 6検証は3欠陥とも通過。新gateは3欠陥×二場面×二寸法の12/12をそれぞれの欠陥別assertionで検出した。fixture / compile失敗、別assertionの失敗は検出に数えず、anchorの一意性も必須にした。
+- 最終境界強化後runではbundle 25.466 ms、正条件の一場面二経路・二reloadが207.122–238.847 ms。旧6検証は欠陥ごと421.784–434.444 ms、新gateの各早期検出は31.277–60.098 ms。範囲と停止位置が異なるため速度倍率を主張しない。branch作成04:19:32 UTCから独立レビューの証拠境界指摘まで反映した最終焦点gate成功04:39 UTCまで約19分。文書、全検証、GitHub統合はこの時間に含めない。
+- 手戻りは、初案のhost側 `gatheringStage` 再計算がSceneView実行と混同され得るという独立レビュー指摘を受けて削除し、呼出し記録だけへ限定したこと。open / leave無副作用、話者・進捗・履歴のexact条件、raw入力、途中会話のclose / reopenも追加した。再開を1描画frameで確認した初回は固定stepの浮動小数点境界でGame tickへ達せず4条件とも失敗し、最初のframeのモデル化focus=nullと2 frame内のGame進行を分離して再成功した。さらにfixture自身の `focusGathering→snapCamera` をproduction SceneViewの実行証拠と誤読し得るためsnap記録を接続証拠から削除した。現行productionの接続欠陥は再現せず、確定した欠陥は旧gateの盲点。
+
+CIは既存のcontents read、10分上限、全必須工程を残し、新gateとalwaysの `Q-gathering-runtime-evidence` uploadを追加する。担当は単独Ultra統合担当 `/root/ultra_q_consult_scene`、独立読取レビューは `/root/ultra_q_consult_scene/consult_gate_review`。両方とも親が実引数 `reasoning_effort="ultra"`、`fork_turns="none"`、model省略でspawnした。独立担当は初期設計、共有diff、証拠境界を監査し、重大指摘を候補へ反映した。実効強度は外部測定せず、受理された指定の事実として扱う。
+
+### 検証、配信判断、次の作業
+
+`npm ci`（16 packages）、既存entrypoint 16/16・負例6/6、新相談gate 4/4・8起動・8 reload・負例12/12、`npm test` 163/163、journey 119秒、crossing両経路、forgeと相談全選択、session 30分相当108,000 step / 138 reload / 死亡0、expedition南北、`review:saves` の8追跡save再生成同値、combat 9/9、touch縦横各20/20、build、package、artifact検査が成功。生成後も追跡review save、combat replay、単体版に差分0。initial JS 128 KiB、3 JS chunks 813 KiB、3 models、単体版3,190 KiB。これらはhost / Nodeの結果で、端末性能ではない。
+
+ゲームsource、public、index、package / lock、Vite、build identity / package script、追跡単体版は変更していない。source fingerprintは既存Site version20と同じ `sha256:540218237d5b40d8907935df41e009808af7ba747c0cc26d1c41373905413bb7`。今回の差分は検証fixture / script / CI / 文書だけなので、検証済みmain反映後も不必要なSite再配信を行わず、既存version20の正式readbackを最終結果に残す。main反映前のremote再確認、通常PR、required CI、通常merge、remote mainのtree / ancestor確認は未完了。
+
+このgateは本番main、Game、SaveStore、lifecycle listener、生成UIとSceneView呼出し境界の接続退行を検出するため採用する。production SceneView構築、WebGLカメラ画面、DOM / CSS hit test、native event、物理touch、実聴、実機性能、人間の実プレイ、外部比較の証拠ではない。期限判断はNO-GOのまま。次の自動制作は、徒歩獲得済みready saveから相談開始、人物の集合、talking遷移と途中saveを同じentrypointで検査する。正式previewの復旧証拠が出れば公式画面QAを戻すが、人間の準備を依頼しない。
+
 ## 2026-09-15 03:29 UTC — 人間不介入の自動検証をmainへ反映完了
 
 最新指示「人間は介入しません」をAGENTS、制作方法、完成条件、復旧手順へ反映した。人間の端末・アカウント・画像・評価者の準備を制作全体の開始条件から外し、AI側の許可済み自動工程を継続する。実機・実聴・実プレイ・外部比較は未確認のまま。以下の古い「main反映前」記録は、この節の完了結果で更新する。
