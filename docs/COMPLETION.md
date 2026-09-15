@@ -132,8 +132,10 @@ pointer capture失敗時に要素外で指を離すと攻撃長押し・移動�
 この変更で正式WebGL画面、物理タッチ、音の実聴、iOS/AndroidのFPS・メモリ・電力・発熱・30分実プレイ、外部評価、複数章・商用品質の美術／演技／音響、native配布は確認・完成していない。完成表の7領域はいずれもend-to-end証拠が揃わず、2026-09-20までに指定10作品と同等以上へ到達できるとは根拠付きで判断できない。
 
 
-## v0.19.0以後の相談実入口gate
+## v0.19.0以後の相談実入口gate（PR #31で履歴exactness補強）
 
-徒歩・戦闘・依頼を経て生成した二つの相談途中saveを、本番mainのSaveStore continueとタイトルJSON importから読み、実interact、住民panel、動的相談panel、選択、保存、終了、reloadへ通す検証を追加した。二場面×二数値寸法で8起動・8 reloadが成功し、旧6検証が見逃すfocus、focus解除、選択結果再描画、既読履歴重複の4欠陥を16/16条件で検出した。実ゲームsourceとbuild入力は変更しておらず、v0.19.0のゲーム成果は同じ。
+徒歩・戦闘・依頼を経て生成した二つの相談途中saveを、本番mainのSaveStore continueとタイトルJSON importから読み、実interact、住民panel、動的相談panel、選択、保存、終了、reloadへ通す検証を追加した。二場面×二数値寸法で8起動・8 reloadが成功した。PR #30時点の4欠陥・16/16は、focus、focus解除、選択結果再描画、履歴重複という選んだ負例には成立したが、1行時点しかexactに見ず、複数行reverseが通るため「全履歴の件数・順序・話者・全文exact」を証明していなかった。
 
-これはNode内のElement/EventTarget、SceneView呼出し記録、音呼出し記録による入口接続の証拠。production SceneView / WebGL、DOM/CSS hit test、native event、物理touch、実聴、実機性能、人間の実プレイ・外部比較ではない。完成表の未確認項目とNO-GO期限判断は変わらない。
+PR #31で期待する3行をproduction表示から独立して全文固定し、beat 1の1行、beat 2の2行、done直後と別runtime reloadの3行を、件数のequal、話者・全文multisetと順序付き配列のdeepEqualで検査する。focus、focus解除、rerender、done後段duplicate、reverse、2件目誤話者、2件目誤全文の7 mutationそれぞれで旧6検証が6/6通過し、新gateが二場面×二寸法の28/28を欠陥固有assertionで検出した。実ゲームsourceとbuild入力は変更しておらず、v0.19.0のゲーム成果は同じ。
+
+これはNode内のElement/EventTarget、SceneView呼出し記録、音呼出し記録による入口接続の証拠。production SceneView / WebGL、DOM/CSS hit test、native event、物理touch、実聴、実機性能、人間の実プレイ・外部比較ではない。完成表7領域のend-to-end合格は0/7、指定10作品との取得済み比較は0/10で、期限判断はNO-GO。次は人間の準備を待たず、[制作方法](PRODUCTION_METHOD.md)で同等scope・完走経路・wall time・repair / reuse定義を固定したasset-first完成縦切り二本A/Bを実source / buildへ入れ、制作速度と再利用率を測る。
