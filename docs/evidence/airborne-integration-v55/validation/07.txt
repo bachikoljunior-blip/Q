@@ -1,0 +1,18 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 test:vaults
+> node scripts/verify-vault-runtime.mjs
+
+{
+  "passed": true,
+  "slices": 4,
+  "scenarios": 8,
+  "reloads": 8,
+  "sourceFingerprint": "sha256:d20e1ad8fea6b9f845c77064319215e6b25a1105bbf2d539198eaff546774271",
+  "report": "artifacts/vault-runtime-report.json"
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice

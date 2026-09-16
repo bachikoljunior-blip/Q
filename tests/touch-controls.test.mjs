@@ -183,9 +183,9 @@ test('main wires the production adapter, lifecycle reset, device report and buil
   for (const action of ['attack', 'dodge', 'parry', 'jump', 'skill', 'heal', 'lock']) assert.match(main, new RegExp(`'${action}'`));
   assert.match(main, /resetMeasurements\('viewport-change'\);clearInput\('viewport-change'\)/);
   assert.match(main, /activate\('respawn',\(\)=>\{audio\.start\(\);game\.respawn\(\)/);
-  assert.match(main, /addEventListener\('pageshow',event=>\{if\(!event\.persisted\)return;clearInput\('pageshow'\)/);
+  assert.match(main, /addEventListener\('pageshow',event=>\{pageActive=true;if\(!event\.persisted\)return;clearInput\('pageshow'\)/);
   assert.match(main, /addEventListener\('blur',\(\)=>\{lifecycleGate\.interrupt\(\);clearInput\('blur'\);suspendSound\(\)/);
-  assert.match(main, /addEventListener\('pagehide',\(\)=>\{lifecycleGate\.interrupt\(\);clearInput\('pagehide'\);save\(\);suspendSound\(\)/);
+  assert.match(main, /addEventListener\('pagehide',\(\)=>\{pageActive=false;lifecycleGate\.interrupt\(\);clearInput\('pagehide'\);save\(\);suspendSound\(\)/);
   assert.match(main, /function standardPad\(\)\{try\{return Array\.from\(navigator\.getGamepads\?\.\(\)\|\|\[\]\)/);
   assert.match(main, /async function importSaveFile\(file\)\{[^}]+const lifecycleToken=lifecycleGate\.begin\(\)/);
   assert.match(main, /const interrupted=lifecycleGate\.shouldPause\(lifecycleToken,/);

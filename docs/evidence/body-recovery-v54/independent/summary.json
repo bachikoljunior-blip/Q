@@ -1,0 +1,35 @@
+{
+  "at": "2026-09-16T09:17:46.522875+00:00",
+  "source": {
+    "before": {
+      "src/actor-models.js": "04b1a72d8d1f5305dbc0e47dbe10e15c824fd0a29955d5fc08bcb40b8d544a96",
+      "src/assets/characters/detailed-geometry.js": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4",
+      "src/character-motion.js": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+      "src/scene.js": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b"
+    },
+    "after": {
+      "src/actor-models.js": "04b1a72d8d1f5305dbc0e47dbe10e15c824fd0a29955d5fc08bcb40b8d544a96",
+      "src/assets/characters/detailed-geometry.js": "db037549dbdee519d0fb57520ee0257f09dc1a127048ee202a2a22b64980b8f6",
+      "src/character-motion.js": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+      "src/scene.js": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b"
+    }
+  },
+  "nativeSeconds": 5.672237654000001,
+  "cases": 14,
+  "otherFamilyPoseHashes": 39,
+  "maxBoundaryDisplacement": 0,
+  "maxNonTargetDisplacement": 0,
+  "minCorrespondingNormalDot": 0.9708412566981607,
+  "minCorrespondingAreaRatio": 0.9003720496595429,
+  "budgets": [
+    {
+      "meshes": 12,
+      "triangles": 6718
+    },
+    {
+      "meshes": 12,
+      "triangles": 6718
+    }
+  ],
+  "scope": "Source/binding/UV pass; actual-idle crossing face count unchanged with pair substitutions; broader API contacts regress; visible torso improvement not established."
+}

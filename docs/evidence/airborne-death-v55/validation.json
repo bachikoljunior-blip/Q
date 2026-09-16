@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-09-16T09:24:19.983124+00:00",
+  "base": "fa920db9782b7df42e4e16099a05994e5841dbaa",
+  "sourceCheckpoint": "bc0d29f5a8b0a92519ae64697eb4122a909c41bc",
+  "sourceFingerprint": "sha256:88853c41214b99d00f653e2439dc005d2e03a96bf6f220c18f4cf717db197aa4",
+  "sourceHashes": {
+    "src/core.js": {
+      "sha256": "a6b7271063f683d2228dc1d547a82d7dd5b3257b3f4a538ced63c88ac37e3b3f",
+      "bytes": 39845
+    },
+    "src/main.js": {
+      "sha256": "0e864c56cea02f20e20d2edb00de72b0bb062f959699486219eaa23cc718dc87",
+      "bytes": 54846
+    },
+    "tests/main-runtime-fixture.mjs": {
+      "sha256": "74b896b0be077bc10e993e22ce1547908ca41f67952da01b09e6405bded9258e",
+      "bytes": 13783
+    },
+    "tests/touch-controls.test.mjs": {
+      "sha256": "1b64ea9f6a851c33c6c554758d46f1c7a4eacf678a52cad122b2272851d88ab8",
+      "bytes": 11169
+    },
+    "tests/airborne-death-fixture.mjs": {
+      "sha256": "0f98e6fa2fab52a7f6651992f2d384b2c2289a081f77bdbbb729cfce31adcbe2",
+      "bytes": 2960
+    },
+    "tests/airborne-death.test.mjs": {
+      "sha256": "fbf0ec114d21f471f092afbf622cdf7544e8d66ba33c40b1a8127a2da0f6530c",
+      "bytes": 5044
+    },
+    "docs/AIRBORNE_DEATH_V55.md": {
+      "sha256": "e9491f3c635cbf6a1de5096c1d82e6bdce3df04f7e459259d73b2affb9370bf0",
+      "bytes": 6853
+    }
+  },
+  "changedRuntimePaths": [
+    "src/core.js",
+    "src/main.js"
+  ],
+  "allowedDeadTickMutations": [
+    "player.y",
+    "player.vertical",
+    "player.grounded"
+  ],
+  "gates": {
+    "focused": {
+      "pass": 5,
+      "fail": 0,
+      "hostMs": 2821.35558
+    },
+    "existingMainAndDialogue": {
+      "pass": 25,
+      "fail": 0,
+      "hostMs": 9788.622701
+    },
+    "fullUnitSuite": {
+      "pass": 322,
+      "fail": 0,
+      "hostMs": 44849.813151
+    },
+    "mainRuntime": {
+      "pass": true,
+      "scenarios": 18,
+      "negativeControls": 3,
+      "detections": 6
+    },
+    "journey": {
+      "exitCode": 0
+    },
+    "crossing": {
+      "exitCode": 0
+    },
+    "simulatedSession": {
+      "exitCode": 0,
+      "gameMinutes": 30
+    },
+    "build": {
+      "exitCode": 0,
+      "hostSeconds": 7.55
+    }
+  },
+  "budget": {
+    "before": {
+      "file": "/workspace/scratch/e72662e3b71f/Q-recovery-v51-20260916/dist/assets/index-CGHwhJDe.js",
+      "bytes": 164988,
+      "gzipLevel9Mtime0Bytes": 62484,
+      "sha256": "95ed8147ec998e7c7088d96c4e019ca123b65fae80ae5b395c521e7356806b88"
+    },
+    "after": {
+      "file": "dist/assets/index-BtrtMH8U.js",
+      "bytes": 165184,
+      "gzipLevel9Mtime0Bytes": 62557,
+      "sha256": "37e11f47987ac841bc9aaa857d8b7a28e5734fba87881f6d1674e48a9a114f11"
+    },
+    "jsChunkCount": 3,
+    "limits": "Local source regression measurements, not HTTP or device performance.",
+    "byteDelta": 196,
+    "gzipByteDelta": 73
+  },
+  "independent": {
+    "source": "q-airborne-death-review-v55",
+    "reviewSha256": "46a39be14f01b1a6613d699b82b07a815ff87c736169e08a414eec4deadc32cd",
+    "manifestSha256": "bfc9b71e1951d9f88974fa7a50d4da98a1d68ea75dcc6d96e57331fe8efd9fc7",
+    "requiredLifecycleFixVerified": true,
+    "copiedBy": "integrator, separately",
+    "actorContactCases": 18,
+    "framesPerCase": 72,
+    "minimumVisibleVertexGapMeters": 0.000653821,
+    "settledVisibleVertexGapMeters": 0.006,
+    "triangleInteriorGuarantee": false
+  },
+  "wall": {
+    "startedAt": "2026-09-16T09:06:19+00:00",
+    "firstCandidateConfirmedBy": "2026-09-16T09:09:51Z",
+    "finalRuntimeFileMtime": "2026-09-16T09:16:54.484373+00:00",
+    "authorEvidenceFinalizedAt": "2026-09-16T09:24:19.983124+00:00",
+    "elapsedSecondsToEvidence": 1080.983124,
+    "meaning": "Wall interval includes parallel independent review, source repair, fixture corrections, tests and documentation. It is not execution time summed across concurrent tools."
+  },
+  "delivery": {
+    "packageAndReceipt": "Not regenerated in this author unit; integrator owns combined receipt and artifact gates",
+    "base165000Guard": "Exceeded by 184 bytes; unchanged here",
+    "nativeAudioCombinedBudget": "Parent owns later 166000 regression guard; exact combined size requires integration build"
+  },
+  "limits": [
+    "Node main uses explicit DOM/Scene/audio doubles",
+    "Contact evidence is actual native Three vertex CPU evaluation with separately specified actor and Scene prefix",
+    "No actual WebGL, device CPU/GPU/frame time, physical touch, PS4 or naturalness assessment",
+    "No remote, Site, preview or browser substitute operation"
+  ]
+}

@@ -1,0 +1,17 @@
+✔ launch completion remains active only in the initiating lifecycle (0.701703ms)
+✔ blur, hidden or pagehide invalidates an in-flight asynchronous launch (0.182392ms)
+✔ portrait three-pointer trace keeps movement, camera and dodge independent (3.767762ms)
+✔ landscape capture, cancellation, wrong ids and lifecycle clearing cannot leave input held (0.996241ms)
+✔ lost capture, blur and pagehide clearing each remove their pointer ownership (0.70987ms)
+✔ pointer evidence separates portrait and landscape measurement sessions without raw positions (0.390808ms)
+✔ capture failure rolls back immediately and document end remains a fallback (0.825339ms)
+✔ right-click parry is aggregated without leaving an active pointer (0.324632ms)
+✔ main wires the production adapter, lifecycle reset, device report and build identity (1.706441ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 130.412966

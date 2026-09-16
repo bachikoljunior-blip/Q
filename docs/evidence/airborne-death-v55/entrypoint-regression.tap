@@ -1,0 +1,33 @@
+✔ native paused dialogue preserves save and exact gameplay orbit/projection on return (96.168144ms)
+✔ resize/quality rebuild composition once; death, threat and static blockage restore ordinary camera (432.320644ms)
+✔ disappearing NPC and unready gathering cannot reuse a stale close-up (42.712199ms)
+✔ real main ordinary modal retains focus across interruption, ignores wheel and clears on close/settings (252.714763ms)
+✔ dialogue layout has an opaque scrollable lower reading region and keyboard-reachable disclosure controls (0.980887ms)
+✔ actual gathering next-line and choice replace content at its reading start (125.937919ms)
+✔ actual melee death in the dialogue event batch closes the modal and respawn resumes input (166.751668ms)
+✔ production main boundary: launch-input-pause-resume (390x844) (315.549475ms)
+✔ production main boundary: deferred-scene-blur (390x844) (110.086631ms)
+✔ production main boundary: deferred-scene-hidden (390x844) (118.337408ms)
+✔ production main boundary: deferred-scene-pagehide (390x844) (119.246357ms)
+✔ production main boundary: deferred-title-import (390x844) (152.465735ms)
+✔ production main boundary: title-import-invalid-file-restores-controls (390x844) (51.00133ms)
+✔ production main boundary: active-save-import-and-invalid-file (390x844) (194.079313ms)
+✔ production main boundary: scene-load-failure (390x844) (99.233479ms)
+✔ production main boundary: storage-and-gamepad-failure (390x844) (141.351257ms)
+✔ production main boundary: launch-input-pause-resume (844x390) (425.088758ms)
+✔ production main boundary: deferred-scene-blur (844x390) (757.503787ms)
+✔ production main boundary: deferred-scene-hidden (844x390) (637.237896ms)
+✔ production main boundary: deferred-scene-pagehide (844x390) (1007.047799ms)
+✔ production main boundary: deferred-title-import (844x390) (668.023999ms)
+✔ production main boundary: title-import-invalid-file-restores-controls (844x390) (183.677367ms)
+✔ production main boundary: active-save-import-and-invalid-file (844x390) (1304.302744ms)
+✔ production main boundary: scene-load-failure (844x390) (642.960367ms)
+✔ production main boundary: storage-and-gamepad-failure (844x390) (1061.242914ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9788.622701

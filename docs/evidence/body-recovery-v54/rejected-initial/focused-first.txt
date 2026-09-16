@@ -1,0 +1,12 @@
+✔ only Mira source-derived upper cloth changes; other 13 roles and fixed skin/index/material contracts remain exact (407.407202ms)
+✔ 483 vertices and 816 faces preserve the 161 fixed collar/hem/shoulder/cuff vertices exactly through poses (26.592649ms)
+✔ source reshaping has no degenerate or reversed face and physical UV does not worsen p95 anisotropy (8.337465ms)
+✔ fresh provenance matches the exact legal source/output/generator and uses a separated upper-arm section at shoulder transition (2.985677ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 605.528421

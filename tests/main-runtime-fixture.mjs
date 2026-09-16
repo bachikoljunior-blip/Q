@@ -180,7 +180,7 @@ export function createMainRuntime(compiled, { save, saveRaw, storageFailure = fa
     setPadFailure(value) { padFailure = value; },
     click: id => element(id).click(),
     async flush() { for (let i = 0; i < 12; i++) await Promise.resolve(); },
-    frames(count = 1) { for (let i = 0; i < count; i++) { now += 1000 / 60; const pending = frames; frames = []; for (const callback of pending) callback(now); } },
+    frames(count = 1, frameMs = 1000 / 60) { for (let i = 0; i < count; i++) { now += frameMs; const pending = frames; frames = []; for (const callback of pending) callback(now); } },
     pointer(id, type, pointerId, extra = {}) { return element(id).emit(type, { pointerId, pointerType: 'touch', button: 0, clientX: 80, clientY: viewport.height - 90, ...extra }); },
     async interrupt(reason) {
       if (reason === 'hidden') { document.hidden = true; await document.emit('visibilitychange'); document.hidden = false; await document.emit('visibilitychange'); }

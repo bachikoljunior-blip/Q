@@ -1,0 +1,28 @@
+// Mira's bounded CC0 contour derivative changes neither joints nor garment ends.
+function sourceUpperGarment(torso,sleeves){
+  const charts=[];
+  for(const [part,piece]of [torso,...sleeves].entries()){
+    const geometry=piece.geometry,p=geometry.attributes.position,profile=part?MIRA_SLEEVE_PROFILE:MIRA_TORSO_PROFILE,n=profile[0].length;
+    for(let row=0;row<profile.length;row++)for(let col=0;col<=n;col++){
+      const i=row*(n+1)+col,index=part===1?(n-col)%n:col%n,factor=profile[row][index];
+      p.setXYZ(i,p.getX(i)*factor,p.getY(i),p.getZ(i)*factor);
+    }
+    const rows=[],travel=[0];let area=0;
+    const distance=(a,b)=>Math.hypot(p.getX(a)-p.getX(b),p.getY(a)-p.getY(b),p.getZ(a)-p.getZ(b));
+    for(let row=0;row<profile.length;row++){
+      const arc=[0],start=row*(n+1);let step=0;
+      for(let col=1;col<=n;col++)arc.push(arc[col-1]+distance(start+col,start+col-1));
+      if(row){for(let col=0;col<n;col++)step+=distance(start+col,start+col-n-1)/n;travel.push(travel[row-1]+step);area+=(rows[row-1][n]+arc[n])*.5*step;}
+      rows.push(arc);
+    }
+    charts.push({geometry,n,rows,travel,area});
+  }
+  const density=Math.sqrt(3/charts.reduce((sum,c)=>sum+c.area,0));
+  for(const {geometry,n,rows,travel,area}of charts){
+    // Whole repeats close the cylindrical UV seam at repeat(4,4). Meridians
+    // follow physical length; circumference retains a continuous weave phase.
+    const repeats=Math.max(.25,Math.round(area/travel.at(-1)*density*4)/4),uv=geometry.attributes.uv;
+    for(let row=0;row<rows.length;row++)for(let col=0;col<=n;col++)uv.setXY(row*(n+1)+col,rows[row][col]/rows[row][n]*repeats,travel[row]*density);
+    geometry.computeVertexNormals();smoothWrappedNormals(geometry,n);
+  }
+}

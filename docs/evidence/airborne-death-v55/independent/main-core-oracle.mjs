@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+import {build} from '../Q-recovery-v51-20260916/node_modules/esbuild/lib/main.js';
+import {createMainRuntime} from '../Q-recovery-v51-20260916/tests/main-runtime-fixture.mjs';
+const root=pathToFileURL(process.argv[2].replace(/\/$/,'')+'/'), label=process.argv[3]||'candidate';
+const base=new URL('../Q-recovery-v51-20260916/',import.meta.url);
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const sourceHashes={};for(const f of ['src/main.js','src/core.js','src/runtime-state.js'])sourceHashes[f]=hash(await readFile(new URL(f,root)));
+const api=await import(new URL('src/core.js',root)),old=await import(new URL('src/core.js',base));
+const main=await readFile(new URL('src/main.js',root),'utf8');
+const built=await build({stdin:{contents:main,resolveDir:new URL('src/',root).pathname,sourcefile:'main.js',loader:'js'},bundle:true,write:false,format:'iife',platform:'browser',logLevel:'silent',loader:{'.mp4':'empty'},plugins:[{name:'declared-device-boundaries',setup(b){b.onResolve({filter:/^\.\/(style\.css|scene\.js|audio\.js|title-cinematic\.js)$/},a=>({path:a.path,namespace:'boundary'}));b.onLoad({filter:/.*/,namespace:'boundary'},a=>({contents:a.path.endsWith('scene.js')?'export const createSceneView=(...a)=>__devices.createSceneView(...a);':a.path.endsWith('audio.js')?'export const Soundscape=__devices.Soundscape;':a.path.endsWith('title-cinematic.js')?'export const mountTitleCinematic=__devices.mountTitleCinematic;':'',loader:'js'}));}}]});
+const compiled={code:built.outputFiles[0].text,html:await readFile(new URL('index.html',root),'utf8')};
+async function launch(){let now=1000,queue=[];const rt=createMainRuntime(compiled,{allowTimers:true,setupContext({context}){context.requestAnimationFrame=fn=>{queue.push(fn);return queue.length;};context.performance={now:()=>now};}});rt.step=(ms=1000/60)=>{now+=ms;const q=queue;queue=[];q.forEach(f=>f(now));};await rt.click('start');rt.scene.resolve();await rt.flush();rt.step();return rt;}
+const snapshot=g=>JSON.stringify(g,(k,v)=>typeof v==='function'?undefined:v);
+const withoutVertical=g=>{const v=JSON.parse(snapshot(g));for(const k of ['y','vertical','grounded'])delete v.player[k];return JSON.stringify(v);};
+const vertical=p=>({y:p.y,vertical:p.vertical,grounded:p.grounded});
+const results={at:new Date().toISOString(),root:root.pathname,sourceHashes,core:[],main:[],lifecycle:[],limits:['Real main and Game; explicit DOM/SceneView/Soundscape boundary doubles. No CSS, WebGL, native lifecycle ordering or device timing proof.']};
+const places=[{id:'spawn',x:0,z:101},{id:'slope',x:-389,z:-38},...api.BRIDGES.map((b,i)=>({id:'bridge'+i,x:b.x,z:b.z}))];
+for(const place of places)for(const [phase,y,v,grounded]of [['ground',0,0,true],['ascent',1.0941666666666667,3.65,false],['descent',.7,-4,false]]){
+ const g=new api.Game(),p=g.player;Object.assign(p,{x:place.x,z:place.z,y:api.groundAt(place.x,place.z)+y,vertical:v,grounded,ash:101});g.hurtPlayer(999);g.events=[];const invariants=withoutVertical(g),floor=api.groundAt(p.x,p.z);let expected={...vertical(p)},maxError=0;
+ for(let i=0;i<120;i++){const dt=1/60;if(!expected.grounded){expected.vertical-=21*dt;expected.y+=expected.vertical*dt;if(expected.y<=floor)expected={y:floor,vertical:0,grounded:true};}else expected.y=floor;g.tick(dt,{x:1,z:1,sprint:true});maxError=Math.max(maxError,Math.abs(p.y-expected.y));assert.equal(withoutVertical(g),invariants);}
+ results.core.push({place:place.id,phase,maxExpectedError:maxError,finalGap:p.y-floor,ash:p.ash,grounded:p.grounded});
+}
+// Alive equivalence uses identical actual production worlds, inputs, actions and dt.
+for(const dt of [0,1/120,1/60,1/30,.5]){const a=new api.Game(),b=new old.Game();a.jump();b.jump();for(let i=0;i<30;i++){a.tick(dt,{x:.2,z:-.8,sprint:i<5});b.tick(dt,{x:.2,z:-.8,sprint:i<5});assert.equal(snapshot(a),snapshot(b));}results.core.push({aliveDt:dt,exact:true});}
+for(const dt of [-1,0,1/120,1/60,.5]){const g=new api.Game(),p=g.player;Object.assign(p,{y:p.y+1,vertical:-1,grounded:false});g.hurtPlayer(999);const before=vertical(p);g.tick(dt);const h=Math.max(0,Math.min(.05,dt));results.core.push({deadDt:dt,before,after:vertical(p),expectedY:before.y+(before.vertical-21*h)*h});}
+for(const fps of [30,60,120]){const rt=await launch(),g=rt.view.game,p=g.player;await rt.pointer('jump-button','pointerdown',1);await rt.pointer('jump-button','pointerup',1);for(let i=0;i<Math.round(fps*.2);i++)rt.step(1000/fps);g.hurtPlayer(999);rt.step(1000/fps);const start=vertical(p),fixed=withoutVertical(g),time=g.time,save=JSON.parse(rt.values.get('q-ash-pilgrim-v1'));await rt.document.emit('keydown',{code:'KeyW'});await rt.document.emit('keydown',{code:'KeyJ'});for(let i=0;i<fps*2;i++)rt.step(1000/fps);assert.equal(withoutVertical(g),fixed);assert.equal(g.time,time);assert.equal(save.dead,true);assert.equal(p.ash,save.player.ash);results.main.push({fps,start,end:vertical(p),floor:api.groundAt(p.x,p.z),saveAtDeath:save.runtime.player,viewDt:rt.view.lastUpdateDt,errors:rt.errors});const loaded=new api.Game(g.serialize());assert.equal(loaded.player.dead,false);assert.equal(loaded.player.y,api.groundAt(loaded.player.x,loaded.player.z));await rt.click('respawn');assert.equal(p.dead,false);assert.equal(p.grounded,true);assert.equal(p.vertical,0);assert.equal(rt.element('death-screen').classList.contains('hidden'),true);}
+{const rt=await launch(),g=rt.view.game,p=g.player;await rt.pointer('jump-button','pointerdown',1);await rt.pointer('jump-button','pointerup',1);for(let i=0;i<12;i++)rt.step();const enemy=g.enemies.find(e=>e.type==='knight');Object.assign(enemy,{x:p.x+1,z:p.z,y:api.groundAt(p.x+1,p.z),angle:-Math.PI/2,state:'strike',timer:.15,hit:false});p.hp=1;p.invulnerable=0;p.ash=101;assert(g.meleeContact(enemy));rt.step();assert(p.dead);assert.equal(p.ash,80);assert.equal(rt.element('death-screen').classList.contains('hidden'),false);const killed=vertical(p),unchanged=withoutVertical(g);for(let i=0;i<120;i++)rt.step();assert.equal(withoutVertical(g),unchanged);results.main.push({actualEnemyMelee:true,killed,landed:vertical(p),deathPenalty:p.ash,deathPanelShown:true,errors:rt.errors});}
+for(const mode of ['settings','hidden','blur','pagehide','title','dialogue']){
+ const rt=await launch(),g=rt.view.game,p=g.player;Object.assign(p,{y:p.y+1.2,vertical:-2,grounded:false});
+ if(mode==='dialogue'){Object.assign(p,{x:7,z:83,y:api.groundAt(7,83)+1.2});assert(g.interact({...api.KEEPER,type:'npc'}));rt.step();}else {g.hurtPlayer(999);rt.step();}
+ if(mode==='settings')await rt.click('pause-button');if(mode==='hidden'){rt.document.hidden=true;await rt.document.emit('visibilitychange');}if(mode==='blur'){rt.document.focused=false;await rt.window.emit('blur');}if(mode==='pagehide')await rt.window.emit('pagehide',{persisted:true});if(mode==='title'){await rt.click('pause-button');await rt.click('to-title');}
+ const before=vertical(p),saved=snapshot(g);for(let i=0;i<30;i++)rt.step();const row={mode,paused:rt.state.paused,playing:rt.state.playing,before,after:vertical(p),allGameExact:saved===snapshot(g),pausedSceneDt:rt.view.lastUpdateDt,errors:rt.errors};
+ if(mode==='hidden'){rt.document.hidden=false;await rt.document.emit('visibilitychange');}if(mode==='blur'){rt.document.focused=true;await rt.window.emit('focus');}if(mode==='pagehide')await rt.window.emit('pageshow',{persisted:true});if(mode==='settings')await rt.click('settings-close');if(mode==='dialogue')await rt.click('dialogue-leave');
+ if(mode!=='title'){for(let i=0;i<6;i++)rt.step();row.resumed=vertical(p);row.resumedSceneDt=rt.view.lastUpdateDt;row.deathPanelVisible=!rt.element('death-screen').classList.contains('hidden');}results.lifecycle.push(row);
+}
+// A 500ms RAF gap remains clamped to the existing maximum 50ms, three fixed steps.
+{const rt=await launch(),g=rt.view.game,p=g.player;Object.assign(p,{y:p.y+2,vertical:-1,grounded:false});g.hurtPlayer(999);rt.step();const before=vertical(p);rt.step(500);results.main.push({longFrameMs:500,before,after:vertical(p),sceneDt:rt.view.lastUpdateDt});}
+for(const[f,h]of Object.entries(sourceHashes))assert.equal(hash(await readFile(new URL(f,root))),h,'source changed during oracle: '+f);
+await writeFile(new URL(label+'.json',import.meta.url),JSON.stringify(results,null,2)+'\n');console.log(JSON.stringify(results,null,2));

@@ -1,0 +1,35 @@
+✔ real melee deaths retain only vertical motion at 30/60/120 on ground, bridge and slope (8673.921467ms)
+✔ dead dt clamps preserve zero-step state, and respawn/dead-load retain existing semantics (36.333628ms)
+✔ living motion and save output remain identical to frozen core before death (39.738681ms)
+✖ actual main pumps dead fixed ticks at 30/60/120; old main remains frozen as negative control (167.513435ms)
+✖ actual main pause, background and title freeze dead gravity; respawn and dead-save continue stay valid (79.506552ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 3
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9149.487255
+
+✖ failing tests:
+
+test at tests/airborne-death.test.mjs:30:1
+✖ actual main pumps dead fixed ticks at 30/60/120; old main remains frozen as negative control (167.513435ms)
+  TypeError: Cannot read properties of undefined (reading 'dead')
+      at updateHud (production-main-with-device-boundaries.js:3770:47)
+      at frame (production-main-with-device-boundaries.js:3862:9)
+      at Object.frames (file:///workspace/scratch/e72662e3b71f/Q-airborne-death-v55/tests/main-runtime-fixture.mjs:183:165)
+      at TestContext.<anonymous> (file:///workspace/scratch/e72662e3b71f/Q-airborne-death-v55/tests/airborne-death.test.mjs:34:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/airborne-death.test.mjs:40:1
+✖ actual main pause, background and title freeze dead gravity; respawn and dead-save continue stay valid (79.506552ms)
+  TypeError: Cannot read properties of undefined (reading 'dead')
+      at updateHud (production-main-with-device-boundaries.js:3770:47)
+      at frame (production-main-with-device-boundaries.js:3862:9)
+      at Object.frames (file:///workspace/scratch/e72662e3b71f/Q-airborne-death-v55/tests/main-runtime-fixture.mjs:183:165)
+      at TestContext.<anonymous> (file:///workspace/scratch/e72662e3b71f/Q-airborne-death-v55/tests/airborne-death.test.mjs:42:62)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
