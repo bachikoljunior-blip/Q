@@ -1,0 +1,14 @@
+✔ fresh fixed-pose solver preserves all nine pins and does not mutate original reference or posed coordinates (31.593593ms)
+✔ the actual old death-floor failures are repaired using distances and free contact, with positive triangle area and consistent quad normals (26.002395ms)
+✔ support is deterministic and world yaw/translation covariant on the same plane (19.52569ms)
+✔ continuous terrain evidence belongs to exact source and preserves floor, top boundary and orientation without disguising worse steps (6.545234ms)
+✔ an impossible buried chest edge remains pinned and is explicitly reported, never silently projected (0.742249ms)
+✔ bounded iteration comparison records exact repeats, no proper self-crossings in its limited sample, and localized fold change (1.277508ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 384.45848

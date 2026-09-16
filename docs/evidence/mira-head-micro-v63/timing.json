@@ -1,0 +1,23 @@
+{
+  "start": "2026-09-16T13:30:07.729Z",
+  "genStart": "2026-09-16T13:31:13.026Z",
+  "genEnd": "2026-09-16T13:32:14.399Z",
+  "editStart": "2026-09-16T13:32:59.094Z",
+  "editEnd": "2026-09-16T13:34:04.918Z",
+  "implementationStart": "2026-09-16T13:36:04.169Z",
+  "firstMesh": "2026-09-16T13:37:27.272Z",
+  "verifyStart": "2026-09-16T13:39:17.505Z",
+  "firstFigures": "2026-09-16T13:41:26.017Z",
+  "fixtureFixed": "2026-09-16T13:42:22.092Z",
+  "authorRecordAt": "2026-09-16T13:44:35.229Z",
+  "initialToolReportedSeconds": 51,
+  "correctionToolReportedSeconds": 50.3,
+  "notes": [
+    "Start marker follows initial preflight/read; earlier preflight duration was not measured.",
+    "Marker intervals include communication, reasoning and tool handoff. They are elapsed windows, not exclusive CPU or labour time.",
+    "First mesh constructor milliseconds are not total production speed.",
+    "First exporter used walking/hit fixtures that resolved to idle; original metrics retained. Corrected inputs plus explicit actualMotion assertions verified walk/hit. Geometry was unchanged.",
+    "No rendered-game, device or instant-production claim."
+  ],
+  "authorValidationComplete": "2026-09-16T13:45:05.852386+00:00"
+}

@@ -1,0 +1,463 @@
+{
+  "summaries": [
+    {
+      "iterations": 16,
+      "activeCases": 13,
+      "minGap": 0.002997782134976923,
+      "maxStretch": 1.0648699797721306,
+      "minStretch": 0.9320424092178826,
+      "minQuadDot": 0.8027848921699556,
+      "properSelfCrossingPairCount": 0,
+      "cpuMs": {
+        "median": 1.2942129999999565,
+        "p95": 4.963366000000008
+      }
+    },
+    {
+      "iterations": 32,
+      "activeCases": 13,
+      "minGap": 0.002997783722929581,
+      "maxStretch": 1.03864882608073,
+      "minStretch": 0.9604118123795086,
+      "minQuadDot": 0.7595123440970539,
+      "properSelfCrossingPairCount": 0,
+      "cpuMs": {
+        "median": 1.9056920000000162,
+        "p95": 3.2034830000000056
+      }
+    },
+    {
+      "iterations": 64,
+      "activeCases": 13,
+      "minGap": 0.0029999999999998916,
+      "maxStretch": 1.0257452647798637,
+      "minStretch": 0.9795903338415469,
+      "minQuadDot": 0.7466210022553817,
+      "properSelfCrossingPairCount": 0,
+      "cpuMs": {
+        "median": 3.7159540000000106,
+        "p95": 6.39099299999998
+      }
+    }
+  ],
+  "contactTransitions": [
+    {
+      "terrain": "flat",
+      "hz": 30,
+      "frames": [
+        {
+          "age": 0.36666666666666664,
+          "active": true,
+          "beforeMin": -0.011067701555987464,
+          "afterMin": 0.003,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0088093954810917,
+          "minStretch": 0.9830845694595272,
+          "areaMin": 0.9799993808255164,
+          "areaMax": 1.0132578921782185,
+          "quadDot": 0.8775312717652647,
+          "beforeStep": 0.08165052204571367,
+          "afterStep": 0.08165052204571367,
+          "contactChanged": true,
+          "solveMs": 3.9380179999999996
+        }
+      ]
+    },
+    {
+      "terrain": "flat",
+      "hz": 60,
+      "frames": [
+        {
+          "age": 0.35,
+          "active": true,
+          "beforeMin": 0.0013638864041348453,
+          "afterMin": 0.003,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0021006295820816,
+          "minStretch": 0.9970014496846329,
+          "areaMin": 0.9975440109284325,
+          "areaMax": 1.00246439436311,
+          "quadDot": 0.9946628685306894,
+          "beforeStep": 0.04050548128161761,
+          "afterStep": 0.04050548128161761,
+          "contactChanged": true,
+          "solveMs": 2.5269270000000006
+        }
+      ]
+    },
+    {
+      "terrain": "flat",
+      "hz": 120,
+      "frames": [
+        {
+          "age": 0.35,
+          "active": true,
+          "beforeMin": 0.0013638864041348453,
+          "afterMin": 0.003,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0021006295820816,
+          "minStretch": 0.9970014496846329,
+          "areaMin": 0.9975440109284325,
+          "areaMax": 1.00246439436311,
+          "quadDot": 0.9946628685306894,
+          "beforeStep": 0.020343809357298587,
+          "afterStep": 0.020343809357298587,
+          "contactChanged": true,
+          "solveMs": 3.4613690000001043
+        }
+      ]
+    },
+    {
+      "terrain": "cross-slope",
+      "hz": 30,
+      "frames": [
+        {
+          "age": 0.36666666666666664,
+          "active": true,
+          "beforeMin": -0.0176432717317202,
+          "afterMin": 0.002999999999999947,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0115261888606246,
+          "minStretch": 0.9750916177175994,
+          "areaMin": 0.9692429536469881,
+          "areaMax": 1.0191104060462932,
+          "quadDot": 0.7358821790103328,
+          "beforeStep": 0.0816505220457139,
+          "afterStep": 0.08589590963191068,
+          "contactChanged": true,
+          "solveMs": 5.543816000000106
+        }
+      ]
+    },
+    {
+      "terrain": "cross-slope",
+      "hz": 60,
+      "frames": [
+        {
+          "age": 0.35,
+          "active": true,
+          "beforeMin": -0.0020310593423109036,
+          "afterMin": 0.0030000000000000027,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.004208315051242,
+          "minStretch": 0.9935515132229674,
+          "areaMin": 0.9931025622964936,
+          "areaMax": 1.0054954553793118,
+          "quadDot": 0.9579783464367898,
+          "beforeStep": 0.040505481281617746,
+          "afterStep": 0.040505481281617746,
+          "contactChanged": true,
+          "solveMs": 2.9538420000001224
+        }
+      ]
+    },
+    {
+      "terrain": "cross-slope",
+      "hz": 120,
+      "frames": [
+        {
+          "age": 0.35,
+          "active": true,
+          "beforeMin": -0.0020310593423109036,
+          "afterMin": 0.0030000000000000027,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.004208315051242,
+          "minStretch": 0.9935515132229674,
+          "areaMin": 0.9931025622964936,
+          "areaMax": 1.0054954553793118,
+          "quadDot": 0.9579783464367898,
+          "beforeStep": 0.02034380935729875,
+          "afterStep": 0.023436945117082802,
+          "contactChanged": true,
+          "solveMs": 3.2304470000003676
+        }
+      ]
+    },
+    {
+      "terrain": "along-slope",
+      "hz": 30,
+      "frames": [
+        {
+          "age": 0.3333333333333333,
+          "active": true,
+          "beforeMin": 0.0004777826380061301,
+          "afterMin": 0.002999999999999947,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0033429803396843,
+          "minStretch": 0.9942441222270821,
+          "areaMin": 0.9948397322181864,
+          "areaMax": 1.0041061511619682,
+          "quadDot": 0.9757980241294734,
+          "beforeStep": 0.07844601448332351,
+          "afterStep": 0.07844601448332351,
+          "contactChanged": true,
+          "solveMs": 3.601496999999654
+        }
+      ]
+    },
+    {
+      "terrain": "along-slope",
+      "hz": 60,
+      "frames": [
+        {
+          "age": 0.3333333333333333,
+          "active": true,
+          "beforeMin": 0.0004777826380061301,
+          "afterMin": 0.002999999999999947,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0033429803396843,
+          "minStretch": 0.9942441222270821,
+          "areaMin": 0.9948397322181864,
+          "areaMax": 1.0041061511619682,
+          "quadDot": 0.9757980241294734,
+          "beforeStep": 0.03970295827178318,
+          "afterStep": 0.03970295827178318,
+          "contactChanged": true,
+          "solveMs": 2.6468740000000253
+        }
+      ]
+    },
+    {
+      "terrain": "along-slope",
+      "hz": 120,
+      "frames": [
+        {
+          "age": 0.3333333333333333,
+          "active": true,
+          "beforeMin": 0.0004777826380061301,
+          "afterMin": 0.002999999999999947,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0033429803396843,
+          "minStretch": 0.9942441222270821,
+          "areaMin": 0.9948397322181864,
+          "areaMax": 1.0041061511619682,
+          "quadDot": 0.9757980241294734,
+          "beforeStep": 0.01996177033163632,
+          "afterStep": 0.02117684166905742,
+          "contactChanged": true,
+          "solveMs": 2.605829000000085
+        }
+      ]
+    },
+    {
+      "terrain": "diagonal-slope",
+      "hz": 30,
+      "frames": [
+        {
+          "age": 0.3333333333333333,
+          "active": true,
+          "beforeMin": -0.002317294918655982,
+          "afterMin": 0.0029999999999999923,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0054282180757919,
+          "minStretch": 0.9901049611068822,
+          "areaMin": 0.9891456765515815,
+          "areaMax": 1.0073440246225496,
+          "quadDot": 0.9541208133653296,
+          "beforeStep": 0.07844601448332349,
+          "afterStep": 0.07844601448332349,
+          "contactChanged": true,
+          "solveMs": 2.5877409999998235
+        }
+      ]
+    },
+    {
+      "terrain": "diagonal-slope",
+      "hz": 60,
+      "frames": [
+        {
+          "age": 0.3333333333333333,
+          "active": true,
+          "beforeMin": -0.002317294918655982,
+          "afterMin": 0.0029999999999999923,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0054282180757919,
+          "minStretch": 0.9901049611068822,
+          "areaMin": 0.9891456765515815,
+          "areaMax": 1.0073440246225496,
+          "quadDot": 0.9541208133653296,
+          "beforeStep": 0.03970295827178324,
+          "afterStep": 0.041750754924003874,
+          "contactChanged": true,
+          "solveMs": 3.131245999999919
+        }
+      ]
+    },
+    {
+      "terrain": "diagonal-slope",
+      "hz": 120,
+      "frames": [
+        {
+          "age": 0.3333333333333333,
+          "active": true,
+          "beforeMin": -0.002317294918655982,
+          "afterMin": 0.0029999999999999923,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0054282180757919,
+          "minStretch": 0.9901049611068822,
+          "areaMin": 0.9891456765515815,
+          "areaMax": 1.0073440246225496,
+          "quadDot": 0.9541208133653296,
+          "beforeStep": 0.019961770331636458,
+          "afterStep": 0.025134853689376346,
+          "contactChanged": true,
+          "solveMs": 2.993109000000004
+        }
+      ]
+    },
+    {
+      "terrain": "actual-spawn",
+      "hz": 30,
+      "frames": [
+        {
+          "age": 0.4,
+          "active": true,
+          "beforeMin": 0.002885900107904238,
+          "afterMin": 0.0029999999999998916,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0000677830146139,
+          "minStretch": 0.999871484117953,
+          "areaMin": 0.9998941499069008,
+          "areaMax": 1.0000531866722986,
+          "quadDot": 0.999786525050238,
+          "beforeStep": 0.08358836449631105,
+          "afterStep": 0.08358836449631105,
+          "contactChanged": true,
+          "solveMs": 3.5899370000006456
+        },
+        {
+          "age": 0.6333333333333333,
+          "active": false,
+          "beforeMin": 0.011719021503196814,
+          "afterMin": 0.011719021503196814,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1,
+          "minStretch": 1,
+          "areaMin": 1,
+          "areaMax": 1,
+          "quadDot": 0.9997865661310359,
+          "beforeStep": 0.05971983732851981,
+          "afterStep": 0.05971983732851981,
+          "contactChanged": true,
+          "solveMs": 0.03204600000026403
+        }
+      ]
+    },
+    {
+      "terrain": "actual-spawn",
+      "hz": 60,
+      "frames": [
+        {
+          "age": 0.4,
+          "active": true,
+          "beforeMin": 0.002885900107904238,
+          "afterMin": 0.0029999999999998916,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0000677830146139,
+          "minStretch": 0.999871484117953,
+          "areaMin": 0.9998941499069008,
+          "areaMax": 1.0000531866722986,
+          "quadDot": 0.999786525050238,
+          "beforeStep": 0.04195816587221657,
+          "afterStep": 0.04195816587221657,
+          "contactChanged": true,
+          "solveMs": 3.9735740000005535
+        },
+        {
+          "age": 0.6166666666666667,
+          "active": false,
+          "beforeMin": 0.006921754468870889,
+          "afterMin": 0.006921754468870889,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1,
+          "minStretch": 1,
+          "areaMin": 1,
+          "areaMax": 1,
+          "quadDot": 0.9997865661310341,
+          "beforeStep": 0.030842971447193362,
+          "afterStep": 0.030842971447193362,
+          "contactChanged": true,
+          "solveMs": 0.033642000000327243
+        }
+      ]
+    },
+    {
+      "terrain": "actual-spawn",
+      "hz": 120,
+      "frames": [
+        {
+          "age": 0.4,
+          "active": true,
+          "beforeMin": 0.002885900107904238,
+          "afterMin": 0.0029999999999998916,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1.0000677830146139,
+          "minStretch": 0.999871484117953,
+          "areaMin": 0.9998941499069008,
+          "areaMax": 1.0000531866722986,
+          "quadDot": 0.999786525050238,
+          "beforeStep": 0.02100924158216623,
+          "afterStep": 0.02100924158216623,
+          "contactChanged": true,
+          "solveMs": 3.7181829999999536
+        },
+        {
+          "age": 0.6083333333333333,
+          "active": false,
+          "beforeMin": 0.004567253150191464,
+          "afterMin": 0.004567253150191464,
+          "maxPinResidual": 0,
+          "pinnedBelowFloor": [],
+          "maxStretch": 1,
+          "minStretch": 1,
+          "areaMin": 1,
+          "areaMax": 1,
+          "quadDot": 0.9997865661310361,
+          "beforeStep": 0.015658065788450266,
+          "afterStep": 0.015658065788450266,
+          "contactChanged": true,
+          "solveMs": 0.037387000000308035
+        }
+      ]
+    }
+  ],
+  "agreement": [
+    {
+      "terrain": "flat",
+      "matchingAgeMaxDifference": 0
+    },
+    {
+      "terrain": "cross-slope",
+      "matchingAgeMaxDifference": 0
+    },
+    {
+      "terrain": "along-slope",
+      "matchingAgeMaxDifference": 0
+    },
+    {
+      "terrain": "diagonal-slope",
+      "matchingAgeMaxDifference": 0
+    },
+    {
+      "terrain": "actual-spawn",
+      "matchingAgeMaxDifference": 0
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "method": "official builtin image_gen, initial plus one targeted edit",
+  "source": "original generated fictional design references, not photograph/scan or calibrated 3D projection",
+  "references": [
+    "q-character-reference-v60/references/mira-head-views-v1.png",
+    "q-character-reference-v60/references/mira-complete-six-views-v1.png",
+    "q-character-reference-v60/micro-references/head/mira-face-patches-F01-F05-F09-v2.png"
+  ],
+  "originalToolOutputs": [
+    "/workspace/scratch/e72662e3b71f/generated_images/exec-bf2cee3a-56d6-461a-8f1d-c6cd3f9223de.png",
+    "/workspace/scratch/e72662e3b71f/generated_images/exec-dc5ce571-59e7-459c-8ff5-34c6697386a9.png"
+  ],
+  "copies": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v63/head/mira-F07-F11-v1.png",
+      "bytes": 1784906,
+      "sha256": "e425743db3d881f7cfca8a6be0bd0e6879b17a8918cb3be4f1b05b52e0353720",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "unmodifiedByteCopy": true
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v63/head/mira-F07-F11-v2.png",
+      "bytes": 1764903,
+      "sha256": "e92542a8696c2adc5af4d4d2754bd726bbf27771d480dc490ac1519ce46fad4d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "unmodifiedByteCopy": true
+    }
+  ],
+  "inspection": "v1 missing joins; v2 contiguous placement improved. F07 isolated depth and exact multiview projection remain unaccepted. Canonical head concavity + v2 layout + authored common curves used for bounded prototype, integration owner approved. No further generation."
+}
