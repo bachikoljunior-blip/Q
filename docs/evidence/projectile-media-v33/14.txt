@@ -1,0 +1,182 @@
+{
+  "scope": "Actual SceneView async factory and Game/actor updates; explicit texture-loader/renderer doubles (skin is an uninstalled flat-material fixture; skin factory is covered separately). No image decoding, Canvas, WebGL compilation/drawing, GPU/device performance or visual parity.",
+  "sourceHashes": {
+    "scene": "95b32fb3cf484793834afc847af6de37094bae1bb575eee4e95829d8b9010a01",
+    "forest-materials": "881295c31be465ee1784e2f458bfae777744ba8d67394920f815a707b3c3d0a8",
+    "actor-models": "0731e2582bd7eacabf90fd96ca651fd7bc2f56c886c82c912835563c7294b006",
+    "character-motion": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+    "weapon-trails": "29239925d0b70ca70032e728425ce475ac57718379aaf6936509119b28cc5b3b"
+  },
+  "loader": {
+    "calls": {
+      "vault": 1,
+      "environment": 1,
+      "forest": 1
+    },
+    "waitedForForestBeforeConstructor": true,
+    "returnedOneScene": true
+  },
+  "forest": {
+    "meshes": 4,
+    "materialPassContracts": 12,
+    "qualitySwitches": [
+      {
+        "quality": "low",
+        "x": 0,
+        "z": 80,
+        "drawCounts": [
+          1154,
+          228,
+          0,
+          0
+        ]
+      },
+      {
+        "quality": "low",
+        "x": -105,
+        "z": 0,
+        "drawCounts": [
+          1154,
+          228,
+          0,
+          0
+        ]
+      },
+      {
+        "quality": "medium",
+        "x": 0,
+        "z": 80,
+        "drawCounts": [
+          1114,
+          228,
+          40,
+          0
+        ]
+      },
+      {
+        "quality": "medium",
+        "x": -105,
+        "z": 0,
+        "drawCounts": [
+          1154,
+          195,
+          0,
+          33
+        ]
+      },
+      {
+        "quality": "high",
+        "x": 0,
+        "z": 80,
+        "drawCounts": [
+          1086,
+          222,
+          68,
+          6
+        ]
+      },
+      {
+        "quality": "high",
+        "x": -105,
+        "z": 0,
+        "drawCounts": [
+          1150,
+          160,
+          4,
+          68
+        ]
+      }
+    ],
+    "mainColorVarying": "vec4, explicitly sampled RGB"
+  },
+  "combat": [
+    {
+      "weapon": "sword",
+      "hz": 30,
+      "fixedSimulationHz": 60,
+      "releaseFrames": 5,
+      "visibleReleaseFrames": 5,
+      "unexpectedResets": 0
+    },
+    {
+      "weapon": "sword",
+      "hz": 60,
+      "fixedSimulationHz": 60,
+      "releaseFrames": 9,
+      "visibleReleaseFrames": 9,
+      "unexpectedResets": 0
+    },
+    {
+      "weapon": "sword",
+      "hz": 120,
+      "fixedSimulationHz": 60,
+      "releaseFrames": 18,
+      "visibleReleaseFrames": 18,
+      "unexpectedResets": 0
+    },
+    {
+      "weapon": "spear",
+      "hz": 30,
+      "fixedSimulationHz": 60,
+      "releaseFrames": 4,
+      "visibleReleaseFrames": 4,
+      "unexpectedResets": 0
+    },
+    {
+      "weapon": "spear",
+      "hz": 60,
+      "fixedSimulationHz": 60,
+      "releaseFrames": 7,
+      "visibleReleaseFrames": 7,
+      "unexpectedResets": 0
+    },
+    {
+      "weapon": "spear",
+      "hz": 120,
+      "fixedSimulationHz": 60,
+      "releaseFrames": 14,
+      "visibleReleaseFrames": 14,
+      "unexpectedResets": 0
+    },
+    {
+      "weapon": "greatsword",
+      "hz": 30,
+      "fixedSimulationHz": 60,
+      "releaseFrames": 6,
+      "visibleReleaseFrames": 6,
+      "unexpectedResets": 0
+    },
+    {
+      "weapon": "greatsword",
+      "hz": 60,
+      "fixedSimulationHz": 60,
+      "releaseFrames": 12,
+      "visibleReleaseFrames": 12,
+      "unexpectedResets": 0
+    },
+    {
+      "weapon": "greatsword",
+      "hz": 120,
+      "fixedSimulationHz": 60,
+      "releaseFrames": 24,
+      "visibleReleaseFrames": 24,
+      "unexpectedResets": 0
+    }
+  ],
+  "lifecycle": {
+    "paused-dt-zero": "pass",
+    "inactive-title": "pass",
+    "death": "pass",
+    "camera-teleport": "pass",
+    "unsnapped-root-jump": "pass",
+    "new-game": "pass"
+  },
+  "faultDetection": {
+    "omittedForestInstallation": true
+  },
+  "sameFrame": {
+    "updateChecks": 407,
+    "maxAuthoredPointError": 0,
+    "order": "actor → trail → renderer"
+  }
+}

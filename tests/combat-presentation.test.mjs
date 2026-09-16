@@ -51,7 +51,7 @@ test('boss radial attacks name jump as the distinct response',()=>{
 });
 
 test('only arrows whose current flight intersects the player become warnings',()=>{
-  const {game}=fixture();game.enemies.forEach(enemy=>enemy.dead=true);game.projectiles=[{owner:'enemy-1',x:0,y:game.player.y+1,z:5,vx:0,vy:0,vz:-20,life:2,damage:20}];let view=combatPresentation(game);assert.equal(view.primary.kind,'arrow');assert.equal(view.primary.timeToImpact,.22);
+  const {game}=fixture();game.enemies.forEach(enemy=>enemy.dead=true);game.projectiles=[{owner:'enemy-1',x:0,y:game.player.y+1,z:5,vx:0,vy:0,vz:-20,life:2,damage:20}];let view=combatPresentation(game);assert.equal(view.primary.kind,'arrow');assert.equal(view.primary.timeToImpact,Math.round((5-.6-1.34)/20*1000)/1000);
   game.projectiles[0].vx=20;game.projectiles[0].vz=0;view=combatPresentation(game);assert.equal(view.active,false);
 });
 

@@ -1,0 +1,268 @@
+{
+  "baseCommit": "892f7e59f602e20da62bf1c8708e432ce1eac637",
+  "recordedAt": "2026-09-16T05:17:18.956Z",
+  "identity": {
+    "version": "0.21.0",
+    "sourceFingerprint": "sha256:28733d6d841a8986c78da99eb6d7b587897f12113264d22699d9a12888baf1cc"
+  },
+  "files": {
+    "scripts/package.mjs": {
+      "bytes": 2079,
+      "sha256": "01b73f5a9000d236eb356ad43089c09e4d5a3e260f0c2441e27751b4ba9c2dc4"
+    },
+    "scripts/build-identity.mjs": {
+      "bytes": 1101,
+      "sha256": "c5163a7f3a26d71219bda1fa83f3399195f02419575790fef86b9f2197665d27"
+    },
+    "scripts/packed-media.mjs": {
+      "bytes": 2401,
+      "sha256": "28ada56188da9ee995d11bf448432b2941ed7667fe2394382f0e8e4a88e8e1dc"
+    },
+    "scripts/packed-media-plugin.mjs": {
+      "bytes": 1407,
+      "sha256": "0d1465111fecaf46e30aa181337c6c661da5c1cd5f798c70d567998c3be6bf34"
+    },
+    "scripts/verify-artifacts.mjs": {
+      "bytes": 12369,
+      "sha256": "a215053774df93286785fa9d167e5008a2670958f76c73841ca30295b1ed0cbc"
+    },
+    "tests/main-runtime-fixture.mjs": {
+      "bytes": 13721,
+      "sha256": "e43b363c6d94f0c024d32d7f1493ff2ed56d7e1a41c1090993acbe151cea206e"
+    },
+    "tests/standalone-runtime-fixture.mjs": {
+      "bytes": 3599,
+      "sha256": "dcf2dd4ed92d48d1a17886c064cf635d400a641413750e29b28bd9a4f049ff11"
+    },
+    "tests/packed-media.test.mjs": {
+      "bytes": 2995,
+      "sha256": "81198dc10f29046050569117c283c402598aea7ae0ba3b6ce49546612caacce6"
+    },
+    "tests/standalone-encoding.test.mjs": {
+      "bytes": 3305,
+      "sha256": "fbae175c184f0e1e435ff820f1defb805e488c5aeafe56ef142815ab8f161c52"
+    }
+  },
+  "study": {
+    "compare-fast.mjs": {
+      "bytes": 3797,
+      "sha256": "bb8463891e82f4c0e328fb73a28dc4161b57e621dc53bc94473d78b3b2d7576d",
+      "preservedFrom": "/workspace/scratch/e72662e3b71f/q-v33-standalone-encoding-study/compare-fast.mjs"
+    },
+    "compare.mjs": {
+      "bytes": 3750,
+      "sha256": "89999e42bdaa8dc4222b28af0ab7d7e1a54130dc77a0e803712e072915d6f248",
+      "preservedFrom": "/workspace/scratch/e72662e3b71f/q-v33-standalone-encoding-study/compare.mjs"
+    },
+    "comparison-fast.json": {
+      "bytes": 10410,
+      "sha256": "1b76d466d513dfbe8d8181866e9afe29c85c3c459595131af7cb8990f093118d",
+      "preservedFrom": "/workspace/scratch/e72662e3b71f/q-v33-standalone-encoding-study/comparison-fast.json"
+    },
+    "comparison.json": {
+      "bytes": 10424,
+      "sha256": "ee50c6ab026cc8a1cd933cc658ca0d9b101b3922ed118b5897bd87bab79c0e68",
+      "preservedFrom": "/workspace/scratch/e72662e3b71f/q-v33-standalone-encoding-study/comparison.json"
+    }
+  },
+  "stats": {
+    "htmlBytes": 15393094,
+    "scriptBytes": 15109453,
+    "cssBytes": 275888,
+    "decoderAttributedBytes": 1244,
+    "packedAssets": 26
+  },
+  "stage": {
+    "root": "artifacts/site-ZY6H63",
+    "files": [
+      "assets/crown-branch-rgba-DvI_Tv4J.png",
+      "assets/ember-ambient-DxlfqX62.wav",
+      "assets/ember-stone-CGtrIuNR.png",
+      "assets/forest_floor_diff_1k-FrvyY1gs.jpg",
+      "assets/gale-ambient-Bk5IsviT.wav",
+      "assets/gale-stone-DFcyxpvg.png",
+      "assets/index-B4Hxfhht.js",
+      "assets/index-D9sgQo73.css",
+      "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
+      "assets/moss-ambient-P9AOr4W8.wav",
+      "assets/moss-stone-DiwO4PmY.png",
+      "assets/north-gate-v22-M69S2yqx.webp",
+      "assets/north-gate-v23-BAPO0H9x.mp4",
+      "assets/pilgrim-foley-CW54U_6w.wav",
+      "assets/pilgrim-harmony-LSIdyu7z.mp3",
+      "assets/pilgrim-motif-yb4axZNo.mp3",
+      "assets/pilgrim-pulse-BJS9Fs4r.mp3",
+      "assets/pine-branch-rgba-DpLH-kJr.png",
+      "assets/rock_face_03_diff_1k-Clx6WbHJ.jpg",
+      "assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg",
+      "assets/scene-DH17HoGE.js",
+      "assets/shared-alert-JeJkFdAY.wav",
+      "assets/shared-claim-BPXeWqKz.wav",
+      "assets/shared-impact-DwWqEia4.wav",
+      "assets/shared-seal-slkiLvkd.wav",
+      "assets/shared-step-D8_A5LtE.wav",
+      "assets/shared-swing-BkmUzsmF.wav",
+      "assets/three-gEIhRU3M.js",
+      "assets/tide-ambient-BP0Z0aTJ.wav",
+      "assets/tide-stone-COv3Sj_E.png",
+      "assets/young-male-q95-DLRShmkN.webp",
+      "icon.svg",
+      "index.html",
+      "manifest.webmanifest"
+    ]
+  },
+  "baseline": {
+    "bytes": 16331434,
+    "sha256": "8f659340f1eecf5984287486c8f94d00de384ff6b677625e0c03716958e8945e"
+  },
+  "candidate": {
+    "bytes": 15393094,
+    "sha256": "df465ffa7b282d9f014c63b2ef5dea6b995be6cd6fc73cae33be15fe74f77737",
+    "remainingUnder16MiB": 1384122
+  },
+  "bytesSaved": 938340,
+  "packedRawPayloadSaving": 939890,
+  "combinedHelperDescriptorWrapperOverhead": 1550,
+  "cssExact": true,
+  "allSourceMediaBytes": 11441662,
+  "initialDecoderInputBytes": 5569926,
+  "launchDecoderInputBytes": 5708774,
+  "largestTemporaryDecodedByteArray": 3178191,
+  "media": [
+    {
+      "source": "src/assets/characters/skin/young-male-q95.webp",
+      "bytes": 541954,
+      "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+    },
+    {
+      "source": "src/assets/environment/forest_floor_diff_1k.jpg",
+      "bytes": 1329853,
+      "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b"
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_diff_1k.jpg",
+      "bytes": 927082,
+      "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d"
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_nor_gl_1k.jpg",
+      "bytes": 1146788,
+      "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
+    },
+    {
+      "source": "src/assets/forest/crown-branch-rgba.png",
+      "bytes": 162720,
+      "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7"
+    },
+    {
+      "source": "src/assets/forest/pine-branch-rgba.png",
+      "bytes": 165258,
+      "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a"
+    },
+    {
+      "source": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-foley.wav",
+      "bytes": 826370,
+      "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+      "bytes": 288594,
+      "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-motif.mp3",
+      "bytes": 192463,
+      "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+      "bytes": 192463,
+      "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13"
+    },
+    {
+      "source": "src/assets/title/north-gate-v22.webp",
+      "bytes": 162962,
+      "sha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a"
+    },
+    {
+      "source": "src/assets/title/north-gate-v23.mp4",
+      "bytes": 3178191,
+      "sha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c"
+    },
+    {
+      "source": "src/assets/vaults/ember-ambient.wav",
+      "bytes": 176444,
+      "sha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13"
+    },
+    {
+      "source": "src/assets/vaults/ember-stone.png",
+      "bytes": 16849,
+      "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9"
+    },
+    {
+      "source": "src/assets/vaults/gale-ambient.wav",
+      "bytes": 176444,
+      "sha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0"
+    },
+    {
+      "source": "src/assets/vaults/gale-stone.png",
+      "bytes": 17052,
+      "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
+    },
+    {
+      "source": "src/assets/vaults/moss-ambient.wav",
+      "bytes": 176444,
+      "sha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36"
+    },
+    {
+      "source": "src/assets/vaults/moss-stone.png",
+      "bytes": 17328,
+      "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419"
+    },
+    {
+      "source": "src/assets/vaults/shared-alert.wav",
+      "bytes": 21212,
+      "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a"
+    },
+    {
+      "source": "src/assets/vaults/shared-claim.wav",
+      "bytes": 39734,
+      "sha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a"
+    },
+    {
+      "source": "src/assets/vaults/shared-impact.wav",
+      "bytes": 7982,
+      "sha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153"
+    },
+    {
+      "source": "src/assets/vaults/shared-seal.wav",
+      "bytes": 30914,
+      "sha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5"
+    },
+    {
+      "source": "src/assets/vaults/shared-step.wav",
+      "bytes": 7100,
+      "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088"
+    },
+    {
+      "source": "src/assets/vaults/shared-swing.wav",
+      "bytes": 10628,
+      "sha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25"
+    },
+    {
+      "source": "src/assets/vaults/tide-ambient.wav",
+      "bytes": 176444,
+      "sha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba"
+    },
+    {
+      "source": "src/assets/vaults/tide-stone.png",
+      "bytes": 17270,
+      "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
+    }
+  ]
+}

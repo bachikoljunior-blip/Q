@@ -1,0 +1,1227 @@
+{
+  "recordedAt": "2026-09-16T05:15:00.488Z",
+  "node": "v24.19.0",
+  "baselinePath": "/workspace/scratch/e72662e3b71f/Q-ps4-v31/release/Q-ash-pilgrim.html",
+  "baselineBytes": 16331434,
+  "baselineSHA256": "8f659340f1eecf5984287486c8f94d00de384ff6b677625e0c03716958e8945e",
+  "candidateBytes": 15393094,
+  "candidateSHA256": "df465ffa7b282d9f014c63b2ef5dea6b995be6cd6fc73cae33be15fe74f77737",
+  "media": [
+    {
+      "source": "src/assets/characters/skin/young-male-q95.webp",
+      "bytes": 541954,
+      "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+    },
+    {
+      "source": "src/assets/environment/forest_floor_diff_1k.jpg",
+      "bytes": 1329853,
+      "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b"
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_diff_1k.jpg",
+      "bytes": 927082,
+      "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d"
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_nor_gl_1k.jpg",
+      "bytes": 1146788,
+      "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
+    },
+    {
+      "source": "src/assets/forest/crown-branch-rgba.png",
+      "bytes": 162720,
+      "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7"
+    },
+    {
+      "source": "src/assets/forest/pine-branch-rgba.png",
+      "bytes": 165258,
+      "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a"
+    },
+    {
+      "source": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-foley.wav",
+      "bytes": 826370,
+      "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+      "bytes": 288594,
+      "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-motif.mp3",
+      "bytes": 192463,
+      "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+      "bytes": 192463,
+      "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13"
+    },
+    {
+      "source": "src/assets/title/north-gate-v22.webp",
+      "bytes": 162962,
+      "sha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a"
+    },
+    {
+      "source": "src/assets/title/north-gate-v23.mp4",
+      "bytes": 3178191,
+      "sha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c"
+    },
+    {
+      "source": "src/assets/vaults/ember-ambient.wav",
+      "bytes": 176444,
+      "sha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13"
+    },
+    {
+      "source": "src/assets/vaults/ember-stone.png",
+      "bytes": 16849,
+      "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9"
+    },
+    {
+      "source": "src/assets/vaults/gale-ambient.wav",
+      "bytes": 176444,
+      "sha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0"
+    },
+    {
+      "source": "src/assets/vaults/gale-stone.png",
+      "bytes": 17052,
+      "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
+    },
+    {
+      "source": "src/assets/vaults/moss-ambient.wav",
+      "bytes": 176444,
+      "sha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36"
+    },
+    {
+      "source": "src/assets/vaults/moss-stone.png",
+      "bytes": 17328,
+      "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419"
+    },
+    {
+      "source": "src/assets/vaults/shared-alert.wav",
+      "bytes": 21212,
+      "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a"
+    },
+    {
+      "source": "src/assets/vaults/shared-claim.wav",
+      "bytes": 39734,
+      "sha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a"
+    },
+    {
+      "source": "src/assets/vaults/shared-impact.wav",
+      "bytes": 7982,
+      "sha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153"
+    },
+    {
+      "source": "src/assets/vaults/shared-seal.wav",
+      "bytes": 30914,
+      "sha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5"
+    },
+    {
+      "source": "src/assets/vaults/shared-step.wav",
+      "bytes": 7100,
+      "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088"
+    },
+    {
+      "source": "src/assets/vaults/shared-swing.wav",
+      "bytes": 10628,
+      "sha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25"
+    },
+    {
+      "source": "src/assets/vaults/tide-ambient.wav",
+      "bytes": 176444,
+      "sha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba"
+    },
+    {
+      "source": "src/assets/vaults/tide-stone.png",
+      "bytes": 17270,
+      "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
+    }
+  ],
+  "runs": [
+    {
+      "name": "baseline",
+      "titleAllocations": 0,
+      "allocations": [],
+      "requests": [
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+        }
+      ],
+      "titleState": {
+        "playing": false,
+        "paused": false,
+        "level": 1,
+        "objective": "集落の灯守ミラと話す",
+        "lit": [
+          "haven"
+        ],
+        "ash": 0,
+        "herbs": 0,
+        "potions": 3,
+        "ending": null
+      },
+      "finalState": {
+        "playing": false,
+        "paused": false,
+        "level": 1,
+        "objective": "集落の灯守ミラと話す",
+        "lit": [
+          "haven"
+        ],
+        "ash": 0,
+        "herbs": 0,
+        "potions": 3,
+        "ending": null
+      },
+      "titleHostMs": 112.12325500000003,
+      "launchHostMs": 86.11240099999998,
+      "memoryStart": {
+        "total_heap_size": 108322816,
+        "total_heap_size_executable": 524288,
+        "total_physical_size": 78327808,
+        "total_available_size": 4422238920,
+        "used_heap_size": 72973456,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 624184,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 1,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 8192,
+        "used_global_handles_size": 3968,
+        "external_memory": 15411148
+      },
+      "memoryAfterTitle": {
+        "total_heap_size": 123928576,
+        "total_heap_size_executable": 524288,
+        "total_physical_size": 118005760,
+        "total_available_size": 4396373608,
+        "used_heap_size": 99641128,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 2,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4096,
+        "external_memory": 3967863
+      },
+      "memoryEnd": {
+        "total_heap_size": 132255744,
+        "total_heap_size_executable": 786432,
+        "total_physical_size": 132268032,
+        "total_available_size": 4393946272,
+        "used_heap_size": 102042600,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 2,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4416,
+        "external_memory": 8627162
+      },
+      "scriptSHA256": "678f976c52d6ab68f40db64b55ed2d6accda42a81aeed9eaf20cf865252b0321",
+      "boundary": "Actual packaged script in Node DOM fixture; title decoration context null, image/HDR decoding rejects explicitly, no AudioContext/WebGL. Boot failure returns to title. No actual browser, render, codec, device or peak-heap measurement. Allocation source names are candidates by byte length; equal-length audio assets are not falsely identified by length alone."
+    },
+    {
+      "name": "candidate",
+      "titleAllocations": 19,
+      "allocations": [
+        {
+          "phase": "title",
+          "bytes": 16849,
+          "candidateSources": [
+            "src/assets/vaults/ember-stone.png"
+          ],
+          "timeMs": 56.67085200000008,
+          "heapUsed": 120779112
+        },
+        {
+          "phase": "title",
+          "bytes": 176444,
+          "candidateSources": [
+            "src/assets/vaults/ember-ambient.wav",
+            "src/assets/vaults/gale-ambient.wav",
+            "src/assets/vaults/moss-ambient.wav",
+            "src/assets/vaults/tide-ambient.wav"
+          ],
+          "timeMs": 58.982395999999994,
+          "heapUsed": 121437104
+        },
+        {
+          "phase": "title",
+          "bytes": 17270,
+          "candidateSources": [
+            "src/assets/vaults/tide-stone.png"
+          ],
+          "timeMs": 66.02731200000005,
+          "heapUsed": 127898696
+        },
+        {
+          "phase": "title",
+          "bytes": 176444,
+          "candidateSources": [
+            "src/assets/vaults/ember-ambient.wav",
+            "src/assets/vaults/gale-ambient.wav",
+            "src/assets/vaults/moss-ambient.wav",
+            "src/assets/vaults/tide-ambient.wav"
+          ],
+          "timeMs": 67.44072600000004,
+          "heapUsed": 128538080
+        },
+        {
+          "phase": "title",
+          "bytes": 17052,
+          "candidateSources": [
+            "src/assets/vaults/gale-stone.png"
+          ],
+          "timeMs": 73.530351,
+          "heapUsed": 134906344
+        },
+        {
+          "phase": "title",
+          "bytes": 176444,
+          "candidateSources": [
+            "src/assets/vaults/ember-ambient.wav",
+            "src/assets/vaults/gale-ambient.wav",
+            "src/assets/vaults/moss-ambient.wav",
+            "src/assets/vaults/tide-ambient.wav"
+          ],
+          "timeMs": 74.261124,
+          "heapUsed": 135522672
+        },
+        {
+          "phase": "title",
+          "bytes": 17328,
+          "candidateSources": [
+            "src/assets/vaults/moss-stone.png"
+          ],
+          "timeMs": 80.30473900000004,
+          "heapUsed": 126569272
+        },
+        {
+          "phase": "title",
+          "bytes": 176444,
+          "candidateSources": [
+            "src/assets/vaults/ember-ambient.wav",
+            "src/assets/vaults/gale-ambient.wav",
+            "src/assets/vaults/moss-ambient.wav",
+            "src/assets/vaults/tide-ambient.wav"
+          ],
+          "timeMs": 81.02054700000008,
+          "heapUsed": 127199984
+        },
+        {
+          "phase": "title",
+          "bytes": 7100,
+          "candidateSources": [
+            "src/assets/vaults/shared-step.wav"
+          ],
+          "timeMs": 86.58669600000007,
+          "heapUsed": 133554208
+        },
+        {
+          "phase": "title",
+          "bytes": 21212,
+          "candidateSources": [
+            "src/assets/vaults/shared-alert.wav"
+          ],
+          "timeMs": 86.84713799999997,
+          "heapUsed": 133811936
+        },
+        {
+          "phase": "title",
+          "bytes": 10628,
+          "candidateSources": [
+            "src/assets/vaults/shared-swing.wav"
+          ],
+          "timeMs": 87.335782,
+          "heapUsed": 134577512
+        },
+        {
+          "phase": "title",
+          "bytes": 7982,
+          "candidateSources": [
+            "src/assets/vaults/shared-impact.wav"
+          ],
+          "timeMs": 87.60375399999998,
+          "heapUsed": 134962128
+        },
+        {
+          "phase": "title",
+          "bytes": 39734,
+          "candidateSources": [
+            "src/assets/vaults/shared-claim.wav"
+          ],
+          "timeMs": 87.88221099999998,
+          "heapUsed": 135251480
+        },
+        {
+          "phase": "title",
+          "bytes": 30914,
+          "candidateSources": [
+            "src/assets/vaults/shared-seal.wav"
+          ],
+          "timeMs": 88.93348700000001,
+          "heapUsed": 136683808
+        },
+        {
+          "phase": "title",
+          "bytes": 288594,
+          "candidateSources": [
+            "src/assets/soundscape/pilgrim-harmony.mp3"
+          ],
+          "timeMs": 89.79516699999999,
+          "heapUsed": 137831944
+        },
+        {
+          "phase": "title",
+          "bytes": 192463,
+          "candidateSources": [
+            "src/assets/soundscape/pilgrim-motif.mp3",
+            "src/assets/soundscape/pilgrim-pulse.mp3"
+          ],
+          "timeMs": 97.68063500000005,
+          "heapUsed": 132094568
+        },
+        {
+          "phase": "title",
+          "bytes": 192463,
+          "candidateSources": [
+            "src/assets/soundscape/pilgrim-motif.mp3",
+            "src/assets/soundscape/pilgrim-pulse.mp3"
+          ],
+          "timeMs": 102.60938699999997,
+          "heapUsed": 139024560
+        },
+        {
+          "phase": "title",
+          "bytes": 826370,
+          "candidateSources": [
+            "src/assets/soundscape/pilgrim-foley.wav"
+          ],
+          "timeMs": 108.21585300000004,
+          "heapUsed": 145954536
+        },
+        {
+          "phase": "title",
+          "bytes": 3178191,
+          "candidateSources": [
+            "src/assets/title/north-gate-v23.mp4"
+          ],
+          "timeMs": 140.08215500000006,
+          "heapUsed": 147762424
+        },
+        {
+          "phase": "launch",
+          "bytes": 1329853,
+          "candidateSources": [
+            "src/assets/environment/forest_floor_diff_1k.jpg"
+          ],
+          "timeMs": 509.23043300000006,
+          "heapUsed": 112936632
+        },
+        {
+          "phase": "launch",
+          "bytes": 927082,
+          "candidateSources": [
+            "src/assets/environment/rock_face_03_diff_1k.jpg"
+          ],
+          "timeMs": 538.299021,
+          "heapUsed": 161970968
+        },
+        {
+          "phase": "launch",
+          "bytes": 1146788,
+          "candidateSources": [
+            "src/assets/environment/rock_face_03_nor_gl_1k.jpg"
+          ],
+          "timeMs": 624.2853060000001,
+          "heapUsed": 139595736
+        },
+        {
+          "phase": "launch",
+          "bytes": 1435119,
+          "candidateSources": [
+            "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr"
+          ],
+          "timeMs": 654.542556,
+          "heapUsed": 182677072
+        },
+        {
+          "phase": "launch",
+          "bytes": 165258,
+          "candidateSources": [
+            "src/assets/forest/pine-branch-rgba.png"
+          ],
+          "timeMs": 687.117955,
+          "heapUsed": 169477048
+        },
+        {
+          "phase": "launch",
+          "bytes": 162720,
+          "candidateSources": [
+            "src/assets/forest/crown-branch-rgba.png"
+          ],
+          "timeMs": 691.1658630000001,
+          "heapUsed": 175631400
+        },
+        {
+          "phase": "launch",
+          "bytes": 541954,
+          "candidateSources": [
+            "src/assets/characters/skin/young-male-q95.webp"
+          ],
+          "timeMs": 695.99266,
+          "heapUsed": 182169472
+        }
+      ],
+      "requests": [
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+        }
+      ],
+      "titleState": {
+        "playing": false,
+        "paused": false,
+        "level": 1,
+        "objective": "集落の灯守ミラと話す",
+        "lit": [
+          "haven"
+        ],
+        "ash": 0,
+        "herbs": 0,
+        "potions": 3,
+        "ending": null
+      },
+      "finalState": {
+        "playing": false,
+        "paused": false,
+        "level": 1,
+        "objective": "集落の灯守ミラと話す",
+        "lit": [
+          "haven"
+        ],
+        "ash": 0,
+        "herbs": 0,
+        "potions": 3,
+        "ending": null
+      },
+      "titleHostMs": 393.583853,
+      "launchHostMs": 340.91603499999997,
+      "memoryStart": {
+        "total_heap_size": 140435456,
+        "total_heap_size_executable": 786432,
+        "total_physical_size": 140447744,
+        "total_available_size": 4389749504,
+        "used_heap_size": 105500280,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 286792,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 2,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4064,
+        "external_memory": 8627141
+      },
+      "memoryAfterTitle": {
+        "total_heap_size": 294686720,
+        "total_heap_size_executable": 1310720,
+        "total_physical_size": 279216128,
+        "total_available_size": 4286258504,
+        "used_heap_size": 209812552,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 3,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4192,
+        "external_memory": 7535958
+      },
+      "memoryEnd": {
+        "total_heap_size": 265584640,
+        "total_heap_size_executable": 786432,
+        "total_physical_size": 265854976,
+        "total_available_size": 4344764376,
+        "used_heap_size": 147609784,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 3,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4480,
+        "external_memory": 9558999
+      },
+      "scriptSHA256": "07fb312a569e80f97ea983dfea8f70916e23598c339a227fb8ef52864e0334ab",
+      "boundary": "Actual packaged script in Node DOM fixture; title decoration context null, image/HDR decoding rejects explicitly, no AudioContext/WebGL. Boot failure returns to title. No actual browser, render, codec, device or peak-heap measurement. Allocation source names are candidates by byte length; equal-length audio assets are not falsely identified by length alone."
+    },
+    {
+      "name": "candidate",
+      "titleAllocations": 19,
+      "allocations": [
+        {
+          "phase": "title",
+          "bytes": 16849,
+          "candidateSources": [
+            "src/assets/vaults/ember-stone.png"
+          ],
+          "timeMs": 3.735304000000042,
+          "heapUsed": 120975576
+        },
+        {
+          "phase": "title",
+          "bytes": 176444,
+          "candidateSources": [
+            "src/assets/vaults/ember-ambient.wav",
+            "src/assets/vaults/gale-ambient.wav",
+            "src/assets/vaults/moss-ambient.wav",
+            "src/assets/vaults/tide-ambient.wav"
+          ],
+          "timeMs": 5.422751000000062,
+          "heapUsed": 121634264
+        },
+        {
+          "phase": "title",
+          "bytes": 17270,
+          "candidateSources": [
+            "src/assets/vaults/tide-stone.png"
+          ],
+          "timeMs": 13.118697000000111,
+          "heapUsed": 128125880
+        },
+        {
+          "phase": "title",
+          "bytes": 176444,
+          "candidateSources": [
+            "src/assets/vaults/ember-ambient.wav",
+            "src/assets/vaults/gale-ambient.wav",
+            "src/assets/vaults/moss-ambient.wav",
+            "src/assets/vaults/tide-ambient.wav"
+          ],
+          "timeMs": 14.058035000000018,
+          "heapUsed": 128764240
+        },
+        {
+          "phase": "title",
+          "bytes": 17052,
+          "candidateSources": [
+            "src/assets/vaults/gale-stone.png"
+          ],
+          "timeMs": 18.595113999999967,
+          "heapUsed": 135131664
+        },
+        {
+          "phase": "title",
+          "bytes": 176444,
+          "candidateSources": [
+            "src/assets/vaults/ember-ambient.wav",
+            "src/assets/vaults/gale-ambient.wav",
+            "src/assets/vaults/moss-ambient.wav",
+            "src/assets/vaults/tide-ambient.wav"
+          ],
+          "timeMs": 19.050527999999986,
+          "heapUsed": 135747208
+        },
+        {
+          "phase": "title",
+          "bytes": 17328,
+          "candidateSources": [
+            "src/assets/vaults/moss-stone.png"
+          ],
+          "timeMs": 23.784647000000177,
+          "heapUsed": 142121216
+        },
+        {
+          "phase": "title",
+          "bytes": 176444,
+          "candidateSources": [
+            "src/assets/vaults/ember-ambient.wav",
+            "src/assets/vaults/gale-ambient.wav",
+            "src/assets/vaults/moss-ambient.wav",
+            "src/assets/vaults/tide-ambient.wav"
+          ],
+          "timeMs": 24.397688000000016,
+          "heapUsed": 142746696
+        },
+        {
+          "phase": "title",
+          "bytes": 7100,
+          "candidateSources": [
+            "src/assets/vaults/shared-step.wav"
+          ],
+          "timeMs": 31.14532700000018,
+          "heapUsed": 149100064
+        },
+        {
+          "phase": "title",
+          "bytes": 21212,
+          "candidateSources": [
+            "src/assets/vaults/shared-alert.wav"
+          ],
+          "timeMs": 31.39646400000015,
+          "heapUsed": 149361488
+        },
+        {
+          "phase": "title",
+          "bytes": 10628,
+          "candidateSources": [
+            "src/assets/vaults/shared-swing.wav"
+          ],
+          "timeMs": 32.01659300000006,
+          "heapUsed": 150126776
+        },
+        {
+          "phase": "title",
+          "bytes": 7982,
+          "candidateSources": [
+            "src/assets/vaults/shared-impact.wav"
+          ],
+          "timeMs": 32.24621500000012,
+          "heapUsed": 150511120
+        },
+        {
+          "phase": "title",
+          "bytes": 39734,
+          "candidateSources": [
+            "src/assets/vaults/shared-claim.wav"
+          ],
+          "timeMs": 32.427577000000156,
+          "heapUsed": 150800200
+        },
+        {
+          "phase": "title",
+          "bytes": 30914,
+          "candidateSources": [
+            "src/assets/vaults/shared-seal.wav"
+          ],
+          "timeMs": 33.43183399999998,
+          "heapUsed": 152232208
+        },
+        {
+          "phase": "title",
+          "bytes": 288594,
+          "candidateSources": [
+            "src/assets/soundscape/pilgrim-harmony.mp3"
+          ],
+          "timeMs": 34.17811000000006,
+          "heapUsed": 153351336
+        },
+        {
+          "phase": "title",
+          "bytes": 192463,
+          "candidateSources": [
+            "src/assets/soundscape/pilgrim-motif.mp3",
+            "src/assets/soundscape/pilgrim-pulse.mp3"
+          ],
+          "timeMs": 41.62002800000005,
+          "heapUsed": 163742312
+        },
+        {
+          "phase": "title",
+          "bytes": 192463,
+          "candidateSources": [
+            "src/assets/soundscape/pilgrim-motif.mp3",
+            "src/assets/soundscape/pilgrim-pulse.mp3"
+          ],
+          "timeMs": 46.274049000000105,
+          "heapUsed": 170672344
+        },
+        {
+          "phase": "title",
+          "bytes": 826370,
+          "candidateSources": [
+            "src/assets/soundscape/pilgrim-foley.wav"
+          ],
+          "timeMs": 50.987763000000086,
+          "heapUsed": 177602384
+        },
+        {
+          "phase": "title",
+          "bytes": 3178191,
+          "candidateSources": [
+            "src/assets/title/north-gate-v23.mp4"
+          ],
+          "timeMs": 84.69225700000015,
+          "heapUsed": 147222224
+        },
+        {
+          "phase": "launch",
+          "bytes": 1329853,
+          "candidateSources": [
+            "src/assets/environment/forest_floor_diff_1k.jpg"
+          ],
+          "timeMs": 527.833721,
+          "heapUsed": 219044552
+        },
+        {
+          "phase": "launch",
+          "bytes": 927082,
+          "candidateSources": [
+            "src/assets/environment/rock_face_03_diff_1k.jpg"
+          ],
+          "timeMs": 589.11436,
+          "heapUsed": 226803288
+        },
+        {
+          "phase": "launch",
+          "bytes": 1146788,
+          "candidateSources": [
+            "src/assets/environment/rock_face_03_nor_gl_1k.jpg"
+          ],
+          "timeMs": 648.2237190000001,
+          "heapUsed": 210585328
+        },
+        {
+          "phase": "launch",
+          "bytes": 1435119,
+          "candidateSources": [
+            "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr"
+          ],
+          "timeMs": 674.08637,
+          "heapUsed": 251871504
+        },
+        {
+          "phase": "launch",
+          "bytes": 165258,
+          "candidateSources": [
+            "src/assets/forest/pine-branch-rgba.png"
+          ],
+          "timeMs": 714.293881,
+          "heapUsed": 241411680
+        },
+        {
+          "phase": "launch",
+          "bytes": 162720,
+          "candidateSources": [
+            "src/assets/forest/crown-branch-rgba.png"
+          ],
+          "timeMs": 717.7908500000001,
+          "heapUsed": 247362336
+        },
+        {
+          "phase": "launch",
+          "bytes": 541954,
+          "candidateSources": [
+            "src/assets/characters/skin/young-male-q95.webp"
+          ],
+          "timeMs": 721.4098370000002,
+          "heapUsed": 253222648
+        }
+      ],
+      "requests": [
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+        }
+      ],
+      "titleState": {
+        "playing": false,
+        "paused": false,
+        "level": 1,
+        "objective": "集落の灯守ミラと話す",
+        "lit": [
+          "haven"
+        ],
+        "ash": 0,
+        "herbs": 0,
+        "potions": 3,
+        "ending": null
+      },
+      "finalState": {
+        "playing": false,
+        "paused": false,
+        "level": 1,
+        "objective": "集落の灯守ミラと話す",
+        "lit": [
+          "haven"
+        ],
+        "ash": 0,
+        "herbs": 0,
+        "potions": 3,
+        "ending": null
+      },
+      "titleHostMs": 499.40281400000003,
+      "launchHostMs": 264.19693199999983,
+      "memoryStart": {
+        "total_heap_size": 255787008,
+        "total_heap_size_executable": 786432,
+        "total_physical_size": 256057344,
+        "total_available_size": 4375513624,
+        "used_heap_size": 120059992,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 3,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4160,
+        "external_memory": 9558999
+      },
+      "memoryAfterTitle": {
+        "total_heap_size": 310693888,
+        "total_heap_size_executable": 1310720,
+        "total_physical_size": 310964224,
+        "total_available_size": 4302951648,
+        "used_heap_size": 193199592,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 4,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4288,
+        "external_memory": 7860326
+      },
+      "memoryEnd": {
+        "total_heap_size": 340357120,
+        "total_heap_size_executable": 1310720,
+        "total_physical_size": 340627456,
+        "total_available_size": 4272022128,
+        "used_heap_size": 220309600,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 467576,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 4,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4608,
+        "external_memory": 13127115
+      },
+      "scriptSHA256": "07fb312a569e80f97ea983dfea8f70916e23598c339a227fb8ef52864e0334ab",
+      "boundary": "Actual packaged script in Node DOM fixture; title decoration context null, image/HDR decoding rejects explicitly, no AudioContext/WebGL. Boot failure returns to title. No actual browser, render, codec, device or peak-heap measurement. Allocation source names are candidates by byte length; equal-length audio assets are not falsely identified by length alone."
+    },
+    {
+      "name": "baseline",
+      "titleAllocations": 0,
+      "allocations": [],
+      "requests": [
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7"
+        },
+        {
+          "phase": "launch",
+          "kind": "image",
+          "dataURL": true,
+          "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+        }
+      ],
+      "titleState": {
+        "playing": false,
+        "paused": false,
+        "level": 1,
+        "objective": "集落の灯守ミラと話す",
+        "lit": [
+          "haven"
+        ],
+        "ash": 0,
+        "herbs": 0,
+        "potions": 3,
+        "ending": null
+      },
+      "finalState": {
+        "playing": false,
+        "paused": false,
+        "level": 1,
+        "objective": "集落の灯守ミラと話す",
+        "lit": [
+          "haven"
+        ],
+        "ash": 0,
+        "herbs": 0,
+        "potions": 3,
+        "ending": null
+      },
+      "titleHostMs": 32.66699400000016,
+      "launchHostMs": 56.52620899999965,
+      "memoryStart": {
+        "total_heap_size": 272625664,
+        "total_heap_size_executable": 1310720,
+        "total_physical_size": 272896000,
+        "total_available_size": 4358511576,
+        "used_heap_size": 135286312,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 4,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4256,
+        "external_memory": 13127094
+      },
+      "memoryAfterTitle": {
+        "total_heap_size": 272625664,
+        "total_heap_size_executable": 1310720,
+        "total_physical_size": 272896000,
+        "total_available_size": 4332977688,
+        "used_heap_size": 161936856,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 5,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4384,
+        "external_memory": 5006247
+      },
+      "memoryEnd": {
+        "total_heap_size": 278331392,
+        "total_heap_size_executable": 1310720,
+        "total_physical_size": 278601728,
+        "total_available_size": 4299717600,
+        "used_heap_size": 195189536,
+        "heap_size_limit": 4496293888,
+        "malloced_memory": 278592,
+        "peak_malloced_memory": 18866008,
+        "does_zap_garbage": 0,
+        "number_of_native_contexts": 5,
+        "number_of_detached_contexts": 0,
+        "total_global_handles_size": 12360,
+        "used_global_handles_size": 4704,
+        "external_memory": 9665546
+      },
+      "scriptSHA256": "678f976c52d6ab68f40db64b55ed2d6accda42a81aeed9eaf20cf865252b0321",
+      "boundary": "Actual packaged script in Node DOM fixture; title decoration context null, image/HDR decoding rejects explicitly, no AudioContext/WebGL. Boot failure returns to title. No actual browser, render, codec, device or peak-heap measurement. Allocation source names are candidates by byte length; equal-length audio assets are not falsely identified by length alone."
+    }
+  ],
+  "method": "Same exact Node DOM fixture and unchanged emitted script. Alternating two runs per version; explicit GC immediately before each trial outside timed phases. Title includes VM parse, DOM fixture construction, IIFE initialization and asset restoration; launch includes module initialization and explicit image/HDR decoder failure. V8 snapshots are process-wide used_heap_size at phase boundaries, not peak heap, device RAM or media/GPU memory; both input HTML strings remain resident. Observer and fixture allocations are included. OS RSS unavailable: process.memoryUsage() reported ENOENT uv_resident_set_memory; no alternate /proc access attempted."
+}

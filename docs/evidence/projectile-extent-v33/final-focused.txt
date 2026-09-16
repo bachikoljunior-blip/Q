@@ -1,0 +1,17 @@
+✔ tail, loaded and flying extent preserve full length with a narrow nock (1109.763043ms)
+✔ full initial occupied span resolves wall and body by raw distance before t0 conversion (178.015884ms)
+✔ all rates and optimized prediction use the leading tip time while damage stays 20 (29.003371ms)
+✔ a moving actor inside the current shaft is detected even behind its tip (9.956716ms)
+✔ terrain continuation is copied to forecasts and rejected after a teleport or reversal (9.33801ms)
+✔ parry uses contact as outgoing tail and checks reflected cover immediately (17.624584ms)
+✔ expiry, saved coordinates and arrows after shooter death retain their contracts (105.654395ms)
+✔ a second real ranger windup shows its loaded arrow despite the previous hit flag (41.339976ms)
+✔ same instrumented 48-arrow budget includes exact terrain work and rejects full-span resampling (75.761263ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1743.899598

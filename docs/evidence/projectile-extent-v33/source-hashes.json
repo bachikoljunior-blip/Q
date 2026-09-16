@@ -1,0 +1,62 @@
+{
+  "src/projectile-shape.js": {
+    "sha256": "c754233b0d7a34dd0aa1520d1507f23db0b0f6b8359670593bef02c7d4accc54",
+    "bytes": 678
+  },
+  "src/projectile-geometry.js": {
+    "sha256": "68a1a410014bc224468e052b4a1d6b1de776d63fa0b4d56d71d416fd5593fc70",
+    "bytes": 1274
+  },
+  "src/core.js": {
+    "sha256": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390",
+    "bytes": 39729
+  },
+  "src/combat-presentation.js": {
+    "sha256": "aa40a85842d8a0542fdc503e7ac2b0986655a1e0d1ae20c06b4c0bbac1e9244a",
+    "bytes": 16740
+  },
+  "src/spatial.js": {
+    "sha256": "9a6a4331b556530701968ee2fa9dacaa5be01015f6cbb6a2cb551a7cbe56be6f",
+    "bytes": 8204
+  },
+  "src/scene.js": {
+    "sha256": "187ccd0eb934d129dd229bbd22c2765800ed1c14f18276265e769340f4e9f2af",
+    "bytes": 29630
+  },
+  "src/bow-contact.js": {
+    "sha256": "0b81d2dc277555e13ff552d2dbdd891e6cd0a4660cc10a1668c9269d1249005c",
+    "bytes": 5819
+  },
+  "src/actor-models.js": {
+    "sha256": "0731e2582bd7eacabf90fd96ca651fd7bc2f56c886c82c912835563c7294b006",
+    "bytes": 26380
+  },
+  "src/assets/characters/detailed-geometry.js": {
+    "sha256": "443a6bfb62f8ecee4f21b305416c6666f46ba1c661c2e1486f2d4da441e2829c",
+    "bytes": 30076
+  },
+  "src/assets/characters/detailed-provenance.json": {
+    "sha256": "4c4851c4b375ccb02d256df8c9285830d45090d8d7933038c9a23574cc0c15f2",
+    "bytes": 2806
+  },
+  "scripts/verify-archery-contact.mjs": {
+    "sha256": "535aed22ee2cdc960c0db62b2f907cf2b25fdcd1b1a818ebce7ab35634b9b5fd",
+    "bytes": 10890
+  },
+  "scripts/verify-loaded-arrow.mjs": {
+    "sha256": "a1637b7c8c6acc31900167ba28cad90ed0ef19dc4e5562354573708252a76f2a",
+    "bytes": 3776
+  },
+  "scripts/verify-projectile-budget.mjs": {
+    "sha256": "c1bce80e2b21eba5d50cbb091aa01da85b38bcb1f311419d3be30e11112e11d7",
+    "bytes": 4622
+  },
+  "scripts/verify-projectile-contacts.mjs": {
+    "sha256": "bcbf294449c36fcfbc42a26698c6a0ec6a18b663553a2aa0f9abdb9092dbd5b4",
+    "bytes": 2046
+  },
+  "tests/projectile-extent.test.mjs": {
+    "sha256": "8ff41b62b4913cc3795be92c2986c840c05c4ae11c4d5de244b91b0693cf0dd3",
+    "bytes": 6638
+  }
+}

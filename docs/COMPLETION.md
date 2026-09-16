@@ -1,5 +1,10 @@
 # Current continuation — combined dialogue and appearance v32 (2026-09-16)
 
+## 2026-09-16 v33: 矢/媒体結合は検証済み、全画面品質は未達
+
+25工程/299tests成功は有限なsource/contact/媒体byteの証拠。矢の70.5ms前倒し・旧保存表示+.55m・許容nock接触、単体追加CPU費用、未描画/実機/知覚評価を[結合記録](PROJECTILE_MEDIA_INTEGRATION_V33.md)へ保持。最新ユーザー提案により、単体16MiBを全美術容量の条件にする方式を改め、同一owner限定URLの複数ファイル配信を一次化する実装を継続。main/Site未反映、PS4全画面/9月20日達成の根拠不足を成功へ変更しない。
+
+
 The combined v32 unit passed 23 required commands and 284 tests in 107.241350 s. Speaker-focused composition, lower readable dialogue, scroll/death/HUD lifecycle repairs, one source-validated NPC face, and physical cloak UVs are recorded in [DIALOGUE_APPEARANCE_V32.md](DIALOGUE_APPEARANCE_V32.md). The same-camera face differences remain small; sampled death cloth distortion has an explicit remaining worsening. No actual screen or PS4 perceptual acceptance is claimed.
 
 PR46 is preserved at remote `fe8e8f83f9cceb2573868621888a315c613df635`, exact tree `462d4a5390edcf854bfca711af927aa91849ba4c`, with both required CI runs successful. PR39 remains open/unmerged and actual main `547676fdce8d8e97abed9f065aad0b6e24af2fd6`; no additional merge mutation after the 03:14Z timeout. Preserve v32 as the next stack unit, then retarget/recheck/normal merge in predecessor order only after real main progress. Site23 remains owner-only and unchanged. `69748211…` names the source main.js file SHA256, not a remote main commit.

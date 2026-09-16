@@ -1,0 +1,651 @@
+{
+  "base": "892f7e59f602e20da62bf1c8708e432ce1eac637",
+  "sourceHashes": {
+    "src/core.js": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390",
+    "src/combat-presentation.js": "aa40a85842d8a0542fdc503e7ac2b0986655a1e0d1ae20c06b4c0bbac1e9244a",
+    "src/spatial.js": "9a6a4331b556530701968ee2fa9dacaa5be01015f6cbb6a2cb551a7cbe56be6f"
+  },
+  "instrumentation": "The exact same source-injected counter at groundAt entry counts all calls, including inside exact live contact. No runtime file is modified. The mutant disables only reuse of already checked terrain spans.",
+  "baseline": {
+    "metrics": {
+      "trajectories": 48,
+      "reusedPlayerImpacts": 0,
+      "bodySweeps": 48,
+      "obstacleSweeps": 0,
+      "terrainFrames": 713,
+      "terrainSamples": 1474,
+      "exactFrames": 48,
+      "fallbackFrames": 0,
+      "sharedBodies": 1,
+      "sharedObstacles": 0
+    },
+    "actualTerrainReads": 1618,
+    "sequentialTerrainReads": 2283,
+    "sequentialMetrics": {
+      "exactFrames": 761,
+      "terrainSamples": 0
+    },
+    "contacts": [
+      {
+        "target": "player",
+        "time": 0.2209526249034475
+      },
+      {
+        "target": "player",
+        "time": 0.2215000000000032
+      },
+      {
+        "target": "player",
+        "time": 0.22395262490344764
+      },
+      {
+        "target": "player",
+        "time": 0.22545262490344772
+      },
+      {
+        "target": "player",
+        "time": 0.22600000000000342
+      },
+      {
+        "target": "player",
+        "time": 0.2284526249034479
+      },
+      {
+        "target": "player",
+        "time": 0.22995262490344795
+      },
+      {
+        "target": "player",
+        "time": 0.23050000000000292
+      },
+      {
+        "target": "player",
+        "time": 0.2329526249034474
+      },
+      {
+        "target": "player",
+        "time": 0.23445262490344748
+      },
+      {
+        "target": "player",
+        "time": 0.23500000000000318
+      },
+      {
+        "target": "player",
+        "time": 0.23745262490344765
+      },
+      {
+        "target": "player",
+        "time": 0.2389526249034477
+      },
+      {
+        "target": "player",
+        "time": 0.2395000000000034
+      },
+      {
+        "target": "player",
+        "time": 0.24195262490344788
+      },
+      {
+        "target": "player",
+        "time": 0.24345262490344793
+      },
+      {
+        "target": "player",
+        "time": 0.24400000000000366
+      },
+      {
+        "target": "player",
+        "time": 0.2464526249034481
+      },
+      {
+        "target": "player",
+        "time": 0.2479526249034482
+      },
+      {
+        "target": "player",
+        "time": 0.24850000000000316
+      },
+      {
+        "target": "player",
+        "time": 0.2509526249034476
+      },
+      {
+        "target": "player",
+        "time": 0.2524526249034477
+      },
+      {
+        "target": "player",
+        "time": 0.2530000000000034
+      },
+      {
+        "target": "player",
+        "time": 0.25545262490344783
+      },
+      {
+        "target": "player",
+        "time": 0.25695262490344795
+      },
+      {
+        "target": "player",
+        "time": 0.2575000000000036
+      },
+      {
+        "target": "player",
+        "time": 0.2599526249034481
+      },
+      {
+        "target": "player",
+        "time": 0.26145262490344817
+      },
+      {
+        "target": "player",
+        "time": 0.26200000000000384
+      },
+      {
+        "target": "player",
+        "time": 0.26445262490344834
+      },
+      {
+        "target": "player",
+        "time": 0.2659526249034484
+      },
+      {
+        "target": "player",
+        "time": 0.2665000000000041
+      },
+      {
+        "target": "player",
+        "time": 0.2689526249034479
+      },
+      {
+        "target": "player",
+        "time": 0.27045262490344796
+      },
+      {
+        "target": "player",
+        "time": 0.2710000000000036
+      },
+      {
+        "target": "player",
+        "time": 0.2734526249034481
+      },
+      {
+        "target": "player",
+        "time": 0.2749526249034482
+      },
+      {
+        "target": "player",
+        "time": 0.27550000000000385
+      },
+      {
+        "target": "player",
+        "time": 0.27795262490344835
+      },
+      {
+        "target": "player",
+        "time": 0.2794526249034484
+      },
+      {
+        "target": "player",
+        "time": 0.28000000000000413
+      },
+      {
+        "target": "player",
+        "time": 0.2824526249034486
+      },
+      {
+        "target": "player",
+        "time": 0.28395262490344864
+      },
+      {
+        "target": "player",
+        "time": 0.28450000000000436
+      },
+      {
+        "target": "player",
+        "time": 0.2869526249034481
+      },
+      {
+        "target": "player",
+        "time": 0.2884526249034482
+      },
+      {
+        "target": "player",
+        "time": 0.28900000000000386
+      },
+      {
+        "target": "player",
+        "time": 0.2914526249034483
+      }
+    ]
+  },
+  "candidate": {
+    "metrics": {
+      "trajectories": 48,
+      "reusedPlayerImpacts": 0,
+      "bodySweeps": 48,
+      "obstacleSweeps": 0,
+      "terrainFrames": 521,
+      "terrainSamples": 1522,
+      "exactFrames": 48,
+      "fallbackFrames": 0,
+      "sharedBodies": 1,
+      "sharedObstacles": 0
+    },
+    "actualTerrainReads": 1522,
+    "sequentialTerrainReads": 1522,
+    "sequentialMetrics": {
+      "exactFrames": 569,
+      "terrainSamples": 1522
+    },
+    "contacts": [
+      {
+        "target": "player",
+        "time": 0.15395262490344655
+      },
+      {
+        "target": "player",
+        "time": 0.15450000000000225
+      },
+      {
+        "target": "player",
+        "time": 0.1569526249034467
+      },
+      {
+        "target": "player",
+        "time": 0.15845262490344672
+      },
+      {
+        "target": "player",
+        "time": 0.1590000000000024
+      },
+      {
+        "target": "player",
+        "time": 0.16145262490344683
+      },
+      {
+        "target": "player",
+        "time": 0.1629526249034469
+      },
+      {
+        "target": "player",
+        "time": 0.16350000000000184
+      },
+      {
+        "target": "player",
+        "time": 0.16595262490344628
+      },
+      {
+        "target": "player",
+        "time": 0.1674526249034466
+      },
+      {
+        "target": "player",
+        "time": 0.16800000000000226
+      },
+      {
+        "target": "player",
+        "time": 0.17045262490344673
+      },
+      {
+        "target": "player",
+        "time": 0.1719526249034468
+      },
+      {
+        "target": "player",
+        "time": 0.17250000000000243
+      },
+      {
+        "target": "player",
+        "time": 0.17495262490344685
+      },
+      {
+        "target": "player",
+        "time": 0.1764526249034469
+      },
+      {
+        "target": "player",
+        "time": 0.17700000000000257
+      },
+      {
+        "target": "player",
+        "time": 0.17945262490344704
+      },
+      {
+        "target": "player",
+        "time": 0.18095262490344707
+      },
+      {
+        "target": "player",
+        "time": 0.18150000000000208
+      },
+      {
+        "target": "player",
+        "time": 0.18395262490344674
+      },
+      {
+        "target": "player",
+        "time": 0.1854526249034468
+      },
+      {
+        "target": "player",
+        "time": 0.18600000000000247
+      },
+      {
+        "target": "player",
+        "time": 0.1884526249034469
+      },
+      {
+        "target": "player",
+        "time": 0.18995262490344697
+      },
+      {
+        "target": "player",
+        "time": 0.19050000000000267
+      },
+      {
+        "target": "player",
+        "time": 0.19295262490344706
+      },
+      {
+        "target": "player",
+        "time": 0.19445262490344714
+      },
+      {
+        "target": "player",
+        "time": 0.1950000000000028
+      },
+      {
+        "target": "player",
+        "time": 0.19745262490344725
+      },
+      {
+        "target": "player",
+        "time": 0.1989526249034473
+      },
+      {
+        "target": "player",
+        "time": 0.19950000000000298
+      },
+      {
+        "target": "player",
+        "time": 0.20195262490344693
+      },
+      {
+        "target": "player",
+        "time": 0.203452624903447
+      },
+      {
+        "target": "player",
+        "time": 0.20400000000000268
+      },
+      {
+        "target": "player",
+        "time": 0.20645262490344715
+      },
+      {
+        "target": "player",
+        "time": 0.20795262490344718
+      },
+      {
+        "target": "player",
+        "time": 0.20850000000000285
+      },
+      {
+        "target": "player",
+        "time": 0.2109526249034473
+      },
+      {
+        "target": "player",
+        "time": 0.21245262490344732
+      },
+      {
+        "target": "player",
+        "time": 0.21300000000000302
+      },
+      {
+        "target": "player",
+        "time": 0.21545262490344744
+      },
+      {
+        "target": "player",
+        "time": 0.21695262490344774
+      },
+      {
+        "target": "player",
+        "time": 0.21750000000000344
+      },
+      {
+        "target": "player",
+        "time": 0.21995262490344714
+      },
+      {
+        "target": "player",
+        "time": 0.22145262490344722
+      },
+      {
+        "target": "player",
+        "time": 0.22200000000000286
+      },
+      {
+        "target": "player",
+        "time": 0.22445262490344733
+      }
+    ]
+  },
+  "fullSpan": {
+    "metrics": {
+      "trajectories": 48,
+      "reusedPlayerImpacts": 0,
+      "bodySweeps": 48,
+      "obstacleSweeps": 0,
+      "terrainFrames": 521,
+      "terrainSamples": 5690,
+      "exactFrames": 48,
+      "fallbackFrames": 0,
+      "sharedBodies": 1,
+      "sharedObstacles": 0
+    },
+    "actualTerrainReads": 5690,
+    "sequentialTerrainReads": 5690,
+    "sequentialMetrics": {
+      "exactFrames": 569,
+      "terrainSamples": 5690
+    },
+    "contacts": [
+      {
+        "target": "player",
+        "time": 0.15395262490344655
+      },
+      {
+        "target": "player",
+        "time": 0.15450000000000225
+      },
+      {
+        "target": "player",
+        "time": 0.1569526249034467
+      },
+      {
+        "target": "player",
+        "time": 0.15845262490344672
+      },
+      {
+        "target": "player",
+        "time": 0.1590000000000024
+      },
+      {
+        "target": "player",
+        "time": 0.16145262490344683
+      },
+      {
+        "target": "player",
+        "time": 0.1629526249034469
+      },
+      {
+        "target": "player",
+        "time": 0.16350000000000184
+      },
+      {
+        "target": "player",
+        "time": 0.16595262490344628
+      },
+      {
+        "target": "player",
+        "time": 0.1674526249034466
+      },
+      {
+        "target": "player",
+        "time": 0.16800000000000226
+      },
+      {
+        "target": "player",
+        "time": 0.17045262490344673
+      },
+      {
+        "target": "player",
+        "time": 0.1719526249034468
+      },
+      {
+        "target": "player",
+        "time": 0.17250000000000243
+      },
+      {
+        "target": "player",
+        "time": 0.17495262490344685
+      },
+      {
+        "target": "player",
+        "time": 0.1764526249034469
+      },
+      {
+        "target": "player",
+        "time": 0.17700000000000257
+      },
+      {
+        "target": "player",
+        "time": 0.17945262490344704
+      },
+      {
+        "target": "player",
+        "time": 0.18095262490344707
+      },
+      {
+        "target": "player",
+        "time": 0.18150000000000208
+      },
+      {
+        "target": "player",
+        "time": 0.18395262490344674
+      },
+      {
+        "target": "player",
+        "time": 0.1854526249034468
+      },
+      {
+        "target": "player",
+        "time": 0.18600000000000247
+      },
+      {
+        "target": "player",
+        "time": 0.1884526249034469
+      },
+      {
+        "target": "player",
+        "time": 0.18995262490344697
+      },
+      {
+        "target": "player",
+        "time": 0.19050000000000267
+      },
+      {
+        "target": "player",
+        "time": 0.19295262490344706
+      },
+      {
+        "target": "player",
+        "time": 0.19445262490344714
+      },
+      {
+        "target": "player",
+        "time": 0.1950000000000028
+      },
+      {
+        "target": "player",
+        "time": 0.19745262490344725
+      },
+      {
+        "target": "player",
+        "time": 0.1989526249034473
+      },
+      {
+        "target": "player",
+        "time": 0.19950000000000298
+      },
+      {
+        "target": "player",
+        "time": 0.20195262490344693
+      },
+      {
+        "target": "player",
+        "time": 0.203452624903447
+      },
+      {
+        "target": "player",
+        "time": 0.20400000000000268
+      },
+      {
+        "target": "player",
+        "time": 0.20645262490344715
+      },
+      {
+        "target": "player",
+        "time": 0.20795262490344718
+      },
+      {
+        "target": "player",
+        "time": 0.20850000000000285
+      },
+      {
+        "target": "player",
+        "time": 0.2109526249034473
+      },
+      {
+        "target": "player",
+        "time": 0.21245262490344732
+      },
+      {
+        "target": "player",
+        "time": 0.21300000000000302
+      },
+      {
+        "target": "player",
+        "time": 0.21545262490344744
+      },
+      {
+        "target": "player",
+        "time": 0.21695262490344774
+      },
+      {
+        "target": "player",
+        "time": 0.21750000000000344
+      },
+      {
+        "target": "player",
+        "time": 0.21995262490344714
+      },
+      {
+        "target": "player",
+        "time": 0.22145262490344722
+      },
+      {
+        "target": "player",
+        "time": 0.22200000000000286
+      },
+      {
+        "target": "player",
+        "time": 0.22445262490344733
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+✔ held attack cannot cancel an accepted parry before an imminent hit (54.14733ms)
+✔ a blocked urgent arrow does not hide later unblocked arrows (41.264845ms)
+✔ a near-expiry arrow still warns when it will hit on its final live step (67.960564ms)
+✔ a 48-arrow batch preserves sequential contact results with shared static prediction (34.64524ms)
+✔ a tangent obstacle remains a conservative batch candidate (26.361281ms)
+✔ bridge-edge and ground-grazing warnings match live 60 Hz projectile contacts (2130.155027ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2550.368913

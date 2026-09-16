@@ -49,6 +49,10 @@ jobs:
       - run: npm test
       - name: Verify bow grips, body clearance and saved shot poses
         run: node scripts/verify-archery-contact.mjs artifacts/archery-contact-report.json
+      - name: Verify physical loaded-arrow surfaces
+        run: node scripts/verify-loaded-arrow.mjs artifacts/loaded-arrow-report.json
+      - name: Verify finite projectile forecast correctness and real terrain-read cost
+        run: node scripts/verify-projectile-budget.mjs artifacts/projectile-budget-report.json
       - name: Verify actual conversation routes and native speaker framing
         run: node scripts/verify-dialogue-framing.mjs artifacts/dialogue-framing-report.json
       - name: Verify terrain contact, shallow stream and stable shadow geometry

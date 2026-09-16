@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir, stat } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { buildIdentity } from './build-identity.mjs';
+import { unpackMedia } from './packed-media.mjs';
 
 const stage=JSON.parse(await readFile('artifacts/latest-site.json','utf8'));
 const root=`${stage.root}/dist`,manifest=JSON.parse(await readFile('dist/.vite/manifest.json','utf8'));
@@ -37,6 +38,16 @@ assert(!/<link[^>]+(?:stylesheet|manifest)/.test(standalone),'standalone build c
 assert(!/import\(["']\.\/assets\//.test(standalone),'standalone build contains an unresolved production chunk import');
 assert(standalone.includes('aria-busy')&&standalone.includes('SceneView'),'standalone build does not contain the lazy scene bootstrap');
 const embedded=[...standalone.matchAll(/data:[^"'\s;]+;base64,([A-Za-z0-9+/=]+)/g)].map(match=>Buffer.from(match[1],'base64'));
+const packed=[...standalone.matchAll(/["'](q85:[^"'\\<>`\s]*)["']/g)].map(match=>unpackMedia(match[1]));
+embedded.push(...packed.map(asset=>Buffer.from(asset.bytes)));
+const mediaSources=Object.keys(manifest).filter(source=>/\.(hdr|glb|png|webp|jpg|mp4|mp3|wav)$/.test(source));
+assert.equal(embedded.length,mediaSources.length,'standalone media count differs from the emitted graph');
+for(const source of mediaSources){
+  const original=await readFile(source),output=manifest[source].file;
+  assert((await readFile(`dist/${output}`)).equals(original),`emitted media differs from source: ${source}`);
+  assert((await readFile(`${root}/${output}`)).equals(original),`staged media differs from source: ${source}`);
+  assert.equal(embedded.filter(bytes=>bytes.equals(original)).length,1,`standalone must contain exactly one complete media asset: ${source}`);
+}
 let runtimeModels=0;
 for(const name of ['pilgrim','knight','keeper']){
   const source=`src/assets/characters/${name}.glb`,original=await readFile(source),output=manifest[source]?.file;

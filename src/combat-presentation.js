@@ -1,6 +1,7 @@
-import {angleDelta,distance,groundAt,heightAt} from './core.js';
+import {angleDelta,distance,heightAt,arrowTerrain,copyProjectileTerrain} from './core.js';
 import {queryObstacles,segmentCylinder,obstacleCylinder} from './spatial.js';
 import {vaultByWarden} from './vault-slices.js';
+import {ARROW_LENGTH,projectilePoint,projectileTime,projectileBody} from './projectile-shape.js';
 
 const labels={boss:'灰冠の番人',ranger:'弓兵',wolf:'灰を喰う獣',knight:'火を失った兵'};
 const round=value=>Math.round(value*1000)/1000;
@@ -36,50 +37,25 @@ function enemyThreat(game,enemy,contactOrder){
   return {hazardId:enemy.id,sourceId:enemy.id,contactOrder:ranged?game.enemies.length+game.projectiles.length+contactOrder:contactOrder,contactPhase:ranged?'projectile':'enemy',sourceType:enemy.type,source:vaultByWarden(enemy.id)?.wardenName||labels[enemy.type]||'敵',position:{x:enemy.x,y:enemy.y+(enemy.type==='boss'?2.2:enemy.type==='wolf'?.8:1.2),z:enemy.z},stage:enemy.state,kind,response,damage,lethal:damage>=player.hp,direction:radial?'周囲':directionFrom(player,enemy),impactTime,timeToImpact:round(impactTime),distance:round(d)};
 }
 
-const projectileBody=actor=>({
-  ...actor,
-  y:actor.y+.15,
-  height:(actor.type==='boss'?4.7:actor.type==='wolf'?1.35:2.1)-.15,
-  r:actor.type==='boss'?1.25:.48,
-});
-
 function staticContactTime(game,arrow,horizon,knownPlayerImpactTime,bodyCache,obstacleCache,metrics){
   let first=Number.isFinite(knownPlayerImpactTime)?knownPlayerImpactTime:Infinity;
   if(Number.isFinite(knownPlayerImpactTime)){if(metrics)metrics.reusedPlayerImpacts++;}
   else{
-    const victims=arrow.owner==='player'?game.enemies.filter(enemy=>!enemy.dead):[game.player],fullTo={x:arrow.x+arrow.vx*horizon,y:arrow.y+arrow.vy*horizon,z:arrow.z+arrow.vz*horizon};
+    const victims=arrow.owner==='player'?game.enemies.filter(enemy=>!enemy.dead):[game.player],fullTo=projectilePoint(arrow,horizon,ARROW_LENGTH);
     for(const victim of victims){
       let body=bodyCache.get(victim);if(!body){body=projectileBody(victim);bodyCache.set(victim,body);}
       const fraction=segmentCylinder(arrow,fullTo,body,.12+FORECAST_GUARD);if(metrics)metrics.bodySweeps++;
-      if(fraction!==null)first=Math.min(first,fraction*horizon);
+      if(fraction!==null)first=Math.min(first,projectileTime(arrow,horizon,fraction));
     }
   }
-  const scanTime=Math.min(horizon,first),scanTo={x:arrow.x+arrow.vx*scanTime,y:arrow.y+arrow.vy*scanTime,z:arrow.z+arrow.vz*scanTime};
+  const scanTime=Math.min(horizon,first),scanTo=projectilePoint(arrow,scanTime,ARROW_LENGTH);
   const obstacleGuard=.08+FORECAST_GUARD;
   for(const obstacle of queryObstacles(game.obstacles,Math.min(arrow.x,scanTo.x)-obstacleGuard,Math.min(arrow.z,scanTo.z)-obstacleGuard,Math.max(arrow.x,scanTo.x)+obstacleGuard,Math.max(arrow.z,scanTo.z)+obstacleGuard)){
     let body=obstacleCache.get(obstacle);if(!body){body=obstacleCylinder(obstacle,heightAt);obstacleCache.set(obstacle,body);}
     const fraction=segmentCylinder(arrow,scanTo,body,obstacleGuard);if(metrics)metrics.obstacleSweeps++;
-    if(fraction!==null)first=Math.min(first,fraction*scanTime);
+    if(fraction!==null)first=Math.min(first,projectileTime(arrow,scanTime,fraction));
   }
   return first;
-}
-
-function terrainContact(from,to,startFloor,metrics){
-  const length=Math.hypot(to.x-from.x,to.y-from.y,to.z-from.z),steps=Math.max(1,Math.ceil(length/.2));let endFloor=startFloor,endMatchesNext=false;
-  for(let index=0;index<=steps;index++){
-    const fraction=index/steps,x=from.x+(to.x-from.x)*fraction,y=from.y+(to.y-from.y)*fraction,z=from.z+(to.z-from.z)*fraction;
-    let floor;if(index===0&&Number.isFinite(startFloor))floor=startFloor;else{floor=groundAt(x,z);if(metrics)metrics.terrainSamples++;}
-    if(index===steps){endFloor=floor;endMatchesNext=x===to.x&&z===to.z;}
-    if(y<floor+.1){
-      let low=Math.max(0,(index-1)/steps),high=fraction;
-      for(let iteration=0;iteration<5;iteration++){
-        const middle=(low+high)/2,middleX=from.x+(to.x-from.x)*middle,middleZ=from.z+(to.z-from.z)*middle;
-        if(metrics)metrics.terrainSamples++;if(from.y+(to.y-from.y)*middle<groundAt(middleX,middleZ)+.1)high=middle;else low=middle;
-      }
-      return {fraction:high,endFloor,endMatchesNext};
-    }
-  }
-  return {fraction:null,endFloor,endMatchesNext};
 }
 
 /**
@@ -94,20 +70,19 @@ export function forecastProjectileContacts(game,requests,{metrics:reportedMetric
   const bodyCache=new Map(),obstacleCache=new Map();
   const results=requests.map(({arrow,horizon,playerImpactTime})=>{
     if(!arrow||arrow.life<=0||!Number.isFinite(horizon)||horizon<=0)return null;
-    const simulated={...arrow};let elapsed=0,fallback=false,terrainFloor;
+    const simulated={...arrow};copyProjectileTerrain(arrow,simulated);let elapsed=0,fallback=false;
     const staticTime=staticContactTime(game,arrow,horizon,playerImpactTime,bodyCache,obstacleCache,metrics);
     while(elapsed+1e-9<horizon){
       const step=Math.min(1/60,horizon-elapsed);if(simulated.life-step<=0)break;
       const reachesStatic=staticTime<=elapsed+step+1e-12;
       if(reachesStatic||fallback){
-        const contact=game.projectileContact(simulated,step);if(metrics){metrics.exactFrames++;if(fallback)metrics.fallbackFrames++;}
+        const contact=game.projectileContact(simulated,step,metrics);if(metrics){metrics.exactFrames++;if(fallback)metrics.fallbackFrames++;}
         if(contact.target)return {target:contact.target,timeToImpact:elapsed+contact.fraction*step};
         fallback=true;simulated.x=contact.to.x;simulated.y=contact.to.y;simulated.z=contact.to.z;
       }else{
-        const from={x:simulated.x,y:simulated.y,z:simulated.z},to={x:simulated.x+simulated.vx*step,y:simulated.y+simulated.vy*step,z:simulated.z+simulated.vz*step};
-        const terrain=terrainContact(from,to,terrainFloor,metrics);if(metrics)metrics.terrainFrames++;
-        if(terrain.fraction!==null)return {target:'wall',timeToImpact:elapsed+terrain.fraction*step};
-        terrainFloor=terrain.endMatchesNext?terrain.endFloor:undefined;
+        const to=projectilePoint(simulated,step);
+        const terrain=arrowTerrain(simulated,step,metrics);if(metrics)metrics.terrainFrames++;
+        if(terrain!==null)return {target:'wall',timeToImpact:elapsed+projectileTime(simulated,step,terrain)};
         simulated.x=to.x;simulated.y=to.y;simulated.z=to.z;
       }
       simulated.life-=step;elapsed+=step;
@@ -125,15 +100,15 @@ export function forecastProjectileContact(game,arrow,horizon){
 function projectileThreat(game,arrow,deferCover=false,contactOrder=0){
   if(arrow.owner==='player'||arrow.life<=0)return null;
   const player=game.player,horizon=Math.min((Math.ceil(arrow.life*60-1e-9)-1)/60,1.8);if(horizon<=0)return null;
-  const to={x:arrow.x+arrow.vx*horizon,y:arrow.y+arrow.vy*horizon,z:arrow.z+arrow.vz*horizon};
+  const to=projectilePoint(arrow,horizon,ARROW_LENGTH);
   // Cheap body broad phase before replaying the exact live-frame contact order.
-  const fraction=segmentCylinder(arrow,to,{...player,y:player.y+.15,height:1.95,r:.48},.12+FORECAST_GUARD);
+  const fraction=segmentCylinder(arrow,to,projectileBody(player),.12+FORECAST_GUARD);
   if(fraction===null)return null;
   const forecast=deferCover?null:forecastProjectileContact(game,arrow,horizon);
   if(!deferCover&&forecast?.target!==player)return null;
-  const t=forecast?.timeToImpact??fraction*horizon;
+  const t=forecast?.timeToImpact??projectileTime(arrow,horizon,fraction);
   const source=game.enemies.find(enemy=>enemy.id===arrow.owner);
-  return {...(deferCover?{trajectory:arrow,horizon,playerImpactTime:fraction*horizon}:{}),hazardId:`arrow-${arrow.id??contactOrder}`,sourceId:arrow.owner,contactOrder,contactPhase:'projectile',sourceType:source?.type||'ranger',source:labels[source?.type]||'矢',position:{x:arrow.x,y:arrow.y,z:arrow.z},stage:'flight',kind:'arrow',response:'横移動 / 回避',damage:arrow.damage,lethal:arrow.damage>=player.hp,direction:directionFrom(player,arrow),impactTime:t,timeToImpact:round(t),distance:round(distance(player,arrow))};
+  return {...(deferCover?{trajectory:arrow,horizon,playerImpactTime:projectileTime(arrow,horizon,fraction)}:{}),hazardId:`arrow-${arrow.id??contactOrder}`,sourceId:arrow.owner,contactOrder,contactPhase:'projectile',sourceType:source?.type||'ranger',source:labels[source?.type]||'矢',position:{x:arrow.x,y:arrow.y,z:arrow.z},stage:'flight',kind:'arrow',response:'横移動 / 回避',damage:arrow.damage,lethal:arrow.damage>=player.hp,direction:directionFrom(player,arrow),impactTime:t,timeToImpact:round(t),distance:round(distance(player,arrow))};
 }
 
 export function cameraFacingAngle(cameraYaw){return angleDelta(cameraYaw+Math.PI,0);}

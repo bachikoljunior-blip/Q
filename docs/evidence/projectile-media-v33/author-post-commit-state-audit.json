@@ -1,0 +1,68 @@
+{
+  "observed_at_utc": "2026-09-16T05:46:12.632523+00:00",
+  "repository": "/workspace/scratch/e72662e3b71f/Q-projectile-extent-v33",
+  "head": "b7af1cdcddce13c732de732c467f6448a9fc3f2d",
+  "git_status": "?? docs/evidence/projectile-extent-v33/loaded-first.txt\n?? docs/evidence/projectile-extent-v33/loaded-surface-first.json\n?? docs/evidence/projectile-extent-v33/loaded-surface-first.txt\n?? docs/evidence/projectile-extent-v33/loaded-surface-taper.json\n?? docs/evidence/projectile-extent-v33/loaded-surface-taper.txt\n",
+  "tracked_diff": "",
+  "files": [
+    {
+      "file": "loaded-first.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_ns": 1789534781216617936,
+      "ctime_ns": 1789537353911456026,
+      "mtime_utc": "2026-09-16T04:59:41.216618+00:00",
+      "ctime_utc": "2026-09-16T05:42:33.911456+00:00",
+      "scratch_copy_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scratch_copy_exact": true
+    },
+    {
+      "file": "loaded-surface-first.json",
+      "bytes": 1668087,
+      "sha256": "af49a59bd833c66d7dfa2bcf4756f679ed956858d01bb7cd01f6685de7d441a6",
+      "mtime_ns": 1789534931876894766,
+      "ctime_ns": 1789537353911456026,
+      "mtime_utc": "2026-09-16T05:02:11.876895+00:00",
+      "ctime_utc": "2026-09-16T05:42:33.911456+00:00",
+      "scratch_copy_sha256": "af49a59bd833c66d7dfa2bcf4756f679ed956858d01bb7cd01f6685de7d441a6",
+      "scratch_copy_exact": true
+    },
+    {
+      "file": "loaded-surface-first.txt",
+      "bytes": 33899,
+      "sha256": "29a38d664c496274ec810d1ec95bad33341bc1618c564a245ddf4cd5147747d4",
+      "mtime_ns": 1789534931876894766,
+      "ctime_ns": 1789537353911456026,
+      "mtime_utc": "2026-09-16T05:02:11.876895+00:00",
+      "ctime_utc": "2026-09-16T05:42:33.911456+00:00",
+      "scratch_copy_sha256": "29a38d664c496274ec810d1ec95bad33341bc1618c564a245ddf4cd5147747d4",
+      "scratch_copy_exact": true
+    },
+    {
+      "file": "loaded-surface-taper.json",
+      "bytes": 162956,
+      "sha256": "5e14480be326679be46ed454203fd5255a01942657b9ffbe0377b4a993d36f0f",
+      "mtime_ns": 1789535034256831230,
+      "ctime_ns": 1789537353911456026,
+      "mtime_utc": "2026-09-16T05:03:54.256831+00:00",
+      "ctime_utc": "2026-09-16T05:42:33.911456+00:00",
+      "scratch_copy_sha256": "5e14480be326679be46ed454203fd5255a01942657b9ffbe0377b4a993d36f0f",
+      "scratch_copy_exact": true
+    },
+    {
+      "file": "loaded-surface-taper.txt",
+      "bytes": 33957,
+      "sha256": "d956a61a6af7c76bbba7bf24d14238a0db80c49109bc6726e36ed6625d0ed992",
+      "mtime_ns": 1789535034260831071,
+      "ctime_ns": 1789537353911456026,
+      "mtime_utc": "2026-09-16T05:03:54.260831+00:00",
+      "ctime_utc": "2026-09-16T05:42:33.911456+00:00",
+      "scratch_copy_sha256": "d956a61a6af7c76bbba7bf24d14238a0db80c49109bc6726e36ed6625d0ed992",
+      "scratch_copy_exact": true
+    }
+  ],
+  "classification": "All five are byte-identical copies of deliberately retained scratch intermediate artifacts. Two JSON hashes match committed rework.json: first 45 failed poses/6120 edge hits; taper 45 failed poses/540 edge hits. Text files are corresponding diagnostic outputs; loaded-first.txt is empty. These are historical unsuccessful candidate evidence, not final candidate results. They were intentionally excluded from the final commit.",
+  "reappearance_cause": "Undetermined. All five retain old content mtime but share later ctime 2026-09-16T05:42:33.911456Z. ctime is inode status-change time, not proof of creation or writer identity.",
+  "process_boundary": "No known agent exec sessions remain open; all earlier session IDs completed. Attempted read-only ps -eo pid,ppid,lstart,args failed exit47: Error, do this: mount -t proc proc /proc. No mount or alternate process intervention attempted. Therefore current OS-wide active writer absence cannot be established from this environment.",
+  "actions": "Read-only inspection of repository/artifacts; no deletion, move, or source/commit amendment. Only this scratch audit record is written."
+}

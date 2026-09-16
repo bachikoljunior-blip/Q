@@ -1,0 +1,7333 @@
+{
+  "sourceHashes": {
+    "src/core.js": "27b62eb40ef1488e344f1a1f5a5455cf67661236035c535508f95f3408345f0d",
+    "src/scene.js": "7f05d2be9103d1480f1281fe3af2afd90a7886d21089fdab6fa471b6c5d93f25",
+    "src/spatial.js": "9485b013c168da824f035fa11c90ab706bd3949a1d45cd00fc2967cd5f5b894c",
+    "src/combat-presentation.js": "e3389ea0a17dcb3214f79bd532432d90b6e022152bc6351e8c89c292137d04d9",
+    "src/runtime-state.js": "84a543c09f089a37031da9ba12915078cee5c668ed009bcd281e90d70829f325",
+    "src/bow-contact.js": "c9da5e24059bde9d23ef225f7d4988c93174e5d040a5ce1532dec2b10fad7b8d",
+    "src/assets/characters/detailed-geometry.js": "51a6a10a890bfd3b531119b39808a18a32b2bea45fa4441871a57e38da06046d"
+  },
+  "cases": [
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 135.48564102807228,
+        "y": -0.5198252758262927,
+        "z": -122.7,
+        "vx": -18.998554012878582,
+        "vy": -0.23440439359200374,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000456662266103,
+            "frames": 19,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.6604786163456511,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000456662266053,
+            "frames": 37,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.6604786163456479,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000456662266406,
+            "frames": 73,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.6604786163456562,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 111.48564102807228,
+        "y": -0.24058420596928265,
+        "z": -122.7,
+        "vx": 18.987966042050747,
+        "vy": -0.676125421743322,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003802605689124,
+            "frames": 19,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.6465165628528041,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003802605688991,
+            "frames": 37,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.6465165628527957,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003802605689261,
+            "frames": 73,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.6465165628528124,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 135.48564102807228,
+        "y": 0.9219151861562751,
+        "z": -122.64,
+        "vx": -18.83673069102324,
+        "vy": -2.4854731690088743,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6052005619761217,
+            "frames": 19,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.5822945725044677,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.60520056197611,
+            "frames": 37,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.5822945725044381,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6052005619761356,
+            "frames": 73,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.5822945725045025,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 111.48564102807228,
+        "y": -0.23197120875205335,
+        "z": -122.64,
+        "vx": 18.98784220345316,
+        "vy": -0.679594332497806,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003841762455111,
+            "frames": 19,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.6399888922498667,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003841762455249,
+            "frames": 37,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.6399888922498759,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.600384176245498,
+            "frames": 73,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.6399888922498573,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 135.48564102807228,
+        "y": 0.9219151861562751,
+        "z": -120,
+        "vx": -18.88980064683269,
+        "vy": -2.043387266995516,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.603500281084838,
+            "frames": 19,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.31126960384069796,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6035002810848262,
+            "frames": 37,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.3112696038406729,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6035002810848165,
+            "frames": 73,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.3112696038406535,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 111.48564102807228,
+        "y": 0.15956201451624152,
+        "z": -120,
+        "vx": 18.98109336287698,
+        "vy": -0.8474047142584734,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6005976464082966,
+            "frames": 19,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.34938726242269263,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6005976464082968,
+            "frames": 37,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.3493872624226926,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6005976464082969,
+            "frames": 73,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.34938726242269247,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 135.48564102807228,
+        "y": 0.9219151861562751,
+        "z": -117.36,
+        "vx": -18.93330955122869,
+        "vy": -1.590531180880294,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6021134323692663,
+            "frames": 19,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.0357650024539008,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6021134323692665,
+            "frames": 37,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.035765002453900505,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6021134323692314,
+            "frames": 73,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.03576500245384426,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 111.48564102807228,
+        "y": 0.5722415391151843,
+        "z": -117.36,
+        "vx": 18.97146514044322,
+        "vy": -1.0409180683164683,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009024561681048,
+            "frames": 19,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.053248684805940395,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009024561681184,
+            "frames": 37,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.05324868480595436,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009024561680916,
+            "frames": 73,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.053248684805926205,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 135.48564102807228,
+        "y": -0.1669731486388666,
+        "z": -117.3,
+        "vx": -18.999495626034687,
+        "vy": 0.13844116544169566,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000159280217303,
+            "frames": 19,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.08390624427995774,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000159280217305,
+            "frames": 37,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.08390624427995762,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000159280216955,
+            "frames": 73,
+            "reference": {
+              "x": 124.08564102807227,
+              "y": -0.08390624427996224,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -22,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 111.48564102807228,
+        "y": 0.5818258605104795,
+        "z": -117.3,
+        "vx": 18.971209501834867,
+        "vy": -1.0455668498429769,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009105533781223,
+            "frames": 19,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.046466293822483636,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009105533781225,
+            "frames": 37,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.046466293822483525,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009105533781497,
+            "frames": 73,
+            "reference": {
+              "x": 122.88564102807229,
+              "y": -0.04646629382251222,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 136.0356410280723,
+        "y": -0.5418793078517632,
+        "z": -122.7,
+        "vx": -18.99888580917673,
+        "vy": -0.20576202240246924,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000351870368003,
+            "frames": 19,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.6653437614490991,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000351870367863,
+            "frames": 37,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.6653437614490961,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000351870367782,
+            "frames": 73,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.6653437614490945,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 112.03564102807228,
+        "y": -0.24214817510293285,
+        "z": -122.7,
+        "vx": 18.987830808560947,
+        "vy": -0.6799126307575494,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003845365453835,
+            "frames": 19,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.6503572048116569,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003845365453703,
+            "frames": 37,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.6503572048116484,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003845365453974,
+            "frames": 73,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.6503572048116667,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 136.0356410280723,
+        "y": 0.9219151861562751,
+        "z": -122.64,
+        "vx": -18.837489423661438,
+        "vy": -2.4797161558217535,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6051761858287071,
+            "frames": 19,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.5787499789617574,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6051761858287074,
+            "frames": 37,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.5787499789617571,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6051761858286689,
+            "frames": 73,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.5787499789616615,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 112.03564102807228,
+        "y": -0.2335997951880866,
+        "z": -122.64,
+        "vx": 18.98814346802662,
+        "vy": -0.6711241596290525,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003746505916123,
+            "frames": 19,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.6365257280289687,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003746505916125,
+            "frames": 37,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.6365257280289686,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003746505916127,
+            "frames": 73,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.6365257280289688,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 136.0356410280723,
+        "y": 0.9219151861562751,
+        "z": -120,
+        "vx": -18.88926061535897,
+        "vy": -2.0483733558724904,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6035175347589096,
+            "frames": 19,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.31431405184572486,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6035175347589286,
+            "frames": 37,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.31431405184576383,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6035175347589371,
+            "frames": 73,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.3143140518457801,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 112.03564102807228,
+        "y": 0.1546748939230287,
+        "z": -120,
+        "vx": 18.981211750326572,
+        "vy": -0.8447487728694938,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6005939004291325,
+            "frames": 19,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.3526760664573839,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6005939004291463,
+            "frames": 37,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.35267606645739535,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6005939004291194,
+            "frames": 73,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.35267606645737276,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 136.0356410280723,
+        "y": 0.9219151861562751,
+        "z": -117.36,
+        "vx": -18.931874714404934,
+        "vy": -1.60751976599823,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.602159066229506,
+            "frames": 19,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.04606741508269343,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6021590662294873,
+            "frames": 37,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.04606741508266333,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6021590662294791,
+            "frames": 73,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.04606741508264994,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 112.03564102807228,
+        "y": 0.5633792024523754,
+        "z": -117.36,
+        "vx": 18.971293449094876,
+        "vy": -1.0440425605930976,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009078943715299,
+            "frames": 19,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.06399421426788358,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009078943715167,
+            "frames": 37,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.06399421426786935,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009078943715438,
+            "frames": 73,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.06399421426789674,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 136.0356410280723,
+        "y": -0.19682818687478854,
+        "z": -117.3,
+        "vx": -18.999328293327277,
+        "vy": 0.15976358275122288,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000212125395971,
+            "frames": 19,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.10096664823272956,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000212125395831,
+            "frames": 37,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.10096664823273184,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.600021212539575,
+            "frames": 73,
+            "reference": {
+              "x": 124.63564102807227,
+              "y": -0.10096664823273242,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -21.45,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 112.03564102807228,
+        "y": 0.5728660047673051,
+        "z": -117.3,
+        "vx": 18.970560740631594,
+        "vy": -1.0572725221092296,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009311035062457,
+            "frames": 19,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.06248193865062576,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6009311035062459,
+            "frames": 37,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.06248193865062575,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.600931103506219,
+            "frames": 73,
+            "reference": {
+              "x": 123.43564102807228,
+              "y": -0.06248193865059762,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 143.98564102807228,
+        "y": -0.987008844133628,
+        "z": -122.7,
+        "vx": -18.997786816999746,
+        "vy": 0.2899931996282531,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000698981314356,
+            "frames": 19,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": -0.8129926543738936,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000698981314359,
+            "frames": 37,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": -0.8129926543738916,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.600069898131436,
+            "frames": 73,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": -0.8129926543738956,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 119.98564102807228,
+        "y": -0.2526759292714946,
+        "z": -122.7,
+        "vx": 18.979990932502975,
+        "vy": -0.8717477858330815,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6006325314137897,
+            "frames": 19,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": -0.7762760086307846,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6006325314137899,
+            "frames": 37,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": -0.776276008630784,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.60063253141379,
+            "frames": 73,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": -0.7762760086307852,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 143.98564102807228,
+        "y": 0.9219151861562751,
+        "z": -122.64,
+        "vx": -18.989453232603935,
+        "vy": -0.632981774420131,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": 0.5419151861562745,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": 0.5419151861562916,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": 0.5419151861562916,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 119.98564102807228,
+        "y": -0.2455059625376661,
+        "z": -122.64,
+        "vx": 18.961265407778207,
+        "vy": 1.212606339993987,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6012256964307612,
+            "frames": 19,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": 0.48354412872157504,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.601225696430769,
+            "frames": 37,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": 0.4835441287215842,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.601225696430772,
+            "frames": 73,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": 0.4835441287215877,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 143.98564102807228,
+        "y": 0.9219151861562751,
+        "z": -120,
+        "vx": -18.989453232603935,
+        "vy": -0.632981774420131,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": 0.5419151861562745,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": 0.5419151861562916,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": 0.5419151861562916,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 119.98564102807228,
+        "y": 0.07572380754865948,
+        "z": -120,
+        "vx": 18.98687940823695,
+        "vy": 0.7059818248848163,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6004146207962133,
+            "frames": 19,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": 0.499605617225895,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6004146207962225,
+            "frames": 37,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": 0.4996056172259013,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6004146207962061,
+            "frames": 73,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": 0.49960561722588964,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 143.98564102807228,
+        "y": 0.9219151861562751,
+        "z": -117.36,
+        "vx": -18.989453232603935,
+        "vy": -0.632981774420131,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": 0.5419151861562745,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": 0.5419151861562916,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": 0.5419151861562916,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 119.98564102807228,
+        "y": 0.4065007457373697,
+        "z": -117.36,
+        "vx": 18.999121278435016,
+        "vy": 0.1827310792334581,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000277503854687,
+            "frames": 19,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": 0.5161444641353303,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600027750385469,
+            "frames": 37,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": 0.5161444641353303,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000277503854525,
+            "frames": 73,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": 0.5161444641353279,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 143.98564102807228,
+        "y": -0.7165247954446434,
+        "z": -117.3,
+        "vx": -18.99313282181156,
+        "vy": 0.5107892060571013,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6002169366660821,
+            "frames": 19,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": -0.4099404629029493,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6002169366660823,
+            "frames": 37,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": -0.40994046290294894,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6002169366660824,
+            "frames": 73,
+            "reference": {
+              "x": 132.58564102807227,
+              "y": -0.40994046290294894,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": -13.5,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 119.98564102807228,
+        "y": 0.4141095383246107,
+        "z": -117.3,
+        "vx": 18.957084123146192,
+        "vy": -1.2763077794789832,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6013583062640384,
+            "frames": 19,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": -0.35340874621448626,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6013583062640386,
+            "frames": 37,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": -0.3534087462144861,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6013583062640221,
+            "frames": 73,
+            "reference": {
+              "x": 131.38564102807229,
+              "y": -0.35340874621446483,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 170.98564102807228,
+        "y": -4.02130305254673,
+        "z": -122.7,
+        "vx": -18.91084936729186,
+        "vy": 1.838416766567674,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6028285551106748,
+            "frames": 19,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": -2.913052929465504,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.602828555110675,
+            "frames": 37,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": -2.913052929465496,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6028285551106751,
+            "frames": 73,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": -2.9130529294655125,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 146.98564102807228,
+        "y": -1.2180464313044432,
+        "z": -122.7,
+        "vx": 18.825707258711553,
+        "vy": -2.5676343605146115,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6055549384326436,
+            "frames": 19,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": -2.7728900984034106,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6055549384326164,
+            "frames": 37,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": -2.772890098403337,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6055549384326165,
+            "frames": 73,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": -2.7728900984033404,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 170.98564102807228,
+        "y": -4.018717150055786,
+        "z": -122.64,
+        "vx": -17.770393897393213,
+        "vy": 6.724068763144091,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6415164495409705,
+            "frames": 20,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": 0.2948835693457562,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6415164495409709,
+            "frames": 39,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": 0.2948835693457562,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6415164495409091,
+            "frames": 77,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": 0.29488356934535026,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 146.98564102807228,
+        "y": 0.9219151861562751,
+        "z": -122.64,
+        "vx": 18.989453232603935,
+        "vy": -0.632981774420131,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": 0.5419151861562745,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": 0.5419151861562916,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": 0.5419151861562916,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 170.98564102807228,
+        "y": -3.9090652825570062,
+        "z": -120,
+        "vx": -17.82373105769084,
+        "vy": 6.581383683018869,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6395967243390976,
+            "frames": 20,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": 0.30036616272064787,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.639596724339098,
+            "frames": 39,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": 0.30036616272065075,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6395967243390367,
+            "frames": 77,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": 0.30036616272024974,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 146.98564102807228,
+        "y": 0.9219151861562751,
+        "z": -120,
+        "vx": 18.989453232603935,
+        "vy": -0.632981774420131,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": 0.5419151861562745,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": 0.5419151861562916,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": 0.5419151861562916,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 170.98564102807228,
+        "y": -3.809018454198191,
+        "z": -117.36,
+        "vx": -17.871665503140083,
+        "vy": 6.450083111392652,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6378812314944606,
+            "frames": 20,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": 0.30536850413857713,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.637881231494461,
+            "frames": 39,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": 0.30536850413857464,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6378812314944,
+            "frames": 77,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": 0.30536850413818034,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 146.98564102807228,
+        "y": 0.9219151861562751,
+        "z": -117.36,
+        "vx": 18.989453232603935,
+        "vy": -0.632981774420131,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": 0.5419151861562745,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": 0.5419151861562916,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": 0.5419151861562916,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 170.98564102807228,
+        "y": -3.8068732200703383,
+        "z": -117.3,
+        "vx": -18.903449291966584,
+        "vy": 1.9130093742708416,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6030645425565095,
+            "frames": 19,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": -2.6532050968693826,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6030645425565098,
+            "frames": 37,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": -2.6532050968693826,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6030645425565099,
+            "frames": 73,
+            "reference": {
+              "x": 159.58564102807227,
+              "y": -2.6532050968693826,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 13.5,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 146.98564102807228,
+        "y": -0.958502255783001,
+        "z": -117.3,
+        "vx": 18.826272741644527,
+        "vy": -2.5634848658052007,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.605536749437528,
+            "frames": 19,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": -2.5107865486549814,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6055367494375556,
+            "frames": 37,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": -2.5107865486550494,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6055367494375558,
+            "frames": 73,
+            "reference": {
+              "x": 158.38564102807229,
+              "y": -2.510786548655044,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 178.93564102807227,
+        "y": -5.097993264057909,
+        "z": -122.7,
+        "vx": -18.90182534991074,
+        "vy": 1.9289889687273318,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.603116354582863,
+            "frames": 19,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.9345884692085202,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.603116354582836,
+            "frames": 37,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.9345884692085726,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6031163545828361,
+            "frames": 73,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.9345884692085726,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 154.93564102807227,
+        "y": -1.9874018538362905,
+        "z": -122.7,
+        "vx": 18.76960769095283,
+        "vy": -2.949885951647011,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.607364852143121,
+            "frames": 19,
+            "reference": {
+              "x": 166.33564102807227,
+              "y": -3.7790588986974445,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6073648521431487,
+            "frames": 37,
+            "reference": {
+              "x": 166.33564102807227,
+              "y": -3.779058898697526,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6073648521430937,
+            "frames": 73,
+            "reference": {
+              "x": 166.33564102807227,
+              "y": -3.7790588986973788,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 178.93564102807227,
+        "y": -5.096837759706739,
+        "z": -122.64,
+        "vx": -18.89819037606662,
+        "vy": 1.9642811687594577,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6032323610432877,
+            "frames": 19,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.9119197925231095,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6032323610432879,
+            "frames": 37,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.9119197925231104,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6032323610432335,
+            "frames": 73,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.9119197925231877,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 154.93564102807227,
+        "y": 0.9219151861562751,
+        "z": -122.64,
+        "vx": 17.655494032761744,
+        "vy": -7.020222963632592,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "wall",
+            "time": 0.19244791666666666,
+            "frames": 6,
+            "reference": {
+              "x": 158.33340407239803,
+              "y": -0.4291120977303098,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "wall",
+            "time": 0.19244791666666666,
+            "frames": 12,
+            "reference": {
+              "x": 158.33340407239803,
+              "y": -0.4291120977303096,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "wall",
+            "time": 0.19244791666666666,
+            "frames": 24,
+            "reference": {
+              "x": 158.33340407239803,
+              "y": -0.42911209773030984,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 178.93564102807227,
+        "y": -5.046410988415977,
+        "z": -120,
+        "vx": -18.885692349660715,
+        "vy": 2.0810152507770394,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6036315634573393,
+            "frames": 19,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.7902444990108695,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6036315634573122,
+            "frames": 37,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.790244499010927,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6036315634573668,
+            "frames": 73,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.7902444990107873,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 154.93564102807227,
+        "y": 0.9219151861562751,
+        "z": -120,
+        "vx": 17.71835423216646,
+        "vy": -6.860023564352306,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "wall",
+            "time": 0.196875,
+            "frames": 6,
+            "reference": {
+              "x": 158.42394201753012,
+              "y": -0.4286519530755851,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "wall",
+            "time": 0.196875,
+            "frames": 12,
+            "reference": {
+              "x": 158.42394201752995,
+              "y": -0.42865195307558523,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "wall",
+            "time": 0.196875,
+            "frames": 24,
+            "reference": {
+              "x": 158.4239420175303,
+              "y": -0.42865195307558485,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 178.93564102807227,
+        "y": -4.997750344431494,
+        "z": -117.36,
+        "vx": -18.874468611444026,
+        "vy": 2.1804666096077394,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6039905141005063,
+            "frames": 19,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.680769195915522,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6039905141005337,
+            "frames": 37,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.6807691959154605,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6039905141005338,
+            "frames": 73,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.6807691959154845,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 154.93564102807227,
+        "y": 0.9219151861562751,
+        "z": -117.36,
+        "vx": 17.773952028469576,
+        "vy": -6.714657793935759,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "wall",
+            "time": 0.20130208333333333,
+            "frames": 7,
+            "reference": {
+              "x": 158.5135746004699,
+              "y": -0.42975941663339706,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "wall",
+            "time": 0.20130208333333333,
+            "frames": 13,
+            "reference": {
+              "x": 158.5135746004699,
+              "y": -0.4297594166333972,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "wall",
+            "time": 0.20130208333333333,
+            "frames": 25,
+            "reference": {
+              "x": 158.5135746004699,
+              "y": -0.429759416633397,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 178.93564102807227,
+        "y": -4.996675586371151,
+        "z": -117.3,
+        "vx": -18.877621445570195,
+        "vy": 2.152999897294056,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6038896390029518,
+            "frames": 19,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.69650125562085,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6038896390029792,
+            "frames": 37,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.6965012556207912,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6038896390029793,
+            "frames": 73,
+            "reference": {
+              "x": 167.53564102807226,
+              "y": -3.6965012556207912,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 21.45,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 154.93564102807227,
+        "y": -1.7287249691557387,
+        "z": -117.3,
+        "vx": 18.766384572010523,
+        "vy": -2.970321547476875,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6074691668102561,
+            "frames": 19,
+            "reference": {
+              "x": 166.33564102807227,
+              "y": -3.533103724760068,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6074691668102288,
+            "frames": 37,
+            "reference": {
+              "x": 166.33564102807227,
+              "y": -3.5331037247599792,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6074691668102289,
+            "frames": 73,
+            "reference": {
+              "x": 166.33564102807227,
+              "y": -3.5331037247599784,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 179.48564102807228,
+        "y": -5.170915871243036,
+        "z": -122.7,
+        "vx": -18.90195715016154,
+        "vy": 1.9276970440027519,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6031121491513174,
+            "frames": 19,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -4.008298364121894,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6031121491513176,
+            "frames": 37,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -4.008298364121894,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6031121491513177,
+            "frames": 73,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -4.008298364121926,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 155.48564102807228,
+        "y": -2.048229885028989,
+        "z": -122.7,
+        "vx": 18.76649756432205,
+        "vy": -2.96960757816492,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6074655092633209,
+            "frames": 19,
+            "reference": {
+              "x": 166.88564102807229,
+              "y": -3.8521640648111624,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6074655092633211,
+            "frames": 37,
+            "reference": {
+              "x": 166.88564102807229,
+              "y": -3.8521640648111624,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6074655092633212,
+            "frames": 73,
+            "reference": {
+              "x": 166.88564102807229,
+              "y": -3.8521640648111624,
+              "z": -122.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 179.48564102807228,
+        "y": -5.169886203669429,
+        "z": -122.64,
+        "vx": -18.901650061367146,
+        "vy": 1.930705818507652,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6031219477129366,
+            "frames": 19,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -4.005435149950393,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6031219477129096,
+            "frames": 37,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -4.005435149950445,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6031219477129641,
+            "frames": 73,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -4.0054351499503404,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 155.48564102807228,
+        "y": 0.9219151861562751,
+        "z": -122.64,
+        "vx": 17.607433703324485,
+        "vy": -7.139907449192385,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "wall",
+            "time": 0.18932291666666665,
+            "frames": 6,
+            "reference": {
+              "x": 158.8191317318007,
+              "y": -0.42983291685488734,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "wall",
+            "time": 0.18932291666666665,
+            "frames": 12,
+            "reference": {
+              "x": 158.8191317318007,
+              "y": -0.4298329168548872,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "wall",
+            "time": 0.18932291666666665,
+            "frames": 23,
+            "reference": {
+              "x": 158.81913173180038,
+              "y": -0.429832916854887,
+              "z": -122.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 179.48564102807228,
+        "y": -5.124730485006993,
+        "z": -120,
+        "vx": -18.88860051081679,
+        "vy": 2.054451445708005,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.603538626033807,
+            "frames": 19,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -3.8847896822112093,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6035386260338345,
+            "frames": 37,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -3.8847896822111667,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6035386260337801,
+            "frames": 73,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -3.8847896822112804,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 155.48564102807228,
+        "y": 0.9219151861562751,
+        "z": -120,
+        "vx": 17.67063348277097,
+        "vy": -6.982027808421666,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "wall",
+            "time": 0.19348958333333333,
+            "frames": 6,
+            "reference": {
+              "x": 158.9047245378897,
+              "y": -0.42903446531697953,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "wall",
+            "time": 0.19348958333333333,
+            "frames": 12,
+            "reference": {
+              "x": 158.90472453788954,
+              "y": -0.4290344653169793,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "wall",
+            "time": 0.19348958333333333,
+            "frames": 24,
+            "reference": {
+              "x": 158.90472453788954,
+              "y": -0.4290344653169792,
+              "z": -120
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 179.48564102807228,
+        "y": -5.080747376797676,
+        "z": -117.36,
+        "vx": -18.87677472316589,
+        "vy": 2.1604110837628503,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6039167266222489,
+            "frames": 19,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -3.776038986933193,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6039167266222765,
+            "frames": 37,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -3.7760389869331346,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.603916726622222,
+            "frames": 73,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -3.7760389869332522,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 155.48564102807228,
+        "y": 0.9219151861562751,
+        "z": -117.36,
+        "vx": 17.726677403831463,
+        "vy": -6.8384872757424215,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6430985198352012,
+            "frames": 20,
+            "reference": {
+              "x": 166.88564102807229,
+              "y": -3.4759058587855325,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6430985198351705,
+            "frames": 39,
+            "reference": {
+              "x": 166.88564102807229,
+              "y": -3.475905858785323,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6430985198351704,
+            "frames": 78,
+            "reference": {
+              "x": 166.88564102807229,
+              "y": -3.475905858785318,
+              "z": -117.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 179.48564102807228,
+        "y": -5.0797712027643485,
+        "z": -117.3,
+        "vx": -18.876523705262414,
+        "vy": 2.162603247169057,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6039247574394261,
+            "frames": 19,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -3.773721561280059,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6039247574394263,
+            "frames": 37,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -3.773721561280059,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6039247574394264,
+            "frames": 73,
+            "reference": {
+              "x": 168.08564102807227,
+              "y": -3.773721561280059,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": -120,
+      "ox": 22,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 155.48564102807228,
+        "y": -1.7889442929064543,
+        "z": -117.3,
+        "vx": 18.762337491137597,
+        "vy": -2.995779008647421,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6076001993560018,
+            "frames": 19,
+            "reference": {
+              "x": 166.88564102807229,
+              "y": -3.609180215787155,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6076001993560021,
+            "frames": 37,
+            "reference": {
+              "x": 166.88564102807229,
+              "y": -3.6091802157871484,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6076001993560021,
+            "frames": 73,
+            "reference": {
+              "x": 166.88564102807229,
+              "y": -3.6091802157871617,
+              "z": -117.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 165.48337798009877,
+        "y": 3.6495527497828846,
+        "z": 22.3,
+        "vx": -18.92603756859923,
+        "vy": 1.6748438589822383,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6023447834064452,
+            "frames": 19,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.658386211261152,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6023447834064454,
+            "frames": 37,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.65838621126116,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6023447834064455,
+            "frames": 73,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.658386211261144,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 141.48337798009877,
+        "y": 6.1577545952461445,
+        "z": 22.3,
+        "vx": 18.863491125647812,
+        "vy": -2.2734780739224996,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6043420024461872,
+            "frames": 19,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.783796303534321,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6043420024461874,
+            "frames": 37,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.783796303534305,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6043420024462421,
+            "frames": 73,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.783796303534181,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 165.48337798009877,
+        "y": 4.9891119527874475,
+        "z": 22.36,
+        "vx": -18.994837415538438,
+        "vy": -0.44289000582663157,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6001630732924629,
+            "frames": 19,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.723305725760022,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6001630732924631,
+            "frames": 37,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.723305725760006,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6001630732924632,
+            "frames": 73,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.723305725760006,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 141.48337798009877,
+        "y": 6.160800759453188,
+        "z": 22.36,
+        "vx": 18.862515960311562,
+        "vy": -2.2815546557099444,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6043732460710372,
+            "frames": 19,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.781890166093283,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6043732460710374,
+            "frames": 37,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.781890166093283,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6043732460710375,
+            "frames": 73,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.78189016609325,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 165.48337798009877,
+        "y": 4.9891119527874475,
+        "z": 25,
+        "vx": -18.98971585625176,
+        "vy": -0.6250533567787372,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003249383137645,
+            "frames": 19,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.613876834936435,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003249383137648,
+            "frames": 37,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.613876834936435,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003249383137109,
+            "frames": 73,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.613876834936501,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 141.48337798009877,
+        "y": 6.276663149044906,
+        "z": 25,
+        "vx": 18.81594688424906,
+        "vy": -2.6382082649249488,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6058690572486136,
+            "frames": 19,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.678254394749327,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6058690572486138,
+            "frames": 37,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.678254394749327,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.605869057248614,
+            "frames": 73,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.678254394749327,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 165.48337798009877,
+        "y": 4.9891119527874475,
+        "z": 27.64,
+        "vx": -18.98016046557345,
+        "vy": -0.8680487895749184,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6006271664919502,
+            "frames": 19,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.4677382679282935,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6006271664919505,
+            "frames": 37,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.4677382679282935,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6006271664919506,
+            "frames": 73,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.4677382679283255,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 141.48337798009877,
+        "y": 6.353811822176302,
+        "z": 27.64,
+        "vx": 18.762951451691748,
+        "vy": -2.991931286219423,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6075803174863703,
+            "frames": 19,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.535973261397695,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6075803174863705,
+            "frames": 37,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.535973261397712,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6075803174863706,
+            "frames": 73,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.535973261397712,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 165.48337798009877,
+        "y": 2.893354899885649,
+        "z": 27.7,
+        "vx": -18.84485111779685,
+        "vy": 2.4231356437621936,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6049397752595619,
+            "frames": 19,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.359206031646582,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6049397752595895,
+            "frames": 37,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.359206031646652,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6049397752595349,
+            "frames": 73,
+            "reference": {
+              "x": 154.08337798009876,
+              "y": 4.359206031646531,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -22,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 141.48337798009877,
+        "y": 6.355080106099042,
+        "z": 27.7,
+        "vx": 18.76168313319816,
+        "vy": -2.9998743322792065,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6076213908456974,
+            "frames": 19,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.532292291957246,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6076213908456977,
+            "frames": 37,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.53229229195723,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6076213908456978,
+            "frames": 73,
+            "reference": {
+              "x": 152.88337798009877,
+              "y": 4.53229229195723,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 166.03337798009878,
+        "y": 3.5740063805589033,
+        "z": 22.3,
+        "vx": -18.92362714035196,
+        "vy": 1.7018624659280244,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6024215080676228,
+            "frames": 19,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.599244933806945,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.602421508067596,
+            "frames": 37,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.599244933806904,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6024215080675961,
+            "frames": 73,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.599244933806893,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 142.03337798009878,
+        "y": 6.119076105944148,
+        "z": 22.3,
+        "vx": 18.85980734338968,
+        "vy": -2.303837444401153,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.60446004523983,
+            "frames": 19,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.726498420076206,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6044600452398302,
+            "frames": 37,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.726498420076206,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6044600452398303,
+            "frames": 73,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.726498420076238,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 166.03337798009878,
+        "y": 4.9891119527874475,
+        "z": 22.36,
+        "vx": -18.992670810264162,
+        "vy": -0.5276888220720057,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6002315374117547,
+            "frames": 19,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.6723764798401675,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600231537411755,
+            "frames": 37,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.6723764798401834,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6002315374117011,
+            "frames": 73,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.67237647984018,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 142.03337798009878,
+        "y": 6.1219374019291335,
+        "z": 22.36,
+        "vx": 18.859739243667594,
+        "vy": -2.3043948578454354,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6044622278554386,
+            "frames": 19,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.729017752297258,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6044622278554662,
+            "frames": 37,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.729017752297211,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6044622278554663,
+            "frames": 73,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.729017752297179,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 166.03337798009878,
+        "y": 4.9891119527874475,
+        "z": 25,
+        "vx": -18.986133957314593,
+        "vy": -0.7257529572145582,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.60043819482312,
+            "frames": 19,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.553342157269997,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6004381948231472,
+            "frames": 37,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.553342157269992,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6004381948230934,
+            "frames": 73,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.553342157270032,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 142.03337798009878,
+        "y": 6.229506843458573,
+        "z": 25,
+        "vx": 18.8123588464459,
+        "vy": -2.663673146718401,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6059846132561829,
+            "frames": 19,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.615361901803536,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6059846132561831,
+            "frames": 37,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.615361901803536,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6059846132561283,
+            "frames": 73,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.615361901803714,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 166.03337798009878,
+        "y": 4.9891119527874475,
+        "z": 27.64,
+        "vx": -18.97451059095805,
+        "vy": -0.983843398931255,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6008060100075685,
+            "frames": 19,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.398012925803282,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6008060100075687,
+            "frames": 37,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.398012925803282,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6008060100075688,
+            "frames": 73,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.39801292580325,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 142.03337798009878,
+        "y": 6.298163345835208,
+        "z": 27.64,
+        "vx": 18.758617940612954,
+        "vy": -3.018982106292446,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6077206772956654,
+            "frames": 19,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.463465495455665,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6077206772956932,
+            "frames": 37,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.463465495455582,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6077206772956381,
+            "frames": 73,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.463465495455781,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 166.03337798009878,
+        "y": 2.800652173224889,
+        "z": 27.7,
+        "vx": -18.842833174003264,
+        "vy": 2.438777967893361,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6050045603401235,
+            "frames": 19,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.2761239654573915,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6050045603400964,
+            "frames": 37,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.276123965457328,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6050045603401513,
+            "frames": 73,
+            "reference": {
+              "x": 154.63337798009877,
+              "y": 4.276123965457448,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -21.45,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 142.03337798009878,
+        "y": 6.299237611721414,
+        "z": 27.7,
+        "vx": 18.755124751081592,
+        "vy": -3.040607763485231,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6078338668124483,
+            "frames": 19,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.451053237382236,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6078338668124762,
+            "frames": 37,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.451053237382152,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.607833866812421,
+            "frames": 73,
+            "reference": {
+              "x": 153.43337798009878,
+              "y": 4.451053237382287,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 173.98337798009877,
+        "y": 2.4251292228055252,
+        "z": 22.3,
+        "vx": -18.89124965835638,
+        "vy": 2.0299473750937467,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6034539909305313,
+            "frames": 19,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 3.650109067684801,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6034539909305315,
+            "frames": 37,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 3.650109067684809,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6034539909304771,
+            "frames": 73,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 3.6501090676846824,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 149.98337798009877,
+        "y": 5.46114702495399,
+        "z": 22.3,
+        "vx": 18.801894363485236,
+        "vy": -2.7365614088381522,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6063218832959636,
+            "frames": 19,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 3.801909957792184,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6063218832959363,
+            "frames": 37,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 3.8019099577922595,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6063218832959364,
+            "frames": 73,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 3.8019099577922595,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 173.98337798009877,
+        "y": 4.9891119527874475,
+        "z": 22.36,
+        "vx": -18.989453232603935,
+        "vy": -0.6329817744201317,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 4.609111952787439,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 4.609111952787456,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 4.609111952787456,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 149.98337798009877,
+        "y": 5.460686874630612,
+        "z": 22.36,
+        "vx": 18.9500820857541,
+        "vy": -1.3763680260677245,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.601580507588931,
+            "frames": 19,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 4.632690698879609,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6015805075889583,
+            "frames": 37,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 4.632690698879587,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6015805075889042,
+            "frames": 73,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 4.632690698879662,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 173.98337798009877,
+        "y": 4.9891119527874475,
+        "z": 25,
+        "vx": -18.989453232603935,
+        "vy": -0.6329817744201317,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 4.609111952787439,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 4.609111952787456,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 4.609111952787456,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 149.98337798009877,
+        "y": 5.420676663682231,
+        "z": 25,
+        "vx": 18.954543864739097,
+        "vy": -1.3134941490853558,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6014388993663453,
+            "frames": 19,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 4.630690188332203,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6014388993663455,
+            "frames": 37,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 4.630690188332187,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6014388993663456,
+            "frames": 73,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 4.630690188332187,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 173.98337798009877,
+        "y": 4.9891119527874475,
+        "z": 27.64,
+        "vx": -18.989453232603935,
+        "vy": -0.6329817744201317,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 4.609111952787439,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 4.609111952787456,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 4.609111952787456,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 149.98337798009877,
+        "y": 5.341065056115287,
+        "z": 27.64,
+        "vx": 18.962806595032838,
+        "vy": -1.1882617722450477,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6011768322831684,
+            "frames": 19,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 4.626709607953821,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6011768322831686,
+            "frames": 37,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 4.626709607953821,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6011768322831148,
+            "frames": 73,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 4.6267096079538845,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 173.98337798009877,
+        "y": 1.4833352402673212,
+        "z": 27.7,
+        "vx": -18.833827759712044,
+        "vy": 2.50737550388848,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6052938438985785,
+            "frames": 19,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 3.0010341971131123,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6052938438986062,
+            "frames": 37,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 3.0010341971131798,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6052938438985515,
+            "frames": 73,
+            "reference": {
+              "x": 162.58337798009876,
+              "y": 3.0010341971130527,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": -13.5,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 149.98337798009877,
+        "y": 5.338786207132383,
+        "z": 27.7,
+        "vx": 18.672348788922047,
+        "vy": -3.513316197674426,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6105284412190991,
+            "frames": 19,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 3.1938067454564,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6105284412191272,
+            "frames": 37,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 3.1938067454563086,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6105284412190716,
+            "frames": 74,
+            "reference": {
+              "x": 161.38337798009877,
+              "y": 3.193806745456491,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 200.98337798009877,
+        "y": 1.6854734189454466,
+        "z": 22.3,
+        "vx": -18.77334606047557,
+        "vy": -2.9260002894098065,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6072439065085463,
+            "frames": 19,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": -0.09132242724090182,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6072439065085465,
+            "frames": 37,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": -0.09132242724090028,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6072439065084915,
+            "frames": 73,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": -0.0913224272407409,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 176.98337798009877,
+        "y": 1.9742419922132308,
+        "z": 22.3,
+        "vx": 18.69973306425829,
+        "vy": -3.3645182902586983,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6096343707595226,
+            "frames": 19,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": -0.07688399857753653,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6096343707594951,
+            "frames": 37,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": -0.07688399857744313,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6096343707594951,
+            "frames": 74,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": -0.07688399857743944,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 200.98337798009877,
+        "y": 1.6805203463573244,
+        "z": 22.36,
+        "vx": -18.465327913446284,
+        "vy": 4.4756748149191425,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6173732767398418,
+            "frames": 19,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": 4.443682372465939,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6173732767398705,
+            "frames": 38,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": 4.443682372466069,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6173732767398705,
+            "frames": 75,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": 4.443682372466058,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 176.98337798009877,
+        "y": 4.9891119527874475,
+        "z": 22.36,
+        "vx": 18.989453232603935,
+        "vy": -0.6329817744201317,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": 4.609111952787439,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": 4.609111952787456,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": 4.609111952787456,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 200.98337798009877,
+        "y": 1.4661844954266197,
+        "z": 25,
+        "vx": -18.387534708878466,
+        "vy": 4.785244751294315,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6199852335014416,
+            "frames": 19,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": 4.432965579919372,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.619985233501442,
+            "frames": 38,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": 4.4329655799193715,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6199852335014994,
+            "frames": 75,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": 4.432965579919651,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 176.98337798009877,
+        "y": 4.9891119527874475,
+        "z": 25,
+        "vx": 18.989453232603935,
+        "vy": -0.6329817744201317,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": 4.609111952787439,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": 4.609111952787456,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": 4.609111952787456,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 200.98337798009877,
+        "y": 1.259279286243561,
+        "z": 27.64,
+        "vx": -18.308216924541956,
+        "vy": 5.080274898459288,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6226712326484496,
+            "frames": 19,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": 4.422620319460182,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6226712326484788,
+            "frames": 38,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": 4.422620319460325,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6226712326484788,
+            "frames": 75,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": 4.422620319460327,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 176.98337798009877,
+        "y": 4.9891119527874475,
+        "z": 27.64,
+        "vx": 18.989453232603935,
+        "vy": -0.6329817744201317,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921457,
+            "frames": 19,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": 4.609111952787439,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.600333240792119,
+            "frames": 37,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": 4.609111952787456,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6003332407921191,
+            "frames": 73,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": 4.609111952787456,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 200.98337798009877,
+        "y": 1.254666984861067,
+        "z": 27.7,
+        "vx": -18.674115410442766,
+        "vy": -3.5039140453875444,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6104706835872302,
+            "frames": 19,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": -0.884369817657565,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6104706835872304,
+            "frames": 37,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": -0.8843698176575654,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6104706835872863,
+            "frames": 74,
+            "reference": {
+              "x": 189.58337798009876,
+              "y": -0.8843698176577608,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 13.5,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 176.98337798009877,
+        "y": 1.0120692060053105,
+        "z": 27.7,
+        "vx": 18.7391954092776,
+        "vy": -3.1372847197711042,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.60835055886956,
+            "frames": 19,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": -0.8964997066003719,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6083505588695602,
+            "frames": 37,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": -0.8964997066003709,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6083505588695604,
+            "frames": 74,
+            "reference": {
+              "x": 188.38337798009877,
+              "y": -0.8964997066003704,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 208.93337798009875,
+        "y": 3.2277351304631754,
+        "z": 22.3,
+        "vx": -18.570881904485276,
+        "vy": -4.01526403735313,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6138642234996079,
+            "frames": 19,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.7629081900274945,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6138642234996081,
+            "frames": 37,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.7629081900274943,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6138642234996645,
+            "frames": 74,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.762908190027276,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 184.93337798009875,
+        "y": 0.7875503730424227,
+        "z": 22.3,
+        "vx": 18.998428072345,
+        "vy": -0.2443988132815893,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.600049643927875,
+            "frames": 19,
+            "reference": {
+              "x": 196.33337798009876,
+              "y": 0.6408989521564101,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000496439278752,
+            "frames": 37,
+            "reference": {
+              "x": 196.33337798009876,
+              "y": 0.6408989521564081,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000496439279291,
+            "frames": 73,
+            "reference": {
+              "x": 196.33337798009876,
+              "y": 0.6408989521563989,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 208.93337798009875,
+        "y": 3.2254151030337272,
+        "z": 22.36,
+        "vx": -18.579865150047,
+        "vy": -3.9734885184267084,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6135674240871047,
+            "frames": 19,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.7874119881429666,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6135674240870768,
+            "frames": 37,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.7874119881430746,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6135674240870769,
+            "frames": 74,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.7874119881430711,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 184.93337798009875,
+        "y": 4.9891119527874475,
+        "z": 22.36,
+        "vx": 17.872101906505538,
+        "vy": -6.448873812029598,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "wall",
+            "time": 0.20937499999999998,
+            "frames": 7,
+            "reference": {
+              "x": 188.67534931677338,
+              "y": 3.638878998393751,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "wall",
+            "time": 0.20937499999999998,
+            "frames": 13,
+            "reference": {
+              "x": 188.67534931677338,
+              "y": 3.638878998393751,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "wall",
+            "time": 0.20937499999999998,
+            "frames": 26,
+            "reference": {
+              "x": 188.67534931677304,
+              "y": 3.638878998393751,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 208.93337798009875,
+        "y": 3.1305360825093267,
+        "z": 25,
+        "vx": -18.520200164565072,
+        "vy": -4.242898285894193,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6155441031253809,
+            "frames": 19,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.5188450624663702,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6155441031253811,
+            "frames": 37,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.5188450624663686,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6155441031253812,
+            "frames": 74,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.518845062466373,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 184.93337798009875,
+        "y": 4.9891119527874475,
+        "z": 25,
+        "vx": 17.737357494450276,
+        "vy": -6.810737780451443,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "wall",
+            "time": 0.1984375,
+            "frames": 6,
+            "reference": {
+              "x": 188.4531348579038,
+              "y": 3.637606174479115,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "wall",
+            "time": 0.1984375,
+            "frames": 12,
+            "reference": {
+              "x": 188.4531348579038,
+              "y": 3.6376061744791124,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "wall",
+            "time": 0.1984375,
+            "frames": 24,
+            "reference": {
+              "x": 188.45313485790345,
+              "y": 3.6376061744791106,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 208.93337798009875,
+        "y": 3.0483787997732144,
+        "z": 27.64,
+        "vx": -18.453948079149765,
+        "vy": -4.522366669349649,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6177539869032429,
+            "frames": 19,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.25466875954412777,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6177539869032431,
+            "frames": 38,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.25466875954412765,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6177539869031861,
+            "frames": 75,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.2546687595443858,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 184.93337798009875,
+        "y": 4.9891119527874475,
+        "z": 27.64,
+        "vx": 17.599548819505447,
+        "vy": -7.159321291145159,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "wall",
+            "time": 0.18880208333333331,
+            "frames": 6,
+            "reference": {
+              "x": 188.25620946294814,
+              "y": 3.6374171777665514,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "wall",
+            "time": 0.18880208333333331,
+            "frames": 12,
+            "reference": {
+              "x": 188.25620946294796,
+              "y": 3.637417177766555,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "wall",
+            "time": 0.18880208333333331,
+            "frames": 23,
+            "reference": {
+              "x": 188.25620946294828,
+              "y": 3.6374171777665563,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 208.93337798009875,
+        "y": 3.0466425311415426,
+        "z": 27.7,
+        "vx": -18.438957243597393,
+        "vy": -4.583105472143009,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6182562196654781,
+            "frames": 19,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.21310906760623932,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6182562196654783,
+            "frames": 38,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.21310906760623785,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6182562196654783,
+            "frames": 75,
+            "reference": {
+              "x": 197.53337798009875,
+              "y": 0.2131090676062371,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 21.45,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 184.93337798009875,
+        "y": -0.11255785539706098,
+        "z": 27.7,
+        "vx": 18.997944368332533,
+        "vy": 0.27948126545864527,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000649217081825,
+            "frames": 19,
+            "reference": {
+              "x": 196.33337798009876,
+              "y": 0.05514904827928475,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000649217082096,
+            "frames": 37,
+            "reference": {
+              "x": 196.33337798009876,
+              "y": 0.05514904827929223,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000649217082097,
+            "frames": 73,
+            "reference": {
+              "x": 196.33337798009876,
+              "y": 0.05514904827929236,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": -2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 209.48337798009877,
+        "y": 3.348830013064271,
+        "z": 22.3,
+        "vx": -18.558946262072734,
+        "vy": -4.070075385235076,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6142590122854699,
+            "frames": 19,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.8487495270023719,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6142590122854983,
+            "frames": 37,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.848749527002253,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6142590122854419,
+            "frames": 74,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.8487495270024793,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": -2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 185.48337798009877,
+        "y": 0.7078992068209947,
+        "z": 22.3,
+        "vx": 18.999994334319787,
+        "vy": 0.014672962073266304,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000001789162771,
+            "frames": 19,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.7167029866901857,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000001789162773,
+            "frames": 37,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.7167029866901857,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6000001789162774,
+            "frames": 73,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.7167029866901857,
+              "z": 22.3
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": -2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 209.48337798009877,
+        "y": 3.3466679401677384,
+        "z": 22.36,
+        "vx": -18.557637463093947,
+        "vy": -4.076038737349293,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6143023336171549,
+            "frames": 19,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.8427478319001462,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6143023336171551,
+            "frames": 37,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.842747831900142,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6143023336171552,
+            "frames": 74,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.8427478319001473,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": -2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 185.48337798009877,
+        "y": 4.9891119527874475,
+        "z": 22.36,
+        "vx": 17.89666707077103,
+        "vy": -6.380384608938545,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6369901141324048,
+            "frames": 20,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.9248700325310443,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6369901141323748,
+            "frames": 39,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.9248700325312383,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6369901141324354,
+            "frames": 77,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.9248700325308575,
+              "z": 22.36
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": 0,
+      "direction": -1,
+      "arrow": {
+        "x": 209.48337798009877,
+        "y": 3.258928292716873,
+        "z": 25,
+        "vx": -18.49636261821827,
+        "vy": -4.345638030873908,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6163373975362757,
+            "frames": 19,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.5805490581333843,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6163373975362759,
+            "frames": 37,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.580549058133386,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.616337397536276,
+            "frames": 74,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.5805490581333791,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": 0,
+      "direction": 1,
+      "arrow": {
+        "x": 185.48337798009877,
+        "y": 4.9891119527874475,
+        "z": 25,
+        "vx": 17.766029844708164,
+        "vy": -6.7355908097908355,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6416740318262917,
+            "frames": 20,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.6670582411368441,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6416740318262919,
+            "frames": 39,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.6670582411368436,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6416740318262302,
+            "frames": 78,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.6670582411372646,
+              "z": 25
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": 2.64,
+      "direction": -1,
+      "arrow": {
+        "x": 209.48337798009877,
+        "y": 3.184189878079266,
+        "z": 27.64,
+        "vx": -18.428524701618468,
+        "vy": -4.624875925020897,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6186062196828245,
+            "frames": 19,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.323212865599982,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6186062196828533,
+            "frames": 38,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.3232128655998527,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6186062196828533,
+            "frames": 75,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.3232128655998487,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": 2.64,
+      "direction": 1,
+      "arrow": {
+        "x": 185.48337798009877,
+        "y": 4.9891119527874475,
+        "z": 27.64,
+        "vx": 17.632696192631915,
+        "vy": -7.077289380712368,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "wall",
+            "time": 0.19088541666666667,
+            "frames": 6,
+            "reference": {
+              "x": 188.84920253978603,
+              "y": 3.6381606204795904,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "wall",
+            "time": 0.19088541666666664,
+            "frames": 12,
+            "reference": {
+              "x": 188.8492025397862,
+              "y": 3.6381606204795895,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "wall",
+            "time": 0.19088541666666664,
+            "frames": 23,
+            "reference": {
+              "x": 188.8492025397862,
+              "y": 3.6381606204795895,
+              "z": 27.64
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": 2.7,
+      "direction": -1,
+      "arrow": {
+        "x": 209.48337798009877,
+        "y": 3.1826243986749994,
+        "z": 27.7,
+        "vx": -18.426915675958355,
+        "vy": -4.631282616200421,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.618660235954378,
+            "frames": 19,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.3174340025650387,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6186602359543784,
+            "frames": 38,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.3174340025650356,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6186602359544355,
+            "frames": 75,
+            "reference": {
+              "x": 198.08337798009876,
+              "y": 0.31743400256477444,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    },
+    {
+      "bridgeZ": 25,
+      "ox": 22,
+      "oz": 2.7,
+      "direction": 1,
+      "arrow": {
+        "x": 185.48337798009877,
+        "y": -0.1822108386578396,
+        "z": 27.7,
+        "vx": 18.991976722293987,
+        "vy": 0.5521052253359064,
+        "vz": 0,
+        "life": 2.3,
+        "damage": 20,
+        "owner": "enemy-24"
+      },
+      "rates": [
+        {
+          "hz": 30,
+          "baseline": {
+            "target": "player",
+            "time": 0.6002534737007174,
+            "frames": 19,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.1491922406983555,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 60,
+          "baseline": {
+            "target": "player",
+            "time": 0.6002534737007176,
+            "frames": 37,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.14919224069835557,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        },
+        {
+          "hz": 120,
+          "baseline": {
+            "target": "player",
+            "time": 0.6002534737006637,
+            "frames": 73,
+            "reference": {
+              "x": 196.88337798009877,
+              "y": 0.14919224069832598,
+              "z": 27.7
+            },
+            "contactPoint": null
+          }
+        }
+      ]
+    }
+  ]
+}
