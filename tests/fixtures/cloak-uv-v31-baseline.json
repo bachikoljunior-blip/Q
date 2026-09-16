@@ -1,0 +1,1009 @@
+{
+  "sourceCommit": "892f7e59f602e20da62bf1c8708e432ce1eac637",
+  "geometrySHA256": "51a6a10a890bfd3b531119b39808a18a32b2bea45fa4441871a57e38da06046d",
+  "method": "Exact unmodified production actor with deterministic sequential frames; contract excludes only non-boss cape UV.",
+  "roles": {
+    "player": {
+      "samples": {
+        "0": {
+          "contract": "034bdd33d826af3699b6f0fd1c58dcafc9b1c7fbbf2bdbbcf09978237db05a98",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.938703853517453,
+            "uvArea": 1,
+            "density": 264.2260698032041,
+            "densityP05": 230.1456756927513,
+            "densityP95": 310.0302420449387,
+            "stretchP50": 1.4148981390624926,
+            "stretchP95": 2.022735077268376,
+            "stretchMax": 2.2222350667109527,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "15": {
+          "contract": "a26f92bdd77c5c65797db86d4a0f009a060fcdee9dbe98cca381fb6478d85b41",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9401481738214228,
+            "uvArea": 1,
+            "density": 264.0230306593637,
+            "densityP05": 229.51178419558607,
+            "densityP95": 309.71564907549856,
+            "stretchP50": 1.4115769646955025,
+            "stretchP95": 2.0212808213125677,
+            "stretchMax": 2.2217632096100934,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "30": {
+          "contract": "c158df8932fa8e5e0b21e28c02da75a7514de421ba836511067b21a66f0d8a59",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9594755409921089,
+            "uvArea": 1,
+            "density": 261.3503049839395,
+            "densityP05": 220.38166141873822,
+            "densityP95": 309.0083946999711,
+            "stretchP50": 1.4681261105944479,
+            "stretchP95": 2.033954332502584,
+            "stretchMax": 2.2602095706889833,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "45": {
+          "contract": "6314f4b59c93c6302ee67f3b988b11ed1552a9a1f243f062d8f845c69715a5e1",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.964367451697206,
+            "uvArea": 1,
+            "density": 260.68659125603415,
+            "densityP05": 218.91599840734173,
+            "densityP95": 309.4070760965065,
+            "stretchP50": 1.48250747315962,
+            "stretchP95": 2.018991664347911,
+            "stretchMax": 2.2305153425670046,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "60": {
+          "contract": "6cf39eb284e98fe7bbc285108aaa0371b642641b9c1235a604a066e88e36cd02",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9420893266785965,
+            "uvArea": 1,
+            "density": 263.75088378254935,
+            "densityP05": 230.11538364522286,
+            "densityP95": 310.27551404416846,
+            "stretchP50": 1.4151356180358083,
+            "stretchP95": 2.0185952014753368,
+            "stretchMax": 2.1955457324640064,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "75": {
+          "contract": "a782b09199023c6b9ebc481bed629a62fb57634f283bd9f8f069c8f6f88500e0",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.8608553601257679,
+            "uvArea": 1,
+            "density": 275.9147204497189,
+            "densityP05": 234.69163554465814,
+            "densityP95": 320.3130005006079,
+            "stretchP50": 1.461321234361653,
+            "stretchP95": 2.135132810893892,
+            "stretchMax": 5.92798971751452,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "90": {
+          "contract": "a8691b696e3821b0c2dffc583240716ef15610707af000a52b0c5f18a00d20be",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9039287452892819,
+            "uvArea": 1,
+            "density": 269.2606356073094,
+            "densityP05": 237.12717418493466,
+            "densityP95": 312.65412339263605,
+            "stretchP50": 1.4433655371791363,
+            "stretchP95": 2.036382021960021,
+            "stretchMax": 2.2042161206709348,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        }
+      }
+    },
+    "npc": {
+      "samples": {
+        "0": {
+          "contract": "bc14503062788374aa20314bce3cbe5618c14f74e83327cb64340f6acfbdce42",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.938703853517453,
+            "uvArea": 1,
+            "density": 264.2260698032041,
+            "densityP05": 230.1456756927513,
+            "densityP95": 310.0302420449387,
+            "stretchP50": 1.4148981390624926,
+            "stretchP95": 2.022735077268376,
+            "stretchMax": 2.2222350667109527,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "15": {
+          "contract": "9c19d0f7b69e1fa24b5ec39ee46a93d358250a6a3d456b33196ea18ea760c5c5",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9401481738214228,
+            "uvArea": 1,
+            "density": 264.0230306593637,
+            "densityP05": 229.51178419558607,
+            "densityP95": 309.71564907549856,
+            "stretchP50": 1.4115769646955025,
+            "stretchP95": 2.0212808213125677,
+            "stretchMax": 2.2217632096100934,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "30": {
+          "contract": "c61d7115b9b231a2473c90465ec7b3a3b0e8fa8aa66a29c7ce646d91f6b629b6",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9594755409921089,
+            "uvArea": 1,
+            "density": 261.3503049839395,
+            "densityP05": 220.38166141873822,
+            "densityP95": 309.0083946999711,
+            "stretchP50": 1.4681261105944479,
+            "stretchP95": 2.033954332502584,
+            "stretchMax": 2.2602095706889833,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "45": {
+          "contract": "1da94c83c7b81e07b7bd4a9452f96bcddf6c532e17484505ec28b18c08e82df7",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.964367451697206,
+            "uvArea": 1,
+            "density": 260.68659125603415,
+            "densityP05": 218.91599840734173,
+            "densityP95": 309.4070760965065,
+            "stretchP50": 1.48250747315962,
+            "stretchP95": 2.018991664347911,
+            "stretchMax": 2.2305153425670046,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "60": {
+          "contract": "2330a424dd31fb10dacbfe83a8c029636356138860203d3978f060594055b67d",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9420893266785965,
+            "uvArea": 1,
+            "density": 263.75088378254935,
+            "densityP05": 230.11538364522286,
+            "densityP95": 310.27551404416846,
+            "stretchP50": 1.4151356180358083,
+            "stretchP95": 2.0185952014753368,
+            "stretchMax": 2.1955457324640064,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "75": {
+          "contract": "6c6810dfc6f63d44a28eb10a91432b85fddc139425e10882ba834d3838d47fe4",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.8608553601257679,
+            "uvArea": 1,
+            "density": 275.9147204497189,
+            "densityP05": 234.69163554465814,
+            "densityP95": 320.3130005006079,
+            "stretchP50": 1.461321234361653,
+            "stretchP95": 2.135132810893892,
+            "stretchMax": 5.92798971751452,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "90": {
+          "contract": "3e75a403ecf7233fb875843307af640055a6f739862643fc28f382a1b233b734",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9039287452892819,
+            "uvArea": 1,
+            "density": 269.2606356073094,
+            "densityP05": 237.12717418493466,
+            "densityP95": 312.65412339263605,
+            "stretchP50": 1.4433655371791363,
+            "stretchP95": 2.036382021960021,
+            "stretchMax": 2.2042161206709348,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        }
+      }
+    },
+    "sena": {
+      "samples": {
+        "0": {
+          "contract": "daf46687df78c1da7afd25cbf7b628e88d479b961915f576c2fabd83bb68a36a",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.938703853517453,
+            "uvArea": 1,
+            "density": 264.2260698032041,
+            "densityP05": 230.1456756927513,
+            "densityP95": 310.0302420449387,
+            "stretchP50": 1.4148981390624926,
+            "stretchP95": 2.022735077268376,
+            "stretchMax": 2.2222350667109527,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "15": {
+          "contract": "e39986538b913dba20bf619cb876e100927e7f217ea402595e6df14eb8853682",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9401481738214228,
+            "uvArea": 1,
+            "density": 264.0230306593637,
+            "densityP05": 229.51178419558607,
+            "densityP95": 309.71564907549856,
+            "stretchP50": 1.4115769646955025,
+            "stretchP95": 2.0212808213125677,
+            "stretchMax": 2.2217632096100934,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "30": {
+          "contract": "b69595056eef04a019b83a01c38e4ffed02ae54b640bc54857c7aa88cf23bf0e",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9594755409921089,
+            "uvArea": 1,
+            "density": 261.3503049839395,
+            "densityP05": 220.38166141873822,
+            "densityP95": 309.0083946999711,
+            "stretchP50": 1.4681261105944479,
+            "stretchP95": 2.033954332502584,
+            "stretchMax": 2.2602095706889833,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "45": {
+          "contract": "78fc5ce1cd0ccfefe49f553cefad648c090d73455efb9e03ca8d6996798a7b18",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.964367451697206,
+            "uvArea": 1,
+            "density": 260.68659125603415,
+            "densityP05": 218.91599840734173,
+            "densityP95": 309.4070760965065,
+            "stretchP50": 1.48250747315962,
+            "stretchP95": 2.018991664347911,
+            "stretchMax": 2.2305153425670046,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "60": {
+          "contract": "577e246fb18638bb444611b0b1651d5a2427e0ed116cc5f9f8616cfc9435cc8f",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9420893266785965,
+            "uvArea": 1,
+            "density": 263.75088378254935,
+            "densityP05": 230.11538364522286,
+            "densityP95": 310.27551404416846,
+            "stretchP50": 1.4151356180358083,
+            "stretchP95": 2.0185952014753368,
+            "stretchMax": 2.1955457324640064,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "75": {
+          "contract": "c6f68a3b13165c55e355ad93dd1e31a08aeae1743a11c9978d5f676ea57954ef",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.8608553601257679,
+            "uvArea": 1,
+            "density": 275.9147204497189,
+            "densityP05": 234.69163554465814,
+            "densityP95": 320.3130005006079,
+            "stretchP50": 1.461321234361653,
+            "stretchP95": 2.135132810893892,
+            "stretchMax": 5.92798971751452,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "90": {
+          "contract": "420e0126ef99dd650e11d331a9ab9b5b3646f64d3f533fc5f01c01bf40db7522",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9039287452892819,
+            "uvArea": 1,
+            "density": 269.2606356073094,
+            "densityP05": 237.12717418493466,
+            "densityP95": 312.65412339263605,
+            "stretchP50": 1.4433655371791363,
+            "stretchP95": 2.036382021960021,
+            "stretchMax": 2.2042161206709348,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        }
+      }
+    },
+    "scout": {
+      "samples": {
+        "0": {
+          "contract": "55262f06f0051b7d70d90db9008aba2c36538b3f0ab186a2c58b675ba9652632",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.938703853517453,
+            "uvArea": 1,
+            "density": 264.2260698032041,
+            "densityP05": 230.1456756927513,
+            "densityP95": 310.0302420449387,
+            "stretchP50": 1.4148981390624926,
+            "stretchP95": 2.022735077268376,
+            "stretchMax": 2.2222350667109527,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "15": {
+          "contract": "2dd6e66ad452df17aaabf697c4a21459d6cc03dadb17cd9e9b6b2aef2a96c06d",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9401481738214228,
+            "uvArea": 1,
+            "density": 264.0230306593637,
+            "densityP05": 229.51178419558607,
+            "densityP95": 309.71564907549856,
+            "stretchP50": 1.4115769646955025,
+            "stretchP95": 2.0212808213125677,
+            "stretchMax": 2.2217632096100934,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "30": {
+          "contract": "4af3d205e7dd1cd650a44d9f39b1ad2900530041f767935e404afca2c83a4a4b",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9594755409921089,
+            "uvArea": 1,
+            "density": 261.3503049839395,
+            "densityP05": 220.38166141873822,
+            "densityP95": 309.0083946999711,
+            "stretchP50": 1.4681261105944479,
+            "stretchP95": 2.033954332502584,
+            "stretchMax": 2.2602095706889833,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "45": {
+          "contract": "0ec57d76846411ea11a6b7eea4346dcc72cb7d63005e1c66933d80d27335cff3",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.964367451697206,
+            "uvArea": 1,
+            "density": 260.68659125603415,
+            "densityP05": 218.91599840734173,
+            "densityP95": 309.4070760965065,
+            "stretchP50": 1.48250747315962,
+            "stretchP95": 2.018991664347911,
+            "stretchMax": 2.2305153425670046,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "60": {
+          "contract": "a6357764c3cc67bad097df8e653461e8558a8e3ca9bb54824d28f07290f3af0e",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9420893266785965,
+            "uvArea": 1,
+            "density": 263.75088378254935,
+            "densityP05": 230.11538364522286,
+            "densityP95": 310.27551404416846,
+            "stretchP50": 1.4151356180358083,
+            "stretchP95": 2.0185952014753368,
+            "stretchMax": 2.1955457324640064,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "75": {
+          "contract": "b21da21d10df7f2a5a746279f2f452fb027f82d14633b6506f0f5533e8767658",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.8608553601257679,
+            "uvArea": 1,
+            "density": 275.9147204497189,
+            "densityP05": 234.69163554465814,
+            "densityP95": 320.3130005006079,
+            "stretchP50": 1.461321234361653,
+            "stretchP95": 2.135132810893892,
+            "stretchMax": 5.92798971751452,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "90": {
+          "contract": "83444c1b2a250baf0a4a8651ef4b8ac7b0d6030c0972a22dce1a63bd39de8c26",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9039287452892819,
+            "uvArea": 1,
+            "density": 269.2606356073094,
+            "densityP05": 237.12717418493466,
+            "densityP95": 312.65412339263605,
+            "stretchP50": 1.4433655371791363,
+            "stretchP95": 2.036382021960021,
+            "stretchMax": 2.2042161206709348,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        }
+      }
+    },
+    "traveler": {
+      "samples": {
+        "0": {
+          "contract": "dc9984dd7e3062a774570cf7b4c40508df03988bccf5be7893ecffb695b1cb48",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.938703853517453,
+            "uvArea": 1,
+            "density": 264.2260698032041,
+            "densityP05": 230.1456756927513,
+            "densityP95": 310.0302420449387,
+            "stretchP50": 1.4148981390624926,
+            "stretchP95": 2.022735077268376,
+            "stretchMax": 2.2222350667109527,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "15": {
+          "contract": "7fe055f329950789b82d7d8c5d2d43cb8c26ec01e565196da4f2978f242ea1ec",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9401481738214228,
+            "uvArea": 1,
+            "density": 264.0230306593637,
+            "densityP05": 229.51178419558607,
+            "densityP95": 309.71564907549856,
+            "stretchP50": 1.4115769646955025,
+            "stretchP95": 2.0212808213125677,
+            "stretchMax": 2.2217632096100934,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "30": {
+          "contract": "7e830add76cef1ead54faf54d0c6f861b51373282ebe8669f6bead39c1cf7f62",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9594755409921089,
+            "uvArea": 1,
+            "density": 261.3503049839395,
+            "densityP05": 220.38166141873822,
+            "densityP95": 309.0083946999711,
+            "stretchP50": 1.4681261105944479,
+            "stretchP95": 2.033954332502584,
+            "stretchMax": 2.2602095706889833,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "45": {
+          "contract": "02b8758f9ef8550fd933d718c56986755cc29e43adbc3054874a3e2ca18bef37",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.964367451697206,
+            "uvArea": 1,
+            "density": 260.68659125603415,
+            "densityP05": 218.91599840734173,
+            "densityP95": 309.4070760965065,
+            "stretchP50": 1.48250747315962,
+            "stretchP95": 2.018991664347911,
+            "stretchMax": 2.2305153425670046,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "60": {
+          "contract": "9784332abd0cceabc52b3cc6b51eb9962b96aba28dd47d92d23248bc2c73952d",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9420893266785965,
+            "uvArea": 1,
+            "density": 263.75088378254935,
+            "densityP05": 230.11538364522286,
+            "densityP95": 310.27551404416846,
+            "stretchP50": 1.4151356180358083,
+            "stretchP95": 2.0185952014753368,
+            "stretchMax": 2.1955457324640064,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "75": {
+          "contract": "cf27fe2545a6283a65281c9ef04de7f07dae97b3de3f787947624df0b7ad931a",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.8608553601257679,
+            "uvArea": 1,
+            "density": 275.9147204497189,
+            "densityP05": 234.69163554465814,
+            "densityP95": 320.3130005006079,
+            "stretchP50": 1.461321234361653,
+            "stretchP95": 2.135132810893892,
+            "stretchMax": 5.92798971751452,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "90": {
+          "contract": "5785a77e3e1d52a9b4f441649731755c4e211715378c505ba51fd9e1686a42c1",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9039287452892819,
+            "uvArea": 1,
+            "density": 269.2606356073094,
+            "densityP05": 237.12717418493466,
+            "densityP95": 312.65412339263605,
+            "stretchP50": 1.4433655371791363,
+            "stretchP95": 2.036382021960021,
+            "stretchMax": 2.2042161206709348,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        }
+      }
+    },
+    "ranger": {
+      "samples": {
+        "0": {
+          "contract": "3f6594f91a53329655c05f36ebd5ba08bdd7216451496d34cdf1273d16354cab",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.938703853517453,
+            "uvArea": 1,
+            "density": 264.2260698032041,
+            "densityP05": 230.1456756927513,
+            "densityP95": 310.0302420449387,
+            "stretchP50": 1.4148981390624926,
+            "stretchP95": 2.022735077268376,
+            "stretchMax": 2.2222350667109527,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "15": {
+          "contract": "6a871db1566206b78eeb27ae911c6c68c58cd12788f6c4f661f55154f73cb83a",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9401481738214228,
+            "uvArea": 1,
+            "density": 264.0230306593637,
+            "densityP05": 229.51178419558607,
+            "densityP95": 309.71564907549856,
+            "stretchP50": 1.4115769646955025,
+            "stretchP95": 2.0212808213125677,
+            "stretchMax": 2.2217632096100934,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "30": {
+          "contract": "37b7a30fd8122004d3c534861303542ebca3ebd9f25c5ef0b0067d562e88e34f",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9594755409921089,
+            "uvArea": 1,
+            "density": 261.3503049839395,
+            "densityP05": 220.38166141873822,
+            "densityP95": 309.0083946999711,
+            "stretchP50": 1.4681261105944479,
+            "stretchP95": 2.033954332502584,
+            "stretchMax": 2.2602095706889833,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "45": {
+          "contract": "a05a472a9e88ed47a73681ad7b491c41f89b79dc2415d7d0692c18d57c159581",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.964367451697206,
+            "uvArea": 1,
+            "density": 260.68659125603415,
+            "densityP05": 218.91599840734173,
+            "densityP95": 309.4070760965065,
+            "stretchP50": 1.48250747315962,
+            "stretchP95": 2.018991664347911,
+            "stretchMax": 2.2305153425670046,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "60": {
+          "contract": "467d83eed9b24699cd72de1e16ffeb3f47cf44322ca9db975a7160b79f9d064c",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9420893266785964,
+            "uvArea": 1,
+            "density": 263.75088378254935,
+            "densityP05": 230.1153836452228,
+            "densityP95": 310.2755140441684,
+            "stretchP50": 1.415135618035807,
+            "stretchP95": 2.018595201475337,
+            "stretchMax": 2.195545732464004,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "75": {
+          "contract": "53592eaae82e6fd1b60d8616fe3b188cd7cd1182e81adbe85df005f553246502",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.8608553601257679,
+            "uvArea": 1,
+            "density": 275.9147204497189,
+            "densityP05": 234.69163554465814,
+            "densityP95": 320.3130005006079,
+            "stretchP50": 1.461321234361653,
+            "stretchP95": 2.135132810893892,
+            "stretchMax": 5.92798971751452,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "90": {
+          "contract": "d511bb3a8151b18220654b1311e902bfc8077c5e95434fba27496a80ab2922b6",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 0.9039287452892819,
+            "uvArea": 1,
+            "density": 269.2606356073094,
+            "densityP05": 237.12717418493466,
+            "densityP95": 312.65412339263605,
+            "stretchP50": 1.4433655371791363,
+            "stretchP95": 2.036382021960021,
+            "stretchMax": 2.2042161206709348,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        }
+      }
+    },
+    "boss": {
+      "samples": {
+        "0": {
+          "contract": "e907975edb38a1e713f7b3088281023197c14c24c86f4ca73d6f16f6186ced73",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 5.8452397609919275,
+            "uvArea": 1,
+            "density": 105.88606287899913,
+            "densityP05": 90.21156871029872,
+            "densityP95": 123.2342510279475,
+            "stretchP50": 1.8670793706404232,
+            "stretchP95": 2.700551270731917,
+            "stretchMax": 3.5145703099705434,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "15": {
+          "contract": "6ee5d121f83320efadcd57b3f758959bb96cd03566e82de2183245678e935f04",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 5.857334388766847,
+            "uvArea": 1,
+            "density": 105.77668596705031,
+            "densityP05": 89.53770758022041,
+            "densityP95": 123.1748739331992,
+            "stretchP50": 1.8640955930409961,
+            "stretchP95": 2.7313385339345433,
+            "stretchMax": 3.487267466188951,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "30": {
+          "contract": "f3121c233d22d7f4be731a434b991bbdfd3f2796b9018d920476e1d931e609e7",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 5.96228477344204,
+            "uvArea": 1,
+            "density": 104.84159217434832,
+            "densityP05": 85.55383457550208,
+            "densityP95": 122.26897125256679,
+            "stretchP50": 1.9283432552762736,
+            "stretchP95": 2.6052942160567762,
+            "stretchMax": 7.403345033192755,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "45": {
+          "contract": "4f941bf1520ee046be12106e85facc0bee797db23c78e4af7f9ddb1cab6a18a5",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 5.930536696290513,
+            "uvArea": 1,
+            "density": 105.1218430480934,
+            "densityP05": 85.10026681336653,
+            "densityP95": 119.52382236717581,
+            "stretchP50": 1.9151109875685717,
+            "stretchP95": 2.603893825393392,
+            "stretchMax": 11.371992785744316,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "60": {
+          "contract": "9ca30f4eec806fbc9c77beb75f64c1b16da9b5916c3d1a8b95f61fdae20fae22",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 5.763779548612866,
+            "uvArea": 1,
+            "density": 106.63168805921372,
+            "densityP05": 90.12065305957181,
+            "densityP95": 119.23750001578945,
+            "stretchP50": 1.8437574403197294,
+            "stretchP95": 2.5956579474247103,
+            "stretchMax": 15.519435814250294,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "75": {
+          "contract": "25d756b7a5358a46a3188b2776177a130c9b122fcf34c70c2ad14f0a8c221708",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 4.408120823118542,
+            "uvArea": 1,
+            "density": 121.93074306663382,
+            "densityP05": 97.19671869187734,
+            "densityP95": 123.62500046991971,
+            "stretchP50": 2.031457278046373,
+            "stretchP95": 2.774088730477106,
+            "stretchMax": 270.0487294807818,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        },
+        "90": {
+          "contract": "9d635b0671e77c4ece0442f784f7f305bd20c89d92f4fe4001cdd5df70f3452f",
+          "metric": {
+            "triangles": 192,
+            "vertices": 117,
+            "physicalAreaM2": 4.901128125962956,
+            "uvArea": 1,
+            "density": 115.6357009464759,
+            "densityP05": 97.16492792371669,
+            "densityP95": 124.23174006471771,
+            "stretchP50": 1.9892589624308301,
+            "stretchP95": 2.767128710010614,
+            "stretchMax": 141.78003950626146,
+            "negative": 192,
+            "positive": 0,
+            "zero": 0
+          }
+        }
+      }
+    }
+  },
+  "allFamilies": {
+    "player": {
+      "contract": "034bdd33d826af3699b6f0fd1c58dcafc9b1c7fbbf2bdbbcf09978237db05a98",
+      "triangles": 7822,
+      "meshes": 14
+    },
+    "npc": {
+      "contract": "bc14503062788374aa20314bce3cbe5618c14f74e83327cb64340f6acfbdce42",
+      "triangles": 6618,
+      "meshes": 12
+    },
+    "sena": {
+      "contract": "daf46687df78c1da7afd25cbf7b628e88d479b961915f576c2fabd83bb68a36a",
+      "triangles": 6786,
+      "meshes": 12
+    },
+    "smith": {
+      "contract": "92d3f763e2a292ea0548ca4ca2e0c2c1dc80c1d2c395447a14a2db63735f79ce",
+      "triangles": 6242,
+      "meshes": 11
+    },
+    "healer": {
+      "contract": "3036b544fa98f93bb41259c388c8fa3dfa266423c1d4714d44c3155bd377ea7c",
+      "triangles": 7038,
+      "meshes": 11
+    },
+    "patient": {
+      "contract": "ff160c4893c965a51a28928f9076082145ebc771e7d04b841c48069b7cafa8c8",
+      "triangles": 6270,
+      "meshes": 10
+    },
+    "porter": {
+      "contract": "9ef7fb047f5240a3186c776c9847fdaa1f4953b63bfe2b1d72ab43dd79e4d0a4",
+      "triangles": 6450,
+      "meshes": 10
+    },
+    "scout": {
+      "contract": "55262f06f0051b7d70d90db9008aba2c36538b3f0ab186a2c58b675ba9652632",
+      "triangles": 6798,
+      "meshes": 11
+    },
+    "traveler": {
+      "contract": "dc9984dd7e3062a774570cf7b4c40508df03988bccf5be7893ecffb695b1cb48",
+      "triangles": 6578,
+      "meshes": 10
+    },
+    "courier": {
+      "contract": "0f148a90370d5a6ff62f2819e6acb7f72ba3bc0ec0c5f8eed9601a14fdefaea3",
+      "triangles": 6398,
+      "meshes": 10
+    },
+    "soldier": {
+      "contract": "89722acc66240111db5ebe99bebc40d2685ffefaba41eb00a90e45ed8548b7f5",
+      "triangles": 7454,
+      "meshes": 13
+    },
+    "ranger": {
+      "contract": "3f6594f91a53329655c05f36ebd5ba08bdd7216451496d34cdf1273d16354cab",
+      "triangles": 7078,
+      "meshes": 12
+    },
+    "wolf": {
+      "contract": "af2120f849eebc3a22f9fc80614bbfe7c1d7bc0423ddb87e7dc1e718b1ffa980",
+      "triangles": 4028,
+      "meshes": 6
+    },
+    "boss": {
+      "contract": "e907975edb38a1e713f7b3088281023197c14c24c86f4ca73d6f16f6186ced73",
+      "triangles": 7950,
+      "meshes": 14
+    },
+    "soldier/ember": {
+      "contract": "dbcf5c4ca1515f483f2169b9b950f7edfef56c506979f02faf7b70739cd54beb",
+      "triangles": 7854,
+      "meshes": 13
+    },
+    "soldier/tide": {
+      "contract": "d7098ee3f7cce4d1a17ae60a2a190d2948157515d370e36f371a691750c9eff5",
+      "triangles": 7786,
+      "meshes": 13
+    },
+    "soldier/gale": {
+      "contract": "2a2c8e48867f274b58647da9eef05aa7d21c29137932c6558f4fea7c8cb99fd2",
+      "triangles": 7794,
+      "meshes": 14
+    },
+    "soldier/moss": {
+      "contract": "f2145d234a8bf34f22055af2b51ea16608bbc5738ceabca4f3d7fb916882d23e",
+      "triangles": 7998,
+      "meshes": 13
+    }
+  }
+}

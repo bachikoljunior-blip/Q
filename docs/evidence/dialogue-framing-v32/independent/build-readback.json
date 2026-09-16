@@ -1,0 +1,57 @@
+{
+  "entry": "./assets/index-kNfcS517.js",
+  "entryBytes": 164802,
+  "entrySHA256": "74813f7e8f93665f68aad73ae96c183c02a415a224708feb37b4be3f3431c109",
+  "manifestReferencedJs": {
+    "assets/index-kNfcS517.js": 164802,
+    "assets/scene-DpnMIFGX.js": 229458,
+    "assets/three-DeJEtbAc.js": 579597
+  },
+  "standaloneBytes": 16334297,
+  "sourceHashes": {
+    "src/dialogue-camera.js": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e",
+    "src/main.js": "697482115caaee6a3ae57a5ff4b50ab76b09d3f41efe81c8042cfca40b7c337e",
+    "src/scene.js": "b50991698bdeb8511e37d49c24c4d352a06e99cf5390d4cd29228f1cf9924ac6",
+    "src/game-interface.css": "745d5e0f047bc14c5a8f169f2227cd395fad962ee4dba6215e52a8d7b2d021e1"
+  },
+  "stageManifest": {
+    "root": "artifacts/site-lM7gFY",
+    "files": [
+      "assets/crown-branch-rgba-DvI_Tv4J.png",
+      "assets/ember-ambient-DxlfqX62.wav",
+      "assets/ember-stone-CGtrIuNR.png",
+      "assets/forest_floor_diff_1k-FrvyY1gs.jpg",
+      "assets/gale-ambient-Bk5IsviT.wav",
+      "assets/gale-stone-DFcyxpvg.png",
+      "assets/index-DvxNsySP.css",
+      "assets/index-kNfcS517.js",
+      "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
+      "assets/moss-ambient-P9AOr4W8.wav",
+      "assets/moss-stone-DiwO4PmY.png",
+      "assets/north-gate-v22-M69S2yqx.webp",
+      "assets/north-gate-v23-BAPO0H9x.mp4",
+      "assets/pilgrim-foley-CW54U_6w.wav",
+      "assets/pilgrim-harmony-LSIdyu7z.mp3",
+      "assets/pilgrim-motif-yb4axZNo.mp3",
+      "assets/pilgrim-pulse-BJS9Fs4r.mp3",
+      "assets/pine-branch-rgba-DpLH-kJr.png",
+      "assets/rock_face_03_diff_1k-Clx6WbHJ.jpg",
+      "assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg",
+      "assets/scene-DpnMIFGX.js",
+      "assets/shared-alert-JeJkFdAY.wav",
+      "assets/shared-claim-BPXeWqKz.wav",
+      "assets/shared-impact-DwWqEia4.wav",
+      "assets/shared-seal-slkiLvkd.wav",
+      "assets/shared-step-D8_A5LtE.wav",
+      "assets/shared-swing-BkmUzsmF.wav",
+      "assets/three-DeJEtbAc.js",
+      "assets/tide-ambient-BP0Z0aTJ.wav",
+      "assets/tide-stone-COv3Sj_E.png",
+      "assets/young-male-q95-DLRShmkN.webp",
+      "icon.svg",
+      "index.html",
+      "manifest.webmanifest"
+    ]
+  },
+  "boundary": "Read current dist entry, exact source and standalone bytes, plus latest-site manifest references to current dist assets. Build/package/stage verification executed by owner, not independently rebuilt. Temporary stage directory has been removed; its byte verification is owner evidence. Older unreferenced dist files excluded from the three manifest-referenced chunks."
+}

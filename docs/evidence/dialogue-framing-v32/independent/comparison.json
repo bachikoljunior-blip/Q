@@ -1,0 +1,503 @@
+{
+  "boundary": "Eight unchanged actual game states/player/NPC/stage data \u00d7 three viewport sizes. Native projection only, not pixel or whole-screen perceptual quality. Source CSS described separately; no browser CSS layout.",
+  "baselineCommit": "fb07441c63cc8e7c985972691eccaed0e1fa50b3",
+  "measuredCandidateCommit": "a0b9833e546336f9367ec41e42bcb9739b7a47f7",
+  "sameInputCases": 8,
+  "frameCount": 24,
+  "eyeRaysClear": 48,
+  "upperBodyFramesInside": 24,
+  "baselineHeadsOutsideViewport": 2,
+  "maxCandidateFrontAngle": 30.925330073293946,
+  "minimumStaticFraction": 1,
+  "minimumGroundClearance": 1.4069844190972347,
+  "summary": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "baselineHeadPx": [
+        18.096529541367715,
+        42.13275877156377
+      ],
+      "candidateHeadPx": [
+        90.09406178094896,
+        91.34537425864059
+      ],
+      "sameConditionRatios": [
+        2.1680368654210076,
+        4.978527047133467
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "baselineHeadPx": [
+        9.802286834907562,
+        22.821911001263686
+      ],
+      "candidateHeadPx": [
+        48.80095013134735,
+        49.47874439009699
+      ],
+      "sameConditionRatios": [
+        2.1680368654210103,
+        4.978527047133441
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "baselineHeadPx": [
+        19.61650756574653,
+        49.38895611555529
+      ],
+      "candidateHeadPx": [
+        105.61026130989018,
+        107.07707760318425
+      ],
+      "sameConditionRatios": [
+        2.168036865421009,
+        5.383744326350023
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "name": "Mira +Z 3m default yaw",
+      "viewport": [
+        1280,
+        720
+      ],
+      "baselineHeadHeight": 20.18241918263692,
+      "candidateHeadHeight": 90.88082321576479,
+      "ratio": 4.5029697576567145,
+      "baselineAngleDeg": 78.57908596224834,
+      "candidateAngleDeg": 2.4890770593312372,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.0730936097697565
+    },
+    {
+      "name": "Mira +Z 3m default yaw",
+      "viewport": [
+        844,
+        390
+      ],
+      "baselineHeadHeight": 10.932143723928306,
+      "candidateHeadHeight": 49.227112575205936,
+      "ratio": 4.502969757656726,
+      "baselineAngleDeg": 78.57908596224834,
+      "candidateAngleDeg": 2.4890770593312372,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.0730936097697565
+    },
+    {
+      "name": "Mira +Z 3m default yaw",
+      "viewport": [
+        390,
+        844
+      ],
+      "baselineHeadHeight": 21.67589191089587,
+      "candidateHeadHeight": 106.53252054736873,
+      "ratio": 4.914792940714831,
+      "baselineAngleDeg": 78.52972040902559,
+      "candidateAngleDeg": 2.4890770593312372,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.0730936097697565
+    },
+    {
+      "name": "Ren +X 3m aligned user yaw",
+      "viewport": [
+        1280,
+        720
+      ],
+      "baselineHeadHeight": 19.94039195574294,
+      "candidateHeadHeight": 90.72127718332223,
+      "ratio": 4.549623567313782,
+      "baselineAngleDeg": 17.87735956890141,
+      "candidateAngleDeg": 30.925330073293946,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.162849325543589
+    },
+    {
+      "name": "Ren +X 3m aligned user yaw",
+      "viewport": [
+        844,
+        390
+      ],
+      "baselineHeadHeight": 10.801045642694106,
+      "candidateHeadHeight": 49.14069180763286,
+      "ratio": 4.549623567313775,
+      "baselineAngleDeg": 17.87735956890141,
+      "candidateAngleDeg": 30.925330073293946,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.162849325543589
+    },
+    {
+      "name": "Ren +X 3m aligned user yaw",
+      "viewport": [
+        390,
+        844
+      ],
+      "baselineHeadHeight": 21.385670985857473,
+      "candidateHeadHeight": 106.34549714267214,
+      "ratio": 4.972745405697083,
+      "baselineAngleDeg": 18.276087838193522,
+      "candidateAngleDeg": 30.925330073293946,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.162849325543589
+    },
+    {
+      "name": "Sena +Z 3m default yaw",
+      "viewport": [
+        1280,
+        720
+      ],
+      "baselineHeadHeight": 20.635119195887114,
+      "candidateHeadHeight": 90.80358038461772,
+      "ratio": 4.400438859723971,
+      "baselineAngleDeg": 88.26647579935808,
+      "candidateAngleDeg": 2.4890770593310907,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 1.4069844190972347
+    },
+    {
+      "name": "Sena +Z 3m default yaw",
+      "viewport": [
+        844,
+        390
+      ],
+      "baselineHeadHeight": 11.177356231105534,
+      "candidateHeadHeight": 49.185272708334594,
+      "ratio": 4.400438859723965,
+      "baselineAngleDeg": 88.26647579935808,
+      "candidateAngleDeg": 2.4890770593310907,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 1.4069844190972347
+    },
+    {
+      "name": "Sena +Z 3m default yaw",
+      "viewport": [
+        390,
+        844
+      ],
+      "baselineHeadHeight": 22.130922563793206,
+      "candidateHeadHeight": 106.44197478419076,
+      "ratio": 4.809649235243936,
+      "baselineAngleDeg": 88.32269111251993,
+      "candidateAngleDeg": 2.4890770593310907,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 1.4069844190972347
+    },
+    {
+      "name": "Ren -Z 4.2m edge of talk range, prior facing +Z",
+      "viewport": [
+        1280,
+        720
+      ],
+      "baselineHeadHeight": 18.096529541367715,
+      "candidateHeadHeight": 90.09406178094896,
+      "ratio": 4.978527047133467,
+      "baselineAngleDeg": 170.4330284000965,
+      "candidateAngleDeg": 7.6456972155087035,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.4719489101631327
+    },
+    {
+      "name": "Ren -Z 4.2m edge of talk range, prior facing +Z",
+      "viewport": [
+        844,
+        390
+      ],
+      "baselineHeadHeight": 9.802286834907562,
+      "candidateHeadHeight": 48.80095013134735,
+      "ratio": 4.978527047133441,
+      "baselineAngleDeg": 170.4330284000965,
+      "candidateAngleDeg": 7.6456972155087035,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.4719489101631327
+    },
+    {
+      "name": "Ren -Z 4.2m edge of talk range, prior facing +Z",
+      "viewport": [
+        390,
+        844
+      ],
+      "baselineHeadHeight": 19.61650756574653,
+      "candidateHeadHeight": 105.61026130989018,
+      "ratio": 5.383744326350023,
+      "baselineAngleDeg": 170.26989712509436,
+      "candidateAngleDeg": 7.6456972155087035,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.4719489101631327
+    },
+    {
+      "name": "Mira +Z 3m user camera sideways",
+      "viewport": [
+        1280,
+        720
+      ],
+      "baselineHeadHeight": 25.850366725104095,
+      "candidateHeadHeight": 90.88082321576479,
+      "ratio": 3.5156492819696674,
+      "baselineAngleDeg": 19.49769646248448,
+      "candidateAngleDeg": 2.4890770593312372,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.0730936097697565
+    },
+    {
+      "name": "Mira +Z 3m user camera sideways",
+      "viewport": [
+        844,
+        390
+      ],
+      "baselineHeadHeight": 14.002281976098061,
+      "candidateHeadHeight": 49.227112575205936,
+      "ratio": 3.5156492819696656,
+      "baselineAngleDeg": 19.49769646248448,
+      "candidateAngleDeg": 2.4890770593312372,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.0730936097697565
+    },
+    {
+      "name": "Mira +Z 3m user camera sideways",
+      "viewport": [
+        390,
+        844
+      ],
+      "baselineHeadHeight": 27.049944117115672,
+      "candidateHeadHeight": 106.53252054736873,
+      "ratio": 3.938363794251279,
+      "baselineAngleDeg": 18.765455838032732,
+      "candidateAngleDeg": 2.4890770593312372,
+      "baselineWithinViewport": false,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.0730936097697565
+    },
+    {
+      "name": "Mira +Z 3m user camera reversed",
+      "viewport": [
+        1280,
+        720
+      ],
+      "baselineHeadHeight": 38.87022946691724,
+      "candidateHeadHeight": 90.88082321576479,
+      "ratio": 2.3380572860552364,
+      "baselineAngleDeg": 99.08749614168369,
+      "candidateAngleDeg": 2.4890770593312372,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.0730936097697565
+    },
+    {
+      "name": "Mira +Z 3m user camera reversed",
+      "viewport": [
+        844,
+        390
+      ],
+      "baselineHeadHeight": 21.05470762791353,
+      "candidateHeadHeight": 49.227112575205936,
+      "ratio": 2.3380572860552338,
+      "baselineAngleDeg": 99.08749614168369,
+      "candidateAngleDeg": 2.4890770593312372,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.0730936097697565
+    },
+    {
+      "name": "Mira +Z 3m user camera reversed",
+      "viewport": [
+        390,
+        844
+      ],
+      "baselineHeadHeight": 38.84366096348538,
+      "candidateHeadHeight": 106.53252054736873,
+      "ratio": 2.742597322315053,
+      "baselineAngleDeg": 99.15227971425256,
+      "candidateAngleDeg": 2.4890770593312372,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.0730936097697565
+    },
+    {
+      "name": "earned hearth",
+      "viewport": [
+        1280,
+        720
+      ],
+      "baselineHeadHeight": 29.49988805109723,
+      "candidateHeadHeight": 91.08424192406085,
+      "ratio": 3.0876131382699614,
+      "baselineAngleDeg": 12.052278830160374,
+      "candidateAngleDeg": 2.4890770593307976,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.252292199363612
+    },
+    {
+      "name": "earned hearth",
+      "viewport": [
+        844,
+        390
+      ],
+      "baselineHeadHeight": 15.979106027677659,
+      "candidateHeadHeight": 49.33729770886629,
+      "ratio": 3.0876131382699623,
+      "baselineAngleDeg": 12.052278830160374,
+      "candidateAngleDeg": 2.4890770593307976,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.252292199363612
+    },
+    {
+      "name": "earned hearth",
+      "viewport": [
+        390,
+        844
+      ],
+      "baselineHeadHeight": 34.58042432656396,
+      "candidateHeadHeight": 106.77097247764911,
+      "ratio": 3.0876131382699628,
+      "baselineAngleDeg": 12.052278830160374,
+      "candidateAngleDeg": 2.4890770593307976,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 2.252292199363612
+    },
+    {
+      "name": "earned road-watch",
+      "viewport": [
+        1280,
+        720
+      ],
+      "baselineHeadHeight": 42.13275877156377,
+      "candidateHeadHeight": 91.34537425864059,
+      "ratio": 2.1680368654210076,
+      "baselineAngleDeg": 42.03406930478584,
+      "candidateAngleDeg": 30.096439941579906,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 1.820339495373224
+    },
+    {
+      "name": "earned road-watch",
+      "viewport": [
+        844,
+        390
+      ],
+      "baselineHeadHeight": 22.821911001263686,
+      "candidateHeadHeight": 49.47874439009699,
+      "ratio": 2.1680368654210103,
+      "baselineAngleDeg": 42.03406930478584,
+      "candidateAngleDeg": 30.096439941579906,
+      "baselineWithinViewport": true,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 1.820339495373224
+    },
+    {
+      "name": "earned road-watch",
+      "viewport": [
+        390,
+        844
+      ],
+      "baselineHeadHeight": 49.38895611555529,
+      "candidateHeadHeight": 107.07707760318425,
+      "ratio": 2.168036865421009,
+      "baselineAngleDeg": 42.03406930478584,
+      "candidateAngleDeg": 30.096439941579906,
+      "baselineWithinViewport": false,
+      "candidateWithinViewport": true,
+      "candidateEyesClear": true,
+      "candidateUpperBodyInside": true,
+      "staticFraction": 1,
+      "groundClearance": 1.820339495373224
+    }
+  ]
+}

@@ -37,7 +37,7 @@ test('derived head is closed at every UV split, outward, finite and within its u
 });
 test('every human shares one independent skeleton and immutable face geometry without texturing hands or duplicating old head skin',()=>{
  for(const [family,options] of [...ACTOR_FAMILIES.filter(f=>f!=='wolf').map(f=>[f,{}]),...['ember','tide','gale','moss'].map(theme=>['soldier',{theme}])]){
-  const a=createDetailedActor(family,options),b=createDetailedActor(family,options),fa=face(a),fb=face(b);assert(fa&&fb);assert.equal(fa.geometry,fb.geometry);assert.notEqual(fa.skeleton,fb.skeleton);assert.equal(fa.geometry.index.count/3,1546);assert.equal(fa.material.map,null);
+  const a=createDetailedActor(family,options),b=createDetailedActor(family,options),fa=face(a),fb=face(b);assert(fa&&fb);assert.equal(fa.geometry,fb.geometry);assert.notEqual(fa.skeleton,fb.skeleton);assert.equal(fa.geometry.index.count/3,family==='npc'?1646:1546);assert.equal(fa.material.map,null);
   const palettes=new Set();let triangles=0,draws=0;
   a.g.traverse(n=>{if(!n.isMesh)return;if(n.isSkinnedMesh){palettes.add(n.skeleton);if(n.material.name==='Q skin'){assert.notEqual(n.material,fa.material);const w=n.geometry.attributes.skinWeight,idx=n.geometry.attributes.skinIndex;for(let i=0;i<w.count;i++)for(let k=0;k<4;k++)if(w.getComponent(i,k)>.99)assert.notEqual(n.skeleton.bones[idx.getComponent(i,k)].name,'head','old analytic face/ears must be removed');}}});
   a.g.traverseVisible(n=>{if(n.isMesh){triangles+=(n.geometry.index?.count??n.geometry.attributes.position.count)/3;draws++;}});assert.equal(palettes.size,1);assert(triangles<8000);assert(draws<=14);const before=b.head.quaternion.clone();a.animate({healTimer:.45},0);assert(b.head.quaternion.equals(before));

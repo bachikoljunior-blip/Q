@@ -5,8 +5,8 @@
   "license": "Q project-authored source under repository terms; MakeHuman head source and derivative are CC0-1.0 (see anatomical-head-provenance.json and sources/MAKEHUMAN-LICENSE-ASSETS.md).",
   "recipe": {
     "file": "detailed-geometry.js",
-    "sha256": "51a6a10a890bfd3b531119b39808a18a32b2bea45fa4441871a57e38da06046d",
-    "bytes": 29689
+    "sha256": "912a41ba214f4537168753429c01fe22c976aa35899499a8e524b9d1907c6f4c",
+    "bytes": 30800
   },
   "separateUnmodifiedAssets": "The adjacent pilgrim.glb, knight.glb, keeper.glb and provenance.json preserve Kay Lousberg CC0 attribution. They are not the source of the new procedural bodies.",
   "families": [
@@ -51,8 +51,8 @@
   "geometryMethod": "Continuous shaped torso, sleeves, trouser legs, boots, digits and canine trunk/tail. Smooth multi-joint weights across joint collars, explicit human spine/digits and canine hocks; UV seams retain averaged normals. Armor/equipment stay rigid. Material batches and immutable geometry shared across instances; bones and deforming cape independent. All material batches within an actor share one skeleton palette; each actor has independent cloned bones.",
   "animationRecipe": {
     "file": "../../actor-models.js",
-    "sha256": "d299e3d02b0fca392b3e22eb9b7753133d7413d452403e482ee86b76337f7ff7",
-    "bytes": 26225,
+    "sha256": "0731e2582bd7eacabf90fd96ca651fd7bc2f56c886c82c912835563c7294b006",
+    "bytes": 26380,
     "origin": "Original analytic poses with a continuous saved combat clock, two-hand weapon frames and fixed-length arm IK, and visual-only contact/transition logic. No motion capture imported."
   },
   "qualityBoundary": "Smith face uses an acquired CC0 graphical skin color map; all other roles retain flat skin. Actual lit appearance, face-neck boundary, device FPS and PS4/flagship parity remain unverified. Source contains socket/crease darkness, not calibrated illumination-free albedo.",

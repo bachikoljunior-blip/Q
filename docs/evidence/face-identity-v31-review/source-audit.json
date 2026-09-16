@@ -1,0 +1,91 @@
+{
+  "boundary": "Independent CPU source-ID, integer basis, topology and normal audit. No rendering or GPU/identity acceptance.",
+  "hashes": {
+    "scripts/characters/generate-anatomical-head.py": "8bf8805f3f7a173198e9bf17edc60c2f31041a496e3a0abec445618c3165b85f",
+    "src/assets/characters/anatomical-head-data.js": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
+    "src/assets/characters/face-identity-data.js": "202f0b2c942fe4efb12652f9ae1685fc79c65bf5bb00532c5249556be295ea73",
+    "scripts/characters/generate-face-identities.py": "a9060398bc56d1056c6f90d3b66a918bf6de6301f9bd87918330ffd63392b3c1"
+  },
+  "sourcePointRegistrationMaxDifferenceM": 8.126937396042007e-08,
+  "bases": [
+    {
+      "name": "head-oval",
+      "sourceCorrespondenceMismatches": [],
+      "protectedPositionChanges": [],
+      "maxUVSplitIntegerDeltaDifference": 0,
+      "rows": 161
+    },
+    {
+      "name": "nose-scale-horiz-incr",
+      "sourceCorrespondenceMismatches": [],
+      "protectedPositionChanges": [],
+      "maxUVSplitIntegerDeltaDifference": 0,
+      "rows": 66
+    },
+    {
+      "name": "chin-width-incr",
+      "sourceCorrespondenceMismatches": [],
+      "protectedPositionChanges": [],
+      "maxUVSplitIntegerDeltaDifference": 0,
+      "rows": 38
+    }
+  ],
+  "roles": [
+    {
+      "role": "npc",
+      "maxDeltaM": 0.0041177343345582705,
+      "rmsDeltaM": 0.00041321517733696643,
+      "changedPositions": 116,
+      "minFaceNormalCos": 0.9804785395955267,
+      "reversedTriangles": [],
+      "newBackwardNormals": [],
+      "inheritedBadFacePositionChangeM": 0.0,
+      "inheritedBadFaceNormalChange": 7.398723773676632e-08
+    },
+    {
+      "role": "sena",
+      "maxDeltaM": 0.0021232925198850948,
+      "rmsDeltaM": 0.00019397243176819535,
+      "changedPositions": 78,
+      "minFaceNormalCos": 0.9949875072945679,
+      "reversedTriangles": [],
+      "newBackwardNormals": [],
+      "inheritedBadFacePositionChangeM": 0.0,
+      "inheritedBadFaceNormalChange": 7.398723773676632e-08
+    },
+    {
+      "role": "smith",
+      "maxDeltaM": 0.004364582829148738,
+      "rmsDeltaM": 0.0004067618547774315,
+      "changedPositions": 68,
+      "minFaceNormalCos": 0.9801719982884773,
+      "reversedTriangles": [],
+      "newBackwardNormals": [],
+      "inheritedBadFacePositionChangeM": 0.0,
+      "inheritedBadFaceNormalChange": 7.398723773676632e-08
+    },
+    {
+      "role": "healer",
+      "maxDeltaM": 0.00561509227439764,
+      "rmsDeltaM": 0.0004935525769189141,
+      "changedPositions": 66,
+      "minFaceNormalCos": 0.9631054547374874,
+      "reversedTriangles": [],
+      "newBackwardNormals": [],
+      "inheritedBadFacePositionChangeM": 0.0,
+      "inheritedBadFaceNormalChange": 7.398723773676632e-08
+    }
+  ],
+  "baselineBackwardMeanNormalTriangles": [
+    {
+      "triangle": 1443,
+      "sourceIDs": [
+        12034,
+        12058,
+        12305
+      ],
+      "region": 0,
+      "dot": -9.003239073411363e-07
+    }
+  ]
+}

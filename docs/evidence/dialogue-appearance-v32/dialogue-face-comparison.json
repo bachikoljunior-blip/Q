@@ -1,0 +1,147 @@
+{
+  "recordedAt": "2026-09-16T05:18:27.137Z",
+  "boundary": "Same actual keeper pose/location and selected conversation camera, comparing only shared original source-vertex IDs. Novel LOD vertices are excluded. CPU projection, not pixels, rendered identity, a blinded comparison or PS4 acceptance.",
+  "hashes": {
+    "src/assets/characters/anatomical-head-data.js": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
+    "src/assets/characters/identity-head-data.js": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe",
+    "src/scene.js": "b50991698bdeb8511e37d49c24c4d352a06e99cf5390d4cd29228f1cf9924ac6",
+    "src/dialogue-camera.js": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e"
+  },
+  "rows": [
+    {
+      "route": "Mira +Z 3m default yaw",
+      "viewportCSS": [
+        1280,
+        720
+      ],
+      "commonSourceVertices": 725,
+      "actualHeadHeightCSSpx": 90.88082623691749,
+      "sameCameraSourceDisplacementCSSpx": {
+        "max": 2.2661467028132667,
+        "p95": 0.33113436166331667,
+        "median": 0,
+        "rms": 0.21816557672706974
+      }
+    },
+    {
+      "route": "Mira +Z 3m default yaw",
+      "viewportCSS": [
+        844,
+        390
+      ],
+      "commonSourceVertices": 725,
+      "actualHeadHeightCSSpx": 49.22711421166363,
+      "sameCameraSourceDisplacementCSSpx": {
+        "max": 1.2274961306905543,
+        "p95": 0.17936444590094425,
+        "median": 0,
+        "rms": 0.11817302072716476
+      }
+    },
+    {
+      "route": "Mira +Z 3m default yaw",
+      "viewportCSS": [
+        390,
+        844
+      ],
+      "commonSourceVertices": 725,
+      "actualHeadHeightCSSpx": 106.53252408883105,
+      "sameCameraSourceDisplacementCSSpx": {
+        "max": 2.6564275238533535,
+        "p95": 0.3881630572831227,
+        "median": 0,
+        "rms": 0.25573853716339656
+      }
+    },
+    {
+      "route": "Mira +Z 3m user camera sideways",
+      "viewportCSS": [
+        1280,
+        720
+      ],
+      "commonSourceVertices": 725,
+      "actualHeadHeightCSSpx": 90.88082623691749,
+      "sameCameraSourceDisplacementCSSpx": {
+        "max": 2.2661467028132667,
+        "p95": 0.33113436166331667,
+        "median": 0,
+        "rms": 0.21816557672706974
+      }
+    },
+    {
+      "route": "Mira +Z 3m user camera sideways",
+      "viewportCSS": [
+        844,
+        390
+      ],
+      "commonSourceVertices": 725,
+      "actualHeadHeightCSSpx": 49.22711421166363,
+      "sameCameraSourceDisplacementCSSpx": {
+        "max": 1.2274961306905543,
+        "p95": 0.17936444590094425,
+        "median": 0,
+        "rms": 0.11817302072716476
+      }
+    },
+    {
+      "route": "Mira +Z 3m user camera sideways",
+      "viewportCSS": [
+        390,
+        844
+      ],
+      "commonSourceVertices": 725,
+      "actualHeadHeightCSSpx": 106.53252408883105,
+      "sameCameraSourceDisplacementCSSpx": {
+        "max": 2.6564275238533535,
+        "p95": 0.3881630572831227,
+        "median": 0,
+        "rms": 0.25573853716339656
+      }
+    },
+    {
+      "route": "Mira +Z 3m user camera reversed",
+      "viewportCSS": [
+        1280,
+        720
+      ],
+      "commonSourceVertices": 725,
+      "actualHeadHeightCSSpx": 90.88082623691749,
+      "sameCameraSourceDisplacementCSSpx": {
+        "max": 2.2661467028132667,
+        "p95": 0.33113436166331667,
+        "median": 0,
+        "rms": 0.21816557672706974
+      }
+    },
+    {
+      "route": "Mira +Z 3m user camera reversed",
+      "viewportCSS": [
+        844,
+        390
+      ],
+      "commonSourceVertices": 725,
+      "actualHeadHeightCSSpx": 49.22711421166363,
+      "sameCameraSourceDisplacementCSSpx": {
+        "max": 1.2274961306905543,
+        "p95": 0.17936444590094425,
+        "median": 0,
+        "rms": 0.11817302072716476
+      }
+    },
+    {
+      "route": "Mira +Z 3m user camera reversed",
+      "viewportCSS": [
+        390,
+        844
+      ],
+      "commonSourceVertices": 725,
+      "actualHeadHeightCSSpx": 106.53252408883105,
+      "sameCameraSourceDisplacementCSSpx": {
+        "max": 2.6564275238533535,
+        "p95": 0.3881630572831227,
+        "median": 0,
+        "rms": 0.25573853716339656
+      }
+    }
+  ]
+}

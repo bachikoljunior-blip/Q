@@ -1,0 +1,560 @@
+{
+  "timeUTC": "2026-09-16T04:39:25.411337+00:00",
+  "sourceBase": "fb07441c63cc8e7c985972691eccaed0e1fa50b3",
+  "geometrySourceSHA256": "a320835670bd43147e793651834034a87ad23d16f87c191b412a5de881a17849",
+  "candidate": "cotton_jersey",
+  "officialPagesRecheckedUTC": "2026-09-16",
+  "apiReaderStatus": "web reader files/info returned not safe to open (non-retryable error); not retried through another route. Previously acquired exact official metadata retained.",
+  "physicalSizeM": [
+    0.2636027473872483,
+    0.2637999951839447
+  ],
+  "authors": {
+    "colormass": "Photography",
+    "Rico Cilliers": "Processing"
+  },
+  "license": "CC0-1.0",
+  "licenseURL": "https://polyhaven.com/license",
+  "assetURL": "https://polyhaven.com/a/cotton_jersey",
+  "originalFiles": [
+    {
+      "asset": "cotton_jersey",
+      "channel": "Diffuse",
+      "path": "/workspace/scratch/e72662e3b71f/q-v33-actor-material-study/source/cotton_jersey_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cotton_jersey/cotton_jersey_diff_1k.jpg",
+      "expected_bytes": 581360,
+      "actual_bytes": 581360,
+      "expected_md5": "d2f4493fdd48634b50d40f810ce9deb7",
+      "actual_md5": "d2f4493fdd48634b50d40f810ce9deb7",
+      "sha256": "0f1b790e4087223275aaa6fdffdd46a556a26d2af72cd811acf72ba9c21ec1f6",
+      "magic_hex": "ffd8ffe000104a4649460001",
+      "verified": true,
+      "image_size": [
+        1024,
+        1025
+      ],
+      "png_bit_depth": null,
+      "png_color_type": null,
+      "source_license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "asset_page": "https://polyhaven.com/a/cotton_jersey",
+      "source_api": "https://api.polyhaven.com/files/cotton_jersey",
+      "suggested_shader_interpretation": "sRGB color",
+      "acquisition": "Exact copy of previously downloaded official bytes; no duplicate network transfer or image alteration.",
+      "mipRGBA8Bytes": 5596500,
+      "mipLevels": [
+        [
+          1024,
+          1025,
+          4198400
+        ],
+        [
+          512,
+          512,
+          1048576
+        ],
+        [
+          256,
+          256,
+          262144
+        ],
+        [
+          128,
+          128,
+          65536
+        ],
+        [
+          64,
+          64,
+          16384
+        ],
+        [
+          32,
+          32,
+          4096
+        ],
+        [
+          16,
+          16,
+          1024
+        ],
+        [
+          8,
+          8,
+          256
+        ],
+        [
+          4,
+          4,
+          64
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          1,
+          1,
+          4
+        ]
+      ],
+      "imageStats": {
+        "sRGBMean": [
+          0.7611318597633678,
+          0.6688543273212003,
+          0.615507143702416
+        ],
+        "linearRGBMean": [
+          0.5403611166519605,
+          0.40524992838158813,
+          0.3372799985741638
+        ],
+        "sRGBP01": [
+          0.7254901960784313,
+          0.6313725490196078,
+          0.5764705882352941
+        ],
+        "sRGBP99": [
+          0.796078431372549,
+          0.7019607843137254,
+          0.6509803921568628
+        ],
+        "rawFrequencyPeaksAbove20CyclesPerTile": {
+          "horizontal": [
+            {
+              "cyclesPerTile": 318,
+              "pixelPeriod": 3.220125786163522,
+              "power": 1.0700891152956742
+            },
+            {
+              "cyclesPerTile": 321,
+              "pixelPeriod": 3.190031152647975,
+              "power": 1.0471293343872248
+            },
+            {
+              "cyclesPerTile": 319,
+              "pixelPeriod": 3.2100313479623823,
+              "power": 0.9936388250379278
+            },
+            {
+              "cyclesPerTile": 320,
+              "pixelPeriod": 3.2,
+              "power": 0.9708599085436539
+            },
+            {
+              "cyclesPerTile": 324,
+              "pixelPeriod": 3.1604938271604937,
+              "power": 0.9376943933606223
+            }
+          ],
+          "vertical": [
+            {
+              "cyclesPerTile": 263,
+              "pixelPeriod": 3.897338403041825,
+              "power": 9.497179591085395
+            },
+            {
+              "cyclesPerTile": 266,
+              "pixelPeriod": 3.8533834586466167,
+              "power": 9.022188034914794
+            },
+            {
+              "cyclesPerTile": 265,
+              "pixelPeriod": 3.8679245283018866,
+              "power": 8.582175353491461
+            },
+            {
+              "cyclesPerTile": 262,
+              "pixelPeriod": 3.9122137404580153,
+              "power": 7.933072262026335
+            },
+            {
+              "cyclesPerTile": 268,
+              "pixelPeriod": 3.824626865671642,
+              "power": 6.689462003113991
+            }
+          ]
+        }
+      }
+    },
+    {
+      "asset": "cotton_jersey",
+      "channel": "nor_gl",
+      "path": "/workspace/scratch/e72662e3b71f/q-v33-actor-material-study/source/cotton_jersey_nor_gl_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/cotton_jersey/cotton_jersey_nor_gl_1k.png",
+      "expected_bytes": 5460045,
+      "actual_bytes": 5460045,
+      "expected_md5": "919d63b888f8c495b34e8b261dc23f88",
+      "actual_md5": "919d63b888f8c495b34e8b261dc23f88",
+      "sha256": "d2d3bf79f2dd4214d8efa4c82bec9ce5ef409daea33b7d3add10d4fed08bb5a4",
+      "magic_hex": "89504e470d0a1a0a0000000d",
+      "verified": true,
+      "image_size": [
+        1024,
+        1025
+      ],
+      "png_bit_depth": 16,
+      "png_color_type": 2,
+      "source_license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "asset_page": "https://polyhaven.com/a/cotton_jersey",
+      "source_api": "https://api.polyhaven.com/files/cotton_jersey",
+      "suggested_shader_interpretation": "raw non-color data",
+      "acquisition": "Exact copy of previously downloaded official bytes; no duplicate network transfer or image alteration.",
+      "mipRGBA8Bytes": 5596500,
+      "mipLevels": [
+        [
+          1024,
+          1025,
+          4198400
+        ],
+        [
+          512,
+          512,
+          1048576
+        ],
+        [
+          256,
+          256,
+          262144
+        ],
+        [
+          128,
+          128,
+          65536
+        ],
+        [
+          64,
+          64,
+          16384
+        ],
+        [
+          32,
+          32,
+          4096
+        ],
+        [
+          16,
+          16,
+          1024
+        ],
+        [
+          8,
+          8,
+          256
+        ],
+        [
+          4,
+          4,
+          64
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          1,
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "asset": "cotton_jersey",
+      "channel": "Rough",
+      "path": "/workspace/scratch/e72662e3b71f/q-v33-actor-material-study/source/cotton_jersey_rough_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/cotton_jersey/cotton_jersey_rough_1k.png",
+      "expected_bytes": 1979369,
+      "actual_bytes": 1979369,
+      "expected_md5": "8f402095349668efe3a79d0352ee3d61",
+      "actual_md5": "8f402095349668efe3a79d0352ee3d61",
+      "sha256": "4c44c3f0efa4d95ce9ee1c86aae12e6f3ac22a46b4c7ee9bc2c55804a7946c41",
+      "magic_hex": "89504e470d0a1a0a0000000d",
+      "verified": true,
+      "image_size": [
+        1024,
+        1025
+      ],
+      "png_bit_depth": 16,
+      "png_color_type": 0,
+      "source_license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "asset_page": "https://polyhaven.com/a/cotton_jersey",
+      "source_api": "https://api.polyhaven.com/files/cotton_jersey",
+      "suggested_shader_interpretation": "raw non-color data",
+      "acquisition": "Exact copy of previously downloaded official bytes; no duplicate network transfer or image alteration.",
+      "mipRGBA8Bytes": 5596500,
+      "mipLevels": [
+        [
+          1024,
+          1025,
+          4198400
+        ],
+        [
+          512,
+          512,
+          1048576
+        ],
+        [
+          256,
+          256,
+          262144
+        ],
+        [
+          128,
+          128,
+          65536
+        ],
+        [
+          64,
+          64,
+          16384
+        ],
+        [
+          32,
+          32,
+          4096
+        ],
+        [
+          16,
+          16,
+          1024
+        ],
+        [
+          8,
+          8,
+          256
+        ],
+        [
+          4,
+          4,
+          64
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          1,
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "asset": "cotton_jersey",
+      "channel": "nor_gl",
+      "path": "/workspace/scratch/e72662e3b71f/q-v33-actor-material-study/source/cotton_jersey_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cotton_jersey/cotton_jersey_nor_gl_1k.jpg",
+      "expected_bytes": 678670,
+      "actual_bytes": 678670,
+      "expected_md5": "2dcc9dda3b726477f607c808e52f1833",
+      "actual_md5": "2dcc9dda3b726477f607c808e52f1833",
+      "sha256": "9b79709806511b62567fb007ff61009c3b194bb0d0821fbaee3faf1b2bff0318",
+      "image_size": [
+        1024,
+        1025
+      ],
+      "mode": "RGB",
+      "jpeg_sampling": 2,
+      "source_license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "asset_page": "https://polyhaven.com/a/cotton_jersey",
+      "source_api": "https://api.polyhaven.com/files/cotton_jersey",
+      "suggested_shader_interpretation": "raw non-color data",
+      "official_lossy_shipping_candidate": true,
+      "verified": true,
+      "acquisition": "Exact copy of previously downloaded official bytes; no duplicate network transfer or image alteration.",
+      "mipRGBA8Bytes": 5596500,
+      "mipLevels": [
+        [
+          1024,
+          1025,
+          4198400
+        ],
+        [
+          512,
+          512,
+          1048576
+        ],
+        [
+          256,
+          256,
+          262144
+        ],
+        [
+          128,
+          128,
+          65536
+        ],
+        [
+          64,
+          64,
+          16384
+        ],
+        [
+          32,
+          32,
+          4096
+        ],
+        [
+          16,
+          16,
+          1024
+        ],
+        [
+          8,
+          8,
+          256
+        ],
+        [
+          4,
+          4,
+          64
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          1,
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "asset": "cotton_jersey",
+      "channel": "Rough",
+      "path": "/workspace/scratch/e72662e3b71f/q-v33-actor-material-study/source/cotton_jersey_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cotton_jersey/cotton_jersey_rough_1k.jpg",
+      "expected_bytes": 865264,
+      "actual_bytes": 865264,
+      "expected_md5": "ac691d215d3aca34dcd6ea2d03937286",
+      "actual_md5": "ac691d215d3aca34dcd6ea2d03937286",
+      "sha256": "89bed18f5c3f03fc7b4c2382446891629716278e521e06e8b7f6c8f02dd22590",
+      "image_size": [
+        1024,
+        1025
+      ],
+      "mode": "L",
+      "jpeg_sampling": -1,
+      "source_license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "asset_page": "https://polyhaven.com/a/cotton_jersey",
+      "source_api": "https://api.polyhaven.com/files/cotton_jersey",
+      "suggested_shader_interpretation": "raw non-color data",
+      "official_lossy_shipping_candidate": true,
+      "verified": true,
+      "acquisition": "Exact copy of previously downloaded official bytes; no duplicate network transfer or image alteration.",
+      "mipRGBA8Bytes": 5596500,
+      "mipLevels": [
+        [
+          1024,
+          1025,
+          4198400
+        ],
+        [
+          512,
+          512,
+          1048576
+        ],
+        [
+          256,
+          256,
+          262144
+        ],
+        [
+          128,
+          128,
+          65536
+        ],
+        [
+          64,
+          64,
+          16384
+        ],
+        [
+          32,
+          32,
+          4096
+        ],
+        [
+          16,
+          16,
+          1024
+        ],
+        [
+          8,
+          8,
+          256
+        ],
+        [
+          4,
+          4,
+          64
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          1,
+          1,
+          4
+        ]
+      ]
+    }
+  ],
+  "availableDiffuseResolutionKeys": [
+    "1k",
+    "2k",
+    "4k",
+    "8k"
+  ],
+  "budgets": {
+    "additionalRuntimeBytesCap": 160000,
+    "additionalDecodedMipRGBA8BytesCap": 1398100,
+    "baseV30StandaloneBytes": 16327411,
+    "standaloneCapBytes": 16777216,
+    "baseV30RemainingBytes": 449805,
+    "faceCandidateEstimatedReservedBytes": 94000,
+    "bowEstimatedReservedBytes": 4000,
+    "remainingBeforeDialogueAndMaterialsBytes": 351805,
+    "base64BytesOf160000Binary": 213336,
+    "remainingAfterThoseReservationsAnd160000BinaryBase64BeforeDialogueCodeMarkupBytes": 138469
+  },
+  "currentSynthetic": {
+    "RGBA64MipBytes": 21844,
+    "sharedKinds": 5,
+    "clothHeightRedRange": 0.3215686274509804,
+    "clothHeightRedMax": 0.6823529411764706,
+    "clothRoughGreenMean": 0.9390222886029413,
+    "clothRoughGreenMin": 0.8784313725490196,
+    "clothRoughGreenMax": 1.0,
+    "clothBumpScale": 0.0014,
+    "clothRepeat": [
+      4,
+      4
+    ],
+    "clothWeavePixelPeriod": 4,
+    "clothWeavePeriodsPerUV": 64,
+    "capeWidthM": [
+      0.53,
+      0.93
+    ],
+    "capeLengthM": 1.15,
+    "capeNominalWeavePeriodHorizontalM": [
+      0.00828125,
+      0.01453125
+    ],
+    "capeNominalWeavePeriodVerticalM": 0.01796875
+  },
+  "candidateDecision": "Not suitable for direct runtime adoption at fixed byte/mip cap. One diffuse alone exceeds both. No derivative, downsample, retouch, bitmap generation or live integration made.",
+  "imageEditingPerformed": false
+}

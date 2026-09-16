@@ -1,0 +1,1357 @@
+{
+  "completedAtUTC": "2026-09-16T04:18:50.756079+00:00",
+  "baseCommit": "ec83ba61dd2018eab013b7a4dd5ac3c26e6a090e",
+  "boundary": "Read-only source audit and actual Three.js CPU skin/ray/camera math; no browser, WebGL pixels, GPU or PS4 acceptance. Scratch writes only.",
+  "reviewedHashes": {
+    "src/assets/characters/detailed-geometry.js": "2166a6d7f38f64085ad6f4da7d74d9fba304e551846e34cac4a8059fe6d284cd",
+    "src/assets/characters/face-identity-data.js": "202f0b2c942fe4efb12652f9ae1685fc79c65bf5bb00532c5249556be295ea73",
+    "src/assets/characters/anatomical-head-data.js": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
+    "src/actor-models.js": "d299e3d02b0fca392b3e22eb9b7753133d7413d452403e482ee86b76337f7ff7",
+    "src/character-motion.js": "4569b9fa69da7f5894c102acc9e7586f4b40f37b3a22bcafb04b1a0169ea3924",
+    "src/skin-materials.js": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63",
+    "scripts/characters/generate-face-identities.py": "90a6e80372ab1f233f753b9168f6c4e6ecea0275329d53704fdb6d827cd4aaa4"
+  },
+  "runtimeAndBasisUnchangedSinceExecution": true,
+  "testCommand": "node --test tests/anatomical-head.test.mjs tests/skin-materials.test.mjs tests/skin-scene.test.mjs",
+  "testResult": {
+    "pass": 9,
+    "fail": 0,
+    "durationMs": 9298.058049
+  },
+  "resolvedGeneratorRisks": [
+    "Base head and registration recipe now checked against base provenance before recipe reuse.",
+    "Candidate output write moved after all role checks so failed candidate does not overwrite last valid generated data."
+  ],
+  "sourceCorrespondence": {
+    "basisPositionMismatches": 0,
+    "protectedPositionChanges": 0,
+    "uvSplitIntegerDeltaDifferences": 0,
+    "baselineRegistrationMaxFloatDifferenceM": 8.126937396042007e-08
+  },
+  "runtime": {
+    "maxPositionErrorM": 6.048601838724347e-08,
+    "maxUVFloatError": 2.9766082709770103e-08,
+    "headWeightErrors": 0,
+    "allIndicesUnchanged": true,
+    "allCloneGeometryShared": true,
+    "allCloneSkeletonIndependent": true
+  },
+  "normalBoundary": [
+    {
+      "triangle": 1443,
+      "sourceIDs": [
+        12034,
+        12058,
+        12305
+      ],
+      "region": 0,
+      "dot": -9.003239073411363e-07
+    }
+  ],
+  "coefficientGeometry": [
+    {
+      "role": "npc",
+      "factor": 1,
+      "maxDeltaM": 0.0041177343345582705,
+      "minFaceCos": 0.9804785395955268,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.3397067882230887,
+          "rmsDisplacementCSSpx": 0.0340745045071755,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.17589678441270093,
+          "rmsDisplacementCSSpx": 0.017651661239303267,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "sena",
+      "factor": 1,
+      "maxDeltaM": 0.0021232925198850948,
+      "minFaceCos": 0.9949875072945679,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.17505853544885455,
+          "rmsDisplacementCSSpx": 0.015977744113939398,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.0906751715794405,
+          "rmsDisplacementCSSpx": 0.00827583001558912,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "smith",
+      "factor": 1,
+      "maxDeltaM": 0.004364582829148738,
+      "minFaceCos": 0.9801719982884772,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.3607169322893261,
+          "rmsDisplacementCSSpx": 0.033773905968936584,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.18684663783363345,
+          "rmsDisplacementCSSpx": 0.01750485678384611,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            4,
+            1.9144899323149664,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.558375203788978,
+          "rmsDisplacementCSSpx": 0.052617756003989616,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            4,
+            1.9144899323149664,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.2580169780541501,
+          "rmsDisplacementCSSpx": 0.02431389199236458,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "healer",
+      "factor": 1,
+      "maxDeltaM": 0.00561509227439764,
+      "minFaceCos": 0.9631054547374874,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.4632363712871049,
+          "rmsDisplacementCSSpx": 0.040595437649157046,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.2398591680665679,
+          "rmsDisplacementCSSpx": 0.021025215331112068,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            0,
+            2.2880828729241958,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.7368269364149972,
+          "rmsDisplacementCSSpx": 0.06356329154317983,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            0,
+            2.2880828729241958,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.340476901897883,
+          "rmsDisplacementCSSpx": 0.029371663153838608,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "npc",
+      "factor": 1.5,
+      "maxDeltaM": 0.006176601501837399,
+      "minFaceCos": 0.9551805862523844,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.5095599431962887,
+          "rmsDisplacementCSSpx": 0.05111182392368838,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.263845050468555,
+          "rmsDisplacementCSSpx": 0.026477530954546403,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "sena",
+      "factor": 1.5,
+      "maxDeltaM": 0.003184938779827647,
+      "minFaceCos": 0.9886311678811986,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.2625854237575127,
+          "rmsDisplacementCSSpx": 0.023966606561383125,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.13601137448325049,
+          "rmsDisplacementCSSpx": 0.01241373945186981,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "smith",
+      "factor": 1.5,
+      "maxDeltaM": 0.006546874243723107,
+      "minFaceCos": 0.9548170335027689,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.541069108326851,
+          "rmsDisplacementCSSpx": 0.050660805497718064,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.2802663065924289,
+          "rmsDisplacementCSSpx": 0.026257254200880636,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            4,
+            1.9144899323149664,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.8374056061591926,
+          "rmsDisplacementCSSpx": 0.07892525669009472,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            4,
+            1.9144899323149664,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.3869528274906429,
+          "rmsDisplacementCSSpx": 0.03647020155110951,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "healer",
+      "factor": 1.5,
+      "maxDeltaM": 0.008422638411596448,
+      "minFaceCos": 0.9163134072390692,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.6948541122523043,
+          "rmsDisplacementCSSpx": 0.0608933000137256,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.3597885175226827,
+          "rmsDisplacementCSSpx": 0.03153790656781325,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            0,
+            2.2880828729241958,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 1.1055064467053455,
+          "rmsDisplacementCSSpx": 0.0953456414205627,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            0,
+            2.2880828729241958,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.5108382869846676,
+          "rmsDisplacementCSSpx": 0.044057820087700574,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "npc",
+      "factor": 2,
+      "maxDeltaM": 0.008235468669116527,
+      "minFaceCos": 0.9199622745394128,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.6794129387442273,
+          "rmsDisplacementCSSpx": 0.06814918814064098,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.3517932324242358,
+          "rmsDisplacementCSSpx": 0.03530342674993859,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "sena",
+      "factor": 2,
+      "maxDeltaM": 0.004246585039770188,
+      "minFaceCos": 0.9797112199697947,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.3501107258464808,
+          "rmsDisplacementCSSpx": 0.031955462605777474,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.18134665550061405,
+          "rmsDisplacementCSSpx": 0.016551645175962314,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "smith",
+      "factor": 2,
+      "maxDeltaM": 0.008729165658297476,
+      "minFaceCos": 0.9199033590309776,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.7214170911546093,
+          "rmsDisplacementCSSpx": 0.06754766939914215,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.37368354203931325,
+          "rmsDisplacementCSSpx": 0.03500963097434948,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            4,
+            1.9144899323149664,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 1.116331287511132,
+          "rmsDisplacementCSSpx": 0.10523184275886312,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            4,
+            1.9144899323149664,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.5158402868831431,
+          "rmsDisplacementCSSpx": 0.0486260884786212,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "healer",
+      "factor": 2,
+      "maxDeltaM": 0.011230184548795269,
+      "minFaceCos": 0.8542023168179304,
+      "flips": 0,
+      "newBackward": 0,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            "Q eye",
+            "Q eye"
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            "Q skin",
+            "Q skin"
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            0.5774408985136952,
+            4.678843683146303,
+            9.612463384591022
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.9264715567660282,
+          "rmsDisplacementCSSpx": 0.08119125814277599,
+          "occlusionTested": false
+        },
+        {
+          "kind": "ordinary",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            0.5155722308157992,
+            4.3596818599520555,
+            8.58255659338484
+          ],
+          "target": [
+            0,
+            1.6,
+            0
+          ],
+          "actor": [
+            0,
+            0,
+            0
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.4797177105944319,
+          "rmsDisplacementCSSpx": 0.04205065356507095,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            0,
+            2.2880828729241958,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 1.4743634891945723,
+          "rmsDisplacementCSSpx": 0.12712847222295764,
+          "occlusionTested": false
+        },
+        {
+          "kind": "hearth",
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "camera": [
+            2,
+            3.683537616573841,
+            95.5
+          ],
+          "target": [
+            2,
+            3.6300826654979756,
+            89
+          ],
+          "actor": [
+            0,
+            2.2880828729241958,
+            89
+          ],
+          "collisionFraction": 1,
+          "maxDisplacementCSSpx": 0.6812817070922622,
+          "rmsDisplacementCSSpx": 0.058744199249945,
+          "occlusionTested": false
+        }
+      ]
+    }
+  ],
+  "adoption": "No runtime visual adoption recommended from this audit: ordinary max difference stays below 1 CSSpx even at factor 2, and author reports factor-1 NPC source-to-LOD p95 2.228142mm above unchanged 2.1mm gate. The latter figure is author-reported, not independently recomputed in this bounded review. Factor 1.5/2 source-to-LOD gate is not independently tested.",
+  "remainingBoundaries": [
+    "Screen-space differences are geometric projected displacements, not image/pixel comparison; no occlusion or perceptual scoring.",
+    "Actual hearth fixture uses published actor/player positions, real groundAt and cameraFraction=1; other standing player positions may produce different projection.",
+    "NPC and Sena have ordinary single-dialogue camera only; they are not actors in the hearth gathering.",
+    "Inherited baseline negative mean vertex normal on triangle1443 remains.",
+    "Normal deltas are basis blended then normalized, not a fresh solve of combined deformed source normals. No shading acceptance inferred."
+  ]
+}

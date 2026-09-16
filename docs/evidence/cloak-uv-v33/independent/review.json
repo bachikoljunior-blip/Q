@@ -1,0 +1,4316 @@
+{
+  "startedAtUTC": "2026-09-16T04:54:32.360Z",
+  "base": "892f7e59f602e20da62bf1c8708e432ce1eac637",
+  "head": "892f7e59f602e20da62bf1c8708e432ce1eac637",
+  "sourceHashes": {
+    "baselineGeometry": "51a6a10a890bfd3b531119b39808a18a32b2bea45fa4441871a57e38da06046d",
+    "candidateGeometry": "1c5ce56521d0dbf4bad2920340e86d3a1e9cfc03647cb387f1bb5eeb73c4826a",
+    "src/actor-models.js": "0731e2582bd7eacabf90fd96ca651fd7bc2f56c886c82c912835563c7294b006",
+    "src/character-motion.js": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+    "src/bow-contact.js": "c9da5e24059bde9d23ef225f7d4988c93174e5d040a5ce1532dec2b10fad7b8d",
+    "src/content.js": "6ed2588b9620268f806e0feccbfae2816d8463535a8b98ca755d3289a05f63d6",
+    "src/skin-materials.js": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63",
+    "src/assets/characters/anatomical-head-data.js": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba"
+  },
+  "boundary": "Host Node / Three.js CPU geometry and existing procedural motion only; no browser, WebGL, GPU, game pixels, texture appearance or PS4 performance/quality acceptance.",
+  "method": "Independent world-space triangle tangent Jacobian, singular-value ratio, physical triangle area-weighted quantiles. Texture remains 64x64, repeat(4,4), 256 texels/UV. Baseline loaded from exact git object; source snapshots transformed only in memory for module imports. Shared dependencies asserted byte-identical to base.",
+  "bind": {
+    "ordinary": {
+      "baseline": {
+        "vertices": 117,
+        "triangles": 192,
+        "areaM2": 0.9394496063748358,
+        "absoluteUVArea": 1,
+        "uvSigns": {
+          "positive": 0,
+          "negative": 192,
+          "zero": 0
+        },
+        "zeroGeometryTrianglesExcludedFromJacobian": 0,
+        "equivalentTexelsPerMetre": 264.1211751575949,
+        "anisotropy": {
+          "min": 1.0822131361951501,
+          "p05": 1.1456856152676371,
+          "median": 1.4090062500737714,
+          "p95": 2.0204225646707976,
+          "max": 2.2106608966270356
+        },
+        "density": {
+          "min": 227.08931204584155,
+          "p05": 229.62516219908005,
+          "median": 257.7106204506372,
+          "p95": 310.1533297213619,
+          "max": 322.1747407526562
+        }
+      },
+      "candidate": {
+        "vertices": 117,
+        "triangles": 192,
+        "areaM2": 0.9394496063748358,
+        "absoluteUVArea": 1.0000000598118222,
+        "uvSigns": {
+          "positive": 0,
+          "negative": 192,
+          "zero": 0
+        },
+        "zeroGeometryTrianglesExcludedFromJacobian": 0,
+        "equivalentTexelsPerMetre": 264.12118305637915,
+        "anisotropy": {
+          "min": 1.0127650604092149,
+          "p05": 1.022246771236132,
+          "median": 1.0730067235415868,
+          "p95": 1.1650380483979745,
+          "max": 1.172835900692763
+        },
+        "density": {
+          "min": 262.53761977457077,
+          "p05": 262.5781976396248,
+          "median": 264.12883232638865,
+          "p95": 265.37602371068607,
+          "max": 265.4693195473505
+        }
+      }
+    },
+    "bossExcluded": {
+      "baseline": {
+        "vertices": 117,
+        "triangles": 192,
+        "areaM2": 1.202729409490834,
+        "absoluteUVArea": 1,
+        "uvSigns": {
+          "positive": 0,
+          "negative": 192,
+          "zero": 0
+        },
+        "zeroGeometryTrianglesExcludedFromJacobian": 0,
+        "equivalentTexelsPerMetre": 233.42963986911153,
+        "anisotropy": {
+          "min": 1.3851840401070057,
+          "p05": 1.4472506734687536,
+          "median": 1.7784969329365128,
+          "p95": 2.569105666203212,
+          "max": 2.7879748942692517
+        },
+        "density": {
+          "min": 201.16918241279228,
+          "p05": 202.53777460240755,
+          "median": 227.66735750809815,
+          "p95": 273.95245435958964,
+          "max": 284.38325575458884
+        }
+      },
+      "candidate": {
+        "vertices": 117,
+        "triangles": 192,
+        "areaM2": 1.202729409490834,
+        "absoluteUVArea": 1,
+        "uvSigns": {
+          "positive": 0,
+          "negative": 192,
+          "zero": 0
+        },
+        "zeroGeometryTrianglesExcludedFromJacobian": 0,
+        "equivalentTexelsPerMetre": 233.42963986911153,
+        "anisotropy": {
+          "min": 1.3851840401070057,
+          "p05": 1.4472506734687536,
+          "median": 1.7784969329365128,
+          "p95": 2.569105666203212,
+          "max": 2.7879748942692517
+        },
+        "density": {
+          "min": 201.16918241279228,
+          "p05": 202.53777460240755,
+          "median": 227.66735750809815,
+          "p95": 273.95245435958964,
+          "max": 284.38325575458884
+        }
+      }
+    }
+  },
+  "families": [
+    {
+      "family": "player",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 7822,
+        "draws": 14,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "npc",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 6618,
+        "draws": 12,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "sena",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 6786,
+        "draws": 12,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "smith",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 6242,
+        "draws": 11,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "healer",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 7038,
+        "draws": 11,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "patient",
+      "rootScale": [
+        0.97,
+        0.97,
+        0.97
+      ],
+      "budget": {
+        "triangles": 6270,
+        "draws": 10,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "porter",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 6450,
+        "draws": 10,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "scout",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 6798,
+        "draws": 11,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "traveler",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 6578,
+        "draws": 10,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "courier",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 6398,
+        "draws": 10,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "soldier",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 7454,
+        "draws": 13,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "ranger",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 7078,
+        "draws": 12,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "wolf",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "budget": {
+        "triangles": 4028,
+        "draws": 6,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    },
+    {
+      "family": "boss",
+      "rootScale": [
+        2.3,
+        2.3,
+        2.3
+      ],
+      "budget": {
+        "triangles": 7950,
+        "draws": 14,
+        "palettes": 1
+      },
+      "allNonCapeUVGeometryAndMaterialsEqual": true,
+      "independentClone": true
+    }
+  ],
+  "motion": [
+    {
+      "family": "player",
+      "frames": 240,
+      "positionsIndicesNormalsBonesAndContactsExactlyEqual": true,
+      "uvUnchangedDuringAnimation": true,
+      "metrics": [
+        {
+          "state": "idle",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.7155952443203,
+            "anisotropy": {
+              "min": 1.0496944883994077,
+              "p05": 1.1253976224093674,
+              "median": 1.4208357988862381,
+              "p95": 2.018474129802043,
+              "max": 2.2140994508167657
+            },
+            "density": {
+              "min": 222.05093699990852,
+              "p05": 229.01606151401282,
+              "median": 257.7681695506978,
+              "p95": 310.02071656177503,
+              "max": 322.3567259580438
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.71560313097535,
+            "anisotropy": {
+              "min": 1.0059537573981718,
+              "p05": 1.0216112309659287,
+              "median": 1.0905733740964667,
+              "p95": 1.1665441023081031,
+              "max": 1.2081561483479306
+            },
+            "density": {
+              "min": 256.71275488820424,
+              "p05": 259.0272244933211,
+              "median": 264.02068884454786,
+              "p95": 267.6210025294289,
+              "max": 270.5388789569442
+            }
+          }
+        },
+        {
+          "state": "idle",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.015307400039604,
+              2.024112143486506
+            ],
+            "candidate": [
+              1.155749553336297,
+              1.1888363469389596
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5710943374147377,
+            0.5891435533633944
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 59,
+            "ratio": 0.5891435533633944,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.5381343719332,
+              "anisotropy": {
+                "min": 1.034941433179267,
+                "p05": 1.121329099444775,
+                "median": 1.4142063692126154,
+                "p95": 2.0179060606739148,
+                "max": 2.1953897068000203
+              },
+              "density": {
+                "min": 222.32818441898542,
+                "p05": 229.83815558290755,
+                "median": 256.40982583635434,
+                "p95": 310.1599362501001,
+                "max": 322.3009752822631
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.53814225328114,
+              "anisotropy": {
+                "min": 1.005095609229815,
+                "p05": 1.0156816163786992,
+                "median": 1.0874116897326336,
+                "p95": 1.1888363469389596,
+                "max": 1.20515336598872
+              },
+              "density": {
+                "min": 256.0766204376732,
+                "p05": 257.9081625687481,
+                "median": 263.6644372182287,
+                "p95": 268.76422034330517,
+                "max": 270.4602118999235
+              }
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.82558183990204,
+            "anisotropy": {
+              "min": 1.0323802361765237,
+              "p05": 1.088187119452596,
+              "median": 1.393114470111452,
+              "p95": 2.042916621150435,
+              "max": 2.2075531147271876
+            },
+            "density": {
+              "min": 209.8160728478141,
+              "p05": 223.61235781793414,
+              "median": 257.49569707554934,
+              "p95": 308.2807003166076,
+              "max": 321.59551161109954
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.8255896999404,
+            "anisotropy": {
+              "min": 1.0093124432504932,
+              "p05": 1.0284383861258755,
+              "median": 1.1032498812931344,
+              "p95": 1.2246261237280613,
+              "max": 1.3067721215546457
+            },
+            "density": {
+              "min": 242.56803376457913,
+              "p05": 252.32869838222723,
+              "median": 262.5397139054948,
+              "p95": 275.1206027745522,
+              "max": 278.99698844145126
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0171726772885648,
+              2.0484281359975465
+            ],
+            "candidate": [
+              1.2209274979877716,
+              1.2979519964477089
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5982623391904315,
+            0.6427792038635748
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "ratio": 0.6427792038635748,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520224753185,
+              "anisotropy": {
+                "min": 1.0404671311213447,
+                "p05": 1.0985614177581302,
+                "median": 1.42810191599846,
+                "p95": 2.0192812534165148,
+                "max": 2.1908864386968374
+              },
+              "density": {
+                "min": 213.47974879062994,
+                "p05": 219.30220413375557,
+                "median": 256.0420692399703,
+                "p95": 310.19118052776486,
+                "max": 322.32095091984127
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520302942793,
+              "anisotropy": {
+                "min": 1.010565620922819,
+                "p05": 1.0244832650917517,
+                "median": 1.1248061780699532,
+                "p95": 1.2979519964477089,
+                "max": 1.350212169463762
+              },
+              "density": {
+                "min": 242.4195352859271,
+                "p05": 246.8036237048947,
+                "median": 262.48608874591736,
+                "p95": 275.813249379749,
+                "max": 280.47657118726863
+              }
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.93105053296847,
+            "anisotropy": {
+              "min": 1.0278809527532051,
+              "p05": 1.1760932295562823,
+              "median": 1.5186707698481843,
+              "p95": 2.0284519987202043,
+              "max": 2.2764740786090663
+            },
+            "density": {
+              "min": 193.9244845069829,
+              "p05": 206.06343896872102,
+              "median": 252.2957203829682,
+              "p95": 309.9473953586849,
+              "max": 322.63748505539377
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.9310582466314,
+            "anisotropy": {
+              "min": 1.0121422951036245,
+              "p05": 1.0288935086197348,
+              "median": 1.167558902838686,
+              "p95": 1.5098937639794956,
+              "max": 1.6680765813104794
+            },
+            "density": {
+              "min": 224.19581141800472,
+              "p05": 233.06682809235315,
+              "median": 261.81084307106084,
+              "p95": 271.62607230235943,
+              "max": 282.61830254834337
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0099456916850964,
+              2.187428808026638
+            ],
+            "candidate": [
+              1.3897691514071422,
+              1.6584756930435844
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.6686368345363053,
+            0.7581849918762649
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 5,
+            "ratio": 0.7581849918762649,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.64233555207414,
+              "anisotropy": {
+                "min": 1.079575803502024,
+                "p05": 1.203750378310856,
+                "median": 1.5665137682387988,
+                "p95": 2.187428808026638,
+                "max": 28.27234907197363
+              },
+              "density": {
+                "min": 209.29123861097034,
+                "p05": 226.2812908771963,
+                "median": 268.5325097881726,
+                "p95": 316.3665002427037,
+                "max": 1333.7506069381611
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.6423437954092,
+              "anisotropy": {
+                "min": 1.003939144635851,
+                "p05": 1.0219912316183064,
+                "median": 1.1124763643997333,
+                "p95": 1.6584756930435844,
+                "max": 29.703468521265233
+              },
+              "density": {
+                "min": 231.3764004643707,
+                "p05": 239.20627970733983,
+                "median": 262.60607967607183,
+                "p95": 326.1765453382375,
+                "max": 1508.5306980269963
+              }
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.5917406494222304,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 332.7930617490582,
+            "anisotropy": {
+              "min": 1.1329579286638864,
+              "p05": 1.1966237010271945,
+              "median": 1.6769843186319955,
+              "p95": 2.173678502921827,
+              "max": 157.5282089352885
+            },
+            "density": {
+              "min": 265.4569318207676,
+              "p05": 266.08673025570164,
+              "median": 291.45653627213244,
+              "p95": 327.212825727116,
+              "max": 3363.096488844881
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.5917406494222304,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 332.79307170153777,
+            "anisotropy": {
+              "min": 1.0105747743829654,
+              "p05": 1.0221903812871103,
+              "median": 1.0687162186619947,
+              "p95": 1.1089159642991313,
+              "max": 168.94848720491575
+            },
+            "density": {
+              "min": 268.9867652376935,
+              "p05": 270.4152963160004,
+              "median": 276.0908777842482,
+              "p95": 308.2776733539343,
+              "max": 3888.071010666056
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.021357882064013,
+              2.712816699467578
+            ],
+            "candidate": [
+              1.0830724120989288,
+              3.694311091270693
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.4975219187273033,
+            1.3617990083870188
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            80
+          ],
+          "framesWithWorseP95": 4,
+          "worstRatioFrame": {
+            "frame": 38,
+            "deathElapsed": 0.6440677966101694,
+            "ratio": 1.3617990083870188,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.4584091286440956,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 378.1057976030227,
+              "anisotropy": {
+                "min": 1.5047689015013879,
+                "p05": 1.5426913453700142,
+                "median": 1.7966362910754838,
+                "p95": 2.712816699467578,
+                "max": 283.867224515372
+              },
+              "density": {
+                "min": 273.0322085528197,
+                "p05": 273.05830709420263,
+                "median": 292.9982031464564,
+                "p95": 538.2651607473979,
+                "max": 4763.332167652596
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.4584091286440956,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 378.1058089106209,
+              "anisotropy": {
+                "min": 1.0091788148860372,
+                "p05": 1.0216806004242456,
+                "median": 1.0627452830804145,
+                "p95": 3.694311091270693,
+                "max": 317.760586770688
+              },
+              "density": {
+                "min": 269.6055078053651,
+                "p05": 269.6289182817515,
+                "median": 275.9000426975461,
+                "p95": 564.2348623299955,
+                "max": 5387.536577055069
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "family": "npc",
+      "frames": 240,
+      "positionsIndicesNormalsBonesAndContactsExactlyEqual": true,
+      "uvUnchangedDuringAnimation": true,
+      "metrics": [
+        {
+          "state": "idle",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.7155952443203,
+            "anisotropy": {
+              "min": 1.0496944883994077,
+              "p05": 1.1253976224093674,
+              "median": 1.4208357988862381,
+              "p95": 2.018474129802043,
+              "max": 2.2140994508167657
+            },
+            "density": {
+              "min": 222.05093699990852,
+              "p05": 229.01606151401282,
+              "median": 257.7681695506978,
+              "p95": 310.02071656177503,
+              "max": 322.3567259580438
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.71560313097535,
+            "anisotropy": {
+              "min": 1.0059537573981718,
+              "p05": 1.0216112309659287,
+              "median": 1.0905733740964667,
+              "p95": 1.1665441023081031,
+              "max": 1.2081561483479306
+            },
+            "density": {
+              "min": 256.71275488820424,
+              "p05": 259.0272244933211,
+              "median": 264.02068884454786,
+              "p95": 267.6210025294289,
+              "max": 270.5388789569442
+            }
+          }
+        },
+        {
+          "state": "idle",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.015307400039604,
+              2.024112143486506
+            ],
+            "candidate": [
+              1.155749553336297,
+              1.1888363469389596
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5710943374147377,
+            0.5891435533633944
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 59,
+            "ratio": 0.5891435533633944,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.5381343719332,
+              "anisotropy": {
+                "min": 1.034941433179267,
+                "p05": 1.121329099444775,
+                "median": 1.4142063692126154,
+                "p95": 2.0179060606739148,
+                "max": 2.1953897068000203
+              },
+              "density": {
+                "min": 222.32818441898542,
+                "p05": 229.83815558290755,
+                "median": 256.40982583635434,
+                "p95": 310.1599362501001,
+                "max": 322.3009752822631
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.53814225328114,
+              "anisotropy": {
+                "min": 1.005095609229815,
+                "p05": 1.0156816163786992,
+                "median": 1.0874116897326336,
+                "p95": 1.1888363469389596,
+                "max": 1.20515336598872
+              },
+              "density": {
+                "min": 256.0766204376732,
+                "p05": 257.9081625687481,
+                "median": 263.6644372182287,
+                "p95": 268.76422034330517,
+                "max": 270.4602118999235
+              }
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.82558183990204,
+            "anisotropy": {
+              "min": 1.0323802361765237,
+              "p05": 1.088187119452596,
+              "median": 1.393114470111452,
+              "p95": 2.042916621150435,
+              "max": 2.2075531147271876
+            },
+            "density": {
+              "min": 209.8160728478141,
+              "p05": 223.61235781793414,
+              "median": 257.49569707554934,
+              "p95": 308.2807003166076,
+              "max": 321.59551161109954
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.8255896999404,
+            "anisotropy": {
+              "min": 1.0093124432504932,
+              "p05": 1.0284383861258755,
+              "median": 1.1032498812931344,
+              "p95": 1.2246261237280613,
+              "max": 1.3067721215546457
+            },
+            "density": {
+              "min": 242.56803376457913,
+              "p05": 252.32869838222723,
+              "median": 262.5397139054948,
+              "p95": 275.1206027745522,
+              "max": 278.99698844145126
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0171726772885648,
+              2.0484281359975465
+            ],
+            "candidate": [
+              1.2209274979877716,
+              1.2979519964477089
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5982623391904315,
+            0.6427792038635748
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "ratio": 0.6427792038635748,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520224753185,
+              "anisotropy": {
+                "min": 1.0404671311213447,
+                "p05": 1.0985614177581302,
+                "median": 1.42810191599846,
+                "p95": 2.0192812534165148,
+                "max": 2.1908864386968374
+              },
+              "density": {
+                "min": 213.47974879062994,
+                "p05": 219.30220413375557,
+                "median": 256.0420692399703,
+                "p95": 310.19118052776486,
+                "max": 322.32095091984127
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520302942793,
+              "anisotropy": {
+                "min": 1.010565620922819,
+                "p05": 1.0244832650917517,
+                "median": 1.1248061780699532,
+                "p95": 1.2979519964477089,
+                "max": 1.350212169463762
+              },
+              "density": {
+                "min": 242.4195352859271,
+                "p05": 246.8036237048947,
+                "median": 262.48608874591736,
+                "p95": 275.813249379749,
+                "max": 280.47657118726863
+              }
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.93105053296847,
+            "anisotropy": {
+              "min": 1.0278809527532051,
+              "p05": 1.1760932295562823,
+              "median": 1.5186707698481843,
+              "p95": 2.0284519987202043,
+              "max": 2.2764740786090663
+            },
+            "density": {
+              "min": 193.9244845069829,
+              "p05": 206.06343896872102,
+              "median": 252.2957203829682,
+              "p95": 309.9473953586849,
+              "max": 322.63748505539377
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.9310582466314,
+            "anisotropy": {
+              "min": 1.0121422951036245,
+              "p05": 1.0288935086197348,
+              "median": 1.167558902838686,
+              "p95": 1.5098937639794956,
+              "max": 1.6680765813104794
+            },
+            "density": {
+              "min": 224.19581141800472,
+              "p05": 233.06682809235315,
+              "median": 261.81084307106084,
+              "p95": 271.62607230235943,
+              "max": 282.61830254834337
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0099456916850964,
+              2.187428808026638
+            ],
+            "candidate": [
+              1.3897691514071422,
+              1.6584756930435844
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.6686368345363053,
+            0.7581849918762649
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 5,
+            "ratio": 0.7581849918762649,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.64233555207414,
+              "anisotropy": {
+                "min": 1.079575803502024,
+                "p05": 1.203750378310856,
+                "median": 1.5665137682387988,
+                "p95": 2.187428808026638,
+                "max": 28.27234907197363
+              },
+              "density": {
+                "min": 209.29123861097034,
+                "p05": 226.2812908771963,
+                "median": 268.5325097881726,
+                "p95": 316.3665002427037,
+                "max": 1333.7506069381611
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.6423437954092,
+              "anisotropy": {
+                "min": 1.003939144635851,
+                "p05": 1.0219912316183064,
+                "median": 1.1124763643997333,
+                "p95": 1.6584756930435844,
+                "max": 29.703468521265233
+              },
+              "density": {
+                "min": 231.3764004643707,
+                "p05": 239.20627970733983,
+                "median": 262.60607967607183,
+                "p95": 326.1765453382375,
+                "max": 1508.5306980269963
+              }
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.6712231828130475,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 312.46867901968676,
+            "anisotropy": {
+              "min": 1.11565562884744,
+              "p05": 1.1748492597166922,
+              "median": 1.6401892495119452,
+              "p95": 2.1666069921176696,
+              "max": 157.5282089350161
+            },
+            "density": {
+              "min": 259.93103732227405,
+              "p05": 260.45272977754126,
+              "median": 284.2338773938301,
+              "p95": 327.0665286310977,
+              "max": 3363.096488841973
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.6712231828130475,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 312.46868836434714,
+            "anisotropy": {
+              "min": 1.010574774382974,
+              "p05": 1.0245116087007993,
+              "median": 1.0709134545443015,
+              "p95": 1.10411456713689,
+              "max": 168.94848720462355
+            },
+            "density": {
+              "min": 268.9867652376935,
+              "p05": 270.4561632961711,
+              "median": 277.2020509333751,
+              "p95": 305.55392433428983,
+              "max": 3888.071010662694
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.021357882064013,
+              2.3105716604175806
+            ],
+            "candidate": [
+              1.0909450650705905,
+              2.8242131347372674
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.49798896639534856,
+            1.243401197908529
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            64
+          ],
+          "framesWithWorseP95": 2,
+          "worstRatioFrame": {
+            "frame": 40,
+            "deathElapsed": 0.6779661016949152,
+            "ratio": 1.243401197908529,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.537382988221694,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 349.2191157381018,
+              "anisotropy": {
+                "min": 1.4427540007503252,
+                "p05": 1.4851974721531527,
+                "median": 1.7420582118917087,
+                "p95": 2.1984374990055886,
+                "max": 395.04234369478996
+              },
+              "density": {
+                "min": 267.3694610202904,
+                "p05": 267.386893978323,
+                "median": 293.04506345038027,
+                "p95": 456.1291193440487,
+                "max": 5844.408852480542
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.537382988221694,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 349.21912618181744,
+              "anisotropy": {
+                "min": 1.0090357878515692,
+                "p05": 1.0221665067945047,
+                "median": 1.0698551645398044,
+                "p95": 2.73353981979058,
+                "max": 463.0990000565699
+              },
+              "density": {
+                "min": 269.65009696916513,
+                "p05": 271.2238195321548,
+                "median": 277.465097489863,
+                "p95": 490.2664922284761,
+                "max": 6461.131448059562
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "family": "sena",
+      "frames": 240,
+      "positionsIndicesNormalsBonesAndContactsExactlyEqual": true,
+      "uvUnchangedDuringAnimation": true,
+      "metrics": [
+        {
+          "state": "idle",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.7155952443203,
+            "anisotropy": {
+              "min": 1.0496944883994077,
+              "p05": 1.1253976224093674,
+              "median": 1.4208357988862381,
+              "p95": 2.018474129802043,
+              "max": 2.2140994508167657
+            },
+            "density": {
+              "min": 222.05093699990852,
+              "p05": 229.01606151401282,
+              "median": 257.7681695506978,
+              "p95": 310.02071656177503,
+              "max": 322.3567259580438
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.71560313097535,
+            "anisotropy": {
+              "min": 1.0059537573981718,
+              "p05": 1.0216112309659287,
+              "median": 1.0905733740964667,
+              "p95": 1.1665441023081031,
+              "max": 1.2081561483479306
+            },
+            "density": {
+              "min": 256.71275488820424,
+              "p05": 259.0272244933211,
+              "median": 264.02068884454786,
+              "p95": 267.6210025294289,
+              "max": 270.5388789569442
+            }
+          }
+        },
+        {
+          "state": "idle",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.015307400039604,
+              2.024112143486506
+            ],
+            "candidate": [
+              1.155749553336297,
+              1.1888363469389596
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5710943374147377,
+            0.5891435533633944
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 59,
+            "ratio": 0.5891435533633944,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.5381343719332,
+              "anisotropy": {
+                "min": 1.034941433179267,
+                "p05": 1.121329099444775,
+                "median": 1.4142063692126154,
+                "p95": 2.0179060606739148,
+                "max": 2.1953897068000203
+              },
+              "density": {
+                "min": 222.32818441898542,
+                "p05": 229.83815558290755,
+                "median": 256.40982583635434,
+                "p95": 310.1599362501001,
+                "max": 322.3009752822631
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.53814225328114,
+              "anisotropy": {
+                "min": 1.005095609229815,
+                "p05": 1.0156816163786992,
+                "median": 1.0874116897326336,
+                "p95": 1.1888363469389596,
+                "max": 1.20515336598872
+              },
+              "density": {
+                "min": 256.0766204376732,
+                "p05": 257.9081625687481,
+                "median": 263.6644372182287,
+                "p95": 268.76422034330517,
+                "max": 270.4602118999235
+              }
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.82558183990204,
+            "anisotropy": {
+              "min": 1.0323802361765237,
+              "p05": 1.088187119452596,
+              "median": 1.393114470111452,
+              "p95": 2.042916621150435,
+              "max": 2.2075531147271876
+            },
+            "density": {
+              "min": 209.8160728478141,
+              "p05": 223.61235781793414,
+              "median": 257.49569707554934,
+              "p95": 308.2807003166076,
+              "max": 321.59551161109954
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.8255896999404,
+            "anisotropy": {
+              "min": 1.0093124432504932,
+              "p05": 1.0284383861258755,
+              "median": 1.1032498812931344,
+              "p95": 1.2246261237280613,
+              "max": 1.3067721215546457
+            },
+            "density": {
+              "min": 242.56803376457913,
+              "p05": 252.32869838222723,
+              "median": 262.5397139054948,
+              "p95": 275.1206027745522,
+              "max": 278.99698844145126
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0171726772885648,
+              2.0484281359975465
+            ],
+            "candidate": [
+              1.2209274979877716,
+              1.2979519964477089
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5982623391904315,
+            0.6427792038635748
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "ratio": 0.6427792038635748,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520224753185,
+              "anisotropy": {
+                "min": 1.0404671311213447,
+                "p05": 1.0985614177581302,
+                "median": 1.42810191599846,
+                "p95": 2.0192812534165148,
+                "max": 2.1908864386968374
+              },
+              "density": {
+                "min": 213.47974879062994,
+                "p05": 219.30220413375557,
+                "median": 256.0420692399703,
+                "p95": 310.19118052776486,
+                "max": 322.32095091984127
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520302942793,
+              "anisotropy": {
+                "min": 1.010565620922819,
+                "p05": 1.0244832650917517,
+                "median": 1.1248061780699532,
+                "p95": 1.2979519964477089,
+                "max": 1.350212169463762
+              },
+              "density": {
+                "min": 242.4195352859271,
+                "p05": 246.8036237048947,
+                "median": 262.48608874591736,
+                "p95": 275.813249379749,
+                "max": 280.47657118726863
+              }
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.93105053296847,
+            "anisotropy": {
+              "min": 1.0278809527532051,
+              "p05": 1.1760932295562823,
+              "median": 1.5186707698481843,
+              "p95": 2.0284519987202043,
+              "max": 2.2764740786090663
+            },
+            "density": {
+              "min": 193.9244845069829,
+              "p05": 206.06343896872102,
+              "median": 252.2957203829682,
+              "p95": 309.9473953586849,
+              "max": 322.63748505539377
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.9310582466314,
+            "anisotropy": {
+              "min": 1.0121422951036245,
+              "p05": 1.0288935086197348,
+              "median": 1.167558902838686,
+              "p95": 1.5098937639794956,
+              "max": 1.6680765813104794
+            },
+            "density": {
+              "min": 224.19581141800472,
+              "p05": 233.06682809235315,
+              "median": 261.81084307106084,
+              "p95": 271.62607230235943,
+              "max": 282.61830254834337
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0099456916850964,
+              2.187428808026638
+            ],
+            "candidate": [
+              1.3897691514071422,
+              1.6584756930435844
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.6686368345363053,
+            0.7581849918762649
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 5,
+            "ratio": 0.7581849918762649,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.64233555207414,
+              "anisotropy": {
+                "min": 1.079575803502024,
+                "p05": 1.203750378310856,
+                "median": 1.5665137682387988,
+                "p95": 2.187428808026638,
+                "max": 28.27234907197363
+              },
+              "density": {
+                "min": 209.29123861097034,
+                "p05": 226.2812908771963,
+                "median": 268.5325097881726,
+                "p95": 316.3665002427037,
+                "max": 1333.7506069381611
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.6423437954092,
+              "anisotropy": {
+                "min": 1.003939144635851,
+                "p05": 1.0219912316183064,
+                "median": 1.1124763643997333,
+                "p95": 1.6584756930435844,
+                "max": 29.703468521265233
+              },
+              "density": {
+                "min": 231.3764004643707,
+                "p05": 239.20627970733983,
+                "median": 262.60607967607183,
+                "p95": 326.1765453382375,
+                "max": 1508.5306980269963
+              }
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.6712231828130475,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 312.46867901968676,
+            "anisotropy": {
+              "min": 1.11565562884744,
+              "p05": 1.1748492597166922,
+              "median": 1.6401892495119452,
+              "p95": 2.1666069921176696,
+              "max": 157.5282089350161
+            },
+            "density": {
+              "min": 259.93103732227405,
+              "p05": 260.45272977754126,
+              "median": 284.2338773938301,
+              "p95": 327.0665286310977,
+              "max": 3363.096488841973
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.6712231828130475,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 312.46868836434714,
+            "anisotropy": {
+              "min": 1.010574774382974,
+              "p05": 1.0245116087007993,
+              "median": 1.0709134545443015,
+              "p95": 1.10411456713689,
+              "max": 168.94848720462355
+            },
+            "density": {
+              "min": 268.9867652376935,
+              "p05": 270.4561632961711,
+              "median": 277.2020509333751,
+              "p95": 305.55392433428983,
+              "max": 3888.071010662694
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.021357882064013,
+              2.3105716604175806
+            ],
+            "candidate": [
+              1.0909450650705905,
+              2.8242131347372674
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.49798896639534856,
+            1.243401197908529
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            64
+          ],
+          "framesWithWorseP95": 2,
+          "worstRatioFrame": {
+            "frame": 40,
+            "deathElapsed": 0.6779661016949152,
+            "ratio": 1.243401197908529,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.537382988221694,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 349.2191157381018,
+              "anisotropy": {
+                "min": 1.4427540007503252,
+                "p05": 1.4851974721531527,
+                "median": 1.7420582118917087,
+                "p95": 2.1984374990055886,
+                "max": 395.04234369478996
+              },
+              "density": {
+                "min": 267.3694610202904,
+                "p05": 267.386893978323,
+                "median": 293.04506345038027,
+                "p95": 456.1291193440487,
+                "max": 5844.408852480542
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.537382988221694,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 349.21912618181744,
+              "anisotropy": {
+                "min": 1.0090357878515692,
+                "p05": 1.0221665067945047,
+                "median": 1.0698551645398044,
+                "p95": 2.73353981979058,
+                "max": 463.0990000565699
+              },
+              "density": {
+                "min": 269.65009696916513,
+                "p05": 271.2238195321548,
+                "median": 277.465097489863,
+                "p95": 490.2664922284761,
+                "max": 6461.131448059562
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "family": "scout",
+      "frames": 240,
+      "positionsIndicesNormalsBonesAndContactsExactlyEqual": true,
+      "uvUnchangedDuringAnimation": true,
+      "metrics": [
+        {
+          "state": "idle",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.7155952443203,
+            "anisotropy": {
+              "min": 1.0496944883994077,
+              "p05": 1.1253976224093674,
+              "median": 1.4208357988862381,
+              "p95": 2.018474129802043,
+              "max": 2.2140994508167657
+            },
+            "density": {
+              "min": 222.05093699990852,
+              "p05": 229.01606151401282,
+              "median": 257.7681695506978,
+              "p95": 310.02071656177503,
+              "max": 322.3567259580438
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.71560313097535,
+            "anisotropy": {
+              "min": 1.0059537573981718,
+              "p05": 1.0216112309659287,
+              "median": 1.0905733740964667,
+              "p95": 1.1665441023081031,
+              "max": 1.2081561483479306
+            },
+            "density": {
+              "min": 256.71275488820424,
+              "p05": 259.0272244933211,
+              "median": 264.02068884454786,
+              "p95": 267.6210025294289,
+              "max": 270.5388789569442
+            }
+          }
+        },
+        {
+          "state": "idle",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.015307400039604,
+              2.024112143486506
+            ],
+            "candidate": [
+              1.155749553336297,
+              1.1888363469389596
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5710943374147377,
+            0.5891435533633944
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 59,
+            "ratio": 0.5891435533633944,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.5381343719332,
+              "anisotropy": {
+                "min": 1.034941433179267,
+                "p05": 1.121329099444775,
+                "median": 1.4142063692126154,
+                "p95": 2.0179060606739148,
+                "max": 2.1953897068000203
+              },
+              "density": {
+                "min": 222.32818441898542,
+                "p05": 229.83815558290755,
+                "median": 256.40982583635434,
+                "p95": 310.1599362501001,
+                "max": 322.3009752822631
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.53814225328114,
+              "anisotropy": {
+                "min": 1.005095609229815,
+                "p05": 1.0156816163786992,
+                "median": 1.0874116897326336,
+                "p95": 1.1888363469389596,
+                "max": 1.20515336598872
+              },
+              "density": {
+                "min": 256.0766204376732,
+                "p05": 257.9081625687481,
+                "median": 263.6644372182287,
+                "p95": 268.76422034330517,
+                "max": 270.4602118999235
+              }
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.82558183990204,
+            "anisotropy": {
+              "min": 1.0323802361765237,
+              "p05": 1.088187119452596,
+              "median": 1.393114470111452,
+              "p95": 2.042916621150435,
+              "max": 2.2075531147271876
+            },
+            "density": {
+              "min": 209.8160728478141,
+              "p05": 223.61235781793414,
+              "median": 257.49569707554934,
+              "p95": 308.2807003166076,
+              "max": 321.59551161109954
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.8255896999404,
+            "anisotropy": {
+              "min": 1.0093124432504932,
+              "p05": 1.0284383861258755,
+              "median": 1.1032498812931344,
+              "p95": 1.2246261237280613,
+              "max": 1.3067721215546457
+            },
+            "density": {
+              "min": 242.56803376457913,
+              "p05": 252.32869838222723,
+              "median": 262.5397139054948,
+              "p95": 275.1206027745522,
+              "max": 278.99698844145126
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0171726772885648,
+              2.0484281359975465
+            ],
+            "candidate": [
+              1.2209274979877716,
+              1.2979519964477089
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5982623391904315,
+            0.6427792038635748
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "ratio": 0.6427792038635748,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520224753185,
+              "anisotropy": {
+                "min": 1.0404671311213447,
+                "p05": 1.0985614177581302,
+                "median": 1.42810191599846,
+                "p95": 2.0192812534165148,
+                "max": 2.1908864386968374
+              },
+              "density": {
+                "min": 213.47974879062994,
+                "p05": 219.30220413375557,
+                "median": 256.0420692399703,
+                "p95": 310.19118052776486,
+                "max": 322.32095091984127
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520302942793,
+              "anisotropy": {
+                "min": 1.010565620922819,
+                "p05": 1.0244832650917517,
+                "median": 1.1248061780699532,
+                "p95": 1.2979519964477089,
+                "max": 1.350212169463762
+              },
+              "density": {
+                "min": 242.4195352859271,
+                "p05": 246.8036237048947,
+                "median": 262.48608874591736,
+                "p95": 275.813249379749,
+                "max": 280.47657118726863
+              }
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.93105053296847,
+            "anisotropy": {
+              "min": 1.0278809527532051,
+              "p05": 1.1760932295562823,
+              "median": 1.5186707698481843,
+              "p95": 2.0284519987202043,
+              "max": 2.2764740786090663
+            },
+            "density": {
+              "min": 193.9244845069829,
+              "p05": 206.06343896872102,
+              "median": 252.2957203829682,
+              "p95": 309.9473953586849,
+              "max": 322.63748505539377
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.9310582466314,
+            "anisotropy": {
+              "min": 1.0121422951036245,
+              "p05": 1.0288935086197348,
+              "median": 1.167558902838686,
+              "p95": 1.5098937639794956,
+              "max": 1.6680765813104794
+            },
+            "density": {
+              "min": 224.19581141800472,
+              "p05": 233.06682809235315,
+              "median": 261.81084307106084,
+              "p95": 271.62607230235943,
+              "max": 282.61830254834337
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0099456916850964,
+              2.187428808026638
+            ],
+            "candidate": [
+              1.3897691514071422,
+              1.6584756930435844
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.6686368345363053,
+            0.7581849918762649
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 5,
+            "ratio": 0.7581849918762649,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.64233555207414,
+              "anisotropy": {
+                "min": 1.079575803502024,
+                "p05": 1.203750378310856,
+                "median": 1.5665137682387988,
+                "p95": 2.187428808026638,
+                "max": 28.27234907197363
+              },
+              "density": {
+                "min": 209.29123861097034,
+                "p05": 226.2812908771963,
+                "median": 268.5325097881726,
+                "p95": 316.3665002427037,
+                "max": 1333.7506069381611
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.6423437954092,
+              "anisotropy": {
+                "min": 1.003939144635851,
+                "p05": 1.0219912316183064,
+                "median": 1.1124763643997333,
+                "p95": 1.6584756930435844,
+                "max": 29.703468521265233
+              },
+              "density": {
+                "min": 231.3764004643707,
+                "p05": 239.20627970733983,
+                "median": 262.60607967607183,
+                "p95": 326.1765453382375,
+                "max": 1508.5306980269963
+              }
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.5917406494222304,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 332.7930617490582,
+            "anisotropy": {
+              "min": 1.1329579286638864,
+              "p05": 1.1966237010271945,
+              "median": 1.6769843186319955,
+              "p95": 2.173678502921827,
+              "max": 157.5282089352885
+            },
+            "density": {
+              "min": 265.4569318207676,
+              "p05": 266.08673025570164,
+              "median": 291.45653627213244,
+              "p95": 327.212825727116,
+              "max": 3363.096488844881
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.5917406494222304,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 332.79307170153777,
+            "anisotropy": {
+              "min": 1.0105747743829654,
+              "p05": 1.0221903812871103,
+              "median": 1.0687162186619947,
+              "p95": 1.1089159642991313,
+              "max": 168.94848720491575
+            },
+            "density": {
+              "min": 268.9867652376935,
+              "p05": 270.4152963160004,
+              "median": 276.0908777842482,
+              "p95": 308.2776733539343,
+              "max": 3888.071010666056
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.021357882064013,
+              2.712816699467578
+            ],
+            "candidate": [
+              1.0830724120989288,
+              3.694311091270693
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.4975219187273033,
+            1.3617990083870188
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            80
+          ],
+          "framesWithWorseP95": 4,
+          "worstRatioFrame": {
+            "frame": 38,
+            "deathElapsed": 0.6440677966101694,
+            "ratio": 1.3617990083870188,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.4584091286440956,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 378.1057976030227,
+              "anisotropy": {
+                "min": 1.5047689015013879,
+                "p05": 1.5426913453700142,
+                "median": 1.7966362910754838,
+                "p95": 2.712816699467578,
+                "max": 283.867224515372
+              },
+              "density": {
+                "min": 273.0322085528197,
+                "p05": 273.05830709420263,
+                "median": 292.9982031464564,
+                "p95": 538.2651607473979,
+                "max": 4763.332167652596
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.4584091286440956,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 378.1058089106209,
+              "anisotropy": {
+                "min": 1.0091788148860372,
+                "p05": 1.0216806004242456,
+                "median": 1.0627452830804145,
+                "p95": 3.694311091270693,
+                "max": 317.760586770688
+              },
+              "density": {
+                "min": 269.6055078053651,
+                "p05": 269.6289182817515,
+                "median": 275.9000426975461,
+                "p95": 564.2348623299955,
+                "max": 5387.536577055069
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "family": "traveler",
+      "frames": 240,
+      "positionsIndicesNormalsBonesAndContactsExactlyEqual": true,
+      "uvUnchangedDuringAnimation": true,
+      "metrics": [
+        {
+          "state": "idle",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.7155952443203,
+            "anisotropy": {
+              "min": 1.0496944883994077,
+              "p05": 1.1253976224093674,
+              "median": 1.4208357988862381,
+              "p95": 2.018474129802043,
+              "max": 2.2140994508167657
+            },
+            "density": {
+              "min": 222.05093699990852,
+              "p05": 229.01606151401282,
+              "median": 257.7681695506978,
+              "p95": 310.02071656177503,
+              "max": 322.3567259580438
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.71560313097535,
+            "anisotropy": {
+              "min": 1.0059537573981718,
+              "p05": 1.0216112309659287,
+              "median": 1.0905733740964667,
+              "p95": 1.1665441023081031,
+              "max": 1.2081561483479306
+            },
+            "density": {
+              "min": 256.71275488820424,
+              "p05": 259.0272244933211,
+              "median": 264.02068884454786,
+              "p95": 267.6210025294289,
+              "max": 270.5388789569442
+            }
+          }
+        },
+        {
+          "state": "idle",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.015307400039604,
+              2.024112143486506
+            ],
+            "candidate": [
+              1.155749553336297,
+              1.1888363469389596
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5710943374147377,
+            0.5891435533633944
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 59,
+            "ratio": 0.5891435533633944,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.5381343719332,
+              "anisotropy": {
+                "min": 1.034941433179267,
+                "p05": 1.121329099444775,
+                "median": 1.4142063692126154,
+                "p95": 2.0179060606739148,
+                "max": 2.1953897068000203
+              },
+              "density": {
+                "min": 222.32818441898542,
+                "p05": 229.83815558290755,
+                "median": 256.40982583635434,
+                "p95": 310.1599362501001,
+                "max": 322.3009752822631
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.53814225328114,
+              "anisotropy": {
+                "min": 1.005095609229815,
+                "p05": 1.0156816163786992,
+                "median": 1.0874116897326336,
+                "p95": 1.1888363469389596,
+                "max": 1.20515336598872
+              },
+              "density": {
+                "min": 256.0766204376732,
+                "p05": 257.9081625687481,
+                "median": 263.6644372182287,
+                "p95": 268.76422034330517,
+                "max": 270.4602118999235
+              }
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.82558183990204,
+            "anisotropy": {
+              "min": 1.0323802361765237,
+              "p05": 1.088187119452596,
+              "median": 1.393114470111452,
+              "p95": 2.042916621150435,
+              "max": 2.2075531147271876
+            },
+            "density": {
+              "min": 209.8160728478141,
+              "p05": 223.61235781793414,
+              "median": 257.49569707554934,
+              "p95": 308.2807003166076,
+              "max": 321.59551161109954
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.8255896999404,
+            "anisotropy": {
+              "min": 1.0093124432504932,
+              "p05": 1.0284383861258755,
+              "median": 1.1032498812931344,
+              "p95": 1.2246261237280613,
+              "max": 1.3067721215546457
+            },
+            "density": {
+              "min": 242.56803376457913,
+              "p05": 252.32869838222723,
+              "median": 262.5397139054948,
+              "p95": 275.1206027745522,
+              "max": 278.99698844145126
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0171726772885648,
+              2.0484281359975465
+            ],
+            "candidate": [
+              1.2209274979877716,
+              1.2979519964477089
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5982623391904315,
+            0.6427792038635748
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "ratio": 0.6427792038635748,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520224753185,
+              "anisotropy": {
+                "min": 1.0404671311213447,
+                "p05": 1.0985614177581302,
+                "median": 1.42810191599846,
+                "p95": 2.0192812534165148,
+                "max": 2.1908864386968374
+              },
+              "density": {
+                "min": 213.47974879062994,
+                "p05": 219.30220413375557,
+                "median": 256.0420692399703,
+                "p95": 310.19118052776486,
+                "max": 322.32095091984127
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520302942793,
+              "anisotropy": {
+                "min": 1.010565620922819,
+                "p05": 1.0244832650917517,
+                "median": 1.1248061780699532,
+                "p95": 1.2979519964477089,
+                "max": 1.350212169463762
+              },
+              "density": {
+                "min": 242.4195352859271,
+                "p05": 246.8036237048947,
+                "median": 262.48608874591736,
+                "p95": 275.813249379749,
+                "max": 280.47657118726863
+              }
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.93105053296847,
+            "anisotropy": {
+              "min": 1.0278809527532051,
+              "p05": 1.1760932295562823,
+              "median": 1.5186707698481843,
+              "p95": 2.0284519987202043,
+              "max": 2.2764740786090663
+            },
+            "density": {
+              "min": 193.9244845069829,
+              "p05": 206.06343896872102,
+              "median": 252.2957203829682,
+              "p95": 309.9473953586849,
+              "max": 322.63748505539377
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.9310582466314,
+            "anisotropy": {
+              "min": 1.0121422951036245,
+              "p05": 1.0288935086197348,
+              "median": 1.167558902838686,
+              "p95": 1.5098937639794956,
+              "max": 1.6680765813104794
+            },
+            "density": {
+              "min": 224.19581141800472,
+              "p05": 233.06682809235315,
+              "median": 261.81084307106084,
+              "p95": 271.62607230235943,
+              "max": 282.61830254834337
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0099456916850964,
+              2.187428808026638
+            ],
+            "candidate": [
+              1.3897691514071422,
+              1.6584756930435844
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.6686368345363053,
+            0.7581849918762649
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 5,
+            "ratio": 0.7581849918762649,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.64233555207414,
+              "anisotropy": {
+                "min": 1.079575803502024,
+                "p05": 1.203750378310856,
+                "median": 1.5665137682387988,
+                "p95": 2.187428808026638,
+                "max": 28.27234907197363
+              },
+              "density": {
+                "min": 209.29123861097034,
+                "p05": 226.2812908771963,
+                "median": 268.5325097881726,
+                "p95": 316.3665002427037,
+                "max": 1333.7506069381611
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.6423437954092,
+              "anisotropy": {
+                "min": 1.003939144635851,
+                "p05": 1.0219912316183064,
+                "median": 1.1124763643997333,
+                "p95": 1.6584756930435844,
+                "max": 29.703468521265233
+              },
+              "density": {
+                "min": 231.3764004643707,
+                "p05": 239.20627970733983,
+                "median": 262.60607967607183,
+                "p95": 326.1765453382375,
+                "max": 1508.5306980269963
+              }
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.6712231828130475,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 312.46867901968676,
+            "anisotropy": {
+              "min": 1.11565562884744,
+              "p05": 1.1748492597166922,
+              "median": 1.6401892495119452,
+              "p95": 2.1666069921176696,
+              "max": 157.5282089350161
+            },
+            "density": {
+              "min": 259.93103732227405,
+              "p05": 260.45272977754126,
+              "median": 284.2338773938301,
+              "p95": 327.0665286310977,
+              "max": 3363.096488841973
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.6712231828130475,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 312.46868836434714,
+            "anisotropy": {
+              "min": 1.010574774382974,
+              "p05": 1.0245116087007993,
+              "median": 1.0709134545443015,
+              "p95": 1.10411456713689,
+              "max": 168.94848720462355
+            },
+            "density": {
+              "min": 268.9867652376935,
+              "p05": 270.4561632961711,
+              "median": 277.2020509333751,
+              "p95": 305.55392433428983,
+              "max": 3888.071010662694
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.021357882064013,
+              2.3105716604175806
+            ],
+            "candidate": [
+              1.0909450650705905,
+              2.8242131347372674
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.49798896639534856,
+            1.243401197908529
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            64
+          ],
+          "framesWithWorseP95": 2,
+          "worstRatioFrame": {
+            "frame": 40,
+            "deathElapsed": 0.6779661016949152,
+            "ratio": 1.243401197908529,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.537382988221694,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 349.2191157381018,
+              "anisotropy": {
+                "min": 1.4427540007503252,
+                "p05": 1.4851974721531527,
+                "median": 1.7420582118917087,
+                "p95": 2.1984374990055886,
+                "max": 395.04234369478996
+              },
+              "density": {
+                "min": 267.3694610202904,
+                "p05": 267.386893978323,
+                "median": 293.04506345038027,
+                "p95": 456.1291193440487,
+                "max": 5844.408852480542
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.537382988221694,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 349.21912618181744,
+              "anisotropy": {
+                "min": 1.0090357878515692,
+                "p05": 1.0221665067945047,
+                "median": 1.0698551645398044,
+                "p95": 2.73353981979058,
+                "max": 463.0990000565699
+              },
+              "density": {
+                "min": 269.65009696916513,
+                "p05": 271.2238195321548,
+                "median": 277.465097489863,
+                "p95": 490.2664922284761,
+                "max": 6461.131448059562
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "family": "ranger",
+      "frames": 240,
+      "positionsIndicesNormalsBonesAndContactsExactlyEqual": true,
+      "uvUnchangedDuringAnimation": true,
+      "metrics": [
+        {
+          "state": "idle",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.7155952443203,
+            "anisotropy": {
+              "min": 1.0496944883994077,
+              "p05": 1.1253976224093674,
+              "median": 1.4208357988862381,
+              "p95": 2.018474129802043,
+              "max": 2.2140994508167657
+            },
+            "density": {
+              "min": 222.05093699990852,
+              "p05": 229.01606151401282,
+              "median": 257.7681695506978,
+              "p95": 310.02071656177503,
+              "max": 322.3567259580438
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.942341470883342,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 263.71560313097535,
+            "anisotropy": {
+              "min": 1.0059537573981718,
+              "p05": 1.0216112309659287,
+              "median": 1.0905733740964667,
+              "p95": 1.1665441023081031,
+              "max": 1.2081561483479306
+            },
+            "density": {
+              "min": 256.71275488820424,
+              "p05": 259.0272244933211,
+              "median": 264.02068884454786,
+              "p95": 267.6210025294289,
+              "max": 270.5388789569442
+            }
+          }
+        },
+        {
+          "state": "idle",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.015307400039604,
+              2.024112143486506
+            ],
+            "candidate": [
+              1.155749553336297,
+              1.1888363469389596
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5710943374147377,
+            0.5891435533633944
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 59,
+            "ratio": 0.5891435533633944,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.5381343719332,
+              "anisotropy": {
+                "min": 1.034941433179267,
+                "p05": 1.121329099444775,
+                "median": 1.4142063692126154,
+                "p95": 2.0179060606739148,
+                "max": 2.1953897068000203
+              },
+              "density": {
+                "min": 222.32818441898542,
+                "p05": 229.83815558290755,
+                "median": 256.40982583635434,
+                "p95": 310.1599362501001,
+                "max": 322.3009752822631
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9436110028545991,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 263.53814225328114,
+              "anisotropy": {
+                "min": 1.005095609229815,
+                "p05": 1.0156816163786992,
+                "median": 1.0874116897326336,
+                "p95": 1.1888363469389596,
+                "max": 1.20515336598872
+              },
+              "density": {
+                "min": 256.0766204376732,
+                "p05": 257.9081625687481,
+                "median": 263.6644372182287,
+                "p95": 268.76422034330517,
+                "max": 270.4602118999235
+              }
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.82558183990204,
+            "anisotropy": {
+              "min": 1.0323802361765237,
+              "p05": 1.088187119452596,
+              "median": 1.393114470111452,
+              "p95": 2.042916621150435,
+              "max": 2.2075531147271876
+            },
+            "density": {
+              "min": 209.8160728478141,
+              "p05": 223.61235781793414,
+              "median": 257.49569707554934,
+              "p95": 308.2807003166076,
+              "max": 321.59551161109954
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9487344299338174,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 262.8255896999404,
+            "anisotropy": {
+              "min": 1.0093124432504932,
+              "p05": 1.0284383861258755,
+              "median": 1.1032498812931344,
+              "p95": 1.2246261237280613,
+              "max": 1.3067721215546457
+            },
+            "density": {
+              "min": 242.56803376457913,
+              "p05": 252.32869838222723,
+              "median": 262.5397139054948,
+              "p95": 275.1206027745522,
+              "max": 278.99698844145126
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0171726772885648,
+              2.0484281359975465
+            ],
+            "candidate": [
+              1.2209274979877716,
+              1.2979519964477089
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.5982623391904315,
+            0.6427792038635748
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "ratio": 0.6427792038635748,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520224753185,
+              "anisotropy": {
+                "min": 1.0404671311213447,
+                "p05": 1.0985614177581302,
+                "median": 1.42810191599846,
+                "p95": 2.0192812534165148,
+                "max": 2.1908864386968374
+              },
+              "density": {
+                "min": 213.47974879062994,
+                "p05": 219.30220413375557,
+                "median": 256.0420692399703,
+                "p95": 310.19118052776486,
+                "max": 322.32095091984127
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.9587291213662864,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 261.4520302942793,
+              "anisotropy": {
+                "min": 1.010565620922819,
+                "p05": 1.0244832650917517,
+                "median": 1.1248061780699532,
+                "p95": 1.2979519964477089,
+                "max": 1.350212169463762
+              },
+              "density": {
+                "min": 242.4195352859271,
+                "p05": 246.8036237048947,
+                "median": 262.48608874591736,
+                "p95": 275.813249379749,
+                "max": 280.47657118726863
+              }
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.93105053296847,
+            "anisotropy": {
+              "min": 1.0278809527532051,
+              "p05": 1.1760932295562823,
+              "median": 1.5186707698481843,
+              "p95": 2.0284519987202043,
+              "max": 2.2764740786090663
+            },
+            "density": {
+              "min": 193.9244845069829,
+              "p05": 206.06343896872102,
+              "median": 252.2957203829682,
+              "p95": 309.9473953586849,
+              "max": 322.63748505539377
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.9850826650148967,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 257.9310582466314,
+            "anisotropy": {
+              "min": 1.0121422951036245,
+              "p05": 1.0288935086197348,
+              "median": 1.167558902838686,
+              "p95": 1.5098937639794956,
+              "max": 1.6680765813104794
+            },
+            "density": {
+              "min": 224.19581141800472,
+              "p05": 233.06682809235315,
+              "median": 261.81084307106084,
+              "p95": 271.62607230235943,
+              "max": 282.61830254834337
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.0099456916850964,
+              2.187428808026638
+            ],
+            "candidate": [
+              1.3897691514071422,
+              1.6584756930435844
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.6686368345363053,
+            0.7581849918762649
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 5,
+            "ratio": 0.7581849918762649,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.64233555207414,
+              "anisotropy": {
+                "min": 1.079575803502024,
+                "p05": 1.203750378310856,
+                "median": 1.5665137682387988,
+                "p95": 2.187428808026638,
+                "max": 28.27234907197363
+              },
+              "density": {
+                "min": 209.29123861097034,
+                "p05": 226.2812908771963,
+                "median": 268.5325097881726,
+                "p95": 316.3665002427037,
+                "max": 1333.7506069381611
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.8625575649424735,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 275.6423437954092,
+              "anisotropy": {
+                "min": 1.003939144635851,
+                "p05": 1.0219912316183064,
+                "median": 1.1124763643997333,
+                "p95": 1.6584756930435844,
+                "max": 29.703468521265233
+              },
+              "density": {
+                "min": 231.3764004643707,
+                "p05": 239.20627970733983,
+                "median": 262.60607967607183,
+                "p95": 326.1765453382375,
+                "max": 1508.5306980269963
+              }
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.6712231828130475,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 312.46867901968676,
+            "anisotropy": {
+              "min": 1.11565562884744,
+              "p05": 1.1748492597166922,
+              "median": 1.6401892495119452,
+              "p95": 2.1666069921176696,
+              "max": 157.5282089350161
+            },
+            "density": {
+              "min": 259.93103732227405,
+              "p05": 260.45272977754126,
+              "median": 284.2338773938301,
+              "p95": 327.0665286310977,
+              "max": 3363.096488841973
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 0.6712231828130475,
+            "absoluteUVArea": 1.0000000598118222,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 312.46868836434714,
+            "anisotropy": {
+              "min": 1.010574774382974,
+              "p05": 1.0245116087007993,
+              "median": 1.0709134545443015,
+              "p95": 1.10411456713689,
+              "max": 168.94848720462355
+            },
+            "density": {
+              "min": 268.9867652376935,
+              "p05": 270.4561632961711,
+              "median": 277.2020509333751,
+              "p95": 305.55392433428983,
+              "max": 3888.071010662694
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.021357882064013,
+              2.3105716604175806
+            ],
+            "candidate": [
+              1.0909450650705905,
+              2.8242131347372674
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            0.49798896639534856,
+            1.243401197908529
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            64
+          ],
+          "framesWithWorseP95": 2,
+          "worstRatioFrame": {
+            "frame": 40,
+            "deathElapsed": 0.6779661016949152,
+            "ratio": 1.243401197908529,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.537382988221694,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 349.2191157381018,
+              "anisotropy": {
+                "min": 1.4427540007503252,
+                "p05": 1.4851974721531527,
+                "median": 1.7420582118917087,
+                "p95": 2.1984374990055886,
+                "max": 395.04234369478996
+              },
+              "density": {
+                "min": 267.3694610202904,
+                "p05": 267.386893978323,
+                "median": 293.04506345038027,
+                "p95": 456.1291193440487,
+                "max": 5844.408852480542
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 0.537382988221694,
+              "absoluteUVArea": 1.0000000598118222,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 349.21912618181744,
+              "anisotropy": {
+                "min": 1.0090357878515692,
+                "p05": 1.0221665067945047,
+                "median": 1.0698551645398044,
+                "p95": 2.73353981979058,
+                "max": 463.0990000565699
+              },
+              "density": {
+                "min": 269.65009696916513,
+                "p05": 271.2238195321548,
+                "median": 277.465097489863,
+                "p95": 490.2664922284761,
+                "max": 6461.131448059562
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "family": "boss",
+      "frames": 240,
+      "positionsIndicesNormalsBonesAndContactsExactlyEqual": true,
+      "uvUnchangedDuringAnimation": true,
+      "metrics": [
+        {
+          "state": "idle",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 5.865532932466107,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 105.70273548024848,
+            "anisotropy": {
+              "min": 1.3681256123056862,
+              "p05": 1.4536476228121091,
+              "median": 1.868549828697387,
+              "p95": 2.730221817826052,
+              "max": 3.455665655357521
+            },
+            "density": {
+              "min": 86.5022757178153,
+              "p05": 89.35217531731645,
+              "median": 100.82514141280257,
+              "p95": 123.27250263039276,
+              "max": 196.75912846269003
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 5.865532932466107,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 105.70273548024848,
+            "anisotropy": {
+              "min": 1.3681256123056862,
+              "p05": 1.4536476228121091,
+              "median": 1.868549828697387,
+              "p95": 2.730221817826052,
+              "max": 3.455665655357521
+            },
+            "density": {
+              "min": 86.5022757178153,
+              "p05": 89.35217531731645,
+              "median": 100.82514141280257,
+              "p95": 123.27250263039276,
+              "max": 196.75912846269003
+            }
+          }
+        },
+        {
+          "state": "idle",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.605947680329784,
+              2.7344611823950307
+            ],
+            "candidate": [
+              2.605947680329784,
+              2.7344611823950307
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            1,
+            1
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "ratio": 1,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 5.846058306365139,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 105.87864971474154,
+              "anisotropy": {
+                "min": 1.4181528145148776,
+                "p05": 1.4873191097951701,
+                "median": 1.869897031029344,
+                "p95": 2.625640524473666,
+                "max": 3.518513720645992
+              },
+              "density": {
+                "min": 87.27253094999897,
+                "p05": 90.13490342383788,
+                "median": 101.13048089708052,
+                "p95": 123.23098462962727,
+                "max": 196.7779437636262
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 5.846058306365139,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 105.87864971474154,
+              "anisotropy": {
+                "min": 1.4181528145148776,
+                "p05": 1.4873191097951701,
+                "median": 1.869897031029344,
+                "p95": 2.625640524473666,
+                "max": 3.518513720645992
+              },
+              "density": {
+                "min": 87.27253094999897,
+                "p05": 90.13490342383788,
+                "median": 101.13048089708052,
+                "p95": 123.23098462962727,
+                "max": 196.7779437636262
+              }
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 5.887985603455942,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 105.5010047218238,
+            "anisotropy": {
+              "min": 1.3192986430054994,
+              "p05": 1.4608493237917903,
+              "median": 1.8745794967000833,
+              "p95": 2.6422734665060728,
+              "max": 10.231755391624526
+            },
+            "density": {
+              "min": 82.21361031934433,
+              "p05": 86.04179455282636,
+              "median": 101.24687484203665,
+              "p95": 122.52136543111156,
+              "max": 357.7044327749868
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 5.887985603455942,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 105.5010047218238,
+            "anisotropy": {
+              "min": 1.3192986430054994,
+              "p05": 1.4608493237917903,
+              "median": 1.8745794967000833,
+              "p95": 2.6422734665060728,
+              "max": 10.231755391624526
+            },
+            "density": {
+              "min": 82.21361031934433,
+              "p05": 86.04179455282636,
+              "median": 101.24687484203665,
+              "p95": 122.52136543111156,
+              "max": 357.7044327749868
+            }
+          }
+        },
+        {
+          "state": "walk",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.590190319500365,
+              2.7584507439139925
+            ],
+            "candidate": [
+              2.590190319500365,
+              2.7584507439139925
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            1,
+            1
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "ratio": 1,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 5.978461773510306,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 104.69965170778482,
+              "anisotropy": {
+                "min": 1.256497076481718,
+                "p05": 1.3947614748696044,
+                "median": 1.8731241615595176,
+                "p95": 2.724372203836575,
+                "max": 3.492319717150559
+              },
+              "density": {
+                "min": 83.13677076364628,
+                "p05": 88.40772993265257,
+                "median": 100.51856240797392,
+                "p95": 123.54383017238993,
+                "max": 195.32247803569132
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 5.978461773510306,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 104.69965170778482,
+              "anisotropy": {
+                "min": 1.256497076481718,
+                "p05": 1.3947614748696044,
+                "median": 1.8731241615595176,
+                "p95": 2.724372203836575,
+                "max": 3.492319717150559
+              },
+              "density": {
+                "min": 83.13677076364628,
+                "p05": 88.40772993265257,
+                "median": 100.51856240797392,
+                "p95": 123.54383017238993,
+                "max": 195.32247803569132
+              }
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 6.166420488879815,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 103.09162784752904,
+            "anisotropy": {
+              "min": 1.2469118285463021,
+              "p05": 1.411604756644873,
+              "median": 1.9625119851947763,
+              "p95": 2.635109421462727,
+              "max": 6.775931186823818
+            },
+            "density": {
+              "min": 77.36998512779888,
+              "p05": 80.56930460310228,
+              "median": 98.87612080769824,
+              "p95": 122.76832074904951,
+              "max": 266.9189057511387
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 6.166420488879815,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 103.09162784752904,
+            "anisotropy": {
+              "min": 1.2469118285463021,
+              "p05": 1.411604756644873,
+              "median": 1.9625119851947763,
+              "p95": 2.635109421462727,
+              "max": 6.775931186823818
+            },
+            "density": {
+              "min": 77.36998512779888,
+              "p05": 80.56930460310228,
+              "median": 98.87612080769824,
+              "p95": 122.76832074904951,
+              "max": 266.9189057511387
+            }
+          }
+        },
+        {
+          "state": "run",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.579558454700149,
+              2.699944711260961
+            ],
+            "candidate": [
+              2.579558454700149,
+              2.699944711260961
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            1,
+            1
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            0
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "ratio": 1,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 6.200964229767338,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 102.80408031720742,
+              "anisotropy": {
+                "min": 1.0921347516219093,
+                "p05": 1.4899736137258337,
+                "median": 1.958041810913981,
+                "p95": 2.6592245406580677,
+                "max": 4.4182692200007505
+              },
+              "density": {
+                "min": 75.1308783720347,
+                "p05": 80.67224776075342,
+                "median": 100.4829018608843,
+                "p95": 121.8374443283294,
+                "max": 193.00382911860754
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 6.200964229767338,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 102.80408031720742,
+              "anisotropy": {
+                "min": 1.0921347516219093,
+                "p05": 1.4899736137258337,
+                "median": 1.958041810913981,
+                "p95": 2.6592245406580677,
+                "max": 4.4182692200007505
+              },
+              "density": {
+                "min": 75.1308783720347,
+                "p05": 80.67224776075342,
+                "median": 100.4829018608843,
+                "p95": 121.8374443283294,
+                "max": 193.00382911860754
+              }
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frame": 30,
+          "baseline": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 3.0309829082114894,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 147.04430926721923,
+            "anisotropy": {
+              "min": 1.6481431003501648,
+              "p05": 1.6844762433597358,
+              "median": 2.2582504736200204,
+              "p95": 2.822700312891678,
+              "max": 418.5371097709103
+            },
+            "density": {
+              "min": 106.42006851711024,
+              "p05": 106.559936006448,
+              "median": 114.79486745238884,
+              "p95": 125.46403505819518,
+              "max": 2675.4691331719464
+            }
+          },
+          "candidate": {
+            "vertices": 117,
+            "triangles": 192,
+            "areaM2": 3.0309829082114894,
+            "absoluteUVArea": 1,
+            "uvSigns": {
+              "positive": 0,
+              "negative": 192,
+              "zero": 0
+            },
+            "zeroGeometryTrianglesExcludedFromJacobian": 0,
+            "equivalentTexelsPerMetre": 147.04430926721923,
+            "anisotropy": {
+              "min": 1.6481431003501648,
+              "p05": 1.6844762433597358,
+              "median": 2.2582504736200204,
+              "p95": 2.822700312891678,
+              "max": 418.5371097709103
+            },
+            "density": {
+              "min": 106.42006851711024,
+              "p05": 106.559936006448,
+              "median": 114.79486745238884,
+              "p95": 125.46403505819518,
+              "max": 2675.4691331719464
+            }
+          }
+        },
+        {
+          "state": "death",
+          "frames": 60,
+          "p95Range": {
+            "baseline": [
+              2.5914083345934564,
+              3.014961583358825
+            ],
+            "candidate": [
+              2.5914083345934564,
+              3.014961583358825
+            ]
+          },
+          "candidateBaselineP95RatioRange": [
+            1,
+            1
+          ],
+          "degenerateGeometryTrianglesRange": [
+            0,
+            96
+          ],
+          "framesWithWorseP95": 0,
+          "worstRatioFrame": {
+            "frame": 0,
+            "deathElapsed": 0,
+            "ratio": 1,
+            "baseline": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 5.790577275418381,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 106.38466601268867,
+              "anisotropy": {
+                "min": 1.384004116491695,
+                "p05": 1.4839472093561241,
+                "median": 1.8441917897592173,
+                "p95": 2.5914083345934564,
+                "max": 7.0712004636036845
+              },
+              "density": {
+                "min": 87.88872316721246,
+                "p05": 90.43898548351385,
+                "median": 100.66041993176543,
+                "p95": 123.01316292811173,
+                "max": 267.5250229651392
+              }
+            },
+            "candidate": {
+              "vertices": 117,
+              "triangles": 192,
+              "areaM2": 5.790577275418381,
+              "absoluteUVArea": 1,
+              "uvSigns": {
+                "positive": 0,
+                "negative": 192,
+                "zero": 0
+              },
+              "zeroGeometryTrianglesExcludedFromJacobian": 0,
+              "equivalentTexelsPerMetre": 106.38466601268867,
+              "anisotropy": {
+                "min": 1.384004116491695,
+                "p05": 1.4839472093561241,
+                "median": 1.8441917897592173,
+                "p95": 2.5914083345934564,
+                "max": 7.0712004636036845
+              },
+              "density": {
+                "min": 87.88872316721246,
+                "p05": 90.43898548351385,
+                "median": 100.66041993176543,
+                "p95": 123.01316292811173,
+                "max": 267.5250229651392
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    "Only ordinary cape UV differs across all 14 runtime families; all other mesh attributes, indices, transforms, visibility and material/texture parameters equal exact base.",
+    "Boss long cape including UV remains byte-identical.",
+    "Every family stays below 8000 triangles and at most 14 draws with one skin palette.",
+    "Every cloned cape has independent geometry and identical UVs.",
+    "6 normal-cape families + boss, 240 frames each: cape positions/index/normals, all bone transforms, contacts and plant records exactly equal baseline.",
+    "All cape UV signs remain uniformly negative; none zero.",
+    "Total absolute UV area and area-equivalent texel density retained within 1e-6."
+  ],
+  "finishedAtUTC": "2026-09-16T04:54:33.751Z",
+  "scriptSHA256": "161f982cb76d8e81b6ca2afd2700a78b7874cb3eb209e5b629bf591cbf7d0ef5",
+  "limitations": [
+    "Existing death motion flattens and floor-clamps the cape; zero-area geometric triangles are counted and omitted only from the undefined tangent Jacobian, equally in base and candidate. Total UV area includes their UV area.",
+    "Ordinary cape P95 is lower in all 60 sampled frames each of idle/walk/run. Some transient death frames have worse anisotropy with the new fixed UV chart despite identical geometry and no UV sign changes; this is not an all-state stretch improvement.",
+    "All 14 default families were independently checked here; four themed variants are covered by the author tests, not repeated in this independent audit."
+  ]
+}

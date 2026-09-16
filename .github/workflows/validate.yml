@@ -49,6 +49,8 @@ jobs:
       - run: npm test
       - name: Verify bow grips, body clearance and saved shot poses
         run: node scripts/verify-archery-contact.mjs artifacts/archery-contact-report.json
+      - name: Verify actual conversation routes and native speaker framing
+        run: node scripts/verify-dialogue-framing.mjs artifacts/dialogue-framing-report.json
       - name: Verify terrain contact, shallow stream and stable shadow geometry
         run: node scripts/verify-world-surfaces.mjs
       - name: Verify architecture contact and shared vertical collision bounds

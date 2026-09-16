@@ -1,0 +1,166 @@
+{
+  "boundary": "Final NPC re-LOD, host Node actual Three.js skin/ray and raw topology; no render, GPU or visual identity acceptance.",
+  "hashes": {
+    "src/assets/characters/detailed-geometry.js": "0035d3c03d228fcfc94d6fc8d11c14b12fceb197da24c035ffa9ea41e6827e0e",
+    "src/assets/characters/identity-head-data.js": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe",
+    "src/assets/characters/identity-head-provenance.json": "1a9719383cef9c042553294c9c5b1d82f5ee3103aeab3bf2cae0636faa5ff1f5",
+    "scripts/characters/generate-identity-head.py": "b939ffa0d10237353722e094fb3400100d98dbf3680c026f28509802bd4f9d10"
+  },
+  "topology": {
+    "triangles": 1646,
+    "renderVertices": 1062,
+    "weldedVertices": 825,
+    "euler": 2,
+    "boundaryEdges": 0,
+    "nonManifold": 0,
+    "inconsistentEdgeOrientation": 0,
+    "maxSeamPosition": 0,
+    "maxSeamNormal": 0,
+    "capTriangles": 46,
+    "minTriangleAreaM2": 2.067755615050758e-07,
+    "volumeM3": 0.009836055092999861,
+    "backwardMeanNormals": [
+      {
+        "triangle": 1539,
+        "ids": [
+          12034,
+          12058,
+          12305
+        ],
+        "dot": -9.003239073411353e-07
+      }
+    ]
+  },
+  "runtime": {
+    "positionFloatErrorM": 6.048601772100196e-08,
+    "uvFloatError": 2.9766082709770103e-08,
+    "weightErrors": 0,
+    "triangles": 6718,
+    "draws": 12,
+    "palettes": 1,
+    "cloneGeometry": true,
+    "cloneSeparateSkeleton": true,
+    "faceMap": null,
+    "headParent": "neck",
+    "headLocal": [
+      0,
+      0.16,
+      0
+    ]
+  },
+  "eyes": [
+    {
+      "closure": 0,
+      "eye": 10,
+      "cloth": 0,
+      "centres": [
+        {
+          "side": -1,
+          "material": "Q eye",
+          "color": "372f25"
+        },
+        {
+          "side": 1,
+          "material": "Q eye",
+          "color": "372f25"
+        }
+      ]
+    },
+    {
+      "closure": 0.25,
+      "eye": 8,
+      "cloth": 0,
+      "centres": [
+        {
+          "side": -1,
+          "material": "Q eye",
+          "color": "372f25"
+        },
+        {
+          "side": 1,
+          "material": "Q eye",
+          "color": "372f25"
+        }
+      ]
+    },
+    {
+      "closure": 0.5,
+      "eye": 2,
+      "cloth": 0,
+      "centres": [
+        {
+          "side": -1,
+          "material": "Q skin",
+          "color": "ab8770"
+        },
+        {
+          "side": 1,
+          "material": "Q skin",
+          "color": "ab8770"
+        }
+      ]
+    },
+    {
+      "closure": 0.75,
+      "eye": 2,
+      "cloth": 0,
+      "centres": [
+        {
+          "side": -1,
+          "material": "Q skin",
+          "color": "ab8770"
+        },
+        {
+          "side": 1,
+          "material": "Q skin",
+          "color": "ab8770"
+        }
+      ]
+    },
+    {
+      "closure": 1,
+      "eye": 0,
+      "cloth": 0,
+      "centres": [
+        {
+          "side": -1,
+          "material": "Q skin",
+          "color": "ab8770"
+        },
+        {
+          "side": 1,
+          "material": "Q skin",
+          "color": "ab8770"
+        }
+      ]
+    }
+  ],
+  "neck": {
+    "rimRenderVertices": 46,
+    "maxNormalizedRadiusSquared": 0.6624512574302128
+  },
+  "testResult": {
+    "command": "node --test tests/face-identity.test.mjs tests/anatomical-head-uv.test.mjs tests/anatomical-head.test.mjs tests/skin-materials.test.mjs",
+    "pass": 15,
+    "fail": 0,
+    "durationMs": 8914.895707
+  },
+  "uvTestResult": {
+    "retainedAllOriginalSeamVertices": 187,
+    "sourceCornerCorrespondence": "pass",
+    "introducedUVOrientationReversals": 0,
+    "capUVNondegenerateTriangles": 46,
+    "overlapAreaIndependentlyRecomputed": false
+  },
+  "finalSourceUnchanged": true,
+  "generatorManifestMatches": true,
+  "sourceDistanceFromManifest": {
+    "max": 0.005740433286837678,
+    "p95": 0.0019397795067136057,
+    "mean": 0.0006071656619396192,
+    "samples": 4244,
+    "boundary": "Exact distances from all registered AND collar-fitted source vertices to LOD triangles. Registration/collar deformation of original MakeHuman is separate; not a continuous Hausdorff bound or perceptual proof."
+  },
+  "sourceDistanceIndependentRecomputation": false,
+  "acceptance": "Numerical source/UV/topology/runtime checkpoint only; no visual-identity or PS4 acceptance. Previously rejected same-LOD four-role candidate is separate."
+}

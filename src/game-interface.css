@@ -399,3 +399,39 @@ body > #fatal p { max-width: 46em; margin: 20px auto; font-size: .9375rem; line-
 @media (prefers-reduced-motion: reduce) {
   #hud *, #panel-backdrop *, body > #death-screen *, body > #fatal * { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Dialogue alone leaves the real upper scene clear. The full-screen modal still
+   owns input; only the opaque lower reading surface scrolls. */
+body > #panel-backdrop.dialogue {
+  align-items: end; background: transparent; backdrop-filter: none;
+  padding-top: 53dvh;
+}
+#panel-backdrop.dialogue #panel {
+  max-width: 1000px; max-height: calc(47dvh - var(--ui-panel-bottom));
+  padding: 12px 22px 10px; background: #111b20;
+  box-shadow: 0 6px 24px #0008; grid-template-rows: auto minmax(0,1fr);
+}
+#panel-backdrop.dialogue #panel-kicker { display: none; }
+#panel-backdrop.dialogue #panel-title {
+  grid-row: 1; font-size: 1.125rem; line-height: 1.5; margin: 0 0 8px;
+  align-self: center;
+}
+#panel-backdrop.dialogue #panel #close-panel { grid-row: 1; }
+#panel-backdrop.dialogue #panel-body { grid-row: 2; padding-top: 6px; }
+#panel-backdrop.dialogue #panel-body > :first-child { margin-top: 0; }
+#panel-backdrop.dialogue #panel .dialogue-speaker { margin: 0 0 6px; }
+#panel-backdrop.dialogue #panel .dialogue-text { margin: 0 0 12px; line-height: 1.75; }
+#panel-backdrop.dialogue #panel .panel-actions { margin-top: 12px; padding-top: 10px; }
+#panel-backdrop.dialogue #panel .gathering-cast { display: flex; flex-wrap: wrap; gap: 6px; }
+#panel-backdrop.dialogue #panel .gathering-person { padding: 4px 8px; }
+#panel-backdrop.dialogue #panel .gathering-person small { display: none; }
+@media (max-width: 700px) {
+  #panel-backdrop.dialogue #panel { padding: 10px 12px 8px; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  #panel-backdrop.dialogue #panel { padding: 6px 16px; }
+  #panel-backdrop.dialogue #panel-title { font-size: 1rem; margin-bottom: 4px; }
+  #panel-backdrop.dialogue #panel .dialogue-text { font-size: 1rem !important; line-height: 1.65; }
+}
+
+#panel-backdrop.dialogue #panel .gathering-context summary { min-height: 46px; padding: 12px 4px; touch-action: manipulation; color: #e6c695; }
