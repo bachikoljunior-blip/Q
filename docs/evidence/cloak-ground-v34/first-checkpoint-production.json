@@ -1,0 +1,67 @@
+{
+  "recordedAt": "2026-09-16T06:04:08.976Z",
+  "timings": [
+    {
+      "kind": "before",
+      "poses": 840,
+      "hostMs": 29.640145000000018
+    },
+    {
+      "kind": "after",
+      "poses": 840,
+      "hostMs": 151.01367399999998
+    },
+    {
+      "kind": "after",
+      "poses": 840,
+      "hostMs": 144.30044099999998
+    },
+    {
+      "kind": "before",
+      "poses": 840,
+      "hostMs": 22.04942899999992
+    }
+  ],
+  "entry": [
+    {
+      "role": "player",
+      "before": 0.01544207410258704,
+      "after": 0.03730853837461504
+    },
+    {
+      "role": "npc",
+      "before": 0.01544207410258704,
+      "after": 0.03730853837461504
+    },
+    {
+      "role": "sena",
+      "before": 0.01544207410258704,
+      "after": 0.03730853837461504
+    },
+    {
+      "role": "scout",
+      "before": 0.01544207410258704,
+      "after": 0.03730853837461504
+    },
+    {
+      "role": "traveler",
+      "before": 0.01544207410258704,
+      "after": 0.03730853837461504
+    },
+    {
+      "role": "ranger",
+      "before": 0.01544207410258704,
+      "after": 0.03730853837461504
+    },
+    {
+      "role": "boss",
+      "before": 0.03510349855534121,
+      "after": 0.09260631967264718
+    }
+  ],
+  "html": {
+    "bytes": 15499746,
+    "sha256": "e55561869ce82b5de71fb2b9333a1f2cfa289c762891d033f22fcd33edbfbc92"
+  },
+  "timingBoundary": "Same Node whole actor animate path, 840 death poses each batch, existing transform/normal/skin helper updates included, warmed one death pose. Host CPU wall time, no WebGL or device frame budget measurement. Entry uses 100 idle frames then canonical saved death phase zero; wind phase mismatch is recorded, not hidden."
+}

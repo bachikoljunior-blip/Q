@@ -1,0 +1,40 @@
+{
+  "base": "39e47a4fa204ea6576c685bf25569727e410cd01",
+  "reviewedAt": "2026-09-16T06:20:47.149171+00:00",
+  "actorSourceHash": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc",
+  "sourceFiles": {
+    "src/actor-models.js": {
+      "sha256": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc",
+      "bytes": 31704
+    },
+    "src/assets/characters/detailed-provenance.json": {
+      "sha256": "f4478455a6c5cf41ea3b24f942ccc8d9c52917098343720edb94e803dbfca54b",
+      "bytes": 2806
+    },
+    "src/scene.js": {
+      "sha256": "b50991698bdeb8511e37d49c24c4d352a06e99cf5390d4cd29228f1cf9924ac6",
+      "bytes": 30238
+    },
+    "src/character-motion.js": {
+      "sha256": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+      "bytes": 4931
+    },
+    "src/rigged-actor.js": {
+      "sha256": "a43871c112863d6193406b40700a2c2b44be00348f1253f57b5087b3eea3a2bd",
+      "bytes": 3227
+    }
+  },
+  "onlyRuntimeChange": "Inserted animateCape death branch; remainder of actor source byte exact to base. Other changed src file is provenance only.",
+  "nativeGeometryRunAt": "2026-09-16T06:17:24.422Z",
+  "bodyRunAt": "2026-09-16T06:17:25.738Z",
+  "nativeGeometryWallSeconds": 9.364814629,
+  "newlyWorsenedTerrainCases": 0,
+  "originalNecklinePenetrationCasesRetainedExact": 6,
+  "sampledTerrainCases": 108,
+  "increasedProperUpperBodyCrossingCases": 0,
+  "properUpperBodyCases": 20,
+  "liveSavedClockError": 0,
+  "savedHistoryError": 0,
+  "worldCovarianceMaxError": 1.591302455776226e-14,
+  "verdict": "No remaining required source correction within this bounded review. Actual rendering, perception, full cloth contact and device performance remain unverified."
+}

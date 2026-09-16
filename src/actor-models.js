@@ -296,6 +296,79 @@ function supportWeapon(actor,state,motion){
 function animateCape(actor,motion){
   if(!actor.cape)return;
   const pos=actor.cape.geometry.attributes.position,base=actor.cape.userData.base;
+  if(motion.state==='death'){
+    // Rebuild from the saved fall phase, then constrain the sheet in world space.
+    // The neckline follows the chest; free cloth keeps its original edge lengths.
+    let cloth=actor.cape.userData.contact;
+    if(!cloth){
+      const points=Array.from({length:pos.count},()=>new Vector3()),targets=points.map(()=>new Vector3()),links=[],seen=new Set(),indices=actor.cape.geometry.index.array;
+      for(let i=0;i<indices.length;i+=3)for(let j=0;j<3;j++){
+        const a=indices[i+j],b=indices[i+(j+1)%3],key=Math.min(a,b)*pos.count+Math.max(a,b);
+        if(!seen.has(key)){seen.add(key);links.push([a,b,Math.hypot(base[a*3]-base[b*3],base[a*3+1]-base[b*3+1],base[a*3+2]-base[b*3+2])]);}
+      }
+      const columns=points.filter((_,i)=>base[i*3+1]>.479).length;
+      cloth=actor.cape.userData.contact={points,targets,links,columns,inverse:new Matrix4(),scale:new Vector3(),origin:new Vector3(),forward:new Vector3(),delta:new Vector3()};
+    }
+    actor.cape.updateWorldMatrix(true,false);cloth.inverse.copy(actor.cape.matrixWorld).invert();actor.cape.getWorldScale(cloth.scale);actor.g.getWorldPosition(cloth.origin);
+    cloth.forward.set(0,0,1).transformDirection(actor.g.matrixWorld);
+    const fall=smooth(actor.deathAge/.8),time=clamp(actor.deathAge,0,.8),scale=cloth.scale.y,clearance=.012*scale;
+    for(let i=0;i<pos.count;i++){
+      const x=base[i*3],y=base[i*3+1],hem=clamp((.48-y)/1.3),point=cloth.points[i];
+      // Preserve the existing falling neckline's local depth. Pinning its rest
+      // depth instead would put it farther below rising terrain than the body.
+      point.set(x+Math.sin(time*2.1-y*2)*.016*hem*(1-fall),y,base[i*3+2]+Math.sin(time*3.4+x*5-y*4)*.022*hem*(1-fall)).applyMatrix4(actor.cape.matrixWorld);
+      point.y-=.35*scale*fall*hem*hem;cloth.targets[i].copy(point);
+      if(i<cloth.columns)point.set(x,y,mix(base[i*3+2],-.115,fall)).applyMatrix4(actor.cape.matrixWorld);
+    }
+    // An arc-length bend turns each meridian onto the support plane. Its
+    // tangent changes continuously at contact, instead of reversing a clamped
+    // segment when the falling chest passes through a vertical orientation.
+    for(let column=0;column<cloth.columns;column++){
+      const root=cloth.points[column],direction=cloth.delta.subVectors(cloth.targets[column+cloth.columns],cloth.targets[column]);
+      const angle=clamp(Math.atan2(-direction.y,direction.dot(cloth.forward)),.18,Math.PI*.65);
+      let travel=0;
+      for(let i=column+cloth.columns;i<pos.count;i+=cloth.columns){
+        const previous=i-cloth.columns,point=cloth.points[i];
+        travel+=Math.hypot(base[i*3+1]-base[previous*3+1],base[i*3+2]-base[previous*3+2])*scale;
+        const sample=actor.groundHeight?.(point.x,point.z),floor=(Number.isFinite(sample)?sample:cloth.origin.y)+clearance;
+        const height=Math.max(0,root.y-floor),radius=Math.min(.075*scale,height/Math.max(1e-6,1-Math.cos(angle)));
+        const straight=Math.max(0,(height-radius*(1-Math.cos(angle)))/Math.sin(angle));
+        let tangent=angle,along=travel*Math.cos(angle),y=root.y-travel*Math.sin(angle);
+        if(travel>straight&&radius>1e-8){
+          const bend=Math.min(angle,(travel-straight)/radius);tangent=angle-bend;
+          along=straight*Math.cos(angle)+radius*(Math.sin(angle)-Math.sin(angle-bend))+Math.max(0,travel-straight-radius*angle);
+          y=floor+radius*(1-Math.cos(angle-bend));
+        }
+        const side=(base[i*3]-base[column*3])*scale;
+        const fold=Math.cos(column/(cloth.columns-1)*Math.PI*8)*.026*(i-column)/(pos.count-cloth.columns)*scale;
+        point.copy(root).addScaledVector(cloth.forward,along+fold*Math.sin(tangent));point.x+=cloth.forward.z*side;point.z-=cloth.forward.x*side;point.y=Math.max(y+fold*Math.cos(tangent),floor);
+      }
+    }
+    for(let iteration=0;iteration<4;iteration++){
+      for(const [a,b,rest]of cloth.links){
+        const wa=base[a*3+1]<.479?1:0,wb=base[b*3+1]<.479?1:0;if(!wa&&!wb)continue;
+        const difference=cloth.delta.subVectors(cloth.points[b],cloth.points[a]),length=difference.length();
+        if(length<1e-8)continue;difference.multiplyScalar((length-rest*scale)/length/(wa+wb));
+        if(wa)cloth.points[a].add(difference);if(wb)cloth.points[b].sub(difference);
+      }
+      for(let i=0;i<pos.count;i++)if(base[i*3+1]<.479){
+        const point=cloth.points[i],sample=actor.groundHeight?.(point.x,point.z),floor=(Number.isFinite(sample)?sample:cloth.origin.y)+clearance;
+        point.y=Math.max(point.y,floor);
+      }
+    }
+    const unfold=smooth(time/.2);
+    for(let i=0;i<pos.count;i++){
+      const point=cloth.points[i];
+      if(unfold<1&&i>=cloth.columns){
+        const x=base[i*3],y=base[i*3+1],hem=clamp((.48-y)/1.3),start=cloth.targets[i];
+        start.set(x+Math.sin(time*2.1-y*2)*.016*hem,Math.max(y,-actor.pelvis.position.y+.06),mix(base[i*3+2]+Math.sin(time*3.4+x*5-y*4)*.022*hem,-.115,fall)).applyMatrix4(actor.cape.matrixWorld);
+        point.lerp(start,1-unfold);
+        const sample=actor.groundHeight?.(point.x,point.z);point.y=Math.max(point.y,(Number.isFinite(sample)?sample:cloth.origin.y)+clearance);
+      }
+      point.applyMatrix4(cloth.inverse);pos.setXYZ(i,point.x,point.y,point.z);
+    }
+    pos.needsUpdate=true;actor.cape.geometry.computeVertexNormals();return;
+  }
   const moving=['walk','run'].includes(motion.state),wind=motion.state==='run'?.12:moving?.07:.022;
   for(let i=0;i<pos.count;i++){
     const x=base[i*3],y=base[i*3+1],hem=clamp((.48-y)/1.3);

@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "evidence": "Node production-entrypoint boundary integration; controlled fault sensitivity",
+  "passed": true,
+  "host": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "build": {
+    "version": "0.21.0",
+    "sourceFingerprint": "sha256:d87c91ff3d509d33792822e0509c8a5170a7a6523915b4850816b917e9aa5278"
+  },
+  "mainSourceSha256": "697482115caaee6a3ae57a5ff4b50ab76b09d3f41efe81c8042cfca40b7c337e",
+  "viewportMeaning": "Numeric fixture inputs only; no responsive layout or rendered viewport test",
+  "boundaries": [
+    "Element lookup/event dispatch fixture",
+    "Deferred SceneView fixture; no WebGL",
+    "Soundscape call recorder; no audio device",
+    "In-memory storage with injected write failure",
+    "Manually stepped requestAnimationFrame"
+  ],
+  "productionModules": [
+    "main",
+    "Game and game rules",
+    "SaveStore",
+    "LifecycleGate",
+    "CombatInputQueue",
+    "bindTouchControls",
+    "FrameMetrics",
+    "HUD presentation"
+  ],
+  "exclusions": [
+    "browser DOM/CSS/hit testing",
+    "browser-native events and Promise timing",
+    "physical touch",
+    "rendered pixels",
+    "heard audio",
+    "device performance",
+    "human playtest",
+    "external quality comparison"
+  ],
+  "scenarios": [
+    {
+      "id": "launch-input-pause-resume",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "hostMs": 203.70433300000002
+    },
+    {
+      "id": "deferred-scene-blur",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "hostMs": 127.93569400000007
+    },
+    {
+      "id": "deferred-scene-hidden",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "hostMs": 180.10881700000004
+    },
+    {
+      "id": "deferred-scene-pagehide",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "hostMs": 100.94827799999996
+    },
+    {
+      "id": "deferred-title-import",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "hostMs": 99.33355900000004
+    },
+    {
+      "id": "title-import-invalid-file-restores-controls",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "hostMs": 29.2169889999999
+    },
+    {
+      "id": "active-save-import-and-invalid-file",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "hostMs": 153.81095600000003
+    },
+    {
+      "id": "scene-load-failure",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "hostMs": 69.7048729999999
+    },
+    {
+      "id": "storage-and-gamepad-failure",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "hostMs": 85.43351200000006
+    },
+    {
+      "id": "launch-input-pause-resume",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "hostMs": 208.08453999999983
+    },
+    {
+      "id": "deferred-scene-blur",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "hostMs": 65.65869999999995
+    },
+    {
+      "id": "deferred-scene-hidden",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "hostMs": 61.34826799999996
+    },
+    {
+      "id": "deferred-scene-pagehide",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "hostMs": 71.82783999999992
+    },
+    {
+      "id": "deferred-title-import",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "hostMs": 93.78932499999996
+    },
+    {
+      "id": "title-import-invalid-file-restores-controls",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "hostMs": 40.704177999999956
+    },
+    {
+      "id": "active-save-import-and-invalid-file",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "hostMs": 127.52364200000011
+    },
+    {
+      "id": "scene-load-failure",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "hostMs": 151.09867799999984
+    },
+    {
+      "id": "storage-and-gamepad-failure",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "hostMs": 141.71547099999998
+    }
+  ],
+  "negativeControls": [
+    {
+      "id": "launch-ignores-interruption",
+      "priorGatePassed": true,
+      "priorGateTests": 9,
+      "priorGateMs": 231.36904500000037,
+      "detections": [
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "detected": true,
+          "assertion": "Expected values to be strictly equal:\n\nfalse !== true\n",
+          "hostMs": 83.48011399999996
+        },
+        {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "detected": true,
+          "assertion": "Expected values to be strictly equal:\n\nfalse !== true\n",
+          "hostMs": 70.4656
+        }
+      ]
+    },
+    {
+      "id": "active-import-ignores-interruption",
+      "priorGatePassed": true,
+      "priorGateTests": 9,
+      "priorGateMs": 171.79678600000034,
+      "detections": [
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "detected": true,
+          "assertion": "Expected values to be strictly equal:\n\nfalse !== true\n",
+          "hostMs": 195.24220799999966
+        },
+        {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "detected": true,
+          "assertion": "Expected values to be strictly equal:\n\nfalse !== true\n",
+          "hostMs": 127.73145900000009
+        }
+      ]
+    },
+    {
+      "id": "main-does-not-clear-pointer-owner",
+      "priorGatePassed": true,
+      "priorGateTests": 9,
+      "priorGateMs": 752.845206,
+      "detections": [
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "detected": true,
+          "assertion": "interruption must release camera ownership\n+ actual - expected\n\n+ -0.5499999999999999\n- -0.06999999999999999\n     ^\n",
+          "hostMs": 91.11140899999964
+        },
+        {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "detected": true,
+          "assertion": "interruption must release camera ownership\n+ actual - expected\n\n+ -0.5499999999999999\n- -0.06999999999999999\n     ^\n",
+          "hostMs": 66.4573390000005
+        }
+      ]
+    }
+  ],
+  "compileMs": 63.62865500000001
+}

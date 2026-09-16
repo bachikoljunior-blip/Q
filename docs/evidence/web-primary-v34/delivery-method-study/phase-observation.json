@@ -1,0 +1,103 @@
+{
+  "boundary": "Unmodified production Soundscape bundle; production title controller; exact extracted createSceneView and vault loader functions. Media/file URLs are real, image loader return values, fetch response bodies, Web Audio and DOM/video timers are explicit fixtures. No HTTP bytes, decoding, browser, GPU, actual playback or quality claim.",
+  "hashes": {
+    "src/audio.js": "a990f34b9d94023e3bb1655c7dbec5d36b484399aa82fd1cdc827e48e7674027",
+    "src/file-audio-bank.js": "0d4ea37b9ffdbe2485bf8c47a528334bb5828bfa90d2795a1dd97201c8d34d42",
+    "src/title-cinematic.js": "ee014186a34625da90768da0434f2eedd69e35501b515f3d658959359a3888e3",
+    "src/scene.js": "95b32fb3cf484793834afc847af6de37094bae1bb575eee4e95829d8b9010a01",
+    "src/vault-textures.js": "5eaecaceb972f866030b6af2c5f10bacd8af23ee076c2041e0ffac27fd5ce9ff"
+  },
+  "audioRows": [
+    {
+      "phase": "construct",
+      "requests": []
+    },
+    {
+      "phase": "gesture start",
+      "requests": [
+        "./pilgrim-harmony.mp3",
+        "./pilgrim-foley.wav",
+        "./pilgrim-motif.mp3",
+        "./pilgrim-pulse.mp3"
+      ]
+    },
+    {
+      "phase": "ember entry",
+      "requests": [
+        "./pilgrim-harmony.mp3",
+        "./pilgrim-foley.wav",
+        "./pilgrim-motif.mp3",
+        "./pilgrim-pulse.mp3",
+        "./ember-ambient.wav"
+      ]
+    },
+    {
+      "phase": "first vault step",
+      "requests": [
+        "./pilgrim-harmony.mp3",
+        "./pilgrim-foley.wav",
+        "./pilgrim-motif.mp3",
+        "./pilgrim-pulse.mp3",
+        "./ember-ambient.wav",
+        "./shared-step.wav"
+      ]
+    },
+    {
+      "phase": "resume cached score/foley",
+      "requests": [
+        "./pilgrim-harmony.mp3",
+        "./pilgrim-foley.wav",
+        "./pilgrim-motif.mp3",
+        "./pilgrim-pulse.mp3",
+        "./ember-ambient.wav",
+        "./shared-step.wav"
+      ]
+    }
+  ],
+  "titleRows": [
+    {
+      "phase": "before window load",
+      "source": "",
+      "playCalls": 0,
+      "timers": 0,
+      "releaseCalls": 0
+    },
+    {
+      "phase": "after load before timer",
+      "source": "",
+      "playCalls": 0,
+      "timers": 1,
+      "releaseCalls": 0
+    },
+    {
+      "phase": "after 300 ms scheduling fixture",
+      "source": "/clip.mp4",
+      "playCalls": 1,
+      "timers": 0,
+      "releaseCalls": 0
+    },
+    {
+      "phase": "launch release request",
+      "source": "",
+      "playCalls": 1,
+      "timers": 0,
+      "releaseCalls": 1
+    }
+  ],
+  "sceneRows": [
+    {
+      "phase": "all non-vault loaders resolved; vault pending",
+      "vaultRequests": [
+        "ember.png",
+        "tide.png",
+        "gale.png",
+        "moss.png"
+      ],
+      "constructed": 0
+    },
+    {
+      "phase": "all four vault images resolved",
+      "constructed": 1
+    }
+  ]
+}

@@ -1,0 +1,1326 @@
+[
+  {
+    "version": "v32",
+    "head": "67baa205ac2dcc1bba8248884161b8df095b3f36",
+    "status": "",
+    "source_media_count": 27,
+    "source_media_bytes": 11441662,
+    "phases": {
+      "gesture_audio": {
+        "files": 4,
+        "bytes": 1499890
+      },
+      "title_after_load_300ms": {
+        "files": 1,
+        "bytes": 3178191
+      },
+      "title_css": {
+        "files": 1,
+        "bytes": 162962
+      },
+      "vault_cue": {
+        "files": 6,
+        "bytes": 117570
+      },
+      "vault_entry": {
+        "files": 4,
+        "bytes": 705776
+      },
+      "world_launch": {
+        "files": 11,
+        "bytes": 5777273
+      }
+    },
+    "initial_js_bytes": 164802,
+    "public_count": 34,
+    "public_bytes": 12584561,
+    "public_files": [
+      {
+        "path": "assets/crown-branch-rgba-DvI_Tv4J.png",
+        "bytes": 162720
+      },
+      {
+        "path": "assets/ember-ambient-DxlfqX62.wav",
+        "bytes": 176444
+      },
+      {
+        "path": "assets/ember-stone-CGtrIuNR.png",
+        "bytes": 16849
+      },
+      {
+        "path": "assets/forest_floor_diff_1k-FrvyY1gs.jpg",
+        "bytes": 1329853
+      },
+      {
+        "path": "assets/gale-ambient-Bk5IsviT.wav",
+        "bytes": 176444
+      },
+      {
+        "path": "assets/gale-stone-DFcyxpvg.png",
+        "bytes": 17052
+      },
+      {
+        "path": "assets/index-9bZeN8XM.js",
+        "bytes": 164802
+      },
+      {
+        "path": "assets/index-DvxNsySP.css",
+        "bytes": 60193
+      },
+      {
+        "path": "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
+        "bytes": 1435119
+      },
+      {
+        "path": "assets/moss-ambient-P9AOr4W8.wav",
+        "bytes": 176444
+      },
+      {
+        "path": "assets/moss-stone-DiwO4PmY.png",
+        "bytes": 17328
+      },
+      {
+        "path": "assets/north-gate-v22-M69S2yqx.webp",
+        "bytes": 162962
+      },
+      {
+        "path": "assets/north-gate-v23-BAPO0H9x.mp4",
+        "bytes": 3178191
+      },
+      {
+        "path": "assets/pilgrim-foley-CW54U_6w.wav",
+        "bytes": 826370
+      },
+      {
+        "path": "assets/pilgrim-harmony-LSIdyu7z.mp3",
+        "bytes": 288594
+      },
+      {
+        "path": "assets/pilgrim-motif-yb4axZNo.mp3",
+        "bytes": 192463
+      },
+      {
+        "path": "assets/pilgrim-pulse-BJS9Fs4r.mp3",
+        "bytes": 192463
+      },
+      {
+        "path": "assets/pine-branch-rgba-DpLH-kJr.png",
+        "bytes": 165258
+      },
+      {
+        "path": "assets/rock_face_03_diff_1k-Clx6WbHJ.jpg",
+        "bytes": 927082
+      },
+      {
+        "path": "assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg",
+        "bytes": 1146788
+      },
+      {
+        "path": "assets/scene-Dl7RmQpT.js",
+        "bytes": 330351
+      },
+      {
+        "path": "assets/shared-alert-JeJkFdAY.wav",
+        "bytes": 21212
+      },
+      {
+        "path": "assets/shared-claim-BPXeWqKz.wav",
+        "bytes": 39734
+      },
+      {
+        "path": "assets/shared-impact-DwWqEia4.wav",
+        "bytes": 7982
+      },
+      {
+        "path": "assets/shared-seal-slkiLvkd.wav",
+        "bytes": 30914
+      },
+      {
+        "path": "assets/shared-step-D8_A5LtE.wav",
+        "bytes": 7100
+      },
+      {
+        "path": "assets/shared-swing-BkmUzsmF.wav",
+        "bytes": 10628
+      },
+      {
+        "path": "assets/three-DeJEtbAc.js",
+        "bytes": 579597
+      },
+      {
+        "path": "assets/tide-ambient-BP0Z0aTJ.wav",
+        "bytes": 176444
+      },
+      {
+        "path": "assets/tide-stone-COv3Sj_E.png",
+        "bytes": 17270
+      },
+      {
+        "path": "assets/young-male-q95-DLRShmkN.webp",
+        "bytes": 541954
+      },
+      {
+        "path": "icon.svg",
+        "bytes": 380
+      },
+      {
+        "path": "index.html",
+        "bytes": 7302
+      },
+      {
+        "path": "manifest.webmanifest",
+        "bytes": 274
+      }
+    ],
+    "js": [
+      {
+        "path": "assets/index-9bZeN8XM.js",
+        "bytes": 164802
+      },
+      {
+        "path": "assets/scene-Dl7RmQpT.js",
+        "bytes": 330351
+      },
+      {
+        "path": "assets/three-DeJEtbAc.js",
+        "bytes": 579597
+      }
+    ],
+    "standalone_bytes": 16435231,
+    "media": [
+      {
+        "source": "src/assets/characters/skin/young-male-q95.webp",
+        "output": "assets/young-male-q95-DLRShmkN.webp",
+        "bytes": 541954,
+        "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04",
+        "emitted_exact": true,
+        "width": 2048,
+        "height": 2048,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 16777216,
+        "rgba_mip_bytes": 22369620,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/environment/forest_floor_diff_1k.jpg",
+        "output": "assets/forest_floor_diff_1k-FrvyY1gs.jpg",
+        "bytes": 1329853,
+        "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b",
+        "emitted_exact": true,
+        "width": 1024,
+        "height": 1024,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 4194304,
+        "rgba_mip_bytes": 5592404,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/environment/rock_face_03_diff_1k.jpg",
+        "output": "assets/rock_face_03_diff_1k-Clx6WbHJ.jpg",
+        "bytes": 927082,
+        "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d",
+        "emitted_exact": true,
+        "width": 1024,
+        "height": 1024,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 4194304,
+        "rgba_mip_bytes": 5592404,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/environment/rock_face_03_nor_gl_1k.jpg",
+        "output": "assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg",
+        "bytes": 1146788,
+        "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0",
+        "emitted_exact": true,
+        "width": 1024,
+        "height": 1024,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 4194304,
+        "rgba_mip_bytes": 5592404,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/forest/crown-branch-rgba.png",
+        "output": "assets/crown-branch-rgba-DvI_Tv4J.png",
+        "bytes": 162720,
+        "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7",
+        "emitted_exact": true,
+        "width": 512,
+        "height": 512,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 1048576,
+        "rgba_mip_bytes": 1398100,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/forest/pine-branch-rgba.png",
+        "output": "assets/pine-branch-rgba-DpLH-kJr.png",
+        "bytes": 165258,
+        "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a",
+        "emitted_exact": true,
+        "width": 512,
+        "height": 512,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 1048576,
+        "rgba_mip_bytes": 1398100,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+        "output": "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
+        "bytes": 1435119,
+        "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+        "emitted_exact": true,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-foley.wav",
+        "output": "assets/pilgrim-foley-CW54U_6w.wav",
+        "bytes": 826370,
+        "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "18.737551",
+            "duration_ts": 413163,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "gesture_audio",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+        "output": "assets/pilgrim-harmony-LSIdyu7z.mp3",
+        "bytes": 288594,
+        "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "mp3",
+            "sample_rate": "22050",
+            "channels": 2,
+            "duration": "48.065306",
+            "duration_ts": 678297600,
+            "time_base": "1/14112000"
+          }
+        ],
+        "phase": "gesture_audio",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-motif.mp3",
+        "output": "assets/pilgrim-motif-yb4axZNo.mp3",
+        "bytes": 192463,
+        "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "mp3",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "48.065306",
+            "duration_ts": 678297600,
+            "time_base": "1/14112000"
+          }
+        ],
+        "phase": "gesture_audio",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+        "output": "assets/pilgrim-pulse-BJS9Fs4r.mp3",
+        "bytes": 192463,
+        "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "mp3",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "48.065306",
+            "duration_ts": 678297600,
+            "time_base": "1/14112000"
+          }
+        ],
+        "phase": "gesture_audio",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/title/north-gate-v22.webp",
+        "output": "assets/north-gate-v22-M69S2yqx.webp",
+        "bytes": 162962,
+        "sha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a",
+        "emitted_exact": true,
+        "width": 1672,
+        "height": 941,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 6293408,
+        "rgba_mip_bytes": 8387888,
+        "phase": "title_css",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/title/north-gate-v23.mp4",
+        "output": "assets/north-gate-v23-BAPO0H9x.mp4",
+        "bytes": 3178191,
+        "sha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "duration": "12.000000",
+            "duration_ts": 147456,
+            "time_base": "1/12288",
+            "nb_frames": "288"
+          }
+        ],
+        "phase": "title_after_load_300ms",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/ember-ambient.wav",
+        "output": "assets/ember-ambient-DxlfqX62.wav",
+        "bytes": 176444,
+        "sha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "4.000000",
+            "duration_ts": 88200,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_entry",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/ember-stone.png",
+        "output": "assets/ember-stone-CGtrIuNR.png",
+        "bytes": 16849,
+        "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9",
+        "emitted_exact": true,
+        "width": 128,
+        "height": 128,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 65536,
+        "rgba_mip_bytes": 87380,
+        "phase": "world_launch",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/gale-ambient.wav",
+        "output": "assets/gale-ambient-Bk5IsviT.wav",
+        "bytes": 176444,
+        "sha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "4.000000",
+            "duration_ts": 88200,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_entry",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/gale-stone.png",
+        "output": "assets/gale-stone-DFcyxpvg.png",
+        "bytes": 17052,
+        "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c",
+        "emitted_exact": true,
+        "width": 128,
+        "height": 128,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 65536,
+        "rgba_mip_bytes": 87380,
+        "phase": "world_launch",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/moss-ambient.wav",
+        "output": "assets/moss-ambient-P9AOr4W8.wav",
+        "bytes": 176444,
+        "sha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "4.000000",
+            "duration_ts": 88200,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_entry",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/moss-stone.png",
+        "output": "assets/moss-stone-DiwO4PmY.png",
+        "bytes": 17328,
+        "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419",
+        "emitted_exact": true,
+        "width": 128,
+        "height": 128,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 65536,
+        "rgba_mip_bytes": 87380,
+        "phase": "world_launch",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-alert.wav",
+        "output": "assets/shared-alert-JeJkFdAY.wav",
+        "bytes": 21212,
+        "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.480000",
+            "duration_ts": 10584,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-claim.wav",
+        "output": "assets/shared-claim-BPXeWqKz.wav",
+        "bytes": 39734,
+        "sha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.900000",
+            "duration_ts": 19845,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-impact.wav",
+        "output": "assets/shared-impact-DwWqEia4.wav",
+        "bytes": 7982,
+        "sha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.180000",
+            "duration_ts": 3969,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-seal.wav",
+        "output": "assets/shared-seal-slkiLvkd.wav",
+        "bytes": 30914,
+        "sha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.700000",
+            "duration_ts": 15435,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-step.wav",
+        "output": "assets/shared-step-D8_A5LtE.wav",
+        "bytes": 7100,
+        "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.160000",
+            "duration_ts": 3528,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-swing.wav",
+        "output": "assets/shared-swing-BkmUzsmF.wav",
+        "bytes": 10628,
+        "sha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.240000",
+            "duration_ts": 5292,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/tide-ambient.wav",
+        "output": "assets/tide-ambient-BP0Z0aTJ.wav",
+        "bytes": 176444,
+        "sha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "4.000000",
+            "duration_ts": 88200,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_entry",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/tide-stone.png",
+        "output": "assets/tide-stone-COv3Sj_E.png",
+        "bytes": 17270,
+        "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567",
+        "emitted_exact": true,
+        "width": 128,
+        "height": 128,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 65536,
+        "rgba_mip_bytes": 87380,
+        "phase": "world_launch",
+        "url_in_initial_js": true
+      }
+    ],
+    "inventory_boundary": "Emitted/source bytes and code-directed request stages, not actual HTTP transfer/Range/cache or measured decoder/GPU residency. An asset URL in JS does not fetch its binary."
+  },
+  {
+    "version": "v33",
+    "head": "7cbff3c899b789d4087b3ff2cc572f62818f9e24",
+    "status": " M tests/cloak-uv.test.mjs\n?? docs/evidence/projectile-media-v33/\n?? scripts/create-ranger-cloak-baseline-v33.mjs\n?? tests/fixtures/cloak-ranger-before-uv-v33.json\n",
+    "source_media_count": 27,
+    "source_media_bytes": 11441662,
+    "phases": {
+      "gesture_audio": {
+        "files": 4,
+        "bytes": 1499890
+      },
+      "title_after_load_300ms": {
+        "files": 1,
+        "bytes": 3178191
+      },
+      "title_css": {
+        "files": 1,
+        "bytes": 162962
+      },
+      "vault_cue": {
+        "files": 6,
+        "bytes": 117570
+      },
+      "vault_entry": {
+        "files": 4,
+        "bytes": 705776
+      },
+      "world_launch": {
+        "files": 11,
+        "bytes": 5777273
+      }
+    },
+    "initial_js_bytes": 164988,
+    "public_count": 34,
+    "public_bytes": 12585792,
+    "public_files": [
+      {
+        "path": "assets/crown-branch-rgba-DvI_Tv4J.png",
+        "bytes": 162720
+      },
+      {
+        "path": "assets/ember-ambient-DxlfqX62.wav",
+        "bytes": 176444
+      },
+      {
+        "path": "assets/ember-stone-CGtrIuNR.png",
+        "bytes": 16849
+      },
+      {
+        "path": "assets/forest_floor_diff_1k-FrvyY1gs.jpg",
+        "bytes": 1329853
+      },
+      {
+        "path": "assets/gale-ambient-Bk5IsviT.wav",
+        "bytes": 176444
+      },
+      {
+        "path": "assets/gale-stone-DFcyxpvg.png",
+        "bytes": 17052
+      },
+      {
+        "path": "assets/index-CtHwKSwD.js",
+        "bytes": 164988
+      },
+      {
+        "path": "assets/index-DvxNsySP.css",
+        "bytes": 60193
+      },
+      {
+        "path": "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
+        "bytes": 1435119
+      },
+      {
+        "path": "assets/moss-ambient-P9AOr4W8.wav",
+        "bytes": 176444
+      },
+      {
+        "path": "assets/moss-stone-DiwO4PmY.png",
+        "bytes": 17328
+      },
+      {
+        "path": "assets/north-gate-v22-M69S2yqx.webp",
+        "bytes": 162962
+      },
+      {
+        "path": "assets/north-gate-v23-BAPO0H9x.mp4",
+        "bytes": 3178191
+      },
+      {
+        "path": "assets/pilgrim-foley-CW54U_6w.wav",
+        "bytes": 826370
+      },
+      {
+        "path": "assets/pilgrim-harmony-LSIdyu7z.mp3",
+        "bytes": 288594
+      },
+      {
+        "path": "assets/pilgrim-motif-yb4axZNo.mp3",
+        "bytes": 192463
+      },
+      {
+        "path": "assets/pilgrim-pulse-BJS9Fs4r.mp3",
+        "bytes": 192463
+      },
+      {
+        "path": "assets/pine-branch-rgba-DpLH-kJr.png",
+        "bytes": 165258
+      },
+      {
+        "path": "assets/rock_face_03_diff_1k-Clx6WbHJ.jpg",
+        "bytes": 927082
+      },
+      {
+        "path": "assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg",
+        "bytes": 1146788
+      },
+      {
+        "path": "assets/scene-BVQpQ-Se.js",
+        "bytes": 331396
+      },
+      {
+        "path": "assets/shared-alert-JeJkFdAY.wav",
+        "bytes": 21212
+      },
+      {
+        "path": "assets/shared-claim-BPXeWqKz.wav",
+        "bytes": 39734
+      },
+      {
+        "path": "assets/shared-impact-DwWqEia4.wav",
+        "bytes": 7982
+      },
+      {
+        "path": "assets/shared-seal-slkiLvkd.wav",
+        "bytes": 30914
+      },
+      {
+        "path": "assets/shared-step-D8_A5LtE.wav",
+        "bytes": 7100
+      },
+      {
+        "path": "assets/shared-swing-BkmUzsmF.wav",
+        "bytes": 10628
+      },
+      {
+        "path": "assets/three-CQW9fVDb.js",
+        "bytes": 579597
+      },
+      {
+        "path": "assets/tide-ambient-BP0Z0aTJ.wav",
+        "bytes": 176444
+      },
+      {
+        "path": "assets/tide-stone-COv3Sj_E.png",
+        "bytes": 17270
+      },
+      {
+        "path": "assets/young-male-q95-DLRShmkN.webp",
+        "bytes": 541954
+      },
+      {
+        "path": "icon.svg",
+        "bytes": 380
+      },
+      {
+        "path": "index.html",
+        "bytes": 7302
+      },
+      {
+        "path": "manifest.webmanifest",
+        "bytes": 274
+      }
+    ],
+    "js": [
+      {
+        "path": "assets/index-CtHwKSwD.js",
+        "bytes": 164988
+      },
+      {
+        "path": "assets/scene-BVQpQ-Se.js",
+        "bytes": 331396
+      },
+      {
+        "path": "assets/three-CQW9fVDb.js",
+        "bytes": 579597
+      }
+    ],
+    "standalone_bytes": 16435231,
+    "media": [
+      {
+        "source": "src/assets/characters/skin/young-male-q95.webp",
+        "output": "assets/young-male-q95-DLRShmkN.webp",
+        "bytes": 541954,
+        "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04",
+        "emitted_exact": true,
+        "width": 2048,
+        "height": 2048,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 16777216,
+        "rgba_mip_bytes": 22369620,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/environment/forest_floor_diff_1k.jpg",
+        "output": "assets/forest_floor_diff_1k-FrvyY1gs.jpg",
+        "bytes": 1329853,
+        "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b",
+        "emitted_exact": true,
+        "width": 1024,
+        "height": 1024,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 4194304,
+        "rgba_mip_bytes": 5592404,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/environment/rock_face_03_diff_1k.jpg",
+        "output": "assets/rock_face_03_diff_1k-Clx6WbHJ.jpg",
+        "bytes": 927082,
+        "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d",
+        "emitted_exact": true,
+        "width": 1024,
+        "height": 1024,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 4194304,
+        "rgba_mip_bytes": 5592404,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/environment/rock_face_03_nor_gl_1k.jpg",
+        "output": "assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg",
+        "bytes": 1146788,
+        "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0",
+        "emitted_exact": true,
+        "width": 1024,
+        "height": 1024,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 4194304,
+        "rgba_mip_bytes": 5592404,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/forest/crown-branch-rgba.png",
+        "output": "assets/crown-branch-rgba-DvI_Tv4J.png",
+        "bytes": 162720,
+        "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7",
+        "emitted_exact": true,
+        "width": 512,
+        "height": 512,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 1048576,
+        "rgba_mip_bytes": 1398100,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/forest/pine-branch-rgba.png",
+        "output": "assets/pine-branch-rgba-DpLH-kJr.png",
+        "bytes": 165258,
+        "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a",
+        "emitted_exact": true,
+        "width": 512,
+        "height": 512,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 1048576,
+        "rgba_mip_bytes": 1398100,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+        "output": "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
+        "bytes": 1435119,
+        "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+        "emitted_exact": true,
+        "phase": "world_launch",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-foley.wav",
+        "output": "assets/pilgrim-foley-CW54U_6w.wav",
+        "bytes": 826370,
+        "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "18.737551",
+            "duration_ts": 413163,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "gesture_audio",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+        "output": "assets/pilgrim-harmony-LSIdyu7z.mp3",
+        "bytes": 288594,
+        "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "mp3",
+            "sample_rate": "22050",
+            "channels": 2,
+            "duration": "48.065306",
+            "duration_ts": 678297600,
+            "time_base": "1/14112000"
+          }
+        ],
+        "phase": "gesture_audio",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-motif.mp3",
+        "output": "assets/pilgrim-motif-yb4axZNo.mp3",
+        "bytes": 192463,
+        "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "mp3",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "48.065306",
+            "duration_ts": 678297600,
+            "time_base": "1/14112000"
+          }
+        ],
+        "phase": "gesture_audio",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+        "output": "assets/pilgrim-pulse-BJS9Fs4r.mp3",
+        "bytes": 192463,
+        "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "mp3",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "48.065306",
+            "duration_ts": 678297600,
+            "time_base": "1/14112000"
+          }
+        ],
+        "phase": "gesture_audio",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/title/north-gate-v22.webp",
+        "output": "assets/north-gate-v22-M69S2yqx.webp",
+        "bytes": 162962,
+        "sha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a",
+        "emitted_exact": true,
+        "width": 1672,
+        "height": 941,
+        "image_mode": "RGB",
+        "rgba_base_bytes": 6293408,
+        "rgba_mip_bytes": 8387888,
+        "phase": "title_css",
+        "url_in_initial_js": false
+      },
+      {
+        "source": "src/assets/title/north-gate-v23.mp4",
+        "output": "assets/north-gate-v23-BAPO0H9x.mp4",
+        "bytes": 3178191,
+        "sha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "duration": "12.000000",
+            "duration_ts": 147456,
+            "time_base": "1/12288",
+            "nb_frames": "288"
+          }
+        ],
+        "phase": "title_after_load_300ms",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/ember-ambient.wav",
+        "output": "assets/ember-ambient-DxlfqX62.wav",
+        "bytes": 176444,
+        "sha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "4.000000",
+            "duration_ts": 88200,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_entry",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/ember-stone.png",
+        "output": "assets/ember-stone-CGtrIuNR.png",
+        "bytes": 16849,
+        "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9",
+        "emitted_exact": true,
+        "width": 128,
+        "height": 128,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 65536,
+        "rgba_mip_bytes": 87380,
+        "phase": "world_launch",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/gale-ambient.wav",
+        "output": "assets/gale-ambient-Bk5IsviT.wav",
+        "bytes": 176444,
+        "sha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "4.000000",
+            "duration_ts": 88200,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_entry",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/gale-stone.png",
+        "output": "assets/gale-stone-DFcyxpvg.png",
+        "bytes": 17052,
+        "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c",
+        "emitted_exact": true,
+        "width": 128,
+        "height": 128,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 65536,
+        "rgba_mip_bytes": 87380,
+        "phase": "world_launch",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/moss-ambient.wav",
+        "output": "assets/moss-ambient-P9AOr4W8.wav",
+        "bytes": 176444,
+        "sha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "4.000000",
+            "duration_ts": 88200,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_entry",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/moss-stone.png",
+        "output": "assets/moss-stone-DiwO4PmY.png",
+        "bytes": 17328,
+        "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419",
+        "emitted_exact": true,
+        "width": 128,
+        "height": 128,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 65536,
+        "rgba_mip_bytes": 87380,
+        "phase": "world_launch",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-alert.wav",
+        "output": "assets/shared-alert-JeJkFdAY.wav",
+        "bytes": 21212,
+        "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.480000",
+            "duration_ts": 10584,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-claim.wav",
+        "output": "assets/shared-claim-BPXeWqKz.wav",
+        "bytes": 39734,
+        "sha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.900000",
+            "duration_ts": 19845,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-impact.wav",
+        "output": "assets/shared-impact-DwWqEia4.wav",
+        "bytes": 7982,
+        "sha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.180000",
+            "duration_ts": 3969,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-seal.wav",
+        "output": "assets/shared-seal-slkiLvkd.wav",
+        "bytes": 30914,
+        "sha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.700000",
+            "duration_ts": 15435,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-step.wav",
+        "output": "assets/shared-step-D8_A5LtE.wav",
+        "bytes": 7100,
+        "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.160000",
+            "duration_ts": 3528,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/shared-swing.wav",
+        "output": "assets/shared-swing-BkmUzsmF.wav",
+        "bytes": 10628,
+        "sha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "0.240000",
+            "duration_ts": 5292,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_cue",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/tide-ambient.wav",
+        "output": "assets/tide-ambient-BP0Z0aTJ.wav",
+        "bytes": 176444,
+        "sha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba",
+        "emitted_exact": true,
+        "media": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1,
+            "duration": "4.000000",
+            "duration_ts": 88200,
+            "time_base": "1/22050"
+          }
+        ],
+        "phase": "vault_entry",
+        "url_in_initial_js": true
+      },
+      {
+        "source": "src/assets/vaults/tide-stone.png",
+        "output": "assets/tide-stone-COv3Sj_E.png",
+        "bytes": 17270,
+        "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567",
+        "emitted_exact": true,
+        "width": 128,
+        "height": 128,
+        "image_mode": "RGBA",
+        "rgba_base_bytes": 65536,
+        "rgba_mip_bytes": 87380,
+        "phase": "world_launch",
+        "url_in_initial_js": true
+      }
+    ],
+    "inventory_boundary": "Emitted/source bytes and code-directed request stages, not actual HTTP transfer/Range/cache or measured decoder/GPU residency. An asset URL in JS does not fetch its binary.",
+    "build_identity": {
+      "sourceFingerprint": "sha256:1dd4272849764e2f31b501044d21912f8e93638ea7bb7593499968d2b90896bc",
+      "dist_current": true,
+      "standalone_current": false,
+      "standalone_bytes_are_stale": true
+    },
+    "standalone_final_readback": {
+      "bytes": 15498171,
+      "sourceFingerprint": "sha256:1dd4272849764e2f31b501044d21912f8e93638ea7bb7593499968d2b90896bc",
+      "current": true,
+      "generated_by": "parent integration; not this study"
+    }
+  }
+]

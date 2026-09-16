@@ -1,0 +1,126 @@
+{
+  "observed_at_utc": "2026-09-16T05:53:44.681632+00:00",
+  "head": "7cbff3c899b789d4087b3ff2cc572f62818f9e24",
+  "files": {
+    "AGENTS.md": {
+      "sha256": "7b2af8e7a3abd7ef24ec13d5dbc161907ecf8e610ed679d6205cefb579a9119a",
+      "bytes": 28002
+    },
+    "vite.config.js": {
+      "sha256": "8fbb0f0226fc7d37a68f1024cbfdc40d663318268054a595c85a044c8ac86d48",
+      "bytes": 594
+    },
+    "package.json": {
+      "sha256": "5f4bba4877577e514635416705f8211aedd89d65a658852acf6e34ccd7b4576e",
+      "bytes": 1365
+    },
+    "scripts/package.mjs": {
+      "sha256": "01b73f5a9000d236eb356ad43089c09e4d5a3e260f0c2441e27751b4ba9c2dc4",
+      "bytes": 2079
+    },
+    "scripts/verify-artifacts.mjs": {
+      "sha256": "a215053774df93286785fa9d167e5008a2670958f76c73841ca30295b1ed0cbc",
+      "bytes": 12369
+    },
+    "scripts/build-identity.mjs": {
+      "sha256": "c5163a7f3a26d71219bda1fa83f3399195f02419575790fef86b9f2197665d27",
+      "bytes": 1101
+    },
+    "scripts/packed-media-plugin.mjs": {
+      "sha256": "0d1465111fecaf46e30aa181337c6c661da5c1cd5f798c70d567998c3be6bf34",
+      "bytes": 1407
+    },
+    "scripts/packed-media.mjs": {
+      "sha256": "28ada56188da9ee995d11bf448432b2941ed7667fe2394382f0e8e4a88e8e1dc",
+      "bytes": 2401
+    },
+    "scripts/stage-site.mjs": {
+      "sha256": "388bb608fce914f9f2443dbb8fb997b337bbcd96ff7e5c2f55d19ec27edfc00e",
+      "bytes": 1947
+    },
+    ".github/workflows/validate.yml": {
+      "sha256": "50f1b12032126ca02c45daae7b221e65237039b648aaf304a301383ac98b728b",
+      "bytes": 4308
+    },
+    ".openai/hosting.json": {
+      "sha256": "da86ae52fe08fe3c8e7aea2654404eb7dcd8e1e144876fc93670b9b278e340d0",
+      "bytes": 106
+    },
+    "public/manifest.webmanifest": {
+      "sha256": "4a9b130f07936394acfa34a5df0fe32f2eb87a6969335c1bed192a7ccbfb0b2b",
+      "bytes": 274
+    },
+    "src/main.js": {
+      "sha256": "697482115caaee6a3ae57a5ff4b50ab76b09d3f41efe81c8042cfca40b7c337e",
+      "bytes": 54637
+    },
+    "src/scene.js": {
+      "sha256": "95b32fb3cf484793834afc847af6de37094bae1bb575eee4e95829d8b9010a01",
+      "bytes": 30234
+    },
+    "src/audio.js": {
+      "sha256": "a990f34b9d94023e3bb1655c7dbec5d36b484399aa82fd1cdc827e48e7674027",
+      "bytes": 24766
+    },
+    "src/title-cinematic.js": {
+      "sha256": "ee014186a34625da90768da0434f2eedd69e35501b515f3d658959359a3888e3",
+      "bytes": 12165
+    },
+    "src/file-audio-bank.js": {
+      "sha256": "0d4ea37b9ffdbe2485bf8c47a528334bb5828bfa90d2795a1dd97201c8d34d42",
+      "bytes": 5110
+    },
+    "src/vault-asset-urls.js": {
+      "sha256": "495f978b1b689ecc03377bac791d03392a322c8a561aa120fc1c75dff249a338",
+      "bytes": 1296
+    },
+    "src/vault-textures.js": {
+      "sha256": "5eaecaceb972f866030b6af2c5f10bacd8af23ee076c2041e0ffac27fd5ce9ff",
+      "bytes": 604
+    },
+    "src/vault-scene.js": {
+      "sha256": "27c3ef9e110f1e01b6b73acffb009573ebbb9e8ead4af152a0dad13007663604",
+      "bytes": 8293
+    },
+    "src/soundscape-asset-urls.js": {
+      "sha256": "071d87e650e9107a4a4481e45b6810f21ad860a2853189ae38841beddcf088e2",
+      "bytes": 471
+    },
+    "src/skin-texture-loader.js": {
+      "sha256": "b6a8f15968944f98e34f952ad2798e7a0ae3c6786f328c46c0b5ea5e6c55cb52",
+      "bytes": 1664
+    },
+    "src/forest-texture-loader.js": {
+      "sha256": "76b78d8f7fe2d200e1fbde179599d17708c43de9bbcbe9ad782f61f7ec6f8a45",
+      "bytes": 1337
+    },
+    "src/sky-texture-loader.js": {
+      "sha256": "99240b6018c501b03023c023e9fce4b85d31f5babade32c5113037caa8edb2f2",
+      "bytes": 1073
+    },
+    "src/environment-assets.js": {
+      "sha256": "56a1752a93c58a542f6d5eacc8e7a1e3ad022d79c16662b429c5761606b65fcd",
+      "bytes": 1428
+    },
+    "src/sky-lighting.js": {
+      "sha256": "7bd023cf23cc5269e2ce25e9c289d31e9f50ac870556e0f277c16414a4d40762",
+      "bytes": 2326
+    },
+    "src/forest-materials.js": {
+      "sha256": "881295c31be465ee1784e2f458bfae777744ba8d67394920f815a707b3c3d0a8",
+      "bytes": 9514
+    },
+    "src/environment-materials.js": {
+      "sha256": "39f68f90bb5bc01c12d05e5f382d4108846ecb7716d82e99ab275031a4ba76f0",
+      "bytes": 11893
+    },
+    "src/environment-contact.js": {
+      "sha256": "ec18f2f1c7389d08658f583f545ae1495e7edffa756638b822cf659c4aed16b4",
+      "bytes": 1765
+    },
+    "docs/STANDALONE_ENCODING_V33.md": {
+      "sha256": "f7d8cdacd2fcecef47f52c12b0bb42cb0ccf85a3e291bbc4ab224ce1f2b73854",
+      "bytes": 8564
+    }
+  }
+}

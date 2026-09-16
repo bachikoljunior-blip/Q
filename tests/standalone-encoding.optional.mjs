@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {transform} from 'esbuild';
-import {buildStandalone} from '../scripts/package.mjs';
+import {buildStandalone} from '../scripts/package-standalone.mjs';
 import {unpackMedia,restorePackedAsset} from '../scripts/packed-media.mjs';
 import {runStandalone} from './standalone-runtime-fixture.mjs';
 
@@ -31,7 +31,7 @@ test('actual standalone preserves every emitted media byte and original data URL
   }
   assert.equal((candidate.html.match(/<script>/gi)||[]).length,1);
   assert.equal((candidate.html.match(/<\/script>/gi)||[]).length,1);
-  assert(candidate.stats.htmlBytes<16*1024*1024);
+  assert.equal(candidate.stats.htmlBytes,Buffer.byteLength(candidate.html));
   // A syntactically valid byte mutation cannot pass the source identity oracle.
   const corrupt=Buffer.from(embedded[0]);corrupt[0]^=1;
   assert(!media.some(asset=>asset.sha256===hash(corrupt)));

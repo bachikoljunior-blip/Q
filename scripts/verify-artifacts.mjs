@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import { readFile, readdir, stat } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { buildIdentity } from './build-identity.mjs';
-import { unpackMedia } from './packed-media.mjs';
+import { verifyWebReceipt } from './web-package.mjs';
+await verifyWebReceipt(JSON.parse(await readFile('release/Q-web-manifest.json','utf8')));
 
 const stage=JSON.parse(await readFile('artifacts/latest-site.json','utf8'));
 const root=`${stage.root}/dist`,manifest=JSON.parse(await readFile('dist/.vite/manifest.json','utf8'));
@@ -29,24 +30,14 @@ assert(jsAssets.some(name=>name.startsWith('scene-')),'scene chunk is missing');
 assert(jsAssets.some(name=>name.startsWith('three-')),'Three.js vendor chunk is missing');
 const totalJs=(await Promise.all(jsAssets.map(async name=>(await stat(`${root}/assets/${name}`)).size))).reduce((a,b)=>a+b,0);
 
-const standalone=await readFile('release/Q-ash-pilgrim.html','utf8');
 const identity=await buildIdentity();
 assert(entry.includes(identity.sourceFingerprint),'production measurement identity differs from app source');
-assert(standalone.includes(identity.sourceFingerprint),'standalone measurement identity differs from app source');
-assert(!/<script[^>]+src=/.test(standalone),'standalone build contains an external script');
-assert(!/<link[^>]+(?:stylesheet|manifest)/.test(standalone),'standalone build contains an external stylesheet or manifest');
-assert(!/import\(["']\.\/assets\//.test(standalone),'standalone build contains an unresolved production chunk import');
-assert(standalone.includes('aria-busy')&&standalone.includes('SceneView'),'standalone build does not contain the lazy scene bootstrap');
-const embedded=[...standalone.matchAll(/data:[^"'\s;]+;base64,([A-Za-z0-9+/=]+)/g)].map(match=>Buffer.from(match[1],'base64'));
-const packed=[...standalone.matchAll(/["'](q85:[^"'\\<>`\s]*)["']/g)].map(match=>unpackMedia(match[1]));
-embedded.push(...packed.map(asset=>Buffer.from(asset.bytes)));
+for(const name of jsAssets)assert(!(await readFile(`${root}/assets/${name}`,'utf8')).includes('q85:'),'web runtime must not include the optional standalone decoder');
 const mediaSources=Object.keys(manifest).filter(source=>/\.(hdr|glb|png|webp|jpg|mp4|mp3|wav)$/.test(source));
-assert.equal(embedded.length,mediaSources.length,'standalone media count differs from the emitted graph');
 for(const source of mediaSources){
   const original=await readFile(source),output=manifest[source].file;
   assert((await readFile(`dist/${output}`)).equals(original),`emitted media differs from source: ${source}`);
   assert((await readFile(`${root}/${output}`)).equals(original),`staged media differs from source: ${source}`);
-  assert.equal(embedded.filter(bytes=>bytes.equals(original)).length,1,`standalone must contain exactly one complete media asset: ${source}`);
 }
 let runtimeModels=0;
 for(const name of ['pilgrim','knight','keeper']){
@@ -56,7 +47,6 @@ for(const name of ['pilgrim','knight','keeper']){
   if(!output)continue;
   runtimeModels++;
   assert((await readFile(`${root}/${output}`)).equals(original),`deployed model differs from source: ${name}`);
-  assert(embedded.some(data=>data.equals(original)),`standalone does not embed the complete ${name} model`);
   assert(!entry.includes(output),'character assets must stay out of the title chunk');
 }
 
@@ -74,7 +64,6 @@ for(const sourcePath of presentationSources){
   const source=await readFile(sourcePath),output=manifest[sourcePath].file;
   assert((await readFile(`dist/${output}`)).equals(source),`presentation build differs from source: ${sourcePath}`);
   assert((await readFile(`${root}/${output}`)).equals(source),`staged presentation asset differs: ${sourcePath}`);
-  assert(embedded.some(data=>data.equals(source)),`standalone omits presentation asset: ${sourcePath}`);
   presentationBytes+=source.length;
 }
 
@@ -86,7 +75,6 @@ for(const asset of environment.assets){
   assert.equal(original.length,asset.bytes); assert.equal(createHash('sha256').update(original).digest('hex'),asset.sha256);
   assert.equal(asset.license,'CC0-1.0'); assert(output);
   assert((await readFile(`dist/${output}`)).equals(original)); assert((await readFile(`${root}/${output}`)).equals(original));
-  assert(embedded.some(data=>data.equals(original)),`standalone omits environment source: ${asset.path}`);
   assert(!entry.includes(output),'environment photos must stay behind the scene import');
 }
 
@@ -99,7 +87,6 @@ for(const asset of [...forest.sources,...forest.derivatives]){
   if(!asset.runtimeIncluded){assert(!manifest[asset.path],'retained forest source must not duplicate a runtime photo');continue;}
   const output=manifest[asset.path]?.file;assert(output);
   assert((await readFile(`dist/${output}`)).equals(bytes));assert((await readFile(`${root}/${output}`)).equals(bytes));
-  assert(embedded.some(data=>data.equals(bytes)),`standalone omits forest photo: ${asset.path}`);
   assert(!entry.includes(output),'forest photos must remain behind the scene import');
 }
 assert.equal(createHash('sha256').update(await readFile(forest.generator.path)).digest('hex'),forest.generator.sha256);
@@ -111,7 +98,6 @@ assert.equal(sky.source.license,'CC0-1.0');assert.equal(sky.source.runtimeInclud
 const skyBytes=await readFile(sky.source.path),skyOutput=manifest[sky.source.path]?.file;
 assert.equal(skyBytes.length,sky.source.bytes);assert.equal(createHash('sha256').update(skyBytes).digest('hex'),sky.source.sha256);assert(skyOutput);
 assert((await readFile(`dist/${skyOutput}`)).equals(skyBytes));assert((await readFile(`${root}/${skyOutput}`)).equals(skyBytes));
-assert(embedded.some(data=>data.equals(skyBytes)),'standalone omits the complete HDR sky');
 assert(!entry.includes(skyOutput),'HDR sky must remain behind the scene import');
 
 const skin=JSON.parse(await readFile('src/assets/characters/skin/provenance.json','utf8'));
@@ -119,11 +105,10 @@ const skinOutputs=Object.keys(manifest).filter(path=>path.startsWith('src/assets
 assert.deepEqual(skinOutputs,[skin.runtime.path],'only the selected WebP skin belongs in runtime');
 for(const asset of [skin.source,skin.materialDescriptor,skin.licenseFile,skin.runtime]){
   const bytes=await readFile(asset.path);assert.equal(bytes.length,asset.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);
-  if(!asset.runtimeIncluded){assert(!manifest[asset.path]);assert(!embedded.some(data=>data.equals(bytes)),'retained skin source must not be embedded');continue;}
+  if(!asset.runtimeIncluded){assert(!manifest[asset.path]);continue;}
   const output=manifest[asset.path]?.file;assert(output);assert((await readFile(`dist/${output}`)).equals(bytes));assert((await readFile(`${root}/${output}`)).equals(bytes));
-  assert(embedded.some(data=>data.equals(bytes)),'standalone omits the complete skin WebP');assert(!entry.includes(output),'skin must remain behind the scene import');
+  assert(!entry.includes(output),'skin must remain behind the scene import');
 }
-assert(Buffer.byteLength(standalone)<16*1024*1024,'standalone exceeds the existing publishing blob limit');
 
 const provenance=JSON.parse(await readFile('src/assets/vaults/provenance.json','utf8'));
 assert.equal(provenance.schemaVersion,1,'unsupported vault asset provenance schema');
@@ -144,8 +129,7 @@ for(const asset of provenance.assets){
   assert(output,`missing emitted vault asset ${asset.file}`);
   assert((await readFile(`dist/${output}`)).equals(source),`build output differs from source: ${asset.file}`);
   assert((await readFile(`${root}/${output}`)).equals(source),`staged output differs from source: ${asset.file}`);
-  assert(embedded.some(data=>data.equals(source)),`standalone does not embed the complete ${asset.file}`);
   vaultBytes+=source.length;
 }
 
-console.log(`Verified staged production build: initial ${entryBytes} bytes, ${jsAssets.length} JS chunks, ${totalJs} JS bytes, ${runtimeModels} imported runtime models, ${provenance.assets.length} vault assets (${vaultBytes} bytes) and ${presentationSources.length} title/score assets (${presentationBytes} bytes); source, build, staged output and standalone bytes agree.`);
+console.log(`Verified staged production build: initial ${entryBytes} bytes, ${jsAssets.length} JS chunks, ${totalJs} JS bytes, ${runtimeModels} imported runtime models, ${provenance.assets.length} vault assets (${vaultBytes} bytes) and ${presentationSources.length} title/score assets (${presentationBytes} bytes); source, build, fixed staged output and web receipt bytes agree.`);

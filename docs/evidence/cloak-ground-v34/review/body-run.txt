@@ -1,0 +1,247 @@
+{
+  "sourceHash": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc",
+  "cases": [
+    {
+      "role": "player",
+      "t": 0.08,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 3746
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 3746
+      }
+    },
+    {
+      "role": "player",
+      "t": 0.25,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 3746
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 3746
+      }
+    },
+    {
+      "role": "player",
+      "t": 0.5,
+      "before": {
+        "crossed": 31,
+        "bodyTriangles": 3746
+      },
+      "after": {
+        "crossed": 15,
+        "bodyTriangles": 3746
+      }
+    },
+    {
+      "role": "player",
+      "t": 0.8,
+      "before": {
+        "crossed": 65,
+        "bodyTriangles": 3746
+      },
+      "after": {
+        "crossed": 38,
+        "bodyTriangles": 3746
+      }
+    },
+    {
+      "role": "player",
+      "t": 1.1,
+      "before": {
+        "crossed": 65,
+        "bodyTriangles": 3746
+      },
+      "after": {
+        "crossed": 38,
+        "bodyTriangles": 3746
+      }
+    },
+    {
+      "role": "npc",
+      "t": 0.08,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 3174
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 3174
+      }
+    },
+    {
+      "role": "npc",
+      "t": 0.25,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 3174
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 3174
+      }
+    },
+    {
+      "role": "npc",
+      "t": 0.5,
+      "before": {
+        "crossed": 39,
+        "bodyTriangles": 3174
+      },
+      "after": {
+        "crossed": 10,
+        "bodyTriangles": 3174
+      }
+    },
+    {
+      "role": "npc",
+      "t": 0.8,
+      "before": {
+        "crossed": 56,
+        "bodyTriangles": 3174
+      },
+      "after": {
+        "crossed": 17,
+        "bodyTriangles": 3174
+      }
+    },
+    {
+      "role": "npc",
+      "t": 1.1,
+      "before": {
+        "crossed": 56,
+        "bodyTriangles": 3174
+      },
+      "after": {
+        "crossed": 17,
+        "bodyTriangles": 3174
+      }
+    },
+    {
+      "role": "ranger",
+      "t": 0.08,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 3346
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 3346
+      }
+    },
+    {
+      "role": "ranger",
+      "t": 0.25,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 3346
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 3346
+      }
+    },
+    {
+      "role": "ranger",
+      "t": 0.5,
+      "before": {
+        "crossed": 17,
+        "bodyTriangles": 3346
+      },
+      "after": {
+        "crossed": 6,
+        "bodyTriangles": 3346
+      }
+    },
+    {
+      "role": "ranger",
+      "t": 0.8,
+      "before": {
+        "crossed": 37,
+        "bodyTriangles": 3346
+      },
+      "after": {
+        "crossed": 17,
+        "bodyTriangles": 3346
+      }
+    },
+    {
+      "role": "ranger",
+      "t": 1.1,
+      "before": {
+        "crossed": 37,
+        "bodyTriangles": 3346
+      },
+      "after": {
+        "crossed": 17,
+        "bodyTriangles": 3346
+      }
+    },
+    {
+      "role": "boss",
+      "t": 0.08,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 3570
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 3570
+      }
+    },
+    {
+      "role": "boss",
+      "t": 0.25,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 3570
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 3570
+      }
+    },
+    {
+      "role": "boss",
+      "t": 0.5,
+      "before": {
+        "crossed": 39,
+        "bodyTriangles": 3570
+      },
+      "after": {
+        "crossed": 21,
+        "bodyTriangles": 3570
+      }
+    },
+    {
+      "role": "boss",
+      "t": 0.8,
+      "before": {
+        "crossed": 67,
+        "bodyTriangles": 3570
+      },
+      "after": {
+        "crossed": 32,
+        "bodyTriangles": 3570
+      }
+    },
+    {
+      "role": "boss",
+      "t": 1.1,
+      "before": {
+        "crossed": 67,
+        "bodyTriangles": 3570
+      },
+      "after": {
+        "crossed": 32,
+        "bodyTriangles": 3570
+      }
+    }
+  ],
+  "at": "2026-09-16T06:17:25.738Z",
+  "boundary": "Independent two-sided Moller-Trumbore proper edge/triangle crossings for torso/head-dominated skin only. No full limbs, rigid pieces, containment, adjacency/coplanar or cloth self-contact guarantee."
+}

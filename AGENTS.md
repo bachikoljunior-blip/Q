@@ -1,5 +1,12 @@
 # Q — 灰の巡礼
 
+## 最新の直接指定：遊ぶ方法を見直しWeb配信を主にする（2026-09-16）
+
+ユーザー原文「容量不足がネックなら今のプレイする方法を見直すのはどうですか？」。通常のプレイURLと複数ファイルの静的配信を一次提供にし、全素材を詰めたHTMLをGitへ保存する都合の16MiB guardを画質採用条件から外す。Sites独自の総量quotaは未公表であり、無制限とは断定しない。通常のsource→Vite→固定stageの全素材byte/hash・参照・sourceFingerprint・初期JS165000B未満/3chunks・出所検証は維持する。
+
+`npm run package` は固定stageと小さい `release/Q-web-manifest.json` を生成する。単体版は `npm run package:standalone` と `npm run test:standalone` の任意経路で `artifacts/` へ生成・完全byte検証し、Gitの必須大型blobから外す。下記の旧「両方必須」指定はこの範囲で更新する。全画面PS4の目標、スマホ、2026-09-20の期限、人間待ちなし、Ultra委任、単独writer、通常main統合後の同一所有者限定Site反映を保持する。生成receiptだけで公開済みや品質達成とは扱わない。
+
+
 ## 最新の直接指定：PS4相当の品質に達するまで制作を続ける（2026-09-16）
 
 ユーザー原文「PS4相当の品質達成 これ達成するまで絶対止めんな」。対象は以下の画面全体と音の品質であり、局所改修の公開、テスト成功、指示保存、正式画面の未取得だけを完了・自発停止条件にしない。許可された実行可能な品質作業が残る間は、有限の実装→検証→通常main統合→同一所有者限定Site反映を続け、次の具体的な品質欠落へ進む。人間の準備待ちにせず、実行制限が実際に生じた場合だけ、成果と未完了操作・次地点を安全に保存する。停止した子を背景で動き続けていると称しない。
@@ -74,7 +81,7 @@ Qの主目的はスマートフォン向けオープンワールドアクショ�
 
 - src/core.js は描画に依存しないゲームルール。src/content.js は武器と副クエストの定義。src/spatial.js / src/navigation.js は衝突と経路。src/runtime-state.js は途中動作・敵・矢の保存。src/save-store.js はブラウザー保存の検証・復旧。src/woodland.js は描画と衝突で共用する木の配置。src/scene.js はThree.jsによる3D描画。src/main.js は操作、画面、進行保存。src/audio.js は手続き的な環境音と効果音。
 - 操作、進行、保存の変更では該当する振る舞いを npm test で確認する。進行変更では npm run test:journey と npm run test:crossing も実行する。保存・経路変更では npm run test:session で30分相当の継続シミュレーションも行う。細かな表示だけの変更に不要な単体テストを増やさない。
-- 成果物は npm run build と npm run package で生成し、npm run test:artifacts で遅延チャンクと単体版を検査する。release/Q-ash-pilgrim.html は依存ファイルが不要な起動版。生成物はソース変更と一致させる。
+- 成果物は npm run build と npm run package で生成し、npm run test:artifacts で遅延チャンク・全素材・固定stage・release/Q-web-manifest.jsonを検査する。任意の単体HTMLは package:standalone / test:standalone で別検証する。生成物はソース変更と一致させる。
 - 品質確認はビルド、ロジックテスト、ブラウザー操作、スマホ実機、プレイヤー評価を区別する。できなかった確認は理由とともに残す。
 - src/village.js は住民の生活行動と鐘の探索クエスト、src/village-scene.js はその描画。住民・鐘・報酬の変更では npm run test:forge も実行する。三つの鐘を解いた状態と報告して報酬を得た状態を区別し、既存セーブを維持する。
 - 薬草の配達後は、選んだ届け先に対応する住民だけが活動する。反対側の住民や旅人の薬箱を偽の対象データで操作可能にしない。分岐変更では npm run test:crossing の両経路を徒歩で確認する。
@@ -83,7 +90,7 @@ Qの主目的はスマートフォン向けオープンワールドアクショ�
 - docs/PROJECT_STATE.md に進行、検証結果、欠点、次の作業を残す。品質目標を小規模な初期版へ勝手に縮小しない。
 - .openai/hosting.json はこのゲームのプレイ用Siteを指す。同じIDを使う。GitHub Qがゲームのソースであり、Sitesの閲覧範囲は所有者限定。認証情報をコードやGit設定へ保存しない。
 - 人物素材は src/assets/characters/provenance.json の版・出所・ライセンスを維持する。src/character-motion.js は保存された動作時間から姿勢を選び、src/rigged-actor.js は描画だけを更新する。骨格アニメーションから移動やダメージを二重に発生させない。
-- npm run test:artifacts が artifacts/latest-site.json に記録した配信用コピーをSitesへ渡す。過去のハッシュ付き生成物が残ったdistをそのまま包まない。ソースと一致するモデルの配信・単体版への埋込みを検査する。
+- npm run package が artifacts/latest-site.json に記録し、npm run test:artifacts が照合した配信用コピーをSitesへ渡す。過去のハッシュ付き生成物が残ったdistをそのまま包まない。全素材のsource/build/stage一致を通常経路で検査し、単体版への完全埋込みは任意経路で検査する。
 - src/world-regions.js の範囲・ルート・遭遇・障害物を、移動、保存、地図、表示で共有する。西部依頼の変更では npm run test:expedition で両迂回路・開通後の近道・途中保存を検証する。新しい地域の灯火数を既存の三灯火によるボス封印条件へ混ぜない。
 - 運び手ナルは石門が開いた後だけ活動し、src/world-regions.js の作業地点を実際の経路探索で往復する。座標を瞬間移動させず、門の開閉、途中保存、東西の到達を test:expedition と単体試験で確認する。NPCの移動確認を人間が導線を理解できることや画面上の演技確認へ読み替えない。
 - 配信用ディレクトリは生成物のハードリンクを使う場合がある。検証後から配信完了までdistを変更せず、再ビルドしたら再びステージング・検証する。ステージング失敗では前の正常な参照を維持し、不完全なコピーを除去する。容量不足時もユーザーのソースや無関係なファイルを消さない。

@@ -24,10 +24,10 @@ test('build identity detects changed or absent standalone helper inputs',async()
   await mkdir('artifacts',{recursive:true});const root=await mkdtemp('artifacts/identity-fixture-');
   try{
     for(const directory of ['src','public','scripts'])await mkdir(root+'/'+directory);
-    const inputs=['index.html','package.json','package-lock.json','vite.config.js','scripts/package.mjs','scripts/build-identity.mjs','scripts/packed-media.mjs','scripts/packed-media-plugin.mjs'];
+    const inputs=['index.html','package.json','package-lock.json','vite.config.js','scripts/package.mjs','scripts/package-standalone.mjs','scripts/web-package.mjs','scripts/build-identity.mjs','scripts/packed-media.mjs','scripts/packed-media-plugin.mjs'];
     for(const path of inputs)await writeFile(root+'/'+path,await readFile(path));
     const before=await buildIdentity(root);
-    for(const path of ['scripts/packed-media.mjs','scripts/packed-media-plugin.mjs']){
+    for(const path of ['scripts/package-standalone.mjs','scripts/web-package.mjs','scripts/packed-media.mjs','scripts/packed-media-plugin.mjs']){
       const original=await readFile(root+'/'+path);await writeFile(root+'/'+path,Buffer.concat([original,Buffer.from('\n// changed input\n')]));
       assert.notEqual((await buildIdentity(root)).sourceFingerprint,before.sourceFingerprint);
       await rm(root+'/'+path);await assert.rejects(buildIdentity(root),{code:'ENOENT'});await writeFile(root+'/'+path,original);

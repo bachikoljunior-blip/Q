@@ -1,0 +1,5841 @@
+{
+  "base": "39e47a4fa204ea6576c685bf25569727e410cd01",
+  "sourceHash": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc",
+  "baselineHash": "0731e2582bd7eacabf90fd96ca651fd7bc2f56c886c82c912835563c7294b006",
+  "nonDeath": [
+    {
+      "role": "player",
+      "allOtherActorStateExact": true,
+      "nonDeathCapeExact": true,
+      "includesRecovery": true
+    },
+    {
+      "role": "npc",
+      "allOtherActorStateExact": true,
+      "nonDeathCapeExact": true,
+      "includesRecovery": true
+    },
+    {
+      "role": "ranger",
+      "allOtherActorStateExact": true,
+      "nonDeathCapeExact": true,
+      "includesRecovery": true
+    },
+    {
+      "role": "boss",
+      "allOtherActorStateExact": true,
+      "nonDeathCapeExact": true,
+      "includesRecovery": true
+    }
+  ],
+  "saved": [
+    {
+      "role": "player",
+      "t": 0.075,
+      "historyError": 0
+    },
+    {
+      "role": "player",
+      "t": 0.2,
+      "historyError": 0
+    },
+    {
+      "role": "player",
+      "t": 0.475,
+      "historyError": 0
+    },
+    {
+      "role": "player",
+      "t": 0.8,
+      "historyError": 0
+    },
+    {
+      "role": "player",
+      "t": 1.2,
+      "historyError": 0
+    },
+    {
+      "role": "npc",
+      "t": 0.075,
+      "historyError": 0
+    },
+    {
+      "role": "npc",
+      "t": 0.2,
+      "historyError": 0
+    },
+    {
+      "role": "npc",
+      "t": 0.475,
+      "historyError": 0
+    },
+    {
+      "role": "npc",
+      "t": 0.8,
+      "historyError": 0
+    },
+    {
+      "role": "npc",
+      "t": 1.2,
+      "historyError": 0
+    },
+    {
+      "role": "ranger",
+      "t": 0.075,
+      "historyError": 0
+    },
+    {
+      "role": "ranger",
+      "t": 0.2,
+      "historyError": 0
+    },
+    {
+      "role": "ranger",
+      "t": 0.475,
+      "historyError": 0
+    },
+    {
+      "role": "ranger",
+      "t": 0.8,
+      "historyError": 0
+    },
+    {
+      "role": "ranger",
+      "t": 1.2,
+      "historyError": 0
+    },
+    {
+      "role": "boss",
+      "t": 0.075,
+      "historyError": 0
+    },
+    {
+      "role": "boss",
+      "t": 0.2,
+      "historyError": 0
+    },
+    {
+      "role": "boss",
+      "t": 0.475,
+      "historyError": 0
+    },
+    {
+      "role": "boss",
+      "t": 0.8,
+      "historyError": 0
+    },
+    {
+      "role": "boss",
+      "t": 1.2,
+      "historyError": 0
+    }
+  ],
+  "liveClock": [
+    {
+      "role": "player",
+      "hz": 30,
+      "maxError": 0
+    },
+    {
+      "role": "player",
+      "hz": 60,
+      "maxError": 0
+    },
+    {
+      "role": "player",
+      "hz": 120,
+      "maxError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 30,
+      "maxError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 60,
+      "maxError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 120,
+      "maxError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 30,
+      "maxError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 60,
+      "maxError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 120,
+      "maxError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 30,
+      "maxError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 60,
+      "maxError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 120,
+      "maxError": 0
+    }
+  ],
+  "rates": [
+    {
+      "role": "player",
+      "hz": 30,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.1253071146173709,
+      "lateMax": 0.1253071146173709,
+      "minArea": 0.972170482030316,
+      "minGap": 0.011999973352145421,
+      "maxEdge": 1.086416628805229,
+      "nonCapeExact": true
+    },
+    {
+      "role": "player",
+      "hz": 60,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.06748385867531252,
+      "lateMax": 0.06748385867531252,
+      "minArea": 0.972170482030316,
+      "minGap": 0.011999973352145421,
+      "maxEdge": 1.086416628805229,
+      "nonCapeExact": true
+    },
+    {
+      "role": "player",
+      "hz": 120,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.03503495426861902,
+      "lateMax": 0.03503495426861902,
+      "minArea": 0.972170482030316,
+      "minGap": 0.011999973352145421,
+      "maxEdge": 1.086416628805229,
+      "nonCapeExact": true
+    },
+    {
+      "role": "player",
+      "hz": 240,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.018196178601238833,
+      "lateMax": 0.018196178601238833,
+      "minArea": 0.972170482030316,
+      "minGap": 0.011999973352145421,
+      "maxEdge": 1.086416628805229,
+      "nonCapeExact": true
+    },
+    {
+      "role": "npc",
+      "hz": 30,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.11408439565293287,
+      "lateMax": 0.11408439565293287,
+      "minArea": 0.9798495972434478,
+      "minGap": 0.011999972422507055,
+      "maxEdge": 1.0822657270498226,
+      "nonCapeExact": true
+    },
+    {
+      "role": "npc",
+      "hz": 60,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.06175158357401826,
+      "lateMax": 0.06175158357401826,
+      "minArea": 0.9798495972434478,
+      "minGap": 0.011999972422507055,
+      "maxEdge": 1.0822657270498226,
+      "nonCapeExact": true
+    },
+    {
+      "role": "npc",
+      "hz": 120,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.03132162533650124,
+      "lateMax": 0.03132162533650124,
+      "minArea": 0.9798495972434478,
+      "minGap": 0.011999972422507055,
+      "maxEdge": 1.0822657270498226,
+      "nonCapeExact": true
+    },
+    {
+      "role": "npc",
+      "hz": 240,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.01581972048735113,
+      "lateMax": 0.01581972048735113,
+      "minArea": 0.9798495972434478,
+      "minGap": 0.011999972422507055,
+      "maxEdge": 1.0822657270498226,
+      "nonCapeExact": true
+    },
+    {
+      "role": "ranger",
+      "hz": 30,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.11408439565293287,
+      "lateMax": 0.11408439565293287,
+      "minArea": 0.9798495972434478,
+      "minGap": 0.011999972422507055,
+      "maxEdge": 1.0822657270498226,
+      "nonCapeExact": true
+    },
+    {
+      "role": "ranger",
+      "hz": 60,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.06175158357401826,
+      "lateMax": 0.06175158357401826,
+      "minArea": 0.9798495972434478,
+      "minGap": 0.011999972422507055,
+      "maxEdge": 1.0822657270498226,
+      "nonCapeExact": true
+    },
+    {
+      "role": "ranger",
+      "hz": 120,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.03132162533650124,
+      "lateMax": 0.03132162533650124,
+      "minArea": 0.9798495972434478,
+      "minGap": 0.011999972422507055,
+      "maxEdge": 1.0822657270498226,
+      "nonCapeExact": true
+    },
+    {
+      "role": "ranger",
+      "hz": 240,
+      "entry": 0.03730853837461504,
+      "fullMax": 0.01581972048735113,
+      "lateMax": 0.01581972048735113,
+      "minArea": 0.9798495972434478,
+      "minGap": 0.011999972422507055,
+      "maxEdge": 1.0822657270498226,
+      "nonCapeExact": true
+    },
+    {
+      "role": "boss",
+      "hz": 30,
+      "entry": 0.09260631967264718,
+      "fullMax": 0.31732897253226566,
+      "lateMax": 0.2369043172018522,
+      "minArea": 0.9003746903087128,
+      "minGap": 0.027599932977502517,
+      "maxEdge": 1.0750933186559823,
+      "nonCapeExact": true
+    },
+    {
+      "role": "boss",
+      "hz": 60,
+      "entry": 0.09260631967264718,
+      "fullMax": 0.16255882655568504,
+      "lateMax": 0.1264955530483083,
+      "minArea": 0.9003746903087128,
+      "minGap": 0.027599932977502517,
+      "maxEdge": 1.0750933186559823,
+      "nonCapeExact": true
+    },
+    {
+      "role": "boss",
+      "hz": 120,
+      "entry": 0.09260631967264718,
+      "fullMax": 0.08158492053812526,
+      "lateMax": 0.0635535989583452,
+      "minArea": 0.9003746903087128,
+      "minGap": 0.027599932977502517,
+      "maxEdge": 1.0750933186559823,
+      "nonCapeExact": true
+    },
+    {
+      "role": "boss",
+      "hz": 240,
+      "entry": 0.09260631967264718,
+      "fullMax": 0.041021820940674275,
+      "lateMax": 0.0318944376206988,
+      "minArea": 0.9003746903087128,
+      "minGap": 0.027599932977502517,
+      "maxEdge": 1.0750933186559823,
+      "nonCapeExact": true
+    }
+  ],
+  "covariance": [
+    {
+      "role": "player",
+      "yaw": -1.9,
+      "maxError": 1.0087767680389479e-14
+    },
+    {
+      "role": "player",
+      "yaw": 0.73,
+      "maxError": 1.5888218580782548e-14
+    },
+    {
+      "role": "player",
+      "yaw": 2.6,
+      "maxError": 1.4210854715202004e-14
+    },
+    {
+      "role": "npc",
+      "yaw": -1.9,
+      "maxError": 1.0087767680389479e-14
+    },
+    {
+      "role": "npc",
+      "yaw": 0.73,
+      "maxError": 1.5888218580782548e-14
+    },
+    {
+      "role": "npc",
+      "yaw": 2.6,
+      "maxError": 1.5888218580782548e-14
+    },
+    {
+      "role": "ranger",
+      "yaw": -1.9,
+      "maxError": 1.0087767680389479e-14
+    },
+    {
+      "role": "ranger",
+      "yaw": 0.73,
+      "maxError": 1.5888218580782548e-14
+    },
+    {
+      "role": "ranger",
+      "yaw": 2.6,
+      "maxError": 1.5888218580782548e-14
+    },
+    {
+      "role": "boss",
+      "yaw": -1.9,
+      "maxError": 1.591302455776226e-14
+    },
+    {
+      "role": "boss",
+      "yaw": 0.73,
+      "maxError": 1.591302455776226e-14
+    },
+    {
+      "role": "boss",
+      "yaw": 2.6,
+      "maxError": 1.0087767680389479e-14
+    }
+  ],
+  "terrain": [
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547503,
+        "degenerate": 0,
+        "maxEdge": 1.014153120716819,
+        "minGap": 0.01727436620689682,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.3691538637081265,
+            -1.2477983790080365,
+            100.66973184250055
+          ],
+          "ground": -1.2650727452149333
+        }
+      },
+      "after": {
+        "areaRatio": 0.9954632518052652,
+        "degenerate": 0,
+        "maxEdge": 1.0199175219484282,
+        "minGap": 0.022140491661356787,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.3508598087011045,
+            -1.2524359783240653,
+            100.69250297031908
+          ],
+          "ground": -1.274576469985422
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447953,
+        "degenerate": 0,
+        "maxEdge": 1.004094756256559,
+        "minGap": 0.05725068037337655,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.3912400543974504,
+            -1.3746648970409239,
+            101.15945431720493
+          ],
+          "ground": -1.4319155774143004
+        }
+      },
+      "after": {
+        "areaRatio": 0.9828650037504357,
+        "degenerate": 0,
+        "maxEdge": 1.0687327494346637,
+        "minGap": 0.015611463182627183,
+        "worst": {
+          "triangle": 153,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.09086527391137186,
+            -1.4495209386200831,
+            101.17088270780863
+          ],
+          "ground": -1.4651324018027103
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710666897,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030372963,
+        "minGap": -0.061602319639050496,
+        "worst": {
+          "triangle": 14,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "ground": -1.2156113661450414
+        }
+      },
+      "after": {
+        "areaRatio": 0.983876090310955,
+        "degenerate": 0,
+        "maxEdge": 1.0687180037857382,
+        "minGap": -0.061602319639050496,
+        "worst": {
+          "triangle": 14,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "ground": -1.2156113661450414
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547513,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207167898,
+        "minGap": -0.01500632059084328,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.01969476092346144,
+            -1.238958975234763,
+            100.44532159840458
+          ],
+          "ground": -1.2239526546439197
+        }
+      },
+      "after": {
+        "areaRatio": 0.9950558173404993,
+        "degenerate": 0,
+        "maxEdge": 1.0220784257667748,
+        "minGap": 0.017047819377010276,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.10631331831261419,
+            -1.2510014817113886,
+            100.54823166649393
+          ],
+          "ground": -1.2680493010883989
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447922,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562565772,
+        "minGap": -0.1004051954158971,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.38349961206160227,
+            -1.3491342654729666,
+            100.6259739858939
+          ],
+          "ground": -1.2487290700570695
+        }
+      },
+      "after": {
+        "areaRatio": 0.9914042625872824,
+        "degenerate": 0,
+        "maxEdge": 1.075868073331917,
+        "minGap": 0.02058794904952732,
+        "worst": {
+          "triangle": 137,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.1410623555562746,
+            -1.3693716530793267,
+            100.96896666154495
+          ],
+          "ground": -1.389959602128854
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.4213637371066573,
+        "degenerate": 80,
+        "maxEdge": 1.004073903037454,
+        "minGap": -0.09335137638004154,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.2950230585926459,
+            -1.3392375686151121,
+            100.59430385955291
+          ],
+          "ground": -1.2458861922350706
+        }
+      },
+      "after": {
+        "areaRatio": 0.9839212482844869,
+        "degenerate": 0,
+        "maxEdge": 1.045916848515358,
+        "minGap": 0.015086824160497336,
+        "worst": {
+          "triangle": 13,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.29024492015457526,
+            -1.3108308039480714,
+            100.66136492628935
+          ],
+          "ground": -1.3259176281085687
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547522,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207167647,
+        "minGap": 0.18665689617369052,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.5397332396084598,
+            -1.238958975234763,
+            100.8706012254075
+          ],
+          "ground": -1.4256158714084535
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388849,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685025808,
+        "minGap": 0.18153277683510072,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.5036300037101251,
+            -1.242520173093996,
+            100.87725872403216
+          ],
+          "ground": -1.4240529499290968
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447905,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562565605,
+        "minGap": -0.07490746458776076,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.1807924371288428,
+            -1.3746648970409239,
+            100.61815113707486
+          ],
+          "ground": -1.299757432453163
+        }
+      },
+      "after": {
+        "areaRatio": 0.9870056459281655,
+        "degenerate": 0,
+        "maxEdge": 1.1252878979225076,
+        "minGap": 0.011972745620378644,
+        "worst": {
+          "triangle": 181,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            0.3657212617710061,
+            -1.3078705608450534,
+            100.82789973553557
+          ],
+          "ground": -1.319843306465432
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.4213637371066653,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030373236,
+        "minGap": -0.03000863239570184,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.3119935143291742,
+            -1.3392375686151121,
+            100.60720487465913
+          ],
+          "ground": -1.3092289362194103
+        }
+      },
+      "after": {
+        "areaRatio": 0.9800799924684984,
+        "degenerate": 0,
+        "maxEdge": 1.0710654821259205,
+        "minGap": 0.011974841391826807,
+        "worst": {
+          "triangle": 145,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            0.5676356349278774,
+            -1.3187964502075458,
+            100.91313702190746
+          ],
+          "ground": -1.3307712915993726
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023405,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106055,
+        "minGap": -0.2754867359394062,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.8540260239654129,
+            -1.3729332696263916,
+            100.29928764608913
+          ],
+          "ground": -1.0974465336869854
+        }
+      },
+      "after": {
+        "areaRatio": 0.9457081772420415,
+        "degenerate": 0,
+        "maxEdge": 1.068710858267408,
+        "minGap": 0.030208461740004022,
+        "worst": {
+          "triangle": 153,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.2748040833373095,
+            -1.18878715069211,
+            100.5107946894095
+          ],
+          "ground": -1.218995612432114
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847348,
+        "degenerate": 0,
+        "maxEdge": 1.003631450922709,
+        "minGap": 0.1406163277225254,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.9016212716913877,
+            -1.317334041619181,
+            101.37112334269587
+          ],
+          "ground": -1.4579503693417064
+        }
+      },
+      "after": {
+        "areaRatio": 0.9740130120853676,
+        "degenerate": 0,
+        "maxEdge": 1.046040961475574,
+        "minGap": 0.03041640882485641,
+        "worst": {
+          "triangle": 125,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.657656820944164,
+            -1.4714624466039201,
+            101.43459723541346
+          ],
+          "ground": -1.5018788554287765
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.31644690337289905,
+        "degenerate": 96,
+        "maxEdge": 1.003620626092068,
+        "minGap": -0.1357660762073778,
+        "worst": {
+          "triangle": 14,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.5077797891419923,
+            -1.0985060891516119,
+            99.81913979705149
+          ],
+          "ground": -0.9627400129442341
+        }
+      },
+      "after": {
+        "areaRatio": 0.9873987762731685,
+        "degenerate": 0,
+        "maxEdge": 1.0505495411305037,
+        "minGap": -0.1357660762073778,
+        "worst": {
+          "triangle": 14,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.5077797891419923,
+            -1.0985060891516119,
+            99.81913979705149
+          ],
+          "ground": -0.9627400129442341
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023427,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090105374,
+        "minGap": -0.3669391344084789,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.03196836171398181,
+            -1.3493957635833436,
+            99.7579861598291
+          ],
+          "ground": -0.9824566291748646
+        }
+      },
+      "after": {
+        "areaRatio": 0.9567007402684568,
+        "degenerate": 0,
+        "maxEdge": 1.0624943004884118,
+        "minGap": 0.027544506958689485,
+        "worst": {
+          "triangle": 173,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            0.10503685421510228,
+            -1.0906583543956723,
+            100.17271854918485
+          ],
+          "ground": -1.1182028613543618
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847336,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509226967,
+        "minGap": -0.2081192588217775,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.8933430895552599,
+            -1.2499214113560717,
+            100.14350188567673
+          ],
+          "ground": -1.0418021525342942
+        }
+      },
+      "after": {
+        "areaRatio": 0.9918768938432606,
+        "degenerate": 0,
+        "maxEdge": 1.0511338233781702,
+        "minGap": 0.05288415143818592,
+        "worst": {
+          "triangle": 117,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.31837475777887864,
+            -1.4869665258283138,
+            101.45046561847909
+          ],
+          "ground": -1.5398506772664997
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.3164469033728947,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920144,
+        "minGap": -0.20889407820065875,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.679195771930659,
+            -1.2411429507810279,
+            100.06524820304628
+          ],
+          "ground": -1.0322488725803691
+        }
+      },
+      "after": {
+        "areaRatio": 0.9871545362975283,
+        "degenerate": 0,
+        "maxEdge": 1.0399941647201463,
+        "minGap": 0.03314331199091258,
+        "worst": {
+          "triangle": 13,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.6111147036972461,
+            -1.1814371809523525,
+            100.24763151232173
+          ],
+          "ground": -1.214580492943265
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023449,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090105993,
+        "minGap": 0.06714783732098328,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -1.1882011027865735,
+            -1.3493957635833436,
+            100.63695937601489
+          ],
+          "ground": -1.4165436009043268
+        }
+      },
+      "after": {
+        "areaRatio": 0.9566796598686015,
+        "degenerate": 0,
+        "maxEdge": 1.04869111690235,
+        "minGap": 0.03297984492835493,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.9034757825280418,
+            -1.2774994156682973,
+            100.4302310841969
+          ],
+          "ground": -1.3104792605966522
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847337,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509227064,
+        "minGap": -0.1684677008553297,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.4141697061094086,
+            -1.317334041619181,
+            100.11732400757616
+          ],
+          "ground": -1.1488663407638513
+        }
+      },
+      "after": {
+        "areaRatio": 0.9927437179946701,
+        "degenerate": 0,
+        "maxEdge": 1.0964635067491655,
+        "minGap": 0.027193199611031504,
+        "worst": {
+          "triangle": 190,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            0.46976134320860824,
+            -0.7246130521356784,
+            99.18505403773334
+          ],
+          "ground": -0.7518062517467099
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.3164469033728978,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920688,
+        "minGap": -0.06838344458975087,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.7190036718899522,
+            -1.2411429507810279,
+            100.09551034371562
+          ],
+          "ground": -1.172759506191277
+        }
+      },
+      "after": {
+        "areaRatio": 0.9716323845044339,
+        "degenerate": 0,
+        "maxEdge": 1.0637642762060167,
+        "minGap": 0.027420050551187458,
+        "worst": {
+          "triangle": 101,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            0.7088555087130771,
+            -1.2087336550512906,
+            100.67268429228736
+          ],
+          "ground": -1.236153705602478
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.98152133385476,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207167096,
+        "minGap": 0.16255393574235022,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.67168412176225,
+            12.16442283354965,
+            -247.29853197918274
+          ],
+          "ground": 12.0018688978073
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388809,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685026297,
+        "minGap": 0.16290350986313484,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.3510571895572285,
+            12.165943307789288,
+            -247.33517636387901
+          ],
+          "ground": 12.003039797926153
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447822,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562564926,
+        "minGap": 0.024084020790660077,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.6949687283019466,
+            12.023918315248407,
+            -246.7999463463564
+          ],
+          "ground": 11.999834294457747
+        }
+      },
+      "after": {
+        "areaRatio": 0.9793758374134955,
+        "degenerate": 0,
+        "maxEdge": 1.0703598926849411,
+        "minGap": 0.01197640920114651,
+        "worst": {
+          "triangle": 181,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            3.8526055247404596,
+            12.011396182685633,
+            -246.64876713079076
+          ],
+          "ground": 11.999419773484487
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710670183,
+        "degenerate": 80,
+        "maxEdge": 1.004073903037389,
+        "minGap": 0.0661812274083804,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.5700267772943466,
+            12.065957642591174,
+            -246.8287366800504
+          ],
+          "ground": 11.999776415182794
+        }
+      },
+      "after": {
+        "areaRatio": 0.9720671963113925,
+        "degenerate": 0,
+        "maxEdge": 1.0431069126090287,
+        "minGap": 0.01197583317829043,
+        "worst": {
+          "triangle": 165,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            3.8459553268689515,
+            12.010154547339305,
+            -246.46704904683662
+          ],
+          "ground": 11.998178714161014
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547497,
+        "degenerate": 0,
+        "maxEdge": 1.01415312071658,
+        "minGap": 0.16369869540764448,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.8731093480298346,
+            12.16688268880104,
+            -247.47880099560393
+          ],
+          "ground": 12.003183993393396
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388798,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685025318,
+        "minGap": 0.1629027768621416,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.8605265371740987,
+            12.165943307789288,
+            -247.46489944978495
+          ],
+          "ground": 12.003040530927146
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447951,
+        "degenerate": 0,
+        "maxEdge": 1.004094756256671,
+        "minGap": 0.024354127284722082,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.039928286778623,
+            12.023918315248407,
+            -246.63741032424403
+          ],
+          "ground": 11.999564187963685
+        }
+      },
+      "after": {
+        "areaRatio": 0.9795156921302165,
+        "degenerate": 0,
+        "maxEdge": 1.0708453443109065,
+        "minGap": 0.011989650925015027,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            4.148349746471324,
+            12.010787276241054,
+            -246.4976537738115
+          ],
+          "ground": 11.998797625316039
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.4213637371066701,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030374553,
+        "minGap": 0.06703702892480301,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.957596945111503,
+            12.065957642591174,
+            -246.53912032162378
+          ],
+          "ground": 11.998920613666371
+        }
+      },
+      "after": {
+        "areaRatio": 0.9725504038115979,
+        "degenerate": 0,
+        "maxEdge": 1.043259365295316,
+        "minGap": 0.011989796606469483,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            4.397223890357582,
+            12.009606153384608,
+            -246.3533961708278
+          ],
+          "ground": 11.997616356778138
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547512,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207167378,
+        "minGap": 0.16529177739202972,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.040450705169904,
+            12.16442283354965,
+            -246.55809910732262
+          ],
+          "ground": 11.999131056157621
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388675,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685026566,
+        "minGap": 0.16550337464911635,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.514733341833626,
+            12.165943307789288,
+            -246.9899692614913
+          ],
+          "ground": 12.000439933140171
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565448018,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562565716,
+        "minGap": 0.023009747282221937,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.360057019964693,
+            12.023918315248407,
+            -246.94148091401917
+          ],
+          "ground": 12.000908567966185
+        }
+      },
+      "after": {
+        "areaRatio": 0.9794387663464555,
+        "degenerate": 0,
+        "maxEdge": 1.0719062809197593,
+        "minGap": 0.011999980518517361,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.018770107782863,
+            12.015517652748333,
+            -247.5012229051582
+          ],
+          "ground": 12.003517672229815
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710668074,
+        "degenerate": 80,
+        "maxEdge": 1.004073903037326,
+        "minGap": 0.0651994748134026,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.432741619079073,
+            12.065957642591174,
+            -246.83585741527295
+          ],
+          "ground": 12.000758167777771
+        }
+      },
+      "after": {
+        "areaRatio": 0.9725940778679413,
+        "degenerate": 0,
+        "maxEdge": 1.0437302869711502,
+        "minGap": 0.01199999276597552,
+        "worst": {
+          "triangle": 105,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.074715824053114,
+            12.01270829734042,
+            -247.16360213191257
+          ],
+          "ground": 12.000708304574445
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023455,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106042,
+        "minGap": 0.02628970132756514,
+        "worst": {
+          "triangle": 185,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.31929843930342,
+            12.034090078516577,
+            -247.72185067231945
+          ],
+          "ground": 12.007800377189012
+        }
+      },
+      "after": {
+        "areaRatio": 0.9482238175424,
+        "degenerate": 0,
+        "maxEdge": 1.0742257386323808,
+        "minGap": 0.027599974689152873,
+        "worst": {
+          "triangle": 181,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.6949368649104497,
+            12.028885961114154,
+            -247.2125438614696
+          ],
+          "ground": 12.001285986425001
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847358,
+        "degenerate": 0,
+        "maxEdge": 1.003631450922709,
+        "minGap": 0.059295333946330686,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.3001965878514055,
+            12.056047532160955,
+            -246.5391338143371
+          ],
+          "ground": 11.996752198214624
+        }
+      },
+      "after": {
+        "areaRatio": 0.9761120369702725,
+        "degenerate": 0,
+        "maxEdge": 1.0560250724352829,
+        "minGap": 0.02739061584199476,
+        "worst": {
+          "triangle": 165,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            3.683205781962619,
+            12.01342057478243,
+            -245.7348165670213
+          ],
+          "ground": 11.986029958940435
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.31644690337290987,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920317,
+        "minGap": 0.1559064360350657,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.0128242236147003,
+            12.151720646841632,
+            -246.60627029131192
+          ],
+          "ground": 11.995814210806566
+        }
+      },
+      "after": {
+        "areaRatio": 0.9694933940652747,
+        "degenerate": 0,
+        "maxEdge": 1.0388429036457778,
+        "minGap": 0.027389822711091583,
+        "worst": {
+          "triangle": 149,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            3.6578945390170627,
+            12.004825556395465,
+            -245.4125196951815
+          ],
+          "ground": 11.977435733684374
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.845375154702341,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106761,
+        "minGap": 0.028745991225566314,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.7629028849758823,
+            12.041747798182685,
+            -248.07895468421094
+          ],
+          "ground": 12.013001806957119
+        }
+      },
+      "after": {
+        "areaRatio": 0.9482586201893415,
+        "degenerate": 0,
+        "maxEdge": 1.0748613990870786,
+        "minGap": 0.02801786874605483,
+        "worst": {
+          "triangle": 181,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.6684338290064957,
+            12.027913271954986,
+            -246.8250984969512
+          ],
+          "ground": 11.999895403208932
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847296,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509226953,
+        "minGap": 0.06028530030905266,
+        "worst": {
+          "triangle": 181,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.301422168518936,
+            12.060117820933337,
+            -246.66032536232441
+          ],
+          "ground": 11.999832520624285
+        }
+      },
+      "after": {
+        "areaRatio": 0.9765208606368715,
+        "degenerate": 0,
+        "maxEdge": 1.0564946677537805,
+        "minGap": 0.027505189893700432,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            5.009096299525249,
+            12.00902047187711,
+            -245.50761120536163
+          ],
+          "ground": 11.981515281983409
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.3164469033728976,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920142,
+        "minGap": 0.15869216907775296,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.679195771930659,
+            12.173538117028047,
+            -247.9347517969537
+          ],
+          "ground": 12.014845947950294
+        }
+      },
+      "after": {
+        "areaRatio": 0.9712030947744603,
+        "degenerate": 0,
+        "maxEdge": 1.0397456516698982,
+        "minGap": 0.027504802250794214,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            5.552145654040664,
+            11.997889799971134,
+            -245.1934095449846
+          ],
+          "ground": 11.97038499772034
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023385,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106,
+        "minGap": 0.0361183749452465,
+        "worst": {
+          "triangle": 185,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            3.2769677864676368,
+            12.034090078516577,
+            -246.6833861900293
+          ],
+          "ground": 11.99797170357133
+        }
+      },
+      "after": {
+        "areaRatio": 0.9479533550928791,
+        "degenerate": 0,
+        "maxEdge": 1.0752876578108816,
+        "minGap": 0.028402429351222835,
+        "worst": {
+          "triangle": 181,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.078095194712829,
+            12.027962393846547,
+            -246.63110078666637
+          ],
+          "ground": 11.999559964495324
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847318,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509226936,
+        "minGap": 0.05365506395178876,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.827328777809012,
+            12.056047532160955,
+            -246.86714839048284
+          ],
+          "ground": 12.002392468209166
+        }
+      },
+      "after": {
+        "areaRatio": 0.9756066005984378,
+        "degenerate": 0,
+        "maxEdge": 1.0572609518474576,
+        "minGap": 0.027599960663909684,
+        "worst": {
+          "triangle": 141,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.037505170184278,
+            12.040367882515866,
+            -248.04554849350353
+          ],
+          "ground": 12.012767921851957
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.31644690337290365,
+        "degenerate": 96,
+        "maxEdge": 1.003620626092042,
+        "minGap": 0.150835867032308,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            4.993887134949016,
+            12.151720646841632,
+            -246.6235329231282
+          ],
+          "ground": 12.000884779809324
+        }
+      },
+      "after": {
+        "areaRatio": 0.9712373608855728,
+        "degenerate": 0,
+        "maxEdge": 1.0406841809360423,
+        "minGap": 0.027599988336355352,
+        "worst": {
+          "triangle": 113,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            5.395627110337189,
+            12.040277564826704,
+            -247.3397552521279
+          ],
+          "ground": 12.012677576490349
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547506,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207169288,
+        "minGap": 0.038775849109546456,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.48540000680168,
+            4.115009879817528,
+            -35.26915208749186
+          ],
+          "ground": 4.076234030707981
+        }
+      },
+      "after": {
+        "areaRatio": 0.9958137870768246,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685024996,
+        "minGap": 0.04799677898310861,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.45378617280912,
+            4.115763142325536,
+            -35.24233809790473
+          ],
+          "ground": 4.067766363342427
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447868,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562565727,
+        "minGap": -0.0990682778136236,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.50728867322513,
+            4.004834589579324,
+            -34.82787907246079
+          ],
+          "ground": 4.103902867392947
+        }
+      },
+      "after": {
+        "areaRatio": 0.994301492138823,
+        "degenerate": 0,
+        "maxEdge": 1.088753972340773,
+        "minGap": 0.011990288630559842,
+        "worst": {
+          "triangle": 153,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            204.09102466512508,
+            3.9876913975341144,
+            -34.83174544597638
+          ],
+          "ground": 3.9757011089035545
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710665737,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030372798,
+        "minGap": -0.08121206258837876,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.4953807014237,
+            4.014731286437178,
+            -34.921095474578514
+          ],
+          "ground": 4.095943349025557
+        }
+      },
+      "after": {
+        "areaRatio": 0.9902701668575344,
+        "degenerate": 0,
+        "maxEdge": 1.0766741522639962,
+        "minGap": 0.016947555047178042,
+        "worst": {
+          "triangle": 45,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.19846391905077,
+            4.006697290418361,
+            -35.22024491515293
+          ],
+          "ground": 3.9897497353711833
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547432,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207167893,
+        "minGap": 0.2107391452737879,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            203.98030523907653,
+            4.115009879817528,
+            -35.55467840159542
+          ],
+          "ground": 3.90427073454374
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388774,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685026246,
+        "minGap": 0.20419089303156124,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            203.9835479250947,
+            4.1114486819582945,
+            -35.51810996004186
+          ],
+          "ground": 3.9072577889267333
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447975,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562565792,
+        "minGap": -0.04519832206095087,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.31957183230762,
+            3.9793039580113665,
+            -35.276348156201124
+          ],
+          "ground": 4.024502280072317
+        }
+      },
+      "after": {
+        "areaRatio": 0.9828501715436673,
+        "degenerate": 0,
+        "maxEdge": 1.11251017901968,
+        "minGap": 0.011985385935415316,
+        "worst": {
+          "triangle": 181,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            204.26445699023077,
+            4.047558334975091,
+            -34.69400073699656
+          ],
+          "ground": 4.0355729490396754
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710668895,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030372794,
+        "minGap": 0.004399872207506483,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.29502305859262,
+            4.014731286437178,
+            -35.405696140447084
+          ],
+          "ground": 4.010331414229672
+        }
+      },
+      "after": {
+        "areaRatio": 0.9743192705358766,
+        "degenerate": 0,
+        "maxEdge": 1.0723402388523802,
+        "minGap": 0.011986837456518629,
+        "worst": {
+          "triangle": 145,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            204.2338876706046,
+            4.048208170270988,
+            -34.47483057140812
+          ],
+          "ground": 4.03622133281447
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.981521333854746,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207166363,
+        "minGap": 0.09710891629413876,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.16220320884545,
+            4.109401191973757,
+            -34.51891920024889
+          ],
+          "ground": 4.012292275679618
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388768,
+        "degenerate": 0,
+        "maxEdge": 1.008731568502569,
+        "minGap": 0.0987521412047272,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.15641262873706,
+            4.1100532854217215,
+            -34.50182056689212
+          ],
+          "ground": 4.011301144216994
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447852,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562564044,
+        "minGap": -0.10990237089397592,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.45969664141867,
+            3.9770584584837723,
+            -34.878458754429
+          ],
+          "ground": 4.086960829377748
+        }
+      },
+      "after": {
+        "areaRatio": 0.9753698402808929,
+        "degenerate": 0,
+        "maxEdge": 1.0725638947326532,
+        "minGap": 0.011980364995827664,
+        "worst": {
+          "triangle": 173,
+          "barycentric": [
+            0.5,
+            0.5,
+            0
+          ],
+          "point": [
+            203.98398473468382,
+            3.9276463386835863,
+            -35.36275732798455
+          ],
+          "ground": 3.9156659736877586
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710666963,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030370964,
+        "minGap": -0.07541233620848065,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.43274161907905,
+            4.005245429834389,
+            -34.835857415272976
+          ],
+          "ground": 4.08065776604287
+        }
+      },
+      "after": {
+        "areaRatio": 0.966403553472353,
+        "degenerate": 0,
+        "maxEdge": 1.0614581470670013,
+        "minGap": 0.011985736342668751,
+        "worst": {
+          "triangle": 109,
+          "barycentric": [
+            0.5,
+            0.5,
+            0
+          ],
+          "point": [
+            203.95784791810058,
+            3.925469719811117,
+            -35.24888766087135
+          ],
+          "ground": 3.9134839834684483
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023447,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106186,
+        "minGap": -0.25537002507874895,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            205.12139260054028,
+            4.004573091468947,
+            -35.534882221409795
+          ],
+          "ground": 4.259943116547696
+        }
+      },
+      "after": {
+        "areaRatio": 0.9558141571016369,
+        "degenerate": 0,
+        "maxEdge": 1.0528895250625951,
+        "minGap": 0.027528725138739496,
+        "worst": {
+          "triangle": 159,
+          "barycentric": [
+            0.5,
+            0.5,
+            0
+          ],
+          "point": [
+            204.92840031832435,
+            4.231169258585598,
+            -35.466271433048995
+          ],
+          "ground": 4.203640533446858
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847366,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509226685,
+        "minGap": -0.2114548616323484,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            205.16853438388824,
+            4.104047443696219,
+            -34.592350286193685
+          ],
+          "ground": 4.315502305328567
+        }
+      },
+      "after": {
+        "areaRatio": 0.99937929363176,
+        "degenerate": 0,
+        "maxEdge": 1.0525642017877772,
+        "minGap": 0.027600015276871837,
+        "worst": {
+          "triangle": 117,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            203.74150720440886,
+            3.9130134117785538,
+            -34.47195371667253
+          ],
+          "ground": 3.885413396501682
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.31644690337289366,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920073,
+        "minGap": -0.1850726302703034,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            205.1411382491122,
+            4.112825904271263,
+            -34.81869551872658
+          ],
+          "ground": 4.297898534541567
+        }
+      },
+      "after": {
+        "areaRatio": 0.9852447782616411,
+        "degenerate": 0,
+        "maxEdge": 1.069320827585743,
+        "minGap": 0.048892644174662436,
+        "worst": {
+          "triangle": 45,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.45431981950742,
+            4.113152255569087,
+            -35.316822784873466
+          ],
+          "ground": 4.064259611394425
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.845375154702342,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106115,
+        "minGap": 0.12272414138779997,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.03196836171398,
+            4.004573091468947,
+            -36.2420138401709
+          ],
+          "ground": 3.881848950081147
+        }
+      },
+      "after": {
+        "areaRatio": 0.9584843422639413,
+        "degenerate": 0,
+        "maxEdge": 1.0463044998056132,
+        "minGap": 0.04201371475331683,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.280039520254,
+            4.013003391372951,
+            -36.053912158631896
+          ],
+          "ground": 3.9709896766196344
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847346,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509227149,
+        "minGap": -0.10029914814973928,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.73971976633516,
+            4.036634813433109,
+            -35.63519140450198
+          ],
+          "ground": 4.136933961582848
+        }
+      },
+      "after": {
+        "areaRatio": 0.9877909222977297,
+        "degenerate": 0,
+        "maxEdge": 1.0905429160229256,
+        "minGap": 0.027385942700496102,
+        "worst": {
+          "triangle": 190,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            205.8502080303353,
+            4.53073489369449,
+            -35.0555913513161
+          ],
+          "ground": 4.503348950993994
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.31644690337290404,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920746,
+        "minGap": 0.010137178426770532,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.67919577193064,
+            4.112825904271263,
+            -35.93475179695371
+          ],
+          "ground": 4.102688725844493
+        }
+      },
+      "after": {
+        "areaRatio": 0.9651051326385605,
+        "degenerate": 0,
+        "maxEdge": 1.0665146919534518,
+        "minGap": 0.02749646662942329,
+        "worst": {
+          "triangle": 113,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            204.57042564213353,
+            4.1923540383839875,
+            -33.83625278459806
+          ],
+          "ground": 4.164857571754564
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023416,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090105656,
+        "minGap": -0.12451712666088399,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.42004436390076,
+            3.9905063577776585,
+            -33.95215977692596
+          ],
+          "ground": 4.1150234844385425
+        }
+      },
+      "after": {
+        "areaRatio": 0.9506330339876908,
+        "degenerate": 0,
+        "maxEdge": 1.052744413235497,
+        "minGap": 0.027498607319514257,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0.5,
+            0.5,
+            0
+          ],
+          "point": [
+            204.61442554147476,
+            4.187208393392324,
+            -34.29734279977881
+          ],
+          "ground": 4.15970978607281
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847332,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509227084,
+        "minGap": -0.24066132412998353,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            205.06213148648476,
+            4.036999872361724,
+            -34.72834749215398
+          ],
+          "ground": 4.2776611964917075
+        }
+      },
+      "after": {
+        "areaRatio": 0.9712206863338745,
+        "degenerate": 0,
+        "maxEdge": 1.0913605035374654,
+        "minGap": 0.027512626711405197,
+        "worst": {
+          "triangle": 141,
+          "barycentric": [
+            0.5,
+            0.5,
+            0
+          ],
+          "point": [
+            204.11911409699002,
+            3.954528638279468,
+            -35.933867393471985
+          ],
+          "ground": 3.927016011568063
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.3164469033729006,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920455,
+        "minGap": -0.17028560732649112,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            204.993887134949,
+            4.091008434084847,
+            -34.62353292312823
+          ],
+          "ground": 4.261294041411338
+        }
+      },
+      "after": {
+        "areaRatio": 0.9613116492913153,
+        "degenerate": 0,
+        "maxEdge": 1.0552819555695623,
+        "minGap": 0.027533290197904847,
+        "worst": {
+          "triangle": 93,
+          "barycentric": [
+            0.5,
+            0.5,
+            0
+          ],
+          "point": [
+            204.03549858762523,
+            3.9424167055252797,
+            -35.67776252599137
+          ],
+          "ground": 3.914883415327375
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547497,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207169288,
+        "minGap": 0.06061472488850583,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.48540000680168,
+            7.517072924145002,
+            -48.26915208749186
+          ],
+          "ground": 7.456458199256496
+        }
+      },
+      "after": {
+        "areaRatio": 0.995801703586288,
+        "degenerate": 0,
+        "maxEdge": 1.008731568502513,
+        "minGap": 0.06610487460897208,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.45435379417748,
+            7.5156058872211755,
+            -48.24780767556555
+          ],
+          "ground": 7.449501012612203
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.707187556544786,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562565765,
+        "minGap": -0.09506900429340259,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.50728867322513,
+            7.406897633906798,
+            -47.82787907246079
+          ],
+          "ground": 7.501966638200201
+        }
+      },
+      "after": {
+        "areaRatio": 0.9926761378638056,
+        "degenerate": 0,
+        "maxEdge": 1.090687061255543,
+        "minGap": 0.011988498772760536,
+        "worst": {
+          "triangle": 157,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            218.30404796121945,
+            7.457421177526466,
+            -47.81168032884951
+          ],
+          "ground": 7.445432678753705
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710665737,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030372796,
+        "minGap": -0.07362148010692682,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.4953807014237,
+            7.416794330764652,
+            -47.921095474578514
+          ],
+          "ground": 7.490415810871579
+        }
+      },
+      "after": {
+        "areaRatio": 0.991471513885893,
+        "degenerate": 0,
+        "maxEdge": 1.0650638478866552,
+        "minGap": 0.016767158909085644,
+        "worst": {
+          "triangle": 125,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.26145477501962,
+            7.455539603330242,
+            -47.748807799122105
+          ],
+          "ground": 7.438772444421156
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547435,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207167893,
+        "minGap": 0.23293566279227207,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            217.98030523907653,
+            7.517072924145002,
+            -48.55467840159542
+          ],
+          "ground": 7.28413726135273
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388771,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685026381,
+        "minGap": 0.22495784185869017,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            217.9835479250947,
+            7.513511726285769,
+            -48.51810996004186
+          ],
+          "ground": 7.2885538844270785
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447973,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562565825,
+        "minGap": -0.02684585622389335,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.31957183230762,
+            7.381367002338841,
+            -48.276348156201124
+          ],
+          "ground": 7.4082128585627345
+        }
+      },
+      "after": {
+        "areaRatio": 0.9807533864742446,
+        "degenerate": 0,
+        "maxEdge": 1.0997219540819243,
+        "minGap": 0.011985844120915523,
+        "worst": {
+          "triangle": 181,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            218.2655301814375,
+            7.456672735571965,
+            -47.69436138737716
+          ],
+          "ground": 7.44468689145105
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710668923,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030372792,
+        "minGap": 0.027561119930116007,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.29502305859262,
+            7.416794330764652,
+            -48.405696140447084
+          ],
+          "ground": 7.389233210834536
+        }
+      },
+      "after": {
+        "areaRatio": 0.9692188252662579,
+        "degenerate": 0,
+        "maxEdge": 1.0741129700791516,
+        "minGap": 0.011970898344591419,
+        "worst": {
+          "triangle": 148,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            218.28434967311216,
+            7.467636631869242,
+            -47.629678213957206
+          ],
+          "ground": 7.455665733524651
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547455,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207166363,
+        "minGap": 0.0810986169438177,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.16220320884545,
+            7.511464236301231,
+            -47.51891920024889
+          ],
+          "ground": 7.4303656193574135
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959476775681946,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685025828,
+        "minGap": 0.08227952836289809,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.1566499462838,
+            7.512532645904095,
+            -47.50178337370323
+          ],
+          "ground": 7.430253117541197
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447846,
+        "degenerate": 0,
+        "maxEdge": 1.004094756256408,
+        "minGap": -0.10486933175951041,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.45969664141867,
+            7.3791215028112465,
+            -47.878458754429
+          ],
+          "ground": 7.483990834570757
+        }
+      },
+      "after": {
+        "areaRatio": 0.974413415397312,
+        "degenerate": 0,
+        "maxEdge": 1.0691948827096676,
+        "minGap": 0.011977992726310838,
+        "worst": {
+          "triangle": 144,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            218.4416872728823,
+            7.490767284744484,
+            -47.87922508547403
+          ],
+          "ground": 7.478789292018173
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710666974,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030370962,
+        "minGap": -0.07273204406355571,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.43274161907905,
+            7.407308474161863,
+            -47.835857415272976
+          ],
+          "ground": 7.480040518225419
+        }
+      },
+      "after": {
+        "areaRatio": 0.9652111396968341,
+        "degenerate": 0,
+        "maxEdge": 1.0568410152164274,
+        "minGap": 0.011985130817140366,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            218.76331193151356,
+            7.558473199598424,
+            -48.14958880044377
+          ],
+          "ground": 7.546488068781284
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023443,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106182,
+        "minGap": -0.20701721704960985,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            219.12139260054028,
+            7.406636135796421,
+            -48.534882221409795
+          ],
+          "ground": 7.613653352846031
+        }
+      },
+      "after": {
+        "areaRatio": 0.9566746867656577,
+        "degenerate": 0,
+        "maxEdge": 1.0626982070093987,
+        "minGap": 0.027514470380936906,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0.5,
+            0.5,
+            0
+          ],
+          "point": [
+            218.89402280629858,
+            7.623077285102615,
+            -48.01291787051586
+          ],
+          "ground": 7.595562814721678
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847367,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509226656,
+        "minGap": -0.2023092687180812,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            219.16853438388824,
+            7.506110488023695,
+            -47.592350286193685
+          ],
+          "ground": 7.708419756741776
+        }
+      },
+      "after": {
+        "areaRatio": 0.9981182256672619,
+        "degenerate": 0,
+        "maxEdge": 1.0545234401571193,
+        "minGap": 0.027502285927765158,
+        "worst": {
+          "triangle": 157,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            218.6951234919947,
+            7.656732014515664,
+            -46.93452993315026
+          ],
+          "ground": 7.629229728587899
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.31644690337289366,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920073,
+        "minGap": -0.166950314857508,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            219.1411382491122,
+            7.514888948598737,
+            -47.81869551872658
+          ],
+          "ground": 7.681839263456245
+        }
+      },
+      "after": {
+        "areaRatio": 0.983751634935029,
+        "degenerate": 0,
+        "maxEdge": 1.0616734671682826,
+        "minGap": 0.04383406884264396,
+        "worst": {
+          "triangle": 45,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.45681312810174,
+            7.487832152926291,
+            -48.316009620232165
+          ],
+          "ground": 7.443998084083647
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023415,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106113,
+        "minGap": 0.17465296383120954,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.03196836171398,
+            7.406636135796421,
+            -49.2420138401709
+          ],
+          "ground": 7.2319831719652115
+        }
+      },
+      "after": {
+        "areaRatio": 0.9597111214920666,
+        "degenerate": 0,
+        "maxEdge": 1.0349212222958104,
+        "minGap": 0.05597109868015426,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.0622639403116,
+            7.336692153986698,
+            -48.83837001971873
+          ],
+          "ground": 7.280721055306544
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847344,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509227122,
+        "minGap": -0.06440830227242866,
+        "worst": {
+          "triangle": 185,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.51346663109055,
+            7.4107118508243435,
+            -48.15137272396712
+          ],
+          "ground": 7.475120153096772
+        }
+      },
+      "after": {
+        "areaRatio": 0.9857545221445301,
+        "degenerate": 0,
+        "maxEdge": 1.088452579544748,
+        "minGap": 0.027388570790717104,
+        "worst": {
+          "triangle": 160,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            218.76957715050162,
+            7.710467858267055,
+            -46.50596169071071
+          ],
+          "ground": 7.683079287476338
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.31644690337290404,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920746,
+        "minGap": 0.0647330028185511,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.67919577193064,
+            7.514888948598737,
+            -48.93475179695371
+          ],
+          "ground": 7.450155945780186
+        }
+      },
+      "after": {
+        "areaRatio": 0.961083390822197,
+        "degenerate": 0,
+        "maxEdge": 1.0618551933709617,
+        "minGap": 0.02742301373184297,
+        "worst": {
+          "triangle": 120,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            218.85873732537857,
+            7.649451971152729,
+            -47.5865626478091
+          ],
+          "ground": 7.622028957420886
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023415,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090105656,
+        "minGap": -0.15804097294622466,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.42004436390076,
+            7.392569402105133,
+            -46.95215977692596
+          ],
+          "ground": 7.550610375051358
+        }
+      },
+      "after": {
+        "areaRatio": 0.950252957162791,
+        "degenerate": 0,
+        "maxEdge": 1.0575286076352146,
+        "minGap": 0.027483795928577415,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0.5,
+            0.25,
+            0.25
+          ],
+          "point": [
+            218.5939720639903,
+            7.60112478336338,
+            -47.27145142400264
+          ],
+          "ground": 7.5736409874348025
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847337,
+        "degenerate": 0,
+        "maxEdge": 1.003631450922706,
+        "minGap": -0.22822298000720576,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            219.06213148648476,
+            7.439062916689201,
+            -47.72834749215398
+          ],
+          "ground": 7.667285896696407
+        }
+      },
+      "after": {
+        "areaRatio": 0.9690714450053991,
+        "degenerate": 0,
+        "maxEdge": 1.0849042635064816,
+        "minGap": 0.02749260379337315,
+        "worst": {
+          "triangle": 144,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            219.43648786308822,
+            7.761036615671774,
+            -48.1830178200107
+          ],
+          "ground": 7.733544011878401
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.3164469033729006,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920455,
+        "minGap": -0.16384487223943722,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            218.993887134949,
+            7.493071478412321,
+            -47.62353292312823
+          ],
+          "ground": 7.656916350651758
+        }
+      },
+      "after": {
+        "areaRatio": 0.9618708965823107,
+        "degenerate": 0,
+        "maxEdge": 1.052729781732772,
+        "minGap": 0.027525746655403083,
+        "worst": {
+          "triangle": 96,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            219.13621257307852,
+            7.695507319041649,
+            -47.96526189255923
+          ],
+          "ground": 7.667981572386246
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547415,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207167407,
+        "minGap": 0.05736811090015692,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.4445599939453,
+            51.74882999780053,
+            -38.24518366306167
+          ],
+          "ground": 51.69146188690037
+        }
+      },
+      "after": {
+        "areaRatio": 0.995849058547911,
+        "degenerate": 0,
+        "maxEdge": 1.008731568502486,
+        "minGap": 0.05949150060040154,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.4520273199969,
+            51.75144938351882,
+            -38.259402673040924
+          ],
+          "ground": 51.691957882918416
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447917,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562564428,
+        "minGap": -0.13224359467945135,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.4210740507391,
+            51.61648726431055,
+            -37.77911559516178
+          ],
+          "ground": 51.74873085899
+        }
+      },
+      "after": {
+        "areaRatio": 0.9738197346818959,
+        "degenerate": 0,
+        "maxEdge": 1.0837415080334079,
+        "minGap": 0.0119883315846252,
+        "worst": {
+          "triangle": 178,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            -389.3124970457801,
+            51.749349727107784,
+            -37.60442357515422
+          ],
+          "ground": 51.73736139552316
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.4213637371066658,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030372772,
+        "minGap": -0.10006949948312638,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.42997322270566,
+            51.644674235661164,
+            -37.82873668005039
+          ],
+          "ground": 51.74474373514429
+        }
+      },
+      "after": {
+        "areaRatio": 0.9684120341746221,
+        "degenerate": 0,
+        "maxEdge": 1.0606268123013305,
+        "minGap": 0.011989488201152199,
+        "worst": {
+          "triangle": 182,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            -389.1065487709941,
+            51.71334798558499,
+            -37.37900638108157
+          ],
+          "ground": 51.701358497383836
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.981521333854738,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207168197,
+        "minGap": -0.008546314782442721,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.4201601740819,
+            51.74882999780053,
+            -37.71501922000881
+          ],
+          "ground": 51.75737631258297
+        }
+      },
+      "after": {
+        "areaRatio": 0.9932988441946163,
+        "degenerate": 0,
+        "maxEdge": 1.0221074683847244,
+        "minGap": 0.01200001074317214,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.4275849234056,
+            51.757142563111735,
+            -37.82022658482816
+          ],
+          "ground": 51.74514255236856
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.707187556544792,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562567069,
+        "minGap": -0.027477491499219298,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -388.9941437489336,
+            51.61648726431055,
+            -37.524543397532426
+          ],
+          "ground": 51.64396475580977
+        }
+      },
+      "after": {
+        "areaRatio": 0.977099169262491,
+        "degenerate": 0,
+        "maxEdge": 1.0599412718854524,
+        "minGap": 0.01199998331174612,
+        "worst": {
+          "triangle": 169,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -388.7371011646062,
+            51.50948139055231,
+            -37.961648357820415
+          ],
+          "ground": 51.497481407240564
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.4213637371067184,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030373793,
+        "minGap": -0.05864712983962761,
+        "worst": {
+          "triangle": 0,
+          "barycentric": [
+            1,
+            0,
+            0
+          ],
+          "point": [
+            -389.54971587791584,
+            51.71077805714936,
+            -37.935784425826625
+          ],
+          "ground": 51.76942518698899
+        }
+      },
+      "after": {
+        "areaRatio": 0.9704901963047671,
+        "degenerate": 0,
+        "maxEdge": 1.04983586633529,
+        "minGap": -0.05864712983962761,
+        "worst": {
+          "triangle": 0,
+          "barycentric": [
+            1,
+            0,
+            0
+          ],
+          "point": [
+            -389.54971587791584,
+            51.71077805714936,
+            -37.935784425826625
+          ],
+          "ground": 51.76942518698899
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547406,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207170535,
+        "minGap": 0.003940176580208288,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.49529571926547,
+            51.74559928187103,
+            -38.005812179109554
+          ],
+          "ground": 51.74165910529082
+        }
+      },
+      "after": {
+        "areaRatio": 0.9948630318098446,
+        "degenerate": 0,
+        "maxEdge": 1.0258863696741973,
+        "minGap": 0.015009323575398525,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.4584179225312,
+            51.74253563429326,
+            -38.019586816906006
+          ],
+          "ground": 51.72752631071786
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447839,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562564135,
+        "minGap": 0.03398635824421348,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.18079243712884,
+            51.61873276383814,
+            -38.38184886292514
+          ],
+          "ground": 51.584746405593926
+        }
+      },
+      "after": {
+        "areaRatio": 0.9834620671003524,
+        "degenerate": 0,
+        "maxEdge": 1.0708535908401497,
+        "minGap": 0.018137337938121334,
+        "worst": {
+          "triangle": 153,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -388.94761822692135,
+            51.55233553340014,
+            -38.192450341657796
+          ],
+          "ground": 51.53419819546202
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710669456,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030373123,
+        "minGap": -0.06297039054859965,
+        "worst": {
+          "triangle": 14,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.5095918321139,
+            51.71618397509497,
+            -37.770533764698456
+          ],
+          "ground": 51.77915436564357
+        }
+      },
+      "after": {
+        "areaRatio": 0.9831864545764152,
+        "degenerate": 0,
+        "maxEdge": 1.079837318359315,
+        "minGap": -0.06297039054859965,
+        "worst": {
+          "triangle": 14,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.5095918321139,
+            51.71618397509497,
+            -37.770533764698456
+          ],
+          "ground": 51.77915436564357
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.845375154702341,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090105402,
+        "minGap": -0.21867794366488624,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -390.017515563976,
+            51.62993516360443,
+            -38.48894629337312
+          ],
+          "ground": 51.848613107269315
+        }
+      },
+      "after": {
+        "areaRatio": 0.9496441335959406,
+        "degenerate": 0,
+        "maxEdge": 1.031239919993114,
+        "minGap": 0.02753622478874007,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            -389.9194539015406,
+            51.8879920142736,
+            -38.164751608819984
+          ],
+          "ground": 51.86045578948486
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847366,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509228073,
+        "minGap": -0.29341428400900327,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.9667003501667,
+            51.6764286781885,
+            -37.482884140072144
+          ],
+          "ground": 51.969842962197504
+        }
+      },
+      "after": {
+        "areaRatio": 0.9705640310414982,
+        "degenerate": 0,
+        "maxEdge": 1.0936621323168958,
+        "minGap": 0.027515526990811168,
+        "worst": {
+          "triangle": 178,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            -389.71746816427367,
+            52.07328434460031,
+            -36.338785540822194
+          ],
+          "ground": 52.0457688176095
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.3164469033728999,
+        "degenerate": 96,
+        "maxEdge": 1.003620626092008,
+        "minGap": -0.2292298946835487,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.9871757763853,
+            51.73043723991162,
+            -37.60627029131189
+          ],
+          "ground": 51.95966713459517
+        }
+      },
+      "after": {
+        "areaRatio": 0.9652782505123167,
+        "degenerate": 0,
+        "maxEdge": 1.0543323245148541,
+        "minGap": 0.027520868614082872,
+        "worst": {
+          "triangle": 178,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            -389.78047234714415,
+            52.158990147558946,
+            -35.86493864105002
+          ],
+          "ground": 52.13146927894486
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023411,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106006,
+        "minGap": -0.34010965231726686,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.89729364863854,
+            51.62993516360443,
+            -37.314966782667
+          ],
+          "ground": 51.970044815921696
+        }
+      },
+      "after": {
+        "areaRatio": 0.9429346664758724,
+        "degenerate": 0,
+        "maxEdge": 1.0486289997159182,
+        "minGap": 0.027599945530475622,
+        "worst": {
+          "triangle": 169,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.2480542601426,
+            51.634414101258514,
+            -38.38375654368165
+          ],
+          "ground": 51.60681415572804
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847363,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509227264,
+        "minGap": -0.04980607488692357,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -388.9776340690442,
+            51.6764286781885,
+            -36.90390778456653
+          ],
+          "ground": 51.726234753075424
+        }
+      },
+      "after": {
+        "areaRatio": 0.9674186680617707,
+        "degenerate": 0,
+        "maxEdge": 1.0502457544067871,
+        "minGap": 0.027599969661260104,
+        "worst": {
+          "triangle": 117,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -388.68808734164355,
+            51.57226748042016,
+            -37.51729365267607
+          ],
+          "ground": 51.5446675107589
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.3164469033729269,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260921703,
+        "minGap": -0.13541916455205438,
+        "worst": {
+          "triangle": 0,
+          "barycentric": [
+            1,
+            0,
+            0
+          ],
+          "point": [
+            -390.26434651920647,
+            51.88245796045254,
+            -37.852304179401244
+          ],
+          "ground": 52.017877125004595
+        }
+      },
+      "after": {
+        "areaRatio": 0.9734229688455953,
+        "degenerate": 0,
+        "maxEdge": 1.0316369002505006,
+        "minGap": -0.13541916455205438,
+        "worst": {
+          "triangle": 0,
+          "barycentric": [
+            1,
+            0,
+            0
+          ],
+          "point": [
+            -390.26434651920647,
+            51.88245796045254,
+            -37.852304179401244
+          ],
+          "ground": 52.017877125004595
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023365,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090107474,
+        "minGap": -0.3154287999140095,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -390.1030588182049,
+            51.62046439125267,
+            -38.06016224824515
+          ],
+          "ground": 51.93589319116668
+        }
+      },
+      "after": {
+        "areaRatio": 0.9477890362433417,
+        "degenerate": 0,
+        "maxEdge": 1.0698755463345297,
+        "minGap": 0.02988940184342681,
+        "worst": {
+          "triangle": 153,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.53482571721355,
+            51.80871373417447,
+            -37.83280964877352
+          ],
+          "ground": 51.77882433233104
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847337,
+        "degenerate": 0,
+        "maxEdge": 1.00363145092272,
+        "minGap": 0.0837129668370693,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -389.41416970610936,
+            51.676063619259885,
+            -38.882675992423835
+          ],
+          "ground": 51.592350652422816
+        }
+      },
+      "after": {
+        "areaRatio": 0.9750339822351113,
+        "degenerate": 0,
+        "maxEdge": 1.046893997772892,
+        "minGap": 0.03668651159675562,
+        "worst": {
+          "triangle": 121,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -388.8447492816733,
+            51.49935094396301,
+            -38.456895265913985
+          ],
+          "ground": 51.46266443236625
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.316446903372917,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260922036,
+        "minGap": -0.14422057666559596,
+        "worst": {
+          "triangle": 14,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -390.1720612138621,
+            51.894891571727456,
+            -37.47222765880645
+          ],
+          "ground": 52.03911214839305
+        }
+      },
+      "after": {
+        "areaRatio": 0.9862650267758656,
+        "degenerate": 0,
+        "maxEdge": 1.0523492601161533,
+        "minGap": -0.14422057666559596,
+        "worst": {
+          "triangle": 14,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -390.1720612138621,
+            51.894891571727456,
+            -37.47222765880645
+          ],
+          "ground": 52.03911214839305
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547455,
+        "degenerate": 0,
+        "maxEdge": 1.014153120716747,
+        "minGap": 0.12380483620130711,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.48540000680167,
+            8.800839141715556,
+            -33.26915208749186
+          ],
+          "ground": 8.67703430551425
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388811,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685026113,
+        "minGap": 0.12331898147344411,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.454280812344,
+            8.797277943856322,
+            -33.24967487859083
+          ],
+          "ground": 8.673958962382878
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447898,
+        "degenerate": 0,
+        "maxEdge": 1.004094756256607,
+        "minGap": -0.042528632539374556,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.39124005439745,
+            8.665133219909393,
+            -32.840545682795074
+          ],
+          "ground": 8.707661852448767
+        }
+      },
+      "after": {
+        "areaRatio": 0.9865564235994231,
+        "degenerate": 0,
+        "maxEdge": 1.0942189297771108,
+        "minGap": 0.01199278856357111,
+        "worst": {
+          "triangle": 157,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            45.304687704313956,
+            8.706516417403392,
+            -32.82958795194894
+          ],
+          "ground": 8.694523628839821
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710665925,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030372803,
+        "minGap": -0.01566327008407775,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.4953807014237,
+            8.700560548335206,
+            -32.921095474578514
+          ],
+          "ground": 8.716223818419284
+        }
+      },
+      "after": {
+        "areaRatio": 0.9928807496439072,
+        "degenerate": 0,
+        "maxEdge": 1.0511360083825392,
+        "minGap": 0.011992712518843263,
+        "worst": {
+          "triangle": 77,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            45.218503559481604,
+            8.665327313246255,
+            -33.0772170994525
+          ],
+          "ground": 8.653334600727412
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547537,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207167909,
+        "minGap": 0.2095558552415131,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            44.57983982591808,
+            8.795230453871785,
+            -32.71501922000881
+          ],
+          "ground": 8.585674598630272
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388827,
+        "degenerate": 0,
+        "maxEdge": 1.00873156850263,
+        "minGap": 0.2133704598975985,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            44.561815324391674,
+            8.79588254731975,
+            -32.716024916476535
+          ],
+          "ground": 8.58251208742215
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447935,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562565796,
+        "minGap": -0.02229394648688654,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.039928286778625,
+            8.649035364389649,
+            -32.63741032424404
+          ],
+          "ground": 8.671329310876535
+        }
+      },
+      "after": {
+        "areaRatio": 0.9781913955108911,
+        "degenerate": 0,
+        "maxEdge": 1.096788509365498,
+        "minGap": 0.011986246674185352,
+        "worst": {
+          "triangle": 145,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            45.00302305925054,
+            8.68068111656693,
+            -32.60505934686235
+          ],
+          "ground": 8.668694869892745
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.42136373710665836,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030373065,
+        "minGap": 0.022796818013837594,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            44.957596945111504,
+            8.691074691732416,
+            -32.53912032162378
+          ],
+          "ground": 8.668277873718578
+        }
+      },
+      "after": {
+        "areaRatio": 0.9766182445300512,
+        "degenerate": 0,
+        "maxEdge": 1.0603267683821087,
+        "minGap": 0.01198083738683664,
+        "worst": {
+          "triangle": 180,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            45.45461523541674,
+            8.764997315528838,
+            -32.51167638363479
+          ],
+          "ground": 8.753016478142001
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.9815213338547469,
+        "degenerate": 0,
+        "maxEdge": 1.0141531207167394,
+        "minGap": 0.09092212717273185,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.16220320884546,
+            8.795230453871785,
+            -32.51891920024889
+          ],
+          "ground": 8.704308326699053
+        }
+      },
+      "after": {
+        "areaRatio": 0.9959722327388777,
+        "degenerate": 0,
+        "maxEdge": 1.0087315685025822,
+        "minGap": 0.09070015077464966,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.15641262873709,
+            8.79588254731975,
+            -32.50182056689212
+          ],
+          "ground": 8.7051823965451
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.7071875565447917,
+        "degenerate": 0,
+        "maxEdge": 1.0040947562565503,
+        "minGap": -0.05201270635033772,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.45969664141867,
+            8.662887720381798,
+            -32.878458754429
+          ],
+          "ground": 8.714900426732136
+        }
+      },
+      "after": {
+        "areaRatio": 0.9736658308014284,
+        "degenerate": 0,
+        "maxEdge": 1.0619273580646902,
+        "minGap": 0.011999424638110767,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            45.54407028867064,
+            8.7244948753445,
+            -33.03091633141748
+          ],
+          "ground": 8.71249545070639
+        }
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.4213637371066619,
+        "degenerate": 80,
+        "maxEdge": 1.0040739030373704,
+        "minGap": -0.023938070750281426,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.432741619079074,
+            8.691074691732416,
+            -32.835857415272976
+          ],
+          "ground": 8.715012762482697
+        }
+      },
+      "after": {
+        "areaRatio": 0.9619344822609265,
+        "degenerate": 0,
+        "maxEdge": 1.0575366434434337,
+        "minGap": 0.01199910937576476,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            45.74003185236997,
+            8.737008490110766,
+            -33.21603594492457
+          ],
+          "ground": 8.725009380735
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 0,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023433,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090105787,
+        "minGap": -0.06331329671056096,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            46.12139260054026,
+            8.690402353366974,
+            -33.534882221409795
+          ],
+          "ground": 8.753715650077535
+        }
+      },
+      "after": {
+        "areaRatio": 0.955296088836181,
+        "degenerate": 0,
+        "maxEdge": 1.0799583398915753,
+        "minGap": 0.027508407057862172,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0.5,
+            0.5,
+            0
+          ],
+          "point": [
+            45.91350462426618,
+            8.793192069578932,
+            -33.10143162496963
+          ],
+          "ground": 8.76568366252107
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847345,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509227082,
+        "minGap": -0.09073212261926322,
+        "worst": {
+          "triangle": 189,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.90162127169138,
+            8.722464075331139,
+            -32.62887665730413
+          ],
+          "ground": 8.813196197950402
+        }
+      },
+      "after": {
+        "areaRatio": 0.9878290806564402,
+        "degenerate": 0,
+        "maxEdge": 1.0633727959750638,
+        "minGap": 0.027537065698147956,
+        "worst": {
+          "triangle": 157,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            45.699345276578825,
+            8.875537644282142,
+            -31.974236596974343
+          ],
+          "ground": 8.848000578583994
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 0,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.31644690337289477,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920466,
+        "minGap": -0.033415676473140365,
+        "worst": {
+          "triangle": 191,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            46.141138249112196,
+            8.798655166169288,
+            -32.81869551872658
+          ],
+          "ground": 8.832070842642429
+        }
+      },
+      "after": {
+        "areaRatio": 0.9867481798066081,
+        "degenerate": 0,
+        "maxEdge": 1.0696901311270688,
+        "minGap": 0.027548426541960325,
+        "worst": {
+          "triangle": 105,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            45.1246872990465,
+            8.750321136581078,
+            -32.28773322433309
+          ],
+          "ground": 8.722772710039118
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 1.1,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023406,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090106066,
+        "minGap": 0.12633936717096184,
+        "worst": {
+          "triangle": 160,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            44.14484950367183,
+            8.680067513102676,
+            -32.33958803669268
+          ],
+          "ground": 8.553728145931714
+        }
+      },
+      "after": {
+        "areaRatio": 0.9590339958137541,
+        "degenerate": 0,
+        "maxEdge": 1.0361895607981877,
+        "minGap": 0.04313676395625343,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            44.26747935847563,
+            8.640191549033974,
+            -32.13538100905098
+          ],
+          "ground": 8.59705478507772
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847332,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509226971,
+        "minGap": -0.04923269291205301,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.0932992231552,
+            8.681164581302196,
+            -32.16728293418419
+          ],
+          "ground": 8.73039727421425
+        }
+      },
+      "after": {
+        "areaRatio": 0.9753553824317989,
+        "degenerate": 0,
+        "maxEdge": 1.0592989970468827,
+        "minGap": 0.027422589700830002,
+        "worst": {
+          "triangle": 190,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            46.789671496777316,
+            8.933989364921743,
+            -33.09975168113718
+          ],
+          "ground": 8.906566775220913
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 1.1,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.31644690337289544,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920513,
+        "minGap": 0.053632322955616374,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            44.903115710924034,
+            8.776837695982874,
+            -31.941627413660115
+          ],
+          "ground": 8.723205373027257
+        }
+      },
+      "after": {
+        "areaRatio": 0.9548784396157775,
+        "degenerate": 0,
+        "maxEdge": 1.0602469006297282,
+        "minGap": 0.027419782207079635,
+        "worst": {
+          "triangle": 160,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            46.20898064985104,
+            9.027687436402374,
+            -31.229939738725513
+          ],
+          "ground": 9.000267654195294
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 2.4,
+      "t": 0.15,
+      "before": {
+        "areaRatio": 0.8453751547023425,
+        "degenerate": 0,
+        "maxEdge": 1.0199139090105886,
+        "minGap": -0.12938246352247162,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.42004436390079,
+            8.676335619675687,
+            -31.95215977692596
+          ],
+          "ground": 8.805718083198158
+        }
+      },
+      "after": {
+        "areaRatio": 0.9498247851255467,
+        "degenerate": 0,
+        "maxEdge": 1.0525510612941975,
+        "minGap": 0.027481225107770513,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            45.56028846529212,
+            8.828328677653424,
+            -32.21748905250651
+          ],
+          "ground": 8.800847452545653
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": {
+        "areaRatio": 0.5349931593847337,
+        "degenerate": 0,
+        "maxEdge": 1.0036314509226871,
+        "minGap": -0.10588445753127651,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            46.06213148648478,
+            8.722829134259754,
+            -32.72834749215398
+          ],
+          "ground": 8.82871359179103
+        }
+      },
+      "after": {
+        "areaRatio": 0.9653897885849585,
+        "degenerate": 0,
+        "maxEdge": 1.0600249506232295,
+        "minGap": 0.027590404375736455,
+        "worst": {
+          "triangle": 177,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            46.75566875715768,
+            8.875182237142266,
+            -33.62202673424677
+          ],
+          "ground": 8.847591832766529
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "yaw": 2.4,
+      "t": 0.8,
+      "before": {
+        "areaRatio": 0.3164469033728956,
+        "degenerate": 96,
+        "maxEdge": 1.0036206260920524,
+        "minGap": -0.051734263061296915,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.99388713494902,
+            8.776837695982874,
+            -32.62353292312823
+          ],
+          "ground": 8.82857195904417
+        }
+      },
+      "after": {
+        "areaRatio": 0.9584185290521878,
+        "degenerate": 0,
+        "maxEdge": 1.0503144062897716,
+        "minGap": 0.027480214154270044,
+        "worst": {
+          "triangle": 176,
+          "barycentric": [
+            0,
+            0.5,
+            0.5
+          ],
+          "point": [
+            47.28265537753903,
+            8.928109980934906,
+            -33.92302227095938
+          ],
+          "ground": 8.900629766780636
+        }
+      }
+    }
+  ],
+  "body": [],
+  "elapsedSeconds": 9.364814629,
+  "at": "2026-09-16T06:17:24.422Z",
+  "boundary": "Independent native geometry on explicit sampled ground; no renderer/browser/GPU. Proper body triangle oracle added separately if needed. Continuous phase rate sweeps include four rates and preserve entry discontinuity explicitly."
+}

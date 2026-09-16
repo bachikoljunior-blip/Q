@@ -1,0 +1,32 @@
+✔ saved death cloth keeps finite area and contacts while the entire remaining actor stays exact (1263.254445ms)
+✔ saved phases, first seen settled corpses and independent clones reconstruct the same cape (156.130127ms)
+✔ 30, 60 and 120 Hz give identical explicit saved phase geometry (92.191787ms)
+✖ real spawn slopes preserve the old neckline and never deepen its existing floor penetration (13.917939ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1722.603891
+
+✖ failing tests:
+
+test at tests/cloak-ground.test.mjs:38:1
+✖ real spawn slopes preserve the old neckline and never deepen its existing floor penetration (13.917939ms)
+  AssertionError [ERR_ASSERTION]: player 0,101 0.5
+      at TestContext.<anonymous> (file:///workspace/scratch/e72662e3b71f/Q-cloak-ground-v34/tests/cloak-ground.test.mjs:43:5)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

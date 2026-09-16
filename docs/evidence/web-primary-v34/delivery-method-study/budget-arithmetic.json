@@ -1,0 +1,174 @@
+{
+  "boundary": "Raw emitted file sums; payload/rate ideal arithmetic excluding compression negotiation, HTTP headers, TLS/RTT, concurrency, cache, MP4 Range/cancellation, decoding, script execution and rendering. Not observed load times. RGBA counts are assumed format payloads, not total GPU/OS memory.",
+  "texture_groups": {
+    "skin": {
+      "files": 1,
+      "compressed_bytes": 541954,
+      "rgba_base_bytes": 16777216,
+      "rgba_mip_bytes": 22369620
+    },
+    "environment": {
+      "files": 3,
+      "compressed_bytes": 3403723,
+      "rgba_base_bytes": 12582912,
+      "rgba_mip_bytes": 16777212
+    },
+    "forest": {
+      "files": 2,
+      "compressed_bytes": 327978,
+      "rgba_base_bytes": 2097152,
+      "rgba_mip_bytes": 2796200
+    },
+    "vaults": {
+      "files": 4,
+      "compressed_bytes": 68499,
+      "rgba_base_bytes": 262144,
+      "rgba_mip_bytes": 349520
+    }
+  },
+  "hdr": {
+    "compressed_bytes": 1435119,
+    "cpu_half_float_source_bytes": 4194304,
+    "gpu_visible_bytes": 4194304,
+    "gpu_pmrem_bytes": 1572864,
+    "temporary_pmrem_input_bytes": 1048576,
+    "temporary_ping_bytes": 1572864
+  },
+  "counted_file_texture_gpu_bytes_with_hdr": 48059720,
+  "counted_file_texture_gpu_MiB": 45.83332061767578,
+  "ground_contact_additional_bytes": 262144,
+  "poster_base_RGBA_bytes": 6293408,
+  "video_720p_RGBA_one_frame_bytes": 3686400,
+  "title_canvas_upper_RGBA_bytes": 6400000,
+  "audio_actual_ffmpeg_decode": [
+    {
+      "source": "src/assets/soundscape/pilgrim-foley.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 1652652,
+      "frames_per_channel": 413163
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+      "channels": 2,
+      "pcm_f32_22050_bytes": 8467200,
+      "frames_per_channel": 1058400
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-motif.mp3",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 4233600,
+      "frames_per_channel": 1058400
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 4233600,
+      "frames_per_channel": 1058400
+    },
+    {
+      "source": "src/assets/vaults/ember-ambient.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 352800,
+      "frames_per_channel": 88200
+    },
+    {
+      "source": "src/assets/vaults/gale-ambient.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 352800,
+      "frames_per_channel": 88200
+    },
+    {
+      "source": "src/assets/vaults/moss-ambient.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 352800,
+      "frames_per_channel": 88200
+    },
+    {
+      "source": "src/assets/vaults/shared-alert.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 42336,
+      "frames_per_channel": 10584
+    },
+    {
+      "source": "src/assets/vaults/shared-claim.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 79380,
+      "frames_per_channel": 19845
+    },
+    {
+      "source": "src/assets/vaults/shared-impact.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 15876,
+      "frames_per_channel": 3969
+    },
+    {
+      "source": "src/assets/vaults/shared-seal.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 61740,
+      "frames_per_channel": 15435
+    },
+    {
+      "source": "src/assets/vaults/shared-step.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 14112,
+      "frames_per_channel": 3528
+    },
+    {
+      "source": "src/assets/vaults/shared-swing.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 21168,
+      "frames_per_channel": 5292
+    },
+    {
+      "source": "src/assets/vaults/tide-ambient.wav",
+      "channels": 1,
+      "pcm_f32_22050_bytes": 352800,
+      "frames_per_channel": 88200
+    }
+  ],
+  "score_plus_foley_pcm_bytes": 18587052,
+  "all_14_audio_pcm_bytes": 20232864,
+  "runtime_audio_cache_cap_bytes": 25165824,
+  "transfer_arithmetic": {
+    "title_shell_and_poster": {
+      "bytes": 396099,
+      "seconds_at_Mbps": {
+        "5": 0.6337584,
+        "20": 0.1584396,
+        "50": 0.06337584
+      }
+    },
+    "conditional_title_video_file": {
+      "bytes": 3178191,
+      "seconds_at_Mbps": {
+        "5": 5.0851056,
+        "20": 1.2712764,
+        "50": 0.50851056
+      }
+    },
+    "gesture_score_and_foley_files": {
+      "bytes": 1499890,
+      "seconds_at_Mbps": {
+        "5": 2.399824,
+        "20": 0.599956,
+        "50": 0.2399824
+      }
+    },
+    "world_launch_additional_files_and_js": {
+      "bytes": 6688266,
+      "seconds_at_Mbps": {
+        "5": 10.7012256,
+        "20": 2.6753064,
+        "50": 1.07012256
+      }
+    },
+    "all_34_public_files": {
+      "bytes": 12585792,
+      "seconds_at_Mbps": {
+        "5": 20.1372672,
+        "20": 5.0343168,
+        "50": 2.01372672
+      }
+    }
+  }
+}

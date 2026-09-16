@@ -10,7 +10,7 @@
 
 - [プレイ版を開く](https://q-ash-pilgrim.juurooo.chatgpt.site)（所有者限定）。
 - タイトルは巡礼者・北門・炎の王冠の原画を先に表示し、12秒の無音映像へ移ります。カメラ・霧・灰・火光を加えた動くイラストです。「動きを止める」で停止でき、減動設定・節約通信時は静止画にします。「旅を始める」「旅をつづける」またはセーブ読込を選んだ時点で3D世界を読み込みます。「音を入れる」でタイトル曲を聴けます。音は操作後に開始し、タイトルへ戻ると3D描画と音を休止します。動きを減らす端末設定にも対応します。
-- PCでは [単体起動版](release/Q-ash-pilgrim.html) をダウンロードし、WebGL 2対応ブラウザーで開くこともできます。単体版は外部CDN・画像・音声への通信を必要としません。
+- 通常は上のプレイURLを使います。PCで通信不要の1ファイルが必要なら、開発環境で `npm run package:standalone` により `artifacts/Q-ash-pilgrim-standalone.html` を任意生成できます。現在の公開版とは別のローカル生成物で、WebGL 2対応ブラウザーが必要です。
 - スマートフォンはプレイ用URLから開いてください。横向き・縦向きのレイアウトを実装しています。ストア向けのAPK/IPAはまだありません。
 - セーブは端末のブラウザーに保存します。消費したスタミナ・残火、回復や攻撃の途中、敵の残り体力と矢も引き継ぎます。旧バージョンのセーブも読込可能です。ひとつ前の正常な記録を残し、保存が壊れた場合に復旧します。タイトルからファイルを読み込むこともできます。「旅の記録」からJSONで書き出し・読み込みができます。
 
@@ -79,7 +79,9 @@ npm run test:artifacts
 
 開発サーバーはViteの出力するURLを開きます。通常環境でスマホ確認する場合は同じネットワークからPCのアドレスへ接続します。相談の新旧表示を同じ条件で確認するための [自動徒歩で生成した検証用セーブ](release/review-saves/README.md) もあります。通常の記録を先に書き出してから読み込んでください。戦闘表示と入力結果は [再現可能な戦闘比較記録](release/combat-replays/README.md) で同条件に揃えられます。production adapterの入力監査は [タッチ入力監査](docs/TOUCH_INPUT_AUDIT.md) に記録しています。いずれも実画面・物理タッチ・面白さの評価を代用するものではありません。
 
-公開用の静的出力は `dist/`、外部依存が不要な単体版は `release/Q-ash-pilgrim.html` です。Sourcesと生成物を変更したら両方を更新してください。
+通常の配信は複数ファイルの静的Web出力です。`npm run build` → `npm run package` が現在のVite出力だけを固定ディレクトリへ集め、全ファイルのbyte数・SHA256・sourceFingerprintを `release/Q-web-manifest.json` に記録します。`npm run test:artifacts` はその固定出力と素材・source・receiptを照合します。receiptは公開完了の証明ではありません。
+
+単体HTMLは任意の補助経路です。通常のWeb検証後に `npm run package:standalone` → `npm run test:standalone` を実行すると、同じ素材を完全に埋め込んだHTMLと実起動fixtureを独立検証します。巨大HTMLをGitの必須生成物にせず、その総量を画質採用の上限にしません。通常のWebへ単体用decoderは追加しません。[配信方法と確認範囲](docs/WEB_PRIMARY_DELIVERY_V34.md) を参照してください。
 
 制作は人間の準備を開始条件とせず、許可済みの自動工程で進めます。本番入口の開始・保存・中断復帰に加え、徒歩で獲得したsaveから相談UI・選択・SceneView呼出し境界・reloadまでを [自律検証工程](docs/AUTONOMOUS_VALIDATION.md) で検査します。これはNode内の明示した模擬境界による検証で、production SceneView / WebGL、ブラウザー画面・実機・音の実聴・人間の比較評価の証拠とは分けます。ChatGPT Workの監督付き環境では、上の一般開発手順から直接serverを起動せず、正式Sites手順に従います。
 
@@ -91,4 +93,4 @@ Three.js 0.186.0を固定しています。[描画にはWebGL 2が必要](https:
 
 完成期限は2026年9月20日です。完成条件と残る検証は [完成までの作業](docs/COMPLETION.md) に記録します。
 
-配信用の作業ディレクトリは、容量を二重に使わないよう生成物へのハードリンクを使う場合があります。生成物は配信完了まで変更せず、再ビルドしたら `npm run test:artifacts` で作り直してください。
+配信用の作業ディレクトリは、容量を二重に使わないよう生成物へのハードリンクを使う場合があります。生成物は配信完了まで変更せず、再ビルドしたら `npm run package` → `npm run test:artifacts` で作り直して照合してください。

@@ -1,0 +1,16 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 test:standalone
+> node scripts/verify-standalone.mjs && node --test tests/standalone-encoding.optional.mjs
+
+Verified optional standalone: 15501114 bytes, 27 complete media assets. No aggregate publishing-blob ceiling applies to this local artifact.
+✔ actual standalone preserves every emitted media byte and original data URL MIME (1306.522195ms)
+✔ actual packaged title defers world media until launch and returns after explicit decoder failure (800.702907ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4021.023382
