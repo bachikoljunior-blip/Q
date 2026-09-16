@@ -1,5 +1,6 @@
 import { buildActorGeometry, ACTOR_FAMILIES } from './assets/characters/detailed-geometry.js';
 import { detailedMotion } from './character-motion.js';
+import { Euler, Matrix4, Quaternion, Vector3 } from 'three';
 
 export { ACTOR_FAMILIES };
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
@@ -27,6 +28,10 @@ export function createDetailedActor(type='player',options={}){
   actor.digits=Array.from({length:2},(_,hand)=>Array.from({length:5},(_,finger)=>({root:get(`finger-${hand}-${finger}`),tip:get(`finger-tip-${hand}-${finger}`)})));
   actor.tailBones=Array.from({length:3},(_,i)=>get(`tail-${i}`));
   actor.eyelids=[get('eyelid-0'),get('eyelid-1')];
+  actor.grip={inverse:new Matrix4(),world:new Quaternion(),chest:new Quaternion(),rotation:new Quaternion(),forearm:new Quaternion(),angles:new Euler(),
+    target:new Vector3(),direction:new Vector3(),pole:new Vector3(),elbow:new Vector3(),down:new Vector3(0,-1,0),
+    command:new Quaternion(),previousCommand:new Quaternion(),fromCommand:new Quaternion(),previousTarget:new Vector3(),fromTarget:new Vector3(),lastState:null,transition:null,
+    regripLeft:new Vector3(),regripRotation:new Quaternion(),regripBones:Array.from({length:6},()=>new Quaternion())};
   actor.animate=(state={},dt=0)=>animateDetailedActor(actor,state,dt);
   actor.animate({},0);return actor;
 }
@@ -74,8 +79,8 @@ function contacts(actor,state,motion){
     const sampled=actor.groundHeight?.(wx,wz),terrain=Number.isFinite(sampled)?clamp((sampled-worldY)/scale,-.18,.18):0;
     const ankleHeight=(wolf?.126:.109)+terrain+foot.lift;
     const dx=(wx-actor.g.position.x)/scale,dz=(wz-actor.g.position.z)/scale;
-    const targetX=cosine*dx-sine*dz-leg.position.x;
-    const targetZ=sine*dx+cosine*dz-leg.position.z-(actor.body.position.z||0);
+    const targetX=cosine*dx-sine*dz-leg.position.x-actor.pelvis.position.x-actor.body.position.x;
+    const targetZ=sine*dx+cosine*dz-leg.position.z-actor.pelvis.position.z-actor.body.position.z;
     const hock=actor.hocks[i],hockAngle=hock?-.64:0;
     const lower=hock?Math.hypot(.21+.15*Math.cos(hockAngle),.15*Math.sin(hockAngle)):wolf?.36:.435;
     const lowerOffset=hock?Math.atan2(.15*Math.sin(hockAngle),.21+.15*Math.cos(hockAngle)):0;
@@ -120,31 +125,35 @@ function humanoidPose(actor,state,motion){
     }else if(actor.type==='healer'){actor.elbows[0].rotation.x=-.76;actor.hands[0].rotation.z=.2;}
   }
   if(motion.state==='attack'||['windup','strike','recover'].includes(motion.state)){
-    const phase=motion.state==='windup'?p*.42:motion.state==='strike'?.5+p*.27:motion.state==='recover'?.77+p*.23:p;
-    const wind=smooth(phase/.38),release=smooth((phase-.38)/.2),settle=smooth((phase-.68)/.32),weight=1-settle;
+    const {wind,release,settle,weight}=motion.combat;
     const weapon=motion.weapon||'sword',combo=motion.combo||0;
+    // Load the rear support, drive across the stance and absorb the follow-through.
+    // The contact solver subtracts this offset so the planted boots remain fixed.
+    actor.pelvis.position.x=(.025*wind-.05*release)*weight;
+    actor.pelvis.position.z=(-.055*wind+.12*release)*weight;
+    actor.pelvis.position.y-=.045*wind*(1-release)+.025*release*weight;
     if(actor.type==='ranger'){
-      const draw=motion.state==='windup'?smooth(p):motion.state==='strike'?1-smooth(p/.35):0;
-      const hold=motion.state==='recover'?1-smooth(p):1;
+      const {draw,bowHold:hold}=motion.combat;
       poseArms(actor,-1.25*hold,-1.5*hold,-.62*hold,.2,1.7*draw+.15,.08);
       actor.chest.rotation.y=-.34*hold;actor.neck.rotation.y=.34*hold;
       for(const [name,sign]of [['string-upper',1],['string-lower',-1]]){
         const string=actor.g.getObjectByName(name);string.rotation.z=sign*Math.atan2(.22*draw,.59);string.scale.y=Math.hypot(.59,.22*draw)/.59;
       }
     }else if(weapon==='spear'){
-      poseArms(actor,mix(-.5,-1.3,release)*weight,mix(-.2,-1.25,release)*weight,-.18,.18,mix(1.1,.06,release)*weight,.65*weight);
-      actor.chest.rotation.y=(.35-.62*release)*weight;if(actor.spear)actor.spear.rotation.set(-Math.PI/2,0,0);
+      poseArms(actor,-.055+(-.50*wind-.55*release)*weight,(-.2*wind-1.05*release)*weight,-.18,.18,.19+(.91*wind-1.04*release)*weight,.65*weight);
+      actor.chest.rotation.y=(.35*wind-.62*release)*weight;
     }else if(state.radial&&actor.type==='boss'){
-      poseArms(actor,-2.65*wind*(1-release),-2.5*wind*(1-release),-.25,.25,.25,.3);
-      actor.chest.rotation.x=(-.15*wind+.48*release)*weight;actor.pelvis.position.y-=.18*release*weight;
-      actor.sword.rotation.x=-.1;
+      poseArms(actor,mix(-.055,-2.4*wind+1.85*release,weight),mix(.01,-2.3*wind+1.75*release,weight),-.25,.25,.25+.4*release,.3+.4*release);
+      actor.chest.rotation.x=(-.15*wind+.36*release)*weight;actor.pelvis.position.y-=.14*release*weight;
+      actor.sword.rotation.x=mix(-1.05,-.1-.8*release,weight);
     }else{
       const chop=combo===2||motion.state!=='attack',heavy=weapon==='greatsword';
-      poseArms(actor,(-.2-2.35*wind+2.9*release)*weight,heavy?(-.6-1.35*wind+1.8*release)*weight:-.2,
-        (chop?-.16:(-.2-1.15*wind+1.9*release))*weight,heavy?.32:.18,(.25+1.05*wind-1.05*release)*weight,heavy?.8:.3);
-      actor.chest.rotation.y=(.48*wind-.91*release)*weight;actor.chest.rotation.x=(chop?-.12*wind+.32*release:0)*weight;
-      if(actor.sword)actor.sword.rotation.x=mix(-1.05,-.12,wind)*weight-1.05*settle;
-      if(actor.greatsword)actor.greatsword.rotation.x=-.16;
+      const reverse=combo===1?-1:1;
+      poseArms(actor,-.055+(-2.295*wind+1.9*release)*weight,heavy?(-.6-1.35*wind+1.45*release)*weight:.01-.21*wind*weight,
+        -.075+(heavy?-.20*wind:chop?-.085*wind:reverse*(-.925*wind+1.8*release))*weight,heavy?.32:.075+.105*wind*weight,(.19+.91*wind-.55*release)*weight+.19*settle,heavy?.8:.19+.11*wind*weight);
+      actor.chest.rotation.y=reverse*(.48*wind-.91*release)*weight;actor.chest.rotation.x=(chop?-.12*wind+.25*release:0)*weight;
+      if(actor.sword)actor.sword.rotation.x=-1.05+(.93*wind-.38*release)*weight;
+      if(actor.greatsword)actor.greatsword.rotation.x=-1.3+(1.14*wind-.55*release)*weight;
     }
   }
   if(motion.state==='parry'){const hold=Math.sin(Math.PI*clamp(p/.18));poseArms(actor,-1.37,-.7,-.63,.32,1.2,.9);actor.chest.rotation.y=-.24;actor.chest.rotation.x=.045+hold*.02;}
@@ -171,14 +180,20 @@ function humanoidPose(actor,state,motion){
   }
 }
 function wolfPose(actor,state,motion){
-  const p=motion.phase,move=['walk','run'].includes(motion.state),breath=Math.sin(actor.time*2.5);
+  const p=motion.phase,move=['walk','run'].includes(motion.state),breath=motion.combat?0:Math.sin(actor.time*2.5);
   actor.pelvis.position.y=.816+(move?Math.cos(actor.phase*TAU*2)*.023:breath*.006);
   actor.chest.scale.x=1+breath*.009;actor.neck.rotation.x=move?-.1:Math.sin(actor.time*.55)*.045;
-  actor.head.rotation.y=move?0:Math.sin(actor.time*.36)*.08;
+  actor.head.rotation.y=move||motion.combat?0:Math.sin(actor.time*.36)*.08;
   for(let i=0;i<3;i++){const tail=actor.tailBones[i];tail.rotation.x=(i===0?.9:.16)+Math.sin(actor.time*2.3-i*.8)*.075;tail.rotation.z=Math.sin(actor.time*1.3-i*.55)*.065;}
-  if(motion.state==='windup'){actor.pelvis.position.y-=.13*smooth(p);actor.neck.rotation.x=.25*smooth(p);actor.g.getObjectByName('jaw').rotation.x=.15*smooth(p);}
-  if(motion.state==='strike'){actor.chest.rotation.x=-.16*(1-p);actor.neck.rotation.x=-.48*(1-p);actor.g.getObjectByName('jaw').rotation.x=.48*Math.sin(p*Math.PI);}
-  if(motion.state==='recover'){actor.neck.rotation.x=mix(-.12,0,smooth(p));actor.head.rotation.x=.05*(1-p);}
+  if(motion.combat){
+    const {wind,release,weight}=motion.combat;
+    actor.pelvis.position.y-=.13*wind*(1-release)+.025*release*weight;
+    actor.pelvis.position.z=(-.075*wind+.17*release)*weight;
+    actor.chest.rotation.x=-.16*release*weight;
+    actor.neck.rotation.x=(.25*wind-.73*release)*weight;
+    actor.g.getObjectByName('jaw').rotation.x=(.15*wind+.33*release)*weight;
+    actor.tailBones.forEach((tail,i)=>{tail.rotation.x=(i===0?.9:.16)+(.18*wind-.30*release)*weight;tail.rotation.z=0;});
+  }
   if(motion.state==='hit'){const recoil=Math.sin((.15+p*.85)*Math.PI);actor.chest.rotation.z=.13*recoil;actor.neck.rotation.y=-.22*recoil;actor.pelvis.position.y-=.06*recoil;}
   if(motion.state==='death'){
     const fall=smooth(actor.deathAge/.65);actor.pelvis.rotation.z=Math.PI*.47*fall;actor.pelvis.position.y=mix(.816,.325,fall);actor.neck.rotation.x=.25*fall;
@@ -202,7 +217,9 @@ function articulateHandsAndSpine(actor,state,motion){
 function blendPassiveTransition(actor,previous,motion,delta){
   const passive=['idle','walk','run','recover','sealed'].includes(motion.state);
   if(delta===0||!passive||previous.state==='death'){actor.poseTransition=null;return;}
-  if(previous.state!==motion.state){
+  // Consecutive combat phases already share a clock. Blending their seam would
+  // add history dependence and delay follow-through on a live (but not saved) pose.
+  if(previous.state!==motion.state&&!(previous.combat&&motion.combat)){
     for(let i=0;i<actor.rest.length;i++){const from=actor.previousPose[i],to=actor.transitionPose[i];to.position.copy(from.position);to.quaternion.copy(from.quaternion);to.scale.copy(from.scale);}
     actor.poseTransition={age:0,from:actor.transitionPose};
   }
@@ -217,6 +234,65 @@ function blendPassiveTransition(actor,previous,motion,delta){
     node.scale.lerpVectors(transition.from[i].scale,node.scale,weight);
   }
   if(weight===1)actor.poseTransition=null;
+}
+function solveArmGrip(actor,index){
+  // target is a wrist position in chest coordinates; world is its orientation.
+  // The pole keeps the elbow outside the ribcage. Segment lengths never stretch.
+  const k=actor.grip,arm=actor.arms[index],elbow=actor.elbows[index],hand=actor.hands[index];
+  k.target.sub(arm.position);
+  const upper=.33,lower=.31,distance=clamp(k.target.length(),Math.abs(upper-lower)+.0001,upper+lower-.0001);
+  k.direction.copy(k.target).normalize();
+  k.pole.set(index===0?-1:1,-.35,-.4).addScaledVector(k.direction,-k.pole.dot(k.direction)).normalize();
+  const along=(upper*upper-lower*lower+distance*distance)/(2*distance),height=Math.sqrt(Math.max(0,upper*upper-along*along));
+  k.elbow.copy(k.direction).multiplyScalar(along).addScaledVector(k.pole,height);
+  arm.quaternion.setFromUnitVectors(k.down,k.elbow.normalize());
+  k.elbow.multiplyScalar(upper);k.target.copy(k.direction).multiplyScalar(distance).sub(k.elbow).normalize();
+  k.forearm.setFromUnitVectors(k.down,k.target);elbow.quaternion.copy(arm.quaternion).invert().multiply(k.forearm);
+  actor.chest.getWorldQuaternion(k.chest);k.rotation.copy(k.chest).multiply(k.forearm).invert();hand.quaternion.copy(k.rotation).multiply(k.world);
+}
+function supportWeapon(actor,state,motion){
+  const weapon=state.weaponType,node=weapon==='spear'?actor.spear:weapon==='greatsword'?actor.greatsword:null;
+  if(!node||motion.state==='death'||(motion.state==='drink'&&motion.phase<=.73))return;
+  const k=actor.grip,{wind=0,release=0,weight=0}=motion.combat||{},spear=weapon==='spear',guard=motion.state==='parry';
+  const regrip=motion.state==='drink'?smooth((motion.phase-.73)/.27):1;
+  const reverse=motion.combo===1?-1:1;
+  actor.g.updateMatrixWorld(true);
+  // Author the equipment frame and rear wrist together, then solve both arms.
+  // This keeps each grip reachable instead of chasing a one-handed swing with
+  // a clamped offhand, and avoids compounding the shaft axis with a bent wrist.
+  k.angles.set(guard?-2.55:spear?-Math.PI+Math.PI*.5*wind*weight:-1.4+(-2*wind+2.15*release)*weight,
+    spear?-.65*wind*(1-smooth(release/.7))*weight:reverse*(.45*wind-.9*release)*weight,guard?.36:0,'YXZ');
+  k.command.setFromEuler(k.angles);
+  k.target.set(spear?.14*wind*(1-release)*weight:.03,guard?.39:spear?.28:.15+(.47*wind-.25*release)*weight,
+    guard?.29:spear?.26+.02*release*weight:.30+(.02*wind+.10*release)*weight);
+  // While the flask lowers, return the visible hands to carry with the weapon
+  // still hidden. Completing the saved drink clock then needs no wrist snap.
+  if(regrip<1){
+    for(let side=0;side<2;side++)for(let joint=0;joint<3;joint++){const chain=joint===0?actor.arms:joint===1?actor.elbows:actor.hands;k.regripBones[side*3+joint].copy(chain[side].quaternion);}
+    k.inverse.copy(actor.chest.matrixWorld).invert();
+    actor.hands[1].getWorldPosition(k.elbow).applyMatrix4(k.inverse);k.target.lerp(k.elbow,1-regrip);
+    actor.hands[0].getWorldPosition(k.regripLeft).applyMatrix4(k.inverse);actor.hands[0].getWorldQuaternion(k.regripRotation);
+    actor.g.getWorldQuaternion(k.rotation).invert();actor.hands[1].getWorldQuaternion(k.forearm);k.rotation.multiply(k.forearm);k.command.slerp(k.rotation,1-regrip);
+  }
+  // A hidden flask can skip this solver. Key the seed to the transition object,
+  // so first equipment use or returning to the same idle state cannot reuse an
+  // uninitialized/stale zero target on the second frame.
+  if(actor.poseTransition!==k.transition){
+    k.transition=actor.poseTransition;
+    if(k.transition){k.fromCommand.copy(k.lastState===null?k.command:k.previousCommand);k.fromTarget.copy(k.lastState===null?k.target:k.previousTarget);}
+  }
+  if(k.transition){const blend=smooth(k.transition.age/.16);k.command.slerp(k.fromCommand,1-blend);k.target.lerpVectors(k.fromTarget,k.target,blend);}
+  k.previousCommand.copy(k.command);k.previousTarget.copy(k.target);k.lastState=motion.state;
+  actor.g.getWorldQuaternion(k.world);k.world.multiply(k.command);
+  solveArmGrip(actor,1);
+  node.quaternion.identity();actor.arms[1].updateMatrixWorld(true);
+  k.target.set(0,spear?-.18:.11,0).applyMatrix4(node.matrixWorld);
+  k.inverse.copy(actor.chest.matrixWorld).invert();k.target.applyMatrix4(k.inverse);
+  if(regrip<1){k.target.lerp(k.regripLeft,1-regrip);k.world.slerp(k.regripRotation,1-regrip);}
+  solveArmGrip(actor,0);
+  // The analytic elbow pole differs from a free drinking arm. Blend the hidden
+  // re-grasp's joint configuration too, so taking over at .73 cannot flip elbows.
+  if(regrip<1)for(let side=0;side<2;side++)for(let joint=0;joint<3;joint++){const chain=joint===0?actor.arms:joint===1?actor.elbows:actor.hands;chain[side].quaternion.slerp(k.regripBones[side*3+joint],1-regrip);}
 }
 function animateCape(actor,motion){
   if(!actor.cape)return;
@@ -252,6 +328,8 @@ export function animateDetailedActor(actor,state={},dt=0){
   if(actor.type==='wolf')wolfPose(actor,state,motion);else humanoidPose(actor,state,motion);
   articulateHandsAndSpine(actor,state,motion);blendPassiveTransition(actor,previous,motion,delta);
   if(!['death','airborne'].includes(motion.state))contacts(actor,state,motion);else{actor.plants.length=0;actor.contacts.length=0;}
+
+  supportWeapon(actor,state,motion);
 
   for(const [weapon,node]of [['sword',actor.sword],['greatsword',actor.greatsword],['spear',actor.spear]])if(node)node.visible=motion.state!=='drink'&&weapon===(state.weaponType||'sword');
   if(actor.flask)actor.flask.visible=motion.state==='drink';

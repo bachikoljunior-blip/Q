@@ -13,11 +13,14 @@ import { bakeGroundContact } from './environment-contact.js';
 import { skyMaterial, updateAtmosphere } from './environment-atmosphere.js';
 import { createTerrainSurface } from './terrain-surface.js';
 import { createWaterSurface } from './water-surface.js';
+import { forestMaterial, configureForestMesh, installForestTextures } from './forest-materials.js';
+import { loadForestTextures } from './forest-assets.js';
+import { WeaponTrails } from './weapon-trails.js';
 import { loadVaultTextures } from './vault-textures.js';
 import { VaultScene, animateVaultWarden, decorateVaultWarden } from './vault-scene.js';
 import { inVaultFootprint, vaultByWarden } from './vault-slices.js';
 import { cameraFraction } from './spatial.js';
-import { WEAPONS, SENA, EAST_CAMP } from './content.js';
+import { SENA, EAST_CAMP } from './content.js';
 import { PLACES, BRIDGES, groundAt, heightAt, random, WORLD_SEED, clamp, distance, riverX, inWater } from './core.js';
 
 const C = { stone:0x697b78, dark:0x293a40, gold:0xcdb57a, wood:0x514840, leaf:0x566c53 };
@@ -28,8 +31,9 @@ function mesh(geometry,mat,parent,pos=[0,0,0],scale=[1,1,1],shadow=false){const 
 function addBox(parent,color,x,y,z,sx,sy,sz,shadow=false){const family=color===C.wood?'wood':color===C.gold?'metal':'stone';return mesh(box,surfaceMaterial(family,color),parent,[x,y,z],[sx,sy,sz],shadow);}
 
 export async function createSceneView(canvas,game,settings){
-  const [vaultTextures,environmentTextures]=await Promise.all([loadVaultTextures(),loadEnvironmentTextures()]);
+  const [vaultTextures,environmentTextures,forestTextures]=await Promise.all([loadVaultTextures(),loadEnvironmentTextures(),loadForestTextures()]);
   installEnvironmentTextures(environmentTextures);
+  installForestTextures(forestTextures);
   return new SceneView(canvas,game,settings,null,vaultTextures);
 }
 
@@ -49,7 +53,7 @@ export class SceneView {
     for(const e of game.enemies){const m=createDetailedActor(e.type==='knight'?'soldier':e.type,{groundHeight:groundAt,theme:vaultByWarden(e.id)?.theme});decorateVaultWarden(m,e,vaultTextures);m.wasDead=!!e.dead;m.deathElapsed=e.dead?2:0;this.scene.add(m.g);this.enemyModels.set(e.id,m);const ringGeo=this.telegraphArc;m.telegraph=mesh(ringGeo,new T.MeshBasicMaterial({color:0xf39855,transparent:true,opacity:.5,side:T.DoubleSide,depthWrite:false}),this.scene);m.telegraph.rotation.x=-Math.PI/2;m.telegraph.visible=false;if(e.type==='ranger'){const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute([0,0,0,0,0,0],3));m.aimLine=new T.Line(geo,new T.LineBasicMaterial({color:0xf1af75,transparent:true,opacity:.65}));m.aimLine.visible=false;this.scene.add(m.aimLine);}}
     for(const item of game.pickups){const g=new T.Group();g.position.set(item.x,heightAt(item.x,item.z),item.z);if(item.type==='chest'||item.type==='supplies'){g.add(createCrate({chest:item.type==='chest'}));}else{g.add(createHerb({relic:item.type==='relic'}));const glint=mesh(sphere,material(0xcee5bc,{emissive:0xb4dca1,emissiveIntensity:.7}),g,[0,.8,0],[.035,.035,.035]);glint.castShadow=false;}this.scene.add(g);this.lootModels.set(item.id,g);}
     this.arrowShafts=new T.InstancedMesh(new T.BoxGeometry(.045,.045,1.1),material(0xbf9256,{emissive:0x362015}),48);const tips=new T.ConeGeometry(.1,.28,5);tips.rotateX(Math.PI/2);tips.translate(0,0,.65);this.arrowTips=new T.InstancedMesh(tips,material(0xe1bc79),48);this.arrowShafts.count=this.arrowTips.count=0;this.scene.add(this.arrowShafts,this.arrowTips);this.arrowDummy=new T.Object3D();
-    this.slash=mesh(new T.RingGeometry(1.4,2.6,36,1,0,Math.PI*1.4),new T.MeshBasicMaterial({color:0xffe4ae,transparent:true,opacity:.65,side:T.DoubleSide,depthWrite:false}),this.scene);this.slash.rotation.x=-Math.PI/2;this.slash.visible=false;
+    this.weaponTrails=new WeaponTrails(this.scene);
     this.resize=()=>{this.camera.aspect=innerWidth/innerHeight;this.camera.updateProjectionMatrix();this.renderer.setSize(innerWidth,innerHeight);};addEventListener('resize',this.resize);this.setQuality(settings.quality);
   }
   // Only these construction methods contain immutable local transforms. Do not
@@ -67,11 +71,11 @@ export class SceneView {
   createTerrain(){mesh(createTerrainSurface(),surfaceMaterial('earth',0xffffff,{vertexColors:true,roughness:1,worldScale:.48,groundContact:true}),this.scene);}
   createMountains(){const rng=this.rng;for(let i=0;i<30;i++){const angle=i/30*Math.PI*2;const rawX=Math.cos(angle)*(360+rng()*130),x=rawX< -300?rawX-200:rawX,z=Math.sin(angle)*(400+rng()*100);const m=mesh(mountainGeometry(5+rng()*3|0),surfaceMaterial('stone',i%2?0x657d82:0x718989,{worldScale:.1}),this.scene,[x,38,z],[65+rng()*80,100+rng()*130,65+rng()*50]);m.rotation.y=rng()*7;const cap=mesh(mountainGeometry(i+51),surfaceMaterial('stone',0xb5c6c5,{worldScale:.08}),this.scene,[x,m.scale.y*.34+38,z],[m.scale.x*.26,m.scale.y*.29,m.scale.z*.26]);cap.rotation.y=m.rotation.y;}}
   createVegetation(){const rng=this.rng,dummy=new T.Object3D(),treePositions=this.game.trees;
-    const trunks=new T.InstancedMesh(treeTrunkGeometry(),surfaceMaterial('bark',0x726957),treePositions.length);const pine=new T.InstancedMesh(coniferGeometry(),surfaceMaterial('leaf',0x547161,{wind:this.sway,roughness:.9}),treePositions.length*2);const crowns=new T.InstancedMesh(broadleafGeometry(),surfaceMaterial('leaf',0xbdb278,{wind:this.sway,roughness:.9}),treePositions.length);let pi=0,ci=0;treePositions.forEach((p,i)=>{const y=heightAt(p.x,p.z);dummy.position.set(p.x,y+p.h*.38,p.z);dummy.scale.set(1,p.h*.76,1);dummy.rotation.set(0,0,0);dummy.updateMatrix();trunks.setMatrixAt(i,dummy.matrix);if(p.gold){dummy.position.y=y+p.h*.75;dummy.scale.set(p.h*.34,p.h*.4,p.h*.34);dummy.rotation.y=rng()*6;dummy.updateMatrix();crowns.setMatrixAt(ci,dummy.matrix);crowns.setColorAt(ci,new T.Color().setHSL(.105+rng()*.04,.25+rng()*.25,.37+rng()*.16));ci++;}else{for(let j=0;j<2;j++){dummy.position.y=y+p.h*(.52+j*.2);dummy.scale.set(p.h*(.37-j*.09),p.h*.73,p.h*(.37-j*.09));dummy.updateMatrix();pine.setMatrixAt(pi++,dummy.matrix);}}});pine.count=pi;crowns.count=ci;this.scene.add(trunks,pine,crowns);trunks.castShadow=false;pine.receiveShadow=true;crowns.receiveShadow=true;
+    const trunks=new T.InstancedMesh(treeTrunkGeometry(),surfaceMaterial('bark',0x726957),treePositions.length);const pine=new T.InstancedMesh(coniferGeometry(),forestMaterial('pine',this.sway),treePositions.length*2);const crowns=new T.InstancedMesh(broadleafGeometry(),forestMaterial('crown',this.sway),treePositions.length);let pi=0,ci=0;treePositions.forEach((p,i)=>{const y=heightAt(p.x,p.z);dummy.position.set(p.x,y+p.h*.38,p.z);dummy.scale.set(1,p.h*.76,1);dummy.rotation.set(0,0,0);dummy.updateMatrix();trunks.setMatrixAt(i,dummy.matrix);if(p.gold){dummy.position.y=y+p.h*.75;dummy.scale.set(p.h*.34,p.h*.4,p.h*.34);dummy.rotation.y=rng()*6;dummy.updateMatrix();crowns.setMatrixAt(ci,dummy.matrix);crowns.setColorAt(ci,new T.Color().setHSL(.105+rng()*.04,.25+rng()*.25,.37+rng()*.16));ci++;}else{for(let j=0;j<2;j++){dummy.position.y=y+p.h*(.52+j*.2);dummy.scale.set(p.h*(.37-j*.09),p.h*.73,p.h*(.37-j*.09));dummy.updateMatrix();pine.setMatrixAt(pi++,dummy.matrix);}}});pine.count=pi;crowns.count=ci;configureForestMesh(pine);configureForestMesh(crowns);this.scene.add(trunks,pine,crowns);trunks.castShadow=false;pine.receiveShadow=true;crowns.receiveShadow=true;
     const rockObs=this.game.rockVisuals||this.game.obstacles.filter(o=>o.type==='rock').map(o=>({...o,hidden:false})),visibleRocks=rockObs.filter(o=>!o.hidden);const rocks=new T.InstancedMesh(rockGeometry(19,2),surfaceMaterial('stone',0x7c8276),visibleRocks.length);let ri=0;rockObs.forEach(p=>{const rotation=[rng(),rng()*6,rng()*.5];if(p.hidden)return;dummy.position.set(p.x,heightAt(p.x,p.z)+p.r*.33,p.z);dummy.scale.set(p.r,p.r*.88,p.r);dummy.rotation.set(...rotation);dummy.updateMatrix();rocks.setMatrixAt(ri++,dummy.matrix);});rocks.receiveShadow=true;this.scene.add(rocks);
     const grassGeo=grassGeometry(),grassMat=surfaceMaterial('leaf',0xb1ad79,{side:T.DoubleSide,roughness:1,wind:this.sway});const count=15000;const grass=new T.InstancedMesh(grassGeo,grassMat,count);let gi=0;for(let i=0;i<count;i++){const x=(rng()-.5)*420,z=155-rng()*420;if(inWater(x,z)||PLACES.some(p=>distance({x,z},p)<9)||Math.abs(x)<4)continue;const rotation=rng()*6,size=.6+rng()*1.1,hue=.12+rng()*.045,light=.43+rng()*.15;if(inVaultFootprint({x,z}))continue;dummy.position.set(x,heightAt(x,z),z);dummy.rotation.set(0,rotation,0);dummy.scale.set(size,size,size);dummy.updateMatrix();grass.setMatrixAt(gi,dummy.matrix);grass.setColorAt(gi,new T.Color().setHSL(hue,.2,light));gi++;}grass.count=gi;this.grass=grass;this.grassCapacity=gi;this.scene.add(grass);
     this.grassGeometries={high:grassGeo,medium:grassGeometry(1),low:new T.BufferGeometry()};this.grassGeometries.low.setAttribute('position',new T.Float32BufferAttribute([-.085,0,0,.085,0,0,.03,.65,.06],3));this.grassGeometries.low.setAttribute('uv',new T.Float32BufferAttribute([0,0,1,0,.5,1],2));this.grassGeometries.low.computeVertexNormals();
-    this.treeDetail=[trunks,pine,crowns].map((source,index)=>{const detail=new T.InstancedMesh(source.geometry,source.material,source.count);detail.name='near-tree-detail';detail.count=0;detail.receiveShadow=true;detail.castShadow=true;this.scene.add(detail);source.geometry=distantTreeGeometry(['trunk','pine','crown'][index]);return{source,detail,total:source.count,matrices:source.instanceMatrix.array.slice(0,source.count*16),colors:source.instanceColor?.array.slice(0,source.count*3)};});
+    this.treeDetail=[trunks,pine,crowns].map((source,index)=>{const detail=new T.InstancedMesh(source.geometry,source.material,source.count);detail.name='near-tree-detail';configureForestMesh(detail);detail.count=0;detail.receiveShadow=true;detail.castShadow=true;this.scene.add(detail);source.geometry=distantTreeGeometry(['trunk','pine','crown'][index]);return{source,detail,total:source.count,matrices:source.instanceMatrix.array.slice(0,source.count*16),colors:source.instanceColor?.array.slice(0,source.count*3)};});
   }
   updateTreeDetail(force=false){
     if(!this.treeDetail)return;const p=this.game.player,quality=this.settings.quality;if(!force&&this.treeDetailPosition&&Math.hypot(p.x-this.treeDetailPosition.x,p.z-this.treeDetailPosition.z)<12)return;
@@ -121,7 +125,7 @@ export class SceneView {
     for(const item of this.game.pickups)this.lootModels.get(item.id).visible=!item.taken&&distance(item,p)<70;
     for(const [id,b]of this.beacons){const lit=this.game.lit.includes(id)||(id==='crown'&&this.game.bossDefeated);b.flame.visible=lit;b.glow.visible=lit;b.flame.rotation.y=this.t;b.flame.scale.y=.6+Math.sin(this.t*5)*.1;b.beam.visible=lit;b.ring.rotation.y=this.t*.35;b.ring.material.emissiveIntensity=lit?1:.1;}
     this.crownHalo.rotation.z=Math.sin(this.t*.06)*.12;
-    const stats=WEAPONS[p.weaponType]||WEAPONS.sword;this.slash.visible=p.attack>.05&&p.attack<stats.duration-stats.hitTime+.08;this.slash.scale.setScalar(stats.reach/3.5);if(this.slash.visible){this.slash.position.set(p.x,p.y+1.05,p.z);this.slash.rotation.set(-Math.PI/2,0,-p.angle+this.t*10);this.slash.material.opacity=p.attack*2;}
+    this.weaponTrails.update(this.player,p,dt,playing&&!this.gatheringFocus);
     this.motes.position.set(p.x,Math.max(0,p.y),p.z);this.motes.rotation.y=this.t*.005;this.motes.position.y+=Math.sin(this.t*.4);this.clouds.forEach((c,i)=>c.position.x+=dt*(.25+i*.01));
     for(let i=this.effects.length-1;i>=0;i--){const e=this.effects[i];e.life-=dt;if(e.life<=0){this.scene.remove(e.m);e.m.geometry.dispose();e.m.material.dispose();this.effects.splice(i,1);continue;}e.m.material.opacity=e.life/e.total;if(e.vel){const a=e.m.geometry.attributes.position;for(let j=0;j<a.count;j++){e.vel[j*3+1]-=dt*8;a.setXYZ(j,a.getX(j)+e.vel[j*3]*dt,a.getY(j)+e.vel[j*3+1]*dt,a.getZ(j)+e.vel[j*3+2]*dt);}a.needsUpdate=true;}else e.m.scale.setScalar(1+(1-e.life/e.total)*(e.type==='skill'?13:6));}
     if(playing){const target=gathering?new T.Vector3(gathering.target.x,groundAt(gathering.target.x,gathering.target.z)+1.45,gathering.target.z):new T.Vector3(p.x,p.y+1.6,p.z);const lock=this.game.enemies.find(e=>e.id===this.game.locked);if(!gathering&&lock&&!lock.dead){const yaw=Math.atan2(p.x-lock.x,p.z-lock.z);this.yaw+=Math.atan2(Math.sin(yaw-this.yaw),Math.cos(yaw-this.yaw))*dt*4;target.lerp(new T.Vector3(lock.x,lock.y+1.5,lock.z),.2);}
@@ -131,7 +135,7 @@ export class SceneView {
   }
   focusGathering(id){this.gatheringFocus=id;this.snapCamera();}
   ringBell(id){this.village.ring(id);}
-  snapCamera(){this.cameraSnap=true;this.shake=0;}
+  snapCamera(){this.cameraSnap=true;this.shake=0;this.weaponTrails?.reset('camera-boundary');}
   project(x,y,z){const p=new T.Vector3(x,y,z).project(this.camera);return{x:(p.x*.5+.5)*innerWidth,y:(-p.y*.5+.5)*innerHeight,visible:p.z<1&&p.z>-1};}
   setQuality(quality){this.settings.quality=quality;this.renderer.setPixelRatio(Math.min(devicePixelRatio,quality==='high'?1.7:quality==='low'?1:1.35));this.renderer.shadowMap.enabled=quality!=='low';if(this.grass){this.grass.count=Math.min(this.grassCapacity,quality==='low'?4500:quality==='medium'?9000:this.grassCapacity);this.grass.geometry=this.grassGeometries[quality]||this.grassGeometries.medium;this.grass.computeBoundingSphere();}this.updateTreeDetail(true);this.motes?.geometry.setDrawRange(0,quality==='low'?90:quality==='medium'?180:300);this.resize();}
 }

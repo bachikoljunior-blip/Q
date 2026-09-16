@@ -1,0 +1,122 @@
+{
+  "startedAt": "2026-09-16T01:43:33.097Z",
+  "base": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+  "steps": [
+    {
+      "phase": "asset_reproduction",
+      "command": "python src/assets/forest/build-textures.py",
+      "exit": 0,
+      "wallMs": 1262.541453,
+      "stdout": "{\"family\": \"pine\", \"size\": [512, 512], \"bytes\": 165258, \"sha256\": \"b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a\", \"alphaCoverageAt92\": 0.13026809692382812, \"transparentFraction\": 0.823638916015625}\n{\"family\": \"crown\", \"size\": [512, 512], \"bytes\": 162720, \"sha256\": \"4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7\", \"alphaCoverageAt92\": 0.24522018432617188, \"transparentFraction\": 0.7335243225097656}\n{\"derivationWallMs\": 750.7435730003635}\n",
+      "stderr": ""
+    },
+    {
+      "phase": "geometry_material_placement_regression",
+      "command": "node --test tests/forest-fidelity.test.mjs tests/environment-overhaul.test.mjs",
+      "exit": 0,
+      "wallMs": 2531.245011,
+      "stdout": "✔ original packed surface payloads reproduce the recorded bytes and share one upload per family (65.749595ms)\n✔ real standard shader hooks preserve lighting and expose bounded triplanar, flow and wind contracts (0.911902ms)\n✔ scenery preserves the original seeded placement stream and partitions every tree once across quality changes (1370.278603ms)\n✔ production enemy death plays once without changing saved state; restored dead enemies stay hidden (870.463384ms)\n✔ open near and distant foliage has finite normalized normals, real UV area, flex roots and bounded wind (21.85956ms)\n✔ committed photos preserve cutout coverage across usable mips and do not carry black fringes (180.328906ms)\n✔ lit, depth and point-shadow shaders share branch movement, alpha and material updates (5.517114ms)\n✔ same 805 tree placement and LOD radii keep six draw sets and bounded triangle changes (22.954499ms)\n✔ photo loader disposes temporary decoder textures, rejects a partial set and retries (1.211848ms)\nℹ tests 9\nℹ suites 0\nℹ pass 9\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 2467.285088\n",
+      "stderr": ""
+    },
+    {
+      "phase": "standalone_forest_asset_compile",
+      "command": "node_modules/.bin/esbuild src/forest-assets.js --bundle --format=iife --platform=browser --loader:.png=dataurl --outfile=artifacts/forest-assets-compile.js",
+      "exit": 0,
+      "wallMs": 76.88668699999971,
+      "stdout": "",
+      "stderr": "\n  artifacts/forest-assets-compile.js  909.0kb\n\n⚡ Done in 69ms\n"
+    },
+    {
+      "phase": "vite_build",
+      "command": "npm run build",
+      "exit": 0,
+      "wallMs": 4177.971197,
+      "stdout": "\n> q-ash-pilgrim@0.21.0 build\n> vite build\n\nvite v7.3.1 building client environment for production...\ntransforming...\n✓ 75 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/.vite/manifest.json                             5.02 kB │ gzip:   0.95 kB\ndist/assets/shared-step-D8_A5LtE.wav                 7.10 kB\ndist/index.html                                      7.30 kB │ gzip:   2.78 kB\ndist/assets/shared-impact-DwWqEia4.wav               7.98 kB\ndist/assets/shared-swing-BkmUzsmF.wav               10.63 kB\ndist/assets/ember-stone-CGtrIuNR.png                16.85 kB\ndist/assets/gale-stone-DFcyxpvg.png                 17.05 kB\ndist/assets/tide-stone-COv3Sj_E.png                 17.27 kB\ndist/assets/moss-stone-DiwO4PmY.png                 17.33 kB\ndist/assets/shared-alert-JeJkFdAY.wav               21.21 kB\ndist/assets/shared-seal-slkiLvkd.wav                30.91 kB\ndist/assets/shared-claim-BPXeWqKz.wav               39.73 kB\ndist/assets/north-gate-v22-M69S2yqx.webp           162.96 kB\ndist/assets/ember-ambient-DxlfqX62.wav             176.44 kB\ndist/assets/tide-ambient-BP0Z0aTJ.wav              176.44 kB\ndist/assets/gale-ambient-Bk5IsviT.wav              176.44 kB\ndist/assets/moss-ambient-P9AOr4W8.wav              176.44 kB\ndist/assets/pilgrim-motif-yb4axZNo.mp3             192.46 kB\ndist/assets/pilgrim-pulse-DgX4WFEi.mp3             192.46 kB\ndist/assets/pilgrim-harmony-BW3Pcfnr.mp3           288.59 kB\ndist/assets/pilgrim-foley-CW54U_6w.wav             826.37 kB\ndist/assets/rock_face_03_diff_1k-Clx6WbHJ.jpg      927.08 kB\ndist/assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg  1,146.79 kB\ndist/assets/forest_floor_diff_1k-FrvyY1gs.jpg    1,329.85 kB\ndist/assets/north-gate-v23-BAPO0H9x.mp4          3,178.19 kB\ndist/assets/index-DX2EUndK.css                      58.55 kB │ gzip:  13.25 kB\ndist/assets/scene-CGIPInmx.js                      100.92 kB │ gzip:  37.45 kB\ndist/assets/index-4gJ2ch_2.js                      163.18 kB │ gzip:  62.23 kB\ndist/assets/three-BZb84v7C.js                      571.24 kB │ gzip: 144.24 kB\n✓ built in 3.38s\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n"
+    }
+  ],
+  "initialAssetExecutionsMs": [
+    1332.5505049979256,
+    2439.6438820003823,
+    817.9023410011723
+  ],
+  "sourceResearchCompleteTimer": null,
+  "initialAuthoringCompleteTimer": null,
+  "initialAuthoringTimerLimitation": "Initial geometry/material authoring and source research were not prospectively timed independently; no method speedup or total T_asset claim.",
+  "rework": [
+    {
+      "type": "art_asset",
+      "count": 1,
+      "reason": "After inspecting composed sprites, connected photo leaf bases to branch twigs and increased broadleaf density."
+    },
+    {
+      "type": "test_fixture",
+      "count": 1,
+      "reason": "Corrected current Three.js ShaderLib distance key; retained near-black photographed texel while checking truly black opaque fringes."
+    },
+    {
+      "type": "packaging",
+      "count": 1,
+      "reason": "Replaced import.meta asset URLs with static PNG imports and isolated injectable loader for IIFE packaging."
+    },
+    {
+      "type": "independent_asset_review",
+      "count": 1,
+      "reason": "Replaced per-channel RGB maxima with nearest opaque full RGB vectors; neon hidden-alpha texels reduced1302to0."
+    },
+    {
+      "type": "shader_type_repair",
+      "count": 1,
+      "reason": "Three0.186 vColor is vec4: usevColor.rgb in vec3mix."
+    },
+    {
+      "type": "runtime_texture_repair",
+      "count": 1,
+      "reason": "Restore full RGB gutter after Canvas readback and in each mip because Canvas drops hiddenRGB atalpha0."
+    }
+  ],
+  "limits": [
+    "WebGL compilation/rendering and physical device performance not exercised.",
+    "Full integrated scene material/asset boot is owned by parent; this worktree leaves scene.js unchanged.",
+    "Build count/geometry tests are not PS4 parity evidence."
+  ],
+  "finishedAt": "2026-09-16T01:48:42.912Z",
+  "preIndependentReviewSteps": [
+    {
+      "phase": "asset_reproduction",
+      "command": "python src/assets/forest/build-textures.py",
+      "exit": 0,
+      "wallMs": 1183.135668,
+      "stdout": "{\"family\": \"pine\", \"size\": [512, 512], \"bytes\": 202025, \"sha256\": \"01bf7e90163aa6c68c6dad5b7721d43f2ad85d9d51ab66b34de076bf06f617c2\", \"alphaCoverageAt92\": 0.13026809692382812, \"transparentFraction\": 0.823638916015625}\n{\"family\": \"crown\", \"size\": [512, 512], \"bytes\": 183384, \"sha256\": \"3ce72a36edb7b66a56536c2e79962e737bb0dccdfad3c14937356fa4088a4346\", \"alphaCoverageAt92\": 0.24522018432617188, \"transparentFraction\": 0.7335243225097656}\n{\"derivationWallMs\": 1083.1827570000314}\n",
+      "stderr": ""
+    },
+    {
+      "phase": "geometry_material_placement_regression",
+      "command": "node --test tests/forest-fidelity.test.mjs tests/environment-overhaul.test.mjs",
+      "exit": 0,
+      "wallMs": 3863.785289,
+      "stdout": "✔ original packed surface payloads reproduce the recorded bytes and share one upload per family (94.724375ms)\n✔ real standard shader hooks preserve lighting and expose bounded triplanar, flow and wind contracts (0.740172ms)\n✔ scenery preserves the original seeded placement stream and partitions every tree once across quality changes (1380.337137ms)\n✔ production enemy death plays once without changing saved state; restored dead enemies stay hidden (799.005839ms)\n✔ open near and distant foliage has finite normalized normals, real UV area, flex roots and bounded wind (15.907801ms)\n✔ committed photos preserve cutout coverage across usable mips and do not carry black fringes (200.766273ms)\n✔ lit, depth and point-shadow shaders share branch movement, alpha and material updates (6.745347ms)\n✔ same 805 tree placement and LOD radii keep six draw sets and bounded triangle changes (47.166929ms)\n✔ photo loader disposes temporary decoder textures, rejects a partial set and retries (1.574327ms)\nℹ tests 9\nℹ suites 0\nℹ pass 9\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 3786.100966\n",
+      "stderr": ""
+    },
+    {
+      "phase": "standalone_forest_asset_compile",
+      "command": "node_modules/.bin/esbuild src/forest-assets.js --bundle --format=iife --platform=browser --loader:.png=dataurl --outfile=artifacts/forest-assets-compile.js",
+      "exit": 0,
+      "wallMs": 102.05393499999991,
+      "stdout": "",
+      "stderr": "\n  artifacts/forest-assets-compile.js  982.9kb\n\n⚡ Done in 98ms\n"
+    },
+    {
+      "phase": "vite_build",
+      "command": "npm run build",
+      "exit": 0,
+      "wallMs": 3564.6358960000007,
+      "stdout": "\n> q-ash-pilgrim@0.21.0 build\n> vite build\n\nvite v7.3.1 building client environment for production...\ntransforming...\n✓ 75 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/.vite/manifest.json                             5.02 kB │ gzip:   0.95 kB\ndist/assets/shared-step-D8_A5LtE.wav                 7.10 kB\ndist/index.html                                      7.30 kB │ gzip:   2.78 kB\ndist/assets/shared-impact-DwWqEia4.wav               7.98 kB\ndist/assets/shared-swing-BkmUzsmF.wav               10.63 kB\ndist/assets/ember-stone-CGtrIuNR.png                16.85 kB\ndist/assets/gale-stone-DFcyxpvg.png                 17.05 kB\ndist/assets/tide-stone-COv3Sj_E.png                 17.27 kB\ndist/assets/moss-stone-DiwO4PmY.png                 17.33 kB\ndist/assets/shared-alert-JeJkFdAY.wav               21.21 kB\ndist/assets/shared-seal-slkiLvkd.wav                30.91 kB\ndist/assets/shared-claim-BPXeWqKz.wav               39.73 kB\ndist/assets/north-gate-v22-M69S2yqx.webp           162.96 kB\ndist/assets/ember-ambient-DxlfqX62.wav             176.44 kB\ndist/assets/tide-ambient-BP0Z0aTJ.wav              176.44 kB\ndist/assets/gale-ambient-Bk5IsviT.wav              176.44 kB\ndist/assets/moss-ambient-P9AOr4W8.wav              176.44 kB\ndist/assets/pilgrim-motif-yb4axZNo.mp3             192.46 kB\ndist/assets/pilgrim-pulse-DgX4WFEi.mp3             192.46 kB\ndist/assets/pilgrim-harmony-BW3Pcfnr.mp3           288.59 kB\ndist/assets/pilgrim-foley-CW54U_6w.wav             826.37 kB\ndist/assets/rock_face_03_diff_1k-Clx6WbHJ.jpg      927.08 kB\ndist/assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg  1,146.79 kB\ndist/assets/forest_floor_diff_1k-FrvyY1gs.jpg    1,329.85 kB\ndist/assets/north-gate-v23-BAPO0H9x.mp4          3,178.19 kB\ndist/assets/index-DX2EUndK.css                      58.55 kB │ gzip:  13.25 kB\ndist/assets/scene-tbgjvEtr.js                      100.92 kB │ gzip:  37.45 kB\ndist/assets/index-D_Avy52n.js                      163.18 kB │ gzip:  62.23 kB\ndist/assets/three-BZb84v7C.js                      571.24 kB │ gzip: 144.24 kB\n✓ built in 2.92s\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n"
+    }
+  ],
+  "finalStartedAt": "2026-09-16T01:48:34.857Z",
+  "independentReviewer": "/root/ultra_q_ps4_quality_continuation/frame_quality_audit_ultra",
+  "assetHashCheck": "all originals, both derivatives and generator agree with provenance",
+  "sourceRuntimeExclusion": "standalone forest entry embeds exactly two PNGs and zero source JPEGs"
+}

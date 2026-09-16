@@ -1,6 +1,7 @@
 import * as T from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { surfaceMaterial } from './environment-materials.js';
+import { forestCrownGeometry, forestTrunkGeometry } from './forest-geometry.js';
 
 const unitBox=new T.BoxGeometry(1,1,1),unitCylinder=new T.CylinderGeometry(1,1,1,10);
 const geometries=new Map(), propTemplates=new Map();
@@ -100,21 +101,11 @@ export function createStele(color,accent){
   const g=new T.Group(),stone=surfaceMaterial('stone',color);g.userData.environmentFamily='stele';
   block(g,stone,[0,.12,0],[1,.24,.65]);block(g,stone,[0,1.4,0],[.86,2.6,.43]);block(g,stone,[0,2.73,0],[.95,.13,.53]);for(let i=0;i<6;i++){const a=(i%2?-.1:.1);block(g,accent,[a,2.25-i*.31,.226],[.31,.032,.022],[0,0,i%2?.45:-.45]);}return batchProp(g);
 }
-export function coniferGeometry(){
-  const g=new T.Group(),mat=new T.MeshBasicMaterial();
-  for(let tier=0;tier<4;tier++){const h=.32-tier*.035,base=-.46+tier*.24,r=.47-tier*.105;for(let k=0;k<5;k++){const a=k*Math.PI*2/5+tier*.68;const geo=new T.ConeGeometry(r,h,4,1,true);part(g,geo,mat,[Math.sin(a)*r*.48,base+h*.45,Math.cos(a)*r*.48],[1,1,1],[.12*Math.cos(a),a,-.12*Math.sin(a)]);}}
-  part(g,new T.ConeGeometry(.11,.35,6),mat,[0,.45,0]);batchProp(g);const geometry=g.children[0].geometry;geometry.computeBoundingBox();return geometry;
-}
-export function broadleafGeometry(){const g=new T.Group(),mat=new T.MeshBasicMaterial();for(let i=0;i<7;i++){const a=i*2.399,r=i? .43:0;part(g,rockGeometry(i+7,0),mat,[Math.cos(a)*r,i?.05+Math.sin(i*3)*.17:.37,Math.sin(a)*r],[.5,.43,.48]);}batchProp(g);return g.children[0].geometry;}
-export function treeTrunkGeometry(){const g=new T.Group(),mat=new T.MeshBasicMaterial();part(g,new T.CylinderGeometry(.075,.24,1,6,1),mat);const twig=(a,b,r)=>{const from=new T.Vector3(...a),to=new T.Vector3(...b),m=part(g,new T.CylinderGeometry(r*.45,r,from.distanceTo(to),3,1,true),mat,from.clone().add(to).multiplyScalar(.5).toArray());m.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),to.sub(from).normalize());};for(let i=0;i<5;i++){const a=i*2.399;twig([0,.05+i*.065,0],[Math.sin(a)*.52,.3+i*.025,Math.cos(a)*.52],.052);if(i<3)twig([0,-.45,0],[Math.sin(a)*.36,-.5,Math.cos(a)*.36],.065);}batchProp(g);return g.children[0].geometry;}
+export function coniferGeometry(){return forestCrownGeometry('pine');}
+export function broadleafGeometry(){return forestCrownGeometry('crown');}
+export function treeTrunkGeometry(){return forestTrunkGeometry();}
 export function grassGeometry(blades=3){
   const pos=[],uv=[],indices=[];for(let i=0;i<blades;i++){const a=i*Math.PI/3,dx=Math.cos(a)*.065,dz=Math.sin(a)*.065,offset=pos.length/3;pos.push(-dx,0,-dz,dx,0,dz,-dx*.55,.38,-dz*.55,dx*.55,.38,dz*.55,.09*Math.cos(a),.73,.09*Math.sin(a));uv.push(0,0,1,0,0,.55,1,.55,.5,1);indices.push(offset,offset+1,offset+2,offset+1,offset+3,offset+2,offset+2,offset+3,offset+4);}const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(pos,3));geo.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geo.setIndex(indices);geo.computeVertexNormals();return geo;
 }
 
-export function distantTreeGeometry(family){
-  if(family==='trunk')return new T.CylinderGeometry(.075,.22,1,5,1);
-  const g=new T.Group(),mat=new T.MeshBasicMaterial();
-  if(family==='pine'){for(let i=0;i<3;i++)part(g,new T.ConeGeometry(.48-i*.13,.54,5,1,true),mat,[0,-.27+i*.26,0]);}
-  else for(let i=0;i<3;i++){const a=i*2.399;part(g,rockGeometry(i+3,0),mat,[Math.sin(a)*.25,.1+i*.1,Math.cos(a)*.25],[.65,.56,.6]);}
-  batchProp(g);return g.children[0].geometry;
-}
+export function distantTreeGeometry(family){return family==='trunk'?forestTrunkGeometry(true):forestCrownGeometry(family==='pine'?'pine':'crown',true);}

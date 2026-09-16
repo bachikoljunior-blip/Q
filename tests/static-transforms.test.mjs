@@ -32,7 +32,7 @@ test('actual scenery graph stays identical through actor, weather, effects, qual
   for (const node of b) assert.equal(node.matrixWorldAutoUpdate, true);
   assert.equal(candidate.scene.matrixAutoUpdate, true);
   const excluded = [candidate.camera, candidate.sun, candidate.sun.target, candidate.player.g,
-    candidate.npc.g, candidate.sena.g, candidate.crownHalo, candidate.motes, candidate.slash,
+    candidate.npc.g, candidate.sena.g, candidate.crownHalo, candidate.motes, candidate.weaponTrails.mesh,
     candidate.arrowShafts, candidate.arrowTips, candidate.sky, ...candidate.clouds, ...candidate.lootModels.values(),
     ...candidate.residentModels.values(), ...candidate.enemyModels.values(),
     ...[...candidate.village.bells.values()].map(b => b.swing), candidate.village.flame, candidate.village.charm,

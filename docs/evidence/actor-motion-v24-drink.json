@@ -1,0 +1,5287 @@
+{
+  "sourceHashes": {
+    "src/character-motion.js": "4569b9fa69da7f5894c102acc9e7586f4b40f37b3a22bcafb04b1a0169ea3924",
+    "src/actor-models.js": "d299e3d02b0fca392b3e22eb9b7753133d7413d452403e482ee86b76337f7ff7"
+  },
+  "boundary": "Host Node production Three.js drink-lowering/exit transforms only; no renderer/performance/PS4 quality evidence",
+  "sequences": [
+    {
+      "weaponType": "greatsword",
+      "previouslyEquipped": false,
+      "maxVisibleTipStep": 0.005258776777637613,
+      "maxWristStep": 0.11733235614878935,
+      "steps": [
+        {
+          "i": 1,
+          "healTimer": 0.29833333333333334,
+          "phase": 0.6685185185185185,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "healTimer": 0.2816666666666667,
+          "phase": 0.6870370370370371,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "healTimer": 0.265,
+          "phase": 0.7055555555555555,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "healTimer": 0.24833333333333335,
+          "phase": 0.7240740740740741,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "healTimer": 0.2316666666666667,
+          "phase": 0.7425925925925926,
+          "state": "drink",
+          "tip": 1.9705339041259549,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.0007928855022610478
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.009990609307980026
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00026164383993878664,
+              "rotation": 0.0016918977296989121
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0032152751131118503,
+              "rotation": 0.024100270995957573
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00003000478354313234,
+              "rotation": 0.0009459720739585695
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0069135435452187385,
+              "rotation": 0.01150998555760198
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "healTimer": 0.215,
+          "phase": 0.7611111111111111,
+          "state": "drink",
+          "tip": 0.16111235374512725,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.007108788927368889
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.04536805924602158
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.002345895110269848,
+              "rotation": 0.01719978761882517
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.014707622248571275,
+              "rotation": 0.11315574549918515
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0009289104795713978,
+              "rotation": 0.010547297448902947
+            },
+            {
+              "name": "hand-1",
+              "position": 0.03421284153488567,
+              "rotation": 0.052361359624940366
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "healTimer": 0.19833333333333333,
+          "phase": 0.7796296296296297,
+          "state": "drink",
+          "tip": 0.3114628974568039,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.01615677964497783
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.07130691487403534
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.005331674798527296,
+              "rotation": 0.046906963715756755
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.02338264800218986,
+              "rotation": 0.17923916903039658
+            },
+            {
+              "name": "hand-0",
+              "position": 0.004758032994424632,
+              "rotation": 0.032102607681954894
+            },
+            {
+              "name": "hand-1",
+              "position": 0.06100182543852545,
+              "rotation": 0.07832472632300787
+            }
+          ]
+        },
+        {
+          "i": 8,
+          "healTimer": 0.18166666666666667,
+          "phase": 0.7981481481481482,
+          "state": "drink",
+          "tip": 0.46125123237235544,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.020261633340424932
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.09236610083270973
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.006686220427235564,
+              "rotation": 0.07757948966573348
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.03046099165311228,
+              "rotation": 0.2069872076758648
+            },
+            {
+              "name": "hand-0",
+              "position": 0.012685786662573056,
+              "rotation": 0.060642703825803314
+            },
+            {
+              "name": "hand-1",
+              "position": 0.08436450254652346,
+              "rotation": 0.08675808476062506
+            }
+          ]
+        },
+        {
+          "i": 9,
+          "healTimer": 0.165,
+          "phase": 0.8166666666666667,
+          "state": "drink",
+          "tip": 0.5786418901672888,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.017122385857858368
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.11265149972515637
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0056502621594512435,
+              "rotation": 0.09716401967059571
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.03713773489823945,
+              "rotation": 0.20410687783891354
+            },
+            {
+              "name": "hand-0",
+              "position": 0.023826665291230915,
+              "rotation": 0.08830078331997485
+            },
+            {
+              "name": "hand-1",
+              "position": 0.10285693638235795,
+              "rotation": 0.08958417001277769
+            }
+          ]
+        },
+        {
+          "i": 10,
+          "healTimer": 0.14833333333333334,
+          "phase": 0.8351851851851851,
+          "state": "drink",
+          "tip": 0.6402086107017523,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.018045342163160907
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.12757521181983428
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.005954880881959252,
+              "rotation": 0.10046422703323468
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.042014682962641096,
+              "rotation": 0.1902711932862254
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0351973840758167,
+              "rotation": 0.10852561841433586
+            },
+            {
+              "name": "hand-1",
+              "position": 0.11479606143549037,
+              "rotation": 0.09442162116744912
+            }
+          ]
+        },
+        {
+          "i": 11,
+          "healTimer": 0.13166666666666668,
+          "phase": 0.8537037037037036,
+          "state": "drink",
+          "tip": 0.6332727686293383,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02944704677040833
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.1327648148760338
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009716876676309077,
+              "rotation": 0.09340878342980143
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.043720843276521336,
+              "rotation": 0.17321155292652776
+            },
+            {
+              "name": "hand-0",
+              "position": 0.04387276266372706,
+              "rotation": 0.12109953659147302
+            },
+            {
+              "name": "hand-1",
+              "position": 0.11733235614878935,
+              "rotation": 0.09826490847533535
+            }
+          ]
+        },
+        {
+          "i": 12,
+          "healTimer": 0.11499999999999999,
+          "phase": 0.8722222222222222,
+          "state": "drink",
+          "tip": 0.5532386688210754,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.03701800400826102
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.12721342064327928
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.01221373610648506,
+              "rotation": 0.09230675209783482
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.04192025979196741,
+              "rotation": 0.1524443897328045
+            },
+            {
+              "name": "hand-0",
+              "position": 0.04967490465492599,
+              "rotation": 0.13360066377040586
+            },
+            {
+              "name": "hand-1",
+              "position": 0.10822310008853203,
+              "rotation": 0.1057857855387313
+            }
+          ]
+        },
+        {
+          "i": 13,
+          "healTimer": 0.09833333333333333,
+          "phase": 0.8907407407407407,
+          "state": "drink",
+          "tip": 0.40800582243730416,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.034719158920685306
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.10982942369697589
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.011452948056853783,
+              "rotation": 0.11169984631647718
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.03621727499258503,
+              "rotation": 0.13798415110646803
+            },
+            {
+              "name": "hand-0",
+              "position": 0.054731078114302986,
+              "rotation": 0.15414322536491779
+            },
+            {
+              "name": "hand-1",
+              "position": 0.08833219843541604,
+              "rotation": 0.12404815231223838
+            }
+          ]
+        },
+        {
+          "i": 14,
+          "healTimer": 0.08166666666666667,
+          "phase": 0.9092592592592592,
+          "state": "drink",
+          "tip": 0.22238572953414606,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.027297025602304875
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.07857315253269108
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009001702868292306,
+              "rotation": 0.14599340098854338
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.02591927346063466,
+              "rotation": 0.13895341832017452
+            },
+            {
+              "name": "hand-0",
+              "position": 0.06020109484302364,
+              "rotation": 0.18060575028132944
+            },
+            {
+              "name": "hand-1",
+              "position": 0.06367510452756898,
+              "rotation": 0.14687322377418535
+            }
+          ]
+        },
+        {
+          "i": 15,
+          "healTimer": 0.065,
+          "phase": 0.9277777777777778,
+          "state": "drink",
+          "tip": 0.050638951944433234,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02256873824584673
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.036764235050967785
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.007444482324537904,
+              "rotation": 0.17052720528926427
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.012104518483907263,
+              "rotation": 0.1378122755819506
+            },
+            {
+              "name": "hand-0",
+              "position": 0.06440078474702032,
+              "rotation": 0.2001860822578275
+            },
+            {
+              "name": "hand-1",
+              "position": 0.04664500944578179,
+              "rotation": 0.1597556659221929
+            }
+          ]
+        },
+        {
+          "i": 16,
+          "healTimer": 0.04833333333333334,
+          "phase": 0.9462962962962963,
+          "state": "drink",
+          "tip": 0.12467573499714255,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.028966340389317047
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.024589472970274945
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009557595504621747,
+              "rotation": 0.16585702012178472
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.007961812654036482,
+              "rotation": 0.11647754391431335
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0637218112014205,
+              "rotation": 0.20009194650491427
+            },
+            {
+              "name": "hand-1",
+              "position": 0.04442539574707228,
+              "rotation": 0.1527604104438598
+            }
+          ]
+        },
+        {
+          "i": 17,
+          "healTimer": 0.031666666666666676,
+          "phase": 0.9648148148148148,
+          "state": "drink",
+          "tip": 0.1878277300185401,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.042260408615889006
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.04973958092038453
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.01393193387941708,
+              "rotation": 0.13232240088524677
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.016288992978629853,
+              "rotation": 0.07863092521915563
+            },
+            {
+              "name": "hand-0",
+              "position": 0.054949916304301766,
+              "rotation": 0.17416170500379524
+            },
+            {
+              "name": "hand-1",
+              "position": 0.04341942371457,
+              "rotation": 0.1249415487370582
+            }
+          ]
+        },
+        {
+          "i": 18,
+          "healTimer": 0.015000000000000013,
+          "phase": 0.9833333333333333,
+          "state": "drink",
+          "tip": 0.1605813298031228,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.04149691089485052
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.04913242649870675
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.013670502372039183,
+              "rotation": 0.08273185420206453
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.01612318838212889,
+              "rotation": 0.040185898709043245
+            },
+            {
+              "name": "hand-0",
+              "position": 0.03719384996928787,
+              "rotation": 0.12019102351007001
+            },
+            {
+              "name": "hand-1",
+              "position": 0.03244211842245713,
+              "rotation": 0.0809712473697652
+            }
+          ]
+        },
+        {
+          "i": 19,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.029440978505169222,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000044555514462261274,
+              "rotation": 0.014357161018276278
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00004491537727304826,
+              "rotation": 0.0050579876452826
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.004766867768182005,
+              "rotation": 0.012242309456299671
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0016729095893464271,
+              "rotation": 0.014084706340191253
+            },
+            {
+              "name": "hand-0",
+              "position": 0.009989979452535455,
+              "rotation": 0.02928326515344085
+            },
+            {
+              "name": "hand-1",
+              "position": 0.005976752754560671,
+              "rotation": 0.015057308545129901
+            }
+          ]
+        },
+        {
+          "i": 20,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0026922016958211272,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00012801376259242503,
+              "rotation": 0.0008554926678345479
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00012904850789367703,
+              "rotation": 0.0011547365387236073
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0003564747045907511,
+              "rotation": 0.0010498397875430233
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00038150911639533243,
+              "rotation": 0.0006953846326384067
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0004274923821493758,
+              "rotation": 0.0010061709694937182
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0005584970617895012,
+              "rotation": 0.0011202136724882887
+            }
+          ]
+        },
+        {
+          "i": 21,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.003979932162090416,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00020004482969660807,
+              "rotation": 0.0012474933060393797
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00020166315633624078,
+              "rotation": 0.0016919949920053403
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.000531040219192693,
+              "rotation": 0.0015259584284105646
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.000560237648816104,
+              "rotation": 0.001021393778885154
+            },
+            {
+              "name": "hand-0",
+              "position": 0.000632146989882424,
+              "rotation": 0.0014786468003124306
+            },
+            {
+              "name": "hand-1",
+              "position": 0.000827646907119132,
+              "rotation": 0.0016465875035305663
+            }
+          ]
+        },
+        {
+          "i": 22,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.004839241965310722,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00025678890787649055,
+              "rotation": 0.001495682301617241
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00025886796687272243,
+              "rotation": 0.002038918182224192
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0006514951160204079,
+              "rotation": 0.0018224700849085995
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0006768090138834017,
+              "rotation": 0.0012347207780364045
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0007691357118055556,
+              "rotation": 0.0017881442829428475
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0010089906938858695,
+              "rotation": 0.001991002804156065
+            }
+          ]
+        },
+        {
+          "i": 23,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.005258776777637613,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00029448176088218465,
+              "rotation": 0.0016014013592214804
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00029686785118067605,
+              "rotation": 0.002194920692884394
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0007151738128299275,
+              "rotation": 0.001942782436389961
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0007306210692436996,
+              "rotation": 0.0013339594852830974
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0008365850168804339,
+              "rotation": 0.001933334217891993
+            },
+            {
+              "name": "hand-1",
+              "position": 0.001099520094250236,
+              "rotation": 0.002151939066225078
+            }
+          ]
+        },
+        {
+          "i": 24,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0052277125319338605,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.0003094627181689742,
+              "rotation": 0.0015657144302774588
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00031197206152570216,
+              "rotation": 0.002159150469237167
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0007191232132611356,
+              "rotation": 0.0018904227313700282
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0007209013364217145,
+              "rotation": 0.001317042731363286
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0008325399344936802,
+              "rotation": 0.0019124186124751504
+            },
+            {
+              "name": "hand-1",
+              "position": 0.001096250779941177,
+              "rotation": 0.0021277462592649335
+            }
+          ]
+        },
+        {
+          "i": 25,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.004735772894937795,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000298182617359108,
+              "rotation": 0.0013895874030342553
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0003006021946830731,
+              "rotation": 0.0019306963302710017
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0006602714547927011,
+              "rotation": 0.0016688825257683167
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0006468716683261822,
+              "rotation": 0.0011817402323546899
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0007550651486508967,
+              "rotation": 0.001723344698172575
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0009962952779335008,
+              "rotation": 0.0019166525727911255
+            }
+          ]
+        },
+        {
+          "i": 26,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0037733708205064005,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00025721296610769763,
+              "rotation": 0.0010740975154442424
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0002593013637084915,
+              "rotation": 0.001508793728030732
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0005356719213699213,
+              "rotation": 0.0012814990230977418
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0005079873064564897,
+              "rotation": 0.0009261639995827864
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0006024253492772116,
+              "rotation": 0.0013642284192455978
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0007969960823816641,
+              "rotation": 0.0015169327380166932
+            }
+          ]
+        },
+        {
+          "i": 27,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0023328027053053295,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00018326448694467042,
+              "rotation": 0.0006207985185157922
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00018475250165587463,
+              "rotation": 0.000893029041423749
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00034311948089552183,
+              "rotation": 0.0007314250536241591
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0003046334183133326,
+              "rotation": 0.0005492806753946909
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00037372203901804313,
+              "rotation": 0.0008351614030438675
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0004963921082505794,
+              "rotation": 0.0009282091587354488
+            }
+          ]
+        },
+        {
+          "i": 28,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.000614429707053628,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00008429584026679849,
+              "rotation": 0.00009308921773969901
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00008497397717769587,
+              "rotation": 0.00015963523788365736
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00011255044103062596,
+              "rotation": 0.0000907704133294472
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00007488201454456808,
+              "rotation": 0.00009827397939482961
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00010702677231582864,
+              "rotation": 0.00023441265386150864
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0001382595531278511,
+              "rotation": 0.0002504272943727618
+            }
+          ]
+        },
+        {
+          "i": 29,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00028901627433957673,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.0000611999213611422,
+              "rotation": 0.000050244806465146415
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00006168290282447011,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00007000648129625279,
+              "rotation": 0.00005924766901850702
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.000050335405033122884,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00006471100998896938,
+              "rotation": 0.0001574329760616218
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00007257335537535056,
+              "rotation": 0.0001541551103669352
+            }
+          ]
+        },
+        {
+          "i": 30,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00027921985642758855,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00006034553319055999,
+              "rotation": 0.000050167622345780964
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00006081776692847489,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00006893469578226515,
+              "rotation": 0.00005916173858287961
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.000049676768839634776,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00006353957085260998,
+              "rotation": 0.00015718524904981794
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00007099172570544806,
+              "rotation": 0.00015391403846708878
+            }
+          ]
+        },
+        {
+          "i": 31,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00026919896099589035,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000059487221329757413,
+              "rotation": 0.000050087845682946526
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0000599480531713608,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00006784781631827542,
+              "rotation": 0.0000590727438198808
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.000049038104875342033,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00006236098595901221,
+              "rotation": 0.0001569294537619772
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00006939545284241448,
+              "rotation": 0.00015366506884131116
+            }
+          ]
+        },
+        {
+          "i": 32,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00025896403710243845,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000058627614640455604,
+              "rotation": 0.000050005499591774776
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00005907635901697569,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00006674804993461754,
+              "rotation": 0.000058980663329001124
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.000048423890449931184,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00006117897828164875,
+              "rotation": 0.00015666560737036497
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00006778923446073317,
+              "rotation": 0.00015340820067007727
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weaponType": "greatsword",
+      "previouslyEquipped": true,
+      "maxVisibleTipStep": 0.005602525112422998,
+      "maxWristStep": 0.11733235614878935,
+      "steps": [
+        {
+          "i": 1,
+          "healTimer": 0.29833333333333334,
+          "phase": 0.6685185185185185,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "healTimer": 0.2816666666666667,
+          "phase": 0.6870370370370371,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "healTimer": 0.265,
+          "phase": 0.7055555555555555,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "healTimer": 0.24833333333333335,
+          "phase": 0.7240740740740741,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "healTimer": 0.2316666666666667,
+          "phase": 0.7425925925925926,
+          "state": "drink",
+          "tip": 1.9705339041259549,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.0007928855022610478
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.009990609307980026
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00026164383993878664,
+              "rotation": 0.0016918977296989121
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0032152751131118503,
+              "rotation": 0.024100270995957573
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00003000478354313234,
+              "rotation": 0.0009459720739585695
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0069135435452187385,
+              "rotation": 0.01150998555760198
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "healTimer": 0.215,
+          "phase": 0.7611111111111111,
+          "state": "drink",
+          "tip": 0.16111235374512725,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.007108788927368889
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.04536805924602158
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.002345895110269848,
+              "rotation": 0.01719978761882517
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.014707622248571275,
+              "rotation": 0.11315574549918515
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0009289104795713978,
+              "rotation": 0.010547297448902947
+            },
+            {
+              "name": "hand-1",
+              "position": 0.03421284153488567,
+              "rotation": 0.052361359624940366
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "healTimer": 0.19833333333333333,
+          "phase": 0.7796296296296297,
+          "state": "drink",
+          "tip": 0.3114628974568039,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.01615677964497783
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.07130691487403534
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.005331674798527296,
+              "rotation": 0.046906963715756755
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.02338264800218986,
+              "rotation": 0.17923916903039658
+            },
+            {
+              "name": "hand-0",
+              "position": 0.004758032994424632,
+              "rotation": 0.032102607681954894
+            },
+            {
+              "name": "hand-1",
+              "position": 0.06100182543852545,
+              "rotation": 0.07832472632300787
+            }
+          ]
+        },
+        {
+          "i": 8,
+          "healTimer": 0.18166666666666667,
+          "phase": 0.7981481481481482,
+          "state": "drink",
+          "tip": 0.46125123237235544,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.020261633340424932
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.09236610083270973
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.006686220427235564,
+              "rotation": 0.07757948966573348
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.03046099165311228,
+              "rotation": 0.2069872076758648
+            },
+            {
+              "name": "hand-0",
+              "position": 0.012685786662573056,
+              "rotation": 0.060642703825803314
+            },
+            {
+              "name": "hand-1",
+              "position": 0.08436450254652346,
+              "rotation": 0.08675808476062506
+            }
+          ]
+        },
+        {
+          "i": 9,
+          "healTimer": 0.165,
+          "phase": 0.8166666666666667,
+          "state": "drink",
+          "tip": 0.5786418901672888,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.017122385857858368
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.11265149972515637
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0056502621594512435,
+              "rotation": 0.09716401967059571
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.03713773489823945,
+              "rotation": 0.20410687783891354
+            },
+            {
+              "name": "hand-0",
+              "position": 0.023826665291230915,
+              "rotation": 0.08830078331997485
+            },
+            {
+              "name": "hand-1",
+              "position": 0.10285693638235795,
+              "rotation": 0.08958417001277769
+            }
+          ]
+        },
+        {
+          "i": 10,
+          "healTimer": 0.14833333333333334,
+          "phase": 0.8351851851851851,
+          "state": "drink",
+          "tip": 0.6402086107017523,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.018045342163160907
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.12757521181983428
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.005954880881959252,
+              "rotation": 0.10046422703323468
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.042014682962641096,
+              "rotation": 0.1902711932862254
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0351973840758167,
+              "rotation": 0.10852561841433586
+            },
+            {
+              "name": "hand-1",
+              "position": 0.11479606143549037,
+              "rotation": 0.09442162116744912
+            }
+          ]
+        },
+        {
+          "i": 11,
+          "healTimer": 0.13166666666666668,
+          "phase": 0.8537037037037036,
+          "state": "drink",
+          "tip": 0.6332727686293383,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02944704677040833
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.1327648148760338
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009716876676309077,
+              "rotation": 0.09340878342980143
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.043720843276521336,
+              "rotation": 0.17321155292652776
+            },
+            {
+              "name": "hand-0",
+              "position": 0.04387276266372706,
+              "rotation": 0.12109953659147302
+            },
+            {
+              "name": "hand-1",
+              "position": 0.11733235614878935,
+              "rotation": 0.09826490847533535
+            }
+          ]
+        },
+        {
+          "i": 12,
+          "healTimer": 0.11499999999999999,
+          "phase": 0.8722222222222222,
+          "state": "drink",
+          "tip": 0.5532386688210754,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.03701800400826102
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.12721342064327928
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.01221373610648506,
+              "rotation": 0.09230675209783482
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.04192025979196741,
+              "rotation": 0.1524443897328045
+            },
+            {
+              "name": "hand-0",
+              "position": 0.04967490465492599,
+              "rotation": 0.13360066377040586
+            },
+            {
+              "name": "hand-1",
+              "position": 0.10822310008853203,
+              "rotation": 0.1057857855387313
+            }
+          ]
+        },
+        {
+          "i": 13,
+          "healTimer": 0.09833333333333333,
+          "phase": 0.8907407407407407,
+          "state": "drink",
+          "tip": 0.40800582243730416,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.034719158920685306
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.10982942369697589
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.011452948056853783,
+              "rotation": 0.11169984631647718
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.03621727499258503,
+              "rotation": 0.13798415110646803
+            },
+            {
+              "name": "hand-0",
+              "position": 0.054731078114302986,
+              "rotation": 0.15414322536491779
+            },
+            {
+              "name": "hand-1",
+              "position": 0.08833219843541604,
+              "rotation": 0.12404815231223838
+            }
+          ]
+        },
+        {
+          "i": 14,
+          "healTimer": 0.08166666666666667,
+          "phase": 0.9092592592592592,
+          "state": "drink",
+          "tip": 0.22238572953414606,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.027297025602304875
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.07857315253269108
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009001702868292306,
+              "rotation": 0.14599340098854338
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.02591927346063466,
+              "rotation": 0.13895341832017452
+            },
+            {
+              "name": "hand-0",
+              "position": 0.06020109484302364,
+              "rotation": 0.18060575028132944
+            },
+            {
+              "name": "hand-1",
+              "position": 0.06367510452756898,
+              "rotation": 0.14687322377418535
+            }
+          ]
+        },
+        {
+          "i": 15,
+          "healTimer": 0.065,
+          "phase": 0.9277777777777778,
+          "state": "drink",
+          "tip": 0.050638951944433234,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02256873824584673
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.036764235050967785
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.007444482324537904,
+              "rotation": 0.17052720528926427
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.012104518483907263,
+              "rotation": 0.1378122755819506
+            },
+            {
+              "name": "hand-0",
+              "position": 0.06440078474702032,
+              "rotation": 0.2001860822578275
+            },
+            {
+              "name": "hand-1",
+              "position": 0.04664500944578179,
+              "rotation": 0.1597556659221929
+            }
+          ]
+        },
+        {
+          "i": 16,
+          "healTimer": 0.04833333333333334,
+          "phase": 0.9462962962962963,
+          "state": "drink",
+          "tip": 0.12467573499714255,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.028966340389317047
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.024589472970274945
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009557595504621747,
+              "rotation": 0.16585702012178472
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.007961812654036482,
+              "rotation": 0.11647754391431335
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0637218112014205,
+              "rotation": 0.20009194650491427
+            },
+            {
+              "name": "hand-1",
+              "position": 0.04442539574707228,
+              "rotation": 0.1527604104438598
+            }
+          ]
+        },
+        {
+          "i": 17,
+          "healTimer": 0.031666666666666676,
+          "phase": 0.9648148148148148,
+          "state": "drink",
+          "tip": 0.1878277300185401,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.042260408615889006
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.04973958092038453
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.01393193387941708,
+              "rotation": 0.13232240088524677
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.016288992978629853,
+              "rotation": 0.07863092521915563
+            },
+            {
+              "name": "hand-0",
+              "position": 0.054949916304301766,
+              "rotation": 0.17416170500379524
+            },
+            {
+              "name": "hand-1",
+              "position": 0.04341942371457,
+              "rotation": 0.1249415487370582
+            }
+          ]
+        },
+        {
+          "i": 18,
+          "healTimer": 0.015000000000000013,
+          "phase": 0.9833333333333333,
+          "state": "drink",
+          "tip": 0.1605813298031228,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.04149691089485052
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.04913242649870675
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.013670502372039183,
+              "rotation": 0.08273185420206453
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.01612318838212889,
+              "rotation": 0.040185898709043245
+            },
+            {
+              "name": "hand-0",
+              "position": 0.03719384996928787,
+              "rotation": 0.12019102351007001
+            },
+            {
+              "name": "hand-1",
+              "position": 0.03244211842245713,
+              "rotation": 0.0809712473697652
+            }
+          ]
+        },
+        {
+          "i": 19,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.029485410837474243,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00007114877049096048,
+              "rotation": 0.014375514985395755
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0000717271053632289,
+              "rotation": 0.0050579876452826
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.004792239132530258,
+              "rotation": 0.012217580338567976
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0016706982358355006,
+              "rotation": 0.014084706340191253
+            },
+            {
+              "name": "hand-0",
+              "position": 0.010014780825883623,
+              "rotation": 0.02930898199508101
+            },
+            {
+              "name": "hand-1",
+              "position": 0.005993519552220264,
+              "rotation": 0.015018489092399832
+            }
+          ]
+        },
+        {
+          "i": 20,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.002902914260532267,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00019845002084148004,
+              "rotation": 0.0008189124843382143
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0002000630201760447,
+              "rotation": 0.0011547365387236073
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00040701423355135943,
+              "rotation": 0.0009886960703872354
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00038256264169422177,
+              "rotation": 0.0006953846326384067
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00045805505837933925,
+              "rotation": 0.001047678872172021
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0006083324129917625,
+              "rotation": 0.0011728200946593279
+            }
+          ]
+        },
+        {
+          "i": 21,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.004276355696701204,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.0003007581387797373,
+              "rotation": 0.001194524718244873
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00030320179425453916,
+              "rotation": 0.0016919949920053403
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.000604999327946085,
+              "rotation": 0.0014369210881762845
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0005602827217220244,
+              "rotation": 0.001021393778885154
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0006749732528716901,
+              "rotation": 0.0015443486621574954
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0008971660792143569,
+              "rotation": 0.0017273792274126306
+            }
+          ]
+        },
+        {
+          "i": 22,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.005179038999342485,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00037484902237970076,
+              "rotation": 0.0014327168213071565
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0003778923927822545,
+              "rotation": 0.002038918182224192
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0007402099755704525,
+              "rotation": 0.0017159612181742178
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0006747053857861314,
+              "rotation": 0.0012347207780364045
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0008179492282385177,
+              "rotation": 0.0018734558512201302
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0010879654789532976,
+              "rotation": 0.0020929605983461786
+            }
+          ]
+        },
+        {
+          "i": 23,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.005602525112422998,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.0004176365444297672,
+              "rotation": 0.0015346600255451122
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0004210231620929999,
+              "rotation": 0.002194920692884394
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0008098267592546351,
+              "rotation": 0.0018290734406020788
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0007255309537551793,
+              "rotation": 0.0013339594852830974
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0008855168888618654,
+              "rotation": 0.0020321218120836963
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0011785671108158864,
+              "rotation": 0.0022669000050631488
+            }
+          ]
+        },
+        {
+          "i": 24,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0055395024203438005,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00042617629681135485,
+              "rotation": 0.0015012230467214695
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00042962565004760705,
+              "rotation": 0.002159150469237167
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0008108408663825443,
+              "rotation": 0.001779603447388886
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0007123845367203123,
+              "rotation": 0.001317042731363286
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0008762279773410376,
+              "rotation": 0.0020170259082964077
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0011669384717665156,
+              "rotation": 0.0022464529729500932
+            }
+          ]
+        },
+        {
+          "i": 25,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0049837138500430506,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00039767068545678045,
+              "rotation": 0.001333162182482452
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00040087971277918364,
+              "rotation": 0.0019306963302710017
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0007402371546553786,
+              "rotation": 0.0015708496828408624
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0006349932878861737,
+              "rotation": 0.0011817402323546899
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0007887628789182097,
+              "rotation": 0.0018246413287162585
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0010512633584225525,
+              "rotation": 0.0020287792277160635
+            }
+          ]
+        },
+        {
+          "i": 26,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00392989596834544,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00032948167221622004,
+              "rotation": 0.0010313449964330045
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0003321260513055338,
+              "rotation": 0.001508793728030732
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0005952191050190878,
+              "rotation": 0.0012059654933714223
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0004934164589526187,
+              "rotation": 0.0009261639995827864
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0006221001212527295,
+              "rotation": 0.001451627606981519
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0008300719339574492,
+              "rotation": 0.0016110566530134509
+            }
+          ]
+        },
+        {
+          "i": 27,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0023739611798634284,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00021919521059404466,
+              "rotation": 0.0005971425483265728
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00022092919216548773,
+              "rotation": 0.000893029041423749
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0003736312424899841,
+              "rotation": 0.0006879596368836855
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0002886440834267826,
+              "rotation": 0.0005492806753946909
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0003760210234217938,
+              "rotation": 0.0008962794969470709
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0005026185259279137,
+              "rotation": 0.0009914784308573852
+            }
+          ]
+        },
+        {
+          "i": 28,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0005140566983653928,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00008039557936499312,
+              "rotation": 0.00009183632429701626
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00008095737494310647,
+              "rotation": 0.00015963523788365736
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00010643424551307349,
+              "rotation": 0.00008546523558789816
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00005947639246672818,
+              "rotation": 0.00009827397939482961
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00009000428653301281,
+              "rotation": 0.00025126789417912035
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00011594974224513567,
+              "rotation": 0.0002666885678194365
+            }
+          ]
+        },
+        {
+          "i": 29,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00013608051051017324,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000049942093228753755,
+              "rotation": 0.00004893058522000845
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00005020444364338841,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00005454096997876424,
+              "rotation": 0.00005776658803842414
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004458454942209964,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.000049248879968111047,
+              "rotation": 0.00015323607070677925
+            },
+            {
+              "name": "hand-1",
+              "position": 0.000051218224466530016,
+              "rotation": 0.00015006584133850956
+            }
+          ]
+        },
+        {
+          "i": 30,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00012448190311232314,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00004930754254001267,
+              "rotation": 0.00004881763230674054
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00004954763110370655,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00005349918475422339,
+              "rotation": 0.00005763806133094657
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004460608686588417,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.000048400118439183405,
+              "rotation": 0.0001528767870155279
+            },
+            {
+              "name": "hand-1",
+              "position": 0.000050014000979382305,
+              "rotation": 0.00014971540073318245
+            }
+          ]
+        },
+        {
+          "i": 31,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00011296164360570289,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00004871350308819752,
+              "rotation": 0.000048702165229382194
+            },
+            {
+              "name": "arm-1",
+              "position": 0.000048930462742223236,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0000524834532763837,
+              "rotation": 0.000057506529156045744
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.000044701779406954014,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00004761615094519711,
+              "rotation": 0.00015250965988416928
+            },
+            {
+              "name": "hand-1",
+              "position": 0.000048900868430628166,
+              "rotation": 0.00014935728156779908
+            }
+          ]
+        },
+        {
+          "i": 32,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00010159338756480523,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00004816321341977435,
+              "rotation": 0.00004858416606214712
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00004835621647547163,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00005149752207219583,
+              "rotation": 0.0000573719476209523
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004487264966903319,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00004690291505812329,
+              "rotation": 0.00015213470842537468
+            },
+            {
+              "name": "hand-1",
+              "position": 0.000047889213005720994,
+              "rotation": 0.0001489915000085343
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weaponType": "spear",
+      "previouslyEquipped": false,
+      "maxVisibleTipStep": 0.009842094376506724,
+      "maxWristStep": 0.11430257236817001,
+      "steps": [
+        {
+          "i": 1,
+          "healTimer": 0.29833333333333334,
+          "phase": 0.6685185185185185,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "healTimer": 0.2816666666666667,
+          "phase": 0.6870370370370371,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "healTimer": 0.265,
+          "phase": 0.7055555555555555,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "healTimer": 0.24833333333333335,
+          "phase": 0.7240740740740741,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "healTimer": 0.2316666666666667,
+          "phase": 0.7425925925925926,
+          "state": "drink",
+          "tip": 3.9256141259625674,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.0008835685518151597
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.009987260680554045
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00029157297868319507,
+              "rotation": 0.001890662733823946
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0032137391891209196,
+              "rotation": 0.024114317993003037
+            },
+            {
+              "name": "hand-0",
+              "position": 0.000030720194790702676,
+              "rotation": 0.0010455602497158616
+            },
+            {
+              "name": "hand-1",
+              "position": 0.006910042821569185,
+              "rotation": 0.011553834133889714
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "healTimer": 0.215,
+          "phase": 0.7611111111111111,
+          "state": "drink",
+          "tip": 0.18647590918984114,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.008739261482407813
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.045205425373203455
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0028839369764906836,
+              "rotation": 0.020911764228988546
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.01464317727527188,
+              "rotation": 0.1136920655048344
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0010220212029516376,
+              "rotation": 0.01236507655746379
+            },
+            {
+              "name": "hand-1",
+              "position": 0.03410641806678009,
+              "rotation": 0.053788138111965395
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "healTimer": 0.19833333333333333,
+          "phase": 0.7796296296296297,
+          "state": "drink",
+          "tip": 0.3477700780303464,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02091093375279793
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.07009252183999239
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.006900455103641787,
+              "rotation": 0.058906997742564096
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.02295741624066272,
+              "rotation": 0.1823857614435525
+            },
+            {
+              "name": "hand-0",
+              "position": 0.005611785919568917,
+              "rotation": 0.03801690571715852
+            },
+            {
+              "name": "hand-1",
+              "position": 0.060504225632513314,
+              "rotation": 0.08485495025931686
+            }
+          ]
+        },
+        {
+          "i": 8,
+          "healTimer": 0.18166666666666667,
+          "phase": 0.7981481481481482,
+          "state": "drink",
+          "tip": 0.4887095195168247,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02772039394313548
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.08882712573303252
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009147436725345688,
+              "rotation": 0.09939656673452697
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.029283892603900897,
+              "rotation": 0.21530272865058045
+            },
+            {
+              "name": "hand-0",
+              "position": 0.016312143942312222,
+              "rotation": 0.07202450239056227
+            },
+            {
+              "name": "hand-1",
+              "position": 0.08304267029999622,
+              "rotation": 0.10002326568555855
+            }
+          ]
+        },
+        {
+          "i": 9,
+          "healTimer": 0.165,
+          "phase": 0.8166666666666667,
+          "state": "drink",
+          "tip": 0.5692290790118296,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02963023245576053
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.10777350975366934
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009777615676064264,
+              "rotation": 0.12382666556785062
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.03554124907431309,
+              "rotation": 0.21600023673033403
+            },
+            {
+              "name": "hand-0",
+              "position": 0.03280433109032859,
+              "rotation": 0.10465354131868256
+            },
+            {
+              "name": "hand-1",
+              "position": 0.10014814278301187,
+              "rotation": 0.10440151210088855
+            }
+          ]
+        },
+        {
+          "i": 10,
+          "healTimer": 0.14833333333333334,
+          "phase": 0.8351851851851851,
+          "state": "drink",
+          "tip": 0.5643882880080762,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.04514796329887467
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.12479044538196093
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.014897005073119527,
+              "rotation": 0.12369458215985636
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.04112723903976043,
+              "rotation": 0.20061141717219313
+            },
+            {
+              "name": "hand-0",
+              "position": 0.04975235117895253,
+              "rotation": 0.1292472656714482
+            },
+            {
+              "name": "hand-1",
+              "position": 0.11038439426328879,
+              "rotation": 0.1110899942940504
+            }
+          ]
+        },
+        {
+          "i": 11,
+          "healTimer": 0.13166666666666668,
+          "phase": 0.8537037037037036,
+          "state": "drink",
+          "tip": 0.46882423245280325,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.066714469509667
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.13462607415594655
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.022007733814726975,
+              "rotation": 0.11200372937336914
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.04437519872995185,
+              "rotation": 0.18312269013743612
+            },
+            {
+              "name": "hand-0",
+              "position": 0.061710999154684816,
+              "rotation": 0.15383448315004794
+            },
+            {
+              "name": "hand-1",
+              "position": 0.11170132904979994,
+              "rotation": 0.13499454272588277
+            }
+          ]
+        },
+        {
+          "i": 12,
+          "healTimer": 0.11499999999999999,
+          "phase": 0.8722222222222222,
+          "state": "drink",
+          "tip": 0.2972643546825582,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.07689940622825578
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.13294538921654941
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.025361564986092364,
+              "rotation": 0.11832853981414666
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.043835628001478576,
+              "rotation": 0.17339273175110806
+            },
+            {
+              "name": "hand-0",
+              "position": 0.06976009599989794,
+              "rotation": 0.1972986875812589
+            },
+            {
+              "name": "hand-1",
+              "position": 0.10284448546449648,
+              "rotation": 0.17986263401873234
+            }
+          ]
+        },
+        {
+          "i": 13,
+          "healTimer": 0.09833333333333333,
+          "phase": 0.8907407407407407,
+          "state": "drink",
+          "tip": 0.15172294017817983,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.07549445513001903
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.11569373881567063
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.024898252745690394,
+              "rotation": 0.1636405962925777
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.038156273732053,
+              "rotation": 0.1774296585252416
+            },
+            {
+              "name": "hand-0",
+              "position": 0.07976729399060835,
+              "rotation": 0.2675199902185534
+            },
+            {
+              "name": "hand-1",
+              "position": 0.08605908874497414,
+              "rotation": 0.23463288664489076
+            }
+          ]
+        },
+        {
+          "i": 14,
+          "healTimer": 0.08166666666666667,
+          "phase": 0.9092592592592592,
+          "state": "drink",
+          "tip": 0.30104803197784585,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.0792998711893246
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.08158067121923793
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.02615535511500914,
+              "rotation": 0.23078739918663585
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.026897432126869153,
+              "rotation": 0.1851978972571857
+            },
+            {
+              "name": "hand-0",
+              "position": 0.09529336790511642,
+              "rotation": 0.3586491446400191
+            },
+            {
+              "name": "hand-1",
+              "position": 0.06940483420707663,
+              "rotation": 0.2832086178080322
+            }
+          ]
+        },
+        {
+          "i": 15,
+          "healTimer": 0.065,
+          "phase": 0.9277777777777778,
+          "state": "drink",
+          "tip": 0.4949516311118326,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.10497881708622572
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.04488983841445658
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.03461241340060154,
+              "rotation": 0.28679001212182353
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.014647939407500884,
+              "rotation": 0.17786287642510068
+            },
+            {
+              "name": "hand-0",
+              "position": 0.11097097353890399,
+              "rotation": 0.45809860176029205
+            },
+            {
+              "name": "hand-1",
+              "position": 0.06250602196675202,
+              "rotation": 0.3112077867078842
+            }
+          ]
+        },
+        {
+          "i": 16,
+          "healTimer": 0.04833333333333334,
+          "phase": 0.9462962962962963,
+          "state": "drink",
+          "tip": 0.5868884056138914,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.14776494005257254
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.05362354007419156
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.04869425995636542,
+              "rotation": 0.33777095841770355
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.017400685653336266,
+              "rotation": 0.14891749443698013
+            },
+            {
+              "name": "hand-0",
+              "position": 0.11430257236817001,
+              "rotation": 0.5472068557659604
+            },
+            {
+              "name": "hand-1",
+              "position": 0.061567410395427034,
+              "rotation": 0.308544565605259
+            }
+          ]
+        },
+        {
+          "i": 17,
+          "healTimer": 0.031666666666666676,
+          "phase": 0.9648148148148148,
+          "state": "drink",
+          "tip": 0.5428046635776662,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.1770044130209306
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.0756033021520426
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0583337484063868,
+              "rotation": 0.38866112332629693
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.024735772957635394,
+              "rotation": 0.10814001060754043
+            },
+            {
+              "name": "hand-0",
+              "position": 0.09788198330257956,
+              "rotation": 0.5746414739168851
+            },
+            {
+              "name": "hand-1",
+              "position": 0.05491551889941052,
+              "rotation": 0.2679099777108899
+            }
+          ]
+        },
+        {
+          "i": 18,
+          "healTimer": 0.015000000000000013,
+          "phase": 0.9833333333333333,
+          "state": "drink",
+          "tip": 0.3761889615270239,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.15425746609909347
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.06676495969687028
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.050817398267339685,
+              "rotation": 0.33369945204981466
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.02191804001818477,
+              "rotation": 0.0653716366505987
+            },
+            {
+              "name": "hand-0",
+              "position": 0.06501845720039007,
+              "rotation": 0.44517090467615705
+            },
+            {
+              "name": "hand-1",
+              "position": 0.038117514515568746,
+              "rotation": 0.18379452676848826
+            }
+          ]
+        },
+        {
+          "i": 19,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.06515832865411515,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000044555514462261274,
+              "rotation": 0.041918810383295924
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00004491537727304826,
+              "rotation": 0.00581351458855554
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.013895102412160607,
+              "rotation": 0.05861052952130152
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0019256109834874778,
+              "rotation": 0.01810229905060407
+            },
+            {
+              "name": "hand-0",
+              "position": 0.01510407516885746,
+              "rotation": 0.08058968666971578
+            },
+            {
+              "name": "hand-1",
+              "position": 0.007109603453517631,
+              "rotation": 0.02842616486849147
+            }
+          ]
+        },
+        {
+          "i": 20,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.005200297728176593,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00012801376259242503,
+              "rotation": 0.0014280060853477385
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00012904850789367703,
+              "rotation": 0.0015435365661652504
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0006074387611945914,
+              "rotation": 0.004965029317604193
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0005202930781363583,
+              "rotation": 0.0012823238750326903
+            },
+            {
+              "name": "hand-0",
+              "position": 0.000588788630194937,
+              "rotation": 0.005880717950985449
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0006340935113807231,
+              "rotation": 0.002942959130574682
+            }
+          ]
+        },
+        {
+          "i": 21,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.007608853999412974,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00020004482969660807,
+              "rotation": 0.00209358072163018
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00020166315633624078,
+              "rotation": 0.002261227054020455
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0009067831455517714,
+              "rotation": 0.00727104319568854
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0007641675353696454,
+              "rotation": 0.0018820215310380876
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0008621293540737796,
+              "rotation": 0.00863001992237021
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0009376560086764585,
+              "rotation": 0.004307883518968349
+            }
+          ]
+        },
+        {
+          "i": 22,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.009155654158071874,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00025678890787649055,
+              "rotation": 0.002524377324389537
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00025886796687272243,
+              "rotation": 0.0027241302962395307
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.001114005749855959,
+              "rotation": 0.00875450879011501
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.000923237468569725,
+              "rotation": 0.0022727437873171197
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0010373151543240412,
+              "rotation": 0.010414311941300256
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0011405108053703832,
+              "rotation": 0.005184970611304735
+            }
+          ]
+        },
+        {
+          "i": 23,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.009842094376506724,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00029448176088218465,
+              "rotation": 0.0027190732511885064
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00029686785118067605,
+              "rotation": 0.002931658949170606
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.001223773285116299,
+              "rotation": 0.009414140605512301
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0009966406515783154,
+              "rotation": 0.0024525099981056323
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0011146448338921822,
+              "rotation": 0.01122709239859251
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0012398478098207466,
+              "rotation": 0.005574435181962305
+            }
+          ]
+        },
+        {
+          "i": 24,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00966788568940067,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.0003094627181689742,
+              "rotation": 0.0026760041827547853
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00031197206152570216,
+              "rotation": 0.0028829661040062305
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0012306808941720904,
+              "rotation": 0.009249164572927647
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0009833184125044466,
+              "rotation": 0.0024184448342618797
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00109489358451055,
+              "rotation": 0.01106217283015411
+            },
+            {
+              "name": "hand-1",
+              "position": 0.001232907224907258,
+              "rotation": 0.005476364003627076
+            }
+          ]
+        },
+        {
+          "i": 25,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.008631666525416063,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000298182617359108,
+              "rotation": 0.0023935896394678283
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0003006021946830731,
+              "rotation": 0.002577153701854543
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0011294510387387696,
+              "rotation": 0.008259718325643366
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0008821954496998187,
+              "rotation": 0.0021674815021427867
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0009790136519487608,
+              "rotation": 0.009914123648820607
+            },
+            {
+              "name": "hand-1",
+              "position": 0.001117034362382244,
+              "rotation": 0.004890875235328269
+            }
+          ]
+        },
+        {
+          "i": 26,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00673184177797736,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00025721296610769763,
+              "rotation": 0.001870699858840742
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0002593013637084915,
+              "rotation": 0.0020134746502355337
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0009151621001170214,
+              "rotation": 0.006446791097275418
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0006924221103722633,
+              "rotation": 0.0016970544286398575
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0007678827812083783,
+              "rotation": 0.0077782967277643285
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0008897818772947311,
+              "rotation": 0.0038182966343919076
+            }
+          ]
+        },
+        {
+          "i": 27,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.003967666317511898,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00018326448694467042,
+              "rotation": 0.001106958418620475
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00018475250165587463,
+              "rotation": 0.0011915294039179217
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0005837190315949627,
+              "rotation": 0.0038117187583272772
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0004139432431910556,
+              "rotation": 0.0010057816141362428
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00046254333391844313,
+              "rotation": 0.004650577650769409
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0005492836814130672,
+              "rotation": 0.002259859573563136
+            }
+          ]
+        },
+        {
+          "i": 28,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0006828265778420998,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00008429584026679849,
+              "rotation": 0.0001973200805682314
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00008497397717769587,
+              "rotation": 0.00021297767172284525
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.000179859874876347,
+              "rotation": 0.0006800768277258037
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00009086998305456806,
+              "rotation": 0.0001798940314321401
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00011407397646769021,
+              "rotation": 0.0009200734593941171
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00014331248308382163,
+              "rotation": 0.00042799001228805545
+            }
+          ]
+        },
+        {
+          "i": 29,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00006624059051206767,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.0000611999213611422,
+              "rotation": 9.156639275394291e-7
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00006168290282447011,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0000975775738757642,
+              "rotation": 0.0000012545326459318122
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004873322654265994,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00006777255494076057,
+              "rotation": 0.00015362998624075957
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00006793114819403389,
+              "rotation": 0.0001541551218901132
+            }
+          ]
+        },
+        {
+          "i": 30,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00006478547901207168,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00006034553319055999,
+              "rotation": 9.142077952729524e-7
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00006081776692847489,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00009586358394249672,
+              "rotation": 0.0000012531158948915591
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004799672179216012,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0000662474764980732,
+              "rotation": 0.00015338965822390678
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00006639886813126148,
+              "rotation": 0.00015391405000831526
+            }
+          ]
+        },
+        {
+          "i": 31,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0000633135355622553,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000059487221329757413,
+              "rotation": 9.127493400045447e-7
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0000599480531713608,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00009411748575752338,
+              "rotation": 0.0000012516975402832235
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004727960142023375,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00006470399816920054,
+              "rotation": 0.00015314145711250418
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00006484802483566294,
+              "rotation": 0.00015366507751125548
+            }
+          ]
+        },
+        {
+          "i": 32,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00006182861834438682,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000058627614640455604,
+              "rotation": 9.112885505807869e-7
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00005907635901697569,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0000923419380851023,
+              "rotation": 0.0000012499223336882061
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004658680853135411,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00006314609143252108,
+              "rotation": 0.00015288538232328665
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00006328260107964371,
+              "rotation": 0.00015340820935453862
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weaponType": "spear",
+      "previouslyEquipped": true,
+      "maxVisibleTipStep": 0.009780203586776606,
+      "maxWristStep": 0.11430257236817001,
+      "steps": [
+        {
+          "i": 1,
+          "healTimer": 0.29833333333333334,
+          "phase": 0.6685185185185185,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "healTimer": 0.2816666666666667,
+          "phase": 0.6870370370370371,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "healTimer": 0.265,
+          "phase": 0.7055555555555555,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "healTimer": 0.24833333333333335,
+          "phase": 0.7240740740740741,
+          "state": "drink",
+          "tip": 0,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-0",
+              "position": 0,
+              "rotation": 2.9802322387695312e-8
+            },
+            {
+              "name": "elbow-1",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0,
+              "rotation": 0
+            },
+            {
+              "name": "hand-1",
+              "position": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "healTimer": 0.2316666666666667,
+          "phase": 0.7425925925925926,
+          "state": "drink",
+          "tip": 3.9256141259625674,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.0008835685518151597
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.009987260680554045
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00029157297868319507,
+              "rotation": 0.001890662733823946
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0032137391891209196,
+              "rotation": 0.024114317993003037
+            },
+            {
+              "name": "hand-0",
+              "position": 0.000030720194790702676,
+              "rotation": 0.0010455602497158616
+            },
+            {
+              "name": "hand-1",
+              "position": 0.006910042821569185,
+              "rotation": 0.011553834133889714
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "healTimer": 0.215,
+          "phase": 0.7611111111111111,
+          "state": "drink",
+          "tip": 0.18647590918984114,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.008739261482407813
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.045205425373203455
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0028839369764906836,
+              "rotation": 0.020911764228988546
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.01464317727527188,
+              "rotation": 0.1136920655048344
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0010220212029516376,
+              "rotation": 0.01236507655746379
+            },
+            {
+              "name": "hand-1",
+              "position": 0.03410641806678009,
+              "rotation": 0.053788138111965395
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "healTimer": 0.19833333333333333,
+          "phase": 0.7796296296296297,
+          "state": "drink",
+          "tip": 0.3477700780303464,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02091093375279793
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.07009252183999239
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.006900455103641787,
+              "rotation": 0.058906997742564096
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.02295741624066272,
+              "rotation": 0.1823857614435525
+            },
+            {
+              "name": "hand-0",
+              "position": 0.005611785919568917,
+              "rotation": 0.03801690571715852
+            },
+            {
+              "name": "hand-1",
+              "position": 0.060504225632513314,
+              "rotation": 0.08485495025931686
+            }
+          ]
+        },
+        {
+          "i": 8,
+          "healTimer": 0.18166666666666667,
+          "phase": 0.7981481481481482,
+          "state": "drink",
+          "tip": 0.4887095195168247,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02772039394313548
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.08882712573303252
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009147436725345688,
+              "rotation": 0.09939656673452697
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.029283892603900897,
+              "rotation": 0.21530272865058045
+            },
+            {
+              "name": "hand-0",
+              "position": 0.016312143942312222,
+              "rotation": 0.07202450239056227
+            },
+            {
+              "name": "hand-1",
+              "position": 0.08304267029999622,
+              "rotation": 0.10002326568555855
+            }
+          ]
+        },
+        {
+          "i": 9,
+          "healTimer": 0.165,
+          "phase": 0.8166666666666667,
+          "state": "drink",
+          "tip": 0.5692290790118296,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.02963023245576053
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.10777350975366934
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.009777615676064264,
+              "rotation": 0.12382666556785062
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.03554124907431309,
+              "rotation": 0.21600023673033403
+            },
+            {
+              "name": "hand-0",
+              "position": 0.03280433109032859,
+              "rotation": 0.10465354131868256
+            },
+            {
+              "name": "hand-1",
+              "position": 0.10014814278301187,
+              "rotation": 0.10440151210088855
+            }
+          ]
+        },
+        {
+          "i": 10,
+          "healTimer": 0.14833333333333334,
+          "phase": 0.8351851851851851,
+          "state": "drink",
+          "tip": 0.5643882880080762,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.04514796329887467
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.12479044538196093
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.014897005073119527,
+              "rotation": 0.12369458215985636
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.04112723903976043,
+              "rotation": 0.20061141717219313
+            },
+            {
+              "name": "hand-0",
+              "position": 0.04975235117895253,
+              "rotation": 0.1292472656714482
+            },
+            {
+              "name": "hand-1",
+              "position": 0.11038439426328879,
+              "rotation": 0.1110899942940504
+            }
+          ]
+        },
+        {
+          "i": 11,
+          "healTimer": 0.13166666666666668,
+          "phase": 0.8537037037037036,
+          "state": "drink",
+          "tip": 0.46882423245280325,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.066714469509667
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.13462607415594655
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.022007733814726975,
+              "rotation": 0.11200372937336914
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.04437519872995185,
+              "rotation": 0.18312269013743612
+            },
+            {
+              "name": "hand-0",
+              "position": 0.061710999154684816,
+              "rotation": 0.15383448315004794
+            },
+            {
+              "name": "hand-1",
+              "position": 0.11170132904979994,
+              "rotation": 0.13499454272588277
+            }
+          ]
+        },
+        {
+          "i": 12,
+          "healTimer": 0.11499999999999999,
+          "phase": 0.8722222222222222,
+          "state": "drink",
+          "tip": 0.2972643546825582,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.07689940622825578
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.13294538921654941
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.025361564986092364,
+              "rotation": 0.11832853981414666
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.043835628001478576,
+              "rotation": 0.17339273175110806
+            },
+            {
+              "name": "hand-0",
+              "position": 0.06976009599989794,
+              "rotation": 0.1972986875812589
+            },
+            {
+              "name": "hand-1",
+              "position": 0.10284448546449648,
+              "rotation": 0.17986263401873234
+            }
+          ]
+        },
+        {
+          "i": 13,
+          "healTimer": 0.09833333333333333,
+          "phase": 0.8907407407407407,
+          "state": "drink",
+          "tip": 0.15172294017817983,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.07549445513001903
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.11569373881567063
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.024898252745690394,
+              "rotation": 0.1636405962925777
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.038156273732053,
+              "rotation": 0.1774296585252416
+            },
+            {
+              "name": "hand-0",
+              "position": 0.07976729399060835,
+              "rotation": 0.2675199902185534
+            },
+            {
+              "name": "hand-1",
+              "position": 0.08605908874497414,
+              "rotation": 0.23463288664489076
+            }
+          ]
+        },
+        {
+          "i": 14,
+          "healTimer": 0.08166666666666667,
+          "phase": 0.9092592592592592,
+          "state": "drink",
+          "tip": 0.30104803197784585,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.0792998711893246
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.08158067121923793
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.02615535511500914,
+              "rotation": 0.23078739918663585
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.026897432126869153,
+              "rotation": 0.1851978972571857
+            },
+            {
+              "name": "hand-0",
+              "position": 0.09529336790511642,
+              "rotation": 0.3586491446400191
+            },
+            {
+              "name": "hand-1",
+              "position": 0.06940483420707663,
+              "rotation": 0.2832086178080322
+            }
+          ]
+        },
+        {
+          "i": 15,
+          "healTimer": 0.065,
+          "phase": 0.9277777777777778,
+          "state": "drink",
+          "tip": 0.4949516311118326,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.10497881708622572
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.04488983841445658
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.03461241340060154,
+              "rotation": 0.28679001212182353
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.014647939407500884,
+              "rotation": 0.17786287642510068
+            },
+            {
+              "name": "hand-0",
+              "position": 0.11097097353890399,
+              "rotation": 0.45809860176029205
+            },
+            {
+              "name": "hand-1",
+              "position": 0.06250602196675202,
+              "rotation": 0.3112077867078842
+            }
+          ]
+        },
+        {
+          "i": 16,
+          "healTimer": 0.04833333333333334,
+          "phase": 0.9462962962962963,
+          "state": "drink",
+          "tip": 0.5868884056138914,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.14776494005257254
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.05362354007419156
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.04869425995636542,
+              "rotation": 0.33777095841770355
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.017400685653336266,
+              "rotation": 0.14891749443698013
+            },
+            {
+              "name": "hand-0",
+              "position": 0.11430257236817001,
+              "rotation": 0.5472068557659604
+            },
+            {
+              "name": "hand-1",
+              "position": 0.061567410395427034,
+              "rotation": 0.308544565605259
+            }
+          ]
+        },
+        {
+          "i": 17,
+          "healTimer": 0.031666666666666676,
+          "phase": 0.9648148148148148,
+          "state": "drink",
+          "tip": 0.5428046635776662,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.1770044130209306
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.0756033021520426
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0583337484063868,
+              "rotation": 0.38866112332629693
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.024735772957635394,
+              "rotation": 0.10814001060754043
+            },
+            {
+              "name": "hand-0",
+              "position": 0.09788198330257956,
+              "rotation": 0.5746414739168851
+            },
+            {
+              "name": "hand-1",
+              "position": 0.05491551889941052,
+              "rotation": 0.2679099777108899
+            }
+          ]
+        },
+        {
+          "i": 18,
+          "healTimer": 0.015000000000000013,
+          "phase": 0.9833333333333333,
+          "state": "drink",
+          "tip": 0.3761889615270239,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0,
+              "rotation": 0.15425746609909347
+            },
+            {
+              "name": "arm-1",
+              "position": 0,
+              "rotation": 0.06676495969687028
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.050817398267339685,
+              "rotation": 0.33369945204981466
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.02191804001818477,
+              "rotation": 0.0653716366505987
+            },
+            {
+              "name": "hand-0",
+              "position": 0.06501845720039007,
+              "rotation": 0.44517090467615705
+            },
+            {
+              "name": "hand-1",
+              "position": 0.038117514515568746,
+              "rotation": 0.18379452676848826
+            }
+          ]
+        },
+        {
+          "i": 19,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.06515422811815584,
+          "bothVisible": false,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00007114877049096048,
+              "rotation": 0.041918946040930334
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0000717271053632289,
+              "rotation": 0.00581351458855554
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.013931366562504105,
+              "rotation": 0.058611892438372455
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.001925354614577889,
+              "rotation": 0.01810229905060407
+            },
+            {
+              "name": "hand-0",
+              "position": 0.015121436740160562,
+              "rotation": 0.08063373085314463
+            },
+            {
+              "name": "hand-1",
+              "position": 0.007128146137459209,
+              "rotation": 0.028374788659333725
+            }
+          ]
+        },
+        {
+          "i": 20,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.005152640330579428,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00019845002084148004,
+              "rotation": 0.0014299180997039502
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0002000630201760447,
+              "rotation": 0.0015435365661652504
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0006978490916371853,
+              "rotation": 0.004968559278363603
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0005231370671337828,
+              "rotation": 0.0012823238750326903
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0006029202794537013,
+              "rotation": 0.005994670064046008
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0006808499750525069,
+              "rotation": 0.0029380186901196066
+            }
+          ]
+        },
+        {
+          "i": 21,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.007545567616119194,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.0003007581387797373,
+              "rotation": 0.0020954762771418123
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00030320179425453916,
+              "rotation": 0.002261227054020455
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0010353978688686736,
+              "rotation": 0.007274531091251283
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0007663822746057301,
+              "rotation": 0.0018820215310380876
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0008821894473109436,
+              "rotation": 0.008796358210551476
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0010028276687082292,
+              "rotation": 0.004302147242239663
+            }
+          ]
+        },
+        {
+          "i": 22,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00908844784035432,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00037484902237970076,
+              "rotation": 0.0025252294643179274
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0003778923927822545,
+              "rotation": 0.0027241302962395307
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0012636924260574106,
+              "rotation": 0.00875606284932018
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0009232107663523742,
+              "rotation": 0.0022727437873171197
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0010603392111507447,
+              "rotation": 0.010613670492510245
+            },
+            {
+              "name": "hand-1",
+              "position": 0.001214487908032412,
+              "rotation": 0.00517990814511166
+            }
+          ]
+        },
+        {
+          "i": 23,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.009780203586776606,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.0004176365444297672,
+              "rotation": 0.0027182379330397506
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0004210231620929999,
+              "rotation": 0.002931658949170606
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.001378371971711721,
+              "rotation": 0.009412590117987283
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0009931844239935582,
+              "rotation": 0.0024525099981056323
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0011377714903826764,
+              "rotation": 0.011440306949403541
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0013138415022230108,
+              "rotation": 0.005571115124820618
+            }
+          ]
+        },
+        {
+          "i": 24,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.009617684593473856,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00042617629681135485,
+              "rotation": 0.0026734068221558587
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00042962565004760705,
+              "rotation": 0.0028829661040062305
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0013751360353848271,
+              "rotation": 0.009244392812423669
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0009757384812547711,
+              "rotation": 0.0024184448342618797
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0011154899394010909,
+              "rotation": 0.011270439804980903
+            },
+            {
+              "name": "hand-1",
+              "position": 0.001299046490496011,
+              "rotation": 0.005475502314206625
+            }
+          ]
+        },
+        {
+          "i": 25,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00859680721974012,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00039767068545678045,
+              "rotation": 0.0023897760944428486
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00040087971277918364,
+              "rotation": 0.002577153701854543
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0012499284898309195,
+              "rotation": 0.008252740085207736
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0008703918448133679,
+              "rotation": 0.0021674815021427867
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0009947503941643847,
+              "rotation": 0.010099068456065365
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0011684701476112488,
+              "rotation": 0.004892842132991427
+            }
+          ]
+        },
+        {
+          "i": 26,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.006713817981818698,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00032948167221622004,
+              "rotation": 0.0018667444260446419
+            },
+            {
+              "name": "arm-1",
+              "position": 0.0003321260513055338,
+              "rotation": 0.0020134746502355337
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0009991380178443101,
+              "rotation": 0.006439571404203408
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0006769984374066537,
+              "rotation": 0.0016970544286398575
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0007767322012689354,
+              "rotation": 0.00792193280315601
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0009207844463043266,
+              "rotation": 0.003823081942036886
+            }
+          ]
+        },
+        {
+          "i": 27,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.003966668322539722,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00021919521059404466,
+              "rotation": 0.0011042234005344946
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00022092919216548773,
+              "rotation": 0.0011915294039179217
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0006199720038705238,
+              "rotation": 0.003806732133830044
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00039623786042685327,
+              "rotation": 0.0010057816141362428
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00046245638256104933,
+              "rotation": 0.004735127325374689
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0005552486754363867,
+              "rotation": 0.002266966356742681
+            }
+          ]
+        },
+        {
+          "i": 28,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0006967128162890493,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00008039557936499312,
+              "rotation": 0.00019681657914485598
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00008095737494310647,
+              "rotation": 0.00021297767172284525
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0001630016632440472,
+              "rotation": 0.0006791547726563474
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.0000721814535652731,
+              "rotation": 0.0001798940314321401
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00009827119601877986,
+              "rotation": 0.0009344042836608527
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0001221392515136116,
+              "rotation": 0.00043487926955592857
+            }
+          ]
+        },
+        {
+          "i": 29,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00004608553977443987,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.000049942093228753755,
+              "rotation": 8.910844557122097e-7
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00005020444364338841,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00007177543817810461,
+              "rotation": 0.0000012233481259211369
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.000042060140992893434,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00004656099761705647,
+              "rotation": 0.0001495535562361882
+            },
+            {
+              "name": "hand-1",
+              "position": 0.000046610501745996086,
+              "rotation": 0.000150065847257101
+            }
+          ]
+        },
+        {
+          "i": 30,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.00004487800598718135,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00004930754254001267,
+              "rotation": 8.895880911707534e-7
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00004954763110370655,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00006991057434864891,
+              "rotation": 0.0000012211681156485199
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004205394751607303,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.00004528229383990594,
+              "rotation": 0.0001492042429244468
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00004532440525595444,
+              "rotation": 0.00014971540963185009
+            }
+          ]
+        },
+        {
+          "i": 31,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.0000437430658870079,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00004871350308819752,
+              "rotation": 8.865877855207704e-7
+            },
+            {
+              "name": "arm-1",
+              "position": 0.000048930462742223236,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.0000680663380112927,
+              "rotation": 0.000001216796378051872
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004213027170686964,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.0000440795115324841,
+              "rotation": 0.00014884726286011886
+            },
+            {
+              "name": "hand-1",
+              "position": 0.0000441145674535283,
+              "rotation": 0.00014935729048780338
+            }
+          ]
+        },
+        {
+          "i": 32,
+          "healTimer": 0,
+          "phase": 0,
+          "state": "idle",
+          "tip": 0.000042690249101536706,
+          "bothVisible": true,
+          "nodes": [
+            {
+              "name": "arm-0",
+              "position": 0.00004816321341977435,
+              "rotation": 8.840797528142599e-7
+            },
+            {
+              "name": "arm-1",
+              "position": 0.00004835621647547163,
+              "rotation": 0
+            },
+            {
+              "name": "elbow-0",
+              "position": 0.00006624822665840706,
+              "rotation": 0.0000012131412289767225
+            },
+            {
+              "name": "elbow-1",
+              "position": 0.00004229037620257635,
+              "rotation": 0
+            },
+            {
+              "name": "hand-0",
+              "position": 0.000042963016959367296,
+              "rotation": 0.00014848264748091238
+            },
+            {
+              "name": "hand-1",
+              "position": 0.00004299144228445528,
+              "rotation": 0.0001489915029891688
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "phaseEntry": [
+    {
+      "weaponType": "greatsword",
+      "tip": 1.9487002264714497,
+      "bothVisible": false,
+      "nodes": [
+        {
+          "name": "arm-0",
+          "position": 0,
+          "rotation": 0
+        },
+        {
+          "name": "arm-1",
+          "position": 0,
+          "rotation": 0
+        },
+        {
+          "name": "elbow-0",
+          "position": 1.2416741498691156e-14,
+          "rotation": 0
+        },
+        {
+          "name": "elbow-1",
+          "position": 2.114266138220087e-13,
+          "rotation": 0
+        },
+        {
+          "name": "hand-0",
+          "position": 1.1227293300708972e-15,
+          "rotation": 0
+        },
+        {
+          "name": "hand-1",
+          "position": 4.475137077251229e-13,
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "weaponType": "spear",
+      "tip": 3.9299999999997244,
+      "bothVisible": false,
+      "nodes": [
+        {
+          "name": "arm-0",
+          "position": 0,
+          "rotation": 0
+        },
+        {
+          "name": "arm-1",
+          "position": 0,
+          "rotation": 0
+        },
+        {
+          "name": "elbow-0",
+          "position": 1.2416741498691156e-14,
+          "rotation": 4.2146848510894035e-8
+        },
+        {
+          "name": "elbow-1",
+          "position": 2.114266138220087e-13,
+          "rotation": 0
+        },
+        {
+          "name": "hand-0",
+          "position": 1.1206045118546898e-15,
+          "rotation": 0
+        },
+        {
+          "name": "hand-1",
+          "position": 4.475137077251229e-13,
+          "rotation": 0
+        }
+      ]
+    }
+  ],
+  "determinism": [
+    {
+      "weaponType": "greatsword",
+      "phase": 0.74,
+      "maxPosition": 0,
+      "maxRotation": 7.300048299977715e-8
+    },
+    {
+      "weaponType": "greatsword",
+      "phase": 0.85,
+      "maxPosition": 0,
+      "maxRotation": 4.2146848510894035e-8
+    },
+    {
+      "weaponType": "greatsword",
+      "phase": 0.95,
+      "maxPosition": 0,
+      "maxRotation": 8.940696716308595e-8
+    },
+    {
+      "weaponType": "greatsword",
+      "phase": 0.999,
+      "maxPosition": 0,
+      "maxRotation": 2.9802322387695312e-8
+    },
+    {
+      "weaponType": "spear",
+      "phase": 0.74,
+      "maxPosition": 0,
+      "maxRotation": 4.2146848510894035e-8
+    },
+    {
+      "weaponType": "spear",
+      "phase": 0.85,
+      "maxPosition": 0,
+      "maxRotation": 5.960464477539063e-8
+    },
+    {
+      "weaponType": "spear",
+      "phase": 0.95,
+      "maxPosition": 0,
+      "maxRotation": 5.16191365590357e-8
+    },
+    {
+      "weaponType": "spear",
+      "phase": 0.999,
+      "maxPosition": 0,
+      "maxRotation": 0
+    }
+  ]
+}

@@ -73,6 +73,20 @@ for(const asset of environment.assets){
   assert(!entry.includes(output),'environment photos must stay behind the scene import');
 }
 
+const forest=JSON.parse(await readFile('src/assets/forest/provenance.json','utf8'));
+const forestOutputs=Object.keys(manifest).filter(path=>path.startsWith('src/assets/forest/')).sort();
+assert.deepEqual(forestOutputs,forest.derivatives.map(asset=>asset.path).sort(),'only the two optimized forest photos belong in the runtime');
+for(const asset of [...forest.sources,...forest.derivatives]){
+  const bytes=await readFile(asset.path);
+  assert.equal(bytes.length,asset.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);
+  if(!asset.runtimeIncluded){assert(!manifest[asset.path],'retained forest source must not duplicate a runtime photo');continue;}
+  const output=manifest[asset.path]?.file;assert(output);
+  assert((await readFile(`dist/${output}`)).equals(bytes));assert((await readFile(`${root}/${output}`)).equals(bytes));
+  assert(embedded.some(data=>data.equals(bytes)),`standalone omits forest photo: ${asset.path}`);
+  assert(!entry.includes(output),'forest photos must remain behind the scene import');
+}
+assert.equal(createHash('sha256').update(await readFile(forest.generator.path)).digest('hex'),forest.generator.sha256);
+
 const provenance=JSON.parse(await readFile('src/assets/vaults/provenance.json','utf8'));
 assert.equal(provenance.schemaVersion,1,'unsupported vault asset provenance schema');
 const generator=await readFile(provenance.generator);
