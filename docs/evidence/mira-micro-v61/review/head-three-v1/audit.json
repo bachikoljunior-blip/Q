@@ -1,0 +1,216 @@
+{
+  "fixedUTC": "2026-09-16T12:23:10.670202+00:00",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/head/REVIEW.md",
+      "bytes": 4690,
+      "sha256": "389b1db01b4181bd60f5017de57a9ccf251ebed982cd29272a8f983e90f4378d"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/head/face-patches-manifest.json",
+      "bytes": 4085,
+      "sha256": "0fedb711c75149db46956a5d0f521ddb6dc74fb8e977c4892580e80ec1aa5bdd"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/head/face-patches-v1-prompt.txt",
+      "bytes": 3993,
+      "sha256": "e6090cc8faebab736d3030bf32eb53e0d6cd9345d94d95e9168ad1d674f4f3f5"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/head/face-patches-v2-prompt.txt",
+      "bytes": 1697,
+      "sha256": "266244a378bfb2a229747305eadca5912081176f8d553c2c4c04a14167cf9696"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/head/mira-face-patches-F01-F05-F09-v1.png",
+      "bytes": 1611936,
+      "sha256": "d3b76f0d097e6387c3efb75f8681020f2ebbe398b7ca7051e194cea0c2059c5b"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/head/mira-face-patches-F01-F05-F09-v2.png",
+      "bytes": 1593624,
+      "sha256": "bdb78e0536808201b80aca8d1c8505faaec13c88a1577b65d93570a261b56049"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/head/v1-metadata.json",
+      "bytes": 861,
+      "sha256": "7b32621ad1042c6bde95acfcdabb1f8a280c7583c1f2e723a2ff74a432f77058"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/head/v2-metadata.json",
+      "bytes": 786,
+      "sha256": "371bb3fd8d616cebee8a8e56f0420bb55d79d21d6518a8c6bdee14e695b67818"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-head-views-v1.png",
+      "bytes": 2379503,
+      "sha256": "85bd4853238384211bf9cf2f931337acfed89f4a4c4f6c4bc6ec9d208eac21fe"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-complete-six-views-v1.png",
+      "bytes": 1874282,
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6"
+    }
+  ],
+  "candidateSize": [
+    1448,
+    1086
+  ],
+  "mode": "RGB",
+  "fileValidation": "8 author manifest files plus2 canonical reference hashes/bytes match; full candidate PNG decode completed",
+  "manualMeasurements": {
+    "method": "Reviewer manually estimated outer shape extents from view_image. Not pixel segmentation, exact angle proof, calibrated ratio, fit to source mesh or artwork scoring.",
+    "readings": [
+      {
+        "id": "F01-L",
+        "approxManualBoundsPx": {
+          "front": [
+            433,
+            110,
+            639,
+            289
+          ],
+          "profile": [
+            748,
+            88,
+            809,
+            341
+          ],
+          "back": [
+            918,
+            112,
+            1128,
+            299
+          ],
+          "threeQuarter": [
+            1243,
+            108,
+            1390,
+            298
+          ]
+        },
+        "approxWidthHeightPx": {
+          "front": [
+            206,
+            179
+          ],
+          "profile": [
+            61,
+            253
+          ],
+          "back": [
+            210,
+            187
+          ],
+          "threeQuarter": [
+            147,
+            190
+          ]
+        },
+        "profileToFrontHeightRatio": 1.413,
+        "obliqueToFrontWidthRatio": 0.714
+      },
+      {
+        "id": "F05-L",
+        "approxManualBoundsPx": {
+          "front": [
+            437,
+            426,
+            632,
+            665
+          ],
+          "profile": [
+            750,
+            420,
+            821,
+            666
+          ],
+          "back": [
+            933,
+            424,
+            1123,
+            664
+          ],
+          "threeQuarter": [
+            1247,
+            421,
+            1385,
+            663
+          ]
+        },
+        "approxWidthHeightPx": {
+          "front": [
+            195,
+            239
+          ],
+          "profile": [
+            71,
+            246
+          ],
+          "back": [
+            190,
+            240
+          ],
+          "threeQuarter": [
+            138,
+            242
+          ]
+        },
+        "profileToFrontHeightRatio": 1.029,
+        "obliqueToFrontWidthRatio": 0.708
+      },
+      {
+        "id": "F09-L",
+        "approxManualBoundsPx": {
+          "front": [
+            445,
+            746,
+            621,
+            957
+          ],
+          "profile": [
+            750,
+            742,
+            810,
+            967
+          ],
+          "back": [
+            934,
+            749,
+            1114,
+            956
+          ],
+          "threeQuarter": [
+            1249,
+            746,
+            1390,
+            970
+          ]
+        },
+        "approxWidthHeightPx": {
+          "front": [
+            176,
+            211
+          ],
+          "profile": [
+            60,
+            225
+          ],
+          "back": [
+            180,
+            207
+          ],
+          "threeQuarter": [
+            141,
+            224
+          ]
+        },
+        "profileToFrontHeightRatio": 1.066,
+        "obliqueToFrontWidthRatio": 0.801
+      }
+    ]
+  },
+  "scope": "Independent author-blindness not claimed: supplied source and author report were read, but judgments use direct image inspection/manifest/source constraints, not author self-grade. No image generation/editing, source edits, new geometry, WebGL or perception benchmark.",
+  "mechanicalReadCheckSeconds": 0.10501066999859177,
+  "knownPendingSessions": []
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-16T12:25:48.235862+00:00",
+  "sourceReadback": [
+    {
+      "path": "review/micro-v61/mira-micro-parts.js",
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c",
+      "matchesSnapshot": true
+    },
+    {
+      "path": "tests/mira-micro-parts.test.mjs",
+      "sha256": "14debdf8132584cde81157a665e2b70d66eb766f557654f7fe2ac3a03462436b",
+      "matchesSnapshot": true
+    }
+  ],
+  "reference": {
+    "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v61/docs/evidence/mira-micro-v61/references/staff-caps-micro-v1.png",
+    "sha256": "01a18ebd2631e2e5c73b52c3c261620e1c2487458200c1c68993e89066258532"
+  },
+  "pendingSessions": 0,
+  "sourceEdits": 0,
+  "snapshotImmutableAtClose": true,
+  "reviewStartedUTC": "2026-09-16T12:14:06Z",
+  "reviewElapsedSeconds": 702.235876
+}

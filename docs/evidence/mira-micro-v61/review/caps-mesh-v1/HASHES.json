@@ -1,0 +1,81 @@
+{
+  "at": "2026-09-16T12:25:48.235862+00:00",
+  "files": [
+    {
+      "path": "CLOSE_READBACK.json",
+      "bytes": 825,
+      "sha256": "b6a5be402de0f135d65eb68091b357e7c49f2e39dd7dcf9974c6022659f46b3d"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 7737,
+      "sha256": "0a48833ece7f761a69f197a0fbb59dcbde0052421acc5020dd89061d9afdf3b9"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 644,
+      "sha256": "bea8a5bd8b40d62587e4b6740f1a01ed5da58c0af66537d88e5bba150ddc4ad5"
+    },
+    {
+      "path": "analysis-run.txt",
+      "bytes": 2979,
+      "sha256": "e5f79f9882daad1d888f2249908600c87b9f6208886bbefb15bf80e54453b268"
+    },
+    {
+      "path": "analysis.json",
+      "bytes": 4643,
+      "sha256": "1cac95ccfa358596db193a2e316f0429670f4b358e171c51395a4a20e60555b0"
+    },
+    {
+      "path": "analyze_and_plot.py",
+      "bytes": 13229,
+      "sha256": "df9bc06198656789d7b7ee2312c25fa76bc5d1ab602445b047b52ce677e0f2be"
+    },
+    {
+      "path": "author-test-snapshot.mjs",
+      "bytes": 2537,
+      "sha256": "14debdf8132584cde81157a665e2b70d66eb766f557654f7fe2ac3a03462436b"
+    },
+    {
+      "path": "geometry.json",
+      "bytes": 114966,
+      "sha256": "010e2a822643a7275d3bc2fa585ed627e1630b3a1c821ffeea6f9368e4fd1c5f"
+    },
+    {
+      "path": "joint-sections.png",
+      "bytes": 566619,
+      "sha256": "b06c2cc27918295a41fcfd5deb1aa02e88d162776a857b6f7192c45f8b68d54a"
+    },
+    {
+      "path": "joint-sections.svg",
+      "bytes": 812081,
+      "sha256": "7dbecfad64ceb8bdbe87eabbb8616726de2a0a24112aaefb2e33ead9ec524110"
+    },
+    {
+      "path": "parts-orthographic.png",
+      "bytes": 389437,
+      "sha256": "826ac9887bd72b38e7405bad3b7c8b9d7274b056b0e7866dc74a5fa79dca5f18"
+    },
+    {
+      "path": "parts-orthographic.svg",
+      "bytes": 1129102,
+      "sha256": "0c4f456eedcfb930d4df4fe4c5da0e2f78aa6e3a61f1d5743a2446e04440a44c"
+    },
+    {
+      "path": "snapshot-run.txt",
+      "bytes": 821,
+      "sha256": "00a4fa03d98c610c3828e5b1c7e8e154a88c41ddef906f64db0e5acbc6d49315"
+    },
+    {
+      "path": "snapshot.mjs",
+      "bytes": 3205,
+      "sha256": "fb9e35eeb207b3890de5372e466db2546ff54d03e08e81ff627c7f38c5ca591e"
+    },
+    {
+      "path": "source-snapshot.mjs",
+      "bytes": 3628,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+    }
+  ],
+  "scope": "Frozen native two-part geometry, independent numerical checks and labelled CPU design plots. No WebGL/material/device claim."
+}

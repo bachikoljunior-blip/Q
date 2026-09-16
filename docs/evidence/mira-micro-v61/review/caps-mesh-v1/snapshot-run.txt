@@ -1,0 +1,39 @@
+{
+  "source": [
+    {
+      "path": "review/micro-v61/mira-micro-parts.js",
+      "bytes": 3628,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+    },
+    {
+      "path": "tests/mira-micro-parts.test.mjs",
+      "bytes": 2537,
+      "sha256": "14debdf8132584cde81157a665e2b70d66eb766f557654f7fe2ac3a03462436b"
+    }
+  ],
+  "parts": [
+    {
+      "id": "S13",
+      "vertices": 288,
+      "triangles": 576,
+      "bytes": {
+        "position": 3456,
+        "uv": 2304,
+        "normal": 3456,
+        "index": 3456
+      }
+    },
+    {
+      "id": "S14",
+      "vertices": 384,
+      "triangles": 768,
+      "bytes": {
+        "position": 4608,
+        "uv": 3072,
+        "normal": 4608,
+        "index": 4608
+      }
+    }
+  ],
+  "nativeExtractionMilliseconds": 53.394619999999996
+}

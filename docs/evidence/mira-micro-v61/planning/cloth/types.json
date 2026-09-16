@@ -1,0 +1,1038 @@
+{
+  "schema": 2,
+  "at": "2026-09-16T12:01:58.836229+00:00",
+  "status": "draft; no generation or runtime implementation",
+  "coordinates": "Anatomical Right=-X, Left=+X, front=+Z. Camera +Z: Right on image left. Bone suffix0=-X,1=+X is an index, not anatomical naming.",
+  "types": [
+    {
+      "typeID": "T01",
+      "name": "front centre panel",
+      "singleOperationShape": "shallow tapered loft",
+      "approxSizeMm": [
+        135,
+        500,
+        18
+      ],
+      "instances": [
+        "T01-R",
+        "T01-L"
+      ],
+      "edgeContract": "T03/T05; top T04/C01; bottom WAIST",
+      "canonicalContext": "upper/assembly",
+      "reuseLimit": "torso cross-section scale only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "T02",
+      "name": "rear quarter panel",
+      "singleOperationShape": "shallow tapered loft",
+      "approxSizeMm": [
+        180,
+        500,
+        20
+      ],
+      "instances": [
+        "T02-R",
+        "T02-L"
+      ],
+      "edgeContract": "T03; top T04/C02; bottom WAIST",
+      "canonicalContext": "upper/complete BACK",
+      "reuseLimit": "scale only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "T03",
+      "name": "underarm side panel",
+      "singleOperationShape": "curved trapezoid",
+      "approxSizeMm": [
+        150,
+        330,
+        30
+      ],
+      "instances": [
+        "T03-R",
+        "T03-L"
+      ],
+      "edgeContract": "front T01; rear T02; top T05; bottom WAIST",
+      "canonicalContext": "assembly ARMRAISED",
+      "reuseLimit": "armhole interface IDs, current fit failed",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "T04",
+      "name": "shoulder bridge",
+      "singleOperationShape": "saddle patch",
+      "approxSizeMm": [
+        130,
+        180,
+        45
+      ],
+      "instances": [
+        "T04-R",
+        "T04-L"
+      ],
+      "edgeContract": "inner COLLAR; T01/T02; outer ARMHOLE",
+      "canonicalContext": "upper/assembly",
+      "reuseLimit": "rig shoulder location only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "T05",
+      "name": "armhole gusset half",
+      "singleOperationShape": "shallow crescent patch",
+      "approxSizeMm": [
+        100,
+        160,
+        25
+      ],
+      "instances": [
+        "T05-R-front",
+        "T05-R-rear",
+        "T05-L-front",
+        "T05-L-rear"
+      ],
+      "edgeContract": "shared ARMHOLE16; T03/T04; S01/S02",
+      "canonicalContext": "assembly ELBOW90/ARMRAISED",
+      "reuseLimit": "sewn logical edge after new reference fit",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "S01",
+      "name": "upper sleeve front",
+      "singleOperationShape": "tapered half-shell",
+      "approxSizeMm": [
+        170,
+        250,
+        80
+      ],
+      "instances": [
+        "S01-R",
+        "S01-L"
+      ],
+      "edgeContract": "ARMHOLE; side S02; bottom S03/S04",
+      "canonicalContext": "upper/assembly",
+      "reuseLimit": "joint centres only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "S02",
+      "name": "upper sleeve rear",
+      "singleOperationShape": "tapered half-shell",
+      "approxSizeMm": [
+        170,
+        250,
+        80
+      ],
+      "instances": [
+        "S02-R",
+        "S02-L"
+      ],
+      "edgeContract": "ARMHOLE; side S01; bottom S03/S04",
+      "canonicalContext": "upper/assembly",
+      "reuseLimit": "same operator as S01, distinct boundary profile",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "S03",
+      "name": "outer elbow fold",
+      "singleOperationShape": "one rounded convex fold strip",
+      "approxSizeMm": [
+        180,
+        90,
+        22
+      ],
+      "instances": [
+        "S03-R",
+        "S03-L"
+      ],
+      "edgeContract": "top S01/S02; bottom S05/S06; ends S04",
+      "canonicalContext": "assembly ELBOW90",
+      "reuseLimit": "no accepted fold reuse",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "S04",
+      "name": "inner elbow gusset",
+      "singleOperationShape": "shallow concave patch",
+      "approxSizeMm": [
+        110,
+        90,
+        18
+      ],
+      "instances": [
+        "S04-R",
+        "S04-L"
+      ],
+      "edgeContract": "top S01/S02; bottom S05/S06; ends S03",
+      "canonicalContext": "assembly ELBOW90",
+      "reuseLimit": "joint centre and clearance only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "S05",
+      "name": "forearm sleeve front",
+      "singleOperationShape": "tapered half-shell",
+      "approxSizeMm": [
+        120,
+        190,
+        55
+      ],
+      "instances": [
+        "S05-R",
+        "S05-L"
+      ],
+      "edgeContract": "S03/S04; sides S06; bottom CUFF",
+      "canonicalContext": "upper/hands",
+      "reuseLimit": "joint boundaries only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "S06",
+      "name": "forearm sleeve rear",
+      "singleOperationShape": "tapered half-shell",
+      "approxSizeMm": [
+        120,
+        190,
+        55
+      ],
+      "instances": [
+        "S06-R",
+        "S06-L"
+      ],
+      "edgeContract": "S03/S04; sides S05; bottom CUFF",
+      "canonicalContext": "upper/hands",
+      "reuseLimit": "same operator as S05, distinct seam profile",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "C01",
+      "name": "front stand-collar half",
+      "singleOperationShape": "open curved strip",
+      "approxSizeMm": [
+        115,
+        82,
+        4
+      ],
+      "instances": [
+        "C01-R",
+        "C01-L"
+      ],
+      "edgeContract": "lower T01/T04; back C02; front OPEN",
+      "canonicalContext": "assembly neckline",
+      "reuseLimit": "candidate neck ellipse after head interface check",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "C02",
+      "name": "rear stand collar",
+      "singleOperationShape": "U-shaped extrusion",
+      "approxSizeMm": [
+        300,
+        82,
+        4
+      ],
+      "instances": [
+        "C02-C"
+      ],
+      "edgeContract": "lower T02/T04; ends C01",
+      "canonicalContext": "assembly neckline/BACK",
+      "reuseLimit": "neck interface only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "W01",
+      "name": "front cowl fold",
+      "singleOperationShape": "one draped U-fold strip",
+      "approxSizeMm": [
+        400,
+        50,
+        25
+      ],
+      "instances": [
+        "W01-0",
+        "W01-1",
+        "W01-2"
+      ],
+      "edgeContract": "ends W02; adjacent W01",
+      "canonicalContext": "assembly neckline",
+      "reuseLimit": "one type, explicit offset/depth variants",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "W02",
+      "name": "side cowl bridge",
+      "singleOperationShape": "crescent patch",
+      "approxSizeMm": [
+        140,
+        190,
+        45
+      ],
+      "instances": [
+        "W02-R",
+        "W02-L"
+      ],
+      "edgeContract": "front W01; rear W03; lower P04; brooch seat",
+      "canonicalContext": "cape-v2 shoulder join",
+      "reuseLimit": "tangent frame only; contacts failed",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "W03",
+      "name": "rear cowl fold",
+      "singleOperationShape": "one soft V-fold strip",
+      "approxSizeMm": [
+        410,
+        65,
+        45
+      ],
+      "instances": [
+        "W03-0",
+        "W03-1",
+        "W03-2"
+      ],
+      "edgeContract": "ends W02; upper C02; lower P04",
+      "canonicalContext": "cape-v2 BACK",
+      "reuseLimit": "unworn back drape, not wearable hood",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "P01",
+      "name": "cape rear panel",
+      "singleOperationShape": "one long falling-fold loft",
+      "approxSizeMm": [
+        220,
+        1100,
+        45
+      ],
+      "instances": [
+        "P01-R",
+        "P01-L"
+      ],
+      "edgeContract": "rear centre; outer P02; top P04; bottom HEM",
+      "canonicalContext": "complete BACK/cape-v2",
+      "reuseLimit": "proportion only, old deformation rejected",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "P02",
+      "name": "cape side panel",
+      "singleOperationShape": "one long falling-fold loft",
+      "approxSizeMm": [
+        280,
+        1120,
+        55
+      ],
+      "instances": [
+        "P02-R",
+        "P02-L"
+      ],
+      "edgeContract": "rear P01; front P03; top P04; bottom HEM",
+      "canonicalContext": "cape-v2 opposite sides",
+      "reuseLimit": "new micro reference; preserve side wrap",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "P03",
+      "name": "cape front-edge panel",
+      "singleOperationShape": "curved wedge loft",
+      "approxSizeMm": [
+        160,
+        1050,
+        35
+      ],
+      "instances": [
+        "P03-R",
+        "P03-L"
+      ],
+      "edgeContract": "outer P02; top W02/P04; inner OPEN; bottom HEM",
+      "canonicalContext": "cape-v2 FRONT/oblique",
+      "reuseLimit": "opening angle only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "P04",
+      "name": "cape shoulder connector",
+      "singleOperationShape": "saddle patch",
+      "approxSizeMm": [
+        230,
+        160,
+        50
+      ],
+      "instances": [
+        "P04-R",
+        "P04-L"
+      ],
+      "edgeContract": "inner W02/W03; outer P01/P02/P03",
+      "canonicalContext": "cape-v2 INSIDE JOIN",
+      "reuseLimit": "layer/support order must be defined",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "L01",
+      "name": "lower front panel",
+      "singleOperationShape": "flared shallow loft",
+      "approxSizeMm": [
+        220,
+        505,
+        35
+      ],
+      "instances": [
+        "L01-R",
+        "L01-L"
+      ],
+      "edgeContract": "WAIST; side L03; inner L04/OPEN; bottom L05",
+      "canonicalContext": "lower FRONT/assembly",
+      "reuseLimit": "waist/split proportions only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "L02",
+      "name": "lower rear panel",
+      "singleOperationShape": "flared shallow loft",
+      "approxSizeMm": [
+        240,
+        505,
+        35
+      ],
+      "instances": [
+        "L02-R",
+        "L02-L"
+      ],
+      "edgeContract": "WAIST; side L03; rear centre; bottom L05",
+      "canonicalContext": "lower BACK",
+      "reuseLimit": "no accepted trouser clearance",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "L03",
+      "name": "lower side insert",
+      "singleOperationShape": "narrow flared loft",
+      "approxSizeMm": [
+        150,
+        505,
+        30
+      ],
+      "instances": [
+        "L03-R",
+        "L03-L"
+      ],
+      "edgeContract": "WAIST; front L01; rear L02; bottom L05",
+      "canonicalContext": "lower sides",
+      "reuseLimit": "width based on shape, not grid subdivision",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "L04",
+      "name": "split-edge turnback",
+      "singleOperationShape": "thin curved extrusion",
+      "approxSizeMm": [
+        12,
+        505,
+        3
+      ],
+      "instances": [
+        "L04-R",
+        "L04-L"
+      ],
+      "edgeContract": "fold along L01 front edge; inside free edge",
+      "canonicalContext": "lower FRONT",
+      "reuseLimit": "open-edge topology only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "L05",
+      "name": "hem turnback",
+      "singleOperationShape": "thin curved extrusion",
+      "approxSizeMm": [
+        220,
+        12,
+        3
+      ],
+      "instances": [
+        "L05-front-R",
+        "L05-front-L",
+        "L05-side-R",
+        "L05-side-L",
+        "L05-rear-R",
+        "L05-rear-L"
+      ],
+      "edgeContract": "corresponding lower panel hem; joined endpoints",
+      "canonicalContext": "lower/complete",
+      "reuseLimit": "shared cross-section along six hem curves",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "B01",
+      "name": "belt segment",
+      "singleOperationShape": "curved solid strip",
+      "approxSizeMm": [
+        300,
+        82,
+        6
+      ],
+      "instances": [
+        "B01-front-R",
+        "B01-front-L",
+        "B01-rear-R",
+        "B01-rear-L"
+      ],
+      "edgeContract": "continuous WAIST path",
+      "canonicalContext": "lower FRONT/assembly",
+      "reuseLimit": "waist curve only; one waist layer",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "B02",
+      "name": "hanging belt tail",
+      "singleOperationShape": "tapered strip with one bend",
+      "approxSizeMm": [
+        48,
+        350,
+        5
+      ],
+      "instances": [
+        "B02-R"
+      ],
+      "edgeContract": "top B03-hanger; bottom FREE",
+      "canonicalContext": "lower FRONT",
+      "reuseLimit": "centreline only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "B03",
+      "name": "hardware ring",
+      "singleOperationShape": "bevelled oval extrusion",
+      "approxSizeMm": [
+        72,
+        60,
+        7
+      ],
+      "instances": [
+        "B03-buckle-C",
+        "B03-hanger-R"
+      ],
+      "edgeContract": "belt or tail hinge; closed opening",
+      "canonicalContext": "lower FRONT",
+      "reuseLimit": "one type; hanger variant54x60mm",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "B04",
+      "name": "buckle pin",
+      "singleOperationShape": "one bent rod",
+      "approxSizeMm": [
+        41,
+        6,
+        6
+      ],
+      "instances": [
+        "B04-C"
+      ],
+      "edgeContract": "hinge B03; tip explicit belt hole",
+      "canonicalContext": "assembly waist",
+      "reuseLimit": "missing complete candidate pin",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "F01",
+      "name": "cuff front half",
+      "singleOperationShape": "tapered half-shell",
+      "approxSizeMm": [
+        115,
+        200,
+        6
+      ],
+      "instances": [
+        "F01-R",
+        "F01-L"
+      ],
+      "edgeContract": "top CUFF; side F02; bottom WRIST",
+      "canonicalContext": "hands/upper",
+      "reuseLimit": "rig endpoints only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "F02",
+      "name": "cuff rear half",
+      "singleOperationShape": "tapered half-shell",
+      "approxSizeMm": [
+        115,
+        200,
+        6
+      ],
+      "instances": [
+        "F02-R",
+        "F02-L"
+      ],
+      "edgeContract": "top CUFF; side F01; bottom WRIST",
+      "canonicalContext": "hands/upper",
+      "reuseLimit": "same operator, distinct closure edges",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "F03",
+      "name": "cross-wrap ribbon",
+      "singleOperationShape": "thin ribbon following cuff curve",
+      "approxSizeMm": [
+        12,
+        150,
+        3
+      ],
+      "instances": [
+        "F03-R-0",
+        "F03-R-1",
+        "F03-R-2",
+        "F03-L-0",
+        "F03-L-1",
+        "F03-L-2"
+      ],
+      "edgeContract": "F01/F02; explicit overlap order",
+      "canonicalContext": "hands-staff",
+      "reuseLimit": "new reference, no joint-spanning rigid strip",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "F04",
+      "name": "brooch centre",
+      "singleOperationShape": "shallow convex disc",
+      "approxSizeMm": [
+        42,
+        42,
+        6
+      ],
+      "instances": [
+        "F04-R",
+        "F04-L"
+      ],
+      "edgeContract": "seat W02; rim F05",
+      "canonicalContext": "complete/assembly",
+      "reuseLimit": "cowl tangent only",
+      "microReference": "not yet generated"
+    },
+    {
+      "typeID": "F05",
+      "name": "brooch rim",
+      "singleOperationShape": "bevelled circular extrusion",
+      "approxSizeMm": [
+        54,
+        54,
+        7
+      ],
+      "instances": [
+        "F05-R",
+        "F05-L"
+      ],
+      "edgeContract": "inner F04; back W02",
+      "canonicalContext": "complete/assembly",
+      "reuseLimit": "shared mirrored type, no invented spiral motif",
+      "microReference": "not yet generated"
+    }
+  ],
+  "instances": [
+    {
+      "id": "T01-R",
+      "type": "T01",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "T01-L",
+      "type": "T01",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "T02-R",
+      "type": "T02",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "T02-L",
+      "type": "T02",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "T03-R",
+      "type": "T03",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "T03-L",
+      "type": "T03",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "T04-R",
+      "type": "T04",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "T04-L",
+      "type": "T04",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "T05-R-front",
+      "type": "T05",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "T05-R-rear",
+      "type": "T05",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "T05-L-front",
+      "type": "T05",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "T05-L-rear",
+      "type": "T05",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "S01-R",
+      "type": "S01",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "S01-L",
+      "type": "S01",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "S02-R",
+      "type": "S02",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "S02-L",
+      "type": "S02",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "S03-R",
+      "type": "S03",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "S03-L",
+      "type": "S03",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "S04-R",
+      "type": "S04",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "S04-L",
+      "type": "S04",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "S05-R",
+      "type": "S05",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "S05-L",
+      "type": "S05",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "S06-R",
+      "type": "S06",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "S06-L",
+      "type": "S06",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "C01-R",
+      "type": "C01",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "C01-L",
+      "type": "C01",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "C02-C",
+      "type": "C02",
+      "anatomicalSide": "Centre/shared"
+    },
+    {
+      "id": "W01-0",
+      "type": "W01",
+      "anatomicalSide": "Centre/shared"
+    },
+    {
+      "id": "W01-1",
+      "type": "W01",
+      "anatomicalSide": "Centre/shared"
+    },
+    {
+      "id": "W01-2",
+      "type": "W01",
+      "anatomicalSide": "Centre/shared"
+    },
+    {
+      "id": "W02-R",
+      "type": "W02",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "W02-L",
+      "type": "W02",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "W03-0",
+      "type": "W03",
+      "anatomicalSide": "Centre/shared"
+    },
+    {
+      "id": "W03-1",
+      "type": "W03",
+      "anatomicalSide": "Centre/shared"
+    },
+    {
+      "id": "W03-2",
+      "type": "W03",
+      "anatomicalSide": "Centre/shared"
+    },
+    {
+      "id": "P01-R",
+      "type": "P01",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "P01-L",
+      "type": "P01",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "P02-R",
+      "type": "P02",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "P02-L",
+      "type": "P02",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "P03-R",
+      "type": "P03",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "P03-L",
+      "type": "P03",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "P04-R",
+      "type": "P04",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "P04-L",
+      "type": "P04",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "L01-R",
+      "type": "L01",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "L01-L",
+      "type": "L01",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "L02-R",
+      "type": "L02",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "L02-L",
+      "type": "L02",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "L03-R",
+      "type": "L03",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "L03-L",
+      "type": "L03",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "L04-R",
+      "type": "L04",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "L04-L",
+      "type": "L04",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "L05-front-R",
+      "type": "L05",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "L05-front-L",
+      "type": "L05",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "L05-side-R",
+      "type": "L05",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "L05-side-L",
+      "type": "L05",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "L05-rear-R",
+      "type": "L05",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "L05-rear-L",
+      "type": "L05",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "B01-front-R",
+      "type": "B01",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "B01-front-L",
+      "type": "B01",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "B01-rear-R",
+      "type": "B01",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "B01-rear-L",
+      "type": "B01",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "B02-R",
+      "type": "B02",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "B03-buckle-C",
+      "type": "B03",
+      "anatomicalSide": "Centre/shared"
+    },
+    {
+      "id": "B03-hanger-R",
+      "type": "B03",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "B04-C",
+      "type": "B04",
+      "anatomicalSide": "Centre/shared"
+    },
+    {
+      "id": "F01-R",
+      "type": "F01",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "F01-L",
+      "type": "F01",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "F02-R",
+      "type": "F02",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "F02-L",
+      "type": "F02",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "F03-R-0",
+      "type": "F03",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "F03-R-1",
+      "type": "F03",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "F03-R-2",
+      "type": "F03",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "F03-L-0",
+      "type": "F03",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "F03-L-1",
+      "type": "F03",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "F03-L-2",
+      "type": "F03",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "F04-R",
+      "type": "F04",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "F04-L",
+      "type": "F04",
+      "anatomicalSide": "Left (+X)"
+    },
+    {
+      "id": "F05-R",
+      "type": "F05",
+      "anatomicalSide": "Right (-X)"
+    },
+    {
+      "id": "F05-L",
+      "type": "F05",
+      "anatomicalSide": "Left (+X)"
+    }
+  ],
+  "typeCount": 34,
+  "instanceCount": 79,
+  "generationEstimate": {
+    "microSheetsAtMostFourTypesPerSheet": 9,
+    "joinSheets": 3,
+    "totalPlanningSheets": 12,
+    "meaning": "Planning estimate, no images generated and no time guarantee. Repeated geometry uses one reference plus explicit placement/handedness map."
+  },
+  "candidateCommit": "3afcb955f6c2f698fe42148de88a32760da28b1c",
+  "rejectedDraft": "rejected-grid-draft: uniform212 tiles and old +X-right convention are not final specification"
+}

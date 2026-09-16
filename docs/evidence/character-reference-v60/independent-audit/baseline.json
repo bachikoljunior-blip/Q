@@ -1,0 +1,1012 @@
+{
+  "at": "2026-09-16T11:11:09.910Z",
+  "sourceBase": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+  "localHead": "fc311bac0134b58e04891264c405bfd61eba22e3",
+  "hashes": {
+    "AGENTS.md": "6c041567fd77313b67654d413b9e58afd7961a846836dda7f95a850157793b6b",
+    "docs/PROJECT_STATE.md": "9c0d468a9dd999748754f9de8de56a1f0310df2ef6790b6585e46a7255e64588",
+    "docs/SITE_DELIVERY_V24.md": "70ccecead334d2dfab26b91878d96aa1e0671f1d7a7bef7b45eb001e78ecbff8",
+    "src/actor-models.js": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+    "src/assets/characters/detailed-geometry.js": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+    "src/assets/characters/cloth-material.js": "39ba2cfce1096be273543b313be1d12781ae43c59e8581f5cb9aa95d0a04642f",
+    "src/skin-materials.js": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63",
+    "src/dialogue-camera.js": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e",
+    "src/scene.js": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b",
+    "src/main.js": "0e864c56cea02f20e20d2edb00de72b0bb062f959699486219eaa23cc718dc87",
+    "src/game-interface.css": "745d5e0f047bc14c5a8f169f2227cd395fad962ee4dba6215e52a8d7b2d021e1",
+    "tests/static-scene-fixture.mjs": "a59fc54084666c5bdf28acba67d0721d2b05483d99d7e3b3ed0ed4da40c02412",
+    "tests/dialogue-camera.test.mjs": "1dec5b5c40f4effff3877eb323f274fc62ec086fdce0c70c44c94d9f5d25eb46",
+    "tests/detailed-actors.test.mjs": "e2b0720a29780f4ddeb9133e1860bd670571f867ccc0e35f5942610083a8e726"
+  },
+  "boundary": "Real Game.interact + SceneView + DialogueCamera + native Three CPU vertex/ray/projection; fixture renderer/asset stubs. No DOM layout, rendering, texture upload/decoding, FPS, sound, device or visual-quality evaluation.",
+  "condition": {
+    "npc": "keeper / Mira / npc",
+    "playerOffset": [
+      0,
+      3
+    ],
+    "time": 0,
+    "quality": "high",
+    "orbit": [
+      0.05,
+      0.3,
+      9
+    ],
+    "samePoseLocation": true
+  },
+  "summary": {
+    "meshDrawUnits": 13,
+    "triangles": 6718,
+    "geometryBytes": 319180,
+    "uniqueSampledTextures": 6,
+    "rgba8MipPayloadBytes": 1507320
+  },
+  "inventory": [
+    {
+      "name": "cape",
+      "material": "Q cloth",
+      "color": "696454",
+      "triangles": 192,
+      "vertices": 117,
+      "geometryBytes": 4896,
+      "attributes": {
+        "position": {
+          "count": 117,
+          "bytes": 1404,
+          "sha256": "c0ceb988412de01b3a839e50e5d2d5fce0d5ecfdd098bd1f8f55c37d44290539"
+        },
+        "uv": {
+          "count": 117,
+          "bytes": 936,
+          "sha256": "328b1deac44b072df14b05bc0eb0879a32d8af735a2544dad33a89eb1259597d"
+        },
+        "normal": {
+          "count": 117,
+          "bytes": 1404,
+          "sha256": "a138f9fad4130a9052307d97d8a96d89e2acb70bffc61aae3da7ccfe0fa8bd7a"
+        }
+      },
+      "indexHash": "9e7417e4d14502cd4a270359410e29b64c9034c5f5201d6f378dde0c516e4d39",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q cloth microstructure",
+        "roughnessMap": "Q cloth microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.0014
+    },
+    {
+      "name": "Q upper cloth skin",
+      "material": "Q upper cloth",
+      "color": "696454",
+      "triangles": 816,
+      "vertices": 483,
+      "geometryBytes": 31944,
+      "attributes": {
+        "position": {
+          "count": 483,
+          "bytes": 5796,
+          "sha256": "86c8719cf3390a3c166b4ae390583e8f2561654adc7cce7e9f6f915eae7c61b8"
+        },
+        "uv": {
+          "count": 483,
+          "bytes": 3864,
+          "sha256": "197bebe472ec6d838225081d256ac2d2e300dce676a61a4ac63ee86eed4f4fed"
+        },
+        "normal": {
+          "count": 483,
+          "bytes": 5796,
+          "sha256": "0e26c11eb497e17c7c38c7223e21abcd901896b14d75d9c1f269aafdf07e17f3"
+        },
+        "skinIndex": {
+          "count": 483,
+          "bytes": 3864,
+          "sha256": "723d320354d3d1ef36cd05ded7220b917369fa9849ecee4411e6b8e9b62fce2e"
+        },
+        "skinWeight": {
+          "count": 483,
+          "bytes": 7728,
+          "sha256": "397daca3f43d9d99ad60f7d9fead0bb15e069737a2319146d28db695c6025424"
+        }
+      },
+      "indexHash": "1a9688c3d7168a540501fdb33df23995668deddef95c51b21f7275e50ea982f0",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q upper garment physical weave",
+        "roughnessMap": "Q upper garment physical weave"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.00035
+    },
+    {
+      "name": "Q skin skin",
+      "material": "Q skin",
+      "color": "ab8770",
+      "triangles": 1068,
+      "vertices": 757,
+      "geometryBytes": 48800,
+      "attributes": {
+        "position": {
+          "count": 757,
+          "bytes": 9084,
+          "sha256": "98e0c8cdf37984d96b881bb455f4966fa8e51fa9a7c69fd3a8503c65e3bca2b5"
+        },
+        "normal": {
+          "count": 757,
+          "bytes": 9084,
+          "sha256": "a452ae897c6d74b774f2a716202d033d934a2d45e38e3c7dae32373164a680fa"
+        },
+        "uv": {
+          "count": 757,
+          "bytes": 6056,
+          "sha256": "ad62ce1dd9d2d3760b508e3e91f54c7b8249cd3d52254a3ddc5c4dab3602e09e"
+        },
+        "skinIndex": {
+          "count": 757,
+          "bytes": 6056,
+          "sha256": "24a7072c844366599a8a7ae6138ac69a7c113a294c7af7674936f7ba7bbc480c"
+        },
+        "skinWeight": {
+          "count": 757,
+          "bytes": 12112,
+          "sha256": "86d36de162a2c0fe3c3fa542230f8c66cec16d28c1a20d01c649c8efc2ce3af1"
+        }
+      },
+      "indexHash": "c163e7bf98272395e8e8f876b0379d38980583218b9060dd5e229022d0132ff3",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q skin microstructure",
+        "roughnessMap": "Q skin microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.00018
+    },
+    {
+      "name": "Q anatomical face skin",
+      "material": "Q anatomical face",
+      "color": "ab8770",
+      "triangles": 1646,
+      "vertices": 1062,
+      "geometryBytes": 69348,
+      "attributes": {
+        "position": {
+          "count": 1062,
+          "bytes": 12744,
+          "sha256": "a8ce64785c59d506c4d3740236a36d18aaa1469e21c3b355fd444f510f568fb7"
+        },
+        "normal": {
+          "count": 1062,
+          "bytes": 12744,
+          "sha256": "72a6e725886032de4a8f1cf6d90625078297316be6b3d93320650c1466d31304"
+        },
+        "uv": {
+          "count": 1062,
+          "bytes": 8496,
+          "sha256": "5e07441bb418bad5d379864e397254dbc778b3d52d1803620cc260d600df1448"
+        },
+        "skinIndex": {
+          "count": 1062,
+          "bytes": 8496,
+          "sha256": "1efe225a59fd6a746e790dc82b7159c3283ae56655143fb2989f880cee378ca7"
+        },
+        "skinWeight": {
+          "count": 1062,
+          "bytes": 16992,
+          "sha256": "3d0f5feeb4f0b195487f61e7774ccedd9356e3aebec7185b97ba24e9282c1207"
+        }
+      },
+      "indexHash": "c0300a6f35df5ef6dd4f274a00082188fa4d0eeeb82a61598fe3fa0bbedaf505",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q skin microstructure",
+        "roughnessMap": "Q skin microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.00018
+    },
+    {
+      "name": "Q eye skin",
+      "material": "Q eye",
+      "color": "b8b2a5",
+      "triangles": 160,
+      "vertices": 126,
+      "geometryBytes": 8016,
+      "attributes": {
+        "position": {
+          "count": 126,
+          "bytes": 1512,
+          "sha256": "6c7ace1266ffa00cc8a69d0c242fedba930ea2503680f47733812866de1408d6"
+        },
+        "normal": {
+          "count": 126,
+          "bytes": 1512,
+          "sha256": "84043c847fff2b4484275f763127b7cc34bde3f1be951f8ddde8edc80f6d6c6c"
+        },
+        "uv": {
+          "count": 126,
+          "bytes": 1008,
+          "sha256": "6cc328a1ea76d364a20a7d1be89b78752dc3281b803a00336b61e67da12a96a8"
+        },
+        "skinIndex": {
+          "count": 126,
+          "bytes": 1008,
+          "sha256": "102aa78f145248c65becb2ee269232dff2bf38fda0eec5d5e94bcf1a276a2b39"
+        },
+        "skinWeight": {
+          "count": 126,
+          "bytes": 2016,
+          "sha256": "9f6513bd0a744c940e032c84dfd70be2322ec8941f97b1a0900a333a7dcf4597"
+        }
+      },
+      "indexHash": "520468e205becea49b690ba1361c51c7f5c1beeba0c54c278b5d1d3293740967",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q eye microstructure",
+        "roughnessMap": "Q eye microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0
+    },
+    {
+      "name": "Q eye skin",
+      "material": "Q eye",
+      "color": "372f25",
+      "triangles": 160,
+      "vertices": 126,
+      "geometryBytes": 8016,
+      "attributes": {
+        "position": {
+          "count": 126,
+          "bytes": 1512,
+          "sha256": "7d5960576588a550dc8b92d7457c1432200e3e853aec67bf243cb49575a896fe"
+        },
+        "normal": {
+          "count": 126,
+          "bytes": 1512,
+          "sha256": "29f96e14a8377ca4296099b7bf608eb32c84ca9765bd534d7e9e6475d1567912"
+        },
+        "uv": {
+          "count": 126,
+          "bytes": 1008,
+          "sha256": "6cc328a1ea76d364a20a7d1be89b78752dc3281b803a00336b61e67da12a96a8"
+        },
+        "skinIndex": {
+          "count": 126,
+          "bytes": 1008,
+          "sha256": "102aa78f145248c65becb2ee269232dff2bf38fda0eec5d5e94bcf1a276a2b39"
+        },
+        "skinWeight": {
+          "count": 126,
+          "bytes": 2016,
+          "sha256": "9f6513bd0a744c940e032c84dfd70be2322ec8941f97b1a0900a333a7dcf4597"
+        }
+      },
+      "indexHash": "520468e205becea49b690ba1361c51c7f5c1beeba0c54c278b5d1d3293740967",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q eye microstructure",
+        "roughnessMap": "Q eye microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "a7a397",
+      "triangles": 244,
+      "vertices": 221,
+      "geometryBytes": 13840,
+      "attributes": {
+        "position": {
+          "count": 221,
+          "bytes": 2652,
+          "sha256": "4c83cd1549b08ed307b9fa7ba16c25c4940020f8edc67efe6b6682e18a963c43"
+        },
+        "normal": {
+          "count": 221,
+          "bytes": 2652,
+          "sha256": "714de27061c9dba90f0cef412c28cd31c81abdb50057146a28d8c7caef14e71a"
+        },
+        "uv": {
+          "count": 221,
+          "bytes": 1768,
+          "sha256": "c7e27eb8c2be2731a10336bf83ebd1c7600e73e3160e04eec90afe8acfa4b592"
+        },
+        "skinIndex": {
+          "count": 221,
+          "bytes": 1768,
+          "sha256": "85a068abf9a8695ab679cb7a11b0e0c2812edeb7360b9acde54bcc6d032cfe6c"
+        },
+        "skinWeight": {
+          "count": 221,
+          "bytes": 3536,
+          "sha256": "eebb37710a82072efc9c07b5937c7ea761e616d57b7dcee5ca5bea4467c0e338"
+        }
+      },
+      "indexHash": "63d0156b2fe53ab0579ac1e82f1d6cce64d628947d81730517a2b82becb1eb2c",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q cloth microstructure",
+        "roughnessMap": "Q cloth microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.0014
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "494334",
+      "triangles": 752,
+      "vertices": 656,
+      "geometryBytes": 41248,
+      "attributes": {
+        "position": {
+          "count": 656,
+          "bytes": 7872,
+          "sha256": "d79a5170183b99f220e5ea405c5336a23f213713b9aca2634989264979cea47d"
+        },
+        "normal": {
+          "count": 656,
+          "bytes": 7872,
+          "sha256": "40b6e6c04edcd98cbbf808b7c759df433ed6e2936ececf427a4c3796e1eea61b"
+        },
+        "uv": {
+          "count": 656,
+          "bytes": 5248,
+          "sha256": "5c564c16f9ebf31ac8e7217a95192a9c288b5b8b1a04606ed13067e3cdc0cfb4"
+        },
+        "skinIndex": {
+          "count": 656,
+          "bytes": 5248,
+          "sha256": "c40b3c24c1a2cd57ce40257dd866eb3212befbace4409409e82e0e777d460d27"
+        },
+        "skinWeight": {
+          "count": 656,
+          "bytes": 10496,
+          "sha256": "f504d0623880631414838f591670524aabb90be350bcae04a9f05fc7ac5b7520"
+        }
+      },
+      "indexHash": "3958321daf8ea90511e69be899f361ec9cb73e0df96366b968d038e4a1c9a74c",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q leather microstructure",
+        "roughnessMap": "Q leather microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.0008
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "514333",
+      "triangles": 32,
+      "vertices": 52,
+      "geometryBytes": 3104,
+      "attributes": {
+        "position": {
+          "count": 52,
+          "bytes": 624,
+          "sha256": "8328324f0d1fc89d7115cc14b49d03fffbf4056c64b51b5aa43adae2091ea2bb"
+        },
+        "normal": {
+          "count": 52,
+          "bytes": 624,
+          "sha256": "28fc4538a7d6953aa1c2b562d7cb69ab60088d9dfbf0b4750456c7d24b12baf1"
+        },
+        "uv": {
+          "count": 52,
+          "bytes": 416,
+          "sha256": "cde7cec871099154597e8fb4bd957b0d5377e52821b98f4ef633ae7bea61b66b"
+        },
+        "skinIndex": {
+          "count": 52,
+          "bytes": 416,
+          "sha256": "a6421649ecb2fb9264cff4f2cb9aa1ed4b3931b82447b213cc5c12fe0afa0475"
+        },
+        "skinWeight": {
+          "count": 52,
+          "bytes": 832,
+          "sha256": "f5000ab72c16d6e661853128e741041b3623bb5977992084f46a920cf1b7e34d"
+        }
+      },
+      "indexHash": "950584f6409a7f4ed763b12b4c85d2157265b271a0823deb0ff61232fe31cdab",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q leather microstructure",
+        "roughnessMap": "Q leather microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.0008
+    },
+    {
+      "name": "Q metal skin",
+      "material": "Q metal",
+      "color": "b59b69",
+      "triangles": 508,
+      "vertices": 471,
+      "geometryBytes": 29424,
+      "attributes": {
+        "position": {
+          "count": 471,
+          "bytes": 5652,
+          "sha256": "d39dc06a7bcd09c059f766d318960519421f34c38a645211401a539fa1103d11"
+        },
+        "normal": {
+          "count": 471,
+          "bytes": 5652,
+          "sha256": "d88e8579a9649dc52990880c162af26489c49ad243915af4961a2cd5e6b20186"
+        },
+        "uv": {
+          "count": 471,
+          "bytes": 3768,
+          "sha256": "cf6b9b4ab7a92a86c435cf8224f96cc0a3075eb0042c8e474b705a59ffbe1a80"
+        },
+        "skinIndex": {
+          "count": 471,
+          "bytes": 3768,
+          "sha256": "49c8cb53ecac9108abf15b98b1d06adae1add123d24a09ff4e0f1b5625797533"
+        },
+        "skinWeight": {
+          "count": 471,
+          "bytes": 7536,
+          "sha256": "6cf46e3c2235880d2c5468de40ab6da33385de2325e24281041f55b25a2c4b2f"
+        }
+      },
+      "indexHash": "71c5abb666c3d27885a81d9902f8cb21eeb918b0f81e520b04766ec9660786bc",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q metal microstructure",
+        "roughnessMap": "Q metal microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0.86,
+      "bumpScale": 0.00035
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "c6baa0",
+      "triangles": 100,
+      "vertices": 77,
+      "geometryBytes": 4912,
+      "attributes": {
+        "position": {
+          "count": 77,
+          "bytes": 924,
+          "sha256": "e3478756e5b084ba02ae67ecf0e0a8ea4ef044edbf6e18c6703dba5c0e2c83dc"
+        },
+        "normal": {
+          "count": 77,
+          "bytes": 924,
+          "sha256": "6976d5e15fe3ed5512e2a92d0fb64b56d0fd6ca9c8607a514ae3ce046ccc34d8"
+        },
+        "uv": {
+          "count": 77,
+          "bytes": 616,
+          "sha256": "ebb1553ff8cbc1df104b490620c603646f181bab6b8b37e96c1dc8eb496f7922"
+        },
+        "skinIndex": {
+          "count": 77,
+          "bytes": 616,
+          "sha256": "78c514e55ab9a9adbd2ca95d0fb4d7119d2ddb2085b96da5def518b25ead8727"
+        },
+        "skinWeight": {
+          "count": 77,
+          "bytes": 1232,
+          "sha256": "9cb60856e97e4b577c549908b54a9ef3a8c8431b415c8ae9b47ad00900c9c429"
+        }
+      },
+      "indexHash": "f188e8e6ebb95032a46fc5a4858bf004d39ed71d4787fa3c30944518b3e32ddd",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q cloth microstructure",
+        "roughnessMap": "Q cloth microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.0014
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "696454",
+      "triangles": 512,
+      "vertices": 336,
+      "geometryBytes": 21888,
+      "attributes": {
+        "position": {
+          "count": 336,
+          "bytes": 4032,
+          "sha256": "31918532219c5c9d68f41c72dca6314e53d48d52fb1d21b930d7d385b7a04821"
+        },
+        "uv": {
+          "count": 336,
+          "bytes": 2688,
+          "sha256": "172059e8318dab2184bc209d618bb633e0e6219a89d47ed7e7c1f43061b15e57"
+        },
+        "normal": {
+          "count": 336,
+          "bytes": 4032,
+          "sha256": "de562f32098dfabbe35cd0c89edc9ce9c7fce7d61ea03bb845ff592d2461b357"
+        },
+        "skinIndex": {
+          "count": 336,
+          "bytes": 2688,
+          "sha256": "9b0c7af1ceb0947bec719984b531a7d7ba9870e972940662f9ca84d26538f5e4"
+        },
+        "skinWeight": {
+          "count": 336,
+          "bytes": 5376,
+          "sha256": "02719c5207d72046defbd262ba8a5bd5767795191e3b5f370b54351df1c9e83c"
+        }
+      },
+      "indexHash": "6a386d900833b6d5b6dd9a317abda7e090754bfbcb155d8f076ab133ac4341cf",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q cloth microstructure",
+        "roughnessMap": "Q cloth microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.0014
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "27282a",
+      "triangles": 528,
+      "vertices": 546,
+      "geometryBytes": 33744,
+      "attributes": {
+        "position": {
+          "count": 546,
+          "bytes": 6552,
+          "sha256": "b4cc9ce14b10eef71574bcd81fab69cbc0f443edb99cbb53fb42ca3c3f77c11e"
+        },
+        "normal": {
+          "count": 546,
+          "bytes": 6552,
+          "sha256": "4fbbf572877a0e97127f16f6430dbd8980b757c35366187a85122fcf17a722d9"
+        },
+        "uv": {
+          "count": 546,
+          "bytes": 4368,
+          "sha256": "069d85950a3d3f7e3abbc316000e785d5482fc62cff220826e40186816e53a7e"
+        },
+        "skinIndex": {
+          "count": 546,
+          "bytes": 4368,
+          "sha256": "7f500cded8636443ff5bcaa4cd2f32144f65a221987adbba3674980dec4ec7ec"
+        },
+        "skinWeight": {
+          "count": 546,
+          "bytes": 8736,
+          "sha256": "9842eca3a34f17419ed320633b192145cbe5af0e2297008795649b050b31eec8"
+        }
+      },
+      "indexHash": "9d99a1ec51a9faf63ba87d581ccc75512bed47366e02adf441c73c1913df8b7d",
+      "slots": {
+        "map": null,
+        "normalMap": null,
+        "bumpMap": "Q leather microstructure",
+        "roughnessMap": "Q leather microstructure"
+      },
+      "roughness": 1,
+      "metalness": 0,
+      "bumpScale": 0.0008
+    }
+  ],
+  "textures": [
+    {
+      "name": "Q cloth microstructure",
+      "width": 64,
+      "height": 64,
+      "colorSpace": "",
+      "type": 1009,
+      "format": 1023,
+      "generateMipmaps": true,
+      "cpuDataBytes": 16384,
+      "rgba8FullMipPayloadBytes": 21844
+    },
+    {
+      "name": "Q upper garment physical weave",
+      "width": 512,
+      "height": 512,
+      "colorSpace": "",
+      "type": 1009,
+      "format": 1023,
+      "generateMipmaps": true,
+      "cpuDataBytes": 1048576,
+      "rgba8FullMipPayloadBytes": 1398100
+    },
+    {
+      "name": "Q skin microstructure",
+      "width": 64,
+      "height": 64,
+      "colorSpace": "",
+      "type": 1009,
+      "format": 1023,
+      "generateMipmaps": true,
+      "cpuDataBytes": 16384,
+      "rgba8FullMipPayloadBytes": 21844
+    },
+    {
+      "name": "Q eye microstructure",
+      "width": 64,
+      "height": 64,
+      "colorSpace": "",
+      "type": 1009,
+      "format": 1023,
+      "generateMipmaps": true,
+      "cpuDataBytes": 16384,
+      "rgba8FullMipPayloadBytes": 21844
+    },
+    {
+      "name": "Q leather microstructure",
+      "width": 64,
+      "height": 64,
+      "colorSpace": "",
+      "type": 1009,
+      "format": 1023,
+      "generateMipmaps": true,
+      "cpuDataBytes": 16384,
+      "rgba8FullMipPayloadBytes": 21844
+    },
+    {
+      "name": "Q metal microstructure",
+      "width": 64,
+      "height": 64,
+      "colorSpace": "",
+      "type": 1009,
+      "format": 1023,
+      "generateMipmaps": true,
+      "cpuDataBytes": 16384,
+      "rgba8FullMipPayloadBytes": 21844
+    }
+  ],
+  "rows": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "shot": {
+        "distance": 2.6,
+        "angle": 0
+      },
+      "camera": [
+        9.582160753377863,
+        3.391520709300637,
+        80.44150730864357
+      ],
+      "fovDegrees": 54,
+      "projectionMatrix": [
+        1.1039684093466473,
+        0,
+        0,
+        0,
+        0,
+        1.9626105055051506,
+        0,
+        0,
+        0,
+        -0.53,
+        -1.0001818347122464,
+        -1,
+        0,
+        0,
+        -0.20001818347122463,
+        0
+      ],
+      "headMeshProjectedBounds": {
+        "Q upper cloth": {
+          "x0": 526.8157034533323,
+          "x1": 751.4512617781965,
+          "y0": 225.63548572134107,
+          "y1": 439.5127232167659,
+          "width": 224.63555832486418,
+          "height": 213.87723749542482
+        },
+        "Q anatomical face": {
+          "x0": 600.7326074634616,
+          "x1": 677.2209378072278,
+          "y0": 123.26573583869492,
+          "y1": 214.14655905445971,
+          "width": 76.48833034376617,
+          "height": 90.88082321576479
+        }
+      },
+      "eyes": [
+        {
+          "pixel": [
+            625.956203457473,
+            164.62453069095238
+          ],
+          "firstMaterial": "Q eye"
+        },
+        {
+          "pixel": [
+            651.9009689159552,
+            164.62453069095233
+          ],
+          "firstMaterial": "Q eye"
+        }
+      ],
+      "sourceSafeFrame": {
+        "left": 102.4,
+        "right": 1177.6000000000001,
+        "top": 25.200000000000003,
+        "bottom": 370.8
+      },
+      "rootPosition": [
+        7,
+        1.5400201952265458,
+        80
+      ],
+      "rootQuaternion": [
+        0,
+        0.644217687237691,
+        0,
+        0.7648421872844885
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "shot": {
+        "distance": 2.6,
+        "angle": 0
+      },
+      "camera": [
+        9.582160753377863,
+        3.391520709300637,
+        80.44150730864357
+      ],
+      "fovDegrees": 54,
+      "projectionMatrix": [
+        0.906893480032001,
+        0,
+        0,
+        0,
+        0,
+        1.9626105055051506,
+        0,
+        0,
+        0,
+        -0.53,
+        -1.0001818347122464,
+        -1,
+        0,
+        0,
+        -0.20001818347122463,
+        0
+      ],
+      "headMeshProjectedBounds": {
+        "Q upper cloth": {
+          "x0": 360.691839370555,
+          "x1": 482.3694334631898,
+          "y0": 122.21922143239308,
+          "y1": 238.06939174241484,
+          "width": 121.67759409263482,
+          "height": 115.85017031002175
+        },
+        "Q anatomical face": {
+          "x0": 400.7301623760417,
+          "x1": 442.1613413122484,
+          "y0": 66.76894024595974,
+          "y1": 115.99605282116568,
+          "width": 41.43117893620672,
+          "height": 49.227112575205936
+        }
+      },
+      "eyes": [
+        {
+          "pixel": [
+            414.3929435394645,
+            89.17162079093254
+          ],
+          "firstMaterial": "Q eye"
+        },
+        {
+          "pixel": [
+            428.44635816280913,
+            89.17162079093251
+          ],
+          "firstMaterial": "Q eye"
+        }
+      ],
+      "sourceSafeFrame": {
+        "left": 67.52,
+        "right": 776.48,
+        "top": 13.650000000000002,
+        "bottom": 200.85
+      },
+      "rootPosition": [
+        7,
+        1.5400201952265458,
+        80
+      ],
+      "rootQuaternion": [
+        0,
+        0.644217687237691,
+        0,
+        0.7648421872844885
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "shot": {
+        "distance": 2.6,
+        "angle": 0
+      },
+      "camera": [
+        9.582160753377863,
+        3.391520709300637,
+        80.44150730864357
+      ],
+      "fovDegrees": 54,
+      "projectionMatrix": [
+        4.247290427298326,
+        0,
+        0,
+        0,
+        0,
+        1.9626105055051506,
+        0,
+        0,
+        0,
+        -0.53,
+        -1.0001818347122464,
+        -1,
+        0,
+        0,
+        -0.20001818347122463,
+        0
+      ],
+      "headMeshProjectedBounds": {
+        "Q upper cloth": {
+          "x0": 62.322852381406186,
+          "x1": 325.64564575110813,
+          "y0": 264.4949304844609,
+          "y1": 515.2065811040977,
+          "width": 263.32279336970197,
+          "height": 250.71165061963683
+        },
+        "Q anatomical face": {
+          "x0": 148.96988985994668,
+          "x1": 238.63121042958363,
+          "y0": 144.49483478869237,
+          "y1": 251.0273553360611,
+          "width": 89.66132056963696,
+          "height": 106.53252054736873
+        }
+      },
+      "eyes": [
+        {
+          "pixel": [
+            178.53754960848218,
+            192.9765331988386
+          ],
+          "firstMaterial": "Q eye"
+        },
+        {
+          "pixel": [
+            208.9505802292586,
+            192.97653319883855
+          ],
+          "firstMaterial": "Q eye"
+        }
+      ],
+      "sourceSafeFrame": {
+        "left": 31.2,
+        "right": 358.8,
+        "top": 29.540000000000003,
+        "bottom": 434.66
+      },
+      "rootPosition": [
+        7,
+        1.5400201952265458,
+        80
+      ],
+      "rootQuaternion": [
+        0,
+        0.644217687237691,
+        0,
+        0.7648421872844885
+      ]
+    }
+  ],
+  "historicalCoverage": {
+    "path": "q-visible-actor-method-v56/visibility.json",
+    "sha256": "ee0963c6247b3d48de63b2ff19f778702cb8beb331395ba9ce2f295af718e3e7",
+    "sourceHashes": {
+      "src/actor-models.js": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+      "src/assets/characters/detailed-geometry.js": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4",
+      "src/skin-materials.js": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63",
+      "src/dialogue-camera.js": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e",
+      "src/scene.js": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b"
+    },
+    "boundary": "Historical native 4px first-triangle grid, not rerun here and not raster/shading/DOM. Retained physical geometry versus v57 is established by the v57 cloth review; this is an attributed previous measurement.",
+    "rows": [
+      {
+        "viewport": [
+          1280,
+          720
+        ],
+        "estimatedVisibleAreaPixels": {
+          "hair-cloth": 80,
+          "face-flat": 4704,
+          "metal": 944,
+          "neck-hands": 944,
+          "paper-cloth": 544,
+          "upper-cloth": 24560,
+          "leather": 1520,
+          "cape": 512,
+          "lower-cloth": 48
+        }
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "estimatedVisibleAreaPixels": {
+          "hair-cloth": 32,
+          "face-flat": 1392,
+          "neck-hands": 272,
+          "metal": 304,
+          "paper-cloth": 144,
+          "upper-cloth": 7264,
+          "leather": 432,
+          "cape": 176,
+          "lower-cloth": 16
+        }
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "estimatedVisibleAreaPixels": {
+          "hair-cloth": 160,
+          "face-flat": 6352,
+          "eyes": 64,
+          "neck-hands": 1376,
+          "metal": 1520,
+          "paper-cloth": 784,
+          "upper-cloth": 33648,
+          "cape": 736,
+          "leather": 2160,
+          "lower-cloth": 80
+        }
+      }
+    ]
+  }
+}

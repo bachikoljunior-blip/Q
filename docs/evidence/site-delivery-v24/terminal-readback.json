@@ -1,0 +1,88 @@
+{
+  "recordKind": "parent-reported official Sites responses; credential-free",
+  "latestUserInstruction": "ゲームを最新版更新してくれればいいや。それで確認するから",
+  "projectId": "appgprj_6aa6871ebd648191802ba2398d06115b",
+  "url": "https://q-ash-pilgrim.juurooo.chatgpt.site",
+  "versionNumber": 24,
+  "versionId": "appgprj_6aa6871ebd648191802ba2398d06115b~appgver_9ccbb370b2888191aa7cd59ca4ada6dc",
+  "sourceCommit": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+  "sourceTree": "5dd01fe0a71a610bb91f792135e6bc022092308d",
+  "deploymentId": "appgdep_6aaa71e5b4dc81918f305b3f053ce79b",
+  "deploymentStatus": "succeeded",
+  "failureMessage": null,
+  "terminalUpdatedAt": "2026-09-16T10:39:47.973765+00:00",
+  "siteReadback": {
+    "status": "active",
+    "latestVersionNumber": 24,
+    "currentUserRole": "owner",
+    "accessMode": "custom",
+    "allowedAccountCount": 1,
+    "owners": 1,
+    "nonowners": 0,
+    "editors": 0,
+    "groups": 0,
+    "tenantGroups": 0,
+    "workspaceGroups": 0,
+    "externalVisitors": 0,
+    "policyRevision": 1
+  },
+  "versionReadbackMatches": true,
+  "siteSourcePush": {
+    "old": "f11819aceea515d166846e4bf85082bf2e51e9d1",
+    "new": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+    "branch": "main",
+    "force": false,
+    "ancestorCheckExit": 0,
+    "pushExit": 0,
+    "headAndRemoteReadbackMatch": true,
+    "githubMainWasNotUpdated": true
+  },
+  "githubMainLastReadback": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+  "githubPr39LastReadback": "open/unmerged; no repeated merge mutation for this delivery",
+  "releaseValidation": {
+    "pr": 55,
+    "requiredCiRun": 35083476068,
+    "requiredCiConclusion": "success",
+    "commandsPassed": 27,
+    "testsPassed": 343,
+    "newTestsForThisDocsOnlyRecord": false
+  },
+  "savedArchive": {
+    "format": "tar",
+    "contentHash": "sha256:865a58b7c5deeb3a3e93f2cfb725a434cc3100eee7eb65e2439b4582c852448f",
+    "files": 35,
+    "bytes": 14069760
+  },
+  "localArchive": {
+    "format": "tar.gz",
+    "sha256": "d90bd91dfd0d52c6d2962783ab7b8a72e6cb4dd0190eb75fe93d2e204c9dd870",
+    "bytes": 12448407,
+    "decompressedTarSha256": "d7fefe1f4e15b38c9b5e2905a27ba210456cc87d1d0e30cfd6199ef05ca5a083",
+    "decompressedTarBytes": 14069760,
+    "backendHashEqualsLocalDecompressedHash": false,
+    "hashDifferenceCause": "not established; formats and service receipt recorded separately"
+  },
+  "calls": {
+    "sourcePush": 1,
+    "saveVersion": 1,
+    "privateDeploy": 1,
+    "newSite": 0,
+    "audienceChanges": 0
+  },
+  "preview": {
+    "officialStatusRecovered": true,
+    "officialStartSucceeded": true,
+    "titleDomObserved": true,
+    "startGameClicked": false,
+    "gameplayPixelsObtained": false,
+    "screenshotFileSynchronizationSucceeded": false,
+    "finalStopExit": 0,
+    "finalStopOutput": "Sites preview stopped"
+  },
+  "limits": [
+    "Not proof of PS4 visual parity",
+    "No actual gameplay visual, listening, physical touch, device GPU/RAM or reference-game acceptance in this delivery",
+    "Rejected v59 duration candidate excluded"
+  ],
+  "unfinishedParentOperations": 0
+}

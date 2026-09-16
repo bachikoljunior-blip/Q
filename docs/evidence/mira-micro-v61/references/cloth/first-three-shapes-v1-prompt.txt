@@ -1,0 +1,20 @@
+Use case: stylized-concept
+Asset type: game-character micro-part shape reference sheet, not a game screenshot or an engineering drawing.
+
+Use the four input images only as design references, not edit targets:
+Image 1: canonical complete Mira, keep this person's garment design and muted gray-olive wool.
+Image 2: upper garment construction and sleeve shape.
+Image 3: canonical assembled neckline/waist and bent-arm garment. Its single waist join overrides the separate short tunic hem.
+Image 4: corrected cape-v2, the side/back drape shape and attachment. IGNORE its added swirling cloth pattern; use the restrained wool of Image 1.
+
+Create ONE clean landscape sheet with THREE clearly separated horizontal rows, each showing ONLY ONE SMALL DETACHED SURFACE PART. The five columns are labelled exactly "FRONT", "TRUE PROFILE", "BACK", "3/4", "LOCATION". Put the part ID once at the left of its row. Front means the outside of the worn cloth, back means the inner surface of THAT SAME part. True profile must be a real 90-degree edge view, not another oblique view. All four views of a part must agree in outline, taper, depth and corners. Use consistent neutral studio lighting and restrained realistic wool, readable contours, thin cut edges, no opaque backgrounds hiding the shapes. No dimension arrows, numeric measurements, explanatory paragraphs, extra parts, spare hardware or ornamental design.
+
+Row 1 ID "T01-R": a single small right front-centre torso panel, from just below the cowl to the belt, adjacent to the centre-front seam. Only one gently convex shallow tapered four-sided panel, narrower at the waist. It is NOT the whole front of a shirt, NOT a torso shell, and has NO collar, sleeve, armhole, belt or attached seam ornament. The profile shows the small outward chest bow. A tiny LOCATION inset shows the same complete character from the front with only this right front-centre panel outlined in muted amber; the other clothing remains unchanged.
+
+Row 2 ID "S05-R": only the front half of the right forearm's wool sleeve, from below the elbow fold to just above the leather cuff. A short open tapered half-shell, one smooth rounded curve across its width, gently narrower at its lower end. The two long cut sides and the open inner surface must be clear. NO whole sleeve, elbow folds, hand, cuff, wraps or closed cylinder in the isolated part. A tiny LOCATION inset shows the same complete character's right forearm, outlining only this wool area above the cuff.
+
+Row 3 ID "P01-R": only one narrow right-of-centre BACK cape panel containing exactly ONE long, soft falling fold. A slender four-sided fabric strip, gently wider toward the hem, with a single shallow convex ridge down its length and a corresponding concave inner side. NOT a whole cape, hood, shoulder cowl or a bundle of several folds. No new spiral motif, frayed perforations or seam decoration. The one fold is simple enough to describe by a few cross sections. A tiny LOCATION inset uses the complete character's BACK view and outlines only this narrow strip next to the rear centre line.
+
+Anatomical handedness invariant: the wearer's RIGHT is -X, LEFT is +X, front +Z. Seen from the FRONT the wearer's right is on IMAGE LEFT; seen from the BACK the wearer's right is on IMAGE RIGHT. The location insets must follow this rule. Keep the staff on the wearer's same right side from the canonical complete reference, if it is visible in the small inset.
+
+Layout: four large isolated views plus one smaller placement inset in each row. Plain light neutral gray background, dark restrained labels, generous separation. Every piece is an individual fabric surface that could be modeled with a simple 3x3 or 4x4 control net; do not show wireframes or CAD claims. No mannequin bodies or assembled garments in the four isolated-view columns; small completed-character LOCATION insets only. This sheet defines visual shape guidance for three components, not the completed 3D model.

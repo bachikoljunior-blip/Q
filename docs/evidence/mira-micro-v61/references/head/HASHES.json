@@ -1,0 +1,51 @@
+{
+  "fixedAt": "2026-09-16T12:15:22.300671+00:00",
+  "selectedCandidate": "mira-face-patches-F01-F05-F09-v2.png",
+  "generationCalls": 2,
+  "editsAfterInitial": 1,
+  "allToolCallsComplete": true,
+  "independentReview": "pending",
+  "timing": {
+    "taskStart": "2026-09-16T12:08:43Z",
+    "initialSpecAndReadSeconds": 79.237,
+    "initialToolReportedSeconds": 36.3,
+    "initialPreparedToReturnSeconds": 47.199,
+    "firstInspectionSaveAndEditPromptSeconds": 80.892,
+    "editToolAwaitSeconds": 52.947,
+    "finalInspectionAndRecordSeconds": 139.025671
+  },
+  "files": {
+    "REVIEW.md": {
+      "bytes": 4690,
+      "sha256": "389b1db01b4181bd60f5017de57a9ccf251ebed982cd29272a8f983e90f4378d"
+    },
+    "face-patches-manifest.json": {
+      "bytes": 4085,
+      "sha256": "0fedb711c75149db46956a5d0f521ddb6dc74fb8e977c4892580e80ec1aa5bdd"
+    },
+    "face-patches-v1-prompt.txt": {
+      "bytes": 3993,
+      "sha256": "e6090cc8faebab736d3030bf32eb53e0d6cd9345d94d95e9168ad1d674f4f3f5"
+    },
+    "face-patches-v2-prompt.txt": {
+      "bytes": 1697,
+      "sha256": "266244a378bfb2a229747305eadca5912081176f8d553c2c4c04a14167cf9696"
+    },
+    "mira-face-patches-F01-F05-F09-v1.png": {
+      "bytes": 1611936,
+      "sha256": "d3b76f0d097e6387c3efb75f8681020f2ebbe398b7ca7051e194cea0c2059c5b"
+    },
+    "mira-face-patches-F01-F05-F09-v2.png": {
+      "bytes": 1593624,
+      "sha256": "bdb78e0536808201b80aca8d1c8505faaec13c88a1577b65d93570a261b56049"
+    },
+    "v1-metadata.json": {
+      "bytes": 861,
+      "sha256": "7b32621ad1042c6bde95acfcdabb1f8a280c7583c1f2e723a2ff74a432f77058"
+    },
+    "v2-metadata.json": {
+      "bytes": 786,
+      "sha256": "371bb3fd8d616cebee8a8e56f0420bb55d79d21d6518a8c6bdee14e695b67818"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "at": "2026-09-16T12:21:47.700265+00:00",
+  "sourceSha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c",
+  "parts": [
+    {
+      "id": "S13",
+      "vertices": 288,
+      "triangles": 576,
+      "edges": 864,
+      "eulerCharacteristic": 0,
+      "boundaryOrNonmanifoldEdges": 0,
+      "sameDirectionEdgePairs": 0,
+      "minTriangleAreaMm2": 1.2866270866193907,
+      "materialVolumeMm3": 3520.9474713615004,
+      "normalLengthRange": [
+        0.9999999729309895,
+        1.0000000258434734
+      ],
+      "minimumFacetVertexNormalDot": 0.4388689696788788,
+      "faceNormalInsideOutsideFailures": 0,
+      "profileProperIntersections": [],
+      "nonadjacentProfileContacts": [],
+      "invalidSweepCells": 0,
+      "profileLatticeErrorMm": 9.119510657740193e-07,
+      "localBoundsMm": [
+        [
+          -19.999999552965164,
+          -3.000000026077032,
+          -19.999999552965164
+        ],
+        [
+          19.999999552965164,
+          3.000000026077032,
+          19.999999552965164
+        ]
+      ],
+      "bufferBytes": {
+        "position": 3456,
+        "uv": 2304,
+        "normal": 3456,
+        "index": 3456
+      },
+      "totalBufferBytes": 12672
+    },
+    {
+      "id": "S14",
+      "vertices": 384,
+      "triangles": 768,
+      "edges": 1152,
+      "eulerCharacteristic": 0,
+      "boundaryOrNonmanifoldEdges": 0,
+      "sameDirectionEdgePairs": 0,
+      "minTriangleAreaMm2": 0.7811664038507162,
+      "materialVolumeMm3": 4346.687635891502,
+      "normalLengthRange": [
+        0.9999999638710836,
+        1.0000000293165892
+      ],
+      "minimumFacetVertexNormalDot": 0.1318731856780598,
+      "faceNormalInsideOutsideFailures": 0,
+      "profileProperIntersections": [],
+      "nonadjacentProfileContacts": [],
+      "invalidSweepCells": 0,
+      "profileLatticeErrorMm": 7.748603820800781e-07,
+      "localBoundsMm": [
+        [
+          -17.999999225139618,
+          -6.000000052154064,
+          -17.999999225139618
+        ],
+        [
+          17.999999225139618,
+          9.999999776482582,
+          17.999999225139618
+        ]
+      ],
+      "bufferBytes": {
+        "position": 4608,
+        "uv": 3072,
+        "normal": 4608,
+        "index": 4608
+      },
+      "totalBufferBytes": 16896
+    }
+  ],
+  "pair": {
+    "positiveProfileEdgeCrossings": [],
+    "strictlyInteriorProfileVertices": [],
+    "contactBands": [
+      {
+        "yMm": 1668.0,
+        "radialBandMm": [
+          14.5,
+          18.0
+        ]
+      }
+    ],
+    "actualFacetedContactAreaMm2": 353.2879965649408,
+    "seatPlaneDifferenceMm": 2.60770320892334e-08,
+    "continuousStemRadiusMm": 6,
+    "boreNativePlaneCount": 48,
+    "minimumNativeBoreApothemMm": 6.246102523332574,
+    "minimumClearanceToContinuousSixMmRadiusStemMm": 0.2461025233325742,
+    "nominalRadiusDifferenceMm": 0.3,
+    "scope": "S13/S14 only; S15 continuous circular design envelope used for aperture bound; no actual S15/glass/other staff mesh supplied."
+  },
+  "selfIntersectionMethod": "Independent r/Y non-adjacent segment crossing/contact, strictly positive radius, actual native adjacent-sector/meridian cell connectivity, manifold orientation, and point-in-faceted-solid normals. This establishes no proper self crossing for these two simple positive-radius polygon sweeps; not an arbitrary mesh collider. Coplanar designed contact is reported separately.",
+  "negativeFixture": {
+    "change": "S14 profile vertex12 to [6,-6] on scratch-only copy",
+    "crossedEdgesDetected": [
+      [
+        11,
+        13
+      ]
+    ]
+  },
+  "drawingBoundary": "Native triangle projections only; orthographic matrices stated by angle, equal mm scale. Flat ID colours, no textures/normals lighting or WebGL. Single-part centroid-depth painter visibility is approximate; paired views draw all actual edges as X-ray projections to avoid misleading coplanar visibility. Intersection results use geometry checks, not plot visibility. Generated reference is neither sampled nor edited.",
+  "orthographicViews": [
+    {
+      "name": "FRONT  +Z",
+      "yawDegrees": 0,
+      "elevationDegrees": 0
+    },
+    {
+      "name": "RIGHT  +X",
+      "yawDegrees": 90,
+      "elevationDegrees": 0
+    },
+    {
+      "name": "TOP  +Y",
+      "yawDegrees": 0,
+      "elevationDegrees": 90
+    },
+    {
+      "name": "THREE-QUARTER",
+      "yawDegrees": 45,
+      "elevationDegrees": 25
+    }
+  ],
+  "analysisAndPlotWallSeconds": 2.8231426249985816,
+  "notCompleted": [
+    "actual S15/glass/full staff assembly",
+    "game rendering",
+    "material appearance",
+    "GPU/device performance",
+    "whole-character quality"
+  ]
+}

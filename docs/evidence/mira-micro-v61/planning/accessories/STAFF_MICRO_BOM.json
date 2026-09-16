@@ -1,0 +1,714 @@
+{
+  "schema": 1,
+  "status": "Staff micro-part BOM fixed for the first image-planning trial; no new images or 3D parts fabricated by this author.",
+  "createdUTC": "2026-09-16T11:56:56.921407+00:00",
+  "units": "millimetres",
+  "source_commit": "fc311bac0134b58e04891264c405bfd61eba22e3",
+  "reference_files": [
+    {
+      "name": "mira-hands-staff-views-v1.png",
+      "SHA256": "6bb80bcdcbd52ae8b6a1ecbb0071fe2d56d44f9ad4d7d2d2521bf65ced78ef5f"
+    },
+    {
+      "name": "mira-complete-six-views-v1.png",
+      "SHA256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6"
+    }
+  ],
+  "coordinate_frame": {
+    "origin": "centre of ferrule bottom / ground contact",
+    "X": "character horizontal; front view image right is +X",
+    "Y": "up",
+    "Z": "character front",
+    "full_height": 1700,
+    "handedness": "Mira anatomical right is hand-0 / actor −X / fixed FRONT image left. Left hand is hand-1 and empty. Do not mirror source pictures.",
+    "assembly_anchor": "Staff coordinates only. Final world x/z and hand-to-prop transform are not solved by this BOM. Nominal grip axis height 1135 mm is a planning datum, not an implemented pose."
+  },
+  "dimension_status": "Authored draft registration against the 1701.05 mm existing total staff. Source images are not metrically calibrated. These explicit dimensions allow consistent small-part image requests and later assembly, but are not claimed to have been recovered from generated pixels.",
+  "image_requirements": [
+    "Use the fixed completed-character and hands/staff references together. Every part retains its ID, shared axis and named interface.",
+    "Request isolated micro parts, separated front/side/back views at one scale and explicit attachment faces. Keep other costume parts out of each micro part.",
+    "S05-A/B need distinct winding; S09–S12 are distinct sides of one cage, not one picture duplicated four times.",
+    "Resolve reference contradictions before 3D fabrication. Thin ribs and glass must be visible in the part sheet; do not cover them with the finished body.",
+    "Do not add ornaments, hanging loops, a second lamp or extra straps. Internal plain sockets may only complete named joints.",
+    "Show BOTH bronze grip-end collars S17/S18 as separate micro parts; S06 is the separate lantern neck socket. All 18 IDs must be accounted for, with S05-A/B counted separately."
+  ],
+  "parts": [
+    {
+      "id": "S01",
+      "name": "tapered wooden shaft",
+      "quantity": 1,
+      "form": {
+        "type": "closed tapered cylinder",
+        "bottom_radius": 18,
+        "top_radius": 21,
+        "y_min": 30,
+        "y_max": 1418
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          724,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S02 lower socket, y30–55",
+        "S04 grip sleeve, y1030–1240",
+        "S06 neck socket, y1394–1418"
+      ],
+      "short_build_reason": "One revolved profile with two radii and closed ends.",
+      "material": "dark brown wood",
+      "source_boundary": "Absolute millimetres are authored registration to the old 1701 mm prop, not measurements from the image."
+    },
+    {
+      "id": "S02",
+      "name": "foot ferrule sleeve",
+      "quantity": 1,
+      "form": {
+        "type": "closed annular sleeve",
+        "y_min": 4,
+        "y_max": 55,
+        "outer_radius": 22,
+        "inner_radius": 18.5
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          29.5,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S03 bottom at y4",
+        "S01 socket y30–55"
+      ],
+      "short_build_reason": "One annular extrusion with top and bottom rims.",
+      "material": "aged bronze",
+      "source_boundary": ""
+    },
+    {
+      "id": "S03",
+      "name": "ferrule bottom disc",
+      "quantity": 1,
+      "form": {
+        "type": "closed disc",
+        "radius": 22,
+        "thickness": 4
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          2,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S02 lower rim at y4",
+        "ground datum y0"
+      ],
+      "short_build_reason": "One short cylinder; underside is flat.",
+      "material": "aged bronze",
+      "source_boundary": ""
+    },
+    {
+      "id": "S04",
+      "name": "plain leather grip under-sleeve",
+      "quantity": 1,
+      "form": {
+        "type": "closed annular sleeve",
+        "y_min": 1030,
+        "y_max": 1240,
+        "outer_radius": 24,
+        "inner_radius": 21.8
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          1135,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S01 shared axis",
+        "S05-A/B lay on outer sleeve",
+        "S17 retains lower sleeve end y1030",
+        "S18 retains upper sleeve end y1240"
+      ],
+      "short_build_reason": "One wrapped cylindrical shell; no hand or cuff included.",
+      "material": "brown leather",
+      "source_boundary": ""
+    },
+    {
+      "id": "S05",
+      "name": "crossed grip strips A/B",
+      "quantity": 2,
+      "form": {
+        "type": "two opposite helical flat strips",
+        "sub_ids": [
+          "S05-A",
+          "S05-B"
+        ],
+        "y_min": 1032,
+        "y_max": 1238,
+        "centerline_radius": 24.8,
+        "width": 8,
+        "thickness": 1.5,
+        "turns": 1.8,
+        "handedness": [
+          1,
+          -1
+        ]
+      },
+      "placement_mm": {
+        "axis_origin": [
+          0,
+          1032,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "start_azimuth_degrees": [
+          0,
+          180
+        ]
+      },
+      "interfaces": [
+        "S04 outer surface",
+        "strip ends tuck beneath S17/S18 over y1032–1035 and y1235–1238",
+        "S17 lower collar",
+        "S18 upper collar"
+      ],
+      "short_build_reason": "Each is one rectangular-section sweep along a helix. Opposite winding makes the visible X pattern.",
+      "material": "brown leather",
+      "source_boundary": "Where strips cross, the upper strip must lift by its thickness; a crossing is not permission for intersecting visible surfaces. Twist/strip count is construction guidance rather than recovered scan topology."
+    },
+    {
+      "id": "S06",
+      "name": "neck collar / shaft socket",
+      "quantity": 1,
+      "form": {
+        "type": "closed stepped annular sleeve",
+        "y_min": 1394,
+        "y_max": 1432,
+        "outer_radii": [
+          24,
+          26,
+          22
+        ],
+        "inner_radius": 21.2
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          1413,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S01 wood seated y1394–1418",
+        "S07 cup seated y1427–1432"
+      ],
+      "short_build_reason": "A short three-step lathed profile.",
+      "material": "aged bronze",
+      "source_boundary": "S06 is the lantern neck socket. Do not merge it with the separate bronze collar at the upper end of the leather grip, S18."
+    },
+    {
+      "id": "S07",
+      "name": "lower lantern cup",
+      "quantity": 1,
+      "form": {
+        "type": "closed revolved cup",
+        "y_min": 1427,
+        "y_max": 1448,
+        "outer_radii": [
+          22,
+          24,
+          17
+        ],
+        "wall_thickness": 2
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          1437.5,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S06 neck seat",
+        "S08 lower ring",
+        "S16 lower glass pole y1447 inside cup lip up to y1448"
+      ],
+      "short_build_reason": "A short bowl-like revolved profile; internal seat is a plain construction surface.",
+      "material": "aged bronze",
+      "source_boundary": "The hidden glass seat is an explicit construction completion, not visible reference evidence."
+    },
+    {
+      "id": "S08",
+      "name": "lower cage ring",
+      "quantity": 1,
+      "form": {
+        "type": "horizontal torus",
+        "major_radius": 17,
+        "tube_radius": 3
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          1447,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S07 rim",
+        "S09/S10 endpoints x±14",
+        "S11/S12 endpoints z±14"
+      ],
+      "short_build_reason": "One circular ring with a fixed small tube section.",
+      "material": "aged bronze",
+      "source_boundary": ""
+    },
+    {
+      "id": "S09",
+      "name": "left cage rib",
+      "quantity": 1,
+      "form": {
+        "type": "closed curved rod",
+        "section_radius": 3.5,
+        "centerline_controls": [
+          [
+            -14,
+            1447,
+            0
+          ],
+          [
+            -57,
+            1487,
+            0
+          ],
+          [
+            -70,
+            1556,
+            0
+          ],
+          [
+            -57,
+            1625,
+            0
+          ],
+          [
+            -14,
+            1665,
+            0
+          ]
+        ]
+      },
+      "placement_mm": {
+        "plane": "XY",
+        "assembly_origin": [
+          0,
+          0,
+          0
+        ]
+      },
+      "interfaces": [
+        "S08 lower endpoint",
+        "S13 upper endpoint"
+      ],
+      "short_build_reason": "One five-control-point sweep with circular section and closed endpoint caps. Each direction is its own part, not a mirrored reference picture.",
+      "material": "aged bronze",
+      "source_boundary": ""
+    },
+    {
+      "id": "S10",
+      "name": "right cage rib",
+      "quantity": 1,
+      "form": {
+        "type": "closed curved rod",
+        "section_radius": 3.5,
+        "centerline_controls": [
+          [
+            14,
+            1447,
+            0
+          ],
+          [
+            57,
+            1487,
+            0
+          ],
+          [
+            70,
+            1556,
+            0
+          ],
+          [
+            57,
+            1625,
+            0
+          ],
+          [
+            14,
+            1665,
+            0
+          ]
+        ]
+      },
+      "placement_mm": {
+        "plane": "XY",
+        "assembly_origin": [
+          0,
+          0,
+          0
+        ]
+      },
+      "interfaces": [
+        "S08 lower endpoint",
+        "S13 upper endpoint"
+      ],
+      "short_build_reason": "One five-control-point sweep with circular section and closed endpoint caps. Each direction is its own part, not a mirrored reference picture.",
+      "material": "aged bronze",
+      "source_boundary": ""
+    },
+    {
+      "id": "S11",
+      "name": "front cage rib",
+      "quantity": 1,
+      "form": {
+        "type": "closed curved rod",
+        "section_radius": 3.5,
+        "centerline_controls": [
+          [
+            0,
+            1447,
+            14
+          ],
+          [
+            0,
+            1487,
+            44
+          ],
+          [
+            0,
+            1556,
+            55
+          ],
+          [
+            0,
+            1625,
+            44
+          ],
+          [
+            0,
+            1665,
+            14
+          ]
+        ]
+      },
+      "placement_mm": {
+        "plane": "YZ",
+        "assembly_origin": [
+          0,
+          0,
+          0
+        ]
+      },
+      "interfaces": [
+        "S08 lower endpoint",
+        "S13 upper endpoint"
+      ],
+      "short_build_reason": "One five-control-point sweep with circular section and closed endpoint caps. Each direction is its own part, not a mirrored reference picture.",
+      "material": "aged bronze",
+      "source_boundary": ""
+    },
+    {
+      "id": "S12",
+      "name": "back cage rib",
+      "quantity": 1,
+      "form": {
+        "type": "closed curved rod",
+        "section_radius": 3.5,
+        "centerline_controls": [
+          [
+            0,
+            1447,
+            -14
+          ],
+          [
+            0,
+            1487,
+            -44
+          ],
+          [
+            0,
+            1556,
+            -55
+          ],
+          [
+            0,
+            1625,
+            -44
+          ],
+          [
+            0,
+            1665,
+            -14
+          ]
+        ]
+      },
+      "placement_mm": {
+        "plane": "YZ",
+        "assembly_origin": [
+          0,
+          0,
+          0
+        ]
+      },
+      "interfaces": [
+        "S08 lower endpoint",
+        "S13 upper endpoint"
+      ],
+      "short_build_reason": "One five-control-point sweep with circular section and closed endpoint caps. Each direction is its own part, not a mirrored reference picture.",
+      "material": "aged bronze",
+      "source_boundary": "The complete and close reference support an oval cage. The occluded back rib and exact cross-section are explicit assembly assumptions, not measured image facts."
+    },
+    {
+      "id": "S13",
+      "name": "upper cage ring",
+      "quantity": 1,
+      "form": {
+        "type": "horizontal torus",
+        "major_radius": 17,
+        "tube_radius": 3
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          1665,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S09–S12 upper endpoints",
+        "S14 top cap"
+      ],
+      "short_build_reason": "One circular ring matching the lower cage attachment radius.",
+      "material": "aged bronze",
+      "source_boundary": ""
+    },
+    {
+      "id": "S14",
+      "name": "upper cap",
+      "quantity": 1,
+      "form": {
+        "type": "closed stepped cap",
+        "y_min": 1663,
+        "y_max": 1678,
+        "max_radius": 18
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          1670.5,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S13 ring",
+        "S15 short stem"
+      ],
+      "short_build_reason": "One short revolved cap.",
+      "material": "aged bronze",
+      "source_boundary": ""
+    },
+    {
+      "id": "S15",
+      "name": "small round finial and stem",
+      "quantity": 1,
+      "form": {
+        "type": "closed round finial profile",
+        "sphere_radius": 12,
+        "sphere_center": [
+          0,
+          1688,
+          0
+        ],
+        "stem_radius": 6,
+        "stem_y_min": 1674,
+        "stem_y_max": 1681
+      },
+      "placement_mm": {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "top": [
+          0,
+          1700,
+          0
+        ]
+      },
+      "interfaces": [
+        "S14 cap, internal stem seat"
+      ],
+      "short_build_reason": "One small revolved ball-and-stem profile.",
+      "material": "aged bronze",
+      "source_boundary": "Use the round finial in the hands/staff lantern close-up. Do not introduce an unverified hanging loop."
+    },
+    {
+      "id": "S16",
+      "name": "warm pale lantern glass/core",
+      "quantity": 1,
+      "form": {
+        "type": "closed ellipsoid",
+        "radii": [
+          52,
+          109,
+          39
+        ]
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          1556,
+          0
+        ],
+        "axes": "X/Y/Z"
+      },
+      "interfaces": [
+        "S07 cup: glass lower pole y1447 seats 1 mm inside cup upper lip y1448",
+        "S14 cap: glass upper pole y1665 seats 2 mm inside cap lower y1663"
+      ],
+      "short_build_reason": "One ellipsoid. Both poles meet the named cup/cap seats; no extra floating connector.",
+      "material": "warm ivory glass",
+      "source_boundary": "The generated warm core is a design reference, not evidence of a real light source. Rendering emission or lighting is a separate decision; do not add a second lamp."
+    },
+    {
+      "id": "S17",
+      "name": "lower bronze grip-end collar",
+      "quantity": 1,
+      "form": {
+        "type": "closed annular collar",
+        "inner_radius": 23.8,
+        "outer_radius": 27.5,
+        "height": 10,
+        "y_min": 1025,
+        "y_max": 1035
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          1030,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S04 lower sleeve end at y1030",
+        "S05-A/B strip end retention; named concealed seating only"
+      ],
+      "short_build_reason": "One short annular extrusion with flat annular end faces; no curved cage or wood included.",
+      "material": "aged bronze",
+      "source_boundary": "A separate grip-end collar is visible in the hands/staff GRIP SECTION close-up. It is not S06, the lantern neck socket. Nominal 0.2 mm inner seating into the leather is intentional concealed assembly contact; final geometry must verify the visible boundary."
+    },
+    {
+      "id": "S18",
+      "name": "upper bronze grip-end collar",
+      "quantity": 1,
+      "form": {
+        "type": "closed annular collar",
+        "inner_radius": 23.8,
+        "outer_radius": 27.5,
+        "height": 10,
+        "y_min": 1235,
+        "y_max": 1245
+      },
+      "placement_mm": {
+        "center": [
+          0,
+          1240,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      "interfaces": [
+        "S04 upper sleeve end at y1240",
+        "S05-A/B strip end retention; named concealed seating only"
+      ],
+      "short_build_reason": "One short annular extrusion with flat annular end faces; no curved cage or wood included.",
+      "material": "aged bronze",
+      "source_boundary": "A separate grip-end collar is visible in the hands/staff GRIP SECTION close-up. It is not S06, the lantern neck socket. Nominal 0.2 mm inner seating into the leather is intentional concealed assembly contact; final geometry must verify the visible boundary."
+    }
+  ],
+  "assembly_checks": [
+    "All rigid surfaces closed; open material boundaries belong to a deliberately assembled socket, not an accidental crack.",
+    "Wood and fittings share one axis; deliberate internal seating overlap must be documented separately from unintended visible surface intersections.",
+    "Cage ribs are tangent-compatible with both rings; glass clears all four ribs away from named seats.",
+    "Hand-0 contacts the grip sleeve, not the bare shaft/wrist centre; no dynamic pose is implemented here.",
+    "Flat ferrule underside meets the actual terrain at the prop x/z in the later runtime test.",
+    "Same material batches are preferred; final tri/draw/memory and WebGL appearance remain unmeasured."
+  ],
+  "revision": {
+    "recordedUTC": "2026-09-16T12:01:36.354238+00:00",
+    "change": "Added the two visibly separate bronze grip-end collars S17/S18 omitted from the first 16-ID BOM. The previous omission is not called complete. No reference regeneration or runtime change by this author. Strip endpoints extended by 8 mm into the named collar-covered zones; no new part type.",
+    "ids": 18,
+    "physicalPieces": 19
+  }
+}
