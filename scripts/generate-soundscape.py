@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Q's original electronic score / foley. No samples, pretrained model, or recordings.
+"""Q original composition / foley, with CC0 recorded instrument score performance.
 Requires Python, NumPy, SciPy, ffmpeg (libmp3lame). --verify regenerates using
 the same recorded toolchain; cross-host CI uses scripts/verify-soundscape.mjs.
 Score: 80 BPM, 16 bars, D minor; synchronized 48-second circular stems.
@@ -8,6 +8,7 @@ from pathlib import Path
 import hashlib, json, subprocess, tempfile, wave, sys
 import numpy as np
 import scipy
+import sampled_score
 from scipy.signal import butter, sosfilt
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -123,8 +124,8 @@ def effects():
 
 def generate(out):
     out.mkdir(parents=True,exist_ok=True); assets=[]
-    for name,y in score().items():
-        y*=.78/max(np.max(np.abs(y)),.0001)
+    for name,y in sampled_score.render(score(),SR).items():
+        if name=='pilgrim-motif':y*=.78/max(np.max(np.abs(y)),.0001)
         source=out/(name+'.wav');wav(source,y);path=out/(name+'.mp3')
         subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(source),'-map_metadata','-1','-codec:a','libmp3lame','-b:a','48k' if y.ndim==2 else '32k','-fflags','+bitexact',str(path)],check=True)
         source.unlink();assets.append({'file':path.name,'durationSeconds':48,'channels':2 if y.ndim==2 else 1,'sampleRate':SR,'pcmPeak':float(np.max(np.abs(y))),'pcmRms':float(np.sqrt(np.mean(y*y))),'purpose':name})
@@ -133,7 +134,8 @@ def generate(out):
     (out/'cues.json').write_text(json.dumps(cues,indent=2)+'\n')
     for item in assets:
         data=(out/item['file']).read_bytes();item.update(bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
-    manifest={'schemaVersion':1,'title':'Pilgrim / The Fire Remembers','origin':'Original project-authored score and deterministic synthesized PCM; AI-assisted code composition. No real instruments, orchestral recording, human performance, borrowed melody, stock sample, or external audio model.', 'license':'Project-original assets, created for use, modification and redistribution with Q; no third-party sample license applies. This provenance is not an independent legal authorship determination.', 'generator':'scripts/generate-soundscape.py','generatorSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'recipe':{'seed':'0x51415348','tempoBpm':80,'bars':16,'meter':'4/4','key':'D minor with added ninths','stemLoopSeconds':48,'synthesis':'detuned additive harmonic bed, inharmonic struck resonators, original modal motif and arpeggios, membrane/noise percussion, circular early reflections','encoder':'ffmpeg libmp3lame; MP3 stereo 48k / mono 32k; mono PCM16 foley'},'assets':assets,'cuesSha256':hashlib.sha256((out/'cues.json').read_bytes()).hexdigest(),'totalBytes':sum(x['bytes'] for x in assets)}
+    manifest={'schemaVersion':1,'title':'Pilgrim / The Fire Remembers','origin':'Original project-authored 48-second composition with recorded CC0 cello/viola sections, bass drum and tubular bells from VSCO 2 CE. Offline sample performance; the original synthesized motif, quiet pulse underlay and 24 synthesized foley cues remain. Not a live orchestral performance or generated voice.', 'license':'Original composition and synthesis created for Q; incorporated VSCO 2 CE recordings are CC0-1.0. Source recordings, official mappings, license and verified hashes are preserved in assets-source/soundscape-vsco. This provenance is not an independent legal authorship determination.', 'generator':'scripts/generate-soundscape.py','generatorSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'recipe':{'seed':'0x51415348','tempoBpm':80,'bars':16,'meter':'4/4','key':'D minor with added ninths','stemLoopSeconds':48,'synthesis':'recorded bowed cello/viola phrases, measured stereo sustain crossfades and natural releases, original modal motif/arpeggios, sampled low/metal percussion over restrained synthesized pulse, circular early reflections','encoder':'ffmpeg libmp3lame; MP3 stereo 48k / mono 32k; mono PCM16 foley'},'assets':assets,'cuesSha256':hashlib.sha256((out/'cues.json').read_bytes()).hexdigest(),'totalBytes':sum(x['bytes'] for x in assets)}
+    manifest['sampledPerformance']=sampled_score.provenance()
     manifest['toolchain']={'numpy':np.__version__,'scipy':scipy.__version__,'ffmpeg':subprocess.check_output(['ffmpeg','-version'],text=True).splitlines()[0],'reproducibility':'Exact-byte regeneration is checked on the recorded toolchain only. Cross-host validation checks committed hash, sizes, bounds and source provenance; it does not promise cross-version MP3 identity.'}
     (out/'provenance.json').write_text(json.dumps(manifest,indent=2)+'\n')
     return manifest

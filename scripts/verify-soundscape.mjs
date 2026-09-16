@@ -5,6 +5,22 @@ const root = new URL('../', import.meta.url), base = new URL('src/assets/soundsc
 const hash = data => createHash('sha256').update(data).digest('hex');
 const manifest = JSON.parse(await readFile(new URL('provenance.json', base), 'utf8'));
 const cuesBytes = await readFile(new URL('cues.json', base)), cues = JSON.parse(cuesBytes);
+const sampled = manifest.sampledPerformance;
+assert(sampled, 'recorded instrument provenance is required');
+{
+  assert.equal(hash(await readFile(new URL(sampled.renderer, root))), sampled.rendererSha256, 'sample renderer fingerprint');
+  const raw = await readFile(new URL(sampled.manifest, root));
+  assert.equal(hash(raw), sampled.manifestSha256, 'sample source manifest fingerprint');
+  const inputs = JSON.parse(raw), source = new URL('./', new URL(sampled.manifest, root));
+  assert.equal(inputs.sourceLicense, 'CC0-1.0');assert.equal(inputs.rawSamples.length,13);
+  assert.equal(hash(await readFile(new URL('LICENSE', source))), inputs.licenseFileSha256, 'sample license');
+  for (const item of inputs.rawSamples) {
+    const bytes = await readFile(new URL(item.path, source));
+    assert.equal(bytes.length,item.size);assert.equal(hash(bytes),item.sha256,'recorded sample '+item.path);
+  }
+  for(const [name,digest] of Object.entries(sampled.mappings))assert.equal(hash(await readFile(new URL(name,source))),digest,'official pitch mapping '+name);
+}
+
 assert.equal(hash(await readFile(new URL(manifest.generator, root))), manifest.generatorSha256, 'audio generator fingerprint');
 assert.equal(hash(cuesBytes), manifest.cuesSha256, 'cue bounds fingerprint');
 assert.deepEqual(manifest.assets.map(asset => asset.file).sort(), ['pilgrim-foley.wav', 'pilgrim-harmony.mp3', 'pilgrim-motif.mp3', 'pilgrim-pulse.mp3']);

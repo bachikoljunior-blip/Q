@@ -1,0 +1,35 @@
+{
+  "startedUnix": 1789525766.3914108,
+  "sourceAcquisitionSeconds": 38.72472040399953,
+  "heard": false,
+  "mediaProduction": {
+    "initialRenderSeconds": 8.486015758997382,
+    "exitCode": 0
+  },
+  "rework": {
+    "reason": "Restrict sampled bell to verified publisher pitch zone and fingerprint source mappings",
+    "correctiveRenderSeconds": 13.755321470998751,
+    "exitCode": 0,
+    "editingSeconds": null
+  },
+  "validation": {
+    "exactRegenerationSeconds": 8.786702127999888,
+    "exitCode": 0,
+    "viteReportedBuildSeconds": 2.97,
+    "focusedLifecycleTestsReportedSeconds": 0.892564105,
+    "commentOnlyViteReportedBuildSeconds": 1.83,
+    "finalViteReportedBuildSeconds": 3.06,
+    "independentOracleReportedSeconds": 7.13,
+    "independentLifecycleTestsReportedSeconds": 0.63
+  },
+  "sourceInspectionDesignEditingSeconds": null,
+  "processTimesAreNotAdditive": true,
+  "candidateReadyWallSeconds": 688.036958694458,
+  "independentReviewWaitStartedUnix": 1789526454.428371,
+  "mainSiteIntegrationSeconds": null,
+  "localUnitReadyUnix": 1789526898.298524,
+  "localUnitWallSeconds": 1131.9071130752563,
+  "independentReviewReceived": true,
+  "localFinalSaveUnix": 1789526996.9894536,
+  "localFinalSaveWallSeconds": 1230.5980427265167
+}

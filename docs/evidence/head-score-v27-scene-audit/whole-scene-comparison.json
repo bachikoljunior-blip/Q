@@ -1,0 +1,820 @@
+{
+  "baselineHead": "fb70ddddf8df261851b66b5e29b32ac723818ff1",
+  "candidateHead": "d07bcad57709449513d2828ecf585db956e60894",
+  "conditions": {
+    "points": [
+      [
+        0,
+        80
+      ],
+      [
+        -105,
+        0
+      ],
+      [
+        -300,
+        -130
+      ],
+      [
+        170,
+        -200
+      ]
+    ],
+    "qualityOrder": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "framesPerCondition": 2,
+    "dt": 0.016666666666666666,
+    "day": 0.29,
+    "yaw": 0.05,
+    "pitch": 0.3,
+    "zoom": 9
+  },
+  "assertionsPassed": true,
+  "integrationBlockers": [],
+  "allocationDelta": {
+    "nodes": {
+      "baseline": 3586,
+      "candidate": 3615,
+      "delta": 29
+    },
+    "meshObjects": {
+      "baseline": 1587,
+      "candidate": 1616,
+      "delta": 29
+    },
+    "visibleMeshObjects": {
+      "baseline": 1470,
+      "candidate": 1499,
+      "delta": 29
+    },
+    "frustumCandidateMeshes": {
+      "baseline": 1470,
+      "candidate": 1499,
+      "delta": 29
+    },
+    "visibleTriangles": {
+      "baseline": 784132,
+      "candidate": 798488,
+      "delta": 14356
+    },
+    "frustumCandidateTriangles": {
+      "baseline": 784132,
+      "candidate": 798488,
+      "delta": 14356
+    },
+    "instanceExpandedTriangles": {
+      "baseline": 200500,
+      "candidate": 200500,
+      "delta": 0
+    },
+    "visibleMaterialGroups": {
+      "baseline": 1470,
+      "candidate": 1499,
+      "delta": 29
+    },
+    "transparentExtraTriangles": {
+      "baseline": 80,
+      "candidate": 80,
+      "delta": 0
+    },
+    "castShadowEligibleTriangles": {
+      "baseline": 470846,
+      "candidate": 485202,
+      "delta": 14356
+    },
+    "uniqueGeometryCount": {
+      "baseline": 740,
+      "candidate": 757,
+      "delta": 17
+    },
+    "uniqueBufferAttributes": {
+      "baseline": 2961,
+      "candidate": 3063,
+      "delta": 102
+    },
+    "geometryBufferSourceBytes": {
+      "baseline": 21131274,
+      "candidate": 21409210,
+      "delta": 277936
+    },
+    "uniqueTypedArrayBytes": {
+      "baseline": 21131274,
+      "candidate": 21409210,
+      "delta": 277936
+    },
+    "uniqueMaterialsIncludingCustomShadows": {
+      "baseline": 221,
+      "candidate": 234,
+      "delta": 13
+    },
+    "materialTextureObjects": {
+      "baseline": 15,
+      "candidate": 15,
+      "delta": 0
+    },
+    "instanceBufferSourceBytes": {
+      "baseline": 1509260,
+      "candidate": 1509260,
+      "delta": 0
+    },
+    "activePoints": {
+      "baseline": 300,
+      "candidate": 300,
+      "delta": 0
+    }
+  },
+  "sameConditionSamples": [
+    {
+      "quality": "low",
+      "x": 0,
+      "z": 80,
+      "visibleTriangles": {
+        "baseline": 436312,
+        "candidate": 441092,
+        "delta": 4780,
+        "percent": 1.0955463063129136
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 291218,
+        "candidate": 295998,
+        "delta": 4780,
+        "percent": 1.6413820574277689
+      },
+      "visibleMeshObjects": {
+        "baseline": 939,
+        "candidate": 949,
+        "delta": 10,
+        "percent": 1.0649627263045793
+      }
+    },
+    {
+      "quality": "low",
+      "x": -105,
+      "z": 0,
+      "visibleTriangles": {
+        "baseline": 407944,
+        "candidate": 410968,
+        "delta": 3024,
+        "percent": 0.7412782146569137
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 248482,
+        "candidate": 251506,
+        "delta": 3024,
+        "percent": 1.2169895606120362
+      },
+      "visibleMeshObjects": {
+        "baseline": 882,
+        "candidate": 888,
+        "delta": 6,
+        "percent": 0.6802721088435374
+      }
+    },
+    {
+      "quality": "low",
+      "x": -300,
+      "z": -130,
+      "visibleTriangles": {
+        "baseline": 367728,
+        "candidate": 369240,
+        "delta": 1512,
+        "percent": 0.41117347604751336
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 180916,
+        "candidate": 182428,
+        "delta": 1512,
+        "percent": 0.83574697649738
+      },
+      "visibleMeshObjects": {
+        "baseline": 802,
+        "candidate": 805,
+        "delta": 3,
+        "percent": 0.3740648379052369
+      }
+    },
+    {
+      "quality": "low",
+      "x": 170,
+      "z": -200,
+      "visibleTriangles": {
+        "baseline": 376188,
+        "candidate": 377700,
+        "delta": 1512,
+        "percent": 0.4019266962263549
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 199212,
+        "candidate": 200724,
+        "delta": 1512,
+        "percent": 0.758990422263719
+      },
+      "visibleMeshObjects": {
+        "baseline": 818,
+        "candidate": 821,
+        "delta": 3,
+        "percent": 0.36674816625916873
+      }
+    },
+    {
+      "quality": "medium",
+      "x": 0,
+      "z": 80,
+      "visibleTriangles": {
+        "baseline": 469692,
+        "candidate": 474472,
+        "delta": 4780,
+        "percent": 1.0176881871524317
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 324598,
+        "candidate": 329378,
+        "delta": 4780,
+        "percent": 1.4725907122040185
+      },
+      "visibleMeshObjects": {
+        "baseline": 941,
+        "candidate": 951,
+        "delta": 10,
+        "percent": 1.0626992561105206
+      }
+    },
+    {
+      "quality": "medium",
+      "x": -105,
+      "z": 0,
+      "visibleTriangles": {
+        "baseline": 441070,
+        "candidate": 444094,
+        "delta": 3024,
+        "percent": 0.6856054594508808
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 281608,
+        "candidate": 284632,
+        "delta": 3024,
+        "percent": 1.0738331297406323
+      },
+      "visibleMeshObjects": {
+        "baseline": 884,
+        "candidate": 890,
+        "delta": 6,
+        "percent": 0.6787330316742082
+      }
+    },
+    {
+      "quality": "medium",
+      "x": -300,
+      "z": -130,
+      "visibleTriangles": {
+        "baseline": 392948,
+        "candidate": 394460,
+        "delta": 1512,
+        "percent": 0.3847837372883944
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 206136,
+        "candidate": 207648,
+        "delta": 1512,
+        "percent": 0.7334963325183375
+      },
+      "visibleMeshObjects": {
+        "baseline": 804,
+        "candidate": 807,
+        "delta": 3,
+        "percent": 0.373134328358209
+      }
+    },
+    {
+      "quality": "medium",
+      "x": 170,
+      "z": -200,
+      "visibleTriangles": {
+        "baseline": 414464,
+        "candidate": 415976,
+        "delta": 1512,
+        "percent": 0.3648085237801112
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 237488,
+        "candidate": 239000,
+        "delta": 1512,
+        "percent": 0.6366637472209122
+      },
+      "visibleMeshObjects": {
+        "baseline": 820,
+        "candidate": 823,
+        "delta": 3,
+        "percent": 0.36585365853658536
+      }
+    },
+    {
+      "quality": "high",
+      "x": 0,
+      "z": 80,
+      "visibleTriangles": {
+        "baseline": 576908,
+        "candidate": 581688,
+        "delta": 4780,
+        "percent": 0.8285549862369737
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 431814,
+        "candidate": 436594,
+        "delta": 4780,
+        "percent": 1.106958088436225
+      },
+      "visibleMeshObjects": {
+        "baseline": 942,
+        "candidate": 952,
+        "delta": 10,
+        "percent": 1.0615711252653928
+      }
+    },
+    {
+      "quality": "high",
+      "x": -105,
+      "z": 0,
+      "visibleTriangles": {
+        "baseline": 551096,
+        "candidate": 554120,
+        "delta": 3024,
+        "percent": 0.5487247230972462
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 391634,
+        "candidate": 394658,
+        "delta": 3024,
+        "percent": 0.7721495069375999
+      },
+      "visibleMeshObjects": {
+        "baseline": 885,
+        "candidate": 891,
+        "delta": 6,
+        "percent": 0.6779661016949152
+      }
+    },
+    {
+      "quality": "high",
+      "x": -300,
+      "z": -130,
+      "visibleTriangles": {
+        "baseline": 498110,
+        "candidate": 499622,
+        "delta": 1512,
+        "percent": 0.30354740920680173
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 310920,
+        "candidate": 312432,
+        "delta": 1512,
+        "percent": 0.4862987263604786
+      },
+      "visibleMeshObjects": {
+        "baseline": 805,
+        "candidate": 808,
+        "delta": 3,
+        "percent": 0.37267080745341613
+      }
+    },
+    {
+      "quality": "high",
+      "x": 170,
+      "z": -200,
+      "visibleTriangles": {
+        "baseline": 533348,
+        "candidate": 534860,
+        "delta": 1512,
+        "percent": 0.28349220396439095
+      },
+      "frustumCandidateTriangles": {
+        "baseline": 356372,
+        "candidate": 357884,
+        "delta": 1512,
+        "percent": 0.424275756793463
+      },
+      "visibleMeshObjects": {
+        "baseline": 820,
+        "candidate": 823,
+        "delta": 3,
+        "percent": 0.36585365853658536
+      }
+    }
+  ],
+  "heads": [
+    {
+      "id": "player",
+      "family": "player",
+      "theme": null
+    },
+    {
+      "id": "npc",
+      "family": "npc",
+      "theme": null
+    },
+    {
+      "id": "sena",
+      "family": "sena",
+      "theme": null
+    },
+    {
+      "id": "resident:smith-ren",
+      "family": "smith",
+      "theme": null
+    },
+    {
+      "id": "resident:healer-io",
+      "family": "healer",
+      "theme": null
+    },
+    {
+      "id": "resident:patient-nagi",
+      "family": "patient",
+      "theme": null
+    },
+    {
+      "id": "resident:porter-tou",
+      "family": "porter",
+      "theme": null
+    },
+    {
+      "id": "resident:traveler-asa",
+      "family": "traveler",
+      "theme": null
+    },
+    {
+      "id": "resident:scout-yuno",
+      "family": "scout",
+      "theme": null
+    },
+    {
+      "id": "resident:courier-naru",
+      "family": "courier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-1",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-4",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-6",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-8",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-10",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-12",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-16",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-19",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-22",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-23",
+      "family": "boss",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-24",
+      "family": "ranger",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-25",
+      "family": "ranger",
+      "theme": null
+    },
+    {
+      "id": "enemy:enemy-26",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:salt-guard",
+      "family": "soldier",
+      "theme": null
+    },
+    {
+      "id": "enemy:salt-archer",
+      "family": "ranger",
+      "theme": null
+    },
+    {
+      "id": "enemy:ember-vault-warden",
+      "family": "soldier",
+      "theme": "ember"
+    },
+    {
+      "id": "enemy:tide-vault-warden",
+      "family": "soldier",
+      "theme": "tide"
+    },
+    {
+      "id": "enemy:gale-vault-warden",
+      "family": "soldier",
+      "theme": "gale"
+    },
+    {
+      "id": "enemy:moss-vault-warden",
+      "family": "soldier",
+      "theme": "moss"
+    }
+  ],
+  "headGeometrySharing": [
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "soldier"
+      ],
+      "uses": 11,
+      "actorUses": 11,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "ranger"
+      ],
+      "uses": 3,
+      "actorUses": 3,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "player"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "npc"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "sena"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "smith"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "healer"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "patient"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "porter"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "traveler"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "scout"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "courier"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "boss"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "soldier"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "soldier"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "soldier"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    },
+    {
+      "names": [
+        "Q anatomical face skin"
+      ],
+      "families": [
+        "soldier"
+      ],
+      "uses": 1,
+      "actorUses": 1,
+      "triangles": 1496,
+      "bytes": 61504
+    }
+  ],
+  "headGeometrySourceBytes": 1045568,
+  "geometryDisposeEvents": 0,
+  "nativePMREMMethodCallsAcross12Conditions": 19,
+  "skyTexturePayload": {
+    "visibleBytes": 4194304,
+    "environmentBytes": 1572864,
+    "temporaryInputBytes": 1048576,
+    "temporaryPingBytes": 1572864,
+    "pmremFace": 128
+  },
+  "transfer": {
+    "baselineManifestSha256": "6689913454d14270792d63b1ab8fb59cf57a54d2d6ff6fe725015ea7b62722f8",
+    "candidateManifestSha256": "62876a815be25a6791eac88c00b94cfab276392a0aecc1b3b8860765ec28c6f8",
+    "initialJsBytes": 163175,
+    "jsChunks": 3,
+    "jsTotalBytes": {
+      "baseline": 854704,
+      "candidate": 958132,
+      "delta": 103428
+    },
+    "manifestReferencedFileBytes": {
+      "baseline": 10377838,
+      "candidate": 11916385,
+      "delta": 1538547
+    },
+    "addedAssets": [
+      {
+        "source": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+        "file": "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
+        "bytes": 1435119,
+        "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+      }
+    ],
+    "changedAssets": [
+      {
+        "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+        "baselineSha256": "9ad667bf90a66e98402a6753917e2f9ce883497b1f1edbca66c3a88462abb36c",
+        "candidateSha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+        "baselineBytes": 288594,
+        "candidateBytes": 288594
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+        "baselineSha256": "c5bbaa8d3d0a45bf2a52a935f7eb90147a19fc8c43ea2d9e3f73d966371b1333",
+        "candidateSha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+        "baselineBytes": 192463,
+        "candidateBytes": 192463
+      }
+    ],
+    "unchangedAssetHashes": 23,
+    "sourceAssetHashReadbackMatches": true,
+    "boundary": "Uncompressed emitted file bytes; excludes HTML, icon, webmanifest, HTTP headers/compression/cache/timing. Initial JS is the entry chunk, not total title-screen network requests."
+  },
+  "scope": "Actual SceneView/native Three geometry, material and renderer-prefix matrix/LOD state, 1280x720. Texture entrypoints other than real HDR CPU source and WebGLRenderer are explicit doubles. Geometry triangles/material groups/frustum candidates are CPU structural counts, not observed GPU draws, pixels, allocation or frame time.",
+  "limitations": [
+    "Attached source-buffer payload excludes driver allocations and unattached authoring/cache intermediates.",
+    "Material groups and frustum candidates are not actual GPU draws; instanced batches use native batch bounds, not individual-instance culling.",
+    "Texture decode entrypoints except actual HDR CPU decoding are doubles.",
+    "No rasterization, shader compilation, GPU frame time, visual or PS4 parity certification."
+  ]
+}

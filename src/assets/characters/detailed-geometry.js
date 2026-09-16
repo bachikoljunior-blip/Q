@@ -1,8 +1,9 @@
-// Original Q geometry and surface recipes. No scanned, scraped or generated-image assets.
+// Q costumes/surfaces and a registered CC0 MakeHuman anatomical head; no scans or image maps.
 // The CC0 KayKit models alongside this file remain a separate, unmodified asset family.
 import * as T from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { clone as cloneSkeleton } from 'three/addons/utils/SkeletonUtils.js';
+import { HEAD_ATTRIBUTES, HEAD_INDICES } from './anatomical-head-data.js';
 
 export const ACTOR_FAMILIES = Object.freeze(['player','npc','sena','smith','healer','patient','porter','scout','traveler','courier','soldier','ranger','wolf','boss']);
 const themes = { ember:[0x58403a,0xc38450], tide:[0x405e63,0x9dc7bc], gale:[0x68727a,0xc2c6b6], moss:[0x48594b,0xadb982] };
@@ -23,7 +24,7 @@ const profiles = {
 };
 const textures = new Map(), materials = new Map();
 const shapes = {
-  sphere:new T.SphereGeometry(1,12,8), smallSphere:new T.SphereGeometry(1,8,6), mediumSphere:new T.SphereGeometry(1,10,6),
+  decorSphere:new T.SphereGeometry(1,8,4), sphere:new T.SphereGeometry(1,12,8), smallSphere:new T.SphereGeometry(1,8,6), mediumSphere:new T.SphereGeometry(1,10,6),
   box:new T.BoxGeometry(1,1,1), cylinder:new T.CylinderGeometry(1,1,1,10),
   cone:new T.ConeGeometry(1,1,7), ring:new T.TorusGeometry(1,.085,5,16),
 };
@@ -86,23 +87,28 @@ function tailored(parent,mat,rings,deform,segments=12,fold=0){
   }
   geometry.computeVertexNormals();smoothWrappedNormals(geometry,segments);const result=mesh(parent,geometry,mat);result.userData.deform=deform;return result;
 }
+let anatomicalHead;
 function faceSurface(){
-  const geometry=new T.SphereGeometry(1,20,16),v=geometry.attributes.position;
-  const bump=(x,y,cx,cy,sx,sy)=>Math.exp(-(((x-cx)/sx)**2+((y-cy)/sy)**2));
-  for(let i=0;i<v.count;i++){
-    const rawY=v.getY(i),front=Math.max(0,v.getZ(i)),y=.041+rawY*.157;
-    const jaw=rawY<-.12?1-.19*Math.min(1,(-rawY-.12)/.64):1;
-    const x=v.getX(i)*.12*jaw;let z=v.getZ(i)*.112;
-    // Brow, recessed sockets, cheek planes, bridge/tip, philtrum and chin.
-    if(front>0){const relief=.017*bump(x,y,0,.018,.020,.060)+.030*bump(x,y,0,-.005,.028,.020)
-      +.009*bump(x,y,0,-.078,.054,.028)+.008*bump(x,y,0,-.043,.048,.018)
-      +.009*bump(x,y,-.065,.000,.032,.030)+.009*bump(x,y,.065,.000,.032,.030)
-      -.012*bump(x,y,-.046,.050,.030,.020)-.012*bump(x,y,.046,.050,.030,.020)
-      +.010*bump(x,y,-.044,.078,.042,.012)+.010*bump(x,y,.044,.078,.042,.012);
-      z+=relief*Math.pow(front,.4);}
-    v.setXYZ(i,x,y,z);
-  }
-  geometry.computeVertexNormals();return smoothWrappedNormals(geometry,20);
+  if(anatomicalHead)return anatomicalHead;
+  const geometry=new T.BufferGeometry(),positions=[],normals=[],uv=[];
+  for(const v of HEAD_ATTRIBUTES){positions.push(...v.slice(0,3));normals.push(...v.slice(3,6));uv.push(...v.slice(6,8));}
+  geometry.setAttribute('position',new T.Float32BufferAttribute(positions,3));
+  geometry.setAttribute('normal',new T.Float32BufferAttribute(normals,3));
+  geometry.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geometry.setIndex(HEAD_INDICES);
+  geometry.userData.source='MakeHuman hm08 CC0 registered anatomical head';
+  anatomicalHead=geometry;return geometry;
+}
+function faceMaterial(skin){
+  const key=`face/${skin.color.getHex()}`;
+  if(!materials.has(key)){const mat=skin.clone();mat.name='Q anatomical face';materials.set(key,mat);}
+  return materials.get(key);
+}
+function helmetGeometry(){
+  const geometry=new T.SphereGeometry(1,16,10,0,Math.PI*2,0,Math.PI*.54),v=geometry.attributes.position;
+  // Keep the crown/back coverage and side plates, but the front brim belongs
+  // above the eyes. The old full cap obscured both eyes even without a new head.
+  for(let i=0;i<v.count;i++){const y=v.getY(i),u=T.MathUtils.clamp((v.getZ(i)-.05)/.3,0,1);if(y<.15)v.setY(i,y+(.15-y)*u*u*(3-2*u));}
+  geometry.computeVertexNormals();return smoothWrappedNormals(geometry,16);
 }
 function bootGeometry(sole=false){
   // Ankle, instep, arch, toe box and heel. No rectangular floating sole.
@@ -187,26 +193,23 @@ function makeHuman(type,options){
   }
   const neck=group(chest,'neck',0,.6,0);ellipsoid(neck,m.skin,[0,.018,0],[.08,.12,.078]);
   const head=group(neck,'head',0,.16,0);
-  mesh(head,faceSurface(),m.skin);
-  for(const s of [-1,1])ellipsoid(head,m.dark,[s*.015,-.017,.133],[.007,.004,.005]);
+  mesh(head,faceSurface(),faceMaterial(m.skin));
   for(const s of [-1,1]){
-    ellipsoid(head,m.skin,[s*.12,.019,0],[.022,.042,.03]);
     ellipsoid(head,m.eyeWhite,[s*.046,.050,.100],[.022,.008,.010]);
     ellipsoid(head,m.eye,[s*.046,.050,.109],[.008,.008,.003]);
     const lid=group(head,`eyelid-${s===-1?0:1}`,s*.046,.058,.100);
-    mesh(lid,new T.SphereGeometry(1,10,4,0,Math.PI*2,0,Math.PI*.5),m.skin,[0,0,0],[.023,.014,.011]);
+    mesh(lid,new T.SphereGeometry(1,10,4,0,Math.PI*2,0,Math.PI*.5),m.skin,[0,-.001,0],[.024,.018,.017]);
     beam(head,m.hair,[s*.025,.078,.109],[s*.079,.073,.096],.007);
   }
-  beam(head,m.leather,[-.026,-.055,.124],[.027,-.055,.124],.004);
   const hair=mesh(head,new T.SphereGeometry(1,12,8,0,Math.PI*2,0,Math.PI*.58),m.hair,[0,.06,-.018],[.125,.147,.123]);hair.rotation.x=-.2;
   if(type==='smith')ellipsoid(head,m.hair,[0,-.088,.067],[.089,.043,.06]);
   if(type==='sena')ellipsoid(head,m.hair,[0,-.035,-.105],[.058,.12,.048]);
   if(p.hood){
-    mesh(head,new T.SphereGeometry(1,16,10,Math.PI*.31,Math.PI*1.38,0,Math.PI*.92),m.cloth,[0,.04,-.027],[.147,.193,.153]);
+    mesh(head,new T.SphereGeometry(1,16,10,Math.PI*.81,Math.PI*1.38,0,Math.PI*.92),m.cloth,[0,.04,-.027],[.147,.193,.153]);
     for(const s of [-1,1])beam(chest,m.cloth,[s*.1,.66,.08],[s*.24,.47,.07],.047);
   }
   if(p.helmet){
-    mesh(head,new T.SphereGeometry(1,16,10,0,Math.PI*2,0,Math.PI*.54),m.metal,[0,.056,-.006],[.138,.174,.137]);
+    mesh(head,helmetGeometry(),m.metal,[0,.056,-.006],[.138,.174,.137]);
     for(const s of [-1,1])mesh(head,shapes.box,m.metal,[s*.094,-.011,.105],[.058,.125,.038],[0,s*.18,s*.12]);
     beam(head,m.trim,[0,.19,.07],[0,.005,.148],.012);
   }
@@ -289,7 +292,7 @@ function makeHuman(type,options){
     }
     if(options.theme==='tide')for(const s of [-1,1])mesh(chest,shapes.cone,m.trim,[s*.32,.56,0],[.045,.31,.06],[0,0,-s*.65]);
     if(options.theme==='gale')for(let i=0;i<3;i++)mesh(chest,shapes.box,m.paper,[.2+i*.046,.49,-.18],[.034,.55,.016],[0,0,-.18-i*.12]);
-    if(options.theme==='moss')for(let i=0;i<5;i++)ellipsoid(chest,m.cloth,[Math.sin(i*2)*.28,.3+Math.cos(i)*.16,.13],[.067,.042,.028]);
+    if(options.theme==='moss')for(let i=0;i<5;i++)mesh(chest,shapes.decorSphere,m.cloth,[Math.sin(i*2)*.28,.3+Math.cos(i)*.16,.13],[.067,.042,.028*Math.sin(Math.PI*.4)]);
     if(options.theme==='ember')for(let i=0;i<3;i++)beam(chest,m.trim,[-.12+i*.09,.18,.202],[-.17+i*.09,.38,.208],.011);
   }
   if(type==='boss')g.scale.setScalar(2.3);else if(type==='patient')g.scale.setScalar(.97);

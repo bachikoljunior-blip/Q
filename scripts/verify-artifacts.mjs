@@ -49,6 +49,12 @@ for(const name of ['pilgrim','knight','keeper']){
   assert(!entry.includes(output),'character assets must stay out of the title chunk');
 }
 
+// Authoring recordings and the original full-body mesh are retained only as source.
+for(const path of Object.keys(manifest)){
+  assert(!path.startsWith('assets-source/'),'raw recorded instruments must not be emitted');
+  assert(!path.startsWith('src/assets/characters/sources/'),'full source body and morphs must not be emitted');
+}
+
 const presentationSources=Object.keys(manifest).filter(source=>/^src\/assets\/(title|soundscape)\//.test(source)&&/\.(webp|mp3|wav|mp4)$/.test(source));
 assert.equal(presentationSources.length,6,'title poster/video and four soundscape assets must be emitted exactly once');
 assert(!manifest['src/assets/title/north-gate-v22.png'],'archived original title PNG must not duplicate the optimized runtime artwork');
