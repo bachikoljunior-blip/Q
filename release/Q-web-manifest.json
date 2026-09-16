@@ -3,13 +3,13 @@
   "delivery": "web",
   "buildIdentity": {
     "version": "0.21.0",
-    "sourceFingerprint": "sha256:507bc32c3a8aff07630de36eaa6b832b1dfbd9c61ddebfafe7131fff330d096d"
+    "sourceFingerprint": "sha256:0f351bc73d994ebfb6b2eb0f02fda7b53ebb3486d1cf547da53f5c4fb97f7f07"
   },
   "entry": "index.html",
-  "manifestSha256": "e06fd0e6a5c93cc3afbdf633d323d84844e350f44c3f51b461468cae7acf2edc",
+  "manifestSha256": "00d13b3ac1449e724f96917848e60ebaf4373c95536744c4d371b206721f8bba",
   "hostingSha256": "da86ae52fe08fe3c8e7aea2654404eb7dcd8e1e144876fc93670b9b278e340d0",
   "fileCount": 34,
-  "totalBytes": 14035434,
+  "totalBytes": 14037148,
   "files": [
     {
       "path": "assets/crown-branch-rgba-DvI_Tv4J.png",
@@ -42,14 +42,14 @@
       "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
     },
     {
-      "path": "assets/index-CqyLnEj9.js",
-      "bytes": 165415,
-      "sha256": "6ad04ebb95e4ba2347ef1c50e21cc298ff506c6886a18a1a0b51943461496344"
-    },
-    {
       "path": "assets/index-DvxNsySP.css",
       "bytes": 60193,
       "sha256": "8cc97c2228e81d67448628b2ad5a2afa274ca4053a1d0137e3bb13a28e7f9e7b"
+    },
+    {
+      "path": "assets/index-latpV8ge.js",
+      "bytes": 165415,
+      "sha256": "74958420fd88cd6bbcd0c344a743d5244647eb58db865087b7610bb9eef1b991"
     },
     {
       "path": "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
@@ -112,9 +112,9 @@
       "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
     },
     {
-      "path": "assets/scene-DLcDhz05.js",
-      "bytes": 339016,
-      "sha256": "f6219d590e3068cc7d51b01cacbae3515a8d26031a0069b7ba9beb5c1dd3b80a"
+      "path": "assets/scene-DRbZyVFp.js",
+      "bytes": 340730,
+      "sha256": "b814744f1756bef40e2d2a4cd1c1d4202e47226d1e4fe09639379cf0889e1513"
     },
     {
       "path": "assets/shared-alert-JeJkFdAY.wav",
@@ -174,7 +174,7 @@
     {
       "path": "index.html",
       "bytes": 7302,
-      "sha256": "bae8b526c086717c5d57b1a3d23c5570120f45394d91b763cf7a89c0bc670758"
+      "sha256": "686934cc6f2dc8c65c2ed58909f574f5f91d3c16e0db1e9ea0de97f2dc436923"
     },
     {
       "path": "manifest.webmanifest",
@@ -346,5 +346,5 @@
       "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
     }
   ],
-  "contentSha256": "8498ad0346cc1044775b04bee131e554131ffbcb05f997084ed09c6f1b33e880"
+  "contentSha256": "fc90279e0e48fa8585d3f14722e94de533cee66dbf06e7729c097d913e3d2ad1"
 }

@@ -1,0 +1,39 @@
+{
+  "at": "2026-09-16T08:54:54.850Z",
+  "sourceHash": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+  "seconds": {
+    "vertices": 60.595531409,
+    "surfaces": 7.117746736000001,
+    "total": 67.71328522099999
+  },
+  "vertexCases": 36,
+  "triangleCases": 180,
+  "negativeVertices": 0,
+  "negativeTriangleCases": 0,
+  "finalMax": 0,
+  "ranges": [
+    {
+      "hz": 30,
+      "oldEntry": 3.0422576144175553,
+      "newEntry": 0.23554190015595272,
+      "newStep": 0.8647960778507345
+    },
+    {
+      "hz": 60,
+      "oldEntry": 3.0365305590817675,
+      "newEntry": 0.18601948133362714,
+      "newStep": 0.44371975595029944
+    },
+    {
+      "hz": 120,
+      "oldEntry": 3.00547970578698,
+      "newEntry": 0.14913838116150252,
+      "newStep": 0.22200828542414608
+    }
+  ],
+  "surfaceMinimum": {
+    "skin": 0.0026133613194989636,
+    "rigid": 0.155872226457328,
+    "cape": 0.028800595074584878
+  }
+}

@@ -1,3 +1,15 @@
+## 2026-09-16: 死亡開始の姿勢連続性を結合検証（v53）
+
+[結合記録](DEATH_ENTRY_INTEGRATION_V53.md)。原音保持のPR52はremote `7fbe77e63b2172a8d9cde4c8953858d02fdefe0d` / tree `901eaf7710af58ba9a331a3db85a4470da1d4d2f`、required CI35077524542成功。死亡開始は作者e58994aを同基点へ結合し、0.24秒の姿勢連続化・hidden槍の再表示方向修復を採用。新規27条件で継続可視頂点のentry移動を全条件縮小、1秒後の既存姿勢とGame/保存不変。後続step増加・hidden→shown union増加・空中root固定は残課題であり、全frame改善/自然さ合格とはしない。
+
+v53の27必須工程・333tests全成功143.493227秒、任意単体版2testsも成功。固定stageは34files14,037,148 B、初期165,415 B/3chunks不変、deferred JS+1,714 B、27媒体12,883,257 B完全保持。任意HTML17,309,822 B。主方式は元から複数ファイルの通常URLであり、単体HTML必須gate解除を旧通常版のCPU削減と混同しない。
+
+main547676fdce8d8e97abed9f065aad0b6e24af2fd6/PR39未merge/owner限定Site23は不変。v53をPR52の後ろへ通常stack保存し、実main進行後のみ順序通りretarget/CI/通常merge。期限9/20の全画面PS4到達根拠は引き続き不足。公式preview監督mailbox不在、実画面・実聴・実機・指定作品との比較未実施を保持する。
+
+方法見直しの同条件結果: 原人体からのMira胴/袖候補v54は、実会話3viewport・native面遮蔽を考慮すると胴の可視差最大0.02069px、袖1.313px。交差pair入替/API悪化もあり、runtime不採用とし候補/比較だけ保全する。次のv55は跳躍死亡のroot落下を実main固定tickへ結び、blur/pagehide中の停止を独立再検証中。既存Ultra担当と単独writerを保持し、記録だけで制作の完了とはしない。
+
+---
+
 ## 2026-09-16: 音の原録音rate・破棄時の所有権を再構成し結合検証
 
 [音の結合記録](RECOVERY_AUDIO_INTEGRATION_V52.md)。PR51を正式復元後、原13録音からharmony/pulseを44.1kHz stereoへ再生成し、元motif/foley/24cuesを保持。rate別decoder、同byte fallback、音楽3固定bufferとFX FIFO分離、破棄中再起動の拒否を新規検証した。旧source2hash/新2MP3hashとの一致は回収内容の照合であり、旧PASSの再利用ではない。独立12条件と原媒体検査、結合27工程・324tests全成功115.252264秒。通常34files14,035,434 B、初期165,415 B/3chunks、全27媒体一致。任意HTMLも17,308,120 Bで全媒体と2動作検証成功、16MiBが通常プレイの美術上限でないことを実成果で確認した。

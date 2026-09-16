@@ -1,0 +1,17 @@
+✔ v52 actual lethal idle/walk/attack/parry retains the displayed pose and converges (5666.161307ms)
+✔ v52 source pose at zero age is retained while explicit and first-seen death stay canonical (416.434ms)
+✔ v52 fixed unique snapshots have explicit lifetime and no cross-instance or old-session reuse (17.233887ms)
+✔ v52 elapsed pose interpolation is independent of intermediate frame partition (19.198982ms)
+✔ v52 other roles, every alive pose and death-to-alive recovery remain exact (327.725587ms)
+✔ v52 actual Game dead-save restore respawns and clears a reused view snapshot (43.28335ms)
+✔ v52 visible skin, fixed weapon grips and cape stay above actual terrain through live entry (5943.453937ms)
+✔ v52 hidden healing weapons reappear with a canonical attached orientation above the ground (5889.414601ms)
+✔ v52 actual Game equipment changes before a lethal hit never reuse an unseen weapon orientation (3813.343399ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 22366.677529

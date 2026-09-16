@@ -438,7 +438,7 @@ function deathEntryPose(actor,state,previousDead){
     entry=actor.deathEntry={active:false,poses:nodes.map(node=>({node,position:node.position.clone(),quaternion:node.quaternion.clone(),scale:node.scale.clone()})),fromWeapon:new Quaternion(),targetWeapon:new Quaternion(),rotation:new Quaternion(),inverse:new Quaternion()};
   }
   for(const p of entry.poses){p.position.copy(p.node.position);p.quaternion.copy(p.node.quaternion);p.scale.copy(p.node.scale);}
-  entry.weapon=state.weaponType||'sword';entry.weaponVisible=actor[entry.weapon].visible;entry.active=true;
+  entry.weapon=state.weaponType||'sword';entry.active=true;
   actor.g.updateWorldMatrix(true,true);actor.g.getWorldQuaternion(entry.inverse).invert();
   actor[entry.weapon].getWorldQuaternion(entry.fromWeapon).premultiply(entry.inverse);
 }
@@ -448,8 +448,7 @@ function blendDeathEntry(actor,motion){
   if(weight===1){entry.active=false;return;}
   actor.g.updateWorldMatrix(true,true);actor.g.getWorldQuaternion(entry.inverse).invert();
   const weapon=actor[entry.weapon];weapon.getWorldQuaternion(entry.targetWeapon).premultiply(entry.inverse);
-  // A hidden healing weapon has no displayed orientation to retain on reappearance.
-  if(entry.weaponVisible)entry.targetWeapon.slerp(entry.fromWeapon,1-weight);
+  entry.targetWeapon.slerp(entry.fromWeapon,1-weight);
   for(const p of entry.poses){p.node.position.lerpVectors(p.position,p.node.position,weight);p.node.quaternion.slerp(p.quaternion,1-weight);p.node.scale.lerpVectors(p.scale,p.node.scale,weight);}
   // The carry grip distributes cancelling rotations across wrist and equipment.
   // Interpolate their combined orientation once, then solve the attached wrist.

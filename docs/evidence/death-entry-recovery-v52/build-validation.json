@@ -1,0 +1,196 @@
+{
+  "at": "2026-09-16T08:58:48.135Z",
+  "base": "fa920db9782b7df42e4e16099a05994e5841dbaa",
+  "sourceHash": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+  "sourceBytes": 38244,
+  "sourceFingerprint": "sha256:9fdfd66a2101b81992bf0aaf1328bf9017a0c058e69a1106c4c9a49ec2f7e9f9",
+  "entryBytes": 164988,
+  "js": [
+    {
+      "name": "index-DLatG3EU.js",
+      "bytes": 164988,
+      "sha256": "4d7b370a765c0886361a761e442f57aa677e5b47810248d210dcb670487ace74"
+    },
+    {
+      "name": "scene-DqOkIrfs.js",
+      "bytes": 340730,
+      "sha256": "d707bc4d3e2fa3861fd6fdbb242ba4bcda27a2ba1b1a2d09577387e55bbdd383"
+    },
+    {
+      "name": "three-CQW9fVDb.js",
+      "bytes": 579597,
+      "sha256": "107df06c8d23b63c90cb7a51e7cc4d8c4648253b1f718559c3c736bd854d9764"
+    }
+  ],
+  "unreferencedJs": [
+    "index-Cvyajj32.js",
+    "scene-MZLaPzML.js"
+  ],
+  "mediaCount": 27,
+  "mediaBytes": 11441662,
+  "media": [
+    {
+      "source": "src/assets/characters/skin/young-male-q95.webp",
+      "emitted": "assets/young-male-q95-DLRShmkN.webp",
+      "bytes": 541954,
+      "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+    },
+    {
+      "source": "src/assets/environment/forest_floor_diff_1k.jpg",
+      "emitted": "assets/forest_floor_diff_1k-FrvyY1gs.jpg",
+      "bytes": 1329853,
+      "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b"
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_diff_1k.jpg",
+      "emitted": "assets/rock_face_03_diff_1k-Clx6WbHJ.jpg",
+      "bytes": 927082,
+      "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d"
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_nor_gl_1k.jpg",
+      "emitted": "assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg",
+      "bytes": 1146788,
+      "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
+    },
+    {
+      "source": "src/assets/forest/crown-branch-rgba.png",
+      "emitted": "assets/crown-branch-rgba-DvI_Tv4J.png",
+      "bytes": 162720,
+      "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7"
+    },
+    {
+      "source": "src/assets/forest/pine-branch-rgba.png",
+      "emitted": "assets/pine-branch-rgba-DpLH-kJr.png",
+      "bytes": 165258,
+      "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a"
+    },
+    {
+      "source": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "emitted": "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-foley.wav",
+      "emitted": "assets/pilgrim-foley-CW54U_6w.wav",
+      "bytes": 826370,
+      "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+      "emitted": "assets/pilgrim-harmony-LSIdyu7z.mp3",
+      "bytes": 288594,
+      "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-motif.mp3",
+      "emitted": "assets/pilgrim-motif-yb4axZNo.mp3",
+      "bytes": 192463,
+      "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+      "emitted": "assets/pilgrim-pulse-BJS9Fs4r.mp3",
+      "bytes": 192463,
+      "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13"
+    },
+    {
+      "source": "src/assets/title/north-gate-v22.webp",
+      "emitted": "assets/north-gate-v22-M69S2yqx.webp",
+      "bytes": 162962,
+      "sha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a"
+    },
+    {
+      "source": "src/assets/title/north-gate-v23.mp4",
+      "emitted": "assets/north-gate-v23-BAPO0H9x.mp4",
+      "bytes": 3178191,
+      "sha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c"
+    },
+    {
+      "source": "src/assets/vaults/ember-ambient.wav",
+      "emitted": "assets/ember-ambient-DxlfqX62.wav",
+      "bytes": 176444,
+      "sha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13"
+    },
+    {
+      "source": "src/assets/vaults/ember-stone.png",
+      "emitted": "assets/ember-stone-CGtrIuNR.png",
+      "bytes": 16849,
+      "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9"
+    },
+    {
+      "source": "src/assets/vaults/gale-ambient.wav",
+      "emitted": "assets/gale-ambient-Bk5IsviT.wav",
+      "bytes": 176444,
+      "sha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0"
+    },
+    {
+      "source": "src/assets/vaults/gale-stone.png",
+      "emitted": "assets/gale-stone-DFcyxpvg.png",
+      "bytes": 17052,
+      "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
+    },
+    {
+      "source": "src/assets/vaults/moss-ambient.wav",
+      "emitted": "assets/moss-ambient-P9AOr4W8.wav",
+      "bytes": 176444,
+      "sha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36"
+    },
+    {
+      "source": "src/assets/vaults/moss-stone.png",
+      "emitted": "assets/moss-stone-DiwO4PmY.png",
+      "bytes": 17328,
+      "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419"
+    },
+    {
+      "source": "src/assets/vaults/shared-alert.wav",
+      "emitted": "assets/shared-alert-JeJkFdAY.wav",
+      "bytes": 21212,
+      "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a"
+    },
+    {
+      "source": "src/assets/vaults/shared-claim.wav",
+      "emitted": "assets/shared-claim-BPXeWqKz.wav",
+      "bytes": 39734,
+      "sha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a"
+    },
+    {
+      "source": "src/assets/vaults/shared-impact.wav",
+      "emitted": "assets/shared-impact-DwWqEia4.wav",
+      "bytes": 7982,
+      "sha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153"
+    },
+    {
+      "source": "src/assets/vaults/shared-seal.wav",
+      "emitted": "assets/shared-seal-slkiLvkd.wav",
+      "bytes": 30914,
+      "sha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5"
+    },
+    {
+      "source": "src/assets/vaults/shared-step.wav",
+      "emitted": "assets/shared-step-D8_A5LtE.wav",
+      "bytes": 7100,
+      "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088"
+    },
+    {
+      "source": "src/assets/vaults/shared-swing.wav",
+      "emitted": "assets/shared-swing-BkmUzsmF.wav",
+      "bytes": 10628,
+      "sha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25"
+    },
+    {
+      "source": "src/assets/vaults/tide-ambient.wav",
+      "emitted": "assets/tide-ambient-BP0Z0aTJ.wav",
+      "bytes": 176444,
+      "sha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba"
+    },
+    {
+      "source": "src/assets/vaults/tide-stone.png",
+      "emitted": "assets/tide-stone-COv3Sj_E.png",
+      "bytes": 17270,
+      "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
+    }
+  ],
+  "scope": "Source to manifest-referenced Vite emitted exact bytes and fixed source/recipe/cape contracts. Referenced chunks are counted separately from stale unreferenced dist files. No stage or receipt regeneration, no test:artifacts claim; integration owner owns that required gate. No WebGL/GPU/device measurement."
+}

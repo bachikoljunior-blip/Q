@@ -1,0 +1,32 @@
+{
+  "at": "2026-09-16T08:58:48.135Z",
+  "base": "fa920db9782b7df42e4e16099a05994e5841dbaa",
+  "sourceHash": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+  "sourceBytes": 38244,
+  "sourceFingerprint": "sha256:9fdfd66a2101b81992bf0aaf1328bf9017a0c058e69a1106c4c9a49ec2f7e9f9",
+  "entryBytes": 164988,
+  "js": [
+    {
+      "name": "index-DLatG3EU.js",
+      "bytes": 164988,
+      "sha256": "4d7b370a765c0886361a761e442f57aa677e5b47810248d210dcb670487ace74"
+    },
+    {
+      "name": "scene-DqOkIrfs.js",
+      "bytes": 340730,
+      "sha256": "d707bc4d3e2fa3861fd6fdbb242ba4bcda27a2ba1b1a2d09577387e55bbdd383"
+    },
+    {
+      "name": "three-CQW9fVDb.js",
+      "bytes": 579597,
+      "sha256": "107df06c8d23b63c90cb7a51e7cc4d8c4648253b1f718559c3c736bd854d9764"
+    }
+  ],
+  "unreferencedJs": [
+    "index-Cvyajj32.js",
+    "scene-MZLaPzML.js"
+  ],
+  "mediaCount": 27,
+  "mediaBytes": 11441662,
+  "scope": "Source to manifest-referenced Vite emitted exact bytes and fixed source/recipe/cape contracts. Referenced chunks are counted separately from stale unreferenced dist files. No stage or receipt regeneration, no test:artifacts claim; integration owner owns that required gate. No WebGL/GPU/device measurement."
+}

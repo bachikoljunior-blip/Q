@@ -1,0 +1,549 @@
+{
+  "sourceHash": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+  "at": "2026-09-16T08:56:09.940Z",
+  "seconds": 1.661582792,
+  "scope": "Serial author ABBA whole-animate Node wall-time batches. Includes initial386point support extraction, cloth cache and pose cache. Other host/reviewer load, JIT/GC, extraction alone, heap/GPU/device timings unmeasured. Not a speedup claim.",
+  "rows": [
+    {
+      "kind": "before",
+      "weapon": "sword",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.04825599999998076,
+      "firstDeathMilliseconds": 12.428934999999996,
+      "secondDeathMilliseconds": 3.034393999999992,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "sword",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.04762799999997469,
+      "firstDeathMilliseconds": 8.978052999999989,
+      "secondDeathMilliseconds": 1.3671689999999899,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "sword",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.12307699999996657,
+      "firstDeathMilliseconds": 4.849935000000016,
+      "secondDeathMilliseconds": 0.8123219999999947,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "sword",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.06607200000001967,
+      "firstDeathMilliseconds": 3.8066670000000045,
+      "secondDeathMilliseconds": 1.2675439999999867,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "spear",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.06082800000001498,
+      "firstDeathMilliseconds": 4.341284999999971,
+      "secondDeathMilliseconds": 0.6833179999999857,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "spear",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.06459899999998697,
+      "firstDeathMilliseconds": 4.764659999999992,
+      "secondDeathMilliseconds": 0.9939520000000357,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "spear",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.07086199999997689,
+      "firstDeathMilliseconds": 3.517122000000029,
+      "secondDeathMilliseconds": 0.6050089999999955,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "spear",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.0458590000000072,
+      "firstDeathMilliseconds": 2.3991640000000416,
+      "secondDeathMilliseconds": 0.39580899999998564,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "greatsword",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.07795399999997699,
+      "firstDeathMilliseconds": 4.069375999999977,
+      "secondDeathMilliseconds": 0.5044680000000312,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "greatsword",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.041196999999897344,
+      "firstDeathMilliseconds": 2.4991190000000643,
+      "secondDeathMilliseconds": 0.5372770000000173,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "greatsword",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.039586000000099375,
+      "firstDeathMilliseconds": 2.664957000000072,
+      "secondDeathMilliseconds": 0.38710299999991094,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "greatsword",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.03414300000008552,
+      "firstDeathMilliseconds": 2.533131000000026,
+      "secondDeathMilliseconds": 0.3790000000000191,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "after",
+      "weapon": "sword",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.036984999999958745,
+      "firstDeathMilliseconds": 7.967479000000026,
+      "secondDeathMilliseconds": 1.2475670000000036,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "sword",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.03554399999995894,
+      "firstDeathMilliseconds": 3.66303199999993,
+      "secondDeathMilliseconds": 0.7394409999999425,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "sword",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.16942900000003647,
+      "firstDeathMilliseconds": 3.955355000000054,
+      "secondDeathMilliseconds": 0.5200179999999364,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "sword",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.03552700000000186,
+      "firstDeathMilliseconds": 4.693373999999949,
+      "secondDeathMilliseconds": 0.5964569999999867,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "spear",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.04427099999998063,
+      "firstDeathMilliseconds": 4.243116999999984,
+      "secondDeathMilliseconds": 0.9359810000000834,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "spear",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.03866800000002968,
+      "firstDeathMilliseconds": 2.5686849999999595,
+      "secondDeathMilliseconds": 0.44804599999997663,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "spear",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.07024999999998727,
+      "firstDeathMilliseconds": 3.1640259999999216,
+      "secondDeathMilliseconds": 0.7789750000000595,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "spear",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.03726799999992636,
+      "firstDeathMilliseconds": 4.583491999999978,
+      "secondDeathMilliseconds": 0.4136879999999792,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "greatsword",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.03450299999997242,
+      "firstDeathMilliseconds": 3.150109999999927,
+      "secondDeathMilliseconds": 0.6339029999999184,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "greatsword",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.03409999999996671,
+      "firstDeathMilliseconds": 2.7705929999999626,
+      "secondDeathMilliseconds": 0.42350900000008096,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "greatsword",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.06787900000006175,
+      "firstDeathMilliseconds": 3.019854999999893,
+      "secondDeathMilliseconds": 0.5916419999999789,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "greatsword",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.03490799999997307,
+      "firstDeathMilliseconds": 2.711971999999946,
+      "secondDeathMilliseconds": 0.6214380000000119,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "sword",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.04770399999995334,
+      "firstDeathMilliseconds": 2.553921999999943,
+      "secondDeathMilliseconds": 0.43202999999994063,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "sword",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.026509999999916545,
+      "firstDeathMilliseconds": 2.7621199999999817,
+      "secondDeathMilliseconds": 1.2286380000000463,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "sword",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.028943000000026586,
+      "firstDeathMilliseconds": 4.115227000000004,
+      "secondDeathMilliseconds": 0.662900000000036,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "sword",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.024698999999941407,
+      "firstDeathMilliseconds": 3.3485190000000102,
+      "secondDeathMilliseconds": 0.5490809999998874,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "spear",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.03210599999999886,
+      "firstDeathMilliseconds": 2.5675410000000056,
+      "secondDeathMilliseconds": 0.4905460000001085,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "spear",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.03287199999999757,
+      "firstDeathMilliseconds": 5.412023999999974,
+      "secondDeathMilliseconds": 0.4599319999999807,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "spear",
+      "prior": "attack",
+      "lastAliveMilliseconds": 2.3597280000000183,
+      "firstDeathMilliseconds": 10.89997100000005,
+      "secondDeathMilliseconds": 0.7341119999999819,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "spear",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.059132999999974345,
+      "firstDeathMilliseconds": 5.966873000000078,
+      "secondDeathMilliseconds": 5.610449999999901,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "greatsword",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.05982599999992999,
+      "firstDeathMilliseconds": 5.05314999999996,
+      "secondDeathMilliseconds": 2.7238529999999628,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "greatsword",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.03511800000001131,
+      "firstDeathMilliseconds": 4.660257000000001,
+      "secondDeathMilliseconds": 0.6830189999998311,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "greatsword",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.061681999999791515,
+      "firstDeathMilliseconds": 5.698139999999967,
+      "secondDeathMilliseconds": 0.7609059999999772,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "after",
+      "weapon": "greatsword",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.03226999999992586,
+      "firstDeathMilliseconds": 6.81800700000008,
+      "secondDeathMilliseconds": 0.3988209999999981,
+      "supportPoints": 386,
+      "poseSlots": 44
+    },
+    {
+      "kind": "before",
+      "weapon": "sword",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.025419999999940046,
+      "firstDeathMilliseconds": 4.425157000000127,
+      "secondDeathMilliseconds": 0.433371999999963,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "sword",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.025656000000026324,
+      "firstDeathMilliseconds": 5.250864999999976,
+      "secondDeathMilliseconds": 0.39931799999999384,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "sword",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.028975000000173168,
+      "firstDeathMilliseconds": 3.437292999999954,
+      "secondDeathMilliseconds": 1.0850840000000517,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "sword",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.04349400000000969,
+      "firstDeathMilliseconds": 7.934745000000021,
+      "secondDeathMilliseconds": 3.9468289999999797,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "spear",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.06133900000008907,
+      "firstDeathMilliseconds": 16.372454999999945,
+      "secondDeathMilliseconds": 7.100481000000173,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "spear",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.06235700000001998,
+      "firstDeathMilliseconds": 4.153496000000132,
+      "secondDeathMilliseconds": 1.7574110000000474,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "spear",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.03467200000000048,
+      "firstDeathMilliseconds": 4.684682000000066,
+      "secondDeathMilliseconds": 2.642276000000038,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "spear",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.05955499999981839,
+      "firstDeathMilliseconds": 2.954161000000113,
+      "secondDeathMilliseconds": 0.5868000000000393,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "greatsword",
+      "prior": "idle",
+      "lastAliveMilliseconds": 0.033726000000115164,
+      "firstDeathMilliseconds": 2.8578150000000733,
+      "secondDeathMilliseconds": 0.39631099999996877,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "greatsword",
+      "prior": "walk",
+      "lastAliveMilliseconds": 0.03259299999990617,
+      "firstDeathMilliseconds": 8.601134999999886,
+      "secondDeathMilliseconds": 0.4920100000001639,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "greatsword",
+      "prior": "attack",
+      "lastAliveMilliseconds": 0.035503999999946245,
+      "firstDeathMilliseconds": 6.36253899999997,
+      "secondDeathMilliseconds": 0.39546900000004825,
+      "supportPoints": 386,
+      "poseSlots": 0
+    },
+    {
+      "kind": "before",
+      "weapon": "greatsword",
+      "prior": "parry",
+      "lastAliveMilliseconds": 0.03180900000006659,
+      "firstDeathMilliseconds": 3.1630239999999503,
+      "secondDeathMilliseconds": 0.726615000000038,
+      "supportPoints": 386,
+      "poseSlots": 0
+    }
+  ],
+  "zero": [
+    {
+      "weaponType": "sword",
+      "age": 0,
+      "delta": {
+        "all": 0.02118619251140447,
+        "skin": 0.005000002969056894,
+        "rigid": 0.005000002820044536,
+        "cape": 0.02118619251140447,
+        "matched": 6009,
+        "added": 0,
+        "removed": 0
+      }
+    },
+    {
+      "weaponType": "spear",
+      "age": 0,
+      "delta": {
+        "all": 0.02118619251140447,
+        "skin": 0.005000002969056894,
+        "rigid": 0.00500000282004498,
+        "cape": 0.02118619251140447,
+        "matched": 5954,
+        "added": 0,
+        "removed": 0
+      }
+    },
+    {
+      "weaponType": "greatsword",
+      "age": 0,
+      "delta": {
+        "all": 0.02118619251140447,
+        "skin": 0.005000002969056894,
+        "rigid": 0.005000002820044758,
+        "cape": 0.02118619251140447,
+        "matched": 6009,
+        "added": 0,
+        "removed": 0
+      }
+    }
+  ],
+  "summary": [
+    {
+      "kind": "before",
+      "count": 24,
+      "firstMedian": 4.153496000000132,
+      "firstP95": 8.978052999999989,
+      "firstMax": 16.372454999999945,
+      "secondMedian": 0.6050089999999955,
+      "aliveMedian": 0.04349400000000969
+    },
+    {
+      "kind": "after",
+      "count": 24,
+      "firstMedian": 3.955355000000054,
+      "firstP95": 6.81800700000008,
+      "firstMax": 10.89997100000005,
+      "secondMedian": 0.6214380000000119,
+      "aliveMedian": 0.03554399999995894
+    }
+  ]
+}
