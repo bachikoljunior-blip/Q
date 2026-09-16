@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-16T09:58:40.016198+00:00",
+  "originalReviewManifestUnchanged": "221cf6ef24a80d982a6e0b089a35fcaf77a1a7c10fadf07032cd61e2046d3441",
+  "oldBaselinesAndContractUnchanged": {
+    "tests/fixtures/cloak-uv-v31-baseline.json": "1ce5a28d1ac59ae4173bb2418daa644aa962aedc28536633c343ff52feb19cbc",
+    "tests/fixtures/cloak-npc-before-uv-v32.json": "ec250ec2864c5d70fe3fd0df8a5908b5abea82e9c37e01f72b70369a97b968af",
+    "tests/fixtures/cloak-ranger-before-uv-v33.json": "3531984e0847f01f7a7252cbe62569bc913bc034597167d6b4ca972c79389085",
+    "tests/fixtures/cloak-uv-contract.mjs": "3874d3b856df49ca8f399e4ad6f8a68f759e3713e07c377ce65c0ea98ddc62bc"
+  },
+  "fixedHelper": "1e106c350439ae7f772c2286417559e8ecef0fbc17a0fa956c597ba57d88a512",
+  "remainingRequiredRepairs": 0,
+  "fullSuiteRerun": "Parent integration scope; not claimed by this review."
+}

@@ -1,0 +1,36 @@
+{
+  "at": "2026-09-16T09:47:30.871Z",
+  "boundary": "Actual native SceneView.setQuality and actor factory; no renderer upload, image decode, GPU disposal or context lifetime simulation.",
+  "qualities": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "additionalActorClones": 3,
+  "sameMaterial": true,
+  "sameTexture": true,
+  "sameArray": true,
+  "textureVersionUnchanged": true,
+  "dataSHA256": "41da3df4189bfac978fd46eca678e6db469c5b6f2e2e32af9fa7f9c2aa107150",
+  "cpuArrayBytes": 1048576,
+  "colorSpace": "",
+  "format": 1023,
+  "type": 1009,
+  "filters": [
+    1006,
+    1008
+  ],
+  "channels": {
+    "R": {
+      "min": 0.396078431372549,
+      "max": 0.615686274509804,
+      "mean": 0.5107892803117341
+    },
+    "G": {
+      "min": 0.8666666666666667,
+      "max": 0.9607843137254902,
+      "mean": 0.9175666360294118
+    }
+  },
+  "ownership": "One application/module-lifetime procedural DataTexture. No new async loader, retry, install/release or per-scene disposal API; retained exactly as legacy microtextures."
+}

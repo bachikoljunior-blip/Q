@@ -1,0 +1,296 @@
+{
+  "source": {
+    "file": "/workspace/scratch/e72662e3b71f/Q-ps4-v53/docs/evidence/skin-source-v38/young_lightskinned_female_diffuse.png",
+    "sha256": "b2a6ac8cd4f9febdb447368e29c76cd68410bb66e46d9dcfa2d5f75126eea8fc",
+    "bytes": 4391156,
+    "crc32": "fa5bc375",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "descriptorSha256": "0bdea7786201f0b1132a24088336a97496ccdc54e9984db65d253a6a6d66f24f",
+    "licenseSha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c"
+  },
+  "originalUVMaxError": 0.0,
+  "originalUVCorners": 1015,
+  "syntheticCapCorners": 47,
+  "neck": {
+    "vertices": 46,
+    "corners": 47,
+    "referenceLinearRGB": [
+      0.6899927594121295,
+      0.4283721897289286,
+      0.28785097247276076
+    ],
+    "hypotheticalLinearTint": [
+      0.5902093990793519,
+      0.5655855545124648,
+      0.5628932716370926
+    ],
+    "maxLocalChannelDelta255": 9.659978387002619
+  },
+  "eyeProbes": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "outerFaceEyeApertureProbes": 51,
+      "regionCounts": {
+        "0": 51
+      },
+      "sourceColorRGB255": {
+        "min": [
+          86.97772047108106,
+          52.56095436742235,
+          43.746719476661184
+        ],
+        "max": [
+          204.3498699671307,
+          159.3512964172381,
+          132.11681854101116
+        ]
+      },
+      "independentIrisCenterVisibleBoth": true
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "outerFaceEyeApertureProbes": 51,
+      "regionCounts": {
+        "0": 51
+      },
+      "sourceColorRGB255": {
+        "min": [
+          86.97772047108106,
+          52.56095436742235,
+          43.746719476661184
+        ],
+        "max": [
+          204.3498699671307,
+          159.3512964172381,
+          132.11681854101116
+        ]
+      },
+      "independentIrisCenterVisibleBoth": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "outerFaceEyeApertureProbes": 51,
+      "regionCounts": {
+        "0": 51
+      },
+      "sourceColorRGB255": {
+        "min": [
+          86.97772047108106,
+          52.56095436742235,
+          43.746719476661184
+        ],
+        "max": [
+          204.3498699671307,
+          159.3512964172381,
+          132.11681854101116
+        ]
+      },
+      "independentIrisCenterVisibleBoth": true
+    }
+  ],
+  "seconds": 0.6310825969994767
+}
+[
+  {
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleFaceRays": 294,
+    "visibleFaceRegionCounts": {
+      "0": 294
+    },
+    "knownScalpRectangleHits": 1,
+    "frontDiagnosticHits": 202,
+    "frontDiagnosticAreaPx2": 3232,
+    "frontDiagnosticColor": {
+      "p05RGB": [
+        154.57642877213317,
+        110.56058630734375,
+        92.15501315128434
+      ],
+      "p50RGB": [
+        178.9432689703277,
+        143.4598669873321,
+        120.58047211411568
+      ],
+      "p95RGB": [
+        184.32288384646156,
+        152.44500546907815,
+        132.77870536326265
+      ],
+      "medianMaxChannelDeltaFromFlat": 12.494585078536794,
+      "p95MaxChannelDeltaFromFlat": 26.791184233406206
+    },
+    "fullVisibleColor": {
+      "p05RGB": [
+        143.9991520436195,
+        95.40687717619613,
+        73.41293218693438
+      ],
+      "p50RGB": [
+        176.3735741657768,
+        138.80496202143286,
+        116.18875646228128
+      ],
+      "p95RGB": [
+        184.20429760463475,
+        152.03164763995684,
+        132.22452124731856
+      ],
+      "medianMaxChannelDeltaFromFlat": 13.56740639771602,
+      "p95MaxChannelDeltaFromFlat": 41.467818883706045
+    },
+    "sameTriangleOriginalTexelsPerPixel": {
+      "samples": 80,
+      "p05": 4.61468651116375,
+      "p50": 5.412755791681193,
+      "p95": 8.516861017357648
+    },
+    "faceImagePixelBBox": [
+      604,
+      127,
+      676,
+      207
+    ]
+  },
+  {
+    "viewport": [
+      844,
+      390
+    ],
+    "visibleFaceRays": 87,
+    "visibleFaceRegionCounts": {
+      "0": 87
+    },
+    "knownScalpRectangleHits": 0,
+    "frontDiagnosticHits": 62,
+    "frontDiagnosticAreaPx2": 992,
+    "frontDiagnosticColor": {
+      "p05RGB": [
+        167.60072899625584,
+        122.90632075114324,
+        102.75143267565755
+      ],
+      "p50RGB": [
+        177.836221944025,
+        141.5777617939512,
+        119.34514981973587
+      ],
+      "p95RGB": [
+        183.60151126913442,
+        151.24288014049512,
+        130.92227449285892
+      ],
+      "medianMaxChannelDeltaFromFlat": 9.476224760984358,
+      "p95MaxChannelDeltaFromFlat": 20.22714880231037
+    },
+    "fullVisibleColor": {
+      "p05RGB": [
+        150.64295494003304,
+        103.99591359454645,
+        80.77346115725713
+      ],
+      "p50RGB": [
+        176.2596514906002,
+        139.27287747205136,
+        115.89134141544498
+      ],
+      "p95RGB": [
+        183.96189972765768,
+        150.8784622764522,
+        130.89397130313606
+      ],
+      "medianMaxChannelDeltaFromFlat": 11.731133178339405,
+      "p95MaxChannelDeltaFromFlat": 33.679325970809465
+    },
+    "sameTriangleOriginalTexelsPerPixel": {
+      "samples": 4,
+      "p05": 9.044445012096194,
+      "p50": 9.989451270541554,
+      "p95": 12.455818107976143
+    },
+    "faceImagePixelBBox": [
+      402,
+      67,
+      438,
+      111
+    ]
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "visibleFaceRays": 397,
+    "visibleFaceRegionCounts": {
+      "0": 397
+    },
+    "knownScalpRectangleHits": 2,
+    "frontDiagnosticHits": 298,
+    "frontDiagnosticAreaPx2": 4768,
+    "frontDiagnosticColor": {
+      "p05RGB": [
+        159.5293457314138,
+        115.94444236012829,
+        96.4823267317333
+      ],
+      "p50RGB": [
+        178.54283342780212,
+        142.78932345317088,
+        120.88355444097041
+      ],
+      "p95RGB": [
+        184.29636636678615,
+        152.34298251649375,
+        132.68212173984278
+      ],
+      "medianMaxChannelDeltaFromFlat": 11.944964462133754,
+      "p95MaxChannelDeltaFromFlat": 25.32057784006874
+    },
+    "fullVisibleColor": {
+      "p05RGB": [
+        149.7191190052436,
+        99.50700367097559,
+        74.9573363814007
+      ],
+      "p50RGB": [
+        176.9044936004977,
+        139.8463494602712,
+        117.79608193766711
+      ],
+      "p95RGB": [
+        184.2717979695442,
+        151.71893245403885,
+        132.35288214064718
+      ],
+      "medianMaxChannelDeltaFromFlat": 13.305264110244423,
+      "p95MaxChannelDeltaFromFlat": 37.72279408949648
+    },
+    "sameTriangleOriginalTexelsPerPixel": {
+      "samples": 148,
+      "p05": 3.9494670916704178,
+      "p50": 4.64164104238848,
+      "p95": 7.549530611097832
+    },
+    "faceImagePixelBBox": [
+      152,
+      148,
+      236,
+      244
+    ]
+  }
+]

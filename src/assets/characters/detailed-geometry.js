@@ -1,4 +1,5 @@
 import {arrowGeometry} from '../../projectile-geometry.js';
+import {upperCloth} from './cloth-material.js';
 // Q costumes/surfaces and a registered CC0 MakeHuman anatomical head.
 // The CC0 KayKit models alongside this file remain a separate, unmodified asset family.
 import * as T from 'three';
@@ -236,13 +237,13 @@ function makeHuman(type,options){
     for(const s of [-1,1])mesh(head,shapes.box,m.metal,[s*.094,-.011,.105],[.058,.125,.038],[0,s*.18,s*.12]);
     beam(head,m.trim,[0,.19,.07],[0,.005,.148],.012);
   }
-  const arms=[],legs=[];
+  const arms=[],legs=[],sleeves=[];
   for(const [i,s]of [-1,1].entries()){
     const shoulder=group(chest,`arm-${i}`,s*.313*width,.46,0),elbow=group(shoulder,`elbow-${i}`,0,-.33,0),hand=group(elbow,`hand-${i}`,0,-.31,0);
     // One sleeve runs through shoulder, elbow and wrist; weights blend only
     // across anatomical joint collars, while rigid armor stays on its bone.
-    tailored(shoulder,m.cloth,[[-.643,.039,.038],[-.60,.047,.043],[-.52,.061,.059],[-.43,.067,.066],[-.37,.060,.059],[-.33,.061,.063],[-.29,.068,.069],[-.20,.085,.083],[-.11,.091,.089],[-.04,.109,.108],[.035,.080,.083],[.065,.018,.025]],
-      {axis:'y',joints:['chest',shoulder.name,elbow.name,hand.name],centres:[.010,-.33,-.62],widths:[.14,.16,.09]},12,.035);
+    sleeves.push(tailored(shoulder,m.cloth,[[-.643,.039,.038],[-.60,.047,.043],[-.52,.061,.059],[-.43,.067,.066],[-.37,.060,.059],[-.33,.061,.063],[-.29,.068,.069],[-.20,.085,.083],[-.11,.091,.089],[-.04,.109,.108],[.035,.080,.083],[.065,.018,.025]],
+      {axis:'y',joints:['chest',shoulder.name,elbow.name,hand.name],centres:[.010,-.33,-.62],widths:[.14,.16,.09]},12,.035));
     if(p.armored){
       mesh(shoulder,new T.SphereGeometry(1,12,6,0,Math.PI*2,0,Math.PI*.62),m.metal,[s*.017,-.035,0],[.122,.113,.122]);
       tailored(elbow,m.metal,[[-.268,.051,.054],[-.23,.060,.062],[-.10,.071,.074],[-.065,.069,.073]],null,12);
@@ -263,6 +264,7 @@ function makeHuman(type,options){
     for(let row=0;row<3;row++)beam(foot,m.dark,[-.026,-.001-row*.013,.015+row*.027],[.026,-.001-row*.013,.021+row*.027],.003);
     beam(knee,m.trim,[-.062,-.13,.058],[.062,-.13,.058],.007);legs.push(hip);
   }
+  if(type==='npc')upperCloth([torso,...sleeves],m.cloth);
   const right=g.getObjectByName('hand-1'),left=g.getObjectByName('hand-0');
   if(['player','soldier','boss'].includes(type)){
     blade(right,m);if(type==='player'){blade(right,m,'greatsword');blade(right,m,'spear');}

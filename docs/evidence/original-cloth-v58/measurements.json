@@ -1,0 +1,187 @@
+{
+  "file": "original-wool-basecolor.png",
+  "sha256": "ba1db9154df3a40cbb18cb5e0b0f4cae539efa9937263079a647953d7f9fa260",
+  "bytes": 3416517,
+  "format": "PNG",
+  "mode": "RGB",
+  "width": 1254,
+  "height": 1254,
+  "embeddedMetadata": {},
+  "rgbCodeValueMean": [
+    118.26325201142627,
+    113.85774135207528,
+    110.48920964874125
+  ],
+  "rgbCodeValueStd": [
+    26.85397329381206,
+    27.19566953861457,
+    25.8147515472853
+  ],
+  "encodedLuma": {
+    "mean": 114.55114492927255,
+    "std": 26.99627096483835,
+    "percentiles0_1_50_99_100": [
+      22.063000000000002,
+      54.6366,
+      114.702,
+      173.20059999999998,
+      216.06419999999997
+    ],
+    "block8x8MeanMinMax": [
+      112.03574696227336,
+      117.98619304262616
+    ],
+    "topBottomQuarterMeans": [
+      114.48036230133859,
+      114.62235405073191
+    ],
+    "leftRightQuarterMeans": [
+      114.46171623584084,
+      114.60266863184306
+    ]
+  },
+  "wrapBoundary": {
+    "leftRight": {
+      "edgeMeanAbsCodeValue": 27.86549707602339,
+      "edgeRmsCodeValue": 35.05759671910352,
+      "edgeMaxAbsCodeValue": 132.0,
+      "internalAdjacentMeanAbsCodeValue": 12.536769806690419,
+      "edgeToInternalMeanRatio": 2.222701501717977,
+      "edgePercentileAmongInternalColumnOrRowMeans": 100.0,
+      "internalCutMeanP05P50P95": [
+        11.30930356193514,
+        12.454545454545455,
+        13.9565124933546
+      ]
+    },
+    "topBottom": {
+      "edgeMeanAbsCodeValue": 28.33705475810739,
+      "edgeRmsCodeValue": 35.46332652065632,
+      "edgeMaxAbsCodeValue": 107.0,
+      "internalAdjacentMeanAbsCodeValue": 12.282631413475285,
+      "edgeToInternalMeanRatio": 2.307083376858381,
+      "edgePercentileAmongInternalColumnOrRowMeans": 100.0,
+      "internalCutMeanP05P50P95": [
+        11.033864965443913,
+        12.264221158958001,
+        13.601648059542795
+      ]
+    }
+  },
+  "spatialFrequency": {
+    "horizontal": {
+      "method": "Mean of row/column Hann-windowed, mean-removed 1D spectra; local peaks above 8 cycles/image",
+      "peaks": [
+        {
+          "cyclesPerImage": 83,
+          "pixelPeriod": 15.108433734939759,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 3.0120481927710845,
+          "fractionOfNonDCPower": 0.03019851725564719
+        },
+        {
+          "cyclesPerImage": 41,
+          "pixelPeriod": 30.585365853658537,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 6.097560975609756,
+          "fractionOfNonDCPower": 0.010527860190925921
+        },
+        {
+          "cyclesPerImage": 43,
+          "pixelPeriod": 29.162790697674417,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 5.813953488372093,
+          "fractionOfNonDCPower": 0.010048679224195585
+        },
+        {
+          "cyclesPerImage": 37,
+          "pixelPeriod": 33.891891891891895,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 6.756756756756757,
+          "fractionOfNonDCPower": 0.007072125379987735
+        },
+        {
+          "cyclesPerImage": 127,
+          "pixelPeriod": 9.874015748031496,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 1.968503937007874,
+          "fractionOfNonDCPower": 0.006908215514750585
+        }
+      ],
+      "bandFractions": {
+        "1to8": 0.16750719641547251,
+        "9to64": 0.27058032613153804,
+        "65to249": 0.4627149466377855,
+        "250to500": 0.09257800831137968,
+        "above500": 0.006619522503824313
+      }
+    },
+    "vertical": {
+      "method": "Mean of row/column Hann-windowed, mean-removed 1D spectra; local peaks above 8 cycles/image",
+      "peaks": [
+        {
+          "cyclesPerImage": 86,
+          "pixelPeriod": 14.581395348837209,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 2.9069767441860463,
+          "fractionOfNonDCPower": 0.0818621946217336
+        },
+        {
+          "cyclesPerImage": 43,
+          "pixelPeriod": 29.162790697674417,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 5.813953488372093,
+          "fractionOfNonDCPower": 0.008758363569041057
+        },
+        {
+          "cyclesPerImage": 48,
+          "pixelPeriod": 26.125,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 5.208333333333333,
+          "fractionOfNonDCPower": 0.007949194460690775
+        },
+        {
+          "cyclesPerImage": 41,
+          "pixelPeriod": 30.585365853658537,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 6.097560975609756,
+          "fractionOfNonDCPower": 0.007624365688898273
+        },
+        {
+          "cyclesPerImage": 51,
+          "pixelPeriod": 24.58823529411765,
+          "millimetresPerPeriodIfPromptWidthIs250mm": 4.901960784313726,
+          "fractionOfNonDCPower": 0.006323332943135855
+        }
+      ],
+      "bandFractions": {
+        "1to8": 0.15913160096552958,
+        "9to64": 0.2699594392906474,
+        "65to249": 0.48560302252835685,
+        "250to500": 0.08120196062022757,
+        "above500": 0.0041039765952385916
+      }
+    }
+  },
+  "promptScaleOnly": {
+    "fieldWidthMetres": 0.25,
+    "requestedYarnWidthMm": [
+      0.5,
+      1
+    ],
+    "requestedYarnWidthInActualImagePixels": [
+      2.508,
+      5.016
+    ],
+    "physicalCalibration": false,
+    "periodIsNotYarnDiameter": true
+  },
+  "dialogueBoundary": {
+    "parentReportedVisibleGarmentAreaPixelsSquared": [
+      25000,
+      33000
+    ],
+    "equivalentSquareSidePixels": [
+      158.11388300841898,
+      181.6590212458495
+    ],
+    "actualUvMappingTextureFootprintMipsAnisotropyOrShadingMeasured": false
+  },
+  "limits": [
+    "Statistics describe original generated pixels only.",
+    "Spectrum period assumes prompt field width; neither physical yarn diameter nor real fabric is established.",
+    "Equal or nearby edge statistics do not establish tileability or its appearance on a model.",
+    "No game render, generated screenshot, runtime adoption or quality acceptance."
+  ]
+}

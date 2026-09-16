@@ -1,3 +1,15 @@
+## 2026-09-16: 上衣の物理尺度修復を新規結合検証（v57）
+
+[結合・復旧・採否と次地点](CLOTH_INTEGRATION_V57.md)。ミラ上衣のcm単位の規則格子を約2mmの設計尺度へ修復し、身体形状/動作/他13役/全27媒体を保持。実会話3viewportの同じ投影/接触条件で粗い周期の縮小を確認したが、実WebGLや自然な衣服の合格ではない。+1draw、共有512²データ1MiB/推定full-mip1,398,100 B、Node初回48.18msの費用を明記。生成布v58は画像を正式取得・独立点検したがruntime不採用、身体v54も棄却を保持する。
+
+旧外套テストの2件失敗を保存し、旧fixtureを変えず上衣変更だけ比較条件へ合成するtest-only修復を独立確認。外套UVと髪色の故意差を引続き検出。再結合27工程/343tests全成功140.434495秒、任意単体2tests成功。通常34files14,039,068 B/初期165,611 B/3chunks、27媒体12,883,257 B不変、任意HTML17,311,728 B。単体必須解除は制作/配信判定の制約解除で、元から複数ファイルだった通常SiteのCPU改善としない。
+
+復旧後の音PR52/死亡開始PR53/空中死亡PR54は全tree一致・requiredCI成功。今回のv57完成sourceは同名featureの早期研究checkpoint0a58から通常保存/PR/CIへ進める地点。早期checkpointは布runtimeの完成保存ではない。fresh PR39open未merge・実main547676fdce8d8e97abed9f065aad0b6e24af2fd6・同一owner限定Site23は不変、03:14以降merge mutation0。実main進行後だけ順番にretarget/CI/通常mergeと同一Site反映。公式preview監督不在、実画面/実聴/実機/指定比較未確認で、9/20までのPS4全画面達成根拠は不足する。
+
+次の有限地点は死亡blend後半の大きいstepの同条件原因診断。既存Ultra actor担当が読取調査中、実装未着手。安全な修復範囲を確定できた時だけentry/空中支持/終端を保持して実装する。停止した担当やdisabled automationを背景稼働と称さず、未採用試作・テスト件数を目標達成に数えない。人間の準備待ちは設けない。
+
+---
+
 ## 2026-09-16: 空中死亡の落下と休止を結合検証（v55）
 
 [結合記録](AIRBORNE_INTEGRATION_V55.md)。音PR52 `7fbe77e…` /CI35077524542と死亡開始PR53 `f8ef1de5a9a3913a84c36972b0d9f74e1de464c8` /CI35079065319はremote保存・必須CI成功。後者の全tree一致確認後、空中死亡の縦運動だけを既存60Hz経路へ結合した。deadのy/vertical/grounded以外の世界/敵/進行/横移動は凍結、保存/復活を維持。blur/pagehide停止漏れを独立指摘から修復、復帰時death panelを保持する。

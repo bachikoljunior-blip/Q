@@ -1,0 +1,53 @@
+{
+  "at": "2026-09-16T09:45:49.920Z",
+  "source": {
+    "src/assets/characters/detailed-geometry.js": {
+      "sha256": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+      "bytes": 31318
+    },
+    "src/assets/characters/cloth-material.js": {
+      "sha256": "39ba2cfce1096be273543b313be1d12781ae43c59e8581f5cb9aa95d0a04642f",
+      "bytes": 2906
+    }
+  },
+  "coldMaterialMs": 48.182376000000005,
+  "cachedMaterialMs": 0.013902000000001635,
+  "timingBoundary": "One local Node observation of first lazy material/data construction versus cached lookup after module imports; not actor frame time, GPU upload time or device latency.",
+  "texture": {
+    "dimensions": [
+      512,
+      512
+    ],
+    "sha256": "41da3df4189bfac978fd46eca678e6db469c5b6f2e2e32af9fa7f9c2aa107150",
+    "dataBytes": 1048576,
+    "rgba8FullMipPayloadBytes": 1398100,
+    "retainedCPUDataBytes": 1048576,
+    "channels": {
+      "R": {
+        "min": 0.396078431372549,
+        "max": 0.615686274509804,
+        "mean": 0.5107892803117341
+      },
+      "G": {
+        "min": 0.8666666666666667,
+        "max": 0.9607843137254902,
+        "mean": 0.9175666360294118
+      }
+    },
+    "repeat": [
+      1,
+      1
+    ],
+    "bumpScale": 0.00035,
+    "noDecode": true,
+    "fetches": 0,
+    "concurrentMediaLoads": 0,
+    "owner": "Module singleton shared by cached Mira upper-materials. Retained for existing template/module lifetime, as original microtextures; no scene-quality/title churn, no asynchronous callback, no disposal API introduced."
+  },
+  "npc": {
+    "draws": 13,
+    "triangles": 6718,
+    "bufferBytes": 319180
+  },
+  "boundary": "GPU payload is arithmetic RGBA8+mips, not measured allocation/driver overhead/peak process memory. CPU texture data remains retained; no texture clone per actor. Image-loader retry/failure/release is not applicable because no asynchronous image exists; coarse surface uses standard mip filtering on all existing quality levels."
+}

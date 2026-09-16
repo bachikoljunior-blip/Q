@@ -1,0 +1,73 @@
+{
+  "baseCommit": "21d381c82cd5cf3d7febd72ad4c877157718ee8d",
+  "root": "/workspace/scratch/e72662e3b71f/Q-ps4-v53",
+  "files": {
+    "src/actor-models.js": {
+      "sha256": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+      "bytes": 38244
+    },
+    "src/assets/characters/detailed-geometry.js": {
+      "sha256": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4",
+      "bytes": 31187
+    },
+    "src/skin-materials.js": {
+      "sha256": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63",
+      "bytes": 1532
+    },
+    "src/dialogue-camera.js": {
+      "sha256": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e",
+      "bytes": 5612
+    },
+    "src/scene.js": {
+      "sha256": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b",
+      "bytes": 30277
+    },
+    "src/assets/characters/identity-head-data.js": {
+      "sha256": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe",
+      "bytes": 126806
+    },
+    "src/assets/characters/identity-head-provenance.json": {
+      "sha256": "1a9719383cef9c042553294c9c5b1d82f5ee3103aeab3bf2cae0636faa5ff1f5",
+      "bytes": 7776
+    },
+    "src/assets/characters/sources/makehuman-hm08.obj": {
+      "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+      "bytes": 1749303
+    },
+    "docs/evidence/skin-source-v38/young_lightskinned_female_diffuse.png": {
+      "sha256": "b2a6ac8cd4f9febdb447368e29c76cd68410bb66e46d9dcfa2d5f75126eea8fc",
+      "bytes": 4391156
+    },
+    "docs/evidence/skin-source-v38/young_caucasian_female.mhmat": {
+      "sha256": "0bdea7786201f0b1132a24088336a97496ccdc54e9984db65d253a6a6d66f24f",
+      "bytes": 1464
+    },
+    "docs/evidence/skin-source-v38/LICENSE-CC0.md": {
+      "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c",
+      "bytes": 6962
+    },
+    "docs/evidence/skin-source-v38/provenance.json": {
+      "sha256": "94d74fc3784e0d316d8bd389da30848e84f408431863b21574c70bad799e2b40",
+      "bytes": 2362
+    },
+    "docs/evidence/cloak-material-v36/provenance.json": {
+      "sha256": "835955500a274088bd3ee0588248796e1f8db86726e85fce38d41021908d02a0",
+      "bytes": 3923
+    },
+    "docs/evidence/cloak-material-v36/source/hessian_380_diff_1k.jpg": {
+      "sha256": "5727302df3a9c845e6320ff186ac13fc7d0f1ffcd6fda71667e808e09379fe6f",
+      "bytes": 944914
+    },
+    "docs/evidence/cloak-material-v36/source/hessian_380_nor_gl_1k.jpg": {
+      "sha256": "3994fd74148cb413892edd08155976497b3e7e15a403a182f07325a6b1e7be1a",
+      "bytes": 1076074
+    },
+    "docs/evidence/cloak-material-v36/source/hessian_380_rough_1k.jpg": {
+      "sha256": "a828755c5ddc9af0697eeed46427c5145df1dea5f1e2839f643156a285282fed",
+      "bytes": 956823
+    }
+  },
+  "imageWrites": 0,
+  "runtimeWrites": 0,
+  "networkSourcesAcquiredInV56": 0
+}

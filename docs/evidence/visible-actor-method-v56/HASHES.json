@@ -1,0 +1,70 @@
+{
+  "files": {
+    "FETCH_LIMITS.json": {
+      "bytes": 942,
+      "sha256": "90b8603a84822bca067e6135c53fdc959afb62689ed16fe1ea630cb8c62a79b6"
+    },
+    "REPORT.md": {
+      "bytes": 12858,
+      "sha256": "7ea089ac2b85ea189d0a5a7f32fa3a070e6c967ceff56053d2f21ab9be58cbf8"
+    },
+    "SOURCE_HASHES.json": {
+      "bytes": 2879,
+      "sha256": "82e4ef0d4bbd08836e75eb5b53541ed0d7404e1c0b8def9d592325e0ac7559df"
+    },
+    "TIMING.json": {
+      "bytes": 653,
+      "sha256": "9d2bc9467964a0ffed734588c4a6f325f63f00ff16516bce174b4fe08629c602"
+    },
+    "eye-probes.json": {
+      "bytes": 169886,
+      "sha256": "9ac9520fa30eacaa9cea4b491c7529883c7c46056de072b16ad11cc02b0272d9"
+    },
+    "eye-probes.mjs": {
+      "bytes": 3922,
+      "sha256": "9bf2b85d60789d4fcf1b348f68d3d71ac0531a11baa0367310f6abb68e4d924e"
+    },
+    "eye-run.txt": {
+      "bytes": 4476,
+      "sha256": "5aad0150b3022d26fbdc920975094ad63c3362d46ef27940aa3be6932b53ef22"
+    },
+    "face-run.txt": {
+      "bytes": 6708,
+      "sha256": "d7d2d267e8ae94c8934d9f417be8fcbd5c66b4248b1ce3e187852369c4f84608"
+    },
+    "face-sample.json": {
+      "bytes": 11257,
+      "sha256": "0f7ba86cf99cb0869a2249a04c69058c8ca58a0ab9e043a616f191097fa06b2f"
+    },
+    "face-sample.py": {
+      "bytes": 6320,
+      "sha256": "440ff9a5a627fb976c283be7528aa5aba27b935fe77c127c2b078e9dc0a983c4"
+    },
+    "uv-run.txt": {
+      "bytes": 4326,
+      "sha256": "c0c9a7213d74abfb64853df32136f4c485e23a9a3aaa7b082ccb77b77f8e2a43"
+    },
+    "uv-scale.json": {
+      "bytes": 4417943,
+      "sha256": "1380300e066fa381b680e38366dae775c52c12d9959bcfeceafccccfcc786934"
+    },
+    "uv-scale.mjs": {
+      "bytes": 5535,
+      "sha256": "57fdd13c3e68e5c0e01e0732becabff5eec51b00eae293b0ee0d7ea3205efda3"
+    },
+    "visibility-run.txt": {
+      "bytes": 533,
+      "sha256": "fdfd5b992c76073c358f4bcfdc57ccfe733d5d866c0a786e6b9ce00bcfc1a07f"
+    },
+    "visibility.json": {
+      "bytes": 2335204,
+      "sha256": "ee0963c6247b3d48de63b2ff19f778702cb8beb331395ba9ce2f295af718e3e7"
+    },
+    "visibility.mjs": {
+      "bytes": 5569,
+      "sha256": "65e68ea0a4a8339c23622b5ab88a7328511cd946e3a13a9c141af7d8d7434884"
+    }
+  },
+  "sourceBase": "21d381c82cd5cf3d7febd72ad4c877157718ee8d",
+  "boundary": "All listed files may be copied byte-for-byte into evidence. Source images remain at the exact checked paths in SOURCE_HASHES.json; no additional duplicate bitmap is included."
+}

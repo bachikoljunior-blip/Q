@@ -1,0 +1,134 @@
+{
+  "at": "2026-09-16T09:48:20.999Z",
+  "baselineSource": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4",
+  "candidateSource": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+  "boundary": "Native authored triangle multisets include winding, position, normal, skin indices/weights, normalized material family/color. UV expected to change only on Mira upper cloth. Mesh counts include hidden weapons and are not a render draw benchmark.",
+  "rows": [
+    {
+      "role": "player",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 8208,
+      "meshesBefore": 22,
+      "meshesAfter": 22,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "npc",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": false,
+      "triangles": 6718,
+      "meshesBefore": 12,
+      "meshesAfter": 13,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "sena",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 6786,
+      "meshesBefore": 12,
+      "meshesAfter": 12,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "smith",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 6242,
+      "meshesBefore": 11,
+      "meshesAfter": 11,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "healer",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 7038,
+      "meshesBefore": 11,
+      "meshesAfter": 11,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "patient",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 6270,
+      "meshesBefore": 10,
+      "meshesAfter": 10,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "porter",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 6450,
+      "meshesBefore": 10,
+      "meshesAfter": 10,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "scout",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 6798,
+      "meshesBefore": 11,
+      "meshesAfter": 11,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "traveler",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 6578,
+      "meshesBefore": 10,
+      "meshesAfter": 10,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "courier",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 6398,
+      "meshesBefore": 10,
+      "meshesAfter": 10,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "soldier",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 7454,
+      "meshesBefore": 13,
+      "meshesAfter": 13,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "ranger",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 7108,
+      "meshesBefore": 12,
+      "meshesAfter": 12,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "wolf",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 4028,
+      "meshesBefore": 6,
+      "meshesAfter": 6,
+      "nonTargetMaterialsExact": true
+    },
+    {
+      "role": "boss",
+      "physicalTrianglesExact": true,
+      "allAttributesExact": true,
+      "triangles": 7950,
+      "meshesBefore": 14,
+      "meshesAfter": 14,
+      "nonTargetMaterialsExact": true
+    }
+  ]
+}

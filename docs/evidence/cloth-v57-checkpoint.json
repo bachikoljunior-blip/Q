@@ -1,0 +1,14 @@
+{
+  "state": "research and original image preserved before runtime adoption",
+  "base": "75dd0242f814b488134f84f57c0eb98ed4e454a7",
+  "runtimeChanges": false,
+  "imageAdopted": false,
+  "imageSha256": "ba1db9154df3a40cbb18cb5e0b0f4cae539efa9937263079a647953d7f9fa260",
+  "next": "Complete physical-UV cloth candidate, independent review and fresh integration gates before PR; separately review original image seam/scale conditions",
+  "priorPR54CI": {
+    "run": 35080163831,
+    "conclusion": "success"
+  },
+  "main": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+  "siteVersion": 23
+}
