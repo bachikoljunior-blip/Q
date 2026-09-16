@@ -1,0 +1,1049 @@
+{
+  "result": "No further required source correction in the bounded reviewed conditions; perceptual/device acceptance not assessed",
+  "base": "337a7e2717d9f130bc6468a45003db2ddddd65db",
+  "sourceHash": "04b1a72d8d1f5305dbc0e47dbe10e15c824fd0a29955d5fc08bcb40b8d544a96",
+  "sourceBytes": 35442,
+  "baselineHash": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc",
+  "changedSourceFiles": [
+    "src/actor-models.js",
+    "src/assets/characters/detailed-provenance.json"
+  ],
+  "animateCapeExact": true,
+  "animationProvenanceExact": true,
+  "finishedAt": "2026-09-16T07:06:36.275623+00:00",
+  "reviewStart": "2026-09-16T06:50:42Z",
+  "elapsedMinutes": 15.904593716666666,
+  "measuredRunSeconds": 17.189706423,
+  "terrainCases": 54,
+  "flatCases": 15,
+  "pairedTriangleSamples": 10784560,
+  "minimumMeters": {
+    "skin": 0.000870316651752745,
+    "rigid": 0.028701788552501384,
+    "cape": 0.011978075823508405
+  },
+  "continuousMinimumMeters": {
+    "skin": 0.005958929304539895,
+    "rigid": 0.03126752931526733,
+    "cape": 0.011999984969778943
+  },
+  "preflightCases": 48,
+  "crossingCases": [
+    {
+      "role": "player",
+      "t": 0.08,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 7454
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 7454
+      }
+    },
+    {
+      "role": "player",
+      "t": 0.25,
+      "before": {
+        "crossed": 0,
+        "bodyTriangles": 7454
+      },
+      "after": {
+        "crossed": 0,
+        "bodyTriangles": 7454
+      }
+    },
+    {
+      "role": "player",
+      "t": 0.5,
+      "before": {
+        "crossed": 15,
+        "bodyTriangles": 7454
+      },
+      "after": {
+        "crossed": 13,
+        "bodyTriangles": 7454
+      }
+    },
+    {
+      "role": "player",
+      "t": 0.8,
+      "before": {
+        "crossed": 42,
+        "bodyTriangles": 7454
+      },
+      "after": {
+        "crossed": 38,
+        "bodyTriangles": 7454
+      }
+    },
+    {
+      "role": "player",
+      "t": 1.1,
+      "before": {
+        "crossed": 42,
+        "bodyTriangles": 7454
+      },
+      "after": {
+        "crossed": 38,
+        "bodyTriangles": 7454
+      }
+    }
+  ],
+  "flatSettled": {
+    "before": {
+      "parts": {
+        "pelvis": 0.008168469489572769,
+        "spine": 0.07376196280715507,
+        "chest": 0.02880304332695377,
+        "head": 0.10229015260614224,
+        "hand-0": 0.14735349830229275,
+        "elbow-0": 0.06726978014389068,
+        "arm-0": 0.07177051802093701,
+        "hand-1": 0.15238432414743494,
+        "elbow-1": 0.0977858980132909,
+        "arm-1": 0.10577132604224324,
+        "knee-0": 0.15501397450079438,
+        "leg-0": 0.07936964619692127,
+        "knee-1": 0.15501397450079438,
+        "leg-1": 0.07936964619692127,
+        "eyelid-0": 0.3519728953816622,
+        "eyelid-1": 0.37108016881677675,
+        "neck": 0.1857252739898442,
+        "finger-tip-0-0": 0.18600054161270332,
+        "finger-0-0": 0.19192452019864642,
+        "finger-tip-0-1": 0.19173035133173696,
+        "finger-0-1": 0.1987485976026688,
+        "finger-tip-0-2": 0.19938439271709235,
+        "finger-0-2": 0.20585550362390959,
+        "finger-tip-0-3": 0.2085777807695426,
+        "finger-0-3": 0.21318863119657921,
+        "finger-tip-0-4": 0.21837414239459685,
+        "finger-0-4": 0.20468523712269582,
+        "finger-tip-1-0": 0.18895517061922545,
+        "finger-1-0": 0.1992079479352422,
+        "finger-tip-1-1": 0.1832994895092545,
+        "finger-1-1": 0.19524002830988602,
+        "finger-tip-1-2": 0.18125552510854484,
+        "finger-1-2": 0.19235217738674248,
+        "finger-tip-1-3": 0.18210090986077015,
+        "finger-1-3": 0.19032837068885872,
+        "finger-tip-1-4": 0.20626355848318234,
+        "finger-1-4": 0.19908685011036784,
+        "foot-0": 0.10513780559246556,
+        "foot-1": 0.10513780559246556
+      },
+      "lowerBinMedian": 0.12085212959889782
+    },
+    "after": {
+      "parts": {
+        "pelvis": 0.015000003337859974,
+        "spine": 0.0391855714321136,
+        "chest": 0.006000000000000005,
+        "head": 0.007443224080326716,
+        "hand-0": 0.046415031316218124,
+        "elbow-0": 0.03180076006397096,
+        "arm-0": 0.05644048563579804,
+        "hand-1": 0.03266808040694605,
+        "elbow-1": 0.0198881039164341,
+        "arm-1": 0.05104760957166145,
+        "knee-0": 0.04646101180197926,
+        "leg-0": 0.051668970056797825,
+        "knee-1": 0.04646101180197926,
+        "leg-1": 0.051668970056797825,
+        "eyelid-0": 0.256548783953087,
+        "eyelid-1": 0.2748263624217574,
+        "neck": 0.1070000035166741,
+        "finger-tip-0-0": 0.04842206311421793,
+        "finger-0-0": 0.06472929852905228,
+        "finger-tip-0-1": 0.04610924725335597,
+        "finger-0-1": 0.06490926346031575,
+        "finger-tip-0-2": 0.049802602486209546,
+        "finger-0-2": 0.06735621376769799,
+        "finger-tip-0-3": 0.058300844187490264,
+        "finger-0-3": 0.07161675312512858,
+        "finger-tip-0-4": 0.08374089708367832,
+        "finger-0-4": 0.08366479549170473,
+        "finger-tip-1-0": 0.048261823848816054,
+        "finger-1-0": 0.06170645649841045,
+        "finger-tip-1-1": 0.04666003680689895,
+        "finger-1-1": 0.0622196449232407,
+        "finger-tip-1-2": 0.04992846385952493,
+        "finger-1-2": 0.06443057199309832,
+        "finger-tip-1-3": 0.057093018512780536,
+        "finger-1-3": 0.0679996881464741,
+        "finger-tip-1-4": 0.0658621202230617,
+        "finger-1-4": 0.06658085941794097,
+        "foot-0": 0.010846845663781551,
+        "foot-1": 0.010846845663781551
+      },
+      "lowerBinMedian": 0.04646101180197926
+    }
+  },
+  "attachmentErrorMeters": 1.9895196601282805e-13,
+  "worldCovarianceErrorMeters": 1.7520344258117747e-06,
+  "familyContracts": [
+    {
+      "role": "player",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": false,
+      "recoveryExact": true
+    },
+    {
+      "role": "npc",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "sena",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "smith",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "healer",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "patient",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "porter",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "scout",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "traveler",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "courier",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "soldier",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "ranger",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "wolf",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    },
+    {
+      "role": "boss",
+      "nonDeathExact": true,
+      "otherRoleDeathExact": true,
+      "recoveryExact": true
+    }
+  ],
+  "continuous": [
+    {
+      "weaponType": "sword",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.195579417081375,
+      "maxStep": 0.1297720404511521,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ],
+          "t": 0.8
+        },
+        "rigid": {
+          "min": 0.1255755866909405,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 81,
+          "world": [
+            0.05803536579847545,
+            -1.2728097146896629,
+            100.96977015139088
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "t": 0.8
+        }
+      }
+    },
+    {
+      "weaponType": "sword",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.20866550653109495,
+      "maxStep": 0.12219670575449286,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": 0.005999999999999783,
+          "path": "Q leather skin",
+          "vertex": 334,
+          "world": [
+            0.1712423026772703,
+            -1.5631362684917796,
+            101.49234561049741
+          ],
+          "t": 0.4
+        },
+        "rigid": {
+          "min": 0.032776523172883154,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 93,
+          "world": [
+            0.48678339410747895,
+            -1.3317468256848726,
+            100.98997333558923
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": 0.011999997362467152,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 111,
+          "world": [
+            -0.136322109828091,
+            -1.4345454537363054,
+            101.05166050976106
+          ],
+          "t": 0.36666666666666664
+        }
+      }
+    },
+    {
+      "weaponType": "sword",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.195579417081375,
+      "maxStep": 0.06502761272102286,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ],
+          "t": 0.8
+        },
+        "rigid": {
+          "min": 0.1255755866909405,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 81,
+          "world": [
+            0.05803536579847545,
+            -1.2728097146896629,
+            100.96977015139088
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "t": 0.8
+        }
+      }
+    },
+    {
+      "weaponType": "sword",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.20866550653109495,
+      "maxStep": 0.061172488401776325,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": 0.005973442335606816,
+          "path": "Q leather skin",
+          "vertex": 347,
+          "world": [
+            0.13311843693176956,
+            -1.3980655536903992,
+            101.00727796538153
+          ],
+          "t": 0.016666666666666666
+        },
+        "rigid": {
+          "min": 0.032135520156196584,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 93,
+          "world": [
+            0.48657873759307074,
+            -1.3323854894991913,
+            100.98991198012051
+          ],
+          "t": 0.7833333333333333
+        },
+        "cape": {
+          "min": 0.011999984969778943,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 109,
+          "world": [
+            -0.36921193856713724,
+            -1.4663118736967693,
+            101.0725632246499
+          ],
+          "t": 0.38333333333333336
+        }
+      }
+    },
+    {
+      "weaponType": "sword",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.195579417081375,
+      "maxStep": 0.03253145349807254,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ],
+          "t": 0.8
+        },
+        "rigid": {
+          "min": 0.1255755866909405,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 81,
+          "world": [
+            0.05803536579847545,
+            -1.2728097146896629,
+            100.96977015139088
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "t": 0.8
+        }
+      }
+    },
+    {
+      "weaponType": "sword",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.20866550653109495,
+      "maxStep": 0.03058889634039738,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": 0.005958929304539895,
+          "path": "Q leather skin",
+          "vertex": 347,
+          "world": [
+            0.1330298177215393,
+            -1.3977472653112544,
+            101.00629492757389
+          ],
+          "t": 0.008333333333333333
+        },
+        "rigid": {
+          "min": 0.03134380620560884,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 93,
+          "world": [
+            0.48632609850113145,
+            -1.333174472183041,
+            100.98983669184834
+          ],
+          "t": 0.775
+        },
+        "cape": {
+          "min": 0.011999984969778943,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 109,
+          "world": [
+            -0.36921193856713724,
+            -1.4663118736967693,
+            101.0725632246499
+          ],
+          "t": 0.38333333333333336
+        }
+      }
+    },
+    {
+      "weaponType": "spear",
+      "hz": 30,
+      "key": "before",
+      "entry": 1.0376195700185207,
+      "maxStep": 0.1944472008211325,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ],
+          "t": 0.8
+        },
+        "rigid": {
+          "min": -0.624235175222317,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/spear/Mesh",
+          "vertex": 0,
+          "world": [
+            0.7939947271825515,
+            -1.3871216598105043,
+            99.28953965207371
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "t": 0.8
+        }
+      }
+    },
+    {
+      "weaponType": "spear",
+      "hz": 30,
+      "key": "after",
+      "entry": 1.0391965357529125,
+      "maxStep": 0.15685676583209887,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": 0.005999999999999783,
+          "path": "Q leather skin",
+          "vertex": 334,
+          "world": [
+            0.1712423026772703,
+            -1.5631362684917796,
+            101.49234561049741
+          ],
+          "t": 0.4
+        },
+        "rigid": {
+          "min": 0.03792673835885463,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/spear/Mesh",
+          "vertex": 13,
+          "world": [
+            0.7835871218929481,
+            -1.5616044307549348,
+            101.75213396821623
+          ],
+          "t": 0.7666666666666667
+        },
+        "cape": {
+          "min": 0.011999997362467152,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 111,
+          "world": [
+            -0.136322109828091,
+            -1.4345454537363054,
+            101.05166050976106
+          ],
+          "t": 0.36666666666666664
+        }
+      }
+    },
+    {
+      "weaponType": "spear",
+      "hz": 60,
+      "key": "before",
+      "entry": 1.0376195700185207,
+      "maxStep": 0.09729459324888946,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ],
+          "t": 0.8
+        },
+        "rigid": {
+          "min": -0.624235175222317,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/spear/Mesh",
+          "vertex": 0,
+          "world": [
+            0.7939947271825515,
+            -1.3871216598105043,
+            99.28953965207371
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "t": 0.8
+        }
+      }
+    },
+    {
+      "weaponType": "spear",
+      "hz": 60,
+      "key": "after",
+      "entry": 1.0391965357529125,
+      "maxStep": 0.07852969864165182,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": 0.005973442335606816,
+          "path": "Q leather skin",
+          "vertex": 347,
+          "world": [
+            0.13311843693176956,
+            -1.3980655536903992,
+            101.00727796538153
+          ],
+          "t": 0.016666666666666666
+        },
+        "rigid": {
+          "min": 0.03792673835885463,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/spear/Mesh",
+          "vertex": 13,
+          "world": [
+            0.7835871218929481,
+            -1.5616044307549348,
+            101.75213396821623
+          ],
+          "t": 0.7666666666666667
+        },
+        "cape": {
+          "min": 0.011999984969778943,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 109,
+          "world": [
+            -0.36921193856713724,
+            -1.4663118736967693,
+            101.0725632246499
+          ],
+          "t": 0.38333333333333336
+        }
+      }
+    },
+    {
+      "weaponType": "spear",
+      "hz": 120,
+      "key": "before",
+      "entry": 1.0376195700185207,
+      "maxStep": 0.04865890186321016,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ],
+          "t": 0.8
+        },
+        "rigid": {
+          "min": -0.624235175222317,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/spear/Mesh",
+          "vertex": 0,
+          "world": [
+            0.7939947271825515,
+            -1.3871216598105043,
+            99.28953965207371
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "t": 0.8
+        }
+      }
+    },
+    {
+      "weaponType": "spear",
+      "hz": 120,
+      "key": "after",
+      "entry": 1.0391965357529125,
+      "maxStep": 0.03926757258112597,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": 0.005958929304539895,
+          "path": "Q leather skin",
+          "vertex": 347,
+          "world": [
+            0.1330298177215393,
+            -1.3977472653112544,
+            101.00629492757389
+          ],
+          "t": 0.008333333333333333
+        },
+        "rigid": {
+          "min": 0.037867625317497655,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/spear/Mesh",
+          "vertex": 13,
+          "world": [
+            0.7844435622131716,
+            -1.5617308250323019,
+            101.75256246913125
+          ],
+          "t": 0.775
+        },
+        "cape": {
+          "min": 0.011999984969778943,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 109,
+          "world": [
+            -0.36921193856713724,
+            -1.4663118736967693,
+            101.0725632246499
+          ],
+          "t": 0.38333333333333336
+        }
+      }
+    },
+    {
+      "weaponType": "greatsword",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.5615460808074104,
+      "maxStep": 0.1297720404511521,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ],
+          "t": 0.8
+        },
+        "rigid": {
+          "min": 0.0556378510248563,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 52,
+          "world": [
+            -0.007045501458184026,
+            -1.3753216052179198,
+            101.04467455483204
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "t": 0.8
+        }
+      }
+    },
+    {
+      "weaponType": "greatsword",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.5389462644478004,
+      "maxStep": 0.12219670575449286,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": 0.005999999999999783,
+          "path": "Q leather skin",
+          "vertex": 334,
+          "world": [
+            0.1712423026772703,
+            -1.5631362684917796,
+            101.49234561049741
+          ],
+          "t": 0.4
+        },
+        "rigid": {
+          "min": 0.03272934119862425,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 93,
+          "world": [
+            0.48601425514511637,
+            -1.331782621095925,
+            100.98973520377857
+          ],
+          "t": 0.7666666666666667
+        },
+        "cape": {
+          "min": 0.011999997362467152,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 111,
+          "world": [
+            -0.136322109828091,
+            -1.4345454537363054,
+            101.05166050976106
+          ],
+          "t": 0.36666666666666664
+        }
+      }
+    },
+    {
+      "weaponType": "greatsword",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.5615460808074104,
+      "maxStep": 0.06502761272102286,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ],
+          "t": 0.8
+        },
+        "rigid": {
+          "min": 0.0556378510248563,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 52,
+          "world": [
+            -0.007045501458184026,
+            -1.3753216052179198,
+            101.04467455483204
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "t": 0.8
+        }
+      }
+    },
+    {
+      "weaponType": "greatsword",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.5389462644478004,
+      "maxStep": 0.061172488401776325,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": 0.005973442335606816,
+          "path": "Q leather skin",
+          "vertex": 347,
+          "world": [
+            0.13311843693176956,
+            -1.3980655536903992,
+            101.00727796538153
+          ],
+          "t": 0.016666666666666666
+        },
+        "rigid": {
+          "min": 0.03210137148519143,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 93,
+          "world": [
+            0.4865884170222258,
+            -1.3324189101152104,
+            100.98991244589773
+          ],
+          "t": 0.7833333333333333
+        },
+        "cape": {
+          "min": 0.011999984969778943,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 109,
+          "world": [
+            -0.36921193856713724,
+            -1.4663118736967693,
+            101.0725632246499
+          ],
+          "t": 0.38333333333333336
+        }
+      }
+    },
+    {
+      "weaponType": "greatsword",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.5615460808074104,
+      "maxStep": 0.03253145349807254,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ],
+          "t": 0.8
+        },
+        "rigid": {
+          "min": 0.0556378510248563,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 52,
+          "world": [
+            -0.007045501458184026,
+            -1.3753216052179198,
+            101.04467455483204
+          ],
+          "t": 0.8
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ],
+          "t": 0.8
+        }
+      }
+    },
+    {
+      "weaponType": "greatsword",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.5389462644478004,
+      "maxStep": 0.03058889634039738,
+      "savedError": 0,
+      "worst": {
+        "skin": {
+          "min": 0.005958929304539895,
+          "path": "Q leather skin",
+          "vertex": 347,
+          "world": [
+            0.1330298177215393,
+            -1.3977472653112544,
+            101.00629492757389
+          ],
+          "t": 0.008333333333333333
+        },
+        "rigid": {
+          "min": 0.03126752931526733,
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 93,
+          "world": [
+            0.48634773425880173,
+            -1.3332491354225777,
+            100.98983777303017
+          ],
+          "t": 0.775
+        },
+        "cape": {
+          "min": 0.011999984969778943,
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 109,
+          "world": [
+            -0.36921193856713724,
+            -1.4663118736967693,
+            101.0725632246499
+          ],
+          "t": 0.38333333333333336
+        }
+      }
+    }
+  ],
+  "firstSeenError": 0,
+  "boundary": "Native CPU visible skin/rigid/cape surfaces. Keyframes 10 triangle samples; continuous phases actual vertices only, each actual timestep. No WebGL/render/PS4/device result."
+}

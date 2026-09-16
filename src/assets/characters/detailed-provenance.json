@@ -51,8 +51,8 @@
   "geometryMethod": "Continuous shaped torso, sleeves, trouser legs, boots, digits and canine trunk/tail. Smooth multi-joint weights across joint collars, explicit human spine/digits and canine hocks; UV seams retain averaged normals. Armor/equipment stay rigid. Material batches and immutable geometry shared across instances; bones and deforming cape independent. All material batches within an actor share one skeleton palette; each actor has independent cloned bones.",
   "animationRecipe": {
     "file": "../../actor-models.js",
-    "sha256": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc",
-    "bytes": 31704,
+    "sha256": "04b1a72d8d1f5305dbc0e47dbe10e15c824fd0a29955d5fc08bcb40b8d544a96",
+    "bytes": 35442,
     "origin": "Original analytic poses with a continuous saved combat clock, two-hand weapon frames and fixed-length arm IK, and visual-only contact/transition logic. No motion capture imported."
   },
   "qualityBoundary": "Smith face uses an acquired CC0 graphical skin color map; all other roles retain flat skin. Actual lit appearance, face-neck boundary, device FPS and PS4/flagship parity remain unverified. Source contains socket/crease darkness, not calibrated illumination-free albedo.",

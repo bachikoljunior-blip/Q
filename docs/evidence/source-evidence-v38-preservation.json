@@ -1,0 +1,192 @@
+{
+  "base": "5ff1388a101e6eb163c41b0110b95d79ab98a631",
+  "savedUtc": "2026-09-16T07:13:02.925042+00:00",
+  "copiedFileCount": 29,
+  "copiedBytes": 4702896,
+  "allCopySHA256MatchScratch": true,
+  "originalHASHESFilesCopiedUnchanged": true,
+  "sourceFilesComparedWithBase": 132,
+  "allSrcGitBlobIDsMatchBase": true,
+  "sourceRuntimeChanges": 0,
+  "buildArtifactGeneration": false,
+  "testsReexecuted": false,
+  "downloadsOrInstallsThisUnit": 0,
+  "imageGenerationOrEditingThisUnit": 0,
+  "copyAndVerificationSeconds": 2.156701597996289,
+  "files": [
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/HASHES.json",
+      "savedPath": "docs/evidence/skin-source-v38/HASHES.json",
+      "bytes": 2823,
+      "sha256": "488be848cad0473c5c406442eac9b20cbf1590404213845fae783e05e488d4a8"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/LICENSE-CC0.md",
+      "savedPath": "docs/evidence/skin-source-v38/LICENSE-CC0.md",
+      "bytes": 6962,
+      "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/RESEARCH.md",
+      "savedPath": "docs/evidence/skin-source-v38/RESEARCH.md",
+      "bytes": 8931,
+      "sha256": "c1787e746c3768a3495d2815910941bcec3b6aee6dd71fe6f763de13af19efed"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/acquire.py",
+      "savedPath": "docs/evidence/skin-source-v38/acquire.py",
+      "bytes": 3992,
+      "sha256": "a0eab67a169534325662a2ddc8d388b3799ce8995834e3e85dbc08fb9260c945"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/acquisition-log.txt",
+      "savedPath": "docs/evidence/skin-source-v38/acquisition-log.txt",
+      "bytes": 2881,
+      "sha256": "d27a347d1941cde2a34d6d24535081c65caaf07098b4c8958faad4462b7d6d59"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/acquisition.json",
+      "savedPath": "docs/evidence/skin-source-v38/acquisition.json",
+      "bytes": 3702,
+      "sha256": "3e4f03970f5160eb19cabcf055e69b2a402f3f8553929acc101add419862e44f"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/archive-response.json",
+      "savedPath": "docs/evidence/skin-source-v38/archive-response.json",
+      "bytes": 620,
+      "sha256": "4f9a7d46d66c4a225061551b1fba814b0c9d28492820babb6c8e05761dce68f5"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/archive-tail.bin",
+      "savedPath": "docs/evidence/skin-source-v38/archive-tail.bin",
+      "bytes": 131072,
+      "sha256": "9c5fd51b80bb0b70e8372c423e48ef33f544c17fb1bbb5cc395086ee5c613ba2"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/comparison-run.txt",
+      "savedPath": "docs/evidence/skin-source-v38/comparison-run.txt",
+      "bytes": 6146,
+      "sha256": "1362bc242e41110aa998deb8432b412a8a9aeac8703bc62ee284b525eb008ac0"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/comparison.json",
+      "savedPath": "docs/evidence/skin-source-v38/comparison.json",
+      "bytes": 7103,
+      "sha256": "65b7b4cf563dc3673c268ea37bca5b0021caef000c2281da210eda870a6efab3"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/inspect-scalp.mjs",
+      "savedPath": "docs/evidence/skin-source-v38/inspect-scalp.mjs",
+      "bytes": 3378,
+      "sha256": "1e123c66b2075a9b1607f555a7eea907490b7e514ba957387dec054bf1c8eca6"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/inspect-source.py",
+      "savedPath": "docs/evidence/skin-source-v38/inspect-source.py",
+      "bytes": 5482,
+      "sha256": "cdf93a6264aaa33c4e626a1e7ac1ca80f067a597b9e847792f54cae8cc03d93b"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/prior-makehuman_system_assets_zip_entries.json",
+      "savedPath": "docs/evidence/skin-source-v38/prior-makehuman_system_assets_zip_entries.json",
+      "bytes": 94173,
+      "sha256": "c8b827f5d27e837a7339082af58320a8675b5b437c5376db019313911afe5206"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/prior-makehuman_system_assets_zip_metadata.json",
+      "savedPath": "docs/evidence/skin-source-v38/prior-makehuman_system_assets_zip_metadata.json",
+      "bytes": 698,
+      "sha256": "5ab5aef5008ced9e9bf4f35e3a44a233956f2e93bf77af7a614accc86c209704"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/provenance.json",
+      "savedPath": "docs/evidence/skin-source-v38/provenance.json",
+      "bytes": 2362,
+      "sha256": "94d74fc3784e0d316d8bd389da30848e84f408431863b21574c70bad799e2b40"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/scalp-run.txt",
+      "savedPath": "docs/evidence/skin-source-v38/scalp-run.txt",
+      "bytes": 297,
+      "sha256": "e95b36c75d64d0c5521be95af5af1b05af518db51ae24d8fccd1601cf3e0d9b8"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/scalp-visibility.json",
+      "savedPath": "docs/evidence/skin-source-v38/scalp-visibility.json",
+      "bytes": 9196,
+      "sha256": "fe584149b361051d5214ad884b23e8c194c6520046c8a506d6a450b270d90162"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/selected-current-entries.json",
+      "savedPath": "docs/evidence/skin-source-v38/selected-current-entries.json",
+      "bytes": 668,
+      "sha256": "cdd348967e1cb8fe84eb9e24c6fe0ad2be46adccf48089b72a85fd493001c688"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/selection.json",
+      "savedPath": "docs/evidence/skin-source-v38/selection.json",
+      "bytes": 903,
+      "sha256": "e587d8c14724a57ed037c4441107470d3274d1426819c28f124e3d5621304605"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/transfer-progress.json",
+      "savedPath": "docs/evidence/skin-source-v38/transfer-progress.json",
+      "bytes": 2362,
+      "sha256": "51c5e10fe64595d4661f1412ccd736dab7355d8a17bb6dc57c1ef9a2c870dfe1"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/young_caucasian_female.mhmat",
+      "savedPath": "docs/evidence/skin-source-v38/young_caucasian_female.mhmat",
+      "bytes": 1464,
+      "sha256": "0bdea7786201f0b1132a24088336a97496ccdc54e9984db65d253a6a6d66f24f"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/young_lightskinned_female_diffuse.png",
+      "savedPath": "docs/evidence/skin-source-v38/young_lightskinned_female_diffuse.png",
+      "bytes": 4391156,
+      "sha256": "b2a6ac8cd4f9febdb447368e29c76cd68410bb66e46d9dcfa2d5f75126eea8fc"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-offline-asset-capability/HASHES.json",
+      "savedPath": "docs/evidence/offline-asset-capability-v38/HASHES.json",
+      "bytes": 832,
+      "sha256": "e3a24fe07132b2e108f922ffdec2472216d49c02cce4a1081cdd5e3b1c4c71b2"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-offline-asset-capability/REVIEW.md",
+      "savedPath": "docs/evidence/offline-asset-capability-v38/REVIEW.md",
+      "bytes": 8562,
+      "sha256": "fc7bb8a0b35eac070188c32f3740b6329f1e49a94d61caaa4f246716e5da2704"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-offline-asset-capability/local-preflight.json",
+      "savedPath": "docs/evidence/offline-asset-capability-v38/local-preflight.json",
+      "bytes": 2224,
+      "sha256": "64024a37f892b8e4f9499f5e29dd312e522925011b33d0b5e0dfc90dd74636de"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-offline-asset-capability/preflight.py",
+      "savedPath": "docs/evidence/offline-asset-capability-v38/preflight.py",
+      "bytes": 1664,
+      "sha256": "12df05ff74f372db0cb066ed134276c6c2ce514cd0e229e1f58c5bd2d883133c"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-offline-asset-capability/reachability.json",
+      "savedPath": "docs/evidence/offline-asset-capability-v38/reachability.json",
+      "bytes": 1404,
+      "sha256": "6b4aab116882a6141d8110a31ae4409e70dbe0b1b49230cdf34da86f540e43c6"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-offline-asset-capability/run-metadata.json",
+      "savedPath": "docs/evidence/offline-asset-capability-v38/run-metadata.json",
+      "bytes": 318,
+      "sha256": "90b790dedfde932ae9dc960060c15c63b183b5d20c939d80b1c4e379497dace9"
+    },
+    {
+      "scratchSource": "/workspace/scratch/e72662e3b71f/q-v38-offline-asset-capability/sources.json",
+      "savedPath": "docs/evidence/offline-asset-capability-v38/sources.json",
+      "bytes": 1521,
+      "sha256": "ad989c97583911055ff6d82c9ea04ee692348ed7f16fd444c246053912bfc38f"
+    }
+  ]
+}

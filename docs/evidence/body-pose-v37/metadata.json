@@ -1,0 +1,77 @@
+{
+  "base": "337a7e2717d9f130bc6468a45003db2ddddd65db",
+  "source": {
+    "path": "src/actor-models.js",
+    "bytes": 35442,
+    "sha256": "04b1a72d8d1f5305dbc0e47dbe10e15c824fd0a29955d5fc08bcb40b8d544a96"
+  },
+  "provenance": {
+    "path": "src/assets/characters/detailed-provenance.json",
+    "sha256": "2958373ed0b29ce019fd8b50ebb3bbcd46c6be65c66f3e0d62084313364fca7d"
+  },
+  "buildIdentity": {
+    "version": "0.21.0",
+    "sourceFingerprint": "sha256:57c4628a2f51f2df9974c1586376633b4f6472f80ff3e7c8a6138e012f182b6d"
+  },
+  "scope": "Player death pose and visual support only; animateCape byte-identical; no nonplayer death/nondeath changes",
+  "times": {
+    "worktreeCreated": "2026-09-16T06:45:42Z",
+    "finalCandidateFixedBefore": "2026-09-16T07:04:17Z",
+    "independentReviewFrozen": "2026-09-16T07:08:22.127298+00:00",
+    "evidenceSaved": "2026-09-16T07:13:20.337Z",
+    "elapsedWallSeconds": 1658.337,
+    "phaseLimit": "Exact separate implementation/rework wall times were not instrumented. Failed candidates and raw measurement timestamps are preserved; elapsed is not all CPU time."
+  },
+  "tests": {
+    "passed": 32,
+    "wallSeconds": 15.930820827,
+    "build": true,
+    "package": true,
+    "artifacts": true
+  },
+  "delivery": {
+    "initialJSBytes": 164988,
+    "chunks": 3,
+    "totalJSBytes": 1081406,
+    "stage": "artifacts/site-1A2A3h",
+    "files": 34,
+    "bytes": 12591217,
+    "standalone": "optional; not generated"
+  },
+  "independentReview": {
+    "files": 27,
+    "bytesExcludingManifest": 2239511,
+    "reviewSha256": "41682af3695fb6f5a0529c2e44f99b90f34cae115cd4b3e4240ac8bbf7b7b129",
+    "sourceSha256": "04b1a72d8d1f5305dbc0e47dbe10e15c824fd0a29955d5fc08bcb40b8d544a96"
+  },
+  "residuals": {
+    "fullBodyCapeCrossingFaces": {
+      "before": 42,
+      "after": 38,
+      "newFaces": 5,
+      "removedFaces": 9
+    },
+    "sameWeaponDeathEntryMaxMillimetres": {
+      "sword": [
+        195.58,
+        208.67
+      ],
+      "spear": [
+        1037.62,
+        1039.2
+      ],
+      "greatsword": [
+        561.55,
+        538.95
+      ]
+    },
+    "firstDeathMilliseconds": [
+      61.254471,
+      5.552804
+    ],
+    "otherFamilyDeathSupport": "unchanged and not fixed",
+    "actualRendering": "unavailable; naturalness and PS4 whole-screen acceptance unverified",
+    "collisionOracle": "finite sampled surfaces; no arbitrary continuous-terrain proof"
+  },
+  "sessions": "All known author and independent-review sessions completed; no new agent or remote/Site/browser action"
+}

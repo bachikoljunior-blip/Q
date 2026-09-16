@@ -168,10 +168,20 @@ function humanoidPose(actor,state,motion){
   if(motion.state==='sealed'){poseArms(actor,-.23,-.1,-.1,.1,.48,.32);actor.head.rotation.x=.18;actor.chest.rotation.x=.04;}
   if(motion.state==='airborne')for(let i=0;i<2;i++){actor.legs[i].rotation.x=-.3-i*.18;actor.knees[i].rotation.x=.55+i*.3;actor.feet[i].rotation.x=-.15;}
   if(motion.state==='death'){
-    const fall=smooth(actor.deathAge/.8),floorHeight=['ranger','porter','courier','traveler','npc','sena'].includes(actor.type)?.34:.2;
-    actor.pelvis.position.y=mix(.95,floorHeight,fall);actor.pelvis.rotation.x=-Math.PI*.47*fall;actor.chest.rotation.z=.1*fall;
-    poseArms(actor,.2*fall,.4*fall,-.55*fall,.7*fall,.35,.6);
-    for(let i=0;i<2;i++){actor.legs[i].rotation.x=-.3;actor.knees[i].rotation.x=.4;actor.feet[i].rotation.x=-.1;}
+    const fall=smooth(actor.deathAge/.8);
+    if(actor.type==='player'){
+      actor.pelvis.position.y=mix(.95,.185,fall);actor.pelvis.rotation.x=-Math.PI*.5*fall;actor.chest.rotation.x=0;actor.chest.rotation.z=.018*fall;
+      actor.neck.rotation.x=0;
+      poseArms(actor,.24*fall,.22*fall,.32*fall,.36*fall,mix(.35,.1,fall),mix(.6,.1,fall));
+      actor.hands[1].rotation.x=-.115*fall;
+      actor.greatsword.rotation.x=mix(-1.3,0,fall);
+      for(let i=0;i<2;i++){actor.legs[i].rotation.x=mix(-.3,.08,fall);actor.knees[i].rotation.x=mix(.4,.025,fall);actor.feet[i].rotation.x=mix(-.1,-.105,fall);}
+    }else{
+      const floorHeight=['ranger','porter','courier','traveler','npc','sena'].includes(actor.type)?.34:.2;
+      actor.pelvis.position.y=mix(.95,floorHeight,fall);actor.pelvis.rotation.x=-Math.PI*.47*fall;actor.chest.rotation.z=.1*fall;
+      poseArms(actor,.2*fall,.4*fall,-.55*fall,.7*fall,.35,.6);
+      for(let i=0;i<2;i++){actor.legs[i].rotation.x=-.3;actor.knees[i].rotation.x=.4;actor.feet[i].rotation.x=-.1;}
+    }
     if(actor.sword)actor.sword.rotation.x=mix(-1.05,0,fall);
     actor.head.rotation.y=-.2*fall;
   }
@@ -293,6 +303,40 @@ function supportWeapon(actor,state,motion){
   // re-grasp's joint configuration too, so taking over at .73 cannot flip elbows.
   if(regrip<1)for(let side=0;side<2;side++)for(let joint=0;joint<3;joint++){const chain=joint===0?actor.arms:joint===1?actor.elbows:actor.hands;chain[side].quaternion.slerp(k.regripBones[side*3+joint],1-regrip);}
 }
+function supportFallenBody(actor,motion){
+  if(motion.state!=='death'||actor.type!=='player')return;
+  let support=actor.bodySupport;
+  if(!support){
+    // Source-surface extrema are selected once. Runtime contact evaluates this
+    // selected skin support cloud, rather than every rendered vertex.
+    const groups=new Map(),point=new Vector3(),directions=[];
+    for(const x of [-1,0,1])for(const y of [-1,0,1])for(const z of [-1,0,1])if(x||y||z)directions.push(new Vector3(x,y,z).normalize());
+    actor.g.traverse(node=>{if(!node.isSkinnedMesh)return;const g=node.geometry;
+      for(let i=0;i<g.attributes.position.count;i++){
+        let k=0;for(let j=1;j<4;j++)if(g.attributes.skinWeight.getComponent(i,j)>g.attributes.skinWeight.getComponent(i,k))k=j;
+        let name=node.skeleton.bones[g.attributes.skinIndex.getComponent(i,k)].name;
+        if(name.startsWith('finger'))name='hand-'+name.split('-').at(-2);
+        if(name.startsWith('eyelid')||name==='crown')name='head';
+        if(!groups.has(name))groups.set(name,directions.map(()=>({value:-Infinity,node:null,index:0})));
+        point.fromBufferAttribute(g.attributes.position,i);
+        directions.forEach((d,j)=>{const value=point.dot(d),entry=groups.get(name)[j];if(value>entry.value)Object.assign(entry,{value,node,index:i});});
+      }
+    });
+    const samples=[],seen=new Map();for(const entries of groups.values())for(const e of entries){if(!seen.has(e.node))seen.set(e.node,new Set());if(!seen.get(e.node).has(e.index)){seen.get(e.node).add(e.index);samples.push(e);}}
+    support=actor.bodySupport={samples,point:new Vector3(),origin:new Vector3(),scale:new Vector3(),normal:new Vector3(),up:new Vector3(0,1,0),rotation:new Quaternion(),identity:new Quaternion(),inverse:new Matrix4()};
+  }
+  actor.g.updateWorldMatrix(true,true);actor.g.getWorldPosition(support.origin);actor.g.getWorldScale(support.scale);
+  const scale=support.scale.y,fall=smooth(actor.deathAge/.8),sample=(x,z)=>{const y=actor.groundHeight?.(x,z);return Number.isFinite(y)?y:support.origin.y;};
+  const {x,z}=support.origin,radius=.75*scale;
+  const dx=(sample(x+radius,z)-sample(x-radius,z))/(2*radius),dz=(sample(x,z+radius)-sample(x,z-radius))/(2*radius);
+  support.normal.set(-dx,1,-dz).normalize();support.inverse.copy(actor.body.matrixWorld).invert();support.normal.transformDirection(support.inverse);
+  support.rotation.setFromUnitVectors(support.up,support.normal);support.rotation.slerp(support.identity,1-fall);actor.pelvis.quaternion.premultiply(support.rotation);
+  actor.g.updateMatrixWorld(true);let lift=-Infinity;
+  for(const s of support.samples){s.node.getVertexPosition(s.index,support.point).applyMatrix4(s.node.matrixWorld);lift=Math.max(lift,sample(support.point.x,support.point.z)+.006*scale-support.point.y);}
+  // Translate the complete skeleton in world vertical, preserving every joint
+  // attachment. Tilting first avoids lifting a sloped corpse onto one endpoint.
+  support.point.set(0,Math.max(0,lift),0).transformDirection(support.inverse).multiplyScalar(Math.max(0,lift)/scale);actor.pelvis.position.add(support.point);
+}
 function animateCape(actor,motion){
   if(!actor.cape)return;
   const pos=actor.cape.geometry.attributes.position,base=actor.cape.userData.base;
@@ -406,5 +450,5 @@ export function animateDetailedActor(actor,state={},dt=0){
 
   for(const [weapon,node]of [['sword',actor.sword],['greatsword',actor.greatsword],['spear',actor.spear]])if(node)node.visible=motion.state!=='drink'&&weapon===(state.weaponType||'sword');
   if(actor.flask)actor.flask.visible=motion.state==='drink';
-  animateCape(actor,motion);return motion;
+  supportFallenBody(actor,motion);animateCape(actor,motion);return motion;
 }

@@ -1,0 +1,323 @@
+{
+  "boundary": "Different existing authored source PNGs; no image editing or renderer. UV/source-ID equality is exact; NCC is an image-patch diagnostic, not anatomical/visual acceptance.",
+  "source": {
+    "path": "/workspace/scratch/e72662e3b71f/q-v38-skin-source-study/young_lightskinned_female_diffuse.png",
+    "sha256": "b2a6ac8cd4f9febdb447368e29c76cd68410bb66e46d9dcfa2d5f75126eea8fc",
+    "bytes": 4391156,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "format": "PNG",
+    "metadata": {
+      "dpi": [
+        72.009,
+        72.009
+      ]
+    }
+  },
+  "priorMale": {
+    "path": "/workspace/scratch/e72662e3b71f/Q-skin-candidate-v37/src/assets/characters/skin/sources/young_lightskinned_male_diffuse.png",
+    "sha256": "862a26e335e958b70534cb5f0d7c47ef30ab148a56c42b3e9da969cf76f12963",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "format": "PNG",
+    "metadata": {
+      "dpi": [
+        72.009,
+        72.009
+      ]
+    }
+  },
+  "headDataSHA256": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe",
+  "originalUVMaxDifference": 0,
+  "originalUVCorners": 1015,
+  "syntheticCapCornersExcluded": 47,
+  "allOriginalUVWithinImage": true,
+  "neck": {
+    "priorMale": {
+      "surfaceCollarVertices": 46,
+      "surfaceUVSides": 47,
+      "referenceMeanLinearRGB": [
+        0.7538259969516312,
+        0.39487965323389057,
+        0.23946152880542657
+      ],
+      "hypotheticalMiraLinearTint": [
+        0.5402310527211321,
+        0.6135568659498637,
+        0.676640529472136
+      ],
+      "maxLocalCollarChannelDifference255": 11.757046356117685,
+      "meanMatchLinearResidual": 0.0,
+      "runtimeApplied": false
+    },
+    "candidateFemale": {
+      "surfaceCollarVertices": 46,
+      "surfaceUVSides": 47,
+      "referenceMeanLinearRGB": [
+        0.6899927594121295,
+        0.4283721897289286,
+        0.28785097247276076
+      ],
+      "hypotheticalMiraLinearTint": [
+        0.5902093990793519,
+        0.5655855545124648,
+        0.5628932716370926
+      ],
+      "maxLocalCollarChannelDifference255": 9.659978387002619,
+      "meanMatchLinearResidual": 5.551115123125783e-17,
+      "runtimeApplied": false
+    }
+  },
+  "landmarkPatchDiagnostics": [
+    {
+      "label": "leftEye",
+      "headLocalAnchor": [
+        -0.046,
+        0.05,
+        0.1
+      ],
+      "actualNearestSurfacePoint": [
+        -0.0464013,
+        0.0449544,
+        0.112119
+      ],
+      "anchorDistanceM": 0.013133517504842327,
+      "sourceVertexID": 1095,
+      "sourceUVID": 1238,
+      "uv": [
+        0.839288,
+        0.449867
+      ],
+      "imagePixelCentre": [
+        1718,
+        1126
+      ],
+      "zeroShiftNCC": 0.8082701540820404,
+      "bestPatchShiftPixels": [
+        0,
+        1
+      ],
+      "bestNCC": 0.8101400048376597
+    },
+    {
+      "label": "rightEye",
+      "headLocalAnchor": [
+        0.046,
+        0.05,
+        0.1
+      ],
+      "actualNearestSurfacePoint": [
+        0.0464013,
+        0.0449544,
+        0.112119
+      ],
+      "anchorDistanceM": 0.013133517504842327,
+      "sourceVertexID": 7787,
+      "sourceUVID": 8485,
+      "uv": [
+        0.839274,
+        0.51636
+      ],
+      "imagePixelCentre": [
+        1718,
+        990
+      ],
+      "zeroShiftNCC": 0.808382200320315,
+      "bestPatchShiftPixels": [
+        0,
+        0
+      ],
+      "bestNCC": 0.808382200320315
+    },
+    {
+      "label": "noseTip",
+      "headLocalAnchor": [
+        0,
+        0.012,
+        0.141
+      ],
+      "actualNearestSurfacePoint": [
+        0.0,
+        0.0152107,
+        0.1382754
+      ],
+      "anchorDistanceM": 0.004210942845729442,
+      "sourceVertexID": 291,
+      "sourceUVID": 297,
+      "uv": [
+        0.865857,
+        0.483168
+      ],
+      "imagePixelCentre": [
+        1773,
+        1058
+      ],
+      "zeroShiftNCC": 0.5513382129744877,
+      "bestPatchShiftPixels": [
+        1,
+        -1
+      ],
+      "bestNCC": 0.5784204389843455
+    },
+    {
+      "label": "leftNostril",
+      "headLocalAnchor": [
+        -0.025,
+        -0.012,
+        0.124
+      ],
+      "actualNearestSurfacePoint": [
+        -0.024919,
+        -0.0136715,
+        0.1245523
+      ],
+      "anchorDistanceM": 0.0017622453120947732,
+      "sourceVertexID": 358,
+      "sourceUVID": 366,
+      "uv": [
+        0.881108,
+        0.468198
+      ],
+      "imagePixelCentre": [
+        1804,
+        1089
+      ],
+      "zeroShiftNCC": 0.8847155778363189,
+      "bestPatchShiftPixels": [
+        -1,
+        -2
+      ],
+      "bestNCC": 0.9106183493596873
+    },
+    {
+      "label": "rightNostril",
+      "headLocalAnchor": [
+        0.025,
+        -0.012,
+        0.124
+      ],
+      "actualNearestSurfacePoint": [
+        0.024919,
+        -0.0136715,
+        0.1245523
+      ],
+      "anchorDistanceM": 0.0017622453120947732,
+      "sourceVertexID": 7119,
+      "sourceUVID": 7665,
+      "uv": [
+        0.881108,
+        0.498137
+      ],
+      "imagePixelCentre": [
+        1804,
+        1027
+      ],
+      "zeroShiftNCC": 0.891207044629108,
+      "bestPatchShiftPixels": [
+        -1,
+        1
+      ],
+      "bestNCC": 0.9063892531061464
+    },
+    {
+      "label": "mouth",
+      "headLocalAnchor": [
+        0,
+        -0.042,
+        0.114
+      ],
+      "actualNearestSurfacePoint": [
+        -0.0026976,
+        -0.0447895,
+        0.1263457
+      ],
+      "anchorDistanceM": 0.01294120027277223,
+      "sourceVertexID": 538,
+      "sourceUVID": 557,
+      "uv": [
+        0.90665,
+        0.481916
+      ],
+      "imagePixelCentre": [
+        1856,
+        1061
+      ],
+      "zeroShiftNCC": 0.2963069129675065,
+      "bestPatchShiftPixels": [
+        -8,
+        -1
+      ],
+      "bestNCC": 0.4040174091043981
+    },
+    {
+      "label": "leftEar",
+      "headLocalAnchor": [
+        -0.13,
+        0.032,
+        -0.002
+      ],
+      "actualNearestSurfacePoint": [
+        -0.1311992,
+        0.0267791,
+        -0.0007952
+      ],
+      "anchorDistanceM": 0.005490666670815118,
+      "sourceVertexID": 5506,
+      "sourceUVID": 5996,
+      "uv": [
+        0.845375,
+        0.336236
+      ],
+      "imagePixelCentre": [
+        1731,
+        1359
+      ],
+      "zeroShiftNCC": 0.8118347455768549,
+      "bestPatchShiftPixels": [
+        -1,
+        1
+      ],
+      "bestNCC": 0.8351171364100547
+    },
+    {
+      "label": "rightEar",
+      "headLocalAnchor": [
+        0.13,
+        0.032,
+        -0.002
+      ],
+      "actualNearestSurfacePoint": [
+        0.1311992,
+        0.0267791,
+        -0.0007952
+      ],
+      "anchorDistanceM": 0.005490666670815118,
+      "sourceVertexID": 12105,
+      "sourceUVID": 13201,
+      "uv": [
+        0.845375,
+        0.630099
+      ],
+      "imagePixelCentre": [
+        1731,
+        757
+      ],
+      "zeroShiftNCC": 0.8071340234149007,
+      "bestPatchShiftPixels": [
+        -1,
+        -1
+      ],
+      "bestNCC": 0.8233112394467939
+    }
+  ],
+  "wholeAtlasRGBA8MipEstimateBytes": 22369620,
+  "additionalFullSizeTextureIfBothKept": 22369620,
+  "runtimeWrites": 0,
+  "durationSeconds": 1.3697675179937505
+}

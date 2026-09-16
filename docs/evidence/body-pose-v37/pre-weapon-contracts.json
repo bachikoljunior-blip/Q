@@ -1,0 +1,2176 @@
+{
+  "rates": [
+    {
+      "role": "player",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.195579417081375,
+      "max": 0.1297720404511521,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.20866550653109495,
+      "max": 0.12219670575449286,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.195579417081375,
+      "max": 0.06502761272102286,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.20866550653109495,
+      "max": 0.061172488401776325,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.195579417081375,
+      "max": 0.03253145349807254,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.20866550653109495,
+      "max": 0.03058889634039738,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.2358452839992756,
+      "max": 0.11961169048910564,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.2358452839992756,
+      "max": 0.11961169048910564,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.2358452839992756,
+      "max": 0.05992644195341694,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.2358452839992756,
+      "max": 0.05992644195341694,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.2358452839992756,
+      "max": 0.029977419116436765,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.2358452839992756,
+      "max": 0.029977419116436765,
+      "savedError": 0
+    },
+    {
+      "role": "sena",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.2358452839992756,
+      "max": 0.11961169048910564,
+      "savedError": 0
+    },
+    {
+      "role": "sena",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.2358452839992756,
+      "max": 0.11961169048910564,
+      "savedError": 0
+    },
+    {
+      "role": "sena",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.2358452839992756,
+      "max": 0.05992644195341694,
+      "savedError": 0
+    },
+    {
+      "role": "sena",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.2358452839992756,
+      "max": 0.05992644195341694,
+      "savedError": 0
+    },
+    {
+      "role": "sena",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.2358452839992756,
+      "max": 0.029977419116436765,
+      "savedError": 0
+    },
+    {
+      "role": "sena",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.2358452839992756,
+      "max": 0.029977419116436765,
+      "savedError": 0
+    },
+    {
+      "role": "scout",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.25052613446227484,
+      "max": 0.1297720404511521,
+      "savedError": 0
+    },
+    {
+      "role": "scout",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.25052613446227484,
+      "max": 0.1297720404511521,
+      "savedError": 0
+    },
+    {
+      "role": "scout",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.25052613446227484,
+      "max": 0.06502761272102286,
+      "savedError": 0
+    },
+    {
+      "role": "scout",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.25052613446227484,
+      "max": 0.06502761272102286,
+      "savedError": 0
+    },
+    {
+      "role": "scout",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.25052613446227484,
+      "max": 0.03253145349807254,
+      "savedError": 0
+    },
+    {
+      "role": "scout",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.25052613446227484,
+      "max": 0.03253145349807254,
+      "savedError": 0
+    },
+    {
+      "role": "traveler",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.195579417081375,
+      "max": 0.11961169048910564,
+      "savedError": 0
+    },
+    {
+      "role": "traveler",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.195579417081375,
+      "max": 0.11961169048910564,
+      "savedError": 0
+    },
+    {
+      "role": "traveler",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.195579417081375,
+      "max": 0.05992644195341694,
+      "savedError": 0
+    },
+    {
+      "role": "traveler",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.195579417081375,
+      "max": 0.05992644195341694,
+      "savedError": 0
+    },
+    {
+      "role": "traveler",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.195579417081375,
+      "max": 0.029977419116436765,
+      "savedError": 0
+    },
+    {
+      "role": "traveler",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.195579417081375,
+      "max": 0.029977419116436765,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.30139873298046416,
+      "max": 0.12210930257486446,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.30139873298046416,
+      "max": 0.12210930257486446,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.30139873298046416,
+      "max": 0.06116869158917951,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.30139873298046416,
+      "max": 0.06116869158917951,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.30139873298046416,
+      "max": 0.030596517620703576,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.30139873298046416,
+      "max": 0.030596517620703576,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.4486129905167735,
+      "max": 0.3817794342194344,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.4486129905167735,
+      "max": 0.3817794342194344,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.4486129905167735,
+      "max": 0.19116809627826514,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.4486129905167735,
+      "max": 0.19116809627826514,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.4486129905167735,
+      "max": 0.09560255250749444,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.4486129905167735,
+      "max": 0.09560255250749444,
+      "savedError": 0
+    }
+  ],
+  "saved": [
+    {
+      "role": "player",
+      "firstSeenExact": true
+    },
+    {
+      "role": "npc",
+      "firstSeenExact": true
+    },
+    {
+      "role": "sena",
+      "firstSeenExact": true
+    },
+    {
+      "role": "scout",
+      "firstSeenExact": true
+    },
+    {
+      "role": "traveler",
+      "firstSeenExact": true
+    },
+    {
+      "role": "ranger",
+      "firstSeenExact": true
+    },
+    {
+      "role": "boss",
+      "firstSeenExact": true
+    }
+  ],
+  "nonDeath": [
+    {
+      "role": "player",
+      "exact": true
+    },
+    {
+      "role": "npc",
+      "exact": true
+    },
+    {
+      "role": "sena",
+      "exact": true
+    },
+    {
+      "role": "scout",
+      "exact": true
+    },
+    {
+      "role": "traveler",
+      "exact": true
+    },
+    {
+      "role": "ranger",
+      "exact": true
+    },
+    {
+      "role": "boss",
+      "exact": true
+    }
+  ],
+  "covariance": [
+    {
+      "role": "player",
+      "yaw": -1.9,
+      "error": 0.0000017520344258117747
+    },
+    {
+      "role": "player",
+      "yaw": 0.73,
+      "error": 0.0000017520344241483812
+    },
+    {
+      "role": "player",
+      "yaw": 2.6,
+      "error": 0.0000017520344258117747
+    },
+    {
+      "role": "npc",
+      "yaw": -1.9,
+      "error": 0.0000017520344243614045
+    },
+    {
+      "role": "npc",
+      "yaw": 0.73,
+      "error": 0.000001752034424432412
+    },
+    {
+      "role": "npc",
+      "yaw": 2.6,
+      "error": 0.0000017520344258117747
+    },
+    {
+      "role": "sena",
+      "yaw": -1.9,
+      "error": 0.0000017520344243614045
+    },
+    {
+      "role": "sena",
+      "yaw": 0.73,
+      "error": 0.000001752034424432412
+    },
+    {
+      "role": "sena",
+      "yaw": 2.6,
+      "error": 0.0000017520344258117747
+    },
+    {
+      "role": "scout",
+      "yaw": -1.9,
+      "error": 0.0000017520344243614045
+    },
+    {
+      "role": "scout",
+      "yaw": 0.73,
+      "error": 0.000001752034424432412
+    },
+    {
+      "role": "scout",
+      "yaw": 2.6,
+      "error": 0.0000017520344258117747
+    },
+    {
+      "role": "traveler",
+      "yaw": -1.9,
+      "error": 0.0000017520344243614045
+    },
+    {
+      "role": "traveler",
+      "yaw": 0.73,
+      "error": 0.000001752034424432412
+    },
+    {
+      "role": "traveler",
+      "yaw": 2.6,
+      "error": 0.0000017520344258117747
+    },
+    {
+      "role": "ranger",
+      "yaw": -1.9,
+      "error": 0.0000017520344258117747
+    },
+    {
+      "role": "ranger",
+      "yaw": 0.73,
+      "error": 0.000001752034424432412
+    },
+    {
+      "role": "ranger",
+      "yaw": 2.6,
+      "error": 0.0000017520344258117747
+    },
+    {
+      "role": "boss",
+      "yaw": -1.9,
+      "error": 0.0000017520344328218984
+    },
+    {
+      "role": "boss",
+      "yaw": 0.73,
+      "error": 0.0000017520344457045112
+    },
+    {
+      "role": "boss",
+      "yaw": 2.6,
+      "error": 0.0000017520344301840373
+    }
+  ],
+  "surfaces": [
+    {
+      "role": "player",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.15,
+      "before": {
+        "min": -0.03668766331184936,
+        "below": 317,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.13300000131130219,
+            -1.481653759365969,
+            101.1249831499201
+          ]
+        }
+      },
+      "after": {
+        "min": 0.006000000000000005,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.1414624254589638,
+            -1.425754217781629,
+            101.08938998637825
+          ]
+        }
+      }
+    },
+    {
+      "role": "player",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.45,
+      "before": {
+        "min": 0.13110405596047858,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.13300000131130219,
+            -1.5254503461525144,
+            101.7311837134449
+          ]
+        }
+      },
+      "after": {
+        "min": 0.005999999999999783,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.17448568004723392,
+            -1.591878904864426,
+            101.57561812119084
+          ]
+        }
+      }
+    },
+    {
+      "role": "player",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.8,
+      "before": {
+        "min": -0.17683438845580524,
+        "below": 5041,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q cloth skin",
+          "triangle": 382,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ]
+        }
+      },
+      "after": {
+        "min": 0.006000000000000227,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 455,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.005588026861696405,
+            -1.2695353018074358,
+            100.60124243457585
+          ]
+        }
+      }
+    },
+    {
+      "role": "player",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.15,
+      "before": {
+        "min": -0.04577316639902307,
+        "below": 468,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.0136518491736,
+            51.5117439015131,
+            -38.18199839319863
+          ]
+        }
+      },
+      "after": {
+        "min": 0.006000000000000227,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.0457057678262,
+            51.576448216357846,
+            -38.16551506889386
+          ]
+        }
+      }
+    },
+    {
+      "role": "player",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.45,
+      "before": {
+        "min": 0.1095447961859719,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -388.6041856884832,
+            51.467947314726544,
+            -38.62900687909939
+          ]
+        }
+      },
+      "after": {
+        "min": 0.006000000000000227,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -388.74746824284387,
+            51.42138493199241,
+            -38.562614353160555
+          ]
+        }
+      }
+    },
+    {
+      "role": "player",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.8,
+      "before": {
+        "min": -0.15678790710153123,
+        "below": 4278,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q cloth skin",
+          "triangle": 414,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.5343392711149,
+            51.68837969645839,
+            -37.3547203176315
+          ]
+        }
+      },
+      "after": {
+        "min": 0.006000000000000227,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 455,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.2770140107379,
+            51.716247695934044,
+            -37.71455203470142
+          ]
+        }
+      }
+    },
+    {
+      "role": "player",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.15,
+      "before": {
+        "min": -0.11936845401265472,
+        "below": 5362,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 378,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.35010845726854,
+            8.582459873641168,
+            -32.831560495051676
+          ]
+        }
+      },
+      "after": {
+        "min": 0.0047346486682045,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 404,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.32195047627424,
+            8.697525519703534,
+            -32.87225227419569
+          ]
+        }
+      }
+    },
+    {
+      "role": "player",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.45,
+      "before": {
+        "min": -0.25634492465315617,
+        "below": 6850,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.57276549273312,
+            8.5143477707978,
+            -32.526440802549374
+          ]
+        }
+      },
+      "after": {
+        "min": 0.006000000000000227,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.6266385880829,
+            8.78870528453744,
+            -32.495124457076955
+          ]
+        }
+      }
+    },
+    {
+      "role": "player",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.8,
+      "before": {
+        "min": -0.08085215404341461,
+        "below": 928,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.71453343840489,
+            8.730254854733703,
+            -32.3581279669932
+          ]
+        }
+      },
+      "after": {
+        "min": 0.006000000000000227,
+        "below": 0,
+        "samples": 52178,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 455,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            44.79906623152219,
+            8.569451230354284,
+            -33.24870520227215
+          ]
+        }
+      }
+    },
+    {
+      "role": "npc",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.15,
+      "before": {
+        "min": -0.023767741436849343,
+        "below": 156,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.13300000131130219,
+            -1.468733837490969,
+            101.1249831499201
+          ]
+        }
+      },
+      "after": {
+        "min": -0.023767741436849343,
+        "below": 156,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.13300000131130219,
+            -1.468733837490969,
+            101.1249831499201
+          ]
+        }
+      }
+    },
+    {
+      "role": "npc",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.45,
+      "before": {
+        "min": 0.08543438546074111,
+        "below": 0,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q cloth skin",
+          "triangle": 830,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.04802733648438978,
+            -1.4784967503404876,
+            101.44144766423035
+          ]
+        }
+      },
+      "after": {
+        "min": 0.08543438546074111,
+        "below": 0,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q cloth skin",
+          "triangle": 830,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            0.04802733648438978,
+            -1.4784967503404876,
+            101.44144766423035
+          ]
+        }
+      }
+    },
+    {
+      "role": "npc",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.8,
+      "before": {
+        "min": -0.04285389028194975,
+        "below": 621,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 102,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.36453249168159885,
+            -1.1667814661430977,
+            100.2570765449504
+          ]
+        }
+      },
+      "after": {
+        "min": -0.04285389028194975,
+        "below": 621,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 102,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.36453249168159885,
+            -1.1667814661430977,
+            100.2570765449504
+          ]
+        }
+      }
+    },
+    {
+      "role": "npc",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.15,
+      "before": {
+        "min": -0.03285324452402705,
+        "below": 242,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.0136518491736,
+            51.524663823388096,
+            -38.18199839319863
+          ]
+        }
+      },
+      "after": {
+        "min": -0.03285324452402705,
+        "below": 242,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.0136518491736,
+            51.524663823388096,
+            -38.18199839319863
+          ]
+        }
+      }
+    },
+    {
+      "role": "npc",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.45,
+      "before": {
+        "min": 0.07378361843087333,
+        "below": 0,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q cloth skin",
+          "triangle": 830,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -388.7372334127698,
+            51.51490091053858,
+            -38.35796143079894
+          ]
+        }
+      },
+      "after": {
+        "min": 0.07378361843087333,
+        "below": 0,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q cloth skin",
+          "triangle": 830,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -388.7372334127698,
+            51.51490091053858,
+            -38.35796143079894
+          ]
+        }
+      }
+    },
+    {
+      "role": "npc",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.8,
+      "before": {
+        "min": -0.04976608792753723,
+        "below": 682,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 100,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.7754211562375,
+            51.8220635328851,
+            -37.73572951904548
+          ]
+        }
+      },
+      "after": {
+        "min": -0.04976608792753723,
+        "below": 682,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 100,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.7754211562375,
+            51.8220635328851,
+            -37.73572951904548
+          ]
+        }
+      }
+    },
+    {
+      "role": "npc",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.15,
+      "before": {
+        "min": -0.10644853213765337,
+        "below": 4739,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 378,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.35010845726854,
+            8.59537979551617,
+            -32.831560495051676
+          ]
+        }
+      },
+      "after": {
+        "min": -0.10644853213765337,
+        "below": 4739,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 378,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.35010845726854,
+            8.59537979551617,
+            -32.831560495051676
+          ]
+        }
+      }
+    },
+    {
+      "role": "npc",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.45,
+      "before": {
+        "min": -0.1732882840281551,
+        "below": 5073,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.57276549273312,
+            8.5974044114228,
+            -32.526440802549374
+          ]
+        }
+      },
+      "after": {
+        "min": -0.1732882840281551,
+        "below": 5073,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.57276549273312,
+            8.5974044114228,
+            -32.526440802549374
+          ]
+        }
+      }
+    },
+    {
+      "role": "npc",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.8,
+      "before": {
+        "min": -0.0905511406970092,
+        "below": 32,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q cloth skin",
+          "triangle": 830,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.53221034469752,
+            8.676988417508376,
+            -32.49367323733868
+          ]
+        }
+      },
+      "after": {
+        "min": -0.0905511406970092,
+        "below": 32,
+        "samples": 45682,
+        "worst": {
+          "mesh": "Q cloth skin",
+          "triangle": 830,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.53221034469752,
+            8.676988417508376,
+            -32.49367323733868
+          ]
+        }
+      }
+    },
+    {
+      "role": "ranger",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.15,
+      "before": {
+        "min": -0.023767741436849343,
+        "below": 156,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.13300000131130219,
+            -1.468733837490969,
+            101.1249831499201
+          ]
+        }
+      },
+      "after": {
+        "min": -0.023767741436849343,
+        "below": 156,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.13300000131130219,
+            -1.468733837490969,
+            101.1249831499201
+          ]
+        }
+      }
+    },
+    {
+      "role": "ranger",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.45,
+      "before": {
+        "min": 0.21416069658547854,
+        "below": 0,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.13300000131130219,
+            -1.4423937055275144,
+            101.7311837134449
+          ]
+        }
+      },
+      "after": {
+        "min": 0.21416069658547854,
+        "below": 0,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.13300000131130219,
+            -1.4423937055275144,
+            101.7311837134449
+          ]
+        }
+      }
+    },
+    {
+      "role": "ranger",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.8,
+      "before": {
+        "min": -0.13087213434085587,
+        "below": 1298,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 88,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.1972029964812292,
+            -1.3366722623839578,
+            100.45179638075803
+          ]
+        }
+      },
+      "after": {
+        "min": -0.13087213434085587,
+        "below": 1298,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 88,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.1972029964812292,
+            -1.3366722623839578,
+            100.45179638075803
+          ]
+        }
+      }
+    },
+    {
+      "role": "ranger",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.15,
+      "before": {
+        "min": -0.03285324452402705,
+        "below": 242,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.0136518491736,
+            51.524663823388096,
+            -38.18199839319863
+          ]
+        }
+      },
+      "after": {
+        "min": -0.03285324452402705,
+        "below": 242,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.0136518491736,
+            51.524663823388096,
+            -38.18199839319863
+          ]
+        }
+      }
+    },
+    {
+      "role": "ranger",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.45,
+      "before": {
+        "min": 0.19260143681096764,
+        "below": 0,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -388.6041856884832,
+            51.55100395535154,
+            -38.62900687909939
+          ]
+        }
+      },
+      "after": {
+        "min": 0.19260143681096764,
+        "below": 0,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -388.6041856884832,
+            51.55100395535154,
+            -38.62900687909939
+          ]
+        }
+      }
+    },
+    {
+      "role": "ranger",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.8,
+      "before": {
+        "min": -0.13023575405131282,
+        "below": 1122,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 88,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.5157076105339,
+            51.656725398495105,
+            -37.72896145955141
+          ]
+        }
+      },
+      "after": {
+        "min": -0.13023575405131282,
+        "below": 1122,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 88,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.5157076105339,
+            51.656725398495105,
+            -37.72896145955141
+          ]
+        }
+      }
+    },
+    {
+      "role": "ranger",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.15,
+      "before": {
+        "min": -0.10644853213765337,
+        "below": 4651,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 378,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.35010845726854,
+            8.59537979551617,
+            -32.831560495051676
+          ]
+        }
+      },
+      "after": {
+        "min": -0.10644853213765337,
+        "below": 4651,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 378,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.35010845726854,
+            8.59537979551617,
+            -32.831560495051676
+          ]
+        }
+      }
+    },
+    {
+      "role": "ranger",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.45,
+      "before": {
+        "min": -0.1732882840281551,
+        "below": 5034,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.57276549273312,
+            8.5974044114228,
+            -32.526440802549374
+          ]
+        }
+      },
+      "after": {
+        "min": -0.1732882840281551,
+        "below": 5034,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.57276549273312,
+            8.5974044114228,
+            -32.526440802549374
+          ]
+        }
+      }
+    },
+    {
+      "role": "ranger",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.8,
+      "before": {
+        "min": 0.03296801875616673,
+        "below": 0,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 89,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.07489053584074,
+            8.653345787835267,
+            -33.157655089411506
+          ]
+        }
+      },
+      "after": {
+        "min": 0.03296801875616673,
+        "below": 0,
+        "samples": 48412,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 89,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            45.07489053584074,
+            8.653345787835267,
+            -33.157655089411506
+          ]
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.15,
+      "before": {
+        "min": -0.08425818361743143,
+        "below": 343,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.305900003015995,
+            -1.5687182583899293,
+            101.2874612448162
+          ]
+        }
+      },
+      "after": {
+        "min": -0.08425818361743143,
+        "below": 343,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.305900003015995,
+            -1.5687182583899293,
+            101.2874612448162
+          ]
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.45,
+      "before": {
+        "min": 0.30241885352073483,
+        "below": 0,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.305900003015995,
+            -1.6694504079989838,
+            102.68172254092329
+          ]
+        }
+      },
+      "after": {
+        "min": 0.30241885352073483,
+        "below": 0,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            0.305900003015995,
+            -1.6694504079989838,
+            102.68172254092329
+          ]
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "x": 0,
+      "z": 101,
+      "yaw": 0,
+      "time": 0.8,
+      "before": {
+        "min": -0.6158211244972855,
+        "below": 6744,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 111,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.5616250464053465,
+            -1.0195281953754,
+            97.9010587473519
+          ]
+        }
+      },
+      "after": {
+        "min": -0.6158211244972855,
+        "below": 6744,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 111,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -0.5616250464053465,
+            -1.0195281953754,
+            97.9010587473519
+          ]
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.15,
+      "before": {
+        "min": -0.10530787533463126,
+        "below": 474,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.03139925309915,
+            51.424679402489126,
+            -38.418596304356875
+          ]
+        }
+      },
+      "after": {
+        "min": -0.10530787533463126,
+        "below": 474,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -389.03139925309915,
+            51.424679402489126,
+            -38.418596304356875
+          ]
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.45,
+      "before": {
+        "min": 0.2541788688474611,
+        "below": 0,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -388.08962708351135,
+            51.323947252880075,
+            -39.446715821928656
+          ]
+        }
+      },
+      "after": {
+        "min": 0.2541788688474611,
+        "below": 0,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            -388.08962708351135,
+            51.323947252880075,
+            -39.446715821928656
+          ]
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "x": -389,
+      "z": -38,
+      "yaw": 2.4,
+      "time": 0.8,
+      "before": {
+        "min": -0.5213509071926978,
+        "below": 5843,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 113,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -390.6955997065568,
+            51.970089744874386,
+            -35.388037967470424
+          ]
+        }
+      },
+      "after": {
+        "min": -0.5213509071926978,
+        "below": 5843,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q metal skin",
+          "triangle": 113,
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "point": [
+            -390.6955997065568,
+            51.970089744874386,
+            -35.388037967470424
+          ]
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.15,
+      "before": {
+        "min": -0.272344073067428,
+        "below": 5372,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 378,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.80524945171762,
+            8.527005545491077,
+            -32.61258913861885
+          ]
+        }
+      },
+      "after": {
+        "min": -0.272344073067428,
+        "below": 5372,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 378,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            45.80524945171762,
+            8.527005545491077,
+            -32.61258913861885
+          ]
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.45,
+      "before": {
+        "min": -0.5807686893919559,
+        "below": 6846,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            46.31736063328616,
+            8.370347708951337,
+            -31.910813845863558
+          ]
+        }
+      },
+      "after": {
+        "min": -0.5807686893919559,
+        "below": 6846,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            46.31736063328616,
+            8.370347708951337,
+            -31.910813845863558
+          ]
+        }
+      }
+    },
+    {
+      "role": "boss",
+      "x": 45,
+      "z": -33,
+      "yaw": 0.7,
+      "time": 0.8,
+      "before": {
+        "min": -0.17106646058858033,
+        "below": 830,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            46.643426908331215,
+            8.866934002003912,
+            -31.523694324084342
+          ]
+        }
+      },
+      "after": {
+        "min": -0.17106646058858033,
+        "below": 830,
+        "samples": 53074,
+        "worst": {
+          "mesh": "Q leather skin",
+          "triangle": 340,
+          "barycentric": [
+            0,
+            0,
+            1
+          ],
+          "point": [
+            46.643426908331215,
+            8.866934002003912,
+            -31.523694324084342
+          ]
+        }
+      }
+    }
+  ],
+  "cpu": [
+    {
+      "key": "before",
+      "poses": 840,
+      "milliseconds": 110.51205500000106,
+      "clouds": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "after",
+      "poses": 840,
+      "milliseconds": 186.6513190000005,
+      "clouds": [
+        386,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "after",
+      "poses": 840,
+      "milliseconds": 169.41103699999985,
+      "clouds": [
+        386,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "before",
+      "poses": 840,
+      "milliseconds": 110.13831500000015,
+      "clouds": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "at": "2026-09-16T06:50:40.390Z"
+}

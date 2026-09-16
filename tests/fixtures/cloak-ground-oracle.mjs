@@ -34,12 +34,12 @@ export function nonCapeContract(actor){
   const oldP=p.array,oldN=n.array;p.array=actor.cape.userData.base;n.array=new Float32Array(oldN.length);
   try{return actorContract(actor);}finally{p.array=oldP;n.array=oldN;}
 }
-export function bodyIntersections(actor){
+export function bodyIntersections(actor,wholeBody=false){
   const points=worldPoints(actor),indices=actor.cape.geometry.index.array,body=[],names=new Set(['pelvis','spine','chest','neck','head']);
   actor.g.traverse(node=>{
     if(!node.isSkinnedMesh)return;node.skeleton.update();const geometry=node.geometry,weight=geometry.attributes.skinWeight,skin=geometry.attributes.skinIndex,vertices=[];
     for(let i=0;i<geometry.attributes.position.count;i++)vertices.push(node.getVertexPosition(i,new Vector3()).applyMatrix4(node.matrixWorld));
-    const ix=geometry.index.array;for(let i=0;i<ix.length;i+=3){const ids=[ix[i],ix[i+1],ix[i+2]];if(!ids.every(id=>[0,1,2,3].every(k=>weight.getComponent(id,k)<=.1||names.has(node.skeleton.bones[skin.getComponent(id,k)].name))))continue;const tri=ids.map(id=>vertices[id]);body.push({tri,box:new Box3().setFromPoints(tri)});}
+    const ix=geometry.index.array;for(let i=0;i<ix.length;i+=3){const ids=[ix[i],ix[i+1],ix[i+2]];if(!wholeBody&&!ids.every(id=>[0,1,2,3].every(k=>weight.getComponent(id,k)<=.1||names.has(node.skeleton.bones[skin.getComponent(id,k)].name))))continue;const tri=ids.map(id=>vertices[id]);body.push({tri,box:new Box3().setFromPoints(tri)});}
   });
   let crossed=0;const hit=new Vector3(),ray=new Ray();
   for(let i=0;i<indices.length;i+=3){const tri=[indices[i],indices[i+1],indices[i+2]].map(id=>points[id]),box=new Box3().setFromPoints(tri);let crosses=false;

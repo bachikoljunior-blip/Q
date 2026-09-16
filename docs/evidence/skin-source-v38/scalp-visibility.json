@@ -1,0 +1,347 @@
+{
+  "boundary": "Native actual actor triangles, no renderer; two hand-selected source-image rectangles contain visible scalp follicle pattern in original female PNG. Not whole-head visibility or all legal camera sweep. No texture installed.",
+  "sourceRoot": "/workspace/scratch/e72662e3b71f/Q-ps4-v35",
+  "sourceHashes": {
+    "src/actor-models.js": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc",
+    "src/assets/characters/detailed-geometry.js": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4",
+    "src/assets/characters/identity-head-data.js": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe"
+  },
+  "rectanglesPixelXYXY": [
+    [
+      1320,
+      480,
+      1620,
+      850
+    ],
+    [
+      1320,
+      1300,
+      1620,
+      1630
+    ]
+  ],
+  "faceTriangleCentroidsInRectangles": 95,
+  "visibleActorTriangles": 6718,
+  "views": [
+    {
+      "yawDegrees": -70,
+      "frontFacing": 33,
+      "visibleSamples": 10,
+      "examples": [
+        {
+          "triangle": 21,
+          "uv": [
+            0.7151310046513876,
+            0.3623533248901367
+          ],
+          "pixel": [
+            1464.0882975260417,
+            1305.400390625
+          ],
+          "point": [
+            -0.07820933560530344,
+            1.8962767165341463,
+            0.006046430935345984
+          ],
+          "closestDistance": 2.5284707022959525,
+          "pointDistance": 2.528470702295953,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 222,
+          "uv": [
+            0.7551573316256205,
+            0.3537983298301697
+          ],
+          "pixel": [
+            1546.0622151692708,
+            1322.9210205078125
+          ],
+          "point": [
+            -0.11090436577796936,
+            1.856348398951737,
+            0.010874050246244864
+          ],
+          "closestDistance": 2.4950120115621672,
+          "pointDistance": 2.495012011562167,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 225,
+          "uv": [
+            0.7270009915033976,
+            0.3611406584580739
+          ],
+          "pixel": [
+            1488.3980305989583,
+            1307.8839314778647
+          ],
+          "point": [
+            -0.08960170050462087,
+            1.886233341106998,
+            0.008825282574005085
+          ],
+          "closestDistance": 2.516481522609011,
+          "pointDistance": 2.5164815226090114,
+          "closestMaterial": "Q anatomical face"
+        }
+      ]
+    },
+    {
+      "yawDegrees": -45,
+      "frontFacing": 22,
+      "visibleSamples": 10,
+      "examples": [
+        {
+          "triangle": 21,
+          "uv": [
+            0.7151310046513876,
+            0.3623533248901367
+          ],
+          "pixel": [
+            1464.0882975260417,
+            1305.400390625
+          ],
+          "point": [
+            -0.07820933560530344,
+            1.8962767165341463,
+            0.006046430935345984
+          ],
+          "closestDistance": 2.5471731391631276,
+          "pointDistance": 2.547173139163128,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 222,
+          "uv": [
+            0.7551573316256205,
+            0.3537983298301697
+          ],
+          "pixel": [
+            1546.0622151692708,
+            1322.9210205078125
+          ],
+          "point": [
+            -0.11090436577796936,
+            1.856348398951737,
+            0.010874050246244864
+          ],
+          "closestDistance": 2.5199979633710927,
+          "pointDistance": 2.5199979633710923,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 225,
+          "uv": [
+            0.7270009915033976,
+            0.3611406584580739
+          ],
+          "pixel": [
+            1488.3980305989583,
+            1307.8839314778647
+          ],
+          "point": [
+            -0.08960170050462087,
+            1.886233341106998,
+            0.008825282574005085
+          ],
+          "closestDistance": 2.536948778382146,
+          "pointDistance": 2.536948778382146,
+          "closestMaterial": "Q anatomical face"
+        }
+      ]
+    },
+    {
+      "yawDegrees": 0,
+      "frontFacing": 7,
+      "visibleSamples": 7,
+      "examples": [
+        {
+          "triangle": 284,
+          "uv": [
+            0.7699676752090454,
+            0.363946666320165
+          ],
+          "pixel": [
+            1576.393798828125,
+            1302.1372273763022
+          ],
+          "point": [
+            -0.11568826685349146,
+            1.8434728321028961,
+            0.028908098155863614
+          ],
+          "closestDistance": 2.580244771330182,
+          "pointDistance": 2.580244771330183,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 667,
+          "uv": [
+            0.7797110080718994,
+            0.3571090002854665
+          ],
+          "pixel": [
+            1596.34814453125,
+            1316.1407674153647
+          ],
+          "point": [
+            -0.11824709922075272,
+            1.830502977475522,
+            0.023829752543906697
+          ],
+          "closestDistance": 2.585257451296426,
+          "pointDistance": 2.585257451296425,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 668,
+          "uv": [
+            0.7893386681874593,
+            0.3567750056584676
+          ],
+          "pixel": [
+            1616.0655924479167,
+            1316.8247884114585
+          ],
+          "point": [
+            -0.1181671991944313,
+            1.8198279823092016,
+            0.02656117856353305
+          ],
+          "closestDistance": 2.5824295106065325,
+          "pointDistance": 2.582429510606532,
+          "closestMaterial": "Q anatomical face"
+        }
+      ]
+    },
+    {
+      "yawDegrees": 45,
+      "frontFacing": 28,
+      "visibleSamples": 14,
+      "examples": [
+        {
+          "triangle": 821,
+          "uv": [
+            0.7151310046513876,
+            0.6039816538492838
+          ],
+          "pixel": [
+            1464.0882975260417,
+            810.5455729166667
+          ],
+          "point": [
+            0.07820933560530344,
+            1.8962767165341463,
+            0.006046430935345984
+          ],
+          "closestDistance": 2.5471731391631276,
+          "pointDistance": 2.547173139163128,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 1002,
+          "uv": [
+            0.7551573316256205,
+            0.6125370065371195
+          ],
+          "pixel": [
+            1546.0622151692708,
+            793.0242106119792
+          ],
+          "point": [
+            0.11090436577796936,
+            1.8563483989517366,
+            0.010874050246244863
+          ],
+          "closestDistance": 2.5199979633710927,
+          "pointDistance": 2.5199979633710923,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 1004,
+          "uv": [
+            0.7270009915033976,
+            0.6051946679751078
+          ],
+          "pixel": [
+            1488.3980305989583,
+            808.0613199869792
+          ],
+          "point": [
+            0.08960170050462087,
+            1.886233341106998,
+            0.008825282574005085
+          ],
+          "closestDistance": 2.5369487783821456,
+          "pointDistance": 2.536948778382146,
+          "closestMaterial": "Q anatomical face"
+        }
+      ]
+    },
+    {
+      "yawDegrees": 70,
+      "frontFacing": 37,
+      "visibleSamples": 14,
+      "examples": [
+        {
+          "triangle": 821,
+          "uv": [
+            0.7151310046513876,
+            0.6039816538492838
+          ],
+          "pixel": [
+            1464.0882975260417,
+            810.5455729166667
+          ],
+          "point": [
+            0.07820933560530344,
+            1.8962767165341463,
+            0.006046430935345984
+          ],
+          "closestDistance": 2.5284707022959525,
+          "pointDistance": 2.528470702295953,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 1002,
+          "uv": [
+            0.7551573316256205,
+            0.6125370065371195
+          ],
+          "pixel": [
+            1546.0622151692708,
+            793.0242106119792
+          ],
+          "point": [
+            0.11090436577796936,
+            1.8563483989517366,
+            0.010874050246244863
+          ],
+          "closestDistance": 2.4950120115621663,
+          "pointDistance": 2.495012011562167,
+          "closestMaterial": "Q anatomical face"
+        },
+        {
+          "triangle": 1004,
+          "uv": [
+            0.7270009915033976,
+            0.6051946679751078
+          ],
+          "pixel": [
+            1488.3980305989583,
+            808.0613199869792
+          ],
+          "point": [
+            0.08960170050462087,
+            1.886233341106998,
+            0.008825282574005085
+          ],
+          "closestDistance": 2.5164815226090114,
+          "pointDistance": 2.5164815226090114,
+          "closestMaterial": "Q anatomical face"
+        }
+      ]
+    }
+  ]
+}
