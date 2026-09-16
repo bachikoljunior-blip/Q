@@ -20,7 +20,8 @@ class Source extends Node {
 }
 export class SoundContext {
   static rejectResume = false;
-  constructor() { this.currentTime = 0; this.sampleRate = 48000; this.state = 'suspended'; this.destination = new Node(this, 'destination'); this.created = []; }
+  static sampleRate = 48000;
+  constructor() { this.currentTime = 0; this.sampleRate = SoundContext.sampleRate; this.state = 'suspended'; this.destination = new Node(this, 'destination'); this.created = []; }
   add(node) { this.created.push(node); return node; }
   createGain() { const n = this.add(new Node(this, 'gain')); n.gain = new Param(1); return n; }
   createDynamicsCompressor() { const n = this.add(new Node(this, 'compressor')); for (const key of ['threshold', 'knee', 'ratio', 'attack', 'release']) n[key] = new Param(); return n; }
@@ -35,9 +36,13 @@ export class SoundContext {
   }
   async decodeAudioData(bytes) {
     const url = new TextDecoder().decode(bytes), score = url.endsWith('.mp3');
-    return this.createBuffer(url.includes('harmony') ? 2 : 1, this.sampleRate * (score ? 48 : url.includes('foley') ? 30 : 3), this.sampleRate);
+    return this.createBuffer(url.includes('harmony') || url.includes('pulse') ? 2 : 1, this.sampleRate * (score ? 48 : url.includes('foley') ? 413163 / 22050 : 3), this.sampleRate);
   }
   async resume() { if (SoundContext.rejectResume) throw Error('Gesture required'); this.state = 'running'; }
   async suspend() { this.state = 'suspended'; }
   async close() { this.state = 'closed'; }
+}
+
+export class OfflineSoundContext extends SoundContext {
+  constructor(channels, length, rate) { super(); this.sampleRate = rate; this.numberOfChannels = channels; this.length = length; }
 }

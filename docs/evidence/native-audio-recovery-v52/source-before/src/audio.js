@@ -22,7 +22,6 @@ export class Soundscape {
     this.mode = 'title'; this.active = false; this.disposed = false; this.audioRevision = 0;
     this.nodes = []; this.voices = new Set(); this.maxVoices = 36; this.maxDecodedBytes = 24 * 1024 * 1024;
     this.assetBuffers = new Map(); this.assetPending = new Map(); this.assetStartPending = new Map();
-    this.scoreBuffers = new Map(); this.assetDecoders = new Map();
     this.busVolumes = { ...busDefaults }; this.buses = {}; this.targets = new WeakMap();
     this.vaultGate = new VaultLoopGate(); this.vaultTheme = null; this.vaultLoop = null; this.vaultRetryAt = 0;
     this.score = new Map(); this.scorePending = false; this.scoreRevision = 0; this.scorePhase = 0; this.scoreEpoch = null; this.scoreRetryAt = 0;
@@ -71,7 +70,7 @@ export class Soundscape {
       const AC = globalThis.AudioContext || globalThis.window?.AudioContext || globalThis.window?.webkitAudioContext;
       if (!AC) return Promise.resolve(false);
       try {
-        this.ctx = new AC();
+        try { this.ctx = new AC({ sampleRate: 22050 }); } catch { this.ctx = new AC(); }
         this.buildGraph();
       }
       catch { this.ctx?.close?.().catch?.(() => {}); this.ctx = null; return Promise.resolve(false); }
@@ -121,8 +120,8 @@ export class Soundscape {
   async ensureScore() {
     if (!this.active || !this._music || this.score.size || this.scorePending || this.ctx.currentTime < this.scoreRetryAt) return;
     const revision = this.audioRevision, scoreRevision = ++this.scoreRevision; this.scorePending = true;
-    // Decode long stems serially at their authored rate. The fixed score bank
-    // shares these buffers with voices; FX cache eviction cannot evict music.
+    // Decode one long stem at a time. Each device-rate decode is compacted to
+    // the authored 22.05 kHz before the next stem, bounding retained residency.
     const entries = [];
     for (const [key, url] of Object.entries(SCORE_URLS)) {
       entries.push([key, await this.loadAsset(`score:${key}`, url)]);
@@ -194,7 +193,7 @@ export class Soundscape {
       gain.gain.setValueAtTime(volume, now + Math.max(attack, length - .025)); gain.gain.linearRampToValueAtTime(0, now + length);
     }
     let ended = false;
-    const clean = () => { if (ended) return; ended = true; nodes.forEach(node => node.disconnect()); source.buffer = null; this.releaseVoice(voice); };
+    const clean = () => { if (ended) return; ended = true; nodes.forEach(node => node.disconnect()); this.releaseVoice(voice); };
     const voice = { source, gain, panner, loop, stop: (fade = 0) => {
       if (ended) return; try { if (fade) gain.gain.setTargetAtTime(0, c.currentTime, fade / 4); source.stop(c.currentTime + fade); } catch { /* Ended. */ }
       if (!fade) clean();
@@ -346,13 +345,10 @@ export class Soundscape {
     try { return Promise.resolve(this.ctx.suspend()).catch(() => {}); } catch { return Promise.resolve(); }
   }
   async dispose() {
-    this.disposed = true;
-    await this.suspend(); this.audioRevision++;
+    await this.suspend(); this.disposed = true; this.audioRevision++;
     this.assetBuffers.clear(); this.assetPending.clear(); this.assetStartPending.clear();
-    this.scoreBuffers.clear(); this.assetDecoders.clear();
     for (const bus of Object.values(this.buses)) bus.disconnect();
     this.master?.disconnect(); this.compressor?.disconnect(); this.reverb?.disconnect(); this.reverbGain?.disconnect();
-    if (this.reverb) this.reverb.buffer = null;
     this.noiseBuffer = null; this.fallbackBuffer = null;
     try { await this.ctx?.close(); } catch { /* Context may already be closed. */ }
   }

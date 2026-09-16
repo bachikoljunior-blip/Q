@@ -1,0 +1,29 @@
+{
+  "base": "fa920db9782b7df42e4e16099a05994e5841dbaa",
+  "files": {
+    "src/audio.js": {
+      "bytes": 24766,
+      "sha256": "a990f34b9d94023e3bb1655c7dbec5d36b484399aa82fd1cdc827e48e7674027"
+    },
+    "src/file-audio-bank.js": {
+      "bytes": 5110,
+      "sha256": "0d4ea37b9ffdbe2485bf8c47a528334bb5828bfa90d2795a1dd97201c8d34d42"
+    },
+    "src/assets/soundscape/pilgrim-harmony.mp3": {
+      "bytes": 288594,
+      "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0"
+    },
+    "src/assets/soundscape/pilgrim-pulse.mp3": {
+      "bytes": 192463,
+      "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13"
+    },
+    "src/assets/soundscape/provenance.json": {
+      "bytes": 24642,
+      "sha256": "16e7e5439bb822729b8decfca3e041042d928749aa012b1a4ff540df972d363e"
+    },
+    "src/assets/vaults/provenance.json": {
+      "bytes": 5432,
+      "sha256": "99ae69f4532462911c610a67a6e8418cac5d1a180afcbb4015bbd430b8c2335b"
+    }
+  }
+}

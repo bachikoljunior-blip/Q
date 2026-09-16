@@ -1,0 +1,41 @@
+✔ native output shares three source-rate score buffers outside FX FIFO and preserves phase and mix (31.52811ms)
+✖ unavailable Offline decoder falls back to device rates without application decimation (8.616418ms)
+✔ detached failing Offline input preserves original bytes and deduplicates pending decode (0.907368ms)
+✔ constructor rejection and changed contexts cannot refill stale cache (3.853742ms)
+✔ pause/resume while score decoding shares loads and never starts old generations (40.338506ms)
+✔ late failed Offline completion after dispose cannot native-decode or repopulate (0.810103ms)
+✔ dispose rejects restart before native suspend resolves and releases active references (7.97819ms)
+✔ gesture unlock, actual graph buses, synchronized score, bounded sources, and complete suspend/resume/dispose (36.865732ms)
+✔ music preference and mute affect active graph immediately; pause during decode cannot resurrect loops (22.995763ms)
+✔ material footsteps follow distance, detect water/bridges/vault, and preserve weapon / position variation (7.649649ms)
+✔ resume rejection / unavailable Web Audio stay silent, decode failure produces bounded fallback and vault retries (45.675928ms)
+✔ late file one-shot is cancelled across suspension, loop ABA sources stay independent, decoded cache stays bounded (7.930703ms)
+✔ file audio bank fetches, decodes, connects and starts every ambient and six SFX (34.79158ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 847.883
+
+✖ failing tests:
+
+test at tests/native-audio.test.mjs:31:1
+✖ unavailable Offline decoder falls back to device rates without application decimation (8.616418ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  44100 !== 48000
+
+      at TestContext.<anonymous> (file:///workspace/scratch/e72662e3b71f/Q-audio-recovery-v52/tests/native-audio.test.mjs:32:185)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 44100,
+    expected: 48000,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

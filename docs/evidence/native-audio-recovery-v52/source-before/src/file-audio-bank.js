@@ -1,42 +1,32 @@
 const bufferBytes = b => (b?.length || 0) * (b?.numberOfChannels || 1) * 4;
-// These three slots are retained for phase-aligned resume, outside the FX FIFO.
-export const SCORE_SAMPLE_RATES = Object.freeze({ 'score:harmony': 44100, 'score:motif': 22050, 'score:pulse': 44100 });
-const decodeAsset = async (host, context, rate, data) => {
-  if (host.disposed || host.ctx !== context) return null;
-  const Offline = globalThis.OfflineAudioContext || globalThis.window?.OfflineAudioContext || globalThis.window?.webkitOfflineAudioContext;
-  host.assetDecoders ||= new Map();
-  if (!host.assetDecoders.has(rate)) {
-    let decoder = null;
-    try { if (Offline) decoder = new Offline(1, 1, rate); } catch { /* Native-rate fallback below. */ }
-    host.assetDecoders.set(rate, decoder);
+const compactBuffer = (context, buffer) => {
+  // decodeAudioData resamples to the device context rate (often 48/96 kHz).
+  // Our source assets are already band-limited to 22.05 kHz: retain that rate
+  // rather than silently tripling music residency on high-rate devices.
+  const rate = 22050;
+  if (!(buffer.sampleRate > rate) || !buffer.getChannelData) return buffer;
+  const compact = context.createBuffer(buffer.numberOfChannels, Math.round(buffer.duration * rate), rate);
+  for (let channel = 0; channel < buffer.numberOfChannels; channel++) {
+    const source = buffer.getChannelData(channel), dest = compact.getChannelData(channel), ratio = buffer.sampleRate / rate;
+    for (let i = 0; i < dest.length; i++) {
+      const at = i * ratio, low = Math.min(source.length - 1, Math.floor(at)), high = Math.min(source.length - 1, low + 1);
+      dest[i] = source[low] + (source[high] - source[low]) * (at - low);
+    }
   }
-  const decoder = host.assetDecoders.get(rate);
-  if (decoder) {
-    // decodeAudioData owns/detaches its input: retain the original for fallback.
-    try { return await decoder.decodeAudioData(data.slice(0)); } catch { /* Same encoded bytes, no second fetch. */ }
-  }
-  if (host.disposed || host.ctx !== context) return null;
-  // Never decimate with interpolation: the browser performs antialias filtering.
-  return context.decodeAudioData(data);
+  return compact;
 };
 
 export async function loadFileAudio(host, key, url) {
   if (!host.ctx || !url || host.disposed) return null;
-  const pinned = !!host.scoreBuffers && Object.hasOwn(SCORE_SAMPLE_RATES, key);
-  const cache = pinned ? host.scoreBuffers : host.assetBuffers;
-  if (cache.has(key)) return cache.get(key);
+  if (host.assetBuffers.has(key)) return host.assetBuffers.get(key);
   if (!host.assetPending.has(key)) {
     const context = host.ctx;
     const pending = Promise.resolve().then(() => fetch(url)).then(response => {
       if (!response.ok) throw Error(`audio ${response.status}`);
       return response.arrayBuffer();
-    }).then(data => decodeAsset(host, context, pinned ? SCORE_SAMPLE_RATES[key] : 22050, data)).then(buffer => {
-      if (!buffer || host.disposed || context !== host.ctx) return null;
-      if (pinned) {
-        // Fixed 48-second authored stems, at most stereo; no key-driven growth.
-        if (!(buffer.duration > 0 && buffer.duration <= 49) || !(buffer.numberOfChannels > 0 && buffer.numberOfChannels <= 2)) return null;
-        cache.set(key, buffer); return buffer;
-      }
+    }).then(data => context.decodeAudioData(data)).then(decoded => {
+      if (host.disposed || context !== host.ctx) return null;
+      const buffer = compactBuffer(context, decoded);
       const cap = host.maxDecodedBytes || 24 * 1024 * 1024;
       const incoming = bufferBytes(buffer);
       if (incoming > cap) return null;
@@ -81,7 +71,7 @@ export async function startFileAudio(host, key, url, options = {}) {
     } };
     const cleanup = () => {
       if (ended) return; ended = true;
-      source.disconnect(); source.buffer = null; gain.disconnect(); panner?.disconnect(); host.releaseVoice?.(node);
+      source.disconnect(); gain.disconnect(); panner?.disconnect(); host.releaseVoice?.(node);
     };
     source.onended = cleanup;
     host.registerVoice?.(node);
