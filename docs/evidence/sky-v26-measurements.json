@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-09-16T02:37:34.116Z",
+  "scope": "Actual HDR parsing/CPU fields, emitted bytes, native JavaScript syntax; no WebGL compilation/drawing or device timing",
+  "source": {
+    "path": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+    "title": "Kloofendal 48d Partly Cloudy (Pure Sky)",
+    "page": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky",
+    "download": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+    "authors": [
+      "Greg Zaal — original",
+      "Jarod Guest — sky edits"
+    ],
+    "license": "CC0-1.0",
+    "licenseSource": "https://polyhaven.com/license",
+    "bytes": 1435119,
+    "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+    "dimensions": [
+      1024,
+      512
+    ],
+    "sourceMetadata": {
+      "dynamicRangeEV": 21,
+      "whiteBalanceKelvin": 5400
+    },
+    "runtimeIncluded": true,
+    "modifications": "Byte-identical original Radiance HDR retained and distributed. Photographic source, not AI-generated imagery. Visible sky samples this unmodified HDR with a level yaw and day fade.",
+    "parseMs": 50.78018999999999
+  },
+  "field": {
+    "cpuMs": 324.482717,
+    "bytes": 1048576,
+    "sourcePeak": 60671.4816,
+    "iblPeak": 15.349460937499998,
+    "sourceSolarPixel": 60671.4816,
+    "iblSolarPixel": 3.423558984375,
+    "annulusRGB": [
+      3.489043277788196,
+      3.3649916443306744,
+      3.8315254443634936
+    ],
+    "horizonRGB": [
+      0.4473476334132392,
+      0.4796986952114205,
+      0.582211221594139
+    ]
+  },
+  "angleResolution": {
+    "verticalFovDegrees": 54,
+    "sourceSamplesVertical": 153.6,
+    "horizontalFovDegrees": 84.34201635064858,
+    "sourceSamplesHorizontal": 239.90617984184485
+  },
+  "distribution": {
+    "js": [
+      {
+        "path": "assets/index-B94vXXnz.js",
+        "bytes": 163175
+      },
+      {
+        "path": "assets/scene--C-xFHqW.js",
+        "bytes": 129677
+      },
+      {
+        "path": "assets/three-BQu5jV7o.js",
+        "bytes": 576585
+      }
+    ],
+    "stageFiles": 33,
+    "stageBytes": 11835646,
+    "standaloneBytes": 15505597,
+    "baselineStandaloneBytes": 13576431,
+    "standaloneIncrease": 1929166,
+    "sourceHDRBase64Bytes": 1913492
+  },
+  "sourceHashes": {
+    "src/sky-field.js": "dbc0bb4051e87c17373a956aadd2840370c0b3480048daf6e0d8397381cffc58",
+    "src/sky-texture-loader.js": "99240b6018c501b03023c023e9fce4b85d31f5babade32c5113037caa8edb2f2",
+    "src/sky-assets.js": "9e09e20c5d7e00478d5ab49e2850696cce35a8b928648c202c363f10fcb6a2c0",
+    "src/sky-lighting.js": "7bd023cf23cc5269e2ce25e9c289d31e9f50ac870556e0f277c16414a4d40762",
+    "src/sky-exposure.js": "211f200b8d36aa8b42e060541dcdb118ec335de75dd58226ea926be6da15b5c2",
+    "src/environment-atmosphere.js": "c78303af10af15142d6d9510dd398fd528205b6e3f2de711dc4093ff8ec1aef2",
+    "src/environment-materials.js": "39f68f90bb5bc01c12d05e5f382d4108846ecb7716d82e99ab275031a4ba76f0",
+    "src/scene.js": "965711336afa602023a255218e95cb7c21bfd2b9c4eae926a1707fdff655a7c6"
+  }
+}

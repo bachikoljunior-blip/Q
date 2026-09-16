@@ -41,6 +41,7 @@ export async function createScenePair({ baselineRef } = {}) {
         if (specifier === 'three') return { url: rendererModule, shortCircuit: true };
         if (specifier === './character-assets.js') return { url: assetStub, shortCircuit: true };
         if (specifier === './environment-assets.js') return { url: environmentTextureStub, shortCircuit: true };
+        if (specifier === './sky-assets.js') return { url: 'data:text/javascript,export function loadSkySource(){return Promise.resolve(null)}', shortCircuit: true };
         if (specifier === './forest-assets.js') return { url: forestTextureStub, shortCircuit: true };
         if (specifier === './vault-textures.js') return { url: vaultTextureStub, shortCircuit: true };
         if (!baselineRef && context.parentURL === baselineURL && specifier === './static-transforms.js') return { url: bakeStub, shortCircuit: true };

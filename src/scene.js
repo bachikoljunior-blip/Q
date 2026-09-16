@@ -10,7 +10,9 @@ import { surfaceMaterial, clothMaterial, installEnvironmentTextures } from './en
 import { block, beam, part, batchProp, chamferBox, rockGeometry, mountainGeometry, treeTrunkGeometry, distantTreeGeometry, coniferGeometry, broadleafGeometry, grassGeometry, createHouse, createCrate, createHerb, createTent, createCart, createBoat, createBrazier, createLantern } from './environment-models.js';
 import { loadEnvironmentTextures } from './environment-assets.js';
 import { bakeGroundContact } from './environment-contact.js';
-import { skyMaterial, updateAtmosphere } from './environment-atmosphere.js';
+import { skyMaterial, updateAtmosphere, installSkyAtmosphere, releaseSkyAtmosphere } from './environment-atmosphere.js';
+import { loadSkySource } from './sky-assets.js';
+import { createSkyLighting } from './sky-lighting.js';
 import { createTerrainSurface } from './terrain-surface.js';
 import { createWaterSurface } from './water-surface.js';
 import { forestMaterial, configureForestMesh, installForestTextures } from './forest-materials.js';
@@ -31,14 +33,14 @@ function mesh(geometry,mat,parent,pos=[0,0,0],scale=[1,1,1],shadow=false){const 
 function addBox(parent,color,x,y,z,sx,sy,sz,shadow=false){const family=color===C.wood?'wood':color===C.gold?'metal':'stone';return mesh(box,surfaceMaterial(family,color),parent,[x,y,z],[sx,sy,sz],shadow);}
 
 export async function createSceneView(canvas,game,settings){
-  const [vaultTextures,environmentTextures,forestTextures]=await Promise.all([loadVaultTextures(),loadEnvironmentTextures(),loadForestTextures()]);
+  const [vaultTextures,environmentTextures,forestTextures,skySource]=await Promise.all([loadVaultTextures(),loadEnvironmentTextures(),loadForestTextures(),loadSkySource()]);
   installEnvironmentTextures(environmentTextures);
   installForestTextures(forestTextures);
-  return new SceneView(canvas,game,settings,null,vaultTextures);
+  return new SceneView(canvas,game,settings,null,vaultTextures,skySource);
 }
 
 export class SceneView {
-  constructor(canvas,game,settings,characters,vaultTextures={}){
+  constructor(canvas,game,settings,characters,vaultTextures={},skySource=null){
     this.canvas=canvas;this.game=game;this.settings=settings;this.scene=new T.Scene();this.scene.background=new T.Color(0x9aacac);this.scene.fog=new T.FogExp2(0x9bacac,.0042);
     this.camera=new T.PerspectiveCamera(54,innerWidth/innerHeight,.1,1100);this.renderer=new T.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});this.renderer.setPixelRatio(Math.min(devicePixelRatio,settings.quality==='high'?1.7:settings.quality==='low'?1:1.35));this.renderer.setSize(innerWidth,innerHeight);this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=.94;this.renderer.shadowMap.enabled=settings.quality!=='low';this.renderer.shadowMap.type=T.PCFSoftShadowMap;
     this.ambient=new T.HemisphereLight(0xb5cbdc,0x48493c,1.1);this.scene.add(this.ambient);this.sun=new T.DirectionalLight(0xffd8a1,3.2);this.sun.position.set(-80,100,-70);this.sun.castShadow=true;this.sun.shadow.mapSize.set(1024,1024);Object.assign(this.sun.shadow.camera,{left:-35,right:35,top:35,bottom:-35,near:1,far:220});this.sun.shadow.bias=-.0003;this.sun.shadow.normalBias=.045;this.scene.add(this.sun,this.sun.target);
@@ -54,7 +56,24 @@ export class SceneView {
     for(const item of game.pickups){const g=new T.Group();g.position.set(item.x,heightAt(item.x,item.z),item.z);if(item.type==='chest'||item.type==='supplies'){g.add(createCrate({chest:item.type==='chest'}));}else{g.add(createHerb({relic:item.type==='relic'}));const glint=mesh(sphere,material(0xcee5bc,{emissive:0xb4dca1,emissiveIntensity:.7}),g,[0,.8,0],[.035,.035,.035]);glint.castShadow=false;}this.scene.add(g);this.lootModels.set(item.id,g);}
     this.arrowShafts=new T.InstancedMesh(new T.BoxGeometry(.045,.045,1.1),material(0xbf9256,{emissive:0x362015}),48);const tips=new T.ConeGeometry(.1,.28,5);tips.rotateX(Math.PI/2);tips.translate(0,0,.65);this.arrowTips=new T.InstancedMesh(tips,material(0xe1bc79),48);this.arrowShafts.count=this.arrowTips.count=0;this.scene.add(this.arrowShafts,this.arrowTips);this.arrowDummy=new T.Object3D();
     this.weaponTrails=new WeaponTrails(this.scene);
+    if(skySource){try{this.installSkySource(skySource);}catch(error){this.renderer.dispose();throw error;}}
     this.resize=()=>{this.camera.aspect=innerWidth/innerHeight;this.camera.updateProjectionMatrix();this.renderer.setSize(innerWidth,innerHeight);};addEventListener('resize',this.resize);this.setQuality(settings.quality);
+  }
+  installSkySource(source,makeGenerator){
+    // Prepare completely before changing the live sky; failure retains the prior
+    // environment. Boot failure uses the existing visible launch retry.
+    const resource=createSkyLighting(this.renderer,source,makeGenerator);
+    if(!resource){this.disposeSkyLighting();updateAtmosphere(this,this.game.day,this.t);return null;}
+    this.disposeSkyLighting();this.skyLighting=resource;
+    this.scene.environment=resource.environment;this.scene.environmentRotation.set(0,resource.yaw,0);
+    installSkyAtmosphere(resource);updateAtmosphere(this,this.game.day,this.t);
+    return resource;
+  }
+  disposeSkyLighting(){
+    const resource=this.skyLighting;if(!resource)return;
+    if(this.scene.environment===resource.environment)this.scene.environment=null;
+    this.scene.environmentIntensity=1;this.scene.environmentRotation.set(0,0,0);
+    releaseSkyAtmosphere(resource);resource.dispose();this.skyLighting=null;
   }
   // Only these construction methods contain immutable local transforms. Do not
   // include sky/clouds, actors, loot, effects, beacon animations or quest scenes.

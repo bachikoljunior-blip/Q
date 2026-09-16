@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-09-16",
+  "base": "fb70ddddf8df261851b66b5e29b32ac723818ff1",
+  "source": {
+    "path": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+    "title": "Kloofendal 48d Partly Cloudy (Pure Sky)",
+    "page": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky",
+    "download": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+    "authors": ["Greg Zaal — original", "Jarod Guest — sky edits"],
+    "license": "CC0-1.0",
+    "licenseSource": "https://polyhaven.com/license",
+    "bytes": 1435119,
+    "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+    "dimensions": [1024, 512],
+    "sourceMetadata": {"dynamicRangeEV": 21, "whiteBalanceKelvin": 5400},
+    "runtimeIncluded": true,
+    "modifications": "Byte-identical original Radiance HDR retained and distributed. Photographic source, not AI-generated imagery. Visible sky samples this unmodified HDR with a level yaw and day fade."
+  },
+  "runtimeDerivative": {
+    "implementation": "src/sky-field.js",
+    "dimensions": [512, 256],
+    "encoding": "linear-sRGB RGBA16F",
+    "processing": "Latitude-strip solid-angle 2x2 downsample; measured source solar core inside 2 degrees filled from weighted 4–8 degree sky annulus, smoothly blending until 4 degrees. Synthetic lower hemisphere blends to scene ground radiance over y=-0.16..0. Directional sun replaces the removed direct disc; bright surrounding clouds remain.",
+    "sourceSunDirection": [0.5545829108103306, 0.7419213933971978, 0.3768161900140457],
+    "yawRadians": 3.193171925892692,
+    "groundLinearRGB": [0.085, 0.075, 0.055],
+    "pmrem": {"threeVersion": "0.186.0", "face": 128, "atlas": [384, 512], "outputBytes": 1572864, "temporaryPingBytes": 1572864, "nativeRenderCalls": 19, "ggxLoopIterations": 10616832},
+    "qualityPolicy": "All qualities keep the same 1024x512 visible texture and one face128 PMREM. Quality changes neither fetch/decode nor regenerate/upload new sky resources."
+  },
+  "exclusions": ["2K comparison HDR", "Qwantani alternative", "website thumbnails and example renders", "offline asset-inspection PNGs", "this provenance file and THREE-LICENSE.txt are retained source documentation, not runtime texture copies"],
+  "codeLicense": {"path": "src/sky-exposure.js", "derivedFrom": "Three r186 ACESFilmicToneMapping", "license": "MIT", "notice": "src/assets/sky/THREE-LICENSE.txt"},
+  "validationBoundary": "Actual HDR bytes and CPU source/native Three control flow verified. No GPU shader compilation, gameplay image, FPS, device memory measurement or PS4 parity is established."
+}

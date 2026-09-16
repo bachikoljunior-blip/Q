@@ -1,0 +1,33 @@
+✔ original packed surface payloads reproduce the recorded bytes and share one upload per family (127.031409ms)
+✔ real standard shader hooks preserve lighting and expose bounded triplanar, flow and wind contracts (0.983964ms)
+✔ scenery preserves the original seeded placement stream and partitions every tree once across quality changes (2804.614755ms)
+✔ production enemy death plays once without changing saved state; restored dead enemies stay hidden (2117.214971ms)
+✔ distributed CC0 texture bytes match the immutable source hashes and bounded three-map payload (6.924725ms)
+✔ real async environment loader disposes partial failures, retries, then shares albedo and linear normal uploads (3.51477ms)
+✔ sourced normal path is distinct from vault overrides and plaster; installing maps updates existing material consumers (16.065835ms)
+✔ ground-contact bake is deterministic, read-only, bounded and excludes the movable gate (13.426685ms)
+✔ sky, water and metal share lighting direction while material shaders retain Three light and fog stages (37.688119ms)
+✔ normal neutral/U/V tilts follow albedo UV derivatives on all six signed projection axes (2.265426ms)
+✔ open near and distant foliage has finite normalized normals, real UV area, flex roots and bounded wind (16.621301ms)
+✔ committed photos preserve cutout coverage across usable mips and do not carry black fringes (250.299442ms)
+✔ lit, depth and point-shadow shaders share branch movement, alpha and material updates (8.995461ms)
+✔ same 805 tree placement and LOD radii keep six draw sets and bounded triangle changes (47.192466ms)
+✔ photo loader disposes temporary decoder textures, rejects a partial set and retries (2.000098ms)
+✔ original HDR hash, linear half data and measured solar direction match the shared level-horizon sampling (22.808904ms)
+✔ IBL copy retains directional cloud radiance, removes the direct solar spike and replaces synthetic lower sky (310.405051ms)
+✔ native Three PMREM control flow uses exactly two face128 atlases and 19 render calls; resources release once (226.137651ms)
+✔ loader failure and invalid decode retry; concurrent successful loads share CPU data, not uploaded textures (6.140092ms)
+✔ generator exception restores public renderer state and disposes owned temporary input (178.706485ms)
+✔ same saved day controls photo, IBL, direct sun and foliage; active water/metal retain only native PBR reflection (185.271998ms)
+✔ fog display values match the official Three ACES shader matrix/fit across day and night radiance (1.802173ms)
+✔ real SceneView retains one sky across quality switches and failed replacement, then explicitly releases it (2726.077327ms)
+✔ baked local transforms retain native world updates, parent motion and explicit local rebaking (7.118484ms)
+✔ actual scenery graph stays identical through actor, weather, effects, quality, light and parent updates (25143.058285ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25376.472094

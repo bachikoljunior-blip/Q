@@ -1,0 +1,62 @@
+# Shared photographic sky and material lighting — v26
+
+This bounded source unit replaces the daylight cloud field and supplies previously absent image-based lighting to the same game scene. It is **not a PS4-quality acceptance**: official gameplay pixels, GPU shader compilation, phone frame time/memory, same-save visual comparison and the ten reference-game comparisons remain unobserved. No alternate browser/server/CI renderer was used. Base: `fb70ddddf8df261851b66b5e29b32ac723818ff1`; local branch `feat/ps4-shared-sky-v26-20260916`. The integrator alone handles remote publication.
+
+## Source and intended visual effect
+
+One original [Kloofendal 48d Partly Cloudy Pure Sky](https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky) HDR supplies natural cloud structure, the visible sun, common diffuse lighting and rough/specular reflection for Standard/Physical water, actors and props. Greg Zaal photographed the source; Jarod Guest made the sky edits. The [Poly Haven license](https://polyhaven.com/license) permits CC0 use and redistribution. Original HDR bytes, license/source URLs, authors, processing and exact SHA256 are retained in `src/assets/sky/provenance.json`. This is photographed material, not generated imagery. Website previews are not shipped. The research-only 2K file and second candidate are absent from the repository/runtime.
+
+The source is 1,435,119 B, 1024×512, SHA256 `fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798`. The unchanged file is both the retained source and runtime asset; no duplicate source copy is distributed. Its edited lower hemisphere is synthetic sky extension, so the visible shader hides it below the level horizon and the lighting copy replaces it with subdued ground radiance.
+
+A 1K panorama provides only 153.6 source samples over the camera's **vertical** 54° FOV; at 16:9, the 84.342° horizontal FOV covers about 239.9 samples. Existing output resolution/DPR magnifies these samples. This can visibly limit cloud sharpness. A source photograph and coherent lighting are meaningful material changes, but neither constitutes evidence that final game pixels meet the target.
+
+## Shared direction, energy and color
+
+Visible sky uses the original linear HDR on the existing sphere, without an additional draw. Its inverse yaw is the transpose of the same level Y rotation assigned to `scene.environmentRotation`. Measured source solar direction becomes `[-0.5732726503, 0.7419213934, -0.3477227551]`; the directional shadow light and foliage backlight use that direction. Pitching the panorama to the previous 44.46° sun would tilt the horizon, so the light now follows the photograph's 47.90° elevation.
+
+Before PMREM, a separate linear-radiance copy is solid-angle downsampled to 512×256. Its solar core inside 2° is filled by the surrounding 4–8° sky annulus, blending back to the photograph by 4°. The original center luminance 60,671.48 becomes 3.42356 in the lighting copy. Bright neighboring clouds still reach 15.34946: they are real sky illumination, not an unremoved disc. The directional light is the single direct-sun replacement. Lower-hemisphere radiance blends to scene-ground RGB `[.085,.075,.055]` over y=−.16..0.
+
+On supported renderers, all qualities use one visible 1K texture and one PMREM. The saved `game.day` produces one fade/gain/energy state for photograph, environment, directional sun and leaf backlight. At full night the photo, direct sun and daylight IBL reach zero; the existing analytic night gradient and navigation fill remain. Daytime hemisphere falls to .14; night retains .54. The exposure stays .94, with the existing ACES tone mapper. The environment intensity .85 and directional intensity 2.65 are conservative artistic calibration values, not measured absolute photometry or visually approved lighting.
+
+Water and metal retain the native Standard BRDF, normals, transparency and bank treatment. Their previous hand-added `qSky` reflection is disabled while HDR lighting is active, preventing duplicate reflection. The environment contains distant sky/ground only: it does not reflect nearby bridges, characters or banks. At night there is no separate moon/starlight probe, so metallic night appearance remains a visual-review limitation.
+
+The independent review found a color-space defect: native Three applies fog after tone mapping and output encoding. Copying raw horizon radiance to fog produced about 9.1/255 mismatch. `sky-exposure.js` now computes the exact r186 ACES result for fog; sky retains raw radiance. At y=0, photo blend is zero and both share the same horizon. Native fog uniforms versus an independently evaluated Three shader formula differ by at most 1.11e−16 in the CPU oracle. The mirrored ACES formula retains the Three MIT notice in source and standalone distribution. Directional variation above the horizon still cannot be represented by one fog color.
+
+## Cost under the same quality conditions
+
+| Component | All low / medium / high settings |
+|---|---:|
+| Source transfer | 1,435,119 B; fetched once with existing 3D loading |
+| Cached CPU visible RGBA16F | 4 MiB |
+| Visible GPU texture payload | 4 MiB |
+| Temporary 512×256 IBL input | 1 MiB CPU + 1 MiB GPU |
+| PMREM output / temporary ping | 1.5 MiB / 1.5 MiB |
+| Steady added GPU texture payload | 5.5 MiB |
+| Peak added GPU payload during bake | 8 MiB |
+| Native PMREM control flow | 19 render-method calls, 10,616,832 GGX loop iterations |
+| Additional gameplay scene draws | 0; native material fragment sampling does increase |
+
+These are format/control-flow calculations, not measured GPU allocations or time. Cached CPU data plus the temporary CPU field are additional to GPU payload; Radiance input and decoder scratch/GC can overlap. One recorded local parse took 50.78 ms and field preparation 324.48 ms during the final run; another independent run measured preparation about 153.9 ms. Host load/JIT differ; no phone startup prediction follows. No frame-time claim is made.
+
+`PMREMGenerator.fromEquirectangular()` derives face size from input width/4. Its public second argument is a target, not a size option. The 512 input produces face128 and a 384×512 atlas. The raw HDR is never assigned to `scene.background`, avoiding Three's extra panorama-to-cube cache. Disposing the generator frees its ping texture; the returned output remains until explicit release. Keeping 1K visible on low as well avoids resolution changes, duplicate textures and rebuilding when quality toggles. Low quality's added texture payload is therefore the same bounded 5.5 MiB.
+
+Final emitted graph: **initial 163,175 B; 3 JS chunks**. Scene is 129,677 B and Three is 576,585 B. Staged graph has 33 files / 11,835,646 B. Standalone is **15,505,597 B**, compared with v25's 13,576,431 B: +1,929,166 B, of which the HDR base64 is 1,913,492 B. No existing gate threshold changed. The native build, staged file and standalone contain the exact original HDR once; a dedicated check excludes 2K and verifies the embedded bytes. Local build directories may retain old unreferenced files; staging uses only the current manifest graph.
+
+## Loading, retry and disposal boundary
+
+`createSceneView` awaits the source alongside existing vault/environment/forest assets. WebGL2 alone does not guarantee renderable RGBA16F: before CPU field preparation or GPU resource creation, `createSkyLighting` requires an explicit true from public `renderer.extensions.has` for `EXT_color_buffer_float` or `EXT_color_buffer_half_float`, matching Three's capability alternatives. Both missing, undefined probe API or undefined results return null; SceneView keeps the original analytic sky/day lighting/water reflection and boots normally. The cached HDR download/parse contract remains unchanged. Explicit float and half-only fixtures each run the existing single bake; unsupported/unknown fixtures make zero bake/texture-upload calls and preserve legacy day intensities. A download/parse/validation failure rejects launch and clears the sky loader promise, using the existing visible retry. A decoded CPU array is shared across retries; GPU textures are owned by each installed resource. New PMREM creation completes before replacing live environment/uniform references. Quality changes reuse both textures and perform no new decode or bake. `disposeSkyLighting()` clears the scene environment and shared sky uniform only when they belong to that resource, then releases visible texture and returned PMREM once. Normal construction failure disposes the new renderer before the existing launch retry.
+
+Three r186 has no exception cleanup inside its PMREM render loop. The wrapper restores the public render target, cube face, mip level, XR enabled and autoClear states in `finally`. The equirectangular path does not modify renderer-global viewport/scissor, toneMapping or outputColorSpace; restoring the previous render target restores its viewport/scissor. Known input, generator and returned targets are explicitly disposed. Native faults at passes 1, 3 and 19 restore those states.
+
+**If native PMREM throws before returning its internally allocated output, the public API does not expose that output for explicit disposal.** The oracle observes no output dispose event in that case; actual GPU reclamation is unmeasured, and this is not proof of a permanent leak. A fresh generator with a preallocated second-argument target skips required native LOD/ping initialization. No private generator state, renderer monkeypatch or context-loss workaround was used. Full resource recovery after that specific native exception is therefore not guaranteed.
+
+## Verification and production record
+
+- Focused source/native tests: 25/25 across sky, environment, foliage and real static-scene updates; 25.376 s. Final sky-only rerun is 9/9 including float, half-only, unsupported and unknown capability cases (4.360 s); the final-source independent oracle is retained separately.
+- Independent reviewer: actual HDR parsing, native PMREM control flow, actual `createSceneView` async wait/install, quality switching, native material rotation, fog formula, shader source contracts and injected native faults. Renderer and other asset entrypoints are explicitly doubled. No WebGL shader compilation, drawing or frames occurred.
+- Final build/package/stage gates passed unchanged; native `vm.Script` parsed the packaged IIFE. Source, emitted, staged and embedded HDR hashes agree. See `docs/evidence/sky-v26-measurements.json` and recorded build logs.
+- Independent oracle/report/review are copied unchanged in `docs/evidence/sky-v26-audit/`. An earlier owner rerun is retained as `sky-v26-audit-owner-rerun.json`; its timestamp/hashes precede the capability safeguard. The reviewer then updated the boundary doubles with explicit capability values and reread final source independently. Historical results are not represented as final-source checks.
+
+Implementation began 2026-09-16 02:14:54Z; final measurements were taken 02:37:34Z, with final documentation/checkpoint afterward. Final independent capability readback completed at 02:38:52Z with no source changes during the run. This wall interval includes integration, review, verification and a usage-limit interruption; it is not pure coding time. Source retrieval/inspection happened earlier as a separate bounded research task (measurement timestamp 02:05:37Z); no generated-image request was made. Exact source-acquisition/copy wall duration and the interruption duration were not separately metered, so no invented production-speed ratio is reported. Measured decoder/field CPU time is separate from acquisition and integration wall time.
+
+Rework was concrete: public renderer-state recovery; the float-FBO capability fallback; the fog post-ACES correction; and replacing an incorrect global IBL `<10` test assumption with central-sun removal plus preserved bright-cloud checks. The first combined test run had 16/17 passing due to that overly broad cloud threshold. The final focused runs pass; the native unreturned-target exception remains documented. This unit improves the method by replacing an isolated analytic approximation with one shared photographic source and by checking the real radiance/color/control-flow contracts. Deadline 2026-09-20 and full-screen PS4-quality judgment remain evidence-insufficient; next acceptance work must use the officially supported same-save game view, sun-facing/away water and rough/metal props, and night readability when available.
