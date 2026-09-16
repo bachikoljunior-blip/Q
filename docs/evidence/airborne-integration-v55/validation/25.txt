@@ -1,0 +1,49 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 build
+> vite build
+
+vite v7.3.1 building client environment for production...
+transforming...
+✓ 102 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/.vite/manifest.json                                              5.92 kB │ gzip:   1.12 kB
+dist/assets/shared-step-D8_A5LtE.wav                                  7.10 kB
+dist/index.html                                                       7.30 kB │ gzip:   2.78 kB
+dist/assets/shared-impact-DwWqEia4.wav                                7.98 kB
+dist/assets/shared-swing-BkmUzsmF.wav                                10.63 kB
+dist/assets/ember-stone-CGtrIuNR.png                                 16.85 kB
+dist/assets/gale-stone-DFcyxpvg.png                                  17.05 kB
+dist/assets/tide-stone-COv3Sj_E.png                                  17.27 kB
+dist/assets/moss-stone-DiwO4PmY.png                                  17.33 kB
+dist/assets/shared-alert-JeJkFdAY.wav                                21.21 kB
+dist/assets/shared-seal-slkiLvkd.wav                                 30.91 kB
+dist/assets/shared-claim-BPXeWqKz.wav                                39.73 kB
+dist/assets/crown-branch-rgba-DvI_Tv4J.png                          162.72 kB
+dist/assets/north-gate-v22-M69S2yqx.webp                            162.96 kB
+dist/assets/pine-branch-rgba-DpLH-kJr.png                           165.26 kB
+dist/assets/ember-ambient-DxlfqX62.wav                              176.44 kB
+dist/assets/tide-ambient-BP0Z0aTJ.wav                               176.44 kB
+dist/assets/gale-ambient-Bk5IsviT.wav                               176.44 kB
+dist/assets/moss-ambient-P9AOr4W8.wav                               176.44 kB
+dist/assets/pilgrim-motif-yb4axZNo.mp3                              192.46 kB
+dist/assets/young-male-q95-DLRShmkN.webp                            541.95 kB
+dist/assets/pilgrim-foley-CW54U_6w.wav                              826.37 kB
+dist/assets/rock_face_03_diff_1k-Clx6WbHJ.jpg                       927.08 kB
+dist/assets/pilgrim-harmony-SbAORmVg.mp3                            961.33 kB
+dist/assets/pilgrim-pulse-YjsWYUcK.mp3                              961.33 kB
+dist/assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg                   1,146.79 kB
+dist/assets/forest_floor_diff_1k-FrvyY1gs.jpg                     1,329.85 kB
+dist/assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr  1,435.12 kB
+dist/assets/north-gate-v23-BAPO0H9x.mp4                           3,178.19 kB
+dist/assets/index-DvxNsySP.css                                       60.19 kB │ gzip:  13.54 kB
+dist/assets/index-bjGjwsE7.js                                       165.61 kB │ gzip:  63.32 kB
+dist/assets/scene-Dcsbks9G.js                                       340.73 kB │ gzip: 127.87 kB
+dist/assets/three-CQW9fVDb.js                                       579.60 kB │ gzip: 147.41 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.90s

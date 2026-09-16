@@ -1,0 +1,2372 @@
+{
+  "generatedAt": "2026-09-16T09:19:20.882Z",
+  "base": "fa920db9782b7df42e4e16099a05994e5841dbaa",
+  "boundary": "Production Game and bundled main. DOM/SceneView/Soundscape are explicit Node doubles; no rendered pixels, device time or visual quality assessment.",
+  "sourceHashes": {
+    "src/core.js": {
+      "bytes": 39845,
+      "sha256": "a6b7271063f683d2228dc1d547a82d7dd5b3257b3f4a538ced63c88ac37e3b3f"
+    },
+    "src/main.js": {
+      "bytes": 54846,
+      "sha256": "0e864c56cea02f20e20d2edb00de72b0bb062f959699486219eaa23cc718dc87"
+    },
+    "tests/main-runtime-fixture.mjs": {
+      "bytes": 13783,
+      "sha256": "74b896b0be077bc10e993e22ce1547908ca41f67952da01b09e6405bded9258e"
+    },
+    "tests/airborne-death-fixture.mjs": {
+      "bytes": 2960,
+      "sha256": "0f98e6fa2fab52a7f6651992f2d384b2c2289a081f77bdbbb729cfce31adcbe2"
+    },
+    "tests/airborne-death.test.mjs": {
+      "bytes": 5044,
+      "sha256": "fbf0ec114d21f471f092afbf622cdf7544e8d66ba33c40b1a8127a2da0f6530c"
+    }
+  },
+  "coreCases": [
+    {
+      "before": {
+        "place": "haven",
+        "phase": null,
+        "hz": 30,
+        "initial": {
+          "y": -1.4146810678090764,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      },
+      "after": {
+        "place": "haven",
+        "phase": null,
+        "hz": 30,
+        "initial": {
+          "y": -1.4146810678090764,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "haven",
+        "phase": null,
+        "hz": 60,
+        "initial": {
+          "y": -1.4146810678090764,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      },
+      "after": {
+        "place": "haven",
+        "phase": null,
+        "hz": 60,
+        "initial": {
+          "y": -1.4146810678090764,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "haven",
+        "phase": null,
+        "hz": 120,
+        "initial": {
+          "y": -1.4146810678090764,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      },
+      "after": {
+        "place": "haven",
+        "phase": null,
+        "hz": 120,
+        "initial": {
+          "y": -1.4146810678090764,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "haven",
+        "phase": 0.2,
+        "hz": 30,
+        "initial": {
+          "y": -0.3696810678090762,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0450000000000002,
+        "finalVertical": 3.3000000000000034,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "haven",
+        "phase": 0.2,
+        "hz": 30,
+        "initial": {
+          "y": -0.3696810678090762,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": 0.03333333333333333,
+        "landedAt": 0.5,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": -0.28301440114240944,
+            "vertical": 2.600000000000003,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -0.19968106780907555,
+            "vertical": -0.8999999999999966,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "haven",
+        "phase": 0.2,
+        "hz": 60,
+        "initial": {
+          "y": -0.3696810678090762,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0450000000000002,
+        "finalVertical": 3.3000000000000034,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "haven",
+        "phase": 0.2,
+        "hz": 60,
+        "initial": {
+          "y": -0.3696810678090762,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": 0.016666666666666666,
+        "landedAt": 0.5,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": -0.3205144011424095,
+            "vertical": 2.9500000000000033,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -0.1646810678090756,
+            "vertical": -0.899999999999997,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "haven",
+        "phase": 0.2,
+        "hz": 120,
+        "initial": {
+          "y": -0.3696810678090762,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0450000000000002,
+        "finalVertical": 3.3000000000000034,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": -0.3696810678090762,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "haven",
+        "phase": 0.2,
+        "hz": 120,
+        "initial": {
+          "y": -0.3696810678090762,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": 0.008333333333333333,
+        "landedAt": 0.5083333333333333,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": -0.34363940114240954,
+            "vertical": 3.1250000000000036,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -0.1471810678090754,
+            "vertical": -0.8999999999999957,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "haven",
+        "phase": 0.5,
+        "hz": 30,
+        "initial": {
+          "y": -0.3771810678090753,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0375000000000012,
+        "finalVertical": -2.9999999999999973,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "haven",
+        "phase": 0.5,
+        "hz": 30,
+        "initial": {
+          "y": -0.3771810678090753,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": 0.03333333333333333,
+        "landedAt": 0.2,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": -0.5005144011424085,
+            "vertical": -3.6999999999999975,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "haven",
+        "phase": 0.5,
+        "hz": 60,
+        "initial": {
+          "y": -0.3771810678090753,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0375000000000012,
+        "finalVertical": -2.9999999999999973,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "haven",
+        "phase": 0.5,
+        "hz": 60,
+        "initial": {
+          "y": -0.3771810678090753,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": 0.016666666666666666,
+        "landedAt": 0.2,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": -0.4330144011424086,
+            "vertical": -3.3499999999999974,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "haven",
+        "phase": 0.5,
+        "hz": 120,
+        "initial": {
+          "y": -0.3771810678090753,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0375000000000012,
+        "finalVertical": -2.9999999999999973,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": -0.3771810678090753,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "haven",
+        "phase": 0.5,
+        "hz": 120,
+        "initial": {
+          "y": -0.3771810678090753,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": 0.008333333333333333,
+        "landedAt": 0.20833333333333334,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": -0.4036394011424086,
+            "vertical": -3.174999999999997,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": -1.414681067809075,
+            "vertical": -7.199999999999993,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": -1.4146810678090764,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "bridge",
+        "phase": null,
+        "hz": 30,
+        "initial": {
+          "y": 3.5391119527874473,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      },
+      "after": {
+        "place": "bridge",
+        "phase": null,
+        "hz": 30,
+        "initial": {
+          "y": 3.5391119527874473,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "bridge",
+        "phase": null,
+        "hz": 60,
+        "initial": {
+          "y": 3.5391119527874473,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      },
+      "after": {
+        "place": "bridge",
+        "phase": null,
+        "hz": 60,
+        "initial": {
+          "y": 3.5391119527874473,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "bridge",
+        "phase": null,
+        "hz": 120,
+        "initial": {
+          "y": 3.5391119527874473,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      },
+      "after": {
+        "place": "bridge",
+        "phase": null,
+        "hz": 120,
+        "initial": {
+          "y": 3.5391119527874473,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "bridge",
+        "phase": 0.2,
+        "hz": 30,
+        "initial": {
+          "y": 4.584111952787445,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0449999999999982,
+        "finalVertical": 3.3000000000000034,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "bridge",
+        "phase": 0.2,
+        "hz": 30,
+        "initial": {
+          "y": 4.584111952787445,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": 0.03333333333333333,
+        "landedAt": 0.5,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 4.670778619454112,
+            "vertical": 2.600000000000003,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 4.754111952787445,
+            "vertical": -0.8999999999999966,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "bridge",
+        "phase": 0.2,
+        "hz": 60,
+        "initial": {
+          "y": 4.584111952787445,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0449999999999982,
+        "finalVertical": 3.3000000000000034,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "bridge",
+        "phase": 0.2,
+        "hz": 60,
+        "initial": {
+          "y": 4.584111952787445,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": 0.016666666666666666,
+        "landedAt": 0.5,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 4.633278619454112,
+            "vertical": 2.9500000000000033,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 4.789111952787447,
+            "vertical": -0.899999999999997,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "bridge",
+        "phase": 0.2,
+        "hz": 120,
+        "initial": {
+          "y": 4.584111952787445,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0449999999999982,
+        "finalVertical": 3.3000000000000034,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 4.584111952787445,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "bridge",
+        "phase": 0.2,
+        "hz": 120,
+        "initial": {
+          "y": 4.584111952787445,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": 0.008333333333333333,
+        "landedAt": 0.5083333333333333,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 4.610153619454112,
+            "vertical": 3.1250000000000036,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 4.806611952787446,
+            "vertical": -0.8999999999999957,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "bridge",
+        "phase": 0.5,
+        "hz": 30,
+        "initial": {
+          "y": 4.576611952787449,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0375000000000014,
+        "finalVertical": -2.9999999999999973,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "bridge",
+        "phase": 0.5,
+        "hz": 30,
+        "initial": {
+          "y": 4.576611952787449,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": 0.03333333333333333,
+        "landedAt": 0.2,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 4.453278619454116,
+            "vertical": -3.6999999999999975,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "bridge",
+        "phase": 0.5,
+        "hz": 60,
+        "initial": {
+          "y": 4.576611952787449,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0375000000000014,
+        "finalVertical": -2.9999999999999973,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "bridge",
+        "phase": 0.5,
+        "hz": 60,
+        "initial": {
+          "y": 4.576611952787449,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": 0.016666666666666666,
+        "landedAt": 0.2,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 4.5207786194541155,
+            "vertical": -3.3499999999999974,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "bridge",
+        "phase": 0.5,
+        "hz": 120,
+        "initial": {
+          "y": 4.576611952787449,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0375000000000014,
+        "finalVertical": -2.9999999999999973,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 4.576611952787449,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "bridge",
+        "phase": 0.5,
+        "hz": 120,
+        "initial": {
+          "y": 4.576611952787449,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": 0.008333333333333333,
+        "landedAt": 0.20833333333333334,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 4.5501536194541155,
+            "vertical": -3.174999999999997,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 3.5391119527874486,
+            "vertical": -7.199999999999993,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 3.5391119527874473,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "slope",
+        "phase": null,
+        "hz": 30,
+        "initial": {
+          "y": 51.578716593069984,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      },
+      "after": {
+        "place": "slope",
+        "phase": null,
+        "hz": 30,
+        "initial": {
+          "y": 51.578716593069984,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "slope",
+        "phase": null,
+        "hz": 60,
+        "initial": {
+          "y": 51.578716593069984,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      },
+      "after": {
+        "place": "slope",
+        "phase": null,
+        "hz": 60,
+        "initial": {
+          "y": 51.578716593069984,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "slope",
+        "phase": null,
+        "hz": 120,
+        "initial": {
+          "y": 51.578716593069984,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      },
+      "after": {
+        "place": "slope",
+        "phase": null,
+        "hz": 120,
+        "initial": {
+          "y": 51.578716593069984,
+          "vertical": 0,
+          "grounded": true
+        },
+        "firstMove": null,
+        "landedAt": 0,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "slope",
+        "phase": 0.2,
+        "hz": 30,
+        "initial": {
+          "y": 52.62371659306999,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0450000000000088,
+        "finalVertical": 3.3000000000000034,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "slope",
+        "phase": 0.2,
+        "hz": 30,
+        "initial": {
+          "y": 52.62371659306999,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": 0.03333333333333333,
+        "landedAt": 0.5,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 52.71038325973666,
+            "vertical": 2.600000000000003,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 52.79371659306999,
+            "vertical": -0.8999999999999966,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "slope",
+        "phase": 0.2,
+        "hz": 60,
+        "initial": {
+          "y": 52.62371659306999,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0450000000000088,
+        "finalVertical": 3.3000000000000034,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "slope",
+        "phase": 0.2,
+        "hz": 60,
+        "initial": {
+          "y": 52.62371659306999,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": 0.016666666666666666,
+        "landedAt": 0.5,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 52.67288325973666,
+            "vertical": 2.9500000000000033,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 52.82871659307,
+            "vertical": -0.899999999999997,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "slope",
+        "phase": 0.2,
+        "hz": 120,
+        "initial": {
+          "y": 52.62371659306999,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0450000000000088,
+        "finalVertical": 3.3000000000000034,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 52.62371659306999,
+            "vertical": 3.3000000000000034,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "slope",
+        "phase": 0.2,
+        "hz": 120,
+        "initial": {
+          "y": 52.62371659306999,
+          "vertical": 3.3000000000000034,
+          "grounded": false
+        },
+        "firstMove": 0.008333333333333333,
+        "landedAt": 0.5083333333333333,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 52.64975825973666,
+            "vertical": 3.1250000000000036,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 52.84621659306999,
+            "vertical": -0.8999999999999957,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "slope",
+        "phase": 0.5,
+        "hz": 30,
+        "initial": {
+          "y": 52.61621659307,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0375000000000156,
+        "finalVertical": -2.9999999999999973,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "slope",
+        "phase": 0.5,
+        "hz": 30,
+        "initial": {
+          "y": 52.61621659307,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": 0.03333333333333333,
+        "landedAt": 0.2,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.03333333333333333,
+            "y": 52.492883259736665,
+            "vertical": -3.6999999999999975,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "slope",
+        "phase": 0.5,
+        "hz": 60,
+        "initial": {
+          "y": 52.61621659307,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0375000000000156,
+        "finalVertical": -2.9999999999999973,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "slope",
+        "phase": 0.5,
+        "hz": 60,
+        "initial": {
+          "y": 52.61621659307,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": 0.016666666666666666,
+        "landedAt": 0.2,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.016666666666666666,
+            "y": 52.56038325973667,
+            "vertical": -3.3499999999999974,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "place": "slope",
+        "phase": 0.5,
+        "hz": 120,
+        "initial": {
+          "y": 52.61621659307,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": null,
+        "landedAt": null,
+        "finalGap": 1.0375000000000156,
+        "finalVertical": -2.9999999999999973,
+        "finalGrounded": false,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          },
+          {
+            "time": 2,
+            "y": 52.61621659307,
+            "vertical": -2.9999999999999973,
+            "grounded": false
+          }
+        ]
+      },
+      "after": {
+        "place": "slope",
+        "phase": 0.5,
+        "hz": 120,
+        "initial": {
+          "y": 52.61621659307,
+          "vertical": -2.9999999999999973,
+          "grounded": false
+        },
+        "firstMove": 0.008333333333333333,
+        "landedAt": 0.20833333333333334,
+        "finalGap": 0,
+        "finalVertical": 0,
+        "finalGrounded": true,
+        "points": [
+          {
+            "time": 0.008333333333333333,
+            "y": 52.58975825973667,
+            "vertical": -3.174999999999997,
+            "grounded": false
+          },
+          {
+            "time": 0.2,
+            "y": 51.57871659307,
+            "vertical": -7.199999999999993,
+            "grounded": false
+          },
+          {
+            "time": 0.6,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          },
+          {
+            "time": 2,
+            "y": 51.578716593069984,
+            "vertical": 0,
+            "grounded": true
+          }
+        ]
+      }
+    }
+  ],
+  "mainCases": [
+    {
+      "label": "before-main-with-new-core",
+      "hz": 30,
+      "initialY": -0.3696810678090762,
+      "initialGap": 1.0450000000000002,
+      "firstMove": null,
+      "landedAt": null,
+      "finalGap": 1.0450000000000002,
+      "ash": 80,
+      "allOtherFieldsFrozen": true,
+      "noDeadAutosave": true
+    },
+    {
+      "label": "before-main-with-new-core",
+      "hz": 60,
+      "initialY": -0.3696810678090762,
+      "initialGap": 1.0450000000000002,
+      "firstMove": null,
+      "landedAt": null,
+      "finalGap": 1.0450000000000002,
+      "ash": 80,
+      "allOtherFieldsFrozen": true,
+      "noDeadAutosave": true
+    },
+    {
+      "label": "before-main-with-new-core",
+      "hz": 120,
+      "initialY": -0.3696810678090762,
+      "initialGap": 1.0450000000000002,
+      "firstMove": null,
+      "landedAt": null,
+      "finalGap": 1.0450000000000002,
+      "ash": 80,
+      "allOtherFieldsFrozen": true,
+      "noDeadAutosave": true
+    },
+    {
+      "label": "current",
+      "hz": 30,
+      "initialY": -0.3696810678090762,
+      "initialGap": 1.0450000000000002,
+      "firstMove": 0.03333333333333333,
+      "landedAt": 0.5333333333333333,
+      "finalGap": 0,
+      "ash": 80,
+      "allOtherFieldsFrozen": true,
+      "noDeadAutosave": true
+    },
+    {
+      "label": "current",
+      "hz": 60,
+      "initialY": -0.3696810678090762,
+      "initialGap": 1.0450000000000002,
+      "firstMove": 0.016666666666666666,
+      "landedAt": 0.5,
+      "finalGap": 0,
+      "ash": 80,
+      "allOtherFieldsFrozen": true,
+      "noDeadAutosave": true
+    },
+    {
+      "label": "current",
+      "hz": 120,
+      "initialY": -0.3696810678090762,
+      "initialGap": 1.0450000000000002,
+      "firstMove": 0.016666666666666666,
+      "landedAt": 0.5083333333333333,
+      "finalGap": 0,
+      "ash": 80,
+      "allOtherFieldsFrozen": true,
+      "noDeadAutosave": true
+    }
+  ],
+  "wallMilliseconds": 3574.7068369999997
+}

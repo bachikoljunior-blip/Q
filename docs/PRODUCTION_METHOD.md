@@ -1,3 +1,15 @@
+## 2026-09-16: 空中死亡の落下と休止を結合検証（v55）
+
+[結合記録](AIRBORNE_INTEGRATION_V55.md)。音PR52 `7fbe77e…` /CI35077524542と死亡開始PR53 `f8ef1de5a9a3913a84c36972b0d9f74e1de464c8` /CI35079065319はremote保存・必須CI成功。後者の全tree一致確認後、空中死亡の縦運動だけを既存60Hz経路へ結合した。deadのy/vertical/grounded以外の世界/敵/進行/横移動は凍結、保存/復活を維持。blur/pagehide停止漏れを独立指摘から修復、復帰時death panelを保持する。
+
+新27必須工程・338tests全成功134.005482秒、任意単体版2tests成功。通常34files14,037,344 B、初期165,611 B/3chunks（+196 B、166,000 Bguard維持）、27媒体12,883,257 B不変。固定stageとhashは上記記録。独立実Scene更新prefix＋actor18条件の可視頂点は地面侵入0/min+0.654mm、終端+6mm。実画面/自然さ/実機合格とは呼ばない。
+
+Mira身体v54はruntime不採用。実会話の見える胴差≤0.02069px/袖≤1.313pxと交差変化を比較し、候補全source patchと独立資料だけ保存した。次は実会話で露出する顔/革等の素材をsource画像・UV・画面占有と端末予算で比較し、見えない改変を品質成果に数えない。
+
+実main547676fdce8d8e97abed9f065aad0b6e24af2fd6/PR39open未merge/owner限定Site23不変。独立正規GET7回でPRclean/CI成功・rule待ち根拠無し、旧同期merge worker終了/lock解放は確認不能。新merge/async mutationは行わず、正常main順序を維持。公式preview監督不在と実画面・実聴・実機・10作品比較不足により9/20の全画面PS4達成根拠は未成立。人間準備待ちにせず既存Ultraの実制作を継続する。
+
+---
+
 ## 2026-09-16: 死亡開始の姿勢連続性を結合検証（v53）
 
 [結合記録](DEATH_ENTRY_INTEGRATION_V53.md)。原音保持のPR52はremote `7fbe77e63b2172a8d9cde4c8953858d02fdefe0d` / tree `901eaf7710af58ba9a331a3db85a4470da1d4d2f`、required CI35077524542成功。死亡開始は作者e58994aを同基点へ結合し、0.24秒の姿勢連続化・hidden槍の再表示方向修復を採用。新規27条件で継続可視頂点のentry移動を全条件縮小、1秒後の既存姿勢とGame/保存不変。後続step増加・hidden→shown union増加・空中root固定は残課題であり、全frame改善/自然さ合格とはしない。

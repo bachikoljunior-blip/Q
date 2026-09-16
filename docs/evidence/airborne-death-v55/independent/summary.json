@@ -1,0 +1,72 @@
+{
+  "at": "2026-09-16T09:18:48.552946+00:00",
+  "firstExplicitClock": "2026-09-16T09:08:28+00:00",
+  "status": "PASS within the declared source/API/CPU scope; required blur/pagehide regression corrected",
+  "requiredFindings": [
+    {
+      "id": "dead-interruption",
+      "firstMainHash": "ab669694e62f99ee0a3cdd73f5f2b4d47ca86fc1e3a0d88b2329806c8b26b25b",
+      "cases": [
+        "blur",
+        "pagehide"
+      ],
+      "finalDisposition": "corrected; final freeze and resume checks pass"
+    }
+  ],
+  "sourceHashes": {
+    "src/main.js": "0e864c56cea02f20e20d2edb00de72b0bb062f959699486219eaa23cc718dc87",
+    "src/core.js": "a6b7271063f683d2228dc1d547a82d7dd5b3257b3f4a538ced63c88ac37e3b3f",
+    "src/runtime-state.js": "84a543c09f089a37031da9ba12915078cee5c668ed009bcd281e90d70829f325"
+  },
+  "actorCommit": "e58994a182cfac8714d12f89d9ab9244ce0e4ed5",
+  "actorHash": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+  "sceneHash": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b",
+  "coreTrajectoryCases": 12,
+  "aliveDtCases": 5,
+  "mainRafRates": [
+    30,
+    60,
+    120
+  ],
+  "actualEnemyMeleeDeath": true,
+  "lifecycleModes": [
+    "settings",
+    "hidden",
+    "blur",
+    "pagehide",
+    "title",
+    "dialogue"
+  ],
+  "contactCases": 18,
+  "continuousFramesPerCasePerVariant": 72,
+  "minimumVisibleVertexGapM": 0.0006538212941080701,
+  "finalVisibleMinimumGapM": [
+    0.006000000000000005,
+    0.006000000000000005,
+    0.006000000000000005,
+    0.006000000000000005,
+    0.006000000000000005,
+    0.006000000000000005,
+    0.006000000000000227,
+    0.006000000000000227,
+    0.006000000000000227,
+    0.006000000000000227,
+    0.006000000000000227,
+    0.006000000000000227,
+    0.006000000000000005,
+    0.006000000000000005,
+    0.006000000000000005,
+    0.006000000000000005,
+    0.006000000000000005,
+    0.006000000000000005
+  ],
+  "saveContract": "dead snapshot preserves current vertical fields; loading a dead save respawns under unchanged existing contract; penalty once; alive periodic save clock not advanced while dead",
+  "limitations": [
+    "Explicit DOM/SceneView/audio boundary doubles for actual main execution, no browser layout/native event scheduling.",
+    "Actual SceneView player prefix and Three CPU vertex deformation only; not full SceneView rendering, triangle interiors or WebGL.",
+    "No auditory, device CPU/GPU/peak-memory or perceptual PS4 acceptance.",
+    "Final regression/build/staging gates remain author/integrator-owned."
+  ],
+  "sessionsPending": false,
+  "sourceWrites": false
+}

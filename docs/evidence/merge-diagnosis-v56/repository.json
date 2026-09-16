@@ -1,0 +1,43 @@
+{
+  "at": "2026-09-16T09:21:58.707Z",
+  "tool": "mcp__codex_apps__github_get_repo",
+  "args": {
+    "repository_full_name": "bachikoljunior-blip/Q"
+  },
+  "isError": false,
+  "response": {
+    "allow_auto_merge": false,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "allow_squash_merge": true,
+    "allow_update_branch": false,
+    "archived": false,
+    "clone_url": "https://github.com/bachikoljunior-blip/Q.git",
+    "default_branch": "main",
+    "git_commits_url": "https://api.github.com/repos/bachikoljunior-blip/Q/git/commits{/sha}",
+    "git_refs_url": "https://api.github.com/repos/bachikoljunior-blip/Q/git/refs{/sha}",
+    "git_url": "git://github.com/bachikoljunior-blip/Q.git",
+    "id": "1318331371",
+    "is_code_search_indexed": null,
+    "master_branch": null,
+    "name": "Q",
+    "owner": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/297806842?v=4",
+      "id": 297806842,
+      "login": "bachikoljunior-blip",
+      "type": "User",
+      "url": "https://api.github.com/users/bachikoljunior-blip"
+    },
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "pull": true,
+      "push": true,
+      "triage": true
+    },
+    "repository_full_name": "bachikoljunior-blip/Q",
+    "size": 140138,
+    "visibility": "public"
+  },
+  "transportNote": "Connector result; native HTTP response headers and request IDs are not exposed."
+}

@@ -1,0 +1,78 @@
+{
+  "baseline.json": {
+    "bytes": 340,
+    "sha256": "38e5165a2415fe6f17944ea7a2e501992cf6714014e29a0607d96d4c40110cd1"
+  },
+  "before-core.js": {
+    "bytes": 39729,
+    "sha256": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390"
+  },
+  "before-main.js": {
+    "bytes": 54637,
+    "sha256": "697482115caaee6a3ae57a5ff4b50ab76b09d3f41efe81c8042cfca40b7c337e"
+  },
+  "build-budget.json": {
+    "bytes": 611,
+    "sha256": "85c3e947068753f3ba540d1d97083fd0496d418a121ca25ef11e7ffc333dbe31"
+  },
+  "build.log": {
+    "bytes": 2903,
+    "sha256": "3ea220705300333d5ae0db0bd8d5ceaabe2a4926a34ace045880d92150126364"
+  },
+  "crossing.log": {
+    "bytes": 808,
+    "sha256": "f6094735db1c937013f87d8ed65b2e586a28e08fe2dec378e4f60850da43bbca"
+  },
+  "entrypoint-regression.tap": {
+    "bytes": 2344,
+    "sha256": "3a642512768b67671afb90a3186f3f6b4c631fbd2b89378b140dff3b01b72447"
+  },
+  "focused-before-fixture-repair.tap": {
+    "bytes": 2204,
+    "sha256": "cdf5f98b50cdb6b83675d09e6572880acdd83fac27ce928e976d1765fa67d7be"
+  },
+  "focused.tap": {
+    "bytes": 655,
+    "sha256": "a3810d2839aab7ef5a0c62028213f1609212b7e52a8fde9416a8b31dd25775ab"
+  },
+  "full-tests.tap": {
+    "bytes": 33070,
+    "sha256": "3b6661d6d9f61ede6dfbf7ac6c43211d4081d23ba5d71ce6e41d537970834bee"
+  },
+  "journey.log": {
+    "bytes": 800,
+    "sha256": "81e2edb2be649d221795ce9f403ac04ca4b686a3d081469b70dec1768e85e4e6"
+  },
+  "lifecycle-touch.tap": {
+    "bytes": 963,
+    "sha256": "441b29411b51fb356b4a2d1a750c7cdbcfa0cbe06099a58a0fdfcdc42fcb6769"
+  },
+  "main-runtime-report.json": {
+    "bytes": 6878,
+    "sha256": "af1c052849d3d3d306dbe37c2f1acc314415c7e816ec6529275fa7c7767a4aea"
+  },
+  "main-runtime.log": {
+    "bytes": 232,
+    "sha256": "f6dacc263338aff163dda19a2ca954a9d27510188ae8e693ddfaf983794eb2e8"
+  },
+  "measure.mjs": {
+    "bytes": 2766,
+    "sha256": "462a57475f556a16688280bf0d92b787dba7789740e5d2f07d76e69089f22ceb"
+  },
+  "measurements.json": {
+    "bytes": 58761,
+    "sha256": "b8669800488dfbec03efb5dd7e2fc994597aa0f25f1565b00c5299da02b15552"
+  },
+  "rework.json": {
+    "bytes": 932,
+    "sha256": "f01a9b223d2d2669afb449a3feaca5553a99e7f43af42c364c10c8448b21a90a"
+  },
+  "session.log": {
+    "bytes": 844,
+    "sha256": "df7e6a2e975e7d2a5d9ae30cde4d5bdec492136c76d428c3c669ba747277dfbf"
+  },
+  "validation.json": {
+    "bytes": 4483,
+    "sha256": "5be0a667fc8ffdda22148c64fd479bdddace40e3efc2832021d5451392db8aab"
+  }
+}

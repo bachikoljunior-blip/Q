@@ -1,0 +1,13 @@
+✔ real melee deaths retain only vertical motion at 30/60/120 on ground, bridge and slope (764.139495ms)
+✔ dead dt clamps preserve zero-step state, and respawn/dead-load retain existing semantics (33.000634ms)
+✔ living motion and save output remain identical to frozen core before death (34.468224ms)
+✔ actual main pumps dead fixed ticks at 30/60/120; old main remains frozen as negative control (1361.87932ms)
+✔ actual main pause, background and title freeze dead gravity; respawn and dead-save continue stay valid (470.419781ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2821.35558

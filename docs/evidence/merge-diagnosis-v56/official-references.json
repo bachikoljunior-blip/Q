@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-16",
+  "sources": [
+    {
+      "url": "https://docs.github.com/en/rest/pulls/pulls",
+      "sections": ["Get a pull request", "Merge a pull request", "Merge a pull request asynchronously", "Get the result of an asynchronous merge"],
+      "relevantEndpoints": ["GET /repos/{owner}/{repo}/pulls/{pull_number}", "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge", "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge-async", "GET /repos/{owner}/{repo}/pulls/{pull_number}/merge-async/{uuid}"],
+      "boundary": "Only GET metadata was called. Neither merge endpoint was invoked in this review. The async result endpoint was not called because no verified request UUID exists in the available evidence."
+    },
+    {
+      "url": "https://docs.github.com/en/pull-requests/reference/stacked-pull-requests-apis-and-webhooks",
+      "sections": ["REST API", "Merge API"],
+      "boundary": "Official native-stack public-preview contract; not proof that the manual feature-base PR chain uses that feature."
+    },
+    {
+      "url": "https://docs.github.com/en/graphql/reference/pulls#pullrequest",
+      "fields": ["PullRequest.mergeQueueEntry", "MergeQueueEntry.state", "MergeQueueEntry.position"],
+      "boundary": "The GraphQL fields are documented, but this session's GitHub connector exposes no generic query or queue-read tool. No query or queue mutation was issued."
+    }
+  ],
+  "documentationIsNotWorkerState": true
+}

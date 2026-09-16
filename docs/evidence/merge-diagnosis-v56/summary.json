@@ -1,0 +1,38 @@
+{
+  "at": "2026-09-16T09:25:04.816976+00:00",
+  "startedAt": "2026-09-16T09:20:24+00:00",
+  "elapsedSeconds": 280.816976,
+  "connectorReadCalls": 7,
+  "remoteMutations": 0,
+  "repository": "bachikoljunior-blip/Q",
+  "repositoryId": 1318331371,
+  "pr": 39,
+  "head": "bfc5d10d8b1042dc6063569a624c115b6c1e7833",
+  "main": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+  "merged": false,
+  "mergeable": true,
+  "mergeableState": "clean",
+  "branchProtected": false,
+  "rulesets": [],
+  "headChecks": [
+    {
+      "id": 104634739984,
+      "conclusion": "success"
+    },
+    {
+      "id": 104634384601,
+      "conclusion": "success"
+    }
+  ],
+  "allowMergeCommit": true,
+  "autoMerge": null,
+  "timelineEvents": [
+    "committed",
+    "cross-referenced"
+  ],
+  "operationUuid": null,
+  "safeRecoveryActionAvailable": false,
+  "inference": "Current repository conflict/draft/branch-rule/head-check blockers are not represented; operation/service completion or lock status remains unobservable. No duplicate mutation justified.",
+  "missingCapability": "Verified existing request handle or service-side operation reconciliation/status API",
+  "sessionsPending": false
+}

@@ -1,0 +1,476 @@
+{
+  "at": "2026-09-16T09:17:59.020Z",
+  "root": "/workspace/scratch/e72662e3b71f/Q-airborne-death-v55/",
+  "sourceHashes": {
+    "src/main.js": "0e864c56cea02f20e20d2edb00de72b0bb062f959699486219eaa23cc718dc87",
+    "src/core.js": "a6b7271063f683d2228dc1d547a82d7dd5b3257b3f4a538ced63c88ac37e3b3f",
+    "src/runtime-state.js": "84a543c09f089a37031da9ba12915078cee5c668ed009bcd281e90d70829f325"
+  },
+  "core": [
+    {
+      "place": "spawn",
+      "phase": "ground",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "spawn",
+      "phase": "ascent",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "spawn",
+      "phase": "descent",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "slope",
+      "phase": "ground",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "slope",
+      "phase": "ascent",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "slope",
+      "phase": "descent",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "bridge0",
+      "phase": "ground",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "bridge0",
+      "phase": "ascent",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "bridge0",
+      "phase": "descent",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "bridge1",
+      "phase": "ground",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "bridge1",
+      "phase": "ascent",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "place": "bridge1",
+      "phase": "descent",
+      "maxExpectedError": 0,
+      "finalGap": 0,
+      "ash": 80,
+      "grounded": true
+    },
+    {
+      "aliveDt": 0,
+      "exact": true
+    },
+    {
+      "aliveDt": 0.008333333333333333,
+      "exact": true
+    },
+    {
+      "aliveDt": 0.016666666666666666,
+      "exact": true
+    },
+    {
+      "aliveDt": 0.03333333333333333,
+      "exact": true
+    },
+    {
+      "aliveDt": 0.5,
+      "exact": true
+    },
+    {
+      "deadDt": -1,
+      "before": {
+        "y": -0.41468106780907643,
+        "vertical": -1,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.41468106780907643,
+        "vertical": -1,
+        "grounded": false
+      },
+      "expectedY": -0.41468106780907643
+    },
+    {
+      "deadDt": 0,
+      "before": {
+        "y": -0.41468106780907643,
+        "vertical": -1,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.41468106780907643,
+        "vertical": -1,
+        "grounded": false
+      },
+      "expectedY": -0.41468106780907643
+    },
+    {
+      "deadDt": 0.008333333333333333,
+      "before": {
+        "y": -0.41468106780907643,
+        "vertical": -1,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.4244727344757431,
+        "vertical": -1.175,
+        "grounded": false
+      },
+      "expectedY": -0.4244727344757431
+    },
+    {
+      "deadDt": 0.016666666666666666,
+      "before": {
+        "y": -0.41468106780907643,
+        "vertical": -1,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.43718106780907645,
+        "vertical": -1.35,
+        "grounded": false
+      },
+      "expectedY": -0.43718106780907645
+    },
+    {
+      "deadDt": 0.5,
+      "before": {
+        "y": -0.41468106780907643,
+        "vertical": -1,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.5171810678090765,
+        "vertical": -2.05,
+        "grounded": false
+      },
+      "expectedY": -0.5171810678090765
+    }
+  ],
+  "main": [
+    {
+      "fps": 30,
+      "start": {
+        "y": -0.3205144011424095,
+        "vertical": 2.9500000000000033,
+        "grounded": false
+      },
+      "end": {
+        "y": -1.4146810678090764,
+        "vertical": 0,
+        "grounded": true
+      },
+      "floor": -1.4146810678090764,
+      "saveAtDeath": {
+        "y": -0.3205144011424095,
+        "vertical": 2.9500000000000033,
+        "grounded": false,
+        "stamina": 97.31666666666668,
+        "energy": 100,
+        "combo": 0,
+        "healDone": false,
+        "attack": 0,
+        "comboWindow": 0,
+        "dodge": 0,
+        "parry": 0,
+        "invulnerable": 0.55,
+        "skillCooldown": 0,
+        "staminaDelay": 0,
+        "healTimer": 0
+      },
+      "viewDt": 0.033333333333333486,
+      "errors": []
+    },
+    {
+      "fps": 60,
+      "start": {
+        "y": -0.3205144011424095,
+        "vertical": 2.9500000000000033,
+        "grounded": false
+      },
+      "end": {
+        "y": -1.4146810678090764,
+        "vertical": 0,
+        "grounded": true
+      },
+      "floor": -1.4146810678090764,
+      "saveAtDeath": {
+        "y": -0.3205144011424095,
+        "vertical": 2.9500000000000033,
+        "grounded": false,
+        "stamina": 97.80000000000001,
+        "energy": 100,
+        "combo": 0,
+        "healDone": false,
+        "attack": 0,
+        "comboWindow": 0,
+        "dodge": 0,
+        "parry": 0,
+        "invulnerable": 0.55,
+        "skillCooldown": 0,
+        "staminaDelay": 0,
+        "healTimer": 0
+      },
+      "viewDt": 0.016666666666666514,
+      "errors": []
+    },
+    {
+      "fps": 120,
+      "start": {
+        "y": -0.3696810678090762,
+        "vertical": 3.3000000000000034,
+        "grounded": false
+      },
+      "end": {
+        "y": -1.4146810678090764,
+        "vertical": 0,
+        "grounded": true
+      },
+      "floor": -1.4146810678090764,
+      "saveAtDeath": {
+        "y": -0.3696810678090762,
+        "vertical": 3.3000000000000034,
+        "grounded": false,
+        "stamina": 97.31666666666668,
+        "energy": 100,
+        "combo": 0,
+        "healDone": false,
+        "attack": 0,
+        "comboWindow": 0,
+        "dodge": 0,
+        "parry": 0,
+        "invulnerable": 0.55,
+        "skillCooldown": 0,
+        "staminaDelay": 0,
+        "healTimer": 0
+      },
+      "viewDt": 0.008333333333333484,
+      "errors": []
+    },
+    {
+      "actualEnemyMelee": true,
+      "killed": {
+        "y": -0.3205144011424095,
+        "vertical": 2.9500000000000033,
+        "grounded": false
+      },
+      "landed": {
+        "y": -1.4146810678090764,
+        "vertical": 0,
+        "grounded": true
+      },
+      "deathPenalty": 80,
+      "deathPanelShown": true,
+      "errors": []
+    },
+    {
+      "longFrameMs": 500,
+      "before": {
+        "y": 0.5853189321909236,
+        "vertical": -1,
+        "grounded": false
+      },
+      "after": {
+        "y": 0.5003189321909236,
+        "vertical": -2.0500000000000003,
+        "grounded": false
+      },
+      "sceneDt": 0.05
+    }
+  ],
+  "lifecycle": [
+    {
+      "mode": "settings",
+      "paused": true,
+      "playing": true,
+      "before": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "allGameExact": true,
+      "pausedSceneDt": 0,
+      "errors": [],
+      "resumed": {
+        "y": -0.5371810678090765,
+        "vertical": -4.1000000000000005,
+        "grounded": false
+      },
+      "resumedSceneDt": 0.016666666666666743,
+      "deathPanelVisible": true
+    },
+    {
+      "mode": "hidden",
+      "paused": false,
+      "playing": true,
+      "before": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "allGameExact": true,
+      "pausedSceneDt": 0.01666666666666663,
+      "errors": [],
+      "resumed": {
+        "y": -0.6113477344757432,
+        "vertical": -4.45,
+        "grounded": false
+      },
+      "resumedSceneDt": 0.016666666666666743,
+      "deathPanelVisible": true
+    },
+    {
+      "mode": "blur",
+      "paused": false,
+      "playing": true,
+      "before": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "allGameExact": true,
+      "pausedSceneDt": 0,
+      "errors": [],
+      "resumed": {
+        "y": -0.5371810678090765,
+        "vertical": -4.1000000000000005,
+        "grounded": false
+      },
+      "resumedSceneDt": 0.016666666666666743,
+      "deathPanelVisible": true
+    },
+    {
+      "mode": "pagehide",
+      "paused": false,
+      "playing": true,
+      "before": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "allGameExact": true,
+      "pausedSceneDt": 0,
+      "errors": [],
+      "resumed": {
+        "y": -0.5371810678090765,
+        "vertical": -4.1000000000000005,
+        "grounded": false
+      },
+      "resumedSceneDt": 0.016666666666666743,
+      "deathPanelVisible": true
+    },
+    {
+      "mode": "title",
+      "paused": false,
+      "playing": false,
+      "before": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "after": {
+        "y": -0.21468106780907648,
+        "vertical": -2,
+        "grounded": false
+      },
+      "allGameExact": true,
+      "pausedSceneDt": 0.01666666666666663,
+      "errors": []
+    },
+    {
+      "mode": "dialogue",
+      "paused": true,
+      "playing": true,
+      "before": {
+        "y": 2.878924110576783,
+        "vertical": -2,
+        "grounded": false
+      },
+      "after": {
+        "y": 2.878924110576783,
+        "vertical": -2,
+        "grounded": false
+      },
+      "allGameExact": true,
+      "pausedSceneDt": 0,
+      "errors": [],
+      "resumed": {
+        "y": 2.556424110576783,
+        "vertical": -4.1000000000000005,
+        "grounded": false
+      },
+      "resumedSceneDt": 0.016666666666666743,
+      "deathPanelVisible": false
+    }
+  ],
+  "limits": [
+    "Real main and Game; explicit DOM/SceneView/Soundscape boundary doubles. No CSS, WebGL, native lifecycle ordering or device timing proof."
+  ]
+}

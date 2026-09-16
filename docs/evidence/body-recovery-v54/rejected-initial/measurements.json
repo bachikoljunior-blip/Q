@@ -1,0 +1,1621 @@
+{
+  "at": "2026-09-16T09:04:37.048Z",
+  "sourceBefore": {
+    "src/assets/characters/detailed-geometry.js": "db037549dbdee519d0fb57520ee0257f09dc1a127048ee202a2a22b64980b8f6",
+    "src/assets/characters/body-profile-data.js": "3833017e8eb289a31ac175b1b48c0888148e500e94986279e07c47806fab0ab2",
+    "src/assets/characters/body-profile-provenance.json": "4d9bfb0ddf9469640448ef8710109372a4b3708fa242de58f0b0f8949fbfb7f7",
+    "scripts/characters/generate-body-profile.py": "05e4997b09179b37f6a16b2698cd282c1baf8ff762020cbd0450920c00c72279",
+    "src/actor-models.js": "04b1a72d8d1f5305dbc0e47dbe10e15c824fd0a29955d5fc08bcb40b8d544a96",
+    "src/core.js": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390"
+  },
+  "raw": [
+    {
+      "part": 0,
+      "vertices": 171,
+      "triangles": 288,
+      "before": {
+        "area": 0.8902347031568132,
+        "uvArea": 1,
+        "degenerate": 0,
+        "density": {
+          "min": 0.7736724983734558,
+          "p05": 0.8341585615528275,
+          "p50": 1.0686563221642016,
+          "p95": 1.6995075420996992,
+          "max": 2.4123040603141033
+        },
+        "anisotropy": {
+          "p50": 1.4615743486044586,
+          "p95": 3.110928473709455,
+          "max": 3.441415573612078
+        }
+      },
+      "after": {
+        "area": 0.9031926398160021,
+        "uvArea": 1.6623310446739197,
+        "degenerate": 0,
+        "density": {
+          "min": 1.1550772080254195,
+          "p05": 1.218680022335811,
+          "p50": 1.3316133492592939,
+          "p95": 1.9840395380605211,
+          "max": 2.7502781608119884
+        },
+        "anisotropy": {
+          "p50": 1.2204725569348207,
+          "p95": 1.998950351797695,
+          "max": 3.1468850881260857
+        }
+      },
+      "displacement": {
+        "max": 0.02274310468078569,
+        "p95": 0.01322016106980452,
+        "changed": 112
+      }
+    },
+    {
+      "part": 1,
+      "vertices": 156,
+      "triangles": 264,
+      "before": {
+        "area": 0.333079786778434,
+        "uvArea": 1,
+        "degenerate": 0,
+        "density": {
+          "min": 1.2811140781392243,
+          "p05": 1.328502230090846,
+          "p50": 1.7124520603902509,
+          "p95": 2.978711711965792,
+          "max": 3.596433215552855
+        },
+        "anisotropy": {
+          "p50": 1.7774393296645032,
+          "p95": 3.3977542745311013,
+          "max": 6.589829096456157
+        }
+      },
+      "after": {
+        "area": 0.33147198588060683,
+        "uvArea": 0.5207298994064331,
+        "degenerate": 0,
+        "density": {
+          "min": 0.9984725460225077,
+          "p05": 1.0146974621561373,
+          "p50": 1.293920129280716,
+          "p95": 1.7014595655152942,
+          "max": 2.3531691977450526
+        },
+        "anisotropy": {
+          "p50": 1.307337136109625,
+          "p95": 1.8854520955172205,
+          "max": 3.0970637701626584
+        }
+      },
+      "displacement": {
+        "max": 0.009712917243192986,
+        "p95": 0.005196805530344432,
+        "changed": 104
+      }
+    },
+    {
+      "part": 2,
+      "vertices": 156,
+      "triangles": 264,
+      "before": {
+        "area": 0.333079786778434,
+        "uvArea": 1,
+        "degenerate": 0,
+        "density": {
+          "min": 1.2811140781392243,
+          "p05": 1.328502230090846,
+          "p50": 1.7124520603902509,
+          "p95": 2.978711711965792,
+          "max": 3.596433215552855
+        },
+        "anisotropy": {
+          "p50": 1.7774393296645032,
+          "p95": 3.3977542745311013,
+          "max": 6.589829096456157
+        }
+      },
+      "after": {
+        "area": 0.33119758558211043,
+        "uvArea": 0.5206915140151978,
+        "degenerate": 0,
+        "density": {
+          "min": 1.0020971829575522,
+          "p05": 1.014901036336555,
+          "p50": 1.2936556693405694,
+          "p95": 1.7014595655152942,
+          "max": 2.3531691977450526
+        },
+        "anisotropy": {
+          "p50": 1.306149278371349,
+          "p95": 1.9084263388399005,
+          "max": 3.0970637701626584
+        }
+      },
+      "displacement": {
+        "max": 0.010066165703640276,
+        "p95": 0.00501443819030755,
+        "changed": 104
+      }
+    }
+  ],
+  "poses": [
+    {
+      "name": "rest",
+      "baselineCrossedFaces": 143,
+      "candidateCrossedFaces": 151,
+      "newFaces": [
+        {
+          "face": 49,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        },
+        {
+          "face": 58,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        },
+        {
+          "face": 149,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 177,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 183,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            },
+            {
+              "owner": 51,
+              "material": "Q metal"
+            }
+          ]
+        },
+        {
+          "face": 184,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 210,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 211,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        }
+      ],
+      "removedFaces": [],
+      "worldDisplacementMax": 0.02274310468078569
+    },
+    {
+      "name": "idle",
+      "baselineCrossedFaces": 164,
+      "candidateCrossedFaces": 172,
+      "newFaces": [
+        {
+          "face": 49,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        },
+        {
+          "face": 149,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 177,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 183,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            },
+            {
+              "owner": 51,
+              "material": "Q metal"
+            }
+          ]
+        },
+        {
+          "face": 184,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 210,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 211,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 366,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 730,
+          "others": [
+            {
+              "owner": 50,
+              "material": "Q leather"
+            }
+          ]
+        }
+      ],
+      "removedFaces": [
+        {
+          "face": 57,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        }
+      ],
+      "worldDisplacementMax": 0.022743104680785674
+    },
+    {
+      "name": "walk",
+      "baselineCrossedFaces": 134,
+      "candidateCrossedFaces": 153,
+      "newFaces": [
+        {
+          "face": 49,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        },
+        {
+          "face": 111,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 112,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 113,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 139,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 140,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 141,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 146,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 147,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 148,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 149,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 174,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 175,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 176,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 177,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 183,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            },
+            {
+              "owner": 51,
+              "material": "Q metal"
+            }
+          ]
+        },
+        {
+          "face": 184,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 210,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 211,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 730,
+          "others": [
+            {
+              "owner": 50,
+              "material": "Q leather"
+            }
+          ]
+        }
+      ],
+      "removedFaces": [
+        {
+          "face": 57,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        }
+      ],
+      "worldDisplacementMax": 0.022781892333607483
+    },
+    {
+      "name": "raised",
+      "baselineCrossedFaces": 148,
+      "candidateCrossedFaces": 154,
+      "newFaces": [
+        {
+          "face": 49,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        },
+        {
+          "face": 149,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 177,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 183,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            },
+            {
+              "owner": 51,
+              "material": "Q metal"
+            }
+          ]
+        },
+        {
+          "face": 184,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 210,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 211,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        }
+      ],
+      "removedFaces": [
+        {
+          "face": 57,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        }
+      ],
+      "worldDisplacementMax": 0.022743104680785674
+    },
+    {
+      "name": "reach",
+      "baselineCrossedFaces": 155,
+      "candidateCrossedFaces": 161,
+      "newFaces": [
+        {
+          "face": 49,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        },
+        {
+          "face": 149,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 177,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 183,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            },
+            {
+              "owner": 51,
+              "material": "Q metal"
+            }
+          ]
+        },
+        {
+          "face": 184,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 210,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        },
+        {
+          "face": 211,
+          "others": [
+            {
+              "owner": 49,
+              "material": "Q leather"
+            }
+          ]
+        }
+      ],
+      "removedFaces": [
+        {
+          "face": 57,
+          "others": [
+            {
+              "owner": 43,
+              "material": "Q cloth"
+            }
+          ]
+        }
+      ],
+      "worldDisplacementMax": 0.022743104680785674
+    }
+  ],
+  "projection": [
+    {
+      "pose": "rest",
+      "w": 1280,
+      "h": 720,
+      "angle": 0,
+      "vertexShiftMaxPx": 5.408341614198339,
+      "baselineBounds": [
+        526.5450597562791,
+        330.3017475157895,
+        753.454940243721,
+        534.5181380571134
+      ],
+      "candidateBounds": [
+        526.563230426079,
+        330.3017475157895,
+        753.4367695739211,
+        534.5181380571134
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "rest",
+      "w": 1280,
+      "h": 720,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 6.160936152210992,
+      "baselineBounds": [
+        543.2716544685329,
+        330.2561449449305,
+        748.9561837158811,
+        548.5196952622686
+      ],
+      "candidateBounds": [
+        543.0731157587451,
+        330.2561449449305,
+        748.648604050409,
+        548.5196952622686
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "rest",
+      "w": 1280,
+      "h": 720,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 6.127435642967758,
+      "baselineBounds": [
+        526.5450597562791,
+        330.3017475157895,
+        753.454940243721,
+        534.5181380571134
+      ],
+      "candidateBounds": [
+        526.563230426079,
+        330.3017475157895,
+        753.4367695739211,
+        534.5181380571134
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "rest",
+      "w": 390,
+      "h": 844,
+      "angle": 0,
+      "vertexShiftMaxPx": 6.3397782255326005,
+      "baselineBounds": [
+        62.005597825416004,
+        387.1870484768421,
+        327.994402174584,
+        626.574039611394
+      ],
+      "candidateBounds": [
+        62.02689788834817,
+        387.1870484768421,
+        327.9731021116518,
+        626.574039611394
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "rest",
+      "w": 390,
+      "h": 844,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 7.221986267313924,
+      "baselineBounds": [
+        81.61288384922459,
+        387.13359212989076,
+        322.72085980028294,
+        642.9869761129926
+      ],
+      "candidateBounds": [
+        81.38015236164007,
+        387.13359212989076,
+        322.36030808131284,
+        642.9869761129926
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "rest",
+      "w": 390,
+      "h": 844,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 7.182716225923142,
+      "baselineBounds": [
+        62.005597825416004,
+        387.1870484768421,
+        327.994402174584,
+        626.574039611394
+      ],
+      "candidateBounds": [
+        62.02689788834817,
+        387.1870484768421,
+        327.9731021116518,
+        626.574039611394
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "rest",
+      "w": 844,
+      "h": 390,
+      "angle": 0,
+      "vertexShiftMaxPx": 2.9295183743574906,
+      "baselineBounds": [
+        360.5452407013178,
+        178.91344657105262,
+        483.4547592986822,
+        289.5306581142698
+      ],
+      "candidateBounds": [
+        360.5550831474594,
+        178.91344657105262,
+        483.4449168525406,
+        289.5306581142698
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "rest",
+      "w": 844,
+      "h": 390,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 3.3371737491142306,
+      "baselineBounds": [
+        369.6054795037886,
+        178.88874517850402,
+        481.0179328461023,
+        297.1148349337288
+      ],
+      "candidateBounds": [
+        369.4979377026536,
+        178.88874517850402,
+        480.85132719397154,
+        297.1148349337288
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "rest",
+      "w": 844,
+      "h": 390,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 3.319027639940882,
+      "baselineBounds": [
+        360.5452407013178,
+        178.91344657105262,
+        483.4547592986822,
+        289.5306581142698
+      ],
+      "candidateBounds": [
+        360.5550831474594,
+        178.91344657105262,
+        483.4449168525406,
+        289.5306581142698
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "idle",
+      "w": 1280,
+      "h": 720,
+      "angle": 0,
+      "vertexShiftMaxPx": 5.412399692457486,
+      "baselineBounds": [
+        527.4035547472589,
+        336.2870299668122,
+        752.9078573318242,
+        545.0402151529353
+      ],
+      "candidateBounds": [
+        527.4216466580388,
+        336.2870299668122,
+        752.8896825805446,
+        545.0402151529353
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "idle",
+      "w": 1280,
+      "h": 720,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 6.1616411430631635,
+      "baselineBounds": [
+        543.5322447460145,
+        336.23081953783145,
+        746.8110407312467,
+        558.8099918329045
+      ],
+      "candidateBounds": [
+        543.3344062506193,
+        336.23081953783145,
+        746.5058649581896,
+        558.8099918329045
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "idle",
+      "w": 1280,
+      "h": 720,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 6.112008088615079,
+      "baselineBounds": [
+        527.9709597548093,
+        336.44229770069035,
+        752.3330616690641,
+        540.6821909534951
+      ],
+      "candidateBounds": [
+        527.9889367687867,
+        336.44229770069035,
+        752.3150039112148,
+        540.6821909534951
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "idle",
+      "w": 390,
+      "h": 844,
+      "angle": 0,
+      "vertexShiftMaxPx": 6.344535195047384,
+      "baselineBounds": [
+        63.01194473150904,
+        394.2031295722076,
+        327.3530994278607,
+        638.9082522070519
+      ],
+      "candidateBounds": [
+        63.03315247136766,
+        394.2031295722076,
+        327.3317945805271,
+        638.9082522070519
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "idle",
+      "w": 390,
+      "h": 844,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 7.222812673257369,
+      "baselineBounds": [
+        81.91835356338372,
+        394.13723845823574,
+        320.20627552385025,
+        655.0494904263492
+      ],
+      "candidateBounds": [
+        81.68644288267043,
+        394.13723845823574,
+        319.8485417009889,
+        655.0494904263492
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "idle",
+      "w": 390,
+      "h": 844,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 7.164631703876528,
+      "baselineBounds": [
+        63.677069490359834,
+        394.3851378602537,
+        326.6793111787364,
+        633.7996793954859
+      ],
+      "candidateBounds": [
+        63.69814254563337,
+        394.3851378602537,
+        326.6581434737018,
+        633.7996793954859
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "idle",
+      "w": 844,
+      "h": 390,
+      "angle": 0,
+      "vertexShiftMaxPx": 2.9317165000811194,
+      "baselineBounds": [
+        361.0102588214319,
+        182.1554745653566,
+        483.1584227214048,
+        295.23011654117323
+      ],
+      "candidateBounds": [
+        361.02005860643766,
+        182.1554745653566,
+        483.1485780644616,
+        295.23011654117323
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "idle",
+      "w": 844,
+      "h": 390,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 3.337555619159229,
+      "baselineBounds": [
+        369.74663257075787,
+        182.1250272496587,
+        479.8559803960919,
+        302.6887455761566
+      ],
+      "candidateBounds": [
+        369.6394700524188,
+        182.1250272496587,
+        479.6906768523527,
+        302.6887455761566
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "idle",
+      "w": 844,
+      "h": 390,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 3.3106710479998873,
+      "baselineBounds": [
+        361.3176032005217,
+        182.23957792120726,
+        482.84707507074313,
+        292.86952009980985
+      ],
+      "candidateBounds": [
+        361.3273407497595,
+        182.23957792120726,
+        482.8372937852414,
+        292.86952009980985
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "walk",
+      "w": 1280,
+      "h": 720,
+      "angle": 0,
+      "vertexShiftMaxPx": 5.5728826911680915,
+      "baselineBounds": [
+        526.4807512178628,
+        338.2087773488555,
+        752.7400164236335,
+        546.6335940005168
+      ],
+      "candidateBounds": [
+        526.499058400404,
+        338.2087773488555,
+        752.8242987116901,
+        546.6335940005168
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "walk",
+      "w": 1280,
+      "h": 720,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 6.188818334349494,
+      "baselineBounds": [
+        541.1315529008715,
+        338.1189185825398,
+        746.4719061725167,
+        561.2836151978307
+      ],
+      "candidateBounds": [
+        540.9377143367122,
+        338.1189185825398,
+        746.1685868091088,
+        561.2836151978307
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "walk",
+      "w": 1280,
+      "h": 720,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 6.104137964692687,
+      "baselineBounds": [
+        527.8464646711528,
+        339.02344532429055,
+        751.3578079121235,
+        545.614584306457
+      ],
+      "candidateBounds": [
+        527.8645892793537,
+        339.02344532429055,
+        751.3399701959868,
+        545.614584306457
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "walk",
+      "w": 390,
+      "h": 844,
+      "angle": 0,
+      "vertexShiftMaxPx": 6.5326569324248265,
+      "baselineBounds": [
+        61.93021392760578,
+        396.4558445589362,
+        327.1563525854815,
+        640.7760463006058
+      ],
+      "candidateBounds": [
+        61.95167401380697,
+        396.4558445589362,
+        327.2551501564811,
+        640.7760463006058
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "walk",
+      "w": 390,
+      "h": 844,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 7.25467038082071,
+      "baselineBounds": [
+        79.10420923379932,
+        396.3505101161994,
+        319.8087344577834,
+        657.9491267041237
+      ],
+      "candidateBounds": [
+        78.87698736136815,
+        396.3505101161994,
+        319.4531767595664,
+        657.9491267041237
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "walk",
+      "w": 390,
+      "h": 844,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 7.155406169723052,
+      "baselineBounds": [
+        63.53113358674021,
+        397.4108164634739,
+        325.53609705254473,
+        639.581540492569
+      ],
+      "candidateBounds": [
+        63.552379655242405,
+        397.4108164634739,
+        325.5151872852957,
+        639.581540492569
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "walk",
+      "w": 844,
+      "h": 390,
+      "angle": 0,
+      "vertexShiftMaxPx": 3.0186447910494074,
+      "baselineBounds": [
+        360.5104069096756,
+        183.1964210639634,
+        483.0675088961348,
+        296.09319675027996
+      ],
+      "candidateBounds": [
+        360.5203233002189,
+        183.1964210639634,
+        483.11316180216545,
+        296.09319675027996
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "walk",
+      "w": 844,
+      "h": 390,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 3.3522765977725997,
+      "baselineBounds": [
+        368.4462578213054,
+        183.14774756554237,
+        479.6722825101131,
+        304.02862489882494
+      ],
+      "candidateBounds": [
+        368.34126193238575,
+        183.14774756554237,
+        479.5079845216006,
+        304.02862489882494
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "walk",
+      "w": 844,
+      "h": 390,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 3.3064080642084868,
+      "baselineBounds": [
+        361.2501683635411,
+        183.63769955065737,
+        482.3188126190669,
+        295.54123316599754
+      ],
+      "candidateBounds": [
+        361.25998585964993,
+        183.63769955065737,
+        482.3091505228262,
+        295.54123316599754
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "raised",
+      "w": 1280,
+      "h": 720,
+      "angle": 0,
+      "vertexShiftMaxPx": 5.412399692457486,
+      "baselineBounds": [
+        525.5578922301535,
+        336.2870299668122,
+        754.2436546052842,
+        540.6821909534951
+      ],
+      "candidateBounds": [
+        525.5764777576634,
+        336.2870299668122,
+        754.2251224583993,
+        540.6821909534951
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "raised",
+      "w": 1280,
+      "h": 720,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 6.1616411430631635,
+      "baselineBounds": [
+        463.69379414557835,
+        336.23081953783145,
+        741.6819857668219,
+        542.9613251900508
+      ],
+      "candidateBounds": [
+        463.69379414557835,
+        336.23081953783145,
+        741.5079812512411,
+        542.9613251900508
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "raised",
+      "w": 1280,
+      "h": 720,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 6.112008088615079,
+      "baselineBounds": [
+        529.0998366513845,
+        336.44229770069035,
+        750.7669540638021,
+        540.6821909534951
+      ],
+      "candidateBounds": [
+        529.1175153648445,
+        336.44229770069035,
+        750.7493103929734,
+        540.6821909534951
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "raised",
+      "w": 390,
+      "h": 844,
+      "angle": 0,
+      "vertexShiftMaxPx": 6.344535195047384,
+      "baselineBounds": [
+        60.84841811423546,
+        394.2031295722076,
+        328.9189506761943,
+        633.7996793954859
+      ],
+      "candidateBounds": [
+        60.870204482594346,
+        394.2031295722076,
+        328.89722688179023,
+        633.7996793954859
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "raised",
+      "w": 390,
+      "h": 844,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 7.222812673257369,
+      "baselineBounds": [
+        -11.670052418238729,
+        394.13723845823574,
+        314.19388331555234,
+        636.471331195004
+      ],
+      "candidateBounds": [
+        -11.670052418238729,
+        394.13723845823574,
+        313.9899113556215,
+        636.471331195004
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "raised",
+      "w": 390,
+      "h": 844,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 7.164631703876528,
+      "baselineBounds": [
+        65.00036407467847,
+        394.3851378602537,
+        324.84348504145686,
+        633.7996793954859
+      ],
+      "candidateBounds": [
+        65.02108745545665,
+        394.3851378602537,
+        324.82280273842997,
+        633.7996793954859
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "raised",
+      "w": 844,
+      "h": 390,
+      "angle": 0,
+      "vertexShiftMaxPx": 2.9317165000811194,
+      "baselineBounds": [
+        360.0105249579998,
+        182.1554745653566,
+        483.8819795778623,
+        292.86952009980985
+      ],
+      "candidateBounds": [
+        360.0205921187343,
+        182.1554745653566,
+        483.8719413316329,
+        292.86952009980985
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "raised",
+      "w": 844,
+      "h": 390,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 3.337555619159229,
+      "baselineBounds": [
+        326.50080516218827,
+        182.1250272496587,
+        477.07774229036187,
+        294.1040511446109
+      ],
+      "candidateBounds": [
+        326.50080516218827,
+        182.1250272496587,
+        476.9834898444223,
+        294.1040511446109
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "raised",
+      "w": 844,
+      "h": 390,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 3.3106710479998873,
+      "baselineBounds": [
+        361.9290781861666,
+        182.23957792120726,
+        481.99876678455945,
+        292.86952009980985
+      ],
+      "candidateBounds": [
+        361.93865415595747,
+        182.23957792120726,
+        481.98920979619396,
+        292.86952009980985
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "reach",
+      "w": 1280,
+      "h": 720,
+      "angle": 0,
+      "vertexShiftMaxPx": 5.412399692457486,
+      "baselineBounds": [
+        422.9626033828133,
+        336.2870299668122,
+        862.7521443761223,
+        540.6821909534951
+      ],
+      "candidateBounds": [
+        422.9626033828133,
+        336.2870299668122,
+        862.7521443761223,
+        540.6821909534951
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "reach",
+      "w": 1280,
+      "h": 720,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 6.1616411430631635,
+      "baselineBounds": [
+        462.2054179956531,
+        336.23081953783145,
+        837.9247409533345,
+        542.9613251900508
+      ],
+      "candidateBounds": [
+        462.2054179956531,
+        336.23081953783145,
+        837.9247409533345,
+        542.9613251900508
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "reach",
+      "w": 1280,
+      "h": 720,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 6.112008088615079,
+      "baselineBounds": [
+        443.88300993094475,
+        336.44229770069035,
+        840.4306445171514,
+        540.6821909534951
+      ],
+      "candidateBounds": [
+        443.88300993094475,
+        336.44229770069035,
+        840.4306445171514,
+        540.6821909534951
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "reach",
+      "w": 390,
+      "h": 844,
+      "angle": 0,
+      "vertexShiftMaxPx": 6.344535195047384,
+      "baselineBounds": [
+        -59.416059367924476,
+        394.2031295722076,
+        456.1150136853433,
+        633.7996793954859
+      ],
+      "candidateBounds": [
+        -59.416059367924476,
+        394.2031295722076,
+        456.1150136853433,
+        633.7996793954859
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "reach",
+      "w": 390,
+      "h": 844,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 7.222812673257369,
+      "baselineBounds": [
+        -13.414760016206591,
+        394.13723845823574,
+        427.0117796730755,
+        636.471331195004
+      ],
+      "candidateBounds": [
+        -13.414760016206591,
+        394.13723845823574,
+        427.0117796730755,
+        636.471331195004
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "reach",
+      "w": 390,
+      "h": 844,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 7.164631703876528,
+      "baselineBounds": [
+        -34.89269391428137,
+        394.3851378602537,
+        429.9492555173274,
+        633.7996793954859
+      ],
+      "candidateBounds": [
+        -34.89269391428137,
+        394.3851378602537,
+        429.9492555173274,
+        633.7996793954859
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "reach",
+      "w": 844,
+      "h": 390,
+      "angle": 0,
+      "vertexShiftMaxPx": 2.9317165000811194,
+      "baselineBounds": [
+        304.4380768323572,
+        182.1554745653566,
+        542.6574115370663,
+        292.86952009980985
+      ],
+      "candidateBounds": [
+        304.4380768323572,
+        182.1554745653566,
+        542.6574115370663,
+        292.86952009980985
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "reach",
+      "w": 844,
+      "h": 390,
+      "angle": 0.5235987755982988,
+      "vertexShiftMaxPx": 3.337555619159229,
+      "baselineBounds": [
+        325.6946014143121,
+        182.1250272496587,
+        529.2092346830563,
+        294.1040511446109
+      ],
+      "candidateBounds": [
+        325.6946014143121,
+        182.1250272496587,
+        529.2092346830563,
+        294.1040511446109
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    },
+    {
+      "pose": "reach",
+      "w": 844,
+      "h": 390,
+      "angle": 3.141592653589793,
+      "vertexShiftMaxPx": 3.3106710479998873,
+      "baselineBounds": [
+        315.7699637125951,
+        182.23957792120726,
+        530.5665991134571,
+        292.86952009980985
+      ],
+      "candidateBounds": [
+        315.7699637125951,
+        182.23957792120726,
+        530.5665991134571,
+        292.86952009980985
+      ],
+      "scope": "Camera math on upper garment only. Not rendered visible silhouette; other surfaces may occlude it. 0/30deg/front and180deg/back diagnostic; real dialogue solver checked separately."
+    }
+  ],
+  "sourceAfter": {
+    "src/assets/characters/detailed-geometry.js": "db037549dbdee519d0fb57520ee0257f09dc1a127048ee202a2a22b64980b8f6",
+    "src/assets/characters/body-profile-data.js": "3833017e8eb289a31ac175b1b48c0888148e500e94986279e07c47806fab0ab2",
+    "src/assets/characters/body-profile-provenance.json": "4d9bfb0ddf9469640448ef8710109372a4b3708fa242de58f0b0f8949fbfb7f7",
+    "scripts/characters/generate-body-profile.py": "05e4997b09179b37f6a16b2698cd282c1baf8ff762020cbd0450920c00c72279",
+    "src/actor-models.js": "04b1a72d8d1f5305dbc0e47dbe10e15c824fd0a29955d5fc08bcb40b8d544a96",
+    "src/core.js": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390"
+  }
+}

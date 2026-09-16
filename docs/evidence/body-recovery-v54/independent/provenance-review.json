@@ -1,0 +1,231 @@
+{
+  "sourceSHA256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+  "sourceBytes": 1749303,
+  "generatorSHA256": "23bf06a1880bdfb9ad4d3c1fed16b0fd676d13a4ddaac06c52da56028ad92ec4",
+  "outputSHA256": "c4f03def06656c980adc1dc2833b11a314b6edebce461d46c548df272b45c686",
+  "sourceBodyTriangles": 26756,
+  "sections": [
+    {
+      "section": "torso-3",
+      "components": 3,
+      "selectedPoints": 84,
+      "halfExtentsM": [
+        0.14448317155252177,
+        0.10023271002827765
+      ],
+      "centerOffsetM": [
+        0.0,
+        0.05964381611424341
+      ],
+      "raysClamped": 0,
+      "rays": 18,
+      "factorMin": 0.986521,
+      "factorMax": 1.013224
+    },
+    {
+      "section": "torso-4",
+      "components": 3,
+      "selectedPoints": 100,
+      "halfExtentsM": [
+        0.14990263885016186,
+        0.1096117831416918
+      ],
+      "centerOffsetM": [
+        0.0,
+        0.06049708421679479
+      ],
+      "raysClamped": 0,
+      "rays": 18,
+      "factorMin": 0.959827,
+      "factorMax": 1.047569
+    },
+    {
+      "section": "torso-5",
+      "components": 3,
+      "selectedPoints": 112,
+      "halfExtentsM": [
+        0.1788735328534162,
+        0.10733574174651042
+      ],
+      "centerOffsetM": [
+        0.0,
+        0.03797096277293152
+      ],
+      "raysClamped": 2,
+      "rays": 18,
+      "factorMin": 0.955319,
+      "factorMax": 1.082733
+    },
+    {
+      "section": "torso-6",
+      "components": 1,
+      "selectedPoints": 144,
+      "halfExtentsM": [
+        0.2873157508400968,
+        0.10065181271144454
+      ],
+      "centerOffsetM": [
+        0.0,
+        0.020478094811901975
+      ],
+      "raysClamped": 0,
+      "rays": 18,
+      "factorMin": 0.955486,
+      "factorMax": 1.01671
+    },
+    {
+      "section": "torso-7",
+      "components": 1,
+      "selectedPoints": 108,
+      "halfExtentsM": [
+        0.2517636763710054,
+        0.08237817420060667
+      ],
+      "centerOffsetM": [
+        0.0,
+        0.013782343478437212
+      ],
+      "raysClamped": 0,
+      "rays": 18,
+      "factorMin": 0.989783,
+      "factorMax": 1.013715
+    },
+    {
+      "section": "sleeve-2",
+      "components": 3,
+      "selectedPoints": 42,
+      "halfExtentsM": [
+        0.032794450023437935,
+        0.03248064968000379
+      ],
+      "centerOffsetM": [
+        -0.003668395911050429,
+        -0.0006530709563574064
+      ],
+      "raysClamped": 8,
+      "rays": 12,
+      "factorMin": 1.0,
+      "factorMax": 1.030981
+    },
+    {
+      "section": "sleeve-3",
+      "components": 3,
+      "selectedPoints": 42,
+      "halfExtentsM": [
+        0.040471051282696124,
+        0.038809674382188845
+      ],
+      "centerOffsetM": [
+        -0.00303203858734878,
+        0.0031119497963143176
+      ],
+      "raysClamped": 8,
+      "rays": 12,
+      "factorMin": 1.0,
+      "factorMax": 1.037782
+    },
+    {
+      "section": "sleeve-4",
+      "components": 2,
+      "selectedPoints": 42,
+      "halfExtentsM": [
+        0.04215302254326615,
+        0.03994028354532444
+      ],
+      "centerOffsetM": [
+        -0.001499693153340625,
+        0.007074996000433014
+      ],
+      "raysClamped": 10,
+      "rays": 12,
+      "factorMin": 1.0,
+      "factorMax": 1.075573
+    },
+    {
+      "section": "sleeve-5",
+      "components": 2,
+      "selectedPoints": 46,
+      "halfExtentsM": [
+        0.040608560545697225,
+        0.04510982719069949
+      ],
+      "centerOffsetM": [
+        -0.0026729096549070034,
+        0.007901226480442464
+      ],
+      "raysClamped": 8,
+      "rays": 12,
+      "factorMin": 1.0,
+      "factorMax": 1.068351
+    },
+    {
+      "section": "sleeve-6",
+      "components": 2,
+      "selectedPoints": 42,
+      "halfExtentsM": [
+        0.04117833406092256,
+        0.045401903114780436
+      ],
+      "centerOffsetM": [
+        -0.004223801692767684,
+        0.0063573866143960735
+      ],
+      "raysClamped": 8,
+      "rays": 12,
+      "factorMin": 1.0,
+      "factorMax": 1.063503
+    },
+    {
+      "section": "sleeve-7",
+      "components": 2,
+      "selectedPoints": 40,
+      "halfExtentsM": [
+        0.043193079030328145,
+        0.050024310903536394
+      ],
+      "centerOffsetM": [
+        -0.005731677548749638,
+        0.000982878699422012
+      ],
+      "raysClamped": 8,
+      "rays": 12,
+      "factorMin": 1.0,
+      "factorMax": 1.060403
+    },
+    {
+      "section": "sleeve-8",
+      "components": 2,
+      "selectedPoints": 44,
+      "halfExtentsM": [
+        0.05128447966791716,
+        0.05056726062142127
+      ],
+      "centerOffsetM": [
+        -0.0031581839784631197,
+        -0.0018266203634856985
+      ],
+      "raysClamped": 8,
+      "rays": 12,
+      "factorMin": 1.0,
+      "factorMax": 1.061085
+    },
+    {
+      "section": "sleeve-9",
+      "components": 2,
+      "selectedPoints": 42,
+      "halfExtentsM": [
+        0.051046965985375094,
+        0.05056576390222923
+      ],
+      "centerOffsetM": [
+        -0.0033046459109643558,
+        -0.0016889581457157886
+      ],
+      "raysClamped": 8,
+      "rays": 12,
+      "factorMin": 1.0,
+      "factorMax": 1.023608
+    }
+  ],
+  "scope": "Independent re-intersection of original body triangle planes, nearest connected component, bounds and clamp/blend output from declared raw radii. Raw radii ray hits themselves were source-inspected, not independently re-solved here. Bbox center offsets removed by registration; clothing radii/ease and clamps authored, not calibrated cloth thickness or demographic inference. No source or runtime file written."
+}

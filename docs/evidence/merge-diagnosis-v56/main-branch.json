@@ -1,0 +1,113 @@
+{
+  "at": "2026-09-16T09:21:12.092Z",
+  "tool": "mcp__codex_apps__github_fetch",
+  "args": {
+    "url": "https://api.github.com/repos/bachikoljunior-blip/Q/branches/main"
+  },
+  "isError": false,
+  "response": {
+    "name": "main",
+    "commit": {
+      "sha": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+      "node_id": "C_kwDOTpQj69oAKDU0NzY3NmZkY2U4ZDhlOTdhYmVkOWYwNjVhYWQwYjZlMjRhZjJmZDY",
+      "commit": {
+        "author": {
+          "name": "bachikoljunior-blip",
+          "email": "bachikoljunior@gmail.com",
+          "date": "2026-09-15T12:13:43Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2026-09-15T12:13:43Z"
+        },
+        "message": "Merge pull request #38 from bachikoljunior-blip/docs/title-video-v23-publication\n\nRecord verified title video and presentation publication on Site v23",
+        "tree": {
+          "sha": "103b685a230369504437307f0f0f0ae6d4674638",
+          "url": "https://api.github.com/repos/bachikoljunior-blip/Q/git/trees/103b685a230369504437307f0f0f0ae6d4674638"
+        },
+        "url": "https://api.github.com/repos/bachikoljunior-blip/Q/git/commits/547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqqTZ3CRC1aQ7uu5UhlAAACTQQAHv/n3oYbyE/50DulD0H7G7G\nk6IsuqSrrQ9HpzH/BtM1MNzAi/cdA1bRNWkz9lHoF2O7XwpPMftinWXefMAJQwrk\n5tFON7lM6jpZUG5VTwO9ACa1OlHm8a++mRINJzmRNwEwycSlDzZE1pMaELwdKniz\nHAnY9zalzkgnPNoqCpwZQrGJp2GXu4T96V6EBwTlOiX8Z9IQgXFkesnwENT0XG0e\nlpnPO7wGO/jcIUISyvCWnEYWuOdCCr0lwQ2KHuSEF00OWsBe6B+GfbVTNYgTFLmB\n9cxypv9ikaX5iI9PYkz3PNucZE0Mjt4MFUcmSSJrnbS9gxMxMv61bSrrF7cXJFwU\nZgRN0Yjukf74lNpozJbWiKU8vhfGVghFBSV5PlGdTvFBmqg9bYQiu/ODaen/rjZ8\nS6vlsjSG14bmx4UBJ3xyrwHMO79RDgaZgFI4ZvD8/gfmzIeV+GOeppOGjRiV+52C\nU2XzElhzKxkPzLI+r3Qak6Xl6VqxiuxVO8wNENaFbYEnR3KK5OPIG0Zrk8tN2qlG\nh25FsbQiBf/1eu2+qqvvbAmdYDgi08rP2CxG3yvVpHAyceGtGt6RcgoTgy1JqPKn\n+b68rXayQFzgPP+KWvBx5O+5Hq66kldPkc3Bxjy5cmVgwE0klgCzCnCuHFQWFDGE\nDQA4ak538WP2MV3LAxpz\n=Ll4r\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 103b685a230369504437307f0f0f0ae6d4674638\nparent f11819aceea515d166846e4bf85082bf2e51e9d1\nparent ba5881ed1fc4e4769f144f65bef9b4bd4c56a01f\nauthor bachikoljunior-blip <bachikoljunior@gmail.com> 1789474423 +0900\ncommitter GitHub <noreply@github.com> 1789474423 +0900\n\nMerge pull request #38 from bachikoljunior-blip/docs/title-video-v23-publication\n\nRecord verified title video and presentation publication on Site v23",
+          "verified_at": "2026-09-15T12:13:44Z"
+        }
+      },
+      "url": "https://api.github.com/repos/bachikoljunior-blip/Q/commits/547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+      "html_url": "https://github.com/bachikoljunior-blip/Q/commit/547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+      "comments_url": "https://api.github.com/repos/bachikoljunior-blip/Q/commits/547676fdce8d8e97abed9f065aad0b6e24af2fd6/comments",
+      "author": {
+        "login": "bachikoljunior-blip",
+        "id": 297806842,
+        "node_id": "U_kgDOEcAr-g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/297806842?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/bachikoljunior-blip",
+        "html_url": "https://github.com/bachikoljunior-blip",
+        "followers_url": "https://api.github.com/users/bachikoljunior-blip/followers",
+        "following_url": "https://api.github.com/users/bachikoljunior-blip/following{/other_user}",
+        "gists_url": "https://api.github.com/users/bachikoljunior-blip/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/bachikoljunior-blip/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/bachikoljunior-blip/subscriptions",
+        "organizations_url": "https://api.github.com/users/bachikoljunior-blip/orgs",
+        "repos_url": "https://api.github.com/users/bachikoljunior-blip/repos",
+        "events_url": "https://api.github.com/users/bachikoljunior-blip/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/bachikoljunior-blip/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "f11819aceea515d166846e4bf85082bf2e51e9d1",
+          "url": "https://api.github.com/repos/bachikoljunior-blip/Q/commits/f11819aceea515d166846e4bf85082bf2e51e9d1",
+          "html_url": "https://github.com/bachikoljunior-blip/Q/commit/f11819aceea515d166846e4bf85082bf2e51e9d1"
+        },
+        {
+          "sha": "ba5881ed1fc4e4769f144f65bef9b4bd4c56a01f",
+          "url": "https://api.github.com/repos/bachikoljunior-blip/Q/commits/ba5881ed1fc4e4769f144f65bef9b4bd4c56a01f",
+          "html_url": "https://github.com/bachikoljunior-blip/Q/commit/ba5881ed1fc4e4769f144f65bef9b4bd4c56a01f"
+        }
+      ]
+    },
+    "_links": {
+      "self": "https://api.github.com/repos/bachikoljunior-blip/Q/branches/main",
+      "html": "https://github.com/bachikoljunior-blip/Q/tree/main"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/bachikoljunior-blip/Q/branches/main/protection"
+  },
+  "transportNote": "Connector result; native HTTP response headers and request IDs are not exposed."
+}

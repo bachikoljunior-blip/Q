@@ -1,0 +1,21 @@
+{
+  "sourceRequired": [
+    {
+      "finding": "Main did not tick dead Game",
+      "fix": "Use existing fixed60Hz accumulator for both alive and dead, alive-only input/autosave"
+    },
+    {
+      "finding": "Initial dead main integration continued after blur/pagehide callbacks",
+      "fix": "Dead-only pageActive/hasFocus guard and zero animation dt, evaluate paused again after handleEvents",
+      "independentNegative": "independent/candidate.json"
+    }
+  ],
+  "fixtureCorrections": [
+    "Preserve HUD-required enemy entries instead of deleting the enemy list",
+    "Allow two resumed RAF frames across fixed-step floating boundary",
+    "In-memory title/continue reuses dead Game; test explicit respawn separately",
+    "Update old pageshow/pagehide source regexes to include pageActive assignments"
+  ],
+  "firstFixtureFailure": "focused-before-fixture-repair.tap",
+  "runtimeSourceChangedAfterIndependentFinal": false
+}

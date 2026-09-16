@@ -1,0 +1,49 @@
+
+> q-ash-pilgrim@0.21.0 test:journey
+> node scripts/simulate-journey.mjs
+
+{
+  "passed": true,
+  "seconds": 119,
+  "ending": "release",
+  "log": [
+    {
+      "place": "grove",
+      "lit": true,
+      "time": 30,
+      "hp": 132,
+      "position": [
+        -104.63277335627005,
+        -1.936194890541654
+      ]
+    },
+    {
+      "place": "flood",
+      "lit": true,
+      "time": 69,
+      "hp": 144,
+      "position": [
+        107.14946112707904,
+        -81.06032194280256
+      ]
+    },
+    {
+      "place": "ruins",
+      "lit": true,
+      "time": 99,
+      "hp": 156,
+      "position": [
+        -48.19220848595377,
+        -170.9939923034948
+      ]
+    },
+    {
+      "boss": true,
+      "time": 117,
+      "hp": 168,
+      "level": 5,
+      "weapon": 3,
+      "dead": false
+    }
+  ]
+}

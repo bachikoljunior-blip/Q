@@ -1,0 +1,15 @@
+{
+  "startedUTC": "2026-09-16T08:58:03Z",
+  "firstCandidateMeasuredUTC": "2026-09-16T09:04:54Z",
+  "requiredRework": "Initial actual triangle tests found new garment/accessory crosses. Preserve lower torso/front attachments; permit sleeve fullness without contracting its existing inner envelope.",
+  "candidateFixedUTC": "2026-09-16T09:10:26Z",
+  "generationSeconds": 4.144643550003821,
+  "authorTestsSeconds": 8.262016641,
+  "finalBuildSeconds": 2.69,
+  "scope": "Wall-clock implementation, measurement and required rework overlap; no rendered/media production time. Independent review is subsequent and recorded separately.",
+  "authorCheckpoint": "f879e759af22094e79f113b885d6b8f037de5651",
+  "closedUTC": "2026-09-16T09:19:04.317013+00:00",
+  "outcome": "Runtime not adopted: conversation shape differences too small to justify changed triangle contact pairs / reused API contact increases. Candidate and exact evidence retained.",
+  "independentEvidence": "independent/HASHES.json; 15 byte-preserved files; no optional post-review probes",
+  "reportingCorrection": "Author cross keys classify external mesh/material, not exact opposing triangle IDs. Documentation and test title corrected; test executable logic unchanged."
+}

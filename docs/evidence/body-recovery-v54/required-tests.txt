@@ -1,0 +1,26 @@
+✔ only Mira source-derived upper cloth changes; other 13 roles and fixed skin/index/material contracts remain exact (1532.585097ms)
+✔ 483 vertices and 816 faces preserve the 161 fixed collar/hem/shoulder/cuff vertices exactly through poses (32.921758ms)
+✔ source reshaping has no degenerate or reversed face and physical UV does not worsen p95 anisotropy (9.706763ms)
+✔ fresh provenance matches the exact legal source/output/generator and uses a separated upper-arm section at shoulder transition (3.462596ms)
+✔ bounded garment derivative introduces no external proper-cross pair in the same five poses (4894.794833ms)
+✔ all shipped actor roles and four warden variants have independently bound authored skins within declared geometry budgets (543.882222ms)
+✔ flat and sloping support keep stance ankles at the sampled floor through walk/run with no world transform or game mutation (121.801596ms)
+✔ stance feet counter world displacement and teleportation does not invent a high-speed stride (19.483812ms)
+✔ saved gameplay actions reconstruct the same articulated pose and impact phase without advancing gameplay (497.55468ms)
+✔ windup, release, recovery, hit, live death and settled reload are distinct finite poses for every enemy family (109.046997ms)
+✔ authored geometry recipe matches provenance and preserves separate third-party attribution (73.012668ms)
+✔ native paused dialogue preserves save and exact gameplay orbit/projection on return (85.652814ms)
+✔ resize/quality rebuild composition once; death, threat and static blockage restore ordinary camera (433.41634ms)
+✔ disappearing NPC and unready gathering cannot reuse a stale close-up (73.33198ms)
+✔ real main ordinary modal retains focus across interruption, ignores wheel and clears on close/settings (431.821671ms)
+✔ dialogue layout has an opaque scrollable lower reading region and keyboard-reachable disclosure controls (1.493996ms)
+✔ actual gathering next-line and choice replace content at its reading start (133.119002ms)
+✔ actual melee death in the dialogue event batch closes the modal and respawn resumes input (210.194545ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8262.016641

@@ -1,0 +1,170 @@
+[
+  {
+    "viewport": [
+      1280,
+      720
+    ],
+    "shot": {
+      "id": "keeper",
+      "position": [
+        9.582160753377863,
+        3.391520709300637,
+        80.44150730864357
+      ],
+      "target": [
+        7.019991455407868,
+        3.291520709300637,
+        79.99959273710294
+      ],
+      "distance": 2.6,
+      "angle": 0,
+      "attempts": 1
+    },
+    "all": {
+      "changed": 105,
+      "maxPixels": 3.5188655002568368,
+      "clearAfter": 39,
+      "clearAndUpperAfter": 26,
+      "maxClearUpperPixels": 1.1204000180333382,
+      "capeOccluded": 0
+    },
+    "parts": {
+      "torso": {
+        "changed": 45,
+        "maxPixels": 3.5188655002568368,
+        "clearAfter": 2,
+        "clearAndUpperAfter": 2,
+        "maxClearUpperPixels": 0.017652583948889983,
+        "capeOccluded": 0
+      },
+      "left-sleeve": {
+        "changed": 30,
+        "maxPixels": 1.3750629343423901,
+        "clearAfter": 18,
+        "clearAndUpperAfter": 12,
+        "maxClearUpperPixels": 1.1204000180333382,
+        "capeOccluded": 0
+      },
+      "right-sleeve": {
+        "changed": 30,
+        "maxPixels": 1.3030347967473148,
+        "clearAfter": 19,
+        "clearAndUpperAfter": 12,
+        "maxClearUpperPixels": 1.1045458819289828,
+        "capeOccluded": 0
+      }
+    }
+  },
+  {
+    "viewport": [
+      844,
+      390
+    ],
+    "shot": {
+      "id": "keeper",
+      "position": [
+        9.582160753377863,
+        3.391520709300637,
+        80.44150730864357
+      ],
+      "target": [
+        7.019991455407868,
+        3.291520709300637,
+        79.99959273710294
+      ],
+      "distance": 2.6,
+      "angle": 0,
+      "attempts": 1
+    },
+    "all": {
+      "changed": 105,
+      "maxPixels": 1.9060521459723794,
+      "clearAfter": 39,
+      "clearAndUpperAfter": 26,
+      "maxClearUpperPixels": 0.6068833431014033,
+      "capeOccluded": 0
+    },
+    "parts": {
+      "torso": {
+        "changed": 45,
+        "maxPixels": 1.9060521459723794,
+        "clearAfter": 2,
+        "clearAndUpperAfter": 2,
+        "maxClearUpperPixels": 0.00956181630568211,
+        "capeOccluded": 0
+      },
+      "left-sleeve": {
+        "changed": 30,
+        "maxPixels": 0.7448257561021818,
+        "clearAfter": 18,
+        "clearAndUpperAfter": 12,
+        "maxClearUpperPixels": 0.6068833431014033,
+        "capeOccluded": 0
+      },
+      "right-sleeve": {
+        "changed": 30,
+        "maxPixels": 0.705810514904833,
+        "clearAfter": 19,
+        "clearAndUpperAfter": 12,
+        "maxClearUpperPixels": 0.5982956860449323,
+        "capeOccluded": 0
+      }
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "shot": {
+      "id": "keeper",
+      "position": [
+        9.582160753377863,
+        3.391520709300637,
+        80.44150730864357
+      ],
+      "target": [
+        7.019991455407868,
+        3.291520709300637,
+        79.99959273710294
+      ],
+      "distance": 2.6,
+      "angle": 0,
+      "attempts": 1
+    },
+    "all": {
+      "changed": 105,
+      "maxPixels": 4.124892336412123,
+      "clearAfter": 39,
+      "clearAndUpperAfter": 26,
+      "maxClearUpperPixels": 1.3133577989168397,
+      "capeOccluded": 0
+    },
+    "parts": {
+      "torso": {
+        "changed": 45,
+        "maxPixels": 4.124892336412123,
+        "clearAfter": 2,
+        "clearAndUpperAfter": 2,
+        "maxClearUpperPixels": 0.020692751184332413,
+        "capeOccluded": 0
+      },
+      "left-sleeve": {
+        "changed": 30,
+        "maxPixels": 1.6118793285903497,
+        "clearAfter": 18,
+        "clearAndUpperAfter": 12,
+        "maxClearUpperPixels": 1.3133577989168397,
+        "capeOccluded": 0
+      },
+      "right-sleeve": {
+        "changed": 30,
+        "maxPixels": 1.5274463450760118,
+        "clearAfter": 19,
+        "clearAndUpperAfter": 12,
+        "maxClearUpperPixels": 1.2947732282612574,
+        "capeOccluded": 0
+      }
+    }
+  }
+]
