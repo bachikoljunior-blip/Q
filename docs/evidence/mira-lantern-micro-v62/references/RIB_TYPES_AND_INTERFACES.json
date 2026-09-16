@@ -1,0 +1,214 @@
+{
+  "status": "PROPOSAL_ONLY: visual family retained; complete multiview / joints not accepted; no 3D mesh produced",
+  "units": "millimetres, authored registration; not calibrated from generated pixels",
+  "frame": {
+    "origin": "staff ferrule bottom",
+    "up": "+Y",
+    "front": "+Z",
+    "horizontal": "+X",
+    "bodySide": "Mira physical right = actor -X / hand-0; prop cardinal ribs are not anatomical hand names"
+  },
+  "images": {
+    "first": "staff-ribs-micro-v1.png",
+    "revision": "staff-ribs-micro-v2.png",
+    "generatedCalls": 2,
+    "furtherGeneration": false
+  },
+  "types": [
+    {
+      "id": "RIB-W",
+      "instances": [
+        "S09",
+        "S10"
+      ],
+      "shape": "one closed thin flat planar bronze bow, integral short seating ends; no circular rod or separate blocks",
+      "canonicalPlane": "XY at Z=0, positive radial X",
+      "sectionDesign": {
+        "widthInCurvePlaneNormalToTangentMm": 7,
+        "thicknessAlongZMm": 2,
+        "edgeEaseMm": 0.25,
+        "status": "authored proposal, image not precise enough to certify"
+      },
+      "retainedBOMEnvelopeControlsMm": [
+        [
+          14,
+          1447,
+          0
+        ],
+        [
+          57,
+          1487,
+          0
+        ],
+        [
+          70,
+          1556,
+          0
+        ],
+        [
+          57,
+          1625,
+          0
+        ],
+        [
+          14,
+          1665,
+          0
+        ]
+      ],
+      "controlsStatus": "original gross envelope only; final terminal curves MUST change for new cap seat, not a ready spline",
+      "views": {
+        "front": "+Z: bowed broad-face silhouette",
+        "side": "+X: straight thin vertical edge",
+        "top": "+Y: narrow X footprint; upper/lower end projections overlap at the inboard radial datum",
+        "oblique": "reveals flat face and thin edge"
+      },
+      "quickConstructionReason": "single planar centerline sweep with a rectangular section and two short integrated seat transitions; output still needs consistent closed edges, normals, actual joint check"
+    },
+    {
+      "id": "RIB-D",
+      "instances": [
+        "S11",
+        "S12"
+      ],
+      "shape": "one closed shallow bronze bow with broad face frontward, integral short seating ends",
+      "canonicalPlane": "YZ at X=0, positive radial Z",
+      "sectionDesign": {
+        "widthAlongXmm": 7,
+        "thicknessInCurvePlaneNormalToTangentMm": 2,
+        "edgeEaseMm": 0.25,
+        "status": "authored proposal; different ribbon orientation from RIB-W so front strip remains broad"
+      },
+      "retainedBOMEnvelopeControlsMm": [
+        [
+          0,
+          1447,
+          14
+        ],
+        [
+          0,
+          1487,
+          44
+        ],
+        [
+          0,
+          1556,
+          55
+        ],
+        [
+          0,
+          1625,
+          44
+        ],
+        [
+          0,
+          1665,
+          14
+        ]
+      ],
+      "controlsStatus": "original gross envelope only; final terminal curves MUST change for new cap seat, not a ready spline",
+      "views": {
+        "front": "+Z: straight narrow vertical broad-face silhouette",
+        "side": "+X: shallow bow thin edge",
+        "top": "+Y: narrow Z footprint; upper/lower end projections overlap at the inboard radial datum",
+        "oblique": "reveals depth curve, broad face and edge"
+      },
+      "quickConstructionReason": "one planar shallow centerline sweep with tangential rectangular ribbon section and short integrated seat transitions; not a second set of decorative parts"
+    }
+  ],
+  "instances": [
+    {
+      "id": "S09",
+      "type": "RIB-W",
+      "placement": "negative X",
+      "mirrorFromCanonical": [
+        "X"
+      ],
+      "count": 1
+    },
+    {
+      "id": "S10",
+      "type": "RIB-W",
+      "placement": "positive X",
+      "mirrorFromCanonical": [],
+      "count": 1
+    },
+    {
+      "id": "S11",
+      "type": "RIB-D",
+      "placement": "positive Z",
+      "mirrorFromCanonical": [],
+      "count": 1
+    },
+    {
+      "id": "S12",
+      "type": "RIB-D",
+      "placement": "negative Z",
+      "mirrorFromCanonical": [
+        "Z"
+      ],
+      "count": 1
+    }
+  ],
+  "upperInterface": {
+    "currentCapsSource": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v61/review/micro-v61/mira-micro-parts.js",
+    "currentRingOriginY": 1665,
+    "currentRingBottomY": 1662,
+    "currentRingBottomRadialBand": [
+      14.5,
+      19.2
+    ],
+    "existingCapRingSeat": {
+      "Y": 1668,
+      "radialBand": [
+        14.5,
+        18
+      ],
+      "mustRemainUnmodified": true
+    },
+    "oldRibDatum": {
+      "radial": 14,
+      "Y": 1665,
+      "issue": "datum lies at bore edge, not on lower planar seat; no rib ring attachment has been established"
+    },
+    "proposedIntegralPad": {
+      "topY": 1662,
+      "bottomY": 1660,
+      "radialInterval": [
+        16,
+        18
+      ],
+      "tangentialInterval": [
+        -3.5,
+        3.5
+      ],
+      "status": "candidate contact patch only, no terminal sweep/mesh and no accepted construction yet",
+      "contactNormal": "+Y",
+      "fourPlacements": "rotate radial/tangential frame to -X,+X,+Z,-Z; tabs occupy four non-overlapping sectors"
+    },
+    "padPlanarEnvelopeCheck": {
+      "maxCornerRadius": 18.33712082089225,
+      "minRadialProjection": 16,
+      "ring24gonOuterInradius": 19.035741338377157,
+      "ringInnerCircumradius": 14.5,
+      "nominalContactAreaMm2": 14,
+      "scope": "only the proposed rectangular contact footprint fits the recorded lower 24-gon annulus; not a native triangle, glue/weld, connected volume, load or appearance test"
+    },
+    "requiredNext": "design last few millimetres of both types into integral flat pad while retaining gross oval; close surface, avoid cap/glass, verify actual native triangles and front/back projections. Do not simply add a block over the old R14/Y1665 endpoint."
+  },
+  "lowerInterface": {
+    "currentOwner": "S08/S07",
+    "oldBOMRingCenterY": 1447,
+    "oldBOMTorusMajorRadius": 17,
+    "oldBOMTorusTubeRadius": 3,
+    "status": "no matching lower real profile was supplied in this unit; torus has no annular planar top face. Final lower saddle/seat shape, Y and radial registration remain unresolved. Do not copy upper pad and claim contact."
+  },
+  "remainingAcceptance": [
+    "No round rods: keep rectangular stripe thickness and the different broad-face orientation of the two types.",
+    "Generated TOP blocks are inconsistent with overlapping endpoint projections and must not be traced literally.",
+    "Resolve short upper tongue and lower saddle from actual receiver geometry before any complete assembly claim.",
+    "Mirroring is instance placement only; generated reference images were not mirrored or raster edited. A future reflected mesh must repair winding/normal orientation.",
+    "Retained source glow ellipsoid is an authored envelope, not a measured completed part. Rib/glass clearance and all cap/finial contacts require actual final native meshes.",
+    "Both images are visual references, not real WebGL, device measurements or PS4 quality evidence."
+  ]
+}

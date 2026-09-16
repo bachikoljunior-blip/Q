@@ -1,0 +1,56 @@
+{
+  "scope": "Combined development-only geometry prototypes; no game adoption.",
+  "baseCommit": "3fcd0aa8b6e4825e8ac468800845c344152759b3",
+  "authors": {
+    "cloth": "efdd1877a47078c96a8e29c21e2177ca71914173",
+    "lantern": "12a40b492f980e1e095a16b7422fce40d94d9bd2"
+  },
+  "checks": [
+    {
+      "command": "node --test tests/mira-micro-parts.test.mjs tests/mira-cloth-micro-v62.test.mjs tests/mira-lantern-micro-v62.test.mjs",
+      "exit": 0,
+      "passed": 13,
+      "failed": 0,
+      "durationMs": 376.242478
+    },
+    {
+      "command": "npm run build",
+      "exit": 0,
+      "buildSeconds": 3.27
+    },
+    {
+      "command": "npm run package",
+      "exit": 0,
+      "stage": "artifacts/site-RspztQ",
+      "publicFiles": 34,
+      "publicBytes": 14039068,
+      "mediaFiles": 27
+    },
+    {
+      "command": "npm run test:artifacts",
+      "exit": 0,
+      "initialJSBytes": 165611,
+      "jsChunks": 3,
+      "totalJSBytes": 1087662
+    },
+    {
+      "command": "git diff --exit-code 2bee64cff6482cb7770ba69e07673eefc8ad54ef -- src package.json package-lock.json vite.config.js index.html release/Q-web-manifest.json",
+      "exit": 0
+    }
+  ],
+  "fullLocalSuiteRerun": false,
+  "fullSuiteBoundary": "required CI after final source save",
+  "gameSourceUnchanged": true,
+  "realWebGL": false,
+  "deviceMeasurement": false,
+  "runtimeAdopted": false,
+  "allCharacterComplete": false,
+  "next": "Resolve remaining micro references and assembly interfaces; P01 cloth support, missing lower lantern receiver, and cap/glow boundary remain open.",
+  "independentReview": {
+    "cloth": "independent/cloth-native-v62/REVIEW.md",
+    "lantern": "independent/ribs-native-v62/REVIEW.md",
+    "newRequiredSourceFixes": 0,
+    "runtimeAccepted": false,
+    "agentsPendingTools": 0
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "at": "2026-09-16T13:04:46.379549+00:00",
+  "commit": "efdd1877a47078c96a8e29c21e2177ca71914173",
+  "workingTreeClean": true,
+  "source": {
+    "review/cloth-micro-v62/surfaces.mjs": {
+      "bytes": 5895,
+      "sha256": "adc1b85b596eee63a799bb7a3d4d3c8c8c799dc88a469b535b26b05a0ca23193"
+    },
+    "review/cloth-micro-v62/pose-probe.mjs": {
+      "bytes": 4052,
+      "sha256": "51193565514fe76d3f08263a4adb4b538aebb4115bc2895ca9a13d14930a7d3e"
+    },
+    "docs/evidence/mira-cloth-micro-v62/T01-R.obj": {
+      "bytes": 19204,
+      "sha256": "8892c2ce6a9214732188214d761bc71dc80b1c6bd02e61ec9f1908159180111c"
+    },
+    "docs/evidence/mira-cloth-micro-v62/S05-R.obj": {
+      "bytes": 19232,
+      "sha256": "f7aed5ba8b74b76e807497471fdf838794d3112589429c181bea88340c059b6f"
+    },
+    "docs/evidence/mira-cloth-micro-v62/P01-R.obj": {
+      "bytes": 25973,
+      "sha256": "4bed610c402ce08c84c8838e28e17d552876a9744df88073491f430284c6d761"
+    },
+    "docs/evidence/mira-cloth-micro-v62/meshes.json": {
+      "bytes": 194878,
+      "sha256": "085c522e4811861d2b0203cd41001004e8c149275f1101c0a2e8a67aa7019aa6"
+    },
+    "docs/evidence/mira-cloth-micro-v62/pose-probe.json": {
+      "bytes": 627766,
+      "sha256": "900acc3406b76223719944453bf4d00d290eb45a334e6c77e41fce139bcc5432"
+    },
+    "docs/evidence/mira-cloth-micro-v62/metrics.json": {
+      "bytes": 6546,
+      "sha256": "7441accc077a55a2c97dfa055cf206bc92b2e47c30012e39aff2d6ae6dd75bd7"
+    },
+    "docs/evidence/mira-cloth-micro-v62/cpu-four-views.png": {
+      "bytes": 630990,
+      "sha256": "62da5f74a13f160198aa32ff1246a7556c68b49c7bc8e45ec1d1568d299f3acb"
+    },
+    "docs/evidence/mira-cloth-micro-v62/cpu-bind-registration.png": {
+      "bytes": 283614,
+      "sha256": "b1d64badaa9b5a75d8fac19704f516105b6e9def5ca0f97ed7428dd03c3d44b6"
+    }
+  },
+  "referenceImageSha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+  "geometryAuthoringRetention": "accepted as three unassembled prototypes only",
+  "runtimeAdoption": false,
+  "requiredBeforeRuntime": [
+    "P01 independent cloth deformation and ground/contact support; chest=1 proposal rejected by actual death pose",
+    "Weld neighboring panels with matched positional/tangent/UV/weight boundaries",
+    "Complete cuff/waist/neck/cape suspension interfaces and body fit",
+    "Set physical thickness/material/render-side policy and verify appearance"
+  ],
+  "sourceFixRequiredForPrototypeRetention": false,
+  "nativeCheckAttempts": 2,
+  "nativeCheckCompleted": 1,
+  "retryReason": "Explicit parent authorization to normalize only signed zero after strict comparison stopped first run. No added pose or numerical tolerance."
+}

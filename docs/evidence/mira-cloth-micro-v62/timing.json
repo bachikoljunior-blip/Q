@@ -1,0 +1,35 @@
+{
+  "firstExactClock": "2026-09-16T12:41:24Z",
+  "resumedExactClock": "2026-09-16T12:44:10Z",
+  "firstMeshExportAt": "2026-09-16T12:48:33.773Z",
+  "poseProbeAt": "2026-09-16T12:51:17.864Z",
+  "documentationAndCheckpointAt": "2026-09-16T12:54:22.667856+00:00",
+  "phaseAccounting": {
+    "imageToSpecification": "Read/view/specification occurred before and after 12:41:24; exclusive start was not instrumented. Do not substitute mesh CPU time.",
+    "code": "Between 12:44:10 and first mesh export, including tool overhead and dependency install; then added plot/pose probes.",
+    "verification": "Initial mesh export through documentation timestamp; includes CPU diagram creation and actual view_image inspection.",
+    "rework": "One float oracle correction; final inspection deep-cloned boundary metadata and froze frame offset, with an extended clone test. Mesh JSON before/after exact. Exclusive repair time not instrumented.",
+    "newImageGenerationSeconds": 0
+  },
+  "meshBuildOnlyMs": {
+    "T01-R": 18.63985600000001,
+    "S05-R": 40.966994,
+    "P01-R": 8.845792999999958
+  },
+  "poseSkinAndMetricsOnlyMs": {
+    "idle 2s": 5.580397000000005,
+    "walk 2m/s 1s": 3.817799000000008,
+    "turn right .6rad 1s": 3.285464999999988,
+    "sealed canonical": 3.6891669999999976,
+    "death .45s explicit": 3.5895170000000007,
+    "death 1s explicit": 2.836748
+  },
+  "cpuScope": "One Node run each; cold/warm/JIT mixed. Mesh timings include metre-chart integration; pose timings include CPU skin and metrics, excluding native actor animation and image/specification/code time. No device/GPU claim.",
+  "finalOwnershipFixExportAt": "2026-09-16T12:55:13.327Z",
+  "finalMeshBuildOnlyMs": {
+    "T01-R": 19.840378999999984,
+    "S05-R": 9.409391999999997,
+    "P01-R": 8.011830999999972
+  },
+  "checkpointAt": "2026-09-16T12:56:02.144129+00:00"
+}

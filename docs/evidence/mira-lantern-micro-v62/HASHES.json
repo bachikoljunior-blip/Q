@@ -1,0 +1,173 @@
+{
+  "finalizedUTC": "2026-09-16T12:59:33.164730+00:00",
+  "files": [
+    {
+      "path": "REPORT.md",
+      "bytes": 6528,
+      "sha256": "b4d191b6f99cbbbab7d705415b2aebc6d3f81da97060b1b12441e3a7f8777138"
+    },
+    {
+      "path": "STATUS.json",
+      "bytes": 1523,
+      "sha256": "40fb7d2e4e3a25420cc75cca2b40ff25d93244e676c4ca20944752314e7e678d"
+    },
+    {
+      "path": "TIMING.json",
+      "bytes": 1003,
+      "sha256": "ddc0243a5d94f272918d2b2146ee91271a9723414fb1449c8bb3f3096315d70b"
+    },
+    {
+      "path": "first-inspection.json",
+      "bytes": 9498,
+      "sha256": "102717783125b8641d5e4de46f9f82a9466bfbfef73ddb4a5a728dddf8ba8e59"
+    },
+    {
+      "path": "geometry/S09-S14-partial-assembly.obj",
+      "bytes": 375096,
+      "sha256": "9a72cbdaa3e4a10c455ef1729687fea3b39d74241fa6adb1c7d20d69b2aa28d4"
+    },
+    {
+      "path": "geometry/S09.obj",
+      "bytes": 70791,
+      "sha256": "360079edcb38e17d3ca1a007e7ef41f1c598c9211b797cfa741f5de82b1ebc19"
+    },
+    {
+      "path": "geometry/S10.obj",
+      "bytes": 69959,
+      "sha256": "24e6e72f719e0bb34724f34e3ae8bd6a5393c90091d0f552d82a9291fc56f3fa"
+    },
+    {
+      "path": "geometry/S11.obj",
+      "bytes": 65010,
+      "sha256": "4fc6d8c4389f5617e19d670c5dae4c91cbaa82cf55a9b6919daca4e554a9738b"
+    },
+    {
+      "path": "geometry/S12.obj",
+      "bytes": 65924,
+      "sha256": "3a97148a1ab30604a1ec6170da45e300ecd197c7f6266dfffaafe58126474a28"
+    },
+    {
+      "path": "geometry/native-geometry.json",
+      "bytes": 626188,
+      "sha256": "bc447ea01d9b9775111e9ec9565e87598fa100dda3375525467ca0a5771863ab"
+    },
+    {
+      "path": "geometry/native-three-views.png",
+      "bytes": 381963,
+      "sha256": "828a7808882356f5e3b8a579b5c2048479e1f96011a214cd3ce995c39141bc7c"
+    },
+    {
+      "path": "geometry/native-three-views.svg",
+      "bytes": 1799060,
+      "sha256": "728736cd1fa8c3ec3efcd2a822da28dc0f15268c0e89f7968757da63f04b476c"
+    },
+    {
+      "path": "geometry/report.json",
+      "bytes": 15105,
+      "sha256": "8cea7da3ab3a2def5c5ebebf4332da358b121ac6a068d44d750810e05903eede"
+    },
+    {
+      "path": "geometry/upper-seat-contact.png",
+      "bytes": 123892,
+      "sha256": "ec55356ebce4983c416a2af64b5c281631202f40f4b6f1f49007a03afd96970f"
+    },
+    {
+      "path": "geometry/upper-seat-contact.svg",
+      "bytes": 48498,
+      "sha256": "ce742598e19d38e741ec868195704dd4de33a2a7dfb2070a325ffcade888bbb6"
+    },
+    {
+      "path": "inspection.json",
+      "bytes": 9689,
+      "sha256": "ee77efdf8d70aab7f5a5df879044cd49aa5f8342f554895289d9c62cb427613c"
+    },
+    {
+      "path": "references/HASHES.json",
+      "bytes": 1588,
+      "sha256": "e6dfba5d55d38b62d4f07f78815377293df4f1dece5926f329fd89810ac7bbbe"
+    },
+    {
+      "path": "references/INPUTS.json",
+      "bytes": 1961,
+      "sha256": "1dcd09ebd4429a9fece2f93872de2685ebf837ce04fcc418175e5789ff2949d6"
+    },
+    {
+      "path": "references/REPORT.md",
+      "bytes": 5999,
+      "sha256": "8caa9e17362b87081f0355982baed6dbe0603a4f5d563f249e313c7c5f10e815"
+    },
+    {
+      "path": "references/RIB_TYPES_AND_INTERFACES.json",
+      "bytes": 7133,
+      "sha256": "c241fa9c35eb8cdad52ea86f1ffe9c46a513cacf6bf60080caeef70db9912f58"
+    },
+    {
+      "path": "references/generation-v1.json",
+      "bytes": 736,
+      "sha256": "a7f8ee961b85fe920d8aeaee7bf4c6316641a588f5af70a6917c7a7816a65bcc"
+    },
+    {
+      "path": "references/generation-v2.json",
+      "bytes": 807,
+      "sha256": "acde7dee1268267eab972e019cd85a4215c28ce308caffeae534a89ddce7ce4f"
+    },
+    {
+      "path": "references/prompt-v1.txt",
+      "bytes": 4351,
+      "sha256": "e56c091768443575b6e8801587e5e7782841df49b503dd161f3f9cf344db03df"
+    },
+    {
+      "path": "references/prompt-v2.txt",
+      "bytes": 2409,
+      "sha256": "6dc151a4721a9b8bc7d9b304605af88fd29f74d51b123fe9abc4011d99155ead"
+    },
+    {
+      "path": "references/staff-ribs-micro-v1.png",
+      "bytes": 1637090,
+      "sha256": "0b1936e4089e04d7b6b241851301515778ca08aeb20d1f91199ba17773945bb5"
+    },
+    {
+      "path": "references/staff-ribs-micro-v2.png",
+      "bytes": 1610260,
+      "sha256": "b435f2b73dbcdc8b2dc16c13872c1d3b9ab300dfddbc77e9ad33758457c2a589"
+    },
+    {
+      "path": "source/first-rib-source.js",
+      "bytes": 5636,
+      "sha256": "4821863709b8741e9d7d75dd35fc1aec19130acf79b108da8ae516ef67a68df4"
+    }
+  ],
+  "ownedSource": [
+    {
+      "path": "review/lantern-micro-v62/mira-lantern-ribs.js",
+      "bytes": 5927,
+      "sha256": "33e596ff22332c317d819265e08c819f01c677c8a3cb63eea5aaa42bc17723e6"
+    },
+    {
+      "path": "review/lantern-micro-v62/inspect-ribs.js",
+      "bytes": 6698,
+      "sha256": "4ac3d4a2296cceb23be32444bd84e332dbf9d1aeb32a08b6a22fd915be4d4624"
+    },
+    {
+      "path": "review/lantern-micro-v62/plot-native.py",
+      "bytes": 3235,
+      "sha256": "47dd352fee53ebfebad72641da8e567ed8de8dbe4a0ebce5f4a9a11a78c667e5"
+    },
+    {
+      "path": "tests/mira-lantern-micro-v62.test.mjs",
+      "bytes": 3751,
+      "sha256": "fc1b30ff2cc90f6f5c57c16d6b7e5ba7d95d91f18b5f8edc28167d9031badf4b"
+    },
+    {
+      "path": "scripts/export-mira-lantern-micro-v62.mjs",
+      "bytes": 4089,
+      "sha256": "942c38856e30b0764a976857c7061bb113868fd8e74b6bf581901394ae9af672"
+    }
+  ],
+  "bytesWithoutManifest": 6947697,
+  "originalCapsSource": {
+    "path": "review/micro-v61/mira-micro-parts.js",
+    "bytes": 3628,
+    "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+  }
+}

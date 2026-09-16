@@ -1,0 +1,37 @@
+{
+  "decision": "conditional technical shape prototype only; not a finished lantern or runtime asset",
+  "newTypes": 2,
+  "newInstances": 4,
+  "reusedParts": [
+    "S13",
+    "S14"
+  ],
+  "selectedReferenceViews": [
+    "FRONT",
+    "TRUE SIDE",
+    "THREE-QUARTER"
+  ],
+  "excludedReferenceViews": [
+    "TOP"
+  ],
+  "endOwnership": "integral end blocks / no additional part IDs",
+  "originalImageDifference": "selected image has small box-like ends; candidate uses a narrowing integral terminal loft with a planar contact face to fit existing receiver. In front, wide rib ends are narrower; exact reference match not claimed.",
+  "lowerReceiver": "S08/S07 absent, lower Y1447 datum not an accepted joint",
+  "wholeActorBudget": "unverified; 2352 triangle/6 mesh research assembly is not additive production acceptance",
+  "glowResult": "new 4 ribs clear, S13 clear, existing S14 intersects authored ellipsoid envelope slightly at both 16 and 24 segments; S16 native mesh unmade",
+  "runtimeImported": false,
+  "srcChanged": false,
+  "tests": {
+    "command": "node --test tests/mira-lantern-micro-v62.test.mjs tests/mira-micro-parts.test.mjs",
+    "passed": 6,
+    "failed": 0,
+    "durationMs": 305.547684,
+    "negativeSensitivity": [
+      "top translated to old Y1665 loses actual seat coverage",
+      "inward 5mm crosses ellipsoid",
+      "reversed normals fail normal orientation"
+    ],
+    "scope": "four new geometry/resource tests plus two unchanged cap tests; not whole-game tests"
+  },
+  "openSessions": 0
+}

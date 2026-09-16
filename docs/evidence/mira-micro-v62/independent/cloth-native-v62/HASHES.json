@@ -1,0 +1,33 @@
+{
+  "fixedAt": "2026-09-16T13:04:47.348324+00:00",
+  "startedAt": "2026-09-16T12:57:29+00:00",
+  "wallSeconds": 438.348324,
+  "sessionsRemaining": 0,
+  "scopeClosed": true,
+  "files": {
+    "REVIEW.md": {
+      "bytes": 4232,
+      "sha256": "008ac14f532f885cf5a434e438f50aa78404777853ab976a98ddf1fc4db31c1d"
+    },
+    "check-before-signed-zero.mjs": {
+      "bytes": 5817,
+      "sha256": "93bf9acf0d285dcd9b8d1d8a440c85a0cf9d93d6c4b5821bab3b581e925ea436"
+    },
+    "check.mjs": {
+      "bytes": 6282,
+      "sha256": "a33f224ef0d54bc08f57e300919c3e1e5ac6eb78d2d7e1a9c6356044a58c7d65"
+    },
+    "initial-oracle-stop.json": {
+      "bytes": 822,
+      "sha256": "52dabe8764601547e8ca7c3c3733c4a58175b49a7bd0643ed86b126f9489f1ce"
+    },
+    "native-check.json": {
+      "bytes": 2945,
+      "sha256": "299eb190ab6533c43e544b261feb14d995dbb57ce2f067e16d86913d2f33c5e6"
+    },
+    "snapshot.json": {
+      "bytes": 2687,
+      "sha256": "709dd85f95c70596c12d26faebbc1071713ad0a47e36bf060c8ab50da23f1c81"
+    }
+  }
+}

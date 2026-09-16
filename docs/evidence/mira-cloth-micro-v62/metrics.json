@@ -1,0 +1,226 @@
+{
+  "at": "2026-09-16T12:55:13.327Z",
+  "baseCommit": "3fcd0aa8b6e4825e8ac468800845c344152759b3",
+  "source": [
+    {
+      "path": "docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "bytes": 1885563,
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/review/cloth-three-v1/REVIEW.md",
+      "bytes": 3599,
+      "sha256": "d188afcdadc55529b16a116dcf9e5d15e1733c9d92de3628aa47db401cce5915"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/review/cloth-three-v1/review.json",
+      "bytes": 6285,
+      "sha256": "f3e14d212a7f5b21bbf43b6b6d8ccca869f55e50bd0bd5bfe84f3cc740bf1e36"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/cloth/types.json",
+      "bytes": 24165,
+      "sha256": "0496452d44c4f39daf3eb55869fe60d4bb2c76622d2cdfa9ecfa9fc0facd5597"
+    },
+    {
+      "path": "src/assets/characters/detailed-geometry.js",
+      "bytes": 31318,
+      "sha256": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033"
+    },
+    {
+      "path": "review/cloth-micro-v62/surfaces.mjs",
+      "bytes": 5895,
+      "sha256": "adc1b85b596eee63a799bb7a3d4d3c8c8c799dc88a469b535b26b05a0ca23193"
+    },
+    {
+      "path": "scripts/export-mira-cloth-micro-v62.mjs",
+      "bytes": 5419,
+      "sha256": "c7b2a57b43bdcd368c3eccb8e1b80ed9bb2998e6230747fa4db8275dba6657f8"
+    }
+  ],
+  "frame": {
+    "right": "-X",
+    "left": "+X",
+    "front": "+Z",
+    "up": "+Y",
+    "rootOffset": [
+      0,
+      0.985,
+      0
+    ]
+  },
+  "scope": "three isolated open surface prototypes, CPU geometry only; no image reconstruction accuracy or garment/animation/render approval",
+  "totalVertices": 387,
+  "totalTriangles": 640,
+  "parts": [
+    {
+      "id": "T01-R",
+      "vertices": 117,
+      "triangles": 192,
+      "buildMs": 19.840378999999984,
+      "boundsChest": {
+        "min": [
+          -0.14098611111111112,
+          0.035,
+          0.126
+        ],
+        "max": [
+          -0.006000000000000004,
+          0.5350000000000001,
+          0.161875
+        ]
+      },
+      "surfaceAreaM2": 0.06265609804912832,
+      "triangleAreaMinM2": 0.00028955671468470405,
+      "minTriangleVertexNormalDot": 0.9932430472759209,
+      "boundaryEdges": 40,
+      "nonManifoldEdges": 0,
+      "euler": 1,
+      "sampledAnalyticalSurfaceDistanceM": {
+        "p95": 0.0004441698094947139,
+        "max": 0.0007422807788620503,
+        "sampleCount": 768,
+        "scope": "four same-param triangle samples; not global Hausdorff error"
+      },
+      "uvMetreChart": {
+        "signedAreaMin": 0.0002900499457588024,
+        "signedAreaMax": 0.00036785985020706166,
+        "anisotropyP95": 1.102695794130122,
+        "anisotropyMax": 1.107331582189666,
+        "textureApplied": false
+      },
+      "actualNativeBoneBind": {
+        "missingBones": 0,
+        "maxResidualM": 3.1031676915590914e-17
+      },
+      "enclosedVolumeM3": null,
+      "volumeReason": "one open zero-thickness surface; enclosed volume is undefined, not a watertight garment",
+      "neighbourWeld": "unimplemented; only each part internal grid and its four corners share indices"
+    },
+    {
+      "id": "S05-R",
+      "vertices": 117,
+      "triangles": 192,
+      "buildMs": 9.409391999999997,
+      "boundsChest": {
+        "min": [
+          -0.374,
+          -0.13000000000000003,
+          0
+        ],
+        "max": [
+          -0.252,
+          0.06000000000000001,
+          0.063
+        ]
+      },
+      "surfaceAreaM2": 0.03257545810897719,
+      "triangleAreaMinM2": 0.00013606820005038952,
+      "minTriangleVertexNormalDot": 0.9883579280942184,
+      "boundaryEdges": 40,
+      "nonManifoldEdges": 0,
+      "euler": 1,
+      "sampledAnalyticalSurfaceDistanceM": {
+        "p95": 0.0006848174116930144,
+        "max": 0.000857182777451877,
+        "sampleCount": 768,
+        "scope": "four same-param triangle samples; not global Hausdorff error"
+      },
+      "uvMetreChart": {
+        "signedAreaMin": 0.00013670253337163944,
+        "signedAreaMax": 0.00023110744117305052,
+        "anisotropyP95": 1.3295394133612537,
+        "anisotropyMax": 1.3784640282693592,
+        "textureApplied": false
+      },
+      "actualNativeBoneBind": {
+        "missingBones": 0,
+        "maxResidualM": 5.551115123125783e-17
+      },
+      "enclosedVolumeM3": null,
+      "volumeReason": "one open zero-thickness surface; enclosed volume is undefined, not a watertight garment",
+      "neighbourWeld": "unimplemented; only each part internal grid and its four corners share indices"
+    },
+    {
+      "id": "P01-R",
+      "vertices": 153,
+      "triangles": 256,
+      "buildMs": 8.011830999999972,
+      "boundsChest": {
+        "min": [
+          -0.225,
+          -0.67,
+          -0.2889999999999999
+        ],
+        "max": [
+          -0.0050000000000000044,
+          0.43000000000000005,
+          -0.206
+        ]
+      },
+      "surfaceAreaM2": 0.22244586615586084,
+      "triangleAreaMinM2": 0.0005857901971386451,
+      "minTriangleVertexNormalDot": 0.992107586940892,
+      "boundaryEdges": 48,
+      "nonManifoldEdges": 0,
+      "euler": 1,
+      "sampledAnalyticalSurfaceDistanceM": {
+        "p95": 0.0007531710787157282,
+        "max": 0.0008261064939397903,
+        "sampleCount": 1024,
+        "scope": "four same-param triangle samples; not global Hausdorff error"
+      },
+      "uvMetreChart": {
+        "signedAreaMin": -0.0011642173839046036,
+        "signedAreaMax": -0.0005875796698113458,
+        "anisotropyP95": 1.1261672531415585,
+        "anisotropyMax": 1.134062584784918,
+        "textureApplied": false
+      },
+      "actualNativeBoneBind": {
+        "missingBones": 0,
+        "maxResidualM": 0
+      },
+      "enclosedVolumeM3": null,
+      "volumeReason": "one open zero-thickness surface; enclosed volume is undefined, not a watertight garment",
+      "neighbourWeld": "unimplemented; only each part internal grid and its four corners share indices"
+    }
+  ],
+  "bones": {
+    "pelvis": [
+      0,
+      0.985,
+      0
+    ],
+    "spine": [
+      0,
+      1.165,
+      0
+    ],
+    "chest": [
+      0,
+      0.9850000000000001,
+      0
+    ],
+    "arm-0": [
+      -0.313,
+      1.445,
+      0
+    ],
+    "elbow-0": [
+      -0.313,
+      1.115,
+      0
+    ],
+    "hand-0": [
+      -0.313,
+      0.8049999999999999,
+      0
+    ]
+  },
+  "gpu": {
+    "runtimeImports": 0,
+    "newRuntimeDraws": 0,
+    "benchmark": "not performed; prototypes not loaded by game"
+  }
+}

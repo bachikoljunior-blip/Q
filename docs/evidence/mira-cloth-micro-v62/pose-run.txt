@@ -1,0 +1,350 @@
+[
+  {
+    "name": "idle 2s",
+    "actualMotionState": "idle",
+    "skinAndMetricsMs": 5.580397000000005,
+    "parts": [
+      {
+        "id": "T01-R",
+        "finite": true,
+        "minYFlatFloorM": 1.0192984335446207,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9932266023862191,
+        "edgeStretch": {
+          "min": 0.9988656570579738,
+          "p95": 1.0026590244852924,
+          "max": 1.0033093409662897
+        },
+        "triangleAreaRatio": {
+          "min": 0.9991946013100177,
+          "max": 1.0001884254000126
+        }
+      },
+      {
+        "id": "S05-R",
+        "finite": true,
+        "minYFlatFloorM": 0.8542500254344,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9883224936377004,
+        "edgeStretch": {
+          "min": 0.9972370394905008,
+          "p95": 0.9999993626319018,
+          "max": 0.9999999999999111
+        },
+        "triangleAreaRatio": {
+          "min": 0.9972370200213779,
+          "max": 0.9999625139843188
+        }
+      },
+      {
+        "id": "P01-R",
+        "finite": true,
+        "minYFlatFloorM": 0.3142611942001837,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.992151223762814,
+        "edgeStretch": {
+          "min": 0.998769877055873,
+          "p95": 0.9999992883397272,
+          "max": 0.9999999999745981
+        },
+        "triangleAreaRatio": {
+          "min": 0.998761564910806,
+          "max": 0.9999705386194891
+        }
+      }
+    ]
+  },
+  {
+    "name": "walk 2m/s 1s",
+    "actualMotionState": "walk",
+    "skinAndMetricsMs": 3.817799000000008,
+    "parts": [
+      {
+        "id": "T01-R",
+        "finite": true,
+        "minYFlatFloorM": 1.0154714382525987,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9901594332627888,
+        "edgeStretch": {
+          "min": 0.9663700966416235,
+          "p95": 1.0000069982153872,
+          "max": 1.0001175515166776
+        },
+        "triangleAreaRatio": {
+          "min": 0.9663833493682197,
+          "max": 0.9965944015038897
+        }
+      },
+      {
+        "id": "S05-R",
+        "finite": true,
+        "minYFlatFloorM": 0.865125890970712,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9884483502309632,
+        "edgeStretch": {
+          "min": 1.0000008117926835,
+          "p95": 1.007212357003627,
+          "max": 1.0072228138268844
+        },
+        "triangleAreaRatio": {
+          "min": 1.0007485406107475,
+          "max": 1.0077939656830568
+        }
+      },
+      {
+        "id": "P01-R",
+        "finite": true,
+        "minYFlatFloorM": 0.3217622894065386,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9919845620858366,
+        "edgeStretch": {
+          "min": 1.0000000000716414,
+          "p95": 1.0031191861119788,
+          "max": 1.0034609578599825
+        },
+        "triangleAreaRatio": {
+          "min": 1.0000830796266156,
+          "max": 1.0034842890609301
+        }
+      }
+    ]
+  },
+  {
+    "name": "turn right .6rad 1s",
+    "actualMotionState": "idle",
+    "skinAndMetricsMs": 3.285464999999988,
+    "parts": [
+      {
+        "id": "T01-R",
+        "finite": true,
+        "minYFlatFloorM": 1.0219679718937478,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9931457048919367,
+        "edgeStretch": {
+          "min": 0.9985775906328778,
+          "p95": 1.0008696682836955,
+          "max": 1.0017428812758107
+        },
+        "triangleAreaRatio": {
+          "min": 0.9987331835439086,
+          "max": 1.0001036896839242
+        }
+      },
+      {
+        "id": "S05-R",
+        "finite": true,
+        "minYFlatFloorM": 0.8569396081621755,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9884568609869835,
+        "edgeStretch": {
+          "min": 1.000000000000207,
+          "p95": 1.0077398272577067,
+          "max": 1.0077510459023382
+        },
+        "triangleAreaRatio": {
+          "min": 1.0001057070783808,
+          "max": 1.0077511002345823
+        }
+      },
+      {
+        "id": "P01-R",
+        "finite": true,
+        "minYFlatFloorM": 0.3169698500350995,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9919845620858367,
+        "edgeStretch": {
+          "min": 1.0000000000716385,
+          "p95": 1.0031191861119786,
+          "max": 1.0034609578599836
+        },
+        "triangleAreaRatio": {
+          "min": 1.000083079626616,
+          "max": 1.0034842890609332
+        }
+      }
+    ]
+  },
+  {
+    "name": "sealed canonical",
+    "actualMotionState": "sealed",
+    "skinAndMetricsMs": 3.6891669999999976,
+    "parts": [
+      {
+        "id": "T01-R",
+        "finite": true,
+        "minYFlatFloorM": 1.02,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9934019129686769,
+        "edgeStretch": {
+          "min": 0.9782985336393479,
+          "p95": 0.999999996540861,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 0.9782785381340774,
+          "max": 0.9977684476876799
+        }
+      },
+      {
+        "id": "S05-R",
+        "finite": true,
+        "minYFlatFloorM": 0.8598741566954694,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.988357928094219,
+        "edgeStretch": {
+          "min": 0.9624758515617774,
+          "p95": 1.0000000000000044,
+          "max": 1.0219348478387191
+        },
+        "triangleAreaRatio": {
+          "min": 0.9624668849946191,
+          "max": 1.0000550223690465
+        }
+      },
+      {
+        "id": "P01-R",
+        "finite": true,
+        "minYFlatFloorM": 0.3226065770493337,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9921075869408924,
+        "edgeStretch": {
+          "min": 0.9999999999999963,
+          "p95": 1.0000000000000016,
+          "max": 1.0000000000000053
+        },
+        "triangleAreaRatio": {
+          "min": 0.9999999999999958,
+          "max": 1.0000000000000056
+        }
+      }
+    ]
+  },
+  {
+    "name": "death .45s explicit",
+    "actualMotionState": "death",
+    "skinAndMetricsMs": 3.5895170000000007,
+    "parts": [
+      {
+        "id": "T01-R",
+        "finite": true,
+        "minYFlatFloorM": 0.7350930089755051,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.993274021876153,
+        "edgeStretch": {
+          "min": 0.9462945372299839,
+          "p95": 0.9999999999999986,
+          "max": 1.0040727170517747
+        },
+        "triangleAreaRatio": {
+          "min": 0.9673038440269689,
+          "max": 1.0019932464187102
+        }
+      },
+      {
+        "id": "S05-R",
+        "finite": true,
+        "minYFlatFloorM": 0.5090709503018342,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9734589438023588,
+        "edgeStretch": {
+          "min": 0.9039930838976509,
+          "p95": 1.0000000000000095,
+          "max": 1.0799117378442955
+        },
+        "triangleAreaRatio": {
+          "min": 0.9093661668132531,
+          "max": 1.0169581950702806
+        }
+      },
+      {
+        "id": "P01-R",
+        "finite": true,
+        "minYFlatFloorM": -0.0517834525740484,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9921075869408927,
+        "edgeStretch": {
+          "min": 0.9999999999999939,
+          "p95": 1.000000000000002,
+          "max": 1.000000000000004
+        },
+        "triangleAreaRatio": {
+          "min": 0.9999999999999937,
+          "max": 1.0000000000000056
+        }
+      }
+    ]
+  },
+  {
+    "name": "death 1s explicit",
+    "actualMotionState": "death",
+    "skinAndMetricsMs": 2.836748,
+    "parts": [
+      {
+        "id": "T01-R",
+        "finite": true,
+        "minYFlatFloorM": 0.4878236431107144,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9932976250944537,
+        "edgeStretch": {
+          "min": 0.9140945102677096,
+          "p95": 1,
+          "max": 1.012993886248367
+        },
+        "triangleAreaRatio": {
+          "min": 0.9449215180264566,
+          "max": 1.0042545904086675
+        }
+      },
+      {
+        "id": "S05-R",
+        "finite": true,
+        "minYFlatFloorM": 0.2366517747146861,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.9734589438023624,
+        "edgeStretch": {
+          "min": 0.9039930838976546,
+          "p95": 1.0000000000000093,
+          "max": 1.0799117378442993
+        },
+        "triangleAreaRatio": {
+          "min": 0.9093661668132557,
+          "max": 1.0169581950702784
+        }
+      },
+      {
+        "id": "P01-R",
+        "finite": true,
+        "minYFlatFloorM": -0.0094444176408634,
+        "degenerateTriangles": 0,
+        "reversedAgainstWeightedNormals": 0,
+        "minTriangleVertexNormalDot": 0.992107586940892,
+        "edgeStretch": {
+          "min": 0.9999999999999958,
+          "p95": 1.0000000000000022,
+          "max": 1.000000000000005
+        },
+        "triangleAreaRatio": {
+          "min": 0.9999999999999941,
+          "max": 1.000000000000005
+        }
+      }
+    ]
+  }
+]
