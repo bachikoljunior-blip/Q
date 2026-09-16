@@ -1,0 +1,53 @@
+{
+  "scope": "Revision only. Original review remains byte unchanged. Copy these files plus this HASHES.json under a separate revision-1 directory.",
+  "files": {
+    "REVIEW.md": {
+      "bytes": 3376,
+      "sha256": "c5298e37c878dc63d05dd7064614ea3f359861edef438f3239f411986b465260"
+    },
+    "cape-uv.txt": {
+      "bytes": 1224,
+      "sha256": "d478604fa63224e8348243a67d19c2d4b44c58725705ccd5e3c285a7f9ce8ddd"
+    },
+    "cloak-uv-before.mjs": {
+      "bytes": 3312,
+      "sha256": "47a6cbcc209d2e546921e6b2854feba8a04c185f7cbe70cb5639f9c0a600cf96"
+    },
+    "fault-hook.mjs": {
+      "bytes": 1287,
+      "sha256": "a119921d5a1cee7ab10dcc31ae8632ed2815e0e1c99f48a4b60c5982c73b75b4"
+    },
+    "integration-failure.txt": {
+      "bytes": 37474,
+      "sha256": "4c34c7c03576d06d61f9d7382a39c3bcf8cb7afcb2e83fc19e5e2c538b01b6ea"
+    },
+    "none.txt": {
+      "bytes": 459,
+      "sha256": "a762515107896a85cdfb870de9585a71cbe3e514f7cfc37efbda03b25b6d67d0"
+    },
+    "npc-hair.txt": {
+      "bytes": 3936,
+      "sha256": "eda017ad71caf44da221885231519a3c712953453b0e2e415e41923b56611b45"
+    },
+    "preservation.json": {
+      "bytes": 861,
+      "sha256": "f0c98e403cef466266e673d8935d7c3825acb23f7cb2d5fc45c4314b26f5920f"
+    },
+    "reference-helper-readback.mjs": {
+      "bytes": 2496,
+      "sha256": "1e106c350439ae7f772c2286417559e8ecef0fbc17a0fa956c597ba57d88a512"
+    },
+    "results.json": {
+      "bytes": 1258,
+      "sha256": "e3a382c5f25e925960db8440f201088dc6d5d2545cf1c85278fac3f229150716"
+    },
+    "run-review.mjs": {
+      "bytes": 2006,
+      "sha256": "19fb86dce94a044ddace760813a964e7366727723a5dbbdf0dbd8222123a4023"
+    },
+    "test-fix.diff": {
+      "bytes": 5544,
+      "sha256": "8765a7e56f6d1ae339b2a68f1e9b7701bef0127f9825f601b9a27acd5bbac4a4"
+    }
+  }
+}

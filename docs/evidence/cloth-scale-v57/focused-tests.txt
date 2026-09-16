@@ -1,0 +1,18 @@
+✔ Mira upper UV/material only: all fourteen source shapes and all other surfaces remain byte exact (313.834686ms)
+✔ native skin weights/positions/normals and joints remain exact; Mira adds one shared material draw (53.680469ms)
+✔ upper-cloth source is shared without changing hair/paper/lower cloth; seams repeat exactly (5.973435ms)
+✔ dedicated source/provenance and generated packed channels have exact hashes and bounded ownership (2.049516ms)
+✔ all shipped actor roles and four warden variants have independently bound authored skins within declared geometry budgets (439.006467ms)
+✔ flat and sloping support keep stance ankles at the sampled floor through walk/run with no world transform or game mutation (116.03044ms)
+✔ stance feet counter world displacement and teleportation does not invent a high-speed stride (30.826248ms)
+✔ saved gameplay actions reconstruct the same articulated pose and impact phase without advancing gameplay (308.598218ms)
+✔ windup, release, recovery, hit, live death and settled reload are distinct finite poses for every enemy family (97.076639ms)
+✔ authored geometry recipe matches provenance and preserves separate third-party attribution (8.754722ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1171.191927

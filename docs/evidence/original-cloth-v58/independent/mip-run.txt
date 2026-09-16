@@ -1,0 +1,260 @@
+{
+  "sourceSHA256": "ba1db9154df3a40cbb18cb5e0b0f4cae539efa9937263079a647953d7f9fa260",
+  "models": {
+    "box": [
+      {
+        "level": 3,
+        "dimensions": [
+          156,
+          156
+        ],
+        "meanRelativeToOriginal": 1.0000000000000002,
+        "relativeStd": 0.2072282799268391,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.05924098090801462,
+            "absoluteInteriorRMS": 0.049250198614404966,
+            "ratio": 1.202857705647658,
+            "edgeRMSToMean": 0.3243058115878976,
+            "signedEdgeMeanToMean": -0.12715571581046659
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.06256427501806044,
+            "absoluteInteriorRMS": 0.04081828117926903,
+            "ratio": 1.53275133617914,
+            "edgeRMSToMean": 0.3424986837683426,
+            "signedEdgeMeanToMean": 0.10272000320950152
+          }
+        }
+      },
+      {
+        "level": 4,
+        "dimensions": [
+          78,
+          78
+        ],
+        "meanRelativeToOriginal": 1.0000000000000002,
+        "relativeStd": 0.1200125351830265,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.03103916399347381,
+            "absoluteInteriorRMS": 0.026655488441982896,
+            "ratio": 1.1644567707334352,
+            "edgeRMSToMean": 0.16991922003356863,
+            "signedEdgeMeanToMean": -0.05003842489564886
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.03285636335433588,
+            "absoluteInteriorRMS": 0.026645938298348944,
+            "ratio": 1.233072109769606,
+            "edgeRMSToMean": 0.17986720375207677,
+            "signedEdgeMeanToMean": 0.03488343173450295
+          }
+        }
+      },
+      {
+        "level": 5,
+        "dimensions": [
+          39,
+          39
+        ],
+        "meanRelativeToOriginal": 1.0000000000000002,
+        "relativeStd": 0.07560829532500218,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.016552215975721943,
+            "absoluteInteriorRMS": 0.017624002908481953,
+            "ratio": 0.9391859534791505,
+            "edgeRMSToMean": 0.09061260892893898,
+            "signedEdgeMeanToMean": -0.021304854042461036
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.01862512605045095,
+            "absoluteInteriorRMS": 0.01750581950854511,
+            "ratio": 1.0639391112972159,
+            "edgeRMSToMean": 0.10196044236838786,
+            "signedEdgeMeanToMean": 0.03996142132276788
+          }
+        }
+      },
+      {
+        "level": 6,
+        "dimensions": [
+          19,
+          19
+        ],
+        "meanRelativeToOriginal": 0.9999999999999999,
+        "relativeStd": 0.03535496267250173,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.007224183522989159,
+            "absoluteInteriorRMS": 0.008392434957947769,
+            "ratio": 0.8607970820372868,
+            "edgeRMSToMean": 0.039547702697913245,
+            "signedEdgeMeanToMean": 0.003094541836150888
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.00955323101806566,
+            "absoluteInteriorRMS": 0.00833820141482133,
+            "ratio": 1.1457184280874517,
+            "edgeRMSToMean": 0.05229772179854833,
+            "signedEdgeMeanToMean": 0.01583852191228046
+          }
+        }
+      },
+      {
+        "level": 7,
+        "dimensions": [
+          9,
+          9
+        ],
+        "meanRelativeToOriginal": 0.9999999999999999,
+        "relativeStd": 0.016516667380624718,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.0038248259940937036,
+            "absoluteInteriorRMS": 0.004251765394169586,
+            "ratio": 0.8995853814838087,
+            "edgeRMSToMean": 0.020938432807570753,
+            "signedEdgeMeanToMean": -0.007253398009034813
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.0038004582990160385,
+            "absoluteInteriorRMS": 0.0035600991076300157,
+            "ratio": 1.0675147472357958,
+            "edgeRMSToMean": 0.02080503553751273,
+            "signedEdgeMeanToMean": -0.011282499102329214
+          }
+        }
+      }
+    ],
+    "linear": [
+      {
+        "level": 3,
+        "dimensions": [
+          156,
+          156
+        ],
+        "meanRelativeToOriginal": 0.9977792616380712,
+        "relativeStd": 0.3072578005496007,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.07043656690056785,
+            "absoluteInteriorRMS": 0.08009638824326314,
+            "ratio": 0.8793975414552132,
+            "edgeRMSToMean": 0.3855943578926039,
+            "signedEdgeMeanToMean": -0.12433145300774379
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.0799385039851745,
+            "absoluteInteriorRMS": 0.06632330333013918,
+            "ratio": 1.2052853216201038,
+            "edgeRMSToMean": 0.43761127879175815,
+            "signedEdgeMeanToMean": 0.11216636765261039
+          }
+        }
+      },
+      {
+        "level": 4,
+        "dimensions": [
+          78,
+          78
+        ],
+        "meanRelativeToOriginal": 0.9977792616380712,
+        "relativeStd": 0.14751835181690315,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.033249354450548524,
+            "absoluteInteriorRMS": 0.03526806001531099,
+            "ratio": 0.9427610828640395,
+            "edgeRMSToMean": 0.18201857421304118,
+            "signedEdgeMeanToMean": -0.04664024878357543
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.03789647082303547,
+            "absoluteInteriorRMS": 0.035241216014459,
+            "ratio": 1.0753451528882274,
+            "edgeRMSToMean": 0.20745851162837345,
+            "signedEdgeMeanToMean": 0.03726904078565307
+          }
+        }
+      },
+      {
+        "level": 5,
+        "dimensions": [
+          39,
+          39
+        ],
+        "meanRelativeToOriginal": 0.9977792616380712,
+        "relativeStd": 0.08685169338588537,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.016767323781126605,
+            "absoluteInteriorRMS": 0.020725773214948395,
+            "ratio": 0.809008359168633,
+            "edgeRMSToMean": 0.0917901841537478,
+            "signedEdgeMeanToMean": -0.022652999374164283
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.02052653336820101,
+            "absoluteInteriorRMS": 0.01992609194141732,
+            "ratio": 1.0301334264917068,
+            "edgeRMSToMean": 0.11236940984142098,
+            "signedEdgeMeanToMean": 0.03888239986145497
+          }
+        }
+      },
+      {
+        "level": 6,
+        "dimensions": [
+          19,
+          19
+        ],
+        "meanRelativeToOriginal": 0.9947620271611942,
+        "relativeStd": 0.06076013570240205,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.010031657292142301,
+            "absoluteInteriorRMS": 0.015340230220625264,
+            "ratio": 0.653944376835657,
+            "edgeRMSToMean": 0.054916794250105386,
+            "signedEdgeMeanToMean": 8.409257256598136e-05
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.012285733171535659,
+            "absoluteInteriorRMS": 0.014120746429548657,
+            "ratio": 0.8700484236319758,
+            "edgeRMSToMean": 0.06725639255254454,
+            "signedEdgeMeanToMean": 0.011711253673544978
+          }
+        }
+      },
+      {
+        "level": 7,
+        "dimensions": [
+          9,
+          9
+        ],
+        "meanRelativeToOriginal": 0.9921167417014671,
+        "relativeStd": 0.04157084130527381,
+        "edges": {
+          "topBottom": {
+            "absoluteEdgeRMS": 0.006614973535095083,
+            "absoluteInteriorRMS": 0.012048285865185337,
+            "ratio": 0.5490385610960374,
+            "edgeRMSToMean": 0.03621267453796067,
+            "signedEdgeMeanToMean": 0.0001452654870535344
+          },
+          "leftRight": {
+            "absoluteEdgeRMS": 0.007642266166075717,
+            "absoluteInteriorRMS": 0.01025541931186405,
+            "ratio": 0.745192949569084,
+            "edgeRMSToMean": 0.04183643304637809,
+            "signedEdgeMeanToMean": -0.014993219066455102
+          }
+        }
+      }
+    ]
+  },
+  "scope": "Two mathematical CPU reduction models only: separable exact area-box on linear-sRGB luminance, and centre bilinear sample at each half-resolution step. No image output, editing, saved mip asset or WebGL execution. Models do not certify the GPU generateMipmap kernel, trilinear blend, anisotropy, texture seam or rendered appearance. Levels 3\u20137 bracket intended .25/.125m tile and actual three camera estimates."
+}

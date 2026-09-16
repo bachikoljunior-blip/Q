@@ -1,0 +1,705 @@
+{
+  "source": {
+    "path": "/workspace/scratch/e72662e3b71f/q-original-cloth-v58/original-wool-basecolor.png",
+    "sha256": "ba1db9154df3a40cbb18cb5e0b0f4cae539efa9937263079a647953d7f9fa260",
+    "bytes": 3416517,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "chunks": [
+      [
+        "IHDR",
+        13
+      ],
+      [
+        "caBX",
+        23617
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        65536
+      ],
+      [
+        "IDAT",
+        49883
+      ],
+      [
+        "IEND",
+        0
+      ]
+    ],
+    "allChunkCRCPass": true
+  },
+  "contrast": {
+    "relativeLuma": {
+      "0": 0.044346925980813814,
+      "0.05": 0.3326694080264506,
+      "0.5": 0.933706705972139,
+      "0.95": 1.886740337740179,
+      "1": 3.761989600670476
+    },
+    "linearMeanRGB": [
+      0.19458580591312105,
+      0.18053324886712233,
+      0.1687506397165479
+    ],
+    "srgbMeanRGB": [
+      0.4637774588699825,
+      0.4465009464809226,
+      0.4332910182330978
+    ],
+    "linearChannelMeanSpreadRelative": 0.14250747812199835,
+    "baseMiraLinearRGB": [
+      0.14126329114027164,
+      0.12743768043564743,
+      0.08865558628577294
+    ],
+    "materialLinearTintIfMeanNormalized": [
+      0.7259691449608769,
+      0.7058959013663197,
+      0.525364445638183
+    ],
+    "linearNormalizedMaxRGB": [
+      0.5089783410170337,
+      0.48472834757653854,
+      0.34222536158865313
+    ],
+    "fractionNormalizedChannelsOver1": 0.0
+  },
+  "broadScale": {
+    "cellGrid": [
+      19,
+      19
+    ],
+    "cellMeanRelative": {
+      "0": 0.8733934066991227,
+      "0.05": 0.9333808067610109,
+      "0.5": 0.9969667585941747,
+      "0.95": 1.0708478817896385,
+      "1": 1.144130437331163
+    },
+    "linearPlaneCoefficients": [
+      0.18267011811460665,
+      0.0006946928071519295,
+      0.0013282307743312848
+    ],
+    "leftRightRelativePlaneDelta": 0.0038029909561676724,
+    "topBottomRelativePlaneDelta": 0.007271198968065249,
+    "planeR2": 0.0035755547302803725,
+    "residualRelativeRMS": 0.041682409612804,
+    "interpretation": "A broad colour/brightness trend test only; cannot distinguish pigment variation from baked lighting or prove physical albedo."
+  },
+  "edges": {
+    "0": {
+      "axis": "top/bottom",
+      "boundaryAbsDeltaLinear": {
+        "0": 1.3481980764895596e-05,
+        "0.05": 0.00605516451912285,
+        "0.5": 0.08059467114862212,
+        "0.95": 0.23788895448649483,
+        "1": 0.3964456288947995
+      },
+      "interiorAbsDeltaLinear": {
+        "0": 0.0,
+        "0.05": 0.0028531084179218577,
+        "0.5": 0.032250493545213366,
+        "0.95": 0.11135668543154317,
+        "1": 0.3931202198479832
+      },
+      "boundaryRMS": 0.1217412292621525,
+      "interiorRMS": 0.05439043967744932,
+      "boundaryVsInteriorRMS": 2.238283602488092,
+      "meanEdgeDeltaLinear": 0.0060558594921083595,
+      "strip16MeanRelativeDifference": -0.050035055816462316
+    },
+    "1": {
+      "axis": "left/right",
+      "boundaryAbsDeltaLinear": {
+        "0": 6.236822774352557e-05,
+        "0.05": 0.006706879345295132,
+        "0.5": 0.07728119128141621,
+        "0.95": 0.2384184495679447,
+        "1": 0.44733718945873935
+      },
+      "interiorAbsDeltaLinear": {
+        "0": 0.0,
+        "0.05": 0.002933512214072756,
+        "0.5": 0.033150693083115024,
+        "0.95": 0.11094330785656961,
+        "1": 0.3904213086926934
+      },
+      "boundaryRMS": 0.11920385785433818,
+      "interiorRMS": 0.05463428467169598,
+      "boundaryVsInteriorRMS": 2.1818508024887406,
+      "meanEdgeDeltaLinear": 0.024221365301739853,
+      "strip16MeanRelativeDifference": 0.034619786580572375
+    }
+  },
+  "frequency": [
+    {
+      "axis": "V",
+      "dominantCyclesPerImage": [
+        85,
+        43,
+        47,
+        40,
+        52,
+        35,
+        33,
+        30
+      ],
+      "correspondingPeriodPixels": [
+        14.75294117647059,
+        29.162790697674417,
+        26.680851063829788,
+        31.35,
+        24.115384615384617,
+        35.82857142857143,
+        38.0,
+        41.8
+      ],
+      "periodAtIntended250mm": [
+        2.9411764705882355,
+        5.813953488372093,
+        5.319148936170213,
+        6.25,
+        4.8076923076923075,
+        7.142857142857143,
+        7.575757575757576,
+        8.333333333333334
+      ],
+      "powerFractionsOf20to249": [
+        0.09124782652065054,
+        0.014041374697191819,
+        0.01138186368011675,
+        0.01083217301028216,
+        0.008367484646231937,
+        0.007967184185217644,
+        0.00761617375918863,
+        0.006294746817216077
+      ],
+      "autocorrelationPeaks": [
+        [
+          29,
+          0.37216993767148115
+        ],
+        [
+          58,
+          0.2616641891128122
+        ],
+        [
+          44,
+          0.2239212523900219
+        ],
+        [
+          14,
+          0.18845347682445546
+        ]
+      ]
+    },
+    {
+      "axis": "U",
+      "dominantCyclesPerImage": [
+        83,
+        41,
+        43,
+        36,
+        123,
+        87,
+        127,
+        125
+      ],
+      "correspondingPeriodPixels": [
+        15.108433734939759,
+        30.585365853658537,
+        29.162790697674417,
+        34.833333333333336,
+        10.195121951219512,
+        14.413793103448276,
+        9.874015748031496,
+        10.032
+      ],
+      "periodAtIntended250mm": [
+        3.0120481927710845,
+        6.097560975609756,
+        5.813953488372093,
+        6.944444444444445,
+        2.032520325203252,
+        2.8735632183908044,
+        1.968503937007874,
+        2.0
+      ],
+      "powerFractionsOf20to249": [
+        0.03811112951014161,
+        0.015894550711551266,
+        0.014421354616777179,
+        0.010951888356972974,
+        0.008994064047650113,
+        0.008792324330059824,
+        0.00847196146236926,
+        0.008270052391864374
+      ],
+      "autocorrelationPeaks": [
+        [
+          30,
+          0.3665540204709396
+        ],
+        [
+          12,
+          0.1928981678897568
+        ],
+        [
+          46,
+          0.17176252977750336
+        ],
+        [
+          44,
+          0.17138739949945794
+        ]
+      ]
+    }
+  ],
+  "projection": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "tileM": 0.25,
+      "cameraPlaneTilePixels": 69.63409522423203,
+      "sourceTexelsPerProjectedPixel": 18.00841952440016,
+      "isotropicMipLOD": 4.170599666227968,
+      "strongestAxisPeriodM": [
+        0.0029411764705882353,
+        0.0030120481927710845
+      ],
+      "strongestAxisPeriodPixels": [
+        0.8192246496968474,
+        0.8389650027015907
+      ]
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "tileM": 0.125,
+      "cameraPlaneTilePixels": 34.81704761211601,
+      "sourceTexelsPerProjectedPixel": 36.01683904880032,
+      "isotropicMipLOD": 5.170599666227968,
+      "strongestAxisPeriodM": [
+        0.0014705882352941176,
+        0.0015060240963855422
+      ],
+      "strongestAxisPeriodPixels": [
+        0.4096123248484237,
+        0.41948250135079534
+      ]
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "tileM": 0.1,
+      "cameraPlaneTilePixels": 27.85363808969281,
+      "sourceTexelsPerProjectedPixel": 45.0210488110004,
+      "isotropicMipLOD": 5.492527761115331,
+      "strongestAxisPeriodM": [
+        0.0011764705882352942,
+        0.0012048192771084338
+      ],
+      "strongestAxisPeriodPixels": [
+        0.327689859878739,
+        0.3355860010806363
+      ]
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "tileM": 0.075,
+      "cameraPlaneTilePixels": 20.890228567269606,
+      "sourceTexelsPerProjectedPixel": 60.02806508133387,
+      "isotropicMipLOD": 5.907565260394175,
+      "strongestAxisPeriodM": [
+        0.0008823529411764705,
+        0.0009036144578313252
+      ],
+      "strongestAxisPeriodPixels": [
+        0.2457673949090542,
+        0.2516895008104772
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "tileM": 0.25,
+      "cameraPlaneTilePixels": 37.71890709110871,
+      "sourceTexelsPerProjectedPixel": 33.24592616034729,
+      "isotropicMipLOD": 5.055105663520978,
+      "strongestAxisPeriodM": [
+        0.0029411764705882353,
+        0.0030120481927710845
+      ],
+      "strongestAxisPeriodPixels": [
+        0.44375184813069074,
+        0.45444466374829773
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "tileM": 0.125,
+      "cameraPlaneTilePixels": 18.859453545554356,
+      "sourceTexelsPerProjectedPixel": 66.49185232069458,
+      "isotropicMipLOD": 6.055105663520978,
+      "strongestAxisPeriodM": [
+        0.0014705882352941176,
+        0.0015060240963855422
+      ],
+      "strongestAxisPeriodPixels": [
+        0.22187592406534537,
+        0.22722233187414886
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "tileM": 0.1,
+      "cameraPlaneTilePixels": 15.087562836443485,
+      "sourceTexelsPerProjectedPixel": 83.11481540086822,
+      "isotropicMipLOD": 6.37703375840834,
+      "strongestAxisPeriodM": [
+        0.0011764705882352942,
+        0.0012048192771084338
+      ],
+      "strongestAxisPeriodPixels": [
+        0.1775007392522763,
+        0.1817778654993191
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "tileM": 0.075,
+      "cameraPlaneTilePixels": 11.315672127332613,
+      "sourceTexelsPerProjectedPixel": 110.8197538678243,
+      "isotropicMipLOD": 6.792071257687184,
+      "strongestAxisPeriodM": [
+        0.0008823529411764705,
+        0.0009036144578313252
+      ],
+      "strongestAxisPeriodPixels": [
+        0.1331255544392072,
+        0.1363333991244893
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "tileM": 0.25,
+      "cameraPlaneTilePixels": 81.6266338461831,
+      "sourceTexelsPerProjectedPixel": 15.36263276963047,
+      "isotropicMipLOD": 3.941353573850458,
+      "strongestAxisPeriodM": [
+        0.0029411764705882353,
+        0.0030120481927710845
+      ],
+      "strongestAxisPeriodPixels": [
+        0.9603133393668599,
+        0.9834534198335313
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "tileM": 0.125,
+      "cameraPlaneTilePixels": 40.81331692309155,
+      "sourceTexelsPerProjectedPixel": 30.72526553926094,
+      "isotropicMipLOD": 4.941353573850458,
+      "strongestAxisPeriodM": [
+        0.0014705882352941176,
+        0.0015060240963855422
+      ],
+      "strongestAxisPeriodPixels": [
+        0.48015666968342996,
+        0.49172670991676565
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "tileM": 0.1,
+      "cameraPlaneTilePixels": 32.65065353847324,
+      "sourceTexelsPerProjectedPixel": 38.406581924076164,
+      "isotropicMipLOD": 5.26328166873782,
+      "strongestAxisPeriodM": [
+        0.0011764705882352942,
+        0.0012048192771084338
+      ],
+      "strongestAxisPeriodPixels": [
+        0.384125335746744,
+        0.39338136793341255
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "tileM": 0.075,
+      "cameraPlaneTilePixels": 24.487990153854927,
+      "sourceTexelsPerProjectedPixel": 51.20877589876823,
+      "isotropicMipLOD": 5.678319168016664,
+      "strongestAxisPeriodM": [
+        0.0008823529411764705,
+        0.0009036144578313252
+      ],
+      "strongestAxisPeriodPixels": [
+        0.28809400181005795,
+        0.29503602595005934
+      ]
+    }
+  ],
+  "payload": {
+    "PNGBytes": 3416517,
+    "rgbDecodedBytes": 4717548,
+    "rgba8Level0Bytes": 6290064,
+    "rgba8MipDimensionSequence": [
+      1254,
+      627,
+      313,
+      156,
+      78,
+      39,
+      19,
+      9,
+      4,
+      2,
+      1
+    ],
+    "rgba8FullMipBytes": 8384072,
+    "GPUAllocationAndPeakMeasured": false,
+    "browserDecodeCPUTimeMeasured": false
+  },
+  "samplingCPUWallSeconds": 2.2528941849959665,
+  "boundary": "Read-only PNG decode and numerical statistics. No image output, transform, resampling, normal derivation, screenshot, renderer or PS4 grade. Period is repeat frequency, not resolved yarn diameter. Mip estimates are camera-plane equivalents using prior fixed actual Scene camera depth."
+}

@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-16T09:57:13.695Z",
+  "sourceHashes": {
+    "src/assets/characters/detailed-geometry.js": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+    "src/assets/characters/cloth-material.js": "39ba2cfce1096be273543b313be1d12781ae43c59e8581f5cb9aa95d0a04642f",
+    "src/actor-models.js": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+    "tests/cloak-uv.test.mjs": "066e2e465b0b928063abc061abdf7fb4c437f216c5c5927a144d11db0329fc5a"
+  },
+  "boundary": "Actual repaired cloak-uv test entrypoint and native production actor. Deliberate changes are load-hook memory only; no repository writes. These are negative sensitivity checks, not runtime/game rendering tests.",
+  "results": [
+    {
+      "fault": "none",
+      "status": 0,
+      "sha256": "a762515107896a85cdfb870de9585a71cbe3e514f7cfc37efbda03b25b6d67d0",
+      "expectedRejection": false
+    },
+    {
+      "fault": "cape-uv",
+      "status": 1,
+      "sha256": "d478604fa63224e8348243a67d19c2d4b44c58725705ccd5e3c285a7f9ce8ddd",
+      "expectedRejection": true
+    },
+    {
+      "fault": "npc-hair",
+      "status": 1,
+      "sha256": "eda017ad71caf44da221885231519a3c712953453b0e2e415e41923b56611b45",
+      "expectedRejection": true
+    }
+  ]
+}

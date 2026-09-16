@@ -1,0 +1,37 @@
+{
+  "files": {
+    "REVIEW.md": {
+      "bytes": 9700,
+      "sha256": "356bfb09c5a59ecfdb032ca2d808c072a11f1ee3338ed8c36b39c3b3ad9b3317"
+    },
+    "SOURCES.json": {
+      "bytes": 2067,
+      "sha256": "28fa10a6270ba01874e5b8be0cb74385e1dec7bb4c135f1c9c1008c78ddd24e7"
+    },
+    "measure.py": {
+      "bytes": 5732,
+      "sha256": "f3be2b7800d58604fe8d7522322309f11cd35ad6838d9fa0936764d98368554a"
+    },
+    "measurements.json": {
+      "bytes": 14561,
+      "sha256": "a092df98773b5ae021ecd73b2bf27a58cd69358f0e2de3dc054276cc0a8b032b"
+    },
+    "mip-math.json": {
+      "bytes": 8719,
+      "sha256": "1327fc2e5f3eeb70fa1e3059d9c280fa51ae3b3a556733d95a1238b287d58bf4"
+    },
+    "mip-math.py": {
+      "bytes": 2298,
+      "sha256": "31a861d4bb26e150906804fe7957b4897f72d5ea693f14381740f2907fbb2527"
+    },
+    "mip-run.txt": {
+      "bytes": 8719,
+      "sha256": "1327fc2e5f3eeb70fa1e3059d9c280fa51ae3b3a556733d95a1238b287d58bf4"
+    },
+    "run.txt": {
+      "bytes": 14561,
+      "sha256": "a092df98773b5ae021ecd73b2bf27a58cd69358f0e2de3dc054276cc0a8b032b"
+    }
+  },
+  "boundary": "All listed review files plus this manifest can be copied byte-for-byte. Original image remains at SOURCES.json exact checked path."
+}

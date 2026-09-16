@@ -1,0 +1,231 @@
+{
+  "finishedUTC": "2026-09-16T09:51:04.919618+00:00",
+  "firstPreservedBaselineUTC": "2026-09-16T09:37:47.711422+00:00",
+  "secondsSinceFirstPreservedBaseline": 797.208196,
+  "timingBoundary": "Excludes initial read-only discovery before first retained baseline; includes waiting for author freeze, own oracle construction and verification. No external material acquisition by reviewer.",
+  "requiredRepairs": 0,
+  "verdict": "No required source defect within independently checked finite scope. No render/perceptual/PS4 acceptance.",
+  "authorCheckpoint": "be4737db101c69e96d993f278a2277a62e794f99",
+  "independentGeometry": {
+    "at": "2026-09-16T09:48:20.999Z",
+    "baselineSource": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4",
+    "candidateSource": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+    "boundary": "Native authored triangle multisets include winding, position, normal, skin indices/weights, normalized material family/color. UV expected to change only on Mira upper cloth. Mesh counts include hidden weapons and are not a render draw benchmark.",
+    "rows": [
+      {
+        "role": "player",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 8208,
+        "meshesBefore": 22,
+        "meshesAfter": 22,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "npc",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": false,
+        "triangles": 6718,
+        "meshesBefore": 12,
+        "meshesAfter": 13,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "sena",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 6786,
+        "meshesBefore": 12,
+        "meshesAfter": 12,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "smith",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 6242,
+        "meshesBefore": 11,
+        "meshesAfter": 11,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "healer",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 7038,
+        "meshesBefore": 11,
+        "meshesAfter": 11,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "patient",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 6270,
+        "meshesBefore": 10,
+        "meshesAfter": 10,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "porter",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 6450,
+        "meshesBefore": 10,
+        "meshesAfter": 10,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "scout",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 6798,
+        "meshesBefore": 11,
+        "meshesAfter": 11,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "traveler",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 6578,
+        "meshesBefore": 10,
+        "meshesAfter": 10,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "courier",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 6398,
+        "meshesBefore": 10,
+        "meshesAfter": 10,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "soldier",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 7454,
+        "meshesBefore": 13,
+        "meshesAfter": 13,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "ranger",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 7108,
+        "meshesBefore": 12,
+        "meshesAfter": 12,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "wolf",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 4028,
+        "meshesBefore": 6,
+        "meshesAfter": 6,
+        "nonTargetMaterialsExact": true
+      },
+      {
+        "role": "boss",
+        "physicalTrianglesExact": true,
+        "allAttributesExact": true,
+        "triangles": 7950,
+        "meshesBefore": 14,
+        "meshesAfter": 14,
+        "nonTargetMaterialsExact": true
+      }
+    ]
+  },
+  "scaleRows": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "carrierPeriodMedianMm": [
+        2.2444156913015743,
+        1.983480001928494
+      ],
+      "carrierPeriodMinMaxMm": [
+        [
+          0.5211147087444882,
+          2.6357196864455967
+        ],
+        [
+          1.1709798854327604,
+          2.6023068068560393
+        ]
+      ],
+      "projectedCarrierMedianPixels": [
+        0.5540167097805481,
+        0.5333416738611015
+      ],
+      "sampleCount": 1535,
+      "nativeRaySamples": 24
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "carrierPeriodMedianMm": [
+        2.2444156913015743,
+        1.9868797127332518
+      ],
+      "carrierPeriodMinMaxMm": [
+        [
+          0.5211046894105106,
+          2.6357196864455967
+        ],
+        [
+          1.1709798854327604,
+          2.5863211055150583
+        ]
+      ],
+      "projectedCarrierMedianPixels": [
+        0.30337824174875394,
+        0.2891411228737347
+      ],
+      "sampleCount": 454,
+      "nativeRaySamples": 8
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "carrierPeriodMedianMm": [
+        2.2444156913015743,
+        1.9851427229639786
+      ],
+      "carrierPeriodMinMaxMm": [
+        [
+          0.5211046894105106,
+          2.6357196864455967
+        ],
+        [
+          1.1709798854327604,
+          2.626712623070878
+        ]
+      ],
+      "projectedCarrierMedianPixels": [
+        0.6482351199476155,
+        0.6253160823928837
+      ],
+      "sampleCount": 2103,
+      "nativeRaySamples": 33
+    }
+  ],
+  "ownerBoundary": "Only this new review directory written. Repository/source/remote/Sites/preview mutation zero; no new agent; no active session.",
+  "fixedStage": "Not independently built/read; integrator follow-up gate.",
+  "finalSource": {
+    "src/assets/characters/detailed-geometry.js": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+    "src/assets/characters/cloth-material.js": "39ba2cfce1096be273543b313be1d12781ae43c59e8581f5cb9aa95d0a04642f",
+    "src/assets/characters/cloth-material-provenance.json": "7782a63bb27c347b1e8daf4e61cd94e1b623243daf33b99b92bde86fc6062244",
+    "src/assets/characters/detailed-provenance.json": "100d041cc78e4b137e62abf2c82e0241ee1f7f4dca4bbcd4e393eadf69614a26"
+  }
+}

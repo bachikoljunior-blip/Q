@@ -1,0 +1,30 @@
+{
+  "reason": "Original failed-test logs and patch contain native whitespace. Preserve every original byte as base64 rather than modifying evidence or weakening whitespace checks. Independent original HASHES.json remains a decoded-payload manifest. Decode listed files before rerunning the review harness.",
+  "files": {
+    "cloth-integration-v57/first-failed-validation/08.txt": {
+      "storage": "cloth-integration-v57/first-failed-validation/08.txt.base64",
+      "decodedBytes": 37474,
+      "decodedSha256": "4c34c7c03576d06d61f9d7382a39c3bcf8cb7afcb2e83fc19e5e2c538b01b6ea"
+    },
+    "cloth-scale-v57/independent/revision-1/cape-uv.txt": {
+      "storage": "cloth-scale-v57/independent/revision-1/cape-uv.txt.base64",
+      "decodedBytes": 1224,
+      "decodedSha256": "d478604fa63224e8348243a67d19c2d4b44c58725705ccd5e3c285a7f9ce8ddd"
+    },
+    "cloth-scale-v57/independent/revision-1/integration-failure.txt": {
+      "storage": "cloth-scale-v57/independent/revision-1/integration-failure.txt.base64",
+      "decodedBytes": 37474,
+      "decodedSha256": "4c34c7c03576d06d61f9d7382a39c3bcf8cb7afcb2e83fc19e5e2c538b01b6ea"
+    },
+    "cloth-scale-v57/independent/revision-1/npc-hair.txt": {
+      "storage": "cloth-scale-v57/independent/revision-1/npc-hair.txt.base64",
+      "decodedBytes": 3936,
+      "decodedSha256": "eda017ad71caf44da221885231519a3c712953453b0e2e415e41923b56611b45"
+    },
+    "cloth-scale-v57/independent/revision-1/test-fix.diff": {
+      "storage": "cloth-scale-v57/independent/revision-1/test-fix.diff.base64",
+      "decodedBytes": 5544,
+      "decodedSha256": "8765a7e56f6d1ae339b2a68f1e9b7701bef0127f9825f601b9a27acd5bbac4a4"
+    }
+  }
+}

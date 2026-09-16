@@ -1,0 +1,84 @@
+{
+  "startedAt": "2026-09-16T09:51:22.922307+00:00",
+  "scope": "Fresh reconstructed runtime source, Node boundaries and byte-preserving artifacts; not WebGL/listening/device acceptance",
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "scripts/generate-vault-assets.mjs",
+        "--verify"
+      ],
+      "exitCode": 0,
+      "seconds": 0.19232040100177983,
+      "log": "01.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-soundscape.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.1818504910042975,
+      "log": "02.txt"
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/verify-native-score.py",
+        "artifacts/native-audio-recovery-v52"
+      ],
+      "exitCode": 0,
+      "seconds": 9.418227014997683,
+      "log": "03.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-native-audio.mjs",
+        "artifacts/native-audio-recovery-v52"
+      ],
+      "exitCode": 0,
+      "seconds": 1.5458619889977854,
+      "log": "04.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-main-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.362882921996061,
+      "log": "05.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-gathering-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 9.527857084998686,
+      "log": "06.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:vaults"
+      ],
+      "exitCode": 0,
+      "seconds": 8.606818512002064,
+      "log": "07.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 1,
+      "seconds": 44.55697004599642,
+      "log": "08.txt"
+    }
+  ],
+  "elapsedSeconds": 78.39618446299573,
+  "passed": false
+}
