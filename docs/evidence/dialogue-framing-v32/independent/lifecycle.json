@@ -1,0 +1,136 @@
+{
+  "sourceHash": "697482115caaee6a3ae57a5ff4b50ab76b09d3f41efe81c8042cfca40b7c337e",
+  "boundary": "Actual compiled main/Game/event handlers; explicit existing DOM/property, SceneView, audio, timer/RAF boundaries. ScrollTop assertion verifies assignment, not real browser scroll layout; native Scene camera separately tested.",
+  "records": {
+    "gatheringOpen": {
+      "hudVisibility": "hidden",
+      "focus": null,
+      "gathering": "hearth",
+      "panelHidden": false,
+      "dialogueClass": true,
+      "deathHidden": true,
+      "dt": 0,
+      "active": "close-panel",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "nextLine": {
+      "scrollTop": 0,
+      "firstClass": "dialogue-speaker"
+    },
+    "choice": {
+      "scrollTop": 0,
+      "phase": "done"
+    },
+    "dialogueOpen": {
+      "hudVisibility": "hidden",
+      "focus": "keeper",
+      "gathering": null,
+      "panelHidden": false,
+      "dialogueClass": true,
+      "deathHidden": true,
+      "dt": 0,
+      "active": "close-panel",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "close": {
+      "hudVisibility": "",
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": true,
+      "deathHidden": true,
+      "dt": 0.01666666666666667,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "settings": {
+      "hudVisibility": "",
+      "focus": null,
+      "gathering": null,
+      "panelHidden": false,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0.01666666666666667,
+      "active": "close-panel",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "settingsReturn": {
+      "hudVisibility": "",
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0.01666666666666667,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "title": {
+      "hudVisibility": "",
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0,
+      "active": "close-panel",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "restart": {
+      "hudVisibility": "",
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0.016666666666666656,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "import": {
+      "hudVisibility": "",
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0.016666666666666656,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "death": {
+      "hudVisibility": "",
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": true,
+      "deathHidden": false,
+      "dt": 0.016666666666666666,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "respawn": {
+      "hudVisibility": "",
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": true,
+      "deathHidden": true,
+      "dt": 0.016666666666666663,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "residualAfterDeath": false,
+    "residualAfterRespawn": false
+  }
+}

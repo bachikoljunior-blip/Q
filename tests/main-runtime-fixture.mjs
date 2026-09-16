@@ -140,7 +140,8 @@ export function createMainRuntime(compiled, { save, saveRaw, storageFailure = fa
         game, yaw: 0, pitch: .4, zoom: 10, updates: 0, gatheringFocus: null,
         focusCalls: [], sceneUpdates: [],
         camera: { position: { x: 0, y: 0, z: 0, set(x, y, z) { Object.assign(this, { x, y, z }); } } },
-        focusGathering(id) {
+        focusGathering(id,npc=null) {
+          this.dialogueFocus=npc;
           this.gatheringFocus = id; this.focusCalls.push(id);
         },
         snapCamera() {},

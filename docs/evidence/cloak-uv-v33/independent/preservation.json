@@ -1,0 +1,20 @@
+{
+  "originalLocation": "/workspace/scratch/e72662e3b71f/q-v33-cloak-uv-review",
+  "candidateGeometrySHA256": "1c5ce56521d0dbf4bad2920340e86d3a1e9cfc03647cb387f1bb5eeb73c4826a",
+  "files": [
+    {
+      "file": "review.json",
+      "bytes": 138027,
+      "sha256": "8a57e44929cde7f5d307e6ecc1ab5257c6b1ac723ce4b36097072457b5d43127"
+    },
+    {
+      "file": "review.mjs",
+      "bytes": 13517,
+      "sha256": "161f982cb76d8e81b6ca2afd2700a78b7874cb3eb209e5b629bf591cbf7d0ef5"
+    }
+  ],
+  "lastRunEndUTC": "2026-09-16T04:54:33.751Z",
+  "exitCode": 0,
+  "pendingSessions": 0,
+  "reproduction": "Preserved exact review script reads fixed scratch worktrees; script paths must point to the same verified sources if moved."
+}

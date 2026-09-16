@@ -1,3 +1,13 @@
+# Current continuation — combined dialogue and appearance v32 (2026-09-16)
+
+The combined v32 unit passed 23 required commands and 284 tests in 107.241350 s. Speaker-focused composition, lower readable dialogue, scroll/death/HUD lifecycle repairs, one source-validated NPC face, and physical cloak UVs are recorded in [DIALOGUE_APPEARANCE_V32.md](DIALOGUE_APPEARANCE_V32.md). The same-camera face differences remain small; sampled death cloth distortion has an explicit remaining worsening. No actual screen or PS4 perceptual acceptance is claimed.
+
+PR46 is preserved at remote `fe8e8f83f9cceb2573868621888a315c613df635`, exact tree `462d4a5390edcf854bfca711af927aa91849ba4c`, with both required CI runs successful. PR39 remains open/unmerged and actual main `547676fdce8d8e97abed9f065aad0b6e24af2fd6`; no additional merge mutation after the 03:14Z timeout. Preserve v32 as the next stack unit, then retarget/recheck/normal merge in predecessor order only after real main progress. Site23 remains owner-only and unchanged. `69748211…` names the source main.js file SHA256, not a remote main commit.
+
+The next owned units unify the complete physical arrow and preserve all standalone media bytes with a smaller representation. The latter trades about 0.94 MB for extra decode CPU; it is not yet adopted here. Initial JS164802 B leaves198 B; existing limits remain unchanged. Fixed September20 completion evidence is insufficient: actual whole-screen rendering, real device/touch/listening, target-game comparison and delivery remain unresolved. Q automation is still disabled under the20-task limit despite the stored continuing prompt and no-COUNT hourly schedule. Keep finite substantive production going while these separate acceptance/delivery steps remain blocked.
+
+---
+
 ## Current continuation — v31 archery verified (2026-09-16)
 
 [Archery integration](ARCHERY_INTEGRATION_V31.md) records22 required commands/270 tests, fixed stage and exact media evidence. Main remains547676f and owner-only Site23; no claim of delivery or PS4 attainment. Preserve normal ordered stack integration after the unresolved PR39 merge, with no additional duplicate merge mutation. Continue conversation camera/UI, the one numerically valid NPC candidate and a shared physical projectile contract. September20 completion evidence is still insufficient; the lossless same-byte storage comparison is measured but not adopted and has CPU/temporary-memory cost. Missing actual rendering/device/listening/comparison and the disabled20-limit Q automation remain explicit, not human-wait conditions.

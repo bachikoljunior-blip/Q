@@ -1,0 +1,348 @@
+{
+  "hashes": {
+    "dialogue-camera.js": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e",
+    "scene.js": "b50991698bdeb8511e37d49c24c4d352a06e99cf5390d4cd29228f1cf9924ac6"
+  },
+  "boundary": "Actual SceneView/native Three matrices and skinned vertices, existing explicit renderer/assets/DOM fixture; no GL, pixels, device timing or CSS layout. Fallback uses 15 synthetic small static blockers but retains actual Game.canReach and legal original speaker/player positions. Camera is outside every actual actor mesh world AABB in that case; no claim for all possible worlds.",
+  "records": {
+    "close": {
+      "camera": [
+        7.000000000000001,
+        7.358931403637138,
+        66.86832906596827
+      ],
+      "groundClearance": 6.077694996238828,
+      "active": false,
+      "shot": null,
+      "attempts": 1,
+      "rebuilds": 1,
+      "projectionShift": 0,
+      "orbit": [
+        3.141592653589793,
+        0.4,
+        11
+      ]
+    },
+    "resizeQuality": [
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "quality": "low",
+        "camera": [
+          9.582160753377863,
+          3.391520709300637,
+          80.44150730864357
+        ],
+        "groundClearance": 2.0730936097697565,
+        "active": true,
+        "shot": "keeper",
+        "attempts": 1,
+        "rebuilds": 2,
+        "projectionShift": -0.53,
+        "orbit": [
+          3.141592653589793,
+          0.4,
+          11
+        ]
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "quality": "medium",
+        "camera": [
+          9.582160753377863,
+          3.391520709300637,
+          80.44150730864357
+        ],
+        "groundClearance": 2.0730936097697565,
+        "active": true,
+        "shot": "keeper",
+        "attempts": 1,
+        "rebuilds": 3,
+        "projectionShift": -0.53,
+        "orbit": [
+          3.141592653589793,
+          0.4,
+          11
+        ]
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "quality": "high",
+        "camera": [
+          9.582160753377863,
+          3.391520709300637,
+          80.44150730864357
+        ],
+        "groundClearance": 2.0730936097697565,
+        "active": true,
+        "shot": "keeper",
+        "attempts": 1,
+        "rebuilds": 4,
+        "projectionShift": -0.53,
+        "orbit": [
+          3.141592653589793,
+          0.4,
+          11
+        ]
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "quality": "low",
+        "camera": [
+          9.582160753377863,
+          3.391520709300637,
+          80.44150730864357
+        ],
+        "groundClearance": 2.0730936097697565,
+        "active": true,
+        "shot": "keeper",
+        "attempts": 1,
+        "rebuilds": 5,
+        "projectionShift": -0.53,
+        "orbit": [
+          3.141592653589793,
+          0.4,
+          11
+        ]
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "quality": "medium",
+        "camera": [
+          9.582160753377863,
+          3.391520709300637,
+          80.44150730864357
+        ],
+        "groundClearance": 2.0730936097697565,
+        "active": true,
+        "shot": "keeper",
+        "attempts": 1,
+        "rebuilds": 6,
+        "projectionShift": -0.53,
+        "orbit": [
+          3.141592653589793,
+          0.4,
+          11
+        ]
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "quality": "high",
+        "camera": [
+          9.582160753377863,
+          3.391520709300637,
+          80.44150730864357
+        ],
+        "groundClearance": 2.0730936097697565,
+        "active": true,
+        "shot": "keeper",
+        "attempts": 1,
+        "rebuilds": 7,
+        "projectionShift": -0.53,
+        "orbit": [
+          3.141592653589793,
+          0.4,
+          11
+        ]
+      },
+      {
+        "viewport": [
+          1280,
+          720
+        ],
+        "quality": "low",
+        "camera": [
+          9.582160753377863,
+          3.391520709300637,
+          80.44150730864357
+        ],
+        "groundClearance": 2.0730936097697565,
+        "active": true,
+        "shot": "keeper",
+        "attempts": 1,
+        "rebuilds": 8,
+        "projectionShift": -0.53,
+        "orbit": [
+          3.141592653589793,
+          0.4,
+          11
+        ]
+      },
+      {
+        "viewport": [
+          1280,
+          720
+        ],
+        "quality": "medium",
+        "camera": [
+          9.582160753377863,
+          3.391520709300637,
+          80.44150730864357
+        ],
+        "groundClearance": 2.0730936097697565,
+        "active": true,
+        "shot": "keeper",
+        "attempts": 1,
+        "rebuilds": 9,
+        "projectionShift": -0.53,
+        "orbit": [
+          3.141592653589793,
+          0.4,
+          11
+        ]
+      },
+      {
+        "viewport": [
+          1280,
+          720
+        ],
+        "quality": "high",
+        "camera": [
+          9.582160753377863,
+          3.391520709300637,
+          80.44150730864357
+        ],
+        "groundClearance": 2.0730936097697565,
+        "active": true,
+        "shot": "keeper",
+        "attempts": 1,
+        "rebuilds": 10,
+        "projectionShift": -0.53,
+        "orbit": [
+          3.141592653589793,
+          0.4,
+          11
+        ]
+      }
+    ],
+    "fallback": {
+      "camera": [
+        7.000000000000001,
+        7.358931403637138,
+        66.86832906596827
+      ],
+      "groundClearance": 6.077694996238828,
+      "active": false,
+      "shot": null,
+      "attempts": 15,
+      "rebuilds": 12,
+      "projectionShift": 0,
+      "orbit": [
+        3.141592653589793,
+        0.4,
+        11
+      ],
+      "legalInteractionRetained": true,
+      "extraBlockers": 15,
+      "insideObstacleCount": 0,
+      "containingActualMeshAabbs": 0
+    },
+    "death": {
+      "camera": [
+        7.000000000000001,
+        7.358931403637138,
+        66.86832906596827
+      ],
+      "groundClearance": 6.077694996238828,
+      "active": false,
+      "shot": null,
+      "attempts": 1,
+      "rebuilds": 13,
+      "projectionShift": 0,
+      "orbit": [
+        3.141592653589793,
+        0.4,
+        11
+      ]
+    },
+    "threat": {
+      "camera": [
+        7.000000000000001,
+        7.358931403637138,
+        66.86832906596827
+      ],
+      "groundClearance": 6.077694996238828,
+      "active": false,
+      "shot": null,
+      "attempts": 1,
+      "rebuilds": 14,
+      "projectionShift": 0,
+      "orbit": [
+        3.141592653589793,
+        0.4,
+        11
+      ]
+    },
+    "action": {
+      "camera": [
+        7.000000000000001,
+        7.358931403637138,
+        66.86832906596827
+      ],
+      "groundClearance": 6.077694996238828,
+      "active": false,
+      "shot": null,
+      "attempts": 1,
+      "rebuilds": 15,
+      "projectionShift": 0,
+      "orbit": [
+        3.141592653589793,
+        0.4,
+        11
+      ]
+    },
+    "targetDisappears": {
+      "camera": [
+        12,
+        2.671318042470517,
+        94.60592519203142
+      ],
+      "groundClearance": 2.493095740194006,
+      "active": false,
+      "shot": null,
+      "attempts": 2,
+      "rebuilds": 16,
+      "projectionShift": 0,
+      "orbit": [
+        3.141592653589793,
+        0.4,
+        11
+      ]
+    },
+    "newGame": {
+      "camera": [
+        1.7763568394002505e-15,
+        4.56892069758608,
+        90.86832906596827
+      ],
+      "groundClearance": 2.775491741338385,
+      "active": false,
+      "shot": null,
+      "attempts": 1,
+      "rebuilds": 17,
+      "projectionShift": 0,
+      "orbit": [
+        3.141592653589793,
+        0.4,
+        11
+      ]
+    }
+  }
+}

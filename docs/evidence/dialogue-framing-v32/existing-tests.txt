@@ -1,0 +1,36 @@
+✔ both scene definitions use canonical actor identities for every authored speaker (38.019254ms)
+✔ shared presentation exposes invitations, exactly one current speaker and only already-read history (187.086985ms)
+✔ locked, distant, dead and interrupted scenes do not show a false active speaker (73.718958ms)
+✔ earned mid-conversation saves produce collision-free over-shoulder staging without mutating game state (36.098173ms)
+✔ the gathering panel routes focus to the scene view instead of shadowing it with state (0.618354ms)
+✔ world cues follow moving residents, switch speaker rings and hide after completing or changing saves (1340.749277ms)
+✔ production gathering boundary: hearth-saved-consultation (390x844) (762.228661ms)
+✔ production gathering boundary: road-watch-saved-consultation (390x844) (285.016728ms)
+✔ production gathering boundary: hearth-saved-consultation (844x390) (304.491078ms)
+✔ production gathering boundary: road-watch-saved-consultation (844x390) (344.423085ms)
+✔ production main boundary: launch-input-pause-resume (390x844) (733.554361ms)
+✔ production main boundary: deferred-scene-blur (390x844) (356.69891ms)
+✔ production main boundary: deferred-scene-hidden (390x844) (1828.289481ms)
+✔ production main boundary: deferred-scene-pagehide (390x844) (131.017475ms)
+✔ production main boundary: deferred-title-import (390x844) (141.898448ms)
+✔ production main boundary: title-import-invalid-file-restores-controls (390x844) (28.678126ms)
+✔ production main boundary: active-save-import-and-invalid-file (390x844) (108.249648ms)
+✔ production main boundary: scene-load-failure (390x844) (55.437242ms)
+✔ production main boundary: storage-and-gamepad-failure (390x844) (78.176201ms)
+✔ production main boundary: launch-input-pause-resume (844x390) (125.356516ms)
+✔ production main boundary: deferred-scene-blur (844x390) (66.277722ms)
+✔ production main boundary: deferred-scene-hidden (844x390) (60.905877ms)
+✔ production main boundary: deferred-scene-pagehide (844x390) (56.998487ms)
+✔ production main boundary: deferred-title-import (844x390) (76.424449ms)
+✔ production main boundary: title-import-invalid-file-restores-controls (844x390) (28.42624ms)
+✔ production main boundary: active-save-import-and-invalid-file (844x390) (109.170959ms)
+✔ production main boundary: scene-load-failure (844x390) (57.912424ms)
+✔ production main boundary: storage-and-gamepad-failure (844x390) (94.625894ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4359.814898

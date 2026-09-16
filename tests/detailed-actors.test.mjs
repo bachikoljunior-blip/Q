@@ -87,5 +87,7 @@ test('authored geometry recipe matches provenance and preserves separate third-p
   const p=JSON.parse(await readFile(new URL('../src/assets/characters/detailed-provenance.json',import.meta.url)));
   const source=await readFile(new URL(`../src/assets/characters/${p.recipe.file}`,import.meta.url));
   assert.equal(createHash('sha256').update(source).digest('hex'),p.recipe.sha256);assert.equal(source.length,p.recipe.bytes);
+  const animation=await readFile(new URL(`../src/assets/characters/${p.animationRecipe.file}`,import.meta.url));
+  assert.equal(createHash('sha256').update(animation).digest('hex'),p.animationRecipe.sha256);assert.equal(animation.length,p.animationRecipe.bytes);
   assert.match(p.separateUnmodifiedAssets,/Kay Lousberg CC0/);assert.equal(p.families.length,14);assert.equal(p.wardenThemes.length,4);
 });

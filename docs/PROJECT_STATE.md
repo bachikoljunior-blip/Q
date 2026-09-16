@@ -1,3 +1,13 @@
+# Current continuation — combined dialogue and appearance v32 (2026-09-16)
+
+The combined v32 unit passed 23 required commands and 284 tests in 107.241350 s. Speaker-focused composition, lower readable dialogue, scroll/death/HUD lifecycle repairs, one source-validated NPC face, and physical cloak UVs are recorded in [DIALOGUE_APPEARANCE_V32.md](DIALOGUE_APPEARANCE_V32.md). The same-camera face differences remain small; sampled death cloth distortion has an explicit remaining worsening. No actual screen or PS4 perceptual acceptance is claimed.
+
+PR46 is preserved at remote `fe8e8f83f9cceb2573868621888a315c613df635`, exact tree `462d4a5390edcf854bfca711af927aa91849ba4c`, with both required CI runs successful. PR39 remains open/unmerged and actual main `547676fdce8d8e97abed9f065aad0b6e24af2fd6`; no additional merge mutation after the 03:14Z timeout. Preserve v32 as the next stack unit, then retarget/recheck/normal merge in predecessor order only after real main progress. Site23 remains owner-only and unchanged. `69748211…` names the source main.js file SHA256, not a remote main commit.
+
+The next owned units unify the complete physical arrow and preserve all standalone media bytes with a smaller representation. The latter trades about 0.94 MB for extra decode CPU; it is not yet adopted here. Initial JS164802 B leaves198 B; existing limits remain unchanged. Fixed September20 completion evidence is insufficient: actual whole-screen rendering, real device/touch/listening, target-game comparison and delivery remain unresolved. Q automation is still disabled under the20-task limit despite the stored continuing prompt and no-COUNT hourly schedule. Keep finite substantive production going while these separate acceptance/delivery steps remain blocked.
+
+---
+
 # Active continuation: archery verified and conversation presentation (2026-09-16)
 
 PR45 is preserved at remote `7618ef0c0465ba8f14126d4ce331c94bdef5686d`, exact tree `24ffe49f66d2ddf5c629f2fc1326c472ebf98327`, matching local `fb07441c63cc8e7c985972691eccaed0e1fa50b3` by native fetch and full tree diff. Required push35055252419 and PR35055386978 both succeeded. This is a stack preservation checkpoint, not a main merge or Site publication. The last formal PR39 read remains open/unmerged, actual main `547676fdce8d8e97abed9f065aad0b6e24af2fd6`; no further merge mutation after the bounded03:14Z timeout. Existing owner-only Site23 remains unchanged. After actual predecessor main merge, retarget each following PR to main, recheck required CI and normally merge in sequence; never merge into a feature base.

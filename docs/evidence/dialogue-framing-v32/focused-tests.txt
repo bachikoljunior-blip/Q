@@ -1,0 +1,15 @@
+✔ native paused dialogue preserves save and exact gameplay orbit/projection on return (89.988397ms)
+✔ resize/quality rebuild composition once; death, threat and static blockage restore ordinary camera (411.238816ms)
+✔ disappearing NPC and unready gathering cannot reuse a stale close-up (44.683252ms)
+✔ real main ordinary modal retains focus across interruption, ignores wheel and clears on close/settings (114.283943ms)
+✔ dialogue layout has an opaque scrollable lower reading region and keyboard-reachable disclosure controls (1.046361ms)
+✔ actual gathering next-line and choice replace content at its reading start (66.254861ms)
+✔ actual melee death in the dialogue event batch closes the modal and respawn resumes input (77.306532ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7474.458688

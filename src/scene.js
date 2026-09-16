@@ -1,5 +1,6 @@
 import * as T from 'three';
 import { bakeStaticTransforms } from './static-transforms.js';
+import { DialogueCamera } from './dialogue-camera.js';
 import { gatheringStage } from './gathering-presentation.js';
 import { GatheringScene } from './gathering-scene.js';
 import { ExpeditionScene } from './expedition-scene.js';
@@ -48,7 +49,7 @@ export class SceneView {
     this.canvas=canvas;this.game=game;this.settings=settings;this.scene=new T.Scene();this.scene.background=new T.Color(0x9aacac);this.scene.fog=new T.FogExp2(0x9bacac,.0042);
     this.camera=new T.PerspectiveCamera(54,innerWidth/innerHeight,.1,1100);this.renderer=new T.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});this.renderer.setPixelRatio(Math.min(devicePixelRatio,settings.quality==='high'?1.7:settings.quality==='low'?1:1.35));this.renderer.setSize(innerWidth,innerHeight);this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=.94;this.renderer.shadowMap.enabled=settings.quality!=='low';this.renderer.shadowMap.type=T.PCFSoftShadowMap;
     this.ambient=new T.HemisphereLight(0xb5cbdc,0x48493c,1.1);this.scene.add(this.ambient);this.sun=new T.DirectionalLight(0xffd8a1,3.2);this.sun.position.set(-80,100,-70);this.sun.castShadow=true;this.sun.shadow.mapSize.set(1024,1024);Object.assign(this.sun.shadow.camera,{left:-35,right:35,top:35,bottom:-35,near:1,far:220});this.sun.shadow.bias=-.0003;this.sun.shadow.normalBias=.045;this.scene.add(this.sun,this.sun.target);
-    this.rng=random(WORLD_SEED);this.t=0;this.yaw=.06;this.gatheringFocus=null;this.pitch=.3;this.zoom=9;this.shake=0;this.effects=[];this.enemyModels=new Map();this.beacons=new Map();this.lootModels=new Map();this.sway={value:0};
+    this.rng=random(WORLD_SEED);this.t=0;this.yaw=.06;this.gatheringFocus=null;this.dialogueFocus=null;this.dialogueCamera=new DialogueCamera();this.pitch=.3;this.zoom=9;this.shake=0;this.effects=[];this.enemyModels=new Map();this.beacons=new Map();this.lootModels=new Map();this.sway={value:0};
     bakeGroundContact(game.obstacles);this.createSky();
     for(const method of ['createTerrain','createMountains','createVegetation','createWater'])this.createStaticScenery(method);
     this.createStructures();this.createStaticScenery('createCrossing');this.createParticles();
@@ -61,7 +62,7 @@ export class SceneView {
     this.arrowShafts=new T.InstancedMesh(new T.BoxGeometry(.045,.045,1.1),material(0xbf9256,{emissive:0x362015}),48);const tips=new T.ConeGeometry(.1,.28,5);tips.rotateX(Math.PI/2);tips.translate(0,0,.65);this.arrowTips=new T.InstancedMesh(tips,material(0xe1bc79),48);this.arrowShafts.count=this.arrowTips.count=0;this.scene.add(this.arrowShafts,this.arrowTips);this.arrowDummy=new T.Object3D();
     this.weaponTrails=new WeaponTrails(this.scene);
     if(skySource){try{this.installSkySource(skySource);}catch(error){this.renderer.dispose();throw error;}}
-    this.resize=()=>{this.camera.aspect=innerWidth/innerHeight;this.camera.updateProjectionMatrix();this.renderer.setSize(innerWidth,innerHeight);};addEventListener('resize',this.resize);this.setQuality(settings.quality);
+    this.resize=()=>{this.camera.aspect=innerWidth/innerHeight;this.camera.updateProjectionMatrix();this.dialogueCamera.active=false;this.dialogueCamera.reset();this.cameraSnap=true;this.renderer.setSize(innerWidth,innerHeight);};addEventListener('resize',this.resize);this.setQuality(settings.quality);
   }
   installSkySource(source,makeGenerator){
     // Prepare completely before changing the live sky; failure retains the prior
@@ -155,12 +156,12 @@ export class SceneView {
     this.weaponTrails.update(this.player,p,dt,playing&&!this.gatheringFocus);
     this.motes.position.set(p.x,Math.max(0,p.y),p.z);this.motes.rotation.y=this.t*.005;this.motes.position.y+=Math.sin(this.t*.4);this.clouds.forEach((c,i)=>c.position.x+=dt*(.25+i*.01));
     for(let i=this.effects.length-1;i>=0;i--){const e=this.effects[i];e.life-=dt;if(e.life<=0){this.scene.remove(e.m);e.m.geometry.dispose();e.m.material.dispose();this.effects.splice(i,1);continue;}e.m.material.opacity=e.life/e.total;if(e.vel){const a=e.m.geometry.attributes.position;for(let j=0;j<a.count;j++){e.vel[j*3+1]-=dt*8;a.setXYZ(j,a.getX(j)+e.vel[j*3]*dt,a.getY(j)+e.vel[j*3+1]*dt,a.getZ(j)+e.vel[j*3+2]*dt);}a.needsUpdate=true;}else e.m.scale.setScalar(1+(1-e.life/e.total)*(e.type==='skill'?13:6));}
-    if(playing){const target=gathering?new T.Vector3(gathering.target.x,groundAt(gathering.target.x,gathering.target.z)+1.45,gathering.target.z):new T.Vector3(p.x,p.y+1.6,p.z);const lock=this.game.enemies.find(e=>e.id===this.game.locked);if(!gathering&&lock&&!lock.dead){const yaw=Math.atan2(p.x-lock.x,p.z-lock.z);this.yaw+=Math.atan2(Math.sin(yaw-this.yaw),Math.cos(yaw-this.yaw))*dt*4;target.lerp(new T.Vector3(lock.x,lock.y+1.5,lock.z),.2);}
+    if(playing){const shot=this.dialogueCamera.resolve(this,gathering,innerWidth,innerHeight);if(this.dialogueCamera.active&&!shot)this.cameraSnap=true;this.dialogueCamera.compose(this.camera,!!shot);if(shot){this.camera.position.copy(shot.position);this.camera.lookAt(shot.target);this.cameraSnap=false;}else{const target=gathering?new T.Vector3(gathering.target.x,groundAt(gathering.target.x,gathering.target.z)+1.45,gathering.target.z):new T.Vector3(p.x,p.y+1.6,p.z);const lock=this.game.enemies.find(e=>e.id===this.game.locked);if(!gathering&&lock&&!lock.dead){const yaw=Math.atan2(p.x-lock.x,p.z-lock.z);this.yaw+=Math.atan2(Math.sin(yaw-this.yaw),Math.cos(yaw-this.yaw))*dt*4;target.lerp(new T.Vector3(lock.x,lock.y+1.5,lock.z),.2);}
       const d=this.zoom*(innerHeight>innerWidth?1.12:1);const desired=gathering?new T.Vector3(gathering.camera.x,groundAt(gathering.camera.x,gathering.camera.z)+3.2,gathering.camera.z):new T.Vector3(p.x+Math.sin(this.yaw)*Math.cos(this.pitch)*d,p.y+1.7+Math.sin(this.pitch)*d,p.z+Math.cos(this.yaw)*Math.cos(this.pitch)*d);const fraction=cameraFraction(target,desired,this.game.obstacles,groundAt);desired.lerpVectors(target,desired,fraction);this.camera.position.lerp(desired,this.cameraSnap?1:1-Math.exp(-dt*9));this.cameraSnap=false;const safe=cameraFraction(target,this.camera.position,this.game.obstacles,groundAt);if(safe<1)this.camera.position.lerpVectors(target,this.camera.position,safe);if(this.shake>0){this.shake=Math.max(0,this.shake-dt);this.camera.position.x+=(Math.random()-.5)*this.shake;this.camera.position.y+=(Math.random()-.5)*this.shake;}this.camera.lookAt(target);
-    }else{this.camera.position.set(-15+Math.sin(this.t*.025)*3,22,120);this.camera.lookAt(12,6,-48);}
+    }}else{this.dialogueCamera.compose(this.camera,false);this.camera.position.set(-15+Math.sin(this.t*.025)*3,22,120);this.camera.lookAt(12,6,-48);}
     this.renderer.render(this.scene,this.camera);
   }
-  focusGathering(id){this.gatheringFocus=id;this.snapCamera();}
+  focusGathering(id,npc=null){this.gatheringFocus=id;this.dialogueFocus=npc;this.dialogueCamera.reset();this.snapCamera();}
   ringBell(id){this.village.ring(id);}
   snapCamera(){this.cameraSnap=true;this.shake=0;this.weaponTrails?.reset('camera-boundary');}
   project(x,y,z){const p=new T.Vector3(x,y,z).project(this.camera);return{x:(p.x*.5+.5)*innerWidth,y:(-p.y*.5+.5)*innerHeight,visible:p.z<1&&p.z>-1};}

@@ -1,0 +1,104 @@
+{
+  "sourceHash": "72ed2a3285129a9d79c104b0ec371664e16fbb3bf77f447701e4fa1c626a7d37",
+  "boundary": "Actual compiled main/Game/event handlers; explicit existing DOM/property, SceneView, audio, timer/RAF boundaries. ScrollTop assertion verifies assignment, not real browser scroll layout; native Scene camera separately tested.",
+  "records": {
+    "nextLine": {
+      "scrollTop": 0,
+      "firstClass": "dialogue-speaker"
+    },
+    "choice": {
+      "scrollTop": 0,
+      "phase": "done"
+    },
+    "close": {
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": true,
+      "deathHidden": true,
+      "dt": 0.01666666666666667,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "settings": {
+      "focus": null,
+      "gathering": null,
+      "panelHidden": false,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0.01666666666666667,
+      "active": "close-panel",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "settingsReturn": {
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0.01666666666666667,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "title": {
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0,
+      "active": "close-panel",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "restart": {
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0.016666666666666656,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "import": {
+      "focus": null,
+      "gathering": null,
+      "panelHidden": true,
+      "dialogueClass": false,
+      "deathHidden": true,
+      "dt": 0.016666666666666656,
+      "active": "world",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "death": {
+      "focus": "keeper",
+      "gathering": null,
+      "panelHidden": false,
+      "dialogueClass": true,
+      "deathHidden": false,
+      "dt": 0,
+      "active": "close-panel",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "respawn": {
+      "focus": "keeper",
+      "gathering": null,
+      "panelHidden": false,
+      "dialogueClass": true,
+      "deathHidden": true,
+      "dt": 0,
+      "active": "close-panel",
+      "sceneCalls": 1,
+      "errors": []
+    },
+    "residualAfterDeath": true,
+    "residualAfterRespawn": true
+  }
+}

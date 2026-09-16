@@ -4,6 +4,7 @@ import * as T from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { clone as cloneSkeleton } from 'three/addons/utils/SkeletonUtils.js';
 import { HEAD_ATTRIBUTES, HEAD_INDICES } from './anatomical-head-data.js';
+import { HEAD_ATTRIBUTES as NPC_HEAD_ATTRIBUTES, HEAD_INDICES as NPC_HEAD_INDICES } from './identity-head-data.js';
 import { registerFaceSkin } from '../../skin-materials.js';
 
 export const ACTOR_FAMILIES = Object.freeze(['player','npc','sena','smith','healer','patient','porter','scout','traveler','courier','soldier','ranger','wolf','boss']);
@@ -88,16 +89,17 @@ function tailored(parent,mat,rings,deform,segments=12,fold=0){
   }
   geometry.computeVertexNormals();smoothWrappedNormals(geometry,segments);const result=mesh(parent,geometry,mat);result.userData.deform=deform;return result;
 }
-let anatomicalHead;
-function faceSurface(){
-  if(anatomicalHead)return anatomicalHead;
+const anatomicalHeads=new Map();
+function faceSurface(role){
+  const key=role==='npc'?'npc':'base';
+  if(anatomicalHeads.has(key))return anatomicalHeads.get(key);
   const geometry=new T.BufferGeometry(),positions=[],normals=[],uv=[];
-  for(const v of HEAD_ATTRIBUTES){positions.push(...v.slice(0,3));normals.push(...v.slice(3,6));uv.push(...v.slice(6,8));}
+  for(const v of (key==='npc'?NPC_HEAD_ATTRIBUTES:HEAD_ATTRIBUTES)){positions.push(...v.slice(0,3));normals.push(...v.slice(3,6));uv.push(...v.slice(6,8));}
   geometry.setAttribute('position',new T.Float32BufferAttribute(positions,3));
   geometry.setAttribute('normal',new T.Float32BufferAttribute(normals,3));
-  geometry.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geometry.setIndex(HEAD_INDICES);
+  geometry.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geometry.setIndex(key==='npc'?NPC_HEAD_INDICES:HEAD_INDICES);
   geometry.userData.source='MakeHuman hm08 CC0 registered anatomical head';
-  anatomicalHead=geometry;return geometry;
+  anatomicalHeads.set(key,geometry);return geometry;
 }
 function faceMaterial(skin,role){
   const key=`face/${role}/${skin.color.getHex()}`;
@@ -137,6 +139,25 @@ function cloakGeometry(long=false){
   for(let j=0;j<=h;j++)for(let i=0;i<=w;i++){
     const u=i/w,v=j/h,x=(u-.5)*(.53+v*.4), y=.48-v*length;
     positions.push(x,y,-.205-v*.19+Math.cos(u*Math.PI*8)*(.008+v*.026));uv.push(u,v);
+  }
+  if(!long){
+    // Follow the open cloth's row arcs and mean meridians, so the wider hem
+    // does not stretch the weave. Preserve the old total UV area/density.
+    const rows=[],travel=[0];let area=0;
+    const distance=(a,b)=>Math.hypot(...[0,1,2].map(k=>positions[a*3+k]-positions[b*3+k]));
+    for(let j=0;j<=h;j++){
+      const row=[0],start=j*(w+1);let step=0;
+      for(let i=1;i<=w;i++)row.push(row[i-1]+distance(start+i,start+i-1));
+      if(j){
+        for(let i=0;i<=w;i++)step+=distance(start+i,start+i-w-1)/(w+1);
+        travel.push(travel[j-1]+step);area+=(rows[j-1][w]+row[w])*.5*step;
+      }
+      rows.push(row);
+    }
+    const scale=1/Math.sqrt(area);
+    for(let j=0;j<=h;j++)for(let i=0;i<=w;i++){
+      const index=(j*(w+1)+i)*2;uv[index]=.5+(rows[j][i]-rows[j][w]*.5)*scale;uv[index+1]=travel[j]*scale;
+    }
   }
   for(let j=0;j<h;j++)for(let i=0;i<w;i++){const a=j*(w+1)+i,b=a+w+1;indices.push(a,b,a+1,b,b+1,a+1);}
   const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(positions,3));geo.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geo.setIndex(indices);geo.computeVertexNormals();return geo;
@@ -194,7 +215,7 @@ function makeHuman(type,options){
   }
   const neck=group(chest,'neck',0,.6,0);ellipsoid(neck,m.skin,[0,.018,0],[.08,.12,.078]);
   const head=group(neck,'head',0,.16,0);
-  mesh(head,faceSurface(),faceMaterial(m.skin,type));
+  mesh(head,faceSurface(type),faceMaterial(m.skin,type));
   for(const s of [-1,1]){
     ellipsoid(head,m.eyeWhite,[s*.046,.050,.100],[.022,.008,.010]);
     ellipsoid(head,m.eye,[s*.046,.050,.109],[.008,.008,.003]);

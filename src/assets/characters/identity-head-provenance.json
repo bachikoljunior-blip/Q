@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "asset": "identity-head-data.js",
+  "origin": "Authored Mira face: official CC0 hm08 head-oval and nasal-width offsets registered with Q boundary protection, followed by source-aware endpoint LOD. No demographic inference or likeness.",
+  "source": {
+    "file": "sources/makehuman-hm08.obj",
+    "url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/3dobjs/base.obj",
+    "bytes": 1749303,
+    "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+    "license": "CC0-1.0",
+    "licenseFile": "sources/MAKEHUMAN-LICENSE-ASSETS.md"
+  },
+  "generator": "scripts/characters/generate-identity-head.py",
+  "generatorSha256": "b939ffa0d10237353722e094fb3400100d98dbf3680c026f28509802bd4f9d10",
+  "outputBytes": 126806,
+  "outputSha256": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe",
+  "registrationAnchors": [
+    [
+      [
+        -0.8793,
+        -0.30775,
+        0,
+        0.30775,
+        0.8793
+      ],
+      [
+        -0.142,
+        -0.046,
+        0,
+        0.046,
+        0.142
+      ]
+    ],
+    [
+      [
+        6.1555,
+        7.28415,
+        8.4913
+      ],
+      [
+        -0.116,
+        0.05,
+        0.198
+      ]
+    ],
+    [
+      [
+        -0.3916,
+        1.24535,
+        1.6807
+      ],
+      [
+        -0.112,
+        0.1,
+        0.1431492567062378
+      ]
+    ]
+  ],
+  "sourceHead": {
+    "quads": 4220,
+    "triangles": 8440,
+    "vertices": 4244,
+    "neckBoundary": 46
+  },
+  "lod": {
+    "surfaceTriangles": 1600,
+    "capTriangles": 46,
+    "totalTriangles": 1646,
+    "renderVertices": 1062,
+    "collapses": 3420,
+    "lockedVertices": 408,
+    "protectedGroups": {
+      "nose_ridges": 38,
+      "lip_contours": 40,
+      "ear_ridges": 15,
+      "front_side_silhouette": 108,
+      "extrema": 6
+    },
+    "uvIslandCount": 5,
+    "uvLayout": "Original OBJ corner UV coordinates; no atlas repack",
+    "uvSeamVertices": 187,
+    "sourceVertexDistanceM": {
+      "max": 0.005740433286837678,
+      "p95": 0.0019397795067136057,
+      "mean": 0.0006071656619396192,
+      "samples": 4244,
+      "boundary": "Exact distances from all registered AND collar-fitted source vertices to LOD triangles. Registration/collar deformation of original MakeHuman is separate; not a continuous Hausdorff bound or perceptual proof."
+    }
+  },
+  "uvIntegrity": {
+    "sourceTriangleSigns": {
+      "positive": 8440,
+      "negative": 0,
+      "zero": 0
+    },
+    "sourceAbsoluteArea": 0.2086042268575,
+    "retainedTriangleSigns": {
+      "positive": 1600,
+      "negative": 0
+    },
+    "retainedAbsoluteArea": 0.208591453018,
+    "newOrientationReversals": 0,
+    "cap": {
+      "sourceUV": false,
+      "method": "Small planar XZ patch at mean source neck-boundary UV; hidden under retained neck",
+      "centre": [
+        0.38053029787234055,
+        0.9285537021276593
+      ],
+      "radiusScale": 0.001
+    }
+  },
+  "normalStrategy": {
+    "method": "Registered source smooth normals at retained source IDs if they face every surviving incident triangle; final mesh normals at neck cap or sharp folds.",
+    "sourceNormalsTransferred": 744
+  },
+  "normalComparison": {
+    "samples": 778,
+    "meanDegrees": 1.1231580323605437,
+    "p95Degrees": 1.4787793334710982e-06,
+    "maxDegrees": 60.0272753205157,
+    "boundary": "Same retained source vertex smooth normals; excludes capped neck boundary. Not a rendered shading test."
+  },
+  "candidateCentroidToSourceDistanceM": {
+    "samples": 1600,
+    "max": 0.0038671648167135646,
+    "p95": 0.001851710323062702
+  },
+  "archivedUnappliedSources": [
+    {
+      "file": "sources/head-age-incr.target",
+      "bytes": 59255,
+      "sha256": "ff677345bd81e3f439bdf75496bbee620ca3c3f029955a546837afd283abf73a"
+    },
+    {
+      "file": "sources/MAKEHUMAN-LICENSE-ASSETS.md",
+      "bytes": 6962,
+      "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c"
+    }
+  ],
+  "texture": {
+    "status": "not included in this unit",
+    "expectedSourceDiffuseBytes": 3693828,
+    "observedBytes": null,
+    "reason": "Original diffuse independently retrieved and verified in separate research scratch; no PNG is included or sampled by this unit. Existing flat skin material retained."
+  },
+  "morphsApplied": [
+    {
+      "source": "sources/head-oval.target",
+      "coefficient": 1.1
+    },
+    {
+      "source": "sources/nose-scale-horiz-incr.target",
+      "coefficient": 0.7
+    }
+  ],
+  "qualityBoundary": "CPU topology, source-vertex distance, normals and projected footprint do not establish rendered appearance, device performance, anatomical likeness or PS4 quality.",
+  "registrationRecipe": {
+    "file": "scripts/characters/generate-anatomical-head.py",
+    "sha256": "8bf8805f3f7a173198e9bf17edc60c2f31041a496e3a0abec445618c3165b85f"
+  },
+  "morphRecipe": {
+    "file": "scripts/characters/generate-face-identities.py",
+    "sha256": "a1427f36069809ebda5747a9ac095530951e7595ac9a1c2186cf01dffee23a07"
+  },
+  "morphSources": [
+    {
+      "file": "sources/head-oval.target",
+      "url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/targets/head/head-oval.target",
+      "bytes": 36452,
+      "sha256": "a17cd3a600588a344babe520fbd4d4edcb096db3328051fe692dfb997a1a678d",
+      "gitBlobSha1": "66d8131706f7a95b763171c336801a76710f2971",
+      "license": "CC0-1.0",
+      "sourceRows": 2143,
+      "compiledRows": 161,
+      "maxPositionDeltaM": 0.0074866044658900895
+    },
+    {
+      "file": "sources/nose-scale-horiz-incr.target",
+      "url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/targets/nose/nose-scale-horiz-incr.target",
+      "bytes": 7568,
+      "sha256": "cc319e3ddb0523fa2b563dcfc840cf2f915a890abe5612009a0becebecd3c5ae",
+      "gitBlobSha1": "abc36f4e9813600c89414fd64edcab332332c753",
+      "license": "CC0-1.0",
+      "sourceRows": 494,
+      "compiledRows": 66,
+      "maxPositionDeltaM": 0.00510671857123959
+    },
+    {
+      "file": "sources/chin-width-incr.target",
+      "url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/targets/chin/chin-width-incr.target",
+      "bytes": 3706,
+      "sha256": "deef506bfe1883d9d4c38667332c9970785226566efbae4724fd3d60c02efcf4",
+      "gitBlobSha1": "ce13cc1c443cf705c5ef50ac6360a73801315fd7",
+      "license": "CC0-1.0",
+      "sourceRows": 198,
+      "compiledRows": 38,
+      "maxPositionDeltaM": 0.013879702280244167
+    }
+  ],
+  "application": {
+    "basisOrder": [
+      "head-oval",
+      "nose-scale-horiz-incr",
+      "chin-width-incr"
+    ],
+    "positionQuantizationM": 1e-06,
+    "normalQuantization": 1e-05,
+    "method": "Blend boundary-protected registered original target offsets on the full source BEFORE endpoint QEM; reselect vertices, retain original UV corners, and regenerate smooth source/LOD fallback normals. Runtime receives the compiled geometry, not basis-normal interpolation.",
+    "protectedSourceVertices": 2338,
+    "protection": "All original inner-eye/mouth/collar surfaces, y<=-0.105, y>=0.085, abs(x)>=0.115, z<=0.015 fixed; smoothstep over 0.012m distance to protected vertices, multiplied by continuous boundary fades: lateral 0.025m, depth/top 0.04m, bottom 0.03m. All positions in registered head-local metres. UV seam instances get identical position offsets.",
+    "unchanged": "Original UV coordinates and all source seam corners, all existing bones, eye/lid/neck/clothing/material/motion contracts. Only npc uses this source-aware LOD."
+  },
+  "role": "npc",
+  "passesSourceDistanceGate": true
+}

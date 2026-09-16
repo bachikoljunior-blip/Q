@@ -1,0 +1,47 @@
+{
+  "boundary": "Same npc root, idle pose and actor-centred ordinary camera; common original source-vertex IDs only. New LOD vertices are excluded from point-pair displacement; no occlusion/raster/pixel identity judgment. NPC is not a gathering cast member and solo dialogue does not change camera distance.",
+  "hashes": {
+    "anatomical-head-data.js": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
+    "identity-head-data.js": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe"
+  },
+  "samples": [
+    {
+      "viewportCSS": [
+        390,
+        844
+      ],
+      "camera": [
+        0.5774408985136952,
+        4.678843683146303,
+        9.612463384591022
+      ],
+      "target": [
+        0,
+        1.6,
+        0
+      ],
+      "commonSourceVertices": 725,
+      "maxDisplacementCSSpx": 0.6794018753625312,
+      "rmsDisplacementCSSpx": 0.06497005846670816
+    },
+    {
+      "viewportCSS": [
+        844,
+        390
+      ],
+      "camera": [
+        0.5155722308157992,
+        4.3596818599520555,
+        8.58255659338484
+      ],
+      "target": [
+        0,
+        1.6,
+        0
+      ],
+      "commonSourceVertices": 725,
+      "maxDisplacementCSSpx": 0.35178750109371026,
+      "rmsDisplacementCSSpx": 0.033652939217378344
+    }
+  ]
+}

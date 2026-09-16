@@ -1,0 +1,572 @@
+{
+  "boundary": "Actual production Three.js skin/ray/camera math on host Node only; no rendering or GPU/identity acceptance",
+  "hashes": {
+    "src/assets/characters/detailed-geometry.js": "2166a6d7f38f64085ad6f4da7d74d9fba304e551846e34cac4a8059fe6d284cd",
+    "src/assets/characters/face-identity-data.js": "202f0b2c942fe4efb12652f9ae1685fc79c65bf5bb00532c5249556be295ea73",
+    "src/actor-models.js": "d299e3d02b0fca392b3e22eb9b7753133d7413d452403e482ee86b76337f7ff7",
+    "src/character-motion.js": "4569b9fa69da7f5894c102acc9e7586f4b40f37b3a22bcafb04b1a0169ea3924",
+    "src/skin-materials.js": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63"
+  },
+  "roles": [
+    {
+      "role": "player",
+      "triangles": 7822,
+      "draws": 14,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601772100196e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 2,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "b3947b"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "b3947b"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "b3947b"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "b3947b"
+            }
+          ]
+        }
+      ],
+      "projection": []
+    },
+    {
+      "role": "npc",
+      "triangles": 6618,
+      "draws": 12,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601772100196e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 2,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "ab8770"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "ab8770"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "ab8770"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "ab8770"
+            }
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "distanceM": 10.080000000000002,
+          "maxDisplacementCSSpx": 0.33970617570354433,
+          "rmsDisplacementCSSpx": 0.034074455170429355,
+          "changedProjectedVertices": 116,
+          "occlusionTested": false
+        },
+        {
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "distanceM": 9,
+          "maxDisplacementCSSpx": 0.17589646658989622,
+          "rmsDisplacementCSSpx": 0.017651635699821117,
+          "changedProjectedVertices": 116,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "sena",
+      "triangles": 6786,
+      "draws": 12,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601772100196e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 2,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "b18e79"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "b18e79"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "b18e79"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "b18e79"
+            }
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "distanceM": 10.080000000000002,
+          "maxDisplacementCSSpx": 0.17505813273378146,
+          "rmsDisplacementCSSpx": 0.015977766011293335,
+          "changedProjectedVertices": 78,
+          "occlusionTested": false
+        },
+        {
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "distanceM": 9,
+          "maxDisplacementCSSpx": 0.09067496377679797,
+          "rmsDisplacementCSSpx": 0.008275841349228163,
+          "changedProjectedVertices": 78,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "smith",
+      "triangles": 6242,
+      "draws": 11,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601772100196e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 2,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "98765d"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "98765d"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "98765d"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "98765d"
+            }
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "distanceM": 10.080000000000002,
+          "maxDisplacementCSSpx": 0.3607169973160076,
+          "rmsDisplacementCSSpx": 0.03377390538361239,
+          "changedProjectedVertices": 68,
+          "occlusionTested": false
+        },
+        {
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "distanceM": 9,
+          "maxDisplacementCSSpx": 0.18684667187131665,
+          "rmsDisplacementCSSpx": 0.01750485648752276,
+          "changedProjectedVertices": 68,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "healer",
+      "triangles": 7038,
+      "draws": 11,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601772100196e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 10,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 2,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "bc9a81"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "bc9a81"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "cloth": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q skin",
+              "color": "bc9a81"
+            },
+            {
+              "side": 1,
+              "material": "Q skin",
+              "color": "bc9a81"
+            }
+          ]
+        }
+      ],
+      "projection": [
+        {
+          "viewportCSS": [
+            390,
+            844
+          ],
+          "distanceM": 10.080000000000002,
+          "maxDisplacementCSSpx": 0.4632358062641287,
+          "rmsDisplacementCSSpx": 0.04059538695939179,
+          "changedProjectedVertices": 66,
+          "occlusionTested": false
+        },
+        {
+          "viewportCSS": [
+            844,
+            390
+          ],
+          "distanceM": 9,
+          "maxDisplacementCSSpx": 0.23985887463102548,
+          "rmsDisplacementCSSpx": 0.021025189070381187,
+          "changedProjectedVertices": 66,
+          "occlusionTested": false
+        }
+      ]
+    },
+    {
+      "role": "patient",
+      "triangles": 6270,
+      "draws": 10,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601794329014e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [],
+      "projection": []
+    },
+    {
+      "role": "porter",
+      "triangles": 6450,
+      "draws": 10,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.04860181646776e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [],
+      "projection": []
+    },
+    {
+      "role": "scout",
+      "triangles": 6798,
+      "draws": 11,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601772100196e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [],
+      "projection": []
+    },
+    {
+      "role": "traveler",
+      "triangles": 6578,
+      "draws": 10,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601772100196e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [],
+      "projection": []
+    },
+    {
+      "role": "courier",
+      "triangles": 6398,
+      "draws": 10,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.04860181646776e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [],
+      "projection": []
+    },
+    {
+      "role": "soldier",
+      "triangles": 7454,
+      "draws": 13,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601772100196e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [],
+      "projection": []
+    },
+    {
+      "role": "ranger",
+      "triangles": 7078,
+      "draws": 12,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601772100196e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [],
+      "projection": []
+    },
+    {
+      "role": "boss",
+      "triangles": 7950,
+      "draws": 14,
+      "palettes": 1,
+      "vertices": 1012,
+      "trianglesUnchanged": true,
+      "maxRuntimePositionErrorM": 6.048601838724347e-8,
+      "maxRuntimeUVFloatError": 2.9766082709770103e-8,
+      "headWeightErrors": 0,
+      "cloneSharesGeometry": true,
+      "cloneIndependentSkeleton": true,
+      "faceMapInitially": null,
+      "eyes": [],
+      "projection": []
+    }
+  ]
+}
