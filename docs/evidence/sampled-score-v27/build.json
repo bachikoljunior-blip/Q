@@ -1,0 +1,37 @@
+{
+  "entryBytes": 163175,
+  "entryBudget": 165000,
+  "jsChunkCount": 3,
+  "chunkScope": "Current Vite manifest referenced output; unrelated prior build files excluded",
+  "runtimeAudio": [
+    {
+      "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+      "output": "assets/pilgrim-harmony-LSIdyu7z.mp3",
+      "bytes": 288594,
+      "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-motif.mp3",
+      "output": "assets/pilgrim-motif-yb4axZNo.mp3",
+      "bytes": 192463,
+      "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+      "output": "assets/pilgrim-pulse-BJS9Fs4r.mp3",
+      "bytes": 192463,
+      "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13"
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-foley.wav",
+      "output": "assets/pilgrim-foley-CW54U_6w.wav",
+      "bytes": 826370,
+      "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+    }
+  ],
+  "rawSampleInputsBundled": false,
+  "packageRun": false,
+  "publicationRun": false,
+  "audioModuleSha256": "a990f34b9d94023e3bb1655c7dbec5d36b484399aa82fd1cdc827e48e7674027",
+  "audioModuleChange": "provenance comment only; executable code unchanged"
+}

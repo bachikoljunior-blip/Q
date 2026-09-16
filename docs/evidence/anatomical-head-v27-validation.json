@@ -1,0 +1,79 @@
+{
+  "baseCommit": "fb70ddddf8df261851b66b5e29b32ac723818ff1",
+  "worktreeCreatedUTC": "2026-09-16T02:29:45.495310+00:00",
+  "buildMeasuredUTC": "2026-09-16T02:47:41.466638+00:00",
+  "build": {
+    "jsChunks": {
+      "index-DaGzODbI.js": 163175,
+      "scene-BLdsFNFE.js": 207112,
+      "three-DOXJ27mn.js": 573112
+    },
+    "initialJSBytes": 163175,
+    "initialJSBudget": 165000,
+    "fullOriginalSourcesEmitted": false,
+    "modules": 84,
+    "buildWallSeconds": 8.12,
+    "staleOwnPreviousBuildChunksRemoved": 2,
+    "boundary": "Production build structure/bytes only; not a measured device performance result"
+  },
+  "tests": {
+    "command": "npm test",
+    "passed": 247,
+    "failed": 0,
+    "durationMs": 43201.794921,
+    "newFocusedTests": 5
+  },
+  "sourceAcquisition": {
+    "unit": "Inputs acquired in prior read-only source research; exact byte copies used in this unit. No skin transfer restarted.",
+    "makehumanOBJBytes": 1749303,
+    "skinPNGVerified": false
+  },
+  "lodIterations": [
+    {
+      "phase": "initial broad feature locking",
+      "elapsedGeneratorSeconds": 9.391,
+      "maximumSourceVertexDistanceM": 0.022363194721229412,
+      "outcome": "rejected; too much visible shape loss"
+    },
+    {
+      "phase": "visible ridges and front/side silhouette locking",
+      "elapsedGeneratorSeconds": 11.514,
+      "maximumSourceVertexDistanceM": 0.006339874135705211,
+      "outcome": "bounded candidate; later neck posture failure required rework"
+    },
+    {
+      "phase": "source distance and normal audit",
+      "elapsedGeneratorSeconds": 17.809
+    },
+    {
+      "phase": "independent neck posture correction",
+      "elapsedGeneratorSeconds": 16.421
+    },
+    {
+      "phase": "safe source-normal transfer",
+      "elapsedGeneratorSeconds": 17.447
+    },
+    {
+      "phase": "final provenance wording and generator replay",
+      "elapsedGeneratorSeconds": 22.406
+    }
+  ],
+  "independentRework": [
+    {
+      "issue": "sealed head pitch exposed lower neck rim",
+      "beforeMaxNormalizedNeckRadiusSquared": 1.290352,
+      "afterMaxNormalizedNeckRadiusSquared": 0.662451,
+      "fix": "Only last46rim vertices tucked into existing neck; bones and motion unchanged"
+    },
+    {
+      "issue": "moss theme actual actor exceeded8000 triangle budget",
+      "beforeTriangles": 8208,
+      "afterTriangles": 7948,
+      "fix": "Five small moss adornments use48triangle surfaces with prior bounds; head unchanged"
+    }
+  ],
+  "qualityBoundary": "Registered and collar-fitted source geometry is the reference for LOD distances. That does not quantify registration change from the original human, establish likeness, or claim PS4 quality. CPU ray and projected-size checks are not game screenshots.",
+  "unitFrozenUTC": "2026-09-16T02:50:13.468698+00:00",
+  "measuredWallSecondsFromWorktreeCreation": 1227.973388,
+  "timingBoundary": "Wall includes implementation, rework, verification and report preparation; source download occurred in preceding research and is not included. Generator runs are measured separately."
+}

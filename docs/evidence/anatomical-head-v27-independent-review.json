@@ -1,0 +1,140 @@
+{
+  "completedAtUTC": "2026-09-16T02:47:56.234116+00:00",
+  "baseCommit": "fb70ddddf8df261851b66b5e29b32ac723818ff1",
+  "boundary": "Host Node production Three.js transforms, skin rays and CPU asset topology. No browser, WebGL, actual game pixels, device performance, anatomy likeness or PS4 acceptance.",
+  "sourceHashes": {
+    "src/actor-models.js": "d299e3d02b0fca392b3e22eb9b7753133d7413d452403e482ee86b76337f7ff7",
+    "src/character-motion.js": "4569b9fa69da7f5894c102acc9e7586f4b40f37b3a22bcafb04b1a0169ea3924",
+    "src/rigged-actor.js": "a43871c112863d6193406b40700a2c2b44be00348f1253f57b5087b3eea3a2bd",
+    "src/assets/characters/detailed-geometry.js": "38635124d5ff5fa6f6ce21c659ed777b64a7f2d5b0122cee5b1e478e74ccd5a2",
+    "src/assets/characters/detailed-provenance.json": "c12b40bc702ea49717bf42f0abd2948d36b3f5eb22eba07d9e9e8e3baf1d04f1",
+    "src/assets/characters/anatomical-head-data.js": "9a8bb68a01f52f52eba6849c8dd34202b9e4d8d8e93d1987f3ee2e1541fe2118",
+    "src/assets/characters/anatomical-head-provenance.json": "a47e97c89086816a725da6e1a986376d3910f50c5e69ec8bf9c6540a7d2ade21",
+    "scripts/characters/generate-anatomical-head.py": "e776910c846ce1b77b33d2722dcb7e907248ac3bc9e3a75dd33e7d567774c6aa",
+    "tests/detailed-actors.test.mjs": "0c4e4b88cdda1ab4b9c9cb842fa01887648340213c385adde2dc87cce0ac8088",
+    "tests/actor-contact-regression.test.mjs": "e773f5a991183d21a166db9f69df76e46d271fb83df8ea0fe75ed44d79340941",
+    "tests/actor-attack-regression.test.mjs": "19682199c3382c958d38dd4c0468a28928fce243216e3f66c957d6b7c24914e7",
+    "tests/anatomical-head.test.mjs": "59a33a641483607ac26e44b825548ecf2b772fb6ff567af010a8a224860635bc"
+  },
+  "auditedSourceUnchanged": true,
+  "existingMotionSourceAndTestsUnchanged": true,
+  "tests": {
+    "command": "node --test tests/detailed-actors.test.mjs tests/actor-contact-regression.test.mjs tests/actor-attack-regression.test.mjs tests/anatomical-head.test.mjs",
+    "pass": 24,
+    "fail": 0,
+    "reportedDurationMs": 12307.039635,
+    "originalTests": 19,
+    "newTests": 5
+  },
+  "resolvedFindings": [
+    {
+      "issue": "Cut neck rim exposed under sealed head pitch +.18",
+      "beforeMaxEllipsoidNormSquared": 1.2903517689533,
+      "afterMaxEllipsoidNormSquared": 0.6624512574302128,
+      "correction": "Inward fold of lowest 46 source neck boundary points; unchanged head/neck bones and motion."
+    },
+    {
+      "issue": "Moss guardian exceeds existing 8000 triangle gate",
+      "beforeTriangles": 8208,
+      "afterTriangles": 7948,
+      "correction": "Five chest decor ellipsoids only reduced tessellation; extent preserved."
+    }
+  ],
+  "replay": {
+    "boundary": "Offline CPU deterministic replay; isolated output paths only; no renderer.",
+    "dataByteIdentical": true,
+    "outputSha256": "9a8bb68a01f52f52eba6849c8dd34202b9e4d8d8e93d1987f3ee2e1541fe2118",
+    "sourceVertexDistanceIdentical": true,
+    "candidateCentroidToSourceDistanceM": {
+      "samples": 1450,
+      "max": 0.004655737832463404,
+      "p95": 0.002008535426981492
+    },
+    "normalComparison": {
+      "samples": 703,
+      "meanDegrees": 1.4152367263330408,
+      "p95Degrees": 6.494678552502683,
+      "maxDegrees": 60.0272753205157,
+      "boundary": "Same retained source vertex smooth normals; excludes capped neck boundary. Not a rendered shading test."
+    },
+    "lod": {
+      "surfaceTriangles": 1450,
+      "capTriangles": 46,
+      "totalTriangles": 1496,
+      "renderVertices": 938,
+      "collapses": 3495,
+      "lockedVertices": 375,
+      "protectedGroups": {
+        "nose_ridges": 38,
+        "lip_contours": 40,
+        "ear_ridges": 15,
+        "front_side_silhouette": 108,
+        "extrema": 6
+      },
+      "uvIslandCount": 5,
+      "atlasRectangles": [
+        [
+          0.02,
+          0.02,
+          0.66,
+          0.96
+        ],
+        [
+          0.71,
+          0.02,
+          0.27,
+          0.19
+        ],
+        [
+          0.71,
+          0.26,
+          0.12,
+          0.18
+        ],
+        [
+          0.86,
+          0.26,
+          0.12,
+          0.18
+        ],
+        [
+          0.71,
+          0.5,
+          0.27,
+          0.15
+        ]
+      ],
+      "sourceVertexDistanceM": {
+        "max": 0.0070628691242974485,
+        "p95": 0.002031412580309757,
+        "mean": 0.0006864692129858296,
+        "samples": 4244,
+        "boundary": "Exact distances from all registered AND collar-fitted source vertices to LOD triangles. Registration/collar deformation of original MakeHuman is separate; not a continuous Hausdorff bound or perceptual proof."
+      }
+    }
+  },
+  "eyes": {
+    "centralIrisBothVisibleFor": [
+      "npc",
+      "player",
+      "ranger",
+      "soldier",
+      "boss"
+    ],
+    "gridEyeHitsAtQuarterClosure": [
+      10,
+      8,
+      2,
+      2,
+      0
+    ],
+    "qualification": "The central rays hit the actual iris material on both sides; eye-grid counts alone do not establish a natural socket rim or facial appearance."
+  },
+  "remainingBoundaries": [
+    "No verified skin diffuse PNG; face retains flat skin color and procedural microstructure.",
+    "Same rigid head shape across human roles; two rigid eyelid bones, no face muscle blend shapes.",
+    "Source distance is from registered AND collar-fitted source vertices; not raw source likeness, continuous Hausdorff bound, or perceptual acceptance.",
+    "46 cap UV triangles are intentionally zero area, hidden inside neck; a future texture must respect five repacked UV islands.",
+    "Helmet/hood opening, eye rims, hair/skin material seam and expression require genuine rendered review; no visual acceptance inferred."
+  ]
+}

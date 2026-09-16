@@ -1,0 +1,73 @@
+{
+  "boundary": "Offline CPU deterministic replay; isolated output paths only; no renderer.",
+  "dataByteIdentical": true,
+  "outputSha256": "9a8bb68a01f52f52eba6849c8dd34202b9e4d8d8e93d1987f3ee2e1541fe2118",
+  "sourceVertexDistanceIdentical": true,
+  "candidateCentroidToSourceDistanceM": {
+    "samples": 1450,
+    "max": 0.004655737832463404,
+    "p95": 0.002008535426981492
+  },
+  "normalComparison": {
+    "samples": 703,
+    "meanDegrees": 1.4152367263330408,
+    "p95Degrees": 6.494678552502683,
+    "maxDegrees": 60.0272753205157,
+    "boundary": "Same retained source vertex smooth normals; excludes capped neck boundary. Not a rendered shading test."
+  },
+  "lod": {
+    "surfaceTriangles": 1450,
+    "capTriangles": 46,
+    "totalTriangles": 1496,
+    "renderVertices": 938,
+    "collapses": 3495,
+    "lockedVertices": 375,
+    "protectedGroups": {
+      "nose_ridges": 38,
+      "lip_contours": 40,
+      "ear_ridges": 15,
+      "front_side_silhouette": 108,
+      "extrema": 6
+    },
+    "uvIslandCount": 5,
+    "atlasRectangles": [
+      [
+        0.02,
+        0.02,
+        0.66,
+        0.96
+      ],
+      [
+        0.71,
+        0.02,
+        0.27,
+        0.19
+      ],
+      [
+        0.71,
+        0.26,
+        0.12,
+        0.18
+      ],
+      [
+        0.86,
+        0.26,
+        0.12,
+        0.18
+      ],
+      [
+        0.71,
+        0.5,
+        0.27,
+        0.15
+      ]
+    ],
+    "sourceVertexDistanceM": {
+      "max": 0.0070628691242974485,
+      "p95": 0.002031412580309757,
+      "mean": 0.0006864692129858296,
+      "samples": 4244,
+      "boundary": "Exact distances from all registered AND collar-fitted source vertices to LOD triangles. Registration/collar deformation of original MakeHuman is separate; not a continuous Hausdorff bound or perceptual proof."
+    }
+  }
+}

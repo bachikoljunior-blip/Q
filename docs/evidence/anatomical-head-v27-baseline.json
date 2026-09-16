@@ -1,0 +1,1630 @@
+{
+  "conditions": {
+    "boundary": "Actual CPU skin, ray and perspective calculations only; no pixels/WebGL/GPU/device or PS4 acceptance",
+    "rootPosition": [
+      0,
+      0,
+      0
+    ],
+    "rootYaw": 0,
+    "viewportsCSS": [
+      [
+        390,
+        844
+      ],
+      [
+        844,
+        390
+      ]
+    ],
+    "cameraFovDegrees": 54,
+    "cameraYaw": 0.06,
+    "cameraPitch": 0.3
+  },
+  "sourceHashes": {
+    "src/actor-models.js": "d299e3d02b0fca392b3e22eb9b7753133d7413d452403e482ee86b76337f7ff7",
+    "src/character-motion.js": "4569b9fa69da7f5894c102acc9e7586f4b40f37b3a22bcafb04b1a0169ea3924",
+    "src/assets/characters/detailed-geometry.js": "ac0fbfee1f3361e8be329df980dc60db8a8eec1d6b0dcf883c396cff79f9993e"
+  },
+  "roles": [
+    {
+      "family": "player",
+      "triangles": 7268,
+      "visibleMeshBatches": 13,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "2c555b"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.33662721523166,
+          "height": 25.3309216998623,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.08038962377043,
+          "height": 13.115767610962848,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "npc",
+      "triangles": 6064,
+      "visibleMeshBatches": 11,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 18,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 10,
+          "skin": 8,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.33662721523166,
+          "height": 25.3309216998623,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.08038962377043,
+          "height": 13.115767610962848,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "sena",
+      "triangles": 6232,
+      "visibleMeshBatches": 11,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 18,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 10,
+          "skin": 8,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.33662721523166,
+          "height": 25.3309216998623,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.08038962377043,
+          "height": 13.115767610962848,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "smith",
+      "triangles": 5688,
+      "visibleMeshBatches": 10,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 18,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 10,
+          "skin": 8,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.33662721523166,
+          "height": 25.3309216998623,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.08038962377043,
+          "height": 13.115767610962848,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "healer",
+      "triangles": 6484,
+      "visibleMeshBatches": 10,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 18,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 10,
+          "skin": 8,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.33662721523166,
+          "height": 25.3309216998623,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.08038962377043,
+          "height": 13.115767610962848,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "patient",
+      "triangles": 5716,
+      "visibleMeshBatches": 9,
+      "bones": 40,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 18,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 10,
+          "skin": 8,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 22.70325895976859,
+          "height": 24.308243789237963,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 11.756590612198067,
+          "height": 12.590759331382174,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "porter",
+      "triangles": 5896,
+      "visibleMeshBatches": 9,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 18,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 10,
+          "skin": 8,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.446318225693574,
+          "height": 25.126092242432378,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.144010037791759,
+          "height": 13.01868725438959,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "scout",
+      "triangles": 6244,
+      "visibleMeshBatches": 10,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "4e6655"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.33662721523166,
+          "height": 25.3309216998623,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.08038962377043,
+          "height": 13.115767610962848,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "traveler",
+      "triangles": 6024,
+      "visibleMeshBatches": 9,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 18,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 10,
+          "skin": 8,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.33662721523166,
+          "height": 25.3309216998623,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.08038962377043,
+          "height": 13.115767610962848,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "courier",
+      "triangles": 5844,
+      "visibleMeshBatches": 9,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 18,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 10,
+          "skin": 8,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 14,
+          "skin": 4,
+          "cloth": 0,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q eye",
+              "color": "372f25"
+            },
+            {
+              "side": 1,
+              "material": "Q eye",
+              "color": "372f25"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.446318225693574,
+          "height": 25.126092242432378,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.144010037791759,
+          "height": 13.01868725438959,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "soldier",
+      "triangles": 6900,
+      "visibleMeshBatches": 12,
+      "bones": 41,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "626f75"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "626f75"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "626f75"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "626f75"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "626f75"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "626f75"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "626f75"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "626f75"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "626f75"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "626f75"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.33662721523166,
+          "height": 25.3309216998623,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.08038962377043,
+          "height": 13.115767610962848,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "ranger",
+      "triangles": 6524,
+      "visibleMeshBatches": 11,
+      "bones": 44,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "67654b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "67654b"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "67654b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "67654b"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "67654b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "67654b"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "67654b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "67654b"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 18,
+          "metal": 0,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q cloth",
+              "color": "67654b"
+            },
+            {
+              "side": 1,
+              "material": "Q cloth",
+              "color": "67654b"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 23.33662721523166,
+          "height": 25.3309216998623,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 12.08038962377043,
+          "height": 13.115767610962848,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    },
+    {
+      "family": "boss",
+      "triangles": 7396,
+      "visibleMeshBatches": 13,
+      "bones": 42,
+      "eyes": [
+        {
+          "closure": 0,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "414e56"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "414e56"
+            }
+          ]
+        },
+        {
+          "closure": 0.25,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "414e56"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "414e56"
+            }
+          ]
+        },
+        {
+          "closure": 0.5,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "414e56"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "414e56"
+            }
+          ]
+        },
+        {
+          "closure": 0.75,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "414e56"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "414e56"
+            }
+          ]
+        },
+        {
+          "closure": 1,
+          "eye": 0,
+          "skin": 0,
+          "cloth": 0,
+          "metal": 18,
+          "centres": [
+            {
+              "side": -1,
+              "material": "Q metal",
+              "color": "414e56"
+            },
+            {
+              "side": 1,
+              "material": "Q metal",
+              "color": "414e56"
+            }
+          ]
+        }
+      ],
+      "headSkinProjectionCSS": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 57.66972353166565,
+          "height": 65.79597266372082,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "width": 30.13172646799933,
+          "height": 34.72229520181783,
+          "note": "skin head vertices including ears/collar; no occlusion. Same camera; boss retains its existing root scale."
+        }
+      ]
+    }
+  ]
+}

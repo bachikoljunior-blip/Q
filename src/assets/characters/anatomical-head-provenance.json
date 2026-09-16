@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "asset": "anatomical-head-data.js",
+  "origin": "Artist-authored MakeHuman hm08 CC0 graphical base mesh; Q head-only registered, feature-locked LOD derivative. Not a scan, photograph or mocap.",
+  "source": {
+    "file": "sources/makehuman-hm08.obj",
+    "url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/3dobjs/base.obj",
+    "bytes": 1749303,
+    "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+    "license": "CC0-1.0",
+    "licenseFile": "sources/MAKEHUMAN-LICENSE-ASSETS.md"
+  },
+  "generator": "scripts/characters/generate-anatomical-head.py",
+  "generatorSha256": "e776910c846ce1b77b33d2722dcb7e907248ac3bc9e3a75dd33e7d567774c6aa",
+  "outputBytes": 99284,
+  "outputSha256": "9a8bb68a01f52f52eba6849c8dd34202b9e4d8d8e93d1987f3ee2e1541fe2118",
+  "registrationAnchors": [
+    [
+      [
+        -0.8793,
+        -0.30775,
+        0,
+        0.30775,
+        0.8793
+      ],
+      [
+        -0.142,
+        -0.046,
+        0,
+        0.046,
+        0.142
+      ]
+    ],
+    [
+      [
+        6.1555,
+        7.28415,
+        8.4913
+      ],
+      [
+        -0.116,
+        0.05,
+        0.198
+      ]
+    ],
+    [
+      [
+        -0.3916,
+        1.24535,
+        1.6807
+      ],
+      [
+        -0.112,
+        0.1,
+        0.1431492567062378
+      ]
+    ]
+  ],
+  "sourceHead": {
+    "quads": 4220,
+    "triangles": 8440,
+    "vertices": 4244,
+    "neckBoundary": 46
+  },
+  "lod": {
+    "surfaceTriangles": 1450,
+    "capTriangles": 46,
+    "totalTriangles": 1496,
+    "renderVertices": 938,
+    "collapses": 3495,
+    "lockedVertices": 375,
+    "protectedGroups": {
+      "nose_ridges": 38,
+      "lip_contours": 40,
+      "ear_ridges": 15,
+      "front_side_silhouette": 108,
+      "extrema": 6
+    },
+    "uvIslandCount": 5,
+    "atlasRectangles": [
+      [
+        0.02,
+        0.02,
+        0.66,
+        0.96
+      ],
+      [
+        0.71,
+        0.02,
+        0.27,
+        0.19
+      ],
+      [
+        0.71,
+        0.26,
+        0.12,
+        0.18
+      ],
+      [
+        0.86,
+        0.26,
+        0.12,
+        0.18
+      ],
+      [
+        0.71,
+        0.5,
+        0.27,
+        0.15
+      ]
+    ],
+    "sourceVertexDistanceM": {
+      "max": 0.0070628691242974485,
+      "p95": 0.002031412580309757,
+      "mean": 0.0006864692129858296,
+      "samples": 4244,
+      "boundary": "Exact distances from all registered AND collar-fitted source vertices to LOD triangles. Registration/collar deformation of original MakeHuman is separate; not a continuous Hausdorff bound or perceptual proof."
+    }
+  },
+  "normalStrategy": {
+    "method": "Registered source smooth normals at retained source IDs if they face every surviving incident triangle; final mesh normals at neck cap or sharp folds.",
+    "sourceNormalsTransferred": 665
+  },
+  "normalComparison": {
+    "samples": 703,
+    "meanDegrees": 1.4152367263330408,
+    "p95Degrees": 6.494678552502683,
+    "maxDegrees": 60.0272753205157,
+    "boundary": "Same retained source vertex smooth normals; excludes capped neck boundary. Not a rendered shading test."
+  },
+  "candidateCentroidToSourceDistanceM": {
+    "samples": 1450,
+    "max": 0.004655737832463404,
+    "p95": 0.002008535426981492
+  },
+  "archivedUnappliedSources": [
+    {
+      "file": "sources/head-age-incr.target",
+      "bytes": 59255,
+      "sha256": "ff677345bd81e3f439bdf75496bbee620ca3c3f029955a546837afd283abf73a"
+    },
+    {
+      "file": "sources/head-oval.target",
+      "bytes": 36452,
+      "sha256": "a17cd3a600588a344babe520fbd4d4edcb096db3328051fe692dfb997a1a678d"
+    },
+    {
+      "file": "sources/MAKEHUMAN-LICENSE-ASSETS.md",
+      "bytes": 6962,
+      "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c"
+    }
+  ],
+  "texture": {
+    "status": "unverified/not included",
+    "expectedSourceDiffuseBytes": 3693828,
+    "observedBytes": null,
+    "reason": "Bounded official archive transfer was stopped; no PNG saved or decoded. Existing flat skin material retained."
+  },
+  "morphsApplied": [],
+  "qualityBoundary": "CPU topology, source-vertex distance, normals and projected footprint do not establish rendered appearance, device performance, anatomical likeness or PS4 quality."
+}

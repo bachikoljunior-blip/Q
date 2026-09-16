@@ -1,0 +1,1269 @@
+{
+  "checkedAt": "2026-09-16T02:45:34.835277+00:00",
+  "repo": "/workspace/scratch/e72662e3b71f/Q-score-v27",
+  "baselineCommit": "fb70ddddf8df261851b66b5e29b32ac723818ff1",
+  "boundary": "Offline file, metadata, actual PCM decode, resampled note and mathematical mix analysis only. No hearing, musical-preference judgment, actual Web Audio output, phone speaker, FPS or quality-parity evidence.",
+  "sourceHashes": {
+    "scripts/sampled_score.py": "61ab9b6a015dc2da77e65ae8ec152c0b2b2f27464e399ee5bfb3b7ac07110c4b",
+    "scripts/generate-soundscape.py": "d181441e84c06313537575bffaf1cfbf430a8a23ee2023e980bc5543fffe94d3",
+    "scripts/verify-soundscape.mjs": "2cce4710d4c6b4724f344c706f0f2defafc6a8f41e839a401fad9b043d79db71",
+    "scripts/verify-sampled-score.py": "33c5600574a4e9553da58a042ad9597859b7da5392941bee6dcba07c7011f9ea",
+    "src/audio.js": "a990f34b9d94023e3bb1655c7dbec5d36b484399aa82fd1cdc827e48e7674027",
+    "src/file-audio-bank.js": "0d4ea37b9ffdbe2485bf8c47a528334bb5828bfa90d2795a1dd97201c8d34d42",
+    "src/soundscape-asset-urls.js": "071d87e650e9107a4a4481e45b6810f21ad860a2853189ae38841beddcf088e2",
+    "src/assets/soundscape/provenance.json": "16e7e5439bb822729b8decfca3e041042d928749aa012b1a4ff540df972d363e",
+    "src/assets/soundscape/cues.json": "da729e0c95ef506d2ca32dfba5691910afb51ec24519ffa978f108eacaf6e280",
+    "assets-source/soundscape-vsco/manifest.json": "8f858022a2491e7bfe0352999514be8663673afe365056f297e0c59962184dbd",
+    "assets-source/soundscape-vsco/LICENSE": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+    "assets-source/soundscape-vsco/CelloEnsSusVib-Quiet.sfz": "387a04fda4b56f2ddda0f402cb7093e092c3ae97edbbae1263eebbcce9ac5821",
+    "assets-source/soundscape-vsco/TubularBells.sfz": "cde6e3ca00d3a0597f0c3caeba4912221953deb5ca19801aef790ed0efac6923",
+    "assets-source/soundscape-vsco/ViolaEnsSusVib-Quiet.sfz": "99ca4342aa259202d7fcaabf412ec48ac3a1feef21b988885c3d2de383f8585c",
+    "src/assets/soundscape/pilgrim-harmony.mp3": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+    "src/assets/soundscape/pilgrim-motif.mp3": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+    "src/assets/soundscape/pilgrim-pulse.mp3": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+    "src/assets/soundscape/pilgrim-foley.wav": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+  },
+  "changedDuringRun": [],
+  "licensing": {
+    "publisher": "https://versilian-studios.com/vsco-community/",
+    "officialLicense": "https://github.com/sgossner/VSCO-2-CE/blob/master/LICENSE",
+    "cc0Deed": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "selectedWavCount": 13,
+    "selectedWavBytes": 28478818,
+    "rawFiles": [
+      {
+        "path": "Strings/Cello Section/susvib/susvib_E1_v1_2.wav",
+        "bytes": 2439512,
+        "sha256": "3f8c250028d5364fc9c5584ad204d7a1d4c8c02ae41e90ad482e7b0d7d1bc674",
+        "gitBlob": "d5756d400ce67b25c332e04061dd9f32dc89d283"
+      },
+      {
+        "path": "Strings/Cello Section/susvib/susvib_B1_v1_1.wav",
+        "bytes": 2372492,
+        "sha256": "4f95c087c4b8d87ee591e9d39c3c9caf085c6f1b9125eac3ca9e4e637da628ee",
+        "gitBlob": "d6a4a2d1a688c6ccb4e1e1a56b878c9c93df468b"
+      },
+      {
+        "path": "Strings/Cello Section/susvib/susvib_D2_v1_1.wav",
+        "bytes": 2550956,
+        "sha256": "e8640dec9febc6e39fcf06b19d2c95a85d5ff8c38f13c9879e69f551eaf38ab8",
+        "gitBlob": "8076f809d4f6a8057f3835e12d22751a25e39252"
+      },
+      {
+        "path": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+        "bytes": 2186012,
+        "sha256": "162054eab4ba118924f8f8986cf1b17ccfd65211d1945743ffbae30b4953f901",
+        "gitBlob": "78f52c49ddc8a357657d92b05cd89f15beb6c717"
+      },
+      {
+        "path": "Strings/Cello Section/susvib/susvib_A2_v1_1.wav",
+        "bytes": 2336738,
+        "sha256": "c97a003184fdcb153d6b6c0bae8d82a90592a1b04b06bd7caaeda8b9776d5284",
+        "gitBlob": "76df6b474aff133b2ac9d96bf2466cb6fd865c72"
+      },
+      {
+        "path": "Strings/Viola Section/susvib/ViolaEns_susvib_G2_v1_1.wav",
+        "bytes": 2001644,
+        "sha256": "557c2e033951015c30765bf18266bce0dd0412e3ca646dd1a225c32422c60662",
+        "gitBlob": "7c6dbafbe1f5de539b5861515f1bf39987e354cb"
+      },
+      {
+        "path": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+        "bytes": 2861510,
+        "sha256": "ad96d747c5125adec8f069c49091ee3ba937efd4a5b909d3c4938f17e3c8513d",
+        "gitBlob": "86e2428bca77c49d795e5e3d5be7dd9b022fce65"
+      },
+      {
+        "path": "Strings/Viola Section/susvib/ViolaEns_susvib_D3_v1_1.wav",
+        "bytes": 2789648,
+        "sha256": "61ab4cfc0ea90c683433a7c50b3bb4fa86a81c9d4854589562707d54ed028349",
+        "gitBlob": "9a3a65b93d871964a666d6a86deec4d29425d828"
+      },
+      {
+        "path": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
+        "bytes": 2487818,
+        "sha256": "7a37f00ecb58fcaa5c32427a5ffb30950787b40c247409a8e18cfe0880955fd8",
+        "gitBlob": "f9e0fa27802046cf9ed1e6b5625b6a815b3c09e8"
+      },
+      {
+        "path": "Strings/Viola Section/susvib/ViolaEns_susvib_A3_v1_1.wav",
+        "bytes": 2491352,
+        "sha256": "7cea6482a8f67536e3108f01b688d54d198e5820ffcd0ac5a49652d38f6ec065",
+        "gitBlob": "a57d0e5e328257ef14a3dd09b1debea045671527"
+      },
+      {
+        "path": "Percussion/BDrumNewhit_v2_rr1_Sum.wav",
+        "bytes": 281616,
+        "sha256": "56827fe9b55f282a0db851e242bc24660d339a0e358b182966aea047240c1136",
+        "gitBlob": "90e36064984ad741962e2f033e286bc16758b46c"
+      },
+      {
+        "path": "Percussion/BDrumNewhit_v2_rr2_Sum.wav",
+        "bytes": 302396,
+        "sha256": "f1f8979de26f8efe278fe778da7bdce2a39fbfb9f2cbf345e38ce8c66f171b59",
+        "gitBlob": "eb9b718cd1b75df824f30ae07405ba0a111f1be7"
+      },
+      {
+        "path": "Percussion/TB_hit_C4_v4_rr1.wav",
+        "bytes": 3377124,
+        "sha256": "d11d52910e0fc03c348bec0b0969960d737a6fdd3fa7380804f5751959e422c2",
+        "gitBlob": "76efa7c6770b43a670a2cdde701ec26486af9c46"
+      }
+    ],
+    "officialSfzBlobIds": {
+      "CelloEnsSusVib-Quiet.sfz": "dac0009b38effd46d19311bc5243d64be8bd1350",
+      "ViolaEnsSusVib-Quiet.sfz": "56d7c8097fed3a5158dcc0ad0c863ad7aa6fae74",
+      "TubularBells.sfz": "642fa96bb32942cdff10cfd052d55ad2a17d086e"
+    }
+  },
+  "eventContract": {
+    "notes": [
+      {
+        "midi": 50,
+        "sourceRoot": 50,
+        "at": -1,
+        "officialMapping": "CelloEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 57,
+        "sourceRoot": 57,
+        "at": -1,
+        "officialMapping": "CelloEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 60,
+        "sourceRoot": 59,
+        "at": -1,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 64,
+        "sourceRoot": 65,
+        "at": -1,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 69,
+        "sourceRoot": 69,
+        "at": -1,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 46,
+        "sourceRoot": 47,
+        "at": 11,
+        "officialMapping": "CelloEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 53,
+        "sourceRoot": 53,
+        "at": 11,
+        "officialMapping": "CelloEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 57,
+        "sourceRoot": 59,
+        "at": 11,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 60,
+        "sourceRoot": 59,
+        "at": 11,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 65,
+        "sourceRoot": 65,
+        "at": 11,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 41,
+        "sourceRoot": 40,
+        "at": 23,
+        "officialMapping": "CelloEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 53,
+        "sourceRoot": 53,
+        "at": 23,
+        "officialMapping": "CelloEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 57,
+        "sourceRoot": 59,
+        "at": 23,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 60,
+        "sourceRoot": 59,
+        "at": 23,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 67,
+        "sourceRoot": 69,
+        "at": 23,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 45,
+        "sourceRoot": 47,
+        "at": 35,
+        "officialMapping": "CelloEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 52,
+        "sourceRoot": 53,
+        "at": 35,
+        "officialMapping": "CelloEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 55,
+        "sourceRoot": 55,
+        "at": 35,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 62,
+        "sourceRoot": 62,
+        "at": 35,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      },
+      {
+        "midi": 64,
+        "sourceRoot": 65,
+        "at": 35,
+        "officialMapping": "ViolaEnsSusVib-Quiet.sfz"
+      }
+    ],
+    "drumEvents": 36,
+    "bellEvents": 24,
+    "barCount": 16,
+    "tempoBpm": 80,
+    "motifFoleyCuesByteIdentical": true,
+    "runtimeExecutableCodeUnchanged": true
+  },
+  "assets": [
+    {
+      "file": "pilgrim-harmony.mp3",
+      "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+      "bytes": 288594,
+      "stream": {
+        "codec_name": "mp3",
+        "sample_rate": "22050",
+        "channels": 2
+      },
+      "decodedFrames": 1058400,
+      "decodedSeconds": 48.0,
+      "samplePeak": 0.6553034782409668,
+      "polyphase4xPeakEstimate": 0.657373330133814,
+      "rms": 0.12845754197261314,
+      "digitalClippedSamples": 0,
+      "loopComparison": {
+        "sameWindowHalfSeconds": 0.00598639455782313,
+        "loopBoundary": {
+          "jump": 0.003690852492582053,
+          "maxDelta": 0.0613885335624218,
+          "rms": 0.05559803511971355
+        },
+        "internalBarCuts": [
+          {
+            "jump": 0.043356314301490784,
+            "maxDelta": 0.08379928767681122,
+            "rms": 0.1093397609755053
+          },
+          {
+            "jump": 0.02442833036184311,
+            "maxDelta": 0.09993237257003784,
+            "rms": 0.17056055100956904
+          },
+          {
+            "jump": 0.009112507104873657,
+            "maxDelta": 0.10567029565572739,
+            "rms": 0.11745062047249988
+          },
+          {
+            "jump": 0.021243810653686523,
+            "maxDelta": 0.04738252982497215,
+            "rms": 0.12620600153043407
+          },
+          {
+            "jump": 0.045294441282749176,
+            "maxDelta": 0.06875544041395187,
+            "rms": 0.1337044057241266
+          },
+          {
+            "jump": 0.0033723115921020508,
+            "maxDelta": 0.10004997253417969,
+            "rms": 0.17770167543964055
+          },
+          {
+            "jump": 0.03000352531671524,
+            "maxDelta": 0.06651180982589722,
+            "rms": 0.13201379065485272
+          },
+          {
+            "jump": 0.03087352216243744,
+            "maxDelta": 0.06548276543617249,
+            "rms": 0.10536770238475128
+          },
+          {
+            "jump": 0.046384572982788086,
+            "maxDelta": 0.07546141743659973,
+            "rms": 0.17904387381843076
+          },
+          {
+            "jump": 0.02458299696445465,
+            "maxDelta": 0.10902908444404602,
+            "rms": 0.16826315478640866
+          },
+          {
+            "jump": 0.039489395916461945,
+            "maxDelta": 0.06883473694324493,
+            "rms": 0.1432095933403089
+          },
+          {
+            "jump": 0.024845149368047714,
+            "maxDelta": 0.055016822181642056,
+            "rms": 0.0709701329559247
+          },
+          {
+            "jump": 0.032180070877075195,
+            "maxDelta": 0.08448480069637299,
+            "rms": 0.17286791759731282
+          },
+          {
+            "jump": 0.015299350023269653,
+            "maxDelta": 0.0977659821510315,
+            "rms": 0.1663168168597939
+          },
+          {
+            "jump": 0.03186073899269104,
+            "maxDelta": 0.08590039610862732,
+            "rms": 0.1878923890105869
+          }
+        ],
+        "internalRanges": {
+          "jump": [
+            0.0033723115921020508,
+            0.046384572982788086
+          ],
+          "maxDelta": [
+            0.04738252982497215,
+            0.10902908444404602
+          ],
+          "rms": [
+            0.0709701329559247,
+            0.1878923890105869
+          ]
+        },
+        "boundaryMaxDeltaWithinObservedInternalMax": true,
+        "interpretation": "Descriptive equal-window comparison, not an audibility threshold. The authored 6ms seam fade causes a short RMS dip."
+      },
+      "mono": {
+        "correlation": 0.875978041656238,
+        "monoRms": 0.12434421910859557,
+        "monoToStereoRmsRatio": 0.9679791252358346
+      }
+    },
+    {
+      "file": "pilgrim-motif.mp3",
+      "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+      "bytes": 192463,
+      "stream": {
+        "codec_name": "mp3",
+        "sample_rate": "22050",
+        "channels": 1
+      },
+      "decodedFrames": 1058400,
+      "decodedSeconds": 48.0,
+      "samplePeak": 0.7403414249420166,
+      "polyphase4xPeakEstimate": 0.74086496659558,
+      "rms": 0.13485023746102293,
+      "digitalClippedSamples": 0,
+      "loopComparison": {
+        "sameWindowHalfSeconds": 0.00598639455782313,
+        "loopBoundary": {
+          "jump": 0.011728493496775627,
+          "maxDelta": 0.03653636947274208,
+          "rms": 0.0673096536134953
+        },
+        "internalBarCuts": [
+          {
+            "jump": 0.06643052585422993,
+            "maxDelta": 0.09297052025794983,
+            "rms": 0.15741185428449053
+          },
+          {
+            "jump": 0.04967253655195236,
+            "maxDelta": 0.0515478253364563,
+            "rms": 0.14040836912945337
+          },
+          {
+            "jump": 0.001586034893989563,
+            "maxDelta": 0.023672164883464575,
+            "rms": 0.07361219287720276
+          },
+          {
+            "jump": 0.015033446252346039,
+            "maxDelta": 0.050864383578300476,
+            "rms": 0.10060485694193252
+          },
+          {
+            "jump": 0.07628202438354492,
+            "maxDelta": 0.08908937126398087,
+            "rms": 0.13374216788342017
+          },
+          {
+            "jump": 0.021345552057027817,
+            "maxDelta": 0.0611145980656147,
+            "rms": 0.10793751800087105
+          },
+          {
+            "jump": 0.03326097130775452,
+            "maxDelta": 0.06684540212154388,
+            "rms": 0.09227362523533503
+          },
+          {
+            "jump": 0.000958993099629879,
+            "maxDelta": 0.059545598924160004,
+            "rms": 0.06975835754708137
+          },
+          {
+            "jump": 0.031013667583465576,
+            "maxDelta": 0.05359027534723282,
+            "rms": 0.08023889357107308
+          },
+          {
+            "jump": 0.024403400719165802,
+            "maxDelta": 0.034644221886992455,
+            "rms": 0.07052826996476974
+          },
+          {
+            "jump": 0.00538625568151474,
+            "maxDelta": 0.033874399960041046,
+            "rms": 0.08491351518600931
+          },
+          {
+            "jump": 0.003912203013896942,
+            "maxDelta": 0.07076707482337952,
+            "rms": 0.12290084718983482
+          },
+          {
+            "jump": 0.0013043079525232315,
+            "maxDelta": 0.05811873450875282,
+            "rms": 0.07904672472115154
+          },
+          {
+            "jump": 0.006247175857424736,
+            "maxDelta": 0.027839913964271545,
+            "rms": 0.055242537733595776
+          },
+          {
+            "jump": 0.003442777320742607,
+            "maxDelta": 0.017290350049734116,
+            "rms": 0.04611103044577157
+          }
+        ],
+        "internalRanges": {
+          "jump": [
+            0.000958993099629879,
+            0.07628202438354492
+          ],
+          "maxDelta": [
+            0.017290350049734116,
+            0.09297052025794983
+          ],
+          "rms": [
+            0.04611103044577157,
+            0.15741185428449053
+          ]
+        },
+        "boundaryMaxDeltaWithinObservedInternalMax": true,
+        "interpretation": "Descriptive equal-window comparison, not an audibility threshold. The authored 6ms seam fade causes a short RMS dip."
+      }
+    },
+    {
+      "file": "pilgrim-pulse.mp3",
+      "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+      "bytes": 192463,
+      "stream": {
+        "codec_name": "mp3",
+        "sample_rate": "22050",
+        "channels": 1
+      },
+      "decodedFrames": 1058400,
+      "decodedSeconds": 48.0,
+      "samplePeak": 0.7240089774131775,
+      "polyphase4xPeakEstimate": 0.7244698562524025,
+      "rms": 0.05354773107969684,
+      "digitalClippedSamples": 0,
+      "loopComparison": {
+        "sameWindowHalfSeconds": 0.00598639455782313,
+        "loopBoundary": {
+          "jump": 0.0006688448120257817,
+          "maxDelta": 0.00977245345711708,
+          "rms": 0.027397531629714773
+        },
+        "internalBarCuts": [
+          {
+            "jump": 0.0013567409478127956,
+            "maxDelta": 0.009790390729904175,
+            "rms": 0.0422185019534834
+          },
+          {
+            "jump": 0.0022177905775606632,
+            "maxDelta": 0.00997978076338768,
+            "rms": 0.042130002566674214
+          },
+          {
+            "jump": 0.0014510925393551588,
+            "maxDelta": 0.01019037514925003,
+            "rms": 0.042357209802341055
+          },
+          {
+            "jump": 0.0018410991178825498,
+            "maxDelta": 0.005187481641769409,
+            "rms": 0.03094831594090591
+          },
+          {
+            "jump": 0.0012221658835187554,
+            "maxDelta": 0.006667567417025566,
+            "rms": 0.03318956009463539
+          },
+          {
+            "jump": 0.001818931137677282,
+            "maxDelta": 0.006093008443713188,
+            "rms": 0.03152234972481243
+          },
+          {
+            "jump": 0.0020704957423731685,
+            "maxDelta": 0.0055152978748083115,
+            "rms": 0.03166574949392545
+          },
+          {
+            "jump": 0.0020492009352892637,
+            "maxDelta": 0.009044870734214783,
+            "rms": 0.04052136218821638
+          },
+          {
+            "jump": 0.002067712601274252,
+            "maxDelta": 0.008205175399780273,
+            "rms": 0.04124033994977085
+          },
+          {
+            "jump": 0.0012504634214565158,
+            "maxDelta": 0.01062747836112976,
+            "rms": 0.04166197486186591
+          },
+          {
+            "jump": 0.0015756400534883142,
+            "maxDelta": 0.009938426315784454,
+            "rms": 0.042141905008731356
+          },
+          {
+            "jump": 0.002252653823234141,
+            "maxDelta": 0.007152371108531952,
+            "rms": 0.03141649226995248
+          },
+          {
+            "jump": 0.0019044717773795128,
+            "maxDelta": 0.0060531869530677795,
+            "rms": 0.031751072555696556
+          },
+          {
+            "jump": 0.0013360886659938842,
+            "maxDelta": 0.006506448611617088,
+            "rms": 0.03189779086656804
+          },
+          {
+            "jump": 0.0027235799352638423,
+            "maxDelta": 0.006261885166168213,
+            "rms": 0.031747956493825474
+          }
+        ],
+        "internalRanges": {
+          "jump": [
+            0.0012221658835187554,
+            0.0027235799352638423
+          ],
+          "maxDelta": [
+            0.005187481641769409,
+            0.01062747836112976
+          ],
+          "rms": [
+            0.03094831594090591,
+            0.042357209802341055
+          ]
+        },
+        "boundaryMaxDeltaWithinObservedInternalMax": true,
+        "interpretation": "Descriptive equal-window comparison, not an audibility threshold. The authored 6ms seam fade causes a short RMS dip."
+      }
+    },
+    {
+      "file": "pilgrim-foley.wav",
+      "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+      "bytes": 826370,
+      "stream": {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "22050",
+        "channels": 1
+      },
+      "decodedFrames": 413163,
+      "decodedSeconds": 18.737551020408162,
+      "samplePeak": 0.819976806640625,
+      "polyphase4xPeakEstimate": 0.8635903947435641,
+      "rms": 0.09203489880999811,
+      "digitalClippedSamples": 0
+    }
+  ],
+  "runtimeEncodedBytes": 1499890,
+  "runtimeEncodedBudget": 1600000,
+  "authoredRateDecodedBytes": 18587052,
+  "mixes": [
+    {
+      "mode": "title",
+      "fullCueSeconds": 48,
+      "actualMotifPan": 0.14,
+      "unityBusMasterPeak": 0.4347517997220879,
+      "unityBusMaster4xPeakEstimate": 0.4361613965851369,
+      "defaultBusMasterPeak": 0.14672873240620465,
+      "unityHeadroomDb": 7.235172229851568,
+      "defaultHeadroomDb": 16.669696686510697,
+      "rms": 0.08487080085043926,
+      "scope": "Music only before compressor, complete 48s at constant mode gains; excludes live SFX/ambience."
+    },
+    {
+      "mode": "exploration",
+      "fullCueSeconds": 48,
+      "actualMotifPan": 0.14,
+      "unityBusMasterPeak": 0.2618719442210684,
+      "unityBusMaster4xPeakEstimate": 0.26263764041921983,
+      "defaultBusMasterPeak": 0.0883817811746106,
+      "unityHeadroomDb": 11.638220548688693,
+      "defaultHeadroomDb": 21.07274500534782,
+      "rms": 0.051843696894028166,
+      "scope": "Music only before compressor, complete 48s at constant mode gains; excludes live SFX/ambience."
+    },
+    {
+      "mode": "combat",
+      "fullCueSeconds": 48,
+      "actualMotifPan": 0.14,
+      "unityBusMasterPeak": 0.5425181402070001,
+      "unityBusMaster4xPeakEstimate": 0.5428634883152659,
+      "defaultBusMasterPeak": 0.18309987231986252,
+      "unityHeadroomDb": 5.311714714193727,
+      "defaultHeadroomDb": 14.746239170852853,
+      "rms": 0.07175074410826103,
+      "scope": "Music only before compressor, complete 48s at constant mode gains; excludes live SFX/ambience."
+    }
+  ],
+  "conservativeAnyModeTransitionMusicOnlyUnityPeakBound": 0.636978528954723,
+  "withoutStereoPanner": {
+    "constantModeUnityPeaks": {
+      "title": 0.4775932571291923,
+      "exploration": 0.28231437206268306,
+      "combat": 0.6944324421882629
+    },
+    "conservativeAnyModeTransitionMusicOnlyUnityPeakBound": 0.797472124993801
+  },
+  "bows": [
+    {
+      "source": "Strings/Cello Section/susvib/susvib_D2_v1_1.wav",
+      "midi": 50,
+      "sourceRoot": 50,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.849931972789115,
+      "releaseCutJump": 0.0009011433264015152,
+      "ordinaryAdjacentDeltaP99": 0.030407926700115315,
+      "joins": [
+        {
+          "seconds": 5.368979591836735,
+          "jump": 0.009505806272138533,
+          "maxDelta": 0.028233014946134102,
+          "rms": 0.09285711352537902
+        },
+        {
+          "seconds": 9.307891156462585,
+          "jump": 0.010005365658040971,
+          "maxDelta": 0.02971566994981188,
+          "rms": 0.09773709037018315
+        }
+      ],
+      "internalControlMaxDelta": 0.045359087139815284
+    },
+    {
+      "source": "Strings/Cello Section/susvib/susvib_A2_v1_1.wav",
+      "midi": 57,
+      "sourceRoot": 57,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.874920634920635,
+      "releaseCutJump": 0.0007007487046712819,
+      "ordinaryAdjacentDeltaP99": 0.04029102280014567,
+      "joins": [
+        {
+          "seconds": 3.973061224489796,
+          "jump": 0.01612011009418642,
+          "maxDelta": 0.03728112017920618,
+          "rms": 0.07544193343015182
+        },
+        {
+          "seconds": 6.296009070294785,
+          "jump": 0.01667916227082724,
+          "maxDelta": 0.03856704722159024,
+          "rms": 0.07805757666580639
+        },
+        {
+          "seconds": 8.618956916099773,
+          "jump": 0.017495678087666788,
+          "maxDelta": 0.040462042982953465,
+          "rms": 0.08187952281057585
+        },
+        {
+          "seconds": 10.941904761904762,
+          "jump": 0.01631634949032553,
+          "maxDelta": 0.037746763674673015,
+          "rms": 0.0763615278744745
+        }
+      ],
+      "internalControlMaxDelta": 0.058371229183583465
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+      "midi": 60,
+      "sourceRoot": 59,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.841043083900226,
+      "releaseCutJump": 0.0005346926433402496,
+      "ordinaryAdjacentDeltaP99": 0.057556985168965305,
+      "joins": [
+        {
+          "seconds": 3.7793197278911563,
+          "jump": 0.010567548521710421,
+          "maxDelta": 0.06849564999255364,
+          "rms": 0.08235232880183063
+        },
+        {
+          "seconds": 6.208843537414966,
+          "jump": 0.011412541815839073,
+          "maxDelta": 0.07396956753092469,
+          "rms": 0.08893737264348783
+        },
+        {
+          "seconds": 8.638367346938775,
+          "jump": 0.01164316169544581,
+          "maxDelta": 0.07547546584588487,
+          "rms": 0.09073430916773817
+        },
+        {
+          "seconds": 11.067891156462585,
+          "jump": 0.010478943572424267,
+          "maxDelta": 0.0679331470375879,
+          "rms": 0.08166155413383043
+        }
+      ],
+      "internalControlMaxDelta": 0.09093269118658276
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
+      "midi": 64,
+      "sourceRoot": 65,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.987392290249433,
+      "releaseCutJump": 0.006506060163929116,
+      "ordinaryAdjacentDeltaP99": 0.07927603878819871,
+      "joins": [
+        {
+          "seconds": 5.359591836734694,
+          "jump": 0.018831010917534332,
+          "maxDelta": 0.05587046447201234,
+          "rms": 0.07474137197779432
+        },
+        {
+          "seconds": 8.970975056689342,
+          "jump": 0.018548211925396574,
+          "maxDelta": 0.05505657433537174,
+          "rms": 0.07361887372945328
+        }
+      ],
+      "internalControlMaxDelta": 0.10879202351580722
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_A3_v1_1.wav",
+      "midi": 69,
+      "sourceRoot": 69,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.949931972789116,
+      "releaseCutJump": 0.0015794905940335847,
+      "ordinaryAdjacentDeltaP99": 0.07332030459205538,
+      "joins": [
+        {
+          "seconds": 4.3763265306122445,
+          "jump": 0.03940680133328056,
+          "maxDelta": 0.07321504330292866,
+          "rms": 0.08495780696599492
+        },
+        {
+          "seconds": 7.102539682539683,
+          "jump": 0.04061139522139746,
+          "maxDelta": 0.07544735409424064,
+          "rms": 0.08755544303826629
+        },
+        {
+          "seconds": 9.828752834467121,
+          "jump": 0.03722814439999338,
+          "maxDelta": 0.06916202078870692,
+          "rms": 0.08026139633752123
+        }
+      ],
+      "internalControlMaxDelta": 0.09985995607866319
+    },
+    {
+      "source": "Strings/Cello Section/susvib/susvib_B1_v1_1.wav",
+      "midi": 46,
+      "sourceRoot": 47,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.912380952380952,
+      "releaseCutJump": 0.0006372537377004019,
+      "ordinaryAdjacentDeltaP99": 0.026968527450772422,
+      "joins": [
+        {
+          "seconds": 4.307936507936508,
+          "jump": 0.006665393502047312,
+          "maxDelta": 0.028705029233367447,
+          "rms": 0.08357631588512318
+        },
+        {
+          "seconds": 6.751065759637188,
+          "jump": 0.00665074304308242,
+          "maxDelta": 0.028643482224078868,
+          "rms": 0.08339226372111488
+        },
+        {
+          "seconds": 9.194195011337868,
+          "jump": 0.006945507889960061,
+          "maxDelta": 0.029912349302793507,
+          "rms": 0.08708838324808099
+        },
+        {
+          "seconds": 11.637324263038549,
+          "jump": 0.006524339468638923,
+          "maxDelta": 0.028095041166429895,
+          "rms": 0.08180824687326624
+        }
+      ],
+      "internalControlMaxDelta": 0.03910063835795085
+    },
+    {
+      "source": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+      "midi": 53,
+      "sourceRoot": 53,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.874920634920635,
+      "releaseCutJump": 0.002476899655167598,
+      "ordinaryAdjacentDeltaP99": 0.04786256020129118,
+      "joins": [
+        {
+          "seconds": 5.027755102040817,
+          "jump": 0.01730373871863003,
+          "maxDelta": 0.05029254701806728,
+          "rms": 0.09887357691037402
+        },
+        {
+          "seconds": 8.625442176870749,
+          "jump": 0.018673573595798097,
+          "maxDelta": 0.05426996380463605,
+          "rms": 0.10670022544263023
+        }
+      ],
+      "internalControlMaxDelta": 0.08063433925973926
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+      "midi": 57,
+      "sourceRoot": 59,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 13.028526077097506,
+      "releaseCutJump": 0.0005072924404591278,
+      "ordinaryAdjacentDeltaP99": 0.04871231294996974,
+      "joins": [
+        {
+          "seconds": 4.4944671201814055,
+          "jump": 0.011975020632958753,
+          "maxDelta": 0.061441407492003455,
+          "rms": 0.08234137685900601
+        },
+        {
+          "seconds": 7.383718820861678,
+          "jump": 0.013071662190179384,
+          "maxDelta": 0.06707211105238532,
+          "rms": 0.08988260322665982
+        },
+        {
+          "seconds": 10.27297052154195,
+          "jump": 0.01215574567653158,
+          "maxDelta": 0.062385110836572735,
+          "rms": 0.08358662019623575
+        }
+      ],
+      "internalControlMaxDelta": 0.06802761800310217
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+      "midi": 60,
+      "sourceRoot": 59,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.866031746031746,
+      "releaseCutJump": 0.000551081816673592,
+      "ordinaryAdjacentDeltaP99": 0.05758869497189479,
+      "joins": [
+        {
+          "seconds": 3.7793197278911563,
+          "jump": 0.01068948989954534,
+          "maxDelta": 0.06928178976394887,
+          "rms": 0.08330270963064738
+        },
+        {
+          "seconds": 6.208843537414966,
+          "jump": 0.011730491100242503,
+          "maxDelta": 0.07603289452569156,
+          "rms": 0.09141506643949866
+        },
+        {
+          "seconds": 8.638367346938775,
+          "jump": 0.011417502188852048,
+          "maxDelta": 0.07401561147408893,
+          "rms": 0.08897569906799217
+        },
+        {
+          "seconds": 11.067891156462585,
+          "jump": 0.010377973709276352,
+          "maxDelta": 0.06727459822368119,
+          "rms": 0.08087480135055856
+        }
+      ],
+      "internalControlMaxDelta": 0.08992907693030006
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
+      "midi": 65,
+      "sourceRoot": 65,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.949931972789116,
+      "releaseCutJump": 0.006666857806928495,
+      "ordinaryAdjacentDeltaP99": 0.08405550626593918,
+      "joins": [
+        {
+          "seconds": 5.0587755102040814,
+          "jump": 0.014386561851830397,
+          "maxDelta": 0.06179486834685708,
+          "rms": 0.07645376138787056
+        },
+        {
+          "seconds": 8.467437641723356,
+          "jump": 0.013834730065754114,
+          "maxDelta": 0.05944538947965352,
+          "rms": 0.07352014172537052
+        },
+        {
+          "seconds": 11.87609977324263,
+          "jump": 0.013048037393359347,
+          "maxDelta": 0.056053914051768745,
+          "rms": 0.06934008988477164
+        }
+      ],
+      "internalControlMaxDelta": 0.1230149904137704
+    },
+    {
+      "source": "Strings/Cello Section/susvib/susvib_E1_v1_2.wav",
+      "midi": 41,
+      "sourceRoot": 40,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.791020408163265,
+      "releaseCutJump": 0.004941636269836225,
+      "ordinaryAdjacentDeltaP99": 0.030083297548226196,
+      "joins": [
+        {
+          "seconds": 4.774829931972789,
+          "jump": 0.0111379378461266,
+          "maxDelta": 0.04176360643887192,
+          "rms": 0.1326531329377233
+        },
+        {
+          "seconds": 8.303673469387755,
+          "jump": 0.011527727058397275,
+          "maxDelta": 0.04322709312004637,
+          "rms": 0.13729192803305973
+        },
+        {
+          "seconds": 11.832517006802721,
+          "jump": 0.010713628256600785,
+          "maxDelta": 0.04003346772924159,
+          "rms": 0.1267439649272209
+        }
+      ],
+      "internalControlMaxDelta": 0.05129403704345667
+    },
+    {
+      "source": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+      "midi": 53,
+      "sourceRoot": 53,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.874920634920635,
+      "releaseCutJump": 0.002476899655167598,
+      "ordinaryAdjacentDeltaP99": 0.04786256020129118,
+      "joins": [
+        {
+          "seconds": 5.027755102040817,
+          "jump": 0.01730373871863003,
+          "maxDelta": 0.05029254701806728,
+          "rms": 0.09887357691037402
+        },
+        {
+          "seconds": 8.625442176870749,
+          "jump": 0.018673573595798097,
+          "maxDelta": 0.05426996380463605,
+          "rms": 0.10670022544263023
+        }
+      ],
+      "internalControlMaxDelta": 0.08063433925973926
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+      "midi": 57,
+      "sourceRoot": 59,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 13.028526077097506,
+      "releaseCutJump": 0.0005072924404591278,
+      "ordinaryAdjacentDeltaP99": 0.04871231294996974,
+      "joins": [
+        {
+          "seconds": 4.4944671201814055,
+          "jump": 0.011975020632958753,
+          "maxDelta": 0.061441407492003455,
+          "rms": 0.08234137685900601
+        },
+        {
+          "seconds": 7.383718820861678,
+          "jump": 0.013071662190179384,
+          "maxDelta": 0.06707211105238532,
+          "rms": 0.08988260322665982
+        },
+        {
+          "seconds": 10.27297052154195,
+          "jump": 0.01215574567653158,
+          "maxDelta": 0.062385110836572735,
+          "rms": 0.08358662019623575
+        }
+      ],
+      "internalControlMaxDelta": 0.06802761800310217
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+      "midi": 60,
+      "sourceRoot": 59,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.866031746031746,
+      "releaseCutJump": 0.000551081816673592,
+      "ordinaryAdjacentDeltaP99": 0.05758869497189479,
+      "joins": [
+        {
+          "seconds": 3.7793197278911563,
+          "jump": 0.01068948989954534,
+          "maxDelta": 0.06928178976394887,
+          "rms": 0.08330270963064738
+        },
+        {
+          "seconds": 6.208843537414966,
+          "jump": 0.011730491100242503,
+          "maxDelta": 0.07603289452569156,
+          "rms": 0.09141506643949866
+        },
+        {
+          "seconds": 8.638367346938775,
+          "jump": 0.011417502188852048,
+          "maxDelta": 0.07401561147408893,
+          "rms": 0.08897569906799217
+        },
+        {
+          "seconds": 11.067891156462585,
+          "jump": 0.010377973709276352,
+          "maxDelta": 0.06727459822368119,
+          "rms": 0.08087480135055856
+        }
+      ],
+      "internalControlMaxDelta": 0.08992907693030006
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_A3_v1_1.wav",
+      "midi": 67,
+      "sourceRoot": 69,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 13.078503401360544,
+      "releaseCutJump": 0.0014059339782947775,
+      "ordinaryAdjacentDeltaP99": 0.06525799066084226,
+      "joins": [
+        {
+          "seconds": 4.912290249433107,
+          "jump": 0.030277260460779394,
+          "maxDelta": 0.06772904676843054,
+          "rms": 0.08610736583640878
+        },
+        {
+          "seconds": 7.972380952380952,
+          "jump": 0.02977845730408394,
+          "maxDelta": 0.06660766071783326,
+          "rms": 0.08468962111024209
+        },
+        {
+          "seconds": 11.032471655328798,
+          "jump": 0.027596112654911152,
+          "maxDelta": 0.0617286450851732,
+          "rms": 0.07848271003721531
+        }
+      ],
+      "internalControlMaxDelta": 0.08915371147112479
+    },
+    {
+      "source": "Strings/Cello Section/susvib/susvib_B1_v1_1.wav",
+      "midi": 45,
+      "sourceRoot": 47,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.978503401360545,
+      "releaseCutJump": 0.0006457615691168599,
+      "ordinaryAdjacentDeltaP99": 0.025352066985506155,
+      "joins": [
+        {
+          "seconds": 4.564081632653061,
+          "jump": 0.007035877921218181,
+          "maxDelta": 0.026755166781090186,
+          "rms": 0.08308083840577875
+        },
+        {
+          "seconds": 7.152471655328799,
+          "jump": 0.007090404860921801,
+          "maxDelta": 0.026966699197269146,
+          "rms": 0.08372371878494168
+        },
+        {
+          "seconds": 9.740861678004535,
+          "jump": 0.007347733573513773,
+          "maxDelta": 0.027941466136317657,
+          "rms": 0.08676316473143296
+        }
+      ],
+      "internalControlMaxDelta": 0.03464765970693562
+    },
+    {
+      "source": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+      "midi": 52,
+      "sourceRoot": 53,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.937369614512471,
+      "releaseCutJump": 0.002424789474345394,
+      "ordinaryAdjacentDeltaP99": 0.045403166708771765,
+      "joins": [
+        {
+          "seconds": 5.326757369614512,
+          "jump": 0.014238960804001086,
+          "maxDelta": 0.04774895328819335,
+          "rms": 0.10190052761084356
+        },
+        {
+          "seconds": 9.138412698412699,
+          "jump": 0.015236644111577822,
+          "maxDelta": 0.0510855139428191,
+          "rms": 0.10903901870004981
+        }
+      ],
+      "internalControlMaxDelta": 0.05720915722375658
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_G2_v1_1.wav",
+      "midi": 55,
+      "sourceRoot": 55,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.899954648526077,
+      "releaseCutJump": 0.0022443408420652795,
+      "ordinaryAdjacentDeltaP99": 0.06647214080048397,
+      "joins": [
+        {
+          "seconds": 5.306938775510204,
+          "jump": 0.01288348726941074,
+          "maxDelta": 0.0365102585237443,
+          "rms": 0.057746747935388844
+        },
+        {
+          "seconds": 9.513877551020409,
+          "jump": 0.013189282531013771,
+          "maxDelta": 0.037362234449401746,
+          "rms": 0.05911699355628211
+        }
+      ],
+      "internalControlMaxDelta": 0.10094518021732451
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_D3_v1_1.wav",
+      "midi": 62,
+      "sourceRoot": 62,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 12.924943310657596,
+      "releaseCutJump": 0.0012958390747615717,
+      "ordinaryAdjacentDeltaP99": 0.06629692741053712,
+      "joins": [
+        {
+          "seconds": 4.159183673469387,
+          "jump": 0.06333620606757362,
+          "maxDelta": 0.08298771678993523,
+          "rms": 0.10187136809285778
+        },
+        {
+          "seconds": 6.888299319727891,
+          "jump": 0.06892990325202444,
+          "maxDelta": 0.09031654306023364,
+          "rms": 0.11086753618814743
+        },
+        {
+          "seconds": 9.617414965986395,
+          "jump": 0.0638526112151693,
+          "maxDelta": 0.08366347787144245,
+          "rms": 0.10270032741730574
+        }
+      ],
+      "internalControlMaxDelta": 0.10765430879919193
+    },
+    {
+      "source": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
+      "midi": 64,
+      "sourceRoot": 65,
+      "paddedSeconds": 14.0,
+      "lastNonzeroSeconds": 13.012380952380953,
+      "releaseCutJump": 0.006621133356487424,
+      "ordinaryAdjacentDeltaP99": 0.07930381052590636,
+      "joins": [
+        {
+          "seconds": 5.359591836734694,
+          "jump": 0.019259121185902853,
+          "maxDelta": 0.057145868076033404,
+          "rms": 0.07644054875879938
+        },
+        {
+          "seconds": 8.970975056689342,
+          "jump": 0.01805001732231585,
+          "maxDelta": 0.05357540517292102,
+          "rms": 0.07164152415407757
+        }
+      ],
+      "internalControlMaxDelta": 0.10654807489864965
+    }
+  ],
+  "limitations": [
+    "4x polyphase peak is an intersample estimate, not a certified true-peak meter.",
+    "Loop-boundary RMS dips and crossfade metrics do not establish natural bowing or perceived seamlessness.",
+    "The offline review mixes approximate real transitions; this oracle uses actual motif pan and full-cue constant mode levels."
+  ],
+  "passed": true
+}

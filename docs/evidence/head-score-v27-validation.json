@@ -1,0 +1,228 @@
+{
+  "startedAt": "2026-09-16T02:55:41.234333+00:00",
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "scripts/generate-vault-assets.mjs",
+        "--verify"
+      ],
+      "exitCode": 0,
+      "wallMs": 157.194,
+      "log": "artifacts/v27-gate-00.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-soundscape.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 119.527,
+      "log": "artifacts/v27-gate-01.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-main-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 4676.89,
+      "log": "artifacts/v27-gate-02.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-gathering-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 8370.13,
+      "log": "artifacts/v27-gate-03.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:vaults"
+      ],
+      "exitCode": 0,
+      "wallMs": 7585.912,
+      "log": "artifacts/v27-gate-04.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "wallMs": 37364.846,
+      "log": "artifacts/v27-gate-05.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-world-surfaces.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 2881.014,
+      "log": "artifacts/v27-gate-06.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-scene-integration.mjs",
+        ".",
+        "/workspace/scratch/e72662e3b71f/Q-ps4-v27/artifacts/scene-integration-report.json"
+      ],
+      "exitCode": 0,
+      "wallMs": 2541.007,
+      "log": "artifacts/v27-gate-07.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-sky-integration.mjs",
+        ".",
+        "/workspace/scratch/e72662e3b71f/Q-ps4-v27/artifacts/sky-integration-report.json"
+      ],
+      "exitCode": 0,
+      "wallMs": 4274.544,
+      "log": "artifacts/v27-gate-08.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:journey"
+      ],
+      "exitCode": 0,
+      "wallMs": 503.328,
+      "log": "artifacts/v27-gate-09.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:crossing"
+      ],
+      "exitCode": 0,
+      "wallMs": 1052.998,
+      "log": "artifacts/v27-gate-10.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:forge"
+      ],
+      "exitCode": 0,
+      "wallMs": 1550.466,
+      "log": "artifacts/v27-gate-11.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:session"
+      ],
+      "exitCode": 0,
+      "wallMs": 5707.124,
+      "log": "artifacts/v27-gate-12.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:expedition"
+      ],
+      "exitCode": 0,
+      "wallMs": 5297.579,
+      "log": "artifacts/v27-gate-13.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "review:combat"
+      ],
+      "exitCode": 0,
+      "wallMs": 726.864,
+      "log": "artifacts/v27-gate-14.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "compare:touch"
+      ],
+      "exitCode": 0,
+      "wallMs": 1256.188,
+      "log": "artifacts/v27-gate-15.log"
+    },
+    {
+      "argv": [
+        "python",
+        "docs/evidence/sampled-score-v27/verify-sampled-score-independent.py",
+        ".",
+        "/workspace/scratch/e72662e3b71f/Q-ps4-v27/artifacts/sampled-score-integration-report.json"
+      ],
+      "exitCode": 0,
+      "wallMs": 9161.767,
+      "log": "artifacts/v27-gate-16.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "wallMs": 2678.919,
+      "log": "artifacts/v27-gate-17.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "package"
+      ],
+      "exitCode": 0,
+      "wallMs": 1306.874,
+      "log": "artifacts/v27-gate-18.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:artifacts"
+      ],
+      "exitCode": 0,
+      "wallMs": 1190.963,
+      "log": "artifacts/v27-gate-19.log"
+    }
+  ],
+  "wallMs": 98418.494,
+  "finishedAt": "2026-09-16T02:57:19.652852+00:00",
+  "tests": {
+    "passed": 256,
+    "failed": 0
+  },
+  "headAuthor": "7b8b4b69f01a405d0326e4188f267c0257d8a577",
+  "scoreAuthor": "7d361843d3ac8d1b1f7377f3684cfc31617e3395",
+  "baseRemote": "173c4a7286c42fccb093d68b9cca91ec55319029",
+  "baseTree": "cd74d0fc43a6bc8958819d7df4960070496aae9b",
+  "stage": "artifacts/site-ITZktl",
+  "standalone": {
+    "bytes": 15594292,
+    "sha256": "f3d85775ee4137169f3badc8d72d465ca16a089b59ffffdfb0093123d01c9274"
+  },
+  "initialJsBytes": 163175,
+  "jsChunks": 3,
+  "totalJsBytes": 958132,
+  "renderedGame": false,
+  "heardAudio": false,
+  "deviceMeasured": false,
+  "ps4QualityAccepted": false,
+  "delivery": "PR39 normal merge unresolved; PR40 and41 stacked and CI successful; actual main547676fdce8d8e97abed9f065aad0b6e24af2fd6 / Site23 unchanged",
+  "sourceReadiness": "Head untextured. v28 independently repairs same-island UV corner loss before any original skin image is applied.",
+  "wholeSceneIndependent": "head-score-v27-scene-audit/whole-scene-comparison.json"
+}

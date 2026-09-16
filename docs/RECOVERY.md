@@ -1,5 +1,11 @@
 # 制作停止時の復旧
 
+
+2026-09-16の直接指定「達成するまで止めない」と利用上限後の「続けて」に従い、同じUltra所有担当の保存済み成果から継続する。局所単位の完了、正式描画/人間QA不在、通常mergeの未完了は、独立して実行可能な制作の終了条件にしない。実usage制約が再発した場合はその原応答と処理ID/確定SHA/未保存差分を保全し、稼働していない担当をbackground-runningと説明しない。Q定期再開は20件上限でdisabledのまま、保存済みpromptのみから次回実行を保証しない。
+
+PR39は通常mergeのtimeout後、一回のretryが405「Merge already in progress」。正規readbackでopen/merged=false、実main547676fdce8d8e97abed9f065aad0b6e24af2fd6のまま。原因未公開の操作を二重発火せず、mergecommit/mainの実変化を確認する。保存済みPR40/41と後続unitはfeatureへmergeせず、先行PRがmainへ入ってからretarget/requiredCI/expected-head通常mergeの順序を守る。未確認のtest mergeを実main・Site反映へ読み替えない。正規previewはmanaged-linux configured:false、監督mailbox不在。別browser/server/CIに移して迂回しない。
+
+
 2026-09-15の最新指示「人間は介入しません」により、人間の端末・アカウント・スクリーンショット・評価者の準備を復旧条件にしない。正式preview等の利用不能は該当工程に限定し、許可された自動検証と競合しない制作を継続する。人間へ準備を依頼せず、[自律検証工程](AUTONOMOUS_VALIDATION.md) と最新のPROJECT_STATEを使う。実機・実聴・外部評価の不足は未確認のまま保持する。
 
 2026-09-14のユーザー指示に基づき、既存の定期実行を制作の監視・復旧・再発火役へ変更した。実行中の制作に重ねて別の制作を起動するものではない。品質目標と完成期限2026-09-20、mainと既存所有者限定Siteへの反映許可は維持する。

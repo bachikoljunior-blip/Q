@@ -1,5 +1,20 @@
 # 制作状況 — 2026-09-16
 
+## 2026-09-16 — 継続中：頭部の造形・目と衣装の接続、実録楽器の曲を結合
+
+同じUltra担当の完成頭部 `7b8b4b69f01a405d0326e4188f267c0257d8a577` と実楽器曲 `7d361843d3ac8d1b1f7377f3684cfc31617e3395` を、v26の実天空・環境光へ結合した。頭はCC0 MakeHuman原型から眼窩・鼻・顎・耳を登録し1,496triへ制限、首の前傾露出・閉眼・フード/兜の前方遮蔽を修正。全family/4themeの既存8,000tri/14draw上限を維持する。肌の画像は未適用であり、原UVの同一島内seam欠落を次v28で直してから素材を貼る。[頭部と残る誤差](ANATOMICAL_HEAD_V27.md)。
+
+曲はCC0の実録音13WAV、28,478,818 Bを原本保存し、同じ80BPM・48秒・3stemの弦/打楽器/ベルへ用いた。元motif・24SFX・cueと実行する音制御はbyteを保持。各stem実decodeは1,058,400frames、clip0、実pan込み全モード最大peak0.54252、保守的加算上限0.63698。runtime音源は1,499,890 Bで元上限を維持。原録音はruntimeへ送らない。[実録音・権利・同条件比較](SAMPLED_SCORE_V27.md)。これは実聴や自然な演奏感の合格ではない。
+
+独立した同じ4地点×3quality比較では44体を保持し29人へ新頭部を適用、15狼は従来形状。17template geometryを共有、12条件で誤dispose0。全geometry bufferは21,131,274→21,409,210 B（+1.315%）、各地点のactive triangle増分1,512〜4,780。v25とのmanifest総量差+1,538,547 BはHDR1,435,119 BとJS103,428 Bで説明でき、初期JSと既存23媒体hashを保持。[独立scene比較](evidence/head-score-v27-scene-audit/whole-scene-review.md)。実GPU draw/FPSではない。
+
+結合の20必須command・256/256 tests成功、wall98.418秒。初期JS163,175 B、3 chunks、全JS958,132 B。単体版15,594,292 B / SHA256 `f3d85775ee4137169f3badc8d72d465ca16a089b59ffffdfb0093123d01c9274`、固定stage33public filesの全媒体byte一致。v26から全JS/単体版が88,695 B増えた。source・保存・攻撃・描画材質接続・音信号の限定検証で、正式描画・実機・触感・実聴・外部比較ではない。[結合証拠](evidence/head-score-v27-validation.json)。
+
+実mainは `547676fdce8d8e97abed9f065aad0b6e24af2fd6`、PR39の通常mergeはtimeout/405後にopenのまま。PR40 `1641ab6de66d2b27820d9f7281a464a6feb31a8d`、PR41 `173c4a7286c42fccb093d68b9cca91ec55319029` のpush/PR CIは成功しstackへ保全済み。テストmergeを実mainと扱わず、順番に実merge/retarget/CI/通常mergeを確認する。Site23・owner限定は未更新。利用上限後の直接「続けて」で同じ担当が再開し、この記録時点でv28素材/UVと現統合が実行中。過去ACTIVEは永続稼働の保証ではない。
+
+期限2026-09-20判断は **NO-GO / evidence insufficient**。完成0/7・指定10作品比較0/10。局所の原形状・実録音を採用しても全画面PS4写実相当は未達。次は画像素材と元UVの整合を実制作し、正常なmain/Site反映を追跡する。正式preview不足・定期再開20件上限・未完了mergeを、独立した制作の終了理由へ変更しない。
+
+
 ## 2026-09-16 — 継続中：実天空と全材質の環境光を結合、頭部と実楽器へ継続
 
 継続分類 **ACTIVE**。Poly Haven CC0の実HDR天空を、可視の雲・太陽・共有環境光・水/金属/人物/小物の反射へ結合した。原本1,435,119 Bを維持し、太陽の二重計上を除いた別の照明用画像をnative PMREMへ渡す。昼夜・影・fogの色処理を揃え、浮動小数点描画非対応時は既存の空と光で起動する。[出所・具体的費用・修正・限界](SHARED_SKY_V26.md)。独立監査が指摘したfogの最大約9.1/255の計算不一致を修正し、最終CPU計算では1.11e−16以下。native PMREMが出力を返す前に例外を投げた場合の内部出力回収は公開APIから保証できず、実GPU回収は未測定である。

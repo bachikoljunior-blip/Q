@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "heard": false,
+  "devicePlayback": false,
+  "renderedWebAudio": false,
+  "scope": "File/decode/signal/source checks and music-only offline mixes; no perceptual quality pass",
+  "reviewApproximation": "Same mode gain targets; mono stems centered rather than runtime motif pan .14; 1.5-second linear transitions rather than exponential ramps; no runtime compressor, ambience or effects",
+  "sourceFiles": 13,
+  "sourceBytes": 28478818,
+  "canonicalMotifFoleyCuesUnchanged": true,
+  "encodedRuntimeBytes": 1499890,
+  "versions": {
+    "baseline": {
+      "assets": [
+        {
+          "file": "pilgrim-harmony.mp3",
+          "sha256": "9ad667bf90a66e98402a6753917e2f9ce883497b1f1edbca66c3a88462abb36c",
+          "bytes": 288594,
+          "decodedFrames": 1058400,
+          "seconds": 48.0,
+          "channels": 2,
+          "peak": 0.7420286536216736,
+          "rms": 0.13695231080055237,
+          "clippedSamples": 0,
+          "loopJump": 0.017596356570720673,
+          "adjacentDeltaP99": 0.04118448495864868,
+          "stereoCorrelation": 0.8340134526207484,
+          "monoRms": 0.13113893568515778
+        },
+        {
+          "file": "pilgrim-motif.mp3",
+          "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+          "bytes": 192463,
+          "decodedFrames": 1058400,
+          "seconds": 48.0,
+          "channels": 1,
+          "peak": 0.7403414249420166,
+          "rms": 0.13485023379325867,
+          "clippedSamples": 0,
+          "loopJump": 0.011728493496775627,
+          "adjacentDeltaP99": 0.09618641436100006
+        },
+        {
+          "file": "pilgrim-pulse.mp3",
+          "sha256": "c5bbaa8d3d0a45bf2a52a935f7eb90147a19fc8c43ea2d9e3f73d966371b1333",
+          "bytes": 192463,
+          "decodedFrames": 1058400,
+          "seconds": 48.0,
+          "channels": 1,
+          "peak": 0.7421373128890991,
+          "rms": 0.09964697062969208,
+          "clippedSamples": 0,
+          "loopJump": 0.004887763410806656,
+          "adjacentDeltaP99": 0.06268620491027832
+        },
+        {
+          "file": "pilgrim-foley.wav",
+          "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+          "bytes": 826370,
+          "decodedFrames": 413163,
+          "seconds": 18.737551020408162,
+          "channels": 1,
+          "peak": 0.819976806640625,
+          "rms": 0.09203489869832993,
+          "clippedSamples": 0
+        }
+      ],
+      "decodedRetainedBytes": 18587052,
+      "review": "docs/evidence/sampled-score-v27/baseline-review.mp3",
+      "reviewSha256": "df8329fb7ecb8888d7e80a710d5b625600c6d928e25b42cf3c34e52b1d51ea23",
+      "reviewPeak": 0.18865931011398246,
+      "reviewRms": 0.025591789957739246,
+      "reviewSegments": "0..16s title,16..32s exploration,32..48s combat; music only"
+    },
+    "candidate": {
+      "assets": [
+        {
+          "file": "pilgrim-harmony.mp3",
+          "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+          "bytes": 288594,
+          "decodedFrames": 1058400,
+          "seconds": 48.0,
+          "channels": 2,
+          "peak": 0.6553034782409668,
+          "rms": 0.12845753133296967,
+          "clippedSamples": 0,
+          "loopJump": 0.003690852550789714,
+          "adjacentDeltaP99": 0.06675174832344055,
+          "stereoCorrelation": 0.875978041656238,
+          "monoRms": 0.12434422224760056
+        },
+        {
+          "file": "pilgrim-motif.mp3",
+          "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+          "bytes": 192463,
+          "decodedFrames": 1058400,
+          "seconds": 48.0,
+          "channels": 1,
+          "peak": 0.7403414249420166,
+          "rms": 0.13485023379325867,
+          "clippedSamples": 0,
+          "loopJump": 0.011728493496775627,
+          "adjacentDeltaP99": 0.09618641436100006
+        },
+        {
+          "file": "pilgrim-pulse.mp3",
+          "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+          "bytes": 192463,
+          "decodedFrames": 1058400,
+          "seconds": 48.0,
+          "channels": 1,
+          "peak": 0.7240089774131775,
+          "rms": 0.053547728806734085,
+          "clippedSamples": 0,
+          "loopJump": 0.0006688447901979089,
+          "adjacentDeltaP99": 0.008547216653823853
+        },
+        {
+          "file": "pilgrim-foley.wav",
+          "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+          "bytes": 826370,
+          "decodedFrames": 413163,
+          "seconds": 18.737551020408162,
+          "channels": 1,
+          "peak": 0.819976806640625,
+          "rms": 0.09203489869832993,
+          "clippedSamples": 0
+        }
+      ],
+      "decodedRetainedBytes": 18587052,
+      "review": "docs/evidence/sampled-score-v27/candidate-review.mp3",
+      "reviewSha256": "917a8e054d14ec261718c463581ff076639bd58356ee7271c064bd77b682e674",
+      "reviewPeak": 0.18249399705516745,
+      "reviewRms": 0.02366099716485497,
+      "reviewSegments": "0..16s title,16..32s exploration,32..48s combat; music only"
+    }
+  },
+  "passed": true
+}

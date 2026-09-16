@@ -1,0 +1,2 @@
+# Preserve exact upstream SFZ bytes, including their final blank line.
+*.sfz whitespace=-blank-at-eof

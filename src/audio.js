@@ -14,8 +14,8 @@ const MODES = Object.freeze({
 const busDefaults = Object.freeze({ music: .75, ambience: .65, sfx: .85, ui: .65 });
 const stopNode = node => { if (node?.stop) node.stop(); else try { node?.source.stop(); } catch { /* Already ended. */ } };
 
-// Original electronic composition and synthesized foley, with bounded Web Audio
-// voices. No recording, real instruments, or external music service is required.
+// Original composition rendered with CC0 recorded instrument samples;
+// the motif and foley remain synthesized, with bounded Web Audio voices.
 export class Soundscape {
   constructor() {
     this.ctx = null; this.volume = .45; this._music = true; this.muted = false;
