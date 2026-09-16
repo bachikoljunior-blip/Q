@@ -1,0 +1,184 @@
+{
+  "startedAt": "2026-09-16T02:02:52.178165+00:00",
+  "scope": "Required local source, gameplay, asset and CPU integration gates; no WebGL pixels or device timing.",
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "scripts/generate-vault-assets.mjs",
+        "--verify"
+      ],
+      "exitCode": 0,
+      "wallMs": 200.393,
+      "log": "artifacts/v25-gate-00.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-soundscape.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 90.566,
+      "log": "artifacts/v25-gate-01.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-main-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 2555.874,
+      "log": "artifacts/v25-gate-02.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-gathering-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 7288.11,
+      "log": "artifacts/v25-gate-03.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:vaults"
+      ],
+      "exitCode": 0,
+      "wallMs": 7468.559,
+      "log": "artifacts/v25-gate-04.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "wallMs": 28704.432,
+      "log": "artifacts/v25-gate-05.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-world-surfaces.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 2045.166,
+      "log": "artifacts/v25-gate-06.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-scene-integration.mjs",
+        ".",
+        "/workspace/scratch/e72662e3b71f/Q-ps4-v25/artifacts/scene-integration-report.json"
+      ],
+      "exitCode": 0,
+      "wallMs": 2896.237,
+      "log": "artifacts/v25-gate-07.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:journey"
+      ],
+      "exitCode": 0,
+      "wallMs": 483.325,
+      "log": "artifacts/v25-gate-08.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:crossing"
+      ],
+      "exitCode": 0,
+      "wallMs": 1013.911,
+      "log": "artifacts/v25-gate-09.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:forge"
+      ],
+      "exitCode": 0,
+      "wallMs": 999.614,
+      "log": "artifacts/v25-gate-10.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:session"
+      ],
+      "exitCode": 0,
+      "wallMs": 7282.061,
+      "log": "artifacts/v25-gate-11.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:expedition"
+      ],
+      "exitCode": 0,
+      "wallMs": 5251.539,
+      "log": "artifacts/v25-gate-12.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "review:combat"
+      ],
+      "exitCode": 0,
+      "wallMs": 4618.303,
+      "log": "artifacts/v25-gate-13.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "compare:touch"
+      ],
+      "exitCode": 0,
+      "wallMs": 1517.64,
+      "log": "artifacts/v25-gate-14.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "wallMs": 3050.159,
+      "log": "artifacts/v25-gate-15.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "package"
+      ],
+      "exitCode": 0,
+      "wallMs": 642.487,
+      "log": "artifacts/v25-gate-16.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:artifacts"
+      ],
+      "exitCode": 0,
+      "wallMs": 543.281,
+      "log": "artifacts/v25-gate-17.log"
+    }
+  ],
+  "wallMs": 76662.7,
+  "finishedAt": "2026-09-16T02:04:08.840868+00:00"
+}

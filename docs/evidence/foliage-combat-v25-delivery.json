@@ -1,0 +1,46 @@
+{
+  "recordedAt": "2026-09-16T02:04:08.840868+00:00",
+  "sourceBase": "bfc5d10d8b1042dc6063569a624c115b6c1e7833",
+  "includedUnits": {
+    "forest": "3c6bdc9204508766b609a3414fbea1121ca0084c",
+    "actorMotion": "7d8a234354fac9ee9d38aeabbf31c228220fc086",
+    "weaponTrail": "c7794e7709367e582f3739684e7eab7447af3297"
+  },
+  "validation": {
+    "requiredCommands": 18,
+    "tests": 242,
+    "passed": 242,
+    "wallMs": 76662.7,
+    "initialJSBytes": 163175,
+    "JSChunks": 3,
+    "allJSBytes": 854704
+  },
+  "release": {
+    "bytes": 13576431,
+    "sha256": "9c80c6c5e68e20b40ef2d143874d5e6a4f7c3215e94317df37c4b20856212507"
+  },
+  "stage": {
+    "path": "artifacts/site-jhYm3c",
+    "publicFiles": 32
+  },
+  "sourceHashes": {
+    "src/scene.js": "d1cdd4389c4de89e92c871d1b52d8f524ad6b73d0dbaae45e0e8f1c4ccf3b87c",
+    "src/actor-models.js": "d299e3d02b0fca392b3e22eb9b7753133d7413d452403e482ee86b76337f7ff7",
+    "src/character-motion.js": "4569b9fa69da7f5894c102acc9e7586f4b40f37b3a22bcafb04b1a0169ea3924",
+    "src/weapon-trails.js": "29239925d0b70ca70032e728425ce475ac57718379aaf6936509119b28cc5b3b",
+    "src/forest-materials.js": "881295c31be465ee1784e2f458bfae777744ba8d67394920f815a707b3c3d0a8",
+    "src/forest-geometry.js": "9118a5befb535c04c4f8516d6afbb1b30e774957fcb373f805de05c98ac2fd1c",
+    "src/forest-texture-loader.js": "76b78d8f7fe2d200e1fbde179599d17708c43de9bbcbe9ad782f61f7ec6f8a45",
+    "src/forest-assets.js": "484deeeb535da5f6ecbfdc0bb234928cd50923eae321adcd46a1bf9c51962302"
+  },
+  "limits": [
+    "Explicit loader/renderer doubles in Node integration.",
+    "No WebGL pixels, GPU compilation, hardware frame time, physical touch, actual audio listening or PS4 perceptual parity."
+  ],
+  "main": {
+    "status": "PR39 merge request unresolved at last readback; v25 has not been merged"
+  },
+  "site": {
+    "status": "version23 retained until actual main and exact source deployment"
+  }
+}

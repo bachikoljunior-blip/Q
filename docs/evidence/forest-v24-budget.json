@@ -1,0 +1,350 @@
+{
+  "base": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+  "measuredAt": "2026-09-16T01:42:49.760Z",
+  "geometry": {
+    "trunk": {
+      "triangles": 216,
+      "vertices": 200,
+      "bytes": 7696,
+      "bounds": {
+        "min": [
+          -0.9182323813438416,
+          -0.5341120958328247,
+          -0.7513965368270874
+        ],
+        "max": [
+          0.5830845832824707,
+          0.5046996474266052,
+          0.7782655954360962
+        ]
+      }
+    },
+    "pine": {
+      "triangles": 192,
+      "vertices": 288,
+      "bytes": 18432,
+      "bounds": {
+        "min": [
+          -0.6708215308189392,
+          -0.658818645477295,
+          -0.7479419541358948
+        ],
+        "max": [
+          0.6198600363731385,
+          0.6087261271476746,
+          0.6806895565986634
+        ]
+      }
+    },
+    "crown": {
+      "triangles": 144,
+      "vertices": 216,
+      "bytes": 13824,
+      "bounds": {
+        "min": [
+          -0.8430690002441407,
+          -0.5467542243003846,
+          -0.8652504515647889
+        ],
+        "max": [
+          0.8509355020523072,
+          0.7366149854660035,
+          0.8509087991714478
+        ]
+      }
+    },
+    "farTrunk": {
+      "triangles": 20,
+      "vertices": 18,
+      "bytes": 696,
+      "bounds": {
+        "min": [
+          -0.18182998895645142,
+          -0.5084689259529114,
+          -0.19732660055160522
+        ],
+        "max": [
+          0.23524761199951172,
+          0.5044912099838257,
+          0.19732660055160522
+        ]
+      }
+    },
+    "farPine": {
+      "triangles": 18,
+      "vertices": 36,
+      "bytes": 2268,
+      "bounds": {
+        "min": [
+          -0.7732032370567322,
+          -0.6935233306884766,
+          -0.6109818053245545
+        ],
+        "max": [
+          0.7074838709831238,
+          0.5748296809196473,
+          0.6777236294746399
+        ]
+      }
+    },
+    "farCrown": {
+      "triangles": 18,
+      "vertices": 36,
+      "bytes": 2268,
+      "bounds": {
+        "min": [
+          -0.6766605806350708,
+          -0.5467542243003846,
+          -0.8652504515647889
+        ],
+        "max": [
+          0.8509355020523072,
+          0.728981478214264,
+          0.8439317178726197
+        ]
+      }
+    }
+  },
+  "conditions": {
+    "treeCount": 805,
+    "pineTrees": 577,
+    "broadleafTrees": 228,
+    "pineInstancesPerTree": 2,
+    "qualityRadii": {
+      "low": 0,
+      "medium": 52,
+      "high": 80
+    },
+    "positions": [
+      [
+        0,
+        80
+      ],
+      [
+        -105,
+        0
+      ],
+      [
+        -300,
+        -130
+      ],
+      [
+        170,
+        -200
+      ]
+    ]
+  },
+  "scenarios": [
+    {
+      "quality": "low",
+      "x": 0,
+      "z": 80,
+      "counts": {
+        "trunk": 0,
+        "pine": 0,
+        "crown": 0,
+        "farTrunk": 805,
+        "farPine": 1154,
+        "farCrown": 228
+      },
+      "triangles": 40976,
+      "nonemptyMainPassDraws": 3,
+      "baselineTriangles": 47090,
+      "triangleDelta": -6114
+    },
+    {
+      "quality": "low",
+      "x": -105,
+      "z": 0,
+      "counts": {
+        "trunk": 0,
+        "pine": 0,
+        "crown": 0,
+        "farTrunk": 805,
+        "farPine": 1154,
+        "farCrown": 228
+      },
+      "triangles": 40976,
+      "nonemptyMainPassDraws": 3,
+      "baselineTriangles": 47090,
+      "triangleDelta": -6114
+    },
+    {
+      "quality": "low",
+      "x": -300,
+      "z": -130,
+      "counts": {
+        "trunk": 0,
+        "pine": 0,
+        "crown": 0,
+        "farTrunk": 805,
+        "farPine": 1154,
+        "farCrown": 228
+      },
+      "triangles": 40976,
+      "nonemptyMainPassDraws": 3,
+      "baselineTriangles": 47090,
+      "triangleDelta": -6114
+    },
+    {
+      "quality": "low",
+      "x": 170,
+      "z": -200,
+      "counts": {
+        "trunk": 0,
+        "pine": 0,
+        "crown": 0,
+        "farTrunk": 805,
+        "farPine": 1154,
+        "farCrown": 228
+      },
+      "triangles": 40976,
+      "nonemptyMainPassDraws": 3,
+      "baselineTriangles": 47090,
+      "triangleDelta": -6114
+    },
+    {
+      "quality": "medium",
+      "x": 0,
+      "z": 80,
+      "counts": {
+        "trunk": 20,
+        "pine": 40,
+        "crown": 0,
+        "farTrunk": 785,
+        "farPine": 1114,
+        "farCrown": 228
+      },
+      "triangles": 51856,
+      "nonemptyMainPassDraws": 5,
+      "baselineTriangles": 51210,
+      "triangleDelta": 646
+    },
+    {
+      "quality": "medium",
+      "x": -105,
+      "z": 0,
+      "counts": {
+        "trunk": 33,
+        "pine": 0,
+        "crown": 33,
+        "farTrunk": 772,
+        "farPine": 1154,
+        "farCrown": 195
+      },
+      "triangles": 51602,
+      "nonemptyMainPassDraws": 5,
+      "baselineTriangles": 51446,
+      "triangleDelta": 156
+    },
+    {
+      "quality": "medium",
+      "x": -300,
+      "z": -130,
+      "counts": {
+        "trunk": 5,
+        "pine": 10,
+        "crown": 0,
+        "farTrunk": 800,
+        "farPine": 1144,
+        "farCrown": 228
+      },
+      "triangles": 43696,
+      "nonemptyMainPassDraws": 5,
+      "baselineTriangles": 48120,
+      "triangleDelta": -4424
+    },
+    {
+      "quality": "medium",
+      "x": 170,
+      "z": -200,
+      "counts": {
+        "trunk": 29,
+        "pine": 58,
+        "crown": 0,
+        "farTrunk": 776,
+        "farPine": 1096,
+        "farCrown": 228
+      },
+      "triangles": 56752,
+      "nonemptyMainPassDraws": 5,
+      "baselineTriangles": 53064,
+      "triangleDelta": 3688
+    },
+    {
+      "quality": "high",
+      "x": 0,
+      "z": 80,
+      "counts": {
+        "trunk": 40,
+        "pine": 68,
+        "crown": 6,
+        "farTrunk": 765,
+        "farPine": 1086,
+        "farCrown": 222
+      },
+      "triangles": 61404,
+      "nonemptyMainPassDraws": 6,
+      "baselineTriangles": 54886,
+      "triangleDelta": 6518
+    },
+    {
+      "quality": "high",
+      "x": -105,
+      "z": 0,
+      "counts": {
+        "trunk": 70,
+        "pine": 4,
+        "crown": 68,
+        "farTrunk": 735,
+        "farPine": 1150,
+        "farCrown": 160
+      },
+      "triangles": 63960,
+      "nonemptyMainPassDraws": 6,
+      "baselineTriangles": 56478,
+      "triangleDelta": 7482
+    },
+    {
+      "quality": "high",
+      "x": -300,
+      "z": -130,
+      "counts": {
+        "trunk": 20,
+        "pine": 34,
+        "crown": 3,
+        "farTrunk": 785,
+        "farPine": 1120,
+        "farCrown": 225
+      },
+      "triangles": 51190,
+      "nonemptyMainPassDraws": 6,
+      "baselineTriangles": 50988,
+      "triangleDelta": 202
+    },
+    {
+      "quality": "high",
+      "x": 170,
+      "z": -200,
+      "counts": {
+        "trunk": 68,
+        "pine": 136,
+        "crown": 0,
+        "farTrunk": 737,
+        "farPine": 1018,
+        "farCrown": 228
+      },
+      "triangles": 77968,
+      "nonemptyMainPassDraws": 5,
+      "baselineTriangles": 61098,
+      "triangleDelta": 16870
+    }
+  ],
+  "residentGeometryBytes": {
+    "baseline": 37592,
+    "candidate": 45184
+  },
+  "runtimeTextureBytes": 327978,
+  "sharedTextureMipBytes": 2796200,
+  "scope": "Identical real Game tree coordinates, height/gold family counts, two pine instances and unchanged 0/52/80m radii. Main-pass instanced draw sets, including all tree geometry regardless of frustum/occlusion. Excludes other scenery. Structural counts are not measured draw calls, FPS or GPU timing."
+}

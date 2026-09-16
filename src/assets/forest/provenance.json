@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "recordedAt": "2026-09-16",
+  "license": "CC0-1.0",
+  "sources": [
+    {
+      "path": "src/assets/forest/pine-diff.jpg",
+      "asset": "pine_tree_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_tree_01/pine_tree_01_twig_diff_1k.jpg",
+      "sourcePage": "https://polyhaven.com/a/pine_tree_01",
+      "license": "CC0-1.0",
+      "licenseURL": "https://polyhaven.com/license",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 510932,
+      "sha256": "e649f0f9bc74d1af5f1a45eaf2fe7a29adaaddfab251f746b983da301e4b80e1",
+      "retainedOriginal": true,
+      "runtimeIncluded": false
+    },
+    {
+      "path": "src/assets/forest/pine-alpha.jpg",
+      "asset": "pine_tree_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_tree_01/pine_tree_01_twig_alpha_1k.jpg",
+      "sourcePage": "https://polyhaven.com/a/pine_tree_01",
+      "license": "CC0-1.0",
+      "licenseURL": "https://polyhaven.com/license",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 195206,
+      "sha256": "bee10734c529a874570da6e4091758de5cc7dee17a359eeacd9c67fde1cb0947",
+      "retainedOriginal": true,
+      "runtimeIncluded": false
+    },
+    {
+      "path": "src/assets/forest/crown-diff.jpg",
+      "asset": "shrub_04",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/shrub_04/shrub_04_diff_1k.jpg",
+      "sourcePage": "https://polyhaven.com/a/shrub_04",
+      "license": "CC0-1.0",
+      "licenseURL": "https://polyhaven.com/license",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 373350,
+      "sha256": "0b0fa0a474753d13f3093858cea79d0de05da1e6a0c5d6e181cd351080980b6c",
+      "retainedOriginal": true,
+      "runtimeIncluded": false
+    },
+    {
+      "path": "src/assets/forest/crown-alpha.jpg",
+      "asset": "shrub_04",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/shrub_04/shrub_04_alpha_1k.jpg",
+      "sourcePage": "https://polyhaven.com/a/shrub_04",
+      "license": "CC0-1.0",
+      "licenseURL": "https://polyhaven.com/license",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 77934,
+      "sha256": "79b42a2e9703f3080192e1d0c6be89d7d36a5543ee7cc411339f2741dd11a1ee",
+      "retainedOriginal": true,
+      "runtimeIncluded": false
+    }
+  ],
+  "derivatives": [
+    {
+      "path": "src/assets/forest/pine-branch-rgba.png",
+      "bytes": 165258,
+      "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "RGBA8 PNG, straight alpha, source maps composed into a branch spray",
+      "runtimeIncluded": true,
+      "operations": [
+        "connected alpha component extraction from source atlas",
+        "resampling/rotation and original twig recomposition",
+        "nearest opaque photographic RGB vector propagation with two-pixel bilinear gutter"
+      ]
+    },
+    {
+      "path": "src/assets/forest/crown-branch-rgba.png",
+      "bytes": 162720,
+      "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "RGBA8 PNG, straight alpha, source maps composed into a branch spray",
+      "runtimeIncluded": true,
+      "operations": [
+        "connected alpha component extraction from source atlas",
+        "resampling/rotation and original twig recomposition",
+        "nearest opaque photographic RGB vector propagation with two-pixel bilinear gutter",
+        "amber color grading preserving source venation"
+      ]
+    }
+  ],
+  "credits": [
+    {
+      "asset": "Pine Tree 01",
+      "authors": {
+        "photography": "Rob Tuytel",
+        "modeling": "Rico Cilliers"
+      }
+    },
+    {
+      "asset": "Shrub 04",
+      "authors": {
+        "creator": "Rico Cilliers"
+      },
+      "qualification": "Source page lists creator, not a separately credited photography role."
+    }
+  ],
+  "generator": {
+    "path": "src/assets/forest/build-textures.py",
+    "sha256": "4b07a13e1c97a9e6048393e94727bca9917cd62d4aedffff6fc4a9b194bf35a0",
+    "python": "3",
+    "pillow": "12.3.0",
+    "aiGenerated": false,
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "scope": "Uses original source texture bytes, not the 17M-triangle pine model or native Blender scene. Recomposition and geometry authored for Q; source photography credited to Poly Haven.",
+  "runtimeTextureBudget": {
+    "compressedBytes": 327978,
+    "rgbaMipBytesPerTexture": 1398100,
+    "sharedTextures": 2,
+    "rgbaMipBytesTotal": 2796200,
+    "fallbackRgbaMipBytes": 43688,
+    "extraMainPassDraws": 0,
+    "extraShadowPasses": 0
+  },
+  "verificationLimits": [
+    "These PNG files are material assets, not gameplay screenshots.",
+    "Formal WebGL preview, hardware FPS, perceptual comparison and PS4 parity have not been verified."
+  ]
+}

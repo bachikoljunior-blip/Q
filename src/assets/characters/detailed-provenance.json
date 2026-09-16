@@ -51,9 +51,9 @@
   "geometryMethod": "Continuous shaped torso, sleeves, trouser legs, boots, digits and canine trunk/tail. Smooth multi-joint weights across joint collars, explicit human spine/digits and canine hocks; UV seams retain averaged normals. Armor/equipment stay rigid. Material batches and immutable geometry shared across instances; bones and deforming cape independent. All material batches within an actor share one skeleton palette; each actor has independent cloned bones.",
   "animationRecipe": {
     "file": "../../actor-models.js",
-    "sha256": "835be3e889666c05a46d82c97aaad0ba08d447a02ef76f145dc6c3ba7432b55e",
-    "bytes": 20155,
-    "origin": "Original analytic poses and visual-only contact/transition logic. No motion capture imported."
+    "sha256": "d299e3d02b0fca392b3e22eb9b7753133d7413d452403e482ee86b76337f7ff7",
+    "bytes": 26225,
+    "origin": "Original analytic poses with a continuous saved combat clock, two-hand weapon frames and fixed-length arm IK, and visual-only contact/transition logic. No motion capture imported."
   },
   "qualityBoundary": "Original analytic modelling, not photogrammetry, scan-derived anatomy or imported mocap. CPU topology/weight/contact checks do not establish WebGL appearance, device FPS or PS4/flagship parity."
 }
