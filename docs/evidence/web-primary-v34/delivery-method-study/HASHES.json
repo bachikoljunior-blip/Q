@@ -1,0 +1,32 @@
+{
+  "finished_utc": "2026-09-16T05:58:16.972515+00:00",
+  "source_hashes_stable": true,
+  "head": "7cbff3c899b789d4087b3ff2cc572f62818f9e24",
+  "status_readonly": " M .github/workflows/validate.yml\n M release/Q-ash-pilgrim.html\n M tests/cloak-uv.test.mjs\n?? docs/PROJECTILE_MEDIA_INTEGRATION_V33.md\n?? docs/evidence/projectile-media-v33/\n?? scripts/create-ranger-cloak-baseline-v33.mjs\n?? tests/fixtures/cloak-ranger-before-uv-v33.json\n",
+  "files": {
+    "REVIEW.md": {
+      "sha256": "274fb26ef14dd30434679e2daa32d2a1fdaede9067586df2a98d9b34a013a246",
+      "bytes": 16240
+    },
+    "asset-inventory.json": {
+      "sha256": "737f593aaf63f86183c97822b66c26f956ba6b3d38473b100ecbd5d91841353c",
+      "bytes": 40111
+    },
+    "audit-phases.mjs": {
+      "sha256": "7c77bdbc9f196af03dd6fe087d6bd91ce02b97f1768b6e2374f1b92fd663527e",
+      "bytes": 5563
+    },
+    "budget-arithmetic.json": {
+      "sha256": "07de50b6c832444cf876effdab68bb3cfd21ee95895f319b77ad46b5decfafbd",
+      "bytes": 4749
+    },
+    "phase-observation.json": {
+      "sha256": "62e91849222ab1a72e63316a7b94d17e6130e6573cd27b564a5012ab2ca705a8",
+      "bytes": 2792
+    },
+    "source-hashes.json": {
+      "sha256": "23c1277dc75bcaded922a2d61d7b5498f063ef59566cfb244a0eab770601bf5d",
+      "bytes": 4425
+    }
+  }
+}

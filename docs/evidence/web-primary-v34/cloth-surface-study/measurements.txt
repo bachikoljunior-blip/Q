@@ -1,0 +1,104 @@
+{
+  "metersPerUV": 0.9722054042332153,
+  "repeat": [
+    3.6881459463887416,
+    3.6853882561874487
+  ],
+  "photo": {
+    "source": "cotton_jersey_diff_1k.jpg",
+    "bytes": 581360,
+    "sha256": "0f1b790e4087223275aaa6fdffdd46a556a26d2af72cd811acf72ba9c21ec1f6",
+    "md5": "d2f4493fdd48634b50d40f810ce9deb7",
+    "q85RepresentationCharacters": 726722,
+    "rgba8MipsBytes": 5596500,
+    "MiB": 5.337238311767578
+  },
+  "delivery": {
+    "standaloneBytes": 16435231,
+    "sha256": "67de9eba041c58f5676af4780f023924b4123496ce52a7ae6e7b7d1d033a08cf",
+    "remainingBeforePhoto": 341985,
+    "withPhotoPayloadOnly": 17161953,
+    "remainingAfterPhotoPayloadOnly": -384737,
+    "warning": "Parent may be rebuilding; no loader/code allowance or final candidate package in this source-only study"
+  },
+  "projection": [
+    {
+      "viewport": "1280x720",
+      "perpendicularDistanceM": 9,
+      "pxPerM": 78.50442022020601,
+      "clothTileHeightPx": 20.70946567600872,
+      "sourceTexelsPerScreenPixel": 49.494275518051204,
+      "estimatedMipmapLod": 5.629189768376616,
+      "cottonFrequencyPeakPeriodPx": [
+        0.06507541148455771,
+        0.07874321549813201
+      ],
+      "currentProceduralPeriodPx": 1.1925378374106186
+    },
+    {
+      "viewport": "1280x720",
+      "perpendicularDistanceM": 2.6,
+      "pxPerM": 271.74606999302085,
+      "clothTileHeightPx": 71.6866119554148,
+      "sourceTexelsPerScreenPixel": 14.298346260770346,
+      "estimatedMipmapLod": 3.8377763901880337,
+      "cottonFrequencyPeakPeriodPx": [
+        0.22526103975423828,
+        0.27257266903199545
+      ],
+      "currentProceduralPeriodPx": 4.128015591036757
+    },
+    {
+      "viewport": "844x390",
+      "perpendicularDistanceM": 9,
+      "pxPerM": 42.52322761927826,
+      "clothTileHeightPx": 11.217627241171389,
+      "sourceTexelsPerScreenPixel": 91.37404711024838,
+      "estimatedMipmapLod": 6.51371255095668,
+      "cottonFrequencyPeakPeriodPx": [
+        0.035249181220802096,
+        0.042652575061488174
+      ],
+      "currentProceduralPeriodPx": 0.6459579952640851
+    },
+    {
+      "viewport": "844x390",
+      "perpendicularDistanceM": 2.6,
+      "pxPerM": 147.1957879128863,
+      "clothTileHeightPx": 38.830248142516346,
+      "sourceTexelsPerScreenPixel": 26.396946942960643,
+      "estimatedMipmapLod": 4.722299172768098,
+      "cottonFrequencyPeakPeriodPx": [
+        0.12201639653354573,
+        0.14764352905899752
+      ],
+      "currentProceduralPeriodPx": 2.2360084451449103
+    },
+    {
+      "viewport": "390x844",
+      "perpendicularDistanceM": 9,
+      "pxPerM": 92.02462592479705,
+      "clothTileHeightPx": 24.276095875765776,
+      "sourceTexelsPerScreenPixel": 42.22260470734226,
+      "estimatedMipmapLod": 5.399943675999106,
+      "cottonFrequencyPeakPeriodPx": [
+        0.07628284346245377,
+        0.09230454705614363
+      ],
+      "currentProceduralPeriodPx": 1.3979193538535586
+    },
+    {
+      "viewport": "390x844",
+      "perpendicularDistanceM": 2.6,
+      "pxPerM": 318.5467820473744,
+      "clothTileHeightPx": 84.03263956995845,
+      "sourceTexelsPerScreenPixel": 12.197641359898876,
+      "estimatedMipmapLod": 3.6085302978105234,
+      "cottonFrequencyPeakPeriodPx": [
+        0.2640559966008015,
+        0.3195157398097279
+      ],
+      "currentProceduralPeriodPx": 4.838951609493087
+    }
+  ]
+}

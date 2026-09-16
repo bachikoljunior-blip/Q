@@ -1,0 +1,22 @@
+✔ base: every retained surface corner uses its exact original OBJ vertex/UV pair, including same-island seams (8.173715ms)
+✔ base: LOD preserves each source face orientation without swapping UV corners and the authored cap is nondegenerate (8.335773ms)
+✔ Mira: every retained surface corner uses its exact original OBJ vertex/UV pair, including same-island seams (4.577901ms)
+✔ Mira: LOD preserves each source face orientation without swapping UV corners and the authored cap is nondegenerate (4.245867ms)
+✔ head source, all archived inputs, generator and generated runtime bytes match provenance (21.394139ms)
+✔ derived head is closed at every UV split, outward, finite and within its unchanged silhouette envelope (41.308409ms)
+✔ every human shares one independent skeleton and immutable face geometry without texturing hands or duplicating old head skin (3805.387199ms)
+✔ existing two eyelid bones close the registered sockets monotonically and corrected hoods expose the eyes (8651.487308ms)
+✔ capped neck rim stays inside the existing animated neck through pitch, drinking, recoil and death (170.210216ms)
+✔ real ranger grip, draw finger, bowstrings and saved release share the existing Game launch line (1635.018126ms)
+✔ one deferred decode is shared, decode failure retries, late release disposes and cannot poison new load (4.649383ms)
+✔ invalid decode is disposed, cache can recover, invalid install retains prior face material (70.063274ms)
+✔ only smith face shares sRGB map across clones; eyes, lids, body and every other role remain unchanged (279.553623ms)
+✔ real scene waits for skin, rejects failed decode, installs before actor construction and shares every quality (1454.165326ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13587.365469

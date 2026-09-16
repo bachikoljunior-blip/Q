@@ -1,0 +1,29 @@
+{
+  "recordedAtUTC": "2026-09-16T06:33:41Z",
+  "scope": "Fresh official connector GET reads only; this review made zero mutations.",
+  "main": {
+    "node_id": "REF_kwDOTpQj669yZWZzL2hlYWRzL21haW4",
+    "object": {
+      "sha": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+      "type": "commit",
+      "url": "https://api.github.com/repos/bachikoljunior-blip/Q/git/commits/547676fdce8d8e97abed9f065aad0b6e24af2fd6"
+    },
+    "ref": "refs/heads/main",
+    "url": "https://api.github.com/repos/bachikoljunior-blip/Q/git/refs/heads/main"
+  },
+  "pr": {
+    "auto_merge": null,
+    "base": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+    "baseRef": "main",
+    "head": "bfc5d10d8b1042dc6063569a624c115b6c1e7833",
+    "headRef": "feat/ps4-world-surfaces-v24-20260916",
+    "merge_commit_sha": "16fff61d98870b7e8ed1e24df375fe0c9eabda3b",
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "merged": false,
+    "merged_at": null,
+    "number": 39,
+    "state": "open",
+    "updated_at": "2026-09-16T01:48:48Z"
+  }
+}

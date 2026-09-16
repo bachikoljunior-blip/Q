@@ -1,0 +1,100 @@
+{
+  "wallSeconds": 10.282390091,
+  "nonDeathExact": true,
+  "nonCapeExact": true,
+  "rows": 1785,
+  "keyframes": 84,
+  "roles": [
+    {
+      "role": "player",
+      "minFloorBefore": -0.02288908603180828,
+      "minFloorAfter": 0.011999969904402996,
+      "maxDegenerateBefore": 80,
+      "maxDegenerateAfter": 0,
+      "maxEdgeAfter": 1.0919494497339577,
+      "minAreaRatioAfter": 0.9688138386008848,
+      "maxStretchBefore": 3.3865964043796573,
+      "maxStretchAfter": 1.2990930621287327,
+      "bodyCrossingsBefore": 65,
+      "bodyCrossingsAfter": 17
+    },
+    {
+      "role": "npc",
+      "minFloorBefore": -0.01306901958473794,
+      "minFloorAfter": 0.011999976311216909,
+      "maxDegenerateBefore": 64,
+      "maxDegenerateAfter": 0,
+      "maxEdgeAfter": 1.0872074143866126,
+      "minAreaRatioAfter": 0.9791048156947647,
+      "maxStretchBefore": 2.7556398207919974,
+      "maxStretchAfter": 1.296003217972347,
+      "bodyCrossingsBefore": 62,
+      "bodyCrossingsAfter": 15
+    },
+    {
+      "role": "sena",
+      "minFloorBefore": -0.01306901958473794,
+      "minFloorAfter": 0.011999976311216909,
+      "maxDegenerateBefore": 64,
+      "maxDegenerateAfter": 0,
+      "maxEdgeAfter": 1.0872074143866126,
+      "minAreaRatioAfter": 0.9791048156947647,
+      "maxStretchBefore": 2.7556398207919974,
+      "maxStretchAfter": 1.296003217972347,
+      "bodyCrossingsBefore": 62,
+      "bodyCrossingsAfter": 15
+    },
+    {
+      "role": "scout",
+      "minFloorBefore": -0.02288908603180828,
+      "minFloorAfter": 0.011999969904402996,
+      "maxDegenerateBefore": 80,
+      "maxDegenerateAfter": 0,
+      "maxEdgeAfter": 1.0919494497339577,
+      "minAreaRatioAfter": 0.9688138386008848,
+      "maxStretchBefore": 3.3865964043796573,
+      "maxStretchAfter": 1.2990930621287327,
+      "bodyCrossingsBefore": 63,
+      "bodyCrossingsAfter": 17
+    },
+    {
+      "role": "traveler",
+      "minFloorBefore": -0.01306901958473794,
+      "minFloorAfter": 0.011999976311216909,
+      "maxDegenerateBefore": 64,
+      "maxDegenerateAfter": 0,
+      "maxEdgeAfter": 1.0872074143866126,
+      "minAreaRatioAfter": 0.9791048156947647,
+      "maxStretchBefore": 2.7556398207919974,
+      "maxStretchAfter": 1.296003217972347,
+      "bodyCrossingsBefore": 42,
+      "bodyCrossingsAfter": 0
+    },
+    {
+      "role": "ranger",
+      "minFloorBefore": -0.01306901958473794,
+      "minFloorAfter": 0.011999976311216909,
+      "maxDegenerateBefore": 64,
+      "maxDegenerateAfter": 0,
+      "maxEdgeAfter": 1.0872074143866126,
+      "minAreaRatioAfter": 0.9791048156947647,
+      "maxStretchBefore": 2.7556398207919974,
+      "maxStretchAfter": 1.296003217972347,
+      "bodyCrossingsBefore": 42,
+      "bodyCrossingsAfter": 0
+    },
+    {
+      "role": "boss",
+      "minFloorBefore": -0.06846574013757101,
+      "minFloorAfter": 0.027599925859258523,
+      "maxDegenerateBefore": 96,
+      "maxDegenerateAfter": 0,
+      "maxEdgeAfter": 1.090198916462623,
+      "minAreaRatioAfter": 0.9673706428188656,
+      "maxStretchBefore": 3.839692500531195,
+      "maxStretchAfter": 2.5883571932085334,
+      "bodyCrossingsBefore": 67,
+      "bodyCrossingsAfter": 14
+    }
+  ]
+}

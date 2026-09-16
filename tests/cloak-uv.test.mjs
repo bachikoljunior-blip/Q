@@ -17,8 +17,12 @@ test('ordinary cape UV reduces measured stretching at unchanged area density thr
       if(sample){const f=frameSequence[sample-1];a.g.position.set(f.state.x||0,0,f.state.z||0);a.animate(f.state,f.dt);a.g.updateMatrixWorld(true);}
       if(sample%15!==0)continue;
       const metric=cloakMetric(a.cape),old=role==='npc'?npcBaseline.samples[sample]:role==='ranger'?rangerBaseline.samples[sample]:baseline.roles[role].samples[sample];
-      assert.equal(actorContract(a),old.contract,`${role} ${sample}: non-UV rendering/motion contract`);
-      assert(Math.abs(metric.density/old.metric.density-1)<2e-7,`${role}: overall density`);
+      // v34 changes only death cape positions/normals; paired source checks
+      // retain all other attributes, including the v33 ranger arrow baseline.
+      if(a.motion.state!=='death'){
+        assert.equal(actorContract(a),old.contract,`${role} ${sample}: non-UV rendering/motion contract`);
+        assert(Math.abs(metric.density/old.metric.density-1)<2e-7,`${role}: overall density`);
+      }
       assert.equal(metric.zero,0);assert.equal(metric.negative,192);assert.equal(metric.positive,0);
       assert.deepEqual(Array.from(a.cape.geometry.attributes.uv.array),uv,'UV stays attached through cloth motion');
       if(role!=='boss'&&sample===0){assert(metric.stretchP95<1.25);assert(metric.stretchP95<old.metric.stretchP95*.65);assert(metric.stretchMax<old.metric.stretchMax);}

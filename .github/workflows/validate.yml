@@ -2,6 +2,12 @@ name: Validate game
 on:
   push:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      standalone:
+        description: Also generate and validate the optional offline HTML
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -79,13 +85,28 @@ jobs:
       - run: npm run build
       - run: npm run package
       - run: npm run test:artifacts
-      - name: Verify the standalone build is current
+      - name: Verify the web receipt is current
         run: |
-          git ls-files --error-unmatch release/Q-ash-pilgrim.html
-          test -z "$(git status --porcelain --untracked-files=all -- release/Q-ash-pilgrim.html)"
+          git ls-files --error-unmatch release/Q-web-manifest.json
+          test -z "$(git status --porcelain --untracked-files=all -- release/Q-web-manifest.json)"
+      - name: Select the verified fixed web stage
+        id: web-stage
+        run: node -e 'const fs=require("node:fs"); const stage=JSON.parse(fs.readFileSync("artifacts/latest-site.json")); fs.appendFileSync(process.env.GITHUB_OUTPUT,`root=${stage.root}\n`);'
       - uses: actions/upload-artifact@v4
         with:
-          name: Q-ash-pilgrim
+          name: Q-web
           path: |
-            dist/
-            release/Q-ash-pilgrim.html
+            ${{ steps.web-stage.outputs.root }}/dist/
+            release/Q-web-manifest.json
+          if-no-files-found: error
+      - name: Generate and verify optional offline HTML
+        if: github.event_name == 'workflow_dispatch' && inputs.standalone
+        run: npm run package:standalone && npm run test:standalone
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'workflow_dispatch' && inputs.standalone
+        with:
+          name: Q-standalone-optional
+          path: |
+            artifacts/Q-ash-pilgrim-standalone.html
+            artifacts/standalone-encoding.json
+          if-no-files-found: error

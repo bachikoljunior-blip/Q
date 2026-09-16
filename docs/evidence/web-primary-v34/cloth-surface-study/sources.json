@@ -1,0 +1,45 @@
+{
+  "reviewedUTC": "2026-09-16",
+  "urls": {
+    "cottonAsset": "https://polyhaven.com/a/cotton_jersey",
+    "license": "https://polyhaven.com/license",
+    "cottonDiffuse1K": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cotton_jersey/cotton_jersey_diff_1k.jpg",
+    "textureAPI": "https://api.polyhaven.com/files/cotton_jersey",
+    "alternativeAsset": "https://polyhaven.com/a/poly_wool_herringbone",
+    "alternativeKnownOfficial4K": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/poly_wool_herringbone/poly_wool_herringbone_diff_4k.jpg",
+    "alternative1KCandidatePath": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/poly_wool_herringbone/poly_wool_herringbone_diff_1k.jpg",
+    "standardMaterial": "https://threejs.org/docs/pages/MeshStandardMaterial.html",
+    "physicalMaterial": "https://threejs.org/docs/pages/MeshPhysicalMaterial.html"
+  },
+  "license": "CC0-1.0",
+  "authors": {
+    "colormass": "Photography",
+    "Rico Cilliers": "Processing"
+  },
+  "retainedAssets": [
+    {
+      "path": "source/cotton_jersey_diff_1k.jpg",
+      "bytes": 581360,
+      "sha256": "0f1b790e4087223275aaa6fdffdd46a556a26d2af72cd811acf72ba9c21ec1f6"
+    },
+    {
+      "path": "source/polyhaven_info_cotton_jersey.json",
+      "bytes": 1210,
+      "sha256": "3b9ad2a667978cdff31f7a83b17d02dc2ce1cc44556599ae61dc8f749130ec47"
+    },
+    {
+      "path": "source/polyhaven_files_cotton_jersey.json",
+      "bytes": 55542,
+      "sha256": "e0d5a534898337ca653020a295a60b6dd0b4a20b1f519a71934d1b849bd5b576"
+    }
+  ],
+  "sourceAcquisition": "Exact copy from existing same-workspace study; 0 new asset downloads; no bitmap editing or resize",
+  "viewImage": "Viewed exact original JPEG through view_image during this study; source asset only, not game pixels",
+  "primaryReadback": {
+    "cotton": "public asset page confirms CC0, credited photography/processing, 1K 38.8 px/cm, clean matte jersey/stretch knit",
+    "license": "public CC0 commercial use and redistribution confirmed",
+    "dimensions": "Exact 263.6027473872483 by 263.7999951839447 mm from retained official metadata; current public px/cm corroborates scale; current exact API reread not claimed",
+    "alternative": "Public asset page inspected; official 4K JPG request returned content length too large 13,605,843 B; dedicated 1K candidate URL returned not safe to open non-retryable. No alternate tool/browser/route attempted; no source bytes/metadata hash or exact 1K dimensions verified",
+    "apiDocumentation": "docs.polyhaven.com/en/api returned not safe to open non-retryable; no bypass"
+  }
+}

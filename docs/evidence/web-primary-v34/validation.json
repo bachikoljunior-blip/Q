@@ -1,0 +1,529 @@
+{
+  "baseCommit": "7cbff3c899b789d4087b3ff2cc572f62818f9e24",
+  "sourceFingerprint": "sha256:d87c91ff3d509d33792822e0509c8a5170a7a6523915b4850816b917e9aa5278",
+  "web": {
+    "files": 34,
+    "bytes": 12585792,
+    "mediaCount": 27,
+    "mediaBytes": 11441662,
+    "entryBytes": 164988,
+    "jsChunks": 3,
+    "receiptBytes": 12457,
+    "receiptSha256": "3db1fed6e90a25f371a36828e678dde73160f7a079d1cf32fc9f4e43bdaa1417"
+  },
+  "standalone": {
+    "bytes": 15498171,
+    "sha256": "772e5f356e5f69effdebe37b4b3562cb7ed62e3ef48b61403c6d6db58bcc7e6b",
+    "optional": true
+  },
+  "media": [
+    {
+      "source": "src/assets/characters/skin/young-male-q95.webp",
+      "bytes": 541954,
+      "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/environment/forest_floor_diff_1k.jpg",
+      "bytes": 1329853,
+      "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_diff_1k.jpg",
+      "bytes": 927082,
+      "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_nor_gl_1k.jpg",
+      "bytes": 1146788,
+      "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/forest/crown-branch-rgba.png",
+      "bytes": 162720,
+      "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/forest/pine-branch-rgba.png",
+      "bytes": 165258,
+      "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-foley.wav",
+      "bytes": 826370,
+      "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+      "bytes": 288594,
+      "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-motif.mp3",
+      "bytes": 192463,
+      "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+      "bytes": 192463,
+      "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/title/north-gate-v22.webp",
+      "bytes": 162962,
+      "sha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/title/north-gate-v23.mp4",
+      "bytes": 3178191,
+      "sha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/ember-ambient.wav",
+      "bytes": 176444,
+      "sha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/ember-stone.png",
+      "bytes": 16849,
+      "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/gale-ambient.wav",
+      "bytes": 176444,
+      "sha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/gale-stone.png",
+      "bytes": 17052,
+      "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/moss-ambient.wav",
+      "bytes": 176444,
+      "sha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/moss-stone.png",
+      "bytes": 17328,
+      "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/shared-alert.wav",
+      "bytes": 21212,
+      "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/shared-claim.wav",
+      "bytes": 39734,
+      "sha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/shared-impact.wav",
+      "bytes": 7982,
+      "sha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/shared-seal.wav",
+      "bytes": 30914,
+      "sha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/shared-step.wav",
+      "bytes": 7100,
+      "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/shared-swing.wav",
+      "bytes": 10628,
+      "sha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/tide-ambient.wav",
+      "bytes": 176444,
+      "sha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba",
+      "baseByteEqual": true
+    },
+    {
+      "source": "src/assets/vaults/tide-stone.png",
+      "bytes": 17270,
+      "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567",
+      "baseByteEqual": true
+    }
+  ],
+  "sourceHashes": {
+    "scripts/package.mjs": "f6bb92f5cccd216571250048d04dbc6ee7f3d06423c4e0a0d3a31b45da3118cd",
+    "scripts/package-standalone.mjs": "50823739fe679b8ce81fa6043f7fbaa2d60bf04be4ec76f6a017a1f099071f80",
+    "scripts/web-package.mjs": "2b53892a490fb28d656741bd2e0729b28d2cb0aba1e78c1fac0f1caebdc1e168",
+    "scripts/verify-artifacts.mjs": "8c6433648fd9e1304e7cb2c68298d6e4b4d03deb29f75cf168dcd42c3c63fbc5",
+    "scripts/verify-standalone.mjs": "b25b660215072625c509986efac3da729633fcb37b8b23e810cf014d6339dac2",
+    "scripts/build-identity.mjs": "6e77fd772a454740ac84a530f7cf25b271d329274eee73ed34a79f6c0da5c70b",
+    "package.json": "a94c3397b18a1073e7a91fab16574486f1944a2675c4ee056370efdddafc4b6a",
+    "package-lock.json": "3efc7f9d03f5ad50566a29ae5f414f0d5163bf88cd571083c3b1502043112ff6",
+    ".github/workflows/validate.yml": "dde8f5173a02cade391a016ac21c7159984e4fc5422f9a38d8013003a0087eb3",
+    "tests/web-package.test.mjs": "ba44056b27fd703fe52966898751be7a563d4fa30007ad6dd7f28a2f3c1f09c7",
+    "tests/packed-media.test.mjs": "f76a2f31012fc2eb5d79d45589fdf054450367f81a1c01731859d76c5067f36c",
+    "tests/standalone-encoding.optional.mjs": "d45bea34c8b83c8c7849f5d700d665af80e95c3db598ce1327483f31a51e903e"
+  },
+  "runtimeSourceChanged": false,
+  "boundaries": [
+    "Encoded file sizes, not actual HTTP transfer or decode/GPU memory.",
+    "Node application/DOM/renderer fixtures do not demonstrate browser, touch, sound or PS4 visual quality.",
+    "No remote merge or Site publication performed."
+  ],
+  "repackage": {
+    "differentFixedStage": true,
+    "byteIdenticalReceipt": true,
+    "packageMs": 788.7105630000001,
+    "verifyMs": 713.972018,
+    "root": "artifacts/site-qT5UZ5"
+  },
+  "gates": {
+    "focusedTests": 9,
+    "optionalStandaloneTests": 2,
+    "mainRuntime": {
+      "schemaVersion": 1,
+      "evidence": "Node production-entrypoint boundary integration; controlled fault sensitivity",
+      "passed": true,
+      "host": {
+        "node": "v24.19.0",
+        "platform": "linux",
+        "arch": "x64"
+      },
+      "build": {
+        "version": "0.21.0",
+        "sourceFingerprint": "sha256:d87c91ff3d509d33792822e0509c8a5170a7a6523915b4850816b917e9aa5278"
+      },
+      "mainSourceSha256": "697482115caaee6a3ae57a5ff4b50ab76b09d3f41efe81c8042cfca40b7c337e",
+      "viewportMeaning": "Numeric fixture inputs only; no responsive layout or rendered viewport test",
+      "boundaries": [
+        "Element lookup/event dispatch fixture",
+        "Deferred SceneView fixture; no WebGL",
+        "Soundscape call recorder; no audio device",
+        "In-memory storage with injected write failure",
+        "Manually stepped requestAnimationFrame"
+      ],
+      "productionModules": [
+        "main",
+        "Game and game rules",
+        "SaveStore",
+        "LifecycleGate",
+        "CombatInputQueue",
+        "bindTouchControls",
+        "FrameMetrics",
+        "HUD presentation"
+      ],
+      "exclusions": [
+        "browser DOM/CSS/hit testing",
+        "browser-native events and Promise timing",
+        "physical touch",
+        "rendered pixels",
+        "heard audio",
+        "device performance",
+        "human playtest",
+        "external quality comparison"
+      ],
+      "scenarios": [
+        {
+          "id": "launch-input-pause-resume",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "passed": true,
+          "hostMs": 203.70433300000002
+        },
+        {
+          "id": "deferred-scene-blur",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "passed": true,
+          "hostMs": 127.93569400000007
+        },
+        {
+          "id": "deferred-scene-hidden",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "passed": true,
+          "hostMs": 180.10881700000004
+        },
+        {
+          "id": "deferred-scene-pagehide",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "passed": true,
+          "hostMs": 100.94827799999996
+        },
+        {
+          "id": "deferred-title-import",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "passed": true,
+          "hostMs": 99.33355900000004
+        },
+        {
+          "id": "title-import-invalid-file-restores-controls",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "passed": true,
+          "hostMs": 29.2169889999999
+        },
+        {
+          "id": "active-save-import-and-invalid-file",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "passed": true,
+          "hostMs": 153.81095600000003
+        },
+        {
+          "id": "scene-load-failure",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "passed": true,
+          "hostMs": 69.7048729999999
+        },
+        {
+          "id": "storage-and-gamepad-failure",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "passed": true,
+          "hostMs": 85.43351200000006
+        },
+        {
+          "id": "launch-input-pause-resume",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "passed": true,
+          "hostMs": 208.08453999999983
+        },
+        {
+          "id": "deferred-scene-blur",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "passed": true,
+          "hostMs": 65.65869999999995
+        },
+        {
+          "id": "deferred-scene-hidden",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "passed": true,
+          "hostMs": 61.34826799999996
+        },
+        {
+          "id": "deferred-scene-pagehide",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "passed": true,
+          "hostMs": 71.82783999999992
+        },
+        {
+          "id": "deferred-title-import",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "passed": true,
+          "hostMs": 93.78932499999996
+        },
+        {
+          "id": "title-import-invalid-file-restores-controls",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "passed": true,
+          "hostMs": 40.704177999999956
+        },
+        {
+          "id": "active-save-import-and-invalid-file",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "passed": true,
+          "hostMs": 127.52364200000011
+        },
+        {
+          "id": "scene-load-failure",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "passed": true,
+          "hostMs": 151.09867799999984
+        },
+        {
+          "id": "storage-and-gamepad-failure",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "passed": true,
+          "hostMs": 141.71547099999998
+        }
+      ],
+      "negativeControls": [
+        {
+          "id": "launch-ignores-interruption",
+          "priorGatePassed": true,
+          "priorGateTests": 9,
+          "priorGateMs": 231.36904500000037,
+          "detections": [
+            {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "detected": true,
+              "assertion": "Expected values to be strictly equal:\n\nfalse !== true\n",
+              "hostMs": 83.48011399999996
+            },
+            {
+              "viewport": {
+                "width": 844,
+                "height": 390
+              },
+              "detected": true,
+              "assertion": "Expected values to be strictly equal:\n\nfalse !== true\n",
+              "hostMs": 70.4656
+            }
+          ]
+        },
+        {
+          "id": "active-import-ignores-interruption",
+          "priorGatePassed": true,
+          "priorGateTests": 9,
+          "priorGateMs": 171.79678600000034,
+          "detections": [
+            {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "detected": true,
+              "assertion": "Expected values to be strictly equal:\n\nfalse !== true\n",
+              "hostMs": 195.24220799999966
+            },
+            {
+              "viewport": {
+                "width": 844,
+                "height": 390
+              },
+              "detected": true,
+              "assertion": "Expected values to be strictly equal:\n\nfalse !== true\n",
+              "hostMs": 127.73145900000009
+            }
+          ]
+        },
+        {
+          "id": "main-does-not-clear-pointer-owner",
+          "priorGatePassed": true,
+          "priorGateTests": 9,
+          "priorGateMs": 752.845206,
+          "detections": [
+            {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "detected": true,
+              "assertion": "interruption must release camera ownership\n+ actual - expected\n\n+ -0.5499999999999999\n- -0.06999999999999999\n     ^\n",
+              "hostMs": 91.11140899999964
+            },
+            {
+              "viewport": {
+                "width": 844,
+                "height": 390
+              },
+              "detected": true,
+              "assertion": "interruption must release camera ownership\n+ actual - expected\n\n+ -0.5499999999999999\n- -0.06999999999999999\n     ^\n",
+              "hostMs": 66.4573390000005
+            }
+          ]
+        }
+      ],
+      "compileMs": 63.62865500000001
+    }
+  },
+  "ciInterface": {
+    "yamlParsed": true,
+    "requiredWebReceiptAndFixedStageUpload": true,
+    "standaloneWorkflowDispatchOnly": true,
+    "remoteCIExecuted": false
+  },
+  "timing": {
+    "startedUTC": "2026-09-16T05:53:41Z",
+    "evidenceSavedUTC": "2026-09-16T06:14:28Z",
+    "scope": "Local production/verification; includes one recovered transport failure. Not a device timing."
+  },
+  "independentMediaReference": {
+    "boundary": "Independent emitted-format media-URL negative control; no author edits or rendered-browser claim.",
+    "rows": [
+      {
+        "url": "photo.png",
+        "accepted": true,
+        "error": null
+      },
+      {
+        "url": "missing.png",
+        "accepted": false,
+        "error": "Missing packaged reference: assets/scene.js -> missing.png"
+      }
+    ]
+  },
+  "workingCopyBoundary": "Git tree removes both legacy files. Across local tool calls, the environment recreated them as untracked files after successful deletion; do not treat those stale files as release output or execute the obsolete test. Remove them in the same invocation before a local broad test if this recurs."
+}

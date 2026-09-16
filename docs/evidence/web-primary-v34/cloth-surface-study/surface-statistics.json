@@ -1,0 +1,122 @@
+{
+  "photoSHA256": "0f1b790e4087223275aaa6fdffdd46a556a26d2af72cd811acf72ba9c21ec1f6",
+  "linearMean": [
+    0.5403611166519605,
+    0.40524992838158813,
+    0.3372799985741638
+  ],
+  "playerBaseLinear": [
+    0.02518685962736163,
+    0.09084171118340768,
+    0.10461648409110419
+  ],
+  "naiveMultipliedMeanLinear": [
+    0.013609999593197314,
+    0.036813596951136875,
+    0.03528504760508165
+  ],
+  "meanNormalizedTintLinear": [
+    0.04661116214915248,
+    0.2241621893585384,
+    0.31017695841249326
+  ],
+  "blockAnalysis": [
+    {
+      "squareBlockPx": 1,
+      "physicalSideApproxMm": 0.25736585365853654,
+      "count": 1049600,
+      "linearRGBMean": [
+        0.5403611166519605,
+        0.40524992838158813,
+        0.3372799985741638
+      ],
+      "normalizedLuminanceP01P50P99": [
+        0.8800301402780827,
+        1.0031407438655102,
+        1.1084815087771334
+      ],
+      "normalizedLuminanceStd": 0.051762856690188735
+    },
+    {
+      "squareBlockPx": 8,
+      "physicalSideApproxMm": 2.0589268292682923,
+      "count": 16384,
+      "linearRGBMean": [
+        0.540360054740917,
+        0.40524865180350944,
+        0.3372778492223746
+      ],
+      "normalizedLuminanceP01P50P99": [
+        0.9860554851281661,
+        0.9999194347000222,
+        1.0143505887628963
+      ],
+      "normalizedLuminanceStd": 0.005933928020595835
+    },
+    {
+      "squareBlockPx": 16,
+      "physicalSideApproxMm": 4.117853658536585,
+      "count": 4096,
+      "linearRGBMean": [
+        0.5403600547409205,
+        0.4052486518035108,
+        0.3372778492223751
+      ],
+      "normalizedLuminanceP01P50P99": [
+        0.9936310477850009,
+        1.000009606890269,
+        1.0062439542582562
+      ],
+      "normalizedLuminanceStd": 0.0027194731861312498
+    },
+    {
+      "squareBlockPx": 32,
+      "physicalSideApproxMm": 8.23570731707317,
+      "count": 1024,
+      "linearRGBMean": [
+        0.5403600547409175,
+        0.40524865180350683,
+        0.33727784922237525
+      ],
+      "normalizedLuminanceP01P50P99": [
+        0.9965430749266904,
+        1.000008749910715,
+        1.003266504316091
+      ],
+      "normalizedLuminanceStd": 0.0014913482567399515
+    },
+    {
+      "squareBlockPx": 64,
+      "physicalSideApproxMm": 16.47141463414634,
+      "count": 256,
+      "linearRGBMean": [
+        0.5403600547409173,
+        0.4052486518035047,
+        0.33727784922237275
+      ],
+      "normalizedLuminanceP01P50P99": [
+        0.9984969220791832,
+        0.999929537073021,
+        1.0019215775686092
+      ],
+      "normalizedLuminanceStd": 0.0008305920652719906
+    },
+    {
+      "squareBlockPx": 128,
+      "physicalSideApproxMm": 32.94282926829268,
+      "count": 64,
+      "linearRGBMean": [
+        0.5403600547408504,
+        0.40524865180354375,
+        0.3372778492223612
+      ],
+      "normalizedLuminanceP01P50P99": [
+        0.9991501819370894,
+        0.9999869215553872,
+        1.0011965306468904
+      ],
+      "normalizedLuminanceStd": 0.0005163955081290081
+    }
+  ],
+  "boundary": "Read-only numerical aggregation of original pixels, not an edited or generated image, not GPU mip/screenshot. No raster written."
+}

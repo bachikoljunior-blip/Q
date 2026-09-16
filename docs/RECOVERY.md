@@ -1,3 +1,15 @@
+## 2026-09-16 現在地: 通常Web主軸と布接地を結合・検証
+
+最新ユーザーの遊ぶ方法見直しを実装し、単体HTMLは任意、通常固定stage＋小さいreceiptを主契約へ変更。旧通常Siteも複数ファイルで単体復元CPUは元々無い。方式変更だけではruntime/転送/端末費用は変わらず、16MiB単体保存guardを美術採用条件から外した。布処理の結合分だけdeferred JS +2998 B。27工程/306tests全成功123.953893秒、原27媒体11,441,662 B保持、初期164,988 B/3chunks、通常34files12,588,790 B。実値と制約は[結合記録](WEB_CLOAK_INTEGRATION_V34.md)。
+
+v33はremote599f522cc02abe45079e4948ff608bb0a65ac2d1/PR48/tree14ff045ebab7a91b1d6de28f0c40f83a41a73d4dへ全144blobとnative差分0で保全、required PR CI35064047853success。v32 PR47も両CI成功。実main547676fdce8d8e97abed9f065aad0b6e24af2fd6/PR39未merge/Site23は未更新。03:14後merge mutation無し、最新独立読取もworker解放を示さず追加retryはしない。通常の順次main→同一owner限定Siteのみ。
+
+Q privatepeekは最新prompt完全一致/disabled/nextnull/active20、hourly COUNT無しを保持。新規task/他task変更無し。公式preview mailbox不在、configured:false。実画面/HTTP/GPU/実機/実聴/10作品比較は未確認、PS4達成と9月20期限内達成の根拠は不足。人間準備待ちとせず継続。次はv35近傍media作者7edc8b84b83e2e72470020a3d76c3bf91b3fbcd5の通常Web結合、actor死亡全身支持、適合する顔素材の制作。単体容量を理由に素材を却下せず、画面目的と物理尺度/decoded負荷を別々に比較する。
+
+旧test/HTMLの未追跡再出現は同じ削除を反復せずbytes保全。最初から削除済みtree e731685の新Q-ps4-v34-verifiedでは両path不在を保ち全gate成功。原因不明を他writerや成功復旧と断定しない。全実制作は既存受理済Ultra、単独remote writer維持。
+
+---
+
 # Current continuation — combined dialogue and appearance v32 (2026-09-16)
 
 ## 2026-09-16 継続復旧の実確認と次地点

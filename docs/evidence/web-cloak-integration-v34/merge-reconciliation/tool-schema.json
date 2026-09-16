@@ -1,0 +1,24 @@
+{
+  "name": "mcp__codex_apps__github_merge_pull_request",
+  "observedContract": "Immediate PR merge returning GitHub sha/merged/message",
+  "parameters": {
+    "repository_full_name": "string",
+    "pr_number": "number",
+    "expected_head_sha": "optional string; head mismatch rejected",
+    "merge_method": [
+      "merge",
+      "squash",
+      "rebase"
+    ],
+    "commit_title": "optional string",
+    "commit_message": "optional string"
+  },
+  "notExposed": [
+    "idempotency key",
+    "expected base SHA",
+    "request timeout override",
+    "operation UUID",
+    "asynchronous merge method"
+  ],
+  "readTool": "mcp__codex_apps__github_fetch supports approved repository GET subresources; no mutation"
+}

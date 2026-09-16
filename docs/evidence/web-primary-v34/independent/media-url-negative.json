@@ -1,0 +1,15 @@
+{
+  "boundary": "Independent emitted-format media-URL negative control; no author edits or rendered-browser claim.",
+  "rows": [
+    {
+      "url": "photo.png",
+      "accepted": true,
+      "error": null
+    },
+    {
+      "url": "missing.png",
+      "accepted": false,
+      "error": "Missing packaged reference: assets/scene.js -> missing.png"
+    }
+  ]
+}

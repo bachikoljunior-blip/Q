@@ -1,0 +1,10 @@
+{
+  "recordedAtUTC": "2026-09-16T06:33:41Z",
+  "previousAttempt": "2026-09-16 ~03:14 ordinary merge retry timed out; outcome UNKNOWN",
+  "newEvidence": "PR39 is still open/unmerged/clean at the same head/base; actual main unchanged",
+  "recommendation": "Do not renew the previous bounded-retry allowance solely because more time elapsed. A further ordinary call is not categorically forbidden by GitHub, but cannot be certified safe/exactly-once from the documentation and current reads.",
+  "nature": "Operational recommendation, not a permissions block or claim that all identical retries are unsafe.",
+  "ifParentElectsRetry": "Sole writer; immediate unchanged PR/head/base/main and CI readback; exact original payload; one call only; reconcile PR and actual main for every response; any timeout/405/unknown ends new mutation calls.",
+  "originalOperationPoll": "No UUID available. Ordinary PR/main outcome reads remain possible; the documented async UUID result endpoint cannot identify this original operation from these records.",
+  "mutationCountThisReview": 0
+}
