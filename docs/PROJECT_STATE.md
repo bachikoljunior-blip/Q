@@ -1,3 +1,9 @@
+## 2026-09-16 v65: 最新指定により親も実装へ参加
+
+ユーザー原文「親も作業して」により親の実作業制限を更新した。既存Ultra統合担当と子の数値再構築を止めず、親には別worktreeの `review/staff-attachment-v65/` と対応証拠/限定testで、既存右腕の実行列から剛体杖を同期するadapterを割当てた。既存形状/41骨を維持し、新形状と本編importは全体参照・登録ゲート後に統合する。parent成果はparent担当と明記し、Ultra子の成果へ算入しない。単独remote writerは引き続き `/root/ultra_q_recover_reference_assembly`。
+
+---
+
 ## 2026-09-16 23:35 UTC v65: 保存済み参照を復旧し、未保存の数値登録を再構築中
 
 PR59 `bc761f25aae76209d26623b509f97e1f3a5a12ca` / tree `90e3046fd63170cf1ea069231b0e0e8f57d651e0` の2,371追跡ファイルを正規Gitから復元し、全tree一致・git fsck成功を確認した。120型287配置の選択73 PNGは存在・byte・SHA256を新たに照合した。旧scratchにはディレクトリが残る一方、通常ファイルとGitが見当たらなかった。ユーザーによる削除や環境内部の消失原因は断定しない。[復旧・引継ぎ証拠](evidence/mira-assembly-v65/recovery/RECOVERY.json)。
