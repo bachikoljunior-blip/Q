@@ -1,0 +1,27 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {registerHooks} from 'node:module';
+import {pathToFileURL} from 'node:url';
+import {performance} from 'node:perf_hooks';
+import assert from 'node:assert/strict';
+const start=performance.now(),root='/workspace/scratch/e72662e3b71f/Q-mira-micro-v61';
+const source='review/micro-v61/mira-micro-parts.js',tests='tests/mira-micro-parts.test.mjs';
+const sha=b=>createHash('sha256').update(b).digest('hex');
+const bytes=readFileSync(root+'/'+source),testBytes=readFileSync(root+'/'+tests);
+const manifest={at:new Date().toISOString(),root,head:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),status:execFileSync('git',['status','--short'],{cwd:root,encoding:'utf8'}),files:[{path:source,bytes:bytes.length,sha256:sha(bytes)},{path:tests,bytes:testBytes.length,sha256:sha(testBytes)}]};
+writeFileSync(new URL('source-snapshot.mjs',import.meta.url),bytes);writeFileSync(new URL('author-test-snapshot.mjs',import.meta.url),testBytes);
+writeFileSync(new URL('SOURCE.json',import.meta.url),JSON.stringify(manifest,null,2));
+const three='/workspace/scratch/e72662e3b71f/Q-ps4-v57/node_modules/three/build/three.module.js';
+const hooks=registerHooks({resolve(s,c,n){if(s==='three')return{url:pathToFileURL(three).href,shortCircuit:true};return n(s,c);}});
+const {MICRO_PARTS,makeMiraMicroPair}=await import('./source-snapshot.mjs');
+hooks.deregister();
+const pair=makeMiraMicroPair();pair.updateMatrixWorld(true);
+const parts=[];
+for(const m of pair.children){const g=m.geometry;parts.push({id:m.name,spec:MICRO_PARTS[m.name],positions:Array.from(g.attributes.position.array),indices:Array.from(g.index.array),normals:Array.from(g.attributes.normal.array),uv:Array.from(g.attributes.uv.array),matrixWorld:m.matrixWorld.toArray(),bytes:Object.fromEntries([...Object.entries(g.attributes).map(([k,a])=>[k,a.array.byteLength]),['index',g.index.array.byteLength]]),indexType:g.index.array.constructor.name,geometryName:g.name});}
+assert.equal(sha(readFileSync(root+'/'+source)),manifest.files[0].sha256,'source changed during snapshot');
+assert.equal(sha(readFileSync(root+'/'+tests)),manifest.files[1].sha256,'test changed during snapshot');
+const output={at:new Date().toISOString(),sourceSha256:manifest.files[0].sha256,threeModuleSha256:sha(readFileSync(three)),nativeExtractionMilliseconds:performance.now()-start,materialIdentityShared:pair.children[0].material===pair.children[1].material,pairMetadata:pair.userData,parts,boundary:'Actual native Three BufferGeometry from frozen source; no renderer, image asset, texture mapping, material shading, DOM or WebGL. Coordinates are source-local metres; matrixWorld supplies authored placement.'};
+writeFileSync(new URL('geometry.json',import.meta.url),JSON.stringify(output));
+console.log(JSON.stringify({source:manifest.files,parts:parts.map(p=>({id:p.id,vertices:p.positions.length/3,triangles:p.indices.length/3,bytes:p.bytes})),nativeExtractionMilliseconds:output.nativeExtractionMilliseconds},null,2));
+for(const m of pair.children)m.geometry.dispose();pair.children[0].material.dispose();

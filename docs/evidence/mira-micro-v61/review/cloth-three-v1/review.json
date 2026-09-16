@@ -1,0 +1,111 @@
+{
+  "reviewedAt": "2026-09-16T12:22:33.274422+00:00",
+  "scope": "Independent actual-bitmap review of clothing micro3 only; no author self-assessment used.",
+  "files": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+      "bytes": 1885563,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "evidence": "Direct view_image inspection; actual PNG bytes and Pillow header read. No rendering or transformation."
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-complete-six-views-v1.png",
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+      "bytes": 1874282,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "evidence": "Direct view_image inspection; actual PNG bytes and Pillow header read. No rendering or transformation."
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-upper-views-v1.png",
+      "sha256": "561d93036b3322ea25e88ef41be355ddd82bb0d1f2c2ec673fe0d6ec1f0fa6c4",
+      "bytes": 2271191,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "evidence": "Direct view_image inspection; actual PNG bytes and Pillow header read. No rendering or transformation."
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-cape-views-v2.png",
+      "sha256": "4080eac540f7f92b30adbf484a756e3c435191f8f7213c7a3806434f790d34a2",
+      "bytes": 2401843,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "evidence": "Direct view_image inspection; actual PNG bytes and Pillow header read. No rendering or transformation."
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-garment-assembly-v1.png",
+      "sha256": "4920620758835d3f635eaa54d0e1b6184081580454ac384b6439fc4ec7006a2a",
+      "bytes": 2682065,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "evidence": "Direct view_image inspection; actual PNG bytes and Pillow header read. No rendering or transformation."
+    }
+  ],
+  "result": "Useful as shape-only concept references, conditional on explicit assembly seam/width/thickness rules. Not accepted material, exact 3D geometry, natural cloth, or finished actor.",
+  "materialDecision": "Reject ornamental swirl/basecolor as new generated motif contrary to intended plain wool; do not transfer it into texture/normal/geometry.",
+  "orientation": "Face +Z; anatomical R=-X, L=+X. Front locator image-left=R; back locator image-right=R.",
+  "parts": [
+    {
+      "id": "T01-R",
+      "readableShape": "One shallow vertically elongated curved open panel with waist narrowing and one convex longitudinal profile.",
+      "viewEvidence": "Front/back retain broadly compatible tapered quadrilateral envelope; profile exposes a chest bulge, 3/4 shows a turned side. Exact 90-degree orientation or identical surface is unproven.",
+      "placement": "Front locator is on staff-side torso, image-left/anatomical R, from beneath cowl toward belt.",
+      "minimalConstruction": "One joined smooth quad patch with longitudinal curvature controls; not a separate thick framed plate.",
+      "unresolved": [
+        "Shared upper/lower/inner/outer edge point arrays",
+        "Which edge is actual front placket vs internal surface subdivision",
+        "Chest/waist fit and cowl/belt overlap",
+        "Thickness and outward normal",
+        "Skin weighting at spine/chest transitions"
+      ]
+    },
+    {
+      "id": "S05-R",
+      "readableShape": "One open tapered forearm shell, wider toward elbow, narrower toward wrist, with a shallow longitudinal bow.",
+      "viewEvidence": "Front/back preserve taper; 3/4 exposes a dark inner opening and profile shows curvature. Back top-edge curvature differs in appearance from front, so contour identity remains approximate.",
+      "placement": "Locator is the staff-holding right forearm above the leather bracer.",
+      "minimalConstruction": "A tapered open cylindrical-sector surface with a few longitudinal sections; wrist edge continues under bracer.",
+      "unresolved": [
+        "Angular wrap and longitudinal inner-arm seam",
+        "Upper edge continuation into sleeve",
+        "Wrist overlap and actual thickness",
+        "Forearm/elbow skinning and bent-elbow clearance"
+      ]
+    },
+    {
+      "id": "P01-R",
+      "readableShape": "A long widening strip with one dominant longitudinal ridge/valley, not a collection of separate wrinkles.",
+      "viewEvidence": "Front/back/3/4 show the taper and central fold; profile shows a folded narrow section. Fold angle/radius/depth are not measurable exactly from these views.",
+      "placement": "Back locator lies to image-right of midline, the staff-side/anatomical R.",
+      "minimalConstruction": "Two smooth longitudinal surface spans meeting at one rounded fold; preserve varying width and fold opening along length.",
+      "unresolved": [
+        "Upper root under cowl and cloth suspension",
+        "Shared side seams with neighboring cape strips",
+        "Lower edge target; locator does not define full global hem continuation",
+        "Fold radius/angle and cloth thickness",
+        "Continuous cape animation across shared seams"
+      ]
+    }
+  ],
+  "requiredBeforeGeometryAdoption": [
+    "Omit generated ornamental texture and raised ornamental borders.",
+    "Separate actual garment hem/placket from internal panel partition; do not hem every micro-part edge.",
+    "Assign anatomical R=-X with front/back-view mapping; do not trust legacy code side names.",
+    "Fix shared boundary coordinates, UV continuity/smooth normals, skinning and material thickness in a separate assembly manifest."
+  ],
+  "additionalGenerationRequiredForThisReview": false,
+  "boundaries": [
+    "No source/asset mutation",
+    "No new image or 3D generation",
+    "No camera/GPU/native mesh or cloth simulation executed",
+    "No claimed exact object identity across generated projections",
+    "No PS4/full-character/natural cloth acceptance"
+  ]
+}

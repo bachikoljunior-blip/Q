@@ -1,0 +1,112 @@
+{
+  "parts": [
+    {
+      "id": "S13",
+      "vertices": 288,
+      "triangles": 576,
+      "edges": 864,
+      "eulerCharacteristic": 0,
+      "boundaryOrNonmanifoldEdges": 0,
+      "sameDirectionEdgePairs": 0,
+      "minTriangleAreaMm2": 1.2866270866193907,
+      "materialVolumeMm3": 3520.9474713615004,
+      "normalLengthRange": [
+        0.9999999729309895,
+        1.0000000258434734
+      ],
+      "minimumFacetVertexNormalDot": 0.4388689696788788,
+      "faceNormalInsideOutsideFailures": 0,
+      "profileProperIntersections": [],
+      "nonadjacentProfileContacts": [],
+      "invalidSweepCells": 0,
+      "profileLatticeErrorMm": 9.119510657740193e-07,
+      "localBoundsMm": [
+        [
+          -19.999999552965164,
+          -3.000000026077032,
+          -19.999999552965164
+        ],
+        [
+          19.999999552965164,
+          3.000000026077032,
+          19.999999552965164
+        ]
+      ],
+      "bufferBytes": {
+        "position": 3456,
+        "uv": 2304,
+        "normal": 3456,
+        "index": 3456
+      },
+      "totalBufferBytes": 12672
+    },
+    {
+      "id": "S14",
+      "vertices": 384,
+      "triangles": 768,
+      "edges": 1152,
+      "eulerCharacteristic": 0,
+      "boundaryOrNonmanifoldEdges": 0,
+      "sameDirectionEdgePairs": 0,
+      "minTriangleAreaMm2": 0.7811664038507162,
+      "materialVolumeMm3": 4346.687635891502,
+      "normalLengthRange": [
+        0.9999999638710836,
+        1.0000000293165892
+      ],
+      "minimumFacetVertexNormalDot": 0.1318731856780598,
+      "faceNormalInsideOutsideFailures": 0,
+      "profileProperIntersections": [],
+      "nonadjacentProfileContacts": [],
+      "invalidSweepCells": 0,
+      "profileLatticeErrorMm": 7.748603820800781e-07,
+      "localBoundsMm": [
+        [
+          -17.999999225139618,
+          -6.000000052154064,
+          -17.999999225139618
+        ],
+        [
+          17.999999225139618,
+          9.999999776482582,
+          17.999999225139618
+        ]
+      ],
+      "bufferBytes": {
+        "position": 4608,
+        "uv": 3072,
+        "normal": 4608,
+        "index": 4608
+      },
+      "totalBufferBytes": 16896
+    }
+  ],
+  "pair": {
+    "positiveProfileEdgeCrossings": [],
+    "strictlyInteriorProfileVertices": [],
+    "contactBands": [
+      {
+        "yMm": 1668.0,
+        "radialBandMm": [
+          14.5,
+          18.0
+        ]
+      }
+    ],
+    "actualFacetedContactAreaMm2": 353.2879965649408,
+    "seatPlaneDifferenceMm": 2.60770320892334e-08,
+    "continuousStemRadiusMm": 6,
+    "boreNativePlaneCount": 48,
+    "minimumNativeBoreApothemMm": 6.246102523332574,
+    "minimumClearanceToContinuousSixMmRadiusStemMm": 0.2461025233325742,
+    "nominalRadiusDifferenceMm": 0.3,
+    "scope": "S13/S14 only; S15 continuous circular design envelope used for aperture bound; no actual S15/glass/other staff mesh supplied."
+  },
+  "negativeCrossings": [
+    [
+      11,
+      13
+    ]
+  ],
+  "analysisAndPlotWallSeconds": 2.8231426249985816
+}

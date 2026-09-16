@@ -1,0 +1,35 @@
+Type_ID,Name,Single_simple_shape,Approx_mm,Instances,Adjacent,Context,Reuse_limit
+T01,front centre panel,shallow tapered loft,"[135, 500, 18]","T01-R,T01-L",T03/T05; top T04/C01; bottom WAIST,upper/assembly,torso cross-section scale only
+T02,rear quarter panel,shallow tapered loft,"[180, 500, 20]","T02-R,T02-L",T03; top T04/C02; bottom WAIST,upper/complete BACK,scale only
+T03,underarm side panel,curved trapezoid,"[150, 330, 30]","T03-R,T03-L",front T01; rear T02; top T05; bottom WAIST,assembly ARMRAISED,"armhole interface IDs, current fit failed"
+T04,shoulder bridge,saddle patch,"[130, 180, 45]","T04-R,T04-L",inner COLLAR; T01/T02; outer ARMHOLE,upper/assembly,rig shoulder location only
+T05,armhole gusset half,shallow crescent patch,"[100, 160, 25]","T05-R-front,T05-R-rear,T05-L-front,T05-L-rear",shared ARMHOLE16; T03/T04; S01/S02,assembly ELBOW90/ARMRAISED,sewn logical edge after new reference fit
+S01,upper sleeve front,tapered half-shell,"[170, 250, 80]","S01-R,S01-L",ARMHOLE; side S02; bottom S03/S04,upper/assembly,joint centres only
+S02,upper sleeve rear,tapered half-shell,"[170, 250, 80]","S02-R,S02-L",ARMHOLE; side S01; bottom S03/S04,upper/assembly,"same operator as S01, distinct boundary profile"
+S03,outer elbow fold,one rounded convex fold strip,"[180, 90, 22]","S03-R,S03-L",top S01/S02; bottom S05/S06; ends S04,assembly ELBOW90,no accepted fold reuse
+S04,inner elbow gusset,shallow concave patch,"[110, 90, 18]","S04-R,S04-L",top S01/S02; bottom S05/S06; ends S03,assembly ELBOW90,joint centre and clearance only
+S05,forearm sleeve front,tapered half-shell,"[120, 190, 55]","S05-R,S05-L",S03/S04; sides S06; bottom CUFF,upper/hands,joint boundaries only
+S06,forearm sleeve rear,tapered half-shell,"[120, 190, 55]","S06-R,S06-L",S03/S04; sides S05; bottom CUFF,upper/hands,"same operator as S05, distinct seam profile"
+C01,front stand-collar half,open curved strip,"[115, 82, 4]","C01-R,C01-L",lower T01/T04; back C02; front OPEN,assembly neckline,candidate neck ellipse after head interface check
+C02,rear stand collar,U-shaped extrusion,"[300, 82, 4]",C02-C,lower T02/T04; ends C01,assembly neckline/BACK,neck interface only
+W01,front cowl fold,one draped U-fold strip,"[400, 50, 25]","W01-0,W01-1,W01-2",ends W02; adjacent W01,assembly neckline,"one type, explicit offset/depth variants"
+W02,side cowl bridge,crescent patch,"[140, 190, 45]","W02-R,W02-L",front W01; rear W03; lower P04; brooch seat,cape-v2 shoulder join,tangent frame only; contacts failed
+W03,rear cowl fold,one soft V-fold strip,"[410, 65, 45]","W03-0,W03-1,W03-2",ends W02; upper C02; lower P04,cape-v2 BACK,"unworn back drape, not wearable hood"
+P01,cape rear panel,one long falling-fold loft,"[220, 1100, 45]","P01-R,P01-L",rear centre; outer P02; top P04; bottom HEM,complete BACK/cape-v2,"proportion only, old deformation rejected"
+P02,cape side panel,one long falling-fold loft,"[280, 1120, 55]","P02-R,P02-L",rear P01; front P03; top P04; bottom HEM,cape-v2 opposite sides,new micro reference; preserve side wrap
+P03,cape front-edge panel,curved wedge loft,"[160, 1050, 35]","P03-R,P03-L",outer P02; top W02/P04; inner OPEN; bottom HEM,cape-v2 FRONT/oblique,opening angle only
+P04,cape shoulder connector,saddle patch,"[230, 160, 50]","P04-R,P04-L",inner W02/W03; outer P01/P02/P03,cape-v2 INSIDE JOIN,layer/support order must be defined
+L01,lower front panel,flared shallow loft,"[220, 505, 35]","L01-R,L01-L",WAIST; side L03; inner L04/OPEN; bottom L05,lower FRONT/assembly,waist/split proportions only
+L02,lower rear panel,flared shallow loft,"[240, 505, 35]","L02-R,L02-L",WAIST; side L03; rear centre; bottom L05,lower BACK,no accepted trouser clearance
+L03,lower side insert,narrow flared loft,"[150, 505, 30]","L03-R,L03-L",WAIST; front L01; rear L02; bottom L05,lower sides,"width based on shape, not grid subdivision"
+L04,split-edge turnback,thin curved extrusion,"[12, 505, 3]","L04-R,L04-L",fold along L01 front edge; inside free edge,lower FRONT,open-edge topology only
+L05,hem turnback,thin curved extrusion,"[220, 12, 3]","L05-front-R,L05-front-L,L05-side-R,L05-side-L,L05-rear-R,L05-rear-L",corresponding lower panel hem; joined endpoints,lower/complete,shared cross-section along six hem curves
+B01,belt segment,curved solid strip,"[300, 82, 6]","B01-front-R,B01-front-L,B01-rear-R,B01-rear-L",continuous WAIST path,lower FRONT/assembly,waist curve only; one waist layer
+B02,hanging belt tail,tapered strip with one bend,"[48, 350, 5]",B02-R,top B03-hanger; bottom FREE,lower FRONT,centreline only
+B03,hardware ring,bevelled oval extrusion,"[72, 60, 7]","B03-buckle-C,B03-hanger-R",belt or tail hinge; closed opening,lower FRONT,one type; hanger variant54x60mm
+B04,buckle pin,one bent rod,"[41, 6, 6]",B04-C,hinge B03; tip explicit belt hole,assembly waist,missing complete candidate pin
+F01,cuff front half,tapered half-shell,"[115, 200, 6]","F01-R,F01-L",top CUFF; side F02; bottom WRIST,hands/upper,rig endpoints only
+F02,cuff rear half,tapered half-shell,"[115, 200, 6]","F02-R,F02-L",top CUFF; side F01; bottom WRIST,hands/upper,"same operator, distinct closure edges"
+F03,cross-wrap ribbon,thin ribbon following cuff curve,"[12, 150, 3]","F03-R-0,F03-R-1,F03-R-2,F03-L-0,F03-L-1,F03-L-2",F01/F02; explicit overlap order,hands-staff,"new reference, no joint-spanning rigid strip"
+F04,brooch centre,shallow convex disc,"[42, 42, 6]","F04-R,F04-L",seat W02; rim F05,complete/assembly,cowl tangent only
+F05,brooch rim,bevelled circular extrusion,"[54, 54, 7]","F05-R,F05-L",inner F04; back W02,complete/assembly,"shared mirrored type, no invented spiral motif"

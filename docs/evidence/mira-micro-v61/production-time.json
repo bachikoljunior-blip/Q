@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "imagesReturnedEpochMs": 1789560283366,
+  "codePhaseMarkerEpochMs": 1789560658550,
+  "firstCodeWrittenEpochMs": 1789560746085,
+  "firstTestFinishedEpochMs": 1789560769188,
+  "OBJExportFinishedEpochMs": 1789560881017,
+  "windowsSeconds": {
+    "imageReturnToCodeMarker": 375.184,
+    "codeMarkerToFirstFile": 87.535,
+    "firstFileToFirstTest": 23.103,
+    "firstTestToOBJ": 111.829,
+    "imageReturnToOBJ": 597.651
+  },
+  "interpretation": "These are elapsed event windows, not exclusive person-hours. The first window includes interpretation, independent image review and interleaved work; it cannot retrospectively isolate shape-decision time. Code and later windows also include orchestration. They must not be compared with millisecond mesh construction as if both measured production speed. A controlled equal-deliverable baseline has not been measured.",
+  "measuredFunctionConstructionMs": {
+    "S13": 5.462101,
+    "S14": 2.150601
+  }
+}

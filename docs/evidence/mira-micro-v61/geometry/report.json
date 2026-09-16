@@ -1,0 +1,211 @@
+{
+  "schema": 1,
+  "createdUTC": "2026-09-16T12:14:40.754Z",
+  "scope": "Two authored development mesh parts only. Neither complete lantern nor production asset acceptance. No WebGL/GPU/iPhone evidence.",
+  "units": "metres",
+  "constructionTiming": "Function execution is reported separately and is not shape-specification, coding, repair or review duration.",
+  "parts": [
+    {
+      "id": "S13",
+      "triangles": 576,
+      "vertices": 288,
+      "geometryArrayBytes": 12672,
+      "constructionMs": 5.462101000000004,
+      "objBytes": 52606,
+      "objSHA256": "4d321993c92ece2cbe41d92f622b8a348e4e3cae790ca4a8b21410dfd1844627",
+      "bounds": {
+        "min": [
+          -0.019999999552965164,
+          -0.003000000026077032,
+          -0.019999999552965164
+        ],
+        "max": [
+          0.019999999552965164,
+          0.003000000026077032,
+          0.019999999552965164
+        ]
+      },
+      "spec": {
+        "name": "upper seating ring",
+        "originMm": [
+          0,
+          1665,
+          0
+        ],
+        "profileMm": [
+          [
+            14,
+            -2.5
+          ],
+          [
+            14.5,
+            -3
+          ],
+          [
+            19.2,
+            -3
+          ],
+          [
+            20,
+            -2.2
+          ],
+          [
+            20,
+            2.2
+          ],
+          [
+            19.2,
+            3
+          ],
+          [
+            14.5,
+            3
+          ],
+          [
+            14,
+            2.5
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            15,
+            1
+          ],
+          [
+            15,
+            -1
+          ],
+          [
+            14,
+            -1
+          ]
+        ],
+        "interfaces": {
+          "capSeatY": 1668,
+          "capSeatRadialBand": [
+            14.5,
+            18
+          ],
+          "ribEndpointRadius": 14
+        },
+        "image": "docs/evidence/mira-micro-v61/references/staff-caps-micro-v1.png"
+      }
+    },
+    {
+      "id": "S14",
+      "triangles": 768,
+      "vertices": 384,
+      "geometryArrayBytes": 16896,
+      "constructionMs": 2.1506009999999947,
+      "objBytes": 69546,
+      "objSHA256": "feba34f9004980412110edf0bcae177edf927dd101644df27fafd67fed227749",
+      "bounds": {
+        "min": [
+          -0.017999999225139618,
+          -0.006000000052154064,
+          -0.017999999225139618
+        ],
+        "max": [
+          0.017999999225139618,
+          0.009999999776482582,
+          0.017999999225139618
+        ]
+      },
+      "spec": {
+        "name": "upper receiving cap without finial",
+        "originMm": [
+          0,
+          1668,
+          0
+        ],
+        "profileMm": [
+          [
+            6.3,
+            10
+          ],
+          [
+            8.5,
+            10
+          ],
+          [
+            9,
+            9.5
+          ],
+          [
+            9,
+            6.5
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            4.5
+          ],
+          [
+            10,
+            3.5
+          ],
+          [
+            17.5,
+            1
+          ],
+          [
+            18,
+            0.5
+          ],
+          [
+            18,
+            0
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            13.2,
+            -0.5
+          ],
+          [
+            13.2,
+            -6
+          ],
+          [
+            12.115928535016781,
+            -6
+          ],
+          [
+            9,
+            -3
+          ],
+          [
+            6.3,
+            2
+          ]
+        ],
+        "interfaces": {
+          "ringSeatY": 1668,
+          "finialStemRadius": 6,
+          "socketRadius": 6.3,
+          "socketTopY": 1678,
+          "finialStemBottomY": 1674,
+          "glassContactY": 1662,
+          "glassContactRadius": 12.115928535016781
+        },
+        "image": "docs/evidence/mira-micro-v61/references/staff-caps-micro-v1.png"
+      }
+    }
+  ],
+  "partialAssembly": {
+    "objBytes": 121629,
+    "objSHA256": "f20d3da9f04d9fb24433163bdb38e91ab449fa5812587d641406318c2d371a50",
+    "partIds": [
+      "S13",
+      "S14"
+    ],
+    "materialAppearanceVerified": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "at": "2026-09-16T12:00:17.138221+00:00",
+  "sourceImages": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/generated_images/exec-d6875d94-13d5-4a47-97cb-eb35e675abe3.png",
+      "bytes": 2006540,
+      "sha256": "fe87250f6feb0362e660a776f0c506cbd586b8d9d0e3b431ead8f06780c225ab",
+      "viewed": "view_image original"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-hands-staff-views-v1.png",
+      "bytes": 1974979,
+      "sha256": "6bb80bcdcbd52ae8b6a1ecbb0071fe2d56d44f9ad4d7d2d2521bf65ced78ef5f",
+      "viewed": "view_image original"
+    }
+  ],
+  "declaredTypes": 11,
+  "declaredIds": [
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16"
+  ],
+  "decision": "requires structural corrections before canonical assembly",
+  "requiredFindings": [
+    {
+      "ids": [
+        "S09",
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "issue": "catalog has four strip IDs; both exploded views visibly contain five strips",
+      "kind": "count and ID mapping contradiction"
+    },
+    {
+      "ids": [
+        "S14",
+        "S15"
+      ],
+      "issue": "S14 SIDE has closed spherical top unlike open FRONT and THREE-QUARTER; possible duplicated S15 ownership",
+      "kind": "part shape and boundary contradiction"
+    },
+    {
+      "ids": [
+        "S11",
+        "S12"
+      ],
+      "issue": "individual side/oblique strips appear straight while assembled close-up front strip appears bowed around insert",
+      "kind": "depth curvature unresolved"
+    }
+  ],
+  "additionalUncertainties": [
+    "S13 thin ring versus tall narrow SIDE",
+    "assembled side/back labels lack clear rotation evidence",
+    "numeric scale and mating cross-sections absent from supplied bitmap"
+  ],
+  "noEditsOrNewModel": true,
+  "pendingSessions": 0
+}

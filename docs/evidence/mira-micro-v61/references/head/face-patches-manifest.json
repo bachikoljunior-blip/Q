@@ -1,0 +1,107 @@
+{
+  "status": "Candidate micro-reference for independent review; no 3D production/adoption.",
+  "selectedCandidate": "mira-face-patches-F01-F05-F09-v2.png",
+  "priorVersionRetained": "mira-face-patches-F01-F05-F09-v1.png",
+  "ids": [
+    "F01-L",
+    "F05-L",
+    "F09-L"
+  ],
+  "coordinateSystem": "Head-local +Y up, face +Z. Anatomical R=-X, L=+X. Camera at +Z sees +X on image right (the person's left). Legacy code side/bone names are not anatomical authority.",
+  "dimensionsStatus": "The numbers below are exact copies of the authored provisional guide envelopes. They are not calibrated from the image, nor accepted final mesh dimensions.",
+  "joinsStatus": "Conceptual named neighboring regions; exact welded mesh boundary vertices are not yet defined.",
+  "parts": [
+    {
+      "id": "F01-L",
+      "name": "forehead L",
+      "guideEnvelopeMm": [
+        55,
+        55,
+        25
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Continuous convex forehead patch; local slope changes at brow, no separate solid",
+      "joins": [
+        "S01",
+        "F03-L",
+        "F05-L"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F01",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "F05-L",
+      "name": "malar cheek L",
+      "guideEnvelopeMm": [
+        40,
+        35,
+        40
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Defined cheek plane with rounded anatomical transition",
+      "joins": [
+        "F03-L",
+        "F07-L",
+        "F12"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F05",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "F09-L",
+      "name": "jaw corner L",
+      "guideEnvelopeMm": [
+        38,
+        35,
+        45
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Angular mandibular transition with curved underside",
+      "joins": [
+        "F07-L",
+        "F11",
+        "N01"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F09",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    }
+  ],
+  "originalReferenceFiles": [
+    {
+      "file": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-head-views-v1.png",
+      "sha256": "85bd4853238384211bf9cf2f931337acfed89f4a4c4f6c4bc6ec9d208eac21fe",
+      "bytes": 2379503,
+      "role": "Fixed generated fictional Mira design reference, not a photograph or a 3D mesh."
+    },
+    {
+      "file": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-complete-six-views-v1.png",
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+      "bytes": 1874282,
+      "role": "Fixed generated fictional Mira design reference, not a photograph or a 3D mesh."
+    }
+  ],
+  "requestedDimensions": [
+    2048,
+    1536
+  ],
+  "actualDimensions": [
+    1448,
+    1086
+  ],
+  "runtimeSourceChanged": false,
+  "newGeometryCreated": false,
+  "imageProcessing": "Original PNG byte copies only. Pillow used to decode header/dimensions, no image transformation or editing.",
+  "generationCalls": 2,
+  "correctionCount": 1,
+  "tool": "builtin image_gen",
+  "skill": "skill://flora-skills/root/.codex/skills/.system/imagegen/SKILL.md"
+}

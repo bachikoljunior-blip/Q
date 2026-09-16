@@ -1,0 +1,54 @@
+{
+  "build": {
+    "chunks": 3,
+    "exit": 0,
+    "initialJsBytes": 165611,
+    "modules": 103,
+    "reportedSeconds": 2.11
+  },
+  "productionSourceDiff": {
+    "base": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+    "exit": 0,
+    "paths": [
+      "src",
+      "package.json",
+      "package-lock.json",
+      "vite.config.js",
+      "index.html"
+    ]
+  },
+  "tests": {
+    "exit": 0,
+    "failed": 0,
+    "passed": 345,
+    "rawOutput": "tool display truncated; aggregate result retained, not a complete raw TAP artifact",
+    "wallSeconds": 45.302746175
+  },
+  "package": {
+    "exit": 0,
+    "publicFiles": 34,
+    "bytes": 14039068,
+    "media": 27,
+    "published": false
+  },
+  "artifacts": {
+    "exit": 0,
+    "initialJsBytes": 165611,
+    "chunks": 3,
+    "totalJsBytes": 1087662,
+    "sourceBuildStageReceiptMatch": true
+  },
+  "focused": {
+    "exit": 0,
+    "passed": 2,
+    "failed": 0
+  },
+  "independentReview": {
+    "requiredSourceFixes": 0,
+    "minimumSocketClearanceMM": 0.246102523,
+    "triangles": 1344,
+    "meshes": 2,
+    "runtimeAdopted": false,
+    "review": "review/caps-mesh-v1/REVIEW.md"
+  }
+}

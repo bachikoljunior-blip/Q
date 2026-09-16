@@ -1,0 +1,74 @@
+{
+  "specificationStartUTC": "2026-09-16T12:09:00Z",
+  "specificationStartPrecision": "approximate turn-start minute; first exact tool read12:10:05Z",
+  "generationRequestedUTC": "2026-09-16T12:11:48.421776+00:00",
+  "mode": "builtin image_gen, single referenced generation",
+  "inputReferences": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-complete-six-views-v1.png",
+      "role": "design reference; not an edit target",
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+      "bytes": 1874282
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-upper-views-v1.png",
+      "role": "design reference; not an edit target",
+      "sha256": "561d93036b3322ea25e88ef41be355ddd82bb0d1f2c2ec673fe0d6ec1f0fa6c4",
+      "bytes": 2271191
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-garment-assembly-v1.png",
+      "role": "design reference; not an edit target",
+      "sha256": "4920620758835d3f635eaa54d0e1b6184081580454ac384b6439fc4ec7006a2a",
+      "bytes": 2682065
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-cape-views-v2.png",
+      "role": "design reference; not an edit target",
+      "sha256": "4080eac540f7f92b30adbf484a756e3c435191f8f7213c7a3806434f790d34a2",
+      "bytes": 2401843
+    }
+  ],
+  "parts": [
+    {
+      "id": "T01-R",
+      "dimensionsIntentMetres": [
+        0.135,
+        0.5,
+        0.018
+      ],
+      "neighbors": "centre front edge, T03/T05 outside, cowl/shoulder above, single WAIST below",
+      "geometryContract": "one shallow four-sided loft; shared edges/UV/weights are authored later, not taken numerically from pixels"
+    },
+    {
+      "id": "S05-R",
+      "dimensionsIntentMetres": [
+        0.12,
+        0.19,
+        0.055
+      ],
+      "neighbors": "S03/S04 above, S06 long edges, CUFF below",
+      "geometryContract": "one open front half-shell; no complete sleeve/cuff/hand"
+    },
+    {
+      "id": "P01-R",
+      "dimensionsIntentMetres": [
+        0.22,
+        1.1,
+        0.045
+      ],
+      "neighbors": "back centre/P01-L, P02-R outer edge, P04 above, hem below",
+      "geometryContract": "one falling fold loft only; no entire cape"
+    }
+  ],
+  "coordinateConvention": "anatomical Right=-X,Left=+X,front=+Z; no change of existing rig indices",
+  "runtimeChanges": 0,
+  "pendingCalls": [],
+  "sourceCandidate": "3afcb955 preserved and not modified",
+  "completedCalls": [
+    "builtin generation v1,49.170s",
+    "builtin targeted edit v2,52.080s"
+  ],
+  "rawSavedWithoutEditing": true,
+  "inspectionBoundary": "author visual inspection of generated reference images, not blind comparison, actual 3D geometry or WebGL"
+}

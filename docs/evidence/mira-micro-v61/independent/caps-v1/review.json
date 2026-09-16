@@ -1,0 +1,130 @@
+{
+  "at": "2026-09-16T12:08:22.121429+00:00",
+  "image": {
+    "path": "/workspace/scratch/e72662e3b71f/generated_images/exec-b3fa2aae-18ed-43d9-97e1-f1891c3cefb1.png",
+    "bytes": 1894355,
+    "sha256": "01a18ebd2631e2e5c73b52c3c261620e1c2487458200c1c68993e89066258532",
+    "viewed": "view_image original"
+  },
+  "bomReadback": {
+    "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-part-planning/accessories/STAFF_MICRO_BOM.json",
+    "sha256": "c581b436baa0d6bef4b8182af149e0648dbe1f3a7665af431ca3138424a1c081",
+    "dimension_status": "Authored draft registration against the 1701.05 mm existing total staff. Source images are not metrically calibrated. These explicit dimensions allow consistent small-part image requests and later assembly, but are not claimed to have been recovered from generated pixels.",
+    "relevantParts": [
+      {
+        "id": "S13",
+        "name": "upper cage ring",
+        "quantity": 1,
+        "form": {
+          "type": "horizontal torus",
+          "major_radius": 17,
+          "tube_radius": 3
+        },
+        "placement_mm": {
+          "center": [
+            0,
+            1665,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        },
+        "interfaces": [
+          "S09–S12 upper endpoints",
+          "S14 top cap"
+        ],
+        "short_build_reason": "One circular ring matching the lower cage attachment radius.",
+        "material": "aged bronze",
+        "source_boundary": ""
+      },
+      {
+        "id": "S14",
+        "name": "upper cap",
+        "quantity": 1,
+        "form": {
+          "type": "closed stepped cap",
+          "y_min": 1663,
+          "y_max": 1678,
+          "max_radius": 18
+        },
+        "placement_mm": {
+          "center": [
+            0,
+            1670.5,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        },
+        "interfaces": [
+          "S13 ring",
+          "S15 short stem"
+        ],
+        "short_build_reason": "One short revolved cap.",
+        "material": "aged bronze",
+        "source_boundary": ""
+      },
+      {
+        "id": "S15",
+        "name": "small round finial and stem",
+        "quantity": 1,
+        "form": {
+          "type": "closed round finial profile",
+          "sphere_radius": 12,
+          "sphere_center": [
+            0,
+            1688,
+            0
+          ],
+          "stem_radius": 6,
+          "stem_y_min": 1674,
+          "stem_y_max": 1681
+        },
+        "placement_mm": {
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "top": [
+            0,
+            1700,
+            0
+          ]
+        },
+        "interfaces": [
+          "S14 cap, internal stem seat"
+        ],
+        "short_build_reason": "One small revolved ball-and-stem profile.",
+        "material": "aged bronze",
+        "source_boundary": "Use the round finial in the hands/staff lantern close-up. Do not introduce an unverified hanging loop."
+      }
+    ]
+  },
+  "decision": "two individual outer-form references coherent; lathe numeric specification needs explicit BOM finalization; whole assembly unverified",
+  "resolvedComparedWithIndependentlyViewedMicroV1": [
+    "S13 SIDE no longer becomes tall thin sleeve",
+    "S14 no longer includes a spherical top in just one view",
+    "direct top provides bore and concentricity information"
+  ],
+  "requiredDesignClarifications": [
+    "S13 torus specification versus flattened/beveled/stepped annulus",
+    "S14 socket bore/depth and S15 stem boundary"
+  ],
+  "additionalImageGenerationRequired": false,
+  "unverified": [
+    "intermediate exec-b7df image",
+    "four-rib whole assembly count and curvature",
+    "all mating interfaces",
+    "entire character micro-part completeness",
+    "actual 3D and runtime quality"
+  ],
+  "noEditsOrNew3D": true,
+  "pendingSessions": 0
+}

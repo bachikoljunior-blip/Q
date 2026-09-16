@@ -1,0 +1,3918 @@
+{
+  "schema": 1,
+  "at": "2026-09-16T11:55:56.823137+00:00",
+  "status": "draft micro-part specification, no image generation or runtime changes. User requested all fine parts first, then assembly. Not a speed guarantee.",
+  "preservedCandidateCommit": "3afcb955f6c2f698fe42148de88a32760da28b1c",
+  "coordinateConvention": "+X character right, +Z front, +Y up; dimensions are authored rig-based estimates, not measurements recovered from generated images.",
+  "instances": 212,
+  "parts": [
+    {
+      "id": "UP-00-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "bottom": "UP-01-00.top",
+        "left": "UP-00-07.right",
+        "right": "UP-00-01.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-00-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "bottom": "UP-01-01.top",
+        "left": "UP-00-00.right",
+        "right": "UP-00-02.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-00-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "bottom": "UP-01-02.top",
+        "left": "UP-00-01.right",
+        "right": "UP-00-03.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-00-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "bottom": "UP-01-03.top",
+        "left": "UP-00-02.right",
+        "right": "UP-00-04.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-00-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "bottom": "UP-01-04.top",
+        "left": "UP-00-03.right",
+        "right": "UP-00-05.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-00-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "bottom": "UP-01-05.top",
+        "left": "UP-00-04.right",
+        "right": "UP-00-06.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-00-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "bottom": "UP-01-06.top",
+        "left": "UP-00-05.right",
+        "right": "UP-00-07.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-00-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "bottom": "UP-01-07.top",
+        "left": "UP-00-06.right",
+        "right": "UP-00-00.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-01-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-00-00.bottom",
+        "bottom": "UP-02-00.top",
+        "left": "UP-01-07.right",
+        "right": "UP-01-01.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-01-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-00-01.bottom",
+        "bottom": "UP-02-01.top",
+        "left": "UP-01-00.right",
+        "right": "UP-01-02.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-01-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-00-02.bottom",
+        "bottom": "UP-02-02.top",
+        "left": "UP-01-01.right",
+        "right": "UP-01-03.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-01-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-00-03.bottom",
+        "bottom": "UP-02-03.top",
+        "left": "UP-01-02.right",
+        "right": "UP-01-04.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-01-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-00-04.bottom",
+        "bottom": "UP-02-04.top",
+        "left": "UP-01-03.right",
+        "right": "UP-01-05.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-01-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-00-05.bottom",
+        "bottom": "UP-02-05.top",
+        "left": "UP-01-04.right",
+        "right": "UP-01-06.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-01-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-00-06.bottom",
+        "bottom": "UP-02-06.top",
+        "left": "UP-01-05.right",
+        "right": "UP-01-07.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-01-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-00-07.bottom",
+        "bottom": "UP-02-07.top",
+        "left": "UP-01-06.right",
+        "right": "UP-01-00.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-02-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-01-00.bottom",
+        "bottom": "UP-03-00.top",
+        "left": "UP-02-07.right",
+        "right": "UP-02-01.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-02-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-01-01.bottom",
+        "bottom": "UP-03-01.top",
+        "left": "UP-02-00.right",
+        "right": "UP-02-02.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-02-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-01-02.bottom",
+        "bottom": "UP-03-02.top",
+        "left": "UP-02-01.right",
+        "right": "UP-02-03.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-02-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-01-03.bottom",
+        "bottom": "UP-03-03.top",
+        "left": "UP-02-02.right",
+        "right": "UP-02-04.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-02-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-01-04.bottom",
+        "bottom": "UP-03-04.top",
+        "left": "UP-02-03.right",
+        "right": "UP-02-05.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-02-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-01-05.bottom",
+        "bottom": "UP-03-05.top",
+        "left": "UP-02-04.right",
+        "right": "UP-02-06.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-02-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-01-06.bottom",
+        "bottom": "UP-03-06.top",
+        "left": "UP-02-05.right",
+        "right": "UP-02-07.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-02-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-01-07.bottom",
+        "bottom": "UP-03-07.top",
+        "left": "UP-02-06.right",
+        "right": "UP-02-00.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-03-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-02-00.bottom",
+        "left": "UP-03-07.right",
+        "right": "UP-03-01.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-03-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-02-01.bottom",
+        "left": "UP-03-00.right",
+        "right": "UP-03-02.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-03-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-02-02.bottom",
+        "left": "UP-03-01.right",
+        "right": "UP-03-03.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-03-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-02-03.bottom",
+        "left": "UP-03-02.right",
+        "right": "UP-03-04.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-03-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-02-04.bottom",
+        "left": "UP-03-03.right",
+        "right": "UP-03-05.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-03-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-02-05.bottom",
+        "left": "UP-03-04.right",
+        "right": "UP-03-06.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-03-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-02-06.bottom",
+        "left": "UP-03-05.right",
+        "right": "UP-03-07.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "UP-03-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.169,
+        "height": 0.15
+      },
+      "adjacent": {
+        "top": "UP-02-07.bottom",
+        "left": "UP-03-06.right",
+        "right": "UP-03-00.left"
+      },
+      "reference": "upper + assembly",
+      "existingCandidateReuse": "Existing torso cross-section dimensions only; armhole boundary must be split using canonical micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-00-00",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "bottom": "SLL-01-00.top",
+        "left": "SLL-00-03.right",
+        "right": "SLL-00-01.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-00-01",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "bottom": "SLL-01-01.top",
+        "left": "SLL-00-00.right",
+        "right": "SLL-00-02.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-00-02",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "bottom": "SLL-01-02.top",
+        "left": "SLL-00-01.right",
+        "right": "SLL-00-03.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-00-03",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "bottom": "SLL-01-03.top",
+        "left": "SLL-00-02.right",
+        "right": "SLL-00-00.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-01-00",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLL-00-00.bottom",
+        "bottom": "SLL-02-00.top",
+        "left": "SLL-01-03.right",
+        "right": "SLL-01-01.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-01-01",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLL-00-01.bottom",
+        "bottom": "SLL-02-01.top",
+        "left": "SLL-01-00.right",
+        "right": "SLL-01-02.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-01-02",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLL-00-02.bottom",
+        "bottom": "SLL-02-02.top",
+        "left": "SLL-01-01.right",
+        "right": "SLL-01-03.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-01-03",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLL-00-03.bottom",
+        "bottom": "SLL-02-03.top",
+        "left": "SLL-01-02.right",
+        "right": "SLL-01-00.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-02-00",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLL-01-00.bottom",
+        "left": "SLL-02-03.right",
+        "right": "SLL-02-01.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-02-01",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLL-01-01.bottom",
+        "left": "SLL-02-00.right",
+        "right": "SLL-02-02.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-02-02",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLL-01-02.bottom",
+        "left": "SLL-02-01.right",
+        "right": "SLL-02-03.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLL-02-03",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLL-01-03.bottom",
+        "left": "SLL-02-02.right",
+        "right": "SLL-02-00.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-00-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "bottom": "SLR-01-00.top",
+        "left": "SLR-00-03.right",
+        "right": "SLR-00-01.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-00-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "bottom": "SLR-01-01.top",
+        "left": "SLR-00-00.right",
+        "right": "SLR-00-02.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-00-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "bottom": "SLR-01-02.top",
+        "left": "SLR-00-01.right",
+        "right": "SLR-00-03.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-00-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "bottom": "SLR-01-03.top",
+        "left": "SLR-00-02.right",
+        "right": "SLR-00-00.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-01-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLR-00-00.bottom",
+        "bottom": "SLR-02-00.top",
+        "left": "SLR-01-03.right",
+        "right": "SLR-01-01.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-01-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLR-00-01.bottom",
+        "bottom": "SLR-02-01.top",
+        "left": "SLR-01-00.right",
+        "right": "SLR-01-02.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-01-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLR-00-02.bottom",
+        "bottom": "SLR-02-02.top",
+        "left": "SLR-01-01.right",
+        "right": "SLR-01-03.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-01-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLR-00-03.bottom",
+        "bottom": "SLR-02-03.top",
+        "left": "SLR-01-02.right",
+        "right": "SLR-01-00.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-02-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLR-01-00.bottom",
+        "left": "SLR-02-03.right",
+        "right": "SLR-02-01.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-02-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLR-01-01.bottom",
+        "left": "SLR-02-00.right",
+        "right": "SLR-02-02.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-02-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLR-01-02.bottom",
+        "left": "SLR-02-01.right",
+        "right": "SLR-02-03.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "SLR-02-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.13,
+        "height": 0.213
+      },
+      "adjacent": {
+        "top": "SLR-01-03.bottom",
+        "left": "SLR-02-02.right",
+        "right": "SLR-02-00.left"
+      },
+      "reference": "upper + assembly ELBOW90/ARMRAISED",
+      "existingCandidateReuse": "Existing sewn loop IDs may be reused after gap/normal checks; sleeve fullness is not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COL-00-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.07,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "COL-00-07.right",
+        "right": "COL-00-01.left"
+      },
+      "reference": "assembly neckline",
+      "existingCandidateReuse": "Candidate neck opening and base rig dimensions may be reused; small collar arc surface needs micro reference.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COL-00-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.07,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "COL-00-00.right",
+        "right": "COL-00-02.left"
+      },
+      "reference": "assembly neckline",
+      "existingCandidateReuse": "Candidate neck opening and base rig dimensions may be reused; small collar arc surface needs micro reference.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COL-00-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.07,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "COL-00-01.right",
+        "right": "COL-00-03.left"
+      },
+      "reference": "assembly neckline",
+      "existingCandidateReuse": "Candidate neck opening and base rig dimensions may be reused; small collar arc surface needs micro reference.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COL-00-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.07,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "COL-00-02.right",
+        "right": "COL-00-04.left"
+      },
+      "reference": "assembly neckline",
+      "existingCandidateReuse": "Candidate neck opening and base rig dimensions may be reused; small collar arc surface needs micro reference.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COL-00-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.07,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "COL-00-03.right",
+        "right": "COL-00-05.left"
+      },
+      "reference": "assembly neckline",
+      "existingCandidateReuse": "Candidate neck opening and base rig dimensions may be reused; small collar arc surface needs micro reference.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COL-00-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.07,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "COL-00-04.right",
+        "right": "COL-00-06.left"
+      },
+      "reference": "assembly neckline",
+      "existingCandidateReuse": "Candidate neck opening and base rig dimensions may be reused; small collar arc surface needs micro reference.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COL-00-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.07,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "COL-00-05.right",
+        "right": "COL-00-07.left"
+      },
+      "reference": "assembly neckline",
+      "existingCandidateReuse": "Candidate neck opening and base rig dimensions may be reused; small collar arc surface needs micro reference.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COL-00-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.07,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "COL-00-06.right",
+        "right": "COL-00-00.left"
+      },
+      "reference": "assembly neckline",
+      "existingCandidateReuse": "Candidate neck opening and base rig dimensions may be reused; small collar arc surface needs micro reference.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-00-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "bottom": "COW-01-00.top",
+        "left": "COW-00-07.right",
+        "right": "COW-00-01.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-00-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "bottom": "COW-01-01.top",
+        "left": "COW-00-00.right",
+        "right": "COW-00-02.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-00-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "bottom": "COW-01-02.top",
+        "left": "COW-00-01.right",
+        "right": "COW-00-03.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-00-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "bottom": "COW-01-03.top",
+        "left": "COW-00-02.right",
+        "right": "COW-00-04.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-00-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "bottom": "COW-01-04.top",
+        "left": "COW-00-03.right",
+        "right": "COW-00-05.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-00-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "bottom": "COW-01-05.top",
+        "left": "COW-00-04.right",
+        "right": "COW-00-06.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-00-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "bottom": "COW-01-06.top",
+        "left": "COW-00-05.right",
+        "right": "COW-00-07.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-00-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "bottom": "COW-01-07.top",
+        "left": "COW-00-06.right",
+        "right": "COW-00-00.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-01-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-00-00.bottom",
+        "bottom": "COW-02-00.top",
+        "left": "COW-01-07.right",
+        "right": "COW-01-01.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-01-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-00-01.bottom",
+        "bottom": "COW-02-01.top",
+        "left": "COW-01-00.right",
+        "right": "COW-01-02.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-01-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-00-02.bottom",
+        "bottom": "COW-02-02.top",
+        "left": "COW-01-01.right",
+        "right": "COW-01-03.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-01-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-00-03.bottom",
+        "bottom": "COW-02-03.top",
+        "left": "COW-01-02.right",
+        "right": "COW-01-04.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-01-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-00-04.bottom",
+        "bottom": "COW-02-04.top",
+        "left": "COW-01-03.right",
+        "right": "COW-01-05.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-01-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-00-05.bottom",
+        "bottom": "COW-02-05.top",
+        "left": "COW-01-04.right",
+        "right": "COW-01-06.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-01-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-00-06.bottom",
+        "bottom": "COW-02-06.top",
+        "left": "COW-01-05.right",
+        "right": "COW-01-07.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-01-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-00-07.bottom",
+        "bottom": "COW-02-07.top",
+        "left": "COW-01-06.right",
+        "right": "COW-01-00.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-02-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-01-00.bottom",
+        "bottom": "COW-03-00.top",
+        "left": "COW-02-07.right",
+        "right": "COW-02-01.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-02-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-01-01.bottom",
+        "bottom": "COW-03-01.top",
+        "left": "COW-02-00.right",
+        "right": "COW-02-02.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-02-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-01-02.bottom",
+        "bottom": "COW-03-02.top",
+        "left": "COW-02-01.right",
+        "right": "COW-02-03.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-02-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-01-03.bottom",
+        "bottom": "COW-03-03.top",
+        "left": "COW-02-02.right",
+        "right": "COW-02-04.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-02-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-01-04.bottom",
+        "bottom": "COW-03-04.top",
+        "left": "COW-02-03.right",
+        "right": "COW-02-05.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-02-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-01-05.bottom",
+        "bottom": "COW-03-05.top",
+        "left": "COW-02-04.right",
+        "right": "COW-02-06.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-02-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-01-06.bottom",
+        "bottom": "COW-03-06.top",
+        "left": "COW-02-05.right",
+        "right": "COW-02-07.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-02-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-01-07.bottom",
+        "bottom": "COW-03-07.top",
+        "left": "COW-02-06.right",
+        "right": "COW-02-00.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-03-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-02-00.bottom",
+        "bottom": "COW-04-00.top",
+        "left": "COW-03-07.right",
+        "right": "COW-03-01.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-03-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-02-01.bottom",
+        "bottom": "COW-04-01.top",
+        "left": "COW-03-00.right",
+        "right": "COW-03-02.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-03-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-02-02.bottom",
+        "bottom": "COW-04-02.top",
+        "left": "COW-03-01.right",
+        "right": "COW-03-03.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-03-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-02-03.bottom",
+        "bottom": "COW-04-03.top",
+        "left": "COW-03-02.right",
+        "right": "COW-03-04.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-03-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-02-04.bottom",
+        "bottom": "COW-04-04.top",
+        "left": "COW-03-03.right",
+        "right": "COW-03-05.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-03-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-02-05.bottom",
+        "bottom": "COW-04-05.top",
+        "left": "COW-03-04.right",
+        "right": "COW-03-06.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-03-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-02-06.bottom",
+        "bottom": "COW-04-06.top",
+        "left": "COW-03-05.right",
+        "right": "COW-03-07.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-03-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-02-07.bottom",
+        "bottom": "COW-04-07.top",
+        "left": "COW-03-06.right",
+        "right": "COW-03-00.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-04-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-03-00.bottom",
+        "left": "COW-04-07.right",
+        "right": "COW-04-01.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-04-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-03-01.bottom",
+        "left": "COW-04-00.right",
+        "right": "COW-04-02.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-04-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-03-02.bottom",
+        "left": "COW-04-01.right",
+        "right": "COW-04-03.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-04-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-03-03.bottom",
+        "left": "COW-04-02.right",
+        "right": "COW-04-04.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-04-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-03-04.bottom",
+        "left": "COW-04-03.right",
+        "right": "COW-04-05.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-04-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-03-05.bottom",
+        "left": "COW-04-04.right",
+        "right": "COW-04-06.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-04-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-03-06.bottom",
+        "left": "COW-04-05.right",
+        "right": "COW-04-07.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "COW-04-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.175,
+        "height": 0.068
+      },
+      "adjacent": {
+        "top": "COW-03-07.bottom",
+        "left": "COW-04-06.right",
+        "right": "COW-04-00.left"
+      },
+      "reference": "assembly neckline + cape-v2",
+      "existingCandidateReuse": "Candidate cowl folds/contacts failed; retain only inner neck interface, redraw each fold strip from new references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-00-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "bottom": "LOW-01-00.top",
+        "right": "LOW-00-01.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-00-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "bottom": "LOW-01-01.top",
+        "left": "LOW-00-00.right",
+        "right": "LOW-00-02.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-00-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "bottom": "LOW-01-02.top",
+        "left": "LOW-00-01.right",
+        "right": "LOW-00-03.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-00-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "bottom": "LOW-01-03.top",
+        "left": "LOW-00-02.right",
+        "right": "LOW-00-04.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-00-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "bottom": "LOW-01-04.top",
+        "left": "LOW-00-03.right",
+        "right": "LOW-00-05.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-00-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "bottom": "LOW-01-05.top",
+        "left": "LOW-00-04.right",
+        "right": "LOW-00-06.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-00-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "bottom": "LOW-01-06.top",
+        "left": "LOW-00-05.right",
+        "right": "LOW-00-07.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-00-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "bottom": "LOW-01-07.top",
+        "left": "LOW-00-06.right"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-01-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-00-00.bottom",
+        "bottom": "LOW-02-00.top",
+        "right": "LOW-01-01.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-01-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-00-01.bottom",
+        "bottom": "LOW-02-01.top",
+        "left": "LOW-01-00.right",
+        "right": "LOW-01-02.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-01-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-00-02.bottom",
+        "bottom": "LOW-02-02.top",
+        "left": "LOW-01-01.right",
+        "right": "LOW-01-03.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-01-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-00-03.bottom",
+        "bottom": "LOW-02-03.top",
+        "left": "LOW-01-02.right",
+        "right": "LOW-01-04.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-01-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-00-04.bottom",
+        "bottom": "LOW-02-04.top",
+        "left": "LOW-01-03.right",
+        "right": "LOW-01-05.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-01-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-00-05.bottom",
+        "bottom": "LOW-02-05.top",
+        "left": "LOW-01-04.right",
+        "right": "LOW-01-06.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-01-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-00-06.bottom",
+        "bottom": "LOW-02-06.top",
+        "left": "LOW-01-05.right",
+        "right": "LOW-01-07.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-01-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-00-07.bottom",
+        "bottom": "LOW-02-07.top",
+        "left": "LOW-01-06.right"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-02-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-01-00.bottom",
+        "right": "LOW-02-01.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-02-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-01-01.bottom",
+        "left": "LOW-02-00.right",
+        "right": "LOW-02-02.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-02-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-01-02.bottom",
+        "left": "LOW-02-01.right",
+        "right": "LOW-02-03.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-02-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-01-03.bottom",
+        "left": "LOW-02-02.right",
+        "right": "LOW-02-04.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-02-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-01-04.bottom",
+        "left": "LOW-02-03.right",
+        "right": "LOW-02-05.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-02-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-01-05.bottom",
+        "left": "LOW-02-04.right",
+        "right": "LOW-02-06.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-02-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-01-06.bottom",
+        "left": "LOW-02-05.right",
+        "right": "LOW-02-07.left"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "LOW-02-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.219,
+        "height": 0.168
+      },
+      "adjacent": {
+        "top": "LOW-01-07.bottom",
+        "left": "LOW-02-06.right"
+      },
+      "reference": "lower FRONT/BACK + assembly waist",
+      "existingCandidateReuse": "Candidate split and waist dimensions only; cloth/trouser clearance not accepted.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-00-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "bottom": "CAP-01-00.top",
+        "right": "CAP-00-01.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-00-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "bottom": "CAP-01-01.top",
+        "left": "CAP-00-00.right",
+        "right": "CAP-00-02.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-00-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "bottom": "CAP-01-02.top",
+        "left": "CAP-00-01.right",
+        "right": "CAP-00-03.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-00-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "bottom": "CAP-01-03.top",
+        "left": "CAP-00-02.right",
+        "right": "CAP-00-04.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-00-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "bottom": "CAP-01-04.top",
+        "left": "CAP-00-03.right",
+        "right": "CAP-00-05.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-00-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "bottom": "CAP-01-05.top",
+        "left": "CAP-00-04.right",
+        "right": "CAP-00-06.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-00-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "bottom": "CAP-01-06.top",
+        "left": "CAP-00-05.right",
+        "right": "CAP-00-07.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-00-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "bottom": "CAP-01-07.top",
+        "left": "CAP-00-06.right"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-01-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-00-00.bottom",
+        "bottom": "CAP-02-00.top",
+        "right": "CAP-01-01.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-01-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-00-01.bottom",
+        "bottom": "CAP-02-01.top",
+        "left": "CAP-01-00.right",
+        "right": "CAP-01-02.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-01-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-00-02.bottom",
+        "bottom": "CAP-02-02.top",
+        "left": "CAP-01-01.right",
+        "right": "CAP-01-03.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-01-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-00-03.bottom",
+        "bottom": "CAP-02-03.top",
+        "left": "CAP-01-02.right",
+        "right": "CAP-01-04.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-01-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-00-04.bottom",
+        "bottom": "CAP-02-04.top",
+        "left": "CAP-01-03.right",
+        "right": "CAP-01-05.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-01-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-00-05.bottom",
+        "bottom": "CAP-02-05.top",
+        "left": "CAP-01-04.right",
+        "right": "CAP-01-06.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-01-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-00-06.bottom",
+        "bottom": "CAP-02-06.top",
+        "left": "CAP-01-05.right",
+        "right": "CAP-01-07.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-01-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-00-07.bottom",
+        "bottom": "CAP-02-07.top",
+        "left": "CAP-01-06.right"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-02-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-01-00.bottom",
+        "bottom": "CAP-03-00.top",
+        "right": "CAP-02-01.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-02-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-01-01.bottom",
+        "bottom": "CAP-03-01.top",
+        "left": "CAP-02-00.right",
+        "right": "CAP-02-02.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-02-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-01-02.bottom",
+        "bottom": "CAP-03-02.top",
+        "left": "CAP-02-01.right",
+        "right": "CAP-02-03.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-02-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-01-03.bottom",
+        "bottom": "CAP-03-03.top",
+        "left": "CAP-02-02.right",
+        "right": "CAP-02-04.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-02-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-01-04.bottom",
+        "bottom": "CAP-03-04.top",
+        "left": "CAP-02-03.right",
+        "right": "CAP-02-05.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-02-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-01-05.bottom",
+        "bottom": "CAP-03-05.top",
+        "left": "CAP-02-04.right",
+        "right": "CAP-02-06.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-02-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-01-06.bottom",
+        "bottom": "CAP-03-06.top",
+        "left": "CAP-02-05.right",
+        "right": "CAP-02-07.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-02-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-01-07.bottom",
+        "bottom": "CAP-03-07.top",
+        "left": "CAP-02-06.right"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-03-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-02-00.bottom",
+        "right": "CAP-03-01.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-03-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-02-01.bottom",
+        "left": "CAP-03-00.right",
+        "right": "CAP-03-02.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-03-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-02-02.bottom",
+        "left": "CAP-03-01.right",
+        "right": "CAP-03-03.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-03-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-02-03.bottom",
+        "left": "CAP-03-02.right",
+        "right": "CAP-03-04.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-03-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-02-04.bottom",
+        "left": "CAP-03-03.right",
+        "right": "CAP-03-05.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-03-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-02-05.bottom",
+        "left": "CAP-03-04.right",
+        "right": "CAP-03-06.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-03-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-02-06.bottom",
+        "left": "CAP-03-05.right",
+        "right": "CAP-03-07.left"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CAP-03-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.231,
+        "height": 0.301
+      },
+      "adjacent": {
+        "top": "CAP-02-07.bottom",
+        "left": "CAP-03-06.right"
+      },
+      "reference": "cape-v2 + complete",
+      "existingCandidateReuse": "Candidate wrap layout as scaffold only; old back-cape deformation fails, so no accepted deformation reuse.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; no whole sleeve/torso/cape in one part. Open edges stay unjoined.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BLT-00-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.155,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "BLT-00-07.right",
+        "right": "BLT-00-01.left"
+      },
+      "reference": "lower FRONT + assembly waist",
+      "existingCandidateReuse": "Candidate waist curve may be reused after layer-clearance check.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BLT-00-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.155,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "BLT-00-00.right",
+        "right": "BLT-00-02.left"
+      },
+      "reference": "lower FRONT + assembly waist",
+      "existingCandidateReuse": "Candidate waist curve may be reused after layer-clearance check.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BLT-00-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.155,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "BLT-00-01.right",
+        "right": "BLT-00-03.left"
+      },
+      "reference": "lower FRONT + assembly waist",
+      "existingCandidateReuse": "Candidate waist curve may be reused after layer-clearance check.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BLT-00-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.155,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "BLT-00-02.right",
+        "right": "BLT-00-04.left"
+      },
+      "reference": "lower FRONT + assembly waist",
+      "existingCandidateReuse": "Candidate waist curve may be reused after layer-clearance check.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BLT-00-04",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.155,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "BLT-00-03.right",
+        "right": "BLT-00-05.left"
+      },
+      "reference": "lower FRONT + assembly waist",
+      "existingCandidateReuse": "Candidate waist curve may be reused after layer-clearance check.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BLT-00-05",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.155,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "BLT-00-04.right",
+        "right": "BLT-00-06.left"
+      },
+      "reference": "lower FRONT + assembly waist",
+      "existingCandidateReuse": "Candidate waist curve may be reused after layer-clearance check.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BLT-00-06",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.155,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "BLT-00-05.right",
+        "right": "BLT-00-07.left"
+      },
+      "reference": "lower FRONT + assembly waist",
+      "existingCandidateReuse": "Candidate waist curve may be reused after layer-clearance check.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BLT-00-07",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.155,
+        "height": 0.082
+      },
+      "adjacent": {
+        "left": "BLT-00-06.right",
+        "right": "BLT-00-00.left"
+      },
+      "reference": "lower FRONT + assembly waist",
+      "existingCandidateReuse": "Candidate waist curve may be reused after layer-clearance check.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFL-00-00",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "bottom": "CUFL-01-00.top",
+        "left": "CUFL-00-03.right",
+        "right": "CUFL-00-01.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFL-00-01",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "bottom": "CUFL-01-01.top",
+        "left": "CUFL-00-00.right",
+        "right": "CUFL-00-02.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFL-00-02",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "bottom": "CUFL-01-02.top",
+        "left": "CUFL-00-01.right",
+        "right": "CUFL-00-03.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFL-00-03",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "bottom": "CUFL-01-03.top",
+        "left": "CUFL-00-02.right",
+        "right": "CUFL-00-00.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFL-01-00",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "top": "CUFL-00-00.bottom",
+        "left": "CUFL-01-03.right",
+        "right": "CUFL-01-01.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFL-01-01",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "top": "CUFL-00-01.bottom",
+        "left": "CUFL-01-00.right",
+        "right": "CUFL-01-02.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFL-01-02",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "top": "CUFL-00-02.bottom",
+        "left": "CUFL-01-01.right",
+        "right": "CUFL-01-03.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFL-01-03",
+      "side": "L",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "top": "CUFL-00-03.bottom",
+        "left": "CUFL-01-02.right",
+        "right": "CUFL-01-00.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "WRP-L-0",
+      "side": "L",
+      "shape": "one narrow crossing leather ribbon with four edge controls",
+      "approxDimensionsMetres": {
+        "width": 0.012,
+        "length": 0.15
+      },
+      "adjacent": [
+        "CUFL-00-*",
+        "CUFL-01-*"
+      ],
+      "reference": "hands-staff",
+      "existingCandidateReuse": "No modeled cross-wrap ribbon in current candidate; new reference required.",
+      "constraint": "Ribbon follows cuff surface with defined clearance; does not bind rigidly across a bending joint.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "WRP-L-1",
+      "side": "L",
+      "shape": "one narrow crossing leather ribbon with four edge controls",
+      "approxDimensionsMetres": {
+        "width": 0.012,
+        "length": 0.15
+      },
+      "adjacent": [
+        "CUFL-00-*",
+        "CUFL-01-*"
+      ],
+      "reference": "hands-staff",
+      "existingCandidateReuse": "No modeled cross-wrap ribbon in current candidate; new reference required.",
+      "constraint": "Ribbon follows cuff surface with defined clearance; does not bind rigidly across a bending joint.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "WRP-L-2",
+      "side": "L",
+      "shape": "one narrow crossing leather ribbon with four edge controls",
+      "approxDimensionsMetres": {
+        "width": 0.012,
+        "length": 0.15
+      },
+      "adjacent": [
+        "CUFL-00-*",
+        "CUFL-01-*"
+      ],
+      "reference": "hands-staff",
+      "existingCandidateReuse": "No modeled cross-wrap ribbon in current candidate; new reference required.",
+      "constraint": "Ribbon follows cuff surface with defined clearance; does not bind rigidly across a bending joint.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFR-00-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "bottom": "CUFR-01-00.top",
+        "left": "CUFR-00-03.right",
+        "right": "CUFR-00-01.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFR-00-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "bottom": "CUFR-01-01.top",
+        "left": "CUFR-00-00.right",
+        "right": "CUFR-00-02.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFR-00-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "bottom": "CUFR-01-02.top",
+        "left": "CUFR-00-01.right",
+        "right": "CUFR-00-03.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFR-00-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "bottom": "CUFR-01-03.top",
+        "left": "CUFR-00-02.right",
+        "right": "CUFR-00-00.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFR-01-00",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "top": "CUFR-00-00.bottom",
+        "left": "CUFR-01-03.right",
+        "right": "CUFR-01-01.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFR-01-01",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "top": "CUFR-00-01.bottom",
+        "left": "CUFR-01-00.right",
+        "right": "CUFR-01-02.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFR-01-02",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "top": "CUFR-00-02.bottom",
+        "left": "CUFR-01-01.right",
+        "right": "CUFR-01-03.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "CUFR-01-03",
+      "side": "R",
+      "shape": "one shallow curved quad, at most one primary fold/crease",
+      "approxDimensionsMetres": {
+        "width": 0.085,
+        "height": 0.1
+      },
+      "adjacent": {
+        "top": "CUFR-00-03.bottom",
+        "left": "CUFR-01-02.right",
+        "right": "CUFR-01-00.left"
+      },
+      "reference": "hands-staff cuff + upper",
+      "existingCandidateReuse": "Candidate cuff coverage/rig endpoints only; crossing wrap bands need their own micro references.",
+      "constraint": "3\u00d73 to 4\u00d74 control grid; shared edge control IDs and weights before welding.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "WRP-R-0",
+      "side": "R",
+      "shape": "one narrow crossing leather ribbon with four edge controls",
+      "approxDimensionsMetres": {
+        "width": 0.012,
+        "length": 0.15
+      },
+      "adjacent": [
+        "CUFR-00-*",
+        "CUFR-01-*"
+      ],
+      "reference": "hands-staff",
+      "existingCandidateReuse": "No modeled cross-wrap ribbon in current candidate; new reference required.",
+      "constraint": "Ribbon follows cuff surface with defined clearance; does not bind rigidly across a bending joint.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "WRP-R-1",
+      "side": "R",
+      "shape": "one narrow crossing leather ribbon with four edge controls",
+      "approxDimensionsMetres": {
+        "width": 0.012,
+        "length": 0.15
+      },
+      "adjacent": [
+        "CUFR-00-*",
+        "CUFR-01-*"
+      ],
+      "reference": "hands-staff",
+      "existingCandidateReuse": "No modeled cross-wrap ribbon in current candidate; new reference required.",
+      "constraint": "Ribbon follows cuff surface with defined clearance; does not bind rigidly across a bending joint.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "WRP-R-2",
+      "side": "R",
+      "shape": "one narrow crossing leather ribbon with four edge controls",
+      "approxDimensionsMetres": {
+        "width": 0.012,
+        "length": 0.15
+      },
+      "adjacent": [
+        "CUFR-00-*",
+        "CUFR-01-*"
+      ],
+      "reference": "hands-staff",
+      "existingCandidateReuse": "No modeled cross-wrap ribbon in current candidate; new reference required.",
+      "constraint": "Ribbon follows cuff surface with defined clearance; does not bind rigidly across a bending joint.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BUCKLE-ARC-0",
+      "side": "C",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.057,
+        "outerRadius": 0.036,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BUCKLE-ARC-3",
+        "BUCKLE-ARC-1"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BUCKLE-ARC-1",
+      "side": "C",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.057,
+        "outerRadius": 0.036,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BUCKLE-ARC-0",
+        "BUCKLE-ARC-2"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BUCKLE-ARC-2",
+      "side": "C",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.057,
+        "outerRadius": 0.036,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BUCKLE-ARC-1",
+        "BUCKLE-ARC-3"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BUCKLE-ARC-3",
+      "side": "C",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.057,
+        "outerRadius": 0.036,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BUCKLE-ARC-2",
+        "BUCKLE-ARC-0"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "HANGER-ARC-0",
+      "side": "R",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "HANGER-ARC-3",
+        "HANGER-ARC-1"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "HANGER-ARC-1",
+      "side": "R",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "HANGER-ARC-0",
+        "HANGER-ARC-2"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "HANGER-ARC-2",
+      "side": "R",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "HANGER-ARC-1",
+        "HANGER-ARC-3"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "HANGER-ARC-3",
+      "side": "R",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "HANGER-ARC-2",
+        "HANGER-ARC-0"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-L-ARC-0",
+      "side": "L",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BROOCH-L-ARC-3",
+        "BROOCH-L-ARC-1"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-L-ARC-1",
+      "side": "L",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BROOCH-L-ARC-0",
+        "BROOCH-L-ARC-2"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-L-ARC-2",
+      "side": "L",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BROOCH-L-ARC-1",
+        "BROOCH-L-ARC-3"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-L-ARC-3",
+      "side": "L",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BROOCH-L-ARC-2",
+        "BROOCH-L-ARC-0"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-L-DISC",
+      "side": "L",
+      "shape": "one shallow convex disc with ring seat",
+      "approxDimensionsMetres": {
+        "diameter": 0.042,
+        "depth": 0.006
+      },
+      "adjacent": [
+        "BROOCH-L-ARC-*"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate tangent plane and centre position only.",
+      "constraint": "No floral/spiral design invented; canonical ornament must be fixed first.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-R-ARC-0",
+      "side": "R",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BROOCH-R-ARC-3",
+        "BROOCH-R-ARC-1"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-R-ARC-1",
+      "side": "R",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BROOCH-R-ARC-0",
+        "BROOCH-R-ARC-2"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-R-ARC-2",
+      "side": "R",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BROOCH-R-ARC-1",
+        "BROOCH-R-ARC-3"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-R-ARC-3",
+      "side": "R",
+      "shape": "one quarter-annulus with explicit front/back bevel",
+      "approxDimensionsMetres": {
+        "arcLength": 0.042,
+        "outerRadius": 0.027,
+        "thickness": 0.007
+      },
+      "adjacent": [
+        "BROOCH-R-ARC-2",
+        "BROOCH-R-ARC-0"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate local ring path/tangent frame may be reused; decorative reference match not verified.",
+      "constraint": "Four matching quarters form one closed ring. Hardware uses existing brass batch.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BROOCH-R-DISC",
+      "side": "R",
+      "shape": "one shallow convex disc with ring seat",
+      "approxDimensionsMetres": {
+        "diameter": 0.042,
+        "depth": 0.006
+      },
+      "adjacent": [
+        "BROOCH-R-ARC-*"
+      ],
+      "reference": "complete + assembly brooch",
+      "existingCandidateReuse": "Candidate tangent plane and centre position only.",
+      "constraint": "No floral/spiral design invented; canonical ornament must be fixed first.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "TONGUE-0",
+      "side": "R",
+      "shape": "one straight or tapered leather strip section",
+      "approxDimensionsMetres": {
+        "width": 0.048,
+        "height": 0.117
+      },
+      "adjacent": [
+        "HANGER-ARC-*",
+        "TONGUE-1"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Existing strip centreline reusable only after front-layer clearance checks.",
+      "constraint": "Three strips form one hanging belt tail; shared edge ID, no independent floating pieces.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "TONGUE-1",
+      "side": "R",
+      "shape": "one straight or tapered leather strip section",
+      "approxDimensionsMetres": {
+        "width": 0.048,
+        "height": 0.117
+      },
+      "adjacent": [
+        "TONGUE-0",
+        "TONGUE-2"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Existing strip centreline reusable only after front-layer clearance checks.",
+      "constraint": "Three strips form one hanging belt tail; shared edge ID, no independent floating pieces.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "TONGUE-2",
+      "side": "R",
+      "shape": "one straight or tapered leather strip section",
+      "approxDimensionsMetres": {
+        "width": 0.048,
+        "height": 0.117
+      },
+      "adjacent": [
+        "TONGUE-1",
+        "free tip"
+      ],
+      "reference": "lower FRONT",
+      "existingCandidateReuse": "Existing strip centreline reusable only after front-layer clearance checks.",
+      "constraint": "Three strips form one hanging belt tail; shared edge ID, no independent floating pieces.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    },
+    {
+      "id": "BUCKLE-PIN",
+      "side": "C",
+      "shape": "one short bent pin with hinge end",
+      "approxDimensionsMetres": {
+        "length": 0.041,
+        "radius": 0.003
+      },
+      "adjacent": [
+        "BUCKLE-ARC-*",
+        "BLT-00-*"
+      ],
+      "reference": "lower FRONT + assembly waist",
+      "existingCandidateReuse": "Not present as a complete candidate part.",
+      "constraint": "Exact hole/pin relation must be supplied in the micro reference.",
+      "microReferenceStatus": "not generated; current seven sheets are coarse context only"
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "NECK",
+      "space": "chest local",
+      "centre": [
+        0,
+        0.6,
+        0
+      ],
+      "outerOpening": [
+        0.089,
+        0.083
+      ],
+      "collarTopY": 0.644,
+      "owner": "cloth / head neck-cut boundary"
+    },
+    {
+      "id": "ARMHOLE-L/R",
+      "space": "shared logical cloth vertices",
+      "countEach": 16,
+      "owner": "cloth torso/sleeve; same position/normal/weight on both sides"
+    },
+    {
+      "id": "WRIST-L/R",
+      "space": "chest local",
+      "centres": [
+        [
+          -0.313,
+          -0.18,
+          0
+        ],
+        [
+          0.313,
+          -0.18,
+          0
+        ]
+      ],
+      "owner": "cloth cuff / accessory hands"
+    },
+    {
+      "id": "WAIST",
+      "space": "chest local",
+      "y": 0.02,
+      "radii": [
+        0.216,
+        0.145
+      ],
+      "owner": "cloth upper/lower/belt, no second free upper hem"
+    },
+    {
+      "id": "BOOT-L/R",
+      "space": "knee local",
+      "y": -0.095,
+      "owner": "existing trousers / accessory boot upper edge, unchanged here"
+    }
+  ],
+  "assemblyContract": [
+    "Whole image fixes proportion; per-part orthographic front/back/side and one corner view fix thickness and edge IDs.",
+    "Each neighboring edge uses one canonical sampled curve and one skin-weight list; source image discrepancies are resolved before model construction.",
+    "Build one small surface, check its boundary against neighbors, then merge/weld. Part count is not draw count; preserve shared materials and bone palette.",
+    "Reuse reflected shape only when opposite-hand assembly direction is documented; do not repeat cape-v1 same-side error.",
+    "Canonical image ID + part ID + neighbor edges must be explicit for every pictured part; no generic ornament sheets.",
+    "No resumed large-garment modeling until these references and seam constraints are fixed. Existing rejected intersections are not grandfathered in."
+  ]
+}

@@ -1,0 +1,742 @@
+{
+  "schema": 1,
+  "scope": "Planning coverage across visible character surfaces and staff; does not establish joined complete geometry. Existing hidden rig/support may be reused only after registration.",
+  "anatomicalFrame": "R=-X, L=+X, front=+Z; retain distinction from historical code right variable.",
+  "types": [
+    {
+      "key": "head:F01",
+      "localId": "F01",
+      "scope": "head",
+      "name": "forehead",
+      "status": "one-sided micro shape reference exists; join/metric boundaries pending; no geometry"
+    },
+    {
+      "key": "head:F03",
+      "localId": "F03",
+      "scope": "head",
+      "name": "temple",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:F05",
+      "localId": "F05",
+      "scope": "head",
+      "name": "malar cheek",
+      "status": "one-sided micro shape reference exists; join/metric boundaries pending; no geometry"
+    },
+    {
+      "key": "head:F07",
+      "localId": "F07",
+      "scope": "head",
+      "name": "lower cheek",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:F09",
+      "localId": "F09",
+      "scope": "head",
+      "name": "jaw corner",
+      "status": "one-sided micro shape reference exists; join/metric boundaries pending; no geometry"
+    },
+    {
+      "key": "head:F14",
+      "localId": "F14",
+      "scope": "head",
+      "name": "nasal ala",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:F11",
+      "localId": "F11",
+      "scope": "head",
+      "name": "chin",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:F12",
+      "localId": "F12",
+      "scope": "head",
+      "name": "nasal bridge",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:F13",
+      "localId": "F13",
+      "scope": "head",
+      "name": "nasal tip",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:F16",
+      "localId": "F16",
+      "scope": "head",
+      "name": "upper lip and philtrum",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:F17",
+      "localId": "F17",
+      "scope": "head",
+      "name": "lower lip",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:S01",
+      "localId": "S01",
+      "scope": "head",
+      "name": "front scalp",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:S02",
+      "localId": "S02",
+      "scope": "head",
+      "name": "crown",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:S-SIDE",
+      "localId": "S-SIDE",
+      "scope": "head",
+      "name": "side scalp",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:S05",
+      "localId": "S05",
+      "scope": "head",
+      "name": "rear scalp",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:A01",
+      "localId": "A01",
+      "scope": "head",
+      "name": "helix and antihelix",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:A02",
+      "localId": "A02",
+      "scope": "head",
+      "name": "concha and tragus",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:A03",
+      "localId": "A03",
+      "scope": "head",
+      "name": "earlobe",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:E01",
+      "localId": "E01",
+      "scope": "head",
+      "name": "eyeball",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:E02",
+      "localId": "E02",
+      "scope": "head",
+      "name": "iris and pupil",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:E03",
+      "localId": "E03",
+      "scope": "head",
+      "name": "upper lid",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:B01",
+      "localId": "B01",
+      "scope": "head",
+      "name": "eyebrow",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:N01",
+      "localId": "N01",
+      "scope": "head",
+      "name": "front neck transition",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:N02",
+      "localId": "N02",
+      "scope": "head",
+      "name": "rear neck transition",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:HT01",
+      "localId": "HT01",
+      "scope": "head",
+      "name": "raised swept forelock",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:HT02",
+      "localId": "HT02",
+      "scope": "head",
+      "name": "broad shallow top overlap",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:HT03",
+      "localId": "HT03",
+      "scope": "head",
+      "name": "short side fall",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:HT04",
+      "localId": "HT04",
+      "scope": "head",
+      "name": "ear-edge tapered terminal",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:HT05",
+      "localId": "HT05",
+      "scope": "head",
+      "name": "posterior crown flow",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "head:HT06",
+      "localId": "HT06",
+      "scope": "head",
+      "name": "nape taper",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:T01",
+      "localId": "T01",
+      "scope": "cloth",
+      "name": "front centre panel",
+      "status": "one-sided micro shape reference exists; exclude invented texture and internal hems; joins pending; no geometry"
+    },
+    {
+      "key": "cloth:T02",
+      "localId": "T02",
+      "scope": "cloth",
+      "name": "rear quarter panel",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:T03",
+      "localId": "T03",
+      "scope": "cloth",
+      "name": "underarm side panel",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:T04",
+      "localId": "T04",
+      "scope": "cloth",
+      "name": "shoulder bridge",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:T05",
+      "localId": "T05",
+      "scope": "cloth",
+      "name": "armhole gusset half",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:S01",
+      "localId": "S01",
+      "scope": "cloth",
+      "name": "upper sleeve front",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:S02",
+      "localId": "S02",
+      "scope": "cloth",
+      "name": "upper sleeve rear",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:S03",
+      "localId": "S03",
+      "scope": "cloth",
+      "name": "outer elbow fold",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:S04",
+      "localId": "S04",
+      "scope": "cloth",
+      "name": "inner elbow gusset",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:S05",
+      "localId": "S05",
+      "scope": "cloth",
+      "name": "forearm sleeve front",
+      "status": "one-sided micro shape reference exists; exclude invented texture and internal hems; joins pending; no geometry"
+    },
+    {
+      "key": "cloth:S06",
+      "localId": "S06",
+      "scope": "cloth",
+      "name": "forearm sleeve rear",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:C01",
+      "localId": "C01",
+      "scope": "cloth",
+      "name": "front stand-collar half",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:C02",
+      "localId": "C02",
+      "scope": "cloth",
+      "name": "rear stand collar",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:W01",
+      "localId": "W01",
+      "scope": "cloth",
+      "name": "front cowl fold",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:W02",
+      "localId": "W02",
+      "scope": "cloth",
+      "name": "side cowl bridge",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:W03",
+      "localId": "W03",
+      "scope": "cloth",
+      "name": "rear cowl fold",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:P01",
+      "localId": "P01",
+      "scope": "cloth",
+      "name": "cape rear panel",
+      "status": "one-sided micro shape reference exists; exclude invented texture and internal hems; joins pending; no geometry"
+    },
+    {
+      "key": "cloth:P02",
+      "localId": "P02",
+      "scope": "cloth",
+      "name": "cape side panel",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:P03",
+      "localId": "P03",
+      "scope": "cloth",
+      "name": "cape front-edge panel",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:P04",
+      "localId": "P04",
+      "scope": "cloth",
+      "name": "cape shoulder connector",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:L01",
+      "localId": "L01",
+      "scope": "cloth",
+      "name": "lower front panel",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:L02",
+      "localId": "L02",
+      "scope": "cloth",
+      "name": "lower rear panel",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:L03",
+      "localId": "L03",
+      "scope": "cloth",
+      "name": "lower side insert",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:L04",
+      "localId": "L04",
+      "scope": "cloth",
+      "name": "split-edge turnback",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:L05",
+      "localId": "L05",
+      "scope": "cloth",
+      "name": "hem turnback",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:B01",
+      "localId": "B01",
+      "scope": "cloth",
+      "name": "belt segment",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:B02",
+      "localId": "B02",
+      "scope": "cloth",
+      "name": "hanging belt tail",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:B03",
+      "localId": "B03",
+      "scope": "cloth",
+      "name": "hardware ring",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:B04",
+      "localId": "B04",
+      "scope": "cloth",
+      "name": "buckle pin",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:F01",
+      "localId": "F01",
+      "scope": "cloth",
+      "name": "cuff front half",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:F02",
+      "localId": "F02",
+      "scope": "cloth",
+      "name": "cuff rear half",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:F03",
+      "localId": "F03",
+      "scope": "cloth",
+      "name": "cross-wrap ribbon",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:F04",
+      "localId": "F04",
+      "scope": "cloth",
+      "name": "brooch centre",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "cloth:F05",
+      "localId": "F05",
+      "scope": "cloth",
+      "name": "brooch rim",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH01",
+      "localId": "AH01",
+      "scope": "hands-boots",
+      "name": "掌中央曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH02",
+      "localId": "AH02",
+      "scope": "hands-boots",
+      "name": "手背中央曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH03",
+      "localId": "AH03",
+      "scope": "hands-boots",
+      "name": "母指球・橈側曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH04",
+      "localId": "AH04",
+      "scope": "hands-boots",
+      "name": "小指球・尺側曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH05",
+      "localId": "AH05",
+      "scope": "hands-boots",
+      "name": "通常指間の鞍形曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH06",
+      "localId": "AH06",
+      "scope": "hands-boots",
+      "name": "指節の短い開放ロフト",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH07",
+      "localId": "AH07",
+      "scope": "hands-boots",
+      "name": "指先・指腹の終端ロフト",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH08",
+      "localId": "AH08",
+      "scope": "hands-boots",
+      "name": "爪板の薄い曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH09",
+      "localId": "AH09",
+      "scope": "hands-boots",
+      "name": "母指と示指の第一指間",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AH10",
+      "localId": "AH10",
+      "scope": "hands-boots",
+      "name": "手首の短い皮膚スリーブ",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB01",
+      "localId": "AB01",
+      "scope": "hands-boots",
+      "name": "本底",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB02",
+      "localId": "AB02",
+      "scope": "hands-boots",
+      "name": "踵ブロック",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB03",
+      "localId": "AB03",
+      "scope": "hands-boots",
+      "name": "甲の曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB04",
+      "localId": "AB04",
+      "scope": "hands-boots",
+      "name": "爪先を包む曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB05",
+      "localId": "AB05",
+      "scope": "hands-boots",
+      "name": "内外の腰革曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB06",
+      "localId": "AB06",
+      "scope": "hands-boots",
+      "name": "踵後面の曲面",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB07",
+      "localId": "AB07",
+      "scope": "hands-boots",
+      "name": "足首から脛の筒",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB08",
+      "localId": "AB08",
+      "scope": "hands-boots",
+      "name": "靴の履き口折返し",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB09",
+      "localId": "AB09",
+      "scope": "hands-boots",
+      "name": "巻き革の帯",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB10",
+      "localId": "AB10",
+      "scope": "hands-boots",
+      "name": "底周囲の細い縁帯",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "hands-boots:AB11",
+      "localId": "AB11",
+      "scope": "hands-boots",
+      "name": "踵底の留め釘頭",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "staff:S01",
+      "localId": "S01",
+      "scope": "staff",
+      "name": "tapered wooden shaft",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "staff:S02",
+      "localId": "S02",
+      "scope": "staff",
+      "name": "foot ferrule sleeve",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "staff:S03",
+      "localId": "S03",
+      "scope": "staff",
+      "name": "ferrule bottom disc",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "staff:S04",
+      "localId": "S04",
+      "scope": "staff",
+      "name": "plain leather grip under-sleeve",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "staff:S05",
+      "localId": "S05",
+      "scope": "staff",
+      "name": "crossed grip strips A/B",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "staff:S06",
+      "localId": "S06",
+      "scope": "staff",
+      "name": "neck collar / shaft socket",
+      "status": "initial micro sheet exists; reference inconsistencies remain; no geometry"
+    },
+    {
+      "key": "staff:S07",
+      "localId": "S07",
+      "scope": "staff",
+      "name": "lower lantern cup",
+      "status": "initial micro sheet exists; reference inconsistencies remain; no geometry"
+    },
+    {
+      "key": "staff:S08",
+      "localId": "S08",
+      "scope": "staff",
+      "name": "lower cage ring",
+      "status": "initial micro sheet exists; reference inconsistencies remain; no geometry"
+    },
+    {
+      "key": "staff:S09",
+      "localId": "S09",
+      "scope": "staff",
+      "name": "left cage rib",
+      "status": "initial micro sheet exists; reference inconsistencies remain; no geometry"
+    },
+    {
+      "key": "staff:S10",
+      "localId": "S10",
+      "scope": "staff",
+      "name": "right cage rib",
+      "status": "initial micro sheet exists; reference inconsistencies remain; no geometry"
+    },
+    {
+      "key": "staff:S11",
+      "localId": "S11",
+      "scope": "staff",
+      "name": "front cage rib",
+      "status": "initial micro sheet exists; reference inconsistencies remain; no geometry"
+    },
+    {
+      "key": "staff:S12",
+      "localId": "S12",
+      "scope": "staff",
+      "name": "back cage rib",
+      "status": "initial micro sheet exists; reference inconsistencies remain; no geometry"
+    },
+    {
+      "key": "staff:S13",
+      "localId": "S13",
+      "scope": "staff",
+      "name": "upper cage ring",
+      "status": "individual image reviewed; real 3D candidate and partial two-part seat checked; whole assembly pending"
+    },
+    {
+      "key": "staff:S14",
+      "localId": "S14",
+      "scope": "staff",
+      "name": "upper cap",
+      "status": "individual image reviewed; real 3D candidate and partial two-part seat checked; whole assembly pending"
+    },
+    {
+      "key": "staff:S15",
+      "localId": "S15",
+      "scope": "staff",
+      "name": "small round finial and stem",
+      "status": "initial micro sheet exists; reference inconsistencies remain; no geometry"
+    },
+    {
+      "key": "staff:S16",
+      "localId": "S16",
+      "scope": "staff",
+      "name": "warm pale lantern glass/core",
+      "status": "initial micro sheet exists; reference inconsistencies remain; no geometry"
+    },
+    {
+      "key": "staff:S17",
+      "localId": "S17",
+      "scope": "staff",
+      "name": "lower bronze grip-end collar",
+      "status": "planned; micro image not fixed; no geometry"
+    },
+    {
+      "key": "staff:S18",
+      "localId": "S18",
+      "scope": "staff",
+      "name": "upper bronze grip-end collar",
+      "status": "planned; micro image not fixed; no geometry"
+    }
+  ],
+  "plannedTypeCount": 103,
+  "plannedInstances": {
+    "head": 62,
+    "cloth": 79,
+    "handsBoots": 90,
+    "staff": 19
+  },
+  "candidateFabricatedIds": [
+    "staff:S13",
+    "staff:S14"
+  ],
+  "completeCharacter": false,
+  "allReferencesFixed": false,
+  "idRule": "Names are scoped so clothing S05 and staff S05 cannot collide. Generated image local labels never determine the global namespace."
+}
