@@ -1,0 +1,173 @@
+[
+  {
+    "viewport": [
+      1280,
+      720
+    ],
+    "types": {
+      "upper-cloth": {
+        "raySamples": 1535,
+        "uniqueTriangleCount": 261,
+        "visibleAreaPx2": 24560,
+        "physicalWeaveAxesMedianM": [
+          0.01571540426092859,
+          0.012563774940122245
+        ],
+        "rawUVPhysicalSingularMetresP50": [
+          0.5700154409563477,
+          1.0876244273448348
+        ],
+        "repeatedTileMRange": [
+          0.0271050469736033,
+          0.4067506893428032
+        ],
+        "repeatedTileMedianM": [
+          0.14250386023908693,
+          0.2719061068362087
+        ],
+        "weaveMedianPitchM": [
+          0.008906491264942933,
+          0.016994131677263043
+        ],
+        "viewPlane20mmPixelsP50": 5.570727617938562
+      },
+      "leather": {
+        "raySamples": 95,
+        "uniqueTriangleCount": 17,
+        "visibleAreaPx2": 1520,
+        "physicalWeaveAxesMedianM": [
+          0.0011480500371998342,
+          0.0062225977682521935
+        ],
+        "rawUVPhysicalSingularMetresP50": [
+          0.07347520238078127,
+          0.39824625716814166
+        ],
+        "repeatedTileMRange": [
+          0.005999993689823755,
+          0.09956156438571508
+        ],
+        "repeatedTileMedianM": [
+          0.018368800595195318,
+          0.09956156429203541
+        ],
+        "weaveMedianPitchM": null,
+        "viewPlane20mmPixelsP50": 5.665896433632244
+      }
+    }
+  },
+  {
+    "viewport": [
+      844,
+      390
+    ],
+    "types": {
+      "upper-cloth": {
+        "raySamples": 454,
+        "uniqueTriangleCount": 203,
+        "visibleAreaPx2": 7264,
+        "physicalWeaveAxesMedianM": [
+          0.015540465068345511,
+          0.012622611668825253
+        ],
+        "rawUVPhysicalSingularMetresP50": [
+          0.5808913919288767,
+          1.0876244273448348
+        ],
+        "repeatedTileMRange": [
+          0.03349067809608493,
+          0.4067506893428032
+        ],
+        "repeatedTileMedianM": [
+          0.14522284798221918,
+          0.2719061068362087
+        ],
+        "weaveMedianPitchM": [
+          0.009076427998888699,
+          0.016994131677263043
+        ],
+        "viewPlane20mmPixelsP50": 3.017512567288697
+      },
+      "leather": {
+        "raySamples": 27,
+        "uniqueTriangleCount": 14,
+        "visibleAreaPx2": 432,
+        "physicalWeaveAxesMedianM": [
+          0.0011480502554924309,
+          0.0062225977682521935
+        ],
+        "rawUVPhysicalSingularMetresP50": [
+          0.07347521635151347,
+          0.39824625716814166
+        ],
+        "repeatedTileMRange": [
+          0.018368788447017906,
+          0.09956156438571508
+        ],
+        "repeatedTileMedianM": [
+          0.018368804087878367,
+          0.09956156429203541
+        ],
+        "weaveMedianPitchM": null,
+        "viewPlane20mmPixelsP50": 3.069027234884132
+      }
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "types": {
+      "upper-cloth": {
+        "raySamples": 2103,
+        "uniqueTriangleCount": 276,
+        "visibleAreaPx2": 33648,
+        "physicalWeaveAxesMedianM": [
+          0.01571540426092859,
+          0.012590337591228226
+        ],
+        "rawUVPhysicalSingularMetresP50": [
+          0.5919691204793139,
+          1.0876244273448348
+        ],
+        "repeatedTileMRange": [
+          0.0271050469736033,
+          0.4067506893428032
+        ],
+        "repeatedTileMedianM": [
+          0.14799228011982848,
+          0.2719061068362087
+        ],
+        "weaveMedianPitchM": [
+          0.00924951750748928,
+          0.016994131677263043
+        ],
+        "viewPlane20mmPixelsP50": 6.5301307076946475
+      },
+      "leather": {
+        "raySamples": 135,
+        "uniqueTriangleCount": 18,
+        "visibleAreaPx2": 2160,
+        "physicalWeaveAxesMedianM": [
+          0.0011480500371998342,
+          0.0062225977682521935
+        ],
+        "rawUVPhysicalSingularMetresP50": [
+          0.07347520238078127,
+          0.39824625716814166
+        ],
+        "repeatedTileMRange": [
+          0.0169999897480011,
+          0.26948326936475886
+        ],
+        "repeatedTileMedianM": [
+          0.018368800595195318,
+          0.09956156429203541
+        ],
+        "weaveMedianPitchM": null,
+        "viewPlane20mmPixelsP50": 6.6416897083133515
+      }
+    }
+  }
+]
