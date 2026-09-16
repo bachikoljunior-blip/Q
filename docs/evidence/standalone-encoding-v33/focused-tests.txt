@@ -1,0 +1,31 @@
+✔ production main boundary: launch-input-pause-resume (390x844) (311.938438ms)
+✔ production main boundary: deferred-scene-blur (390x844) (140.140824ms)
+✔ production main boundary: deferred-scene-hidden (390x844) (100.409782ms)
+✔ production main boundary: deferred-scene-pagehide (390x844) (111.256965ms)
+✔ production main boundary: deferred-title-import (390x844) (148.376397ms)
+✔ production main boundary: title-import-invalid-file-restores-controls (390x844) (47.019872ms)
+✔ production main boundary: active-save-import-and-invalid-file (390x844) (212.870216ms)
+✔ production main boundary: scene-load-failure (390x844) (112.44339ms)
+✔ production main boundary: storage-and-gamepad-failure (390x844) (142.602664ms)
+✔ production main boundary: launch-input-pause-resume (844x390) (229.679586ms)
+✔ production main boundary: deferred-scene-blur (844x390) (95.670863ms)
+✔ production main boundary: deferred-scene-hidden (844x390) (98.073668ms)
+✔ production main boundary: deferred-scene-pagehide (844x390) (96.003987ms)
+✔ production main boundary: deferred-title-import (844x390) (129.429822ms)
+✔ production main boundary: title-import-invalid-file-restores-controls (844x390) (51.003087ms)
+✔ production main boundary: active-save-import-and-invalid-file (844x390) (172.876262ms)
+✔ production main boundary: scene-load-failure (844x390) (83.959132ms)
+✔ production main boundary: storage-and-gamepad-failure (844x390) (138.275151ms)
+✔ script-safe media representation round trips byte boundaries and exact data URLs (11.414806ms)
+✔ invalid headers, digits, overflow, cuts and noncanonical padding are rejected (0.399399ms)
+✔ browser decoder compiles with no Node, eval, fetch or platform base64 dependencies (13.377865ms)
+✔ actual standalone preserves every emitted media byte and original data URL MIME (2576.978391ms)
+✔ actual packaged title defers world media until launch and returns after explicit decoder failure (1445.703489ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9764.334855

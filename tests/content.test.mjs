@@ -25,7 +25,10 @@ test('walls intercept arrows before they reach the player',()=>{
 });
 test('timed parry physically returns an arrow and only damages its enemy on arrival',()=>{
   const g=quiet(),e=ranger(g,104);e.cooldown=10;e.aim={x:0,y:g.player.y+1.05,z:101};g.player.angle=0;g.fireArrow(e);g.parry();
-  step(g,.14);assert.equal(g.player.hp,120);assert.equal(e.hp,82);assert(g.projectiles.some(a=>a.owner==='player'));step(g,.3);assert(e.hp<82);assert.equal(g.player.hp,120);
+  // A finite arrow reaches contact earlier; check the actual parry boundary,
+  // not the old point projectile's arbitrary .14-second checkpoint.
+  for(let i=0;i<30&&!g.projectiles.some(a=>a.owner==='player');i++)step(g,1/60);
+  const reflected=g.projectiles.find(a=>a.owner==='player');assert(reflected);assert.equal(g.player.hp,120);assert.equal(e.hp,82);assert.equal(g.projectileContact(reflected,0).target,null);step(g,.3);assert(e.hp<82);assert.equal(g.player.hp,120);
 });
 test('jump can carry the player above a previously aimed arrow',()=>{
   const g=quiet(),e=ranger(g);e.cooldown=10;e.aim={x:0,y:g.player.y+1.05,z:101};g.fireArrow(e);step(g,.15);g.jump();step(g,.55);assert.equal(g.player.hp,120);

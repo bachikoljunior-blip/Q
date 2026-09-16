@@ -1,0 +1,42 @@
+✔ held attack cannot cancel an accepted parry before an imminent hit (37.74688ms)
+✔ a blocked urgent arrow does not hide later unblocked arrows (27.612849ms)
+✔ a near-expiry arrow still warns when it will hit on its final live step (27.791566ms)
+✔ a 48-arrow batch preserves sequential contact results with shared static prediction (25.119021ms)
+✔ a tangent obstacle remains a conservative batch candidate (14.98131ms)
+✔ bridge-edge and ground-grazing warnings match live 60 Hz projectile contacts (3778.509586ms)
+✔ melee warning reports source, player-relative direction, lead time and response without mutation (48.760226ms)
+✔ default warning direction remains player-relative for deterministic rule replays (19.924634ms)
+✔ camera fallback has normalized front, side and rear directions without mutating combat state (14.875579ms)
+✔ projected screen x overrides azimuth fallback for visible threats (0.26215ms)
+✔ production combat HUD receives camera yaw and renders actionable screen-relative cues (17.797198ms)
+✔ boss radial attacks name jump as the distinct response (29.464684ms)
+✔ only arrows whose current flight intersects the player become warnings (13.347835ms)
+✔ safe, dead and out-of-reach states do not leave a false warning (11.690135ms)
+✔ spear hits at extended range but misses a side target outside its narrow arc (257.923402ms)
+✔ greatsword commits more time and stamina before dealing its heavier hit (192.488601ms)
+✔ ranger aims before releasing an arrow, which takes time to reach its target (41.906083ms)
+✔ walls intercept arrows before they reach the player (37.888357ms)
+✔ timed parry physically returns an arrow and only damages its enemy on arrival (22.962248ms)
+✔ jump can carry the player above a previously aimed arrow (385.402007ms)
+✔ bridge deck and both ramps support walking above the river (114.270415ms)
+✔ crossing supplies require defeating the camp, and delivery has two persistent outcomes (164.423883ms)
+✔ legacy save unlocks weapons earned at beacons and cannot restore unknown equipment (33.885673ms)
+✔ frame measurements include slow active frames and report their actual intervals (0.912995ms)
+✔ a new display setting starts a separate frame measurement window (0.300524ms)
+✔ tail, loaded and flying extent preserve full length with a narrow nock (1645.614327ms)
+✔ full initial occupied span resolves wall and body by raw distance before t0 conversion (177.303784ms)
+✔ all rates and optimized prediction use the leading tip time while damage stays 20 (31.641281ms)
+✔ a moving actor inside the current shaft is detected even behind its tip (8.239005ms)
+✔ terrain continuation is copied to forecasts and rejected after a teleport or reversal (10.25721ms)
+✔ parry uses contact as outgoing tail and checks reflected cover immediately (17.514732ms)
+✔ expiry, saved coordinates and arrows after shooter death retain their contracts (126.380551ms)
+✔ a second real ranger windup shows its loaded arrow despite the previous hit flag (59.480421ms)
+✔ same instrumented 48-arrow budget includes exact terrain work and rejects full-span resampling (90.762945ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4868.180043

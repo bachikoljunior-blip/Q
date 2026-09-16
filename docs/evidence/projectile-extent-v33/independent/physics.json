@@ -1,0 +1,1562 @@
+{
+  "sourceHashes": {
+    "src/core.js": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390",
+    "src/spatial.js": "9a6a4331b556530701968ee2fa9dacaa5be01015f6cbb6a2cb551a7cbe56be6f",
+    "src/projectile-shape.js": "c754233b0d7a34dd0aa1520d1507f23db0b0f6b8359670593bef02c7d4accc54",
+    "src/combat-presentation.js": "aa40a85842d8a0542fdc503e7ac2b0986655a1e0d1ae20c06b4c0bbac1e9244a",
+    "src/runtime-state.js": "84a543c09f089a37031da9ba12915078cee5c668ed009bcd281e90d70829f325"
+  },
+  "boundary": "Actual native Game contact/tick/parry/save and optimized/sequential forecast; synthetic elevated cylinder fixtures plus actual bridge terrain. No renderer, GPU or physical perception. Invalid vectors tested through the production save validator, which rejects them before contact.",
+  "rows": [
+    {
+      "case": "near-wall",
+      "hz": 30,
+      "front": 0.15,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 0.14999999999999997,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 30,
+      "front": 0.5,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 0.5,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 30,
+      "front": 1,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 1.0000000000000007,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 30,
+      "front": 1.3,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 1.300000000000002,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 30,
+      "front": 1.8,
+      "expected": 0.02421052631578947,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0.024210526315789505,
+        "point": {
+          "x": 1.800000000000001,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0.024210526315789682
+    },
+    {
+      "case": "near-wall",
+      "hz": 30,
+      "front": 3,
+      "expected": 0.08736842105263158,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0.08736842105263184,
+        "point": {
+          "x": 3.0000000000000053,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0.08736842105263151
+    },
+    {
+      "case": "near-wall",
+      "hz": 60,
+      "front": 0.15,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 0.15,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 60,
+      "front": 0.5,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 0.5,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 60,
+      "front": 1,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 1,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 60,
+      "front": 1.3,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 1.2999999999999994,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 60,
+      "front": 1.8,
+      "expected": 0.02421052631578947,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0.024210526315789682,
+        "point": {
+          "x": 1.800000000000004,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0.024210526315789682
+    },
+    {
+      "case": "near-wall",
+      "hz": 60,
+      "front": 3,
+      "expected": 0.08736842105263158,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0.08736842105263151,
+        "point": {
+          "x": 2.999999999999999,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0.08736842105263151
+    },
+    {
+      "case": "near-wall",
+      "hz": 120,
+      "front": 0.15,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 0.14999999999999997,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 120,
+      "front": 0.5,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 0.5000000000000001,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 120,
+      "front": 1,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 0.9999999999999998,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 120,
+      "front": 1.3,
+      "expected": 0,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0,
+        "point": {
+          "x": 1.299999999999997,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0
+    },
+    {
+      "case": "near-wall",
+      "hz": 120,
+      "front": 1.8,
+      "expected": 0.02421052631578947,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0.02421052631578973,
+        "point": {
+          "x": 1.8000000000000045,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0.024210526315789682
+    },
+    {
+      "case": "near-wall",
+      "hz": 120,
+      "front": 3,
+      "expected": 0.08736842105263158,
+      "actual": {
+        "target": "wall",
+        "timeToImpact": 0.08736842105263165,
+        "point": {
+          "x": 3.000000000000001,
+          "y": 20,
+          "z": 0
+        }
+      },
+      "forecast": 0.08736842105263151
+    },
+    {
+      "case": "initial-raw-order",
+      "wall": 0.15,
+      "body": 0.8,
+      "expected": "wall",
+      "actual": "wall",
+      "point": {
+        "x": 0.15,
+        "y": 20,
+        "z": 0
+      },
+      "forecast": "wall"
+    },
+    {
+      "case": "initial-raw-order",
+      "wall": 0.8,
+      "body": 0.15,
+      "expected": "player",
+      "actual": "player",
+      "point": {
+        "x": 0.14999999999999994,
+        "y": 20,
+        "z": 0
+      },
+      "forecast": "player"
+    },
+    {
+      "case": "initial-raw-order",
+      "wall": 0.5,
+      "body": 0.5,
+      "expected": "wall",
+      "actual": "wall",
+      "point": {
+        "x": 0.5,
+        "y": 20,
+        "z": 0
+      },
+      "forecast": "wall"
+    },
+    {
+      "case": "reverse-obstacle-array",
+      "point": {
+        "x": 0.15,
+        "y": 20,
+        "z": 0
+      }
+    },
+    {
+      "case": "tail-time-separate-contact",
+      "expected": 0.1610526315789474,
+      "fraction": 0.5368421052631578,
+      "point": {
+        "x": 4.3999999999999995,
+        "y": 20,
+        "z": 0
+      },
+      "to": {
+        "x": 5.7,
+        "y": 20,
+        "z": 0
+      }
+    },
+    {
+      "case": "parry-tail-at-contact",
+      "tail": [
+        0.8999999999999997,
+        20,
+        0
+      ],
+      "velocity": [
+        -24.993690055427003,
+        0.5616559563017284,
+        0
+      ],
+      "life": 2,
+      "discardRemainingStep": true
+    },
+    {
+      "case": "parry-new-span-wall",
+      "contact": {
+        "x": 0.8999999999999997,
+        "y": 20,
+        "z": 0
+      },
+      "break": {
+        "type": "arrowBreak",
+        "x": -0.16000000000000258,
+        "z": 0
+      }
+    },
+    {
+      "case": "life-before-contact",
+      "hz": 30,
+      "life": 0.016666666666666666,
+      "hit": false
+    },
+    {
+      "case": "life-before-contact",
+      "hz": 30,
+      "life": 0.03333333333333333,
+      "hit": false
+    },
+    {
+      "case": "life-before-contact",
+      "hz": 30,
+      "life": 0.03666666666666667,
+      "hit": true
+    },
+    {
+      "case": "life-before-contact",
+      "hz": 60,
+      "life": 0.008333333333333333,
+      "hit": false
+    },
+    {
+      "case": "life-before-contact",
+      "hz": 60,
+      "life": 0.016666666666666666,
+      "hit": false
+    },
+    {
+      "case": "life-before-contact",
+      "hz": 60,
+      "life": 0.018333333333333333,
+      "hit": true
+    },
+    {
+      "case": "life-before-contact",
+      "hz": 120,
+      "life": 0.004166666666666667,
+      "hit": false
+    },
+    {
+      "case": "life-before-contact",
+      "hz": 120,
+      "life": 0.008333333333333333,
+      "hit": false
+    },
+    {
+      "case": "life-before-contact",
+      "hz": 120,
+      "life": 0.009166666666666667,
+      "hit": true
+    },
+    {
+      "case": "old-save-tail-coordinates-and-invalid-filter",
+      "unchangedFields": true,
+      "rejected": [
+        [
+          "vx",
+          "vy",
+          "vz"
+        ],
+        [
+          "vx"
+        ],
+        [
+          "vx"
+        ],
+        [
+          "vy"
+        ],
+        [
+          "life"
+        ],
+        [
+          "vx"
+        ]
+      ]
+    },
+    {
+      "case": "actual-first-fire-near-wall",
+      "front": 0.15,
+      "break": {
+        "type": "arrowBreak",
+        "x": 0.15,
+        "z": 0
+      }
+    },
+    {
+      "case": "actual-first-fire-near-wall",
+      "front": 0.5,
+      "break": {
+        "type": "arrowBreak",
+        "x": 0.5,
+        "z": 0
+      }
+    },
+    {
+      "case": "actual-first-fire-near-wall",
+      "front": 1,
+      "break": {
+        "type": "arrowBreak",
+        "x": 1,
+        "z": 0
+      }
+    },
+    {
+      "case": "actual-first-fire-near-wall",
+      "front": 1.3,
+      "break": {
+        "type": "arrowBreak",
+        "x": 1.2999999999999994,
+        "z": 0
+      }
+    },
+    {
+      "case": "actual-fire-cap",
+      "arrows": 48,
+      "id": 48
+    }
+  ],
+  "bridge": [
+    {
+      "bridge": -120,
+      "ox": -21.45,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5295088712473102,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5295088712473102
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -21.45,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5298582207558981,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298582207558981
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -21.45,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.532991218969455,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.532991218969455
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -21.45,
+      "oz": 0,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5300675846396707,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5300675846396707
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -21.45,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5294948967501079,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5294948967501079
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -21.45,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5304047877167718,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5304047877167718
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -13.5,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5295435823419631,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5295435823419631
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -13.5,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5301062156243158,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5301062156243158
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -13.5,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5298069250026483,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298069250026483
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -13.5,
+      "oz": 0,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5298883050067476,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298883050067476
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -13.5,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5296906208766105,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5296906208766105
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": -13.5,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5308319904745645,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5308319904745645
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 0,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5307345397462132,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5307345397462132
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 0,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5317648850994396,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5317648850994396
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 0,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5298069250026483,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298069250026483
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 0,
+      "oz": 0,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5298069250026483,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298069250026483
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 0,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5307432818272871,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5307432818272871
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 0,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.532317319630592,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.532317319630592
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 13.5,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5323022393211996,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5323022393211996
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 13.5,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5350286226431452,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5350286226431452
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 13.5,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5690704085496235,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5690704085496235
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 13.5,
+      "oz": 0,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5298069250026483,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298069250026483
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 13.5,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5325382267670364,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5325382267670364
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 13.5,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5350104336480803,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5350104336480803
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 21.45,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5325900387933649,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5325900387933649
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 21.45,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5368385363536713,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5368385363536713
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 21.45,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5331052476678415,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5331052476678415
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 21.45,
+      "oz": 0,
+      "direction": 1,
+      "target": "wall",
+      "time": 0.12630208333333331,
+      "warning": false,
+      "cold": {
+        "target": "wall",
+        "time": 0.12637000487329433
+      },
+      "cachedColdDifference": true
+    },
+    {
+      "bridge": -120,
+      "ox": 21.45,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5333633232135041,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5333633232135041
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": -120,
+      "ox": 21.45,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5369428510207571,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5369428510207571
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -21.45,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5318951922781244,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5318951922781244
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -21.45,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5339337294503576,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5339337294503576
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -21.45,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5299118790336701,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5299118790336701
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -21.45,
+      "oz": 0,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5354582974667094,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5354582974667094
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -21.45,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5344782445506253,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5344782445506253
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -21.45,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5373075510230007,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5373075510230007
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -13.5,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5329276751410565,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5329276751410565
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -13.5,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5357955675064654,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5357955675064654
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -13.5,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5298069250026483,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298069250026483
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -13.5,
+      "oz": 0,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5309125835768731,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5309125835768731
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -13.5,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.53476752810913,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.53476752810913
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": -13.5,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5400021254296499,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5400021254296499
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 0,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5334121268103631,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5334121268103631
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 0,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5387522570090467,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5387522570090467
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 0,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5298069250026483,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298069250026483
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 0,
+      "oz": 0,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5298069250026483,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298069250026483
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 0,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5328273318391236,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5328273318391236
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 0,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5412072538509816,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5412072538509816
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 13.5,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5367175907190728,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5367175907190728
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 13.5,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5391080549700232,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5391080549700232
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 13.5,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5494589177119686,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5494589177119686
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 13.5,
+      "oz": 0,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5298069250026483,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5298069250026483
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 13.5,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5399443677977579,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5399443677977579
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 13.5,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5378242430800872,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5378242430800872
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 21.45,
+      "oz": -2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.543337907710135,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.543337907710135
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 21.45,
+      "oz": -2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5295233281384021,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5295233281384021
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 21.45,
+      "oz": 0,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5450177873359089,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5450177873359089
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 21.45,
+      "oz": 0,
+      "direction": 1,
+      "target": "wall",
+      "time": 0.1278645833333333,
+      "warning": false,
+      "cold": {
+        "target": "wall",
+        "time": 0.12788377192982456
+      },
+      "cachedColdDifference": true
+    },
+    {
+      "bridge": 25,
+      "ox": 21.45,
+      "oz": 2.7,
+      "direction": -1,
+      "target": "player",
+      "time": 0.5477299038760057,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5477299038760057
+      },
+      "cachedColdDifference": false
+    },
+    {
+      "bridge": 25,
+      "ox": 21.45,
+      "oz": 2.7,
+      "direction": 1,
+      "target": "player",
+      "time": 0.5295386059187333,
+      "warning": true,
+      "cold": {
+        "target": "player",
+        "time": 0.5295386059187333
+      },
+      "cachedColdDifference": false
+    }
+  ],
+  "batch": {
+    "metrics": {
+      "trajectories": 48,
+      "reusedPlayerImpacts": 0,
+      "bodySweeps": 48,
+      "obstacleSweeps": 0,
+      "terrainFrames": 521,
+      "terrainSamples": 1522,
+      "exactFrames": 48,
+      "fallbackFrames": 0,
+      "sharedBodies": 1,
+      "sharedObstacles": 0
+    },
+    "contacts": [
+      {
+        "target": "player",
+        "time": 0.15395262490344655
+      },
+      {
+        "target": "player",
+        "time": 0.15450000000000225
+      },
+      {
+        "target": "player",
+        "time": 0.1569526249034467
+      },
+      {
+        "target": "player",
+        "time": 0.15845262490344672
+      },
+      {
+        "target": "player",
+        "time": 0.1590000000000024
+      },
+      {
+        "target": "player",
+        "time": 0.16145262490344683
+      },
+      {
+        "target": "player",
+        "time": 0.1629526249034469
+      },
+      {
+        "target": "player",
+        "time": 0.16350000000000184
+      },
+      {
+        "target": "player",
+        "time": 0.16595262490344628
+      },
+      {
+        "target": "player",
+        "time": 0.1674526249034466
+      },
+      {
+        "target": "player",
+        "time": 0.16800000000000226
+      },
+      {
+        "target": "player",
+        "time": 0.17045262490344673
+      },
+      {
+        "target": "player",
+        "time": 0.1719526249034468
+      },
+      {
+        "target": "player",
+        "time": 0.17250000000000243
+      },
+      {
+        "target": "player",
+        "time": 0.17495262490344685
+      },
+      {
+        "target": "player",
+        "time": 0.1764526249034469
+      },
+      {
+        "target": "player",
+        "time": 0.17700000000000257
+      },
+      {
+        "target": "player",
+        "time": 0.17945262490344704
+      },
+      {
+        "target": "player",
+        "time": 0.18095262490344707
+      },
+      {
+        "target": "player",
+        "time": 0.18150000000000208
+      },
+      {
+        "target": "player",
+        "time": 0.18395262490344674
+      },
+      {
+        "target": "player",
+        "time": 0.1854526249034468
+      },
+      {
+        "target": "player",
+        "time": 0.18600000000000247
+      },
+      {
+        "target": "player",
+        "time": 0.1884526249034469
+      },
+      {
+        "target": "player",
+        "time": 0.18995262490344697
+      },
+      {
+        "target": "player",
+        "time": 0.19050000000000267
+      },
+      {
+        "target": "player",
+        "time": 0.19295262490344706
+      },
+      {
+        "target": "player",
+        "time": 0.19445262490344714
+      },
+      {
+        "target": "player",
+        "time": 0.1950000000000028
+      },
+      {
+        "target": "player",
+        "time": 0.19745262490344725
+      },
+      {
+        "target": "player",
+        "time": 0.1989526249034473
+      },
+      {
+        "target": "player",
+        "time": 0.19950000000000298
+      },
+      {
+        "target": "player",
+        "time": 0.20195262490344693
+      },
+      {
+        "target": "player",
+        "time": 0.203452624903447
+      },
+      {
+        "target": "player",
+        "time": 0.20400000000000268
+      },
+      {
+        "target": "player",
+        "time": 0.20645262490344715
+      },
+      {
+        "target": "player",
+        "time": 0.20795262490344718
+      },
+      {
+        "target": "player",
+        "time": 0.20850000000000285
+      },
+      {
+        "target": "player",
+        "time": 0.2109526249034473
+      },
+      {
+        "target": "player",
+        "time": 0.21245262490344732
+      },
+      {
+        "target": "player",
+        "time": 0.21300000000000302
+      },
+      {
+        "target": "player",
+        "time": 0.21545262490344744
+      },
+      {
+        "target": "player",
+        "time": 0.21695262490344774
+      },
+      {
+        "target": "player",
+        "time": 0.21750000000000344
+      },
+      {
+        "target": "player",
+        "time": 0.21995262490344714
+      },
+      {
+        "target": "player",
+        "time": 0.22145262490344722
+      },
+      {
+        "target": "player",
+        "time": 0.22200000000000286
+      },
+      {
+        "target": "player",
+        "time": 0.22445262490344733
+      }
+    ],
+    "primary": "arrow-1"
+  }
+}

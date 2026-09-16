@@ -1,0 +1,26 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 test:session
+> node scripts/simulate-session.mjs
+
+{"simulationMinutes":5,"objectives":30,"totalObjectives":81,"reloads":23,"deaths":0}
+{"simulationMinutes":10,"objectives":76,"totalObjectives":81,"reloads":46,"deaths":0}
+{"simulationMinutes":15,"objectives":81,"totalObjectives":81,"reloads":69,"deaths":0}
+{"simulationMinutes":20,"objectives":81,"totalObjectives":81,"reloads":92,"deaths":0}
+{"simulationMinutes":25,"objectives":81,"totalObjectives":81,"reloads":115,"deaths":0}
+{
+  "passed": true,
+  "simulationMinutes": 30,
+  "fixedSteps": 108000,
+  "reloads": 138,
+  "deaths": 0,
+  "objectives": 81,
+  "patrolStops": 25,
+  "lit": 4,
+  "ending": "release",
+  "crossing": "haven",
+  "loot": 63,
+  "maxArrows": 1,
+  "maxSaveBytes": 9158,
+  "note": "No rendering, audio, touch or real-device performance measurement."
+}

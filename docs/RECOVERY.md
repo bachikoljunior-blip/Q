@@ -1,5 +1,12 @@
 # Current continuation — combined dialogue and appearance v32 (2026-09-16)
 
+## 2026-09-16 継続復旧の実確認と次地点
+
+一時pending_init/旧孫不可視後、同じ受理済みUltra担当へのfollowupで4件の到達と保存済み成果を確認、新spawn/置換なし。v32固定67baa205、remotea94a081/PR47/tree6b428a13、v33結合25gates299tests成功。旧session67212はUnknown process id、保存済みexit0ログを根拠に終了結果を確認した。関係ないwriter不在をOS-wide証明せず、再出現untracked5filesは旧失敗候補とhash一致を保全し、無削除・committedsourceのみ利用した。
+
+次はQ-web-primary-v34通常URL一次化とQ-cloak-ground-v34有限布修復。最新容量/プレイ方法見直しを保持し、単体出力の上限を全体品質の停止条件にしない。PR39未知mergeはreadback追跡のみ、03:14Z後の追加mutation無し、main547/Site23維持。既存Qはdisabled/20件上限、再開済みのふりをしない。既存preview監督mailbox不在に別browser/serverを使わない。親専用Site操作の再発火はactualmain/fixedsource/現在audienceの確認後だけ。
+
+
 The combined v32 unit passed 23 required commands and 284 tests in 107.241350 s. Speaker-focused composition, lower readable dialogue, scroll/death/HUD lifecycle repairs, one source-validated NPC face, and physical cloak UVs are recorded in [DIALOGUE_APPEARANCE_V32.md](DIALOGUE_APPEARANCE_V32.md). The same-camera face differences remain small; sampled death cloth distortion has an explicit remaining worsening. No actual screen or PS4 perceptual acceptance is claimed.
 
 PR46 is preserved at remote `fe8e8f83f9cceb2573868621888a315c613df635`, exact tree `462d4a5390edcf854bfca711af927aa91849ba4c`, with both required CI runs successful. PR39 remains open/unmerged and actual main `547676fdce8d8e97abed9f065aad0b6e24af2fd6`; no additional merge mutation after the 03:14Z timeout. Preserve v32 as the next stack unit, then retarget/recheck/normal merge in predecessor order only after real main progress. Site23 remains owner-only and unchanged. `69748211…` names the source main.js file SHA256, not a remote main commit.

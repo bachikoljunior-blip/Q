@@ -61,18 +61,24 @@ export function segmentCylinder(a, b, cylinder, padding = 0) {
   return enter<=exit&&enter>=0&&enter<=1?enter:null;
 }
 
-export function segmentTerrain(a,b,floorAt,padding=.1){
-  const length=Math.hypot(b.x-a.x,b.y-a.y,b.z-a.z),steps=Math.max(1,Math.ceil(length/.2));
-  for(let i=0;i<=steps;i++){
-    const t=i/steps,x=a.x+(b.x-a.x)*t,y=a.y+(b.y-a.y)*t,z=a.z+(b.z-a.z)*t;
-    if(y<floorAt(x,z)+padding){
-      let low=Math.max(0,(i-1)/steps),high=t;
-      for(let j=0;j<5;j++){const mid=(low+high)/2,mx=a.x+(b.x-a.x)*mid,mz=a.z+(b.z-a.z)*mid;
-        if(a.y+(b.y-a.y)*mid<floorAt(mx,mz)+padding)high=mid;else low=mid;}
-      return high;
+export function segmentTerrain(a,b,floorAt,padding=.1){return terrainContact(a,b,floorAt,padding).fraction;}
+
+export function terrainContact(from,to,floorAt,padding=.1,startFloor,metrics){
+  const length=Math.hypot(to.x-from.x,to.y-from.y,to.z-from.z),steps=Math.max(1,Math.ceil(length/.2));let endFloor=startFloor,endMatchesNext=false;
+  for(let index=0;index<=steps;index++){
+    const fraction=index/steps,x=from.x+(to.x-from.x)*fraction,y=from.y+(to.y-from.y)*fraction,z=from.z+(to.z-from.z)*fraction;
+    let floor;if(index===0&&Number.isFinite(startFloor))floor=startFloor;else{floor=floorAt(x,z);if(metrics)metrics.terrainSamples++;}
+    if(index===steps){endFloor=floor;endMatchesNext=x===to.x&&z===to.z;}
+    if(y<floor+padding){
+      let low=Math.max(0,(index-1)/steps),high=fraction;
+      for(let iteration=0;iteration<5;iteration++){
+        const middle=(low+high)/2,middleX=from.x+(to.x-from.x)*middle,middleZ=from.z+(to.z-from.z)*middle;
+        if(metrics)metrics.terrainSamples++;if(from.y+(to.y-from.y)*middle<floorAt(middleX,middleZ)+padding)high=middle;else low=middle;
+      }
+      return {fraction:high,endFloor,endMatchesNext};
     }
   }
-  return null;
+  return {fraction:null,endFloor,endMatchesNext};
 }
 
 export function moveCircle(actor, dx, dz, obstacles, radius = .48) {

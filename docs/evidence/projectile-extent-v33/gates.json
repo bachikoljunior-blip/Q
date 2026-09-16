@@ -1,0 +1,137 @@
+[
+  {
+    "name": "tests",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit": 0,
+    "seconds": 41.219
+  },
+  {
+    "name": "main-runtime",
+    "command": [
+      "node",
+      "scripts/verify-main-runtime.mjs"
+    ],
+    "exit": 0,
+    "seconds": 3.604
+  },
+  {
+    "name": "archery",
+    "command": [
+      "node",
+      "scripts/verify-archery-contact.mjs",
+      "/workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/docs/evidence/projectile-extent-v33/archery.json"
+    ],
+    "exit": 0,
+    "seconds": 1.587
+  },
+  {
+    "name": "loaded-arrow",
+    "command": [
+      "node",
+      "scripts/verify-loaded-arrow.mjs",
+      "/workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/docs/evidence/projectile-extent-v33/loaded-surface.json"
+    ],
+    "exit": 0,
+    "seconds": 1.155
+  },
+  {
+    "name": "projectile-budget",
+    "command": [
+      "node",
+      "scripts/verify-projectile-budget.mjs",
+      "/workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/docs/evidence/projectile-extent-v33/budget.json"
+    ],
+    "exit": 0,
+    "seconds": 0.219
+  },
+  {
+    "name": "grounding",
+    "command": [
+      "node",
+      "scripts/verify-architecture-grounding.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.875
+  },
+  {
+    "name": "settlement",
+    "command": [
+      "node",
+      "scripts/verify-settlement-contact.mjs"
+    ],
+    "exit": 0,
+    "seconds": 1.822
+  },
+  {
+    "name": "scene",
+    "command": [
+      "node",
+      "scripts/verify-scene-integration.mjs"
+    ],
+    "exit": 0,
+    "seconds": 2.466
+  },
+  {
+    "name": "journey",
+    "command": [
+      "npm",
+      "run",
+      "test:journey"
+    ],
+    "exit": 0,
+    "seconds": 0.5
+  },
+  {
+    "name": "crossing",
+    "command": [
+      "npm",
+      "run",
+      "test:crossing"
+    ],
+    "exit": 0,
+    "seconds": 1.022
+  },
+  {
+    "name": "session",
+    "command": [
+      "npm",
+      "run",
+      "test:session"
+    ],
+    "exit": 0,
+    "seconds": 5.369
+  },
+  {
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit": 0,
+    "seconds": 2.617
+  },
+  {
+    "name": "package",
+    "command": [
+      "npm",
+      "run",
+      "package"
+    ],
+    "exit": 0,
+    "seconds": 0.854
+  },
+  {
+    "name": "artifacts",
+    "command": [
+      "npm",
+      "run",
+      "test:artifacts"
+    ],
+    "exit": 0,
+    "seconds": 0.638
+  }
+]

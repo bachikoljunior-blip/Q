@@ -1,5 +1,14 @@
 # Current continuation — combined dialogue and appearance v32 (2026-09-16)
 
+## 2026-09-16: 容量を理由にプレイ方法自体を見直す
+
+最新直接提案「容量不足がネックなら今のプレイする方法を見直すのはどうですか？」に従い、16MiB単体HTMLのGit-data保存guardと、既存多ファイルSiteのゲーム容量を同一視した前提を撤回する。旧方式を正当化するためだけのq85圧縮は採用根拠にせず、原byte候補として保全。通常URLのsource/build/stage全ファイル整合を主契約にし、任意単体出力を独立させる実装を開始した。初期165000B/3chunkは現checkpointで維持し、必要なarchitecture変更は実測で再評価する。
+
+同じ27媒体の原byte11441662 Bを保持した比較。単体候補の復元CPU増は実測、実Webの取得量/Range/HTTPcache/端末GPUは別項目。地域vault4画像を起動から外せる原byteは68499 Bに過ぎず、約5.7MB全worldasset待機を大幅解消とは扱わない。真に近接素材/地域/媒体の優先読込を必要時へ移す工程を続ける。native/installable案は追加署名/配布/スマホ別検証と移植再作業を含めて比較、デバイスRAM/描画費用を自動解消すると仮定しない。
+
+PS4全画面/期限9月20日の達成根拠は不足。素材選定と衣服接地修復、方式変更の実装/比較、正規mainの実遅延を別々に記録。新しい方式名やテスト件数だけで期限評価を改善しない。[v33実値](PROJECTILE_MEDIA_INTEGRATION_V33.md)。
+
+
 The combined v32 unit passed 23 required commands and 284 tests in 107.241350 s. Speaker-focused composition, lower readable dialogue, scroll/death/HUD lifecycle repairs, one source-validated NPC face, and physical cloak UVs are recorded in [DIALOGUE_APPEARANCE_V32.md](DIALOGUE_APPEARANCE_V32.md). The same-camera face differences remain small; sampled death cloth distortion has an explicit remaining worsening. No actual screen or PS4 perceptual acceptance is claimed.
 
 PR46 is preserved at remote `fe8e8f83f9cceb2573868621888a315c613df635`, exact tree `462d4a5390edcf854bfca711af927aa91849ba4c`, with both required CI runs successful. PR39 remains open/unmerged and actual main `547676fdce8d8e97abed9f065aad0b6e24af2fd6`; no additional merge mutation after the 03:14Z timeout. Preserve v32 as the next stack unit, then retarget/recheck/normal merge in predecessor order only after real main progress. Site23 remains owner-only and unchanged. `69748211…` names the source main.js file SHA256, not a remote main commit.

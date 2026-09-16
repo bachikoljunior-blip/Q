@@ -100,7 +100,7 @@ export async function compileMain({ mutate } = {}) {
   });
   return { code: result.outputFiles[0].text, html: await readFile(new URL('index.html', root), 'utf8') };
 }
-export function createMainRuntime(compiled, { save, saveRaw, storageFailure = false, allowTimers = false, audioStartGate = null, viewport = { width: 390, height: 844 } } = {}) {
+export function createMainRuntime(compiled, { save, saveRaw, storageFailure = false, allowTimers = false, audioStartGate = null, viewport = { width: 390, height: 844 }, setupContext } = {}) {
   const window = new Target(), document = new Target(), events = [], errors = [], tools = new Map(), soundCalls = [], soundUpdates = [], titleState = { active: true, saveAvailable: false, launching: false };
   const initialSave = saveRaw ?? (save ? JSON.stringify(save) : null);
   const values = new Map(initialSave === null ? [] : [['q-ash-pilgrim-v1', initialSave]]);
@@ -168,6 +168,9 @@ export function createMainRuntime(compiled, { save, saveRaw, storageFailure = fa
     setTimeout() { if (allowTimers) return 0; throw Error('Unmodelled timeout: this scenario needs an explicit timer fixture'); },
     AbortController, __devices: devices,
   });
+  // Optional explicit device adapters let standalone tests run the actual output
+  // script. They do not rewrite its module graph or replace its decoder.
+  setupContext?.({context,document,window});
   new Script(compiled.code, { filename: 'production-main-with-device-boundaries.js' }).runInContext(context);
   const element = id => { const el = document.getElementById(id); if (!el) throw Error('Missing production element: ' + id); return el; };
   return {

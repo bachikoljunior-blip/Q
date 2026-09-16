@@ -1,0 +1,38 @@
+✖ tail, loaded and flying extent preserve full length with a narrow nock (1547.030909ms)
+✔ full initial occupied span resolves wall and body by raw distance before t0 conversion (240.922473ms)
+✔ all rates and optimized prediction use the leading tip time while damage stays 20 (50.743418ms)
+✔ a moving actor inside the current shaft is detected even behind its tip (15.015045ms)
+✔ terrain continuation is copied to forecasts and rejected after a teleport or reversal (16.318382ms)
+✔ parry uses contact as outgoing tail and checks reflected cover immediately (31.595194ms)
+✔ expiry, saved coordinates and arrows after shooter death retain their contracts (206.546094ms)
+✔ a second real ranger windup shows its loaded arrow despite the previous hit flag (65.425454ms)
+✔ same instrumented 48-arrow budget includes exact terrain work and rejects full-span resampling (109.691326ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2479.862132
+
+✖ failing tests:
+
+test at tests/projectile-extent.test.mjs:14:1
+✖ tail, loaded and flying extent preserve full length with a narrow nock (1547.030909ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(r.rows.every(p=>p.triangles===7108&&p.meshes===12))
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/tests/projectile-extent.test.mjs:14:552)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

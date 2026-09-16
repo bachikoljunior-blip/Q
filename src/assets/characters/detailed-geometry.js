@@ -1,3 +1,4 @@
+import {arrowGeometry} from '../../projectile-geometry.js';
 // Q costumes/surfaces and a registered CC0 MakeHuman anatomical head.
 // The CC0 KayKit models alongside this file remain a separate, unmodified asset family.
 import * as T from 'three';
@@ -298,6 +299,9 @@ function makeHuman(type,options){
     mesh(bow,new T.TubeGeometry(curve,20,.019,5,false),m.wood);
     const upper=group(bow,'string-upper',0,.59,0),lower=group(bow,'string-lower',0,-.59,0);
     beam(upper,m.paper,[0,0,0],[0,-.59,0],.003);beam(lower,m.paper,[0,0,0],[0,.59,0],.003);
+    // One rigid nocked arrow is weighted into the existing wood/metal batches.
+    // Its bone is collapsed outside the loaded phase; no independent draw call.
+    const loaded=group(bow,'loaded-arrow'),arrow=arrowGeometry();mesh(loaded,arrow.shaft.rotateY(Math.PI/2),m.wood);mesh(loaded,arrow.tip.rotateY(Math.PI/2),m.trim);
     const quiver=group(chest,'quiver',.2,.26,-.24);quiver.rotation.z=-.18;mesh(quiver,shapes.cylinder,m.leather,[0,0,0],[.082,.48,.077]);
     for(let i=0;i<4;i++){const x=(i-1.5)*.029;beam(quiver,m.wood,[x,-.1,0],[x,.4,0],.005);mesh(quiver,shapes.box,m.paper,[x,.33,0],[.024,.083,.004]);}
   }

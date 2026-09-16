@@ -1,5 +1,18 @@
 # Current continuation — combined dialogue and appearance v32 (2026-09-16)
 
+## 継続地点 2026-09-16: v33矢/媒体の結合を検証、通常URL中心へ方式変更中
+
+最新ユーザー「容量不足がネックなら今のプレイする方法を見直すのはどうですか？」。単体HTMLの16 MiBをゲーム全体の美術容量として扱う前提を見直す。既存owner限定URLは既に複数ファイル配信。通常配信の全source/build/stage照合を保持し、単体版は補助生成へ分離する実装を既存Ultra担当が進める。初期165000 Bは転送の回帰ガードであり端末上限ではない。総配信量、段階取得、decoded texture/device容量と別々に扱う。既存URL・owner・通常main統合・期限2026-09-20・PS4全画面目標は維持。新サービス/課金/公開拡大/監督preview迂回は行わない。
+
+v32 local67baa205ac2dcc1bba8248884161b8df095b3f36 は remote a94a081b7abcd145997dfe1ad6b44bcb34d27af9 / PR47、tree6b428a13b051001b3e545d16765b952e6272c4e1 と118blob一致で保全。PR46をbaseとする保存でありfeatureへmergeしない。CI/native readbackを追跡し、PR39実main確認後だけ通常順序でretarget/main/同一Siteへ進める。
+
+v33結合は25工程/299tests成功148.485818秒、初期164988 B/3chunks、単体候補15498171 B/hash a09c7ad2ac71e1e703c7435116ff32a8a83953b5b5ff24a91acaf3c24ab7fd8e、fixedstage Q-ps4-v33/artifacts/site-axnjK6。矢の尾端/有限長/近壁/反射/第二射表示と原媒体完全一致を検証。単体候補のCPU増は実測記録し、通常プレイの前提へ固定しない。[採用範囲・残課題](PROJECTILE_MEDIA_INTEGRATION_V33.md)。
+
+実main547676fdce8d8e97abed9f065aad0b6e24af2fd6、PR39 open/merged false、Site23 sourcef11819aceea515d166846e4bf85082bf2e51e9d1のまま。03:14Z後にmerge mutation無し。定期Qは20件上限でdisabled、promptと無期限hourly意図は保存済み、自動再開済みとはしない。実WebGL/端末/touch/実聴/指定10作品比較は未確認、PS4達成/期限内完成根拠なし。
+
+既存Ultra: integratorが排他的Gitwriter。actor_motionはQ-cloak-ground-v34の死亡布（現floor座標混同/退化/時間跳びを同条件修復）、frame_qualityはQ-web-primary-v34通常URL一次化、combat_vfxは同一媒体の配信phaseとWeb/native比較、forest_fidelityは布素材選定。新spawnなし。旧孫がlistから一時不可視になった後に同じ受理済み担当へfollowup到達、未知原因は捏造しない。作者worktree再出現untrackedの初期失敗5filesは無削除/hash保全、committedsourceだけ使用。人間待ちにせず実行可能な有限制作を継続する。
+
+
 The combined v32 unit passed 23 required commands and 284 tests in 107.241350 s. Speaker-focused composition, lower readable dialogue, scroll/death/HUD lifecycle repairs, one source-validated NPC face, and physical cloak UVs are recorded in [DIALOGUE_APPEARANCE_V32.md](DIALOGUE_APPEARANCE_V32.md). The same-camera face differences remain small; sampled death cloth distortion has an explicit remaining worsening. No actual screen or PS4 perceptual acceptance is claimed.
 
 PR46 is preserved at remote `fe8e8f83f9cceb2573868621888a315c613df635`, exact tree `462d4a5390edcf854bfca711af927aa91849ba4c`, with both required CI runs successful. PR39 remains open/unmerged and actual main `547676fdce8d8e97abed9f065aad0b6e24af2fd6`; no additional merge mutation after the 03:14Z timeout. Preserve v32 as the next stack unit, then retarget/recheck/normal merge in predecessor order only after real main progress. Site23 remains owner-only and unchanged. `69748211…` names the source main.js file SHA256, not a remote main commit.

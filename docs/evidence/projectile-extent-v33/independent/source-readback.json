@@ -1,0 +1,25 @@
+{
+  "sourceHashes": {
+    "src/core.js": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390",
+    "src/spatial.js": "9a6a4331b556530701968ee2fa9dacaa5be01015f6cbb6a2cb551a7cbe56be6f",
+    "src/projectile-shape.js": "c754233b0d7a34dd0aa1520d1507f23db0b0f6b8359670593bef02c7d4accc54",
+    "src/projectile-geometry.js": "68a1a410014bc224468e052b4a1d6b1de776d63fa0b4d56d71d416fd5593fc70",
+    "src/combat-presentation.js": "aa40a85842d8a0542fdc503e7ac2b0986655a1e0d1ae20c06b4c0bbac1e9244a",
+    "src/scene.js": "187ccd0eb934d129dd229bbd22c2765800ed1c14f18276265e769340f4e9f2af",
+    "src/bow-contact.js": "0b81d2dc277555e13ff552d2dbdd891e6cd0a4660cc10a1668c9269d1249005c",
+    "src/actor-models.js": "0731e2582bd7eacabf90fd96ca651fd7bc2f56c886c82c912835563c7294b006",
+    "src/character-motion.js": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+    "src/assets/characters/detailed-geometry.js": "443a6bfb62f8ecee4f21b305416c6666f46ba1c661c2e1486f2d4da441e2829c",
+    "src/runtime-state.js": "84a543c09f089a37031da9ba12915078cee5c668ed009bcd281e90d70829f325"
+  },
+  "entry": "./assets/index-ROlJubcU.js",
+  "entryBytes": 164679,
+  "jsManifest": {
+    "assets/index-ROlJubcU.js": 164679,
+    "assets/scene-DFfA4b8r.js": 230720,
+    "assets/three-De2ejzE8.js": 578362
+  },
+  "v32IncrementReported": 309,
+  "combinedInitialArithmetic": 164988,
+  "boundary": "Current entry bytes and latest manifest-referenced chunks read independently. Combined v32 size here is arithmetic, not an integration build; parent must build combined source. Author performed build/package/gates. No device-performance claim."
+}

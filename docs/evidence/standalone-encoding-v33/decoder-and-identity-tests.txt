@@ -1,0 +1,12 @@
+✔ script-safe media representation round trips byte boundaries and exact data URLs (11.92671ms)
+✔ invalid headers, digits, overflow, cuts and noncanonical padding are rejected (0.411553ms)
+✔ browser decoder compiles with no Node, eval, fetch or platform base64 dependencies (12.207646ms)
+✔ build identity detects changed or absent standalone helper inputs (27.689532ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 148.717301

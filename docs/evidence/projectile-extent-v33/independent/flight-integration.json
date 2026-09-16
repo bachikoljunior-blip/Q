@@ -1,0 +1,177 @@
+{
+  "sourceHashes": {
+    "src/scene.js": "187ccd0eb934d129dd229bbd22c2765800ed1c14f18276265e769340f4e9f2af",
+    "src/bow-contact.js": "0b81d2dc277555e13ff552d2dbdd891e6cd0a4660cc10a1668c9269d1249005c",
+    "src/actor-models.js": "0731e2582bd7eacabf90fd96ca651fd7bc2f56c886c82c912835563c7294b006",
+    "src/character-motion.js": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+    "src/projectile-geometry.js": "68a1a410014bc224468e052b4a1d6b1de776d63fa0b4d56d71d416fd5593fc70",
+    "src/projectile-shape.js": "c754233b0d7a34dd0aa1520d1507f23db0b0f6b8359670593bef02c7d4accc54",
+    "src/assets/characters/detailed-geometry.js": "443a6bfb62f8ecee4f21b305416c6666f46ba1c661c2e1486f2d4da441e2829c",
+    "src/core.js": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390"
+  },
+  "boundary": "Actual Game.tickEnemy/fireArrow/tickProjectiles and native loaded actor; selected same-frame actual SceneView instance matrices through explicit existing renderer/asset/DOM fixture. No WebGL draw, pixels, touch or device timing.",
+  "rows": [
+    {
+      "hz": 30,
+      "shots": 2,
+      "loadedSamples": 52,
+      "secondWindupSamples": 26,
+      "secondSaved": {
+        "hit": true,
+        "loadedVisible": true,
+        "tailError": 0,
+        "fixture": "actual original ranger home/world position, preserving second-cycle hit/timer"
+      },
+      "fires": [
+        {
+          "shot": 1,
+          "previousNockToSpawn": 5.051514762044462e-15,
+          "renderTailToCurrentGame": 2.2712067844651435e-7,
+          "actualExtent": [
+            5.84386481589658e-8,
+            1.3400001299701048
+          ],
+          "newArrowTravel": 0.6333333333333333,
+          "loadedCollapsedAfterFire": true
+        },
+        {
+          "shot": 2,
+          "previousNockToSpawn": 5.051514762044462e-15,
+          "renderTailToCurrentGame": 2.2712067844651435e-7,
+          "actualExtent": [
+            5.84386481589658e-8,
+            1.3400001299701048
+          ],
+          "newArrowTravel": 0.6333333333333333,
+          "loadedCollapsedAfterFire": true
+        }
+      ],
+      "stops": [
+        {
+          "state": "idle",
+          "collapsed": true
+        },
+        {
+          "state": "stagger",
+          "timer": 0.3,
+          "stagger": 0.3,
+          "collapsed": true
+        },
+        {
+          "state": "windup",
+          "dead": true,
+          "deathElapsed": 0.1,
+          "collapsed": true
+        }
+      ]
+    },
+    {
+      "hz": 60,
+      "shots": 2,
+      "loadedSamples": 104,
+      "secondWindupSamples": 52,
+      "secondSaved": {
+        "hit": true,
+        "loadedVisible": true,
+        "tailError": 0,
+        "fixture": "actual original ranger home/world position, preserving second-cycle hit/timer"
+      },
+      "fires": [
+        {
+          "shot": 1,
+          "previousNockToSpawn": 5.051514762044462e-15,
+          "renderTailToCurrentGame": 2.0881666232940773e-7,
+          "actualExtent": [
+            4.7673720758687355e-8,
+            1.3400001192051774
+          ],
+          "newArrowTravel": 0.31666666666666665,
+          "loadedCollapsedAfterFire": true
+        },
+        {
+          "shot": 2,
+          "previousNockToSpawn": 5.051514762044462e-15,
+          "renderTailToCurrentGame": 2.0881666232940773e-7,
+          "actualExtent": [
+            4.7673720758687355e-8,
+            1.3400001192051774
+          ],
+          "newArrowTravel": 0.31666666666666665,
+          "loadedCollapsedAfterFire": true
+        }
+      ],
+      "stops": [
+        {
+          "state": "idle",
+          "collapsed": true
+        },
+        {
+          "state": "stagger",
+          "timer": 0.3,
+          "stagger": 0.3,
+          "collapsed": true
+        },
+        {
+          "state": "windup",
+          "dead": true,
+          "deathElapsed": 0.1,
+          "collapsed": true
+        }
+      ]
+    },
+    {
+      "hz": 120,
+      "shots": 2,
+      "loadedSamples": 212,
+      "secondWindupSamples": 106,
+      "secondSaved": {
+        "hit": true,
+        "loadedVisible": true,
+        "tailError": 0,
+        "fixture": "actual original ranger home/world position, preserving second-cycle hit/timer"
+      },
+      "fires": [
+        {
+          "shot": 1,
+          "previousNockToSpawn": 5.051514762044462e-15,
+          "renderTailToCurrentGame": 1.9974419616642658e-7,
+          "actualExtent": [
+            4.229125694527611e-8,
+            1.3400001138227136
+          ],
+          "newArrowTravel": 0.15833333333333333,
+          "loadedCollapsedAfterFire": true
+        },
+        {
+          "shot": 2,
+          "previousNockToSpawn": 5.051514762044462e-15,
+          "renderTailToCurrentGame": 1.9974419616642658e-7,
+          "actualExtent": [
+            4.229125694527611e-8,
+            1.3400001138227136
+          ],
+          "newArrowTravel": 0.15833333333333333,
+          "loadedCollapsedAfterFire": true
+        }
+      ],
+      "stops": [
+        {
+          "state": "idle",
+          "collapsed": true
+        },
+        {
+          "state": "stagger",
+          "timer": 0.3,
+          "stagger": 0.3,
+          "collapsed": true
+        },
+        {
+          "state": "windup",
+          "dead": true,
+          "deathElapsed": 0.1,
+          "collapsed": true
+        }
+      ]
+    }
+  ]
+}

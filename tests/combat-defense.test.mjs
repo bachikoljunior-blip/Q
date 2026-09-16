@@ -10,10 +10,10 @@ function fixture(){
   return g;
 }
 function sequentialForecast(game,arrow,horizon,metrics){
-  const simulated={...arrow};let elapsed=0;
+  const simulated={...arrow};let elapsed=0;metrics.terrainSamples??=0;
   while(elapsed+1e-9<horizon){
     const step=Math.min(1/60,horizon-elapsed);if(simulated.life-step<=0)break;
-    const contact=game.projectileContact(simulated,step);metrics.exactFrames++;
+    const contact=game.projectileContact(simulated,step,metrics);metrics.exactFrames++;
     if(contact.target)return {target:contact.target,timeToImpact:elapsed+contact.fraction*step};
     simulated.x=contact.to.x;simulated.y=contact.to.y;simulated.z=contact.to.z;simulated.life-=step;elapsed+=step;
   }
@@ -45,7 +45,7 @@ test('a near-expiry arrow still warns when it will hit on its final live step',(
 test('a 48-arrow batch preserves sequential contact results with shared static prediction',()=>{
   const g=fixture(),p=g.player,requests=Array.from({length:48},(_,index)=>({arrow:{id:index+1,owner:'attacker',x:p.x+(index%3-1)*.15,y:p.y+1,z:p.z+5+index*.03,vx:0,vy:0,vz:-20,life:2,damage:20},horizon:1.8}));
   const before=JSON.stringify(g.serialize()),sequentialMetrics={exactFrames:0},expected=requests.map(({arrow,horizon})=>sequentialForecast(g,arrow,horizon,sequentialMetrics)),batchMetrics={},actual=forecastProjectileContacts(g,requests,{metrics:batchMetrics});
-  assert.deepEqual(actual,expected);assert.equal(JSON.stringify(g.serialize()),before);assert.equal(sequentialMetrics.exactFrames,761);assert.equal(batchMetrics.exactFrames,48);assert.equal(batchMetrics.fallbackFrames,0);assert.equal(batchMetrics.sharedBodies,1);assert(batchMetrics.terrainSamples<sequentialMetrics.exactFrames*2);
+  assert.deepEqual(actual,expected);assert.equal(JSON.stringify(g.serialize()),before);assert.equal(sequentialMetrics.exactFrames,569);assert.equal(batchMetrics.exactFrames,48);assert.equal(batchMetrics.fallbackFrames,0);assert.equal(batchMetrics.sharedBodies,1);assert.equal(batchMetrics.terrainSamples,sequentialMetrics.terrainSamples);assert(batchMetrics.terrainSamples<=1618);assert.equal(batchMetrics.bodySweeps,48);
   g.obstacles=[{x:p.x,z:p.z+2.5,r:.4,height:6}];const coveredExpected=requests.map(({arrow,horizon})=>sequentialForecast(g,arrow,horizon,{exactFrames:0})),coveredMetrics={},coveredActual=forecastProjectileContacts(g,requests,{metrics:coveredMetrics});
   assert.deepEqual(coveredActual,coveredExpected);assert(coveredActual.every(contact=>contact?.target==='wall'));assert.equal(coveredMetrics.sharedObstacles,1);assert.equal(coveredMetrics.fallbackFrames,0);
 });

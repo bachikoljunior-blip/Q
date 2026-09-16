@@ -3,7 +3,8 @@ import { moveCircle, steerAround, lineClear, indexObstacles, queryObstacles, obs
 import { landmarkSupports, houseFoundation } from './architecture-grounding.js';
 import { findPath } from './navigation.js';
 import { WEAPONS, SENA, EAST_CAMP, SUPPLY_ID, crossingText } from './content.js';
-import { segmentCylinder, segmentTerrain } from './spatial.js';
+import { segmentCylinder, segmentTerrain, terrainContact } from './spatial.js';
+import {ARROW_LENGTH,projectilePoint,projectileTime,projectileBody} from './projectile-shape.js';
 import { captureRuntime, restoreRuntime } from './runtime-state.js';
 import { createWoodland } from './woodland.js';
 import { WIND_SHRINE, WIND_BELLS, ROAD_CACHE, createResidents, createBells, restoreBells, tickVillage, startForge, reportForge, interactShrine, forgeText, residentActive, useRoadCache } from './village.js';
@@ -11,6 +12,17 @@ import { WORLD_BOUNDS, SALT_JOURNEY, SALT_TARGETS, saltObstacles } from './world
 import { createExpedition, restoreExpedition, applyExpeditionWorld, tickExpedition, expeditionQuest, interactExpedition } from './expedition.js';
 import { createGatherings, restoreGatherings, tickGatherings } from './gatherings.js';
 import { VAULT_SLICES, availableVaultTargets, claimVaultMemory, createVaultProgress, inVaultFootprint, restoreVaultProgress, tickVaultSlices, vaultAt, vaultByWarden, vaultObstacles } from './vault-slices.js';
+// A validated clear terrain span is reusable only at the exact next tail and
+// velocity. Weak keys add no saved fields and expire with released projectiles.
+const projectileTerrainCache=new WeakMap();
+export function copyProjectileTerrain(from,to){projectileTerrainCache.set(to,projectileTerrainCache.get(from));}
+export function arrowTerrain(a,dt,metrics){
+  const old=projectileTerrainCache.get(a),reuse=old&&old.x===a.x&&old.y===a.y&&old.z===a.z&&old.vx===a.vx&&old.vy===a.vy&&old.vz===a.vz;
+  const tip=projectilePoint(a,dt,ARROW_LENGTH),terrain=terrainContact(reuse?old.tip:a,tip,groundAt,.1,reuse?old.floor:undefined,metrics);
+  if(terrain.fraction===null)projectileTerrainCache.set(a,{...a,...projectilePoint(a,dt),tip,floor:terrain.endMatchesNext?terrain.endFloor:undefined});else projectileTerrainCache.delete(a);
+  const length=Math.hypot(a.vx,a.vy,a.vz)*dt;
+  return terrain.fraction===null?null:reuse?(ARROW_LENGTH+length*terrain.fraction)/(ARROW_LENGTH+length):terrain.fraction;
+}
 export const WORLD_SEED = 87123;
 export const SAVE_VERSION = 1;
 export const TAU = Math.PI * 2;
@@ -210,23 +222,22 @@ export class Game {
     const arrow=this.createEnemyArrow(e);if(!arrow)return;
     this.projectiles.push({...arrow,id:++this.projectileId});this.emit('arrow');
   }
-  projectileContact(arrow,dt){
-      const from={x:arrow.x,y:arrow.y,z:arrow.z},to={x:arrow.x+arrow.vx*dt,y:arrow.y+arrow.vy*dt,z:arrow.z+arrow.vz*dt};
-      const terrain=segmentTerrain(from,to,groundAt,.1);let first=terrain??1.01,target=terrain===null?null:'wall';
-      for(const o of queryObstacles(this.obstacles,Math.min(from.x,to.x)-.08,Math.min(from.z,to.z)-.08,Math.max(from.x,to.x)+.08,Math.max(from.z,to.z)+.08)){const t=segmentCylinder(from,to,obstacleCylinder(o,heightAt),.08);if(t!==null&&t<first){first=t;target='wall';}}
-      const victims=arrow.owner==='player'?this.enemies.filter(e=>!e.dead):[this.player];
-      for(const victim of victims){const body=victim.type==='boss'?4.7:victim.type==='wolf'?1.35:2.1;const t=segmentCylinder(from,to,{...victim,y:victim.y+.15,height:body-.15,r:victim.type==='boss'?1.25:.48},.12);if(t!==null&&t<first){first=t;target=victim;}}
-    return {from,to,target,fraction:target?first:1};
+  projectileContact(arrow,dt,metrics){
+    const from=projectilePoint(arrow),to=projectilePoint(arrow,dt),tip=projectilePoint(arrow,dt,ARROW_LENGTH);
+    const terrain=arrowTerrain(arrow,dt,metrics);let first=terrain??1.01,target=terrain===null?null:'wall';
+    for(const o of queryObstacles(this.obstacles,Math.min(from.x,tip.x)-.08,Math.min(from.z,tip.z)-.08,Math.max(from.x,tip.x)+.08,Math.max(from.z,tip.z)+.08)){const t=segmentCylinder(from,tip,obstacleCylinder(o,heightAt),.08);if(t!==null&&t<first){first=t;target='wall';}}
+    for(const victim of arrow.owner==='player'?this.enemies.filter(e=>!e.dead):[this.player]){const t=segmentCylinder(from,tip,projectileBody(victim),.12);if(t!==null&&t<first){first=t;target=victim;}}
+    return {from,to,target,fraction:target?(dt?projectileTime(arrow,dt,first)/dt:0):1,point:target?projectilePoint(arrow,dt*first,ARROW_LENGTH*first):null};
   }
   tickProjectiles(dt){
     const p=this.player;
     for(const arrow of this.projectiles){
       arrow.life-=dt;if(arrow.life<=0)continue;
-      const {from,to,target,fraction:impact}=this.projectileContact(arrow,dt);arrow.x=from.x+(to.x-from.x)*impact;arrow.y=from.y+(to.y-from.y)*impact;arrow.z=from.z+(to.z-from.z)*impact;
+      const {from,target,point,fraction:impact}=this.projectileContact(arrow,dt);Object.assign(arrow,projectilePoint(arrow,dt*impact));
       if(target){
-        if(target===p){const source=this.enemies.find(e=>e.id===arrow.owner);const result=this.hurtPlayer(arrow.damage,source,true,{x:from.x-arrow.vx*.1,z:from.z-arrow.vz*.1});if(result==='parry'){arrow.owner='player';const dx=source&&!source.dead?source.x-p.x:-arrow.vx,dy=source&&!source.dead?source.y+1.2-arrow.y:-arrow.vy,dz=source&&!source.dead?source.z-p.z:-arrow.vz,length=Math.hypot(dx,dy,dz)||1;arrow.vx=dx/length*25;arrow.vy=dy/length*25;arrow.vz=dz/length*25;arrow.damage=this.damageAmount()*1.5;arrow.life=2;continue;}}
+        if(target===p){const source=this.enemies.find(e=>e.id===arrow.owner);const result=this.hurtPlayer(arrow.damage,source,true,{x:from.x-arrow.vx*.1,z:from.z-arrow.vz*.1});if(result==='parry'){Object.assign(arrow,point);arrow.owner='player';const dx=source&&!source.dead?source.x-point.x:-arrow.vx,dy=source&&!source.dead?source.y+1.2-point.y:-arrow.vy,dz=source&&!source.dead?source.z-point.z:-arrow.vz,length=Math.hypot(dx,dy,dz)||1;arrow.vx=dx/length*25;arrow.vy=dy/length*25;arrow.vz=dz/length*25;arrow.damage=this.damageAmount()*1.5;arrow.life=2;const rebound=this.projectileContact(arrow,0);if(rebound.target!=='wall')continue;Object.assign(point,rebound.point);}}
         else if(target!=='wall')this.hurtEnemy(target,arrow.damage,1.1);
-        arrow.life=0;this.emit('arrowBreak',{x:arrow.x,z:arrow.z});
+        arrow.life=0;this.emit('arrowBreak',{x:point.x,z:point.z});
       }else if(arrow.y<groundAt(arrow.x,arrow.z)+.1)arrow.life=0;
       if(p.dead)break;
     }

@@ -1,0 +1,50 @@
+✖ held attack cannot cancel an accepted parry before an imminent hit (26.237714ms)
+✔ a blocked urgent arrow does not hide later unblocked arrows (21.788392ms)
+✔ a near-expiry arrow still warns when it will hit on its final live step (29.24434ms)
+✖ a 48-arrow batch preserves sequential contact results with shared static prediction (19.850785ms)
+✔ a tangent obstacle remains a conservative batch candidate (12.795721ms)
+✔ bridge-edge and ground-grazing warnings match live 60 Hz projectile contacts (1178.665153ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 4
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1408.895401
+
+✖ failing tests:
+
+test at tests/combat-defense.test.mjs:22:1
+✖ held attack cannot cancel an accepted parry before an imminent hit (26.237714ms)
+  ReferenceError: segmentTerrain is not defined
+      at Game.canStrike (file:///workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/src/core.js:116:5)
+      at Game.meleeContact (file:///workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/src/core.js:121:109)
+      at Game.tickEnemy (file:///workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/src/core.js:193:37)
+      at Game.tick (file:///workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/src/core.js:180:55)
+      at TestContext.<anonymous> (file:///workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/tests/combat-defense.test.mjs:26:53)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests/combat-defense.test.mjs:45:1
+✖ a 48-arrow batch preserves sequential contact results with shared static prediction (19.850785ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  569 !== 761
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/e72662e3b71f/Q-projectile-extent-v33/tests/combat-defense.test.mjs:48:95)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 569,
+    expected: 761,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

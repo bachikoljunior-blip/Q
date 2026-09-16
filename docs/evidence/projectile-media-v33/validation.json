@@ -1,0 +1,270 @@
+{
+  "startedAt": "2026-09-16T05:50:06.403347+00:00",
+  "scope": "Combined native source/geometry, explicit Node production boundaries and delivery artifacts; no WebGL/device/listening acceptance",
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "scripts/generate-vault-assets.mjs",
+        "--verify"
+      ],
+      "exitCode": 0,
+      "seconds": 0.19011797299754107,
+      "log": "01.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-soundscape.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.13317317399923922,
+      "log": "02.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-main-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 7.986705823997909,
+      "log": "03.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-gathering-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 14.763150767001207,
+      "log": "04.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:vaults"
+      ],
+      "exitCode": 0,
+      "seconds": 14.38614326199604,
+      "log": "05.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "seconds": 46.461570967003354,
+      "log": "06.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-archery-contact.mjs",
+        "artifacts/archery-contact-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 1.1862470139967627,
+      "log": "07.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-loaded-arrow.mjs",
+        "artifacts/loaded-arrow-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 1.2863131379999686,
+      "log": "08.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-projectile-budget.mjs",
+        "artifacts/projectile-budget-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 0.20006772600027034,
+      "log": "09.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-dialogue-framing.mjs",
+        "artifacts/dialogue-framing-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 6.840440940002736,
+      "log": "10.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-world-surfaces.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.472918954998022,
+      "log": "11.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-architecture-grounding.mjs",
+        "artifacts/architecture-grounding-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 1.062585890002083,
+      "log": "12.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-settlement-contact.mjs",
+        "artifacts/settlement-contact-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 2.08558654999797,
+      "log": "13.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-scene-integration.mjs",
+        ".",
+        "artifacts/scene-integration-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 2.895243068000127,
+      "log": "14.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-sky-integration.mjs",
+        ".",
+        "artifacts/sky-integration-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 11.557379896003113,
+      "log": "15.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:journey"
+      ],
+      "exitCode": 0,
+      "seconds": 0.48705514799803495,
+      "log": "16.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:crossing"
+      ],
+      "exitCode": 0,
+      "seconds": 1.0113192339995294,
+      "log": "17.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:forge"
+      ],
+      "exitCode": 0,
+      "seconds": 1.1429329829989001,
+      "log": "18.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:session"
+      ],
+      "exitCode": 0,
+      "seconds": 5.823335273998964,
+      "log": "19.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:expedition"
+      ],
+      "exitCode": 0,
+      "seconds": 5.646563134003372,
+      "log": "20.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "review:combat"
+      ],
+      "exitCode": 0,
+      "seconds": 0.8255767219961854,
+      "log": "21.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "compare:touch"
+      ],
+      "exitCode": 0,
+      "seconds": 1.2199725219979882,
+      "log": "22.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "seconds": 4.134124472002441,
+      "log": "23.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "package"
+      ],
+      "exitCode": 0,
+      "seconds": 10.566091706998122,
+      "log": "24.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:artifacts"
+      ],
+      "exitCode": 0,
+      "seconds": 2.1062581049991422,
+      "log": "25.txt"
+    }
+  ],
+  "elapsedSeconds": 148.4858182359967,
+  "passed": true,
+  "tests": 299,
+  "initialJavaScriptBytes": 164988,
+  "javaScriptChunks": 3,
+  "allJavaScriptBytes": 1075981,
+  "standalone": {
+    "bytes": 15498171,
+    "sha256": "a09c7ad2ac71e1e703c7435116ff32a8a83953b5b5ff24a91acaf3c24ab7fd8e"
+  },
+  "frozenStage": "/workspace/scratch/e72662e3b71f/Q-ps4-v33/artifacts/site-axnjK6",
+  "sourceAuthors": [
+    "b46b649f96ef97f4bd37fc02dadb8d815ac26956",
+    "b7af1cdcddce13c732de732c467f6448a9fc3f2d"
+  ],
+  "actualMain": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+  "latestUserDirection": "Primary play method reassessment; one-file size is not the world art budget. Existing URL and private audience retained."
+}
