@@ -1,0 +1,139 @@
+{
+  "at": "2026-09-16T08:44:31.592677+00:00",
+  "baseCommit": "fa920db9782b7df42e4e16099a05994e5841dbaa",
+  "baseSourceHashes": {
+    "src/audio.js": "a990f34b9d94023e3bb1655c7dbec5d36b484399aa82fd1cdc827e48e7674027",
+    "src/file-audio-bank.js": "0d4ea37b9ffdbe2485bf8c47a528334bb5828bfa90d2795a1dd97201c8d34d42",
+    "src/soundscape-asset-urls.js": "071d87e650e9107a4a4481e45b6810f21ad860a2853189ae38841beddcf088e2",
+    "src/assets/soundscape/provenance.json": "16e7e5439bb822729b8decfca3e041042d928749aa012b1a4ff540df972d363e",
+    "assets-source/soundscape-vsco/manifest.json": "8f858022a2491e7bfe0352999514be8663673afe365056f297e0c59962184dbd",
+    "assets-source/soundscape-vsco/LICENSE": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+    "scripts/sampled_score.py": "61ab9b6a015dc2da77e65ae8ec152c0b2b2f27464e399ee5bfb3b7ac07110c4b",
+    "scripts/generate-soundscape.py": "d181441e84c06313537575bffaf1cfbf430a8a23ee2023e980bc5543fffe94d3"
+  },
+  "sourceSamples": [
+    {
+      "file": "Percussion/BDrumNewhit_v2_rr1_Sum.wav",
+      "bytes": 281616,
+      "sha256": "56827fe9b55f282a0db851e242bc24660d339a0e358b182966aea047240c1136",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 2,
+      "frames": 70393
+    },
+    {
+      "file": "Percussion/BDrumNewhit_v2_rr2_Sum.wav",
+      "bytes": 302396,
+      "sha256": "f1f8979de26f8efe278fe778da7bdce2a39fbfb9f2cbf345e38ce8c66f171b59",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 2,
+      "frames": 75588
+    },
+    {
+      "file": "Percussion/TB_hit_C4_v4_rr1.wav",
+      "bytes": 3377124,
+      "sha256": "d11d52910e0fc03c348bec0b0969960d737a6fdd3fa7380804f5751959e422c2",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 2,
+      "frames": 844270
+    },
+    {
+      "file": "Strings/Cello Section/susvib/susvib_A2_v1_1.wav",
+      "bytes": 2336738,
+      "sha256": "c97a003184fdcb153d6b6c0bae8d82a90592a1b04b06bd7caaeda8b9776d5284",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 389449
+    },
+    {
+      "file": "Strings/Cello Section/susvib/susvib_B1_v1_1.wav",
+      "bytes": 2372492,
+      "sha256": "4f95c087c4b8d87ee591e9d39c3c9caf085c6f1b9125eac3ca9e4e637da628ee",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 395408
+    },
+    {
+      "file": "Strings/Cello Section/susvib/susvib_D2_v1_1.wav",
+      "bytes": 2550956,
+      "sha256": "e8640dec9febc6e39fcf06b19d2c95a85d5ff8c38f13c9879e69f551eaf38ab8",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 425152
+    },
+    {
+      "file": "Strings/Cello Section/susvib/susvib_E1_v1_2.wav",
+      "bytes": 2439512,
+      "sha256": "3f8c250028d5364fc9c5584ad204d7a1d4c8c02ae41e90ad482e7b0d7d1bc674",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 406578
+    },
+    {
+      "file": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+      "bytes": 2186012,
+      "sha256": "162054eab4ba118924f8f8986cf1b17ccfd65211d1945743ffbae30b4953f901",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 364328
+    },
+    {
+      "file": "Strings/Viola Section/susvib/ViolaEns_susvib_A3_v1_1.wav",
+      "bytes": 2491352,
+      "sha256": "7cea6482a8f67536e3108f01b688d54d198e5820ffcd0ac5a49652d38f6ec065",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 415218
+    },
+    {
+      "file": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+      "bytes": 2861510,
+      "sha256": "ad96d747c5125adec8f069c49091ee3ba937efd4a5b909d3c4938f17e3c8513d",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 476911
+    },
+    {
+      "file": "Strings/Viola Section/susvib/ViolaEns_susvib_D3_v1_1.wav",
+      "bytes": 2789648,
+      "sha256": "61ab4cfc0ea90c683433a7c50b3bb4fa86a81c9d4854589562707d54ed028349",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 464934
+    },
+    {
+      "file": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
+      "bytes": 2487818,
+      "sha256": "7a37f00ecb58fcaa5c32427a5ffb30950787b40c247409a8e18cfe0880955fd8",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 414629
+    },
+    {
+      "file": "Strings/Viola Section/susvib/ViolaEns_susvib_G2_v1_1.wav",
+      "bytes": 2001644,
+      "sha256": "557c2e033951015c30765bf18266bce0dd0412e3ca646dd1a225c32422c60662",
+      "rate": 44100,
+      "channels": 2,
+      "sampleWidth": 3,
+      "frames": 333600
+    }
+  ],
+  "sourceCount": 13,
+  "sourceBytes": 28478818,
+  "licenseHash": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+  "sourceManifestAgreement": true,
+  "candidateValidation": "NOT RUN: waiting for new candidate source hash",
+  "evidenceBoundary": "Fresh recovered-base file/hash and stdlib WAV-header read. No PCM rendering/listening, browser API, runtime or device measurement."
+}

@@ -1,0 +1,167 @@
+{
+  "scope": "Read-only indexed triangle and native Three shadow matrix arithmetic; no renderer, pixels, GPU timing, browser, device, PS4-quality qualification",
+  "sourceHashes": {
+    "terrain-surface": "be555011070f2d0aac57445d48ed88deb12d5d5c4a3d29a337fc17882842204b",
+    "water-surface": "ddede0fbe629001cabc9f9f9b014a9834e0fe9c3ef4db0061c82333ca9fcead2",
+    "environment-materials": "39f68f90bb5bc01c12d05e5f382d4108846ecb7716d82e99ab275031a4ba76f0",
+    "environment-atmosphere": "c78303af10af15142d6d9510dd398fd528205b6e3f2de711dc4093ff8ec1aef2"
+  },
+  "terrain": {
+    "constructionMs": 397.91549299999997,
+    "vertices": 52547,
+    "triangles": 104570,
+    "bytes": 2939488,
+    "area": 554400,
+    "invalid": 0,
+    "degenerate": 0,
+    "wrongWinding": 0,
+    "duplicateXZ": 0,
+    "nonManifold": 0,
+    "boundaryEdges": 522,
+    "interiorBoundaries": 0,
+    "samples": [
+      {
+        "name": "Same baseline 1m grid",
+        "count": 555901,
+        "holes": 0,
+        "min": -0.04495306085334505,
+        "max": 0.059329762912943784,
+        "mean": -0.00018122350643166282,
+        "worstLow": {
+          "x": -375,
+          "z": 11
+        },
+        "worstHigh": {
+          "x": -165,
+          "z": -190
+        },
+        "p95Absolute": 0.025405931741431687,
+        "maxAbsolute": 0.059329762912943784
+      },
+      {
+        "name": "PLACES squares radius24m, .25m step",
+        "count": 186245,
+        "holes": 0,
+        "min": -0.04742669150853729,
+        "max": 0.07458718476048176,
+        "mean": -0.0030698788842371334,
+        "worstLow": {
+          "x": 101.25,
+          "z": -59.5
+        },
+        "worstHigh": {
+          "x": -44.5,
+          "z": -143.25
+        },
+        "p95Absolute": 0.021991039365291343,
+        "maxAbsolute": 0.07458718476048176
+      },
+      {
+        "name": "Actual indexed triangle centroids and edge midpoints",
+        "count": 418280,
+        "holes": 0,
+        "min": -0.08707843318258313,
+        "max": 0.0886395296240785,
+        "mean": 0.0008483253058217601,
+        "worstLow": {
+          "x": -48.046875,
+          "z": -166.875
+        },
+        "worstHigh": {
+          "x": -51.09375,
+          "z": -143.203125
+        },
+        "p95Absolute": 0.026486210126426712,
+        "maxAbsolute": 0.0886395296240785
+      }
+    ],
+    "anchors": [
+      {
+        "id": "haven",
+        "exactVertex": true,
+        "error": 0
+      },
+      {
+        "id": "grove",
+        "exactVertex": true,
+        "error": 0
+      },
+      {
+        "id": "flood",
+        "exactVertex": true,
+        "error": 0
+      },
+      {
+        "id": "ruins",
+        "exactVertex": true,
+        "error": 0
+      },
+      {
+        "id": "crown",
+        "exactVertex": true,
+        "error": 0
+      }
+    ]
+  },
+  "water": {
+    "vertices": 5397,
+    "triangles": 10240,
+    "bytes": 234144,
+    "area": 8925,
+    "invalid": 0,
+    "degenerate": 0,
+    "wrongWinding": 0,
+    "duplicateXZ": 0,
+    "nonManifold": 0,
+    "boundaryEdges": 552,
+    "samples": {
+      "name": "Same baseline wet-area points (center from old4.4m strip; .5m along/across)",
+      "count": 29756,
+      "holes": 0,
+      "min": 0.0905946900165473,
+      "max": 0.2032653295910789,
+      "mean": 0.13850616910984842,
+      "worstLow": {
+        "x": 172.5297251135857,
+        "z": -190
+      },
+      "worstHigh": {
+        "x": 189.9920201219919,
+        "z": 143
+      },
+      "p95Absolute": 0.15282479125255444,
+      "maxAbsolute": 0.2032653295910789
+    },
+    "triangleClearance": {
+      "name": "Water indexed triangle centroids and edge midpoints",
+      "count": 40960,
+      "holes": 0,
+      "min": 0.08656619034202961,
+      "max": 0.2135736901157852,
+      "mean": 0.13884356228482114,
+      "worstLow": {
+        "x": 170.67853546142578,
+        "z": -190.05859375
+      },
+      "worstHigh": {
+        "x": 189.98439025878906,
+        "z": 142.802734375
+      },
+      "p95Absolute": 0.15331915356509862,
+      "maxAbsolute": 0.2135736901157852
+    },
+    "wetCount": 29756,
+    "underwaterAtWorstNegativeWave": 0,
+    "maxWave": 0.021,
+    "minimumGuaranteedSampleClearance": 0.06556619034202961
+  },
+  "doubleSidedBump": {
+    "determinant": "dot(qDx,qRx)*faceDirection",
+    "oppositionErrorRadians": 0
+  },
+  "shadow": {
+    "texelMeters": 0.068359375,
+    "sameCellMaxPixels": 0,
+    "oneCellStepErrorPixels": 2.2737367544323206e-13
+  }
+}

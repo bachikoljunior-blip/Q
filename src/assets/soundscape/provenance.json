@@ -3,8 +3,8 @@
   "title": "Pilgrim / The Fire Remembers",
   "origin": "Original project-authored 48-second composition with recorded CC0 cello/viola sections, bass drum and tubular bells from VSCO 2 CE. Offline sample performance; the original synthesized motif, quiet pulse underlay and 24 synthesized foley cues remain. Not a live orchestral performance or generated voice.",
   "license": "Original composition and synthesis created for Q; incorporated VSCO 2 CE recordings are CC0-1.0. Source recordings, official mappings, license and verified hashes are preserved in assets-source/soundscape-vsco. This provenance is not an independent legal authorship determination.",
-  "generator": "scripts/generate-soundscape.py",
-  "generatorSha256": "d181441e84c06313537575bffaf1cfbf430a8a23ee2023e980bc5543fffe94d3",
+  "generator": "scripts/generate-native-score.py",
+  "generatorSha256": "8651c00d2bf2d2599436e7b03d50ecdd24725d87a9130e291b9844894be0ba73",
   "recipe": {
     "seed": "0x51415348",
     "tempoBpm": 80,
@@ -13,19 +13,19 @@
     "key": "D minor with added ninths",
     "stemLoopSeconds": 48,
     "synthesis": "recorded bowed cello/viola phrases, measured stereo sustain crossfades and natural releases, original modal motif/arpeggios, sampled low/metal percussion over restrained synthesized pulse, circular early reflections",
-    "encoder": "ffmpeg libmp3lame; MP3 stereo 48k / mono 32k; mono PCM16 foley"
+    "encoder": "ffmpeg libmp3lame 160k stereo 44100 for recorded stems; original 22050 motif/foley byte-identical"
   },
   "assets": [
     {
       "file": "pilgrim-harmony.mp3",
       "durationSeconds": 48,
       "channels": 2,
-      "sampleRate": 22050,
-      "pcmPeak": 0.6692097792616192,
-      "pcmRms": 0.13499033917532377,
+      "sampleRate": 44100,
+      "pcmPeak": 0.6692535299560584,
+      "pcmRms": 0.13499034017889866,
       "purpose": "pilgrim-harmony",
-      "bytes": 288594,
-      "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0"
+      "bytes": 961326,
+      "sha256": "fa219541b1537f1fa8beb2adc9b3a2c9139e6a8a76be9f2190860b7339b619c3"
     },
     {
       "file": "pilgrim-motif.mp3",
@@ -41,13 +41,13 @@
     {
       "file": "pilgrim-pulse.mp3",
       "durationSeconds": 48,
-      "channels": 1,
-      "sampleRate": 22050,
-      "pcmPeak": 0.76,
-      "pcmRms": 0.05634956420064149,
+      "channels": 2,
+      "sampleRate": 44100,
+      "pcmPeak": 0.5374011537017761,
+      "pcmRms": 0.03970874872730887,
       "purpose": "pilgrim-pulse",
-      "bytes": 192463,
-      "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13"
+      "bytes": 961326,
+      "sha256": "5d29876c525f67bba1e154736b85230d0c4bb1f85e361ec0bc9ddc34dc164efb"
     },
     {
       "file": "pilgrim-foley.wav",
@@ -62,12 +62,12 @@
     }
   ],
   "cuesSha256": "da729e0c95ef506d2ca32dfba5691910afb51ec24519ffa978f108eacaf6e280",
-  "totalBytes": 1499890,
+  "totalBytes": 2941485,
   "sampledPerformance": {
     "manifest": "assets-source/soundscape-vsco/manifest.json",
     "manifestSha256": "8f858022a2491e7bfe0352999514be8663673afe365056f297e0c59962184dbd",
-    "renderer": "scripts/sampled_score.py",
-    "rendererSha256": "61ab9b6a015dc2da77e65ae8ec152c0b2b2f27464e399ee5bfb3b7ac07110c4b",
+    "renderer": "scripts/generate-native-score.py",
+    "rendererSha256": "8651c00d2bf2d2599436e7b03d50ecdd24725d87a9130e291b9844894be0ba73",
     "mappings": {
       "CelloEnsSusVib-Quiet.sfz": "387a04fda4b56f2ddda0f402cb7093e092c3ae97edbbae1263eebbcce9ac5821",
       "ViolaEnsSusVib-Quiet.sfz": "99ca4342aa259202d7fcaabf412ec48ac3a1feef21b988885c3d2de383f8585c",
@@ -78,7 +78,7 @@
     "publisherUrl": "https://versilian-studios.com/vsco-community/",
     "performance": {
       "schemaVersion": 1,
-      "sampleRate": 22050,
+      "sampleRate": 44100,
       "seconds": 48,
       "chords": [
         [
@@ -113,113 +113,113 @@
       "recordings": [
         {
           "path": "Strings/Cello Section/susvib/susvib_E1_v1_2.wav",
-          "onset": 2313,
-          "end": 191749,
-          "release": 168597,
-          "loopStart": 31420,
-          "loopEnd": 118710,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.7775331464918664,
-          "analysisRate": 22050
+          "onset": 4626,
+          "end": 383498,
+          "release": 337194,
+          "loopStart": 62840,
+          "loopEnd": 237420,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.7775428447440257,
+          "analysisRate": 44100
         },
         {
           "path": "Strings/Cello Section/susvib/susvib_B1_v1_1.wav",
-          "onset": 3415,
-          "end": 187341,
-          "release": 164189,
-          "loopStart": 42226,
-          "loopEnd": 97924,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.6586935503172342,
-          "analysisRate": 22050
+          "onset": 6830,
+          "end": 374682,
+          "release": 328378,
+          "loopStart": 84452,
+          "loopEnd": 195848,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.6586909845218509,
+          "analysisRate": 44100
         },
         {
           "path": "Strings/Cello Section/susvib/susvib_D2_v1_1.wav",
-          "onset": 2313,
-          "end": 185137,
-          "release": 161985,
-          "loopStart": 33846,
-          "loopEnd": 125550,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.744533683327111,
-          "analysisRate": 22050
+          "onset": 4626,
+          "end": 370274,
+          "release": 323970,
+          "loopStart": 67692,
+          "loopEnd": 251100,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.744484529421582,
+          "analysisRate": 44100
         },
         {
           "path": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
-          "onset": 3415,
-          "end": 170811,
-          "release": 147659,
-          "loopStart": 34948,
-          "loopEnd": 119128,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.6220112621902614,
-          "analysisRate": 22050
+          "onset": 6830,
+          "end": 341622,
+          "release": 295318,
+          "loopStart": 69896,
+          "loopEnd": 238256,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.6220067708663247,
+          "analysisRate": 44100
         },
         {
           "path": "Strings/Cello Section/susvib/susvib_A2_v1_1.wav",
-          "onset": 1211,
-          "end": 180729,
-          "release": 157577,
-          "loopStart": 37596,
-          "loopEnd": 93668,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.7021585582700497,
-          "analysisRate": 22050
+          "onset": 2422,
+          "end": 361458,
+          "release": 315154,
+          "loopStart": 75192,
+          "loopEnd": 187336,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.702171925103598,
+          "analysisRate": 44100
         },
         {
           "path": "Strings/Viola Section/susvib/ViolaEns_susvib_G2_v1_1.wav",
-          "onset": 6721,
-          "end": 161995,
-          "release": 138843,
-          "loopStart": 30976,
-          "loopEnd": 128590,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.45288296251628785,
-          "analysisRate": 22050
+          "onset": 13442,
+          "end": 323990,
+          "release": 277686,
+          "loopStart": 61952,
+          "loopEnd": 257180,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.4527663839100028,
+          "analysisRate": 44100
         },
         {
           "path": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
-          "onset": 1211,
-          "end": 232523,
-          "release": 209371,
-          "loopStart": 32744,
-          "loopEnd": 94352,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.7078831570879085,
-          "analysisRate": 22050
+          "onset": 2422,
+          "end": 465046,
+          "release": 418742,
+          "loopStart": 65488,
+          "loopEnd": 188704,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.7078903837559931,
+          "analysisRate": 44100
         },
         {
           "path": "Strings/Viola Section/susvib/ViolaEns_susvib_D3_v1_1.wav",
-          "onset": 8925,
-          "end": 224809,
-          "release": 201657,
-          "loopStart": 40458,
-          "loopEnd": 105486,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.7111415136285065,
-          "analysisRate": 22050
+          "onset": 17850,
+          "end": 449618,
+          "release": 403314,
+          "loopStart": 80916,
+          "loopEnd": 210972,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.7111456083962042,
+          "analysisRate": 44100
         },
         {
           "path": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
-          "onset": 4517,
-          "end": 200565,
-          "release": 177413,
-          "loopStart": 40902,
-          "loopEnd": 120914,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.6411943137241514,
-          "analysisRate": 22050
+          "onset": 9034,
+          "end": 401130,
+          "release": 354826,
+          "loopStart": 81804,
+          "loopEnd": 241828,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.6411927275951744,
+          "analysisRate": 44100
         },
         {
           "path": "Strings/Viola Section/susvib/ViolaEns_susvib_A3_v1_1.wav",
-          "onset": 2313,
-          "end": 204973,
-          "release": 181821,
-          "loopStart": 38698,
-          "loopEnd": 103662,
-          "crossfade": 4851,
-          "stereoJoinCorrelation": 0.8582483969028237,
-          "analysisRate": 22050
+          "onset": 4626,
+          "end": 409946,
+          "release": 363642,
+          "loopStart": 77396,
+          "loopEnd": 207324,
+          "crossfade": 9702,
+          "stereoJoinCorrelation": 0.8582368945462532,
+          "analysisRate": 44100
         }
       ],
       "notes": [
@@ -934,8 +934,28 @@
   },
   "toolchain": {
     "numpy": "2.3.5",
-    "scipy": "1.17.0",
     "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
-    "reproducibility": "Exact-byte regeneration is checked on the recorded toolchain only. Cross-host validation checks committed hash, sizes, bounds and source provenance; it does not promise cross-version MP3 identity."
+    "reproducibility": "Exact-byte regeneration on this recorded toolchain; cross-host provenance/hash verification does not promise cross-version encoder identity."
+  },
+  "nativeDelivery": {
+    "baselineProvenance": "docs/evidence/native-audio-recovery-v52/source-before/src/assets/soundscape/provenance.json",
+    "baselineSha256": "16e7e5439bb822729b8decfca3e041042d928749aa012b1a4ff540df972d363e",
+    "legacyGenerator": "scripts/generate-soundscape.py",
+    "legacyGeneratorSha256": "d181441e84c06313537575bffaf1cfbf430a8a23ee2023e980bc5543fffe94d3",
+    "legacyRenderer": "scripts/sampled_score.py",
+    "legacyRendererSha256": "61ab9b6a015dc2da77e65ae8ec152c0b2b2f27464e399ee5bfb3b7ac07110c4b",
+    "unchanged": [
+      "pilgrim-motif.mp3",
+      "pilgrim-foley.wav",
+      "cues.json"
+    ],
+    "scoreRates": {
+      "harmony": 44100,
+      "motif": 22050,
+      "pulse": 44100
+    },
+    "pulseStereoGain": 0.7071067811865475,
+    "timing": "Original rounded 22050 onset/loop/pitched-join/hold/reflection/seam grid doubled; notes, pulse events and internal crossfade times exact",
+    "heard": false
   }
 }

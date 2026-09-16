@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { build } from 'esbuild';
-import { SoundContext } from './soundscape-web-audio-contract.mjs';
+import { SoundContext, OfflineSoundContext } from './soundscape-web-audio-contract.mjs';
 import { startFileAudio } from '../src/file-audio-bank.js';
 import { VaultLoopGate } from '../src/vault-audio-cues.js';
 
@@ -11,10 +11,10 @@ const bundle = await build({ entryPoints: [new URL('../src/audio.js', import.met
 const code = bundle.outputFiles.find(file => file.path.endsWith('sound-test.js')).text;
 const { Soundscape } = await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`);
 const flush = async () => { for (let i = 0; i < 70; i++) await Promise.resolve(); };
-const oldAudio = globalThis.AudioContext, oldFetch = globalThis.fetch;
+const oldAudio = globalThis.AudioContext, oldFetch = globalThis.fetch, oldOffline = globalThis.OfflineAudioContext;
 function install({ delayed = false, fail = false } = {}) {
   const reads = [], pending = [];
-  globalThis.AudioContext = SoundContext;
+  globalThis.AudioContext = SoundContext; globalThis.OfflineAudioContext = OfflineSoundContext;
   globalThis.fetch = url => {
     reads.push(url);
     const response = { ok: !fail, status: fail ? 503 : 200, arrayBuffer: async () => new TextEncoder().encode(url).buffer };
@@ -23,7 +23,7 @@ function install({ delayed = false, fail = false } = {}) {
   };
   return { reads, pending, resolve() { for (const finish of pending.splice(0)) finish(); } };
 }
-const cleanup = () => { globalThis.AudioContext = oldAudio; globalThis.fetch = oldFetch; SoundContext.rejectResume = false; };
+const cleanup = () => { globalThis.AudioContext = oldAudio; globalThis.OfflineAudioContext = oldOffline; globalThis.fetch = oldFetch; SoundContext.rejectResume = false; };
 const game = () => ({ player: { x: 0, z: 100, y: 3, grounded: true, moving: true, weaponType: 'sword' }, enemies: [], lit: ['haven'] });
 
 test('gesture unlock, actual graph buses, synchronized score, bounded sources, and complete suspend/resume/dispose', async () => {
@@ -34,7 +34,8 @@ test('gesture unlock, actual graph buses, synchronized score, bounded sources, a
     assert.equal(audio.status, 'running'); assert.equal(audio.score.size, 3);
     assert.equal(audio.voices.size, 6, 'three stems and three atmospheric loops');
     assert.equal(audio.ctx.sampleRate, 48000, 'mock models device override / resampling');
-    for (const key of ['score:harmony', 'score:motif', 'score:pulse', 'foley']) assert.equal(audio.assetBuffers.get(key)?.sampleRate, 22050, `compact residency ${key}`);
+    for (const [key, rate] of [['harmony', 44100], ['motif', 22050], ['pulse', 44100]]) assert.equal(audio.scoreBuffers.get('score:' + key)?.sampleRate, rate);
+    assert.equal(audio.assetBuffers.get('foley')?.sampleRate, 22050);
     assert([...audio.assetBuffers.values()].reduce((n, b) => n + b.length * b.numberOfChannels * 4, 0) < 24 * 1024 * 1024);
     const score = [...audio.score.values()];
     assert.equal(new Set(score.map(node => node.source.started[0][0])).size, 1, 'stem start timestamp aligned');

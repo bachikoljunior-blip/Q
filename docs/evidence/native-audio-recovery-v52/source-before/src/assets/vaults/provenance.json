@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "generator": "scripts/generate-vault-assets.mjs",
+  "generatorSha256": "510e879ff8b04acc587aa564dd87f03f68f129e20b0f66fc40699bc57a5fe506",
+  "origin": "Repository-native deterministic synthesis from mathematical waveforms and pixel functions",
+  "assets": [
+    {
+      "file": "ember-ambient.wav",
+      "kind": "looping-ambient-audio",
+      "slice": "ember",
+      "bytes": 176444,
+      "sha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "ember-stone.png",
+      "kind": "tileable-raster-texture",
+      "slice": "ember",
+      "bytes": 16849,
+      "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "gale-ambient.wav",
+      "kind": "looping-ambient-audio",
+      "slice": "gale",
+      "bytes": 176444,
+      "sha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "gale-stone.png",
+      "kind": "tileable-raster-texture",
+      "slice": "gale",
+      "bytes": 17052,
+      "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "moss-ambient.wav",
+      "kind": "looping-ambient-audio",
+      "slice": "moss",
+      "bytes": 176444,
+      "sha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "moss-stone.png",
+      "kind": "tileable-raster-texture",
+      "slice": "moss",
+      "bytes": 17328,
+      "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "shared-alert.wav",
+      "kind": "one-shot-sfx",
+      "slice": "shared",
+      "bytes": 21212,
+      "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "shared-claim.wav",
+      "kind": "one-shot-sfx",
+      "slice": "shared",
+      "bytes": 39734,
+      "sha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "shared-impact.wav",
+      "kind": "one-shot-sfx",
+      "slice": "shared",
+      "bytes": 7982,
+      "sha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "shared-seal.wav",
+      "kind": "one-shot-sfx",
+      "slice": "shared",
+      "bytes": 30914,
+      "sha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "shared-step.wav",
+      "kind": "one-shot-sfx",
+      "slice": "shared",
+      "bytes": 7100,
+      "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "shared-swing.wav",
+      "kind": "one-shot-sfx",
+      "slice": "shared",
+      "bytes": 10628,
+      "sha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "tide-ambient.wav",
+      "kind": "looping-ambient-audio",
+      "slice": "tide",
+      "bytes": 176444,
+      "sha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    },
+    {
+      "file": "tide-stone.png",
+      "kind": "tileable-raster-texture",
+      "slice": "tide",
+      "bytes": 17270,
+      "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567",
+      "generator": "scripts/generate-vault-assets.mjs",
+      "license": "Project-original deterministic procedural asset; no third-party source material"
+    }
+  ]
+}

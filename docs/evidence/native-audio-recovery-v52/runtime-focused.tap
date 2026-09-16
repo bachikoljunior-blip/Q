@@ -1,0 +1,21 @@
+✔ native output shares three source-rate score buffers outside FX FIFO and preserves phase and mix (30.080214ms)
+✔ unavailable Offline decoder falls back to device rates without application decimation (1.943147ms)
+✔ detached failing Offline input preserves original bytes and deduplicates pending decode (1.378468ms)
+✔ constructor rejection and changed contexts cannot refill stale cache (1.68206ms)
+✔ pause/resume while score decoding shares loads and never starts old generations (20.728089ms)
+✔ late failed Offline completion after dispose cannot native-decode or repopulate (0.914353ms)
+✔ dispose rejects restart before native suspend resolves and releases active references (16.006638ms)
+✔ gesture unlock, actual graph buses, synchronized score, bounded sources, and complete suspend/resume/dispose (33.932148ms)
+✔ music preference and mute affect active graph immediately; pause during decode cannot resurrect loops (61.568217ms)
+✔ material footsteps follow distance, detect water/bridges/vault, and preserve weapon / position variation (9.373491ms)
+✔ resume rejection / unavailable Web Audio stay silent, decode failure produces bounded fallback and vault retries (48.817097ms)
+✔ late file one-shot is cancelled across suspension, loop ABA sources stay independent, decoded cache stays bounded (7.572686ms)
+✔ file audio bank fetches, decodes, connects and starts every ambient and six SFX (5.303251ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 401.368167

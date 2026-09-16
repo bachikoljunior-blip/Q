@@ -4,6 +4,10 @@ from pathlib import Path
 import numpy as np
 import subprocess,json,tempfile,wave,hashlib
 ROOT=Path(__file__).resolve().parent.parent; BASE=ROOT/'src/assets/soundscape'; OUT=ROOT/'docs/evidence'
+if json.loads((BASE/'provenance.json').read_text()).get('nativeDelivery'):
+    import runpy
+    runpy.run_path(str(ROOT/'scripts/verify-native-score.py'),run_name='__main__')
+    raise SystemExit(0)
 manifest=json.loads((BASE/'provenance.json').read_text()); sr=22050; stems={}; result=[]
 for asset in manifest['assets']:
     channels=asset['channels']; raw=subprocess.check_output(['ffmpeg','-v','error','-i',str(BASE/asset['file']),'-f','f32le','-acodec','pcm_f32le','-ar',str(sr),'-ac',str(channels),'-'])

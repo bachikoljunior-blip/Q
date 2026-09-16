@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
+import { SCORE_SAMPLE_RATES } from '../src/file-audio-bank.js';
 const root = new URL('../', import.meta.url), base = new URL('src/assets/soundscape/', root);
 const hash = data => createHash('sha256').update(data).digest('hex');
 const manifest = JSON.parse(await readFile(new URL('provenance.json', base), 'utf8'));
@@ -21,6 +22,17 @@ assert(sampled, 'recorded instrument provenance is required');
   for(const [name,digest] of Object.entries(sampled.mappings))assert.equal(hash(await readFile(new URL(name,source))),digest,'official pitch mapping '+name);
 }
 
+if (manifest.nativeDelivery) {
+  const policy = manifest.nativeDelivery;
+  const bytes = await readFile(new URL(policy.baselineProvenance, root));
+  assert.equal(hash(bytes), policy.baselineSha256);
+  const old = JSON.parse(bytes);
+  for (const [file, digest] of [[policy.legacyGenerator, policy.legacyGeneratorSha256], [policy.legacyRenderer, policy.legacyRendererSha256]]) assert.equal(hash(await readFile(new URL(file, root))), digest);
+  for (const name of policy.unchanged) assert.equal(hash(await readFile(new URL(name, base))), name === 'cues.json' ? old.cuesSha256 : old.assets.find(a => a.file === name).sha256);
+  for (const field of ['notes', 'pulseEvents', 'chords']) assert.deepEqual(sampled.performance[field], old.sampledPerformance.performance[field]);
+  assert.deepEqual(policy.scoreRates, {harmony:44100,motif:22050,pulse:44100});
+}
+
 assert.equal(hash(await readFile(new URL(manifest.generator, root))), manifest.generatorSha256, 'audio generator fingerprint');
 assert.equal(hash(cuesBytes), manifest.cuesSha256, 'cue bounds fingerprint');
 assert.deepEqual(manifest.assets.map(asset => asset.file).sort(), ['pilgrim-foley.wav', 'pilgrim-harmony.mp3', 'pilgrim-motif.mp3', 'pilgrim-pulse.mp3']);
@@ -28,7 +40,8 @@ let total = 0;
 for (const asset of manifest.assets) {
   const data = await readFile(new URL(asset.file, base)); total += data.length;
   assert.equal(data.length, asset.bytes, `size ${asset.file}`); assert.equal(hash(data), asset.sha256, `SHA-256 ${asset.file}`);
-  assert.equal(asset.sampleRate, 22050); assert(asset.pcmPeak > 0 && asset.pcmPeak < .9); assert(asset.pcmRms > .01);
+  const scoreKey = 'score:' + asset.file.replace('pilgrim-', '').replace('.mp3', '');
+  assert.equal(asset.sampleRate, manifest.nativeDelivery ? SCORE_SAMPLE_RATES[scoreKey] || 22050 : 22050); assert(asset.pcmPeak > 0 && asset.pcmPeak < .9); assert(asset.pcmRms > .01);
   if (asset.file.endsWith('.wav')) {
     assert.equal(data.toString('ascii', 0, 4), 'RIFF'); assert.equal(data.toString('ascii', 8, 12), 'WAVE');
     assert.equal(data.readUInt16LE(20), 1); assert.equal(data.readUInt16LE(22), 1); assert.equal(data.readUInt32LE(24), 22050); assert.equal(data.readUInt16LE(34), 16);
@@ -41,5 +54,5 @@ for (const asset of manifest.assets) {
     assert.equal(asset.durationSeconds, 48); assert(data.toString('ascii', 0, 3) === 'ID3' || (data[0] === 255 && (data[1] & 224) === 224), 'MP3 header');
   }
 }
-assert.equal(Object.keys(cues).length, 24); assert.equal(total, manifest.totalBytes); assert(total < 1600000, 'mobile encoded audio payload budget');
+assert.equal(Object.keys(cues).length, 24); assert.equal(total, manifest.totalBytes); assert(total < (manifest.nativeDelivery ? 3000000 : 1600000), 'encoded soundscape regression budget, not a service limit');
 console.log(JSON.stringify({ passed: true, scope: 'Committed asset hashes, source provenance, WAV header, cue bounds and encoded payload; not decoded media or heard device audio', files: manifest.assets.length, cues: Object.keys(cues).length, bytes: total }));

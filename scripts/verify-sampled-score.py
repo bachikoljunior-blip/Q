@@ -8,6 +8,10 @@ import numpy as np
 
 ROOT=Path(__file__).resolve().parent.parent
 BASE=ROOT/'src/assets/soundscape';OUT=ROOT/'docs/evidence/sampled-score-v27'
+if json.loads((BASE/'provenance.json').read_text()).get('nativeDelivery'):
+    import runpy
+    runpy.run_path(str(ROOT/'scripts/verify-native-score.py'),run_name='__main__')
+    raise SystemExit(0)
 SR=22050;FRAMES=48*SR
 hash_file=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 

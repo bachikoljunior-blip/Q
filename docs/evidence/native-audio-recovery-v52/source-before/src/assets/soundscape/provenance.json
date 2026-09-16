@@ -1,0 +1,941 @@
+{
+  "schemaVersion": 1,
+  "title": "Pilgrim / The Fire Remembers",
+  "origin": "Original project-authored 48-second composition with recorded CC0 cello/viola sections, bass drum and tubular bells from VSCO 2 CE. Offline sample performance; the original synthesized motif, quiet pulse underlay and 24 synthesized foley cues remain. Not a live orchestral performance or generated voice.",
+  "license": "Original composition and synthesis created for Q; incorporated VSCO 2 CE recordings are CC0-1.0. Source recordings, official mappings, license and verified hashes are preserved in assets-source/soundscape-vsco. This provenance is not an independent legal authorship determination.",
+  "generator": "scripts/generate-soundscape.py",
+  "generatorSha256": "d181441e84c06313537575bffaf1cfbf430a8a23ee2023e980bc5543fffe94d3",
+  "recipe": {
+    "seed": "0x51415348",
+    "tempoBpm": 80,
+    "bars": 16,
+    "meter": "4/4",
+    "key": "D minor with added ninths",
+    "stemLoopSeconds": 48,
+    "synthesis": "recorded bowed cello/viola phrases, measured stereo sustain crossfades and natural releases, original modal motif/arpeggios, sampled low/metal percussion over restrained synthesized pulse, circular early reflections",
+    "encoder": "ffmpeg libmp3lame; MP3 stereo 48k / mono 32k; mono PCM16 foley"
+  },
+  "assets": [
+    {
+      "file": "pilgrim-harmony.mp3",
+      "durationSeconds": 48,
+      "channels": 2,
+      "sampleRate": 22050,
+      "pcmPeak": 0.6692097792616192,
+      "pcmRms": 0.13499033917532377,
+      "purpose": "pilgrim-harmony",
+      "bytes": 288594,
+      "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0"
+    },
+    {
+      "file": "pilgrim-motif.mp3",
+      "durationSeconds": 48,
+      "channels": 1,
+      "sampleRate": 22050,
+      "pcmPeak": 0.78,
+      "pcmRms": 0.1419265563450547,
+      "purpose": "pilgrim-motif",
+      "bytes": 192463,
+      "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4"
+    },
+    {
+      "file": "pilgrim-pulse.mp3",
+      "durationSeconds": 48,
+      "channels": 1,
+      "sampleRate": 22050,
+      "pcmPeak": 0.76,
+      "pcmRms": 0.05634956420064149,
+      "purpose": "pilgrim-pulse",
+      "bytes": 192463,
+      "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13"
+    },
+    {
+      "file": "pilgrim-foley.wav",
+      "durationSeconds": 18.737551020408162,
+      "channels": 1,
+      "sampleRate": 22050,
+      "pcmPeak": 0.82,
+      "pcmRms": 0.09203769598162127,
+      "purpose": "24 original synthesized foley / signature cues",
+      "bytes": 826370,
+      "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+    }
+  ],
+  "cuesSha256": "da729e0c95ef506d2ca32dfba5691910afb51ec24519ffa978f108eacaf6e280",
+  "totalBytes": 1499890,
+  "sampledPerformance": {
+    "manifest": "assets-source/soundscape-vsco/manifest.json",
+    "manifestSha256": "8f858022a2491e7bfe0352999514be8663673afe365056f297e0c59962184dbd",
+    "renderer": "scripts/sampled_score.py",
+    "rendererSha256": "61ab9b6a015dc2da77e65ae8ec152c0b2b2f27464e399ee5bfb3b7ac07110c4b",
+    "mappings": {
+      "CelloEnsSusVib-Quiet.sfz": "387a04fda4b56f2ddda0f402cb7093e092c3ae97edbbae1263eebbcce9ac5821",
+      "ViolaEnsSusVib-Quiet.sfz": "99ca4342aa259202d7fcaabf412ec48ac3a1feef21b988885c3d2de383f8585c",
+      "TubularBells.sfz": "cde6e3ca00d3a0597f0c3caeba4912221953deb5ca19801aef790ed0efac6923"
+    },
+    "license": "CC0-1.0",
+    "publisher": "Versilian Studios / Sam Gossner; recordings with Simon Dalzell",
+    "publisherUrl": "https://versilian-studios.com/vsco-community/",
+    "performance": {
+      "schemaVersion": 1,
+      "sampleRate": 22050,
+      "seconds": 48,
+      "chords": [
+        [
+          50,
+          57,
+          60,
+          64,
+          69
+        ],
+        [
+          46,
+          53,
+          57,
+          60,
+          65
+        ],
+        [
+          41,
+          53,
+          57,
+          60,
+          67
+        ],
+        [
+          45,
+          52,
+          55,
+          62,
+          64
+        ]
+      ],
+      "recordings": [
+        {
+          "path": "Strings/Cello Section/susvib/susvib_E1_v1_2.wav",
+          "onset": 2313,
+          "end": 191749,
+          "release": 168597,
+          "loopStart": 31420,
+          "loopEnd": 118710,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.7775331464918664,
+          "analysisRate": 22050
+        },
+        {
+          "path": "Strings/Cello Section/susvib/susvib_B1_v1_1.wav",
+          "onset": 3415,
+          "end": 187341,
+          "release": 164189,
+          "loopStart": 42226,
+          "loopEnd": 97924,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.6586935503172342,
+          "analysisRate": 22050
+        },
+        {
+          "path": "Strings/Cello Section/susvib/susvib_D2_v1_1.wav",
+          "onset": 2313,
+          "end": 185137,
+          "release": 161985,
+          "loopStart": 33846,
+          "loopEnd": 125550,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.744533683327111,
+          "analysisRate": 22050
+        },
+        {
+          "path": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+          "onset": 3415,
+          "end": 170811,
+          "release": 147659,
+          "loopStart": 34948,
+          "loopEnd": 119128,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.6220112621902614,
+          "analysisRate": 22050
+        },
+        {
+          "path": "Strings/Cello Section/susvib/susvib_A2_v1_1.wav",
+          "onset": 1211,
+          "end": 180729,
+          "release": 157577,
+          "loopStart": 37596,
+          "loopEnd": 93668,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.7021585582700497,
+          "analysisRate": 22050
+        },
+        {
+          "path": "Strings/Viola Section/susvib/ViolaEns_susvib_G2_v1_1.wav",
+          "onset": 6721,
+          "end": 161995,
+          "release": 138843,
+          "loopStart": 30976,
+          "loopEnd": 128590,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.45288296251628785,
+          "analysisRate": 22050
+        },
+        {
+          "path": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+          "onset": 1211,
+          "end": 232523,
+          "release": 209371,
+          "loopStart": 32744,
+          "loopEnd": 94352,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.7078831570879085,
+          "analysisRate": 22050
+        },
+        {
+          "path": "Strings/Viola Section/susvib/ViolaEns_susvib_D3_v1_1.wav",
+          "onset": 8925,
+          "end": 224809,
+          "release": 201657,
+          "loopStart": 40458,
+          "loopEnd": 105486,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.7111415136285065,
+          "analysisRate": 22050
+        },
+        {
+          "path": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
+          "onset": 4517,
+          "end": 200565,
+          "release": 177413,
+          "loopStart": 40902,
+          "loopEnd": 120914,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.6411943137241514,
+          "analysisRate": 22050
+        },
+        {
+          "path": "Strings/Viola Section/susvib/ViolaEns_susvib_A3_v1_1.wav",
+          "onset": 2313,
+          "end": 204973,
+          "release": 181821,
+          "loopStart": 38698,
+          "loopEnd": 103662,
+          "crossfade": 4851,
+          "stereoJoinCorrelation": 0.8582483969028237,
+          "analysisRate": 22050
+        }
+      ],
+      "notes": [
+        {
+          "section": 0,
+          "voice": 0,
+          "midi": 50,
+          "at": -1,
+          "seconds": 14,
+          "source": "Strings/Cello Section/susvib/susvib_D2_v1_1.wav",
+          "root": 50,
+          "pan": -0.28,
+          "gain": 0.84,
+          "internalCrossfadesSeconds": [
+            5.368979591836735,
+            9.307891156462585
+          ]
+        },
+        {
+          "section": 0,
+          "voice": 1,
+          "midi": 57,
+          "at": -1,
+          "seconds": 14,
+          "source": "Strings/Cello Section/susvib/susvib_A2_v1_1.wav",
+          "root": 57,
+          "pan": -0.16,
+          "gain": 0.63,
+          "internalCrossfadesSeconds": [
+            3.973061224489796,
+            6.296009070294785,
+            8.618956916099773,
+            10.941904761904762
+          ]
+        },
+        {
+          "section": 0,
+          "voice": 2,
+          "midi": 60,
+          "at": -1,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+          "root": 59,
+          "pan": 0.2,
+          "gain": 0.61,
+          "internalCrossfadesSeconds": [
+            3.7793197278911563,
+            6.208843537414966,
+            8.638367346938775,
+            11.067891156462585
+          ]
+        },
+        {
+          "section": 0,
+          "voice": 3,
+          "midi": 64,
+          "at": -1,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
+          "root": 65,
+          "pan": 0.37,
+          "gain": 0.56,
+          "internalCrossfadesSeconds": [
+            5.359591836734694,
+            8.970975056689342
+          ]
+        },
+        {
+          "section": 0,
+          "voice": 4,
+          "midi": 69,
+          "at": -1,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_A3_v1_1.wav",
+          "root": 69,
+          "pan": 0.46,
+          "gain": 0.5,
+          "internalCrossfadesSeconds": [
+            4.3763265306122445,
+            7.102539682539683,
+            9.828752834467121
+          ]
+        },
+        {
+          "section": 1,
+          "voice": 0,
+          "midi": 46,
+          "at": 11,
+          "seconds": 14,
+          "source": "Strings/Cello Section/susvib/susvib_B1_v1_1.wav",
+          "root": 47,
+          "pan": -0.28,
+          "gain": 0.84,
+          "internalCrossfadesSeconds": [
+            4.307936507936508,
+            6.751065759637188,
+            9.194195011337868,
+            11.637324263038549
+          ]
+        },
+        {
+          "section": 1,
+          "voice": 1,
+          "midi": 53,
+          "at": 11,
+          "seconds": 14,
+          "source": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+          "root": 53,
+          "pan": -0.16,
+          "gain": 0.63,
+          "internalCrossfadesSeconds": [
+            5.027755102040817,
+            8.625442176870749
+          ]
+        },
+        {
+          "section": 1,
+          "voice": 2,
+          "midi": 57,
+          "at": 11,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+          "root": 59,
+          "pan": 0.2,
+          "gain": 0.61,
+          "internalCrossfadesSeconds": [
+            4.4944671201814055,
+            7.383718820861678,
+            10.27297052154195
+          ]
+        },
+        {
+          "section": 1,
+          "voice": 3,
+          "midi": 60,
+          "at": 11,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+          "root": 59,
+          "pan": 0.37,
+          "gain": 0.56,
+          "internalCrossfadesSeconds": [
+            3.7793197278911563,
+            6.208843537414966,
+            8.638367346938775,
+            11.067891156462585
+          ]
+        },
+        {
+          "section": 1,
+          "voice": 4,
+          "midi": 65,
+          "at": 11,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
+          "root": 65,
+          "pan": 0.46,
+          "gain": 0.5,
+          "internalCrossfadesSeconds": [
+            5.0587755102040814,
+            8.467437641723356,
+            11.87609977324263
+          ]
+        },
+        {
+          "section": 2,
+          "voice": 0,
+          "midi": 41,
+          "at": 23,
+          "seconds": 14,
+          "source": "Strings/Cello Section/susvib/susvib_E1_v1_2.wav",
+          "root": 40,
+          "pan": -0.28,
+          "gain": 0.84,
+          "internalCrossfadesSeconds": [
+            4.774829931972789,
+            8.303673469387755,
+            11.832517006802721
+          ]
+        },
+        {
+          "section": 2,
+          "voice": 1,
+          "midi": 53,
+          "at": 23,
+          "seconds": 14,
+          "source": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+          "root": 53,
+          "pan": -0.16,
+          "gain": 0.63,
+          "internalCrossfadesSeconds": [
+            5.027755102040817,
+            8.625442176870749
+          ]
+        },
+        {
+          "section": 2,
+          "voice": 2,
+          "midi": 57,
+          "at": 23,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+          "root": 59,
+          "pan": 0.2,
+          "gain": 0.61,
+          "internalCrossfadesSeconds": [
+            4.4944671201814055,
+            7.383718820861678,
+            10.27297052154195
+          ]
+        },
+        {
+          "section": 2,
+          "voice": 3,
+          "midi": 60,
+          "at": 23,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_B2_v1_1.wav",
+          "root": 59,
+          "pan": 0.37,
+          "gain": 0.56,
+          "internalCrossfadesSeconds": [
+            3.7793197278911563,
+            6.208843537414966,
+            8.638367346938775,
+            11.067891156462585
+          ]
+        },
+        {
+          "section": 2,
+          "voice": 4,
+          "midi": 67,
+          "at": 23,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_A3_v1_1.wav",
+          "root": 69,
+          "pan": 0.46,
+          "gain": 0.5,
+          "internalCrossfadesSeconds": [
+            4.912290249433107,
+            7.972380952380952,
+            11.032471655328798
+          ]
+        },
+        {
+          "section": 3,
+          "voice": 0,
+          "midi": 45,
+          "at": 35,
+          "seconds": 14,
+          "source": "Strings/Cello Section/susvib/susvib_B1_v1_1.wav",
+          "root": 47,
+          "pan": -0.28,
+          "gain": 0.84,
+          "internalCrossfadesSeconds": [
+            4.564081632653061,
+            7.152471655328799,
+            9.740861678004535
+          ]
+        },
+        {
+          "section": 3,
+          "voice": 1,
+          "midi": 52,
+          "at": 35,
+          "seconds": 14,
+          "source": "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+          "root": 53,
+          "pan": -0.16,
+          "gain": 0.63,
+          "internalCrossfadesSeconds": [
+            5.326757369614512,
+            9.138412698412699
+          ]
+        },
+        {
+          "section": 3,
+          "voice": 2,
+          "midi": 55,
+          "at": 35,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_G2_v1_1.wav",
+          "root": 55,
+          "pan": 0.2,
+          "gain": 0.61,
+          "internalCrossfadesSeconds": [
+            5.306938775510204,
+            9.513877551020409
+          ]
+        },
+        {
+          "section": 3,
+          "voice": 3,
+          "midi": 62,
+          "at": 35,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_D3_v1_1.wav",
+          "root": 62,
+          "pan": 0.37,
+          "gain": 0.56,
+          "internalCrossfadesSeconds": [
+            4.159183673469387,
+            6.888299319727891,
+            9.617414965986395
+          ]
+        },
+        {
+          "section": 3,
+          "voice": 4,
+          "midi": 64,
+          "at": 35,
+          "seconds": 14,
+          "source": "Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav",
+          "root": 65,
+          "pan": 0.46,
+          "gain": 0.5,
+          "internalCrossfadesSeconds": [
+            5.359591836734694,
+            8.970975056689342
+          ]
+        }
+      ],
+      "pulseEvents": [
+        {
+          "at": 0.0,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.72
+        },
+        {
+          "at": 1.5,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 2.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 3.0,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.72
+        },
+        {
+          "at": 4.5,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 4.875,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 5.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 6.0,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.72
+        },
+        {
+          "at": 7.5,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 8.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 9.0,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.72
+        },
+        {
+          "at": 10.5,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 10.875,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 11.25,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 11.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 12.0,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.72
+        },
+        {
+          "at": 13.5,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 14.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 15.0,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.72
+        },
+        {
+          "at": 16.5,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 16.875,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 17.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 18.0,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.72
+        },
+        {
+          "at": 19.5,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 20.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 21.0,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.72
+        },
+        {
+          "at": 22.5,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 22.875,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 23.25,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 23.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 24.0,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.72
+        },
+        {
+          "at": 25.5,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 26.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 27.0,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.72
+        },
+        {
+          "at": 28.5,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 28.875,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 29.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 30.0,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.72
+        },
+        {
+          "at": 31.5,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 32.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 33.0,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.72
+        },
+        {
+          "at": 34.5,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 34.875,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 35.25,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 35.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 36.0,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.72
+        },
+        {
+          "at": 37.5,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 38.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 39.0,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.72
+        },
+        {
+          "at": 40.5,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 40.875,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 41.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 42.0,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.72
+        },
+        {
+          "at": 43.5,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 44.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 45.0,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.72
+        },
+        {
+          "at": 46.5,
+          "kind": "bass-drum",
+          "roundRobin": 1,
+          "gain": 0.39
+        },
+        {
+          "at": 46.875,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        },
+        {
+          "at": 47.25,
+          "kind": "bass-drum",
+          "roundRobin": 2,
+          "gain": 0.39
+        },
+        {
+          "at": 47.625,
+          "kind": "tubular-bell",
+          "midi": 62,
+          "root": 60,
+          "gain": 0.035
+        }
+      ],
+      "heard": false,
+      "method": "Recorded stereo attacks, correlation-selected bowed sustain crossfades, original releases, circular placement/reflections"
+    }
+  },
+  "toolchain": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+    "reproducibility": "Exact-byte regeneration is checked on the recorded toolchain only. Cross-host validation checks committed hash, sizes, bounds and source provenance; it does not promise cross-version MP3 identity."
+  }
+}

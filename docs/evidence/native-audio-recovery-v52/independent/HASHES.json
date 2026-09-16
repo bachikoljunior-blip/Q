@@ -1,0 +1,71 @@
+{
+  "at": "2026-09-16T08:55:45.158912+00:00",
+  "files": {
+    "REVIEW.md": {
+      "bytes": 8112,
+      "sha256": "bfa98ac713816270e82c13928977339cd72e6e0c826986a4fae71d2ebc975a3d"
+    },
+    "REVIEW_PLAN.md": {
+      "bytes": 2599,
+      "sha256": "bad1f359147d5f67600d22653ad0394741a11cd87908f8c7850831c1115c850b"
+    },
+    "base-media.json": {
+      "bytes": 7086,
+      "sha256": "a6362108441a4ba886597fd467384f45bcc73907bb95d77e0453bf2ae2bd92a6"
+    },
+    "baseline-inventory.json": {
+      "bytes": 4980,
+      "sha256": "9cc19694121d068ffd9fc17fb48a67594a3e5e114ea2fd780559a96f9771e8e4"
+    },
+    "candidate-media.json": {
+      "bytes": 7085,
+      "sha256": "bed30ac0150590dd78f7dc8b414d5d77ff70486babc4508c0bfba7d2db4b23e1"
+    },
+    "final-runtime.json": {
+      "bytes": 7253,
+      "sha256": "01fefc92cb7e09e8196bd1f8ee631a92b05f146e896950361a60a2a648383e8c"
+    },
+    "final-runtime.log": {
+      "bytes": 7254,
+      "sha256": "c9c0594eed5f17ead2909cbaedebfbf26aacfc791ad735f7f70055c179ba574b"
+    },
+    "finalize.py": {
+      "bytes": 5114,
+      "sha256": "44d44ac48509fd23cb75a9464545b5a68cc9f3f38fa1be4a8170618c1b63f314"
+    },
+    "inspect-media.py": {
+      "bytes": 1536,
+      "sha256": "9f625db49bd9378e96d4840f63d036873bb8469496198fa69cac08970ffe79db"
+    },
+    "nonseekable-fixture-base-media.json": {
+      "bytes": 7040,
+      "sha256": "b90e262e6392addd8d17e8c2f54eb0c29da09e0a67fd58f22768d66525691d0c"
+    },
+    "nonseekable-fixture-runtime-before-media.json": {
+      "bytes": 7256,
+      "sha256": "810ec885fd0e8720f3d3fd170dc2cd94bba7a533d836897dd5a3529bb7547227"
+    },
+    "nonseekable-fixture-runtime-before-media.log": {
+      "bytes": 7257,
+      "sha256": "561b7d2db3b80bf0a570db4a42da99b45839ec2b3fcf46aad24be8768815cbd0"
+    },
+    "runtime-before-media.json": {
+      "bytes": 7256,
+      "sha256": "601c31c7a0b390f386696a82eb936b938f053ebbe9c3653e058bb3062b977e8c"
+    },
+    "runtime-before-media.log": {
+      "bytes": 7257,
+      "sha256": "e9a894aee2f22f9ab4fea3ddd12d54372f0e740393a3eed0f490fc6307367cb5"
+    },
+    "runtime-oracle.mjs": {
+      "bytes": 13166,
+      "sha256": "ef685a0a20e7a1d20ddb09d25cb089156f072b0ef9359f01d718bfdb3d359061"
+    },
+    "summary.json": {
+      "bytes": 2678,
+      "sha256": "708db3274836298bb9b330c9c8bb7435020b6ce28ee6d92ddce93ed661ea3d85"
+    }
+  },
+  "noRepositoryWrites": true,
+  "sessionsPending": false
+}

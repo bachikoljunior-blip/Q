@@ -1,0 +1,1342 @@
+{
+  "passed": true,
+  "base": "fa920db9782b7df42e4e16099a05994e5841dbaa",
+  "boundary": "Production Soundscape/functions and actual source bytes; Web Audio/fetch are explicit doubles. Logical unique Float32 payload, not device heap/native decoder CPU, native-node acquired copies or listening.",
+  "cases": [
+    {
+      "before": true,
+      "rate": 48000,
+      "offline": true,
+      "requestedContext": {
+        "sampleRate": 22050
+      },
+      "fetches": [
+        "pilgrim-harmony.mp3",
+        "pilgrim-foley.wav",
+        "pilgrim-motif.mp3",
+        "pilgrim-pulse.mp3",
+        "ember-ambient.wav",
+        "gale-ambient.wav",
+        "moss-ambient.wav",
+        "shared-alert.wav",
+        "shared-claim.wav",
+        "shared-impact.wav",
+        "shared-seal.wav",
+        "shared-step.wav",
+        "shared-swing.wav",
+        "tide-ambient.wav"
+      ],
+      "decodes": [
+        {
+          "name": "pilgrim-harmony.mp3",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 288594,
+          "float32Bytes": 8467200
+        },
+        {
+          "name": "pilgrim-foley.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 826370,
+          "float32Bytes": 1652652
+        },
+        {
+          "name": "pilgrim-motif.mp3",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 192463,
+          "float32Bytes": 4233600
+        },
+        {
+          "name": "pilgrim-pulse.mp3",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 192463,
+          "float32Bytes": 4233600
+        },
+        {
+          "name": "ember-ambient.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        },
+        {
+          "name": "gale-ambient.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        },
+        {
+          "name": "moss-ambient.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        },
+        {
+          "name": "shared-alert.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 21212,
+          "float32Bytes": 42336
+        },
+        {
+          "name": "shared-claim.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 39734,
+          "float32Bytes": 79380
+        },
+        {
+          "name": "shared-impact.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 7982,
+          "float32Bytes": 15876
+        },
+        {
+          "name": "shared-seal.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 30914,
+          "float32Bytes": 61740
+        },
+        {
+          "name": "shared-step.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 7100,
+          "float32Bytes": 14112
+        },
+        {
+          "name": "shared-swing.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 10628,
+          "float32Bytes": 21168
+        },
+        {
+          "name": "tide-ambient.wav",
+          "where": "live",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        }
+      ],
+      "snapshots": [
+        {
+          "label": "gesture",
+          "scoreKeys": [],
+          "cacheKeys": [
+            "score:harmony",
+            "foley",
+            "score:motif",
+            "score:pulse"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            22050,
+            22050,
+            22050
+          ],
+          "scoreBankBytes": 0,
+          "fxOrLegacyCacheBytes": 18587052,
+          "activeUniqueBytes": 17199000,
+          "generatedBytes": 502744,
+          "uniqueAccountedBytes": 19089796,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "all 14 files",
+          "scoreKeys": [],
+          "cacheKeys": [
+            "score:harmony",
+            "foley",
+            "score:motif",
+            "score:pulse",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            22050,
+            22050,
+            22050
+          ],
+          "scoreBankBytes": 0,
+          "fxOrLegacyCacheBytes": 20232864,
+          "activeUniqueBytes": 17199000,
+          "generatedBytes": 502744,
+          "uniqueAccountedBytes": 20735608,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "suspend",
+          "scoreKeys": [],
+          "cacheKeys": [
+            "score:harmony",
+            "foley",
+            "score:motif",
+            "score:pulse",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 0,
+          "fxOrLegacyCacheBytes": 20232864,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 502744,
+          "uniqueAccountedBytes": 20735608,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "resume",
+          "scoreKeys": [],
+          "cacheKeys": [
+            "score:harmony",
+            "foley",
+            "score:motif",
+            "score:pulse",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            22050,
+            22050,
+            22050
+          ],
+          "scoreBankBytes": 0,
+          "fxOrLegacyCacheBytes": 20232864,
+          "activeUniqueBytes": 17199000,
+          "generatedBytes": 502744,
+          "uniqueAccountedBytes": 20735608,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "dispose",
+          "scoreKeys": [],
+          "cacheKeys": [],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 0,
+          "fxOrLegacyCacheBytes": 0,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 238144,
+          "uniqueAccountedBytes": 238144,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        }
+      ]
+    },
+    {
+      "before": false,
+      "rate": 48000,
+      "offline": true,
+      "requestedContext": null,
+      "fetches": [
+        "pilgrim-harmony.mp3",
+        "pilgrim-foley.wav",
+        "pilgrim-motif.mp3",
+        "pilgrim-pulse.mp3",
+        "ember-ambient.wav",
+        "gale-ambient.wav",
+        "moss-ambient.wav",
+        "shared-alert.wav",
+        "shared-claim.wav",
+        "shared-impact.wav",
+        "shared-seal.wav",
+        "shared-step.wav",
+        "shared-swing.wav",
+        "tide-ambient.wav"
+      ],
+      "decodes": [
+        {
+          "name": "pilgrim-harmony.mp3",
+          "where": "offline",
+          "rate": 44100,
+          "inputBytes": 961326,
+          "float32Bytes": 16934400
+        },
+        {
+          "name": "pilgrim-foley.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 826370,
+          "float32Bytes": 1652652
+        },
+        {
+          "name": "pilgrim-motif.mp3",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 192463,
+          "float32Bytes": 4233600
+        },
+        {
+          "name": "pilgrim-pulse.mp3",
+          "where": "offline",
+          "rate": 44100,
+          "inputBytes": 961326,
+          "float32Bytes": 16934400
+        },
+        {
+          "name": "ember-ambient.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        },
+        {
+          "name": "gale-ambient.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        },
+        {
+          "name": "moss-ambient.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        },
+        {
+          "name": "shared-alert.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 21212,
+          "float32Bytes": 42336
+        },
+        {
+          "name": "shared-claim.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 39734,
+          "float32Bytes": 79380
+        },
+        {
+          "name": "shared-impact.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 7982,
+          "float32Bytes": 15876
+        },
+        {
+          "name": "shared-seal.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 30914,
+          "float32Bytes": 61740
+        },
+        {
+          "name": "shared-step.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 7100,
+          "float32Bytes": 14112
+        },
+        {
+          "name": "shared-swing.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 10628,
+          "float32Bytes": 21168
+        },
+        {
+          "name": "tide-ambient.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        }
+      ],
+      "snapshots": [
+        {
+          "label": "gesture",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            44100,
+            22050,
+            44100
+          ],
+          "scoreBankBytes": 38102400,
+          "fxOrLegacyCacheBytes": 1652652,
+          "activeUniqueBytes": 38678400,
+          "generatedBytes": 1094400,
+          "uniqueAccountedBytes": 40849452,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "all 14 files",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            44100,
+            22050,
+            44100
+          ],
+          "scoreBankBytes": 38102400,
+          "fxOrLegacyCacheBytes": 3298464,
+          "activeUniqueBytes": 38678400,
+          "generatedBytes": 1094400,
+          "uniqueAccountedBytes": 42495264,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "suspend",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 38102400,
+          "fxOrLegacyCacheBytes": 3298464,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 1094400,
+          "uniqueAccountedBytes": 42495264,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "resume",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            44100,
+            22050,
+            44100
+          ],
+          "scoreBankBytes": 38102400,
+          "fxOrLegacyCacheBytes": 3298464,
+          "activeUniqueBytes": 38678400,
+          "generatedBytes": 1094400,
+          "uniqueAccountedBytes": 42495264,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "dispose",
+          "scoreKeys": [],
+          "cacheKeys": [],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 0,
+          "fxOrLegacyCacheBytes": 0,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 0,
+          "uniqueAccountedBytes": 0,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        }
+      ]
+    },
+    {
+      "before": false,
+      "rate": 96000,
+      "offline": true,
+      "requestedContext": null,
+      "fetches": [
+        "pilgrim-harmony.mp3",
+        "pilgrim-foley.wav",
+        "pilgrim-motif.mp3",
+        "pilgrim-pulse.mp3",
+        "ember-ambient.wav",
+        "gale-ambient.wav",
+        "moss-ambient.wav",
+        "shared-alert.wav",
+        "shared-claim.wav",
+        "shared-impact.wav",
+        "shared-seal.wav",
+        "shared-step.wav",
+        "shared-swing.wav",
+        "tide-ambient.wav"
+      ],
+      "decodes": [
+        {
+          "name": "pilgrim-harmony.mp3",
+          "where": "offline",
+          "rate": 44100,
+          "inputBytes": 961326,
+          "float32Bytes": 16934400
+        },
+        {
+          "name": "pilgrim-foley.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 826370,
+          "float32Bytes": 1652652
+        },
+        {
+          "name": "pilgrim-motif.mp3",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 192463,
+          "float32Bytes": 4233600
+        },
+        {
+          "name": "pilgrim-pulse.mp3",
+          "where": "offline",
+          "rate": 44100,
+          "inputBytes": 961326,
+          "float32Bytes": 16934400
+        },
+        {
+          "name": "ember-ambient.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        },
+        {
+          "name": "gale-ambient.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        },
+        {
+          "name": "moss-ambient.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        },
+        {
+          "name": "shared-alert.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 21212,
+          "float32Bytes": 42336
+        },
+        {
+          "name": "shared-claim.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 39734,
+          "float32Bytes": 79380
+        },
+        {
+          "name": "shared-impact.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 7982,
+          "float32Bytes": 15876
+        },
+        {
+          "name": "shared-seal.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 30914,
+          "float32Bytes": 61740
+        },
+        {
+          "name": "shared-step.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 7100,
+          "float32Bytes": 14112
+        },
+        {
+          "name": "shared-swing.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 10628,
+          "float32Bytes": 21168
+        },
+        {
+          "name": "tide-ambient.wav",
+          "where": "offline",
+          "rate": 22050,
+          "inputBytes": 176444,
+          "float32Bytes": 352800
+        }
+      ],
+      "snapshots": [
+        {
+          "label": "gesture",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            44100,
+            22050,
+            44100
+          ],
+          "scoreBankBytes": 38102400,
+          "fxOrLegacyCacheBytes": 1652652,
+          "activeUniqueBytes": 39254400,
+          "generatedBytes": 2188800,
+          "uniqueAccountedBytes": 41943852,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "all 14 files",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            44100,
+            22050,
+            44100
+          ],
+          "scoreBankBytes": 38102400,
+          "fxOrLegacyCacheBytes": 3298464,
+          "activeUniqueBytes": 39254400,
+          "generatedBytes": 2188800,
+          "uniqueAccountedBytes": 43589664,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "suspend",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 38102400,
+          "fxOrLegacyCacheBytes": 3298464,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 2188800,
+          "uniqueAccountedBytes": 43589664,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "resume",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            44100,
+            22050,
+            44100
+          ],
+          "scoreBankBytes": 38102400,
+          "fxOrLegacyCacheBytes": 3298464,
+          "activeUniqueBytes": 39254400,
+          "generatedBytes": 2188800,
+          "uniqueAccountedBytes": 43589664,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "dispose",
+          "scoreKeys": [],
+          "cacheKeys": [],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 0,
+          "fxOrLegacyCacheBytes": 0,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 0,
+          "uniqueAccountedBytes": 0,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        }
+      ]
+    },
+    {
+      "before": false,
+      "rate": 48000,
+      "offline": false,
+      "requestedContext": null,
+      "fetches": [
+        "pilgrim-harmony.mp3",
+        "pilgrim-foley.wav",
+        "pilgrim-motif.mp3",
+        "pilgrim-pulse.mp3",
+        "ember-ambient.wav",
+        "gale-ambient.wav",
+        "moss-ambient.wav",
+        "shared-alert.wav",
+        "shared-claim.wav",
+        "shared-impact.wav",
+        "shared-seal.wav",
+        "shared-step.wav",
+        "shared-swing.wav",
+        "tide-ambient.wav"
+      ],
+      "decodes": [
+        {
+          "name": "pilgrim-harmony.mp3",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 961326,
+          "float32Bytes": 18432000
+        },
+        {
+          "name": "pilgrim-foley.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 826370,
+          "float32Bytes": 3597608
+        },
+        {
+          "name": "pilgrim-motif.mp3",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 192463,
+          "float32Bytes": 9216000
+        },
+        {
+          "name": "pilgrim-pulse.mp3",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 961326,
+          "float32Bytes": 18432000
+        },
+        {
+          "name": "ember-ambient.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 176444,
+          "float32Bytes": 768000
+        },
+        {
+          "name": "gale-ambient.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 176444,
+          "float32Bytes": 768000
+        },
+        {
+          "name": "moss-ambient.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 176444,
+          "float32Bytes": 768000
+        },
+        {
+          "name": "shared-alert.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 21212,
+          "float32Bytes": 92160
+        },
+        {
+          "name": "shared-claim.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 39734,
+          "float32Bytes": 172800
+        },
+        {
+          "name": "shared-impact.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 7982,
+          "float32Bytes": 34560
+        },
+        {
+          "name": "shared-seal.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 30914,
+          "float32Bytes": 134400
+        },
+        {
+          "name": "shared-step.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 7100,
+          "float32Bytes": 30720
+        },
+        {
+          "name": "shared-swing.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 10628,
+          "float32Bytes": 46080
+        },
+        {
+          "name": "tide-ambient.wav",
+          "where": "live",
+          "rate": 48000,
+          "inputBytes": 176444,
+          "float32Bytes": 768000
+        }
+      ],
+      "snapshots": [
+        {
+          "label": "gesture",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            48000,
+            48000,
+            48000
+          ],
+          "scoreBankBytes": 46080000,
+          "fxOrLegacyCacheBytes": 3597608,
+          "activeUniqueBytes": 46656000,
+          "generatedBytes": 1094400,
+          "uniqueAccountedBytes": 50772008,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "all 14 files",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            48000,
+            48000,
+            48000
+          ],
+          "scoreBankBytes": 46080000,
+          "fxOrLegacyCacheBytes": 7180328,
+          "activeUniqueBytes": 46656000,
+          "generatedBytes": 1094400,
+          "uniqueAccountedBytes": 54354728,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "suspend",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 46080000,
+          "fxOrLegacyCacheBytes": 7180328,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 1094400,
+          "uniqueAccountedBytes": 54354728,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "resume",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            48000,
+            48000,
+            48000
+          ],
+          "scoreBankBytes": 46080000,
+          "fxOrLegacyCacheBytes": 7180328,
+          "activeUniqueBytes": 46656000,
+          "generatedBytes": 1094400,
+          "uniqueAccountedBytes": 54354728,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "dispose",
+          "scoreKeys": [],
+          "cacheKeys": [],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 0,
+          "fxOrLegacyCacheBytes": 0,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 0,
+          "uniqueAccountedBytes": 0,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        }
+      ]
+    },
+    {
+      "before": false,
+      "rate": 96000,
+      "offline": false,
+      "requestedContext": null,
+      "fetches": [
+        "pilgrim-harmony.mp3",
+        "pilgrim-foley.wav",
+        "pilgrim-motif.mp3",
+        "pilgrim-pulse.mp3",
+        "ember-ambient.wav",
+        "gale-ambient.wav",
+        "moss-ambient.wav",
+        "shared-alert.wav",
+        "shared-claim.wav",
+        "shared-impact.wav",
+        "shared-seal.wav",
+        "shared-step.wav",
+        "shared-swing.wav",
+        "tide-ambient.wav"
+      ],
+      "decodes": [
+        {
+          "name": "pilgrim-harmony.mp3",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 961326,
+          "float32Bytes": 36864000
+        },
+        {
+          "name": "pilgrim-foley.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 826370,
+          "float32Bytes": 7195220
+        },
+        {
+          "name": "pilgrim-motif.mp3",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 192463,
+          "float32Bytes": 18432000
+        },
+        {
+          "name": "pilgrim-pulse.mp3",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 961326,
+          "float32Bytes": 36864000
+        },
+        {
+          "name": "ember-ambient.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 176444,
+          "float32Bytes": 1536000
+        },
+        {
+          "name": "gale-ambient.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 176444,
+          "float32Bytes": 1536000
+        },
+        {
+          "name": "moss-ambient.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 176444,
+          "float32Bytes": 1536000
+        },
+        {
+          "name": "shared-alert.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 21212,
+          "float32Bytes": 184320
+        },
+        {
+          "name": "shared-claim.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 39734,
+          "float32Bytes": 345600
+        },
+        {
+          "name": "shared-impact.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 7982,
+          "float32Bytes": 69120
+        },
+        {
+          "name": "shared-seal.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 30914,
+          "float32Bytes": 268800
+        },
+        {
+          "name": "shared-step.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 7100,
+          "float32Bytes": 61440
+        },
+        {
+          "name": "shared-swing.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 10628,
+          "float32Bytes": 92160
+        },
+        {
+          "name": "tide-ambient.wav",
+          "where": "live",
+          "rate": 96000,
+          "inputBytes": 176444,
+          "float32Bytes": 1536000
+        }
+      ],
+      "snapshots": [
+        {
+          "label": "gesture",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            96000,
+            96000,
+            96000
+          ],
+          "scoreBankBytes": 92160000,
+          "fxOrLegacyCacheBytes": 7195220,
+          "activeUniqueBytes": 93312000,
+          "generatedBytes": 2188800,
+          "uniqueAccountedBytes": 101544020,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "all 14 files",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            96000,
+            96000,
+            96000
+          ],
+          "scoreBankBytes": 92160000,
+          "fxOrLegacyCacheBytes": 14360660,
+          "activeUniqueBytes": 93312000,
+          "generatedBytes": 2188800,
+          "uniqueAccountedBytes": 108709460,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "suspend",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 92160000,
+          "fxOrLegacyCacheBytes": 14360660,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 2188800,
+          "uniqueAccountedBytes": 108709460,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "resume",
+          "scoreKeys": [
+            "score:harmony",
+            "score:motif",
+            "score:pulse"
+          ],
+          "cacheKeys": [
+            "foley",
+            "audit:ember-ambient.wav",
+            "audit:gale-ambient.wav",
+            "audit:moss-ambient.wav",
+            "audit:shared-alert.wav",
+            "audit:shared-claim.wav",
+            "audit:shared-impact.wav",
+            "audit:shared-seal.wav",
+            "audit:shared-step.wav",
+            "audit:shared-swing.wav",
+            "audit:tide-ambient.wav"
+          ],
+          "pendingKeys": [],
+          "voices": 6,
+          "scoreRates": [
+            96000,
+            96000,
+            96000
+          ],
+          "scoreBankBytes": 92160000,
+          "fxOrLegacyCacheBytes": 14360660,
+          "activeUniqueBytes": 93312000,
+          "generatedBytes": 2188800,
+          "uniqueAccountedBytes": 108709460,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        },
+        {
+          "label": "dispose",
+          "scoreKeys": [],
+          "cacheKeys": [],
+          "pendingKeys": [],
+          "voices": 0,
+          "scoreRates": [],
+          "scoreBankBytes": 0,
+          "fxOrLegacyCacheBytes": 0,
+          "activeUniqueBytes": 0,
+          "generatedBytes": 0,
+          "uniqueAccountedBytes": 0,
+          "scoreAlsoInFx": false,
+          "sameScoreObjects": true
+        }
+      ]
+    }
+  ],
+  "negativeControls": [
+    {
+      "name": "force 22050 score",
+      "rejected": true,
+      "reason": "source rates\n+ actual - expected\n\n  [\n-   44100,\n    22050,\n+   22050,\n+   22050\n-   44100\n  ]\n"
+    },
+    {
+      "name": "mix score into FX FIFO",
+      "rejected": true,
+      "reason": "fixed three slots\n\n0 !== 3\n"
+    }
+  ]
+}
