@@ -1,0 +1,21 @@
+✔ two integral flat rib types make four tracked placements with closed outward surfaces (352.329058ms)
+✔ rib top faces contact actual 16 and 24 sided ring faces, not a circular radius proxy (20.014807ms)
+✔ every native rib triangle clears the authored glow envelope; inward placement fails (6.263603ms)
+✔ crease normals preserve face orientation and resource disposal is shared exactly once (7.842638ms)
+✔ nine head-core parts are closed, consistently oriented solids and have no proper crossings (272.414864ms)
+✔ upper/lower pads and cup/ring/glass receivers have real face contact (311.21694ms)
+✔ the actual closed glass stays clear of revised cap, while one millimetre uplift is detected (58.59425ms)
+✔ original four ribs and upper ring remain byte-identical; disposal owns each shared resource once (34.979256ms)
+✔ authored S06 and S15 boundary preserves shaft and ball dimensions without claiming their mesh integration (0.250895ms)
+✔ paired 16-angle glass/cradle reduces triangles while keeping the actual shared contacts (127.282937ms)
+✔ actual parent S06/S15 snapshot contacts the candidate; displaced finial fails without hiding Float32 gaps (52.15382ms)
+✔ reference ring and cap are closed, finite solids with no degenerate triangles (15.812809ms)
+✔ ring/cap seat, open finial socket and glass datum agree without adding a finial (4.600922ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 990.799387

@@ -1,0 +1,912 @@
+{
+  "start": "2026-09-16T14:02:55.856Z",
+  "finish": "2026-09-16T14:02:55.981Z",
+  "source": {
+    "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/review/staff-v63/staff-parts.mjs",
+    "sha256": "bb16b0fe5584dcf85be6fd016da4b8510df49bafe05e73194b864e76a9238f7e",
+    "bytes": 6601
+  },
+  "prior": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/repairs/staff-before-collar.mjs.txt",
+      "bytes": 6295,
+      "sha256": "afd01a6bde340780208d698a0578f1ce397f8c1e682fbdcba91ac7475689edef"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/repairs/before-collar.json",
+      "bytes": 19729,
+      "sha256": "8379be1ceac1fd256c768251bb618d6b94c4ed69c3be503569ccf034927d67fa"
+    }
+  ],
+  "scope": "required lower-collar regression only; no repeat of full geometry or plot batch",
+  "unchanged": {
+    "allProfiles": true,
+    "allNativePartsExceptS05B": true
+  },
+  "before": {
+    "a": "S17",
+    "b": "S05-B",
+    "pairs": 29,
+    "classification": {
+      "upper bevel": {
+        "outside": 5,
+        "edge-2": 1
+      },
+      "exposed top lip": {
+        "edge-2": 3,
+        "outside": 3
+      },
+      "inner channel": {
+        "edge-2": 6,
+        "outside": 2
+      },
+      "hidden channel floor": {
+        "outside": 3,
+        "edge-2": 3,
+        "inside": 1,
+        "terminal": 2
+      }
+    },
+    "hits": [
+      {
+        "faceA": 101,
+        "faceB": 21,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          10.81923329730654,
+          1034.4282036598536,
+          24.940045346301645
+        ]
+      },
+      {
+        "faceA": 101,
+        "faceB": 21,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          10.399731233895654,
+          1034.5241513276546,
+          25.10717171249163
+        ]
+      },
+      {
+        "faceA": 101,
+        "faceB": 22,
+        "location": "upper bevel",
+        "tag": "edge-2",
+        "pointMm": [
+          11.338301936599729,
+          1034.999966621399,
+          23.918786300693135
+        ]
+      },
+      {
+        "faceA": 101,
+        "faceB": 22,
+        "location": "upper bevel",
+        "tag": "edge-2",
+        "pointMm": [
+          10.819233297306539,
+          1034.4282036598536,
+          24.940045346301645
+        ]
+      },
+      {
+        "faceA": 102,
+        "faceB": 13,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          7.4529281384491615,
+          1034.7834967127385,
+          25.43398659394004
+        ]
+      },
+      {
+        "faceA": 102,
+        "faceB": 13,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          9.740431415134301,
+          1034.4692696001591,
+          25.293195389619342
+        ]
+      },
+      {
+        "faceA": 102,
+        "faceB": 20,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          9.740431415134303,
+          1034.4692696001591,
+          25.29319538961934
+        ]
+      },
+      {
+        "faceA": 102,
+        "faceB": 20,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          10.07850480417774,
+          1034.466815130365,
+          25.22840282392836
+        ]
+      },
+      {
+        "faceA": 102,
+        "faceB": 21,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          10.399731233895654,
+          1034.5241513276546,
+          25.10717171249163
+        ]
+      },
+      {
+        "faceA": 102,
+        "faceB": 21,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          10.07850480417774,
+          1034.466815130365,
+          25.22840282392836
+        ]
+      },
+      {
+        "faceA": 103,
+        "faceB": 13,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          7.452928138449163,
+          1034.7834967127385,
+          25.43398659394004
+        ]
+      },
+      {
+        "faceA": 103,
+        "faceB": 13,
+        "location": "upper bevel",
+        "tag": "outside",
+        "pointMm": [
+          5.877072848234657,
+          1034.999966621399,
+          25.53097722542522
+        ]
+      },
+      {
+        "faceA": 132,
+        "faceB": 22,
+        "location": "exposed top lip",
+        "tag": "edge-2",
+        "pointMm": [
+          11.328527224718826,
+          1034.999966621399,
+          23.894560126884635
+        ]
+      },
+      {
+        "faceA": 132,
+        "faceB": 22,
+        "location": "exposed top lip",
+        "tag": "edge-2",
+        "pointMm": [
+          11.338301936599729,
+          1034.999966621399,
+          23.918786300693135
+        ]
+      },
+      {
+        "faceA": 133,
+        "faceB": 22,
+        "location": "exposed top lip",
+        "tag": "edge-2",
+        "pointMm": [
+          11.328527224718826,
+          1034.999966621399,
+          23.894560126884635
+        ]
+      },
+      {
+        "faceA": 133,
+        "faceB": 22,
+        "location": "exposed top lip",
+        "tag": "edge-2",
+        "pointMm": [
+          11.299616059022881,
+          1034.999966621399,
+          23.822905132477604
+        ]
+      },
+      {
+        "faceA": 133,
+        "faceB": 23,
+        "location": "exposed top lip",
+        "tag": "edge-2",
+        "pointMm": [
+          11.251942039781257,
+          1034.999966621399,
+          23.740573555186707
+        ]
+      },
+      {
+        "faceA": 133,
+        "faceB": 23,
+        "location": "exposed top lip",
+        "tag": "edge-2",
+        "pointMm": [
+          11.299616059022881,
+          1034.999966621399,
+          23.822905132477604
+        ]
+      },
+      {
+        "faceA": 134,
+        "faceB": 12,
+        "location": "exposed top lip",
+        "tag": "outside",
+        "pointMm": [
+          5.443041269410528,
+          1034.999966621399,
+          25.50996516990449
+        ]
+      },
+      {
+        "faceA": 134,
+        "faceB": 12,
+        "location": "exposed top lip",
+        "tag": "outside",
+        "pointMm": [
+          5.629203591664206,
+          1034.999966621399,
+          25.53899987685529
+        ]
+      },
+      {
+        "faceA": 134,
+        "faceB": 13,
+        "location": "exposed top lip",
+        "tag": "outside",
+        "pointMm": [
+          5.877072848234658,
+          1034.999966621399,
+          25.53097722542522
+        ]
+      },
+      {
+        "faceA": 134,
+        "faceB": 13,
+        "location": "exposed top lip",
+        "tag": "outside",
+        "pointMm": [
+          5.629203591664206,
+          1034.999966621399,
+          25.53899987685529
+        ]
+      },
+      {
+        "faceA": 135,
+        "faceB": 12,
+        "location": "exposed top lip",
+        "tag": "outside",
+        "pointMm": [
+          5.4430412694105295,
+          1034.999966621399,
+          25.50996516990449
+        ]
+      },
+      {
+        "faceA": 135,
+        "faceB": 12,
+        "location": "exposed top lip",
+        "tag": "outside",
+        "pointMm": [
+          5.1819541100002375,
+          1034.999966621399,
+          25.46924485082851
+        ]
+      },
+      {
+        "faceA": 164,
+        "faceB": 22,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          10.78384744882461,
+          1034.6261620810342,
+          24.053344363158704
+        ]
+      },
+      {
+        "faceA": 164,
+        "faceB": 22,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          11.134749386701115,
+          1034.8997265395767,
+          23.818879182938883
+        ]
+      },
+      {
+        "faceA": 164,
+        "faceB": 23,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          11.251942039781257,
+          1034.999966621399,
+          23.740573555186707
+        ]
+      },
+      {
+        "faceA": 164,
+        "faceB": 23,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          11.134749386701115,
+          1034.8997265395765,
+          23.818879182938883
+        ]
+      },
+      {
+        "faceA": 165,
+        "faceB": 22,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          10.783847448824607,
+          1034.6261620810342,
+          24.053344363158704
+        ]
+      },
+      {
+        "faceA": 165,
+        "faceB": 22,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          10.141110979020596,
+          1034.1250823337652,
+          24.482807144522667
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 12,
+        "location": "inner channel",
+        "tag": "outside",
+        "pointMm": [
+          5.7413395731329135,
+          1034.1649142845201,
+          25.357976155812935
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 12,
+        "location": "inner channel",
+        "tag": "outside",
+        "pointMm": [
+          5.181954110000238,
+          1034.999966621399,
+          25.46924485082851
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 13,
+        "location": "inner channel",
+        "tag": "outside",
+        "pointMm": [
+          7.862154184229691,
+          1032.5022261668225,
+          24.936119869406834
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 13,
+        "location": "inner channel",
+        "tag": "outside",
+        "pointMm": [
+          5.7413395731329135,
+          1034.1649142845201,
+          25.357976155812935
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 14,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          9.047055684704954,
+          1033.3147335369158,
+          24.700428289326194
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 14,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          7.862154184229692,
+          1032.5022261668225,
+          24.936119869406834
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 15,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          9.897793436465323,
+          1033.963680267334,
+          24.531206016532863
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 15,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          9.047055684704954,
+          1033.3147335369158,
+          24.700428289326194
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 22,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          10.141110979020596,
+          1034.1250823337652,
+          24.482807144522667
+        ]
+      },
+      {
+        "faceA": 166,
+        "faceB": 22,
+        "location": "inner channel",
+        "tag": "edge-2",
+        "pointMm": [
+          9.897793436465323,
+          1033.963680267334,
+          24.531206016532863
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 4,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          2.2549636039791485,
+          1029.9999713897705,
+          25.382982101061565
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 4,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          2.3621797838658076,
+          1029.9999713897705,
+          25.385028840256044
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 5,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          4.199976097917593,
+          1029.9999713897705,
+          25.087580996161147
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 5,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          2.362179783865807,
+          1029.9999713897705,
+          25.385028840256044
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 6,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.135654783758821,
+          1029.9999713897705,
+          24.451363906440438
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 6,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.199976097917593,
+          1029.9999713897705,
+          25.087580996161147
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 0,
+        "location": "hidden channel floor",
+        "tag": "inside",
+        "pointMm": [
+          1.5153253306840913,
+          1029.9999713897705,
+          23.878278210759163
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 0,
+        "location": "hidden channel floor",
+        "tag": "inside",
+        "pointMm": [
+          3.952918950002489,
+          1029.9999713897705,
+          23.611840441433937
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 4,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          2.2549636039791463,
+          1029.9999713897705,
+          25.382982101061568
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 4,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          1.6100330177038726,
+          1029.9999713897705,
+          25.37067048251629
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 6,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.135654783758821,
+          1029.9999713897705,
+          24.451363906440438
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 6,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.118602290247866,
+          1029.9999713897705,
+          24.282693723999188
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 7,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          3.9529189500024895,
+          1029.9999713897705,
+          23.611840441433937
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 7,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.118602290247866,
+          1029.9999713897705,
+          24.282693723999188
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 640,
+        "location": "hidden channel floor",
+        "tag": "terminal",
+        "pointMm": [
+          1.4872390188517608,
+          1029.9999713897705,
+          24.15608645843964
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 640,
+        "location": "hidden channel floor",
+        "tag": "terminal",
+        "pointMm": [
+          1.5153253306840915,
+          1029.9999713897705,
+          23.878278210759163
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 641,
+        "location": "hidden channel floor",
+        "tag": "terminal",
+        "pointMm": [
+          1.610033017703873,
+          1029.9999713897705,
+          25.37067048251629
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 641,
+        "location": "hidden channel floor",
+        "tag": "terminal",
+        "pointMm": [
+          1.4872390188517608,
+          1029.9999713897705,
+          24.15608645843964
+        ]
+      }
+    ]
+  },
+  "after": {
+    "a": "S17",
+    "b": "S05-B",
+    "pairs": 9,
+    "classification": {
+      "hidden channel floor": {
+        "outside": 3,
+        "edge-2": 3,
+        "inside": 1,
+        "terminal": 2
+      }
+    },
+    "hits": [
+      {
+        "faceA": 198,
+        "faceB": 4,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          2.2549636039791485,
+          1029.9999713897705,
+          25.382982101061565
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 4,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          2.3621797838658076,
+          1029.9999713897705,
+          25.385028840256044
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 5,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          4.199976097917593,
+          1029.9999713897705,
+          25.087580996161147
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 5,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          2.362179783865807,
+          1029.9999713897705,
+          25.385028840256044
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 6,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.135654783758821,
+          1029.9999713897705,
+          24.451363906440438
+        ]
+      },
+      {
+        "faceA": 198,
+        "faceB": 6,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.199976097917593,
+          1029.9999713897705,
+          25.087580996161147
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 0,
+        "location": "hidden channel floor",
+        "tag": "inside",
+        "pointMm": [
+          1.5153253306840913,
+          1029.9999713897705,
+          23.878278210759163
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 0,
+        "location": "hidden channel floor",
+        "tag": "inside",
+        "pointMm": [
+          3.952918950002489,
+          1029.9999713897705,
+          23.611840441433937
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 4,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          2.2549636039791463,
+          1029.9999713897705,
+          25.382982101061568
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 4,
+        "location": "hidden channel floor",
+        "tag": "outside",
+        "pointMm": [
+          1.6100330177038726,
+          1029.9999713897705,
+          25.37067048251629
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 6,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.135654783758821,
+          1029.9999713897705,
+          24.451363906440438
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 6,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.118602290247866,
+          1029.9999713897705,
+          24.282693723999188
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 7,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          3.9529189500024895,
+          1029.9999713897705,
+          23.611840441433937
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 7,
+        "location": "hidden channel floor",
+        "tag": "edge-2",
+        "pointMm": [
+          4.118602290247866,
+          1029.9999713897705,
+          24.282693723999188
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 640,
+        "location": "hidden channel floor",
+        "tag": "terminal",
+        "pointMm": [
+          1.4872390188517608,
+          1029.9999713897705,
+          24.15608645843964
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 640,
+        "location": "hidden channel floor",
+        "tag": "terminal",
+        "pointMm": [
+          1.5153253306840915,
+          1029.9999713897705,
+          23.878278210759163
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 641,
+        "location": "hidden channel floor",
+        "tag": "terminal",
+        "pointMm": [
+          1.610033017703873,
+          1029.9999713897705,
+          25.37067048251629
+        ]
+      },
+      {
+        "faceA": 199,
+        "faceB": 641,
+        "location": "hidden channel floor",
+        "tag": "terminal",
+        "pointMm": [
+          1.4872390188517608,
+          1029.9999713897705,
+          24.15608645843964
+        ]
+      }
+    ]
+  },
+  "wraps": {
+    "a": "S05-A",
+    "b": "S05-B",
+    "pairs": 0,
+    "classification": {},
+    "hits": []
+  },
+  "decision": "required external collar penetration resolved; residual nine pairs are inside hidden channel floor at y1030; not a full staff/hand/material/render acceptance"
+}

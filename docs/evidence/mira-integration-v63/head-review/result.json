@@ -1,0 +1,438 @@
+{
+  "at": "2026-09-16T14:03:04.938Z",
+  "source": {
+    "root": "/workspace/scratch/e72662e3b71f/Q-mira-head-micro-v63",
+    "head": "5afdfb177cbdbb00232ba400592acdb731889db1",
+    "tree": "941794ff2556f2d58d1fa8b48a14b52901b09c52",
+    "surfaceSha256": "b93311bafce2b211a944604ce02f7cc0878bb0e14d5eae3066ca420b490b3d0b"
+  },
+  "manifestChecks": [
+    {
+      "path": "docs/evidence/mira-head-micro-v63/F05-L.obj",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/F05-R.obj",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/F07-L.obj",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/F07-R.obj",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/F09-L.obj",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/F09-R.obj",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/F11.obj",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/README.md",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/assembly.json",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/assembly.obj",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/cpu-four-views.png",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/cpu-old-head-registration.png",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/metrics-before-fixture-fix.json",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/metrics.json",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/plot-data.json",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/references/mira-F07-F11-v1.png",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/references/mira-F07-F11-v2.png",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/references/prompt-v1.txt",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/references/prompt-v2.txt",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/references/timing.json",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/tests.txt",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/timing.json",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "review/head-micro-v63/inspect.mjs",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "review/head-micro-v63/plot.py",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "review/head-micro-v63/surfaces.mjs",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "scripts/export-mira-head-micro-v63.mjs",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "tests/mira-head-micro-v63.test.mjs",
+      "exactBytes": true,
+      "exactHash": true
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/references/provenance.json",
+      "exactBytes": true,
+      "exactHash": true
+    }
+  ],
+  "preserved": [
+    {
+      "path": "src/actor-models.js",
+      "sha256": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+      "baseExact": true
+    },
+    {
+      "path": "src/core.js",
+      "sha256": "a6b7271063f683d2228dc1d547a82d7dd5b3257b3f4a538ced63c88ac37e3b3f",
+      "baseExact": true
+    },
+    {
+      "path": "src/assets/characters/detailed-geometry.js",
+      "sha256": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+      "baseExact": true
+    },
+    {
+      "path": "src/assets/characters/identity-head-data.js",
+      "sha256": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe",
+      "baseExact": true
+    }
+  ],
+  "archiveArraysExact": true,
+  "geometry": {
+    "vertices": 513,
+    "triangles": 896,
+    "edgeCount": 1408,
+    "boundaryEdges": 128,
+    "boundaryComponents": 1,
+    "boundaryDegree2": true,
+    "euler": 1,
+    "duplicateTriangles": 0,
+    "nonManifold": 0,
+    "windingConflict": 0,
+    "minAreaM2": 0.000004752340618905198,
+    "minFaceVertexNormalDot": 0.9675467378170403,
+    "minUvArea": 0.0011160714285714246,
+    "maxNormalUnitError": 4.440892098500626e-16,
+    "maxIndependentPositionErrorM": 6.206335383118183e-17,
+    "maxIndependentNormalError": 2.5410021990585447e-15,
+    "weightErrors": 0,
+    "seams": [
+      {
+        "id": "F05-R:F07-R",
+        "maxPositionM": 0,
+        "maxNormalVector": 1.8038988979531736e-15,
+        "maxDU": 0,
+        "maxDV": 1.249000902703301e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F07-R:F09-R",
+        "maxPositionM": 0,
+        "maxNormalVector": 2.042629342666091e-15,
+        "maxDU": 0,
+        "maxDV": 1.316562550716263e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F09-R:F11",
+        "maxPositionM": 0,
+        "maxNormalVector": 2.152946912258037e-15,
+        "maxDU": 0,
+        "maxDV": 1.3329179921125024e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F11:F09-L",
+        "maxPositionM": 0,
+        "maxNormalVector": 2.152946912258037e-15,
+        "maxDU": 0,
+        "maxDV": 1.3329179921125024e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F09-L:F07-L",
+        "maxPositionM": 0,
+        "maxNormalVector": 2.042629342666091e-15,
+        "maxDU": 0,
+        "maxDV": 1.316562550716263e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F07-L:F05-L",
+        "maxPositionM": 0,
+        "maxNormalVector": 1.8038988979531736e-15,
+        "maxDU": 0,
+        "maxDV": 1.249000902703301e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      }
+    ]
+  },
+  "negativeChecks": {
+    "oneMillimetreSeamChangeDetected": 0.0010000000000000009,
+    "oneNonheadWeightDetected": 1
+  },
+  "rig": {
+    "headLocal": [
+      0,
+      0.16,
+      0
+    ],
+    "headBindWorld": [
+      0,
+      1.7449999999999999,
+      0
+    ],
+    "neckLocal": [
+      0,
+      0.6,
+      0
+    ]
+  },
+  "poses": [
+    {
+      "id": "idle",
+      "actualMotion": "idle",
+      "headMatrix": [
+        0.9999976101563431,
+        0.000013872578519087203,
+        -0.002187184032875508,
+        0,
+        -0.0000029344850587352545,
+        0.9999875696535513,
+        0.004993017218971729,
+        0,
+        0.0021868164421778627,
+        -0.005013891054191821,
+        1.0013778882265254,
+        0,
+        6.108514437540831e-7,
+        1.722317149269426,
+        0.006222783595535717,
+        1
+      ],
+      "archivedMatrixDifference": 0,
+      "maxNativeSkinRegistrationErrorM": 5.922603275774287e-8,
+      "maxSeamPositionM": 0,
+      "maxSeamNormal": 2.1534971048122414e-15,
+      "minWorldY": 1.6236371492031116,
+      "nativeVertices": 513
+    },
+    {
+      "id": "walking",
+      "actualMotion": "walk",
+      "headMatrix": [
+        0.9999975971545328,
+        -0.00008136554544019575,
+        0.002190676792359093,
+        0,
+        0.000036746231650505436,
+        0.9997931051516935,
+        0.020360177333596397,
+        0,
+        -0.0021939668671705367,
+        -0.020418228848318443,
+        1.0007410781574888,
+        0,
+        8.436861158617728e-7,
+        1.733704832305435,
+        0.025360140820730216,
+        1
+      ],
+      "archivedMatrixDifference": 0,
+      "maxNativeSkinRegistrationErrorM": 5.922589216810464e-8,
+      "maxSeamPositionM": 0,
+      "maxSeamNormal": 2.1632467764761047e-15,
+      "minWorldY": 1.6337191652863357,
+      "nativeVertices": 513
+    },
+    {
+      "id": "hit",
+      "actualMotion": "hit",
+      "headMatrix": [
+        0.9980096336458768,
+        0.062356993877171155,
+        -0.009400875737147613,
+        0,
+        -0.06279934497050826,
+        0.9963356927264558,
+        -0.05806401355890192,
+        0,
+        0.0057457307018298695,
+        0.05853881373837093,
+        0.9982685980560575,
+        0,
+        -0.04467616838937701,
+        1.6666032594887261,
+        -0.10872898524255499,
+        1
+      ],
+      "archivedMatrixDifference": 0,
+      "maxNativeSkinRegistrationErrorM": 5.92258232546687e-8,
+      "maxSeamPositionM": 0,
+      "maxSeamNormal": 2.1242083858945795e-15,
+      "minWorldY": 1.5734492715440254,
+      "nativeVertices": 513
+    },
+    {
+      "id": "death-.45",
+      "actualMotion": "death",
+      "headMatrix": [
+        0.9912004474310254,
+        0.12860978955144375,
+        0.03132403301090591,
+        0,
+        -0.059290817251117026,
+        0.642941988588123,
+        -0.7636165256855328,
+        0,
+        -0.1183480967410529,
+        0.7550398144084078,
+        0.6449097662897403,
+        0,
+        -0.04207122538650522,
+        1.0786103818530657,
+        -0.5787991039841842,
+        1
+      ],
+      "archivedMatrixDifference": 0,
+      "maxNativeSkinRegistrationErrorM": 5.9225823118797215e-8,
+      "maxSeamPositionM": 0,
+      "maxSeamNormal": 2.2023747557895893e-15,
+      "minWorldY": 1.0578591074616883,
+      "nativeVertices": 513
+    }
+  ],
+  "landmarkRays": [
+    {
+      "target": [
+        0.046,
+        0.05,
+        0.109
+      ],
+      "hits": 0
+    },
+    {
+      "target": [
+        -0.046,
+        0.05,
+        0.109
+      ],
+      "hits": 0
+    },
+    {
+      "target": [
+        0,
+        -0.045,
+        0.134
+      ],
+      "hits": 0
+    },
+    {
+      "target": [
+        0,
+        0.005,
+        0.142
+      ],
+      "hits": 0
+    }
+  ],
+  "budget": {
+    "float32PositionNormalUvAndFourSkinIndexWeightBytes": 32832,
+    "uint16IndexBytes": 5376,
+    "totalBytes": 38208,
+    "currentRuntimeBytes": 0,
+    "note": "hypothetical buffer payload; not actual GPU allocation/draw budget"
+  },
+  "batchMs": 188.2006,
+  "limits": [
+    "Only four explicit actual actor fixtures, no temporal sweep",
+    "Native SkinnedMesh is an in-memory test binding, not runtime integration",
+    "New continuous ribbon UV is not source skin atlas correspondence",
+    "Open connected lower-face band; eyes/nose/mouth/neck/hair unfinished",
+    "No full self-intersection/body contact/expressions/raster/WebGL/device/perceptual acceptance"
+  ],
+  "readback": {
+    "head": "5afdfb177cbdbb00232ba400592acdb731889db1",
+    "status": "",
+    "surfaceSha256": "b93311bafce2b211a944604ce02f7cc0878bb0e14d5eae3066ca420b490b3d0b"
+  }
+}

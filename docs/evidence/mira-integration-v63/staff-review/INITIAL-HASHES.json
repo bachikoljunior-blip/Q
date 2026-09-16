@@ -1,0 +1,61 @@
+{
+  "at": "2026-09-16T14:01:43.687864+00:00",
+  "state": "required outer-bevel repair pending; initial source afd01 preserved by native snapshot and exact source hash",
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "bytes": 5288,
+      "sha256": "c720a8c199333f5fd85ff50f3d991070d319e1b3ff2b4e7a3bec145e5b89cefd"
+    },
+    {
+      "path": "check-before-polygon-phase-fix.mjs",
+      "bytes": 8415,
+      "sha256": "e1636fbc1618c299a5b367bb7784d49bcb25e10eabf65e5035d933686f3bf257"
+    },
+    {
+      "path": "check.mjs",
+      "bytes": 8404,
+      "sha256": "212e6a5693d0bfd571947032922d1abd68a4577ba541986f82609fc4b3d55290"
+    },
+    {
+      "path": "collar-classification.json",
+      "bytes": 286,
+      "sha256": "42d1e429a8b2bb9927a6f05050c63c81522bdc05abd16982d9fdda1394c65df8"
+    },
+    {
+      "path": "crossing-points.json",
+      "bytes": 228061,
+      "sha256": "37af3ba282d0eef98d86d761007b4f9caa66fa57631fdf8182cfccf5d9847fac"
+    },
+    {
+      "path": "derived.py",
+      "bytes": 2354,
+      "sha256": "42c1c2fabc02776c02c867c5510b96a6df0448af52305b89c40e035ef924ab9f"
+    },
+    {
+      "path": "native-before-polygon-phase-fix.json",
+      "bytes": 26423,
+      "sha256": "b4909f54e70916aa2ece6e007fa36a72df606d34578d67ee5d129279545e1098"
+    },
+    {
+      "path": "native-contact-projections.png",
+      "bytes": 402757,
+      "sha256": "9bdee930a1121bc155abc39431bfc7f0e10a77eb346b6e6b289f54f19a468e7e"
+    },
+    {
+      "path": "native-review.json",
+      "bytes": 27976,
+      "sha256": "b6372850d1fd9723e559772259a3dfc633f6af6477e207b199803111895745a2"
+    },
+    {
+      "path": "native-snapshot.json",
+      "bytes": 593485,
+      "sha256": "8f7e471e156b594dce04d1156ada39e0ff9cf9d1677f4b64aa3cae24fde23d00"
+    },
+    {
+      "path": "plot.py",
+      "bytes": 2083,
+      "sha256": "4690a72acfb13ab46013847217ed5eaf36178a04fcbc7d2bbfbce564db796ce5"
+    }
+  ]
+}

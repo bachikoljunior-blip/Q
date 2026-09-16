@@ -1,0 +1,218 @@
+{
+  "interfaces": [
+    {
+      "id": "staff:lower-rib-seat",
+      "members": [
+        "staff:S09",
+        "staff:S10",
+        "staff:S11",
+        "staff:S12",
+        "staff:S08"
+      ],
+      "status": "source endpoint fixed; receiver missing",
+      "frame": "staff mm, Y up, shaft bottom Y0",
+      "datumYmm": 1447,
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "ribEndPad": {
+        "centerRadiusMm": 16.75,
+        "radialBoundsMm": [
+          15.25,
+          18.25
+        ],
+        "tangentialBoundsMm": [
+          -4,
+          4
+        ],
+        "chamferMm": 0.2,
+        "areaMm2": 23.919997708797375
+      },
+      "receiverConstraint": "S08 upward planar seat at Y1447 must contain all four native end pads; select angular phase and test polygon faces, not circumscribed radii alone. Existing S13-style ring r14.5..19.2 with same16 phase is one already supported shape, not mandatory S08 source.",
+      "unknown": [
+        "S08 complete radial profile",
+        "S08 underside seat Y/profile toward S07"
+      ]
+    },
+    {
+      "id": "staff:upper-rib-seat",
+      "members": [
+        "staff:S09",
+        "staff:S10",
+        "staff:S11",
+        "staff:S12",
+        "staff:S13"
+      ],
+      "status": "fixed partial native contact",
+      "datumYmm": 1662,
+      "sourceEvidence": "v62 ribs-native result.json; no new native sweep this unit"
+    },
+    {
+      "id": "staff:cap-seat",
+      "members": [
+        "staff:S13",
+        "staff:S14"
+      ],
+      "status": "fixed partial native contact",
+      "datumYmm": 1668,
+      "capSegments": 16,
+      "sourceEvidence": "caps-budget-v1 + v62 native frozen profile"
+    },
+    {
+      "id": "staff:cup-ring-glow",
+      "members": [
+        "staff:S06",
+        "staff:S07",
+        "staff:S08",
+        "staff:S16"
+      ],
+      "status": "missing surfaces; old BOM dimensions provisional",
+      "knownDraft": {
+        "S06Ymm": [
+          1394,
+          1432
+        ],
+        "S07Ymm": [
+          1427,
+          1448
+        ],
+        "glowLowerPoleYmm": 1447
+      },
+      "requiredDistinctSurfaceOwnership": [
+        "S07 underside to S06 socket",
+        "S07 annular or named receiver to S08 underside",
+        "S07 internal lower-glow seat to S16",
+        "S08 upward receiver for four ribs"
+      ],
+      "unknown": [
+        "final S07 profile",
+        "seat normals and contact area to S08",
+        "S16 actual lower closure/contact shape",
+        "S06 actual mating mesh"
+      ]
+    },
+    {
+      "id": "staff:glow-envelope",
+      "members": [
+        "staff:S16",
+        "staff:S14",
+        "staff:S07",
+        "staff:S09",
+        "staff:S10",
+        "staff:S11",
+        "staff:S12"
+      ],
+      "status": "not globally clear; old S14 envelope defect unresolved",
+      "centerMm": [
+        0,
+        1556,
+        0
+      ],
+      "radiiMm": [
+        52,
+        109,
+        39
+      ],
+      "axes": "staff X/Y/Z",
+      "S14normalizedRadius16": 0.9994088571055387,
+      "S14normalizedRadius24": 0.9997378781391432,
+      "required": "Keep one S16 owner. Declare actual pole truncation/socket surfaces and measure actual triangles separately from ellipsoid envelope. Preserve gross dimensions unless explicitly reviewed. Do not equate normalized deficit to mm penetration or hidden overlap to clear."
+    },
+    {
+      "id": "cloth:P01-support",
+      "members": [
+        "cloth:P01-R",
+        "cloth:P04-R",
+        "rig:chest"
+      ],
+      "status": "top9 registration fixed; deformation candidate currently outside this audited tree",
+      "topIndices": [
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152
+      ],
+      "frame": "chest-bind metres; rootOffset [0,.985,0]",
+      "constraint": "Existing top positions, source weights, ordered edge and time/state transform remain exact; P04 eventual shared edge must read the same boundary solution, not independently simulated approximate points.",
+      "unknown": [
+        "P04 actual edge",
+        "skin-to-cloth support/contact thickness",
+        "body collision beyond requested local floor support"
+      ]
+    },
+    {
+      "id": "cloth:P01-centre",
+      "members": [
+        "cloth:P01-R",
+        "cloth:P01-L",
+        "cloth:REAR-CENTRE"
+      ],
+      "status": "unjoined conceptual alternative; choose one explicit owner before full cape assembly",
+      "mirrorGapMm": [
+        10.000000000000009,
+        10.00000000000001
+      ],
+      "constraint": "R inside x=-.005 m. Mirroring gives L x=+.005 m, so these are not a welded center. Register one shared seam or define an owned connector with an ID; do not count either as already made.",
+      "unknown": [
+        "seam versus connector decision",
+        "left actual geometry",
+        "shared runtime support solution"
+      ]
+    },
+    {
+      "id": "head:three-patch-boundaries",
+      "members": [
+        "head:F01-L",
+        "head:F05-L",
+        "head:F09-L",
+        "head:F03-L",
+        "head:F07-L"
+      ],
+      "status": "conceptual only; no metric boundary vertices",
+      "constraint": "Use single open skin surfaces; no cast backing/beveled inner rim from reference picture. F05 to F09 requires missing F07. F01 lists F05 but reciprocal endpoint/edge is absent: reconcile named adjacency before welding. Define shared ordered positions/tangents/normals/skin weights in head-local frame once.",
+      "guideEnvelopeMm": {
+        "F01-L": [
+          55,
+          55,
+          25
+        ],
+        "F05-L": [
+          40,
+          35,
+          40
+        ],
+        "F09-L": [
+          38,
+          35,
+          45
+        ]
+      },
+      "guideIsCalibrated": false,
+      "unknown": [
+        "scale registration to fixed head landmarks",
+        "boundary curves/vertex IDs",
+        "exact reciprocal neighboring edges",
+        "UV charts and deformed seam policy"
+      ]
+    },
+    {
+      "id": "head:neck-cloth",
+      "members": [
+        "head:N01",
+        "head:N02",
+        "cloth:C01",
+        "cloth:C02",
+        "rig:neck"
+      ],
+      "status": "historical registration reference; not joined new micro assembly",
+      "constraint": "Head owns neck cut and skin; costume owns stand collar/cowl/brooch. Existing 46-point neck rim is a source reuse candidate only after exact point/weight/frame correspondence. Do not import stale coarse212-grid +X-right data as current geometry."
+    }
+  ]
+}

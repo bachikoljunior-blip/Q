@@ -1,0 +1,1798 @@
+{
+  "startedUTC": "2026-09-16T14:08:27.748Z",
+  "finishedUTC": "2026-09-16T14:08:28.154Z",
+  "buildMs": 82.65157500000001,
+  "wholeExportMs": 405.086986,
+  "scope": "native triangle/shape QA only; no WebGL",
+  "spec": {
+    "units": "mm",
+    "axis": "+Y",
+    "front": "+Z",
+    "right": "-X",
+    "segments": 16,
+    "shaft": {
+      "bottom": 4,
+      "visibleTaperBottom": 30,
+      "top": 1418,
+      "r0": 18,
+      "r1": 21
+    },
+    "grip": {
+      "bottom": 1030,
+      "top": 1240,
+      "radius": 24
+    },
+    "wraps": {
+      "bottom": 1032,
+      "top": 1238,
+      "turns": 1.8,
+      "width": 8,
+      "thickness": 1.5,
+      "lift": 2.1,
+      "secondPhase": 1.5707963267948966
+    },
+    "neck": {
+      "bottom": 1385,
+      "top": 1423,
+      "woodSeat": 1418,
+      "topContact": [
+        6.3,
+        22
+      ]
+    },
+    "finial": {
+      "centerY": 1688,
+      "radius": 12,
+      "stemRadius": 6,
+      "stemBottom": 1674
+    },
+    "sourceStatus": "shape references conditional; exact joins authored; not game imported"
+  },
+  "profiles": {
+    "S01": [
+      [
+        0,
+        4
+      ],
+      [
+        18,
+        4
+      ],
+      [
+        18,
+        30
+      ],
+      [
+        21,
+        1418
+      ],
+      [
+        0,
+        1418
+      ]
+    ],
+    "S02": [
+      [
+        18.5,
+        4
+      ],
+      [
+        21.2,
+        4
+      ],
+      [
+        22,
+        4.8
+      ],
+      [
+        22,
+        8
+      ],
+      [
+        20.5,
+        9
+      ],
+      [
+        20.5,
+        50
+      ],
+      [
+        22,
+        51
+      ],
+      [
+        22,
+        54.2
+      ],
+      [
+        21.2,
+        55
+      ],
+      [
+        18.5,
+        55
+      ]
+    ],
+    "S03": [
+      [
+        0,
+        0
+      ],
+      [
+        21.2,
+        0
+      ],
+      [
+        22,
+        0.8
+      ],
+      [
+        22,
+        3.2
+      ],
+      [
+        21.2,
+        4
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "S04": [
+      [
+        20.161383285302595,
+        1030
+      ],
+      [
+        24,
+        1030
+      ],
+      [
+        24,
+        1240
+      ],
+      [
+        20.61527377521614,
+        1240
+      ]
+    ],
+    "S06": [
+      [
+        21.2,
+        1385
+      ],
+      [
+        25.5,
+        1385
+      ],
+      [
+        26,
+        1385.8
+      ],
+      [
+        24,
+        1392
+      ],
+      [
+        23,
+        1393
+      ],
+      [
+        23,
+        1415
+      ],
+      [
+        24,
+        1416
+      ],
+      [
+        24,
+        1422.2
+      ],
+      [
+        23.2,
+        1423
+      ],
+      [
+        6.3,
+        1423
+      ],
+      [
+        6.3,
+        1418
+      ],
+      [
+        21.2,
+        1418
+      ]
+    ],
+    "S15": [
+      [
+        0,
+        1674
+      ],
+      [
+        6,
+        1674
+      ],
+      [
+        6,
+        1677.6076951545867
+      ],
+      [
+        8.10708249138792,
+        1679.1526719582785
+      ],
+      [
+        9.8298245314679,
+        1681.1170827637875
+      ],
+      [
+        11.08655439013544,
+        1683.407798811619
+      ],
+      [
+        11.817693036146496,
+        1685.916221867997
+      ],
+      [
+        11.988578658982293,
+        1688.523432648384
+      ],
+      [
+        11.59110991546882,
+        1691.1058285412303
+      ],
+      [
+        10.644129998138661,
+        1693.5409833588203
+      ],
+      [
+        9.192533317427738,
+        1695.7134513162384
+      ],
+      [
+        7.305137148104648,
+        1697.5202400834949
+      ],
+      [
+        5.071419140888393,
+        1698.8756934444398
+      ],
+      [
+        2.5972753672572324,
+        1699.7155520854392
+      ],
+      [
+        0,
+        1700
+      ]
+    ],
+    "S17": [
+      [
+        23.8,
+        1025
+      ],
+      [
+        26.7,
+        1025
+      ],
+      [
+        27.5,
+        1025.8
+      ],
+      [
+        27.5,
+        1034.2
+      ],
+      [
+        26.7,
+        1035
+      ],
+      [
+        26.5,
+        1035
+      ],
+      [
+        26.5,
+        1030
+      ],
+      [
+        23.8,
+        1030
+      ]
+    ],
+    "S18": [
+      [
+        26.5,
+        1235
+      ],
+      [
+        26.7,
+        1235
+      ],
+      [
+        27.5,
+        1235.8
+      ],
+      [
+        27.5,
+        1244.2
+      ],
+      [
+        26.7,
+        1245
+      ],
+      [
+        23.8,
+        1245
+      ],
+      [
+        23.8,
+        1240
+      ],
+      [
+        26.5,
+        1240
+      ]
+    ]
+  },
+  "parts": [
+    {
+      "id": "S01",
+      "vertices": 111,
+      "weldedPositions": 50,
+      "triangles": 96,
+      "bufferBytes": 4128,
+      "nonfinite": 0,
+      "minAreaMm2": 61.99471152803536,
+      "signedVolumeMm3": 1644779.4795872853,
+      "minVertexNormalFaceDot": 0.874440267256324,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S02",
+      "vertices": 498,
+      "weldedPositions": 160,
+      "triangles": 320,
+      "bufferBytes": 17856,
+      "nonfinite": 0,
+      "minAreaMm2": 4.634511046676845,
+      "signedVolumeMm3": 13847.573807408968,
+      "minVertexNormalFaceDot": 0.8156854510307312,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S03",
+      "vertices": 154,
+      "weldedPositions": 66,
+      "triangles": 128,
+      "bufferBytes": 5696,
+      "nonfinite": 0,
+      "minAreaMm2": 4.634514999766312,
+      "signedVolumeMm3": 5841.835383130932,
+      "minVertexNormalFaceDot": 0.7895001173019409,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S04",
+      "vertices": 168,
+      "weldedPositions": 64,
+      "triangles": 128,
+      "bufferBytes": 6144,
+      "nonfinite": 0,
+      "minAreaMm2": 13.351257388509799,
+      "signedVolumeMm3": 103057.47326081737,
+      "minVertexNormalFaceDot": 0.8744402445901917,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S06",
+      "vertices": 541,
+      "weldedPositions": 192,
+      "triangles": 384,
+      "bufferBytes": 19616,
+      "nonfinite": 0,
+      "minAreaMm2": 4.668121085455077,
+      "signedVolumeMm3": 18788.333187855987,
+      "minVertexNormalFaceDot": 0.7520425829781853,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S15",
+      "vertices": 684,
+      "weldedPositions": 210,
+      "triangles": 416,
+      "bufferBytes": 24384,
+      "nonfinite": 0,
+      "minAreaMm2": 1.298788488012547,
+      "signedVolumeMm3": 7282.508895760537,
+      "minVertexNormalFaceDot": 0.8215475726220762,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S17",
+      "vertices": 288,
+      "weldedPositions": 128,
+      "triangles": 256,
+      "bufferBytes": 10752,
+      "nonfinite": 0,
+      "minAreaMm2": 1.0141093751987045,
+      "signedVolumeMm3": 3625.3578010803108,
+      "minVertexNormalFaceDot": 0.8405941824408397,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S18",
+      "vertices": 288,
+      "weldedPositions": 128,
+      "triangles": 256,
+      "bufferBytes": 10752,
+      "nonfinite": 0,
+      "minAreaMm2": 1.0141093751987045,
+      "signedVolumeMm3": 3625.3578010807587,
+      "minVertexNormalFaceDot": 0.8405941824408397,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S05-A",
+      "vertices": 658,
+      "weldedPositions": 324,
+      "triangles": 644,
+      "bufferBytes": 24920,
+      "nonfinite": 0,
+      "minAreaMm2": 3.1877737738807723,
+      "signedVolumeMm3": 3835.445997875021,
+      "minVertexNormalFaceDot": 0.7220698377644494,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S05-B",
+      "vertices": 656,
+      "weldedPositions": 324,
+      "triangles": 644,
+      "bufferBytes": 24856,
+      "nonfinite": 0,
+      "minAreaMm2": 3.187773995789018,
+      "signedVolumeMm3": 4667.048785114921,
+      "minVertexNormalFaceDot": 0.8490681535423645,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S09",
+      "vertices": 458,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bufferBytes": 16840,
+      "nonfinite": 0,
+      "minAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3610.279011742314,
+      "minVertexNormalFaceDot": 0.8738129030160922,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S10",
+      "vertices": 458,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bufferBytes": 16840,
+      "nonfinite": 0,
+      "minAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3610.279011742314,
+      "minVertexNormalFaceDot": 0.8738129030160922,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S11",
+      "vertices": 422,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bufferBytes": 15688,
+      "nonfinite": 0,
+      "minAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3297.620695021396,
+      "minVertexNormalFaceDot": 0.859569680687801,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S12",
+      "vertices": 422,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bufferBytes": 15688,
+      "nonfinite": 0,
+      "minAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3297.620695021396,
+      "minVertexNormalFaceDot": 0.859569680687801,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S13",
+      "vertices": 192,
+      "weldedPositions": 192,
+      "triangles": 384,
+      "bufferBytes": 8448,
+      "nonfinite": 0,
+      "minAreaMm2": 1.9128296226729606,
+      "signedVolumeMm3": 3470.6569969199318,
+      "minVertexNormalFaceDot": 0.4384327828884124,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S07",
+      "vertices": 838,
+      "weldedPositions": 338,
+      "triangles": 672,
+      "bufferBytes": 30848,
+      "nonfinite": 0,
+      "minAreaMm2": 0.9707184114082233,
+      "signedVolumeMm3": 11184.406492534632,
+      "minVertexNormalFaceDot": 0.8921591822102398,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S14",
+      "vertices": 933,
+      "weldedPositions": 274,
+      "triangles": 544,
+      "bufferBytes": 33120,
+      "nonfinite": 0,
+      "minAreaMm2": 1.101359394210346,
+      "signedVolumeMm3": 5456.606412388077,
+      "minVertexNormalFaceDot": 0.8350003456033668,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S16",
+      "vertices": 534,
+      "weldedPositions": 402,
+      "triangles": 800,
+      "bufferBytes": 28296,
+      "nonfinite": 0,
+      "minAreaMm2": 0.9707184114082233,
+      "signedVolumeMm3": 898058.5257426549,
+      "minVertexNormalFaceDot": 0.7895781348498633,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S08",
+      "vertices": 192,
+      "weldedPositions": 192,
+      "triangles": 384,
+      "bufferBytes": 8448,
+      "nonfinite": 0,
+      "minAreaMm2": 1.9128296226729606,
+      "signedVolumeMm3": 3470.6569969199318,
+      "minVertexNormalFaceDot": 0.4384327828884124,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    }
+  ],
+  "pairs": [
+    {
+      "a": "S01",
+      "b": "S01",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S02",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S03",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S04",
+      "properTrianglePairs": 100,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S06",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S15",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S17",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S18",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S05-A",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S05-B",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S01",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S02",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S03",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S04",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S06",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S15",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S17",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S18",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S05-A",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S05-B",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S02",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S03",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S04",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S06",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S15",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S17",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S18",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S05-A",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S05-B",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S03",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S04",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S06",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S15",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S17",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S18",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S05-A",
+      "properTrianglePairs": 288,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S05-B",
+      "properTrianglePairs": 254,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S04",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S06",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S15",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S17",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S18",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S05-A",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S05-B",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S06",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S15",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S17",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S18",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S05-A",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S05-B",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S15",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S17",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S18",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S05-A",
+      "properTrianglePairs": 9,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S05-B",
+      "properTrianglePairs": 9,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S17",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S18",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S05-A",
+      "properTrianglePairs": 9,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S05-B",
+      "properTrianglePairs": 9,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S18",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S05-A",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S05-B",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-A",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S05-B",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S05-B",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S12",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S12",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S12",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S12",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S12",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S12",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S13",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S13",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S13",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S13",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S13",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S07",
+      "b": "S07",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S07",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S07",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S07",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S14",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S14",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S14",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S16",
+      "b": "S16",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S16",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S08",
+      "b": "S08",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    }
+  ],
+  "terminalInterfaces": {
+    "neckTopY": 1423,
+    "neckTopFaceAreaMm2": 1526.2945487174325,
+    "finialBottomY": 1674,
+    "finialBottomFaceAreaMm2": 110.21282499229298
+  },
+  "counts": {
+    "meshes": 19,
+    "triangles": 7512,
+    "perMeshBufferBytes": 323320,
+    "uniqueBufferBytes": 290792
+  },
+  "footSeat": {
+    "up": "S03",
+    "down": "S01",
+    "yMm": 4,
+    "planeToleranceMm": 0.00001,
+    "upLevelsMm": [
+      4.000000189989805
+    ],
+    "downLevelsMm": [
+      4.000000189989805
+    ],
+    "upAreaMm2": 1375.9459521857366,
+    "downAreaMm2": 991.9154362123227,
+    "contactAreaMm2": 991.9154362123227,
+    "upFaces": 16,
+    "downFaces": 16
+  },
+  "blanks": [
+    {
+      "id": "S05-A",
+      "partId": "S05-A",
+      "lengthMm": 346.2182220863728,
+      "widthMm": 8,
+      "thicknessMm": 1.5,
+      "formedEdgeRatio": [
+        0.9836879063971666,
+        1.043755713359742
+      ],
+      "definition": "straight rectangular blank -> authored opposite-handed winding",
+      "physicalStrainAcceptance": false,
+      "gameImported": false
+    },
+    {
+      "id": "S05-B",
+      "partId": "S05-B",
+      "lengthMm": 355.68311337983454,
+      "widthMm": 8,
+      "thicknessMm": 1.5,
+      "formedEdgeRatio": [
+        0.8838180668082791,
+        1.1096895729835166
+      ],
+      "definition": "straight rectangular blank -> authored opposite-handed winding",
+      "physicalStrainAcceptance": false,
+      "gameImported": false
+    }
+  ],
+  "limitations": [
+    "Conditional generated reference views; erroneous thumbnails excluded",
+    "S05 blank concept accepted but image aspect is not dimensionally exact; assembled shape is authored",
+    "Metal/leather concealed retention overlaps are classified separately from exterior defects",
+    "Materials are preview swatches; source part shaders have no visual acceptance",
+    "No skeleton/hand, runtime, whole actor budget or device acceptance"
+  ]
+}

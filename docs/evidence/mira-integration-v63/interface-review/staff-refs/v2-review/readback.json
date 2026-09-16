@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-16T13:54:07.669672+00:00",
+  "file": "/workspace/scratch/e72662e3b71f/q-character-reference-v63/staff/grip-strips-v2.png",
+  "sha256": "a6e741c22b5fc3b7cb4359eefce775c79795f583f445be368b0f11f5735154b9",
+  "bytes": 1860482,
+  "width": 1536,
+  "height": 1024,
+  "method": "Original complete PNG viewed through view_image; no crop, editing, generation, calibration or mesh changes",
+  "result": "Concept reference usable; exact shared multiview specification unresolved",
+  "scope": "S05 v2 only. Other four-sheet v1 findings remain frozen. No assembled staff or runtime claim.",
+  "observations": [
+    "Single thin open strip, two endpoints, and a handed helical concept are legible.",
+    "BACK reverses the horizontal silhouette/end direction relative to FRONT, which is compatible with a 180-degree yaw and is not by itself reversed handedness.",
+    "TRUE SIDE keeps nearly the same total height but is conspicuously narrower, with major side-to-side turning heights resembling FRONT.",
+    "THREE-QUARTER remains close to FRONT; exact distinct azimuth is not established.",
+    "No calibrated camera or fixed ruler is present; labels alone do not establish exact 90/45-degree camera or dimensional consistency.",
+    "No direct axial end view/cross section establishes bore, centerline radius, strip thickness, or endpoint phase numerically."
+  ],
+  "conditionalGeometricReason": "For a constant-radius helix spanning at least one full turn, centerline radial extrema across the entire part span diameter 2R from every horizontal orthographic azimuth. At equal vertical scale/elevation, yaw alone does not substantially compress that total width. Different framing/perspective or a noncircular coil remain unknown here, so the bitmap is not a calibrated impossibility proof.",
+  "notClaimed": [
+    "True perspective/orthographic camera recovered",
+    "Precise dimensions derived from image",
+    "Candidate 3D strip rejected",
+    "Final staff assembly fits",
+    "Generated reference is real game rendering"
+  ],
+  "sourceWrites": 0,
+  "imageWrites": 0,
+  "sessionsPending": 0
+}

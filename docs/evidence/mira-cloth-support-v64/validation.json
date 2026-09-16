@@ -1,0 +1,19 @@
+{
+  "at": "2026-09-16T13:48:54.178092+00:00",
+  "adopted": false,
+  "reason": "lower host CPU, but local material metric and two 120Hz terrain step peaks regress",
+  "tests": {
+    "passed": 5,
+    "failed": 0,
+    "durationMs": 136.929972,
+    "log": "test-run.txt"
+  },
+  "v63ManifestFilesByteExact": 20,
+  "runtimeDiff": "",
+  "oldV63Diff": "",
+  "knownSessionsClosed": [
+    80038,
+    33115
+  ],
+  "unfinishedSessions": 0
+}

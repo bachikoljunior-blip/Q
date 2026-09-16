@@ -1,0 +1,1919 @@
+{
+  "at": "2026-09-16T14:14:12.386Z",
+  "source": {
+    "root": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63",
+    "requestedHead": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+    "startHead": "9d1f5fa119d5026c8b88569149208587cec6b264",
+    "startStatus": "",
+    "endHead": "9d1f5fa119d5026c8b88569149208587cec6b264",
+    "endStatus": "",
+    "sources": [
+      {
+        "path": "review/staff-v63/assembly.mjs",
+        "bytes": 760,
+        "sha256": "dabaaee77dbf0e16f80605c3b1a3a39e2897b2c9d89898b22eefb71d98236481",
+        "fixedCommitExact": true,
+        "unchanged": true
+      },
+      {
+        "path": "review/staff-v63/staff-parts.mjs",
+        "bytes": 6759,
+        "sha256": "c71aad81b0acaff2070b3681dcdae8ba057c51a28468cef5a16957fa69d1f5cc",
+        "fixedCommitExact": true,
+        "unchanged": true
+      },
+      {
+        "path": "review/lantern-v63/lantern-head.js",
+        "bytes": 7525,
+        "sha256": "db88b7c1eb36c1c58fde73dfad4668505e46893f39708a44320a600574fbaf5d",
+        "fixedCommitExact": true,
+        "unchanged": true
+      },
+      {
+        "path": "review/lantern-micro-v62/mira-lantern-ribs.js",
+        "bytes": 5927,
+        "sha256": "33e596ff22332c317d819265e08c819f01c677c8a3cb63eea5aaa42bc17723e6",
+        "fixedCommitExact": true,
+        "unchanged": true
+      },
+      {
+        "path": "review/micro-v61/mira-micro-parts.js",
+        "bytes": 3628,
+        "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c",
+        "fixedCommitExact": true,
+        "unchanged": true
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "id": "S01",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S02",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S03",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S04",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S06",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S15",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S17",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S18",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S05-A",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S05-B",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S09",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S10",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S11",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S12",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S13",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S07",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S14",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S16",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    },
+    {
+      "id": "S08",
+      "partIdExact": true,
+      "worldMatrixExact": true,
+      "geometryExact": true
+    }
+  ],
+  "solids": [
+    {
+      "id": "S01",
+      "vertices": 111,
+      "welded": 50,
+      "triangles": 96,
+      "finite": true,
+      "minAreaMm2": 61.99471152803536,
+      "volumeMm3": 1644779.4795872848,
+      "minFaceNormalDot": 0.8744402900638293,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -20.999999716877937,
+        4.000000189989805,
+        -20.999999716877937
+      ],
+      "maxMm": [
+        20.999999716877937,
+        1417.9999828338623,
+        20.999999716877937
+      ]
+    },
+    {
+      "id": "S02",
+      "vertices": 498,
+      "welded": 160,
+      "triangles": 320,
+      "finite": true,
+      "minAreaMm2": 4.634511046676845,
+      "volumeMm3": 13847.573807408939,
+      "minFaceNormalDot": 0.8156854743872823,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -21.99999988079071,
+        4.000000189989805,
+        -21.99999988079071
+      ],
+      "maxMm": [
+        21.99999988079071,
+        54.999999701976776,
+        21.99999988079071
+      ]
+    },
+    {
+      "id": "S03",
+      "vertices": 154,
+      "welded": 66,
+      "triangles": 128,
+      "finite": true,
+      "minAreaMm2": 4.634514999766311,
+      "volumeMm3": 5841.835383130929,
+      "minFaceNormalDot": 0.7895001329473077,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -21.99999988079071,
+        0,
+        -21.99999988079071
+      ],
+      "maxMm": [
+        21.99999988079071,
+        4.000000189989805,
+        21.99999988079071
+      ]
+    },
+    {
+      "id": "S04",
+      "vertices": 168,
+      "welded": 64,
+      "triangles": 128,
+      "finite": true,
+      "minAreaMm2": 13.351257388509799,
+      "volumeMm3": 103057.4732608173,
+      "minFaceNormalDot": 0.8744402668605953,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -24.000000208616257,
+        1029.9999713897705,
+        -24.000000208616257
+      ],
+      "maxMm": [
+        24.000000208616257,
+        1240.0000095367432,
+        24.000000208616257
+      ]
+    },
+    {
+      "id": "S06",
+      "vertices": 541,
+      "welded": 192,
+      "triangles": 384,
+      "finite": true,
+      "minAreaMm2": 4.668121085455077,
+      "volumeMm3": 18788.333187857075,
+      "minFaceNormalDot": 0.7520425971670105,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -26.000000536441803,
+        1384.9999904632568,
+        -26.000000536441803
+      ],
+      "maxMm": [
+        26.000000536441803,
+        1422.9999780654907,
+        26.000000536441803
+      ]
+    },
+    {
+      "id": "S15",
+      "vertices": 684,
+      "welded": 210,
+      "triangles": 416,
+      "finite": true,
+      "minAreaMm2": 1.2987884880125473,
+      "volumeMm3": 7282.508895760684,
+      "minFaceNormalDot": 0.8215475496120048,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -11.988578364253044,
+        1674.0000247955322,
+        -11.988578364253044
+      ],
+      "maxMm": [
+        11.988578364253044,
+        1700.0000476837158,
+        11.988578364253044
+      ]
+    },
+    {
+      "id": "S17",
+      "vertices": 288,
+      "welded": 128,
+      "triangles": 256,
+      "finite": true,
+      "minAreaMm2": 1.014109375198704,
+      "volumeMm3": 3625.3578010803267,
+      "minFaceNormalDot": 0.8405941819330429,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -27.499999850988388,
+        1024.999976158142,
+        -27.499999850988388
+      ],
+      "maxMm": [
+        27.499999850988388,
+        1034.999966621399,
+        27.499999850988388
+      ]
+    },
+    {
+      "id": "S18",
+      "vertices": 288,
+      "welded": 128,
+      "triangles": 256,
+      "finite": true,
+      "minAreaMm2": 1.0141093751987045,
+      "volumeMm3": 3625.3578010808965,
+      "minFaceNormalDot": 0.8405941819330429,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -27.499999850988388,
+        1235.0000143051147,
+        -27.499999850988388
+      ],
+      "maxMm": [
+        27.499999850988388,
+        1245.0000047683716,
+        27.499999850988388
+      ]
+    },
+    {
+      "id": "S05-A",
+      "vertices": 658,
+      "welded": 324,
+      "triangles": 644,
+      "finite": true,
+      "minAreaMm2": 3.1877737738807723,
+      "volumeMm3": 3835.4459978751875,
+      "minFaceNormalDot": 0.7220698435597326,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -25.499459356069565,
+        1028.8137197494507,
+        -25.499459356069565
+      ],
+      "maxMm": [
+        25.49370750784874,
+        1241.186261177063,
+        25.49370750784874
+      ]
+    },
+    {
+      "id": "S05-B",
+      "vertices": 656,
+      "welded": 324,
+      "triangles": 644,
+      "finite": true,
+      "minAreaMm2": 3.1877739957890183,
+      "volumeMm3": 4667.048785114946,
+      "minFaceNormalDot": 0.8490681349045001,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -26.87278389930725,
+        1028.8137197494507,
+        -26.87278389930725
+      ],
+      "maxMm": [
+        26.82582102715969,
+        1241.186261177063,
+        26.668628677725792
+      ]
+    },
+    {
+      "id": "S09",
+      "vertices": 458,
+      "welded": 184,
+      "triangles": 364,
+      "finite": true,
+      "minAreaMm2": 0.2600001876801397,
+      "volumeMm3": 3610.279011742273,
+      "minFaceNormalDot": 0.8738128800529027,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -73.49999994039536,
+        1447.0000026226044,
+        -4.000000189989808
+      ],
+      "maxMm": [
+        -15.250000171363354,
+        1661.9999987483025,
+        4.0000001899898034
+      ]
+    },
+    {
+      "id": "S10",
+      "vertices": 458,
+      "welded": 184,
+      "triangles": 364,
+      "finite": true,
+      "minAreaMm2": 0.2600001876801403,
+      "volumeMm3": 3610.2790117423297,
+      "minFaceNormalDot": 0.8738128800529028,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        15.250000171363354,
+        1447.0000026226044,
+        -4.000000189989805
+      ],
+      "maxMm": [
+        73.49999994039536,
+        1661.9999987483025,
+        4.000000189989805
+      ]
+    },
+    {
+      "id": "S11",
+      "vertices": 422,
+      "welded": 184,
+      "triangles": 364,
+      "finite": true,
+      "minAreaMm2": 0.2600001876801403,
+      "volumeMm3": 3297.620695021449,
+      "minFaceNormalDot": 0.8595696669145998,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -4.000000189989805,
+        1447.0000026226044,
+        15.250000171363354
+      ],
+      "maxMm": [
+        4.000000189989805,
+        1661.9999987483025,
+        56.0000017285347
+      ]
+    },
+    {
+      "id": "S12",
+      "vertices": 422,
+      "welded": 184,
+      "triangles": 364,
+      "finite": true,
+      "minAreaMm2": 0.260000187680141,
+      "volumeMm3": 3297.620695021359,
+      "minFaceNormalDot": 0.8595696669145998,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -4.0000001899898034,
+        1447.0000026226044,
+        -56.0000017285347
+      ],
+      "maxMm": [
+        4.000000189989808,
+        1661.9999987483025,
+        -15.250000171363354
+      ]
+    },
+    {
+      "id": "S13",
+      "vertices": 192,
+      "welded": 192,
+      "triangles": 384,
+      "finite": true,
+      "minAreaMm2": 1.9128296226729606,
+      "volumeMm3": 3470.656996919328,
+      "minFaceNormalDot": 0.4384327931532707,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -19.999999552965164,
+        1661.999999973923,
+        -19.999999552965164
+      ],
+      "maxMm": [
+        19.999999552965164,
+        1668.000000026077,
+        19.999999552965164
+      ]
+    },
+    {
+      "id": "S07",
+      "vertices": 838,
+      "welded": 338,
+      "triangles": 672,
+      "finite": true,
+      "minAreaMm2": 0.9707184114082231,
+      "volumeMm3": 11184.406492534743,
+      "minFaceNormalDot": 0.8921591934649071,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -17.999999225139618,
+        1422.9999986886978,
+        -17.999999225139618
+      ],
+      "maxMm": [
+        17.999999225139618,
+        1448.3922255635262,
+        17.999999225139618
+      ]
+    },
+    {
+      "id": "S14",
+      "vertices": 933,
+      "welded": 274,
+      "triangles": 544,
+      "finite": true,
+      "minAreaMm2": 1.1013593942103457,
+      "volumeMm3": 5456.606412388356,
+      "minFaceNormalDot": 0.8350003213819285,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -17.999999225139618,
+        1661.9999987483025,
+        -17.999999225139618
+      ],
+      "maxMm": [
+        17.999999225139618,
+        1678.0000013709068,
+        17.999999225139618
+      ]
+    },
+    {
+      "id": "S16",
+      "vertices": 534,
+      "welded": 402,
+      "triangles": 800,
+      "finite": true,
+      "minAreaMm2": 0.9707184114082231,
+      "volumeMm3": 898058.525742646,
+      "minFaceNormalDot": 0.7895781426410665,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -52.000001072883606,
+        1447.0000026226044,
+        -39.000000804662704
+      ],
+      "maxMm": [
+        52.000001072883606,
+        1661.9999987483025,
+        39.000000804662704
+      ]
+    },
+    {
+      "id": "S08",
+      "vertices": 192,
+      "welded": 192,
+      "triangles": 384,
+      "finite": true,
+      "minAreaMm2": 1.9128296226729606,
+      "volumeMm3": 3470.656996919309,
+      "minFaceNormalDot": 0.43843279315327066,
+      "badEdges": 0,
+      "windingConflicts": 0,
+      "minMm": [
+        -19.999999552965164,
+        1440.999999973923,
+        -19.999999552965164
+      ],
+      "maxMm": [
+        19.999999552965164,
+        1447.000000026077,
+        19.999999552965164
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "up": "S03",
+      "down": "S01",
+      "yMm": 4,
+      "toleranceMm": 0.0001,
+      "upFaces": 16,
+      "downFaces": 16,
+      "upAreaMm2": 1375.9459521857366,
+      "downAreaMm2": 991.9154362123227,
+      "overlapMm2": 991.9154362123227,
+      "upLevelsMm": [
+        4.000000189989805
+      ],
+      "downLevelsMm": [
+        4.000000189989805
+      ]
+    },
+    {
+      "up": "S01",
+      "down": "S06",
+      "yMm": 1418,
+      "toleranceMm": 0.0001,
+      "upFaces": 16,
+      "downFaces": 32,
+      "upAreaMm2": 1350.107149346597,
+      "downAreaMm2": 1254.4363055451586,
+      "overlapMm2": 1228.5975027060194,
+      "upLevelsMm": [
+        1417.9999828338623
+      ],
+      "downLevelsMm": [
+        1417.9999828338623
+      ]
+    },
+    {
+      "up": "S06",
+      "down": "S07",
+      "yMm": 1423,
+      "toleranceMm": 0.0001,
+      "upFaces": 32,
+      "downFaces": 32,
+      "upAreaMm2": 1526.2945487174327,
+      "downAreaMm2": 184.63709153832565,
+      "overlapMm2": 184.63709153832565,
+      "upLevelsMm": [
+        1422.9999780654907
+      ],
+      "downLevelsMm": [
+        1422.9999986886978
+      ]
+    },
+    {
+      "up": "S07",
+      "down": "S08",
+      "yMm": 1441,
+      "toleranceMm": 0.0001,
+      "upFaces": 32,
+      "downFaces": 32,
+      "upAreaMm2": 348.24192078570894,
+      "downAreaMm2": 484.9058882415697,
+      "overlapMm2": 348.2419207857088,
+      "upLevelsMm": [
+        1440.9999979138374
+      ],
+      "downLevelsMm": [
+        1440.999999973923
+      ]
+    },
+    {
+      "up": "S08",
+      "down": "S09",
+      "yMm": 1447,
+      "toleranceMm": 0.0001,
+      "upFaces": 32,
+      "downFaces": 6,
+      "upAreaMm2": 484.90588824156964,
+      "downAreaMm2": 23.919997708797375,
+      "overlapMm2": 23.919997708797357,
+      "upLevelsMm": [
+        1447.000000026077
+      ],
+      "downLevelsMm": [
+        1447.0000026226044
+      ]
+    },
+    {
+      "up": "S09",
+      "down": "S13",
+      "yMm": 1662,
+      "toleranceMm": 0.0001,
+      "upFaces": 6,
+      "downFaces": 32,
+      "upAreaMm2": 23.919997708797375,
+      "downAreaMm2": 484.90588824156964,
+      "overlapMm2": 23.919997708797354,
+      "upLevelsMm": [
+        1661.9999987483025
+      ],
+      "downLevelsMm": [
+        1661.999999973923
+      ]
+    },
+    {
+      "up": "S08",
+      "down": "S10",
+      "yMm": 1447,
+      "toleranceMm": 0.0001,
+      "upFaces": 32,
+      "downFaces": 6,
+      "upAreaMm2": 484.90588824156964,
+      "downAreaMm2": 23.919997708797375,
+      "overlapMm2": 23.91999770879734,
+      "upLevelsMm": [
+        1447.000000026077
+      ],
+      "downLevelsMm": [
+        1447.0000026226044
+      ]
+    },
+    {
+      "up": "S10",
+      "down": "S13",
+      "yMm": 1662,
+      "toleranceMm": 0.0001,
+      "upFaces": 6,
+      "downFaces": 32,
+      "upAreaMm2": 23.919997708797375,
+      "downAreaMm2": 484.90588824156964,
+      "overlapMm2": 23.91999770879736,
+      "upLevelsMm": [
+        1661.9999987483025
+      ],
+      "downLevelsMm": [
+        1661.999999973923
+      ]
+    },
+    {
+      "up": "S08",
+      "down": "S11",
+      "yMm": 1447,
+      "toleranceMm": 0.0001,
+      "upFaces": 32,
+      "downFaces": 6,
+      "upAreaMm2": 484.90588824156964,
+      "downAreaMm2": 23.919997708797375,
+      "overlapMm2": 23.919997708797364,
+      "upLevelsMm": [
+        1447.000000026077
+      ],
+      "downLevelsMm": [
+        1447.0000026226044
+      ]
+    },
+    {
+      "up": "S11",
+      "down": "S13",
+      "yMm": 1662,
+      "toleranceMm": 0.0001,
+      "upFaces": 6,
+      "downFaces": 32,
+      "upAreaMm2": 23.919997708797375,
+      "downAreaMm2": 484.90588824156964,
+      "overlapMm2": 23.91999770879734,
+      "upLevelsMm": [
+        1661.9999987483025
+      ],
+      "downLevelsMm": [
+        1661.999999973923
+      ]
+    },
+    {
+      "up": "S08",
+      "down": "S12",
+      "yMm": 1447,
+      "toleranceMm": 0.0001,
+      "upFaces": 32,
+      "downFaces": 6,
+      "upAreaMm2": 484.90588824156964,
+      "downAreaMm2": 23.919997708797375,
+      "overlapMm2": 23.919997708797393,
+      "upLevelsMm": [
+        1447.000000026077
+      ],
+      "downLevelsMm": [
+        1447.0000026226044
+      ]
+    },
+    {
+      "up": "S12",
+      "down": "S13",
+      "yMm": 1662,
+      "toleranceMm": 0.0001,
+      "upFaces": 6,
+      "downFaces": 32,
+      "upAreaMm2": 23.919997708797375,
+      "downAreaMm2": 484.90588824156964,
+      "overlapMm2": 23.91999770879737,
+      "upLevelsMm": [
+        1661.9999987483025
+      ],
+      "downLevelsMm": [
+        1661.999999973923
+      ]
+    },
+    {
+      "up": "S13",
+      "down": "S14",
+      "yMm": 1668,
+      "toleranceMm": 0.0001,
+      "upFaces": 32,
+      "downFaces": 32,
+      "upAreaMm2": 484.9058882415697,
+      "downAreaMm2": 391.86780817581155,
+      "overlapMm2": 348.24192078570906,
+      "upLevelsMm": [
+        1668.000000026077
+      ],
+      "downLevelsMm": [
+        1668.0000034570694
+      ]
+    },
+    {
+      "up": "S16",
+      "down": "S14",
+      "yMm": 1662,
+      "toleranceMm": 0.0001,
+      "upFaces": 16,
+      "downFaces": 32,
+      "upAreaMm2": 337.0577331101186,
+      "downAreaMm2": 337.4961777150489,
+      "overlapMm2": 141.1238050829074,
+      "upLevelsMm": [
+        1661.9999987483025
+      ],
+      "downLevelsMm": [
+        1661.9999987483025
+      ]
+    },
+    {
+      "up": "S14",
+      "down": "S15",
+      "yMm": 1674,
+      "toleranceMm": 0.0001,
+      "upFaces": 16,
+      "downFaces": 16,
+      "upAreaMm2": 121.509646640578,
+      "downAreaMm2": 110.21282499229298,
+      "overlapMm2": 110.21282499229298,
+      "upLevelsMm": [
+        1674.0000007152557
+      ],
+      "downLevelsMm": [
+        1674.0000247955322
+      ]
+    }
+  ],
+  "glassCradle": {
+    "coincidentTriangles": 80,
+    "areaMm2": 163.49442029389513,
+    "maxNormalDot": -0.9999999999999996,
+    "quantizationMm": 0.000001
+  },
+  "pairs": [
+    {
+      "a": "S01",
+      "b": "S01",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S01",
+      "b": "S02",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S01",
+      "b": "S03",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S01",
+      "b": "S04",
+      "properPairs": 80,
+      "diagnosticPlaneDepthMm": 1210.0000102072954
+    },
+    {
+      "a": "S01",
+      "b": "S06",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S01",
+      "b": "S15",
+      "properPairs": 0
+    },
+    {
+      "a": "S01",
+      "b": "S17",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S01",
+      "b": "S18",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S01",
+      "b": "S05-A",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S01",
+      "b": "S05-B",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S01",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S01",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S01",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S01",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S01",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S01",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S01",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S01",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S01",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S02",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S02",
+      "b": "S03",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S02",
+      "b": "S04",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S06",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S15",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S17",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S18",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S05-A",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S05-B",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S02",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S03",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S03",
+      "b": "S04",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S06",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S15",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S17",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S18",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S05-A",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S05-B",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S03",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S04",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S04",
+      "b": "S06",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S15",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S17",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S04",
+      "b": "S18",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S04",
+      "b": "S05-A",
+      "properPairs": 288,
+      "diagnosticPlaneDepthMm": 170.55315134011457
+    },
+    {
+      "a": "S04",
+      "b": "S05-B",
+      "properPairs": 254,
+      "diagnosticPlaneDepthMm": 164.9288812459163
+    },
+    {
+      "a": "S04",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S04",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S06",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S06",
+      "b": "S15",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S17",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S18",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S05-A",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S05-B",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S06",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S15",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S15",
+      "b": "S17",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S18",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S05-A",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S05-B",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S14",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S15",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S15",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S17",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S17",
+      "b": "S18",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S05-A",
+      "properPairs": 9,
+      "diagnosticPlaneDepthMm": 6.804528999039909
+    },
+    {
+      "a": "S17",
+      "b": "S05-B",
+      "properPairs": 9,
+      "diagnosticPlaneDepthMm": 6.088062149716656
+    },
+    {
+      "a": "S17",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S17",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S18",
+      "b": "S18",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S18",
+      "b": "S05-A",
+      "properPairs": 9,
+      "diagnosticPlaneDepthMm": 5.408522426730245
+    },
+    {
+      "a": "S18",
+      "b": "S05-B",
+      "properPairs": 9,
+      "diagnosticPlaneDepthMm": 5.195712637836199
+    },
+    {
+      "a": "S18",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S18",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S18",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S18",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S18",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S18",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S18",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S18",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S18",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S05-A",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S05-B",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-A",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S05-B",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S09",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S05-B",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S09",
+      "b": "S09",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S09",
+      "b": "S10",
+      "properPairs": 0
+    },
+    {
+      "a": "S09",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S09",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S09",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S09",
+      "b": "S07",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S09",
+      "b": "S14",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S09",
+      "b": "S16",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S09",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S10",
+      "b": "S10",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S10",
+      "b": "S11",
+      "properPairs": 0
+    },
+    {
+      "a": "S10",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S10",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S10",
+      "b": "S07",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S10",
+      "b": "S14",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S10",
+      "b": "S16",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S10",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S11",
+      "b": "S11",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S11",
+      "b": "S12",
+      "properPairs": 0
+    },
+    {
+      "a": "S11",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S11",
+      "b": "S07",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S11",
+      "b": "S14",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S11",
+      "b": "S16",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S11",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S12",
+      "b": "S12",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S12",
+      "b": "S13",
+      "properPairs": 0
+    },
+    {
+      "a": "S12",
+      "b": "S07",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S12",
+      "b": "S14",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S12",
+      "b": "S16",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S12",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S13",
+      "b": "S13",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S13",
+      "b": "S07",
+      "properPairs": 0
+    },
+    {
+      "a": "S13",
+      "b": "S14",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S13",
+      "b": "S16",
+      "properPairs": 0
+    },
+    {
+      "a": "S13",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S07",
+      "b": "S07",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S07",
+      "b": "S14",
+      "properPairs": 0
+    },
+    {
+      "a": "S07",
+      "b": "S16",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S07",
+      "b": "S08",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S14",
+      "b": "S14",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S14",
+      "b": "S16",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S14",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S16",
+      "b": "S16",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    },
+    {
+      "a": "S16",
+      "b": "S08",
+      "properPairs": 0
+    },
+    {
+      "a": "S08",
+      "b": "S08",
+      "properPairs": 0,
+      "diagnosticPlaneDepthMm": 0
+    }
+  ],
+  "newUnexpectedCrossingPairs": [],
+  "negativeGap": {
+    "up": "S14",
+    "down": "S15",
+    "yMm": 1674,
+    "toleranceMm": 0.0001,
+    "upFaces": 16,
+    "downFaces": 0,
+    "upAreaMm2": 121.509646640578,
+    "downAreaMm2": 0,
+    "overlapMm2": 0,
+    "upLevelsMm": [
+      1674.0000007152557
+    ],
+    "downLevelsMm": []
+  },
+  "stats": {
+    "parts": 19,
+    "ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05-A",
+      "S05-B",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18"
+    ],
+    "triangles": 7512,
+    "uniqueGeometry": 17,
+    "uniqueMaterialObjects": 5,
+    "uniqueBuffersBytes": 290792,
+    "headTriangles": 4240,
+    "wholeBoundsMm": {
+      "min": [
+        -73.49999994039536,
+        0,
+        -56.0000017285347
+      ],
+      "max": [
+        73.49999994039536,
+        1700.0000476837158,
+        56.0000017285347
+      ]
+    }
+  },
+  "batchMs": 523.4666119999999,
+  "limits": [
+    "One native static batch; no repeated LOD/pose sweep",
+    "Interior segment/triangle crossings exclude coplanar overlap, tangent touches and complete containment",
+    "Intentional old grip/retention overlap remains classified, not zero intersections",
+    "Finite positive seat area is not fastener strength or dynamic contact",
+    "No renderer, material/texture fidelity, whole actor budget, hand binding, actual gameplay/device acceptance"
+  ],
+  "resourcesDisposed": true
+}

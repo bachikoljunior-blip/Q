@@ -1,0 +1,128 @@
+{
+  "scope": "Four original generated design reference sheets; known-source structural review, not blind beauty rating or runtime mesh acceptance.",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v63/staff/shaft-foot-v1.png",
+      "bytes": 1868223,
+      "sha256": "cb87b32ddc39df04ab3898a532ed253f0f4c48140f5e1419dbad11a5210e6760",
+      "viewedOriginalBitmap": true
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v63/staff/grip-strips-v1.png",
+      "bytes": 1971203,
+      "sha256": "4b7cd0a7a445fd5d6595c5dda4947078ab49eb6953eb4dfc54f458a01f3ee5f8",
+      "viewedOriginalBitmap": true
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v63/staff/collars-neck-v1.png",
+      "bytes": 2390637,
+      "sha256": "cd97eb9d416488f8d59ecc0eea395a4f9d5f2e50b3dc2af7ae78e403dd35e3a5",
+      "viewedOriginalBitmap": true
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v63/staff/finial-v1.png",
+      "bytes": 1898046,
+      "sha256": "73330e0d816dc84ebd051cfccf9104f61f7666f285721c687f2929d4a585c5fd",
+      "viewedOriginalBitmap": true
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v63/staff/IMAGES.json",
+      "bytes": 1397,
+      "sha256": "1dab0d213180acd38b1dde5621926880e6a7451b8ffc074a0e27874b660cebb1"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v63/staff/requests.json",
+      "bytes": 6633,
+      "sha256": "b669180ad810d69daaf6fc38e7e233ce591cd83f272e5f421a4ad55da8c1d83e"
+    }
+  ],
+  "findings": [
+    {
+      "id": "S05-angle-evidence",
+      "severity": "required reference correction before definitive shape construction",
+      "sheet": "grip-strips-v1.png",
+      "views": [
+        "FRONT",
+        "SIDE",
+        "THREE-QUARTER"
+      ],
+      "observation": "Near-identical S-shaped silhouettes and similar endpoint phase projection for a non-axisymmetric finite helix; stated distinct camera directions cannot be verified. Not a claim that an exact90-degree contradiction was reconstructed metrically.",
+      "singleCorrectionTarget": "S05 only: keep same winding and same two labeled endpoints A/B; show an actual90-degree side and oblique view, with endpoint phase correspondence. Keep single strip separate from opposite-winding pair assembly.",
+      "notRequired": "Do not regenerate the plainS04 cylinder or other isolated parts solely for this."
+    },
+    {
+      "id": "collar-placement-ID",
+      "severity": "reject placement thumbnail; isolated geometry reference conditionally usable",
+      "sheet": "collars-neck-v1.png",
+      "observation": "Thumbnail labels upper collarS17 and lowerS18; fixed BOM defines S17lower at1030/S18upper at1240.",
+      "resolution": "Retain scoped BOM IDs and original hands/staff placement; do not silently swap IDs. Both collars use one shared shape. No image regeneration required for the isolated annular band."
+    },
+    {
+      "id": "finial-placement-assembly",
+      "severity": "reject placement thumbnail; isolated geometry reference conditionally usable",
+      "sheet": "finial-v1.png",
+      "observation": "Thumbnail puts S15 ball/stem immediately on a grip collar and wrapped shaft; required lantern cage and S14 top-cap placement are absent.",
+      "resolution": "Use isolatedS15 front/bottom/top/3q as ball-with-stem shape reference only. Register it to S14 socket using the explicit new interface/source and original lantern close-up; never to grip."
+    }
+  ],
+  "conditionalShapes": [
+    {
+      "ids": [
+        "S01"
+      ],
+      "basis": "Single almost straight round shaft, isolated full length and solid round ends. Front/side equivalence is permissible for nearly axisymmetric shape; taper magnitude and shared scale uncalibrated."
+    },
+    {
+      "ids": [
+        "S02"
+      ],
+      "basis": "Hollow ferrule topology is visible in both end views. Same rolled-rim sleeve shape in front/side/3q; inner seat dimensions unknown."
+    },
+    {
+      "ids": [
+        "S03"
+      ],
+      "basis": "Separate closed filled disc and thickness edge, no unintended central hole. Its FRONT is a face-on view, not the same object-up/front convention as S02; axis registration remains numerical."
+    },
+    {
+      "ids": [
+        "S04"
+      ],
+      "basis": "Plain cylindrical grip shell without integral X bands; end interiors visible but dark, images alone do not prove no hidden end cap. Construct deliberate open-ended spec and verify mesh later."
+    },
+    {
+      "ids": [
+        "S17",
+        "S18"
+      ],
+      "basis": "One annular collar form used twice. Front/side image scales are not common/calibrated; widths cannot be used as exact ellipticity or diameter."
+    },
+    {
+      "ids": [
+        "S06"
+      ],
+      "basis": "Distinct taller stepped hollow neck sleeve; bore/outer lip/waist topology consistent enough for authored profile. Exact axial proportions/hidden seats unknown."
+    },
+    {
+      "ids": [
+        "S15"
+      ],
+      "basis": "One solid ball and coaxial stem, no second ball/hanging loop/cage. Axisymmetric front/side similarity is acceptable; bottom view shows the stem end. Socket mating dimensions not established by picture."
+    }
+  ],
+  "correctionGenerationLimit": {
+    "recommendedTargets": 1,
+    "target": "S05 distinct angles",
+    "otherThumbnails": "Exclude from placement authority; use explicit BOM/interfaces and original full/hands reference."
+  },
+  "unknowns": [
+    "Exactmm dimensions and common image scale/camera calibration",
+    "S05 winding sign/endpoint phase across truly distinct views",
+    "Real helical strips crossing clearance and endpoint capture under collars",
+    "Socket fit and S15 sphere/S14 clearance",
+    "Fullstaff/hand/world registration",
+    "Native geometry/material/lighting/realWebGL/device/PS4 appearance"
+  ],
+  "sourceOrImageEdits": 0,
+  "generationCalls": 0
+}

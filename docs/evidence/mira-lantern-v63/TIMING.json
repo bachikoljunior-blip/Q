@@ -1,0 +1,29 @@
+{
+  "imageSelectionUTC": "2026-09-16T13:39:57.901620+00:00",
+  "implementationStartUTC": "2026-09-16T13:39:57.905478+00:00",
+  "generationSeconds": [
+    39.532,
+    27.542
+  ],
+  "referenceInputReadStartUTC": "2026-09-16T13:32:56.184649+00:00",
+  "firstNativeInspectionUTC": "2026-09-16T13:44:22.926560+00:00",
+  "pairedLodAndExternalJointMeasurementUTC": "2026-09-16T13:52:28.191543+00:00",
+  "exportInspectionEndUTC": "2026-09-16T13:53:52.296232+00:00",
+  "verificationEndUTC": "2026-09-16T13:53:53.712177+00:00",
+  "nativePlotCreatedUTC": "2026-09-16T13:54:43.254234+00:00",
+  "documentationFreezeUTC": "2026-09-16T13:59:11.812216+00:00",
+  "windowsAreExclusiveLabor": false,
+  "notes": "Wall-clock windows include reasoning, accepted tools, communication and checkpoint/context overhead; generated waits recorded separately. Plot was actually viewed within the reported interval; no precise viewing timestamp was recorded.",
+  "elapsedWindowsSeconds": {
+    "imageSelectionAfterFinalGeneratedOutput": 192.68862,
+    "implementationToFirstNativeInspection": 265.021082,
+    "requiredBoundaryAndLodRework": 485.264983,
+    "exportAndFocusedVerification": 85.520634,
+    "nativePlotUntilCreated": 49.542057
+  },
+  "nativePlotActuallyViewed": true,
+  "nativePlotViewIntervalUTC": [
+    "2026-09-16T13:54:43.254234+00:00",
+    "2026-09-16T13:54:58.032366+00:00"
+  ]
+}

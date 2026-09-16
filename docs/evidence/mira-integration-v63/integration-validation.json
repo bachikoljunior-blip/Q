@@ -1,0 +1,33 @@
+{
+  "scope": "source-only integration; runtime src/index/package/public exact to Site24 2bee",
+  "fixedSource": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+  "localValidation": {
+    "npmTest": {
+      "passed": 379,
+      "failed": 0,
+      "durationMs": 54468.104625
+    },
+    "build": {
+      "exit": 0,
+      "seconds": 4.33
+    },
+    "package": {
+      "exit": 0,
+      "publicFiles": 34,
+      "bytes": 14039068,
+      "media": 27
+    },
+    "artifacts": {
+      "exit": 0,
+      "initialJS": 165611,
+      "JSChunks": 3
+    }
+  },
+  "runtimeDiffToSite24": "git diff --stat exact empty for src index.html package.json package-lock.json public .openai/hosting.json",
+  "notProven": [
+    "WebGL or mobile performance",
+    "generated-image exact matching",
+    "whole character or PS4 quality",
+    "main integration or new Site deployment"
+  ]
+}

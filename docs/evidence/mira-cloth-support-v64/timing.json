@@ -1,0 +1,14 @@
+{
+  "methodDecisionMarker": "2026-09-16T13:41:46Z",
+  "pairedSweepStartedAt": "2026-09-16T13:44:34.533Z",
+  "pairedSweepEndedAt": "2026-09-16T13:44:40.647Z",
+  "checkpointAt": "2026-09-16T13:48:54.178092+00:00",
+  "phases": {
+    "shapeAndMethod": "existing rest shape unchanged; 51-row-support method chosen before first source write, exclusive timer not instrumented",
+    "codeAndFirstValidation": "method marker through paired sweep completion; includes specification/code/tools",
+    "correction": "no second candidate or parameter revision; no functional rework after first measured source",
+    "limitedValidation": "after paired sweep, added only limited crossings/sag, covariance/rejection tests, CPU diagram and actual viewing, documentation",
+    "newImageGenerationSeconds": 0
+  },
+  "cpuScope": "paired solver host CPU only, alternating order; excludes native pose generation and triangle measurement/specification/coding. Not a device benchmark."
+}

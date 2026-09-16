@@ -1,0 +1,172 @@
+{
+  "generatedUTC": "2026-09-16T13:59:11.813386+00:00",
+  "base": "22d1d041dd6aef60de7764b1eebf6cf78028c857",
+  "scope": "Candidate code/source-only head assembly. Original reference PNG bytes preserved. Manifest excludes itself. Untracked SVG reappearance is documented separately in FILE_STATE.json; committed archive preserves identical bytes.",
+  "files": [
+    {
+      "path": "docs/evidence/mira-lantern-v63/FILE_STATE.json",
+      "bytes": 1135,
+      "sha256": "ac1489917777f2f414b5edfb39c6d3b31a381074ee6c40edd91e342f85befca5"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/REPORT.md",
+      "bytes": 8804,
+      "sha256": "80e47c1debfba05ddebeedecd744efa8d498c6f8db72c22dee9cbc8342490574"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/TIMING.json",
+      "bytes": 1368,
+      "sha256": "4f995b6302a71c0916317980e3300ddb2ded88b89f8c914cfa7df32ab3efa99e"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/comparison.json",
+      "bytes": 42401,
+      "sha256": "5c6b6059c3100e233378cd2b09189ad077b6ed70aefa3a19a83a7cc2bfa1070f"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/first-inspection.json",
+      "bytes": 16316,
+      "sha256": "198a5eaf84cd8055fec762620f6b33d6bac754dae5c5ce78fdc0c88e3639f160"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/S07.obj",
+      "bytes": 130688,
+      "sha256": "c56dbe9bdb9e1d572fcd431a2b902a75ba9a747bb18f6f951896821201701cc2"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/S08.obj",
+      "bytes": 36418,
+      "sha256": "68418c5aadc89042f15248c8f1619fddacab346051cc6868e4084b97219df985"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/S14.obj",
+      "bytes": 136989,
+      "sha256": "5787b83dd0a56cc0962f6003f537025a988f80fc4547c6602a0674e3b8f4b25c"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/S16.obj",
+      "bytes": 98304,
+      "sha256": "f018d3a5e2cb7655363afe56a7295e9385dc54c34edcb1bbbc4c9d01d5bacd88"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/head-with-S06-S15-boundaries.obj",
+      "bytes": 946059,
+      "sha256": "67918ef0be342f38bb1a1cc57a9a66eb98089109d84ee5b6730eb2e510c96229"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/lantern-head-16.obj",
+      "bytes": 749546,
+      "sha256": "0ab3e07b3853af69d50809556388c5427a1bafd7a155b04e2f0ddbf8e2865134"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/native-geometry.json",
+      "bytes": 1632459,
+      "sha256": "e8edc73f92fdb2c039d428e16c3141230602d38d779ef0684dc855c697c82e39"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/native-projections-svg.json",
+      "bytes": 258617,
+      "sha256": "47d6a92561c3b0c22750de739aafa9560749ff452b34ab98cec1a5b5a0ed3bb2"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/native-projections.png",
+      "bytes": 564625,
+      "sha256": "49c61c95e79349d385070046f0a84faff1634b5d617c04cf047f6e993fd49179"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/geometry/report.json",
+      "bytes": 47015,
+      "sha256": "3d95f21e6c718e88ae8f75b28b721444a21054cb0875067462d69e063231b8bb"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/parent-boundary-snapshot/SOURCE.json",
+      "bytes": 364,
+      "sha256": "6bea782a319d690e6d470008739faed4659d276c766df10f74bb5c092a08c540"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/parent-boundary-snapshot/staff-parts.mjs",
+      "bytes": 6295,
+      "sha256": "afd01a6bde340780208d698a0578f1ce397f8c1e682fbdcba91ac7475689edef"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/plot-geometry.py",
+      "bytes": 3306,
+      "sha256": "648f541133bc695eee45ed2ddf382d36f3611d5906ef8fd3e18a1e6a09e7b534"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/INPUTS.json",
+      "bytes": 783,
+      "sha256": "5c36483b49c6441e85631fd6466c2a14f87ff7d99d570b0f29662497ac6e3b25"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/SELECTION.json",
+      "bytes": 781,
+      "sha256": "417db3f8382b49eabd0193348fa685096ef5b0a64717912e35553feeb19c5b99"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/generation-v1.json",
+      "bytes": 670,
+      "sha256": "bb8327964751cb5db72ae919aad10fc724e15cb296196d933d8555cddca811cb"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/generation-v2.json",
+      "bytes": 710,
+      "sha256": "8ff2a6f9c90b3b6f27c9de54225617436240a8dd6885c1723c3992e7b4cd3b47"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/glass-correction-prompt.txt",
+      "bytes": 2076,
+      "sha256": "24c5094493c1aaae9df192bca80333f4638a157f5ac5b423716f9cd3f1ddc42c"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/glass-multiview-v2.png",
+      "bytes": 1285938,
+      "sha256": "6c86735438a9444765c78f377f0a364281fe50360159d5fd20309f49a4434ce4"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/lower-cup-ring-glass-v1.png",
+      "bytes": 1725935,
+      "sha256": "1225a270841c4755e2de630ab746dc49f899102ff80de915c6ccc079a74dccbc"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/prompt-v1.txt",
+      "bytes": 3616,
+      "sha256": "81c6aae929cbda2f2d96b18836bc51631ec3465934ada153677f597908e48391"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/tests.txt",
+      "bytes": 1496,
+      "sha256": "cb6719bd70961bae1f1ad4bb11dd5e882b4f5ddcc5b6a2ce9d3c6f78021b095d"
+    },
+    {
+      "path": "review/lantern-v63/README.md",
+      "bytes": 1193,
+      "sha256": "1631efa70e0ed42a81e193f76858f49b17065e60f6a89a0fc22bda17ca14feb3"
+    },
+    {
+      "path": "review/lantern-v63/compare-head.js",
+      "bytes": 2424,
+      "sha256": "99ab0660af43954145725f5ede2ee3555bae751657ddcc2ab617fa6a1395e8d6"
+    },
+    {
+      "path": "review/lantern-v63/inspect-head.js",
+      "bytes": 3622,
+      "sha256": "c97e33b67c2360bb53b99865bd0ae686617e42ae6d440042372ee12e109a7d78"
+    },
+    {
+      "path": "review/lantern-v63/lantern-head.js",
+      "bytes": 7525,
+      "sha256": "db88b7c1eb36c1c58fde73dfad4668505e46893f39708a44320a600574fbaf5d"
+    },
+    {
+      "path": "scripts/export-mira-lantern-v63.mjs",
+      "bytes": 3906,
+      "sha256": "2d58e950376ac981d1520642b458a72d6e1b7624a5f35dc41ef71a9a08ac666a"
+    },
+    {
+      "path": "tests/mira-lantern-v63.test.mjs",
+      "bytes": 6168,
+      "sha256": "fcbd78fcf5db3a1607db33a04178be3930b595385b1bcb66de2aba3cd3dfbf75"
+    }
+  ]
+}

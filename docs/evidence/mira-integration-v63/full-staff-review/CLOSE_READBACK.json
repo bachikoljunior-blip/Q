@@ -1,0 +1,58 @@
+{
+  "at": "2026-09-16T14:16:26.229560+00:00",
+  "startedAt": "2026-09-16T14:10:46+00:00",
+  "elapsedSeconds": 340.22956,
+  "nativeBatchMs": 523.4666119999999,
+  "head": "9d1f5fa119d5026c8b88569149208587cec6b264",
+  "status": "",
+  "frozenSourceUnchanged": true,
+  "oldPartSourcePreserved": [
+    {
+      "path": "review/lantern-micro-v62/mira-lantern-ribs.js",
+      "exactToBase": true,
+      "sha256": "33e596ff22332c317d819265e08c819f01c677c8a3cb63eea5aaa42bc17723e6"
+    },
+    {
+      "path": "review/micro-v61/mira-micro-parts.js",
+      "exactToBase": true,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+    }
+  ],
+  "readOrViewedInputs": [
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/lower-cup-ring-glass-v1.png",
+      "bytes": 1725935,
+      "sha256": "1225a270841c4755e2de630ab746dc49f899102ff80de915c6ccc079a74dccbc"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/glass-multiview-v2.png",
+      "bytes": 1285938,
+      "sha256": "6c86735438a9444765c78f377f0a364281fe50360159d5fd20309f49a4434ce4"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/references/SELECTION.json",
+      "bytes": 781,
+      "sha256": "417db3f8382b49eabd0193348fa685096ef5b0a64717912e35553feeb19c5b99"
+    },
+    {
+      "path": "docs/evidence/mira-lantern-v63/REPORT.md",
+      "bytes": 8804,
+      "sha256": "80e47c1debfba05ddebeedecd744efa8d498c6f8db72c22dee9cbc8342490574"
+    },
+    {
+      "path": "review/staff-v63/README.md",
+      "bytes": 3795,
+      "sha256": "70f0336f3dae7009928b1ea97567ecf8561d9e68270a43b6664968af87ab0a24"
+    },
+    {
+      "path": "docs/evidence/mira-staff-v63/assembly/native-report.json",
+      "bytes": 51473,
+      "sha256": "d9c0130d39178adc736586b4e6952256de63076bb3065c751c8a3a44b1fdf328"
+    }
+  ],
+  "sourceEdits": 0,
+  "imageEdits": 0,
+  "gitMutations": 0,
+  "unfinishedSessions": 0,
+  "requiredSourceRepairs": 0
+}
