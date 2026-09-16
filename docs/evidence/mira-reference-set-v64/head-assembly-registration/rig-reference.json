@@ -1,0 +1,100 @@
+{
+  "source": "existing detailed-geometry.js lines218-226 / actor-models blink; v63 metrics rig",
+  "frame": {
+    "id": "HEAD_LOCAL_M",
+    "units": "metres",
+    "origin": "existing head group origin",
+    "up": "+Y",
+    "face": "+Z",
+    "anatomicalR": "-X",
+    "anatomicalL": "+X",
+    "mirror": "[-x,y,z]; negative determinant requires winding reversal; do not mirror entire hairstyle",
+    "pixelToMetreCalibration": null
+  },
+  "rig": {
+    "headLocal": [
+      0,
+      0.16,
+      0
+    ],
+    "neckLocal": [
+      0,
+      0.6,
+      0
+    ],
+    "headWorld": [
+      0,
+      1.7449999999999999,
+      0
+    ],
+    "neckWorld": [
+      0,
+      1.585,
+      0
+    ],
+    "headToNeck": 0.16,
+    "missingBones": 0
+  },
+  "eyes": [
+    {
+      "side": "R",
+      "scleraCenterM": [
+        -0.046,
+        0.05,
+        0.1
+      ],
+      "scleraEllipsoidScalesM": [
+        0.022,
+        0.008,
+        0.01
+      ],
+      "irisCenterM": [
+        -0.046,
+        0.05,
+        0.109
+      ],
+      "irisScalesM": [
+        0.008,
+        0.008,
+        0.003
+      ],
+      "lidGroup": "eyelid-0",
+      "lidPivotM": [
+        -0.046,
+        0.058,
+        0.1
+      ]
+    },
+    {
+      "side": "L",
+      "scleraCenterM": [
+        0.046,
+        0.05,
+        0.1
+      ],
+      "scleraEllipsoidScalesM": [
+        0.022,
+        0.008,
+        0.01
+      ],
+      "irisCenterM": [
+        0.046,
+        0.05,
+        0.109
+      ],
+      "irisScalesM": [
+        0.008,
+        0.008,
+        0.003
+      ],
+      "lidGroup": "eyelid-1",
+      "lidPivotM": [
+        0.046,
+        0.058,
+        0.1
+      ]
+    }
+  ],
+  "newEyeGeometry": "not fixed; old flattened ellipsoid is not new near-spherical E01 image, cannot silently reuse dimensions",
+  "bonesModified": false
+}

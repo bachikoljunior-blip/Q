@@ -1,0 +1,1744 @@
+{
+  "scope": "clothing reference inventory, not character completion",
+  "oldTypes": 34,
+  "oldInstances": 79,
+  "additionalTypes": 6,
+  "additionalInstances": 17,
+  "imageRepresentedTypes": 40,
+  "proposedInstances": 96,
+  "new3D": 0,
+  "runtimeChanges": 0,
+  "allNumericalSeamsClosed": false,
+  "independentCurrentSetReview": "pending",
+  "types": [
+    {
+      "typeID": "T01",
+      "name": "front centre panel",
+      "instances": [
+        "T01-R",
+        "T01-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "independent-shape-only-conditional",
+      "notes": "not exact multi-view CAD; swirls/rims rejected; shared edges unresolved",
+      "dimensions": [
+        135,
+        500,
+        18
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "T03/T05; top T04/C01; bottom WAIST",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "T02",
+      "name": "rear quarter panel",
+      "instances": [
+        "T02-R",
+        "T02-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-01-v2.png",
+      "sha256": "6bb55000c12fb0da11ba3807081bafbcd56af2b669f380abe9b3722f1333306c",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Ignore generated text left shoulder: rear locator image-right is anatomical Right. Existing author placement is authoritative; no all-panel consistency claim.",
+      "dimensions": [
+        180,
+        500,
+        20
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "T03; top T04/C02; bottom WAIST",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "T03",
+      "name": "underarm side panel",
+      "instances": [
+        "T03-R",
+        "T03-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-01-v2.png",
+      "sha256": "6bb55000c12fb0da11ba3807081bafbcd56af2b669f380abe9b3722f1333306c",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Single side surface readable; contour and grain/piping are not measured geometry or material.",
+      "dimensions": [
+        150,
+        330,
+        30
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "front T01; rear T02; top T05; bottom WAIST",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "T04",
+      "name": "shoulder bridge",
+      "instances": [
+        "T04-R",
+        "T04-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-01-v2.png",
+      "sha256": "6bb55000c12fb0da11ba3807081bafbcd56af2b669f380abe9b3722f1333306c",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Single shoulder saddle readable. Ignore generated HOODIE neighbour text; ARMHOLE from author ledger controls.",
+      "dimensions": [
+        130,
+        180,
+        45
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "inner COLLAR; T01/T02; outer ARMHOLE",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "T05",
+      "name": "armhole gusset half",
+      "instances": [
+        "T05-R-front",
+        "T05-R-rear",
+        "T05-L-front",
+        "T05-L-rear"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-02-v1.png",
+      "sha256": "36182e4c7b4aa340d79831b0754444eef1cb082b36902cf1db220f2a681abf20",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "One crescent patch, not complete annular armhole. Four placements require front/rear adjacency registration.",
+      "dimensions": [
+        100,
+        160,
+        25
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "shared ARMHOLE16; T03/T04; S01/S02",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "S01",
+      "name": "upper sleeve front",
+      "instances": [
+        "S01-R",
+        "S01-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-02-v1.png",
+      "sha256": "36182e4c7b4aa340d79831b0754444eef1cb082b36902cf1db220f2a681abf20",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Half-panel with one broad bend; exact shoulder and elbow arc correspondence unmeasured.",
+      "dimensions": [
+        170,
+        250,
+        80
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "ARMHOLE; side S02; bottom S03/S04",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "S02",
+      "name": "upper sleeve rear",
+      "instances": [
+        "S02-R",
+        "S02-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/S02-v2.png",
+      "sha256": "191b21af54b8cc7d2f3c1099a0ef35ec4ffcc7077a75909ce3d70fe468af9215",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Repaired locator shows rear anatomical Right upper arm; not front S01. Exact cut contours remain author registration.",
+      "dimensions": [
+        170,
+        250,
+        80
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "ARMHOLE; side S01; bottom S03/S04",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "S03",
+      "name": "outer elbow fold",
+      "instances": [
+        "S03-R",
+        "S03-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/S03-v2.png",
+      "sha256": "01aa626ca1940ad8662d4eab2397aba762f1257e390d599c90f82e73da326e37",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "One-fold topology agrees. Image remains taller than old 180x90 nominal author ratio; this is uncalibrated aspect/scale, not proof of a different topology. Final author width/height and fold depth must be registered together before mesh.",
+      "dimensions": [
+        180,
+        90,
+        22
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top S01/S02; bottom S05/S06; ends S04",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "S04",
+      "name": "inner elbow gusset",
+      "instances": [
+        "S04-R",
+        "S04-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-03-v1.png",
+      "sha256": "250c76f9fcaa650bef57b7c53e7425203012357f6afe1b6c81e733b9552ff987",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Single concave gusset; elbow seam lengths unmeasured.",
+      "dimensions": [
+        110,
+        90,
+        18
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top S01/S02; bottom S05/S06; ends S03",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "S05",
+      "name": "forearm sleeve front",
+      "instances": [
+        "S05-R",
+        "S05-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "independent-shape-only-conditional",
+      "notes": "not exact multi-view CAD; swirls/rims rejected; shared edges unresolved",
+      "dimensions": [
+        120,
+        190,
+        55
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "S03/S04; sides S06; bottom CUFF",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "S06",
+      "name": "forearm sleeve rear",
+      "instances": [
+        "S06-R",
+        "S06-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/S06-v2.png",
+      "sha256": "6b569ec4c96b5da70b7abc65ffa2750d65ccacb6671a065ff2fff081154465a5",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "",
+      "dimensions": [
+        120,
+        190,
+        55
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "S03/S04; sides S05; bottom CUFF",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "C01",
+      "name": "front stand-collar half",
+      "instances": [
+        "C01-R",
+        "C01-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/C01-v2.png",
+      "sha256": "ae5dad88812d11858129bbd887eb6c18442b027313338b50e7ac961719865406",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Front collar half is readable; illustrated angular sweep not a measured 90-degree arc.",
+      "dimensions": [
+        115,
+        82,
+        4
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "lower T01/T04; back C02; front OPEN",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "C02",
+      "name": "rear stand collar",
+      "instances": [
+        "C02-C"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-04-v1.png",
+      "sha256": "ea4a70f37ec9a4933194b2652e292dcf90f19156ca6f64da7839becb7435cfde",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Rear curved stand-collar strip; exact end angles and wall thickness not measured.",
+      "dimensions": [
+        300,
+        82,
+        4
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "lower T02/T04; ends C01",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "W01",
+      "name": "front cowl fold",
+      "instances": [
+        "W01-0",
+        "W01-1",
+        "W01-2"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/W01-v2.png",
+      "sha256": "e89dec51440d51f46b30bd4ce90992628af90ee38b5436bae85b338139af6d17",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Corrected from multiple pleats to one U fold. Three layer instances are author placements, not three different shapes.",
+      "dimensions": [
+        400,
+        50,
+        25
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "ends W02; adjacent W01",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "W02",
+      "name": "side cowl bridge",
+      "instances": [
+        "W02-R",
+        "W02-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/W02-v2.png",
+      "sha256": "ce3651f4d19d49b2afc68d224fd4fe200d91b3ebff1f9424ddf390314e0701e7",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Corrected from entire scarf to one shoulder bridge. Brooch attachment is separate.",
+      "dimensions": [
+        140,
+        190,
+        45
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "front W01; rear W03; lower P04; brooch seat",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "W03",
+      "name": "rear cowl fold",
+      "instances": [
+        "W03-0",
+        "W03-1",
+        "W03-2"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/W03-v2.png",
+      "sha256": "edc2f90888e4ebeeb37ee35884964ddef6701e09d5bc0e7e0a12db8bc63dbe26",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Corrected to one V strip. Context lacks individual layer highlight; author 3-layer mapping controls.",
+      "dimensions": [
+        410,
+        65,
+        45
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "ends W02; upper C02; lower P04",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "P01",
+      "name": "cape rear panel",
+      "instances": [
+        "P01-R",
+        "P01-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "independent-shape-only-conditional",
+      "notes": "not exact multi-view CAD; swirls/rims rejected; shared edges unresolved",
+      "dimensions": [
+        220,
+        1100,
+        45
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "rear centre; outer P02; top P04; bottom HEM",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "P02",
+      "name": "cape side panel",
+      "instances": [
+        "P02-R",
+        "P02-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v2.png",
+      "sha256": "409535188a6e448e7fb59f415be5302e49513024e429edb3e9d49f85d4fbee4a",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "author-shape-only-conditional-independent-review-pending",
+      "notes": "profile/3q depth not exactly reconciled; no measured dimensions",
+      "dimensions": [
+        280,
+        1120,
+        55
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "rear P01; front P03; top P04; bottom HEM",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "P03",
+      "name": "cape front-edge panel",
+      "instances": [
+        "P03-R",
+        "P03-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/P03-v2.png",
+      "sha256": "b1fd5e177089c695d7f357633f8100a721a935dd4cead920f8800b79420d918b",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Corrected placement to outer cape edge, staff side, rather than tunic split.",
+      "dimensions": [
+        160,
+        1050,
+        35
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "outer P02; top W02/P04; inner OPEN; bottom HEM",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "P04",
+      "name": "cape shoulder connector",
+      "instances": [
+        "P04-R",
+        "P04-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/P04-v2.png",
+      "sha256": "2f547c0754f5d9d3508b2c37d06d24fba3fda01f018daca8d07b24079db0f63d",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Corrected entire cowl into single shoulder saddle; older P04-RB image covers only back subdivision, not whole type.",
+      "dimensions": [
+        230,
+        160,
+        50
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "inner W02/W03; outer P01/P02/P03",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "L01",
+      "name": "lower front panel",
+      "instances": [
+        "L01-R",
+        "L01-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/L01-v2.png",
+      "sha256": "27f482e1587da82b1dc5fc2c67c8a9524c8d3343ff6a4648d884bbfc98df543b",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Corrected pair of panels to one front half. No second front wall is present.",
+      "dimensions": [
+        220,
+        505,
+        35
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "WAIST; side L03; inner L04/OPEN; bottom L05",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "L02",
+      "name": "lower rear panel",
+      "instances": [
+        "L02-R",
+        "L02-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/L02-v2.png",
+      "sha256": "75055d823970683cd8e41305b64118655ff65d98980a9083299d4ed9cb1c24c2",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Corrected full-width rear to one quarter. Context unhighlighted; rear quarter mapping comes from canonical and ledger.",
+      "dimensions": [
+        240,
+        505,
+        35
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "WAIST; side L03; rear centre; bottom L05",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "L03",
+      "name": "lower side insert",
+      "instances": [
+        "L03-R",
+        "L03-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/L03-v2.png",
+      "sha256": "0c8d756575df48931788f18ffc13261be99c8fe84413765a40df8e3fc19162fa",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Corrected doubled return wall into one panel; decorative edge rolls are excluded.",
+      "dimensions": [
+        150,
+        505,
+        30
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "WAIST; front L01; rear L02; bottom L05",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "L04",
+      "name": "split-edge turnback",
+      "instances": [
+        "L04-R",
+        "L04-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-07-v1.png",
+      "sha256": "6a00837ee926e9941d2d5f2e751ea4fc885b4601e461ada4baad6bb84cc5dfd0",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "One turnback strip; thick drawn rim is illustrative, not runtime thickness.",
+      "dimensions": [
+        12,
+        505,
+        3
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "fold along L01 front edge; inside free edge",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "L05",
+      "name": "hem turnback",
+      "instances": [
+        "L05-front-R",
+        "L05-front-L",
+        "L05-side-R",
+        "L05-side-L",
+        "L05-rear-R",
+        "L05-rear-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-07-v1.png",
+      "sha256": "6a00837ee926e9941d2d5f2e751ea4fc885b4601e461ada4baad6bb84cc5dfd0",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Tunic hem only, not cape hem. Shared adjacent ends are not independent solid caps.",
+      "dimensions": [
+        220,
+        12,
+        3
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "corresponding lower panel hem; joined endpoints",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "B01",
+      "name": "belt segment",
+      "instances": [
+        "B01-front-R",
+        "B01-front-L",
+        "B01-rear-R",
+        "B01-rear-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-08-v1.png",
+      "sha256": "40097bcc008935c4a11763c28c8d5b4a52b6f9e6f3917954e3acc9cf3d4e53bb",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Leather segment remains separate from trouser fabric TR04.",
+      "dimensions": [
+        300,
+        82,
+        6
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "continuous WAIST path",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "B02",
+      "name": "hanging belt tail",
+      "instances": [
+        "B02-R"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-08-v1.png",
+      "sha256": "40097bcc008935c4a11763c28c8d5b4a52b6f9e6f3917954e3acc9cf3d4e53bb",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Legacy B02-R ID retained; canonical hanging tail is anatomical Left (+X), front image-right.",
+      "dimensions": [
+        48,
+        350,
+        5
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top B03-hanger; bottom FREE",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "B03",
+      "name": "hardware ring",
+      "instances": [
+        "B03-buckle-C",
+        "B03-hanger-R"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-08-v1.png",
+      "sha256": "40097bcc008935c4a11763c28c8d5b4a52b6f9e6f3917954e3acc9cf3d4e53bb",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Two scale instances; hanger legacy R alias maps Left (+X). Exact ring proportions/pin clearance unresolved.",
+      "dimensions": [
+        72,
+        60,
+        7
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "belt or tail hinge; closed opening",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "B04",
+      "name": "buckle pin",
+      "instances": [
+        "B04-C"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-09-v1.png",
+      "sha256": "393bd8dc8f01537f4d752f073963c174fd3ac078b178b64fd4b44a47766156e6",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Single pin/hinge part; belt-hole contact needs author fit.",
+      "dimensions": [
+        41,
+        6,
+        6
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "hinge B03; tip explicit belt hole",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "F01",
+      "name": "cuff front half",
+      "instances": [
+        "F01-R",
+        "F01-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-09-v1.png",
+      "sha256": "393bd8dc8f01537f4d752f073963c174fd3ac078b178b64fd4b44a47766156e6",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Open front half-shell readable; thick edge rims excluded.",
+      "dimensions": [
+        115,
+        200,
+        6
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top CUFF; side F02; bottom WRIST",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "F02",
+      "name": "cuff rear half",
+      "instances": [
+        "F02-R",
+        "F02-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-09-v1.png",
+      "sha256": "393bd8dc8f01537f4d752f073963c174fd3ac078b178b64fd4b44a47766156e6",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Open rear half-shell readable; mirror shares shape, not automatically mirrored twist or winding.",
+      "dimensions": [
+        115,
+        200,
+        6
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top CUFF; side F01; bottom WRIST",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "F03",
+      "name": "cross-wrap ribbon",
+      "instances": [
+        "F03-R-0",
+        "F03-R-1",
+        "F03-R-2",
+        "F03-L-0",
+        "F03-L-1",
+        "F03-L-2"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/F03-v2.png",
+      "sha256": "9dc81ba31e72ddbf1b0fc1594e805cb399859bf2ba478bfab9c75a3cd01b0d99",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Shape is one ribbon. Old front/rear locator sides conflict; repaired contexts lack a precise highlighted strip. Discard both locator claims; use canonical wrists plus author R=-X/L=+X and wrap order.",
+      "dimensions": [
+        12,
+        150,
+        3
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "F01/F02; explicit overlap order",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "F04",
+      "name": "brooch centre",
+      "instances": [
+        "F04-R",
+        "F04-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/F04-v2.png",
+      "sha256": "b5c28dc961e64afcdcc8e1eb26e4183dcab3e780b9b173462da45614778dffe7",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Corrected double-convex profile to a thin concave-backed dome. Exact thickness/contact with F05 unresolved.",
+      "dimensions": [
+        42,
+        42,
+        6
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "seat W02; rim F05",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "F05",
+      "name": "brooch rim",
+      "instances": [
+        "F05-R",
+        "F05-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-10-v1.png",
+      "sha256": "0ee71d6ebad812bd175d4136445027ca3aca659f63bff6080fc5bf8e4617f47d",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "missing",
+      "notes": "Separate rim with central opening; F04 seat is author fit.",
+      "dimensions": [
+        54,
+        54,
+        7
+      ],
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "inner F04; back W02",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "reflection X -> -X permitted for symmetric instances only; reverse winding and anatomical bone mapping later; geometry equivalence not yet validated"
+    },
+    {
+      "typeID": "TR01",
+      "name": "trouser front leg half-shell",
+      "instances": [
+        "TR01-R",
+        "TR01-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR01-method-b.png",
+      "sha256": "a429a8dffe2657aa7907ba5827f90ed164eb1ff442f39949d0b197665b1e0977",
+      "referenceAssessment": "open-surface-method-conditional-registration-pending",
+      "priorIndependentStatus": "new image: independent review pending",
+      "notes": "v1/v2 closed-ankle topology rejected. Method B is an open one-surface reference; blue-grey is proxy only. Upper cutout location and TR03 mating edges are not yet registered to actual trouser contours.",
+      "dimensions": null,
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "TR04 waist; outside and inside seams TR02; upper inner cutout TR03; bottom TR05",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "symmetry is author proposal; exact shared contours and winding not implemented"
+    },
+    {
+      "typeID": "TR02",
+      "name": "trouser rear leg and seat half-shell",
+      "instances": [
+        "TR02-R",
+        "TR02-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR02-method-b.png",
+      "sha256": "92eda1a1205de61856bdabac7f345e31e9eb29687285e69e8f2f774737162a70",
+      "referenceAssessment": "open-surface-method-conditional-registration-pending",
+      "priorIndependentStatus": "new image: independent review pending",
+      "notes": "v1/v2 mixed open/closed views rejected. Method B open surface class readable; seat/crotch contour and matching TR01 seams still require author registration. Proxy blue-grey is not canonical colour.",
+      "dimensions": null,
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "TR04 waist; both side seams TR01; upper inner cutout TR03; bottom TR05",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "symmetry is author proposal; exact shared contours and winding not implemented"
+    },
+    {
+      "typeID": "TR03",
+      "name": "crotch gusset saddle",
+      "instances": [
+        "TR03-C"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR03-v2.png",
+      "sha256": "875cf46b6a524d29f1392308ee55cfba8a6c3e7fd72593b7ba88d7b6ee3496fb",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "new image: independent review pending",
+      "notes": "One curved diamond patch visible; exact saddle curvature and four seam lengths must match both front/rear leg pieces, not duplicate their crotch region.",
+      "dimensions": null,
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "four cut edges to inner top contours of TR01-R/L and TR02-R/L",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "symmetry is author proposal; exact shared contours and winding not implemented"
+    },
+    {
+      "typeID": "TR04",
+      "name": "trouser waist fabric strip",
+      "instances": [
+        "TR04-front-R",
+        "TR04-front-L",
+        "TR04-rear-R",
+        "TR04-rear-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR04-v2.png",
+      "sha256": "850e1dae61e856a18745128dc270585b3702ec91b675af10d1571ff1682446c8",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "new image: independent review pending",
+      "notes": "Fabric waist arc only; not external leather belt. Four instances share endpoints; no independent end caps.",
+      "dimensions": null,
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "lower edge TR01/TR02; four endpoints shared around trouser waist",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "symmetry is author proposal; exact shared contours and winding not implemented"
+    },
+    {
+      "typeID": "TR05",
+      "name": "trouser boot underlap strip",
+      "instances": [
+        "TR05-R",
+        "TR05-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR05-v1.png",
+      "sha256": "b7afe4303310d4dbcef9411a0f3ca7ef20b87c51ee2a78aa53a2de1baeedb0dd",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "new image: independent review pending",
+      "notes": "Cloth underlap inside boots only. Joint with TR01/TR02 and overlap depth with AB07/AB08 not measured.",
+      "dimensions": null,
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "top TR01/TR02 bottom edges; lower edge tucked inside boot AB07/AB08",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "symmetry is author proposal; exact shared contours and winding not implemented"
+    },
+    {
+      "typeID": "PH01",
+      "name": "cape hem turnback segment",
+      "instances": [
+        "PH01-P01-R",
+        "PH01-P01-L",
+        "PH01-P02-R",
+        "PH01-P02-L",
+        "PH01-P03-R",
+        "PH01-P03-L"
+      ],
+      "selectedImage": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/PH01-v1.png",
+      "sha256": "2a9dc2184fa51daca9151d1bbec92510b932dc40cc3887fd76be3a85b47095c1",
+      "referenceAssessment": "qualitative-shape-only-conditional",
+      "priorIndependentStatus": "new image: independent review pending",
+      "notes": "Cape-specific hem only. Ignore generated swirl texture/rolled thickness; share P01/P02/P03 hem and endpoints, no capped independent solids.",
+      "dimensions": null,
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "upper edge inherits matching cape P01/P02/P03 hem curve; neighbouring endpoints shared, no individual end caps",
+      "sharedVerticesUVWeights": "not established by this image set; no new geometry",
+      "mirrorPolicy": "symmetry is author proposal; exact shared contours and winding not implemented"
+    }
+  ],
+  "instances": [
+    {
+      "id": "T01-R",
+      "type": "T01",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "T01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T01-L",
+      "type": "T01",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "T01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T02-R",
+      "type": "T02",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "T02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T02-L",
+      "type": "T02",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "T02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T03-R",
+      "type": "T03",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "T03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T03-L",
+      "type": "T03",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "T03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T04-R",
+      "type": "T04",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "T04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T04-L",
+      "type": "T04",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "T04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T05-R-front",
+      "type": "T05",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "T05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T05-R-rear",
+      "type": "T05",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "T05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T05-L-front",
+      "type": "T05",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "T05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "T05-L-rear",
+      "type": "T05",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "T05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "T05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S01-R",
+      "type": "S01",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "S01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S01-L",
+      "type": "S01",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "S01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S02-R",
+      "type": "S02",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "S02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S02-L",
+      "type": "S02",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "S02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S03-R",
+      "type": "S03",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "S03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S03-L",
+      "type": "S03",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "S03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S04-R",
+      "type": "S04",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "S04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S04-L",
+      "type": "S04",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "S04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S05-R",
+      "type": "S05",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "S05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S05-L",
+      "type": "S05",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "S05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S06-R",
+      "type": "S06",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "S06",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S06",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "S06-L",
+      "type": "S06",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "S06",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "S06",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "C01-R",
+      "type": "C01",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "C01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "C01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "C01-L",
+      "type": "C01",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "C01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "C01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "C02-C",
+      "type": "C02",
+      "anatomicalSide": "Centre/shared",
+      "referenceType": "C02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "C02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "W01-0",
+      "type": "W01",
+      "anatomicalSide": "Centre/shared",
+      "referenceType": "W01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "W01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "W01-1",
+      "type": "W01",
+      "anatomicalSide": "Centre/shared",
+      "referenceType": "W01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "W01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "W01-2",
+      "type": "W01",
+      "anatomicalSide": "Centre/shared",
+      "referenceType": "W01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "W01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "W02-R",
+      "type": "W02",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "W02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "W02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "W02-L",
+      "type": "W02",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "W02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "W02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "W03-0",
+      "type": "W03",
+      "anatomicalSide": "Centre/shared",
+      "referenceType": "W03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "W03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "W03-1",
+      "type": "W03",
+      "anatomicalSide": "Centre/shared",
+      "referenceType": "W03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "W03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "W03-2",
+      "type": "W03",
+      "anatomicalSide": "Centre/shared",
+      "referenceType": "W03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "W03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "P01-R",
+      "type": "P01",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "P01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "P01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "P01-L",
+      "type": "P01",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "P01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "P01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "P02-R",
+      "type": "P02",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "P02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "P02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "P02-L",
+      "type": "P02",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "P02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "P02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "P03-R",
+      "type": "P03",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "P03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "P03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "P03-L",
+      "type": "P03",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "P03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "P03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "P04-R",
+      "type": "P04",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "P04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "P04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "P04-L",
+      "type": "P04",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "P04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "P04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L01-R",
+      "type": "L01",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "L01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L01-L",
+      "type": "L01",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "L01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L02-R",
+      "type": "L02",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "L02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L02-L",
+      "type": "L02",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "L02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L03-R",
+      "type": "L03",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "L03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L03-L",
+      "type": "L03",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "L03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L04-R",
+      "type": "L04",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "L04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L04-L",
+      "type": "L04",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "L04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L05-front-R",
+      "type": "L05",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "L05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L05-front-L",
+      "type": "L05",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "L05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L05-side-R",
+      "type": "L05",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "L05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L05-side-L",
+      "type": "L05",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "L05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L05-rear-R",
+      "type": "L05",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "L05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "L05-rear-L",
+      "type": "L05",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "L05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "L05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "B01-front-R",
+      "type": "B01",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "B01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "B01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "B01-front-L",
+      "type": "B01",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "B01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "B01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "B01-rear-R",
+      "type": "B01",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "B01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "B01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "B01-rear-L",
+      "type": "B01",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "B01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "B01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "B02-R",
+      "type": "B02",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "B02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "proposedAnatomicalSide": "Left (+X)",
+      "conflict": "legacy -R id conflicts with canonical frontal hanging-tail location; retain ID for audit, resolve in global ledger",
+      "imageType": "B02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary",
+      "legacyAnatomicalSide": "Right (-X)",
+      "aliasStatus": "legacy ID retained; canonical placement correction proposed, not runtime mutation"
+    },
+    {
+      "id": "B03-buckle-C",
+      "type": "B03",
+      "anatomicalSide": "Centre/shared",
+      "referenceType": "B03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "B03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "B03-hanger-R",
+      "type": "B03",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "B03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "proposedAnatomicalSide": "Left (+X)",
+      "conflict": "legacy -R id conflicts with canonical frontal hanging-tail location; retain ID for audit, resolve in global ledger",
+      "imageType": "B03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary",
+      "legacyAnatomicalSide": "Right (-X)",
+      "aliasStatus": "legacy ID retained; canonical placement correction proposed, not runtime mutation"
+    },
+    {
+      "id": "B04-C",
+      "type": "B04",
+      "anatomicalSide": "Centre/shared",
+      "referenceType": "B04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "B04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F01-R",
+      "type": "F01",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "F01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F01-L",
+      "type": "F01",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "F01",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F01",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F02-R",
+      "type": "F02",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "F02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F02-L",
+      "type": "F02",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "F02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F03-R-0",
+      "type": "F03",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "F03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F03-R-1",
+      "type": "F03",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "F03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F03-R-2",
+      "type": "F03",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "F03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F03-L-0",
+      "type": "F03",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "F03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F03-L-1",
+      "type": "F03",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "F03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F03-L-2",
+      "type": "F03",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "F03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F04-R",
+      "type": "F04",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "F04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F04-L",
+      "type": "F04",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "F04",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F04",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F05-R",
+      "type": "F05",
+      "anatomicalSide": "Right (-X)",
+      "referenceType": "F05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "F05-L",
+      "type": "F05",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "F05",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "imageType": "F05",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary"
+    },
+    {
+      "id": "TR01-R",
+      "type": "TR01",
+      "imageType": "TR01",
+      "anatomicalSide": "Right (-X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR01-L",
+      "type": "TR01",
+      "imageType": "TR01",
+      "anatomicalSide": "Left (+X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR02-R",
+      "type": "TR02",
+      "imageType": "TR02",
+      "anatomicalSide": "Right (-X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR02-L",
+      "type": "TR02",
+      "imageType": "TR02",
+      "anatomicalSide": "Left (+X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR03-C",
+      "type": "TR03",
+      "imageType": "TR03",
+      "anatomicalSide": "Centre",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR04-front-R",
+      "type": "TR04",
+      "imageType": "TR04",
+      "anatomicalSide": "Right (-X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR04-front-L",
+      "type": "TR04",
+      "imageType": "TR04",
+      "anatomicalSide": "Left (+X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR04-rear-R",
+      "type": "TR04",
+      "imageType": "TR04",
+      "anatomicalSide": "Right (-X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR04-rear-L",
+      "type": "TR04",
+      "imageType": "TR04",
+      "anatomicalSide": "Left (+X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR05-R",
+      "type": "TR05",
+      "imageType": "TR05",
+      "anatomicalSide": "Right (-X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "TR05-L",
+      "type": "TR05",
+      "imageType": "TR05",
+      "anatomicalSide": "Left (+X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "PH01-P01-R",
+      "type": "PH01",
+      "imageType": "PH01",
+      "anatomicalSide": "Right (-X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "PH01-P01-L",
+      "type": "PH01",
+      "imageType": "PH01",
+      "anatomicalSide": "Left (+X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "PH01-P02-R",
+      "type": "PH01",
+      "imageType": "PH01",
+      "anatomicalSide": "Right (-X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "PH01-P02-L",
+      "type": "PH01",
+      "imageType": "PH01",
+      "anatomicalSide": "Left (+X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "PH01-P03-R",
+      "type": "PH01",
+      "imageType": "PH01",
+      "anatomicalSide": "Right (-X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    },
+    {
+      "id": "PH01-P03-L",
+      "type": "PH01",
+      "imageType": "PH01",
+      "anatomicalSide": "Left (+X)",
+      "assemblyStatus": "proposed unassembled author registration",
+      "placementAuthority": "canonical plus ADDITIONS-PLAN; not measured from proxy images"
+    }
+  ]
+}

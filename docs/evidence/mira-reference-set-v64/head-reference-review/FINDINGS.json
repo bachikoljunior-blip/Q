@@ -1,0 +1,72 @@
+{
+  "status": "finite independent design-reference review closed; whole head not accepted",
+  "requiredLocalClarifications": [
+    {
+      "id": "H-R1",
+      "types": [
+        "F17"
+      ],
+      "classification": "cross-view shape correspondence unresolved",
+      "image": "existing/mira-F17-v2.png",
+      "angle": "TRUE SIDE compared with FRONT and THREE-QUARTER",
+      "observation": "Two side protrusions cannot be assigned confidently to the single continuous front/oblique lower-lip ridge. Extra upper-lip ownership is not proven.",
+      "minimalClarification": "One F17-only consistent central profile and oblique view with mouth-contact upper edge and F11 lower edge marked."
+    },
+    {
+      "id": "H-R2",
+      "types": [
+        "A01a"
+      ],
+      "classification": "attachment-side / cross-section not shown",
+      "image": "09-ear-outer-v1.png",
+      "angle": "REVERSE and missing cross-section",
+      "observation": "Rounded C-rim reverse does not distinguish exposed roll from longitudinal skin attachment edges; closed-rod topology is not proven.",
+      "minimalClarification": "One A01a-only attachment view plus transverse section identifying the exposed rim and skin continuation edges."
+    }
+  ],
+  "notNewShapeFailures": [
+    {
+      "id": "H-D1",
+      "types": [
+        "HT04",
+        "HT05",
+        "HT06"
+      ],
+      "observation": "RIGHT SIDE (+Z VIEW) is not a usable world-camera declaration under the canonical face +Z coordinate system. A part-local transformation would need definition.",
+      "action": "Exclude this label as a world-axis authority; image regeneration is not required solely for text."
+    },
+    {
+      "id": "H-U1",
+      "types": [
+        "HT01",
+        "HT02"
+      ],
+      "observation": "Similar side silhouettes are insufficient evidence of incompatible geometry given differing width, local orientation, and uncalibrated image scale.",
+      "action": "Register distinct root lift, cross-section and placement if the two design families are retained."
+    },
+    {
+      "id": "H-U2",
+      "types": [
+        "E04",
+        "F18"
+      ],
+      "observation": "Broad locators occupy similar under-eye regions. They are not exact disjoint skin boundaries.",
+      "action": "Define the lower-lid to infraorbital shared curve in the separate registration work; this review does not prove overlap or prescribe new geometry."
+    }
+  ],
+  "wholeAssemblyBoundaries": [
+    "All 80 transforms and seams are null in the frozen image ledger.",
+    "All 40 finalMillimetres are null.",
+    "Lids, mouth contacts, nostril interior, ear entrance, scalp closure, neck/collar and 24 hair roots/tips are not established by isolated pictures.",
+    "Known native lower-face seams are not proof of generated-view consistency."
+  ],
+  "laterRevisionExcluded": [
+    "F21",
+    "proposed 41 types / 82 placements",
+    "head-assembly-registration"
+  ],
+  "newImages": 0,
+  "new3D": 0,
+  "runtimeEdits": 0,
+  "renderingClaims": false
+}

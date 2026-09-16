@@ -1,0 +1,111 @@
+{
+  "status": "Author proposal, not measured from generated images and not implemented",
+  "units": "mm",
+  "soleHeel": {
+    "constraint": "Registered complete rear thickness T = sole t + heel block h. Never count heel thickness inside both parts.",
+    "provisionalExample": {
+      "t": 8,
+      "h": 14,
+      "T": 22,
+      "adopted": false
+    },
+    "exteriorPolicy": "Preserve the registered completed boot footprint and total outer thickness. If its measured T differs, revise the internal split; do not raise the assembled outer envelope. A metrically registered canonical T is not yet available.",
+    "legacyFootFrame": {
+      "X": "across foot",
+      "Y": "up",
+      "Z": "toward toe",
+      "XBounds": [
+        -79,
+        79
+      ],
+      "ZBounds": [
+        -93,
+        193
+      ],
+      "supportPlaneY": -108
+    },
+    "provisionalHeelVertical": {
+      "AB02BottomY": -108,
+      "AB02TopY": -94,
+      "AB01HeelBottomY": -94,
+      "AB01HeelTopY": -86,
+      "claim": "Arithmetic split only, no actual surfaces built or tested.",
+      "sharedYPlaneDifference": 0,
+      "geometricGapAndOverlapMeasured": false
+    },
+    "forefoot": {
+      "provisionalSoleThickness": 8,
+      "lowerSupportY": -108,
+      "upperY": -100,
+      "curveToHeel": "Unregistered. Thin layer may curve upward toward heel but may not acquire a second integral heel block."
+    },
+    "AB11Seats": {
+      "countPerBoot": 4,
+      "centresXZ": [
+        [
+          -40,
+          -80
+        ],
+        [
+          40,
+          -80
+        ],
+        [
+          -40,
+          -35
+        ],
+        [
+          40,
+          -35
+        ]
+      ],
+      "headRadius": 3,
+      "headThickness": 1,
+      "headCentreY": -107.5,
+      "outerFaceY": -108,
+      "proposedSeatRadius": 3.1,
+      "proposedSeatDepth": 1,
+      "seatFloorY": -107,
+      "ownership": "AB02 contains recesses only; AB11 supplies all four heads. Shapes/depths not taken from gold dots or new raster."
+    }
+  },
+  "nailSeat": {
+    "ownerSkin": "AH07",
+    "ownerPlate": "AH08",
+    "provisionalNormalDepth": 0.4,
+    "plannedPlateThickness": 0.5,
+    "provisionalPlateProudAmount": 0.1,
+    "contourClearancePerSide": 0.1,
+    "dimensionsByDigit": {
+      "index": [
+        12,
+        11
+      ],
+      "middle": [
+        12,
+        11
+      ],
+      "ring": [
+        12,
+        11
+      ],
+      "little": [
+        10,
+        9
+      ],
+      "thumb": [
+        17,
+        14
+      ]
+    },
+    "constraints": [
+      "Copy the same registered seating contour to AH07 and AH08 underside.",
+      "No second keratin plate or nail free edge in AH07.",
+      "The picture's thick-looking rim/deep recess does not set real thickness.",
+      "Require common native curvature and weights before assembly."
+    ],
+    "implemented": false
+  },
+  "newMeshCount": 0,
+  "oldLedgerChanged": false
+}

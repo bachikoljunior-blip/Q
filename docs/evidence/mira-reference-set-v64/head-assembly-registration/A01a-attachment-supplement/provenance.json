@@ -1,0 +1,41 @@
+{
+  "type": "A01a",
+  "instances": [
+    "A01a-L",
+    "A01a-R"
+  ],
+  "raw": {
+    "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/A01a-attachment-supplement/mira-A01a-attachment-v1.png",
+    "originalToolPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-282f2641-ed07-4263-890d-87d0e51cc1b1.png",
+    "sha256": "4b50e5fa2feb0d4d12e8908a66c7206c9f8284e33e3df827a941886711aac2b7",
+    "bytes": 1933156,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB"
+  },
+  "generator": "builtin image_gen; one call; raw byte copy; no pixel modifications",
+  "status": "conditional open rolled-surface reference, not calibrated projection or attachment proof",
+  "observations": [
+    "Reverse and reverse-three-quarter views now show the concave back of a rolled open strip with two longitudinal trim-edge intents, rather than only a round rod.",
+    "The section illustration is an open U-like cross section; the exposed side preserves the outer C-shaped ear-rim intent.",
+    "Anatomical-left locator faces left, and the small part highlights the outer helix without swallowing the full ear.",
+    "Rendered short-end thickness/cap appearance and duplicate colored outlines are illustration artifacts; not a declared closed solid, flange or exact trim chart.",
+    "The caption View from above (toward +X) does not define a consistent global section-view transform. Only the qualitative open U form is usable; the next author specification must set the section plane and basis explicitly."
+  ],
+  "candidateBoundaryOwnership": {
+    "innerLongEdge": "HI-043/044 to A01b region; exact trim and scapha coverage not yet fixed",
+    "rearLongEdge": "HI-049/050 to A04 region; existing root image does not prove a full-span rear-auricle receiver",
+    "superiorShortEdge": "HI-045/046 to A02a upper-concha root",
+    "inferiorShortEdge": "HI-047/048 to A03 lobe"
+  },
+  "limits": [
+    "Neighbor boundary coordinates and coverage remain design work; no automatic full-length weld to a small root patch.",
+    "No width or depth inferred from generated pixels.",
+    "No exact section compatibility, seam normal, UV, rig or expression verification.",
+    "Original 40/80 imagery and v1 170 relationships/14 blocked ports remain frozen.",
+    "No new mesh, runtime edit or full-face completion."
+  ],
+  "recorded": "2026-09-16T15:23:25.816524+00:00"
+}

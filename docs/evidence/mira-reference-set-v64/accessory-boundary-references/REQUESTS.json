@@ -1,0 +1,32 @@
+{
+  "tool": "image_gen.imagegen",
+  "recordedUTC": "2026-09-16T15:10:32.472Z",
+  "calls": [
+    {
+      "id": "AH07-bare-seat-v1",
+      "type": "AH07",
+      "refs": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/AHB-03-v2.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Create ONE single-type reference sheet of the AH07 digital fingertip SKIN mesh component shown in the input. Preserve its warm adult skin material, rounded closed distal end, palmar fingerprint pad, open proximal connection and noncircular volume. Correct one ownership ambiguity: the dorsal nail location must be an EMPTY SHALLOW SEATING RECESS in the skin shell for a separate AH08 plate, and absolutely no nail plate is present anywhere. Make the recess floor matte, the SAME warm pigmented skin colour as the surrounding component, with fine skin texture continuing across the floor; a narrow gentle recessed step gives a visible seat, not a raised pink oval, polished keratin surface, white free edge or nail. One identical component in four large views labelled DORSAL, PALMAR, TRUE SIDE, OBLIQUE; dorsal/low side/oblique must clearly reveal that the seat is below the adjacent skin and empty, with a small exposed skin lip at the fingertip beyond it. Do not add a detached nail, thumb variant or other part. Light grey studio background, restrained realistic digital game-asset material reference, no measurements or dimension arrows. This is a synthetic hollow skin-surface game asset, not a severed anatomical specimen: no flesh, internal organs, bones, blood or injury. The purpose is the bare skin/plate attachment boundary, not a finished fingernail. Keep all four silhouettes and the recess border consistent."
+    },
+    {
+      "id": "AB01-thin-outsole-v1",
+      "type": "AB01",
+      "refs": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/AHB-05-v2.png",
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-lower-views-v1.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Produce a SINGLE-TYPE appearance reference sheet for AB01, the thin continuous leather outsole layer of Mira's worn brown boot. Input1 supplies the right-foot outline/colour but its thick rear heel step is WRONG for this isolated layer; input2 is the completed boot appearance. Show only ONE thin full-length sole slab, similar thickness all the way from rounded heel to broad rounded toe. The slab can follow the boot's gentle arch and toe rise, but its upper/lower surfaces remain parallel: absolutely NO integral heel block, chunky rear bulge, wedge, second stacked heel layer, fasteners, ankle, upper boot or separate welt. At the heel there is simply a smooth thin slab underside which will contact the separate AB02 block later. Four large corresponding views TOP, UNDERSIDE, TRUE SIDE, THREE-QUARTER, preserving the same outline and thin heel thickness in all views. Make the true side unmistakably a thin strip at BOTH heel and toe. Worn dark brown sole leather, natural restrained edge wear, no gold dots, buckles, added trim, raised perimeter piping or new hardware. Pale studio background. No ruler, dimensions, alternate versions, full assembled boots or exploded other parts. No supposed exact CAD evidence: a clear material/shape reference of a simple thin curved slab."
+    },
+    {
+      "id": "AB02-empty-heel-v1",
+      "type": "AB02",
+      "refs": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/AHB-05-v1.png",
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-lower-views-v1.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Isolate ONLY AB02, the small low heel block in the middle row of input1, with the completed worn boot in input2 as appearance context. One simple CLOSED low extruded dark leather block, rounded rear outline and straight front cut, gentle edge wear, without the long sole slab. Correct the bottom ownership: four small round shallow EMPTY SEATS, all dark leather cavities with visible recessed floor/rim; remove all gold metal heads. The separate AB11 fastener heads are NOT drawn anywhere, even as exploded objects. The TOP is the plain contact face for the underside of a separate thin AB01 sole. Keep identical low thickness, perimeter and four bottom-seat positions in four large views TOP CONTACT, BOTTOM EMPTY SEATS, TRUE SIDE, THREE-QUARTER. The oblique view can look from below enough to confirm the same empty seats. No through-holes, extra holes, screws, metallic surface, attached sole, full boot, dimensions, rulers or variants. This is one small uncomplicated block for a game-asset appearance reference on a pale grey studio background, not a multi-part collage."
+    }
+  ]
+}

@@ -1,0 +1,4870 @@
+{
+  "frame": {
+    "id": "HEAD_LOCAL_M",
+    "units": "metres",
+    "origin": "existing head group origin",
+    "up": "+Y",
+    "face": "+Z",
+    "anatomicalR": "-X",
+    "anatomicalL": "+X",
+    "mirror": "[-x,y,z]; negative determinant requires winding reversal; do not mirror entire hairstyle",
+    "pixelToMetreCalibration": null
+  },
+  "instances": [
+    {
+      "id": "F01-L",
+      "type": "F01",
+      "namespacedId": "head:F01-L",
+      "legacyInstance": "F01-L",
+      "anatomicalSide": "L",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-007",
+        "HI-009",
+        "HI-065",
+        "HI-085",
+        "HI-089",
+        "HI-109"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F01-L",
+            "mm": [
+              55,
+              55,
+              25
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F01-R",
+            "mm": [
+              55,
+              55,
+              25
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F01-R",
+      "type": "F01",
+      "namespacedId": "head:F01-R",
+      "legacyInstance": "F01-R",
+      "anatomicalSide": "R",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-008",
+        "HI-010",
+        "HI-066",
+        "HI-086",
+        "HI-089",
+        "HI-122"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F01-L",
+            "mm": [
+              55,
+              55,
+              25
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F01-R",
+            "mm": [
+              55,
+              55,
+              25
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F03-L",
+      "type": "F03",
+      "namespacedId": "head:F03-L",
+      "legacyInstance": "F03-L",
+      "anatomicalSide": "L",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-007",
+        "HI-011",
+        "HI-013",
+        "HI-015",
+        "HI-083",
+        "HI-102",
+        "HI-111"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F03-L",
+            "mm": [
+              35,
+              55,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F03-R",
+            "mm": [
+              35,
+              55,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F03-R",
+      "type": "F03",
+      "namespacedId": "head:F03-R",
+      "legacyInstance": "F03-R",
+      "anatomicalSide": "R",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-008",
+        "HI-012",
+        "HI-014",
+        "HI-016",
+        "HI-084",
+        "HI-115",
+        "HI-124"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F03-L",
+            "mm": [
+              35,
+              55,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F03-R",
+            "mm": [
+              35,
+              55,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F05-L",
+      "type": "F05",
+      "namespacedId": "head:F05-L",
+      "legacyInstance": "F05-L",
+      "anatomicalSide": "L",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-006",
+        "HI-013",
+        "HI-021",
+        "HI-025"
+      ],
+      "openPorts": [
+        "OPEN-F05-L-outer-u1"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F05-L",
+            "mm": [
+              40,
+              35,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F05-R",
+            "mm": [
+              40,
+              35,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": {
+          "u": "inner to outer",
+          "v": "ordered chain R cheek down chin then up L",
+          "textureAtlasCorrespondence": null
+        }
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "existing-v63",
+        "weight": {
+          "head": 1
+        }
+      },
+      "existingNumericBoundaryRecord": "existing-boundaries.json#F05-L"
+    },
+    {
+      "id": "F05-R",
+      "type": "F05",
+      "namespacedId": "head:F05-R",
+      "legacyInstance": "F05-R",
+      "anatomicalSide": "R",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-001",
+        "HI-014",
+        "HI-022",
+        "HI-026"
+      ],
+      "openPorts": [
+        "OPEN-F05-R-outer-u1"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F05-L",
+            "mm": [
+              40,
+              35,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F05-R",
+            "mm": [
+              40,
+              35,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": {
+          "u": "inner to outer",
+          "v": "ordered chain R cheek down chin then up L",
+          "textureAtlasCorrespondence": null
+        }
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "existing-v63",
+        "weight": {
+          "head": 1
+        }
+      },
+      "existingNumericBoundaryRecord": "existing-boundaries.json#F05-R"
+    },
+    {
+      "id": "F07-L",
+      "type": "F07",
+      "namespacedId": "head:F07-L",
+      "legacyInstance": "F07-L",
+      "anatomicalSide": "L",
+      "image": "existing/mira-F07-F11-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-005",
+        "HI-006",
+        "HI-027",
+        "HI-033"
+      ],
+      "openPorts": [
+        "OPEN-F07-L-outer-u1"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F07-L",
+            "mm": [
+              38,
+              40,
+              30
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F07-R",
+            "mm": [
+              38,
+              40,
+              30
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": {
+          "u": "inner to outer",
+          "v": "ordered chain R cheek down chin then up L",
+          "textureAtlasCorrespondence": null
+        }
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "existing-v63",
+        "weight": {
+          "head": 1
+        }
+      },
+      "existingNumericBoundaryRecord": "existing-boundaries.json#F07-L"
+    },
+    {
+      "id": "F07-R",
+      "type": "F07",
+      "namespacedId": "head:F07-R",
+      "legacyInstance": "F07-R",
+      "anatomicalSide": "R",
+      "image": "existing/mira-F07-F11-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-001",
+        "HI-002",
+        "HI-028",
+        "HI-034"
+      ],
+      "openPorts": [
+        "OPEN-F07-R-outer-u1"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F07-L",
+            "mm": [
+              38,
+              40,
+              30
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F07-R",
+            "mm": [
+              38,
+              40,
+              30
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": {
+          "u": "inner to outer",
+          "v": "ordered chain R cheek down chin then up L",
+          "textureAtlasCorrespondence": null
+        }
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "existing-v63",
+        "weight": {
+          "head": 1
+        }
+      },
+      "existingNumericBoundaryRecord": "existing-boundaries.json#F07-R"
+    },
+    {
+      "id": "F09-L",
+      "type": "F09",
+      "namespacedId": "head:F09-L",
+      "legacyInstance": "F09-L",
+      "anatomicalSide": "L",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-004",
+        "HI-005",
+        "HI-035",
+        "HI-081"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F09-L",
+            "mm": [
+              38,
+              35,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F09-R",
+            "mm": [
+              38,
+              35,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": {
+          "u": "inner to outer",
+          "v": "ordered chain R cheek down chin then up L",
+          "textureAtlasCorrespondence": null
+        }
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "existing-v63",
+        "weight": {
+          "head": 1
+        }
+      },
+      "existingNumericBoundaryRecord": "existing-boundaries.json#F09-L"
+    },
+    {
+      "id": "F09-R",
+      "type": "F09",
+      "namespacedId": "head:F09-R",
+      "legacyInstance": "F09-R",
+      "anatomicalSide": "R",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-002",
+        "HI-003",
+        "HI-036",
+        "HI-082"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F09-L",
+            "mm": [
+              38,
+              35,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F09-R",
+            "mm": [
+              38,
+              35,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": {
+          "u": "inner to outer",
+          "v": "ordered chain R cheek down chin then up L",
+          "textureAtlasCorrespondence": null
+        }
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "existing-v63",
+        "weight": {
+          "head": 1
+        }
+      },
+      "existingNumericBoundaryRecord": "existing-boundaries.json#F09-R"
+    },
+    {
+      "id": "F14-L",
+      "type": "F14",
+      "namespacedId": "head:F14-L",
+      "legacyInstance": "F14-L",
+      "anatomicalSide": "L",
+      "image": "02-nose-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-031",
+        "HI-071",
+        "HI-073"
+      ],
+      "openPorts": [
+        "OPEN-F14-L-nostril-inner"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F14-L",
+            "mm": [
+              12,
+              15,
+              18
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F14-R",
+            "mm": [
+              12,
+              15,
+              18
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F14-R",
+      "type": "F14",
+      "namespacedId": "head:F14-R",
+      "legacyInstance": "F14-R",
+      "anatomicalSide": "R",
+      "image": "02-nose-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-032",
+        "HI-072",
+        "HI-074"
+      ],
+      "openPorts": [
+        "OPEN-F14-R-nostril-inner"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F14-L",
+            "mm": [
+              12,
+              15,
+              18
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F14-R",
+            "mm": [
+              12,
+              15,
+              18
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F11",
+      "type": "F11",
+      "namespacedId": "head:F11",
+      "legacyInstance": "F11",
+      "anatomicalSide": null,
+      "image": "existing/mira-F07-F11-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-003",
+        "HI-004",
+        "HI-094",
+        "HI-095"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F11",
+            "mm": [
+              48,
+              30,
+              35
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": {
+          "u": "inner to outer",
+          "v": "ordered chain R cheek down chin then up L",
+          "textureAtlasCorrespondence": null
+        }
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "existing-v63",
+        "weight": {
+          "head": 1
+        }
+      },
+      "existingNumericBoundaryRecord": "existing-boundaries.json#F11"
+    },
+    {
+      "id": "F12",
+      "type": "F12",
+      "namespacedId": "head:F12",
+      "legacyInstance": "F12",
+      "anatomicalSide": null,
+      "image": "02-nose-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-065",
+        "HI-066",
+        "HI-067",
+        "HI-068",
+        "HI-069",
+        "HI-070",
+        "HI-090"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F12",
+            "mm": [
+              20,
+              35,
+              25
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F13",
+      "type": "F13",
+      "namespacedId": "head:F13",
+      "legacyInstance": "F13",
+      "anatomicalSide": null,
+      "image": "02-nose-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-071",
+        "HI-072",
+        "HI-090",
+        "HI-091"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F13",
+            "mm": [
+              20,
+              16,
+              22
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F16a",
+      "type": "F16a",
+      "namespacedId": "head:F16a",
+      "legacyInstance": "F16",
+      "anatomicalSide": null,
+      "image": "03-central-mouth-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-077",
+        "HI-078",
+        "HI-093",
+        "HI-125"
+      ],
+      "openPorts": [
+        "OPEN-F16a-inner-mouth"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F16",
+            "mm": [
+              43,
+              16,
+              20
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F16b",
+      "type": "F16b",
+      "namespacedId": "head:F16b",
+      "legacyInstance": "F16",
+      "anatomicalSide": null,
+      "image": "03-central-mouth-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-075",
+        "HI-076",
+        "HI-092",
+        "HI-093"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F16",
+            "mm": [
+              43,
+              16,
+              20
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F17",
+      "type": "F17",
+      "namespacedId": "head:F17",
+      "legacyInstance": "F17",
+      "anatomicalSide": null,
+      "image": "existing/mira-F17-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-079",
+        "HI-080",
+        "HI-094",
+        "HI-125"
+      ],
+      "openPorts": [
+        "OPEN-F17-shape"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F17",
+            "mm": [
+              43,
+              12,
+              18
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "S01",
+      "type": "S01",
+      "namespacedId": "head:S01",
+      "legacyInstance": "S01",
+      "anatomicalSide": null,
+      "image": "07-front-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-083",
+        "HI-084",
+        "HI-085",
+        "HI-086",
+        "HI-096",
+        "HI-099",
+        "HI-112",
+        "HI-126",
+        "HI-127",
+        "HI-128",
+        "HI-129",
+        "HI-134",
+        "HI-135"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "S01",
+            "mm": [
+              140,
+              45,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "S02",
+      "type": "S02",
+      "namespacedId": "head:S02",
+      "legacyInstance": "S02",
+      "anatomicalSide": null,
+      "image": "07-front-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-096",
+        "HI-097",
+        "HI-100",
+        "HI-113",
+        "HI-130",
+        "HI-131",
+        "HI-132",
+        "HI-133",
+        "HI-142",
+        "HI-143"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "S02",
+            "mm": [
+              150,
+              50,
+              115
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "S03",
+      "type": "S-SIDE",
+      "namespacedId": "head:S03",
+      "legacyInstance": "S03",
+      "anatomicalSide": "L",
+      "image": "08-side-rear-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-099",
+        "HI-100",
+        "HI-101",
+        "HI-102",
+        "HI-103",
+        "HI-104",
+        "HI-136",
+        "HI-137",
+        "HI-138"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "S03",
+            "mm": [
+              40,
+              90,
+              100
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "S04",
+            "mm": [
+              40,
+              90,
+              100
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "S04",
+      "type": "S-SIDE",
+      "namespacedId": "head:S04",
+      "legacyInstance": "S04",
+      "anatomicalSide": "R",
+      "image": "08-side-rear-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-112",
+        "HI-113",
+        "HI-114",
+        "HI-115",
+        "HI-116",
+        "HI-117",
+        "HI-139",
+        "HI-140",
+        "HI-141"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "S03",
+            "mm": [
+              40,
+              90,
+              100
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "S04",
+            "mm": [
+              40,
+              90,
+              100
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "S05",
+      "type": "S05",
+      "namespacedId": "head:S05",
+      "legacyInstance": "S05",
+      "anatomicalSide": null,
+      "image": "08-side-rear-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-097",
+        "HI-098",
+        "HI-101",
+        "HI-114",
+        "HI-144",
+        "HI-145",
+        "HI-146",
+        "HI-147",
+        "HI-148",
+        "HI-149"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "S05",
+            "mm": [
+              145,
+              110,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A01a-L",
+      "type": "A01a",
+      "namespacedId": "head:A01a-L",
+      "legacyInstance": "A01-L",
+      "anatomicalSide": "L",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-043",
+        "HI-045",
+        "HI-047",
+        "HI-049"
+      ],
+      "openPorts": [
+        "OPEN-A01a-L-inner-attachment-section"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A01-L",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A01-R",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A01a-R",
+      "type": "A01a",
+      "namespacedId": "head:A01a-R",
+      "legacyInstance": "A01-R",
+      "anatomicalSide": "R",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-044",
+        "HI-046",
+        "HI-048",
+        "HI-050"
+      ],
+      "openPorts": [
+        "OPEN-A01a-R-inner-attachment-section"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A01-L",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A01-R",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A01b-L",
+      "type": "A01b",
+      "namespacedId": "head:A01b-L",
+      "legacyInstance": "A01-L",
+      "anatomicalSide": "L",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-043",
+        "HI-051",
+        "HI-053"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A01-L",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A01-R",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A01b-R",
+      "type": "A01b",
+      "namespacedId": "head:A01b-R",
+      "legacyInstance": "A01-R",
+      "anatomicalSide": "R",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-044",
+        "HI-052",
+        "HI-054"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A01-L",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A01-R",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A02a-L",
+      "type": "A02a",
+      "namespacedId": "head:A02a-L",
+      "legacyInstance": "A02-L",
+      "anatomicalSide": "L",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-045",
+        "HI-051",
+        "HI-055",
+        "HI-057",
+        "HI-059"
+      ],
+      "openPorts": [
+        "OPEN-A02a-L-ear-canal"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A02-L",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A02-R",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A02a-R",
+      "type": "A02a",
+      "namespacedId": "head:A02a-R",
+      "legacyInstance": "A02-R",
+      "anatomicalSide": "R",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-046",
+        "HI-052",
+        "HI-056",
+        "HI-058",
+        "HI-060"
+      ],
+      "openPorts": [
+        "OPEN-A02a-R-ear-canal"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A02-L",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A02-R",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A02b-L",
+      "type": "A02b",
+      "namespacedId": "head:A02b-L",
+      "legacyInstance": "A02-L",
+      "anatomicalSide": "L",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-055",
+        "HI-061"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A02-L",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A02-R",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A02b-R",
+      "type": "A02b",
+      "namespacedId": "head:A02b-R",
+      "legacyInstance": "A02-R",
+      "anatomicalSide": "R",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-056",
+        "HI-062"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A02-L",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A02-R",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A03-L",
+      "type": "A03",
+      "namespacedId": "head:A03-L",
+      "legacyInstance": "A03-L",
+      "anatomicalSide": "L",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-047",
+        "HI-053",
+        "HI-057",
+        "HI-063"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A03-L",
+            "mm": [
+              16,
+              16,
+              13
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A03-R",
+            "mm": [
+              16,
+              16,
+              13
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A03-R",
+      "type": "A03",
+      "namespacedId": "head:A03-R",
+      "legacyInstance": "A03-R",
+      "anatomicalSide": "R",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-048",
+        "HI-054",
+        "HI-058",
+        "HI-064"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A03-L",
+            "mm": [
+              16,
+              16,
+              13
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A03-R",
+            "mm": [
+              16,
+              16,
+              13
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "E01-L",
+      "type": "E01",
+      "namespacedId": "head:E01-L",
+      "legacyInstance": "E01-L",
+      "anatomicalSide": "L",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "ocular-body",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-106",
+        "HI-107",
+        "HI-108"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "E01-L",
+            "mm": [
+              40,
+              35,
+              37
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "E01-R",
+            "mm": [
+              40,
+              35,
+              37
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "E01-R",
+      "type": "E01",
+      "namespacedId": "head:E01-R",
+      "legacyInstance": "E01-R",
+      "anatomicalSide": "R",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "ocular-body",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-119",
+        "HI-120",
+        "HI-121"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "E01-L",
+            "mm": [
+              40,
+              35,
+              37
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "E01-R",
+            "mm": [
+              40,
+              35,
+              37
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "E02-L",
+      "type": "E02",
+      "namespacedId": "head:E02-L",
+      "legacyInstance": "E02-L",
+      "anatomicalSide": "L",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "ocular-front",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-106"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "E02-L",
+            "mm": [
+              16,
+              16,
+              3
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "E02-R",
+            "mm": [
+              16,
+              16,
+              3
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "E02-R",
+      "type": "E02",
+      "namespacedId": "head:E02-R",
+      "legacyInstance": "E02-R",
+      "anatomicalSide": "R",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "ocular-front",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-119"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "E02-L",
+            "mm": [
+              16,
+              16,
+              3
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "E02-R",
+            "mm": [
+              16,
+              16,
+              3
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "E03-L",
+      "type": "E03",
+      "namespacedId": "head:E03-L",
+      "legacyInstance": "E03-L",
+      "anatomicalSide": "L",
+      "image": "06-eyelids-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-009",
+        "HI-011",
+        "HI-037",
+        "HI-041",
+        "HI-107",
+        "HI-110"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "E03-L",
+            "mm": [
+              51,
+              38,
+              38
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "E03-R",
+            "mm": [
+              51,
+              38,
+              38
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "existing group ID only; new eyelid deformation unimplemented",
+        "restParent": "head",
+        "existingGroup": "eyelid-1",
+        "existingPivotM": [
+          0.046,
+          0.058,
+          0.1
+        ],
+        "existingBlinkTranslationYMetres": -0.015,
+        "limitation": "do not assume this translation alone deforms a newly welded lid without cracks"
+      }
+    },
+    {
+      "id": "E03-R",
+      "type": "E03",
+      "namespacedId": "head:E03-R",
+      "legacyInstance": "E03-R",
+      "anatomicalSide": "R",
+      "image": "06-eyelids-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-010",
+        "HI-012",
+        "HI-038",
+        "HI-042",
+        "HI-120",
+        "HI-123"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "E03-L",
+            "mm": [
+              51,
+              38,
+              38
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "E03-R",
+            "mm": [
+              51,
+              38,
+              38
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "existing group ID only; new eyelid deformation unimplemented",
+        "restParent": "head",
+        "existingGroup": "eyelid-0",
+        "existingPivotM": [
+          -0.046,
+          0.058,
+          0.1
+        ],
+        "existingBlinkTranslationYMetres": -0.015,
+        "limitation": "do not assume this translation alone deforms a newly welded lid without cracks"
+      }
+    },
+    {
+      "id": "B01-L",
+      "type": "B01",
+      "namespacedId": "head:B01-L",
+      "legacyInstance": "B01-L",
+      "anatomicalSide": "L",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "brow",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-109",
+        "HI-110",
+        "HI-111"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "B01-L",
+            "mm": [
+              55,
+              8,
+              10
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "B01-R",
+            "mm": [
+              55,
+              8,
+              10
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "B01-R",
+      "type": "B01",
+      "namespacedId": "head:B01-R",
+      "legacyInstance": "B01-R",
+      "anatomicalSide": "R",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "brow",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-122",
+        "HI-123",
+        "HI-124"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "B01-L",
+            "mm": [
+              55,
+              8,
+              10
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "B01-R",
+            "mm": [
+              55,
+              8,
+              10
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "N01",
+      "type": "N01",
+      "namespacedId": "head:N01",
+      "legacyInstance": "N01",
+      "anatomicalSide": null,
+      "image": "11-neck-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-081",
+        "HI-082",
+        "HI-095",
+        "HI-105",
+        "HI-118"
+      ],
+      "openPorts": [
+        "OPEN-N01-costume-cut"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "N01",
+            "mm": [
+              145,
+              40,
+              80
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head-local for authoring",
+        "deformation": "shared head/neck blend: upper jaw/scalp boundary head1, lower collar cut neck1; interior blend and geometry not yet fixed"
+      }
+    },
+    {
+      "id": "N02",
+      "type": "N02",
+      "namespacedId": "head:N02",
+      "legacyInstance": "N02",
+      "anatomicalSide": null,
+      "image": "11-neck-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-087",
+        "HI-088",
+        "HI-098",
+        "HI-104",
+        "HI-105",
+        "HI-117",
+        "HI-118"
+      ],
+      "openPorts": [
+        "OPEN-N02-costume-cut"
+      ],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "N02",
+            "mm": [
+              145,
+              40,
+              80
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head-local for authoring",
+        "deformation": "shared head/neck blend: upper jaw/scalp boundary head1, lower collar cut neck1; interior blend and geometry not yet fixed"
+      }
+    },
+    {
+      "id": "H01",
+      "type": "HT01",
+      "namespacedId": "head:H01",
+      "legacyInstance": "H01",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-126",
+        "HI-150",
+        "HI-153"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H01",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H02",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H03",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H04",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H09",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H10",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S01",
+        "anchorId": "ROOT-H01",
+        "anchorM": null,
+        "region": "frontmost lifted forelock from +X part to -X forehead",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H02",
+      "type": "HT01",
+      "namespacedId": "head:H02",
+      "legacyInstance": "H02",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-127",
+        "HI-150",
+        "HI-151",
+        "HI-154"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H01",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H02",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H03",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H04",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H09",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H10",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S01",
+        "anchorId": "ROOT-H02",
+        "anchorM": null,
+        "region": "forelock behind H01 along frontal part",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H03",
+      "type": "HT01",
+      "namespacedId": "head:H03",
+      "legacyInstance": "H03",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-128",
+        "HI-151",
+        "HI-152"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H01",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H02",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H03",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H04",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H09",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H10",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S01",
+        "anchorId": "ROOT-H03",
+        "anchorM": null,
+        "region": "forelock behind H02 closer crown",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H04",
+      "type": "HT01",
+      "namespacedId": "head:H04",
+      "legacyInstance": "H04",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-129",
+        "HI-152",
+        "HI-155"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H01",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H02",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H03",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H04",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H09",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H10",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S01",
+        "anchorId": "ROOT-H04",
+        "anchorM": null,
+        "region": "lateral forelock continuation behind H03",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H09",
+      "type": "HT01",
+      "namespacedId": "head:H09",
+      "legacyInstance": "H09",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-134",
+        "HI-153"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H01",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H02",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H03",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H04",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H09",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H10",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S01",
+        "anchorId": "ROOT-H09",
+        "anchorM": null,
+        "region": "short front-right fringe under H01",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H10",
+      "type": "HT01",
+      "namespacedId": "head:H10",
+      "legacyInstance": "H10",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-135",
+        "HI-154"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H01",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H02",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H03",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H04",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H09",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H10",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S01",
+        "anchorId": "ROOT-H10",
+        "anchorM": null,
+        "region": "short medial fringe under H02",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H05",
+      "type": "HT02",
+      "namespacedId": "head:H05",
+      "legacyInstance": "H05",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-130",
+        "HI-155",
+        "HI-156",
+        "HI-157"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H05",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H06",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H07",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H08",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S02",
+        "anchorId": "ROOT-H05",
+        "anchorM": null,
+        "region": "low anterior crown left of central crown",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H06",
+      "type": "HT02",
+      "namespacedId": "head:H06",
+      "legacyInstance": "H06",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-131",
+        "HI-156",
+        "HI-158"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H05",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H06",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H07",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H08",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S02",
+        "anchorId": "ROOT-H06",
+        "anchorM": null,
+        "region": "low anterior crown near center",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H07",
+      "type": "HT02",
+      "namespacedId": "head:H07",
+      "legacyInstance": "H07",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-132",
+        "HI-157",
+        "HI-159"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H05",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H06",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H07",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H08",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S02",
+        "anchorId": "ROOT-H07",
+        "anchorM": null,
+        "region": "low crown overlap behind H05",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H08",
+      "type": "HT02",
+      "namespacedId": "head:H08",
+      "legacyInstance": "H08",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-133",
+        "HI-158",
+        "HI-160"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H05",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H06",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H07",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H08",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S02",
+        "anchorId": "ROOT-H08",
+        "anchorM": null,
+        "region": "low crown overlap behind H06",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H11",
+      "type": "HT03",
+      "namespacedId": "head:H11",
+      "legacyInstance": "H11",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-136",
+        "HI-161"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H11",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H12",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H14",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H15",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S03",
+        "anchorId": "ROOT-H11",
+        "anchorM": null,
+        "region": "upper anatomical-left side fall",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H12",
+      "type": "HT03",
+      "namespacedId": "head:H12",
+      "legacyInstance": "H12",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-137",
+        "HI-161",
+        "HI-162"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H11",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H12",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H14",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H15",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S03",
+        "anchorId": "ROOT-H12",
+        "anchorM": null,
+        "region": "lower anatomical-left side fall",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H14",
+      "type": "HT03",
+      "namespacedId": "head:H14",
+      "legacyInstance": "H14",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-139",
+        "HI-163"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H11",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H12",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H14",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H15",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S04",
+        "anchorId": "ROOT-H14",
+        "anchorM": null,
+        "region": "upper anatomical-right side fall",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H15",
+      "type": "HT03",
+      "namespacedId": "head:H15",
+      "legacyInstance": "H15",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-140",
+        "HI-163",
+        "HI-164"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H11",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H12",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H14",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H15",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S04",
+        "anchorId": "ROOT-H15",
+        "anchorM": null,
+        "region": "lower anatomical-right side fall",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H13",
+      "type": "HT04",
+      "namespacedId": "head:H13",
+      "legacyInstance": "H13",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-138",
+        "HI-162"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H13",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H16",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S03",
+        "anchorId": "ROOT-H13",
+        "anchorM": null,
+        "region": "left ear-edge terminal",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H16",
+      "type": "HT04",
+      "namespacedId": "head:H16",
+      "legacyInstance": "H16",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-141",
+        "HI-164"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H13",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H16",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S04",
+        "anchorId": "ROOT-H16",
+        "anchorM": null,
+        "region": "right ear-edge terminal",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H17",
+      "type": "HT05",
+      "namespacedId": "head:H17",
+      "legacyInstance": "H17",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-142",
+        "HI-159",
+        "HI-165"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H17",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H18",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H19",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H20",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S02",
+        "anchorId": "ROOT-H17",
+        "anchorM": null,
+        "region": "left posterior crown arc",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H18",
+      "type": "HT05",
+      "namespacedId": "head:H18",
+      "legacyInstance": "H18",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-143",
+        "HI-160",
+        "HI-166"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H17",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H18",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H19",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H20",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S02",
+        "anchorId": "ROOT-H18",
+        "anchorM": null,
+        "region": "right posterior crown arc",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H19",
+      "type": "HT05",
+      "namespacedId": "head:H19",
+      "legacyInstance": "H19",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-144",
+        "HI-165",
+        "HI-167",
+        "HI-168"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H17",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H18",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H19",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H20",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S05",
+        "anchorId": "ROOT-H19",
+        "anchorM": null,
+        "region": "left middle occipital arc",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H20",
+      "type": "HT05",
+      "namespacedId": "head:H20",
+      "legacyInstance": "H20",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-145",
+        "HI-166",
+        "HI-169",
+        "HI-170"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H17",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H18",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H19",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H20",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S05",
+        "anchorId": "ROOT-H20",
+        "anchorM": null,
+        "region": "right middle occipital arc",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H21",
+      "type": "HT06",
+      "namespacedId": "head:H21",
+      "legacyInstance": "H21",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-146",
+        "HI-167"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H21",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H22",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H23",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H24",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S05",
+        "anchorId": "ROOT-H21",
+        "anchorM": null,
+        "region": "left outer nape terminal",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H22",
+      "type": "HT06",
+      "namespacedId": "head:H22",
+      "legacyInstance": "H22",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-147",
+        "HI-168"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H21",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H22",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H23",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H24",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S05",
+        "anchorId": "ROOT-H22",
+        "anchorM": null,
+        "region": "left inner nape terminal",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H23",
+      "type": "HT06",
+      "namespacedId": "head:H23",
+      "legacyInstance": "H23",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-148",
+        "HI-169"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H21",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H22",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H23",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H24",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S05",
+        "anchorId": "ROOT-H23",
+        "anchorM": null,
+        "region": "right inner nape terminal",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "H24",
+      "type": "HT06",
+      "namespacedId": "head:H24",
+      "legacyInstance": "H24",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "hair",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-149",
+        "HI-170"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H21",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H22",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H23",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H24",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      },
+      "support": {
+        "surface": "S05",
+        "anchorId": "ROOT-H24",
+        "anchorM": null,
+        "region": "right outer nape terminal",
+        "kind": "author relative placement proposal; not generated 24-instance map",
+        "lengthWidthThicknessM": null
+      }
+    },
+    {
+      "id": "E04-L",
+      "type": "E04",
+      "namespacedId": "head:E04-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "06-eyelids-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-017",
+        "HI-039",
+        "HI-041",
+        "HI-108"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "E04-R",
+      "type": "E04",
+      "namespacedId": "head:E04-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "06-eyelids-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-018",
+        "HI-040",
+        "HI-042",
+        "HI-121"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "E05-L",
+      "type": "E05",
+      "namespacedId": "head:E05-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "04-corners-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-019",
+        "HI-037",
+        "HI-039",
+        "HI-067"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "E05-R",
+      "type": "E05",
+      "namespacedId": "head:E05-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "04-corners-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-020",
+        "HI-038",
+        "HI-040",
+        "HI-068"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F18-L",
+      "type": "F18",
+      "namespacedId": "head:F18-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-015",
+        "HI-017",
+        "HI-019",
+        "HI-021",
+        "HI-023",
+        "HI-069"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F18-R",
+      "type": "F18",
+      "namespacedId": "head:F18-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-016",
+        "HI-018",
+        "HI-020",
+        "HI-022",
+        "HI-024",
+        "HI-070"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F19-L",
+      "type": "F19",
+      "namespacedId": "head:F19-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-023",
+        "HI-025",
+        "HI-027",
+        "HI-029",
+        "HI-031",
+        "HI-075"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F19-R",
+      "type": "F19",
+      "namespacedId": "head:F19-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-024",
+        "HI-026",
+        "HI-028",
+        "HI-030",
+        "HI-032",
+        "HI-076"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F20-L",
+      "type": "F20",
+      "namespacedId": "head:F20-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "04-corners-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-029",
+        "HI-033",
+        "HI-035",
+        "HI-077",
+        "HI-079"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F20-R",
+      "type": "F20",
+      "namespacedId": "head:F20-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "04-corners-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-030",
+        "HI-034",
+        "HI-036",
+        "HI-078",
+        "HI-080"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "F15",
+      "type": "F15",
+      "namespacedId": "head:F15",
+      "legacyInstance": null,
+      "anatomicalSide": null,
+      "image": "03-central-mouth-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-073",
+        "HI-074",
+        "HI-091",
+        "HI-092"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A04-L",
+      "type": "A04",
+      "namespacedId": "head:A04-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-049",
+        "HI-059",
+        "HI-061",
+        "HI-063",
+        "HI-087",
+        "HI-103"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    },
+    {
+      "id": "A04-R",
+      "type": "A04",
+      "namespacedId": "head:A04-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null,
+      "layer": "skin",
+      "frame": "HEAD_LOCAL_M",
+      "interfaces": [
+        "HI-050",
+        "HI-060",
+        "HI-062",
+        "HI-064",
+        "HI-088",
+        "HI-116"
+      ],
+      "openPorts": [],
+      "dimensionRecord": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      },
+      "orientation": {
+        "externalNormal": "outward from anatomical body; concrete UV chart only exists on old seven",
+        "localUV": null
+      },
+      "provenance": "v64 author adjacency proposal unless explicitly marked existing-v63",
+      "rig": {
+        "status": "author proposal not implemented",
+        "restParent": "head",
+        "deformation": "head:1 proposed; no new expression deformation defined"
+      }
+    }
+  ],
+  "all80NumericRegistrationComplete": false
+}

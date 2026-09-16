@@ -1,0 +1,96 @@
+{
+  "scope": "Independent local visual reference comparison; 3 new images against 3 old corresponding images",
+  "startedAt": "2026-09-16T15:15:16.446726+00:00",
+  "closedAt": "2026-09-16T15:17:31.714674+00:00",
+  "elapsedSeconds": 135.267948,
+  "timingMeaning": "read, image display, judgement, communication and report wall time; not generation / construction / rendering time",
+  "inputFiles": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-boundary-references/AH07-bare-seat-v1.png",
+      "bytes": 1929112,
+      "sha256": "590fff116383ed2b15fca34846f5ec56afa6d5499475a0def96e05e46ea72d8c",
+      "pngWidthHeight": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-boundary-references/AB01-thin-outsole-v1.png",
+      "bytes": 1693074,
+      "sha256": "d422406e07fc7cee3e8af4e376365d383b74bd002954327a1837272745c9a7e3",
+      "pngWidthHeight": [
+        2172,
+        724
+      ]
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-boundary-references/AB02-empty-heel-v1.png",
+      "bytes": 2213292,
+      "sha256": "a22276520c11f8003b44e55f805c5de672b6829a2366aa22d073d15e274fe0b1",
+      "pngWidthHeight": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/AHB-03-v2.png",
+      "bytes": 1924275,
+      "sha256": "a915651b2a4380db645bd6577ccc7b549102e1ab11a7cafabfc896d3d57c514d",
+      "pngWidthHeight": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/AHB-05-v2.png",
+      "bytes": 1803997,
+      "sha256": "9d90e19a4e8b4615a6108f7c7162afc00c33b5412699860e79b467524e5643fa",
+      "pngWidthHeight": [
+        2172,
+        724
+      ]
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/AHB-05-v1.png",
+      "bytes": 2049678,
+      "sha256": "ed538024843c079be2edd23e7134eb150994e619823efdec8bc8f30d6c360b86",
+      "pngWidthHeight": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "supplementManifestAtFirstRead": {
+    "present": false,
+    "hashVerified": false
+  },
+  "results": {
+    "AH07": {
+      "bareConcaveNailSeatNowShown": true,
+      "separateAH08PlateOwnershipLocallySupported": true,
+      "tenInstanceAndContactGeometryAccepted": false
+    },
+    "AB01": {
+      "continuousThinSoleWithoutHeelBlockNowShown": true,
+      "separateAB02HeightOwnershipLocallySupported": true,
+      "handedFootprintOrCalibratedThicknessAccepted": false
+    },
+    "AB02": {
+      "fourEmptySeatsWithoutAB11HeadsNowShown": true,
+      "exactSeatRadiusDepthOrAB01ContactAccepted": false
+    }
+  },
+  "newClearStructuralConflictObserved": false,
+  "example8Plus14Equals22mm": "author allocation example, not measured and not adopted by this review",
+  "all21TypesReReviewed": false,
+  "allHandsBootsOrPersonAccepted": false,
+  "oldReviewChanged": false,
+  "newImages": 0,
+  "imageEdits": 0,
+  "new3D": 0,
+  "sourceEdits": 0,
+  "gitWrites": 0,
+  "remoteWrites": 0,
+  "browserOrGLCalls": 0,
+  "unfinishedTools": 0
+}

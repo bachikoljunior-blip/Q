@@ -1,0 +1,78 @@
+{
+  "status": "conditional shape-reference review fixed; whole outfit assembly not proven",
+  "newMandatoryImageRegenerationTargetsIdentified": [],
+  "requiredRegistrationBeforeWholeAssemblyClaim": [
+    {
+      "id": "C-R1",
+      "types": [
+        "TR01",
+        "TR02",
+        "TR03"
+      ],
+      "classification": "unregistered interface ownership, not merely scale uncertainty",
+      "observation": "TR01 has an upper-edge notch, TR02 has no corresponding explicit notch, and the four TR03 edges have no labelled source-contour intervals.",
+      "boundary": "TR03 four edges to front/rear and right/left leg upper-inner contours",
+      "notClaimed": "Impossible geometry or need for an additional unbounded image loop"
+    },
+    {
+      "id": "C-R2",
+      "types": [
+        "F03",
+        "F01",
+        "F02"
+      ],
+      "classification": "placement and wrap order incomplete after locator exclusion",
+      "observation": "The table supplies correct anatomical sides for six ribbons but not their individual angular extents, lengths or crossing order.",
+      "boundary": "Three ribbons per wrist overlay front/rear bracer halves",
+      "notClaimed": "A correct R/L list alone fixes the entire wrap"
+    },
+    {
+      "id": "C-R3",
+      "types": [
+        "PH01",
+        "P01",
+        "P02",
+        "P03",
+        "TR05"
+      ],
+      "classification": "semantic contact is not an actual shared curve",
+      "observation": "Cape hem and trouser boot underlap now have explicit ownership, while actual endpoint curves and overlap depth remain unregistered.",
+      "boundary": "Six cape-hem segments and two trouser-to-boot interfaces"
+    }
+  ],
+  "localRepairsSupported": [
+    "S06 open forearm rear half instead of a complete sleeve tube",
+    "P04 single shoulder surface instead of whole cowl",
+    "W01/W03 individual U/V fold classes rather than an entire layered cowl",
+    "L01/L02 one-sided panels and L03 one insert surface",
+    "F04 thin convex/concave dish class instead of double-convex profile",
+    "TR01/TR02 method B open surfaces without closed ankle rims"
+  ],
+  "excludedSourceElements": [
+    "TR01/TR02 v1/v2 mixed open/closed surfaces",
+    "T02 left-shoulder text for the contrary rear locator",
+    "T04 HOODIE label as an armhole attachment",
+    "F03 locator as a trustworthy ribbon transform",
+    "blue-grey method B colour as canonical cloth material",
+    "generated ornamental swirl or exaggerated rim as a calibrated runtime surface"
+  ],
+  "scaleVsStructure": {
+    "S03": "Tall appearance versus historical 180x90 mm proposal is a proportion/registration mismatch, not enough evidence of an impossible surface.",
+    "TR01TR02": "Open-surface topology is readable; fit to canonical trousers and congruent shared curves is not proven."
+  },
+  "counts": {
+    "leafTypes": 40,
+    "instances": 96,
+    "selectedImages": 30,
+    "rejectedTrouserComparisons": 4,
+    "canonicalImages": 6,
+    "semanticInterfaces": 31
+  },
+  "allOutfitReferencesReadyForDirectConstruction": false,
+  "all31SeamsNumericallyValidated": false,
+  "parallelRegistrationReviewed": false,
+  "newImages": 0,
+  "new3D": 0,
+  "sourceEdits": 0,
+  "remoteWrites": 0
+}

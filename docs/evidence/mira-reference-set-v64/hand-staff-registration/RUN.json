@@ -1,0 +1,20 @@
+{
+  "began": "2026-09-16T15:05:42.831Z",
+  "ended": "2026-09-16T15:05:43.071Z",
+  "sourceReadbackUnchanged": true,
+  "newAuthorShapes": 0,
+  "existingNativeConstructorsUsed": [
+    "createDetailedActor(npc)",
+    "makeMiraStaff"
+  ],
+  "sourceWrites": 0,
+  "renderedFrames": 0,
+  "pendingCalls": 0,
+  "checks": {
+    "originalArmLengthsRetained": true,
+    "rigidGripPointRegistration": true,
+    "rightHandBasisDeterminant": 1,
+    "all19StaffParts": true
+  },
+  "disclaimer": "These are coordinate and bone-length checks. They are not skin contact, pose naturalness, complete hand/cuff assembly or rendered quality tests."
+}

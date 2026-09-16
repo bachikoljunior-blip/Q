@@ -1,0 +1,20 @@
+{
+  "firstAcceptanceReadRecordedUTC": "2026-09-16T14:52:10.562Z",
+  "firstNumericCandidateRunUTC": "2026-09-16T14:59:44.190Z",
+  "finalNativeTableRun": {
+    "start": "2026-09-16T15:05:42.831Z",
+    "end": "2026-09-16T15:05:43.071Z"
+  },
+  "recordCompletedUTC": "2026-09-16T15:07:11.570145+00:00",
+  "recordedUnitWindowSeconds": 901.008145,
+  "researchDesignAndDocumentation": "Interleaved within the recorded unit window; no separate stopwatch was maintained. Do not report the Node run as total design time.",
+  "newGeometryImplementationSeconds": 0,
+  "imageGenerationSeconds": 0,
+  "designRevisions": [
+    "Rejected sideways hand orientation which would bend wrist strongly; selected distal30degrees outward from forward.",
+    "Revised palm offset40→44mm after native wrap-envelope read.",
+    "Solved in chest-local coordinates after identifying pre-existing breathing nonuniform scale; world lengths are not forcibly fixed.",
+    "Added explicit left mirrored curve samples and corrected elliptical unit tangent/closure."
+  ],
+  "pendingTools": 0
+}

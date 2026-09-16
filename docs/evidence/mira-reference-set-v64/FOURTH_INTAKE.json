@@ -1,0 +1,209 @@
+{
+  "scope": "Fixed initial registration proposals and independent head image review, not new geometry or complete assembly acceptance.",
+  "files": [
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/F21-supplement/mira-F21-v1.png",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/F21-supplement/mira-F21-v1.png",
+      "bytes": 2145438,
+      "sha256": "1b2e15fb5568cc29124811d3083c4fb12809688be285b36aae862dbdd272bf21"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/F21-supplement/prompt-v1.txt",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/F21-supplement/prompt-v1.txt",
+      "bytes": 2378,
+      "sha256": "51a6a39f2e5e81400f99fbdbb401fac061e3a493f49bb2b86149bd754001e705"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/HASHES.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/HASHES.json",
+      "bytes": 1975,
+      "sha256": "d1b41758a2cce09d791c83a6c41aa787575fd97bb92ccc18727ceaeba1b4ae7c"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/INSTANCE_TABLE.md",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/INSTANCE_TABLE.md",
+      "bytes": 5521,
+      "sha256": "d0482035434e3aa23d1996dc181ae6c624c899be804183d0516426f4cf3920b2"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/INTERFACE_TABLE.md",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/INTERFACE_TABLE.md",
+      "bytes": 13495,
+      "sha256": "b8ae9096eab32eed667056044521fe831702909da6a9df69ddf5e66afa85d0ab"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/README.md",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/README.md",
+      "bytes": 6031,
+      "sha256": "5787263e1474e0f494740647b25acc6fc57e1f755b363a01a2771c371f83267e"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/REQUIRED_VIEWS.md",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/REQUIRED_VIEWS.md",
+      "bytes": 2373,
+      "sha256": "e928a01eaa9dca864d3f86a19845b98687bfdd30dc7a6656a1b5ec7d50cb97d2"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/TIMING.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/TIMING.json",
+      "bytes": 297,
+      "sha256": "b49c03db9ff2b846f00dff0e3bbb7015482d85a1c35ce830f07c1a896f198c38"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/build-registration.py",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/build-registration.py",
+      "bytes": 19317,
+      "sha256": "bacd8e0aaf2f83bc89ce7f4fa2b4fb9d15e00d2ff47fe57739301452a932b055"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/existing-boundaries.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/existing-boundaries.json",
+      "bytes": 13594,
+      "sha256": "ff4321be39231847ed3842adf34dfbeaba3328efd42b9da63674e8eb68572df6"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/index-boundaries.py",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/index-boundaries.py",
+      "bytes": 2466,
+      "sha256": "098877d52073af3bdc2e74874d677fe0e7b1a0726fe418f217803bca5aa171b1"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/instances.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/instances.json",
+      "bytes": 146335,
+      "sha256": "44ec15bf00e7d6d93144070423c9442cf5283384b80068faf1a97db43f740c02"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/interfaces.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/interfaces.json",
+      "bytes": 139759,
+      "sha256": "4fb1585126e0a1586c68ba83d385f8035681b7b89c7219460b3e4a3abddbb745"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/ledger-check.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/ledger-check.json",
+      "bytes": 439,
+      "sha256": "8b05631d4e379248c8ee309db3b187e64c7106010afbc06036af02b7f7d37857"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/legacy-153-accounting.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/legacy-153-accounting.json",
+      "bytes": 39723,
+      "sha256": "e745f9253a97abc97f662e799e27aecb2759b064e60554cd62bf7f7b5e5fd4eb"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/open-native-boundaries.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/open-native-boundaries.json",
+      "bytes": 9676,
+      "sha256": "a5e25046a928599c7f7d6f146ad311de50eb2b427939bdf5c2896732c2de1895"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/rig-reference.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/rig-reference.json",
+      "bytes": 1795,
+      "sha256": "162e9362cb4432625f5e907cc0ebc24ff5ce9f7784b9076977bcb3921df26dbc"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/source-hashes.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/source-hashes.json",
+      "bytes": 1744,
+      "sha256": "c5633148d237e656c728461ed885343453d634c155b4b136bccc721fb8787882"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/AUTHOR_REGISTRATION.json",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/AUTHOR_REGISTRATION.json",
+      "bytes": 322951,
+      "sha256": "a8d3157d26d6e13dc228cddd1282cf0369b64fd317b705b97463cca34cd9e9dd"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/HASHES.json",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/HASHES.json",
+      "bytes": 1440,
+      "sha256": "4e44a72f5245a270d5b53187d6377b8c803b721bb7d9dcd7c718194bc6225767"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/INPUTS.json",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/INPUTS.json",
+      "bytes": 2519,
+      "sha256": "e1af391d64e4b9dd2283e2ce9758716ef7a6619dbf2c7ccf7e0526495bda656d"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/REPORT.md",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/REPORT.md",
+      "bytes": 6460,
+      "sha256": "a8a7b23259153b097e32a99a3f1d9e4b955ed28f34ecb7e6fc391fdb4de719fe"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/RIG_MEASUREMENTS.json",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/RIG_MEASUREMENTS.json",
+      "bytes": 147750,
+      "sha256": "93bac1ed8c8eee3b6a028a393697b42fa5e319653f0e965fb6bfd3ab318b65e9"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/RUN.json",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/RUN.json",
+      "bytes": 627,
+      "sha256": "3dc5c18a74f40d3bd2258255aa6d879a96e6c2e006428ed79fd207c424825760"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/TIMING.json",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/TIMING.json",
+      "bytes": 1059,
+      "sha256": "8475e11842ccd8076be0466c09db5716ca5695679883775bfec909ca420f2346"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/VERIFICATION.json",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/VERIFICATION.json",
+      "bytes": 829,
+      "sha256": "5c38899383058ea8a27205c40c51b7cca9855863f128e9445f89d0180db3c6f8"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/register.mjs",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/register.mjs",
+      "bytes": 18215,
+      "sha256": "d62c48750c27d037e35d4443d5df820fa1f8f6255c69ef9af84c34e57094f1c9"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/hand-staff-registration/run.txt",
+      "path": "docs/evidence/mira-reference-set-v64/hand-staff-registration/run.txt",
+      "bytes": 3712,
+      "sha256": "89f8e9c44b21c87fc8fbaabc3da351faaa5a459c2e7db9852c693c5b09c53216"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-review/CLOSE_READBACK.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-review/CLOSE_READBACK.json",
+      "bytes": 986,
+      "sha256": "eb09d40b5b5199732fa9818822514f19c7e184a65f9fa446ca37d88af21751ee"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-review/FINDINGS.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-review/FINDINGS.json",
+      "bytes": 3004,
+      "sha256": "c8dcc5ab9b7a77c78ce5d5b29ed970fdbe78472c2f425f55c2a64fac8c2fc0b1"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-review/HASHES.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-review/HASHES.json",
+      "bytes": 815,
+      "sha256": "41151547076f9a09c2a21e4c026a26995ea7658ff29835b5aa919c3fcd60ad69"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-review/INPUT_READBACK.json",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-review/INPUT_READBACK.json",
+      "bytes": 13887,
+      "sha256": "000486fa9b1ca9301990bde5a82a0d83877b3c5d2fc4837874552eb43a7b49b0"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-review/REVIEW.md",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-review/REVIEW.md",
+      "bytes": 9224,
+      "sha256": "6514ab49f8e684a60d40d788d467f49cbd4cca7da8679555073699fb5e06208f"
+    },
+    {
+      "source": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-review/inspect_inventory.py",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-review/inspect_inventory.py",
+      "bytes": 3374,
+      "sha256": "ea38b8e9fc824c13aa7ba6ee498309bf416ddf7c72c30ed52bf7ac8100bc93fe"
+    }
+  ]
+}

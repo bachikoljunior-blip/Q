@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "path": "AUTHOR_REGISTRATION.json",
+      "bytes": 322951,
+      "sha256": "a8d3157d26d6e13dc228cddd1282cf0369b64fd317b705b97463cca34cd9e9dd"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 2519,
+      "sha256": "e1af391d64e4b9dd2283e2ce9758716ef7a6619dbf2c7ccf7e0526495bda656d"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 6460,
+      "sha256": "a8a7b23259153b097e32a99a3f1d9e4b955ed28f34ecb7e6fc391fdb4de719fe"
+    },
+    {
+      "path": "RIG_MEASUREMENTS.json",
+      "bytes": 147750,
+      "sha256": "93bac1ed8c8eee3b6a028a393697b42fa5e319653f0e965fb6bfd3ab318b65e9"
+    },
+    {
+      "path": "RUN.json",
+      "bytes": 627,
+      "sha256": "3dc5c18a74f40d3bd2258255aa6d879a96e6c2e006428ed79fd207c424825760"
+    },
+    {
+      "path": "TIMING.json",
+      "bytes": 1059,
+      "sha256": "8475e11842ccd8076be0466c09db5716ca5695679883775bfec909ca420f2346"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 829,
+      "sha256": "5c38899383058ea8a27205c40c51b7cca9855863f128e9445f89d0180db3c6f8"
+    },
+    {
+      "path": "register.mjs",
+      "bytes": 18215,
+      "sha256": "d62c48750c27d037e35d4443d5df820fa1f8f6255c69ef9af84c34e57094f1c9"
+    },
+    {
+      "path": "run.txt",
+      "bytes": 3712,
+      "sha256": "89f8e9c44b21c87fc8fbaabc3da351faaa5a459c2e7db9852c693c5b09c53216"
+    }
+  ],
+  "scope": "Entire read-only registration study; excludes this manifest itself."
+}

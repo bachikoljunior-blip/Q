@@ -1,0 +1,740 @@
+{
+  "recordedAt": "2026-09-16T15:29:25.078489+00:00",
+  "scope": "Selected visual references and semantic inventory, not precise projection or actual geometry",
+  "inputManifest": {
+    "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/HASHES.json",
+    "bytes": 15659,
+    "sha256": "8e3dc0c0e582731fd6e9b5dfe2dc1aa751433d21bdef39b8c4f3a2d52ef91059"
+  },
+  "manifestEntriesExcludingManifest": 102,
+  "inputFilesIncludingManifest": 103,
+  "all103FilesRehashed": false,
+  "all37NewRawPNGRehashed": false,
+  "counts": {
+    "leafTypes": 40,
+    "instances": 96,
+    "selectedImages": 30,
+    "rejectedTrouserComparisons": 4,
+    "canonicalImages": 6,
+    "semanticInterfaces": 31
+  },
+  "selectedImages": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "bytes": 1885563,
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-01-v2.png",
+      "bytes": 1859673,
+      "sha256": "6bb55000c12fb0da11ba3807081bafbcd56af2b669f380abe9b3722f1333306c"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-02-v1.png",
+      "bytes": 2047449,
+      "sha256": "36182e4c7b4aa340d79831b0754444eef1cb082b36902cf1db220f2a681abf20"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/S02-v2.png",
+      "bytes": 2068089,
+      "sha256": "191b21af54b8cc7d2f3c1099a0ef35ec4ffcc7077a75909ce3d70fe468af9215"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/S03-v2.png",
+      "bytes": 1880151,
+      "sha256": "01aa626ca1940ad8662d4eab2397aba762f1257e390d599c90f82e73da326e37"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-03-v1.png",
+      "bytes": 1917813,
+      "sha256": "250c76f9fcaa650bef57b7c53e7425203012357f6afe1b6c81e733b9552ff987"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/S06-v2.png",
+      "bytes": 1669268,
+      "sha256": "6b569ec4c96b5da70b7abc65ffa2750d65ccacb6671a065ff2fff081154465a5"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/C01-v2.png",
+      "bytes": 1424707,
+      "sha256": "ae5dad88812d11858129bbd887eb6c18442b027313338b50e7ac961719865406"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-04-v1.png",
+      "bytes": 1980460,
+      "sha256": "ea4a70f37ec9a4933194b2652e292dcf90f19156ca6f64da7839becb7435cfde"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/W01-v2.png",
+      "bytes": 1209373,
+      "sha256": "e89dec51440d51f46b30bd4ce90992628af90ee38b5436bae85b338139af6d17"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/W02-v2.png",
+      "bytes": 1650172,
+      "sha256": "ce3651f4d19d49b2afc68d224fd4fe200d91b3ebff1f9424ddf390314e0701e7"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/W03-v2.png",
+      "bytes": 1254441,
+      "sha256": "edc2f90888e4ebeeb37ee35884964ddef6701e09d5bc0e7e0a12db8bc63dbe26"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v2.png",
+      "bytes": 1875444,
+      "sha256": "409535188a6e448e7fb59f415be5302e49513024e429edb3e9d49f85d4fbee4a"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/P03-v2.png",
+      "bytes": 1575035,
+      "sha256": "b1fd5e177089c695d7f357633f8100a721a935dd4cead920f8800b79420d918b"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/P04-v2.png",
+      "bytes": 1509187,
+      "sha256": "2f547c0754f5d9d3508b2c37d06d24fba3fda01f018daca8d07b24079db0f63d"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/L01-v2.png",
+      "bytes": 1993573,
+      "sha256": "27f482e1587da82b1dc5fc2c67c8a9524c8d3343ff6a4648d884bbfc98df543b"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/L02-v2.png",
+      "bytes": 1984324,
+      "sha256": "75055d823970683cd8e41305b64118655ff65d98980a9083299d4ed9cb1c24c2"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/L03-v2.png",
+      "bytes": 1804971,
+      "sha256": "0c8d756575df48931788f18ffc13261be99c8fe84413765a40df8e3fc19162fa"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-07-v1.png",
+      "bytes": 1806963,
+      "sha256": "6a00837ee926e9941d2d5f2e751ea4fc885b4601e461ada4baad6bb84cc5dfd0"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-08-v1.png",
+      "bytes": 1928325,
+      "sha256": "40097bcc008935c4a11763c28c8d5b4a52b6f9e6f3917954e3acc9cf3d4e53bb"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-09-v1.png",
+      "bytes": 2006352,
+      "sha256": "393bd8dc8f01537f4d752f073963c174fd3ac078b178b64fd4b44a47766156e6"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/F03-v2.png",
+      "bytes": 1484672,
+      "sha256": "9dc81ba31e72ddbf1b0fc1594e805cb399859bf2ba478bfab9c75a3cd01b0d99"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/F04-v2.png",
+      "bytes": 1467723,
+      "sha256": "b5c28dc961e64afcdcc8e1eb26e4183dcab3e780b9b173462da45614778dffe7"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-10-v1.png",
+      "bytes": 1896140,
+      "sha256": "0ee71d6ebad812bd175d4136445027ca3aca659f63bff6080fc5bf8e4617f47d"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR01-method-b.png",
+      "bytes": 1640510,
+      "sha256": "a429a8dffe2657aa7907ba5827f90ed164eb1ff442f39949d0b197665b1e0977"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR02-method-b.png",
+      "bytes": 1687651,
+      "sha256": "92eda1a1205de61856bdabac7f345e31e9eb29687285e69e8f2f774737162a70"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR03-v2.png",
+      "bytes": 2049419,
+      "sha256": "875cf46b6a524d29f1392308ee55cfba8a6c3e7fd72593b7ba88d7b6ee3496fb"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR04-v2.png",
+      "bytes": 2023820,
+      "sha256": "850e1dae61e856a18745128dc270585b3702ec91b675af10d1571ff1682446c8"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR05-v1.png",
+      "bytes": 1926742,
+      "sha256": "b7afe4303310d4dbcef9411a0f3ca7ef20b87c51ee2a78aa53a2de1baeedb0dd"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/PH01-v1.png",
+      "bytes": 2025999,
+      "sha256": "2a9dc2184fa51daca9151d1bbec92510b932dc40cc3887fd76be3a85b47095c1"
+    }
+  ],
+  "rejectedTrouserImages": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR01-v1.png",
+      "bytes": 2172605,
+      "sha256": "981f94a5651f9a98ee90add632c34746328722d27ab2b680db21349c4f0867c4"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR01-v2.png",
+      "bytes": 2114130,
+      "sha256": "ef98653419568d9fe7a8dc8301ec95bcae0173f0cba9ca12d1d94d3edb152c43"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR02-v1.png",
+      "bytes": 2173088,
+      "sha256": "fa490165ac81f143b7fcf37616f177dd8b4497051a151b24050189e103c37241"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR02-v2.png",
+      "bytes": 2013823,
+      "sha256": "6fd754c650a200afac0005abbf25a4199db00ad61aaa5d4ebe3eeef4b7042556"
+    }
+  ],
+  "canonicalImages": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+      "bytes": 1874282,
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png",
+      "bytes": 2682065,
+      "sha256": "4920620758835d3f635eaa54d0e1b6184081580454ac384b6439fc4ec7006a2a"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/character-reference-v60/references/mira-upper-views-v1.png",
+      "bytes": 2271191,
+      "sha256": "561d93036b3322ea25e88ef41be355ddd82bb0d1f2c2ec673fe0d6ec1f0fa6c4"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/character-reference-v60/references/mira-cape-views-v2.png",
+      "bytes": 2401843,
+      "sha256": "4080eac540f7f92b30adbf484a756e3c435191f8f7213c7a3806434f790d34a2"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png",
+      "bytes": 2325104,
+      "sha256": "8a68d3532b9271287436505661ca58bd83511ef18431af6346812f9799b81325"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/character-reference-v60/references/mira-hands-staff-views-v1.png",
+      "bytes": 1974979,
+      "sha256": "6bb80bcdcbd52ae8b6a1ecbb0071fe2d56d44f9ad4d7d2d2521bf65ced78ef5f"
+    }
+  ],
+  "inputDocuments": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/COVERAGE.json",
+      "bytes": 73836,
+      "sha256": "95fe578dffa1c492fc7238c2bce717fe0e8ea287c2fe9994af5f91403997d409"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/ASSEMBLY.json",
+      "bytes": 8365,
+      "sha256": "9c98490df3c4f8436270d3aef67ded53ed4206ba8559772ea971b2173b52de95"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/REVIEW.md",
+      "bytes": 5766,
+      "sha256": "b107863359536bb7c6a28e8de8537df9c484fc1dc942b5f08db45a3276a4abbb"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/CALLS.json",
+      "bytes": 113622,
+      "sha256": "a8e40d0851012bbf2c4d6527c0cad633f5a46c900b1414f618bf2866ad81ffcf"
+    }
+  ],
+  "types": [
+    {
+      "id": "T01",
+      "name": "front centre panel",
+      "instances": [
+        "T01-R",
+        "T01-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "T03/T05; top T04/C01; bottom WAIST"
+    },
+    {
+      "id": "T02",
+      "name": "rear quarter panel",
+      "instances": [
+        "T02-R",
+        "T02-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-01-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "T03; top T04/C02; bottom WAIST"
+    },
+    {
+      "id": "T03",
+      "name": "underarm side panel",
+      "instances": [
+        "T03-R",
+        "T03-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-01-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "front T01; rear T02; top T05; bottom WAIST"
+    },
+    {
+      "id": "T04",
+      "name": "shoulder bridge",
+      "instances": [
+        "T04-R",
+        "T04-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-01-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "inner COLLAR; T01/T02; outer ARMHOLE"
+    },
+    {
+      "id": "T05",
+      "name": "armhole gusset half",
+      "instances": [
+        "T05-R-front",
+        "T05-R-rear",
+        "T05-L-front",
+        "T05-L-rear"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-02-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "shared ARMHOLE16; T03/T04; S01/S02"
+    },
+    {
+      "id": "S01",
+      "name": "upper sleeve front",
+      "instances": [
+        "S01-R",
+        "S01-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-02-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "ARMHOLE; side S02; bottom S03/S04"
+    },
+    {
+      "id": "S02",
+      "name": "upper sleeve rear",
+      "instances": [
+        "S02-R",
+        "S02-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/S02-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "ARMHOLE; side S01; bottom S03/S04"
+    },
+    {
+      "id": "S03",
+      "name": "outer elbow fold",
+      "instances": [
+        "S03-R",
+        "S03-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/S03-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top S01/S02; bottom S05/S06; ends S04"
+    },
+    {
+      "id": "S04",
+      "name": "inner elbow gusset",
+      "instances": [
+        "S04-R",
+        "S04-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-03-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top S01/S02; bottom S05/S06; ends S03"
+    },
+    {
+      "id": "S05",
+      "name": "forearm sleeve front",
+      "instances": [
+        "S05-R",
+        "S05-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "S03/S04; sides S06; bottom CUFF"
+    },
+    {
+      "id": "S06",
+      "name": "forearm sleeve rear",
+      "instances": [
+        "S06-R",
+        "S06-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/S06-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "S03/S04; sides S05; bottom CUFF"
+    },
+    {
+      "id": "C01",
+      "name": "front stand-collar half",
+      "instances": [
+        "C01-R",
+        "C01-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/C01-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "lower T01/T04; back C02; front OPEN"
+    },
+    {
+      "id": "C02",
+      "name": "rear stand collar",
+      "instances": [
+        "C02-C"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-04-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "lower T02/T04; ends C01"
+    },
+    {
+      "id": "W01",
+      "name": "front cowl fold",
+      "instances": [
+        "W01-0",
+        "W01-1",
+        "W01-2"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/W01-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "ends W02; adjacent W01"
+    },
+    {
+      "id": "W02",
+      "name": "side cowl bridge",
+      "instances": [
+        "W02-R",
+        "W02-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/W02-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "front W01; rear W03; lower P04; brooch seat"
+    },
+    {
+      "id": "W03",
+      "name": "rear cowl fold",
+      "instances": [
+        "W03-0",
+        "W03-1",
+        "W03-2"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/W03-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "ends W02; upper C02; lower P04"
+    },
+    {
+      "id": "P01",
+      "name": "cape rear panel",
+      "instances": [
+        "P01-R",
+        "P01-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "rear centre; outer P02; top P04; bottom HEM"
+    },
+    {
+      "id": "P02",
+      "name": "cape side panel",
+      "instances": [
+        "P02-R",
+        "P02-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "rear P01; front P03; top P04; bottom HEM"
+    },
+    {
+      "id": "P03",
+      "name": "cape front-edge panel",
+      "instances": [
+        "P03-R",
+        "P03-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/P03-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "outer P02; top W02/P04; inner OPEN; bottom HEM"
+    },
+    {
+      "id": "P04",
+      "name": "cape shoulder connector",
+      "instances": [
+        "P04-R",
+        "P04-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/P04-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "inner W02/W03; outer P01/P02/P03"
+    },
+    {
+      "id": "L01",
+      "name": "lower front panel",
+      "instances": [
+        "L01-R",
+        "L01-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/L01-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "WAIST; side L03; inner L04/OPEN; bottom L05"
+    },
+    {
+      "id": "L02",
+      "name": "lower rear panel",
+      "instances": [
+        "L02-R",
+        "L02-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/L02-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "WAIST; side L03; rear centre; bottom L05"
+    },
+    {
+      "id": "L03",
+      "name": "lower side insert",
+      "instances": [
+        "L03-R",
+        "L03-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/L03-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "WAIST; front L01; rear L02; bottom L05"
+    },
+    {
+      "id": "L04",
+      "name": "split-edge turnback",
+      "instances": [
+        "L04-R",
+        "L04-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-07-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "fold along L01 front edge; inside free edge"
+    },
+    {
+      "id": "L05",
+      "name": "hem turnback",
+      "instances": [
+        "L05-front-R",
+        "L05-front-L",
+        "L05-side-R",
+        "L05-side-L",
+        "L05-rear-R",
+        "L05-rear-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-07-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "corresponding lower panel hem; joined endpoints"
+    },
+    {
+      "id": "B01",
+      "name": "belt segment",
+      "instances": [
+        "B01-front-R",
+        "B01-front-L",
+        "B01-rear-R",
+        "B01-rear-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-08-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "continuous WAIST path"
+    },
+    {
+      "id": "B02",
+      "name": "hanging belt tail",
+      "instances": [
+        "B02-R"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-08-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top B03-hanger; bottom FREE"
+    },
+    {
+      "id": "B03",
+      "name": "hardware ring",
+      "instances": [
+        "B03-buckle-C",
+        "B03-hanger-R"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-08-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "belt or tail hinge; closed opening"
+    },
+    {
+      "id": "B04",
+      "name": "buckle pin",
+      "instances": [
+        "B04-C"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-09-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "hinge B03; tip explicit belt hole"
+    },
+    {
+      "id": "F01",
+      "name": "cuff front half",
+      "instances": [
+        "F01-R",
+        "F01-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-09-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top CUFF; side F02; bottom WRIST"
+    },
+    {
+      "id": "F02",
+      "name": "cuff rear half",
+      "instances": [
+        "F02-R",
+        "F02-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-09-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "top CUFF; side F01; bottom WRIST"
+    },
+    {
+      "id": "F03",
+      "name": "cross-wrap ribbon",
+      "instances": [
+        "F03-R-0",
+        "F03-R-1",
+        "F03-R-2",
+        "F03-L-0",
+        "F03-L-1",
+        "F03-L-2"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/F03-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "F01/F02; explicit overlap order"
+    },
+    {
+      "id": "F04",
+      "name": "brooch centre",
+      "instances": [
+        "F04-R",
+        "F04-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/F04-v2.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "seat W02; rim F05"
+    },
+    {
+      "id": "F05",
+      "name": "brooch rim",
+      "instances": [
+        "F05-R",
+        "F05-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-10-v1.png",
+      "dimensionStatus": "prior nominal proposal, not image measurement or final seam coordinates",
+      "edgeContract": "inner F04; back W02"
+    },
+    {
+      "id": "TR01",
+      "name": "trouser front leg half-shell",
+      "instances": [
+        "TR01-R",
+        "TR01-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR01-method-b.png",
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "TR04 waist; outside and inside seams TR02; upper inner cutout TR03; bottom TR05"
+    },
+    {
+      "id": "TR02",
+      "name": "trouser rear leg and seat half-shell",
+      "instances": [
+        "TR02-R",
+        "TR02-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR02-method-b.png",
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "TR04 waist; both side seams TR01; upper inner cutout TR03; bottom TR05"
+    },
+    {
+      "id": "TR03",
+      "name": "crotch gusset saddle",
+      "instances": [
+        "TR03-C"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR03-v2.png",
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "four cut edges to inner top contours of TR01-R/L and TR02-R/L"
+    },
+    {
+      "id": "TR04",
+      "name": "trouser waist fabric strip",
+      "instances": [
+        "TR04-front-R",
+        "TR04-front-L",
+        "TR04-rear-R",
+        "TR04-rear-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR04-v2.png",
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "lower edge TR01/TR02; four endpoints shared around trouser waist"
+    },
+    {
+      "id": "TR05",
+      "name": "trouser boot underlap strip",
+      "instances": [
+        "TR05-R",
+        "TR05-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR05-v1.png",
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "top TR01/TR02 bottom edges; lower edge tucked inside boot AB07/AB08"
+    },
+    {
+      "id": "PH01",
+      "name": "cape hem turnback segment",
+      "instances": [
+        "PH01-P01-R",
+        "PH01-P01-L",
+        "PH01-P02-R",
+        "PH01-P02-L",
+        "PH01-P03-R",
+        "PH01-P03-L"
+      ],
+      "image": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/PH01-v1.png",
+      "dimensionStatus": "unmeasured author specification pending; images not CAD",
+      "edgeContract": "upper edge inherits matching cape P01/P02/P03 hem curve; neighbouring endpoints shared, no individual end caps"
+    }
+  ],
+  "placementCorrections": [
+    {
+      "id": "B02-R",
+      "type": "B02",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "B02",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "proposedAnatomicalSide": "Left (+X)",
+      "conflict": "legacy -R id conflicts with canonical frontal hanging-tail location; retain ID for audit, resolve in global ledger",
+      "imageType": "B02",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary",
+      "legacyAnatomicalSide": "Right (-X)",
+      "aliasStatus": "legacy ID retained; canonical placement correction proposed, not runtime mutation"
+    },
+    {
+      "id": "B03-hanger-R",
+      "type": "B03",
+      "anatomicalSide": "Left (+X)",
+      "referenceType": "B03",
+      "assemblyStatus": "unassembled; images not a mesh proof",
+      "proposedAnatomicalSide": "Left (+X)",
+      "conflict": "legacy -R id conflicts with canonical frontal hanging-tail location; retain ID for audit, resolve in global ledger",
+      "imageType": "B03",
+      "placementAuthority": "canonical complete/assembly plus author mapping; generated locator secondary",
+      "legacyAnatomicalSide": "Right (-X)",
+      "aliasStatus": "legacy ID retained; canonical placement correction proposed, not runtime mutation"
+    }
+  ],
+  "methodBReferencePathsEmptyInSavedAuthorReceipts": true,
+  "receiptIsIndependentServiceLog": false,
+  "sourceOrImageChanges": 0,
+  "new3D": 0,
+  "metadataScriptSeconds": 0.06491574000392575
+}

@@ -1,0 +1,530 @@
+{
+  "recordedAt": "2026-09-16T15:11:13.265919+00:00",
+  "scope": "Metadata identity and reference mapping only; visual decisions are recorded separately in REVIEW.md.",
+  "basePR58": "b21985680bb43a3be5a2c4d2244e6b6d24b5af69",
+  "inputManifest": {
+    "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/HASHES.json",
+    "bytes": 9421,
+    "sha256": "c7672aeec0654c71413fc849cdb75b2760bcb4d6ee9a0113eb0b8b113834d0bb"
+  },
+  "manifestEntryCount": 69,
+  "allManifestFilesRehashed": false,
+  "selectedImagesVisuallyInspected": 16,
+  "counts": {
+    "leafTypes": 40,
+    "instances": 80,
+    "selectedImages": 16
+  },
+  "files": [
+    {
+      "relativePath": "01-face-transitions-v1.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/01-face-transitions-v1.png",
+      "bytes": 1847723,
+      "sha256": "743c0c8f4dee78c5d58aa1ede0df25f1ce5564f138e80852b0fdbaf8cc7391c4"
+    },
+    {
+      "relativePath": "02-nose-v2.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/02-nose-v2.png",
+      "bytes": 1888019,
+      "sha256": "7b33caa548f89db6ba68d44e8b33aa923c17e6b177491e515e9cb6d3a95983f6"
+    },
+    {
+      "relativePath": "03-central-mouth-v1.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/03-central-mouth-v1.png",
+      "bytes": 1923717,
+      "sha256": "c6d2981eab25c3da606a70c16e98d5ba679dcf4d414b59eb4eac84df79ca6337"
+    },
+    {
+      "relativePath": "04-corners-v1.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/04-corners-v1.png",
+      "bytes": 2012380,
+      "sha256": "baf34c9e29d596969585d557aab7a605c2f5a17be93fd6a820aa01114d9ea15d"
+    },
+    {
+      "relativePath": "05-eye-and-brow-v2.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/05-eye-and-brow-v2.png",
+      "bytes": 1920488,
+      "sha256": "685b8f0cf504b368bfab3107272289057b0407fa958e2ee48d5a617446ee06b0"
+    },
+    {
+      "relativePath": "06-eyelids-v1.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/06-eyelids-v1.png",
+      "bytes": 2044237,
+      "sha256": "f77c07476b3d50750c70c08df867ace8d5750e8e70a7912f4afe9e63156ad4ec"
+    },
+    {
+      "relativePath": "07-front-scalp-v2.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/07-front-scalp-v2.png",
+      "bytes": 2207473,
+      "sha256": "465638d2e1fa6c859c2bef83ad110f3ae9349616b85c2cf8d90f6a5f353f2cf1"
+    },
+    {
+      "relativePath": "08-side-rear-scalp-v2.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/08-side-rear-scalp-v2.png",
+      "bytes": 1947664,
+      "sha256": "d615cbb4fdd5d85f93fe5a3bba5deede07d32bdc4d58bfe79b7a1d4f97c7d535"
+    },
+    {
+      "relativePath": "09-ear-outer-v1.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/09-ear-outer-v1.png",
+      "bytes": 2222999,
+      "sha256": "e5ca86a123f1396690cf2001d3d1a025e6211015121cd4df03473038055d568e"
+    },
+    {
+      "relativePath": "10-ear-inner-v1.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/10-ear-inner-v1.png",
+      "bytes": 2039251,
+      "sha256": "cb31d50613cce1716f07fdcad235bdadec37f6b5ba595fb32e6948685fd6237b"
+    },
+    {
+      "relativePath": "11-neck-v2.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/11-neck-v2.png",
+      "bytes": 2097344,
+      "sha256": "74d7b6831d2f14890599b00ff3a48ea53fce10b5a3c685a328aa256caa5d2448"
+    },
+    {
+      "relativePath": "12-hair-front-v2.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/12-hair-front-v2.png",
+      "bytes": 1931890,
+      "sha256": "85e5bc80b48b7f829f238303d7d3f30d71d1180e9e9195e82bf4c78b35b4bea0"
+    },
+    {
+      "relativePath": "13-hair-back-v1.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/13-hair-back-v1.png",
+      "bytes": 2006505,
+      "sha256": "cc316172c47605032a0f963014d03fba2996f1c05b619b66b3f1ed21df17dd4e"
+    },
+    {
+      "relativePath": "existing/mira-F07-F11-v2.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/existing/mira-F07-F11-v2.png",
+      "bytes": 1764903,
+      "sha256": "e92542a8696c2adc5af4d4d2754bd726bbf27771d480dc490ac1519ce46fad4d"
+    },
+    {
+      "relativePath": "existing/mira-F17-v2.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/existing/mira-F17-v2.png",
+      "bytes": 1811045,
+      "sha256": "ed060ee2a97891c8fd074093bba2aba6be60e88b09014da661c6c4634832afb6"
+    },
+    {
+      "relativePath": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/existing/mira-face-patches-F01-F05-F09-v2.png",
+      "bytes": 1593624,
+      "sha256": "bdb78e0536808201b80aca8d1c8505faaec13c88a1577b65d93570a261b56049"
+    },
+    {
+      "relativePath": "README.md",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/README.md",
+      "bytes": 5329,
+      "sha256": "00512bf219b2607efde52de56641e7061373eb9b229aaa9b903c0826f3465594"
+    },
+    {
+      "relativePath": "INTERFACES.md",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/INTERFACES.md",
+      "bytes": 2618,
+      "sha256": "f4d4f5884258b2bc7a8869a8bb77b2c1be36ae27f223952b5c981548e083383f"
+    },
+    {
+      "relativePath": "coverage.json",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/coverage.json",
+      "bytes": 102289,
+      "sha256": "3f3283b112601edc7acce61b5ef6c64b9dc0c1bb2ecd32443262da6e970ba508"
+    }
+  ],
+  "canonicalImages": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/character-reference-v60/references/mira-head-views-v1.png",
+      "bytes": 2379503,
+      "sha256": "85bd4853238384211bf9cf2f931337acfed89f4a4c4f6c4bc6ec9d208eac21fe"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+      "bytes": 1874282,
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6"
+    }
+  ],
+  "coordinateSystem": "face +Z, up +Y, anatomical R=-X/L=+X; image camera labels do not override it",
+  "aliases": {
+    "A01": [
+      "A01a",
+      "A01b"
+    ],
+    "A02": [
+      "A02a",
+      "A02b"
+    ],
+    "F16": [
+      "F16a",
+      "F16b"
+    ]
+  },
+  "types": [
+    {
+      "id": "F01",
+      "name": "forehead",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "instanceIds": [
+        "F01-L",
+        "F01-R"
+      ]
+    },
+    {
+      "id": "F03",
+      "name": "temple",
+      "image": "01-face-transitions-v1.png",
+      "instanceIds": [
+        "F03-L",
+        "F03-R"
+      ]
+    },
+    {
+      "id": "F05",
+      "name": "malar cheek",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "instanceIds": [
+        "F05-L",
+        "F05-R"
+      ]
+    },
+    {
+      "id": "F07",
+      "name": "lower cheek",
+      "image": "existing/mira-F07-F11-v2.png",
+      "instanceIds": [
+        "F07-L",
+        "F07-R"
+      ]
+    },
+    {
+      "id": "F09",
+      "name": "jaw corner",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "instanceIds": [
+        "F09-L",
+        "F09-R"
+      ]
+    },
+    {
+      "id": "F14",
+      "name": "nasal ala",
+      "image": "02-nose-v2.png",
+      "instanceIds": [
+        "F14-L",
+        "F14-R"
+      ]
+    },
+    {
+      "id": "F11",
+      "name": "chin",
+      "image": "existing/mira-F07-F11-v2.png",
+      "instanceIds": [
+        "F11"
+      ]
+    },
+    {
+      "id": "F12",
+      "name": "nasal bridge",
+      "image": "02-nose-v2.png",
+      "instanceIds": [
+        "F12"
+      ]
+    },
+    {
+      "id": "F13",
+      "name": "nasal tip",
+      "image": "02-nose-v2.png",
+      "instanceIds": [
+        "F13"
+      ]
+    },
+    {
+      "id": "F16a",
+      "name": "upper lip",
+      "image": "03-central-mouth-v1.png",
+      "instanceIds": [
+        "F16a"
+      ]
+    },
+    {
+      "id": "F16b",
+      "name": "philtrum",
+      "image": "03-central-mouth-v1.png",
+      "instanceIds": [
+        "F16b"
+      ]
+    },
+    {
+      "id": "F17",
+      "name": "lower lip",
+      "image": "existing/mira-F17-v2.png",
+      "instanceIds": [
+        "F17"
+      ]
+    },
+    {
+      "id": "S01",
+      "name": "front scalp",
+      "image": "07-front-scalp-v2.png",
+      "instanceIds": [
+        "S01"
+      ]
+    },
+    {
+      "id": "S02",
+      "name": "crown",
+      "image": "07-front-scalp-v2.png",
+      "instanceIds": [
+        "S02"
+      ]
+    },
+    {
+      "id": "S-SIDE",
+      "name": "side scalp",
+      "image": "08-side-rear-scalp-v2.png",
+      "instanceIds": [
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "id": "S05",
+      "name": "rear scalp",
+      "image": "08-side-rear-scalp-v2.png",
+      "instanceIds": [
+        "S05"
+      ]
+    },
+    {
+      "id": "A01a",
+      "name": "helix rim",
+      "image": "09-ear-outer-v1.png",
+      "instanceIds": [
+        "A01a-L",
+        "A01a-R"
+      ]
+    },
+    {
+      "id": "A01b",
+      "name": "antihelix fork",
+      "image": "09-ear-outer-v1.png",
+      "instanceIds": [
+        "A01b-L",
+        "A01b-R"
+      ]
+    },
+    {
+      "id": "A02a",
+      "name": "concha bowl",
+      "image": "10-ear-inner-v1.png",
+      "instanceIds": [
+        "A02a-L",
+        "A02a-R"
+      ]
+    },
+    {
+      "id": "A02b",
+      "name": "tragus flap",
+      "image": "10-ear-inner-v1.png",
+      "instanceIds": [
+        "A02b-L",
+        "A02b-R"
+      ]
+    },
+    {
+      "id": "A03",
+      "name": "earlobe",
+      "image": "09-ear-outer-v1.png",
+      "instanceIds": [
+        "A03-L",
+        "A03-R"
+      ]
+    },
+    {
+      "id": "E01",
+      "name": "eyeball",
+      "image": "05-eye-and-brow-v2.png",
+      "instanceIds": [
+        "E01-L",
+        "E01-R"
+      ]
+    },
+    {
+      "id": "E02",
+      "name": "iris and pupil",
+      "image": "05-eye-and-brow-v2.png",
+      "instanceIds": [
+        "E02-L",
+        "E02-R"
+      ]
+    },
+    {
+      "id": "E03",
+      "name": "upper lid",
+      "image": "06-eyelids-v1.png",
+      "instanceIds": [
+        "E03-L",
+        "E03-R"
+      ]
+    },
+    {
+      "id": "B01",
+      "name": "eyebrow",
+      "image": "05-eye-and-brow-v2.png",
+      "instanceIds": [
+        "B01-L",
+        "B01-R"
+      ]
+    },
+    {
+      "id": "N01",
+      "name": "front neck transition",
+      "image": "11-neck-v2.png",
+      "instanceIds": [
+        "N01"
+      ]
+    },
+    {
+      "id": "N02",
+      "name": "rear neck transition",
+      "image": "11-neck-v2.png",
+      "instanceIds": [
+        "N02"
+      ]
+    },
+    {
+      "id": "HT01",
+      "name": "raised swept forelock",
+      "image": "12-hair-front-v2.png",
+      "instanceIds": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H09",
+        "H10"
+      ]
+    },
+    {
+      "id": "HT02",
+      "name": "broad shallow top overlap",
+      "image": "12-hair-front-v2.png",
+      "instanceIds": [
+        "H05",
+        "H06",
+        "H07",
+        "H08"
+      ]
+    },
+    {
+      "id": "HT03",
+      "name": "short side fall",
+      "image": "12-hair-front-v2.png",
+      "instanceIds": [
+        "H11",
+        "H12",
+        "H14",
+        "H15"
+      ]
+    },
+    {
+      "id": "HT04",
+      "name": "ear-edge tapered terminal",
+      "image": "13-hair-back-v1.png",
+      "instanceIds": [
+        "H13",
+        "H16"
+      ]
+    },
+    {
+      "id": "HT05",
+      "name": "posterior crown flow",
+      "image": "13-hair-back-v1.png",
+      "instanceIds": [
+        "H17",
+        "H18",
+        "H19",
+        "H20"
+      ]
+    },
+    {
+      "id": "HT06",
+      "name": "nape taper",
+      "image": "13-hair-back-v1.png",
+      "instanceIds": [
+        "H21",
+        "H22",
+        "H23",
+        "H24"
+      ]
+    },
+    {
+      "id": "E04",
+      "name": "lower eyelid",
+      "image": "06-eyelids-v1.png",
+      "instanceIds": [
+        "E04-L",
+        "E04-R"
+      ]
+    },
+    {
+      "id": "E05",
+      "name": "inner eye corner",
+      "image": "04-corners-v1.png",
+      "instanceIds": [
+        "E05-L",
+        "E05-R"
+      ]
+    },
+    {
+      "id": "F18",
+      "name": "infraorbital",
+      "image": "01-face-transitions-v1.png",
+      "instanceIds": [
+        "F18-L",
+        "F18-R"
+      ]
+    },
+    {
+      "id": "F19",
+      "name": "nasolabial side",
+      "image": "01-face-transitions-v1.png",
+      "instanceIds": [
+        "F19-L",
+        "F19-R"
+      ]
+    },
+    {
+      "id": "F20",
+      "name": "mouth corner",
+      "image": "04-corners-v1.png",
+      "instanceIds": [
+        "F20-L",
+        "F20-R"
+      ]
+    },
+    {
+      "id": "F15",
+      "name": "columella and nasal floor",
+      "image": "03-central-mouth-v1.png",
+      "instanceIds": [
+        "F15"
+      ]
+    },
+    {
+      "id": "A04",
+      "name": "rear ear and root",
+      "image": "10-ear-inner-v1.png",
+      "instanceIds": [
+        "A04-L",
+        "A04-R"
+      ]
+    }
+  ],
+  "all80TransformsAndSeamsUnregisteredInFrozenInput": true,
+  "all40FinalDimensionsUnregisteredInFrozenInput": true,
+  "sourceImageModified": false,
+  "generatedImages": 0,
+  "new3D": 0,
+  "metadataScriptSeconds": 0.03697250600089319,
+  "excludedLaterWork": "F21 / proposed 41 types and 82 placements, and parallel head-assembly-registration, are not part of this frozen 40/80 review."
+}
