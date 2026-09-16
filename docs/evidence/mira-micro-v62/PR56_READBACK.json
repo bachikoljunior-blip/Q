@@ -1,0 +1,205 @@
+{
+  "recordedAt": "2026-09-16T12:45:50.365Z",
+  "localCommit": "8e6510578cf0980eea03c2dcc6ebeb3dcbe39371",
+  "remoteCommit": "3fcd0aa8b6e4825e8ac468800845c344152759b3",
+  "tree": "f71ddad782a78b5177dbdb37416cc83166cd95d6",
+  "base": "906cb4adc07abe7695b85958643b8e1b508f6e8e",
+  "nativeTreeComparisonExit": 0,
+  "localClean": true,
+  "pr": {
+    "number": 56,
+    "url": "https://github.com/bachikoljunior-blip/Q/pull/56",
+    "draft": true,
+    "base": "feat/ps4-cloth-integration-v57-20260916",
+    "head": "feat/mira-micro-parts-v61-20260916"
+  },
+  "ci": [
+    {
+      "id": 104796529560,
+      "head": "3fcd0aa8b6e4825e8ac468800845c344152759b3",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-09-16T12:37:52Z",
+      "completedAt": "2026-09-16T12:39:52Z",
+      "url": "https://github.com/bachikoljunior-blip/Q/actions/runs/35096941845/job/104796529560",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify deterministic asset provenance",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify original score and effect asset provenance",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify production entrypoint and fault sensitivity",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve application-boundary evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify saved consultations through the production entrypoint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve consultation-boundary evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify asset-slice journeys through the production entrypoint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve asset-slice runtime evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm test",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify bow grips, body clearance and saved shot poses",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify physical loaded-arrow surfaces",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify finite projectile forecast correctness and real terrain-read cost",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify actual conversation routes and native speaker framing",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify terrain contact, shallow stream and stable shadow geometry",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify architecture contact and shared vertical collision bounds",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify settlement foundations, bridge contact and matching occlusion",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify loaded foliage and same-frame actor trail integration",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify shared HDR loading, lighting and capability fallback",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run test:journey",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run test:crossing",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run test:forge",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run test:session",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run test:expedition",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run review:combat",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify the review records are tracked",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run compare:touch",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify the review records are current",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run build",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run test:artifacts",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify the web receipt is current",
+          "conclusion": "success"
+        },
+        {
+          "name": "Select the verified fixed web stage",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Generate and verify optional offline HTML",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "githubMain": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+  "site": {
+    "version": 24,
+    "source": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+    "changedByThisUnit": false
+  },
+  "uncompletedRemoteOperations": 0,
+  "scope": "Two real development-only ring/cap parts and preserved references. No complete character or runtime adoption."
+}

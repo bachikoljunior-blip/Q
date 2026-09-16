@@ -1,0 +1,279 @@
+{
+  "sourceSha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c",
+  "head": "8e6510578cf0980eea03c2dcc6ebeb3dcbe39371",
+  "cases": [
+    {
+      "segments": 24,
+      "totals": {
+        "vertices": 672,
+        "triangles": 1344,
+        "bufferBytes": 29568,
+        "meshes": 2,
+        "sharedMaterials": 1,
+        "unbatchedDrawUnits": 2,
+        "textureBytes": 0
+      },
+      "clearanceMm": 0.2461025233325742,
+      "contactAreaMm2": 353.28800150791574,
+      "S13RadialErrorMm": 0.17110314247769765
+    },
+    {
+      "segments": 16,
+      "totals": {
+        "vertices": 448,
+        "triangles": 896,
+        "bufferBytes": 19712,
+        "meshes": 2,
+        "sharedMaterials": 1,
+        "unbatchedDrawUnits": 2,
+        "textureBytes": 0
+      },
+      "clearanceMm": 0.17894727733712745,
+      "contactAreaMm2": 348.241920785709,
+      "S13RadialErrorMm": 0.38429470597486315
+    },
+    {
+      "segments": 12,
+      "totals": {
+        "vertices": 336,
+        "triangles": 672,
+        "bufferBytes": 14784,
+        "meshes": 2,
+        "sharedMaterials": 1,
+        "unbatchedDrawUnits": 2,
+        "textureBytes": 0
+      },
+      "clearanceMm": 0.08533271499168738,
+      "contactAreaMm2": 341.2499843775827,
+      "S13RadialErrorMm": 0.6814836892673561
+    },
+    {
+      "segments": 8,
+      "totals": {
+        "vertices": 224,
+        "triangles": 448,
+        "bufferBytes": 9856,
+        "meshes": 2,
+        "sharedMaterials": 1,
+        "unbatchedDrawUnits": 2,
+        "textureBytes": 0
+      },
+      "clearanceMm": -0.17955881208170688,
+      "contactAreaMm2": 321.73353621264846,
+      "S13RadialErrorMm": 1.5224098604124734
+    }
+  ],
+  "geometryBatchMs": 17.591532,
+  "projections": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "normal-unoccluded-settled",
+      "depthMetres": 9.030057384756224,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 3.1297244386268233,
+      "S14IdealDiameterPx": 2.81675199476414,
+      "radiusToPixelFactor": 0.07824311096567058,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.013387642163457437,
+          "S14Px": 0.012048860603714347
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.030068413323110957,
+          "S14Px": 0.027061570421320985
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.05332140392064032,
+          "S14Px": 0.0479892654145861
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.11911808364348421,
+          "S14Px": 0.10720627922280944
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "dialogue-first-distance",
+      "depthMetres": 2.6019223662515376,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 10.861811884106775,
+      "S14IdealDiameterPx": 9.775630695696096,
+      "radiusToPixelFactor": 0.2715452971026694,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.04646225365930677,
+          "S14Px": 0.04181596810254361
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.10435342010892718,
+          "S14Px": 0.09391807265110624
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.18505369087272744,
+          "S14Px": 0.166548328330914
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.41340323785773847,
+          "S14Px": 0.3720629277586141
+        }
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "mode": "normal-unoccluded-settled",
+      "depthMetres": 9.030057384756224,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 1.6952674042561957,
+      "S14IdealDiameterPx": 1.525740663830576,
+      "radiusToPixelFactor": 0.042381685106404894,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.007251639505206113,
+          "S14Px": 0.006526466160345271
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.016287057216685105,
+          "S14Px": 0.0146583506448822
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.028882427123680172,
+          "S14Px": 0.02599418543290081
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.06452229530688727,
+          "S14Px": 0.05807006791235512
+        }
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "mode": "dialogue-first-distance",
+      "depthMetres": 2.6019223662515376,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 5.8834814372245035,
+      "S14IdealDiameterPx": 5.295133293502053,
+      "radiusToPixelFactor": 0.1470870359306126,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.02516705406545784,
+          "S14Px": 0.022650316055544455
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.056524769225668896,
+          "S14Px": 0.05087228935268255
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.10023741588939403,
+          "S14Px": 0.09021367784591175
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.22392675383960833,
+          "S14Px": 0.20153408586924934
+        }
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": "normal-unoccluded-settled",
+      "depthMetres": 10.110003399437078,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 3.2768401774000937,
+      "S14IdealDiameterPx": 2.949156159660084,
+      "radiusToPixelFactor": 0.08192100443500235,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.014016941293758307,
+          "S14Px": 0.01261522900574188
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.03148180831251469,
+          "S14Px": 0.028333625838009458
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.05582782833085285,
+          "S14Px": 0.0502450474724311
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.12471734492674152,
+          "S14Px": 0.11224561456311725
+        }
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": "dialogue-first-distance",
+      "depthMetres": 2.6019223662515376,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 12.732457264147385,
+      "S14IdealDiameterPx": 11.459211537732644,
+      "radiusToPixelFactor": 0.31831143160368464,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.054464086233965155,
+          "S14Px": 0.04901760705353723
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.12232539801657576,
+          "S14Px": 0.11009285182990788
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.2169240487452527,
+          "S14Px": 0.19523165154346028
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.4846004621554601,
+          "S14Px": 0.4361404319837088
+        }
+      ]
+    }
+  ]
+}

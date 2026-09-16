@@ -1,0 +1,101 @@
+{
+  "at": "2026-09-16T12:56:02.144129+00:00",
+  "base": "3fcd0aa8b6e4825e8ac468800845c344152759b3",
+  "files": [
+    {
+      "path": "review/cloth-micro-v62/README.md",
+      "bytes": 8428,
+      "sha256": "6081d45cc085466f378d8da6889a922e57743c030c12aabf068b2afd9cce799e"
+    },
+    {
+      "path": "review/cloth-micro-v62/plot.py",
+      "bytes": 4349,
+      "sha256": "43615eb9d27770770ff2f438be985c9de432e654ed1070c8120a11b49eb60ce2"
+    },
+    {
+      "path": "review/cloth-micro-v62/pose-probe.mjs",
+      "bytes": 4052,
+      "sha256": "51193565514fe76d3f08263a4adb4b538aebb4115bc2895ca9a13d14930a7d3e"
+    },
+    {
+      "path": "review/cloth-micro-v62/surfaces.mjs",
+      "bytes": 5895,
+      "sha256": "adc1b85b596eee63a799bb7a3d4d3c8c8c799dc88a469b535b26b05a0ca23193"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/P01-R.obj",
+      "bytes": 25973,
+      "sha256": "4bed610c402ce08c84c8838e28e17d552876a9744df88073491f430284c6d761"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/S05-R.obj",
+      "bytes": 19232,
+      "sha256": "f7aed5ba8b74b76e807497471fdf838794d3112589429c181bea88340c059b6f"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/T01-R.obj",
+      "bytes": 19204,
+      "sha256": "8892c2ce6a9214732188214d761bc71dc80b1c6bd02e61ec9f1908159180111c"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/cpu-bind-registration.png",
+      "bytes": 283614,
+      "sha256": "b1d64badaa9b5a75d8fac19704f516105b6e9def5ca0f97ed7428dd03c3d44b6"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/cpu-four-views.png",
+      "bytes": 630990,
+      "sha256": "62da5f74a13f160198aa32ff1246a7556c68b49c7bc8e45ec1d1568d299f3acb"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/export-run.txt",
+      "bytes": 4351,
+      "sha256": "c96fec022c9aed8fc12f64cc9ae8df4f0b3ff2f3e06d1050383d506de3003c7e"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/meshes.json",
+      "bytes": 194878,
+      "sha256": "085c522e4811861d2b0203cd41001004e8c149275f1101c0a2e8a67aa7019aa6"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/metrics.json",
+      "bytes": 6546,
+      "sha256": "7441accc077a55a2c97dfa055cf206bc92b2e47c30012e39aff2d6ae6dd75bd7"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/pose-probe.json",
+      "bytes": 627766,
+      "sha256": "900acc3406b76223719944453bf4d00d290eb45a334e6c77e41fce139bcc5432"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/pose-run.txt",
+      "bytes": 9877,
+      "sha256": "97d22c7477a09d95a45d522d346dd52d7eea533157220f54aebdf8ecd792232e"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/test-run.txt",
+      "bytes": 903,
+      "sha256": "3b8dbab185762c1d619a93ba0900c074285b3e25ab537e10c5fa909a8063523b"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/timing.json",
+      "bytes": 1847,
+      "sha256": "d6774efc0ebb2ed78aa5b0a55e4748b135cafb2ee33b14f76d34b052ebc0377d"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/validation.json",
+      "bytes": 1478,
+      "sha256": "e742dbac0e392986926b9ba47294a8fbe6ad102b38a477f132be7edd5daf18ff"
+    },
+    {
+      "path": "scripts/export-mira-cloth-micro-v62.mjs",
+      "bytes": 5419,
+      "sha256": "c7b2a57b43bdcd368c3eccb8e1b80ed9bb2998e6230747fa4db8275dba6657f8"
+    },
+    {
+      "path": "tests/mira-cloth-micro-v62.test.mjs",
+      "bytes": 5323,
+      "sha256": "86329bc55b69ba2159788d156143186708a4e4a827fae953bfc81cbabf047e06"
+    }
+  ]
+}

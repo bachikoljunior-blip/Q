@@ -1,0 +1,12 @@
+{
+  "exitCode": 1,
+  "firstUnfinishedPart": "T01-R",
+  "failingStatement": "assert.deepEqual(m,record, fresh source must equal frozen mesh)",
+  "observedDifference": "Native analytical normal components include -0; JSON round-trip represents them as 0. Node strict deepEqual distinguishes those signs.",
+  "sourceDefectEstablished": false,
+  "nativeGeometryChecksComplete": false,
+  "initialOracleSha256": "93bf9acf0d285dcd9b8d1d8a440c85a0cf9d93d6c4b5821bab3b581e925ea436",
+  "fullStdoutPreserved": false,
+  "toolOutputBoundary": "Tool emitted a truncated AssertionError diff; exact shown signed-zero discrepancy retained here, not a fabricated full stdout.",
+  "followupAuthorization": "Integrator explicitly permits signed-zero-only oracle correction and exactly one same-check rerun; no added pose/method/tolerance."
+}

@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-09-16T12:54:22.667856+00:00",
+  "tests": {
+    "command": "node --test tests/mira-cloth-micro-v62.test.mjs",
+    "passed": 7,
+    "failed": 0,
+    "durationMs": 259.553234,
+    "stdout": "test-run.txt"
+  },
+  "firstRun": {
+    "passed": 5,
+    "failed": 1,
+    "failure": "strict equality at actual chest Y .9850000000000001 versus decimal .985",
+    "repair": "numerical comparison tolerance 1e-14 m; geometry unchanged"
+  },
+  "runtimeDiff": "",
+  "runtimeImportSearch": "",
+  "buildAndFullSuite": "not run: no runtime imports/source modifications; parent owns integration gates",
+  "sessionsRemaining": 0,
+  "imageAndGPUClaims": "no game rendering or device performance validation",
+  "sourceInspectionRepair": {
+    "defect": "boundary control arrays aliased authoring net",
+    "repair": "deep clone each exported boundary control array; freeze shared frame offset",
+    "geometryJsonBeforeAfterExactSHA": "085c522e4811861d2b0203cd41001004e8c149275f1101c0a2e8a67aa7019aa6",
+    "extendedCloneTest": true
+  },
+  "nativePoseSourceHashes": {
+    "src/actor-models.js": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+    "src/character-motion.js": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+    "src/assets/characters/detailed-geometry.js": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+    "package-lock.json": "3efc7f9d03f5ad50566a29ae5f414f0d5163bf88cd571083c3b1502043112ff6"
+  }
+}

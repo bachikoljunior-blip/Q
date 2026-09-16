@@ -1,0 +1,16 @@
+{
+  "preparation": "AGENTS/current docs/reference/profile reading and npm ci preceded implementation marker; full preparation start not timestamped separately",
+  "implementationStartMarkerUTC": "2026-09-16T12:46:11.240984180Z",
+  "firstSavedNativeInspectionUTC": "2026-09-16T12:50:06.105313+00:00",
+  "rejectedSourceSnapshotUTC": "2026-09-16T12:51:23.389044+00:00",
+  "repairedInspectionUTC": "2026-09-16T12:51:25.558263+00:00",
+  "finalExportUTC": "2026-09-16T12:57:17.696502+00:00",
+  "documentationCloseUTC": "2026-09-16T12:59:33.164730+00:00",
+  "nativeConstructorMs": 34.239498999999995,
+  "exportAndAnalysisMs": 231.17012699999998,
+  "rework": [
+    "one required vertex-normal crease repair, no triangle increase; first geometry/source/inspection preserved",
+    "OBJ export supplemented with native normals and UV indices; no geometry change"
+  ],
+  "scope": "host wall timestamps and Node execution metrics, not image generation, full character production, perception or device performance"
+}

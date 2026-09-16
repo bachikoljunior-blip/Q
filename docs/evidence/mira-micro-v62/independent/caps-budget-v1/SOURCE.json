@@ -1,0 +1,29 @@
+{
+  "capturedAt": "2026-09-16T12:43:40.306Z",
+  "repo": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v61",
+  "head": "8e6510578cf0980eea03c2dcc6ebeb3dcbe39371",
+  "tree": "f71ddad782a78b5177dbdb37416cc83166cd95d6",
+  "status": "",
+  "runtimeDiffFrom2bee": "",
+  "source": {
+    "path": "review/micro-v61/mira-micro-parts.js",
+    "bytes": 3628,
+    "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+  },
+  "cameraFiles": [
+    {
+      "path": "src/scene.js",
+      "bytes": 30277,
+      "sha256": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b"
+    },
+    {
+      "path": "src/dialogue-camera.js",
+      "bytes": 5612,
+      "sha256": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e"
+    }
+  ],
+  "threeModule": {
+    "path": "/workspace/scratch/e72662e3b71f/Q-ps4-v57/node_modules/three/build/three.module.js",
+    "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+  }
+}

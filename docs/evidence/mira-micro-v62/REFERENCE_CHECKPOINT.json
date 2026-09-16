@@ -1,0 +1,115 @@
+{
+  "scope": "Reference and independent budget checkpoint; new runtime/prototypes are not yet included.",
+  "files": [
+    {
+      "path": "PR56_READBACK.json",
+      "bytes": 6049,
+      "sha256": "4d34630df440773f96429b48fe1c435415818f23c14c0001cc2391deaa191663"
+    },
+    {
+      "path": "independent/caps-budget-v1/CLOSE_READBACK.json",
+      "bytes": 1052,
+      "sha256": "e3893f72f86d07b945ad94b2813e33e5436b371babea1e90437dd21f21400fb2"
+    },
+    {
+      "path": "independent/caps-budget-v1/HASHES.json",
+      "bytes": 1112,
+      "sha256": "a506b50325d7f10f23289cfdfb4d775f8b16a39cb2965c431467302a0e836652"
+    },
+    {
+      "path": "independent/caps-budget-v1/REVIEW.md",
+      "bytes": 8241,
+      "sha256": "c49b02075c482a589df016a5e54fa318af7274a042e86780dc08286671c9495c"
+    },
+    {
+      "path": "independent/caps-budget-v1/SOURCE.json",
+      "bytes": 964,
+      "sha256": "241e4d82fb2fe6474ce4474368ec4bc7cb73da43f3f8de94025566900a669194"
+    },
+    {
+      "path": "independent/caps-budget-v1/measure.mjs",
+      "bytes": 11902,
+      "sha256": "728a0c1e8ed39c11f9c20d64e1f8dda4be11856ab2af437ea78c263f8c905e17"
+    },
+    {
+      "path": "independent/caps-budget-v1/results.json",
+      "bytes": 28735,
+      "sha256": "8ba57e475769e8206979729f0a2813c8cd6772668f46f360d79d0f421a8e40f7"
+    },
+    {
+      "path": "independent/caps-budget-v1/run.txt",
+      "bytes": 7494,
+      "sha256": "55cbf9e888fd8ef4e15724de2d3dc047ead2be849eb5f8f7ab06ad1247ab6316"
+    },
+    {
+      "path": "independent/caps-budget-v1/source-snapshot.mjs",
+      "bytes": 3628,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+    },
+    {
+      "path": "independent/ribs-three-views-v1/HASHES.json",
+      "bytes": 570,
+      "sha256": "ef158c91a8bd121d1cfe4fa27928240fbfdaf9d7a3fae4c785bd8ee722ae313a"
+    },
+    {
+      "path": "independent/ribs-three-views-v1/REVIEW.md",
+      "bytes": 3704,
+      "sha256": "c84916ff59a591c153611757264c49cbd1063765f635bc77c24865283edffece"
+    },
+    {
+      "path": "independent/ribs-three-views-v1/review.json",
+      "bytes": 5695,
+      "sha256": "1047c8131d10a1c989cc9e79f9b2e0decf69e81955a691ab8ff48f5aaeba0b21"
+    },
+    {
+      "path": "references/staff-ribs/HASHES.json",
+      "bytes": 1588,
+      "sha256": "e6dfba5d55d38b62d4f07f78815377293df4f1dece5926f329fd89810ac7bbbe"
+    },
+    {
+      "path": "references/staff-ribs/INPUTS.json",
+      "bytes": 1961,
+      "sha256": "1dcd09ebd4429a9fece2f93872de2685ebf837ce04fcc418175e5789ff2949d6"
+    },
+    {
+      "path": "references/staff-ribs/REPORT.md",
+      "bytes": 5999,
+      "sha256": "8caa9e17362b87081f0355982baed6dbe0603a4f5d563f249e313c7c5f10e815"
+    },
+    {
+      "path": "references/staff-ribs/RIB_TYPES_AND_INTERFACES.json",
+      "bytes": 7133,
+      "sha256": "c241fa9c35eb8cdad52ea86f1ffe9c46a513cacf6bf60080caeef70db9912f58"
+    },
+    {
+      "path": "references/staff-ribs/generation-v1.json",
+      "bytes": 736,
+      "sha256": "a7f8ee961b85fe920d8aeaee7bf4c6316641a588f5af70a6917c7a7816a65bcc"
+    },
+    {
+      "path": "references/staff-ribs/generation-v2.json",
+      "bytes": 807,
+      "sha256": "acde7dee1268267eab972e019cd85a4215c28ce308caffeae534a89ddce7ce4f"
+    },
+    {
+      "path": "references/staff-ribs/prompt-v1.txt",
+      "bytes": 4351,
+      "sha256": "e56c091768443575b6e8801587e5e7782841df49b503dd161f3f9cf344db03df"
+    },
+    {
+      "path": "references/staff-ribs/prompt-v2.txt",
+      "bytes": 2409,
+      "sha256": "6dc151a4721a9b8bc7d9b304605af88fd29f74d51b123fe9abc4011d99155ead"
+    },
+    {
+      "path": "references/staff-ribs/staff-ribs-micro-v1.png",
+      "bytes": 1637090,
+      "sha256": "0b1936e4089e04d7b6b241851301515778ca08aeb20d1f91199ba17773945bb5"
+    },
+    {
+      "path": "references/staff-ribs/staff-ribs-micro-v2.png",
+      "bytes": 1610260,
+      "sha256": "b435f2b73dbcdc8b2dc16c13872c1d3b9ab300dfddbc77e9ad33758457c2a589"
+    }
+  ]
+}

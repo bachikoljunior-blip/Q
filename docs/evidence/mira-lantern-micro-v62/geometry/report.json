@@ -1,0 +1,533 @@
+{
+  "parts": [
+    {
+      "id": "S09",
+      "vertices": 458,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bufferBytes": 16840,
+      "nonfinite": 0,
+      "minAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3610.279011742314,
+      "minVertexNormalFaceDot": 0.8738129030160922,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S10",
+      "vertices": 458,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bufferBytes": 16840,
+      "nonfinite": 0,
+      "minAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3610.279011742314,
+      "minVertexNormalFaceDot": 0.8738129030160922,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S11",
+      "vertices": 422,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bufferBytes": 15688,
+      "nonfinite": 0,
+      "minAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3297.620695021396,
+      "minVertexNormalFaceDot": 0.859569680687801,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S12",
+      "vertices": 422,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bufferBytes": 15688,
+      "nonfinite": 0,
+      "minAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3297.620695021396,
+      "minVertexNormalFaceDot": 0.859569680687801,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S13",
+      "vertices": 192,
+      "weldedPositions": 192,
+      "triangles": 384,
+      "bufferBytes": 8448,
+      "nonfinite": 0,
+      "minAreaMm2": 1.9128296226729606,
+      "signedVolumeMm3": 3470.6569969199318,
+      "minVertexNormalFaceDot": 0.4384327828884124,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    },
+    {
+      "id": "S14",
+      "vertices": 256,
+      "weldedPositions": 256,
+      "triangles": 512,
+      "bufferBytes": 11264,
+      "nonfinite": 0,
+      "minAreaMm2": 1.1613608132560793,
+      "signedVolumeMm3": 4284.603165494127,
+      "minVertexNormalFaceDot": 0.12948004934659918,
+      "openOrNonmanifoldEdges": 0,
+      "badWindingEdges": 0
+    }
+  ],
+  "seatContacts": [
+    {
+      "id": "S09",
+      "ribPlanarFaces": 6,
+      "ringSeatFaces": 32,
+      "faceAreaMm2": 23.919997708797375,
+      "coveredAreaMm2": 23.919997708797382,
+      "coverage": 1.0000000000000002,
+      "signedYGapMm": 0.0000012256205081939697
+    },
+    {
+      "id": "S10",
+      "ribPlanarFaces": 6,
+      "ringSeatFaces": 32,
+      "faceAreaMm2": 23.919997708797375,
+      "coveredAreaMm2": 23.919997708797354,
+      "coverage": 0.9999999999999991,
+      "signedYGapMm": 0.0000012256205081939697
+    },
+    {
+      "id": "S11",
+      "ribPlanarFaces": 6,
+      "ringSeatFaces": 32,
+      "faceAreaMm2": 23.919997708797375,
+      "coveredAreaMm2": 23.919997708797368,
+      "coverage": 0.9999999999999997,
+      "signedYGapMm": 0.0000012256205081939697
+    },
+    {
+      "id": "S12",
+      "ribPlanarFaces": 6,
+      "ringSeatFaces": 32,
+      "faceAreaMm2": 23.919997708797375,
+      "coveredAreaMm2": 23.91999770879735,
+      "coverage": 0.999999999999999,
+      "signedYGapMm": 0.0000012256205081939697
+    }
+  ],
+  "glowEnvelope": [
+    {
+      "id": "S09",
+      "minNormalizedRadius": 1.0123998078145708,
+      "conservativeClearanceMm": 0.48359250476826277,
+      "face": 285,
+      "closestScaledMetricPointMm": [
+        -26.582829654216766,
+        1651.2500030398369,
+        1.3530843112619095e-16
+      ],
+      "method": "exact closest point to origin of each ellipsoid-scaled triangle; conservative world-distance lower bound, not actual S16 mesh"
+    },
+    {
+      "id": "S10",
+      "minNormalizedRadius": 1.0123998078145708,
+      "conservativeClearanceMm": 0.48359250476826277,
+      "face": 285,
+      "closestScaledMetricPointMm": [
+        26.582829654216766,
+        1651.2500030398369,
+        0
+      ],
+      "method": "exact closest point to origin of each ellipsoid-scaled triangle; conservative world-distance lower bound, not actual S16 mesh"
+    },
+    {
+      "id": "S11",
+      "minNormalizedRadius": 1.04814725753364,
+      "conservativeClearanceMm": 1.8777430438119564,
+      "face": 349,
+      "closestScaledMetricPointMm": [
+        0,
+        1661.9999987483025,
+        15.250000171363354
+      ],
+      "method": "exact closest point to origin of each ellipsoid-scaled triangle; conservative world-distance lower bound, not actual S16 mesh"
+    },
+    {
+      "id": "S12",
+      "minNormalizedRadius": 1.04814725753364,
+      "conservativeClearanceMm": 1.8777430438119564,
+      "face": 349,
+      "closestScaledMetricPointMm": [
+        7.216449660063518e-16,
+        1661.9999987483025,
+        -15.250000171363354
+      ],
+      "method": "exact closest point to origin of each ellipsoid-scaled triangle; conservative world-distance lower bound, not actual S16 mesh"
+    }
+  ],
+  "crossings": [
+    {
+      "a": "S09",
+      "b": "S09",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S09",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S10",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S10",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S11",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S11",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S12",
+      "b": "S12",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S12",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S12",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S13",
+      "b": "S13",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S13",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    },
+    {
+      "a": "S14",
+      "b": "S14",
+      "properTrianglePairs": 0,
+      "scope": "interior segment / interior triangle crossings; coplanar contacts measured separately by seat clipping"
+    }
+  ],
+  "counts": {
+    "instances": 6,
+    "uniqueGeometries": 4,
+    "materials": 1,
+    "triangles": 2352,
+    "uniqueBufferBytes": 52240
+  },
+  "assembly": {
+    "partialAssembly": true,
+    "completeLantern": false,
+    "gameImported": false,
+    "capSegments": 16,
+    "sourcePartIds": [
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14"
+    ],
+    "missing": [
+      "S06",
+      "S07",
+      "S08",
+      "S15",
+      "S16",
+      "shaft and hand attachment"
+    ]
+  },
+  "default24SeatReadback": [
+    {
+      "id": "S09",
+      "ribPlanarFaces": 6,
+      "ringSeatFaces": 48,
+      "faceAreaMm2": 23.919997708797375,
+      "coveredAreaMm2": 23.919997708797368,
+      "coverage": 0.9999999999999997,
+      "signedYGapMm": 0.0000012256205081939697
+    },
+    {
+      "id": "S10",
+      "ribPlanarFaces": 6,
+      "ringSeatFaces": 48,
+      "faceAreaMm2": 23.919997708797375,
+      "coveredAreaMm2": 23.91999770879737,
+      "coverage": 0.9999999999999999,
+      "signedYGapMm": 0.0000012256205081939697
+    },
+    {
+      "id": "S11",
+      "ribPlanarFaces": 6,
+      "ringSeatFaces": 48,
+      "faceAreaMm2": 23.919997708797375,
+      "coveredAreaMm2": 23.919997708797357,
+      "coverage": 0.9999999999999992,
+      "signedYGapMm": 0.0000012256205081939697
+    },
+    {
+      "id": "S12",
+      "ribPlanarFaces": 6,
+      "ringSeatFaces": 48,
+      "faceAreaMm2": 23.919997708797375,
+      "coveredAreaMm2": 23.91999770879736,
+      "coverage": 0.9999999999999994,
+      "signedYGapMm": 0.0000012256205081939697
+    }
+  ],
+  "reusedCapsGlowEnvelope": {
+    "segments16": [
+      {
+        "id": "S13",
+        "minNormalizedRadius": 1.0108283602490666,
+        "conservativeClearanceMm": 0.42230604971359886,
+        "face": 1,
+        "closestScaledMetricPointMm": [
+          14.18431426371212,
+          1661.999999973923,
+          1.5870573785565723
+        ],
+        "method": "exact closest point to origin of each ellipsoid-scaled triangle; conservative world-distance lower bound, not actual S16 mesh"
+      },
+      {
+        "id": "S14",
+        "minNormalizedRadius": 0.9994088571055387,
+        "conservativeClearanceMm": -0.0230545728839896,
+        "face": 385,
+        "closestScaledMetricPointMm": [
+          11.852147589449775,
+          1661.999999947846,
+          1.3261154727573523
+        ],
+        "method": "exact closest point to origin of each ellipsoid-scaled triangle; conservative world-distance lower bound, not actual S16 mesh"
+      }
+    ],
+    "segments24": [
+      {
+        "id": "S13",
+        "minNormalizedRadius": 1.0112942512921856,
+        "conservativeClearanceMm": 0.44047580039524004,
+        "face": 1,
+        "closestScaledMetricPointMm": [
+          14.359997589445014,
+          1661.999999973923,
+          1.0634217936587367
+        ],
+        "method": "exact closest point to origin of each ellipsoid-scaled triangle; conservative world-distance lower bound, not actual S16 mesh"
+      },
+      {
+        "id": "S14",
+        "minNormalizedRadius": 0.9997378781391432,
+        "conservativeClearanceMm": -0.010222752573416538,
+        "face": 577,
+        "closestScaledMetricPointMm": [
+          11.998944976547419,
+          1661.999999947846,
+          0.8885765635762244
+        ],
+        "method": "exact closest point to origin of each ellipsoid-scaled triangle; conservative world-distance lower bound, not actual S16 mesh"
+      }
+    ],
+    "boundary": "negative scaled-radius deficit is not measured physical penetration depth; S16 is an authored ellipsoid, not an accepted mesh. Existing cap profile remains unchanged."
+  },
+  "ribSpec": {
+    "originY": 1556,
+    "lowerDatumY": 1447,
+    "upperSeatY": 1662,
+    "endpointRadius": 16.75,
+    "wideRadius": 70,
+    "depthRadius": 55,
+    "bowExponent": 0.7,
+    "faceWidth": 7,
+    "plateThickness": 2,
+    "endRadialWidth": 3,
+    "endTangentialWidth": 8,
+    "endTransitionHeight": 12,
+    "edgeChamfer": 0.2,
+    "sectionTimes": [
+      0,
+      0.006,
+      0.015,
+      0.03,
+      0.05,
+      0.08,
+      0.12,
+      0.18,
+      0.25,
+      0.33,
+      0.42,
+      0.5,
+      0.58,
+      0.67,
+      0.75,
+      0.82,
+      0.88,
+      0.92,
+      0.95,
+      0.97,
+      0.985,
+      0.994,
+      1
+    ],
+    "glowEnvelope": {
+      "center": [
+        0,
+        1556,
+        0
+      ],
+      "radii": [
+        52,
+        109,
+        39
+      ]
+    },
+    "reference": "staff-ribs-micro-v2.png",
+    "acceptedViews": [
+      "FRONT",
+      "TRUE SIDE",
+      "THREE-QUARTER"
+    ],
+    "excludedViews": [
+      "TOP"
+    ],
+    "endOwnership": "integral closed end blocks, no extra parts",
+    "lowerJoint": "datum only: S08/S07 receiver not modeled or accepted"
+  },
+  "instances": [
+    {
+      "id": "S09",
+      "type": "wide",
+      "side": "-X",
+      "yaw": 3.141592653589793
+    },
+    {
+      "id": "S10",
+      "type": "wide",
+      "side": "+X",
+      "yaw": 0
+    },
+    {
+      "id": "S11",
+      "type": "depth",
+      "side": "+Z",
+      "yaw": 0
+    },
+    {
+      "id": "S12",
+      "type": "depth",
+      "side": "-Z",
+      "yaw": 3.141592653589793
+    }
+  ],
+  "nativeConstructionMs": 34.239498999999995,
+  "exportAndAnalysisMs": 231.17012699999998,
+  "source": [
+    {
+      "path": "review/lantern-micro-v62/mira-lantern-ribs.js",
+      "bytes": 5927,
+      "sha256": "33e596ff22332c317d819265e08c819f01c677c8a3cb63eea5aaa42bc17723e6"
+    },
+    {
+      "path": "review/lantern-micro-v62/inspect-ribs.js",
+      "bytes": 6698,
+      "sha256": "4ac3d4a2296cceb23be32444bd84e332dbf9d1aeb32a08b6a22fd915be4d4624"
+    },
+    {
+      "path": "review/micro-v61/mira-micro-parts.js",
+      "bytes": 3628,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+    },
+    {
+      "path": "tests/mira-lantern-micro-v62.test.mjs",
+      "bytes": 3751,
+      "sha256": "fc1b30ff2cc90f6f5c57c16d6b7e5ba7d95d91f18b5f8edc28167d9031badf4b"
+    }
+  ]
+}

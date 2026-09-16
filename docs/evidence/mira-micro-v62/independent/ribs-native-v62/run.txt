@@ -1,0 +1,361 @@
+{
+  "metadata": {
+    "startedAt": "2026-09-16T13:04:19.855Z",
+    "repo": "/workspace/scratch/e72662e3b71f/Q-mira-lantern-micro-v62",
+    "head": "12a40b492f980e1e095a16b7422fce40d94d9bd2",
+    "tree": "783c8f2758aaa8fd3420a794bc147de19efb9bf1",
+    "sources": [
+      {
+        "path": "review/lantern-micro-v62/mira-lantern-ribs.js",
+        "snapshot": "ribs-source.mjs",
+        "bytes": 5927,
+        "sha256": "33e596ff22332c317d819265e08c819f01c677c8a3cb63eea5aaa42bc17723e6"
+      },
+      {
+        "path": "review/micro-v61/mira-micro-parts.js",
+        "snapshot": "caps-source.mjs",
+        "bytes": 3628,
+        "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+      },
+      {
+        "path": "review/lantern-micro-v62/inspect-ribs.js",
+        "snapshot": "author-inspection-source.mjs",
+        "bytes": 6698,
+        "sha256": "4ac3d4a2296cceb23be32444bd84e332dbf9d1aeb32a08b6a22fd915be4d4624"
+      }
+    ],
+    "scope": "Read-only source + one independently implemented native geometry check. Author inspection source preserved for hash only, never imported/executed."
+  },
+  "threeRevision": "186",
+  "parts": [
+    {
+      "id": "S09",
+      "attributeVertices": 458,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bytes": 16840,
+      "nonfinite": 0,
+      "minTriangleAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3610.2790117423147,
+      "minVertexNormalFaceDot": 0.8738129030160922,
+      "normalLengthRange": [
+        0.9999999661954034,
+        1.0000000364478177
+      ],
+      "openOrNonmanifoldEdges": 0,
+      "inconsistentEdgeDirections": 0,
+      "worldDeterminant": 1
+    },
+    {
+      "id": "S10",
+      "attributeVertices": 458,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bytes": 16840,
+      "nonfinite": 0,
+      "minTriangleAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3610.2790117423147,
+      "minVertexNormalFaceDot": 0.8738129030160922,
+      "normalLengthRange": [
+        0.9999999661954034,
+        1.0000000364478177
+      ],
+      "openOrNonmanifoldEdges": 0,
+      "inconsistentEdgeDirections": 0,
+      "worldDeterminant": 1
+    },
+    {
+      "id": "S11",
+      "attributeVertices": 422,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bytes": 15688,
+      "nonfinite": 0,
+      "minTriangleAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3297.6206950213955,
+      "minVertexNormalFaceDot": 0.859569680687801,
+      "normalLengthRange": [
+        0.9999999703300602,
+        1.000000033351726
+      ],
+      "openOrNonmanifoldEdges": 0,
+      "inconsistentEdgeDirections": 0,
+      "worldDeterminant": 1
+    },
+    {
+      "id": "S12",
+      "attributeVertices": 422,
+      "weldedPositions": 184,
+      "triangles": 364,
+      "bytes": 15688,
+      "nonfinite": 0,
+      "minTriangleAreaMm2": 0.2600001876801403,
+      "signedVolumeMm3": 3297.6206950213955,
+      "minVertexNormalFaceDot": 0.859569680687801,
+      "normalLengthRange": [
+        0.9999999703300602,
+        1.000000033351726
+      ],
+      "openOrNonmanifoldEdges": 0,
+      "inconsistentEdgeDirections": 0,
+      "worldDeterminant": 1
+    },
+    {
+      "id": "S13",
+      "attributeVertices": 192,
+      "weldedPositions": 192,
+      "triangles": 384,
+      "bytes": 8448,
+      "nonfinite": 0,
+      "minTriangleAreaMm2": 1.9128296226729606,
+      "signedVolumeMm3": 3470.656996919936,
+      "minVertexNormalFaceDot": 0.4384327828884124,
+      "normalLengthRange": [
+        0.9999999740857907,
+        1.0000000270967664
+      ],
+      "openOrNonmanifoldEdges": 0,
+      "inconsistentEdgeDirections": 0,
+      "worldDeterminant": 1
+    },
+    {
+      "id": "S14",
+      "attributeVertices": 256,
+      "weldedPositions": 256,
+      "triangles": 512,
+      "bytes": 11264,
+      "nonfinite": 0,
+      "minTriangleAreaMm2": 1.1613608132560793,
+      "signedVolumeMm3": 4284.603165494133,
+      "minVertexNormalFaceDot": 0.12948004934659918,
+      "normalLengthRange": [
+        0.9999999627173308,
+        1.00000003098007
+      ],
+      "openOrNonmanifoldEdges": 0,
+      "inconsistentEdgeDirections": 0,
+      "worldDeterminant": 1
+    }
+  ],
+  "seatContacts": [
+    {
+      "id": "S09",
+      "planarTriangles": 6,
+      "endFaceAreaMm2": 23.919997708797375,
+      "maximumYmm": 1661.9999987483025,
+      "minimumYmm": 1447.0000026226044,
+      "ringBottomYmm": 1661.999999973923,
+      "signedUpperYGapMm": 0.0000012256205081939697,
+      "minimumOuterPolygonInwardDistanceMm": 0.190403744441035,
+      "minimumEndRadiusMm": 15.250000171363354,
+      "ringInnerCircleUpperBoundMm": 14.500000247068542,
+      "innerBoundaryClearanceLowerBoundMm": 0.7499999242948121,
+      "fullTopFaceCoveredWithinTolerance": true,
+      "method": "All top-face vertices inside convex actual ring outer polygon; closest point of every top triangle is beyond circle bounding actual inner polygon. Thus every top triangle lies in the annular face, independently of author triangle clipping."
+    },
+    {
+      "id": "S10",
+      "planarTriangles": 6,
+      "endFaceAreaMm2": 23.919997708797375,
+      "maximumYmm": 1661.9999987483025,
+      "minimumYmm": 1447.0000026226044,
+      "ringBottomYmm": 1661.999999973923,
+      "signedUpperYGapMm": 0.0000012256205081939697,
+      "minimumOuterPolygonInwardDistanceMm": 0.19040374444103553,
+      "minimumEndRadiusMm": 15.250000171363354,
+      "ringInnerCircleUpperBoundMm": 14.500000247068542,
+      "innerBoundaryClearanceLowerBoundMm": 0.7499999242948121,
+      "fullTopFaceCoveredWithinTolerance": true,
+      "method": "All top-face vertices inside convex actual ring outer polygon; closest point of every top triangle is beyond circle bounding actual inner polygon. Thus every top triangle lies in the annular face, independently of author triangle clipping."
+    },
+    {
+      "id": "S11",
+      "planarTriangles": 6,
+      "endFaceAreaMm2": 23.919997708797375,
+      "maximumYmm": 1661.9999987483025,
+      "minimumYmm": 1447.0000026226044,
+      "ringBottomYmm": 1661.999999973923,
+      "signedUpperYGapMm": 0.0000012256205081939697,
+      "minimumOuterPolygonInwardDistanceMm": 0.1904037444410354,
+      "minimumEndRadiusMm": 15.250000171363354,
+      "ringInnerCircleUpperBoundMm": 14.500000247068542,
+      "innerBoundaryClearanceLowerBoundMm": 0.7499999242948121,
+      "fullTopFaceCoveredWithinTolerance": true,
+      "method": "All top-face vertices inside convex actual ring outer polygon; closest point of every top triangle is beyond circle bounding actual inner polygon. Thus every top triangle lies in the annular face, independently of author triangle clipping."
+    },
+    {
+      "id": "S12",
+      "planarTriangles": 6,
+      "endFaceAreaMm2": 23.919997708797375,
+      "maximumYmm": 1661.9999987483025,
+      "minimumYmm": 1447.0000026226044,
+      "ringBottomYmm": 1661.999999973923,
+      "signedUpperYGapMm": 0.0000012256205081939697,
+      "minimumOuterPolygonInwardDistanceMm": 0.19040374444103483,
+      "minimumEndRadiusMm": 15.250000171363354,
+      "ringInnerCircleUpperBoundMm": 14.500000247068542,
+      "innerBoundaryClearanceLowerBoundMm": 0.7499999242948121,
+      "fullTopFaceCoveredWithinTolerance": true,
+      "method": "All top-face vertices inside convex actual ring outer polygon; closest point of every top triangle is beyond circle bounding actual inner polygon. Thus every top triangle lies in the annular face, independently of author triangle clipping."
+    }
+  ],
+  "capContact": {
+    "S13TopFaceTriangles": 32,
+    "S14BottomFaceTriangles": 32,
+    "planeMismatchMm": 2.60770320892334e-8,
+    "note": "Same frozen 16-segment profiles/datum as caps-budget-v1; previous native contact area 348.241920785709 mm² retained. This check verifies actual capSegments and their opposing plane positions, not a new arbitrary mesh Boolean."
+  },
+  "glowEnvelope": [
+    {
+      "id": "S09",
+      "minimumNormalizedRadius": 1.0123998078145708,
+      "normalizedOutsideMargin": 0.01239980781457084,
+      "triangleIndex": 285,
+      "closestPointInScaledMetricWorldMm": [
+        -26.582829654216766,
+        1651.2500030398369,
+        1.3530843112619095e-16
+      ],
+      "strictlyOutsideEnvelope": true,
+      "method": "Native complete triangles, independent face/edge closest point after ellipsoid scaling; normalized radius is not physical penetration depth."
+    },
+    {
+      "id": "S10",
+      "minimumNormalizedRadius": 1.0123998078145708,
+      "normalizedOutsideMargin": 0.01239980781457084,
+      "triangleIndex": 285,
+      "closestPointInScaledMetricWorldMm": [
+        26.582829654216766,
+        1651.2500030398369,
+        0
+      ],
+      "strictlyOutsideEnvelope": true,
+      "method": "Native complete triangles, independent face/edge closest point after ellipsoid scaling; normalized radius is not physical penetration depth."
+    },
+    {
+      "id": "S11",
+      "minimumNormalizedRadius": 1.04814725753364,
+      "normalizedOutsideMargin": 0.04814725753363991,
+      "triangleIndex": 349,
+      "closestPointInScaledMetricWorldMm": [
+        0,
+        1661.9999987483025,
+        15.250000171363354
+      ],
+      "strictlyOutsideEnvelope": true,
+      "method": "Native complete triangles, independent face/edge closest point after ellipsoid scaling; normalized radius is not physical penetration depth."
+    },
+    {
+      "id": "S12",
+      "minimumNormalizedRadius": 1.04814725753364,
+      "normalizedOutsideMargin": 0.04814725753363991,
+      "triangleIndex": 349,
+      "closestPointInScaledMetricWorldMm": [
+        7.216449660063518e-16,
+        1661.9999987483025,
+        -15.250000171363354
+      ],
+      "strictlyOutsideEnvelope": true,
+      "method": "Native complete triangles, independent face/edge closest point after ellipsoid scaling; normalized radius is not physical penetration depth."
+    },
+    {
+      "id": "S13",
+      "minimumNormalizedRadius": 1.0108283602490666,
+      "normalizedOutsideMargin": 0.010828360249066638,
+      "triangleIndex": 1,
+      "closestPointInScaledMetricWorldMm": [
+        14.18431426371212,
+        1661.999999973923,
+        1.5870573785565723
+      ],
+      "strictlyOutsideEnvelope": true,
+      "method": "Native complete triangles, independent face/edge closest point after ellipsoid scaling; normalized radius is not physical penetration depth."
+    },
+    {
+      "id": "S14",
+      "minimumNormalizedRadius": 0.9994088571055387,
+      "normalizedOutsideMargin": -0.0005911428944612718,
+      "triangleIndex": 385,
+      "closestPointInScaledMetricWorldMm": [
+        11.852147589449775,
+        1661.999999947846,
+        1.3261154727573528
+      ],
+      "strictlyOutsideEnvelope": false,
+      "method": "Native complete triangles, independent face/edge closest point after ellipsoid scaling; normalized radius is not physical penetration depth."
+    }
+  ],
+  "legacyS14Envelope": {
+    "id": "S14-legacy24",
+    "minimumNormalizedRadius": 0.9997378781391432,
+    "normalizedOutsideMargin": -0.0002621218608568343,
+    "triangleIndex": 577,
+    "closestPointInScaledMetricWorldMm": [
+      11.998944976547419,
+      1661.999999947846,
+      0.8885765635762249
+    ],
+    "strictlyOutsideEnvelope": false,
+    "method": "Native complete triangles, independent face/edge closest point after ellipsoid scaling; normalized radius is not physical penetration depth."
+  },
+  "counts": {
+    "instances": 6,
+    "typesOfNewRibs": 2,
+    "uniqueGeometries": 4,
+    "materials": 1,
+    "triangles": 2352,
+    "uniqueBufferBytes": 52240
+  },
+  "nativeAssembly": {
+    "partialAssembly": true,
+    "completeLantern": false,
+    "gameImported": false,
+    "capSegments": 16,
+    "sourcePartIds": [
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14"
+    ],
+    "missing": [
+      "S06",
+      "S07",
+      "S08",
+      "S15",
+      "S16",
+      "shaft and hand attachment"
+    ]
+  },
+  "ownership": {
+    "S09S10SameGeometry": true,
+    "S11S12SameGeometry": true,
+    "capSegments": [
+      {
+        "id": "S13",
+        "segments": 16
+      },
+      {
+        "id": "S14",
+        "segments": 16
+      }
+    ]
+  },
+  "boundaries": {
+    "lowerReceiversModeled": false,
+    "actualGlowS16Modeled": false,
+    "wholeActorBudgetMeasured": false,
+    "properAllMeshSelfIntersectionsRetested": false,
+    "graphicsRendererUsed": false,
+    "authorInspectionExecuted": false
+  },
+  "nativeCheckMs": 36.177865999999995,
+  "readback": {
+    "endedAt": "2026-09-16T13:04:19.935Z",
+    "head": "12a40b492f980e1e095a16b7422fce40d94d9bd2",
+    "status": "",
+    "sourceHashesUnchanged": true,
+    "groupChildrenAfterDispose": 0
+  }
+}

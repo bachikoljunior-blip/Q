@@ -1,0 +1,139 @@
+{
+  "at": "2026-09-16T12:55:13.327Z",
+  "totalVertices": 387,
+  "totalTriangles": 640,
+  "parts": [
+    {
+      "id": "T01-R",
+      "vertices": 117,
+      "triangles": 192,
+      "buildMs": 19.840378999999984,
+      "boundsChest": {
+        "min": [
+          -0.14098611111111112,
+          0.035,
+          0.126
+        ],
+        "max": [
+          -0.006000000000000004,
+          0.5350000000000001,
+          0.161875
+        ]
+      },
+      "surfaceAreaM2": 0.06265609804912832,
+      "triangleAreaMinM2": 0.00028955671468470405,
+      "minTriangleVertexNormalDot": 0.9932430472759209,
+      "boundaryEdges": 40,
+      "nonManifoldEdges": 0,
+      "euler": 1,
+      "sampledAnalyticalSurfaceDistanceM": {
+        "p95": 0.0004441698094947139,
+        "max": 0.0007422807788620503,
+        "sampleCount": 768,
+        "scope": "four same-param triangle samples; not global Hausdorff error"
+      },
+      "uvMetreChart": {
+        "signedAreaMin": 0.0002900499457588024,
+        "signedAreaMax": 0.00036785985020706166,
+        "anisotropyP95": 1.102695794130122,
+        "anisotropyMax": 1.107331582189666,
+        "textureApplied": false
+      },
+      "actualNativeBoneBind": {
+        "missingBones": 0,
+        "maxResidualM": 3.1031676915590914e-17
+      },
+      "enclosedVolumeM3": null,
+      "volumeReason": "one open zero-thickness surface; enclosed volume is undefined, not a watertight garment",
+      "neighbourWeld": "unimplemented; only each part internal grid and its four corners share indices"
+    },
+    {
+      "id": "S05-R",
+      "vertices": 117,
+      "triangles": 192,
+      "buildMs": 9.409391999999997,
+      "boundsChest": {
+        "min": [
+          -0.374,
+          -0.13000000000000003,
+          0
+        ],
+        "max": [
+          -0.252,
+          0.06000000000000001,
+          0.063
+        ]
+      },
+      "surfaceAreaM2": 0.03257545810897719,
+      "triangleAreaMinM2": 0.00013606820005038952,
+      "minTriangleVertexNormalDot": 0.9883579280942184,
+      "boundaryEdges": 40,
+      "nonManifoldEdges": 0,
+      "euler": 1,
+      "sampledAnalyticalSurfaceDistanceM": {
+        "p95": 0.0006848174116930144,
+        "max": 0.000857182777451877,
+        "sampleCount": 768,
+        "scope": "four same-param triangle samples; not global Hausdorff error"
+      },
+      "uvMetreChart": {
+        "signedAreaMin": 0.00013670253337163944,
+        "signedAreaMax": 0.00023110744117305052,
+        "anisotropyP95": 1.3295394133612537,
+        "anisotropyMax": 1.3784640282693592,
+        "textureApplied": false
+      },
+      "actualNativeBoneBind": {
+        "missingBones": 0,
+        "maxResidualM": 5.551115123125783e-17
+      },
+      "enclosedVolumeM3": null,
+      "volumeReason": "one open zero-thickness surface; enclosed volume is undefined, not a watertight garment",
+      "neighbourWeld": "unimplemented; only each part internal grid and its four corners share indices"
+    },
+    {
+      "id": "P01-R",
+      "vertices": 153,
+      "triangles": 256,
+      "buildMs": 8.011830999999972,
+      "boundsChest": {
+        "min": [
+          -0.225,
+          -0.67,
+          -0.2889999999999999
+        ],
+        "max": [
+          -0.0050000000000000044,
+          0.43000000000000005,
+          -0.206
+        ]
+      },
+      "surfaceAreaM2": 0.22244586615586084,
+      "triangleAreaMinM2": 0.0005857901971386451,
+      "minTriangleVertexNormalDot": 0.992107586940892,
+      "boundaryEdges": 48,
+      "nonManifoldEdges": 0,
+      "euler": 1,
+      "sampledAnalyticalSurfaceDistanceM": {
+        "p95": 0.0007531710787157282,
+        "max": 0.0008261064939397903,
+        "sampleCount": 1024,
+        "scope": "four same-param triangle samples; not global Hausdorff error"
+      },
+      "uvMetreChart": {
+        "signedAreaMin": -0.0011642173839046036,
+        "signedAreaMax": -0.0005875796698113458,
+        "anisotropyP95": 1.1261672531415585,
+        "anisotropyMax": 1.134062584784918,
+        "textureApplied": false
+      },
+      "actualNativeBoneBind": {
+        "missingBones": 0,
+        "maxResidualM": 0
+      },
+      "enclosedVolumeM3": null,
+      "volumeReason": "one open zero-thickness surface; enclosed volume is undefined, not a watertight garment",
+      "neighbourWeld": "unimplemented; only each part internal grid and its four corners share indices"
+    }
+  ]
+}

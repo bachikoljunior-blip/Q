@@ -1,0 +1,82 @@
+{
+  "at": "2026-09-16T13:03:02.391Z",
+  "oracleCorrection": "Only -0 -> 0 prior to exact structural comparison; first stopped result preserved separately.",
+  "boundary": "One completed native source pass and one already-authored actual actor death .45 s pose. No rendering, new pose set, body or seam collision guarantee.",
+  "sourceSha256": "adc1b85b596eee63a799bb7a3d4d3c8c8c799dc88a469b535b26b05a0ca23193",
+  "actorSha256": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+  "rows": [
+    {
+      "id": "T01-R",
+      "vertices": 117,
+      "triangles": 192,
+      "boundaryEdges": 40,
+      "boundaryLoops": 1,
+      "nonManifold": 0,
+      "sameDirectionEdges": 0,
+      "minAreaM2": 0.0002895567146847041,
+      "minFaceVertexNormalDot": 0.993243047275921,
+      "normalUnitError": 2.220446049250313e-16,
+      "weightSumError": 0,
+      "freshMeshEqualsFrozenExceptSignedZero": true,
+      "objReadbackMaxErrorM": 7.277975569374258e-11,
+      "neighboursWelded": false,
+      "thicknessM": 0,
+      "death045": {
+        "minWorldY": 0.7350930089755051,
+        "minAreaM2": 0.0002873800150684372,
+        "minFaceVertexNormalDot": 0.9932740218761527,
+        "maxPositionDifferenceFromRecordedPoseM": 0,
+        "finite": true
+      }
+    },
+    {
+      "id": "S05-R",
+      "vertices": 117,
+      "triangles": 192,
+      "boundaryEdges": 40,
+      "boundaryLoops": 1,
+      "nonManifold": 0,
+      "sameDirectionEdges": 0,
+      "minAreaM2": 0.00013606820005038952,
+      "minFaceVertexNormalDot": 0.9883579280942185,
+      "normalUnitError": 2.220446049250313e-16,
+      "weightSumError": 0,
+      "freshMeshEqualsFrozenExceptSignedZero": true,
+      "objReadbackMaxErrorM": 6.36284635159182e-11,
+      "neighboursWelded": false,
+      "thicknessM": 0,
+      "death045": {
+        "minWorldY": 0.5090709503018342,
+        "minAreaM2": 0.00013606820005039103,
+        "minFaceVertexNormalDot": 0.973458943802359,
+        "maxPositionDifferenceFromRecordedPoseM": 0,
+        "finite": true
+      }
+    },
+    {
+      "id": "P01-R",
+      "vertices": 153,
+      "triangles": 256,
+      "boundaryEdges": 48,
+      "boundaryLoops": 1,
+      "nonManifold": 0,
+      "sameDirectionEdges": 0,
+      "minAreaM2": 0.0005857901971386451,
+      "minFaceVertexNormalDot": 0.9921075869408921,
+      "normalUnitError": 2.220446049250313e-16,
+      "weightSumError": 0,
+      "freshMeshEqualsFrozenExceptSignedZero": true,
+      "objReadbackMaxErrorM": 6.64384412849029e-11,
+      "neighboursWelded": false,
+      "thicknessM": 0,
+      "death045": {
+        "minWorldY": -0.0517834525740484,
+        "minAreaM2": 0.000585790197138646,
+        "minFaceVertexNormalDot": 0.9921075869408927,
+        "maxPositionDifferenceFromRecordedPoseM": 0,
+        "finite": true
+      }
+    }
+  ],
+  "remainingRuntimeBlocker": "P01 chest-only weighting penetrates floor; free cloth/support and all adjacent seam contracts are unimplemented."
+}
