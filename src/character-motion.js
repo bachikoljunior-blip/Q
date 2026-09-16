@@ -20,7 +20,7 @@ function combatEnvelope(actor){
   const release=smooth((time-releaseStart)/releaseDuration),settle=smooth((time-releaseEnd-.035)/Math.max(.01,end-releaseEnd-.035));
   return {time,wind,release,releaseStart,releaseEnd,settle,weight:1-settle,
     // Bow release begins on strike, while the bow arm stays extended through it.
-    draw:wind*(1-smooth(time/.07)),bowHold:1-smooth((time-.22)/recovery)};
+    draw:smooth((time+windup-Math.min(.3,windup*.4))/Math.max(.01,windup-Math.min(.3,windup*.4)))*(1-smooth(time/.07)),bowHold:smooth((time+windup)/Math.min(.3,windup*.4))*(1-smooth((time-.22)/recovery))};
 }
 
 // Presentation follows the saved action clock. It never advances combat or root movement.

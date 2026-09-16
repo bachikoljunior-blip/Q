@@ -1,3 +1,7 @@
+## Current continuation — v31 archery verified (2026-09-16)
+
+[Archery integration](ARCHERY_INTEGRATION_V31.md) records22 required commands/270 tests, fixed stage and exact media evidence. Main remains547676f and owner-only Site23; no claim of delivery or PS4 attainment. Preserve normal ordered stack integration after the unresolved PR39 merge, with no additional duplicate merge mutation. Continue conversation camera/UI, the one numerically valid NPC candidate and a shared physical projectile contract. September20 completion evidence is still insufficient; the lossless same-byte storage comparison is measured but not adopted and has CPU/temporary-memory cost. Missing actual rendering/device/listening/comparison and the disabled20-limit Q automation remain explicit, not human-wait conditions.
+
 # 制作停止時の復旧
 
 

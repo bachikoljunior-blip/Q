@@ -272,7 +272,7 @@ function makeHuman(type,options){
     ellipsoid(chest,m.leather,[.27,-.03,.03],[.09,.14,.1]);
   }
   if(type==='ranger'){
-    const bow=group(left,'bow',0,-.035,.04);bow.rotation.z=Math.PI/2;
+    const bow=group(left,'bow',0,.035,.013);bow.rotation.z=-Math.PI/2;
     const curve=new T.CatmullRomCurve3([new T.Vector3(0,-.59,0),new T.Vector3(.16,-.34,0),new T.Vector3(.095,0,0),new T.Vector3(.16,.34,0),new T.Vector3(0,.59,0)]);
     mesh(bow,new T.TubeGeometry(curve,20,.019,5,false),m.wood);
     const upper=group(bow,'string-upper',0,.59,0),lower=group(bow,'string-lower',0,-.59,0);

@@ -1,0 +1,54 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {registerHooks} from 'node:module';
+import {fileURLToPath} from 'node:url';
+import {Ray,Vector3} from 'three';
+import {createDetailedActor} from '../src/actor-models.js';
+import {Game,groundAt} from '../src/core.js';
+const point=(n,x=0,y=0,z=0)=>n.localToWorld(new Vector3(x,y,z));
+const bodyNames=new Set(['pelvis','spine','chest','neck','head']);
+function bodyFace(hit){const m=hit.object;if(!m.isSkinnedMesh)return false;for(const i of[hit.face.a,hit.face.b,hit.face.c])for(let c=0;c<4;c++)if(m.geometry.attributes.skinWeight.array[i*4+c]>.1&&!bodyNames.has(m.skeleton.bones[m.geometry.attributes.skinIndex.array[i*4+c]].name))return false;return true;}
+function measure(a,e,skin=false){
+ a.g.updateWorldMatrix(true,false);a.g.updateMatrixWorld(true);const bow=a.g.getObjectByName('bow'),nock=point(a.g.getObjectByName('string-upper'),0,-.59),other=point(a.g.getObjectByName('string-lower'),0,.59),grip=point(bow,.095),finger=point(a.digits[1][1].tip,0,-.0435),shot=Game.prototype.createEnemyArrow.call({projectiles:[]},e),origin=new Vector3(shot.x,shot.y,shot.z),direction=new Vector3(shot.vx,shot.vy,shot.vz).normalize();
+ const row={state:e.state,timer:e.timer,draw:a.motion.combat?.draw,hold:a.motion.combat?.bowHold,leftGrip:point(a.hands[0],0,-.06,.013).distanceTo(grip),rightFingerNock:finger.distanceTo(nock),stringGap:nock.distanceTo(other),axisAngle:grip.clone().sub(nock).angleTo(direction),launchDistance:nock.distanceTo(origin),nock:nock.toArray(),grip:grip.toArray(),finger:finger.toArray(),arms:a.arms.map((arm,i)=>[point(arm).distanceTo(point(a.elbows[i])),point(a.elbows[i]).distanceTo(point(a.hands[i]))])};
+ if(skin){
+  a.g.traverse(m=>{if(m.isSkinnedMesh){m.skeleton.update();m.computeBoundingSphere();}});row.bodyIntersections=[];
+  const segments=[['shot',nock,grip],['upper-string',point(a.g.getObjectByName('string-upper')),nock],['lower-string',point(a.g.getObjectByName('string-lower')),nock],['left-forearm',point(a.elbows[0]),point(a.hands[0])],['right-forearm',point(a.elbows[1]),point(a.hands[1])],['draw-finger',point(a.hands[1]),finger]];
+  const triangles=[];let nearest=Infinity;a.g.traverse(m=>{if(!m.isSkinnedMesh)return;const vertices=[];for(let i=0;i<m.geometry.attributes.position.count;i++){const v=m.getVertexPosition(i,new Vector3()).applyMatrix4(m.matrixWorld);vertices.push(v);let distal=false;for(let j=0;j<4;j++)if(m.geometry.attributes.skinWeight.array[i*4+j]>.99&&m.skeleton.bones[m.geometry.attributes.skinIndex.array[i*4+j]].name==='finger-tip-1-1')distal=true;if(distal)nearest=Math.min(nearest,v.distanceTo(nock));}const ix=m.geometry.index?.array,n=ix?.length??vertices.length;for(let i=0;i<n;i+=3){const ids=[0,1,2].map(j=>ix?ix[i+j]:i+j);if(bodyFace({object:m,face:{a:ids[0],b:ids[1],c:ids[2]}}))triangles.push(ids.map(i=>vertices[i]));}});
+  const hit=new Vector3();for(const[name,from,to]of segments){const len=from.distanceTo(to),ray=new Ray(from,to.clone().sub(from).normalize());if(len>.01)for(const tri of triangles)if(ray.intersectTriangle(...tri,false,hit)&&hit.distanceTo(from)>.005&&hit.distanceTo(from)<len-.005)row.bodyIntersections.push({segment:name,point:hit.toArray()});}
+  row.nativeFingertipSurfaceDistance=nearest;
+ }
+ return row;
+}
+function sample(a,e,dt=0){a.g.position.set(e.x,e.y,e.z);a.g.rotation.y=e.angle;a.animate(e,dt);return a;}
+export async function inspectArchery(){
+ const saved=JSON.parse(readFileSync(new URL('../docs/evidence/archery-contact-v31/baseline-sources.json',import.meta.url))),urls={};
+ for(const file of['src/actor-models.js','src/character-motion.js','src/assets/characters/detailed-geometry.js']){assert.equal(createHash('sha256').update(saved.sources[file]).digest('hex'),saved.hashes[file]);urls[new URL('../'+file,import.meta.url).href+'?archery-old']=file;}
+ const oldActorURL=Object.keys(urls).find(u=>u.includes('/actor-models.js?'));
+ const hook=registerHooks({resolve(s,c,next){if(c.parentURL===oldActorURL&&['./character-motion.js','./assets/characters/detailed-geometry.js'].includes(s))return{url:new URL(s,c.parentURL).href+'?archery-old',shortCircuit:true};return next(s,c);},load(u,c,next){if(urls[u])return{format:'module',source:saved.sources[urls[u]],shortCircuit:true};return next(u,c);}});let createOld;try{({createDetailedActor:createOld}=await import(oldActorURL));}finally{hook.deregister();}
+ const game=new Game(),records=[],oldRecords=[];
+ for(const actorState of game.enemies.filter(e=>e.type==='ranger'))for(const yaw of[0,.7,1.8,3.4,5.5]){
+  const target={x:actorState.x+Math.sin(yaw)*12,z:actorState.z+Math.cos(yaw)*12};const base={...actorState,angle:yaw,windupMax:1.15,aim:{...target,y:groundAt(target.x,target.z)+1.05}},actor=createDetailedActor('ranger'),old=createOld('ranger');
+  for(const timer of[.85,.7,.3,.001,0]){const e={...base,state:timer===0?'strike':'windup',timer:timer===0?.22:timer};const row=measure(sample(actor,e),e,true),legacy=measure(sample(old,e),e);records.push({x:e.x,z:e.z,yaw,...row});oldRecords.push(legacy);assert(row.leftGrip<1e-6);assert(row.stringGap<1e-6);assert(row.rightFingerNock<1e-6,JSON.stringify({yaw,...row}));assert(row.axisAngle<1e-6);assert(row.nativeFingertipSurfaceDistance<.003,JSON.stringify(row));assert.equal(row.bodyIntersections.length,0,JSON.stringify({yaw,timer,hits:row.bodyIntersections}));if(timer===0)assert(row.launchDistance<1e-6);for(const lengths of row.arms){assert(Math.abs(lengths[0]-.33)<1e-6);assert(Math.abs(lengths[1]-.31)<1e-6);}}
+ }
+ const transitionRecords=[];for(const yaw of[0,1.8]){const actor=createDetailedActor('ranger'),base={x:0,y:0,z:0,angle:yaw,type:'ranger',windupMax:1.15,aim:{x:Math.sin(yaw)*12,y:1.05,z:Math.cos(yaw)*12}};for(const state of[{state:'windup',timer:1.15},...[1.1,1.05,1,.95,.9].map(timer=>({state:'windup',timer})),...[1.15,1.05,.9,.75,.575,.4,.2,.1,.001].map(timer=>({state:'recover',timer}))]){const e={...base,...state},row=measure(sample(actor,e),e,true);assert.equal(row.bodyIntersections.length,0,JSON.stringify({yaw,...row}));transitionRecords.push({yaw,...row});}}
+ const rates=[];
+ for(const hz of[30,60,120]){
+  const g=new Game();g.lit=['haven','grove','flood','ruins'];Object.assign(g.player,{x:0,y:0,z:12});const e={id:'archery-oracle',type:'ranger',x:0,y:0,z:0,homeX:0,homeZ:0,angle:0,hp:100,maxHp:100,dead:false,state:'windup',timer:1.15,windupMax:1.15,cooldown:0,attackCount:1,aim:{x:0,y:1.05,z:12}},a=createDetailedActor('ranger');sample(a,e);let previous=measure(a,e),maxStep=0,maxArmAngle=0,shots=0,saves=0;const priorQ=a.arms.map(n=>n.quaternion.clone());
+  for(let i=0;i<hz*3;i++){
+   const count=g.projectiles.length;g.tickEnemy(e,1/hz);shots+=g.projectiles.length-count;const frozen=JSON.stringify(e);sample(a,Object.freeze({...e}),1/hz);assert.equal(JSON.stringify(e),frozen);const current=measure(a,e);maxStep=Math.max(maxStep,new Vector3(...current.grip).distanceTo(new Vector3(...previous.grip)));a.arms.forEach((arm,j)=>{maxArmAngle=Math.max(maxArmAngle,arm.quaternion.angleTo(priorQ[j]));priorQ[j].copy(arm.quaternion);});assert(current.leftGrip<1e-6);assert(current.stringGap<1e-6);
+   if(a.motion.combat&&i%Math.max(1,Math.round(hz/10))===0){const fresh=createDetailedActor('ranger');sample(fresh,JSON.parse(JSON.stringify(e)));const reconstructed=measure(fresh,e);assert(new Vector3(...reconstructed.grip).distanceTo(new Vector3(...current.grip))<1e-7);assert(new Vector3(...reconstructed.finger).distanceTo(new Vector3(...current.finger))<1e-7);saves++;}
+   previous=current;if(e.state==='chase')break;
+  }
+  assert.equal(shots,1);assert(maxStep<.22,JSON.stringify({hz,maxStep,maxArmAngle}));assert(maxArmAngle<1.05);rates.push({hz,shots,maxStep,maxArmAngle,savedReconstructionSamples:saves});
+ }
+ const savedGamePhases=[];for(const phase of[{state:'windup',timer:.5},{state:'strike',timer:.22},{state:'strike',timer:.18,hit:true},{state:'recover',timer:.575,hit:true}]){const g=new Game(),e=g.enemies.find(e=>e.type==='ranger');Object.assign(g.player,{x:e.x,y:e.y,z:e.z+12});Object.assign(e,{...phase,windupMax:1.15,angle:0,aim:{x:g.player.x,y:g.player.y+1.05,z:g.player.z}});const source=JSON.stringify(g.serialize()),restored=new Game(JSON.parse(source)),after=restored.enemies.find(n=>n.id===e.id),a=createDetailedActor('ranger'),b=createDetailedActor('ranger'),beforePose=measure(sample(a,e),e),afterPose=measure(sample(b,after),after);assert.equal(after.state,e.state);for(const key of['grip','nock','finger'])assert(new Vector3(...beforePose[key]).distanceTo(new Vector3(...afterPose[key]))<1e-7);assert.equal(JSON.stringify(g.serialize()),source);savedGamePhases.push({...phase,positionDifference:0});}
+ // Fresh saved boundary, death and interruption never retain a drawn string.
+ const a=createDetailedActor('ranger'),base={x:0,y:0,z:0,angle:0,type:'ranger',windupMax:1.15,aim:{x:0,y:1.05,z:12}};let interrupts=0;
+ for(const state of[{state:'stagger',timer:.2,stagger:.3},{dead:true,deathElapsed:.8},{state:'idle'}, {state:'chase',x:40,z:40}]){sample(a,{...base,state:'windup',timer:.001});sample(a,{...base,...state});assert.equal(a.g.getObjectByName('string-upper').scale.y,1);assert.equal(a.g.getObjectByName('string-lower').scale.y,1);interrupts++;}
+ assert(oldRecords.some(r=>r.leftGrip>.12&&r.rightFingerNock>.5&&r.launchDistance>.5));
+ const files=['src/actor-models.js','src/character-motion.js','src/bow-contact.js','src/assets/characters/detailed-geometry.js','src/core.js'];assert.equal(createHash('sha256').update(readFileSync(new URL('../src/core.js',import.meta.url))).digest('hex'),saved.hashes['src/core.js']);
+ return{base:saved.base,scope:'Native bones/skinned geometry and Game clocks only; no renderer, perception or PS4-quality pass',coreUnchanged:true,sourceHashes:Object.fromEntries(files.map(f=>[f,createHash('sha256').update(readFileSync(new URL('../'+f,import.meta.url))).digest('hex')])),rates,interrupts,records,oldRecords,transitionRecords,savedGamePhases};
+}
+if(process.argv[1]===fileURLToPath(import.meta.url)){const r=await inspectArchery();if(process.argv[2])writeFileSync(process.argv[2],JSON.stringify(r,null,2)+'\n');console.log(JSON.stringify({passed:true,poses:r.records.length,rates:r.rates,coreUnchanged:r.coreUnchanged}));}

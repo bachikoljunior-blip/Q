@@ -1,4 +1,5 @@
 import { buildActorGeometry, ACTOR_FAMILIES } from './assets/characters/detailed-geometry.js';
+import { createBowContact, supportBow } from './bow-contact.js';
 import { detailedMotion } from './character-motion.js';
 import { Euler, Matrix4, Quaternion, Vector3 } from 'three';
 
@@ -32,6 +33,7 @@ export function createDetailedActor(type='player',options={}){
     target:new Vector3(),direction:new Vector3(),pole:new Vector3(),elbow:new Vector3(),down:new Vector3(0,-1,0),
     command:new Quaternion(),previousCommand:new Quaternion(),fromCommand:new Quaternion(),previousTarget:new Vector3(),fromTarget:new Vector3(),lastState:null,transition:null,
     regripLeft:new Vector3(),regripRotation:new Quaternion(),regripBones:Array.from({length:6},()=>new Quaternion())};
+  actor.archery=createBowContact(actor);
   actor.animate=(state={},dt=0)=>animateDetailedActor(actor,state,dt);
   actor.animate({},0);return actor;
 }
@@ -118,7 +120,7 @@ function humanoidPose(actor,state,motion){
   if(actor.sword)actor.sword.rotation.x=-1.05;
   if(actor.greatsword)actor.greatsword.rotation.x=-1.3;
   if(actor.spear)actor.spear.rotation.z=Math.PI;
-  if(actor.type==='ranger'){actor.arms[0].rotation.z=.26;actor.elbows[0].rotation.x=-.32;}
+  if(actor.type==='ranger'){actor.arms[0].rotation.z=-.15;actor.elbows[0].rotation.x=-.32;actor.hands[0].rotation.z=Math.PI/2;}
   if(motion.state==='idle'){
     if(actor.type==='smith'&&['炉の手入れ','鍛錬'].includes(state.activity)){
       const work=(t*.55)%1,stroke=smooth(clamp((work-.48)/.18));actor.arms[1].rotation.x=mix(-1.7,-.45,stroke);actor.elbows[1].rotation.x=mix(-.95,-.2,stroke);actor.chest.rotation.x=.1+stroke*.055;
@@ -133,12 +135,7 @@ function humanoidPose(actor,state,motion){
     actor.pelvis.position.z=(-.055*wind+.12*release)*weight;
     actor.pelvis.position.y-=.045*wind*(1-release)+.025*release*weight;
     if(actor.type==='ranger'){
-      const {draw,bowHold:hold}=motion.combat;
-      poseArms(actor,-1.25*hold,-1.5*hold,-.62*hold,.2,1.7*draw+.15,.08);
-      actor.chest.rotation.y=-.34*hold;actor.neck.rotation.y=.34*hold;
-      for(const [name,sign]of [['string-upper',1],['string-lower',-1]]){
-        const string=actor.g.getObjectByName(name);string.rotation.z=sign*Math.atan2(.22*draw,.59);string.scale.y=Math.hypot(.59,.22*draw)/.59;
-      }
+      const hold=motion.combat.bowHold,load=motion.combat.wind;actor.pelvis.position.set(0,.962-(.04+.06*load)*hold,-(.10+.08*load)*hold);actor.chest.rotation.y=.55*hold;actor.neck.rotation.y=-.55*hold;
     }else if(weapon==='spear'){
       poseArms(actor,-.055+(-.50*wind-.55*release)*weight,(-.2*wind-1.05*release)*weight,-.18,.18,.19+(.91*wind-1.04*release)*weight,.65*weight);
       actor.chest.rotation.y=(.35*wind-.62*release)*weight;
@@ -210,7 +207,8 @@ function articulateHandsAndSpine(actor,state,motion){
     if(!root||!tip)continue;
     const held=hand===1?(!!actor.sword||['npc','sena','scout','smith'].includes(actor.type)||motion.state==='drink'):
       actor.type==='ranger'||state.weaponType==='greatsword'||state.weaponType==='spear';
-    const curl=motion.state==='death'?.26:held?.92:.18;
+    let curl=motion.state==='death'?.26:held?.92:.18;
+    if(hand===1&&actor.type==='ranger'&&motion.combat)curl=mix(.18,.92,motion.combat.bowHold*(1-smooth(motion.combat.time/.07)));
     root.rotation.x+=(finger===4?.6:1)*curl;tip.rotation.x=curl*.86;
   }
 }
@@ -235,14 +233,15 @@ function blendPassiveTransition(actor,previous,motion,delta){
   }
   if(weight===1)actor.poseTransition=null;
 }
-function solveArmGrip(actor,index){
+function solveArmGrip(actor,index,pole=null){
   // target is a wrist position in chest coordinates; world is its orientation.
   // The pole keeps the elbow outside the ribcage. Segment lengths never stretch.
   const k=actor.grip,arm=actor.arms[index],elbow=actor.elbows[index],hand=actor.hands[index];
   k.target.sub(arm.position);
   const upper=.33,lower=.31,distance=clamp(k.target.length(),Math.abs(upper-lower)+.0001,upper+lower-.0001);
   k.direction.copy(k.target).normalize();
-  k.pole.set(index===0?-1:1,-.35,-.4).addScaledVector(k.direction,-k.pole.dot(k.direction)).normalize();
+  if(pole)k.pole.copy(pole);else k.pole.set(index===0?-1:1,-.35,-.4);
+  k.pole.addScaledVector(k.direction,-k.pole.dot(k.direction)).normalize();
   const along=(upper*upper-lower*lower+distance*distance)/(2*distance),height=Math.sqrt(Math.max(0,upper*upper-along*along));
   k.elbow.copy(k.direction).multiplyScalar(along).addScaledVector(k.pole,height);
   arm.quaternion.setFromUnitVectors(k.down,k.elbow.normalize());
@@ -330,6 +329,7 @@ export function animateDetailedActor(actor,state={},dt=0){
   if(!['death','airborne'].includes(motion.state))contacts(actor,state,motion);else{actor.plants.length=0;actor.contacts.length=0;}
 
   supportWeapon(actor,state,motion);
+  supportBow(actor,state,motion,solveArmGrip);
 
   for(const [weapon,node]of [['sword',actor.sword],['greatsword',actor.greatsword],['spear',actor.spear]])if(node)node.visible=motion.state!=='drink'&&weapon===(state.weaponType||'sword');
   if(actor.flask)actor.flask.visible=motion.state==='drink';

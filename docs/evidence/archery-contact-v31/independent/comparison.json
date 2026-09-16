@@ -1,0 +1,461 @@
+{
+  "baseCommit": "47ca76d0679549a890c5721cf7cd997e2b6a2352",
+  "candidateSourceHashes": {
+    "src/bow-contact.js": "c9da5e24059bde9d23ef225f7d4988c93174e5d040a5ce1532dec2b10fad7b8d",
+    "src/actor-models.js": "0731e2582bd7eacabf90fd96ca651fd7bc2f56c886c82c912835563c7294b006",
+    "src/character-motion.js": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+    "src/assets/characters/detailed-geometry.js": "51a6a10a890bfd3b531119b39808a18a32b2bea45fa4441871a57e38da06046d",
+    "src/core.js": "27b62eb40ef1488e344f1a1f5a5455cf67661236035c535508f95f3408345f0d",
+    "src/runtime-state.js": "84a543c09f089a37031da9ba12915078cee5c668ed009bcd281e90d70829f325",
+    "src/scene.js": "7f05d2be9103d1480f1281fe3af2afd90a7886d21089fdab6fa471b6c5d93f25"
+  },
+  "poseCount": 90,
+  "handAndStringSurfacePoseCount": 30,
+  "bothSidedPhysicalLineBodyHits": 0,
+  "actualHandSurfaceBodyEdgeHits": 0,
+  "actualStringSurfaceBodyEdgeHits": 0,
+  "release": {
+    "gripGap": {
+      "baseline": 0.12300000000000312,
+      "candidate": 3.972054645195637e-15
+    },
+    "tipNockGap": {
+      "baseline": 0.570364390139582,
+      "candidate": 1.0814278949565478e-14
+    },
+    "stringJoinGap": {
+      "baseline": 3.9968028886505635e-15,
+      "candidate": 3.9968028886505635e-15
+    },
+    "launchGap": {
+      "baseline": 0.5588340790112545,
+      "candidate": 7.993605777301127e-15
+    },
+    "nockGripAxisDegrees": {
+      "baseline": 21.584461896169294,
+      "candidate": 0
+    }
+  },
+  "maximumNativeFingerSurfaceDistanceToLoadedNock": 0.0017320375443398406,
+  "maximumArmLengthError": 1.7763568394002505e-15,
+  "runtime": [
+    {
+      "hz": 30,
+      "frames": 77,
+      "fires": [
+        {
+          "state": "strike",
+          "timer": 0.18666666666666668,
+          "previousPoseNockGap": 3.552713678800501e-15,
+          "previousPoseState": "strike",
+          "previousPoseTimer": 0.22,
+          "arrow": {
+            "x": 11,
+            "y": 3.45,
+            "z": 19,
+            "vx": 0,
+            "vy": -0.6329817744201317,
+            "vz": 18.989453232603935,
+            "life": 2.3,
+            "owner": "enemy-24",
+            "damage": 20
+          }
+        }
+      ],
+      "seams": [
+        {
+          "from": "windup",
+          "to": "strike",
+          "timer": 0.22,
+          "tipStep": 0.0004097971368490418,
+          "gripStep": 0,
+          "elbowStep": 0.00024343328177556342
+        },
+        {
+          "from": "strike",
+          "to": "recover",
+          "timer": 1.15,
+          "tipStep": 0,
+          "gripStep": 0,
+          "elbowStep": 0
+        },
+        {
+          "from": "recover",
+          "to": "chase",
+          "timer": 0,
+          "tipStep": 0.00702881353452366,
+          "gripStep": 0.0017004524161819236,
+          "elbowStep": 0.002478368955347569
+        }
+      ],
+      "maxTipStep": 0.16535317053708215,
+      "maxGripStep": 0.14661072898023694,
+      "maxElbowStep": 0.09995829456510634,
+      "projectileCount": 1,
+      "largestElbowSteps": [
+        {
+          "state": "windup",
+          "timer": 1.0499999999999996,
+          "tipStep": 0.13075293079043787,
+          "gripStep": 0.13901062567693184,
+          "elbowStep": 0.09995829456510634
+        },
+        {
+          "state": "windup",
+          "timer": 0.9166666666666662,
+          "tipStep": 0.16535317053708215,
+          "gripStep": 0.09841169992992255,
+          "elbowStep": 0.0985759882219222
+        },
+        {
+          "state": "windup",
+          "timer": 1.083333333333333,
+          "tipStep": 0.08750084718742805,
+          "gripStep": 0.10185996688090676,
+          "elbowStep": 0.09052730953552902
+        }
+      ]
+    },
+    {
+      "hz": 60,
+      "frames": 152,
+      "fires": [
+        {
+          "state": "strike",
+          "timer": 0.20333333333333334,
+          "previousPoseNockGap": 3.552713678800501e-15,
+          "previousPoseState": "strike",
+          "previousPoseTimer": 0.22,
+          "arrow": {
+            "x": 11,
+            "y": 3.45,
+            "z": 19,
+            "vx": 0,
+            "vy": -0.6329817744201317,
+            "vz": 18.989453232603935,
+            "life": 2.3,
+            "owner": "enemy-24",
+            "damage": 20
+          }
+        }
+      ],
+      "seams": [
+        {
+          "from": "windup",
+          "to": "strike",
+          "timer": 0.22,
+          "tipStep": 0.0004097971368490418,
+          "gripStep": 0,
+          "elbowStep": 0.00024343328177556342
+        },
+        {
+          "from": "strike",
+          "to": "recover",
+          "timer": 1.15,
+          "tipStep": 0,
+          "gripStep": 0,
+          "elbowStep": 0
+        },
+        {
+          "from": "recover",
+          "to": "chase",
+          "timer": 0,
+          "tipStep": 0.0018968718274399994,
+          "gripStep": 0.00045922867952258214,
+          "elbowStep": 0.0006673995464452307
+        }
+      ],
+      "maxTipStep": 0.0844359855716766,
+      "maxGripStep": 0.0740882557861828,
+      "maxElbowStep": 0.05407591388044205,
+      "projectileCount": 1,
+      "largestElbowSteps": [
+        {
+          "state": "windup",
+          "timer": 0.9333333333333336,
+          "tipStep": 0.0844359855716766,
+          "gripStep": 0.052101080536515965,
+          "elbowStep": 0.05407591388044205
+        },
+        {
+          "state": "windup",
+          "timer": 1.0833333333333335,
+          "tipStep": 0.050268174787846266,
+          "gripStep": 0.05736256905127707,
+          "elbowStep": 0.052865050137638744
+        },
+        {
+          "state": "windup",
+          "timer": 1.0666666666666669,
+          "tipStep": 0.061427826517376806,
+          "gripStep": 0.06674232842004535,
+          "elbowStep": 0.05238239016053836
+        }
+      ]
+    },
+    {
+      "hz": 120,
+      "frames": 305,
+      "fires": [
+        {
+          "state": "strike",
+          "timer": 0.21166666666666667,
+          "previousPoseNockGap": 3.552713678800501e-15,
+          "previousPoseState": "strike",
+          "previousPoseTimer": 0.22,
+          "arrow": {
+            "x": 11,
+            "y": 3.45,
+            "z": 19,
+            "vx": 0,
+            "vy": -0.6329817744201317,
+            "vz": 18.989453232603935,
+            "life": 2.3,
+            "owner": "enemy-24",
+            "damage": 20
+          }
+        }
+      ],
+      "seams": [
+        {
+          "from": "windup",
+          "to": "strike",
+          "timer": 0.22,
+          "tipStep": 0,
+          "gripStep": 0,
+          "elbowStep": 0
+        },
+        {
+          "from": "strike",
+          "to": "recover",
+          "timer": 1.15,
+          "tipStep": 0,
+          "gripStep": 0,
+          "elbowStep": 0
+        },
+        {
+          "from": "recover",
+          "to": "chase",
+          "timer": 0,
+          "tipStep": 0.0004932699196652091,
+          "gripStep": 0.00011862475830734231,
+          "elbowStep": 0.00017368879251083557
+        }
+      ],
+      "maxTipStep": 0.04232004693415682,
+      "maxGripStep": 0.03705596124299319,
+      "maxElbowStep": 0.04092972572004081,
+      "projectileCount": 1,
+      "largestElbowSteps": [
+        {
+          "state": "windup",
+          "timer": 0.9500000000000006,
+          "tipStep": 0.0405297384002105,
+          "gripStep": 0.027812490731340535,
+          "elbowStep": 0.04092972572004081
+        },
+        {
+          "state": "windup",
+          "timer": 0.9416666666666673,
+          "tipStep": 0.04232004693415682,
+          "gripStep": 0.02668578456295053,
+          "elbowStep": 0.029227279712284653
+        },
+        {
+          "state": "windup",
+          "timer": 1.0833333333333335,
+          "tipStep": 0.026670840233618414,
+          "gripStep": 0.030082441901780176,
+          "elbowStep": 0.02690064445676258
+        }
+      ]
+    }
+  ],
+  "saved": [
+    {
+      "state": "windup",
+      "timer": 0.4,
+      "aimMatches": true,
+      "nockGap": 0,
+      "gripGap": 0,
+      "rightTipGap": 0,
+      "stateRestored": "windup",
+      "timerRestored": 0.4
+    },
+    {
+      "state": "strike",
+      "timer": 0.22,
+      "aimMatches": true,
+      "nockGap": 0,
+      "gripGap": 0,
+      "rightTipGap": 0,
+      "stateRestored": "strike",
+      "timerRestored": 0.22
+    },
+    {
+      "state": "strike",
+      "timer": 0.18,
+      "aimMatches": true,
+      "nockGap": 0,
+      "gripGap": 0,
+      "rightTipGap": 0,
+      "stateRestored": "strike",
+      "timerRestored": 0.18
+    },
+    {
+      "state": "recover",
+      "timer": 0.6,
+      "aimMatches": true,
+      "nockGap": 0,
+      "gripGap": 0,
+      "rightTipGap": 0,
+      "stateRestored": "recover",
+      "timerRestored": 0.6
+    }
+  ],
+  "pause": {
+    "nockGap": 0,
+    "gripGap": 0,
+    "tipGap": 0
+  },
+  "interruptions": [
+    {
+      "phase": "before-shot",
+      "kind": "hit",
+      "arrowsBefore": 0,
+      "arrowsAfter": 0,
+      "state": "stagger",
+      "combatAbsent": true,
+      "stringZ": [
+        0,
+        0
+      ],
+      "stringScale": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "before-shot",
+      "kind": "death",
+      "arrowsBefore": 0,
+      "arrowsAfter": 0,
+      "state": "dead",
+      "combatAbsent": true,
+      "stringZ": [
+        0,
+        0
+      ],
+      "stringScale": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "after-shot",
+      "kind": "hit",
+      "arrowsBefore": 1,
+      "arrowsAfter": 1,
+      "state": "stagger",
+      "combatAbsent": true,
+      "stringZ": [
+        0,
+        0
+      ],
+      "stringScale": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "after-shot",
+      "kind": "death",
+      "arrowsBefore": 1,
+      "arrowsAfter": 1,
+      "state": "dead",
+      "combatAbsent": true,
+      "stringZ": [
+        0,
+        0
+      ],
+      "stringScale": [
+        1,
+        1
+      ]
+    }
+  ],
+  "cancellation": [
+    {
+      "to": "idle",
+      "combatAbsent": true,
+      "drawStringReset": [
+        0,
+        0
+      ],
+      "stringScale": [
+        1,
+        1
+      ],
+      "rightTipStep": 0.04250294124305688,
+      "bowGripStep": 0.033797057556992575
+    },
+    {
+      "to": "stagger",
+      "combatAbsent": true,
+      "drawStringReset": [
+        0,
+        0
+      ],
+      "stringScale": [
+        1,
+        1
+      ],
+      "rightTipStep": 0.8818446589029566,
+      "bowGripStep": 0.8142858848177743
+    },
+    {
+      "to": "death",
+      "combatAbsent": true,
+      "drawStringReset": [
+        0,
+        0
+      ],
+      "stringScale": [
+        1,
+        1
+      ],
+      "rightTipStep": 0.8916580970765995,
+      "bowGripStep": 0.7099047366189413
+    }
+  ],
+  "geometry": {
+    "triangles": 7078,
+    "meshCount": 12,
+    "uniqueGeometryCount": 12,
+    "sourceBytes": 349620
+  },
+  "build": {
+    "entryFile": "assets/index-DVm0juXQ.js",
+    "entryBytes": 164493,
+    "jsChunks": 3,
+    "files": [
+      {
+        "file": "assets/index-DVm0juXQ.js",
+        "bytes": 164493,
+        "sha256": "76f77f706eb83290d78a6ca4db3f1c450d3b901e4ba549172a7eaa6ec51df18b"
+      },
+      {
+        "file": "assets/scene-07OSPvyK.js",
+        "bytes": 229675,
+        "sha256": "55154f869a325b351d1cfc90d437727cdd3b27d652bcf650a1ab58569c7eddd9"
+      },
+      {
+        "file": "assets/three-gEIhRU3M.js",
+        "bytes": 578362,
+        "sha256": "4e8e7d9622b561c76e2121e476b708998351988bab0e8120ce2196998263788a"
+      }
+    ],
+    "boundary": "Readback of author-generated build artifact, not a repeated build or browser measurement."
+  },
+  "unresolved": "Game projectile point coincides with nock; rendered shaft is centered at that point, with tail at local z=-.55. Tail/shaft/tip/collision/forecast definition remains a separate finite unit. No pixels/GPU/frame time/PS4 acceptance."
+}
