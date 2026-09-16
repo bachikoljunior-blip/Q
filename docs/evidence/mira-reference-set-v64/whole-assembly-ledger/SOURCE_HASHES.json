@@ -1,0 +1,75 @@
+{
+  "base": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+  "planningSources": [
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/head/type-manifest.json",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 14152,
+      "sha256": "a001358d32ca2d23ce8461cbf2f9c1af5cb8b7dd0d16c7fe0c6e10910ee8c646"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/head/parts-draft.json",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 52766,
+      "sha256": "7d8de5a4f8b942c8c12b8a39b08bb3e12137358dbcf393a7b198d6bc4c5bfb64"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/cloth/types.json",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 24165,
+      "sha256": "0496452d44c4f39daf3eb55869fe60d4bb2c76622d2cdfa9ecfa9fc0facd5597"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/accessories/HANDS_BOOTS_MICRO_PLAN.json",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 54588,
+      "sha256": "c89fb35ac5d065905dd2fa8ea3a31bab70336e47e83501725b43d204646e709b"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/accessories/STAFF_MICRO_BOM.json",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 19418,
+      "sha256": "c581b436baa0d6bef4b8182af149e0648dbe1f3a7665af431ca3138424a1c081"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/PART_INDEX.json",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 20643,
+      "sha256": "85cd0c072c5f05d36a59e801aba3f09cfef337c26fbef9f206c9c3c23abbfb97"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-reference-set/plan.json",
+      "gitCommit": null,
+      "bytes": 15257,
+      "sha256": "8dad6d44de658459fe0adce8c141b83535b6986575fbda635799381d999ccd89",
+      "note": "Snapshot of concurrent owner proposal; subsequent generation is outside this frozen inventory"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/PLAN.json",
+      "gitCommit": null,
+      "bytes": 53757,
+      "sha256": "f945e7414751358f424cc112efae028b4e280d8ce4b703aa23294e906b9a51c4",
+      "note": "Snapshot of concurrent owner proposal; subsequent generation is outside this frozen inventory"
+    }
+  ],
+  "nativeInputs": [
+    {
+      "path": "docs/evidence/mira-head-micro-v63/assembly.json",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "sha256": "3cb6925f694a40dde6b48051d0c62bb84e791c2b61ccba98c80f33cf116fa8bd"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/meshes.json",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "sha256": "085c522e4811861d2b0203cd41001004e8c149275f1101c0a2e8a67aa7019aa6"
+    },
+    {
+      "path": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "sha256": "9c0b5f8d2c55873d1d66b6f976726ad1c639560b9bd529975664237525367903"
+    }
+  ],
+  "noSourceEdits": true,
+  "noImageEdits": true,
+  "noGitMutations": true
+}

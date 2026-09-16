@@ -1,0 +1,120 @@
+{
+  "base": "22d1d041dd6aef60de7764b1eebf6cf78028c857",
+  "files": [
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/P02-R.obj",
+      "bytes": 26185,
+      "sha256": "4acd02abcf9343bfdf5c6147f472c52540745523d158e26ee0d12012d7d8d33c"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/P04-RB.obj",
+      "bytes": 7146,
+      "sha256": "3fc0094630b04f85a2760c5d987a8961065b5f9d1b75aadbd31e907901b9f867"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/assembly.json",
+      "bytes": 150511,
+      "sha256": "6e7fba4262d0e7e24bbf30a0416f159c701e662d3ac5f5dc83c268ea71e7d7e2"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/assembly.obj",
+      "bytes": 58154,
+      "sha256": "8740205125c67b64e6c832f4f791fbd283cdc1262f2c6ab3b1c170a7709cb19e"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/export-run.txt",
+      "bytes": 12489,
+      "sha256": "11756600b98e1ee17899782cce2cd8787d00610aff3fd579728b21f1d02b7e80"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/geometry-views.png",
+      "bytes": 475522,
+      "sha256": "47928cb7d480e91eb64064b44baec337fdd647160116afe951a1a67c3cc960d9"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/geometry-views.svg",
+      "bytes": 591564,
+      "sha256": "d564f096e519951dcd424414c43c3968ea5c5893dbb517f7e471dd9701869b05"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/image-edit-prompt.txt",
+      "bytes": 1243,
+      "sha256": "e8bfda7515549ed37e5936bc140c9446939ab513419177eec7661ba7c9daca54"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/image-prompt.txt",
+      "bytes": 2956,
+      "sha256": "eb02b516a79403ea7f6dfcf54910037ea07aa51e190b62ede1d4e8bfba134b75"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/image-provenance.json",
+      "bytes": 2513,
+      "sha256": "0d95ee09bb9ee8b3548932d4f36942c4984f09a0ca730811c3e88897ca6aea3c"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/join-spec.json",
+      "bytes": 5882,
+      "sha256": "b1a329dc65f33af6c9dd5cc1e69c697e993ec7d50b5adcbbdf572d6cc634aac6"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/metrics.json",
+      "bytes": 453252,
+      "sha256": "eaad4f92870ff4901cb277795bc31a362d056d122df548076a4f7a07186f1860"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v1.png",
+      "bytes": 1913314,
+      "sha256": "24a7abdaedae49f534a0f1570c567d8bb5f48cc24333c61c3c3a7dd61e7854e3"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v2.png",
+      "bytes": 1875444,
+      "sha256": "409535188a6e448e7fb59f415be5302e49513024e429edb3e9d49f85d4fbee4a"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/tests.txt",
+      "bytes": 419,
+      "sha256": "a6f5f5c4ccc2c100b29cb73d5a31c4240896aaa3b5f5b65fb47cf2d515d2a8d3"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/timing.json",
+      "bytes": 819,
+      "sha256": "09a95c3ce93c1ac15438bd2d3f376d749abc15c8b3998916c3363fecc2a2a483"
+    },
+    {
+      "path": "review/cloth-join-v64/README.md",
+      "bytes": 5866,
+      "sha256": "c2cba87084b318f48f648ca538d868de6a15e4ede065cbddcde8ee136b3f7b5b"
+    },
+    {
+      "path": "review/cloth-join-v64/assembly.mjs",
+      "bytes": 4218,
+      "sha256": "a5679095bfb268e5bd8c2a08a8a91a13a494c38ae5e8ce985582ad53cb4d366b"
+    },
+    {
+      "path": "review/cloth-join-v64/inspect.mjs",
+      "bytes": 4128,
+      "sha256": "f45ab2eaa482f91c67434864bfd1332d2a09e88f219e89961223711f9bd1b9f0"
+    },
+    {
+      "path": "review/cloth-join-v64/plot.py",
+      "bytes": 1872,
+      "sha256": "85f0e6e68c637b6752ba8270bb0c9de1317be94760d45628a14aec5d368d6271"
+    },
+    {
+      "path": "review/cloth-join-v64/pose-probe.mjs",
+      "bytes": 2469,
+      "sha256": "f98ece6fb885cb0554b831a21848efe4b42f73fac1a686230de4eef1b8827181"
+    },
+    {
+      "path": "scripts/export-mira-cloth-join-v64.mjs",
+      "bytes": 1936,
+      "sha256": "9b637dec575d4b49d8a6266d12780ed37369a194a5e448a7368f7e00ed6bdd7b"
+    },
+    {
+      "path": "tests/mira-cloth-join-v64.test.mjs",
+      "bytes": 2378,
+      "sha256": "103310d7b2bc04fb2878508bd8720f9b8548101ebee3bbd389e9e961d6d44788"
+    }
+  ]
+}

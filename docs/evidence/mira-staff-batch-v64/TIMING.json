@@ -1,0 +1,15 @@
+{
+  "base": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+  "sourcePlanUTC": "2026-09-16T14:12:06Z",
+  "firstImplementationWrittenUTC": "2026-09-16T14:13:26.252372+00:00",
+  "notes": "Initial checkout/read/configure wait precedes source marker. Wall-clock windows are not exclusive labor; no renderer or dependency run before configure.",
+  "firstFocusedPassTimestampPrecision": "No exact wall timestamp recorded; 5/5 first focused run duration 663.729439 ms.",
+  "firstFullExportUTC": "2026-09-16T14:18:04.114Z",
+  "finalExportUTC": "2026-09-16T14:18:50.333Z",
+  "focused20TestFileMtimeUTC": "2026-09-16T14:18:05.956295+00:00",
+  "documentationUTC": "2026-09-16T14:20:47.743270+00:00",
+  "reportOnlyRework": "Renamed exporter sourceFiles array so original source count object is retained. No batch geometry change; final exporter rerun recorded.",
+  "generationSeconds": 0,
+  "geometryDesignChangeSeconds": 0,
+  "activeToolSessions": 0
+}

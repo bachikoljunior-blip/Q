@@ -1,0 +1,71 @@
+{
+  "generatedUTC": "2026-09-16T14:20:47.765107+00:00",
+  "base": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+  "files": [
+    {
+      "path": "docs/evidence/mira-staff-batch-v64/BASE_READBACK.json",
+      "bytes": 1287,
+      "sha256": "394447c1be75b27acb5f2a8f646dec7f6c42b040971db1056a01e58c4e4234ab"
+    },
+    {
+      "path": "docs/evidence/mira-staff-batch-v64/REPORT.md",
+      "bytes": 6626,
+      "sha256": "35fef7add20f4ffc8ab794dd71f3857258633c3c26034ec71de7a8f7f35a1c26"
+    },
+    {
+      "path": "docs/evidence/mira-staff-batch-v64/TIMING.json",
+      "bytes": 937,
+      "sha256": "55918188b8b767a04876ae359ae8699f4207d862a45aaab88235406482778311"
+    },
+    {
+      "path": "docs/evidence/mira-staff-batch-v64/batch-geometry.json",
+      "bytes": 1330124,
+      "sha256": "647cd4175afd87dbdd858cacb511aef1437093906b30d2811c371869d925b955"
+    },
+    {
+      "path": "docs/evidence/mira-staff-batch-v64/export.txt",
+      "bytes": 1832,
+      "sha256": "4c5651f1e8f3b07b508d0a8e1890e04918e79011c3d7d55b58d3c48a07787f0f"
+    },
+    {
+      "path": "docs/evidence/mira-staff-batch-v64/part-ranges.json",
+      "bytes": 22730,
+      "sha256": "67a4c657a626f49381bbb6a26991caef399db01944ef2666986b81d36cefaab8"
+    },
+    {
+      "path": "docs/evidence/mira-staff-batch-v64/report.json",
+      "bytes": 18621,
+      "sha256": "f571f7e2b582f3d89a07331b2d87d91065535f8f5ad79a0d57b36c3493f3541c"
+    },
+    {
+      "path": "docs/evidence/mira-staff-batch-v64/tests.txt",
+      "bytes": 2303,
+      "sha256": "d38630f12208e2df5b387adb19e51d615cd7c184136d4b3c0f90d18043b8c31f"
+    },
+    {
+      "path": "review/staff-batch-v64/README.md",
+      "bytes": 1869,
+      "sha256": "5f250e2c7f0bf0e0927f772830c8343bf8724844b3e5b5cdef429769188a5314"
+    },
+    {
+      "path": "review/staff-batch-v64/inspect-batch.mjs",
+      "bytes": 3522,
+      "sha256": "9c7889ad9ba798ba2010016fa3e9ac0b9265620b8d958a9d5f80b7fd22cfc917"
+    },
+    {
+      "path": "review/staff-batch-v64/staff-batch.mjs",
+      "bytes": 6452,
+      "sha256": "84bb4facea8ef49eae5ca67668cbb5608525842cbf20c8e47e0fc6ea7db493d2"
+    },
+    {
+      "path": "scripts/export-mira-staff-batch-v64.mjs",
+      "bytes": 3726,
+      "sha256": "bc7ba1cfdda7c9bd03911a8349736f92a761d9c24a4a755cc1dde35330b66135"
+    },
+    {
+      "path": "tests/mira-staff-batch-v64.test.mjs",
+      "bytes": 5058,
+      "sha256": "017523a4605c7713757150b74c3d13e238c391f46d7a3fb2ce39948525282a6b"
+    }
+  ]
+}

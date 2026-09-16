@@ -1,0 +1,235 @@
+{
+  "status": "full ID image coverage, not full-character clearance or exact image/mesh matching",
+  "plannedIDs": 18,
+  "placementCount": 19,
+  "uniqueFamilyCount": 14,
+  "familyCaveat": "S08/S13 ring, S09/S10 wide bow, S11/S12 depth bow, S17/S18 inverse retaining collar are shared families; IDs kept separately",
+  "sourceModelCheckpoint": "b21985680bb43a3be5a2c4d2244e6b6d24b5af69",
+  "geometryProducedDuringReferencePhase": 0,
+  "rows": [
+    {
+      "id": "S01",
+      "instances": [
+        "S01"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/references/shaft-foot-v1.png",
+      "sha256": "cb87b32ddc39df04ab3898a532ed253f0f4c48140f5e1419dbad11a5210e6760",
+      "bytes": 1868223,
+      "views": "front/side/top/bottom/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "S03 front label uses face orientation; exact assembly axes come from authored specification"
+    },
+    {
+      "id": "S02",
+      "instances": [
+        "S02"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/references/shaft-foot-v1.png",
+      "sha256": "cb87b32ddc39df04ab3898a532ed253f0f4c48140f5e1419dbad11a5210e6760",
+      "bytes": 1868223,
+      "views": "front/side/top/bottom/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "S03 front label uses face orientation; exact assembly axes come from authored specification"
+    },
+    {
+      "id": "S03",
+      "instances": [
+        "S03"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/references/shaft-foot-v1.png",
+      "sha256": "cb87b32ddc39df04ab3898a532ed253f0f4c48140f5e1419dbad11a5210e6760",
+      "bytes": 1868223,
+      "views": "front/side/top/bottom/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "S03 front label uses face orientation; exact assembly axes come from authored specification"
+    },
+    {
+      "id": "S04",
+      "instances": [
+        "S04"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/references/grip-strips-v1.png",
+      "sha256": "4b7cd0a7a445fd5d6595c5dda4947078ab49eb6953eb4dfc54f458a01f3ee5f8",
+      "bytes": 1971203,
+      "views": "front/side/top/bottom/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "S05 region of this sheet excluded; isolated S04 only"
+    },
+    {
+      "id": "S05",
+      "instances": [
+        "S05-A",
+        "S05-B"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/staff-reference-set/S05-flat-blank-v2.png",
+      "sha256": "b29dfea136239d427049cc517a64d38eeab795a8968a7e6b3996b6c016f4baf8",
+      "bytes": 1791930,
+      "views": "outer/inner/side/end/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "flat blank type replaces inconsistent pre-wound helix; aspect not calibrated, assembly winding/edge strain separately authored"
+    },
+    {
+      "id": "S06",
+      "instances": [
+        "S06"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/references/collars-neck-v1.png",
+      "sha256": "cd97eb9d416488f8d59ecc0eea395a4f9d5f2e50b3dc2af7ae78e403dd35e3a5",
+      "bytes": 2390637,
+      "views": "front/side/top/bottom/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "thumbnail swaps S17/S18 and is explicitly excluded; actual S17 lower/S18 upper"
+    },
+    {
+      "id": "S07",
+      "instances": [
+        "S07"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-lantern-v63/references/lower-cup-ring-glass-v1.png",
+      "sha256": "1225a270841c4755e2de630ab746dc49f899102ff80de915c6ccc079a74dccbc",
+      "bytes": 1725935,
+      "views": "front/side/top/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "only cup/ring rows; old S16 lip is excluded; internal cradle authored"
+    },
+    {
+      "id": "S08",
+      "instances": [
+        "S08"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-lantern-v63/references/lower-cup-ring-glass-v1.png",
+      "sha256": "1225a270841c4755e2de630ab746dc49f899102ff80de915c6ccc079a74dccbc",
+      "bytes": 1725935,
+      "views": "front/side/top/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "only cup/ring rows; old S16 lip is excluded; internal cradle authored"
+    },
+    {
+      "id": "S09",
+      "instances": [
+        "S09"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/staff-reference-set/staff-ribs-top-corrected-v3.png",
+      "sha256": "09764b88da5fcc3325466131cc24d2b789a4f9f93ef972c0275d3ca26fd66535",
+      "bytes": 1538050,
+      "views": "front/side/top/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "overlapping endpoints now project onto one TOP pad; precise magnification and pad curves remain authored"
+    },
+    {
+      "id": "S10",
+      "instances": [
+        "S10"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/staff-reference-set/staff-ribs-top-corrected-v3.png",
+      "sha256": "09764b88da5fcc3325466131cc24d2b789a4f9f93ef972c0275d3ca26fd66535",
+      "bytes": 1538050,
+      "views": "front/side/top/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "overlapping endpoints now project onto one TOP pad; precise magnification and pad curves remain authored"
+    },
+    {
+      "id": "S11",
+      "instances": [
+        "S11"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/staff-reference-set/staff-ribs-top-corrected-v3.png",
+      "sha256": "09764b88da5fcc3325466131cc24d2b789a4f9f93ef972c0275d3ca26fd66535",
+      "bytes": 1538050,
+      "views": "front/side/top/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "overlapping endpoints now project onto one TOP pad; precise magnification and pad curves remain authored"
+    },
+    {
+      "id": "S12",
+      "instances": [
+        "S12"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/staff-reference-set/staff-ribs-top-corrected-v3.png",
+      "sha256": "09764b88da5fcc3325466131cc24d2b789a4f9f93ef972c0275d3ca26fd66535",
+      "bytes": 1538050,
+      "views": "front/side/top/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "overlapping endpoints now project onto one TOP pad; precise magnification and pad curves remain authored"
+    },
+    {
+      "id": "S13",
+      "instances": [
+        "S13"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-micro-v61/references/staff-caps-micro-v1.png",
+      "sha256": "01a18ebd2631e2e5c73b52c3c261620e1c2487458200c1c68993e89066258532",
+      "bytes": 1894355,
+      "views": "front/side/top/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "axisymmetric isolated visual references; internal support revisions separately authored"
+    },
+    {
+      "id": "S14",
+      "instances": [
+        "S14"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-micro-v61/references/staff-caps-micro-v1.png",
+      "sha256": "01a18ebd2631e2e5c73b52c3c261620e1c2487458200c1c68993e89066258532",
+      "bytes": 1894355,
+      "views": "front/side/top/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "axisymmetric isolated visual references; internal support revisions separately authored"
+    },
+    {
+      "id": "S15",
+      "instances": [
+        "S15"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/references/finial-v1.png",
+      "sha256": "73330e0d816dc84ebd051cfccf9104f61f7666f285721c687f2929d4a585c5fd",
+      "bytes": 1898046,
+      "views": "front/side/top/bottom/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "wrong grip-attachment thumbnail excluded; part goes above lantern S14"
+    },
+    {
+      "id": "S16",
+      "instances": [
+        "S16"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-lantern-v63/references/glass-multiview-v2.png",
+      "sha256": "6c86735438a9444765c78f377f0a364281fe50360159d5fd20309f49a4434ce4",
+      "bytes": 1285938,
+      "views": "front/side/top/bottom/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "closed oval without vase lip; exact ellipsoid and hidden seats authored"
+    },
+    {
+      "id": "S17",
+      "instances": [
+        "S17"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/references/collars-neck-v1.png",
+      "sha256": "cd97eb9d416488f8d59ecc0eea395a4f9d5f2e50b3dc2af7ae78e403dd35e3a5",
+      "bytes": 2390637,
+      "views": "front/side/top/bottom/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "thumbnail swaps S17/S18 and is explicitly excluded; actual S17 lower/S18 upper"
+    },
+    {
+      "id": "S18",
+      "instances": [
+        "S18"
+      ],
+      "referenceFile": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/references/collars-neck-v1.png",
+      "sha256": "cd97eb9d416488f8d59ecc0eea395a4f9d5f2e50b3dc2af7ae78e403dd35e3a5",
+      "bytes": 2390637,
+      "views": "front/side/top/bottom/three-quarter",
+      "status": "qualitative shape reference with stated exclusions; not calibrated projection",
+      "limitation": "thumbnail swaps S17/S18 and is explicitly excluded; actual S17 lower/S18 upper"
+    }
+  ],
+  "wholeCharacterAttachment": "right hand -X / hand-0 intended; actual hand transform and contact not defined",
+  "blockingQuestions": [
+    "S05 flat END aspect is not calibrated to its broad face",
+    "final exact character hand grip, staff orientation in poses and full assembly not yet fixed",
+    "materials and real rendered appearance untested"
+  ],
+  "authorSpecification": "existing review/staff-v63/STAFF_SPEC/profiles plus lantern-v63 HEAD_SPEC are explicit authored dimensions, not generated-pixel measurements"
+}

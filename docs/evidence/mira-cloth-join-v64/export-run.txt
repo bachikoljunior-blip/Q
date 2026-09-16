@@ -1,0 +1,483 @@
+{
+  "at": "2026-09-16T14:13:51.168Z",
+  "base": "22d1d041dd6aef60de7764b1eebf6cf78028c857",
+  "buildMs": 44.36438000000001,
+  "rest": {
+    "vertices": 325,
+    "triangles": 576,
+    "finite": true,
+    "areaM2": 0.5407979779772836,
+    "minTriangleAreaM2": 0.00019495884658770425,
+    "degenerate": 0,
+    "minTriangleVertexNormalDot": 0.9825762290567795,
+    "reversedAgainstVertexNormals": 0,
+    "uv": {
+      "positive": 0,
+      "negative": 576,
+      "zero": 0,
+      "minAbsArea": 0.00019833657939653525
+    },
+    "edges": 900,
+    "boundaryEdges": 72,
+    "boundaryComponents": 1,
+    "boundaryDegreeNotTwo": 0,
+    "nonManifoldEdges": 0,
+    "inconsistentWinding": 0,
+    "euler": 1,
+    "edgeRatio": {
+      "min": 1,
+      "max": 1
+    },
+    "minY": -0.67,
+    "volume": null,
+    "volumeReason": "open surface; enclosed volume is undefined"
+  },
+  "seams": [
+    {
+      "id": "P01-R:outside=P02-R:inside",
+      "vertices": 17,
+      "positionGap": 0,
+      "uvGap": 0,
+      "wrongID": 0,
+      "weightMismatch": 0
+    },
+    {
+      "id": "P01-R:top=P04-RB:bottom",
+      "vertices": 9,
+      "positionGap": 0,
+      "uvGap": 0,
+      "wrongID": 0,
+      "weightMismatch": 0
+    }
+  ],
+  "properCrossings": {
+    "properNonAdjacentTrianglePairs": 0,
+    "pairs": [],
+    "scope": "strict segment/triangle interiors, shared-vertex pairs and coplanar overlap excluded"
+  },
+  "originalPoseDeltas": [
+    {
+      "name": "idle 2s",
+      "maxCoordinateDelta": 0
+    },
+    {
+      "name": "walk 2m/s 1s",
+      "maxCoordinateDelta": 0
+    },
+    {
+      "name": "turn right .6rad 1s",
+      "maxCoordinateDelta": 0
+    },
+    {
+      "name": "sealed canonical",
+      "maxCoordinateDelta": 0
+    },
+    {
+      "name": "death .45s explicit",
+      "maxCoordinateDelta": 0
+    },
+    {
+      "name": "death 1s explicit",
+      "maxCoordinateDelta": 0
+    }
+  ],
+  "poseRegistration": "v62 factory-post-animate({},0) chest anchor; not a native bindInverse",
+  "poses": [
+    {
+      "name": "idle 2s",
+      "frames": 120,
+      "dt": 0.016666666666666666,
+      "motionState": "idle",
+      "transformMs": 0.19196600000003627,
+      "seamGaps": [
+        {
+          "id": "P01-R:outside=P02-R:inside",
+          "max": 0
+        },
+        {
+          "id": "P01-R:top=P04-RB:bottom",
+          "max": 0
+        }
+      ],
+      "metrics": {
+        "vertices": 325,
+        "triangles": 576,
+        "finite": true,
+        "areaM2": 0.5401969518394781,
+        "minTriangleAreaM2": 0.00019492340982697062,
+        "degenerate": 0,
+        "minTriangleVertexNormalDot": 0.9826596981666826,
+        "reversedAgainstVertexNormals": 0,
+        "uv": {
+          "positive": 0,
+          "negative": 576,
+          "zero": 0,
+          "minAbsArea": 0.00019833657939653525
+        },
+        "edges": 900,
+        "boundaryEdges": 72,
+        "boundaryComponents": 1,
+        "boundaryDegreeNotTwo": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": 0,
+        "euler": 1,
+        "edgeRatio": {
+          "min": 0.9978686505518144,
+          "max": 0.9999999999988765
+        },
+        "minY": 0.31424223836242016,
+        "volume": null,
+        "volumeReason": "open surface; enclosed volume is undefined"
+      },
+      "properCrossings": {
+        "properNonAdjacentTrianglePairs": 0,
+        "pairs": [],
+        "scope": "strict segment/triangle interiors, shared-vertex pairs and coplanar overlap excluded"
+      },
+      "partMinY": [
+        {
+          "id": "P01-R",
+          "minY": 0.3142611942001837
+        },
+        {
+          "id": "P02-R",
+          "minY": 0.31424223836242016
+        },
+        {
+          "id": "P04-RB",
+          "minY": 1.4142734500794858
+        }
+      ]
+    },
+    {
+      "name": "walk 2m/s 1s",
+      "frames": 60,
+      "dt": 0.016666666666666666,
+      "motionState": "walk",
+      "transformMs": 0.17263900000000376,
+      "seamGaps": [
+        {
+          "id": "P01-R:outside=P02-R:inside",
+          "max": 0
+        },
+        {
+          "id": "P01-R:top=P04-RB:bottom",
+          "max": 0
+        }
+      ],
+      "metrics": {
+        "vertices": 325,
+        "triangles": 576,
+        "finite": true,
+        "areaM2": 0.5424884239885263,
+        "minTriangleAreaM2": 0.00019505874743430763,
+        "degenerate": 0,
+        "minTriangleVertexNormalDot": 0.9823415783260339,
+        "reversedAgainstVertexNormals": 0,
+        "uv": {
+          "positive": 0,
+          "negative": 576,
+          "zero": 0,
+          "minAbsArea": 0.00019833657939653525
+        },
+        "edges": 900,
+        "boundaryEdges": 72,
+        "boundaryComponents": 1,
+        "boundaryDegreeNotTwo": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": 0,
+        "euler": 1,
+        "edgeRatio": {
+          "min": 1.000000000003167,
+          "max": 1.0059863142012202
+        },
+        "minY": 0.3098576644380059,
+        "volume": null,
+        "volumeReason": "open surface; enclosed volume is undefined"
+      },
+      "properCrossings": {
+        "properNonAdjacentTrianglePairs": 0,
+        "pairs": [],
+        "scope": "strict segment/triangle interiors, shared-vertex pairs and coplanar overlap excluded"
+      },
+      "partMinY": [
+        {
+          "id": "P01-R",
+          "minY": 0.3217622894065386
+        },
+        {
+          "id": "P02-R",
+          "minY": 0.3098576644380059
+        },
+        {
+          "id": "P04-RB",
+          "minY": 1.4190931915636789
+        }
+      ]
+    },
+    {
+      "name": "turn right .6rad 1s",
+      "frames": 60,
+      "dt": 0.016666666666666666,
+      "motionState": "idle",
+      "transformMs": 0.05040400000001455,
+      "seamGaps": [
+        {
+          "id": "P01-R:outside=P02-R:inside",
+          "max": 0
+        },
+        {
+          "id": "P01-R:top=P04-RB:bottom",
+          "max": 0
+        }
+      ],
+      "metrics": {
+        "vertices": 325,
+        "triangles": 576,
+        "finite": true,
+        "areaM2": 0.5424884239885258,
+        "minTriangleAreaM2": 0.00019505874743430847,
+        "degenerate": 0,
+        "minTriangleVertexNormalDot": 0.982341578326033,
+        "reversedAgainstVertexNormals": 0,
+        "uv": {
+          "positive": 0,
+          "negative": 576,
+          "zero": 0,
+          "minAbsArea": 0.00019833657939653525
+        },
+        "edges": 900,
+        "boundaryEdges": 72,
+        "boundaryComponents": 1,
+        "boundaryDegreeNotTwo": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": 0,
+        "euler": 1,
+        "edgeRatio": {
+          "min": 1.0000000000031672,
+          "max": 1.0059863142012195
+        },
+        "minY": 0.31693545084308844,
+        "volume": null,
+        "volumeReason": "open surface; enclosed volume is undefined"
+      },
+      "properCrossings": {
+        "properNonAdjacentTrianglePairs": 0,
+        "pairs": [],
+        "scope": "strict segment/triangle interiors, shared-vertex pairs and coplanar overlap excluded"
+      },
+      "partMinY": [
+        {
+          "id": "P01-R",
+          "minY": 0.3169698500350995
+        },
+        {
+          "id": "P02-R",
+          "minY": 0.31693545084308844
+        },
+        {
+          "id": "P04-RB",
+          "minY": 1.416974043637118
+        }
+      ]
+    },
+    {
+      "name": "sealed canonical",
+      "frames": 1,
+      "dt": 0,
+      "motionState": "sealed",
+      "transformMs": 0.05098600000002307,
+      "seamGaps": [
+        {
+          "id": "P01-R:outside=P02-R:inside",
+          "max": 0
+        },
+        {
+          "id": "P01-R:top=P04-RB:bottom",
+          "max": 0
+        }
+      ],
+      "metrics": {
+        "vertices": 325,
+        "triangles": 576,
+        "finite": true,
+        "areaM2": 0.5407979779772832,
+        "minTriangleAreaM2": 0.00019495884658770504,
+        "degenerate": 0,
+        "minTriangleVertexNormalDot": 0.9825762290567792,
+        "reversedAgainstVertexNormals": 0,
+        "uv": {
+          "positive": 0,
+          "negative": 576,
+          "zero": 0,
+          "minAbsArea": 0.00019833657939653525
+        },
+        "edges": 900,
+        "boundaryEdges": 72,
+        "boundaryComponents": 1,
+        "boundaryDegreeNotTwo": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": 0,
+        "euler": 1,
+        "edgeRatio": {
+          "min": 0.9999999999999922,
+          "max": 1.0000000000000087
+        },
+        "minY": 0.3149877199978998,
+        "volume": null,
+        "volumeReason": "open surface; enclosed volume is undefined"
+      },
+      "properCrossings": {
+        "properNonAdjacentTrianglePairs": 0,
+        "pairs": [],
+        "scope": "strict segment/triangle interiors, shared-vertex pairs and coplanar overlap excluded"
+      },
+      "partMinY": [
+        {
+          "id": "P01-R",
+          "minY": 0.3226065770493337
+        },
+        {
+          "id": "P02-R",
+          "minY": 0.3149877199978998
+        },
+        {
+          "id": "P04-RB",
+          "minY": 1.4209717851655252
+        }
+      ]
+    },
+    {
+      "name": "death .45s explicit",
+      "frames": 1,
+      "dt": 0,
+      "motionState": "death",
+      "transformMs": 0.048763000000008105,
+      "seamGaps": [
+        {
+          "id": "P01-R:outside=P02-R:inside",
+          "max": 0
+        },
+        {
+          "id": "P01-R:top=P04-RB:bottom",
+          "max": 0
+        }
+      ],
+      "metrics": {
+        "vertices": 325,
+        "triangles": 576,
+        "finite": true,
+        "areaM2": 0.5407979779772832,
+        "minTriangleAreaM2": 0.00019495884658770528,
+        "degenerate": 0,
+        "minTriangleVertexNormalDot": 0.9825762290567799,
+        "reversedAgainstVertexNormals": 0,
+        "uv": {
+          "positive": 0,
+          "negative": 576,
+          "zero": 0,
+          "minAbsArea": 0.00019833657939653525
+        },
+        "edges": 900,
+        "boundaryEdges": 72,
+        "boundaryComponents": 1,
+        "boundaryDegreeNotTwo": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": 0,
+        "euler": 1,
+        "edgeRatio": {
+          "min": 0.9999999999999909,
+          "max": 1.000000000000011
+        },
+        "minY": -0.0517834525740484,
+        "volume": null,
+        "volumeReason": "open surface; enclosed volume is undefined"
+      },
+      "properCrossings": {
+        "properNonAdjacentTrianglePairs": 0,
+        "pairs": [],
+        "scope": "strict segment/triangle interiors, shared-vertex pairs and coplanar overlap excluded"
+      },
+      "partMinY": [
+        {
+          "id": "P01-R",
+          "minY": -0.0517834525740484
+        },
+        {
+          "id": "P02-R",
+          "minY": -0.021432354612156784
+        },
+        {
+          "id": "P04-RB",
+          "minY": 0.692425873177737
+        }
+      ]
+    },
+    {
+      "name": "death 1s explicit",
+      "frames": 1,
+      "dt": 0,
+      "motionState": "death",
+      "transformMs": 0.13898900000003778,
+      "seamGaps": [
+        {
+          "id": "P01-R:outside=P02-R:inside",
+          "max": 0
+        },
+        {
+          "id": "P01-R:top=P04-RB:bottom",
+          "max": 0
+        }
+      ],
+      "metrics": {
+        "vertices": 325,
+        "triangles": 576,
+        "finite": true,
+        "areaM2": 0.5407979779772835,
+        "minTriangleAreaM2": 0.00019495884658770411,
+        "degenerate": 0,
+        "minTriangleVertexNormalDot": 0.9825762290567801,
+        "reversedAgainstVertexNormals": 0,
+        "uv": {
+          "positive": 0,
+          "negative": 576,
+          "zero": 0,
+          "minAbsArea": 0.00019833657939653525
+        },
+        "edges": 900,
+        "boundaryEdges": 72,
+        "boundaryComponents": 1,
+        "boundaryDegreeNotTwo": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": 0,
+        "euler": 1,
+        "edgeRatio": {
+          "min": 0.999999999999986,
+          "max": 1.000000000000009
+        },
+        "minY": -0.0094444176408634,
+        "volume": null,
+        "volumeReason": "open surface; enclosed volume is undefined"
+      },
+      "properCrossings": {
+        "properNonAdjacentTrianglePairs": 0,
+        "pairs": [],
+        "scope": "strict segment/triangle interiors, shared-vertex pairs and coplanar overlap excluded"
+      },
+      "partMinY": [
+        {
+          "id": "P01-R",
+          "minY": -0.0094444176408634
+        },
+        {
+          "id": "P02-R",
+          "minY": 0.03423367279307854
+        },
+        {
+          "id": "P04-RB",
+          "minY": 0.14522549101554127
+        }
+      ]
+    }
+  ]
+}

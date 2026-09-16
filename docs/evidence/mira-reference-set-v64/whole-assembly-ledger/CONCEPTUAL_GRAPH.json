@@ -1,0 +1,2088 @@
+{
+  "head": [
+    {
+      "fromKey": "head:F01-L",
+      "targetText": "S01",
+      "targetKey": "head:S01",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F01-L",
+      "targetText": "F03-L",
+      "targetKey": "head:F03-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F01-L",
+      "targetText": "F05-L",
+      "targetKey": "head:F05-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F03-L",
+      "targetText": "F01-L",
+      "targetKey": "head:F01-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F03-L",
+      "targetText": "F05-L",
+      "targetKey": "head:F05-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F03-L",
+      "targetText": "S03/S04",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F05-L",
+      "targetText": "F03-L",
+      "targetKey": "head:F03-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F05-L",
+      "targetText": "F07-L",
+      "targetKey": "head:F07-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F05-L",
+      "targetText": "F12",
+      "targetKey": "head:F12",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F07-L",
+      "targetText": "F05-L",
+      "targetKey": "head:F05-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F07-L",
+      "targetText": "F09-L",
+      "targetKey": "head:F09-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F07-L",
+      "targetText": "F16",
+      "targetKey": "head:F16",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F09-L",
+      "targetText": "F07-L",
+      "targetKey": "head:F07-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F09-L",
+      "targetText": "F11",
+      "targetKey": "head:F11",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F09-L",
+      "targetText": "N01",
+      "targetKey": "head:N01",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F14-L",
+      "targetText": "F12",
+      "targetKey": "head:F12",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F14-L",
+      "targetText": "F13",
+      "targetKey": "head:F13",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F14-L",
+      "targetText": "F16",
+      "targetKey": "head:F16",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F01-R",
+      "targetText": "S01",
+      "targetKey": "head:S01",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F01-R",
+      "targetText": "F03-R",
+      "targetKey": "head:F03-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F01-R",
+      "targetText": "F05-R",
+      "targetKey": "head:F05-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F03-R",
+      "targetText": "F01-R",
+      "targetKey": "head:F01-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F03-R",
+      "targetText": "F05-R",
+      "targetKey": "head:F05-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F03-R",
+      "targetText": "S03/S04",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F05-R",
+      "targetText": "F03-R",
+      "targetKey": "head:F03-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F05-R",
+      "targetText": "F07-R",
+      "targetKey": "head:F07-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F05-R",
+      "targetText": "F12",
+      "targetKey": "head:F12",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F07-R",
+      "targetText": "F05-R",
+      "targetKey": "head:F05-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F07-R",
+      "targetText": "F09-R",
+      "targetKey": "head:F09-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F07-R",
+      "targetText": "F16",
+      "targetKey": "head:F16",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F09-R",
+      "targetText": "F07-R",
+      "targetKey": "head:F07-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F09-R",
+      "targetText": "F11",
+      "targetKey": "head:F11",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F09-R",
+      "targetText": "N01",
+      "targetKey": "head:N01",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F14-R",
+      "targetText": "F12",
+      "targetKey": "head:F12",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F14-R",
+      "targetText": "F13",
+      "targetKey": "head:F13",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F14-R",
+      "targetText": "F16",
+      "targetKey": "head:F16",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F11",
+      "targetText": "F09-L",
+      "targetKey": "head:F09-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F11",
+      "targetText": "F09-R",
+      "targetKey": "head:F09-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F11",
+      "targetText": "F17",
+      "targetKey": "head:F17",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F11",
+      "targetText": "N01",
+      "targetKey": "head:N01",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F12",
+      "targetText": "F05-L",
+      "targetKey": "head:F05-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F12",
+      "targetText": "F05-R",
+      "targetKey": "head:F05-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F12",
+      "targetText": "F13",
+      "targetKey": "head:F13",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F13",
+      "targetText": "F12",
+      "targetKey": "head:F12",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F13",
+      "targetText": "F14-L",
+      "targetKey": "head:F14-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F13",
+      "targetText": "F14-R",
+      "targetKey": "head:F14-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F16",
+      "targetText": "F14-L",
+      "targetKey": "head:F14-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F16",
+      "targetText": "F14-R",
+      "targetKey": "head:F14-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F16",
+      "targetText": "F17",
+      "targetKey": "head:F17",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F16",
+      "targetText": "F07-L",
+      "targetKey": "head:F07-L",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F16",
+      "targetText": "F07-R",
+      "targetKey": "head:F07-R",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F17",
+      "targetText": "F16",
+      "targetKey": "head:F16",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:F17",
+      "targetText": "F11",
+      "targetKey": "head:F11",
+      "status": "named-proposed-adjacency",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S01",
+      "targetText": "adjacent scalp loops",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S01",
+      "targetText": "forehead/temple/ear root",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S02",
+      "targetText": "adjacent scalp loops",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S02",
+      "targetText": "forehead/temple/ear root",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S03",
+      "targetText": "adjacent scalp loops",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S03",
+      "targetText": "forehead/temple/ear root",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S04",
+      "targetText": "adjacent scalp loops",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S04",
+      "targetText": "forehead/temple/ear root",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S05",
+      "targetText": "adjacent scalp loops",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:S05",
+      "targetText": "forehead/temple/ear root",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A01-L",
+      "targetText": "same-side adjacent ear patches",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A01-L",
+      "targetText": "temple/scalp",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A02-L",
+      "targetText": "same-side adjacent ear patches",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A02-L",
+      "targetText": "temple/scalp",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A03-L",
+      "targetText": "same-side adjacent ear patches",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A03-L",
+      "targetText": "temple/scalp",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E01-L",
+      "targetText": "preserved eye center",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E01-L",
+      "targetText": "orbital rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E01-L",
+      "targetText": "same-side eyelid bone",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E02-L",
+      "targetText": "preserved eye center",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E02-L",
+      "targetText": "orbital rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E02-L",
+      "targetText": "same-side eyelid bone",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E03-L",
+      "targetText": "preserved eye center",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E03-L",
+      "targetText": "orbital rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E03-L",
+      "targetText": "same-side eyelid bone",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:B01-L",
+      "targetText": "preserved eye center",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:B01-L",
+      "targetText": "orbital rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:B01-L",
+      "targetText": "same-side eyelid bone",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A01-R",
+      "targetText": "same-side adjacent ear patches",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A01-R",
+      "targetText": "temple/scalp",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A02-R",
+      "targetText": "same-side adjacent ear patches",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A02-R",
+      "targetText": "temple/scalp",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A03-R",
+      "targetText": "same-side adjacent ear patches",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:A03-R",
+      "targetText": "temple/scalp",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E01-R",
+      "targetText": "preserved eye center",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E01-R",
+      "targetText": "orbital rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E01-R",
+      "targetText": "same-side eyelid bone",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E02-R",
+      "targetText": "preserved eye center",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E02-R",
+      "targetText": "orbital rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E02-R",
+      "targetText": "same-side eyelid bone",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E03-R",
+      "targetText": "preserved eye center",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E03-R",
+      "targetText": "orbital rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:E03-R",
+      "targetText": "same-side eyelid bone",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:B01-R",
+      "targetText": "preserved eye center",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:B01-R",
+      "targetText": "orbital rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:B01-R",
+      "targetText": "same-side eyelid bone",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:N01",
+      "targetText": "shared 46-point neck rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:N01",
+      "targetText": "jaw/scalp",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:N01",
+      "targetText": "costume opening",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:N02",
+      "targetText": "shared 46-point neck rim",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:N02",
+      "targetText": "jaw/scalp",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:N02",
+      "targetText": "costume opening",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H01",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H01",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H02",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H02",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H03",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H03",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H04",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H04",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H05",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H05",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H06",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H06",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H07",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H07",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H08",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H08",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H09",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H09",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H10",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H10",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H11",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H11",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H12",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H12",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H13",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H13",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H14",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H14",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H15",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H15",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H16",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H16",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H17",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H17",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H18",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H18",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H19",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H19",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H20",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H20",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H21",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H21",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H22",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H22",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H23",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H23",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H24",
+      "targetText": "one scalp-root loop/anchor",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    },
+    {
+      "fromKey": "head:H24",
+      "targetText": "neighboring visible overlap",
+      "targetKey": null,
+      "status": "unresolved-generic-or-ambiguous",
+      "sharedCurve": null
+    }
+  ],
+  "accessoryNamedPorts": [
+    {
+      "port": "R.palm.perimeter",
+      "placements": [
+        "hands:R-palm"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.back.perimeter",
+      "placements": [
+        "hands:R-back"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.thenar.perimeter",
+      "placements": [
+        "hands:R-thenar"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.ulnar.perimeter",
+      "placements": [
+        "hands:R-ulnar"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.first-web.perimeter",
+      "placements": [
+        "hands:R-first-web"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.wrist.perimeter",
+      "placements": [
+        "hands:R-wrist"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.MCP.index.side",
+      "placements": [
+        "hands:R-web-index-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.MCP.middle.side",
+      "placements": [
+        "hands:R-web-index-middle",
+        "hands:R-web-middle-ring"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.palm.distal",
+      "placements": [
+        "hands:R-web-index-middle",
+        "hands:R-web-middle-ring",
+        "hands:R-web-ring-little"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.back.distal",
+      "placements": [
+        "hands:R-web-index-middle",
+        "hands:R-web-middle-ring",
+        "hands:R-web-ring-little"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.MCP.ring.side",
+      "placements": [
+        "hands:R-web-middle-ring",
+        "hands:R-web-ring-little"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.MCP.little.side",
+      "placements": [
+        "hands:R-web-ring-little"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.MCP.index.loop",
+      "placements": [
+        "hands:R-index-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.PIP.index.loop",
+      "placements": [
+        "hands:R-index-proximal",
+        "hands:R-index-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.DIP.index.loop",
+      "placements": [
+        "hands:R-index-middle",
+        "hands:R-index-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.index.nail-bed",
+      "placements": [
+        "hands:R-index-tip",
+        "hands:R-index-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.MCP.middle.loop",
+      "placements": [
+        "hands:R-middle-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.PIP.middle.loop",
+      "placements": [
+        "hands:R-middle-proximal",
+        "hands:R-middle-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.DIP.middle.loop",
+      "placements": [
+        "hands:R-middle-middle",
+        "hands:R-middle-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.middle.nail-bed",
+      "placements": [
+        "hands:R-middle-tip",
+        "hands:R-middle-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.MCP.ring.loop",
+      "placements": [
+        "hands:R-ring-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.PIP.ring.loop",
+      "placements": [
+        "hands:R-ring-proximal",
+        "hands:R-ring-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.DIP.ring.loop",
+      "placements": [
+        "hands:R-ring-middle",
+        "hands:R-ring-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.ring.nail-bed",
+      "placements": [
+        "hands:R-ring-tip",
+        "hands:R-ring-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.MCP.little.loop",
+      "placements": [
+        "hands:R-little-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.PIP.little.loop",
+      "placements": [
+        "hands:R-little-proximal",
+        "hands:R-little-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.DIP.little.loop",
+      "placements": [
+        "hands:R-little-middle",
+        "hands:R-little-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.little.nail-bed",
+      "placements": [
+        "hands:R-little-tip",
+        "hands:R-little-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.MCP.thumb.loop",
+      "placements": [
+        "hands:R-thumb-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.IP.thumb.loop",
+      "placements": [
+        "hands:R-thumb-proximal",
+        "hands:R-thumb-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.thumb.nail-bed",
+      "placements": [
+        "hands:R-thumb-tip",
+        "hands:R-thumb-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.palm.perimeter",
+      "placements": [
+        "hands:L-palm"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.back.perimeter",
+      "placements": [
+        "hands:L-back"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.thenar.perimeter",
+      "placements": [
+        "hands:L-thenar"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.ulnar.perimeter",
+      "placements": [
+        "hands:L-ulnar"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.first-web.perimeter",
+      "placements": [
+        "hands:L-first-web"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.wrist.perimeter",
+      "placements": [
+        "hands:L-wrist"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.MCP.index.side",
+      "placements": [
+        "hands:L-web-index-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.MCP.middle.side",
+      "placements": [
+        "hands:L-web-index-middle",
+        "hands:L-web-middle-ring"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.palm.distal",
+      "placements": [
+        "hands:L-web-index-middle",
+        "hands:L-web-middle-ring",
+        "hands:L-web-ring-little"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.back.distal",
+      "placements": [
+        "hands:L-web-index-middle",
+        "hands:L-web-middle-ring",
+        "hands:L-web-ring-little"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.MCP.ring.side",
+      "placements": [
+        "hands:L-web-middle-ring",
+        "hands:L-web-ring-little"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.MCP.little.side",
+      "placements": [
+        "hands:L-web-ring-little"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.MCP.index.loop",
+      "placements": [
+        "hands:L-index-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.PIP.index.loop",
+      "placements": [
+        "hands:L-index-proximal",
+        "hands:L-index-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.DIP.index.loop",
+      "placements": [
+        "hands:L-index-middle",
+        "hands:L-index-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.index.nail-bed",
+      "placements": [
+        "hands:L-index-tip",
+        "hands:L-index-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.MCP.middle.loop",
+      "placements": [
+        "hands:L-middle-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.PIP.middle.loop",
+      "placements": [
+        "hands:L-middle-proximal",
+        "hands:L-middle-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.DIP.middle.loop",
+      "placements": [
+        "hands:L-middle-middle",
+        "hands:L-middle-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.middle.nail-bed",
+      "placements": [
+        "hands:L-middle-tip",
+        "hands:L-middle-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.MCP.ring.loop",
+      "placements": [
+        "hands:L-ring-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.PIP.ring.loop",
+      "placements": [
+        "hands:L-ring-proximal",
+        "hands:L-ring-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.DIP.ring.loop",
+      "placements": [
+        "hands:L-ring-middle",
+        "hands:L-ring-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.ring.nail-bed",
+      "placements": [
+        "hands:L-ring-tip",
+        "hands:L-ring-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.MCP.little.loop",
+      "placements": [
+        "hands:L-little-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.PIP.little.loop",
+      "placements": [
+        "hands:L-little-proximal",
+        "hands:L-little-middle"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.DIP.little.loop",
+      "placements": [
+        "hands:L-little-middle",
+        "hands:L-little-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.little.nail-bed",
+      "placements": [
+        "hands:L-little-tip",
+        "hands:L-little-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.MCP.thumb.loop",
+      "placements": [
+        "hands:L-thumb-proximal"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.IP.thumb.loop",
+      "placements": [
+        "hands:L-thumb-proximal",
+        "hands:L-thumb-tip"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.thumb.nail-bed",
+      "placements": [
+        "hands:L-thumb-tip",
+        "hands:L-thumb-nail"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.sole.perimeter",
+      "placements": [
+        "boots:R-boot-sole"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.heel.perimeter",
+      "placements": [
+        "boots:R-boot-heel"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.vamp.perimeter",
+      "placements": [
+        "boots:R-boot-vamp"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.toe.perimeter",
+      "placements": [
+        "boots:R-boot-toe"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.heel-back.perimeter",
+      "placements": [
+        "boots:R-boot-heel-back"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.shaft.perimeter",
+      "placements": [
+        "boots:R-boot-shaft"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.rim.perimeter",
+      "placements": [
+        "boots:R-boot-rim"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.welt.perimeter",
+      "placements": [
+        "boots:R-boot-welt"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.vamp.inner",
+      "placements": [
+        "boots:R-boot-quarter-inner"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.heel-back.inner",
+      "placements": [
+        "boots:R-boot-quarter-inner"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.shaft.inner",
+      "placements": [
+        "boots:R-boot-quarter-inner"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.sole.inner",
+      "placements": [
+        "boots:R-boot-quarter-inner"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.vamp.outer",
+      "placements": [
+        "boots:R-boot-quarter-outer"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.heel-back.outer",
+      "placements": [
+        "boots:R-boot-quarter-outer"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.shaft.outer",
+      "placements": [
+        "boots:R-boot-quarter-outer"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.sole.outer",
+      "placements": [
+        "boots:R-boot-quarter-outer"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.shaft-a.start-seat",
+      "placements": [
+        "boots:R-boot-wrap-shaft-a"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.shaft-a.end-seat",
+      "placements": [
+        "boots:R-boot-wrap-shaft-a"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.shaft-b.start-seat",
+      "placements": [
+        "boots:R-boot-wrap-shaft-b"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.shaft-b.end-seat",
+      "placements": [
+        "boots:R-boot-wrap-shaft-b"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.instep.start-seat",
+      "placements": [
+        "boots:R-boot-wrap-instep"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.instep.end-seat",
+      "placements": [
+        "boots:R-boot-wrap-instep"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.heel.fastener-1",
+      "placements": [
+        "boots:R-boot-fastener-1"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.heel.fastener-2",
+      "placements": [
+        "boots:R-boot-fastener-2"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.heel.fastener-3",
+      "placements": [
+        "boots:R-boot-fastener-3"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "R.boot.heel.fastener-4",
+      "placements": [
+        "boots:R-boot-fastener-4"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.sole.perimeter",
+      "placements": [
+        "boots:L-boot-sole"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.heel.perimeter",
+      "placements": [
+        "boots:L-boot-heel"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.vamp.perimeter",
+      "placements": [
+        "boots:L-boot-vamp"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.toe.perimeter",
+      "placements": [
+        "boots:L-boot-toe"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.heel-back.perimeter",
+      "placements": [
+        "boots:L-boot-heel-back"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.shaft.perimeter",
+      "placements": [
+        "boots:L-boot-shaft"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.rim.perimeter",
+      "placements": [
+        "boots:L-boot-rim"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.welt.perimeter",
+      "placements": [
+        "boots:L-boot-welt"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.vamp.inner",
+      "placements": [
+        "boots:L-boot-quarter-inner"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.heel-back.inner",
+      "placements": [
+        "boots:L-boot-quarter-inner"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.shaft.inner",
+      "placements": [
+        "boots:L-boot-quarter-inner"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.sole.inner",
+      "placements": [
+        "boots:L-boot-quarter-inner"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.vamp.outer",
+      "placements": [
+        "boots:L-boot-quarter-outer"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.heel-back.outer",
+      "placements": [
+        "boots:L-boot-quarter-outer"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.shaft.outer",
+      "placements": [
+        "boots:L-boot-quarter-outer"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.sole.outer",
+      "placements": [
+        "boots:L-boot-quarter-outer"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.shaft-a.start-seat",
+      "placements": [
+        "boots:L-boot-wrap-shaft-a"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.shaft-a.end-seat",
+      "placements": [
+        "boots:L-boot-wrap-shaft-a"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.shaft-b.start-seat",
+      "placements": [
+        "boots:L-boot-wrap-shaft-b"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.shaft-b.end-seat",
+      "placements": [
+        "boots:L-boot-wrap-shaft-b"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.instep.start-seat",
+      "placements": [
+        "boots:L-boot-wrap-instep"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.instep.end-seat",
+      "placements": [
+        "boots:L-boot-wrap-instep"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.heel.fastener-1",
+      "placements": [
+        "boots:L-boot-fastener-1"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.heel.fastener-2",
+      "placements": [
+        "boots:L-boot-fastener-2"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.heel.fastener-3",
+      "placements": [
+        "boots:L-boot-fastener-3"
+      ],
+      "geometricWeldVerified": false
+    },
+    {
+      "port": "L.boot.heel.fastener-4",
+      "placements": [
+        "boots:L-boot-fastener-4"
+      ],
+      "geometricWeldVerified": false
+    }
+  ],
+  "clothTypeContracts": [
+    {
+      "typeKey": "cloth:T01",
+      "contract": "T03/T05; top T04/C01; bottom WAIST",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:T02",
+      "contract": "T03; top T04/C02; bottom WAIST",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:T03",
+      "contract": "front T01; rear T02; top T05; bottom WAIST",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:T04",
+      "contract": "inner COLLAR; T01/T02; outer ARMHOLE",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:T05",
+      "contract": "shared ARMHOLE16; T03/T04; S01/S02",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:S01",
+      "contract": "ARMHOLE; side S02; bottom S03/S04",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:S02",
+      "contract": "ARMHOLE; side S01; bottom S03/S04",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:S03",
+      "contract": "top S01/S02; bottom S05/S06; ends S04",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:S04",
+      "contract": "top S01/S02; bottom S05/S06; ends S03",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:S05",
+      "contract": "S03/S04; sides S06; bottom CUFF",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:S06",
+      "contract": "S03/S04; sides S05; bottom CUFF",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:C01",
+      "contract": "lower T01/T04; back C02; front OPEN",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:C02",
+      "contract": "lower T02/T04; ends C01",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:W01",
+      "contract": "ends W02; adjacent W01",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:W02",
+      "contract": "front W01; rear W03; lower P04; brooch seat",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:W03",
+      "contract": "ends W02; upper C02; lower P04",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:P01",
+      "contract": "rear centre; outer P02; top P04; bottom HEM",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:P02",
+      "contract": "rear P01; front P03; top P04; bottom HEM",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:P03",
+      "contract": "outer P02; top W02/P04; inner OPEN; bottom HEM",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:P04",
+      "contract": "inner W02/W03; outer P01/P02/P03",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:L01",
+      "contract": "WAIST; side L03; inner L04/OPEN; bottom L05",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:L02",
+      "contract": "WAIST; side L03; rear centre; bottom L05",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:L03",
+      "contract": "WAIST; front L01; rear L02; bottom L05",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:L04",
+      "contract": "fold along L01 front edge; inside free edge",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:L05",
+      "contract": "corresponding lower panel hem; joined endpoints",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:B01",
+      "contract": "continuous WAIST path",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:B02",
+      "contract": "top B03-hanger; bottom FREE",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:B03",
+      "contract": "belt or tail hinge; closed opening",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:B04",
+      "contract": "hinge B03; tip explicit belt hole",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:F01",
+      "contract": "top CUFF; side F02; bottom WRIST",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:F02",
+      "contract": "top CUFF; side F01; bottom WRIST",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:F03",
+      "contract": "F01/F02; explicit overlap order",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:F04",
+      "contract": "seat W02; rim F05",
+      "sharedCurve": null
+    },
+    {
+      "typeKey": "cloth:F05",
+      "contract": "inner F04; back W02",
+      "sharedCurve": null
+    }
+  ],
+  "note": "Repeated port text is not a shared numerical curve; a named conceptual graph is not a watertight mesh."
+}

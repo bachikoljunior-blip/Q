@@ -1,0 +1,73 @@
+{
+  "provider": "official builtin image_gen.imagegen",
+  "operation": "reference-guided new parts followed by one targeted image edit",
+  "references": [
+    {
+      "path": "docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+      "bytes": 1874282,
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB"
+    },
+    {
+      "path": "docs/evidence/character-reference-v60/references/mira-cape-views-v2.png",
+      "bytes": 2401843,
+      "sha256": "4080eac540f7f92b30adbf484a756e3c435191f8f7213c7a3806434f790d34a2",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB"
+    },
+    {
+      "path": "docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png",
+      "bytes": 2682065,
+      "sha256": "4920620758835d3f635eaa54d0e1b6184081580454ac384b6439fc4ec7006a2a",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "bytes": 1885563,
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v1.png",
+      "bytes": 1913314,
+      "sha256": "24a7abdaedae49f534a0f1570c567d8bb5f48cc24333c61c3c3a7dd61e7854e3",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v2.png",
+      "bytes": 1875444,
+      "sha256": "409535188a6e448e7fb59f415be5302e49513024e429edb3e9d49f85d4fbee4a",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB"
+    }
+  ],
+  "prompts": [
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/image-prompt.txt",
+      "bytes": 2956,
+      "sha256": "eb02b516a79403ea7f6dfcf54910037ea07aa51e190b62ede1d4e8bfba134b75"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/image-edit-prompt.txt",
+      "bytes": 1243,
+      "sha256": "e8bfda7515549ed37e5936bc140c9446939ab513419177eec7661ba7c9daca54"
+    }
+  ],
+  "rawPreserved": true,
+  "generatedIsGameScreenshot": false,
+  "use": "shape-reference only; no texture, inferred-normal, thickness or exact CAD claim",
+  "excluded": "swirls / decorative edging / thick cut rims",
+  "editing": "only official imagegen edit; PNG bytes otherwise untouched"
+}

@@ -1,0 +1,9 @@
+# Mira staff static render batches v64
+
+`makeMiraStaffBatch()` returns `{group, manifest, dispose}`. It constructs the fixed v63 staff, creates four independent draw meshes, then releases temporary author geometry/materials. `batchStaff(existingStaff)` borrows the supplied 19-part assembly without disposing or modifying its resources. Always call the returned `dispose()` for the batch; it is idempotent and does not own source objects.
+
+This finite helper is for the fixed rigid staff. It is not a general material merger. Authored buckets are wood (S01), leather (S04/S05-A/S05-B), bronze (14 parts), and transmissive glass (S16 alone). Both bronze source materials have identical render properties but different identity metadata; the original names and UUIDs remain in each part range. Material render JSON, exact color/vector values, defines, attribute layouts and mesh flags must agree inside each authored bucket. Custom compilation hooks, clipping, textures, mirrored transforms, skinning, partial draw ranges and unknown IDs are rejected.
+
+World transforms are baked into new Float32 attributes. The returned group starts at identity; do not reapply the source transform. All indexed triangle order, UVs, vertex colors and per-part index/vertex intervals are retained. The original source matrices and metadata accompany each range in `manifest.parts`. Group culling is now per material bucket and part transforms/visibility are static; rebuild from the precise source if those change. The transmissive glass stays separate from opaque geometry.
+
+No production entry imports this helper. Four native meshes create a possible reduction in render submissions, not a measured GPU speedup. Buffer storage increases because formerly shared mirrored-position ribs become baked copies. See [the measured report](../../docs/evidence/mira-staff-batch-v64/REPORT.md).
