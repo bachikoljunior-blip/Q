@@ -1,3 +1,27 @@
+## 2026-09-16: 音の原録音rate・破棄時の所有権を再構成し結合検証
+
+[音の結合記録](RECOVERY_AUDIO_INTEGRATION_V52.md)。PR51を正式復元後、原13録音からharmony/pulseを44.1kHz stereoへ再生成し、元motif/foley/24cuesを保持。rate別decoder、同byte fallback、音楽3固定bufferとFX FIFO分離、破棄中再起動の拒否を新規検証した。旧source2hash/新2MP3hashとの一致は回収内容の照合であり、旧PASSの再利用ではない。独立12条件と原媒体検査、結合27工程・324tests全成功115.252264秒。通常34files14,035,434 B、初期165,415 B/3chunks、全27媒体一致。任意HTMLも17,308,120 Bで全媒体と2動作検証成功、16MiBが通常プレイの美術上限でないことを実成果で確認した。
+
+同環境・旧媒体のruntime変更のみでは初期+427 B/Python gzip9+114 B、最終新媒体URL/fingerprint込みでは同baseに対しgzip+111 B。条件を混同しない。初期回帰guardを166,000 B、録音payloadを3,000,000 Bへ実測に基づき明示改定、3chunks/scene遅延/source-byte/provenance検証を維持。原録音rateの保持と所有権修復という実益で判断し、音の聴感や端末合格と呼ばない。通常score Float32は38,102,400 B、96kHz fallbackでは92,160,000 B。24MiB FX FIFOは全audio RAM上限ではない。
+
+最初のruntimeはremote e263ebeb52dc73e8b80ee8839e02a6c1309c3d41/tree170fe179fbeed07f3806af61f80f253a15fdc4f3へ15blob/native差分0で先行保全。完成unitのPR保存を続ける。実main547676fdce8d8e97abed9f065aad0b6e24af2fd6/PR39未merge/Site23 owner-onlyの状態は不変、追加merge mutationなし。公式previewは環境再生成後も監督mailbox不在。実画面/実聴/実機/指定比較のPS4到達と9月20期限内完成の根拠不足を維持し、人間の準備待ちにしない。
+
+次は死亡開始の独立単位。新27条件で回復中hidden槍の再表示侵入を検出し、表示状態を扱う修復後に解消確認した。継続可視entry減少と後続step増加・空中でGame高さ固定を区分し、未検証全体の自然さを合格にしない。身体全体の旧v42候補は未回収として、Mira上衣だけを原人体から登録する独立有限比較を既存Ultra担当が開始した。音・死亡・身体の所有範囲を分け、身体待ちで確定音の保全を止めない。
+
+---
+
+## 2026-09-16 — 保存済み PR51 から実制作を再開
+
+最新の直接指定「残作業続けて」に従い、進捗確認だけで区切る指定を解除して残作業を再開。workspace maintenance後、旧v40結合checkoutと作者checkoutのファイル消失、旧session83029のUnknown process idを確認した。消失原因の詳細やユーザー削除は断定しない。PR51 `fa920db9782b7df42e4e16099a05994e5841dbaa` / tree `d5e6e24af116263306d7f8f7e72336d09c8886da` をGitHubから再取得、1,127 tracked files・tree/HEAD一致とgit fsck成功を確認した。これは保存済みsourceの復元であり、新しい動作検証ではない。旧音3770ee・死亡開始086420はGitHub404、旧v40の29工程は16成功の受領以後不明。最新音・動作・身体試作を回収済みとしない。
+
+同じ受理済みUltra担当actor_motionは死亡開始姿勢、frame_qualityは原レート録音/decoder/音の所有権を別worktreeで再実装する。forest_fidelityが音、combat_vfxが実Game追加27死亡条件を独立レビュー。全担当が旧未完了toolなしを返し、新producer/別remote writerなし。integratorが単独で結合、required gates、通常PR保全を担当する。小さい確定sourceを早く保存する方針で、素材再生成と結合待ちに未保存runtimeを長く残さない。
+
+9月20までの全画面PS4品質達成の根拠は依然不足。既存317testsや復元件数で見通しを改善しない。実画面・聴覚・実機/タッチ/性能・指定比較・main配信の未確認と、失われた制作の再作業を残量に含める。方法見直しは単体HTML必須解除を保持し、同一原録音の高レート経路と同一実Game死亡条件を旧sourceに対して新規比較すること。画像・試験数を増やすだけで自然な動作や豊かな音の合格としない。身体の新造形はこの独立修復の次の有限単位で、失われたv42候補は採用しない。
+
+fresh mainは `547676fdce8d8e97abed9f065aad0b6e24af2fd6`、PR39 open/unmerged、Site23 owner-only/source `f11819aceea515d166846e4bf85082bf2e51e9d1` のまま。未知mergeは追加mutationせず、実main確認後の順次retarget/requiredCI/通常mergeだけを維持。環境再生成後にも公式preview statusはmailbox不在、start/daemon/別browser迂回なし。通常Web一次・任意単体版・同一URL/audienceを保持し、人間準備待ちを制作開始条件にしない。
+
+---
+
 ## 2026-09-16 現在地: player死亡支持の結合検証と実再生経路の改善
 
 [結合記録](PLAYER_SUPPORT_INTEGRATION_V37.md)。既存player関節を調整し、頭・胴・踵を地面へ近づける支持をv35地域素材読込へ結合。27工程317通常tests＋任意2成功122.213450秒、通常34files12,593,412 B、初期164,988 B/3chunks、全27媒体不変。有限な接触条件では新しい地面侵入0、cloth交差42→38だが位置入替5面と残存交差・死亡開始pop・first-use CPUばらつきは残る。形状/材質/他役/非死亡/ゲーム保存は維持、PS4の動作自然さ合格ではない。

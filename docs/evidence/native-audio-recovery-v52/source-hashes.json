@@ -1,0 +1,78 @@
+{
+  "src/audio.js": {
+    "bytes": 24904,
+    "sha256": "2a745e5f569b4151043fba976afe988fb13a4f22a2063cff4c39b439787ae961"
+  },
+  "src/file-audio-bank.js": {
+    "bytes": 5762,
+    "sha256": "34b7922322bef859ab8a527cfd61123c6527ecf45a00a49c4b76fc98dafbcf85"
+  },
+  "scripts/generate-native-score.py": {
+    "bytes": 5371,
+    "sha256": "8651c00d2bf2d2599436e7b03d50ecdd24725d87a9130e291b9844894be0ba73"
+  },
+  "scripts/verify-native-score.py": {
+    "bytes": 3908,
+    "sha256": "e34c0b0f3e2541e89fd1cf1f61ea90108f58a9fe48046377733af2bcf7dcb672"
+  },
+  "scripts/verify-native-audio.mjs": {
+    "bytes": 6708,
+    "sha256": "beaa5eb125fa602801f86ba36083a7badd3c81c00a6ba641a651c136e7542773"
+  },
+  "scripts/verify-soundscape.mjs": {
+    "bytes": 4678,
+    "sha256": "95378ec0f5b57d57b90e2096fc23c7a0eff2554cb7831cb9d30783a8cb936b97"
+  },
+  "scripts/verify-sampled-score.py": {
+    "bytes": 6106,
+    "sha256": "48caeb1d44bc5eef7075d26b66f9faab04c7babad8bb6a4beb8c04d546853fbc"
+  },
+  "scripts/analyze-soundscape.py": {
+    "bytes": 3669,
+    "sha256": "ed845adcf71ca712f72e2b65a57d5c92893eb5e86f735b2ae0eec097ceeb603c"
+  },
+  "tests/native-audio.test.mjs": {
+    "bytes": 6378,
+    "sha256": "eb353ec526def30f333e40f205d1e5df9389aa634e46753eb99278742bc24a5d"
+  },
+  "tests/soundscape-lifecycle.test.mjs": {
+    "bytes": 9812,
+    "sha256": "7efacdfdd141ef3ab1d186aa2d257e3b7e36319c6e2ba1ffd120e89928c463b0"
+  },
+  "tests/soundscape-web-audio-contract.mjs": {
+    "bytes": 3390,
+    "sha256": "421da57ee1d7d92ead04324acbe27fa35be727440cc27fe0e312b4eda520809d"
+  },
+  "src/assets/soundscape/provenance.json": {
+    "bytes": 25571,
+    "sha256": "3a4b614728b7e7233751bdefa2d902feebf0dfcfa817bb9f4df6a62207a6f9f7"
+  },
+  "assets-source/soundscape-vsco/manifest.json": {
+    "bytes": 7449,
+    "sha256": "8f858022a2491e7bfe0352999514be8663673afe365056f297e0c59962184dbd"
+  },
+  "docs/NATIVE_AUDIO_RECOVERY_V52.md": {
+    "bytes": 9283,
+    "sha256": "0f5ad7041ad660a6ad3649e97814d4f5bf4285be9e6f8c6454a355a375e5a975"
+  },
+  "src/assets/soundscape/pilgrim-harmony.mp3": {
+    "bytes": 961326,
+    "sha256": "fa219541b1537f1fa8beb2adc9b3a2c9139e6a8a76be9f2190860b7339b619c3"
+  },
+  "src/assets/soundscape/pilgrim-pulse.mp3": {
+    "bytes": 961326,
+    "sha256": "5d29876c525f67bba1e154736b85230d0c4bb1f85e361ec0bc9ddc34dc164efb"
+  },
+  "src/assets/soundscape/pilgrim-motif.mp3": {
+    "bytes": 192463,
+    "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4"
+  },
+  "src/assets/soundscape/pilgrim-foley.wav": {
+    "bytes": 826370,
+    "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+  },
+  "src/assets/soundscape/cues.json": {
+    "bytes": 1721,
+    "sha256": "da729e0c95ef506d2ca32dfba5691910afb51ec24519ffa978f108eacaf6e280"
+  }
+}

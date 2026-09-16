@@ -1,0 +1,224 @@
+{
+  "at": "2026-09-16T08:49:09.955Z",
+  "candidateRoot": "/workspace/scratch/e72662e3b71f/Q-audio-recovery-v52/",
+  "sourceHashes": {
+    "src/audio.js": "2a745e5f569b4151043fba976afe988fb13a4f22a2063cff4c39b439787ae961",
+    "src/file-audio-bank.js": "34b7922322bef859ab8a527cfd61123c6527ecf45a00a49c4b76fc98dafbcf85"
+  },
+  "mediaRoot": "/workspace/scratch/e72662e3b71f/Q-recovery-v51-20260916",
+  "mediaHashes": {
+    "pilgrim-foley.wav": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+    "pilgrim-harmony.mp3": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+    "pilgrim-motif.mp3": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+    "pilgrim-pulse.mp3": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+    "ember-ambient.wav": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13",
+    "gale-ambient.wav": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0",
+    "moss-ambient.wav": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36",
+    "shared-alert.wav": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a",
+    "shared-claim.wav": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a",
+    "shared-impact.wav": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153",
+    "shared-seal.wav": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5",
+    "shared-step.wav": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+    "shared-swing.wav": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25",
+    "tide-ambient.wav": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba"
+  },
+  "results": [
+    {
+      "test": "normal rates/unique pins/sync/modes/pan/resume/FIFO/active references",
+      "scoreBytes": 29635200,
+      "scoreChannels": {
+        "score:harmony": 2,
+        "score:motif": 1,
+        "score:pulse": 1
+      },
+      "phase": 11.215,
+      "modes": {
+        "title": {
+          "harmony": 0.55,
+          "motif": 0.48,
+          "pulse": 0.16
+        },
+        "exploration": {
+          "harmony": 0.36,
+          "motif": 0.24,
+          "pulse": 0
+        },
+        "combat": {
+          "harmony": 0.48,
+          "motif": 0.28,
+          "pulse": 0.64
+        }
+      },
+      "peak": 2,
+      "scorePeak": 1
+    },
+    {
+      "test": "native fallback",
+      "rate": 44100,
+      "scoreBytes": 33868800,
+      "fxBytes": 3305304
+    },
+    {
+      "test": "native fallback",
+      "rate": 48000,
+      "scoreBytes": 36864000,
+      "fxBytes": 3597608
+    },
+    {
+      "test": "native fallback",
+      "rate": 96000,
+      "scoreBytes": 73728000,
+      "fxBytes": 7195220
+    },
+    {
+      "test": "destructive detach fallback/source bytes/no-refetch/per-evicted-asset retry",
+      "constructors": [
+        44100,
+        22050
+      ],
+      "decodes": [
+        {
+          "file": "pilgrim-harmony.mp3",
+          "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+          "offline": true,
+          "rate": 44100
+        },
+        {
+          "file": "pilgrim-foley.wav",
+          "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+          "offline": true,
+          "rate": 22050
+        },
+        {
+          "file": "pilgrim-harmony.mp3",
+          "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0",
+          "offline": false,
+          "rate": 48000
+        },
+        {
+          "file": "pilgrim-foley.wav",
+          "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+          "offline": false,
+          "rate": 48000
+        },
+        {
+          "file": "pilgrim-motif.mp3",
+          "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+          "offline": true,
+          "rate": 22050
+        },
+        {
+          "file": "pilgrim-motif.mp3",
+          "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+          "offline": false,
+          "rate": 48000
+        },
+        {
+          "file": "pilgrim-pulse.mp3",
+          "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+          "offline": true,
+          "rate": 44100
+        },
+        {
+          "file": "pilgrim-pulse.mp3",
+          "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13",
+          "offline": false,
+          "rate": 48000
+        },
+        {
+          "file": "shared-step.wav",
+          "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+          "offline": true,
+          "rate": 22050
+        },
+        {
+          "file": "shared-step.wav",
+          "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+          "offline": false,
+          "rate": 48000
+        },
+        {
+          "file": "shared-alert.wav",
+          "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a",
+          "offline": true,
+          "rate": 22050
+        },
+        {
+          "file": "shared-alert.wav",
+          "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a",
+          "offline": false,
+          "rate": 48000
+        },
+        {
+          "file": "shared-step.wav",
+          "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+          "offline": true,
+          "rate": 22050
+        },
+        {
+          "file": "shared-step.wav",
+          "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+          "offline": false,
+          "rate": 48000
+        }
+      ]
+    },
+    {
+      "test": "constructor failure cached by rate",
+      "constructors": [
+        44100,
+        22050
+      ],
+      "nativeCalls": 4
+    },
+    {
+      "test": "pause/resume pending score generation",
+      "score": 3,
+      "voices": 6,
+      "fetches": [
+        "pilgrim-harmony.mp3",
+        "pilgrim-foley.wav",
+        "pilgrim-motif.mp3",
+        "pilgrim-pulse.mp3"
+      ]
+    },
+    {
+      "test": "dispose before late detached-failure callback",
+      "lateNative": 0,
+      "voices": 0,
+      "pending": 0
+    },
+    {
+      "test": "dispose flags before native suspend settles/reentry refusal",
+      "status": "disposed",
+      "voices": 0,
+      "score": 0
+    },
+    {
+      "test": "late native resume after disposal",
+      "restart": false,
+      "voices": 0
+    },
+    {
+      "test": "context replacement rejects old decode",
+      "result": null,
+      "cacheWrites": 0
+    },
+    {
+      "test": "vault ABA/one-shot pending/concurrent decode",
+      "peak": 6,
+      "scorePeak": 1,
+      "fetches": [
+        "pilgrim-harmony.mp3",
+        "pilgrim-foley.wav",
+        "ember-ambient.wav",
+        "tide-ambient.wav",
+        "shared-step.wav",
+        "shared-impact.wav",
+        "pilgrim-motif.mp3",
+        "pilgrim-pulse.mp3"
+      ]
+    }
+  ],
+  "boundary": "Newly executed production control-flow/ownership checks after recovery. Independent explicit API doubles consume exact real encoded input, but do not perform Web Audio decode/render/listening or device CPU/GPU/GC measurement."
+}

@@ -1,0 +1,66 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 review:combat
+> node scripts/review-combat.mjs
+
+{
+  "passed": true,
+  "formatVersion": 2,
+  "scenarios": [
+    {
+      "id": "knight-no-response",
+      "hp": 98,
+      "events": 2,
+      "samples": 61
+    },
+    {
+      "id": "knight-dodge",
+      "hp": 120,
+      "events": 3,
+      "samples": 53
+    },
+    {
+      "id": "knight-parry",
+      "hp": 120,
+      "events": 4,
+      "samples": 61
+    },
+    {
+      "id": "boss-grounded",
+      "hp": 86,
+      "events": 2,
+      "samples": 88
+    },
+    {
+      "id": "boss-jump",
+      "hp": 120,
+      "events": 2,
+      "samples": 88
+    },
+    {
+      "id": "three-threat-no-response",
+      "hp": 98,
+      "events": 4,
+      "samples": 14
+    },
+    {
+      "id": "three-threat-follow-hud",
+      "hp": 120,
+      "events": 5,
+      "samples": 8
+    },
+    {
+      "id": "same-frame-attack-parry-touch-first",
+      "hp": 120,
+      "events": 4,
+      "samples": 11
+    },
+    {
+      "id": "same-frame-attack-parry-keyboard-first",
+      "hp": 120,
+      "events": 4,
+      "samples": 11
+    }
+  ],
+  "note": "Deterministic Game ticks, explicit laboratory fixture patches, Three clip projection, production HUD bridge and cross-channel input arbitration. No WebGL pixels, browser event dispatch, audio, physical touch device, iOS/Android performance or external player-quality observation."
+}

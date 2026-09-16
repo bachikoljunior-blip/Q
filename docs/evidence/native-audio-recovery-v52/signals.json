@@ -1,0 +1,459 @@
+{
+  "passed": true,
+  "heard": false,
+  "actualWebAudio": false,
+  "assets": [
+    {
+      "file": "pilgrim-harmony.mp3",
+      "bytes": 961326,
+      "sha256": "fa219541b1537f1fa8beb2adc9b3a2c9139e6a8a76be9f2190860b7339b619c3",
+      "header": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 2
+      },
+      "frames": 2116800,
+      "seconds": 48.0,
+      "float32Bytes": 16934400,
+      "peak": 0.63607257604599,
+      "peak4xEstimate": 0.6371265523507863,
+      "rms": 0.1282519192678025,
+      "clipSamples": 0,
+      "energyFractionAbove11025Hz": 1.1458850242847992e-06,
+      "lrCorrelation": 0.8767289617517879,
+      "monoToStereoRms": 0.96812347234795,
+      "loop": {
+        "analysisRate": 44100,
+        "halfWindowSeconds": 0.0060090702947845805,
+        "seam": {
+          "jump": 0.0008384108950849622,
+          "maxDelta": 0.03137485682964325,
+          "rms": 0.056138061596640795
+        },
+        "internalBarCuts": [
+          {
+            "jump": 0.02004522830247879,
+            "maxDelta": 0.042711686342954636,
+            "rms": 0.108862956258231
+          },
+          {
+            "jump": 0.018248431384563446,
+            "maxDelta": 0.05041185021400452,
+            "rms": 0.1745765281026288
+          },
+          {
+            "jump": 0.008805610239505768,
+            "maxDelta": 0.04993616044521332,
+            "rms": 0.1168658576308854
+          },
+          {
+            "jump": 0.01088474690914154,
+            "maxDelta": 0.023711249232292175,
+            "rms": 0.12144168687672954
+          },
+          {
+            "jump": 0.017810765653848648,
+            "maxDelta": 0.036689095199108124,
+            "rms": 0.13446747125448189
+          },
+          {
+            "jump": 0.003741540014743805,
+            "maxDelta": 0.051559120416641235,
+            "rms": 0.1795809108049056
+          },
+          {
+            "jump": 0.014028511941432953,
+            "maxDelta": 0.03472220152616501,
+            "rms": 0.13615733913492095
+          },
+          {
+            "jump": 0.01723022758960724,
+            "maxDelta": 0.03381580114364624,
+            "rms": 0.10456710651777884
+          },
+          {
+            "jump": 0.02388612926006317,
+            "maxDelta": 0.03840962518006563,
+            "rms": 0.17864862576246637
+          },
+          {
+            "jump": 0.014474064111709595,
+            "maxDelta": 0.0532049834728241,
+            "rms": 0.16417114922066559
+          },
+          {
+            "jump": 0.01731770485639572,
+            "maxDelta": 0.03589116223156452,
+            "rms": 0.14339301248673356
+          },
+          {
+            "jump": 0.014429528266191483,
+            "maxDelta": 0.02817182755097747,
+            "rms": 0.06953750984717097
+          },
+          {
+            "jump": 0.010742664337158203,
+            "maxDelta": 0.04594063013792038,
+            "rms": 0.1702436335219021
+          },
+          {
+            "jump": 0.018207110464572906,
+            "maxDelta": 0.049727052450180054,
+            "rms": 0.16902161390708936
+          },
+          {
+            "jump": 0.020712316036224365,
+            "maxDelta": 0.049932368099689484,
+            "rms": 0.18711232474922482
+          }
+        ],
+        "interpretation": "Identical windows, descriptive only; no chosen audibility threshold."
+      }
+    },
+    {
+      "file": "pilgrim-motif.mp3",
+      "bytes": 192463,
+      "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+      "header": {
+        "codec_name": "mp3",
+        "sample_rate": "22050",
+        "channels": 1
+      },
+      "frames": 1058400,
+      "seconds": 48.0,
+      "float32Bytes": 4233600,
+      "peak": 0.7403414249420166,
+      "peak4xEstimate": 0.74086496659558,
+      "rms": 0.13485023746102293,
+      "clipSamples": 0,
+      "energyFractionAbove11025Hz": 0.0,
+      "loop": {
+        "analysisRate": 44100,
+        "halfWindowSeconds": 0.0060090702947845805,
+        "seam": {
+          "jump": 0.010154824238270521,
+          "maxDelta": 0.01830679178237915,
+          "rms": 0.06731952609565192
+        },
+        "internalBarCuts": [
+          {
+            "jump": 0.03437148220837116,
+            "maxDelta": 0.0468672513961792,
+            "rms": 0.15735650621780908
+          },
+          {
+            "jump": 0.025228820741176605,
+            "maxDelta": 0.025848977267742157,
+            "rms": 0.14023526573352327
+          },
+          {
+            "jump": 0.0007054731249809265,
+            "maxDelta": 0.01189551642164588,
+            "rms": 0.07370505948975513
+          },
+          {
+            "jump": 0.007623760029673576,
+            "maxDelta": 0.025644227862358093,
+            "rms": 0.1008611773738393
+          },
+          {
+            "jump": 0.03890448063611984,
+            "maxDelta": 0.045338474214076996,
+            "rms": 0.13352090983015483
+          },
+          {
+            "jump": 0.010473161935806274,
+            "maxDelta": 0.030568581074476242,
+            "rms": 0.1078062482799801
+          },
+          {
+            "jump": 0.017339583486318588,
+            "maxDelta": 0.033862851560115814,
+            "rms": 0.09240454110144804
+          },
+          {
+            "jump": 0.0005248831585049629,
+            "maxDelta": 0.029925808310508728,
+            "rms": 0.06969057619862128
+          },
+          {
+            "jump": 0.016068175435066223,
+            "maxDelta": 0.026921793818473816,
+            "rms": 0.080107284258802
+          },
+          {
+            "jump": 0.012351419776678085,
+            "maxDelta": 0.017401160672307014,
+            "rms": 0.0705106417608955
+          },
+          {
+            "jump": 0.0019926801323890686,
+            "maxDelta": 0.016996439546346664,
+            "rms": 0.08544142940664445
+          },
+          {
+            "jump": 0.0014414489269256592,
+            "maxDelta": 0.03552866727113724,
+            "rms": 0.12268797433297292
+          },
+          {
+            "jump": 0.0008412264287471771,
+            "maxDelta": 0.029158752411603928,
+            "rms": 0.07891472879738985
+          },
+          {
+            "jump": 0.0031503699719905853,
+            "maxDelta": 0.013964645564556122,
+            "rms": 0.056211027981443513
+          },
+          {
+            "jump": 0.0016253851354122162,
+            "maxDelta": 0.008674193173646927,
+            "rms": 0.04602947746164593
+          }
+        ],
+        "interpretation": "Identical windows, descriptive only; no chosen audibility threshold."
+      }
+    },
+    {
+      "file": "pilgrim-pulse.mp3",
+      "bytes": 961326,
+      "sha256": "5d29876c525f67bba1e154736b85230d0c4bb1f85e361ec0bc9ddc34dc164efb",
+      "header": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 2
+      },
+      "frames": 2116800,
+      "seconds": 48.0,
+      "float32Bytes": 16934400,
+      "peak": 0.5103200078010559,
+      "peak4xEstimate": 0.5106448597022974,
+      "rms": 0.0377213205885713,
+      "clipSamples": 0,
+      "energyFractionAbove11025Hz": 3.840191596808959e-06,
+      "lrCorrelation": 0.9982482190363864,
+      "monoToStereoRms": 0.9995615769762823,
+      "loop": {
+        "analysisRate": 44100,
+        "halfWindowSeconds": 0.0060090702947845805,
+        "seam": {
+          "jump": 4.513652129389811e-05,
+          "maxDelta": 0.003906048834323883,
+          "rms": 0.01987180739486548
+        },
+        "internalBarCuts": [
+          {
+            "jump": 0.0008371807052753866,
+            "maxDelta": 0.0034928061068058014,
+            "rms": 0.029611842779664905
+          },
+          {
+            "jump": 0.0011929523898288608,
+            "maxDelta": 0.0037591680884361267,
+            "rms": 0.030424159647433002
+          },
+          {
+            "jump": 0.0008071382762864232,
+            "maxDelta": 0.0040190815925598145,
+            "rms": 0.03004489493080104
+          },
+          {
+            "jump": 0.0002992182271555066,
+            "maxDelta": 0.0021165162324905396,
+            "rms": 0.021753550496684003
+          },
+          {
+            "jump": 0.00048157665878534317,
+            "maxDelta": 0.0030282866209745407,
+            "rms": 0.023203802614887192
+          },
+          {
+            "jump": 0.000527349766343832,
+            "maxDelta": 0.0023649632930755615,
+            "rms": 0.022366118339146698
+          },
+          {
+            "jump": 0.000285698683001101,
+            "maxDelta": 0.002437300980091095,
+            "rms": 0.02224938100124435
+          },
+          {
+            "jump": 0.00029546674340963364,
+            "maxDelta": 0.0037387236952781677,
+            "rms": 0.029603704674686423
+          },
+          {
+            "jump": 0.00041106503340415657,
+            "maxDelta": 0.003283880650997162,
+            "rms": 0.029240253558111225
+          },
+          {
+            "jump": 0.0005239497404545546,
+            "maxDelta": 0.003864184021949768,
+            "rms": 0.02990149902915001
+          },
+          {
+            "jump": 0.000891667150426656,
+            "maxDelta": 0.00382203608751297,
+            "rms": 0.02993722765712865
+          },
+          {
+            "jump": 0.0006670717848464847,
+            "maxDelta": 0.00290687195956707,
+            "rms": 0.02231710453493235
+          },
+          {
+            "jump": 0.0006100673926994205,
+            "maxDelta": 0.0024961624294519424,
+            "rms": 0.022224237092601025
+          },
+          {
+            "jump": 0.0002511627972126007,
+            "maxDelta": 0.0027764253318309784,
+            "rms": 0.022555584195133288
+          },
+          {
+            "jump": 0.0008893510675989091,
+            "maxDelta": 0.0027437638491392136,
+            "rms": 0.022331463043240806
+          }
+        ],
+        "interpretation": "Identical windows, descriptive only; no chosen audibility threshold."
+      }
+    },
+    {
+      "file": "pilgrim-foley.wav",
+      "bytes": 826370,
+      "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+      "header": {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "22050",
+        "channels": 1
+      },
+      "frames": 413163,
+      "seconds": 18.737551020408162,
+      "float32Bytes": 1652652,
+      "peak": 0.819976806640625,
+      "peak4xEstimate": 0.8635903947435641,
+      "rms": 0.09203489880999811,
+      "clipSamples": 0,
+      "energyFractionAbove11025Hz": 0.0
+    }
+  ],
+  "mixes": {
+    "title": {
+      "unityPeak": 0.4392150644522942,
+      "defaultBusMasterPeak": 0.1482350842526493,
+      "rms": 0.08474597676798554,
+      "scope": "48s synchronized music only; actual static gains and motif pan; before compressor, without SFX/ambience."
+    },
+    "exploration": {
+      "unityPeak": 0.26423699086219254,
+      "defaultBusMasterPeak": 0.08917998441598998,
+      "rms": 0.05176277295830076,
+      "scope": "48s synchronized music only; actual static gains and motif pan; before compressor, without SFX/ambience."
+    },
+    "combat": {
+      "unityPeak": 0.5378796895029269,
+      "defaultBusMasterPeak": 0.1815343952072378,
+      "rms": 0.07161319482064402,
+      "scope": "48s synchronized music only; actual static gains and motif pan; before compressor, without SFX/ambience."
+    }
+  },
+  "fileDescriptors": {
+    "pilgrim-harmony.mp3": {
+      "rate": 44100,
+      "channels": 2,
+      "frames": 2116800,
+      "seconds": 48.0
+    },
+    "pilgrim-motif.mp3": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 1058400,
+      "seconds": 48.0
+    },
+    "pilgrim-pulse.mp3": {
+      "rate": 44100,
+      "channels": 2,
+      "frames": 2116800,
+      "seconds": 48.0
+    },
+    "pilgrim-foley.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 413163,
+      "seconds": 18.737551020408162
+    },
+    "ember-ambient.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 88200,
+      "seconds": 4.0
+    },
+    "gale-ambient.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 88200,
+      "seconds": 4.0
+    },
+    "moss-ambient.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 88200,
+      "seconds": 4.0
+    },
+    "shared-alert.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 10584,
+      "seconds": 0.48
+    },
+    "shared-claim.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 19845,
+      "seconds": 0.9
+    },
+    "shared-impact.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 3969,
+      "seconds": 0.18
+    },
+    "shared-seal.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 15435,
+      "seconds": 0.7
+    },
+    "shared-step.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 3528,
+      "seconds": 0.16
+    },
+    "shared-swing.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 5292,
+      "seconds": 0.24
+    },
+    "tide-ambient.wav": {
+      "rate": 22050,
+      "channels": 1,
+      "frames": 88200,
+      "seconds": 4.0
+    }
+  },
+  "scoreFloat32Bytes": 38102400,
+  "allAuthoredAtPolicyRateBytes": 41400864,
+  "encodedSoundscapeBytes": 2941485,
+  "fallbackScoreBytes": {
+    "44100": 42336000,
+    "48000": 46080000,
+    "96000": 92160000
+  },
+  "unknown": "Native decoder working memory, acquired node copies, GC timing, CPU, playback and device memory peak not observed."
+}

@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "base": "fa920db9782b7df42e4e16099a05994e5841dbaa",
+  "runtimeCheckpoint": "57ced28a16709b1515714f0524bfcc5011c71519",
+  "startedUtc": "2026-09-16T08:42:30Z",
+  "sourceFrozenByUtc": "2026-09-16T08:53:52Z",
+  "tests": {
+    "count": 324,
+    "pass": 324,
+    "fail": 0,
+    "durationMs": 47017.046052
+  },
+  "main": {
+    "passed": true,
+    "scenarios": 18,
+    "negativeControls": 3,
+    "detections": 6,
+    "sourceFingerprint": "sha256:507bc32c3a8aff07630de36eaa6b832b1dfbd9c61ddebfafe7131fff330d096d",
+    "report": "artifacts/main-runtime-report.json"
+  },
+  "independentStatus": "Reviewer reports12freshconditions passed; final report preserved separately by reviewer/integrator",
+  "authorArtifactScope": "source\u2192Vite 27media exact; release receipt/stage/artifact guard owned by integrator, not rerun or edited here",
+  "runtimeMatchesRememberedPriorHashes": true,
+  "newMediaMatchesRememberedPriorHashes": true,
+  "heard": false,
+  "realWebAudio": false,
+  "deviceCpuOrMemoryMeasured": false,
+  "remoteMutation": false,
+  "siteMutation": false,
+  "rework": "One test helper default-argument setup corrected; no production runtime rework after source restoration. Separate duration not measured."
+}

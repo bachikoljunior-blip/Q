@@ -1,0 +1,49 @@
+{
+  "at": "2026-09-16T08:54:29.788681+00:00",
+  "startedAt": "2026-09-16T08:43:14+00:00",
+  "elapsedSeconds": 675.788681,
+  "scope": "Fresh independent recovery review; no repository writes or historical PASS reuse",
+  "baseCommit": "fa920db9782b7df42e4e16099a05994e5841dbaa",
+  "candidateHeadAtFinalRead": "57ced28a16709b1515714f0524bfcc5011c71519",
+  "sourceHashes": {
+    "src/audio.js": "2a745e5f569b4151043fba976afe988fb13a4f22a2063cff4c39b439787ae961",
+    "src/file-audio-bank.js": "34b7922322bef859ab8a527cfd61123c6527ecf45a00a49c4b76fc98dafbcf85"
+  },
+  "additionalReadbackHashes": {
+    "src/soundscape-asset-urls.js": "071d87e650e9107a4a4481e45b6810f21ad860a2853189ae38841beddcf088e2",
+    "src/vault-asset-urls.js": "495f978b1b689ecc03377bac791d03392a322c8a561aa120fc1c75dff249a338",
+    "src/vault-audio-cues.js": "5305293c89178e46ee4829644fa2fc53cb3af4dad64e5ec813ffb984d5c4a1a8",
+    "src/assets/soundscape/cues.json": "da729e0c95ef506d2ca32dfba5691910afb51ec24519ffa978f108eacaf6e280",
+    "src/assets/soundscape/provenance.json": "3a4b614728b7e7233751bdefa2d902feebf0dfcfa817bb9f4df6a62207a6f9f7",
+    "scripts/generate-native-score.py": "8651c00d2bf2d2599436e7b03d50ecdd24725d87a9130e291b9844894be0ba73"
+  },
+  "rawRecordings": {
+    "count": 13,
+    "bytes": 28478818,
+    "allMatchBaseManifest": true,
+    "licenseHash": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+  },
+  "media": {
+    "count": 14,
+    "changedFromBase": [
+      "pilgrim-harmony.mp3",
+      "pilgrim-pulse.mp3"
+    ],
+    "encodedBytes": 3764831,
+    "soundscapeBytes": 2941485,
+    "soundscapeDeltaBytes": 1441595,
+    "scoreFloatBytes": 38102400,
+    "otherMediaFloatBytes": 3298464,
+    "allMediaFloatBytes": 41400864,
+    "provenanceMatchesActualBytesAndMetadata": true
+  },
+  "runtimeConditionsPassed": 12,
+  "requiredSourceFixes": [],
+  "limits": [
+    "No real Web Audio API execution, listening, acoustic comparison, native resampler/MP3 gapless conformance, CPU/device/GPU/heap/RSS/GC measurement.",
+    "Decoded byte counts are PCM payload, not peak/native process memory. Active voices, pending decodes, copies, reverb and browser overhead are additional.",
+    "Only score decodes are serialized: observed production control-flow doubles peak at 2 initial decodes, 6 in the vault ABA/FX case.",
+    "Offline constructor failure is cached by rate; Offline decode rejection is retried per subsequently uncached asset, including after FIFO eviction.",
+    "Final build budgets, artifact staging, regression suite, generator reproducibility and source provenance gate are author/integrator responsibilities; historical results are not fresh evidence."
+  ]
+}

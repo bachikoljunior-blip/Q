@@ -1,0 +1,28 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 compare:touch
+> node scripts/compare-touch-input.mjs
+
+{
+  "passed": true,
+  "rounds": 20,
+  "viewports": [
+    {
+      "id": "portrait",
+      "matches": "20/20",
+      "hp": 120,
+      "negativeHp": 98,
+      "maxTouchPointers": 3,
+      "orderHpSpread": 0
+    },
+    {
+      "id": "landscape",
+      "matches": "20/20",
+      "hp": 120,
+      "negativeHp": 98,
+      "maxTouchPointers": 3,
+      "orderHpSpread": 0
+    }
+  ],
+  "note": "Direct CombatInputQueue input is compared with events dispatched through the production touch adapter on Node EventTarget. This does not observe a browser PointerEvent implementation, element hit-testing, CSS layout, WebGL pixels, physical touch, audio, device performance, or external player quality."
+}

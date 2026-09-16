@@ -14,12 +14,13 @@ const entryPath=`${root}/${entryMatch[1]}`,entry=await readFile(entryPath,'utf8'
 assert.equal(entryMatch[1],manifest['index.html'].file);
 const entryBytes=(await stat(entryPath)).size;
 assert(!html.includes('rel="modulepreload"'),'deferred 3D chunks must not be preloaded by the title page');
-// A tunable transfer-size regression guard, not a measured device-performance
-// acceptance criterion. v0.21 adds the title controller and gesture-unlocked
-// sound engine: measured 161,642 bytes after integration versus the old
-// 150,000-byte ceiling. Three/world remain deferred; decoded assets are bounded
-// separately. The explicit revised allowance leaves under 3.4 KB headroom.
-const initialJsBudget=165000;
+// A tunable transfer-size regression guard, not a service or device limit.
+// v52 preserves authored-rate music and explicit active/cache ownership:
+// same-environment code-only builds measure 164,988 -> 165,415 bytes (+427).
+// The integrator adopted this bounded allowance with the three-chunk lazy
+// scene contract intact; see docs/evidence/recovery-v52/entry-budget-comparison.json.
+// Audio residency and actual device/startup acceptance remain separate.
+const initialJsBudget=166000;
 assert(entryBytes<initialJsBudget,`initial application chunk is ${entryBytes} bytes; expected under ${initialJsBudget}`);
 assert(/import\("\.\/scene-[^"']+\.js"\)/.test(entry),'3D scene must be loaded by dynamic import');
 

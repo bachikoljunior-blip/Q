@@ -1,3 +1,15 @@
+## 2026-09-16: 音の原録音rate・破棄時の所有権を再構成し結合検証
+
+[音の結合記録](RECOVERY_AUDIO_INTEGRATION_V52.md)。PR51を正式復元後、原13録音からharmony/pulseを44.1kHz stereoへ再生成し、元motif/foley/24cuesを保持。rate別decoder、同byte fallback、音楽3固定bufferとFX FIFO分離、破棄中再起動の拒否を新規検証した。旧source2hash/新2MP3hashとの一致は回収内容の照合であり、旧PASSの再利用ではない。独立12条件と原媒体検査、結合27工程・324tests全成功115.252264秒。通常34files14,035,434 B、初期165,415 B/3chunks、全27媒体一致。任意HTMLも17,308,120 Bで全媒体と2動作検証成功、16MiBが通常プレイの美術上限でないことを実成果で確認した。
+
+同環境・旧媒体のruntime変更のみでは初期+427 B/Python gzip9+114 B、最終新媒体URL/fingerprint込みでは同baseに対しgzip+111 B。条件を混同しない。初期回帰guardを166,000 B、録音payloadを3,000,000 Bへ実測に基づき明示改定、3chunks/scene遅延/source-byte/provenance検証を維持。原録音rateの保持と所有権修復という実益で判断し、音の聴感や端末合格と呼ばない。通常score Float32は38,102,400 B、96kHz fallbackでは92,160,000 B。24MiB FX FIFOは全audio RAM上限ではない。
+
+最初のruntimeはremote e263ebeb52dc73e8b80ee8839e02a6c1309c3d41/tree170fe179fbeed07f3806af61f80f253a15fdc4f3へ15blob/native差分0で先行保全。完成unitのPR保存を続ける。実main547676fdce8d8e97abed9f065aad0b6e24af2fd6/PR39未merge/Site23 owner-onlyの状態は不変、追加merge mutationなし。公式previewは環境再生成後も監督mailbox不在。実画面/実聴/実機/指定比較のPS4到達と9月20期限内完成の根拠不足を維持し、人間の準備待ちにしない。
+
+次は死亡開始の独立単位。新27条件で回復中hidden槍の再表示侵入を検出し、表示状態を扱う修復後に解消確認した。継続可視entry減少と後続step増加・空中でGame高さ固定を区分し、未検証全体の自然さを合格にしない。身体全体の旧v42候補は未回収として、Mira上衣だけを原人体から登録する独立有限比較を既存Ultra担当が開始した。音・死亡・身体の所有範囲を分け、身体待ちで確定音の保全を止めない。
+
+---
+
 ## 2026-09-16 現在地: player死亡支持の結合検証と実再生経路の改善
 
 [結合記録](PLAYER_SUPPORT_INTEGRATION_V37.md)。既存player関節を調整し、頭・胴・踵を地面へ近づける支持をv35地域素材読込へ結合。27工程317通常tests＋任意2成功122.213450秒、通常34files12,593,412 B、初期164,988 B/3chunks、全27媒体不変。有限な接触条件では新しい地面侵入0、cloth交差42→38だが位置入替5面と残存交差・死亡開始pop・first-use CPUばらつきは残る。形状/材質/他役/非死亡/ゲーム保存は維持、PS4の動作自然さ合格ではない。

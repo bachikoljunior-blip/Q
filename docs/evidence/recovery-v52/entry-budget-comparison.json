@@ -1,0 +1,23 @@
+{
+  "scope": "same environment Vite output, code-only audio change with old media; no actual network/startup/device measurement",
+  "entries": [
+    {
+      "root": "/workspace/scratch/e72662e3b71f/Q-recovery-v51-20260916",
+      "entry": "dist/assets/index-CGHwhJDe.js",
+      "bytes": 164988,
+      "gzip9": 62484,
+      "sha256": "95ed8147ec998e7c7088d96c4e019ca123b65fae80ae5b395c521e7356806b88",
+      "jsChunks": 3
+    },
+    {
+      "root": "/workspace/scratch/e72662e3b71f/Q-ps4-v52",
+      "entry": "dist/assets/index-DLyEfBTS.js",
+      "bytes": 165415,
+      "gzip9": 62598,
+      "sha256": "fc27a099b80293551190ec32d6b2d371cc4b8aab8db826765bb610b0e6a6d044",
+      "jsChunks": 3
+    }
+  ],
+  "rawDelta": 427,
+  "gzipDelta": 114
+}
