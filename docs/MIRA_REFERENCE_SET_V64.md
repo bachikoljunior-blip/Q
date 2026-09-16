@@ -23,3 +23,15 @@
 9月20日までの全画面PS4達成を肯定する根拠はまだない。全人物の資料/組立・自然な変形・材質と画面・実機/聴感・指定比較の残量と、生成の手戻りを除外しない。正式browserのGL disabledは既知の実描画阻害で、再試行や設定変更による迂回はしない。資料と独立幾何検査を本編画面の代用合格にしない。
 
 GitHub main は最新確認 `547676fdce8d8e97abed9f065aad0b6e24af2fd6`、PR39 open/unmerged。未知mergeへの追加mutationなし。Site24/source `2bee64cff6482cb7770ba69e07673eefc8ad54ef` は所有者限定のまま、本研究からの新runtime import/配信は0。正常な増分main反映の許可は維持し、全品質達成を待つ条件にはしない。
+
+## 追加受領と保存（進行中の別checkpoint）
+
+PR59 `346cea5e9bf87e1211febad5926136ba3455219e` / tree `af17228009081f5af9eedfb268d5f799056611d3` を通常のstacked draftとして作成した。native取得でローカル `d080086eb2589895ef7edcd21db902203131b861` との全tree差分0、required CI35111257504 successを確認。このCIは以下の後着画像追加に対するCIではない。
+
+[手靴の作者資料](evidence/mira-reference-set-v64/accessory-reference-set/REPORT.md)は初回8枚＋修正5枚、21型/90配置へ全rawを対応付け、固定54files＋manifestを原bytesで受領した。爪床・底/踵の分担・甲の側面などは未確定のまま独立照合している。作者生成window909.12秒と並行callの時間和1132.25秒を区別し、造形時間は0。
+
+[頭髪の作者資料](evidence/mira-reference-set-v64/head-reference-set/README.md)は40leaf型/80配置の全raw対応を固定。新34leafを13シート＋6回の限定修正、raw19枚38,564,383 Bで示し、旧6型の3画像を含む69files＋manifestを受領した。仕様開始から保存まで2068.20秒、call request→return和1013.30秒。F17側面、髪断面/24配置、共通辺/内部開口などは未確定。画像の存在を全頭の完成としない。
+
+[杖の独立資料レビュー](evidence/mira-reference-set-v64/staff-reference-review/REVIEW.md)では枠TOPの局所矛盾解消を確認。S05の直線帯は5角度の形状参考まで、見掛けL/W約34.6–36.3とEND W/T約3.40–3.46は要求の約43/5へ一致していない。未校正画像の比率を実寸に変換して合格にしない。matrixのmetresとboundsのmmが混じる記述を修復し、元source19行列/boundsに数値差0を独立確認した。
+
+次は全人物の不足画像をそろえ、頭部接合ID/境界と、実骨格からの手・杖/手首・袖口の座標登録を具体化する。共有境界のauthor設計値は画像からの測量と混同しない。新3Dはまだ0。登録計画/画像/独立reviewを保存した後に全体の充足判定を行う。

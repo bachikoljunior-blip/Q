@@ -1,0 +1,22 @@
+{
+  "rawPNGByteMatches": 13,
+  "validPNGDecodes": 13,
+  "promptFiles": 13,
+  "uniqueTypeIDs": 21,
+  "uniqueInstanceIDs": 90,
+  "perTypeCountsMatchOriginal": true,
+  "originalPlanFilesByteIdentical": 3,
+  "originalReferenceHashesMatch": 3,
+  "pixelEdits": 0,
+  "runtimeSourceEdits": 0,
+  "new3D": 0,
+  "pendingCalls": 0,
+  "notChecked": [
+    "native shared edges/weights/normals",
+    "watertight assembled hands or boots",
+    "grip solve",
+    "WebGL appearance",
+    "device performance",
+    "PS4-equivalent quality"
+  ]
+}

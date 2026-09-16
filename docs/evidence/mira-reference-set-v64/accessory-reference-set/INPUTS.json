@@ -1,0 +1,46 @@
+{
+  "inputs": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-complete-six-views-v1.png",
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+      "bytes": 1874282,
+      "viewed": true,
+      "role": "Fixed full character or part reference; generated artwork, not a captured real person/game render."
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-lower-views-v1.png",
+      "sha256": "8a68d3532b9271287436505661ca58bd83511ef18431af6346812f9799b81325",
+      "bytes": 2325104,
+      "viewed": true,
+      "role": "Fixed full character or part reference; generated artwork, not a captured real person/game render."
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-hands-staff-views-v1.png",
+      "sha256": "6bb80bcdcbd52ae8b6a1ecbb0071fe2d56d44f9ad4d7d2d2521bf65ced78ef5f",
+      "bytes": 1974979,
+      "viewed": true,
+      "role": "Fixed full character or part reference; generated artwork, not a captured real person/game render."
+    },
+    {
+      "path": "original-plans/HANDS_BOOTS_HASHES.json",
+      "sha256": "b62441336d91bdfbfce9d71531be6bee9ddd2d25481e5e80fcbea79e3073572f",
+      "bytes": 567,
+      "role": "Byte-identical original plan. Its old generated=0 status is historical; current counts are in TYPE_REFERENCE_COVERAGE.json."
+    },
+    {
+      "path": "original-plans/HANDS_BOOTS_MICRO_PLAN.json",
+      "sha256": "c89fb35ac5d065905dd2fa8ea3a31bab70336e47e83501725b43d204646e709b",
+      "bytes": 54588,
+      "role": "Byte-identical original plan. Its old generated=0 status is historical; current counts are in TYPE_REFERENCE_COVERAGE.json."
+    },
+    {
+      "path": "original-plans/HANDS_BOOTS_MICRO_PLAN.md",
+      "sha256": "2a32e1f10f13fe22f9c2e21f44a40879045449dbbcaed8afbe6c6a5df291d2e7",
+      "bytes": 7056,
+      "role": "Byte-identical original plan. Its old generated=0 status is historical; current counts are in TYPE_REFERENCE_COVERAGE.json."
+    }
+  ],
+  "generationSkill": "e0/.system/imagegen",
+  "provenance": "New PNGs are original OpenAI imagegen outputs for this unit, not CC0 photographs, game screenshots or exported CAD.",
+  "storage": "Raw response PNG bytes copied unchanged to the requested project evidence directory; originals retained at paths recorded in the receipts."
+}

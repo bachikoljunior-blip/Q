@@ -1,0 +1,2938 @@
+{
+  "createdAt": "2026-09-16T14:53:18.195157+00:00",
+  "status": "all proposed leaf types have raw multiview reference; not all coherent or approved; no new 3D",
+  "baseLegacyCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+  "F17SeparateCheckpoint": "014bdddf690f6f26db32ddab843b0ba51b17ce0d",
+  "coordinateSystem": "face +Z, up +Y, anatomical R=-X/L=+X; image camera labels do not override it",
+  "counts": {
+    "legacyTypes": 30,
+    "legacyInstances": 62,
+    "leafTypes": 40,
+    "leafInstances": 80,
+    "existingRawTypes": 6,
+    "newLeafTypes": 34,
+    "newSheets": 13,
+    "initialCalls": 13,
+    "targetedCorrectionCalls": 6,
+    "runtimeOr3DChanges": 0
+  },
+  "aliases": {
+    "A01": [
+      "A01a",
+      "A01b"
+    ],
+    "A02": [
+      "A02a",
+      "A02b"
+    ],
+    "F16": [
+      "F16a",
+      "F16b"
+    ]
+  },
+  "types": [
+    {
+      "id": "F01",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F01-L",
+        "F01-R"
+      ],
+      "name": "forehead",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "status": "raw-present-conditional-existing",
+      "findings": [
+        "profile magnification and artificial rim; forehead-eye boundary not exact"
+      ],
+      "conceptualJoins": [
+        "S01",
+        "F03",
+        "F12",
+        "E03"
+      ],
+      "namespacedId": "head:F01",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F01-L",
+            "mm": [
+              55,
+              55,
+              25
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F01-R",
+            "mm": [
+              55,
+              55,
+              25
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F03",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F03-L",
+        "F03-R"
+      ],
+      "name": "temple",
+      "image": "01-face-transitions-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "All three placement panels indicate anatomical left.",
+        "F03 and F19 front/side/reverse describe curved small open surfaces; exact local flattening and dimensions remain unknown.",
+        "F18 is depicted mostly as convex/concave crescent rather than a clearly resolved saddle; true infraorbital double curvature is not established.",
+        "Visible rim thickness and grain are excluded; no exact common edges with existing patches are defined.",
+        "FRONT and 3Q foreshortening is modest for F03/F18, so strict projection consistency is unproven."
+      ],
+      "conceptualJoins": [
+        "F01",
+        "S-SIDE",
+        "F05",
+        "E03",
+        "F18"
+      ],
+      "shapeRequest": "One shallow recessed patch outside the outer brow, from side of forehead to in front of ear; do not include eyeball or broad cheek.",
+      "namespacedId": "head:F03",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F03-L",
+            "mm": [
+              35,
+              55,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F03-R",
+            "mm": [
+              35,
+              55,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F05",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F05-L",
+        "F05-R"
+      ],
+      "name": "malar cheek",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "status": "raw-present-conditional-existing",
+      "findings": [
+        "conceptual malar shape only; thickness/reverse and source registration uncalibrated"
+      ],
+      "conceptualJoins": [
+        "F03",
+        "F18",
+        "F19",
+        "F07"
+      ],
+      "namespacedId": "head:F05",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F05-L",
+            "mm": [
+              40,
+              35,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F05-R",
+            "mm": [
+              40,
+              35,
+              40
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F07",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F07-L",
+        "F07-R"
+      ],
+      "name": "lower cheek",
+      "image": "existing/mira-F07-F11-v2.png",
+      "status": "raw-present-conditional-existing",
+      "findings": [
+        "isolated hollow not clearly established; image placement alone conditionally used in v63"
+      ],
+      "conceptualJoins": [
+        "F05",
+        "F09",
+        "F19",
+        "F20"
+      ],
+      "namespacedId": "head:F07",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F07-L",
+            "mm": [
+              38,
+              40,
+              30
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F07-R",
+            "mm": [
+              38,
+              40,
+              30
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F09",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F09-L",
+        "F09-R"
+      ],
+      "name": "jaw corner",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "status": "raw-present-conditional-existing",
+      "findings": [
+        "jaw shape conditional; source metrics are separate authored geometry"
+      ],
+      "conceptualJoins": [
+        "F07",
+        "F11",
+        "N01"
+      ],
+      "namespacedId": "head:F09",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F09-L",
+            "mm": [
+              38,
+              35,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F09-R",
+            "mm": [
+              38,
+              35,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F14",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F14-L",
+        "F14-R"
+      ],
+      "name": "nasal ala",
+      "image": "02-nose-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 F13 duplicated lateral wings/nostril arches, overlapping F14.",
+        "One targeted correction v2 isolates F13 to a small central dome with open cut borders, removing wing/nostril duplication in front/profile/3Q.",
+        "F12 bridge and F14 curled wing remain separate; F13/F14 seam coordinates and tangent match still unspecified.",
+        "RIGHT VIEW (+X) label is a camera-view label and must not override anatomical L=+X.",
+        "No exact projection/common-edge acceptance."
+      ],
+      "conceptualJoins": [
+        "F13",
+        "F15",
+        "F19"
+      ],
+      "shapeRequest": "One anatomical LEFT nostril-wing crescent surface wrapping around the nostril opening, real curved underside return but open at nasal-floor interface; do not fill the nostril with a solid cap.",
+      "namespacedId": "head:F14",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F14-L",
+            "mm": [
+              12,
+              15,
+              18
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "F14-R",
+            "mm": [
+              12,
+              15,
+              18
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F11",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F11"
+      ],
+      "name": "chin",
+      "image": "existing/mira-F07-F11-v2.png",
+      "status": "raw-present-conditional-existing",
+      "findings": [
+        "central chin placement useful; underside projection/shape not exact"
+      ],
+      "conceptualJoins": [
+        "F09",
+        "F17",
+        "N01"
+      ],
+      "namespacedId": "head:F11",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F11",
+            "mm": [
+              48,
+              30,
+              35
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F12",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F12"
+      ],
+      "name": "nasal bridge",
+      "image": "02-nose-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 F13 duplicated lateral wings/nostril arches, overlapping F14.",
+        "One targeted correction v2 isolates F13 to a small central dome with open cut borders, removing wing/nostril duplication in front/profile/3Q.",
+        "F12 bridge and F14 curled wing remain separate; F13/F14 seam coordinates and tangent match still unspecified.",
+        "RIGHT VIEW (+X) label is a camera-view label and must not override anatomical L=+X.",
+        "No exact projection/common-edge acceptance."
+      ],
+      "conceptualJoins": [
+        "F01",
+        "E05",
+        "F18",
+        "F13"
+      ],
+      "shapeRequest": "One narrow lengthwise bridge surface, includes the small upper glabellar transition, straight gently convex profile; do not include entire nose.",
+      "namespacedId": "head:F12",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F12",
+            "mm": [
+              20,
+              35,
+              25
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F13",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F13"
+      ],
+      "name": "nasal tip",
+      "image": "02-nose-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 F13 duplicated lateral wings/nostril arches, overlapping F14.",
+        "One targeted correction v2 isolates F13 to a small central dome with open cut borders, removing wing/nostril duplication in front/profile/3Q.",
+        "F12 bridge and F14 curled wing remain separate; F13/F14 seam coordinates and tangent match still unspecified.",
+        "RIGHT VIEW (+X) label is a camera-view label and must not override anatomical L=+X.",
+        "No exact projection/common-edge acceptance."
+      ],
+      "conceptualJoins": [
+        "F12",
+        "F14",
+        "F15"
+      ],
+      "shapeRequest": "One sculpted domed tip patch with distinct central projection and subtle split of alar transition; not a ball, nostril wings are separate.",
+      "namespacedId": "head:F13",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F13",
+            "mm": [
+              20,
+              16,
+              22
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F16a",
+      "legacyAlias": "F16",
+      "instanceIds": [
+        "F16a"
+      ],
+      "name": "upper lip",
+      "image": "03-central-mouth-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "F16a is isolated upper vermilion only, F16b philtrum separate; no lower lip duplicated.",
+        "F15 introduces a central vertical strip and paired curled nasal-floor arms; exact nostril undercut closure with F14 is not fixed.",
+        "F16b central relief and reverse visible, but crease depth and side silhouette thickness are not calibrated.",
+        "Clay grain/thick border not anatomy, no exact join/metric claims."
+      ],
+      "conceptualJoins": [
+        "F16b",
+        "F17",
+        "F20"
+      ],
+      "shapeRequest": "Only the thin neutral closed upper lip vermilion strip. Its lower edge is the mouth contact seam. Exclude lower lip and philtrum. Tiny cupid's bow, no smile.",
+      "namespacedId": "head:F16a",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F16",
+            "mm": [
+              43,
+              16,
+              20
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F16b",
+      "legacyAlias": "F16",
+      "instanceIds": [
+        "F16b"
+      ],
+      "name": "philtrum",
+      "image": "03-central-mouth-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "F16a is isolated upper vermilion only, F16b philtrum separate; no lower lip duplicated.",
+        "F15 introduces a central vertical strip and paired curled nasal-floor arms; exact nostril undercut closure with F14 is not fixed.",
+        "F16b central relief and reverse visible, but crease depth and side silhouette thickness are not calibrated.",
+        "Clay grain/thick border not anatomy, no exact join/metric claims."
+      ],
+      "conceptualJoins": [
+        "F15",
+        "F19",
+        "F16a"
+      ],
+      "shapeRequest": "Only the small skin surface between nose base and upper lip, with central shallow groove and two gentle columns; no nose or lip included.",
+      "namespacedId": "head:F16b",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F16",
+            "mm": [
+              43,
+              16,
+              20
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F17",
+      "legacyAlias": null,
+      "instanceIds": [
+        "F17"
+      ],
+      "name": "lower lip",
+      "image": "existing/mira-F17-v2.png",
+      "status": "raw-present-conditional-existing",
+      "findings": [
+        "front/3Q upper-lip duplication repaired, true side upper spike remains inconsistent"
+      ],
+      "conceptualJoins": [
+        "F16a",
+        "F20",
+        "F11"
+      ],
+      "namespacedId": "head:F17",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "F17",
+            "mm": [
+              43,
+              12,
+              18
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "S01",
+      "legacyAlias": null,
+      "instanceIds": [
+        "S01"
+      ],
+      "name": "front scalp",
+      "image": "07-front-scalp-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "One targeted correction removes S01 frontal band falsely shown on posterior head; v2 says front patch occluded from back.",
+        "S01 band and S02 crown are distinct curved open surfaces; shape and image scale not calibrated.",
+        "S02 profile/top and S01 top locator remain schematic with no common registered cut curves.",
+        "Hair hides actual scalp; no measured skull fit or watertight scalp coverage claim."
+      ],
+      "conceptualJoins": [
+        "F01",
+        "F03",
+        "S02",
+        "S-SIDE"
+      ],
+      "shapeRequest": "One shallow compound curved band just behind canonical forehead hairline up to front crown; follows actual skull ellipsoid, no spikes or hair strands, no whole helmet.",
+      "namespacedId": "head:S01",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "S01",
+            "mm": [
+              140,
+              45,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "S02",
+      "legacyAlias": null,
+      "instanceIds": [
+        "S02"
+      ],
+      "name": "crown",
+      "image": "07-front-scalp-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "One targeted correction removes S01 frontal band falsely shown on posterior head; v2 says front patch occluded from back.",
+        "S01 band and S02 crown are distinct curved open surfaces; shape and image scale not calibrated.",
+        "S02 profile/top and S01 top locator remain schematic with no common registered cut curves.",
+        "Hair hides actual scalp; no measured skull fit or watertight scalp coverage claim."
+      ],
+      "conceptualJoins": [
+        "S01",
+        "S05",
+        "S-SIDE"
+      ],
+      "shapeRequest": "One smooth top crown patch on the same skull, front/back and side cut edges correspond to S01/S05/S-SIDE, no complete hemisphere or generic ball.",
+      "namespacedId": "head:S02",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "S02",
+            "mm": [
+              150,
+              50,
+              115
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "S-SIDE",
+      "legacyAlias": null,
+      "instanceIds": [
+        "S03",
+        "S04"
+      ],
+      "name": "side scalp",
+      "image": "08-side-rear-scalp-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "One targeted correction removes unintended hair fringe/strands from detached side/rear scalp panels, leaving clean curved surfaces.",
+        "S-SIDE ear notch and S05 posterior locator retained.",
+        "S05 locator spans lower occiput; boundary to S02 is not registered and cannot prove full skull coverage.",
+        "FRONT versus 3Q remains weakly differentiated, strict same-object projection unproven."
+      ],
+      "conceptualJoins": [
+        "S01",
+        "S02",
+        "S05",
+        "F03",
+        "A04",
+        "N02"
+      ],
+      "shapeRequest": "One anatomical LEFT side skull curved patch above and behind the ear with a genuine ear-root notch. Not a flat plate; no full ear or hair attached.",
+      "namespacedId": "head:S-SIDE",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "S03",
+            "mm": [
+              40,
+              90,
+              100
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "S04",
+            "mm": [
+              40,
+              90,
+              100
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "S05",
+      "legacyAlias": null,
+      "instanceIds": [
+        "S05"
+      ],
+      "name": "rear scalp",
+      "image": "08-side-rear-scalp-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "One targeted correction removes unintended hair fringe/strands from detached side/rear scalp panels, leaving clean curved surfaces.",
+        "S-SIDE ear notch and S05 posterior locator retained.",
+        "S05 locator spans lower occiput; boundary to S02 is not registered and cannot prove full skull coverage.",
+        "FRONT versus 3Q remains weakly differentiated, strict same-object projection unproven."
+      ],
+      "conceptualJoins": [
+        "S02",
+        "S-SIDE",
+        "N02"
+      ],
+      "shapeRequest": "One broad shallow curved occipital patch on back of the same skull, tapering toward nape, with side and crown boundaries. No entire head or neck.",
+      "namespacedId": "head:S05",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "S05",
+            "mm": [
+              145,
+              110,
+              45
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "A01a",
+      "legacyAlias": "A01",
+      "instanceIds": [
+        "A01a-L",
+        "A01a-R"
+      ],
+      "name": "helix rim",
+      "image": "09-ear-outer-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "A01a rolled outer rim, A01b fork and A03 lobe are independently shown.",
+        "A01a appears near-tubular rather than a clearly open thin surface; hidden longitudinal attachment strip is not fixed.",
+        "A01b locator coverage of upper crura is unclear; exact concha boundaries not specified.",
+        "Dark left/bottom vignette reduces annotation readability, while detached shapes and row IDs remain identifiable.",
+        "No full ear or posterior coverage certified."
+      ],
+      "conceptualJoins": [
+        "A01b",
+        "A02a",
+        "A03",
+        "A04"
+      ],
+      "shapeRequest": "One anatomical LEFT ear outer helical rim as a slender smoothly curved rolled surface strip, open at lower end. No inner fork or ear bowl included.",
+      "namespacedId": "head:A01a",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A01-L",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A01-R",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "A01b",
+      "legacyAlias": "A01",
+      "instanceIds": [
+        "A01b-L",
+        "A01b-R"
+      ],
+      "name": "antihelix fork",
+      "image": "09-ear-outer-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "A01a rolled outer rim, A01b fork and A03 lobe are independently shown.",
+        "A01a appears near-tubular rather than a clearly open thin surface; hidden longitudinal attachment strip is not fixed.",
+        "A01b locator coverage of upper crura is unclear; exact concha boundaries not specified.",
+        "Dark left/bottom vignette reduces annotation readability, while detached shapes and row IDs remain identifiable.",
+        "No full ear or posterior coverage certified."
+      ],
+      "conceptualJoins": [
+        "A01a",
+        "A02a",
+        "A03"
+      ],
+      "shapeRequest": "One anatomical LEFT ear inner Y-shaped soft ridge surface with two small upper crura; no external ear outline, not a rigid fork rod.",
+      "namespacedId": "head:A01b",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A01-L",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A01-R",
+            "mm": [
+              20,
+              43,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "A02a",
+      "legacyAlias": "A02",
+      "instanceIds": [
+        "A02a-L",
+        "A02a-R"
+      ],
+      "name": "concha bowl",
+      "image": "10-ear-inner-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "Concha concavity, tragus curved flap and posterior-root saddle are separately represented.",
+        "A04 rear-side locator exposes intended postauricular region; exact registration to side scalp not specified.",
+        "A02a canal entrance is a shallow depression rather than a defined canal opening; internal ear depth/occlusion remains unresolved.",
+        "A02a/A01b and A04/root seam ownership still conceptual, not registered shared curves."
+      ],
+      "conceptualJoins": [
+        "A01b",
+        "A02b",
+        "A03",
+        "A04"
+      ],
+      "shapeRequest": "One anatomical LEFT ear shallow irregular conchal bowl surface, gently concave with defined attachment boundary, no helix or tragus. Small auditory canal mouth remains a recessed opening not a through-head hole.",
+      "namespacedId": "head:A02a",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A02-L",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A02-R",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "A02b",
+      "legacyAlias": "A02",
+      "instanceIds": [
+        "A02b-L",
+        "A02b-R"
+      ],
+      "name": "tragus flap",
+      "image": "10-ear-inner-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "Concha concavity, tragus curved flap and posterior-root saddle are separately represented.",
+        "A04 rear-side locator exposes intended postauricular region; exact registration to side scalp not specified.",
+        "A02a canal entrance is a shallow depression rather than a defined canal opening; internal ear depth/occlusion remains unresolved.",
+        "A02a/A01b and A04/root seam ownership still conceptual, not registered shared curves."
+      ],
+      "conceptualJoins": [
+        "A02a",
+        "A04"
+      ],
+      "shapeRequest": "One tiny anatomical LEFT curved tragus flap with subtle convex outward face and concave ear-facing reverse; no bowl or full ear.",
+      "namespacedId": "head:A02b",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A02-L",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A02-R",
+            "mm": [
+              17,
+              27,
+              16
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "A03",
+      "legacyAlias": null,
+      "instanceIds": [
+        "A03-L",
+        "A03-R"
+      ],
+      "name": "earlobe",
+      "image": "09-ear-outer-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "A01a rolled outer rim, A01b fork and A03 lobe are independently shown.",
+        "A01a appears near-tubular rather than a clearly open thin surface; hidden longitudinal attachment strip is not fixed.",
+        "A01b locator coverage of upper crura is unclear; exact concha boundaries not specified.",
+        "Dark left/bottom vignette reduces annotation readability, while detached shapes and row IDs remain identifiable.",
+        "No full ear or posterior coverage certified."
+      ],
+      "conceptualJoins": [
+        "A01a",
+        "A01b",
+        "A02a",
+        "A04"
+      ],
+      "shapeRequest": "One small soft anatomical LEFT lower ear lobe patch with front/back rounded transition and root attachment, not a sphere, no entire ear.",
+      "namespacedId": "head:A03",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "A03-L",
+            "mm": [
+              16,
+              16,
+              13
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "A03-R",
+            "mm": [
+              16,
+              16,
+              13
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "E01",
+      "legacyAlias": null,
+      "instanceIds": [
+        "E01-L",
+        "E01-R"
+      ],
+      "name": "eyeball",
+      "image": "05-eye-and-brow-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 E01 BACK incorrectly duplicated an anterior socket. One targeted correction v2 removes that hole in back and rear 3Q.",
+        "E01 v2 anterior corneal seat plus closed posterior body are readable; socket/lens depth and optical model remain unspecified.",
+        "E02 gray-blue iris shallow convex cap and reverse cavity are shown; image is not a deliverable texture or exact corneal design.",
+        "B01 curved tapered hairy strip and reverse are readable but hair thickness/fiber count and fit remain unfixed."
+      ],
+      "conceptualJoins": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "shapeRequest": "One smooth near-spherical scleral body with slightly raised front corneal seat, isolated non-gory modelmaking part; no iris/pupil painted on this type because E02 is separate.",
+      "namespacedId": "head:E01",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "E01-L",
+            "mm": [
+              40,
+              35,
+              37
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "E01-R",
+            "mm": [
+              40,
+              35,
+              37
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "E02",
+      "legacyAlias": null,
+      "instanceIds": [
+        "E02-L",
+        "E02-R"
+      ],
+      "name": "iris and pupil",
+      "image": "05-eye-and-brow-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 E01 BACK incorrectly duplicated an anterior socket. One targeted correction v2 removes that hole in back and rear 3Q.",
+        "E01 v2 anterior corneal seat plus closed posterior body are readable; socket/lens depth and optical model remain unspecified.",
+        "E02 gray-blue iris shallow convex cap and reverse cavity are shown; image is not a deliverable texture or exact corneal design.",
+        "B01 curved tapered hairy strip and reverse are readable but hair thickness/fiber count and fit remain unfixed."
+      ],
+      "conceptualJoins": [
+        "E01"
+      ],
+      "shapeRequest": "One small shallow curved circular iris/pupil optical cap fitting the E01 front seat, gray-blue iris and centered dark pupil as surface appearance, not a flat portrait or giant protruding button. Show actual shallow profile/back attachment.",
+      "namespacedId": "head:E02",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "E02-L",
+            "mm": [
+              16,
+              16,
+              3
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "E02-R",
+            "mm": [
+              16,
+              16,
+              3
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "E03",
+      "legacyAlias": null,
+      "instanceIds": [
+        "E03-L",
+        "E03-R"
+      ],
+      "name": "upper lid",
+      "image": "06-eyelids-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "E03/E04 separate upper/lower arcs and inward concavity are represented, anatomical L placement consistent.",
+        "E04 outer/inner endpoints are not identified separately in detached views; E05 junction still unresolved.",
+        "Thick margins and exaggerated crease texture are excluded from intended skin geometry.",
+        "No blink/contact deformation or closure clearance is provided."
+      ],
+      "conceptualJoins": [
+        "F01",
+        "F03",
+        "E05",
+        "E04"
+      ],
+      "shapeRequest": "One anatomical LEFT curved thin upper eyelid surface, arcs over the eyeball with a narrow free lid margin and gentle fold back to brow skin. No eyeball or lower lid built into the detached part. Show concave eyeball-facing reverse, do not make a flat arch.",
+      "namespacedId": "head:E03",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "E03-L",
+            "mm": [
+              51,
+              38,
+              38
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "E03-R",
+            "mm": [
+              51,
+              38,
+              38
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "B01",
+      "legacyAlias": null,
+      "instanceIds": [
+        "B01-L",
+        "B01-R"
+      ],
+      "name": "eyebrow",
+      "image": "05-eye-and-brow-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 E01 BACK incorrectly duplicated an anterior socket. One targeted correction v2 removes that hole in back and rear 3Q.",
+        "E01 v2 anterior corneal seat plus closed posterior body are readable; socket/lens depth and optical model remain unspecified.",
+        "E02 gray-blue iris shallow convex cap and reverse cavity are shown; image is not a deliverable texture or exact corneal design.",
+        "B01 curved tapered hairy strip and reverse are readable but hair thickness/fiber count and fit remain unfixed."
+      ],
+      "conceptualJoins": [
+        "F01",
+        "E03",
+        "F03"
+      ],
+      "shapeRequest": "One slim curved anatomical LEFT brow hair strip, natural taper at outer end and broader inner root. Silver-gray short fibers follow the canonical brow. Not a rigid thick eyebrow block.",
+      "namespacedId": "head:B01",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "B01-L",
+            "mm": [
+              55,
+              8,
+              10
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "B01-R",
+            "mm": [
+              55,
+              8,
+              10
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "N01",
+      "legacyAlias": null,
+      "instanceIds": [
+        "N01"
+      ],
+      "name": "front neck transition",
+      "image": "11-neck-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 incorrectly changed N01/N02 into anatomical LEFT quarters, contrary to single anterior/posterior types.",
+        "One targeted correction v2 restores central anterior/posterior half-circumference patches and locators, preserving two total instances.",
+        "v2 labels two SIDE views rather than required 3Q; exact orthographic profile correspondence not proven.",
+        "Side edges, jaw/occiput and costume collar cut are not metrically registered.",
+        "No deformation or rig test performed."
+      ],
+      "conceptualJoins": [
+        "F09",
+        "F11",
+        "N02"
+      ],
+      "shapeRequest": "One front half of curved neck skin extending from beneath jaw/chin to collar cut, includes gentle throat plane and curved side edges. No shirt/collar, no whole head, no disconnected cylinder.",
+      "namespacedId": "head:N01",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "N01",
+            "mm": [
+              145,
+              40,
+              80
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "N02",
+      "legacyAlias": null,
+      "instanceIds": [
+        "N02"
+      ],
+      "name": "rear neck transition",
+      "image": "11-neck-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 incorrectly changed N01/N02 into anatomical LEFT quarters, contrary to single anterior/posterior types.",
+        "One targeted correction v2 restores central anterior/posterior half-circumference patches and locators, preserving two total instances.",
+        "v2 labels two SIDE views rather than required 3Q; exact orthographic profile correspondence not proven.",
+        "Side edges, jaw/occiput and costume collar cut are not metrically registered.",
+        "No deformation or rig test performed."
+      ],
+      "conceptualJoins": [
+        "N01",
+        "S05",
+        "S-SIDE",
+        "A04"
+      ],
+      "shapeRequest": "One rear half of neck skin from occiput/ear roots to collar cut, subtle central nape hollow and side bulges; actual counterpart to N01 with side joins. No hair/collar or solid neck plug.",
+      "namespacedId": "head:N02",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "N02",
+            "mm": [
+              145,
+              40,
+              80
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "HT01",
+      "legacyAlias": null,
+      "instanceIds": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H09",
+        "H10"
+      ],
+      "name": "raised swept forelock",
+      "image": "12-hair-front-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 HT01/HT02 looked like multi-lock fans and TIP labels contradicted visible strand taper.",
+        "One correction v2 replaces with coherent single tapered arcs, image-left tips matching canonical main sweep toward anatomical R.",
+        "HT01/HT02 SIDE views remain almost identical; different root lift/section family is not convincingly established.",
+        "Root labels indicate region, not a defined attachment cross-section. HT03 sidefall readable.",
+        "24 hair placements and variation limits are not specified by these three representative locks."
+      ],
+      "conceptualJoins": [
+        "S01",
+        "S02",
+        "HT02"
+      ],
+      "shapeRequest": "One cohesive tapered silver-gray hair lock with lifted root and pronounced lateral bend sweeping from person's LEFT(+X) toward person's RIGHT(-X); one small shape family repeated six times, not full hairstyle. Root broad, tip feathered with modest sparse strand ridges.",
+      "namespacedId": "head:HT01",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H01",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H02",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H03",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H04",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H09",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H10",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "HT02",
+      "legacyAlias": null,
+      "instanceIds": [
+        "H05",
+        "H06",
+        "H07",
+        "H08"
+      ],
+      "name": "broad shallow top overlap",
+      "image": "12-hair-front-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 HT01/HT02 looked like multi-lock fans and TIP labels contradicted visible strand taper.",
+        "One correction v2 replaces with coherent single tapered arcs, image-left tips matching canonical main sweep toward anatomical R.",
+        "HT01/HT02 SIDE views remain almost identical; different root lift/section family is not convincingly established.",
+        "Root labels indicate region, not a defined attachment cross-section. HT03 sidefall readable.",
+        "24 hair placements and variation limits are not specified by these three representative locks."
+      ],
+      "conceptualJoins": [
+        "S01",
+        "S02",
+        "HT01",
+        "HT05"
+      ],
+      "shapeRequest": "One broad low shallow curved silver-gray lock which lies close to crown, same dominant sweep, thinner rise than HT01 and smooth tapered overlapping edge. Not scaled copy of tall forelock.",
+      "namespacedId": "head:HT02",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H05",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H06",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H07",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H08",
+            "mm": [
+              28,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "HT03",
+      "legacyAlias": null,
+      "instanceIds": [
+        "H11",
+        "H12",
+        "H14",
+        "H15"
+      ],
+      "name": "short side fall",
+      "image": "12-hair-front-v2.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "v1 HT01/HT02 looked like multi-lock fans and TIP labels contradicted visible strand taper.",
+        "One correction v2 replaces with coherent single tapered arcs, image-left tips matching canonical main sweep toward anatomical R.",
+        "HT01/HT02 SIDE views remain almost identical; different root lift/section family is not convincingly established.",
+        "Root labels indicate region, not a defined attachment cross-section. HT03 sidefall readable.",
+        "24 hair placements and variation limits are not specified by these three representative locks."
+      ],
+      "conceptualJoins": [
+        "S-SIDE",
+        "HT04"
+      ],
+      "shapeRequest": "One short narrow silver-gray hair clump that curves down along side scalp. Low relief curved root, tapered tip, not a spike or braid; show anatomical LEFT example, mirror with local fitting on right.",
+      "namespacedId": "head:HT03",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H11",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H12",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H14",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H15",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "HT04",
+      "legacyAlias": null,
+      "instanceIds": [
+        "H13",
+        "H16"
+      ],
+      "name": "ear-edge tapered terminal",
+      "image": "13-hair-back-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "HT04 short ear-edge terminal, HT05 S-like posterior flow and HT06 nape taper distinguish three families.",
+        "Root/tip labels broadly match taper; roots lack exact section/attachment dimensions.",
+        "SIDE (+Z VIEW) label is inconsistent with global face +Z convention; treat as local projection label only, not anatomical coordinate authority.",
+        "Posterior and nape locators show representative locks only; all 10 intended placements here require separate indexed placement mapping.",
+        "No entire hairstyle density or silhouette coverage guarantee."
+      ],
+      "conceptualJoins": [
+        "S-SIDE",
+        "HT03"
+      ],
+      "shapeRequest": "One very short tightly tapered silver-gray terminal lock by upper ear/sideburn, small curved root and soft point; distinct from long side fall.",
+      "namespacedId": "head:HT04",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H13",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H16",
+            "mm": [
+              20,
+              45,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "HT05",
+      "legacyAlias": null,
+      "instanceIds": [
+        "H17",
+        "H18",
+        "H19",
+        "H20"
+      ],
+      "name": "posterior crown flow",
+      "image": "13-hair-back-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "HT04 short ear-edge terminal, HT05 S-like posterior flow and HT06 nape taper distinguish three families.",
+        "Root/tip labels broadly match taper; roots lack exact section/attachment dimensions.",
+        "SIDE (+Z VIEW) label is inconsistent with global face +Z convention; treat as local projection label only, not anatomical coordinate authority.",
+        "Posterior and nape locators show representative locks only; all 10 intended placements here require separate indexed placement mapping.",
+        "No entire hairstyle density or silhouette coverage guarantee."
+      ],
+      "conceptualJoins": [
+        "S02",
+        "S05",
+        "HT02",
+        "HT06"
+      ],
+      "shapeRequest": "One silver-gray curved tapered lock following a longer posterior crown arc with small S twist toward back. Not a curled ring or tubular rope.",
+      "namespacedId": "head:HT05",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H17",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H18",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H19",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H20",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "HT06",
+      "legacyAlias": null,
+      "instanceIds": [
+        "H21",
+        "H22",
+        "H23",
+        "H24"
+      ],
+      "name": "nape taper",
+      "image": "13-hair-back-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "HT04 short ear-edge terminal, HT05 S-like posterior flow and HT06 nape taper distinguish three families.",
+        "Root/tip labels broadly match taper; roots lack exact section/attachment dimensions.",
+        "SIDE (+Z VIEW) label is inconsistent with global face +Z convention; treat as local projection label only, not anatomical coordinate authority.",
+        "Posterior and nape locators show representative locks only; all 10 intended placements here require separate indexed placement mapping.",
+        "No entire hairstyle density or silhouette coverage guarantee."
+      ],
+      "conceptualJoins": [
+        "S05",
+        "N02",
+        "HT05"
+      ],
+      "shapeRequest": "One narrow short downward silver-gray terminal lock hugging nape with a small outward tip; forms irregular staggered nape edge through four placed instances, not a whole neck fringe.",
+      "namespacedId": "head:HT06",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": [
+          {
+            "instance": "H21",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H22",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H23",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          },
+          {
+            "instance": "H24",
+            "mm": [
+              20,
+              70,
+              7
+            ],
+            "meaning": "old provisional guide only; not adopted measurement"
+          }
+        ],
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "E04",
+      "legacyAlias": null,
+      "newCoverageProposal": true,
+      "instanceIds": [
+        "E04-L",
+        "E04-R"
+      ],
+      "name": "lower eyelid",
+      "image": "06-eyelids-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "E03/E04 separate upper/lower arcs and inward concavity are represented, anatomical L placement consistent.",
+        "E04 outer/inner endpoints are not identified separately in detached views; E05 junction still unresolved.",
+        "Thick margins and exaggerated crease texture are excluded from intended skin geometry.",
+        "No blink/contact deformation or closure clearance is provided."
+      ],
+      "conceptualJoins": [
+        "E03",
+        "E05",
+        "F18"
+      ],
+      "shapeRequest": "One anatomical LEFT shallower lower eyelid ribbon, narrow curved rim above and soft skin transition below; includes the outer canthal transition where it meets E03, but medial canthus E05 remains separate. Show inner concavity and tapering corners.",
+      "namespacedId": "head:E04",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "E05",
+      "legacyAlias": null,
+      "newCoverageProposal": true,
+      "instanceIds": [
+        "E05-L",
+        "E05-R"
+      ],
+      "name": "inner eye corner",
+      "image": "04-corners-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "F20 locator targets anatomical L commissure; detached part includes adjacent lip ends, not entire mouth.",
+        "E05 locator targets medial canthus and reverse/side shown, but caruncle appears exaggerated as a near-round mound.",
+        "Relief scale, lid-margin cross sections and lip corner seam are not established.",
+        "Prominent grain and thick rims are not requirements."
+      ],
+      "conceptualJoins": [
+        "E03",
+        "E04",
+        "F12",
+        "F18"
+      ],
+      "shapeRequest": "One tiny anatomical LEFT medial canthus with small tear-caruncle mound and fold; two eyelid rim endpoints attach to it. No whole eye or outer corner. Nongory gray modelmaking surface.",
+      "namespacedId": "head:E05",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F18",
+      "legacyAlias": null,
+      "newCoverageProposal": true,
+      "instanceIds": [
+        "F18-L",
+        "F18-R"
+      ],
+      "name": "infraorbital",
+      "image": "01-face-transitions-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "All three placement panels indicate anatomical left.",
+        "F03 and F19 front/side/reverse describe curved small open surfaces; exact local flattening and dimensions remain unknown.",
+        "F18 is depicted mostly as convex/concave crescent rather than a clearly resolved saddle; true infraorbital double curvature is not established.",
+        "Visible rim thickness and grain are excluded; no exact common edges with existing patches are defined.",
+        "FRONT and 3Q foreshortening is modest for F03/F18, so strict projection consistency is unproven."
+      ],
+      "conceptualJoins": [
+        "E04",
+        "E05",
+        "F12",
+        "F19",
+        "F05",
+        "F03"
+      ],
+      "shapeRequest": "One narrow smooth saddle surface immediately under lower eyelid, inner end toward nasal side, outer end blending to malar cheek; no lid rim itself.",
+      "namespacedId": "head:F18",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F19",
+      "legacyAlias": null,
+      "newCoverageProposal": true,
+      "instanceIds": [
+        "F19-L",
+        "F19-R"
+      ],
+      "name": "nasolabial side",
+      "image": "01-face-transitions-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "All three placement panels indicate anatomical left.",
+        "F03 and F19 front/side/reverse describe curved small open surfaces; exact local flattening and dimensions remain unknown.",
+        "F18 is depicted mostly as convex/concave crescent rather than a clearly resolved saddle; true infraorbital double curvature is not established.",
+        "Visible rim thickness and grain are excluded; no exact common edges with existing patches are defined.",
+        "FRONT and 3Q foreshortening is modest for F03/F18, so strict projection consistency is unproven."
+      ],
+      "conceptualJoins": [
+        "F14",
+        "F18",
+        "F05",
+        "F07",
+        "F16b",
+        "F20"
+      ],
+      "shapeRequest": "One small curved nasal-to-mouth side plane from beside nostril wing to above mouth corner, gentle nasolabial slope; exclude nose and lips themselves.",
+      "namespacedId": "head:F19",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F20",
+      "legacyAlias": null,
+      "newCoverageProposal": true,
+      "instanceIds": [
+        "F20-L",
+        "F20-R"
+      ],
+      "name": "mouth corner",
+      "image": "04-corners-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "F20 locator targets anatomical L commissure; detached part includes adjacent lip ends, not entire mouth.",
+        "E05 locator targets medial canthus and reverse/side shown, but caruncle appears exaggerated as a near-round mound.",
+        "Relief scale, lid-margin cross sections and lip corner seam are not established.",
+        "Prominent grain and thick rims are not requirements."
+      ],
+      "conceptualJoins": [
+        "F16a",
+        "F17",
+        "F19",
+        "F07"
+      ],
+      "shapeRequest": "One tiny anatomical LEFT commissure surface that receives the two closed lip edges and transitions outward into cheek; a gently folded surface, no entire mouth, no triangular black hole.",
+      "namespacedId": "head:F20",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "F15",
+      "legacyAlias": null,
+      "newCoverageProposal": true,
+      "instanceIds": [
+        "F15"
+      ],
+      "name": "columella and nasal floor",
+      "image": "03-central-mouth-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "F16a is isolated upper vermilion only, F16b philtrum separate; no lower lip duplicated.",
+        "F15 introduces a central vertical strip and paired curled nasal-floor arms; exact nostril undercut closure with F14 is not fixed.",
+        "F16b central relief and reverse visible, but crease depth and side silhouette thickness are not calibrated.",
+        "Clay grain/thick border not anatomy, no exact join/metric claims."
+      ],
+      "conceptualJoins": [
+        "F13",
+        "F14",
+        "F16b"
+      ],
+      "shapeRequest": "One very small central strip from underside of nasal tip down the nasal septum, then slight outward paired floor edges beneath nostrils; show underside clearly. It is not a whole nose or closed nostril plug.",
+      "namespacedId": "head:F15",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      }
+    },
+    {
+      "id": "A04",
+      "legacyAlias": null,
+      "newCoverageProposal": true,
+      "instanceIds": [
+        "A04-L",
+        "A04-R"
+      ],
+      "name": "rear ear and root",
+      "image": "10-ear-inner-v1.png",
+      "status": "raw-present-author-inspected-independent-review-pending",
+      "findings": [
+        "Concha concavity, tragus curved flap and posterior-root saddle are separately represented.",
+        "A04 rear-side locator exposes intended postauricular region; exact registration to side scalp not specified.",
+        "A02a canal entrance is a shallow depression rather than a defined canal opening; internal ear depth/occlusion remains unresolved.",
+        "A02a/A01b and A04/root seam ownership still conceptual, not registered shared curves."
+      ],
+      "conceptualJoins": [
+        "A01a",
+        "A03",
+        "A02a",
+        "A02b",
+        "S-SIDE",
+        "F03",
+        "N02"
+      ],
+      "shapeRequest": "One anatomical LEFT posterior auricular surface joining the back of the ear rim/lobe to the head, including the visible postauricular groove. A gently folded thin saddle, not a full ear or a solid wedge.",
+      "namespacedId": "head:A04",
+      "imageIsCalibrated": false,
+      "exactSeamsRegistered": false,
+      "fullAssemblyAccepted": false,
+      "dimensions": {
+        "status": "not specified by generated pixels",
+        "legacyEnvelope": null,
+        "finalMillimetres": null
+      }
+    }
+  ],
+  "instances": [
+    {
+      "id": "F01-L",
+      "type": "F01",
+      "namespacedId": "head:F01-L",
+      "legacyInstance": "F01-L",
+      "anatomicalSide": "L",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F01-R",
+      "type": "F01",
+      "namespacedId": "head:F01-R",
+      "legacyInstance": "F01-R",
+      "anatomicalSide": "R",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F03-L",
+      "type": "F03",
+      "namespacedId": "head:F03-L",
+      "legacyInstance": "F03-L",
+      "anatomicalSide": "L",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F03-R",
+      "type": "F03",
+      "namespacedId": "head:F03-R",
+      "legacyInstance": "F03-R",
+      "anatomicalSide": "R",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F05-L",
+      "type": "F05",
+      "namespacedId": "head:F05-L",
+      "legacyInstance": "F05-L",
+      "anatomicalSide": "L",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F05-R",
+      "type": "F05",
+      "namespacedId": "head:F05-R",
+      "legacyInstance": "F05-R",
+      "anatomicalSide": "R",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F07-L",
+      "type": "F07",
+      "namespacedId": "head:F07-L",
+      "legacyInstance": "F07-L",
+      "anatomicalSide": "L",
+      "image": "existing/mira-F07-F11-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F07-R",
+      "type": "F07",
+      "namespacedId": "head:F07-R",
+      "legacyInstance": "F07-R",
+      "anatomicalSide": "R",
+      "image": "existing/mira-F07-F11-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F09-L",
+      "type": "F09",
+      "namespacedId": "head:F09-L",
+      "legacyInstance": "F09-L",
+      "anatomicalSide": "L",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F09-R",
+      "type": "F09",
+      "namespacedId": "head:F09-R",
+      "legacyInstance": "F09-R",
+      "anatomicalSide": "R",
+      "image": "existing/mira-face-patches-F01-F05-F09-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F14-L",
+      "type": "F14",
+      "namespacedId": "head:F14-L",
+      "legacyInstance": "F14-L",
+      "anatomicalSide": "L",
+      "image": "02-nose-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F14-R",
+      "type": "F14",
+      "namespacedId": "head:F14-R",
+      "legacyInstance": "F14-R",
+      "anatomicalSide": "R",
+      "image": "02-nose-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F11",
+      "type": "F11",
+      "namespacedId": "head:F11",
+      "legacyInstance": "F11",
+      "anatomicalSide": null,
+      "image": "existing/mira-F07-F11-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F12",
+      "type": "F12",
+      "namespacedId": "head:F12",
+      "legacyInstance": "F12",
+      "anatomicalSide": null,
+      "image": "02-nose-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F13",
+      "type": "F13",
+      "namespacedId": "head:F13",
+      "legacyInstance": "F13",
+      "anatomicalSide": null,
+      "image": "02-nose-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F16a",
+      "type": "F16a",
+      "namespacedId": "head:F16a",
+      "legacyInstance": "F16",
+      "anatomicalSide": null,
+      "image": "03-central-mouth-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F16b",
+      "type": "F16b",
+      "namespacedId": "head:F16b",
+      "legacyInstance": "F16",
+      "anatomicalSide": null,
+      "image": "03-central-mouth-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F17",
+      "type": "F17",
+      "namespacedId": "head:F17",
+      "legacyInstance": "F17",
+      "anatomicalSide": null,
+      "image": "existing/mira-F17-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "S01",
+      "type": "S01",
+      "namespacedId": "head:S01",
+      "legacyInstance": "S01",
+      "anatomicalSide": null,
+      "image": "07-front-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "S02",
+      "type": "S02",
+      "namespacedId": "head:S02",
+      "legacyInstance": "S02",
+      "anatomicalSide": null,
+      "image": "07-front-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "S03",
+      "type": "S-SIDE",
+      "namespacedId": "head:S03",
+      "legacyInstance": "S03",
+      "anatomicalSide": "L",
+      "image": "08-side-rear-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "S04",
+      "type": "S-SIDE",
+      "namespacedId": "head:S04",
+      "legacyInstance": "S04",
+      "anatomicalSide": "R",
+      "image": "08-side-rear-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "S05",
+      "type": "S05",
+      "namespacedId": "head:S05",
+      "legacyInstance": "S05",
+      "anatomicalSide": null,
+      "image": "08-side-rear-scalp-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A01a-L",
+      "type": "A01a",
+      "namespacedId": "head:A01a-L",
+      "legacyInstance": "A01-L",
+      "anatomicalSide": "L",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A01a-R",
+      "type": "A01a",
+      "namespacedId": "head:A01a-R",
+      "legacyInstance": "A01-R",
+      "anatomicalSide": "R",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A01b-L",
+      "type": "A01b",
+      "namespacedId": "head:A01b-L",
+      "legacyInstance": "A01-L",
+      "anatomicalSide": "L",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A01b-R",
+      "type": "A01b",
+      "namespacedId": "head:A01b-R",
+      "legacyInstance": "A01-R",
+      "anatomicalSide": "R",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A02a-L",
+      "type": "A02a",
+      "namespacedId": "head:A02a-L",
+      "legacyInstance": "A02-L",
+      "anatomicalSide": "L",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A02a-R",
+      "type": "A02a",
+      "namespacedId": "head:A02a-R",
+      "legacyInstance": "A02-R",
+      "anatomicalSide": "R",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A02b-L",
+      "type": "A02b",
+      "namespacedId": "head:A02b-L",
+      "legacyInstance": "A02-L",
+      "anatomicalSide": "L",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A02b-R",
+      "type": "A02b",
+      "namespacedId": "head:A02b-R",
+      "legacyInstance": "A02-R",
+      "anatomicalSide": "R",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A03-L",
+      "type": "A03",
+      "namespacedId": "head:A03-L",
+      "legacyInstance": "A03-L",
+      "anatomicalSide": "L",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A03-R",
+      "type": "A03",
+      "namespacedId": "head:A03-R",
+      "legacyInstance": "A03-R",
+      "anatomicalSide": "R",
+      "image": "09-ear-outer-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E01-L",
+      "type": "E01",
+      "namespacedId": "head:E01-L",
+      "legacyInstance": "E01-L",
+      "anatomicalSide": "L",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E01-R",
+      "type": "E01",
+      "namespacedId": "head:E01-R",
+      "legacyInstance": "E01-R",
+      "anatomicalSide": "R",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E02-L",
+      "type": "E02",
+      "namespacedId": "head:E02-L",
+      "legacyInstance": "E02-L",
+      "anatomicalSide": "L",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E02-R",
+      "type": "E02",
+      "namespacedId": "head:E02-R",
+      "legacyInstance": "E02-R",
+      "anatomicalSide": "R",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E03-L",
+      "type": "E03",
+      "namespacedId": "head:E03-L",
+      "legacyInstance": "E03-L",
+      "anatomicalSide": "L",
+      "image": "06-eyelids-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E03-R",
+      "type": "E03",
+      "namespacedId": "head:E03-R",
+      "legacyInstance": "E03-R",
+      "anatomicalSide": "R",
+      "image": "06-eyelids-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "B01-L",
+      "type": "B01",
+      "namespacedId": "head:B01-L",
+      "legacyInstance": "B01-L",
+      "anatomicalSide": "L",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "B01-R",
+      "type": "B01",
+      "namespacedId": "head:B01-R",
+      "legacyInstance": "B01-R",
+      "anatomicalSide": "R",
+      "image": "05-eye-and-brow-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "N01",
+      "type": "N01",
+      "namespacedId": "head:N01",
+      "legacyInstance": "N01",
+      "anatomicalSide": null,
+      "image": "11-neck-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "N02",
+      "type": "N02",
+      "namespacedId": "head:N02",
+      "legacyInstance": "N02",
+      "anatomicalSide": null,
+      "image": "11-neck-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H01",
+      "type": "HT01",
+      "namespacedId": "head:H01",
+      "legacyInstance": "H01",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H02",
+      "type": "HT01",
+      "namespacedId": "head:H02",
+      "legacyInstance": "H02",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H03",
+      "type": "HT01",
+      "namespacedId": "head:H03",
+      "legacyInstance": "H03",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H04",
+      "type": "HT01",
+      "namespacedId": "head:H04",
+      "legacyInstance": "H04",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H09",
+      "type": "HT01",
+      "namespacedId": "head:H09",
+      "legacyInstance": "H09",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H10",
+      "type": "HT01",
+      "namespacedId": "head:H10",
+      "legacyInstance": "H10",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H05",
+      "type": "HT02",
+      "namespacedId": "head:H05",
+      "legacyInstance": "H05",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H06",
+      "type": "HT02",
+      "namespacedId": "head:H06",
+      "legacyInstance": "H06",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H07",
+      "type": "HT02",
+      "namespacedId": "head:H07",
+      "legacyInstance": "H07",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H08",
+      "type": "HT02",
+      "namespacedId": "head:H08",
+      "legacyInstance": "H08",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H11",
+      "type": "HT03",
+      "namespacedId": "head:H11",
+      "legacyInstance": "H11",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H12",
+      "type": "HT03",
+      "namespacedId": "head:H12",
+      "legacyInstance": "H12",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H14",
+      "type": "HT03",
+      "namespacedId": "head:H14",
+      "legacyInstance": "H14",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H15",
+      "type": "HT03",
+      "namespacedId": "head:H15",
+      "legacyInstance": "H15",
+      "anatomicalSide": null,
+      "image": "12-hair-front-v2.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H13",
+      "type": "HT04",
+      "namespacedId": "head:H13",
+      "legacyInstance": "H13",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H16",
+      "type": "HT04",
+      "namespacedId": "head:H16",
+      "legacyInstance": "H16",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H17",
+      "type": "HT05",
+      "namespacedId": "head:H17",
+      "legacyInstance": "H17",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H18",
+      "type": "HT05",
+      "namespacedId": "head:H18",
+      "legacyInstance": "H18",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H19",
+      "type": "HT05",
+      "namespacedId": "head:H19",
+      "legacyInstance": "H19",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H20",
+      "type": "HT05",
+      "namespacedId": "head:H20",
+      "legacyInstance": "H20",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H21",
+      "type": "HT06",
+      "namespacedId": "head:H21",
+      "legacyInstance": "H21",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H22",
+      "type": "HT06",
+      "namespacedId": "head:H22",
+      "legacyInstance": "H22",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H23",
+      "type": "HT06",
+      "namespacedId": "head:H23",
+      "legacyInstance": "H23",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "H24",
+      "type": "HT06",
+      "namespacedId": "head:H24",
+      "legacyInstance": "H24",
+      "anatomicalSide": null,
+      "image": "13-hair-back-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E04-L",
+      "type": "E04",
+      "namespacedId": "head:E04-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "06-eyelids-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E04-R",
+      "type": "E04",
+      "namespacedId": "head:E04-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "06-eyelids-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E05-L",
+      "type": "E05",
+      "namespacedId": "head:E05-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "04-corners-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "E05-R",
+      "type": "E05",
+      "namespacedId": "head:E05-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "04-corners-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F18-L",
+      "type": "F18",
+      "namespacedId": "head:F18-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F18-R",
+      "type": "F18",
+      "namespacedId": "head:F18-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F19-L",
+      "type": "F19",
+      "namespacedId": "head:F19-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F19-R",
+      "type": "F19",
+      "namespacedId": "head:F19-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "01-face-transitions-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F20-L",
+      "type": "F20",
+      "namespacedId": "head:F20-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "04-corners-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F20-R",
+      "type": "F20",
+      "namespacedId": "head:F20-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "04-corners-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "F15",
+      "type": "F15",
+      "namespacedId": "head:F15",
+      "legacyInstance": null,
+      "anatomicalSide": null,
+      "image": "03-central-mouth-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "central or individual hair placement; no automatic whole-style mirror",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A04-L",
+      "type": "A04",
+      "namespacedId": "head:A04-L",
+      "legacyInstance": null,
+      "anatomicalSide": "L",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    },
+    {
+      "id": "A04-R",
+      "type": "A04",
+      "namespacedId": "head:A04-R",
+      "legacyInstance": null,
+      "anatomicalSide": "R",
+      "image": "10-ear-inner-v1.png",
+      "placementStatus": "type representative shown; exact per-instance placement not fixed",
+      "mirrorPolicy": "constrained mirror and anatomical fit; not identity guarantee",
+      "rootTransform": null,
+      "seamCoordinates": null
+    }
+  ],
+  "wholeHeadClosureProven": false
+}

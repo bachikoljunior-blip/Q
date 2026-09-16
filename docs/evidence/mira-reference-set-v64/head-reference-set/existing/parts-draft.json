@@ -1,0 +1,1451 @@
+{
+  "status": "Paper plan only; no image generation or geometry edit authorized by this record.",
+  "createdAt": "2026-09-16T11:55:56.602393+00:00",
+  "reason": "Latest user asks for small individually fast-to-build pictured parts that assemble to the fixed complete design.",
+  "frozenCandidate": "44477c14dd6dd0db3d57096f12d77680dc4d1946",
+  "evidenceCommit": "ffcd37e8f0a978117ac9c22070924627354b4bf6",
+  "coordinateSystem": "Head-local +Y up, face +Z. Anatomical R=-X, L=+X. Camera at +Z sees +X on image right (the person's left). Legacy code side/bone names are not anatomical authority.",
+  "count": 62,
+  "parts": [
+    {
+      "id": "F01-L",
+      "name": "forehead L",
+      "guideEnvelopeMm": [
+        55,
+        55,
+        25
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Continuous convex forehead patch; local slope changes at brow, no separate solid",
+      "joins": [
+        "S01",
+        "F03-L",
+        "F05-L"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F01",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "F03-L",
+      "name": "temple L",
+      "guideEnvelopeMm": [
+        35,
+        55,
+        40
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Recessed transition from brow to side scalp",
+      "joins": [
+        "F01-L",
+        "F05-L",
+        "S03/S04"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F03",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "F05-L",
+      "name": "malar cheek L",
+      "guideEnvelopeMm": [
+        40,
+        35,
+        40
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Defined cheek plane with rounded anatomical transition",
+      "joins": [
+        "F03-L",
+        "F07-L",
+        "F12"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F05",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "F07-L",
+      "name": "lower cheek L",
+      "guideEnvelopeMm": [
+        38,
+        40,
+        30
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Submalar hollow; its low point must continue into jaw",
+      "joins": [
+        "F05-L",
+        "F09-L",
+        "F16"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F07",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "F09-L",
+      "name": "jaw corner L",
+      "guideEnvelopeMm": [
+        38,
+        35,
+        45
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Angular mandibular transition with curved underside",
+      "joins": [
+        "F07-L",
+        "F11",
+        "N01"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F09",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "F14-L",
+      "name": "nasal ala L",
+      "guideEnvelopeMm": [
+        12,
+        15,
+        18
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Nostril wing curved patch with actual undercut, not a sphere",
+      "joins": [
+        "F12",
+        "F13",
+        "F16"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F14",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "F01-R",
+      "name": "forehead R",
+      "guideEnvelopeMm": [
+        55,
+        55,
+        25
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Continuous convex forehead patch; local slope changes at brow, no separate solid",
+      "joins": [
+        "S01",
+        "F03-R",
+        "F05-R"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F01",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "F03-R",
+      "name": "temple R",
+      "guideEnvelopeMm": [
+        35,
+        55,
+        40
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Recessed transition from brow to side scalp",
+      "joins": [
+        "F01-R",
+        "F05-R",
+        "S03/S04"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F03",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "F05-R",
+      "name": "malar cheek R",
+      "guideEnvelopeMm": [
+        40,
+        35,
+        40
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Defined cheek plane with rounded anatomical transition",
+      "joins": [
+        "F03-R",
+        "F07-R",
+        "F12"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F05",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "F07-R",
+      "name": "lower cheek R",
+      "guideEnvelopeMm": [
+        38,
+        40,
+        30
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Submalar hollow; its low point must continue into jaw",
+      "joins": [
+        "F05-R",
+        "F09-R",
+        "F16"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F07",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "F09-R",
+      "name": "jaw corner R",
+      "guideEnvelopeMm": [
+        38,
+        35,
+        45
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Angular mandibular transition with curved underside",
+      "joins": [
+        "F07-R",
+        "F11",
+        "N01"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F09",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "F14-R",
+      "name": "nasal ala R",
+      "guideEnvelopeMm": [
+        12,
+        15,
+        18
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Nostril wing curved patch with actual undercut, not a sphere",
+      "joins": [
+        "F12",
+        "F13",
+        "F16"
+      ],
+      "candidateReuse": "Potential matching source-face region; requires new micro reference before reuse",
+      "typeId": "F14",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "F11",
+      "name": "chin",
+      "guideEnvelopeMm": [
+        48,
+        30,
+        35
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Broad chin plane joined through underside",
+      "joins": [
+        "F09-L",
+        "F09-R",
+        "F17",
+        "N01"
+      ],
+      "candidateReuse": "Candidate source patch only; no planar portrait",
+      "typeId": "F11",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "F12",
+      "name": "nasal bridge",
+      "guideEnvelopeMm": [
+        20,
+        35,
+        25
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Straight bridge joining orbital medial rims",
+      "joins": [
+        "F05-L",
+        "F05-R",
+        "F13"
+      ],
+      "candidateReuse": "Candidate source patch only; no planar portrait",
+      "typeId": "F12",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "F13",
+      "name": "nasal tip",
+      "guideEnvelopeMm": [
+        20,
+        16,
+        22
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Defined rounded tip with continuous alar transition",
+      "joins": [
+        "F12",
+        "F14-L",
+        "F14-R"
+      ],
+      "candidateReuse": "Candidate source patch only; no planar portrait",
+      "typeId": "F13",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "F16",
+      "name": "upper lip and philtrum",
+      "guideEnvelopeMm": [
+        43,
+        16,
+        20
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Thin closed upper lip, actual vermilion border and philtrum",
+      "joins": [
+        "F14-L",
+        "F14-R",
+        "F17",
+        "F07-L",
+        "F07-R"
+      ],
+      "candidateReuse": "Candidate source patch only; no planar portrait",
+      "typeId": "F16",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "F17",
+      "name": "lower lip",
+      "guideEnvelopeMm": [
+        43,
+        12,
+        18
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Thin lower lip and crease; closed-mouth seam remains shared",
+      "joins": [
+        "F16",
+        "F11"
+      ],
+      "candidateReuse": "Candidate source patch only; no planar portrait",
+      "typeId": "F17",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "S01",
+      "name": "front scalp",
+      "guideEnvelopeMm": [
+        140,
+        45,
+        45
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Subset of one common curved head surface, with continuous registered boundary",
+      "joins": [
+        "adjacent scalp loops",
+        "forehead/temple/ear root"
+      ],
+      "candidateReuse": "Existing fitted source scalp can be partitioned; hairline must match new part references",
+      "typeId": "S01",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "S02",
+      "name": "crown",
+      "guideEnvelopeMm": [
+        150,
+        50,
+        115
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Subset of one common curved head surface, with continuous registered boundary",
+      "joins": [
+        "adjacent scalp loops",
+        "forehead/temple/ear root"
+      ],
+      "candidateReuse": "Existing fitted source scalp can be partitioned; hairline must match new part references",
+      "typeId": "S02",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "S03",
+      "name": "left side scalp",
+      "guideEnvelopeMm": [
+        40,
+        90,
+        100
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Subset of one common curved head surface, with continuous registered boundary",
+      "joins": [
+        "adjacent scalp loops",
+        "forehead/temple/ear root"
+      ],
+      "candidateReuse": "Existing fitted source scalp can be partitioned; hairline must match new part references",
+      "typeId": "S-SIDE",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "S04",
+      "name": "right side scalp",
+      "guideEnvelopeMm": [
+        40,
+        90,
+        100
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Subset of one common curved head surface, with continuous registered boundary",
+      "joins": [
+        "adjacent scalp loops",
+        "forehead/temple/ear root"
+      ],
+      "candidateReuse": "Existing fitted source scalp can be partitioned; hairline must match new part references",
+      "typeId": "S-SIDE",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "S05",
+      "name": "rear scalp",
+      "guideEnvelopeMm": [
+        145,
+        110,
+        45
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Subset of one common curved head surface, with continuous registered boundary",
+      "joins": [
+        "adjacent scalp loops",
+        "forehead/temple/ear root"
+      ],
+      "candidateReuse": "Existing fitted source scalp can be partitioned; hairline must match new part references",
+      "typeId": "S05",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "A01-L",
+      "name": "helix and antihelix L",
+      "guideEnvelopeMm": [
+        20,
+        43,
+        16
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Curved source patch with real folds; shared ear-root seam",
+      "joins": [
+        "same-side adjacent ear patches",
+        "temple/scalp"
+      ],
+      "candidateReuse": "Existing source triangles preserve actual ear structure; no stack of primitive ellipsoids",
+      "typeId": "A01",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "A02-L",
+      "name": "concha and tragus L",
+      "guideEnvelopeMm": [
+        17,
+        27,
+        16
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Curved source patch with real folds; shared ear-root seam",
+      "joins": [
+        "same-side adjacent ear patches",
+        "temple/scalp"
+      ],
+      "candidateReuse": "Existing source triangles preserve actual ear structure; no stack of primitive ellipsoids",
+      "typeId": "A02",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "A03-L",
+      "name": "earlobe L",
+      "guideEnvelopeMm": [
+        16,
+        16,
+        13
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Curved source patch with real folds; shared ear-root seam",
+      "joins": [
+        "same-side adjacent ear patches",
+        "temple/scalp"
+      ],
+      "candidateReuse": "Existing source triangles preserve actual ear structure; no stack of primitive ellipsoids",
+      "typeId": "A03",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "E01-L",
+      "name": "eyeball L",
+      "guideEnvelopeMm": [
+        40,
+        35,
+        37
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "joins": [
+        "preserved eye center",
+        "orbital rim",
+        "same-side eyelid bone"
+      ],
+      "candidateReuse": "Existing centers and lid bones reusable; visible shapes require the micro reference; eye and lid dimensions may change only together",
+      "typeId": "E01",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "E02-L",
+      "name": "iris and pupil L",
+      "guideEnvelopeMm": [
+        16,
+        16,
+        3
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "joins": [
+        "preserved eye center",
+        "orbital rim",
+        "same-side eyelid bone"
+      ],
+      "candidateReuse": "Existing centers and lid bones reusable; visible shapes require the micro reference; eye and lid dimensions may change only together",
+      "typeId": "E02",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1,
+      "referenceColorNote": "Canonical iris is gray-blue. Existing brown iris is not an accepted matching material."
+    },
+    {
+      "id": "E03-L",
+      "name": "upper lid L",
+      "guideEnvelopeMm": [
+        51,
+        38,
+        38
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "joins": [
+        "preserved eye center",
+        "orbital rim",
+        "same-side eyelid bone"
+      ],
+      "candidateReuse": "Existing centers and lid bones reusable; visible shapes require the micro reference; eye and lid dimensions may change only together",
+      "typeId": "E03",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "B01-L",
+      "name": "eyebrow L",
+      "guideEnvelopeMm": [
+        55,
+        8,
+        10
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "joins": [
+        "preserved eye center",
+        "orbital rim",
+        "same-side eyelid bone"
+      ],
+      "candidateReuse": "Existing centers and lid bones reusable; visible shapes require the micro reference; eye and lid dimensions may change only together",
+      "typeId": "B01",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "A01-R",
+      "name": "helix and antihelix R",
+      "guideEnvelopeMm": [
+        20,
+        43,
+        16
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Curved source patch with real folds; shared ear-root seam",
+      "joins": [
+        "same-side adjacent ear patches",
+        "temple/scalp"
+      ],
+      "candidateReuse": "Existing source triangles preserve actual ear structure; no stack of primitive ellipsoids",
+      "typeId": "A01",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "A02-R",
+      "name": "concha and tragus R",
+      "guideEnvelopeMm": [
+        17,
+        27,
+        16
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Curved source patch with real folds; shared ear-root seam",
+      "joins": [
+        "same-side adjacent ear patches",
+        "temple/scalp"
+      ],
+      "candidateReuse": "Existing source triangles preserve actual ear structure; no stack of primitive ellipsoids",
+      "typeId": "A02",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "A03-R",
+      "name": "earlobe R",
+      "guideEnvelopeMm": [
+        16,
+        16,
+        13
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Curved source patch with real folds; shared ear-root seam",
+      "joins": [
+        "same-side adjacent ear patches",
+        "temple/scalp"
+      ],
+      "candidateReuse": "Existing source triangles preserve actual ear structure; no stack of primitive ellipsoids",
+      "typeId": "A03",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "E01-R",
+      "name": "eyeball R",
+      "guideEnvelopeMm": [
+        40,
+        35,
+        37
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "joins": [
+        "preserved eye center",
+        "orbital rim",
+        "same-side eyelid bone"
+      ],
+      "candidateReuse": "Existing centers and lid bones reusable; visible shapes require the micro reference; eye and lid dimensions may change only together",
+      "typeId": "E01",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "E02-R",
+      "name": "iris and pupil R",
+      "guideEnvelopeMm": [
+        16,
+        16,
+        3
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "joins": [
+        "preserved eye center",
+        "orbital rim",
+        "same-side eyelid bone"
+      ],
+      "candidateReuse": "Existing centers and lid bones reusable; visible shapes require the micro reference; eye and lid dimensions may change only together",
+      "typeId": "E02",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1,
+      "referenceColorNote": "Canonical iris is gray-blue. Existing brown iris is not an accepted matching material."
+    },
+    {
+      "id": "E03-R",
+      "name": "upper lid R",
+      "guideEnvelopeMm": [
+        51,
+        38,
+        38
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "joins": [
+        "preserved eye center",
+        "orbital rim",
+        "same-side eyelid bone"
+      ],
+      "candidateReuse": "Existing centers and lid bones reusable; visible shapes require the micro reference; eye and lid dimensions may change only together",
+      "typeId": "E03",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "B01-R",
+      "name": "eyebrow R",
+      "guideEnvelopeMm": [
+        55,
+        8,
+        10
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "joins": [
+        "preserved eye center",
+        "orbital rim",
+        "same-side eyelid bone"
+      ],
+      "candidateReuse": "Existing centers and lid bones reusable; visible shapes require the micro reference; eye and lid dimensions may change only together",
+      "typeId": "B01",
+      "instanceOperation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "N01",
+      "name": "front neck transition",
+      "guideEnvelopeMm": [
+        145,
+        40,
+        80
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Curved cut-ring section tucked into existing neck; collar belongs to costume",
+      "joins": [
+        "shared 46-point neck rim",
+        "jaw/scalp",
+        "costume opening"
+      ],
+      "candidateReuse": "Current neck seam is reusable; no duplicate collar/cowl/brooch",
+      "typeId": "N01",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "N02",
+      "name": "rear neck transition",
+      "guideEnvelopeMm": [
+        145,
+        40,
+        80
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "Curved cut-ring section tucked into existing neck; collar belongs to costume",
+      "joins": [
+        "shared 46-point neck rim",
+        "jaw/scalp",
+        "costume opening"
+      ],
+      "candidateReuse": "Current neck seam is reusable; no duplicate collar/cowl/brooch",
+      "typeId": "N02",
+      "instanceOperation": "Unique central/curved patch"
+    },
+    {
+      "id": "H01",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT01",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H02",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT01",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H03",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT01",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H04",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT01",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H05",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT02",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H06",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT02",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H07",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT02",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H08",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT02",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H09",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT01",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H10",
+      "name": "front swept hair clump",
+      "guideEnvelopeMm": [
+        28,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT01",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H11",
+      "name": "side hair clump",
+      "guideEnvelopeMm": [
+        20,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT03",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "H12",
+      "name": "side hair clump",
+      "guideEnvelopeMm": [
+        20,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT03",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "H13",
+      "name": "side hair clump",
+      "guideEnvelopeMm": [
+        20,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT04",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement",
+      "anatomicalSide": "R",
+      "lateralSignX": -1
+    },
+    {
+      "id": "H14",
+      "name": "side hair clump",
+      "guideEnvelopeMm": [
+        20,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT03",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "H15",
+      "name": "side hair clump",
+      "guideEnvelopeMm": [
+        20,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT03",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "H16",
+      "name": "side hair clump",
+      "guideEnvelopeMm": [
+        20,
+        45,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT04",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement",
+      "anatomicalSide": "L",
+      "lateralSignX": 1
+    },
+    {
+      "id": "H17",
+      "name": "rear hair clump",
+      "guideEnvelopeMm": [
+        20,
+        70,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT05",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H18",
+      "name": "rear hair clump",
+      "guideEnvelopeMm": [
+        20,
+        70,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT05",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H19",
+      "name": "rear hair clump",
+      "guideEnvelopeMm": [
+        20,
+        70,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT05",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H20",
+      "name": "rear hair clump",
+      "guideEnvelopeMm": [
+        20,
+        70,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT05",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H21",
+      "name": "rear hair clump",
+      "guideEnvelopeMm": [
+        20,
+        70,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT06",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H22",
+      "name": "rear hair clump",
+      "guideEnvelopeMm": [
+        20,
+        70,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT06",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H23",
+      "name": "rear hair clump",
+      "guideEnvelopeMm": [
+        20,
+        70,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT06",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    },
+    {
+      "id": "H24",
+      "name": "rear hair clump",
+      "guideEnvelopeMm": [
+        20,
+        70,
+        7
+      ],
+      "envelopeMeaning": "Authored provisional patch span in head-local coordinates; not image-calibrated or an accepted final dimension.",
+      "shape": "One closed swept wedge with root, middle and taper; silhouette direction is explicit",
+      "joins": [
+        "one scalp-root loop/anchor",
+        "neighboring visible overlap"
+      ],
+      "candidateReuse": "Curve/topology template only. Current front-guide flow conflicts with canonical +X part -> -X sweep; current placement is not accepted.",
+      "typeId": "HT06",
+      "assemblyParameters": [
+        "root scalp coordinate",
+        "middle guide offset",
+        "tip coordinate",
+        "width profile",
+        "thickness profile",
+        "bounded curvature/twist",
+        "overlap order"
+      ],
+      "instanceOperation": "Bounded curve/taper variation and placement"
+    }
+  ],
+  "coordinateCorrection": {
+    "scope": "Micro plans only; frozen source/geometry untouched.",
+    "staff": "Canonical complete: right hand/staff = image-left = -X.",
+    "hair": "Canonical head FRONT/TOP part = image-right = anatomical left = +X; front sweep toward image-left = right = -X.",
+    "candidateMismatch": "44477 front guides run negative-X roots to positive-X tips, opposite to the reference. Reuse curve/topology templates only, not placement."
+  },
+  "uniqueTypeCount": 30,
+  "hairUniqueTypes": 6,
+  "typeManifest": "type-manifest.json"
+}

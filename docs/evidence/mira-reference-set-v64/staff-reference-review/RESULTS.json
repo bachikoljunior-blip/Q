@@ -1,0 +1,308 @@
+{
+  "at": "2026-09-16T14:47:45.140020+00:00",
+  "sourceCommit": "b21985680bb43a3be5a2c4d2244e6b6d24b5af69",
+  "mappingChecks": [
+    {
+      "id": "S01",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S02",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S03",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S04",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S06",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S15",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S17",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S18",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S05-A",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S05-B",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S09",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S10",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S11",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S12",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S13",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S07",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S14",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S16",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    },
+    {
+      "id": "S08",
+      "nativeMatrixExact": true,
+      "boundsRecomputeMaxErrorMm": 0.0
+    }
+  ],
+  "interfaces": {
+    "count": 24,
+    "allEndpointsResolve": true,
+    "kind": "native-authored contacts/retentions; not 24 verified welds and not derived from PNGs"
+  },
+  "unitCorrection": {
+    "initialMappingSHA256": "6910cd3e5e7974e5f7cb8c3d6f04fffaf7e6c5303d26182f33d57eecb854e4e0",
+    "finalMappingSHA256": "2858b0f90574d3652d6c26fbf34cc9f259ab58d83fe24012c0786360c5391a99",
+    "translationUnits": "metres",
+    "boundsUnits": "millimetres",
+    "nominalContactYUnits": "millimetres",
+    "numericMatricesAndBoundsExactToPinnedNative": true
+  },
+  "s05PixelObservation": {
+    "method": "Read-only brown-colour bounding pixels inside visually chosen panel ROIs, with three thresholds. This measures the bitmap, not a calibrated object. Rounded edges, texture and shadow affect bounds.",
+    "rois": {
+      "outer": [
+        35,
+        165,
+        1503,
+        219
+      ],
+      "inner": [
+        35,
+        369,
+        1503,
+        421
+      ],
+      "side": [
+        35,
+        559,
+        1503,
+        580
+      ],
+      "end": [
+        120,
+        792,
+        333,
+        862
+      ]
+    },
+    "thresholdRuns": [
+      {
+        "redBlueThreshold": 5,
+        "redGreenThreshold": 2.5,
+        "panels": {
+          "outer": {
+            "rasterBoundsXYXY": [
+              42,
+              171,
+              1496,
+              212
+            ],
+            "width": 1454,
+            "height": 41,
+            "visibleBoundsWidthHeight": 35.46341463414634
+          },
+          "inner": {
+            "rasterBoundsXYXY": [
+              43,
+              375,
+              1496,
+              417
+            ],
+            "width": 1453,
+            "height": 42,
+            "visibleBoundsWidthHeight": 34.595238095238095
+          },
+          "side": {
+            "rasterBoundsXYXY": [
+              43,
+              563,
+              1495,
+              577
+            ],
+            "width": 1452,
+            "height": 14,
+            "visibleBoundsWidthHeight": 103.71428571428571
+          },
+          "end": {
+            "rasterBoundsXYXY": [
+              130,
+              799,
+              324,
+              856
+            ],
+            "width": 194,
+            "height": 57,
+            "visibleBoundsWidthHeight": 3.4035087719298245
+          }
+        }
+      },
+      {
+        "redBlueThreshold": 8,
+        "redGreenThreshold": 4.0,
+        "panels": {
+          "outer": {
+            "rasterBoundsXYXY": [
+              42,
+              171,
+              1496,
+              212
+            ],
+            "width": 1454,
+            "height": 41,
+            "visibleBoundsWidthHeight": 35.46341463414634
+          },
+          "inner": {
+            "rasterBoundsXYXY": [
+              43,
+              375,
+              1496,
+              416
+            ],
+            "width": 1453,
+            "height": 41,
+            "visibleBoundsWidthHeight": 35.4390243902439
+          },
+          "side": {
+            "rasterBoundsXYXY": [
+              43,
+              563,
+              1495,
+              575
+            ],
+            "width": 1452,
+            "height": 12,
+            "visibleBoundsWidthHeight": 121.0
+          },
+          "end": {
+            "rasterBoundsXYXY": [
+              130,
+              799,
+              324,
+              855
+            ],
+            "width": 194,
+            "height": 56,
+            "visibleBoundsWidthHeight": 3.4642857142857144
+          }
+        }
+      },
+      {
+        "redBlueThreshold": 12,
+        "redGreenThreshold": 6.0,
+        "panels": {
+          "outer": {
+            "rasterBoundsXYXY": [
+              43,
+              171,
+              1496,
+              212
+            ],
+            "width": 1453,
+            "height": 41,
+            "visibleBoundsWidthHeight": 35.4390243902439
+          },
+          "inner": {
+            "rasterBoundsXYXY": [
+              43,
+              375,
+              1496,
+              415
+            ],
+            "width": 1453,
+            "height": 40,
+            "visibleBoundsWidthHeight": 36.325
+          },
+          "side": {
+            "rasterBoundsXYXY": [
+              43,
+              563,
+              1495,
+              574
+            ],
+            "width": 1452,
+            "height": 11,
+            "visibleBoundsWidthHeight": 132.0
+          },
+          "end": {
+            "rasterBoundsXYXY": [
+              130,
+              799,
+              324,
+              855
+            ],
+            "width": 194,
+            "height": 56,
+            "visibleBoundsWidthHeight": 3.4642857142857144
+          }
+        }
+      }
+    ],
+    "notAnExactCrossViewGeometricContradictionProof": true,
+    "thinSideUncertainty": "Only 11–14 colour pixels high; pixel/edge/shadow uncertainty is a large fraction. Camera calibration and per-panel scale are absent.",
+    "promptTargets": {
+      "lengthWidth": 43,
+      "widthThickness": 5
+    },
+    "promptIsNotMeasurement": true
+  },
+  "elapsedScriptSeconds": 0.5170703620096901,
+  "newGeometryCreated": 0,
+  "gameRendererRuns": 0,
+  "imageWrites": 0,
+  "sourceEdits": 0,
+  "unfinishedSessions": 0
+}

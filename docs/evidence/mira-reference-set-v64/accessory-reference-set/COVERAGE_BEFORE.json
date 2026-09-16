@@ -1,0 +1,2140 @@
+{
+  "UTC": "2026-09-16T14:24:33.281164+00:00",
+  "types": [
+    {
+      "id": "AH01",
+      "name": "掌中央曲面",
+      "count": 2,
+      "shape_reuse_connections": "四指の付根へ広がる一枚の曲面。AH03/04の側縁、AH05の指間、AH06の付根半周、AH10の手首へ接続",
+      "material": "fixed-person warm medium skin"
+    },
+    {
+      "id": "AH02",
+      "name": "手背中央曲面",
+      "count": 2,
+      "shape_reuse_connections": "中手骨の緩い起伏を持つ背面。掌の複製ではなく、同じ外周へ反対側から接続",
+      "material": "fixed-person warm medium skin"
+    },
+    {
+      "id": "AH03",
+      "name": "母指球・橈側曲面",
+      "count": 2,
+      "shape_reuse_connections": "掌から母指付根へ回る一枚。AH01/02/09と母指AH06へ接続。球を重ねない",
+      "material": "fixed-person warm medium skin"
+    },
+    {
+      "id": "AH04",
+      "name": "小指球・尺側曲面",
+      "count": 2,
+      "shape_reuse_connections": "掌と手背をつなぐ細長い側面。小指付根からAH10へ続く",
+      "material": "fixed-person warm medium skin"
+    },
+    {
+      "id": "AH05",
+      "name": "通常指間の鞍形曲面",
+      "count": 6,
+      "shape_reuse_connections": "一手3枚。同じ型を幅・深さ登録し、隣接二指のAH06と掌/背へ接続",
+      "material": "fixed-person warm medium skin"
+    },
+    {
+      "id": "AH06",
+      "name": "指節の短い開放ロフト",
+      "count": 18,
+      "shape_reuse_connections": "一手：通常四指の近位/中間8個＋母指近位1個。非円形断面と関節幅を個別登録、両端を共通輪郭へ",
+      "material": "fixed-person warm medium skin"
+    },
+    {
+      "id": "AH07",
+      "name": "指先・指腹の終端ロフト",
+      "count": 10,
+      "shape_reuse_connections": "一手5個。指腹・扁平な爪床・閉じた先端。近位はAH06、爪床はAH08へ",
+      "material": "fixed-person warm medium skin"
+    },
+    {
+      "id": "AH08",
+      "name": "爪板の薄い曲面",
+      "count": 10,
+      "shape_reuse_connections": "各指に1枚。爪床へ座る薄板で、下側・縁・厚みも必要。浮いた矩形にしない",
+      "material": "natural keratin; unpolished"
+    },
+    {
+      "id": "AH09",
+      "name": "母指と示指の第一指間",
+      "count": 2,
+      "shape_reuse_connections": "AH05の単純拡大ではなく、母指対向を含む広い鞍形。AH03/02と母指・示指の付根へ",
+      "material": "fixed-person warm medium skin"
+    },
+    {
+      "id": "AH10",
+      "name": "手首の短い皮膚スリーブ",
+      "count": 2,
+      "shape_reuse_connections": "掌の近位環からcloth cuffの下へ入るだけ。掌/背/側面と共通境界",
+      "material": "fixed-person warm medium skin"
+    },
+    {
+      "id": "AB01",
+      "name": "本底",
+      "count": 2,
+      "shape_reuse_connections": "左右の足型を持つ連続した押出し形状。甲/腰革/踵後面の下縁、AB02、AB10へ",
+      "material": "dark worn sole leather"
+    },
+    {
+      "id": "AB02",
+      "name": "踵ブロック",
+      "count": 2,
+      "shape_reuse_connections": "低い閉じた押出し。AB01下面と接し、底面は支持面、AB11の4座を持つ",
+      "material": "dark worn sole leather"
+    },
+    {
+      "id": "AB03",
+      "name": "甲の曲面",
+      "count": 2,
+      "shape_reuse_connections": "足首前から爪先根元へ続く一枚。AB04/05/07と底周囲へ接続",
+      "material": "worn brown leather"
+    },
+    {
+      "id": "AB04",
+      "name": "爪先を包む曲面",
+      "count": 2,
+      "shape_reuse_connections": "扁平な爪先の丸みを作る一枚。AB03の切替縁と本底/縁帯へ。金属鎧を加えない",
+      "material": "worn brown leather"
+    },
+    {
+      "id": "AB05",
+      "name": "内外の腰革曲面",
+      "count": 4,
+      "shape_reuse_connections": "片靴2枚。同型でも内外の反り・土踏まずは別登録。甲/踵/脛/底へ",
+      "material": "worn brown leather"
+    },
+    {
+      "id": "AB06",
+      "name": "踵後面の曲面",
+      "count": 2,
+      "shape_reuse_connections": "後方を包む一枚。左右腰革・脛の後縁・底へ接続。背面縫い線は表面情報",
+      "material": "worn brown leather"
+    },
+    {
+      "id": "AB07",
+      "name": "足首から脛の筒",
+      "count": 2,
+      "shape_reuse_connections": "くびれと屈曲余裕を持つ連続ロフト。AB03/05/06の足首環、AB08、AB09へ",
+      "material": "worn brown leather"
+    },
+    {
+      "id": "AB08",
+      "name": "靴の履き口折返し",
+      "count": 2,
+      "shape_reuse_connections": "内面・厚みを持つ短い折返し環。AB07とズボン下端の重なり。腕のcuffとは別",
+      "material": "worn brown leather"
+    },
+    {
+      "id": "AB09",
+      "name": "巻き革の帯",
+      "count": 6,
+      "shape_reuse_connections": "片靴：脛の逆巻き2本＋甲1本を計画。同じ薄い帯を各経路へ。交差部は厚みぶん持ち上げる",
+      "material": "worn brown leather"
+    },
+    {
+      "id": "AB10",
+      "name": "底周囲の細い縁帯",
+      "count": 2,
+      "shape_reuse_connections": "本底輪郭へ沿う一周の帯。甲などの下縁と共有。縫い位置を表面情報に含む",
+      "material": "worn brown leather"
+    },
+    {
+      "id": "AB11",
+      "name": "踵底の留め釘頭",
+      "count": 8,
+      "shape_reuse_connections": "原sole insetの4留め点を片靴4個。小さい薄円板、底から突出させない",
+      "material": "dark aged metal fastener"
+    }
+  ],
+  "instances": [
+    {
+      "id": "R-palm",
+      "type": "AH01",
+      "side": "R",
+      "bone": "hand-0",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "+X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "R.palm.perimeter"
+      ]
+    },
+    {
+      "id": "R-back",
+      "type": "AH02",
+      "side": "R",
+      "bone": "hand-0",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "+X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "R.back.perimeter"
+      ]
+    },
+    {
+      "id": "R-thenar",
+      "type": "AH03",
+      "side": "R",
+      "bone": "hand-0",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "+X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "R.thenar.perimeter"
+      ]
+    },
+    {
+      "id": "R-ulnar",
+      "type": "AH04",
+      "side": "R",
+      "bone": "hand-0",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "+X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "R.ulnar.perimeter"
+      ]
+    },
+    {
+      "id": "R-first-web",
+      "type": "AH09",
+      "side": "R",
+      "bone": "hand-0",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "+X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "R.first-web.perimeter"
+      ]
+    },
+    {
+      "id": "R-wrist",
+      "type": "AH10",
+      "side": "R",
+      "bone": "hand-0",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "+X",
+        "edge_registration": "shared curves, pending all micro sheets",
+        "skin_y_range_mm": [
+          -15,
+          9
+        ]
+      },
+      "join_edges": [
+        "R.wrist.perimeter"
+      ]
+    },
+    {
+      "id": "R-web-index-middle",
+      "type": "AH05",
+      "side": "R",
+      "bone": "hand-0",
+      "placement": {
+        "between": [
+          "index",
+          "middle"
+        ]
+      },
+      "join_edges": [
+        "R.MCP.index.side",
+        "R.MCP.middle.side",
+        "R.palm.distal",
+        "R.back.distal"
+      ]
+    },
+    {
+      "id": "R-web-middle-ring",
+      "type": "AH05",
+      "side": "R",
+      "bone": "hand-0",
+      "placement": {
+        "between": [
+          "middle",
+          "ring"
+        ]
+      },
+      "join_edges": [
+        "R.MCP.middle.side",
+        "R.MCP.ring.side",
+        "R.palm.distal",
+        "R.back.distal"
+      ]
+    },
+    {
+      "id": "R-web-ring-little",
+      "type": "AH05",
+      "side": "R",
+      "bone": "hand-0",
+      "placement": {
+        "between": [
+          "ring",
+          "little"
+        ]
+      },
+      "join_edges": [
+        "R.MCP.ring.side",
+        "R.MCP.little.side",
+        "R.palm.distal",
+        "R.back.distal"
+      ]
+    },
+    {
+      "id": "R-index-proximal",
+      "type": "AH06",
+      "side": "R",
+      "bone": [
+        "finger-0-3",
+        "finger-tip-0-3"
+      ],
+      "placement": {
+        "digit": "index",
+        "old_chain": 3,
+        "old_chain_length_mm": 65,
+        "old_root_hand_mm": [
+          33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 77,
+        "section_length_mm": 33.88,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.MCP.index.loop",
+        "R.PIP.index.loop"
+      ]
+    },
+    {
+      "id": "R-index-middle",
+      "type": "AH06",
+      "side": "R",
+      "bone": [
+        "finger-0-3",
+        "finger-tip-0-3"
+      ],
+      "placement": {
+        "digit": "index",
+        "old_chain": 3,
+        "old_chain_length_mm": 65,
+        "old_root_hand_mm": [
+          33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 77,
+        "section_length_mm": 23.87,
+        "section_start_mm": 33.88,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.PIP.index.loop",
+        "R.DIP.index.loop"
+      ]
+    },
+    {
+      "id": "R-index-tip",
+      "type": "AH07",
+      "side": "R",
+      "bone": [
+        "finger-0-3",
+        "finger-tip-0-3"
+      ],
+      "placement": {
+        "digit": "index",
+        "old_chain": 3,
+        "old_chain_length_mm": 65,
+        "old_root_hand_mm": [
+          33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 77,
+        "section_length_mm": 19.25,
+        "section_start_mm": 57.75,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.DIP.index.loop",
+        "R.index.nail-bed"
+      ]
+    },
+    {
+      "id": "R-index-nail",
+      "type": "AH08",
+      "side": "R",
+      "bone": "finger-tip-0-3",
+      "placement": {
+        "bed": "R-index-tip",
+        "width_mm": 12,
+        "length_mm": 11,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "R.index.nail-bed"
+      ]
+    },
+    {
+      "id": "R-middle-proximal",
+      "type": "AH06",
+      "side": "R",
+      "bone": [
+        "finger-0-2",
+        "finger-tip-0-2"
+      ],
+      "placement": {
+        "digit": "middle",
+        "old_chain": 2,
+        "old_chain_length_mm": 82,
+        "old_root_hand_mm": [
+          11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 87,
+        "section_length_mm": 38.28,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.MCP.middle.loop",
+        "R.PIP.middle.loop"
+      ]
+    },
+    {
+      "id": "R-middle-middle",
+      "type": "AH06",
+      "side": "R",
+      "bone": [
+        "finger-0-2",
+        "finger-tip-0-2"
+      ],
+      "placement": {
+        "digit": "middle",
+        "old_chain": 2,
+        "old_chain_length_mm": 82,
+        "old_root_hand_mm": [
+          11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 87,
+        "section_length_mm": 26.97,
+        "section_start_mm": 38.28,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.PIP.middle.loop",
+        "R.DIP.middle.loop"
+      ]
+    },
+    {
+      "id": "R-middle-tip",
+      "type": "AH07",
+      "side": "R",
+      "bone": [
+        "finger-0-2",
+        "finger-tip-0-2"
+      ],
+      "placement": {
+        "digit": "middle",
+        "old_chain": 2,
+        "old_chain_length_mm": 82,
+        "old_root_hand_mm": [
+          11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 87,
+        "section_length_mm": 21.75,
+        "section_start_mm": 65.25,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.DIP.middle.loop",
+        "R.middle.nail-bed"
+      ]
+    },
+    {
+      "id": "R-middle-nail",
+      "type": "AH08",
+      "side": "R",
+      "bone": "finger-tip-0-2",
+      "placement": {
+        "bed": "R-middle-tip",
+        "width_mm": 12,
+        "length_mm": 11,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "R.middle.nail-bed"
+      ]
+    },
+    {
+      "id": "R-ring-proximal",
+      "type": "AH06",
+      "side": "R",
+      "bone": [
+        "finger-0-1",
+        "finger-tip-0-1"
+      ],
+      "placement": {
+        "digit": "ring",
+        "old_chain": 1,
+        "old_chain_length_mm": 87,
+        "old_root_hand_mm": [
+          -11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 82,
+        "section_length_mm": 36.08,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.MCP.ring.loop",
+        "R.PIP.ring.loop"
+      ]
+    },
+    {
+      "id": "R-ring-middle",
+      "type": "AH06",
+      "side": "R",
+      "bone": [
+        "finger-0-1",
+        "finger-tip-0-1"
+      ],
+      "placement": {
+        "digit": "ring",
+        "old_chain": 1,
+        "old_chain_length_mm": 87,
+        "old_root_hand_mm": [
+          -11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 82,
+        "section_length_mm": 25.42,
+        "section_start_mm": 36.08,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.PIP.ring.loop",
+        "R.DIP.ring.loop"
+      ]
+    },
+    {
+      "id": "R-ring-tip",
+      "type": "AH07",
+      "side": "R",
+      "bone": [
+        "finger-0-1",
+        "finger-tip-0-1"
+      ],
+      "placement": {
+        "digit": "ring",
+        "old_chain": 1,
+        "old_chain_length_mm": 87,
+        "old_root_hand_mm": [
+          -11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 82,
+        "section_length_mm": 20.5,
+        "section_start_mm": 61.5,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.DIP.ring.loop",
+        "R.ring.nail-bed"
+      ]
+    },
+    {
+      "id": "R-ring-nail",
+      "type": "AH08",
+      "side": "R",
+      "bone": "finger-tip-0-1",
+      "placement": {
+        "bed": "R-ring-tip",
+        "width_mm": 12,
+        "length_mm": 11,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "R.ring.nail-bed"
+      ]
+    },
+    {
+      "id": "R-little-proximal",
+      "type": "AH06",
+      "side": "R",
+      "bone": [
+        "finger-0-0",
+        "finger-tip-0-0"
+      ],
+      "placement": {
+        "digit": "little",
+        "old_chain": 0,
+        "old_chain_length_mm": 77,
+        "old_root_hand_mm": [
+          -33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 65,
+        "section_length_mm": 28.6,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.MCP.little.loop",
+        "R.PIP.little.loop"
+      ]
+    },
+    {
+      "id": "R-little-middle",
+      "type": "AH06",
+      "side": "R",
+      "bone": [
+        "finger-0-0",
+        "finger-tip-0-0"
+      ],
+      "placement": {
+        "digit": "little",
+        "old_chain": 0,
+        "old_chain_length_mm": 77,
+        "old_root_hand_mm": [
+          -33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 65,
+        "section_length_mm": 20.15,
+        "section_start_mm": 28.6,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.PIP.little.loop",
+        "R.DIP.little.loop"
+      ]
+    },
+    {
+      "id": "R-little-tip",
+      "type": "AH07",
+      "side": "R",
+      "bone": [
+        "finger-0-0",
+        "finger-tip-0-0"
+      ],
+      "placement": {
+        "digit": "little",
+        "old_chain": 0,
+        "old_chain_length_mm": 77,
+        "old_root_hand_mm": [
+          -33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 65,
+        "section_length_mm": 16.25,
+        "section_start_mm": 48.75,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.DIP.little.loop",
+        "R.little.nail-bed"
+      ]
+    },
+    {
+      "id": "R-little-nail",
+      "type": "AH08",
+      "side": "R",
+      "bone": "finger-tip-0-0",
+      "placement": {
+        "bed": "R-little-tip",
+        "width_mm": 10,
+        "length_mm": 9,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "R.little.nail-bed"
+      ]
+    },
+    {
+      "id": "R-thumb-proximal",
+      "type": "AH06",
+      "side": "R",
+      "bone": [
+        "finger-0-4",
+        "finger-tip-0-4"
+      ],
+      "placement": {
+        "digit": "thumb",
+        "old_chain": 4,
+        "old_chain_length_mm": 61,
+        "old_root_hand_mm": [
+          43,
+          -35,
+          13
+        ],
+        "target_digit_length_mm": 61,
+        "section_length_mm": 31.11,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.MCP.thumb.loop",
+        "R.IP.thumb.loop"
+      ]
+    },
+    {
+      "id": "R-thumb-tip",
+      "type": "AH07",
+      "side": "R",
+      "bone": [
+        "finger-0-4",
+        "finger-tip-0-4"
+      ],
+      "placement": {
+        "digit": "thumb",
+        "old_chain": 4,
+        "old_chain_length_mm": 61,
+        "old_root_hand_mm": [
+          43,
+          -35,
+          13
+        ],
+        "target_digit_length_mm": 61,
+        "section_length_mm": 29.89,
+        "section_start_mm": 31.11,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "R.IP.thumb.loop",
+        "R.thumb.nail-bed"
+      ]
+    },
+    {
+      "id": "R-thumb-nail",
+      "type": "AH08",
+      "side": "R",
+      "bone": "finger-tip-0-4",
+      "placement": {
+        "bed": "R-thumb-tip",
+        "width_mm": 17,
+        "length_mm": 14,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "R.thumb.nail-bed"
+      ]
+    },
+    {
+      "id": "L-palm",
+      "type": "AH01",
+      "side": "L",
+      "bone": "hand-1",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "-X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "L.palm.perimeter"
+      ]
+    },
+    {
+      "id": "L-back",
+      "type": "AH02",
+      "side": "L",
+      "bone": "hand-1",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "-X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "L.back.perimeter"
+      ]
+    },
+    {
+      "id": "L-thenar",
+      "type": "AH03",
+      "side": "L",
+      "bone": "hand-1",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "-X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "L.thenar.perimeter"
+      ]
+    },
+    {
+      "id": "L-ulnar",
+      "type": "AH04",
+      "side": "L",
+      "bone": "hand-1",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "-X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "L.ulnar.perimeter"
+      ]
+    },
+    {
+      "id": "L-first-web",
+      "type": "AH09",
+      "side": "L",
+      "bone": "hand-1",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "-X",
+        "edge_registration": "shared curves, pending all micro sheets"
+      },
+      "join_edges": [
+        "L.first-web.perimeter"
+      ]
+    },
+    {
+      "id": "L-wrist",
+      "type": "AH10",
+      "side": "L",
+      "bone": "hand-1",
+      "placement": {
+        "frame": "hand-local",
+        "radial_side": "-X",
+        "edge_registration": "shared curves, pending all micro sheets",
+        "skin_y_range_mm": [
+          -15,
+          9
+        ]
+      },
+      "join_edges": [
+        "L.wrist.perimeter"
+      ]
+    },
+    {
+      "id": "L-web-index-middle",
+      "type": "AH05",
+      "side": "L",
+      "bone": "hand-1",
+      "placement": {
+        "between": [
+          "index",
+          "middle"
+        ]
+      },
+      "join_edges": [
+        "L.MCP.index.side",
+        "L.MCP.middle.side",
+        "L.palm.distal",
+        "L.back.distal"
+      ]
+    },
+    {
+      "id": "L-web-middle-ring",
+      "type": "AH05",
+      "side": "L",
+      "bone": "hand-1",
+      "placement": {
+        "between": [
+          "middle",
+          "ring"
+        ]
+      },
+      "join_edges": [
+        "L.MCP.middle.side",
+        "L.MCP.ring.side",
+        "L.palm.distal",
+        "L.back.distal"
+      ]
+    },
+    {
+      "id": "L-web-ring-little",
+      "type": "AH05",
+      "side": "L",
+      "bone": "hand-1",
+      "placement": {
+        "between": [
+          "ring",
+          "little"
+        ]
+      },
+      "join_edges": [
+        "L.MCP.ring.side",
+        "L.MCP.little.side",
+        "L.palm.distal",
+        "L.back.distal"
+      ]
+    },
+    {
+      "id": "L-index-proximal",
+      "type": "AH06",
+      "side": "L",
+      "bone": [
+        "finger-1-0",
+        "finger-tip-1-0"
+      ],
+      "placement": {
+        "digit": "index",
+        "old_chain": 0,
+        "old_chain_length_mm": 77,
+        "old_root_hand_mm": [
+          -33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 77,
+        "section_length_mm": 33.88,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.MCP.index.loop",
+        "L.PIP.index.loop"
+      ]
+    },
+    {
+      "id": "L-index-middle",
+      "type": "AH06",
+      "side": "L",
+      "bone": [
+        "finger-1-0",
+        "finger-tip-1-0"
+      ],
+      "placement": {
+        "digit": "index",
+        "old_chain": 0,
+        "old_chain_length_mm": 77,
+        "old_root_hand_mm": [
+          -33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 77,
+        "section_length_mm": 23.87,
+        "section_start_mm": 33.88,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.PIP.index.loop",
+        "L.DIP.index.loop"
+      ]
+    },
+    {
+      "id": "L-index-tip",
+      "type": "AH07",
+      "side": "L",
+      "bone": [
+        "finger-1-0",
+        "finger-tip-1-0"
+      ],
+      "placement": {
+        "digit": "index",
+        "old_chain": 0,
+        "old_chain_length_mm": 77,
+        "old_root_hand_mm": [
+          -33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 77,
+        "section_length_mm": 19.25,
+        "section_start_mm": 57.75,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.DIP.index.loop",
+        "L.index.nail-bed"
+      ]
+    },
+    {
+      "id": "L-index-nail",
+      "type": "AH08",
+      "side": "L",
+      "bone": "finger-tip-1-0",
+      "placement": {
+        "bed": "L-index-tip",
+        "width_mm": 12,
+        "length_mm": 11,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "L.index.nail-bed"
+      ]
+    },
+    {
+      "id": "L-middle-proximal",
+      "type": "AH06",
+      "side": "L",
+      "bone": [
+        "finger-1-1",
+        "finger-tip-1-1"
+      ],
+      "placement": {
+        "digit": "middle",
+        "old_chain": 1,
+        "old_chain_length_mm": 87,
+        "old_root_hand_mm": [
+          -11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 87,
+        "section_length_mm": 38.28,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.MCP.middle.loop",
+        "L.PIP.middle.loop"
+      ]
+    },
+    {
+      "id": "L-middle-middle",
+      "type": "AH06",
+      "side": "L",
+      "bone": [
+        "finger-1-1",
+        "finger-tip-1-1"
+      ],
+      "placement": {
+        "digit": "middle",
+        "old_chain": 1,
+        "old_chain_length_mm": 87,
+        "old_root_hand_mm": [
+          -11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 87,
+        "section_length_mm": 26.97,
+        "section_start_mm": 38.28,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.PIP.middle.loop",
+        "L.DIP.middle.loop"
+      ]
+    },
+    {
+      "id": "L-middle-tip",
+      "type": "AH07",
+      "side": "L",
+      "bone": [
+        "finger-1-1",
+        "finger-tip-1-1"
+      ],
+      "placement": {
+        "digit": "middle",
+        "old_chain": 1,
+        "old_chain_length_mm": 87,
+        "old_root_hand_mm": [
+          -11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 87,
+        "section_length_mm": 21.75,
+        "section_start_mm": 65.25,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.DIP.middle.loop",
+        "L.middle.nail-bed"
+      ]
+    },
+    {
+      "id": "L-middle-nail",
+      "type": "AH08",
+      "side": "L",
+      "bone": "finger-tip-1-1",
+      "placement": {
+        "bed": "L-middle-tip",
+        "width_mm": 12,
+        "length_mm": 11,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "L.middle.nail-bed"
+      ]
+    },
+    {
+      "id": "L-ring-proximal",
+      "type": "AH06",
+      "side": "L",
+      "bone": [
+        "finger-1-2",
+        "finger-tip-1-2"
+      ],
+      "placement": {
+        "digit": "ring",
+        "old_chain": 2,
+        "old_chain_length_mm": 82,
+        "old_root_hand_mm": [
+          11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 82,
+        "section_length_mm": 36.08,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.MCP.ring.loop",
+        "L.PIP.ring.loop"
+      ]
+    },
+    {
+      "id": "L-ring-middle",
+      "type": "AH06",
+      "side": "L",
+      "bone": [
+        "finger-1-2",
+        "finger-tip-1-2"
+      ],
+      "placement": {
+        "digit": "ring",
+        "old_chain": 2,
+        "old_chain_length_mm": 82,
+        "old_root_hand_mm": [
+          11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 82,
+        "section_length_mm": 25.42,
+        "section_start_mm": 36.08,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.PIP.ring.loop",
+        "L.DIP.ring.loop"
+      ]
+    },
+    {
+      "id": "L-ring-tip",
+      "type": "AH07",
+      "side": "L",
+      "bone": [
+        "finger-1-2",
+        "finger-tip-1-2"
+      ],
+      "placement": {
+        "digit": "ring",
+        "old_chain": 2,
+        "old_chain_length_mm": 82,
+        "old_root_hand_mm": [
+          11.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 82,
+        "section_length_mm": 20.5,
+        "section_start_mm": 61.5,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.DIP.ring.loop",
+        "L.ring.nail-bed"
+      ]
+    },
+    {
+      "id": "L-ring-nail",
+      "type": "AH08",
+      "side": "L",
+      "bone": "finger-tip-1-2",
+      "placement": {
+        "bed": "L-ring-tip",
+        "width_mm": 12,
+        "length_mm": 11,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "L.ring.nail-bed"
+      ]
+    },
+    {
+      "id": "L-little-proximal",
+      "type": "AH06",
+      "side": "L",
+      "bone": [
+        "finger-1-3",
+        "finger-tip-1-3"
+      ],
+      "placement": {
+        "digit": "little",
+        "old_chain": 3,
+        "old_chain_length_mm": 65,
+        "old_root_hand_mm": [
+          33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 65,
+        "section_length_mm": 28.6,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.MCP.little.loop",
+        "L.PIP.little.loop"
+      ]
+    },
+    {
+      "id": "L-little-middle",
+      "type": "AH06",
+      "side": "L",
+      "bone": [
+        "finger-1-3",
+        "finger-tip-1-3"
+      ],
+      "placement": {
+        "digit": "little",
+        "old_chain": 3,
+        "old_chain_length_mm": 65,
+        "old_root_hand_mm": [
+          33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 65,
+        "section_length_mm": 20.15,
+        "section_start_mm": 28.6,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.PIP.little.loop",
+        "L.DIP.little.loop"
+      ]
+    },
+    {
+      "id": "L-little-tip",
+      "type": "AH07",
+      "side": "L",
+      "bone": [
+        "finger-1-3",
+        "finger-tip-1-3"
+      ],
+      "placement": {
+        "digit": "little",
+        "old_chain": 3,
+        "old_chain_length_mm": 65,
+        "old_root_hand_mm": [
+          33.0,
+          -87,
+          13
+        ],
+        "target_digit_length_mm": 65,
+        "section_length_mm": 16.25,
+        "section_start_mm": 48.75,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.DIP.little.loop",
+        "L.little.nail-bed"
+      ]
+    },
+    {
+      "id": "L-little-nail",
+      "type": "AH08",
+      "side": "L",
+      "bone": "finger-tip-1-3",
+      "placement": {
+        "bed": "L-little-tip",
+        "width_mm": 10,
+        "length_mm": 9,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "L.little.nail-bed"
+      ]
+    },
+    {
+      "id": "L-thumb-proximal",
+      "type": "AH06",
+      "side": "L",
+      "bone": [
+        "finger-1-4",
+        "finger-tip-1-4"
+      ],
+      "placement": {
+        "digit": "thumb",
+        "old_chain": 4,
+        "old_chain_length_mm": 61,
+        "old_root_hand_mm": [
+          -43,
+          -35,
+          13
+        ],
+        "target_digit_length_mm": 61,
+        "section_length_mm": 31.11,
+        "section_start_mm": 0,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.MCP.thumb.loop",
+        "L.IP.thumb.loop"
+      ]
+    },
+    {
+      "id": "L-thumb-tip",
+      "type": "AH07",
+      "side": "L",
+      "bone": [
+        "finger-1-4",
+        "finger-tip-1-4"
+      ],
+      "placement": {
+        "digit": "thumb",
+        "old_chain": 4,
+        "old_chain_length_mm": 61,
+        "old_root_hand_mm": [
+          -43,
+          -35,
+          13
+        ],
+        "target_digit_length_mm": 61,
+        "section_length_mm": 29.89,
+        "section_start_mm": 31.11,
+        "axis": "-Y distal",
+        "rig_registration": "pending; geometry sections do not add independent bones"
+      },
+      "join_edges": [
+        "L.IP.thumb.loop",
+        "L.thumb.nail-bed"
+      ]
+    },
+    {
+      "id": "L-thumb-nail",
+      "type": "AH08",
+      "side": "L",
+      "bone": "finger-tip-1-4",
+      "placement": {
+        "bed": "L-thumb-tip",
+        "width_mm": 17,
+        "length_mm": 14,
+        "visible_thickness_mm": 0.5
+      },
+      "join_edges": [
+        "L.thumb.nail-bed"
+      ]
+    },
+    {
+      "id": "R-boot-sole",
+      "type": "AB01",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "R.boot.sole.perimeter"
+      ]
+    },
+    {
+      "id": "R-boot-heel",
+      "type": "AB02",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "R.boot.heel.perimeter"
+      ]
+    },
+    {
+      "id": "R-boot-vamp",
+      "type": "AB03",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "R.boot.vamp.perimeter"
+      ]
+    },
+    {
+      "id": "R-boot-toe",
+      "type": "AB04",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "R.boot.toe.perimeter"
+      ]
+    },
+    {
+      "id": "R-boot-heel-back",
+      "type": "AB06",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "R.boot.heel-back.perimeter"
+      ]
+    },
+    {
+      "id": "R-boot-shaft",
+      "type": "AB07",
+      "side": "R",
+      "bone": [
+        "knee-0",
+        "foot-0"
+      ],
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets",
+        "boot_top_foot_y_mm": 340,
+        "boot_top_knee_y_mm": -95
+      },
+      "join_edges": [
+        "R.boot.shaft.perimeter"
+      ]
+    },
+    {
+      "id": "R-boot-rim",
+      "type": "AB08",
+      "side": "R",
+      "bone": [
+        "knee-0",
+        "foot-0"
+      ],
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets",
+        "boot_top_foot_y_mm": 340,
+        "boot_top_knee_y_mm": -95
+      },
+      "join_edges": [
+        "R.boot.rim.perimeter"
+      ]
+    },
+    {
+      "id": "R-boot-welt",
+      "type": "AB10",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "R.boot.welt.perimeter"
+      ]
+    },
+    {
+      "id": "R-boot-quarter-inner",
+      "type": "AB05",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "variant": "inner",
+        "inner_direction": "+X"
+      },
+      "join_edges": [
+        "R.boot.vamp.inner",
+        "R.boot.heel-back.inner",
+        "R.boot.shaft.inner",
+        "R.boot.sole.inner"
+      ]
+    },
+    {
+      "id": "R-boot-quarter-outer",
+      "type": "AB05",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "variant": "outer",
+        "inner_direction": "+X"
+      },
+      "join_edges": [
+        "R.boot.vamp.outer",
+        "R.boot.heel-back.outer",
+        "R.boot.shaft.outer",
+        "R.boot.sole.outer"
+      ]
+    },
+    {
+      "id": "R-boot-wrap-shaft-a",
+      "type": "AB09",
+      "side": "R",
+      "bone": [
+        "knee-0",
+        "foot-0"
+      ],
+      "placement": {
+        "route": "shaft-a",
+        "width_mm": 12,
+        "thickness_mm": 1.5,
+        "hidden_routing": "authored completion, not recovered from unseen image",
+        "crossing": "lift upper strip one thickness",
+        "y_foot_range_mm": [
+          40,
+          270
+        ]
+      },
+      "join_edges": [
+        "R.boot.shaft-a.start-seat",
+        "R.boot.shaft-a.end-seat"
+      ]
+    },
+    {
+      "id": "R-boot-wrap-shaft-b",
+      "type": "AB09",
+      "side": "R",
+      "bone": [
+        "knee-0",
+        "foot-0"
+      ],
+      "placement": {
+        "route": "shaft-b",
+        "width_mm": 12,
+        "thickness_mm": 1.5,
+        "hidden_routing": "authored completion, not recovered from unseen image",
+        "crossing": "lift upper strip one thickness",
+        "y_foot_range_mm": [
+          40,
+          270
+        ]
+      },
+      "join_edges": [
+        "R.boot.shaft-b.start-seat",
+        "R.boot.shaft-b.end-seat"
+      ]
+    },
+    {
+      "id": "R-boot-wrap-instep",
+      "type": "AB09",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "route": "instep",
+        "width_mm": 12,
+        "thickness_mm": 1.5,
+        "hidden_routing": "authored completion, not recovered from unseen image",
+        "crossing": "lift upper strip one thickness",
+        "z_foot_range_mm": [
+          30,
+          110
+        ]
+      },
+      "join_edges": [
+        "R.boot.instep.start-seat",
+        "R.boot.instep.end-seat"
+      ]
+    },
+    {
+      "id": "R-boot-fastener-1",
+      "type": "AB11",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "center_foot_mm": [
+          -40,
+          -107.5,
+          -80
+        ],
+        "radius_mm": 3,
+        "thickness_mm": 1,
+        "outer_face_y_mm": -108,
+        "placement_status": "authored registration inside heel footprint"
+      },
+      "join_edges": [
+        "R.boot.heel.fastener-1"
+      ]
+    },
+    {
+      "id": "R-boot-fastener-2",
+      "type": "AB11",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "center_foot_mm": [
+          40,
+          -107.5,
+          -80
+        ],
+        "radius_mm": 3,
+        "thickness_mm": 1,
+        "outer_face_y_mm": -108,
+        "placement_status": "authored registration inside heel footprint"
+      },
+      "join_edges": [
+        "R.boot.heel.fastener-2"
+      ]
+    },
+    {
+      "id": "R-boot-fastener-3",
+      "type": "AB11",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "center_foot_mm": [
+          -40,
+          -107.5,
+          -35
+        ],
+        "radius_mm": 3,
+        "thickness_mm": 1,
+        "outer_face_y_mm": -108,
+        "placement_status": "authored registration inside heel footprint"
+      },
+      "join_edges": [
+        "R.boot.heel.fastener-3"
+      ]
+    },
+    {
+      "id": "R-boot-fastener-4",
+      "type": "AB11",
+      "side": "R",
+      "bone": "foot-0",
+      "placement": {
+        "center_foot_mm": [
+          40,
+          -107.5,
+          -35
+        ],
+        "radius_mm": 3,
+        "thickness_mm": 1,
+        "outer_face_y_mm": -108,
+        "placement_status": "authored registration inside heel footprint"
+      },
+      "join_edges": [
+        "R.boot.heel.fastener-4"
+      ]
+    },
+    {
+      "id": "L-boot-sole",
+      "type": "AB01",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "L.boot.sole.perimeter"
+      ]
+    },
+    {
+      "id": "L-boot-heel",
+      "type": "AB02",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "L.boot.heel.perimeter"
+      ]
+    },
+    {
+      "id": "L-boot-vamp",
+      "type": "AB03",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "L.boot.vamp.perimeter"
+      ]
+    },
+    {
+      "id": "L-boot-toe",
+      "type": "AB04",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "L.boot.toe.perimeter"
+      ]
+    },
+    {
+      "id": "L-boot-heel-back",
+      "type": "AB06",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "L.boot.heel-back.perimeter"
+      ]
+    },
+    {
+      "id": "L-boot-shaft",
+      "type": "AB07",
+      "side": "L",
+      "bone": [
+        "knee-1",
+        "foot-1"
+      ],
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets",
+        "boot_top_foot_y_mm": 340,
+        "boot_top_knee_y_mm": -95
+      },
+      "join_edges": [
+        "L.boot.shaft.perimeter"
+      ]
+    },
+    {
+      "id": "L-boot-rim",
+      "type": "AB08",
+      "side": "L",
+      "bone": [
+        "knee-1",
+        "foot-1"
+      ],
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets",
+        "boot_top_foot_y_mm": 340,
+        "boot_top_knee_y_mm": -95
+      },
+      "join_edges": [
+        "L.boot.rim.perimeter"
+      ]
+    },
+    {
+      "id": "L-boot-welt",
+      "type": "AB10",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "frame": "foot-local",
+        "legacy_x_mm": [
+          -79,
+          79
+        ],
+        "legacy_z_mm": [
+          -93,
+          193
+        ],
+        "support_min_y_mm": -108,
+        "shared_edge_registration": "pending all micro sheets"
+      },
+      "join_edges": [
+        "L.boot.welt.perimeter"
+      ]
+    },
+    {
+      "id": "L-boot-quarter-inner",
+      "type": "AB05",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "variant": "inner",
+        "inner_direction": "-X"
+      },
+      "join_edges": [
+        "L.boot.vamp.inner",
+        "L.boot.heel-back.inner",
+        "L.boot.shaft.inner",
+        "L.boot.sole.inner"
+      ]
+    },
+    {
+      "id": "L-boot-quarter-outer",
+      "type": "AB05",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "variant": "outer",
+        "inner_direction": "-X"
+      },
+      "join_edges": [
+        "L.boot.vamp.outer",
+        "L.boot.heel-back.outer",
+        "L.boot.shaft.outer",
+        "L.boot.sole.outer"
+      ]
+    },
+    {
+      "id": "L-boot-wrap-shaft-a",
+      "type": "AB09",
+      "side": "L",
+      "bone": [
+        "knee-1",
+        "foot-1"
+      ],
+      "placement": {
+        "route": "shaft-a",
+        "width_mm": 12,
+        "thickness_mm": 1.5,
+        "hidden_routing": "authored completion, not recovered from unseen image",
+        "crossing": "lift upper strip one thickness",
+        "y_foot_range_mm": [
+          40,
+          270
+        ]
+      },
+      "join_edges": [
+        "L.boot.shaft-a.start-seat",
+        "L.boot.shaft-a.end-seat"
+      ]
+    },
+    {
+      "id": "L-boot-wrap-shaft-b",
+      "type": "AB09",
+      "side": "L",
+      "bone": [
+        "knee-1",
+        "foot-1"
+      ],
+      "placement": {
+        "route": "shaft-b",
+        "width_mm": 12,
+        "thickness_mm": 1.5,
+        "hidden_routing": "authored completion, not recovered from unseen image",
+        "crossing": "lift upper strip one thickness",
+        "y_foot_range_mm": [
+          40,
+          270
+        ]
+      },
+      "join_edges": [
+        "L.boot.shaft-b.start-seat",
+        "L.boot.shaft-b.end-seat"
+      ]
+    },
+    {
+      "id": "L-boot-wrap-instep",
+      "type": "AB09",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "route": "instep",
+        "width_mm": 12,
+        "thickness_mm": 1.5,
+        "hidden_routing": "authored completion, not recovered from unseen image",
+        "crossing": "lift upper strip one thickness",
+        "z_foot_range_mm": [
+          30,
+          110
+        ]
+      },
+      "join_edges": [
+        "L.boot.instep.start-seat",
+        "L.boot.instep.end-seat"
+      ]
+    },
+    {
+      "id": "L-boot-fastener-1",
+      "type": "AB11",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "center_foot_mm": [
+          -40,
+          -107.5,
+          -80
+        ],
+        "radius_mm": 3,
+        "thickness_mm": 1,
+        "outer_face_y_mm": -108,
+        "placement_status": "authored registration inside heel footprint"
+      },
+      "join_edges": [
+        "L.boot.heel.fastener-1"
+      ]
+    },
+    {
+      "id": "L-boot-fastener-2",
+      "type": "AB11",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "center_foot_mm": [
+          40,
+          -107.5,
+          -80
+        ],
+        "radius_mm": 3,
+        "thickness_mm": 1,
+        "outer_face_y_mm": -108,
+        "placement_status": "authored registration inside heel footprint"
+      },
+      "join_edges": [
+        "L.boot.heel.fastener-2"
+      ]
+    },
+    {
+      "id": "L-boot-fastener-3",
+      "type": "AB11",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "center_foot_mm": [
+          -40,
+          -107.5,
+          -35
+        ],
+        "radius_mm": 3,
+        "thickness_mm": 1,
+        "outer_face_y_mm": -108,
+        "placement_status": "authored registration inside heel footprint"
+      },
+      "join_edges": [
+        "L.boot.heel.fastener-3"
+      ]
+    },
+    {
+      "id": "L-boot-fastener-4",
+      "type": "AB11",
+      "side": "L",
+      "bone": "foot-1",
+      "placement": {
+        "center_foot_mm": [
+          40,
+          -107.5,
+          -35
+        ],
+        "radius_mm": 3,
+        "thickness_mm": 1,
+        "outer_face_y_mm": -108,
+        "placement_status": "authored registration inside heel footprint"
+      },
+      "join_edges": [
+        "L.boot.heel.fastener-4"
+      ]
+    }
+  ],
+  "counts": {
+    "AH01": 2,
+    "AH02": 2,
+    "AH03": 2,
+    "AH04": 2,
+    "AH09": 2,
+    "AH10": 2,
+    "AH05": 6,
+    "AH06": 18,
+    "AH07": 10,
+    "AH08": 10,
+    "AB01": 2,
+    "AB02": 2,
+    "AB03": 2,
+    "AB04": 2,
+    "AB06": 2,
+    "AB07": 2,
+    "AB08": 2,
+    "AB10": 2,
+    "AB05": 4,
+    "AB09": 6,
+    "AB11": 8
+  },
+  "originalPlanHash": "c89fb35ac5d065905dd2fa8ea3a31bab70336e47e83501725b43d204646e709b",
+  "requiredSheets": 8,
+  "generatedSheets": 0,
+  "newTypesRequired": false,
+  "openConditions": [
+    "AH06/AH07 thumb versus ordinary-digit profiles are registration variants",
+    "AB05 inner/outer profiles differ; not a blindly mirrored duplicate",
+    "AB09 hidden routes/AB11 opposite sole are authored counterpart construction",
+    "Shared boundary positions/normals/weights and nail seating await later native assembly; generated images do not prove watertightness"
+  ],
+  "new3D": 0
+}

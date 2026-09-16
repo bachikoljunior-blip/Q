@@ -1,0 +1,26 @@
+{
+  "id": "11-neck",
+  "initial": {
+    "start": "2026-09-16T14:40:08.124Z",
+    "returned": "2026-09-16T14:41:13.718Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-b6532aaa-e269-4fae-868a-8d7113c327a5.png",
+    "terminal": "success"
+  },
+  "observation": {
+    "adoption": "v2 conditional; v1 coverage rejected",
+    "findings": [
+      "v1 incorrectly changed N01/N02 into anatomical LEFT quarters, contrary to single anterior/posterior types.",
+      "One targeted correction v2 restores central anterior/posterior half-circumference patches and locators, preserving two total instances.",
+      "v2 labels two SIDE views rather than required 3Q; exact orthographic profile correspondence not proven.",
+      "Side edges, jaw/occiput and costume collar cut are not metrically registered.",
+      "No deformation or rig test performed."
+    ],
+    "seen": true
+  },
+  "correction": {
+    "start": "2026-09-16T14:41:41.700Z",
+    "returned": "2026-09-16T14:42:39.519Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-de84827f-f0df-4f07-8c6c-51e715657da2.png",
+    "terminal": "success"
+  }
+}

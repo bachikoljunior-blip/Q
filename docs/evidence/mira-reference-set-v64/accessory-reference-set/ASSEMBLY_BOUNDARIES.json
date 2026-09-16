@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "source": "whole-assembly-ledger/ASSEMBLY_INTERFACES.json",
+  "sourceSHA256": "59f3fc08a880df12a272bf3cc40bf5b207b861a70e755b45253e80174020d9d3",
+  "ports": [
+    {
+      "portID": "right-wrist",
+      "fromInstance": "R-wrist",
+      "fromType": "hands:AH10",
+      "directToInstances": [
+        "cloth:F01-R",
+        "cloth:F02-R"
+      ],
+      "nearbyClothInstances": [
+        "cloth:S05-R",
+        "cloth:S06-R",
+        "cloth:F03-R-0",
+        "cloth:F03-R-1",
+        "cloth:F03-R-2"
+      ],
+      "registration": {
+        "frame": "hand-0 local",
+        "legacySkinYRangeMm": [
+          -15,
+          9
+        ],
+        "skinBoundary": "AH01/AH02/AH03/AH04 proximal loop",
+        "clothBoundary": "F01/F02 bottom WRIST aperture; not the S05/S06 CUFF top"
+      },
+      "contactKind": "Layered cloth-over-skin overlap, not a skin/cloth vertex weld.",
+      "required": "Register wrist curve to the cuff aperture in one frame; bound clearance through relaxed/grip poses. Skin-to-skin weights/normals must agree.",
+      "registeredCurve": null,
+      "commonFrameTransform": null,
+      "clearanceMm": null,
+      "validated": false
+    },
+    {
+      "portID": "R-trousers-to-boots",
+      "fromInstance": null,
+      "fromType": null,
+      "toInstances": [
+        "R-boot-shaft",
+        "R-boot-rim"
+      ],
+      "toTypes": [
+        "boots:AB07",
+        "boots:AB08"
+      ],
+      "registration": {
+        "frame": "foot-0 local",
+        "legacyBootTopFootYmm": 340,
+        "legacyBootTopKneeYmm": -95,
+        "supportMinFootYmm": -108,
+        "existingBones": [
+          "knee-0",
+          "foot-0"
+        ]
+      },
+      "contactKind": "Trouser hem under boot shaft/rim; it is not the outer long-coat hem.",
+      "required": "Trouser microtype/leaf ownership is absent in the whole ledger; register hem loop, cloth overlap, leg clearance and knee/foot weights before assembly.",
+      "registeredCurve": null,
+      "commonFrameTransform": null,
+      "clearanceMm": null,
+      "validated": false
+    },
+    {
+      "portID": "left-wrist",
+      "fromInstance": "L-wrist",
+      "fromType": "hands:AH10",
+      "directToInstances": [
+        "cloth:F01-L",
+        "cloth:F02-L"
+      ],
+      "nearbyClothInstances": [
+        "cloth:S05-L",
+        "cloth:S06-L",
+        "cloth:F03-L-0",
+        "cloth:F03-L-1",
+        "cloth:F03-L-2"
+      ],
+      "registration": {
+        "frame": "hand-1 local",
+        "legacySkinYRangeMm": [
+          -15,
+          9
+        ],
+        "skinBoundary": "AH01/AH02/AH03/AH04 proximal loop",
+        "clothBoundary": "F01/F02 bottom WRIST aperture; not the S05/S06 CUFF top"
+      },
+      "contactKind": "Layered cloth-over-skin overlap, not a skin/cloth vertex weld.",
+      "required": "Register wrist curve to the cuff aperture in one frame; bound clearance through relaxed/grip poses. Skin-to-skin weights/normals must agree.",
+      "registeredCurve": null,
+      "commonFrameTransform": null,
+      "clearanceMm": null,
+      "validated": false
+    },
+    {
+      "portID": "L-trousers-to-boots",
+      "fromInstance": null,
+      "fromType": null,
+      "toInstances": [
+        "L-boot-shaft",
+        "L-boot-rim"
+      ],
+      "toTypes": [
+        "boots:AB07",
+        "boots:AB08"
+      ],
+      "registration": {
+        "frame": "foot-1 local",
+        "legacyBootTopFootYmm": 340,
+        "legacyBootTopKneeYmm": -95,
+        "supportMinFootYmm": -108,
+        "existingBones": [
+          "knee-1",
+          "foot-1"
+        ]
+      },
+      "contactKind": "Trouser hem under boot shaft/rim; it is not the outer long-coat hem.",
+      "required": "Trouser microtype/leaf ownership is absent in the whole ledger; register hem loop, cloth overlap, leg clearance and knee/foot weights before assembly.",
+      "registeredCurve": null,
+      "commonFrameTransform": null,
+      "clearanceMm": null,
+      "validated": false
+    }
+  ],
+  "scope": "Only minimum wrist join skin belongs to this unit; cloth cuffs and trousers remain external ownership. No full hidden body added."
+}

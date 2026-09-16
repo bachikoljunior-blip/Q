@@ -1,0 +1,35 @@
+{
+  "clock": "UTC call start/end recorded during generation",
+  "firstCallStart": "2026-09-16T14:24:54.945Z",
+  "lastCallEnd": "2026-09-16T14:40:04.065Z",
+  "generationWindowSeconds": 909.12,
+  "sumCallDurationsSeconds": 1132.25,
+  "unionPendingSeconds": 613.149,
+  "pendingIntervals": [
+    [
+      "2026-09-16T14:24:54.945000+00:00",
+      "2026-09-16T14:26:37.160000+00:00"
+    ],
+    [
+      "2026-09-16T14:27:46.725000+00:00",
+      "2026-09-16T14:30:23.802000+00:00"
+    ],
+    [
+      "2026-09-16T14:31:07.060000+00:00",
+      "2026-09-16T14:33:36.082000+00:00"
+    ],
+    [
+      "2026-09-16T14:35:37.341000+00:00",
+      "2026-09-16T14:37:32.300000+00:00"
+    ],
+    [
+      "2026-09-16T14:38:34.189000+00:00",
+      "2026-09-16T14:40:04.065000+00:00"
+    ]
+  ],
+  "note": "Concurrent durations must not be added and called elapsed production time. Planning/visual judgement/final documentation were interleaved and not separately stopwatched.",
+  "nativeImplementationSeconds": 0,
+  "new3DAssemblySeconds": 0,
+  "pendingCalls": 0,
+  "recordFrozenUTC": "2026-09-16T14:48:40.430526+00:00"
+}
