@@ -1,0 +1,2591 @@
+{
+  "at": "2026-09-16T11:07:37.547Z",
+  "root": "/workspace/scratch/e72662e3b71f/Q-ps4-v57",
+  "head": "fc311bac0134b58e04891264c405bfd61eba22e3",
+  "runtimeBase": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+  "seconds": 0.5521937960000001,
+  "scope": "Read-only current native CPU geometry/bones; source bytes compared to deployed source. No renderer, game screenshot, texture loading, GPU or iPhone measurement. Default Mira idle is actual Scene usage; parry/attack/death are API stress only, not new role animation.",
+  "hashes": {
+    "src/assets/characters/detailed-geometry.js": {
+      "sha256": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+      "bytes": 31318
+    },
+    "src/assets/characters/cloth-material.js": {
+      "sha256": "39ba2cfce1096be273543b313be1d12781ae43c59e8581f5cb9aa95d0a04642f",
+      "bytes": 2906
+    },
+    "src/actor-models.js": {
+      "sha256": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+      "bytes": 38244
+    },
+    "src/character-motion.js": {
+      "sha256": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+      "bytes": 4931
+    },
+    "src/assets/characters/identity-head-data.js": {
+      "sha256": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe",
+      "bytes": 126806
+    },
+    "src/assets/characters/anatomical-head-data.js": {
+      "sha256": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
+      "bytes": 120150
+    },
+    "src/skin-materials.js": {
+      "sha256": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63",
+      "bytes": 1532
+    },
+    "src/scene.js": {
+      "sha256": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b",
+      "bytes": 30277
+    },
+    "src/core.js": {
+      "sha256": "a6b7271063f683d2228dc1d547a82d7dd5b3257b3f4a538ced63c88ac37e3b3f",
+      "bytes": 39845
+    }
+  },
+  "bindBones": [
+    {
+      "name": "body",
+      "parent": "Q detailed npc",
+      "local": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "pelvis",
+      "parent": "body",
+      "local": [
+        0,
+        0.985,
+        0
+      ],
+      "world": [
+        0,
+        0.985,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "spine",
+      "parent": "pelvis",
+      "local": [
+        0,
+        0.18,
+        0
+      ],
+      "world": [
+        0,
+        1.165,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "chest",
+      "parent": "spine",
+      "local": [
+        0,
+        -0.18,
+        0
+      ],
+      "world": [
+        0,
+        0.9850000000000001,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "neck",
+      "parent": "chest",
+      "local": [
+        0,
+        0.6,
+        0
+      ],
+      "world": [
+        0,
+        1.585,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "head",
+      "parent": "neck",
+      "local": [
+        0,
+        0.16,
+        0
+      ],
+      "world": [
+        0,
+        1.7449999999999999,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "eyelid-0",
+      "parent": "head",
+      "local": [
+        -0.046,
+        0.058,
+        0.1
+      ],
+      "world": [
+        -0.046,
+        1.803,
+        0.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "eyelid-1",
+      "parent": "head",
+      "local": [
+        0.046,
+        0.058,
+        0.1
+      ],
+      "world": [
+        0.046,
+        1.803,
+        0.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "arm-0",
+      "parent": "chest",
+      "local": [
+        -0.313,
+        0.46,
+        0
+      ],
+      "world": [
+        -0.313,
+        1.445,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "elbow-0",
+      "parent": "arm-0",
+      "local": [
+        0,
+        -0.33,
+        0
+      ],
+      "world": [
+        -0.313,
+        1.115,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "hand-0",
+      "parent": "elbow-0",
+      "local": [
+        0,
+        -0.31,
+        0
+      ],
+      "world": [
+        -0.313,
+        0.8049999999999999,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-0-0",
+      "parent": "hand-0",
+      "local": [
+        -0.033,
+        -0.087,
+        0.013
+      ],
+      "world": [
+        -0.346,
+        0.718,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-0-0",
+      "parent": "finger-0-0",
+      "local": [
+        0,
+        -0.0385,
+        0
+      ],
+      "world": [
+        -0.346,
+        0.6795,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-0-1",
+      "parent": "hand-0",
+      "local": [
+        -0.011,
+        -0.087,
+        0.013
+      ],
+      "world": [
+        -0.324,
+        0.718,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-0-1",
+      "parent": "finger-0-1",
+      "local": [
+        0,
+        -0.0435,
+        0
+      ],
+      "world": [
+        -0.324,
+        0.6745,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-0-2",
+      "parent": "hand-0",
+      "local": [
+        0.011,
+        -0.087,
+        0.013
+      ],
+      "world": [
+        -0.302,
+        0.718,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-0-2",
+      "parent": "finger-0-2",
+      "local": [
+        0,
+        -0.041,
+        0
+      ],
+      "world": [
+        -0.302,
+        0.6769999999999999,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-0-3",
+      "parent": "hand-0",
+      "local": [
+        0.033,
+        -0.087,
+        0.013
+      ],
+      "world": [
+        -0.28,
+        0.718,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-0-3",
+      "parent": "finger-0-3",
+      "local": [
+        0,
+        -0.0325,
+        0
+      ],
+      "world": [
+        -0.28,
+        0.6855,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-0-4",
+      "parent": "hand-0",
+      "local": [
+        0.043,
+        -0.035,
+        0.013
+      ],
+      "world": [
+        -0.27,
+        0.7699999999999999,
+        0.013
+      ],
+      "rotation": [
+        -0.26,
+        0,
+        0.6500000000000001,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-0-4",
+      "parent": "finger-0-4",
+      "local": [
+        0,
+        -0.0305,
+        0
+      ],
+      "world": [
+        -0.2515418146250508,
+        0.7465355141574715,
+        0.01924205869964353
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "arm-1",
+      "parent": "chest",
+      "local": [
+        0.313,
+        0.46,
+        0
+      ],
+      "world": [
+        0.313,
+        1.445,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "elbow-1",
+      "parent": "arm-1",
+      "local": [
+        0,
+        -0.33,
+        0
+      ],
+      "world": [
+        0.313,
+        1.115,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "hand-1",
+      "parent": "elbow-1",
+      "local": [
+        0,
+        -0.31,
+        0
+      ],
+      "world": [
+        0.313,
+        0.8049999999999999,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-1-0",
+      "parent": "hand-1",
+      "local": [
+        -0.033,
+        -0.087,
+        0.013
+      ],
+      "world": [
+        0.28,
+        0.718,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-1-0",
+      "parent": "finger-1-0",
+      "local": [
+        0,
+        -0.0385,
+        0
+      ],
+      "world": [
+        0.28,
+        0.6795,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-1-1",
+      "parent": "hand-1",
+      "local": [
+        -0.011,
+        -0.087,
+        0.013
+      ],
+      "world": [
+        0.302,
+        0.718,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-1-1",
+      "parent": "finger-1-1",
+      "local": [
+        0,
+        -0.0435,
+        0
+      ],
+      "world": [
+        0.302,
+        0.6745,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-1-2",
+      "parent": "hand-1",
+      "local": [
+        0.011,
+        -0.087,
+        0.013
+      ],
+      "world": [
+        0.324,
+        0.718,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-1-2",
+      "parent": "finger-1-2",
+      "local": [
+        0,
+        -0.041,
+        0
+      ],
+      "world": [
+        0.324,
+        0.6769999999999999,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-1-3",
+      "parent": "hand-1",
+      "local": [
+        0.033,
+        -0.087,
+        0.013
+      ],
+      "world": [
+        0.346,
+        0.718,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-1-3",
+      "parent": "finger-1-3",
+      "local": [
+        0,
+        -0.0325,
+        0
+      ],
+      "world": [
+        0.346,
+        0.6855,
+        0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-1-4",
+      "parent": "hand-1",
+      "local": [
+        -0.043,
+        -0.035,
+        0.013
+      ],
+      "world": [
+        0.27,
+        0.7699999999999999,
+        0.013
+      ],
+      "rotation": [
+        -0.26,
+        0,
+        -0.6500000000000001,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "finger-tip-1-4",
+      "parent": "finger-1-4",
+      "local": [
+        0,
+        -0.0305,
+        0
+      ],
+      "world": [
+        0.2515418146250508,
+        0.7465355141574715,
+        0.01924205869964353
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "staff",
+      "parent": "hand-1",
+      "local": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0.313,
+        0.8049999999999999,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "leg-0",
+      "parent": "pelvis",
+      "local": [
+        -0.133,
+        0,
+        0
+      ],
+      "world": [
+        -0.133,
+        0.985,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "knee-0",
+      "parent": "leg-0",
+      "local": [
+        0,
+        -0.445,
+        0
+      ],
+      "world": [
+        -0.133,
+        0.54,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "foot-0",
+      "parent": "knee-0",
+      "local": [
+        0,
+        -0.435,
+        0
+      ],
+      "world": [
+        -0.133,
+        0.10500000000000004,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "leg-1",
+      "parent": "pelvis",
+      "local": [
+        0.133,
+        0,
+        0
+      ],
+      "world": [
+        0.133,
+        0.985,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "knee-1",
+      "parent": "leg-1",
+      "local": [
+        0,
+        -0.445,
+        0
+      ],
+      "world": [
+        0.133,
+        0.54,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "foot-1",
+      "parent": "knee-1",
+      "local": [
+        0,
+        -0.435,
+        0
+      ],
+      "world": [
+        0.133,
+        0.10500000000000004,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    }
+  ],
+  "bindMeshes": [
+    {
+      "name": "cape",
+      "material": "Q cloth",
+      "color": "#696454",
+      "vertices": 117,
+      "triangles": 192,
+      "bounds": {
+        "min": [
+          -0.4650000035762787,
+          0.31499998331069956,
+          -0.42899999022483826
+        ],
+        "max": [
+          0.4650000035762787,
+          1.464999989271164,
+          -0.19699999690055847
+        ],
+        "size": [
+          0.9300000071525574,
+          1.1500000059604645,
+          0.23199999332427979
+        ]
+      }
+    },
+    {
+      "name": "Q upper cloth skin",
+      "material": "Q upper cloth",
+      "color": "#696454",
+      "vertices": 483,
+      "triangles": 816,
+      "bounds": {
+        "min": [
+          -0.4211018446252024,
+          0.8020000100731846,
+          -0.16296126434091507
+        ],
+        "max": [
+          0.4211018446252024,
+          1.5549999475479126,
+          0.16296126434091507
+        ],
+        "size": [
+          0.8422036892504048,
+          0.752999937474728,
+          0.32592252868183014
+        ]
+      }
+    },
+    {
+      "name": "Q skin skin",
+      "material": "Q skin",
+      "color": "#ab8770",
+      "vertices": 757,
+      "triangles": 1068,
+      "bounds": {
+        "min": [
+          -0.35579752922058105,
+          0.6309999823570251,
+          -0.07800000160932541
+        ],
+        "max": [
+          0.35579752922058105,
+          1.8200000524520874,
+          0.11616796255111694
+        ],
+        "size": [
+          0.7115950584411621,
+          1.1890000700950623,
+          0.19416796416044235
+        ]
+      }
+    },
+    {
+      "name": "Q anatomical face skin",
+      "material": "Q anatomical face",
+      "color": "#ab8770",
+      "vertices": 1062,
+      "triangles": 1646,
+      "bounds": {
+        "min": [
+          -0.1420000046491623,
+          1.6061439514160156,
+          -0.1120000034570694
+        ],
+        "max": [
+          0.1420000046491623,
+          1.9429999589920044,
+          0.14314930140972137
+        ],
+        "size": [
+          0.2840000092983246,
+          0.33685600757598877,
+          0.25514930486679077
+        ]
+      }
+    },
+    {
+      "name": "Q eye skin",
+      "material": "Q eye",
+      "color": "#b8b2a5",
+      "vertices": 126,
+      "triangles": 160,
+      "bounds": {
+        "min": [
+          -0.06800000369548798,
+          1.7869999408721924,
+          0.09000000357627869
+        ],
+        "max": [
+          0.06800000369548798,
+          1.8029999732971191,
+          0.10999999940395355
+        ],
+        "size": [
+          0.13600000739097595,
+          0.016000032424926758,
+          0.019999995827674866
+        ]
+      }
+    },
+    {
+      "name": "Q eye skin",
+      "material": "Q eye",
+      "color": "#372f25",
+      "vertices": 126,
+      "triangles": 160,
+      "bounds": {
+        "min": [
+          -0.05400000140070915,
+          1.7869999408721924,
+          0.10599999874830246
+        ],
+        "max": [
+          0.05400000140070915,
+          1.8029999732971191,
+          0.1120000034570694
+        ],
+        "size": [
+          0.1080000028014183,
+          0.016000032424926758,
+          0.006000004708766937
+        ]
+      }
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "#a7a397",
+      "vertices": 221,
+      "triangles": 244,
+      "bounds": {
+        "min": [
+          -0.12496530264616013,
+          1.7455027103424072,
+          -0.1419658213853836
+        ],
+        "max": [
+          0.12496530264616013,
+          1.95086669921875,
+          0.11558215320110321
+        ],
+        "size": [
+          0.24993060529232025,
+          0.20536398887634277,
+          0.2575479745864868
+        ]
+      }
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "#494334",
+      "vertices": 656,
+      "triangles": 752,
+      "bounds": {
+        "min": [
+          -0.36530810594558716,
+          0.018000002950429916,
+          -0.17000000178813934
+        ],
+        "max": [
+          0.36530810594558716,
+          1.4774105548858643,
+          0.19300000369548798
+        ],
+        "size": [
+          0.7306162118911743,
+          1.4594105519354343,
+          0.3630000054836273
+        ]
+      }
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "#514333",
+      "vertices": 52,
+      "triangles": 32,
+      "bounds": {
+        "min": [
+          0.28700000047683716,
+          0.014999978244304657,
+          -0.026000000536441803
+        ],
+        "max": [
+          0.33899998664855957,
+          1.5049999952316284,
+          0.026000000536441803
+        ],
+        "size": [
+          0.05199998617172241,
+          1.4900000169873238,
+          0.052000001072883606
+        ]
+      }
+    },
+    {
+      "name": "Q metal skin",
+      "material": "Q metal",
+      "color": "#b59b69",
+      "vertices": 471,
+      "triangles": 508,
+      "bounds": {
+        "min": [
+          -0.19499999284744263,
+          0.40299999713897705,
+          -0.007518101949244738
+        ],
+        "max": [
+          0.41390499472618103,
+          1.7160500288009644,
+          0.19099999964237213
+        ],
+        "size": [
+          0.6089049875736237,
+          1.3130500316619873,
+          0.19851810159161687
+        ]
+      }
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "#c6baa0",
+      "vertices": 77,
+      "triangles": 100,
+      "bounds": {
+        "min": [
+          0.2630000114440918,
+          1.5059999227523804,
+          -0.04469965770840645
+        ],
+        "max": [
+          0.3630000054836273,
+          1.6439999341964722,
+          0.04469965770840645
+        ],
+        "size": [
+          0.09999999403953552,
+          0.1380000114440918,
+          0.0893993154168129
+        ]
+      }
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "#696454",
+      "vertices": 336,
+      "triangles": 512,
+      "bounds": {
+        "min": [
+          -0.3100000023841858,
+          0.22500000894069672,
+          -0.20999999344348907
+        ],
+        "max": [
+          0.3100000023841858,
+          1.0249999771127478,
+          0.20999999344348907
+        ],
+        "size": [
+          0.6200000047683716,
+          0.7999999681720511,
+          0.41999998688697815
+        ]
+      }
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "#27282a",
+      "vertices": 546,
+      "triangles": 528,
+      "bounds": {
+        "min": [
+          -0.21199999749660492,
+          -0.003000002820044756,
+          -0.09300000220537186
+        ],
+        "max": [
+          0.21199999749660492,
+          0.10698022693395615,
+          0.19300000369548798
+        ],
+        "size": [
+          0.42399999499320984,
+          0.1099802297540009,
+          0.28600000590085983
+        ]
+      }
+    }
+  ],
+  "upperParts": [
+    {
+      "name": "torso",
+      "start": 0,
+      "count": 171,
+      "triangles": 288,
+      "bounds": {
+        "min": [
+          -0.2626875042915344,
+          0.8349999785423279,
+          -0.16296126434091507
+        ],
+        "max": [
+          0.2626875042915344,
+          1.5549999475479126,
+          0.16296126434091507
+        ],
+        "size": [
+          0.5253750085830688,
+          0.7199999690055847,
+          0.32592252868183014
+        ]
+      },
+      "uvBounds": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          4,
+          3.1378252506256104,
+          0
+        ],
+        "size": [
+          4,
+          3.1378252506256104,
+          0
+        ]
+      }
+    },
+    {
+      "name": "left sleeve",
+      "start": 171,
+      "count": 156,
+      "triangles": 264,
+      "bounds": {
+        "min": [
+          -0.4211018446252024,
+          0.8020000100731846,
+          -0.105537065946118
+        ],
+        "max": [
+          -0.20489815182832105,
+          1.510000029839575,
+          0.105537065946118
+        ],
+        "size": [
+          0.21620369279688134,
+          0.7080000197663905,
+          0.211074131892236
+        ]
+      },
+      "uvBounds": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          2,
+          2.958177328109741,
+          0
+        ],
+        "size": [
+          2,
+          2.958177328109741,
+          0
+        ]
+      }
+    },
+    {
+      "name": "right sleeve",
+      "start": 327,
+      "count": 156,
+      "triangles": 264,
+      "bounds": {
+        "min": [
+          0.20489815182832105,
+          0.8020000100731846,
+          -0.105537065946118
+        ],
+        "max": [
+          0.4211018446252024,
+          1.510000029839575,
+          0.105537065946118
+        ],
+        "size": [
+          0.21620369279688134,
+          0.7080000197663905,
+          0.211074131892236
+        ]
+      },
+      "uvBounds": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          2,
+          2.958177328109741,
+          0
+        ],
+        "size": [
+          2,
+          2.958177328109741,
+          0
+        ]
+      }
+    }
+  ],
+  "budget": [
+    {
+      "family": "player",
+      "triangles": 7822,
+      "draws": 14,
+      "bones": 44,
+      "attributeIndexBytes": 376068
+    },
+    {
+      "family": "npc",
+      "triangles": 6718,
+      "draws": 13,
+      "bones": 41,
+      "attributeIndexBytes": 319180
+    },
+    {
+      "family": "sena",
+      "triangles": 6786,
+      "draws": 12,
+      "bones": 41,
+      "attributeIndexBytes": 323340
+    },
+    {
+      "family": "smith",
+      "triangles": 6242,
+      "draws": 11,
+      "bones": 41,
+      "attributeIndexBytes": 303172
+    },
+    {
+      "family": "healer",
+      "triangles": 7038,
+      "draws": 11,
+      "bones": 41,
+      "attributeIndexBytes": 343172
+    },
+    {
+      "family": "patient",
+      "triangles": 6270,
+      "draws": 10,
+      "bones": 40,
+      "attributeIndexBytes": 312076
+    },
+    {
+      "family": "porter",
+      "triangles": 6450,
+      "draws": 10,
+      "bones": 41,
+      "attributeIndexBytes": 321276
+    },
+    {
+      "family": "scout",
+      "triangles": 6798,
+      "draws": 11,
+      "bones": 41,
+      "attributeIndexBytes": 323916
+    },
+    {
+      "family": "traveler",
+      "triangles": 6578,
+      "draws": 10,
+      "bones": 41,
+      "attributeIndexBytes": 319964
+    },
+    {
+      "family": "courier",
+      "triangles": 6398,
+      "draws": 10,
+      "bones": 41,
+      "attributeIndexBytes": 316484
+    },
+    {
+      "family": "soldier",
+      "triangles": 7454,
+      "draws": 13,
+      "bones": 41,
+      "attributeIndexBytes": 363340
+    },
+    {
+      "family": "ranger",
+      "triangles": 7108,
+      "draws": 12,
+      "bones": 45,
+      "attributeIndexBytes": 354448
+    },
+    {
+      "family": "wolf",
+      "triangles": 4028,
+      "draws": 6,
+      "bones": 25,
+      "attributeIndexBytes": 202080
+    },
+    {
+      "family": "boss",
+      "triangles": 7950,
+      "draws": 14,
+      "bones": 42,
+      "attributeIndexBytes": 384508
+    },
+    {
+      "family": "soldier",
+      "theme": "ember",
+      "triangles": 7854,
+      "draws": 13
+    },
+    {
+      "family": "soldier",
+      "theme": "tide",
+      "triangles": 7786,
+      "draws": 13
+    },
+    {
+      "family": "soldier",
+      "theme": "gale",
+      "triangles": 7794,
+      "draws": 14
+    },
+    {
+      "family": "soldier",
+      "theme": "moss",
+      "triangles": 7998,
+      "draws": 13
+    }
+  ],
+  "maps": [
+    {
+      "material": "Q cloth",
+      "color": "#696454",
+      "bump": {
+        "name": "Q cloth microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0014
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q upper cloth",
+      "color": "#696454",
+      "bump": {
+        "name": "Q upper garment physical weave",
+        "width": 512,
+        "height": 512,
+        "repeat": [
+          1,
+          1
+        ],
+        "bumpScale": 0.00035
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q skin",
+      "color": "#ab8770",
+      "bump": {
+        "name": "Q skin microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.00018
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q anatomical face",
+      "color": "#ab8770",
+      "bump": {
+        "name": "Q skin microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.00018
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q eye",
+      "color": "#b8b2a5",
+      "bump": {
+        "name": "Q eye microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q eye",
+      "color": "#372f25",
+      "bump": {
+        "name": "Q eye microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q cloth",
+      "color": "#a7a397",
+      "bump": {
+        "name": "Q cloth microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0014
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q leather",
+      "color": "#494334",
+      "bump": {
+        "name": "Q leather microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0008
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q leather",
+      "color": "#514333",
+      "bump": {
+        "name": "Q leather microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0008
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q metal",
+      "color": "#b59b69",
+      "bump": {
+        "name": "Q metal microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.00035
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q cloth",
+      "color": "#c6baa0",
+      "bump": {
+        "name": "Q cloth microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0014
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q cloth",
+      "color": "#696454",
+      "bump": {
+        "name": "Q cloth microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0014
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q leather",
+      "color": "#27282a",
+      "bump": {
+        "name": "Q leather microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0008
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    }
+  ],
+  "poses": {
+    "idle": {
+      "motion": {
+        "state": "idle",
+        "phase": 0
+      },
+      "bodyBounds": {
+        "min": [
+          -0.4512214660644531,
+          0.1999389652881865,
+          -0.45490995753742475
+        ],
+        "max": [
+          0.47877854108810425,
+          1.9197977825548906,
+          0.27422194487900253
+        ],
+        "size": [
+          0.9300000071525574,
+          1.7198588172667042,
+          0.7291319024164273
+        ]
+      },
+      "upperBounds": {
+        "min": [
+          -0.4179836191302194,
+          0.7781030794002648,
+          -0.16102161331399745
+        ],
+        "max": [
+          0.4179836191302194,
+          1.5326857172115331,
+          0.23102301992845925
+        ],
+        "size": [
+          0.8359672382604388,
+          0.7545826378112683,
+          0.3920446332424567
+        ]
+      },
+      "bones": {
+        "pelvis": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0,
+            0.962,
+            0
+          ]
+        },
+        "chest": {
+          "rotation": [
+            0.0068000000000000005,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0,
+            0.9620009215992135,
+            -0.0005759990169605032
+          ]
+        },
+        "neck": {
+          "rotation": [
+            -0.005,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0,
+            1.5619709218492126,
+            0.005423900983539495
+          ]
+        },
+        "head": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0,
+            1.7219689218533794,
+            0.006223897650210328
+          ]
+        },
+        "arm-0": {
+          "rotation": [
+            0.01,
+            0,
+            0.075,
+            "XYZ"
+          ],
+          "world": [
+            -0.313,
+            1.4219779217908795,
+            0.004023924316756163
+          ]
+        },
+        "arm-1": {
+          "rotation": [
+            -0.15,
+            0,
+            -0.075,
+            "XYZ"
+          ],
+          "world": [
+            0.313,
+            1.4219779217908795,
+            0.004023924316756163
+          ]
+        },
+        "elbow-0": {
+          "rotation": [
+            -0.19,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.288273196599995,
+            1.0929714240820603,
+            -0.0025570831284796158
+          ]
+        },
+        "elbow-1": {
+          "rotation": [
+            -0.35,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.288273196599995,
+            1.0961252565409825,
+            0.04994369939412437
+          ]
+        },
+        "hand-0": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.26546299673783663,
+            0.7882957588701095,
+            0.04990655961488794
+          ]
+        },
+        "hand-1": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.26645325065796166,
+            0.8234126926182117,
+            0.1957234903040973
+          ]
+        },
+        "staff": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.26645325065796166,
+            0.8234126926182117,
+            0.1957234903040973
+          ]
+        }
+      }
+    },
+    "productionAfter1s": {
+      "motion": {
+        "state": "idle",
+        "phase": 0
+      },
+      "bodyBounds": {
+        "min": [
+          -0.4725935159387087,
+          0.20189046629923707,
+          -0.45461844944336094
+        ],
+        "max": [
+          0.4576241947796669,
+          1.9217632931274744,
+          0.2740065760653719
+        ],
+        "size": [
+          0.9302177107183756,
+          1.7198728268282373,
+          0.7286250255087328
+        ]
+      },
+      "upperBounds": {
+        "min": [
+          -0.41796302867516577,
+          0.7800483890430433,
+          -0.16184817444838934
+        ],
+        "max": [
+          0.41803586480853316,
+          1.5346592842060007,
+          0.23039511956738368
+        ],
+        "size": [
+          0.8359988934836989,
+          0.7546108951629574,
+          0.392243294015773
+        ]
+      },
+      "bones": {
+        "pelvis": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0,
+            0.9639679718937478,
+            0
+          ]
+        },
+        "chest": {
+          "rotation": [
+            0.0068000000000000005,
+            0.006603233510478705,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0,
+            0.9639688934929614,
+            -0.0005759990169605033
+          ]
+        },
+        "neck": {
+          "rotation": [
+            -0.005,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.000010477038245043945,
+            1.5639388937860073,
+            0.00542388753148125
+          ]
+        },
+        "head": {
+          "rotation": [
+            0,
+            0.012202345457737756,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.000005876380946934721,
+            1.7239369565474054,
+            0.006217617349524907
+          ]
+        },
+        "arm-0": {
+          "rotation": [
+            0.01,
+            0,
+            0.075,
+            "XYZ"
+          ],
+          "world": [
+            -0.3129788045832131,
+            1.423922654143678,
+            0.006894338654550188
+          ]
+        },
+        "arm-1": {
+          "rotation": [
+            -0.15,
+            0,
+            -0.075,
+            "XYZ"
+          ],
+          "world": [
+            0.3129948693751888,
+            1.4239691332915823,
+            0.0011534893524728273
+          ]
+        },
+        "elbow-0": {
+          "rotation": [
+            -0.19,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.2882892031198583,
+            1.0949182504183916,
+            0.00006081384040081822
+          ]
+        },
+        "elbow-1": {
+          "rotation": [
+            -0.35,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.28871796551038353,
+            1.0981107751129209,
+            0.04768503737512729
+          ]
+        },
+        "hand-0": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.2649722063340116,
+            0.7902399251820418,
+            0.052749854284334236
+          ]
+        },
+        "hand-1": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.26826680663127067,
+            0.8253849438907479,
+            0.1948275577153235
+          ]
+        },
+        "staff": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.26826680663127067,
+            0.8253849438907479,
+            0.1948275577153235
+          ]
+        }
+      }
+    },
+    "apiParry": {
+      "motion": {
+        "state": "parry",
+        "phase": 0.5833333333333333
+      },
+      "bodyBounds": {
+        "min": [
+          -0.40369763197904646,
+          0.1931980908807044,
+          -0.5503510030000606
+        ],
+        "max": [
+          0.5308678169099561,
+          1.9181213431377977,
+          0.6342106851361579
+        ],
+        "size": [
+          0.9345654488890025,
+          1.7249232522570934,
+          1.1845616881362184
+        ]
+      },
+      "upperBounds": {
+        "min": [
+          -0.40369763197904646,
+          0.8119999785423279,
+          -0.15792946967111063
+        ],
+        "max": [
+          0.38044201599691435,
+          1.6375657004047042,
+          0.47168333748955377
+        ],
+        "size": [
+          0.7841396479759608,
+          0.8255657218623763,
+          0.6296128071606644
+        ]
+      },
+      "bones": {
+        "pelvis": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0,
+            0.962,
+            0
+          ]
+        },
+        "chest": {
+          "rotation": [
+            0.030600000000000002,
+            -0.17279999999999998,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0,
+            0.9620186620775159,
+            -0.002591910421408756
+          ]
+        },
+        "neck": {
+          "rotation": [
+            -0.005,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.0012326712167501845,
+            1.5614118612057877,
+            0.024357548950669168
+          ]
+        },
+        "head": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.0013712428973416786,
+            1.7212833428069687,
+            0.030767710300636204
+          ]
+        },
+        "arm-0": {
+          "rotation": [
+            -0.7,
+            0,
+            0.32,
+            "XYZ"
+          ],
+          "world": [
+            -0.304975525849443,
+            1.4242708142275196,
+            -0.05627502197006559
+          ]
+        },
+        "arm-1": {
+          "rotation": [
+            -1.37,
+            0,
+            -0.63,
+            "XYZ"
+          ],
+          "world": [
+            0.3030854299837593,
+            1.4188360819241956,
+            0.09241370549776756
+          ]
+        },
+        "elbow-0": {
+          "rotation": [
+            -0.9,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.2516131713626143,
+            1.1751241306295004,
+            0.1534352285560605
+          ]
+        },
+        "elbow-1": {
+          "rotation": [
+            -1.2,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.052246674624167655,
+            1.3558673582206775,
+            0.2973889689926608
+          ]
+        },
+        "hand-0": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.2649165281399101,
+            1.1777226159050902,
+            0.46313874576684144
+          ]
+        },
+        "hand-1": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.04741608208712411,
+            1.614731261235546,
+            0.4357971141309245
+          ]
+        },
+        "staff": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.04741608208712411,
+            1.614731261235546,
+            0.4357971141309245
+          ]
+        }
+      }
+    },
+    "apiAttack": {
+      "motion": {
+        "state": "attack",
+        "phase": 0.7402592592592592,
+        "weapon": "sword",
+        "combo": 0,
+        "combat": {
+          "time": 0.13,
+          "wind": 1,
+          "release": 1,
+          "releaseStart": -0.136,
+          "releaseEnd": 0.023999999999999994,
+          "settle": 0.2634819225306211,
+          "weight": 0.7365180774693789,
+          "draw": 0,
+          "bowHold": 1
+        }
+      },
+      "bodyBounds": {
+        "min": [
+          -0.4185876396025964,
+          0.18358705700396216,
+          -0.48690072760465297
+        ],
+        "max": [
+          0.5752261070670447,
+          1.9017511553612674,
+          0.6372694652585837
+        ],
+        "size": [
+          0.9938137466696411,
+          1.7181640983573052,
+          1.1241701928632368
+        ]
+      },
+      "upperBounds": {
+        "min": [
+          -0.4185876396025964,
+          0.7812745476817367,
+          -0.14898539330364616
+        ],
+        "max": [
+          0.5349222486861632,
+          1.513586995611178,
+          0.5602347966725623
+        ],
+        "size": [
+          0.9535098882887596,
+          0.7323124479294414,
+          0.7092201899762084
+        ]
+      },
+      "bones": {
+        "pelvis": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.018412951936734475,
+            0.9435870480632655,
+            0.047873675035509634
+          ]
+        },
+        "chest": {
+          "rotation": [
+            0,
+            -0.22802599678451974,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.018412951936734475,
+            0.9435870480632655,
+            0.047873675035509634
+          ]
+        },
+        "neck": {
+          "rotation": [
+            -0.005,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.018412951936734475,
+            1.5435870480632654,
+            0.047873675035509634
+          ]
+        },
+        "head": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.01816380496525173,
+            1.7035850480674322,
+            0.04711346424021308
+          ]
+        },
+        "arm-0": {
+          "rotation": [
+            -0.14466879626856957,
+            0,
+            0.1523343981342848,
+            "XYZ"
+          ],
+          "world": [
+            -0.3158466649021,
+            1.4035870480632655,
+            -0.049605483719767675
+          ]
+        },
+        "arm-1": {
+          "rotation": [
+            -0.3459246406004047,
+            0,
+            0.5694533177857066,
+            "XYZ"
+          ],
+          "world": [
+            0.27902076102863105,
+            1.4035870480632655,
+            0.14535283379078695
+          ]
+        },
+        "elbow-0": {
+          "rotation": [
+            -0.2710169885216317,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.2829056676189279,
+            1.080815956458774,
+            0.010674804289124984
+          ]
+        },
+        "elbow-1": {
+          "rotation": [
+            -0.4551465078889764,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.4187506073700168,
+            1.1421260202913064,
+            0.29031386647834595
+          ]
+        },
+        "hand-0": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.2786667635984835,
+            0.800638454290825,
+            0.14327419709178596
+          ]
+        },
+        "hand-1": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.49672267658723207,
+            0.9677215516612641,
+            0.5344520194652529
+          ]
+        },
+        "staff": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.49672267658723207,
+            0.9677215516612641,
+            0.5344520194652529
+          ]
+        }
+      }
+    },
+    "apiDeath": {
+      "motion": {
+        "state": "death",
+        "phase": 1
+      },
+      "bodyBounds": {
+        "min": [
+          -0.5284970421333841,
+          0.011999986328673773,
+          -0.9486713203377632
+        ],
+        "max": [
+          0.4401843551728222,
+          0.5563623334610125,
+          0.789191995988259
+        ],
+        "size": [
+          0.9686813973062063,
+          0.5443623471323387,
+          1.7378633163260222
+        ]
+      },
+      "upperBounds": {
+        "min": [
+          -0.4339642565872741,
+          0.17948910042695349,
+          -0.5750557170733074
+        ],
+        "max": [
+          0.3520715373918168,
+          0.5355877085238487,
+          0.16317268486620462
+        ],
+        "size": [
+          0.786035793979091,
+          0.35609860809689525,
+          0.738228401939512
+        ]
+      },
+      "bones": {
+        "pelvis": {
+          "rotation": [
+            -1.4765485471872026,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0,
+            0.3400000000000001,
+            0
+          ]
+        },
+        "chest": {
+          "rotation": [
+            0.0068000000000000005,
+            0,
+            0.072,
+            "XYZ"
+          ],
+          "world": [
+            0.00503934146581507,
+            0.3394335086068419,
+            -0.00012534446084433437
+          ]
+        },
+        "neck": {
+          "rotation": [
+            -0.005,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.0548603211647334,
+            0.4015667913480684,
+            -0.5938858059202996
+          ]
+        },
+        "head": {
+          "rotation": [
+            0,
+            -0.2,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.07083351716604286,
+            0.41733980584741315,
+            -0.7523031945590068
+          ]
+        },
+        "arm-0": {
+          "rotation": [
+            0.4,
+            0,
+            0.7,
+            "XYZ"
+          ],
+          "world": [
+            -0.35232005152397017,
+            0.38387647366131106,
+            -0.42425750204753276
+          ]
+        },
+        "arm-1": {
+          "rotation": [
+            0.2,
+            0,
+            -0.55,
+            "XYZ"
+          ],
+          "world": [
+            0.27055258508875935,
+            0.39026157708892006,
+            -0.4864258944453208
+          ]
+        },
+        "elbow-0": {
+          "rotation": [
+            -0.6,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            -0.11760047832323486,
+            0.264216125404423,
+            -0.22554131495774143
+          ]
+        },
+        "elbow-1": {
+          "rotation": [
+            -0.35,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.1264432734386033,
+            0.30436055022717085,
+            -0.20225425638160544
+          ]
+        },
+        "hand-0": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.07121683171476298,
+            0.32472946730493635,
+            0.01275715100888239
+          ]
+        },
+        "hand-1": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.0014034266186826183,
+            0.3299849328468442,
+            0.08024959796840403
+          ]
+        },
+        "staff": {
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "world": [
+            0.0014034266186826183,
+            0.3299849328468442,
+            0.08024959796840403
+          ]
+        }
+      }
+    }
+  }
+}

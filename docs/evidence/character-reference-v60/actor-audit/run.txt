@@ -1,0 +1,1209 @@
+{
+  "at": "2026-09-16T11:07:37.547Z",
+  "seconds": 0.5521937960000001,
+  "budget": [
+    {
+      "family": "player",
+      "triangles": 7822,
+      "draws": 14,
+      "bones": 44,
+      "attributeIndexBytes": 376068
+    },
+    {
+      "family": "npc",
+      "triangles": 6718,
+      "draws": 13,
+      "bones": 41,
+      "attributeIndexBytes": 319180
+    },
+    {
+      "family": "sena",
+      "triangles": 6786,
+      "draws": 12,
+      "bones": 41,
+      "attributeIndexBytes": 323340
+    },
+    {
+      "family": "smith",
+      "triangles": 6242,
+      "draws": 11,
+      "bones": 41,
+      "attributeIndexBytes": 303172
+    },
+    {
+      "family": "healer",
+      "triangles": 7038,
+      "draws": 11,
+      "bones": 41,
+      "attributeIndexBytes": 343172
+    },
+    {
+      "family": "patient",
+      "triangles": 6270,
+      "draws": 10,
+      "bones": 40,
+      "attributeIndexBytes": 312076
+    },
+    {
+      "family": "porter",
+      "triangles": 6450,
+      "draws": 10,
+      "bones": 41,
+      "attributeIndexBytes": 321276
+    },
+    {
+      "family": "scout",
+      "triangles": 6798,
+      "draws": 11,
+      "bones": 41,
+      "attributeIndexBytes": 323916
+    },
+    {
+      "family": "traveler",
+      "triangles": 6578,
+      "draws": 10,
+      "bones": 41,
+      "attributeIndexBytes": 319964
+    },
+    {
+      "family": "courier",
+      "triangles": 6398,
+      "draws": 10,
+      "bones": 41,
+      "attributeIndexBytes": 316484
+    },
+    {
+      "family": "soldier",
+      "triangles": 7454,
+      "draws": 13,
+      "bones": 41,
+      "attributeIndexBytes": 363340
+    },
+    {
+      "family": "ranger",
+      "triangles": 7108,
+      "draws": 12,
+      "bones": 45,
+      "attributeIndexBytes": 354448
+    },
+    {
+      "family": "wolf",
+      "triangles": 4028,
+      "draws": 6,
+      "bones": 25,
+      "attributeIndexBytes": 202080
+    },
+    {
+      "family": "boss",
+      "triangles": 7950,
+      "draws": 14,
+      "bones": 42,
+      "attributeIndexBytes": 384508
+    },
+    {
+      "family": "soldier",
+      "theme": "ember",
+      "triangles": 7854,
+      "draws": 13
+    },
+    {
+      "family": "soldier",
+      "theme": "tide",
+      "triangles": 7786,
+      "draws": 13
+    },
+    {
+      "family": "soldier",
+      "theme": "gale",
+      "triangles": 7794,
+      "draws": 14
+    },
+    {
+      "family": "soldier",
+      "theme": "moss",
+      "triangles": 7998,
+      "draws": 13
+    }
+  ],
+  "parts": [
+    {
+      "name": "torso",
+      "start": 0,
+      "count": 171,
+      "triangles": 288,
+      "bounds": {
+        "min": [
+          -0.2626875042915344,
+          0.8349999785423279,
+          -0.16296126434091507
+        ],
+        "max": [
+          0.2626875042915344,
+          1.5549999475479126,
+          0.16296126434091507
+        ],
+        "size": [
+          0.5253750085830688,
+          0.7199999690055847,
+          0.32592252868183014
+        ]
+      },
+      "uvBounds": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          4,
+          3.1378252506256104,
+          0
+        ],
+        "size": [
+          4,
+          3.1378252506256104,
+          0
+        ]
+      }
+    },
+    {
+      "name": "left sleeve",
+      "start": 171,
+      "count": 156,
+      "triangles": 264,
+      "bounds": {
+        "min": [
+          -0.4211018446252024,
+          0.8020000100731846,
+          -0.105537065946118
+        ],
+        "max": [
+          -0.20489815182832105,
+          1.510000029839575,
+          0.105537065946118
+        ],
+        "size": [
+          0.21620369279688134,
+          0.7080000197663905,
+          0.211074131892236
+        ]
+      },
+      "uvBounds": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          2,
+          2.958177328109741,
+          0
+        ],
+        "size": [
+          2,
+          2.958177328109741,
+          0
+        ]
+      }
+    },
+    {
+      "name": "right sleeve",
+      "start": 327,
+      "count": 156,
+      "triangles": 264,
+      "bounds": {
+        "min": [
+          0.20489815182832105,
+          0.8020000100731846,
+          -0.105537065946118
+        ],
+        "max": [
+          0.4211018446252024,
+          1.510000029839575,
+          0.105537065946118
+        ],
+        "size": [
+          0.21620369279688134,
+          0.7080000197663905,
+          0.211074131892236
+        ]
+      },
+      "uvBounds": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          2,
+          2.958177328109741,
+          0
+        ],
+        "size": [
+          2,
+          2.958177328109741,
+          0
+        ]
+      }
+    }
+  ],
+  "bindBones": [
+    {
+      "name": "body",
+      "parent": "Q detailed npc",
+      "local": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "pelvis",
+      "parent": "body",
+      "local": [
+        0,
+        0.985,
+        0
+      ],
+      "world": [
+        0,
+        0.985,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "spine",
+      "parent": "pelvis",
+      "local": [
+        0,
+        0.18,
+        0
+      ],
+      "world": [
+        0,
+        1.165,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "chest",
+      "parent": "spine",
+      "local": [
+        0,
+        -0.18,
+        0
+      ],
+      "world": [
+        0,
+        0.9850000000000001,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "neck",
+      "parent": "chest",
+      "local": [
+        0,
+        0.6,
+        0
+      ],
+      "world": [
+        0,
+        1.585,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "head",
+      "parent": "neck",
+      "local": [
+        0,
+        0.16,
+        0
+      ],
+      "world": [
+        0,
+        1.7449999999999999,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "eyelid-0",
+      "parent": "head",
+      "local": [
+        -0.046,
+        0.058,
+        0.1
+      ],
+      "world": [
+        -0.046,
+        1.803,
+        0.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "eyelid-1",
+      "parent": "head",
+      "local": [
+        0.046,
+        0.058,
+        0.1
+      ],
+      "world": [
+        0.046,
+        1.803,
+        0.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "arm-0",
+      "parent": "chest",
+      "local": [
+        -0.313,
+        0.46,
+        0
+      ],
+      "world": [
+        -0.313,
+        1.445,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "elbow-0",
+      "parent": "arm-0",
+      "local": [
+        0,
+        -0.33,
+        0
+      ],
+      "world": [
+        -0.313,
+        1.115,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "hand-0",
+      "parent": "elbow-0",
+      "local": [
+        0,
+        -0.31,
+        0
+      ],
+      "world": [
+        -0.313,
+        0.8049999999999999,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "arm-1",
+      "parent": "chest",
+      "local": [
+        0.313,
+        0.46,
+        0
+      ],
+      "world": [
+        0.313,
+        1.445,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "elbow-1",
+      "parent": "arm-1",
+      "local": [
+        0,
+        -0.33,
+        0
+      ],
+      "world": [
+        0.313,
+        1.115,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "hand-1",
+      "parent": "elbow-1",
+      "local": [
+        0,
+        -0.31,
+        0
+      ],
+      "world": [
+        0.313,
+        0.8049999999999999,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "staff",
+      "parent": "hand-1",
+      "local": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0.313,
+        0.8049999999999999,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "leg-0",
+      "parent": "pelvis",
+      "local": [
+        -0.133,
+        0,
+        0
+      ],
+      "world": [
+        -0.133,
+        0.985,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "knee-0",
+      "parent": "leg-0",
+      "local": [
+        0,
+        -0.445,
+        0
+      ],
+      "world": [
+        -0.133,
+        0.54,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "foot-0",
+      "parent": "knee-0",
+      "local": [
+        0,
+        -0.435,
+        0
+      ],
+      "world": [
+        -0.133,
+        0.10500000000000004,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "leg-1",
+      "parent": "pelvis",
+      "local": [
+        0.133,
+        0,
+        0
+      ],
+      "world": [
+        0.133,
+        0.985,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "knee-1",
+      "parent": "leg-1",
+      "local": [
+        0,
+        -0.445,
+        0
+      ],
+      "world": [
+        0.133,
+        0.54,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "foot-1",
+      "parent": "knee-1",
+      "local": [
+        0,
+        -0.435,
+        0
+      ],
+      "world": [
+        0.133,
+        0.10500000000000004,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "cape",
+      "material": "Q cloth",
+      "color": "#696454",
+      "vertices": 117,
+      "triangles": 192,
+      "bounds": {
+        "min": [
+          -0.4650000035762787,
+          0.31499998331069956,
+          -0.42899999022483826
+        ],
+        "max": [
+          0.4650000035762787,
+          1.464999989271164,
+          -0.19699999690055847
+        ],
+        "size": [
+          0.9300000071525574,
+          1.1500000059604645,
+          0.23199999332427979
+        ]
+      }
+    },
+    {
+      "name": "Q upper cloth skin",
+      "material": "Q upper cloth",
+      "color": "#696454",
+      "vertices": 483,
+      "triangles": 816,
+      "bounds": {
+        "min": [
+          -0.4211018446252024,
+          0.8020000100731846,
+          -0.16296126434091507
+        ],
+        "max": [
+          0.4211018446252024,
+          1.5549999475479126,
+          0.16296126434091507
+        ],
+        "size": [
+          0.8422036892504048,
+          0.752999937474728,
+          0.32592252868183014
+        ]
+      }
+    },
+    {
+      "name": "Q skin skin",
+      "material": "Q skin",
+      "color": "#ab8770",
+      "vertices": 757,
+      "triangles": 1068,
+      "bounds": {
+        "min": [
+          -0.35579752922058105,
+          0.6309999823570251,
+          -0.07800000160932541
+        ],
+        "max": [
+          0.35579752922058105,
+          1.8200000524520874,
+          0.11616796255111694
+        ],
+        "size": [
+          0.7115950584411621,
+          1.1890000700950623,
+          0.19416796416044235
+        ]
+      }
+    },
+    {
+      "name": "Q anatomical face skin",
+      "material": "Q anatomical face",
+      "color": "#ab8770",
+      "vertices": 1062,
+      "triangles": 1646,
+      "bounds": {
+        "min": [
+          -0.1420000046491623,
+          1.6061439514160156,
+          -0.1120000034570694
+        ],
+        "max": [
+          0.1420000046491623,
+          1.9429999589920044,
+          0.14314930140972137
+        ],
+        "size": [
+          0.2840000092983246,
+          0.33685600757598877,
+          0.25514930486679077
+        ]
+      }
+    },
+    {
+      "name": "Q eye skin",
+      "material": "Q eye",
+      "color": "#b8b2a5",
+      "vertices": 126,
+      "triangles": 160,
+      "bounds": {
+        "min": [
+          -0.06800000369548798,
+          1.7869999408721924,
+          0.09000000357627869
+        ],
+        "max": [
+          0.06800000369548798,
+          1.8029999732971191,
+          0.10999999940395355
+        ],
+        "size": [
+          0.13600000739097595,
+          0.016000032424926758,
+          0.019999995827674866
+        ]
+      }
+    },
+    {
+      "name": "Q eye skin",
+      "material": "Q eye",
+      "color": "#372f25",
+      "vertices": 126,
+      "triangles": 160,
+      "bounds": {
+        "min": [
+          -0.05400000140070915,
+          1.7869999408721924,
+          0.10599999874830246
+        ],
+        "max": [
+          0.05400000140070915,
+          1.8029999732971191,
+          0.1120000034570694
+        ],
+        "size": [
+          0.1080000028014183,
+          0.016000032424926758,
+          0.006000004708766937
+        ]
+      }
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "#a7a397",
+      "vertices": 221,
+      "triangles": 244,
+      "bounds": {
+        "min": [
+          -0.12496530264616013,
+          1.7455027103424072,
+          -0.1419658213853836
+        ],
+        "max": [
+          0.12496530264616013,
+          1.95086669921875,
+          0.11558215320110321
+        ],
+        "size": [
+          0.24993060529232025,
+          0.20536398887634277,
+          0.2575479745864868
+        ]
+      }
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "#494334",
+      "vertices": 656,
+      "triangles": 752,
+      "bounds": {
+        "min": [
+          -0.36530810594558716,
+          0.018000002950429916,
+          -0.17000000178813934
+        ],
+        "max": [
+          0.36530810594558716,
+          1.4774105548858643,
+          0.19300000369548798
+        ],
+        "size": [
+          0.7306162118911743,
+          1.4594105519354343,
+          0.3630000054836273
+        ]
+      }
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "#514333",
+      "vertices": 52,
+      "triangles": 32,
+      "bounds": {
+        "min": [
+          0.28700000047683716,
+          0.014999978244304657,
+          -0.026000000536441803
+        ],
+        "max": [
+          0.33899998664855957,
+          1.5049999952316284,
+          0.026000000536441803
+        ],
+        "size": [
+          0.05199998617172241,
+          1.4900000169873238,
+          0.052000001072883606
+        ]
+      }
+    },
+    {
+      "name": "Q metal skin",
+      "material": "Q metal",
+      "color": "#b59b69",
+      "vertices": 471,
+      "triangles": 508,
+      "bounds": {
+        "min": [
+          -0.19499999284744263,
+          0.40299999713897705,
+          -0.007518101949244738
+        ],
+        "max": [
+          0.41390499472618103,
+          1.7160500288009644,
+          0.19099999964237213
+        ],
+        "size": [
+          0.6089049875736237,
+          1.3130500316619873,
+          0.19851810159161687
+        ]
+      }
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "#c6baa0",
+      "vertices": 77,
+      "triangles": 100,
+      "bounds": {
+        "min": [
+          0.2630000114440918,
+          1.5059999227523804,
+          -0.04469965770840645
+        ],
+        "max": [
+          0.3630000054836273,
+          1.6439999341964722,
+          0.04469965770840645
+        ],
+        "size": [
+          0.09999999403953552,
+          0.1380000114440918,
+          0.0893993154168129
+        ]
+      }
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "#696454",
+      "vertices": 336,
+      "triangles": 512,
+      "bounds": {
+        "min": [
+          -0.3100000023841858,
+          0.22500000894069672,
+          -0.20999999344348907
+        ],
+        "max": [
+          0.3100000023841858,
+          1.0249999771127478,
+          0.20999999344348907
+        ],
+        "size": [
+          0.6200000047683716,
+          0.7999999681720511,
+          0.41999998688697815
+        ]
+      }
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "#27282a",
+      "vertices": 546,
+      "triangles": 528,
+      "bounds": {
+        "min": [
+          -0.21199999749660492,
+          -0.003000002820044756,
+          -0.09300000220537186
+        ],
+        "max": [
+          0.21199999749660492,
+          0.10698022693395615,
+          0.19300000369548798
+        ],
+        "size": [
+          0.42399999499320984,
+          0.1099802297540009,
+          0.28600000590085983
+        ]
+      }
+    }
+  ],
+  "maps": [
+    {
+      "material": "Q cloth",
+      "color": "#696454",
+      "bump": {
+        "name": "Q cloth microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0014
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q upper cloth",
+      "color": "#696454",
+      "bump": {
+        "name": "Q upper garment physical weave",
+        "width": 512,
+        "height": 512,
+        "repeat": [
+          1,
+          1
+        ],
+        "bumpScale": 0.00035
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q skin",
+      "color": "#ab8770",
+      "bump": {
+        "name": "Q skin microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.00018
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q anatomical face",
+      "color": "#ab8770",
+      "bump": {
+        "name": "Q skin microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.00018
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q eye",
+      "color": "#b8b2a5",
+      "bump": {
+        "name": "Q eye microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q eye",
+      "color": "#372f25",
+      "bump": {
+        "name": "Q eye microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q cloth",
+      "color": "#a7a397",
+      "bump": {
+        "name": "Q cloth microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0014
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q leather",
+      "color": "#494334",
+      "bump": {
+        "name": "Q leather microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0008
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q leather",
+      "color": "#514333",
+      "bump": {
+        "name": "Q leather microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0008
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q metal",
+      "color": "#b59b69",
+      "bump": {
+        "name": "Q metal microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.00035
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q cloth",
+      "color": "#c6baa0",
+      "bump": {
+        "name": "Q cloth microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0014
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q cloth",
+      "color": "#696454",
+      "bump": {
+        "name": "Q cloth microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0014
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    },
+    {
+      "material": "Q leather",
+      "color": "#27282a",
+      "bump": {
+        "name": "Q leather microstructure",
+        "width": 64,
+        "height": 64,
+        "repeat": [
+          4,
+          4
+        ],
+        "bumpScale": 0.0008
+      },
+      "roughness": 1,
+      "baseColorMap": false,
+      "normalMap": false
+    }
+  ]
+}

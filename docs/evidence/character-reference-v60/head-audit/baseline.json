@@ -1,0 +1,320 @@
+{
+  "timestamp": "2026-09-16T11:19:29.607Z",
+  "checkout": "/workspace/scratch/e72662e3b71f/Q-ps4-v57",
+  "head": "fc311bac0134b58e04891264c405bfd61eba22e3",
+  "runtimeBaseline": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+  "boundary": "Read-only actual native Three CPU actor construction and rest transforms. No renderer, pixels or device/GPU cost.",
+  "roleBudgets": [
+    {
+      "role": "player",
+      "triangles": 7822,
+      "visibleMeshes": 14,
+      "uniqueGeometryBufferBytes": 376068
+    },
+    {
+      "role": "npc",
+      "triangles": 6718,
+      "visibleMeshes": 13,
+      "uniqueGeometryBufferBytes": 319180
+    },
+    {
+      "role": "sena",
+      "triangles": 6786,
+      "visibleMeshes": 12,
+      "uniqueGeometryBufferBytes": 323340
+    },
+    {
+      "role": "smith",
+      "triangles": 6242,
+      "visibleMeshes": 11,
+      "uniqueGeometryBufferBytes": 303172
+    },
+    {
+      "role": "healer",
+      "triangles": 7038,
+      "visibleMeshes": 11,
+      "uniqueGeometryBufferBytes": 343172
+    },
+    {
+      "role": "patient",
+      "triangles": 6270,
+      "visibleMeshes": 10,
+      "uniqueGeometryBufferBytes": 312076
+    },
+    {
+      "role": "porter",
+      "triangles": 6450,
+      "visibleMeshes": 10,
+      "uniqueGeometryBufferBytes": 321276
+    },
+    {
+      "role": "scout",
+      "triangles": 6798,
+      "visibleMeshes": 11,
+      "uniqueGeometryBufferBytes": 323916
+    },
+    {
+      "role": "traveler",
+      "triangles": 6578,
+      "visibleMeshes": 10,
+      "uniqueGeometryBufferBytes": 319964
+    },
+    {
+      "role": "courier",
+      "triangles": 6398,
+      "visibleMeshes": 10,
+      "uniqueGeometryBufferBytes": 316484
+    },
+    {
+      "role": "soldier",
+      "triangles": 7454,
+      "visibleMeshes": 13,
+      "uniqueGeometryBufferBytes": 363340
+    },
+    {
+      "role": "ranger",
+      "triangles": 7108,
+      "visibleMeshes": 12,
+      "uniqueGeometryBufferBytes": 354448
+    },
+    {
+      "role": "wolf",
+      "triangles": 4028,
+      "visibleMeshes": 6,
+      "uniqueGeometryBufferBytes": 202080
+    },
+    {
+      "role": "boss",
+      "triangles": 7950,
+      "visibleMeshes": 14,
+      "uniqueGeometryBufferBytes": 384508
+    }
+  ],
+  "npcParts": [
+    {
+      "name": "cape",
+      "material": "Q cloth",
+      "color": "696454",
+      "map": false,
+      "vertices": 117,
+      "triangles": 192,
+      "bufferBytes": 4896
+    },
+    {
+      "name": "Q upper cloth skin",
+      "material": "Q upper cloth",
+      "color": "696454",
+      "map": false,
+      "vertices": 483,
+      "triangles": 816,
+      "bufferBytes": 31944
+    },
+    {
+      "name": "Q skin skin",
+      "material": "Q skin",
+      "color": "ab8770",
+      "map": false,
+      "vertices": 757,
+      "triangles": 1068,
+      "bufferBytes": 48800
+    },
+    {
+      "name": "Q anatomical face skin",
+      "material": "Q anatomical face",
+      "color": "ab8770",
+      "map": false,
+      "vertices": 1062,
+      "triangles": 1646,
+      "bufferBytes": 69348,
+      "headLocalBounds": [
+        [
+          -0.1420000046491623,
+          -0.13885604858398404,
+          -0.11200000345706941
+        ],
+        [
+          0.1420000046491623,
+          0.1979999589920045,
+          0.1431493014097214
+        ]
+      ]
+    },
+    {
+      "name": "Q eye skin",
+      "material": "Q eye",
+      "color": "b8b2a5",
+      "map": false,
+      "vertices": 126,
+      "triangles": 160,
+      "bufferBytes": 8016
+    },
+    {
+      "name": "Q eye skin",
+      "material": "Q eye",
+      "color": "372f25",
+      "map": false,
+      "vertices": 126,
+      "triangles": 160,
+      "bufferBytes": 8016
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "a7a397",
+      "map": false,
+      "vertices": 221,
+      "triangles": 244,
+      "bufferBytes": 13840
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "494334",
+      "map": false,
+      "vertices": 656,
+      "triangles": 752,
+      "bufferBytes": 41248
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "514333",
+      "map": false,
+      "vertices": 52,
+      "triangles": 32,
+      "bufferBytes": 3104
+    },
+    {
+      "name": "Q metal skin",
+      "material": "Q metal",
+      "color": "b59b69",
+      "map": false,
+      "vertices": 471,
+      "triangles": 508,
+      "bufferBytes": 29424
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "c6baa0",
+      "map": false,
+      "vertices": 77,
+      "triangles": 100,
+      "bufferBytes": 4912
+    },
+    {
+      "name": "Q cloth skin",
+      "material": "Q cloth",
+      "color": "696454",
+      "map": false,
+      "vertices": 336,
+      "triangles": 512,
+      "bufferBytes": 21888
+    },
+    {
+      "name": "Q leather skin",
+      "material": "Q leather",
+      "color": "27282a",
+      "map": false,
+      "vertices": 546,
+      "triangles": 528,
+      "bufferBytes": 33744
+    }
+  ],
+  "bonePositions": {
+    "neck": {
+      "localPosition": [
+        0,
+        0.6,
+        0
+      ],
+      "worldPosition": [
+        0,
+        1.5619709218492126,
+        0.005423900983539495
+      ]
+    },
+    "head": {
+      "localPosition": [
+        0,
+        0.16,
+        0
+      ],
+      "worldPosition": [
+        0,
+        1.7219689218533794,
+        0.006223897650210328
+      ]
+    },
+    "eyelid-0": {
+      "localPosition": [
+        -0.046,
+        0.058,
+        0.1
+      ],
+      "worldPosition": [
+        -0.046,
+        1.7794681989382206,
+        0.10651264644448266
+      ]
+    },
+    "eyelid-1": {
+      "localPosition": [
+        0.046,
+        0.058,
+        0.1
+      ],
+      "worldPosition": [
+        0.046,
+        1.7794681989382206,
+        0.10651264644448266
+      ]
+    }
+  },
+  "sourceHashes": {
+    "src/actor-models.js": {
+      "bytes": 38244,
+      "sha256": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b"
+    },
+    "src/character-motion.js": {
+      "bytes": 4931,
+      "sha256": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059"
+    },
+    "src/assets/characters/detailed-geometry.js": {
+      "bytes": 31318,
+      "sha256": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033"
+    },
+    "src/assets/characters/identity-head-data.js": {
+      "bytes": 126806,
+      "sha256": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe"
+    },
+    "src/assets/characters/anatomical-head-data.js": {
+      "bytes": 120150,
+      "sha256": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba"
+    },
+    "src/skin-materials.js": {
+      "bytes": 1532,
+      "sha256": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63"
+    },
+    "src/dialogue-camera.js": {
+      "bytes": 5612,
+      "sha256": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e"
+    },
+    "scripts/characters/generate-anatomical-head.py": {
+      "bytes": 17238,
+      "sha256": "8bf8805f3f7a173198e9bf17edc60c2f31041a496e3a0abec445618c3165b85f"
+    },
+    "scripts/characters/generate-identity-head.py": {
+      "bytes": 3805,
+      "sha256": "b939ffa0d10237353722e094fb3400100d98dbf3680c026f28509802bd4f9d10"
+    },
+    "scripts/characters/generate-face-identities.py": {
+      "bytes": 8509,
+      "sha256": "a1427f36069809ebda5747a9ac095530951e7595ac9a1c2186cf01dffee23a07"
+    },
+    "src/assets/characters/sources/makehuman-hm08.obj": {
+      "bytes": 1749303,
+      "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c"
+    }
+  }
+}

@@ -1,3 +1,21 @@
+## 2026-09-16: 完成品と各パーツの多角度資料を先に固定してミラを3D化（v60）
+
+最新直接指定「いや、完成品とパーツを最初にいろんな角度から生成して、確実に作っていった方がいいでしょう」。[方法・固定画像・分担・検証範囲](CHARACTER_REFERENCE_V60.md)。8画像を正式生成、独立実見で反対cape方向と襟/腰接続を補完し7資料を固定。上衣だけを生成完成人物としない。衣装assemblyと頭髪を別の既存Ultra担当が実3D化し、手/靴/杖も参照一致を確認する。画像は設計資料で、実ゲームや完成モデルではない。
+
+source基点Site24/2bee、docs基点fc311。fresh main547676fd…/PR55open、既存owner1のSite24を保持。旧merge重複0、旧docs保存401は終了しており、新fresh readは成功。正規previewは新v60検査のため親が起動、実WebGL画面は次の確認点。PS4全画面品質/iPhone SE3性能/9月20達成根拠は未確認。手順だけで完成とせず、同じ角度/姿勢/光で実像と費用を測ってから採否を決める。
+
+---
+
+## 2026-09-16: 最新検証済みゲームを同じプレイURLへ配信済み（Site24）
+
+最新ユーザー指定「ゲームを最新版更新してくれればいいや。それで確認するから」を実行した。PR55 source `2bee64cff6482cb7770ba69e07673eefc8ad54ef` / tree `5dd01fe0a71a610bb91f792135e6bc022092308d` を既存owner-only Site24へ配信し、deployment `appgdep_6aaa71e5b4dc81918f305b3f053ce79b` のsucceededとsource/版/audienceの再読取を確認済み。[終端・根拠・残作業](SITE_DELIVERY_V24.md)。以下のSite23/preview監督不在/PR55保存待ちの記述は過去の状態として保持する。
+
+今回は直接の更新指示に基づく配信順序の限定更新で、GitHub mainは最終読取 `547676fdce8d8e97abed9f065aad0b6e24af2fd6`、PR39は未merge。重複merge/force/保護回避なし。Site source GitとGitHub mainを混同せず、後続の古いmainからの再配信でSite24を後退させない。新しいゲーム制作・測定や記録のみの再deployは今回行わない。採用sourceは27工程/343tests・required CI35083476068成功。実ゲーム画面/実聴/実機/PS4全画面品質の合格は未確認。正式previewは起動・タイトルDOM確認後にstop成功。
+
+未採用v59のfade時間延長候補は後続武器移動悪化で棄却、別checkoutの作者docs-only commit `5a2a3ea1c0ed11132a3d39e3e5b9e34a7ab53085` に保存済みで配信には含めない。将来の次修復はslerp短経路切替仮説の直接測定。担当・既知toolは終了、停止中の担当やdisabled Q automationを背景稼働とは呼ばない。全画面品質/期限目標・人間準備待ちなしの方針は維持する。
+
+---
+
 ## 2026-09-16: 上衣の物理尺度修復を新規結合検証（v57）
 
 [結合・復旧・採否と次地点](CLOTH_INTEGRATION_V57.md)。ミラ上衣のcm単位の規則格子を約2mmの設計尺度へ修復し、身体形状/動作/他13役/全27媒体を保持。実会話3viewportの同じ投影/接触条件で粗い周期の縮小を確認したが、実WebGLや自然な衣服の合格ではない。+1draw、共有512²データ1MiB/推定full-mip1,398,100 B、Node初回48.18msの費用を明記。生成布v58は画像を正式取得・独立点検したがruntime不採用、身体v54も棄却を保持する。

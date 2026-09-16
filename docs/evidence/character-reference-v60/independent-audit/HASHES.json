@@ -1,0 +1,29 @@
+{
+  "at": "2026-09-16T11:14:32.368210+00:00",
+  "sourceBase": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+  "localHead": "fc311bac0134b58e04891264c405bfd61eba22e3",
+  "sourceHashReadback": "all 14 listed source/doc/test hashes match at close",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 10434,
+      "sha256": "467eb7a49b246062378017d3a1abdfd13d4e3ff13c94f265070e133e5aa8c112"
+    },
+    {
+      "path": "audit.mjs",
+      "bytes": 7186,
+      "sha256": "1e1061249d34c5be9d83e0558fd6140ee1bff9498c10c32a38b2d75344edb3d7"
+    },
+    {
+      "path": "baseline.json",
+      "bytes": 28755,
+      "sha256": "b09a34901f8f085d2d1f3d1084737f97cdad5bd3042c1557377662264d8e80a5"
+    },
+    {
+      "path": "run.txt",
+      "bytes": 3204,
+      "sha256": "860435cdbfe3fdb2bcfe99f2ca5341f5552e717eaef003cdc72368614b0863b4"
+    }
+  ],
+  "scope": "Initial independent CPU/source audit. Generated-image consistency review not begun. No source edits, browser, remote, new agents, or pending sessions."
+}
