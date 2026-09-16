@@ -1,0 +1,1014 @@
+{
+  "completedAt": "2026-09-16T12:43:40.416Z",
+  "source": {
+    "capturedAt": "2026-09-16T12:43:40.306Z",
+    "repo": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v61",
+    "head": "8e6510578cf0980eea03c2dcc6ebeb3dcbe39371",
+    "tree": "f71ddad782a78b5177dbdb37416cc83166cd95d6",
+    "status": "",
+    "runtimeDiffFrom2bee": "",
+    "source": {
+      "path": "review/micro-v61/mira-micro-parts.js",
+      "bytes": 3628,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+    },
+    "cameraFiles": [
+      {
+        "path": "src/scene.js",
+        "bytes": 30277,
+        "sha256": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b"
+      },
+      {
+        "path": "src/dialogue-camera.js",
+        "bytes": 5612,
+        "sha256": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e"
+      }
+    ],
+    "threeModule": {
+      "path": "/workspace/scratch/e72662e3b71f/Q-ps4-v57/node_modules/three/build/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    }
+  },
+  "threeRevision": "186",
+  "material": {
+    "name": "Mira micro bronze candidate",
+    "type": "MeshStandardMaterial",
+    "colorLinear": [
+      0.37626212298046485,
+      0.24228112245478564,
+      0.07421356837213867
+    ],
+    "metalness": 0.7,
+    "roughness": 0.46,
+    "sharedByBothOriginalParts": true
+  },
+  "profiles": {
+    "S13": {
+      "profileMm": [
+        [
+          14,
+          -2.5
+        ],
+        [
+          14.5,
+          -3
+        ],
+        [
+          19.2,
+          -3
+        ],
+        [
+          20,
+          -2.2
+        ],
+        [
+          20,
+          2.2
+        ],
+        [
+          19.2,
+          3
+        ],
+        [
+          14.5,
+          3
+        ],
+        [
+          14,
+          2.5
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          15,
+          -1
+        ],
+        [
+          14,
+          -1
+        ]
+      ],
+      "originMm": [
+        0,
+        1665,
+        0
+      ],
+      "interfaces": {
+        "capSeatY": 1668,
+        "capSeatRadialBand": [
+          14.5,
+          18
+        ],
+        "ribEndpointRadius": 14
+      }
+    },
+    "S14": {
+      "profileMm": [
+        [
+          6.3,
+          10
+        ],
+        [
+          8.5,
+          10
+        ],
+        [
+          9,
+          9.5
+        ],
+        [
+          9,
+          6.5
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          8,
+          4.5
+        ],
+        [
+          10,
+          3.5
+        ],
+        [
+          17.5,
+          1
+        ],
+        [
+          18,
+          0.5
+        ],
+        [
+          18,
+          0
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          13.2,
+          -0.5
+        ],
+        [
+          13.2,
+          -6
+        ],
+        [
+          12.115928535016781,
+          -6
+        ],
+        [
+          9,
+          -3
+        ],
+        [
+          6.3,
+          2
+        ]
+      ],
+      "originMm": [
+        0,
+        1668,
+        0
+      ],
+      "interfaces": {
+        "ringSeatY": 1668,
+        "finialStemRadius": 6,
+        "socketRadius": 6.3,
+        "socketTopY": 1678,
+        "finialStemBottomY": 1674,
+        "glassContactY": 1662,
+        "glassContactRadius": 12.115928535016781
+      }
+    }
+  },
+  "cases": [
+    {
+      "segments": 24,
+      "guardAccepted": true,
+      "parts": {
+        "S13": {
+          "vertices": 288,
+          "triangles": 576,
+          "indexType": "Uint16Array",
+          "indexBytes": 3456,
+          "attributeBytes": {
+            "position": {
+              "bytes": 3456,
+              "sha256": "a993b258ba3fee4faaee6e5087503f5623760cb2350fd73ae602fa9e30001ee3"
+            },
+            "uv": {
+              "bytes": 2304,
+              "sha256": "a00939621cc2bf53dcb1d6fdf06aa288be880515aed52a4de713ec1d562e3656"
+            },
+            "normal": {
+              "bytes": 3456,
+              "sha256": "6553becc39bab34a64106a784a41a9327e2fb9c1da71bc7e53ff350192a23861"
+            }
+          },
+          "totalBufferBytes": 12672,
+          "volumeMm3": 3520.9474713614973,
+          "minTriangleAreaMm2": 1.2866270866193905,
+          "degenerateTriangles": 0,
+          "boundaryOrNonManifoldEdges": 0,
+          "inconsistentlyDirectedEdges": 0,
+          "outerIdealRadiusMm": 20,
+          "nativeMinimumFacetRadiusMm": 19.828896857522302,
+          "maximumCircleToFacetLossMm": 0.17110314247769765,
+          "originMm": [
+            0,
+            1665,
+            0
+          ],
+          "materialSameIdentity": true,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.665,
+            0,
+            1
+          ],
+          "maximumRadialDifferenceFrom24Over8192AnglesMm": 0
+        },
+        "S14": {
+          "vertices": 384,
+          "triangles": 768,
+          "indexType": "Uint16Array",
+          "indexBytes": 4608,
+          "attributeBytes": {
+            "position": {
+              "bytes": 4608,
+              "sha256": "15c564c10c172fc50ddd4b5448324bd34f7d84b7ca73eada30aa3af498f75071"
+            },
+            "uv": {
+              "bytes": 3072,
+              "sha256": "1c8d94dc8f2a573b9c41ba45f93ca6979b7a397c23e80a8dd426f1959665543a"
+            },
+            "normal": {
+              "bytes": 4608,
+              "sha256": "1b27ba831c3401ca38f5660e81a34a68b24e47638525b86a19b7dadcb56f5da1"
+            }
+          },
+          "totalBufferBytes": 16896,
+          "volumeMm3": 4346.687635891502,
+          "minTriangleAreaMm2": 0.7811664038507163,
+          "degenerateTriangles": 0,
+          "boundaryOrNonManifoldEdges": 0,
+          "inconsistentlyDirectedEdges": 0,
+          "outerIdealRadiusMm": 18,
+          "nativeMinimumFacetRadiusMm": 17.846007393430448,
+          "maximumCircleToFacetLossMm": 0.1539926065695525,
+          "originMm": [
+            0,
+            1668,
+            0
+          ],
+          "materialSameIdentity": true,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.668,
+            0,
+            1
+          ],
+          "socket": {
+            "nativeBoreTriangles": 48,
+            "minimumFaceDistanceToAxisMm": 6.246102523332574,
+            "continuousStemEnvelopeRadiusMm": 6,
+            "minimumRadialClearanceMm": 0.2461025233325742,
+            "continuousR6EnvelopeFits": true,
+            "note": "Continuous R6 cylinder is the specified envelope, not an available S15 mesh. A phase-aligned polygonal stem may behave differently."
+          },
+          "maximumRadialDifferenceFrom24Over8192AnglesMm": 0
+        }
+      },
+      "contact": {
+        "planeMm": 1668,
+        "planeMismatchMm": 2.60770320892334e-8,
+        "ringUpwardSeatTriangles": 48,
+        "capDownwardSeatTriangles": 48,
+        "sharedAngularPhaseErrorRad": 5.288380844348239e-9,
+        "contactAreaMm2": 353.28800150791574,
+        "innerContactRadiusMm": 14.499999582767487,
+        "outerContactRadiusMm": 18.000000669840585,
+        "positiveArea": true,
+        "seatPlaneToleranceMm": 0.00001,
+        "method": "Native co-phased polygons; intersection is S14 outer polygon less S13 inner polygon; all n paired rays and ring containment checked. No full staff/glass claim."
+      },
+      "totals": {
+        "vertices": 672,
+        "triangles": 1344,
+        "bufferBytes": 29568,
+        "meshes": 2,
+        "sharedMaterials": 1,
+        "unbatchedDrawUnits": 2,
+        "textureBytes": 0
+      },
+      "singleCreationAndAnalysisMs": 9.796636000000007,
+      "savedTriangles": 0,
+      "savedBufferBytes": 0,
+      "savedFraction": 0
+    },
+    {
+      "segments": 16,
+      "guardAccepted": true,
+      "parts": {
+        "S13": {
+          "vertices": 192,
+          "triangles": 384,
+          "indexType": "Uint16Array",
+          "indexBytes": 2304,
+          "attributeBytes": {
+            "position": {
+              "bytes": 2304,
+              "sha256": "a8802e50d280444951bfcdcfe3c7ed0310331616dd85076b6677312dd62273bf"
+            },
+            "uv": {
+              "bytes": 1536,
+              "sha256": "a2ac3772eed575e00a3d7f8f869266abfd1b9474601ee5708c8d4e2b725ff8a7"
+            },
+            "normal": {
+              "bytes": 2304,
+              "sha256": "16e1e05c0555250de9d216e11aa0269d4169469d9905da70cdb374fb946db265"
+            }
+          },
+          "totalBufferBytes": 8448,
+          "volumeMm3": 3470.656996919936,
+          "minTriangleAreaMm2": 1.9128296226729606,
+          "degenerateTriangles": 0,
+          "boundaryOrNonManifoldEdges": 0,
+          "inconsistentlyDirectedEdges": 0,
+          "outerIdealRadiusMm": 20,
+          "nativeMinimumFacetRadiusMm": 19.615705294025137,
+          "maximumCircleToFacetLossMm": 0.38429470597486315,
+          "originMm": [
+            0,
+            1665,
+            0
+          ],
+          "materialSameIdentity": true,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.665,
+            0,
+            1
+          ],
+          "maximumRadialDifferenceFrom24Over8192AnglesMm": 0.3418626507782392
+        },
+        "S14": {
+          "vertices": 256,
+          "triangles": 512,
+          "indexType": "Uint16Array",
+          "indexBytes": 3072,
+          "attributeBytes": {
+            "position": {
+              "bytes": 3072,
+              "sha256": "6516979371018c2551939d3d6839f051949520e4dbbee1e8e85ec0e3e89d6d3f"
+            },
+            "uv": {
+              "bytes": 2048,
+              "sha256": "d6f1767192df80cc1034b2f1cbe9d735d59f1ba474f02f27378058f8866d3066"
+            },
+            "normal": {
+              "bytes": 3072,
+              "sha256": "e4e94dcb38fbb6960cfe9a15b544c3d593d5470ecbc99c31d4ded46b9bfceea7"
+            }
+          },
+          "totalBufferBytes": 11264,
+          "volumeMm3": 4284.603165494132,
+          "minTriangleAreaMm2": 1.1613608132560793,
+          "degenerateTriangles": 0,
+          "boundaryOrNonManifoldEdges": 0,
+          "inconsistentlyDirectedEdges": 0,
+          "outerIdealRadiusMm": 18,
+          "nativeMinimumFacetRadiusMm": 17.654134784681627,
+          "maximumCircleToFacetLossMm": 0.3458652153183728,
+          "originMm": [
+            0,
+            1668,
+            0
+          ],
+          "materialSameIdentity": true,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.668,
+            0,
+            1
+          ],
+          "socket": {
+            "nativeBoreTriangles": 32,
+            "minimumFaceDistanceToAxisMm": 6.1789472773371275,
+            "continuousStemEnvelopeRadiusMm": 6,
+            "minimumRadialClearanceMm": 0.17894727733712745,
+            "continuousR6EnvelopeFits": true,
+            "note": "Continuous R6 cylinder is the specified envelope, not an available S15 mesh. A phase-aligned polygonal stem may behave differently."
+          },
+          "maximumRadialDifferenceFrom24Over8192AnglesMm": 0.3076764172019182
+        }
+      },
+      "contact": {
+        "planeMm": 1668,
+        "planeMismatchMm": 2.60770320892334e-8,
+        "ringUpwardSeatTriangles": 32,
+        "capDownwardSeatTriangles": 32,
+        "sharedAngularPhaseErrorRad": 2.5734927133758134e-8,
+        "contactAreaMm2": 348.241920785709,
+        "innerContactRadiusMm": 14.499999582767487,
+        "outerContactRadiusMm": 18.00000018038724,
+        "positiveArea": true,
+        "seatPlaneToleranceMm": 0.00001,
+        "method": "Native co-phased polygons; intersection is S14 outer polygon less S13 inner polygon; all n paired rays and ring containment checked. No full staff/glass claim."
+      },
+      "totals": {
+        "vertices": 448,
+        "triangles": 896,
+        "bufferBytes": 19712,
+        "meshes": 2,
+        "sharedMaterials": 1,
+        "unbatchedDrawUnits": 2,
+        "textureBytes": 0
+      },
+      "singleCreationAndAnalysisMs": 4.194079000000002,
+      "savedTriangles": 448,
+      "savedBufferBytes": 9856,
+      "savedFraction": 0.33333333333333337
+    },
+    {
+      "segments": 12,
+      "guardAccepted": true,
+      "parts": {
+        "S13": {
+          "vertices": 144,
+          "triangles": 288,
+          "indexType": "Uint16Array",
+          "indexBytes": 1728,
+          "attributeBytes": {
+            "position": {
+              "bytes": 1728,
+              "sha256": "c3b410870868a73a1724047ca0b8aaf7fba00d4e92bc88b0585b9c1afb3d5497"
+            },
+            "uv": {
+              "bytes": 1152,
+              "sha256": "e2bb08cd9376c9aa3298800292544477f9bad916acce54b1f344cf2b3b32d8a3"
+            },
+            "normal": {
+              "bytes": 1728,
+              "sha256": "e52ea438d6767fda850990e123bbca60941b28ec8c58b7b7c03ec842fc1a55bd"
+            }
+          },
+          "totalBufferBytes": 6336,
+          "volumeMm3": 3400.973924278154,
+          "minTriangleAreaMm2": 2.5189022815989506,
+          "degenerateTriangles": 0,
+          "boundaryOrNonManifoldEdges": 0,
+          "inconsistentlyDirectedEdges": 0,
+          "outerIdealRadiusMm": 20,
+          "nativeMinimumFacetRadiusMm": 19.318516310732644,
+          "maximumCircleToFacetLossMm": 0.6814836892673561,
+          "originMm": [
+            0,
+            1665,
+            0
+          ],
+          "materialSameIdentity": true,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.665,
+            0,
+            1
+          ],
+          "maximumRadialDifferenceFrom24Over8192AnglesMm": 0.6814829302847727
+        },
+        "S14": {
+          "vertices": 192,
+          "triangles": 384,
+          "indexType": "Uint16Array",
+          "indexBytes": 2304,
+          "attributeBytes": {
+            "position": {
+              "bytes": 2304,
+              "sha256": "2164c0b37e7f1fb62db17ef9cca16f453857cceb2757d241d8de7d194c945f6d"
+            },
+            "uv": {
+              "bytes": 1536,
+              "sha256": "d1db6ad8b4cb54a8ecd5acb52df3302f81ef6b4c0775c0b5908a67e8c110dce8"
+            },
+            "normal": {
+              "bytes": 2304,
+              "sha256": "10f33cdbf3f0404ba1faf864d9eb347e9c4a7aac1cb15a97dc7d5874d41d7ca7"
+            }
+          },
+          "totalBufferBytes": 8448,
+          "volumeMm3": 4198.577892536554,
+          "minTriangleAreaMm2": 1.529333575159844,
+          "degenerateTriangles": 0,
+          "boundaryOrNonManifoldEdges": 0,
+          "inconsistentlyDirectedEdges": 0,
+          "outerIdealRadiusMm": 18,
+          "nativeMinimumFacetRadiusMm": 17.386664655554895,
+          "maximumCircleToFacetLossMm": 0.6133353444451046,
+          "originMm": [
+            0,
+            1668,
+            0
+          ],
+          "materialSameIdentity": true,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.668,
+            0,
+            1
+          ],
+          "socket": {
+            "nativeBoreTriangles": 24,
+            "minimumFaceDistanceToAxisMm": 6.085332714991687,
+            "continuousStemEnvelopeRadiusMm": 6,
+            "minimumRadialClearanceMm": 0.08533271499168738,
+            "continuousR6EnvelopeFits": true,
+            "note": "Continuous R6 cylinder is the specified envelope, not an available S15 mesh. A phase-aligned polygonal stem may behave differently."
+          },
+          "maximumRadialDifferenceFrom24Over8192AnglesMm": 0.6133347689651956
+        }
+      },
+      "contact": {
+        "planeMm": 1668,
+        "planeMismatchMm": 2.60770320892334e-8,
+        "ringUpwardSeatTriangles": 24,
+        "capDownwardSeatTriangles": 24,
+        "sharedAngularPhaseErrorRad": 5.288380844348239e-9,
+        "contactAreaMm2": 341.2499843775827,
+        "innerContactRadiusMm": 14.499999582767487,
+        "outerContactRadiusMm": 18.000000176961034,
+        "positiveArea": true,
+        "seatPlaneToleranceMm": 0.00001,
+        "method": "Native co-phased polygons; intersection is S14 outer polygon less S13 inner polygon; all n paired rays and ring containment checked. No full staff/glass claim."
+      },
+      "totals": {
+        "vertices": 336,
+        "triangles": 672,
+        "bufferBytes": 14784,
+        "meshes": 2,
+        "sharedMaterials": 1,
+        "unbatchedDrawUnits": 2,
+        "textureBytes": 0
+      },
+      "singleCreationAndAnalysisMs": 2.197168999999974,
+      "savedTriangles": 672,
+      "savedBufferBytes": 14784,
+      "savedFraction": 0.5
+    },
+    {
+      "segments": 8,
+      "guardAccepted": true,
+      "parts": {
+        "S13": {
+          "vertices": 96,
+          "triangles": 192,
+          "indexType": "Uint16Array",
+          "indexBytes": 1152,
+          "attributeBytes": {
+            "position": {
+              "bytes": 1152,
+              "sha256": "1cd05e865e6de3556686265e3285aa5ffa543a80ba9f23e9ae7f4f84d04ed391"
+            },
+            "uv": {
+              "bytes": 768,
+              "sha256": "6522b3963bb93e77c7037528c3e36a1c26ff5867012fa960d9a792129a9fa1de"
+            },
+            "normal": {
+              "bytes": 1152,
+              "sha256": "ab1f1715d5468b25d0f1e9eb1a7a8c126d2c700417f63098be1780ee68f53efd"
+            }
+          },
+          "totalBufferBytes": 4224,
+          "volumeMm3": 3206.4686576778586,
+          "minTriangleAreaMm2": 3.647035245572501,
+          "degenerateTriangles": 0,
+          "boundaryOrNonManifoldEdges": 0,
+          "inconsistentlyDirectedEdges": 0,
+          "outerIdealRadiusMm": 20,
+          "nativeMinimumFacetRadiusMm": 18.477590139587527,
+          "maximumCircleToFacetLossMm": 1.5224098604124734,
+          "originMm": [
+            0,
+            1665,
+            0
+          ],
+          "materialSameIdentity": true,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.665,
+            0,
+            1
+          ],
+          "maximumRadialDifferenceFrom24Over8192AnglesMm": 1.362876521212435
+        },
+        "S14": {
+          "vertices": 128,
+          "triangles": 256,
+          "indexType": "Uint16Array",
+          "indexBytes": 1536,
+          "attributeBytes": {
+            "position": {
+              "bytes": 1536,
+              "sha256": "0240ddb150f8e45bf9594d3decdb428419d0faccf4560c93a51d84fdfca5f54a"
+            },
+            "uv": {
+              "bytes": 1024,
+              "sha256": "c96b358feb3362bf063af7ef780c544b4d92ef747d55e49ce0a914e7e705b86d"
+            },
+            "normal": {
+              "bytes": 1536,
+              "sha256": "983d3d3a77c671d09ec571010ca9a208ab4acea435746078f555941aa70e02f7"
+            }
+          },
+          "totalBufferBytes": 5632,
+          "volumeMm3": 3958.4570928139583,
+          "minTriangleAreaMm2": 2.2142713594319487,
+          "degenerateTriangles": 0,
+          "boundaryOrNonManifoldEdges": 0,
+          "inconsistentlyDirectedEdges": 0,
+          "outerIdealRadiusMm": 18,
+          "nativeMinimumFacetRadiusMm": 16.62983107522595,
+          "maximumCircleToFacetLossMm": 1.370168924774049,
+          "originMm": [
+            0,
+            1668,
+            0
+          ],
+          "materialSameIdentity": true,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.668,
+            0,
+            1
+          ],
+          "socket": {
+            "nativeBoreTriangles": 16,
+            "minimumFaceDistanceToAxisMm": 5.820441187918293,
+            "continuousStemEnvelopeRadiusMm": 6,
+            "minimumRadialClearanceMm": -0.17955881208170688,
+            "continuousR6EnvelopeFits": false,
+            "note": "Continuous R6 cylinder is the specified envelope, not an available S15 mesh. A phase-aligned polygonal stem may behave differently."
+          },
+          "maximumRadialDifferenceFrom24Over8192AnglesMm": 1.2265890680787521
+        }
+      },
+      "contact": {
+        "planeMm": 1668,
+        "planeMismatchMm": 2.60770320892334e-8,
+        "ringUpwardSeatTriangles": 16,
+        "capDownwardSeatTriangles": 16,
+        "sharedAngularPhaseErrorRad": 0,
+        "contactAreaMm2": 321.73353621264846,
+        "innerContactRadiusMm": 14.499999582767487,
+        "outerContactRadiusMm": 17.9999996708697,
+        "positiveArea": true,
+        "seatPlaneToleranceMm": 0.00001,
+        "method": "Native co-phased polygons; intersection is S14 outer polygon less S13 inner polygon; all n paired rays and ring containment checked. No full staff/glass claim."
+      },
+      "totals": {
+        "vertices": 224,
+        "triangles": 448,
+        "bufferBytes": 9856,
+        "meshes": 2,
+        "sharedMaterials": 1,
+        "unbatchedDrawUnits": 2,
+        "textureBytes": 0
+      },
+      "singleCreationAndAnalysisMs": 1.36006900000001,
+      "savedTriangles": 896,
+      "savedBufferBytes": 19712,
+      "savedFraction": 0.6666666666666667
+    }
+  ],
+  "projections": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "normal-unoccluded-settled",
+      "depthMetres": 9.030057384756224,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 3.1297244386268233,
+      "S14IdealDiameterPx": 2.81675199476414,
+      "radiusToPixelFactor": 0.07824311096567058,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.013387642163457437,
+          "S14Px": 0.012048860603714347
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.030068413323110957,
+          "S14Px": 0.027061570421320985
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.05332140392064032,
+          "S14Px": 0.0479892654145861
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.11911808364348421,
+          "S14Px": 0.10720627922280944
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "dialogue-first-distance",
+      "depthMetres": 2.6019223662515376,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 10.861811884106775,
+      "S14IdealDiameterPx": 9.775630695696096,
+      "radiusToPixelFactor": 0.2715452971026694,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.04646225365930677,
+          "S14Px": 0.04181596810254361
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.10435342010892718,
+          "S14Px": 0.09391807265110624
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.18505369087272744,
+          "S14Px": 0.166548328330914
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.41340323785773847,
+          "S14Px": 0.3720629277586141
+        }
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "mode": "normal-unoccluded-settled",
+      "depthMetres": 9.030057384756224,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 1.6952674042561957,
+      "S14IdealDiameterPx": 1.525740663830576,
+      "radiusToPixelFactor": 0.042381685106404894,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.007251639505206113,
+          "S14Px": 0.006526466160345271
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.016287057216685105,
+          "S14Px": 0.0146583506448822
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.028882427123680172,
+          "S14Px": 0.02599418543290081
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.06452229530688727,
+          "S14Px": 0.05807006791235512
+        }
+      ]
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "mode": "dialogue-first-distance",
+      "depthMetres": 2.6019223662515376,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 5.8834814372245035,
+      "S14IdealDiameterPx": 5.295133293502053,
+      "radiusToPixelFactor": 0.1470870359306126,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.02516705406545784,
+          "S14Px": 0.022650316055544455
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.056524769225668896,
+          "S14Px": 0.05087228935268255
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.10023741588939403,
+          "S14Px": 0.09021367784591175
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.22392675383960833,
+          "S14Px": 0.20153408586924934
+        }
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": "normal-unoccluded-settled",
+      "depthMetres": 10.110003399437078,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 3.2768401774000937,
+      "S14IdealDiameterPx": 2.949156159660084,
+      "radiusToPixelFactor": 0.08192100443500235,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.014016941293758307,
+          "S14Px": 0.01261522900574188
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.03148180831251469,
+          "S14Px": 0.028333625838009458
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.05582782833085285,
+          "S14Px": 0.0502450474724311
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.12471734492674152,
+          "S14Px": 0.11224561456311725
+        }
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": "dialogue-first-distance",
+      "depthMetres": 2.6019223662515376,
+      "perspectiveFovDegrees": 54,
+      "unit": "CSS-coordinate pixels (mathematical projection only)",
+      "S13IdealDiameterPx": 12.732457264147385,
+      "S14IdealDiameterPx": 11.459211537732644,
+      "radiusToPixelFactor": 0.31831143160368464,
+      "facetingErrorAtImagePlaneBySegments": [
+        {
+          "segments": 24,
+          "S13Px": 0.054464086233965155,
+          "S14Px": 0.04901760705353723
+        },
+        {
+          "segments": 16,
+          "S13Px": 0.12232539801657576,
+          "S14Px": 0.11009285182990788
+        },
+        {
+          "segments": 12,
+          "S13Px": 0.2169240487452527,
+          "S14Px": 0.19523165154346028
+        },
+        {
+          "segments": 8,
+          "S13Px": 0.4846004621554601,
+          "S14Px": 0.4361404319837088
+        }
+      ]
+    }
+  ],
+  "geometryBatchMs": 17.591532,
+  "scope": {
+    "kind": "Independent native Three geometry and code-lens numerical projection; no renderer",
+    "originalMeshesUnchanged": true,
+    "sourceWrite": false,
+    "projectionCaveat": "Virtual camera-facing diameters at each look-at depth. These two parts are not installed on the live actor; actual staff location, orientation, occlusion, DPR, shading and camera candidate selection are not measured.",
+    "contactCaveat": "Only S13/S14 seat and continuous R6 stem design envelope. S15, S16, whole lantern and actor assembly absent.",
+    "timeCaveat": "One ordered 24/16/12/8 creation+analysis batch, not a benchmark or total human/model production time."
+  },
+  "endReadback": {
+    "head": "8e6510578cf0980eea03c2dcc6ebeb3dcbe39371",
+    "status": "",
+    "sourceSha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+  }
+}

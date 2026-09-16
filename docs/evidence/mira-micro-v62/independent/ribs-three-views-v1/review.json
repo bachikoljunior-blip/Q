@@ -1,0 +1,135 @@
+{
+  "reviewedAt": "2026-09-16T12:44:13.229438+00:00",
+  "startedAt": "2026-09-16T12:41:44Z",
+  "scope": "Independent actual-bitmap review, current S13/S14 interface source read; no author ratings, geometry construction, image processing or pixel-metric oracle.",
+  "files": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/micro-references/staff-ribs/staff-ribs-micro-v2.png",
+      "bytes": 1610260,
+      "sha256": "b435f2b73dbcdc8b2dc16c13872c1d3b9ab300dfddbc77e9ad33758457c2a589",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-hands-staff-views-v1.png",
+      "bytes": 1974979,
+      "sha256": "6bb80bcdcbd52ae8b6a1ecbb0071fe2d56d44f9ad4d7d2d2521bf65ced78ef5f",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-complete-six-views-v1.png",
+      "bytes": 1874282,
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v61/review/micro-v61/mira-micro-parts.js",
+      "bytes": 3628,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+    }
+  ],
+  "wholeSheetAccepted": false,
+  "excludedPanels": [
+    "WIDE BOW TOP",
+    "DEPTH BOW TOP"
+  ],
+  "topFailure": "Both bows return their top/bottom terminals to approximately the same lateral location in their bending-plane view, and have no corresponding terminal offset in the orthogonal view. Looking down their vertical length would superpose those terminals near one end of the bow footprint. The drawn TOP views instead show separate terminal blocks at opposite ends of a straight bar, so they cannot be exact projections of the displayed bow.",
+  "usablePanels": [
+    "WIDE BOW FRONT",
+    "WIDE BOW TRUE SIDE",
+    "WIDE BOW THREE-QUARTER",
+    "DEPTH BOW FRONT",
+    "DEPTH BOW TRUE SIDE",
+    "DEPTH BOW THREE-QUARTER"
+  ],
+  "usableScope": "Qualitatively consistent curve/section orientation and small capped-end design types, sufficient to author a first simple bowed-strip candidate only with explicit metric/interface inputs. Not exact reconstruction or strict same-object projection proof.",
+  "types": [
+    {
+      "ids": [
+        "S09",
+        "S10"
+      ],
+      "name": "wide bow",
+      "front": "A clear planar outward bow between vertically aligned rectangular terminal tabs; broad strip face visible.",
+      "trueSide": "Thin approximately straight edge with both terminal tabs, consistent with that bow being in the front plane.",
+      "threeQuarter": "Outward bow remains, visible edge/back face supplies thickness cue; narrower lateral bulge is compatible with oblique viewing.",
+      "unresolved": [
+        "Exact curve versus ellipse/circular/free curve",
+        "Width/thickness and end tab size",
+        "Constant versus tapered cross-section",
+        "Upper and lower tab attachment depth, seating face and fastening"
+      ]
+    },
+    {
+      "ids": [
+        "S11",
+        "S12"
+      ],
+      "name": "depth bow",
+      "front": "Near straight strip, with vertically separated terminal tabs and little lateral bow.",
+      "trueSide": "Curvature appears in the orthogonal depth plane.",
+      "threeQuarter": "Bow bulges toward the opposite image side to wide-bow 3q; a common oblique camera can project +X and +Z curves in opposite horizontal directions, so this alone is not a contradiction.",
+      "unresolved": [
+        "Exact depth bow amount and sign after placement",
+        "Width versus thickness orientation",
+        "Terminal tab dimensions and orientation",
+        "Metric equality of terminal shape across views"
+      ]
+    }
+  ],
+  "readSourceInterfaces": {
+    "boundary": "Current file implements S13 ring and S14 cap, not the S09-S12 rib solids. Its numbers are authored source, not values validated from the image.",
+    "S13": {
+      "originMm": [
+        0,
+        1665,
+        0
+      ],
+      "capSeatY": 1668,
+      "capSeatRadialBandMm": [
+        14.5,
+        18
+      ],
+      "ribEndpointRadiusMm": 14,
+      "profileExtentRadiusMm": [
+        14,
+        20
+      ],
+      "profileExtentHeightMm": [
+        1662,
+        1668
+      ]
+    },
+    "S14": {
+      "originMm": [
+        0,
+        1668,
+        0
+      ],
+      "ringSeatY": 1668,
+      "finialStemRadiusMm": 6,
+      "socketRadiusMm": 6.3,
+      "socketTopY": 1678,
+      "finialStemBottomY": 1674,
+      "glassContactY": 1662
+    }
+  },
+  "requiredBeforeAssembly": [
+    "Declare local part axes, mirrored/opposite placements and bending plane.",
+    "Author rib centreline span/curve, rectangular width/thickness and end-tab profile with no pixel-scale inference.",
+    "Specify the actual S13 seating face/y and radial/angular envelope for each tab; radius14 anchor alone does not prove attachment or clearance.",
+    "Supply unseen lower seat, fastener/socket and glass clearance definition.",
+    "Exclude TOP panels explicitly from acceptance; do not cite all four views as verified."
+  ],
+  "canonicalComparison": "The two curve orientations and capped ends are compatible with the canonical oval metal lantern cage as partial component types. They do not establish the full cage width/depth, glass clearance, fastener detail, complete lantern or complete character.",
+  "newImageRequiredForThisLimitedReview": false,
+  "sourceEdited": false,
+  "imageEdited": false,
+  "newGeometryMade": false,
+  "renderedEvidence": false
+}

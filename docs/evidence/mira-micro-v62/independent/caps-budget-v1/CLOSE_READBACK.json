@@ -1,0 +1,19 @@
+{
+  "closedAt": "2026-09-16T12:46:19.564385+00:00",
+  "reviewStartedAt": "2026-09-16T12:37:09.794133+00:00",
+  "totalElapsedSeconds": 549.770252,
+  "materialGenerationOrAcquisitionSeconds": 0,
+  "nativeGeometryCreationAndAnalysisBatchMs": 17.591532,
+  "nodeCommandObservedWallSeconds": 0.109279312,
+  "timeMeaning": "Elapsed includes source reading, independent oracle development, interpretation and documentation; no instantaneous modeling or device benchmark claim. This unit changes no geometry source.",
+  "sourceHead": "8e6510578cf0980eea03c2dcc6ebeb3dcbe39371",
+  "sourceSha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c",
+  "sourceStatusAtNativeRunEnd": "",
+  "pendingSessions": 0,
+  "requiredSourceEdits": 0,
+  "rejectedConfiguration": {
+    "segments": 8,
+    "reason": "API accepts it, but actual bore face radius is smaller than the specified continuous R6 stem envelope"
+  },
+  "supportedConclusion": "16 and 12 are geometric budget candidates only; no default change or full assembly/visual/device acceptance."
+}

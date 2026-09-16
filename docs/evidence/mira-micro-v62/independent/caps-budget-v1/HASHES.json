@@ -1,0 +1,40 @@
+{
+  "scope": "caps-budget-v1 independent read-only review",
+  "files": [
+    {
+      "path": "CLOSE_READBACK.json",
+      "bytes": 1052,
+      "sha256": "e3893f72f86d07b945ad94b2813e33e5436b371babea1e90437dd21f21400fb2"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 8241,
+      "sha256": "c49b02075c482a589df016a5e54fa318af7274a042e86780dc08286671c9495c"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 964,
+      "sha256": "241e4d82fb2fe6474ce4474368ec4bc7cb73da43f3f8de94025566900a669194"
+    },
+    {
+      "path": "measure.mjs",
+      "bytes": 11902,
+      "sha256": "728a0c1e8ed39c11f9c20d64e1f8dda4be11856ab2af437ea78c263f8c905e17"
+    },
+    {
+      "path": "results.json",
+      "bytes": 28735,
+      "sha256": "8ba57e475769e8206979729f0a2813c8cd6772668f46f360d79d0f421a8e40f7"
+    },
+    {
+      "path": "run.txt",
+      "bytes": 7494,
+      "sha256": "55cbf9e888fd8ef4e15724de2d3dc047ead2be849eb5f8f7ab06ad1247ab6316"
+    },
+    {
+      "path": "source-snapshot.mjs",
+      "bytes": 3628,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+    }
+  ]
+}
