@@ -1,6 +1,9 @@
 # 制作停止時の復旧
 
 
+最新継続点（2026-09-16 03:42Z頃）: main547676f、PR39通常mergeは未完了、追加mutationなし。PR43まで全CI成功、v29は20gate/263testsと固定stageを保全してstack公開へ進む。詳細はPROJECT_STATE最新項を読む。03:30Zの正式preview statusはmailbox不在のまま、Sites skillはlive Site browser QAも禁止。Qautomationはfresh disabled/nextnull/20件上限で再試行しない。家屋・橋の有限制作を既存Ultraが続行しているが、この記録は将来の稼働を保証しない。
+
+
 最新追記（2026-09-16 03:14Z頃）: PR39の最初の405から1時間以上後、公式通常merge仕様の独立確認と同一head/base/main/成功CIの直前readbackに基づき、元payloadを1回だけ再試行した。結果はReadTimeout、PRopen/mergedfalse/main547676f維持。新しいtest merge16fff61d98870b7e8ed1e24df375fe0c9eabda3bは親547+bfc/tree3fe6であり実mainではない。追加mutationは行わずreadbackを続ける。通常mergeのexactly-once保証や、別merge-asyncのUUID追跡が利用可能だったと説明しない。PR42までexact tree/CI成功のstack保全を進め、別の肌/接地制作を継続する。
 
 

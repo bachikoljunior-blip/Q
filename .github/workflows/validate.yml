@@ -49,6 +49,8 @@ jobs:
       - run: npm test
       - name: Verify terrain contact, shallow stream and stable shadow geometry
         run: node scripts/verify-world-surfaces.mjs
+      - name: Verify architecture contact and shared vertical collision bounds
+        run: node scripts/verify-architecture-grounding.mjs artifacts/architecture-grounding-report.json
       - name: Verify loaded foliage and same-frame actor trail integration
         run: node scripts/verify-scene-integration.mjs . artifacts/scene-integration-report.json
       - name: Verify shared HDR loading, lighting and capability fallback

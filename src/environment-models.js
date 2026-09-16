@@ -28,6 +28,25 @@ export function part(parent,geometry,material,position=[0,0,0],scale=[1,1,1],rot
 export function beam(parent,material,a,b,r=.05){const from=new T.Vector3(...a),to=new T.Vector3(...b),m=part(parent,unitCylinder,material,from.clone().add(to).multiplyScalar(.5).toArray(),[r,from.distanceTo(to),r]);m.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),to.sub(from).normalize());return m;}
 export function block(parent,material,pos,scale,rotation){return part(parent,chamferBox(),material,pos,scale,rotation);}
 
+// One continuous support mesh replaces each former floating shaft. Its top remains
+// at the original arch/capital joint; the segmented bottom follows real ground.
+export function groundedSupportGeometry(obstacle, origin) {
+  const {perimeter,top,kind}=obstacle.architecture,tower=kind==='tower',positions=[],uv=[];
+  const point=(p,upper)=>[obstacle.x-origin.x+p.x*(upper&&tower?.8:1),(upper?top:p.y)-origin.y,obstacle.z-origin.z+p.z*(upper&&tower?.8:1)];
+  const triangle=(a,b,c)=>{for(const p of[a,b,c]){positions.push(...p);uv.push(p[0],p[1]);}};
+  const topCenter=[obstacle.x-origin.x,top-origin.y,obstacle.z-origin.z],bottomCenter=[obstacle.x-origin.x,obstacle.y-origin.y,obstacle.z-origin.z];
+  // Rectangular contours run counter-clockwise in XZ; the tower runs clockwise.
+  const ring=tower?[...perimeter].reverse():perimeter;
+  for(let i=0;i<ring.length;i++) {
+    const a=point(ring[i],false),b=point(ring[(i+1)%ring.length],false),c=point(ring[i],true),d=point(ring[(i+1)%ring.length],true);
+    triangle(a,c,b);triangle(b,c,d);triangle(bottomCenter,a,b);
+    if(!tower)triangle(topCenter,d,c);
+  }
+  const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.Float32BufferAttribute(positions,3));geometry.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geometry.computeVertexNormals();
+  geometry.userData.groundedSupport={place:obstacle.architecture.place,kind,worldX:obstacle.x,worldZ:obstacle.z};
+  return geometry;
+}
+
 // One draw per material per authored prop, rather than every board or stone.
 // Call only for fully static subgraphs; movable flames/wheels remain siblings.
 export function batchProp(group){

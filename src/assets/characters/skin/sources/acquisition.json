@@ -1,0 +1,105 @@
+{
+  "sourceType": "Official MakeHuman CC0 graphical skin asset; photographic scan provenance not established",
+  "sourceCatalog": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+  "sourceArchive": "https://files2.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+  "entry": "skins/young_caucasian_male/young_lightskinned_male_diffuse.png",
+  "zipLocalHeaderOffset": 23394852,
+  "zipCompressedDataRange": [
+    23394972,
+    27084983
+  ],
+  "expectedCompressedBytes": 3690012,
+  "expectedOriginalBytes": 3693828,
+  "expectedOriginalCRC32": "e723c591",
+  "archiveBytes": 280737770,
+  "expectedETag": "\"10bbb7ea-6160e7c0d7996\"",
+  "authorsInOfficialMaterial": [
+    "Data Collection AB",
+    "Joel Palmius",
+    "Jonas Hauquier"
+  ],
+  "license": "CC0-1.0",
+  "licenseDeclaredAt": "September2020 in exact original .mhmat header",
+  "licensingScope": "Original asset data only; application downloader code is AGPL and is not used as runtime code",
+  "assetStatus": "Complete original PNG acquired, ZIP CRC32 and every PNG chunk CRC verified, fully decoded and visually inspected with view_image.",
+  "childDelegation": {
+    "canonical": "/root/ultra_q_ps4_quality_continuation/forest_fidelity_ultra/skin_uv_ultra",
+    "reasoning_effort": "ultra",
+    "fork_turns": "none",
+    "modelOverrideOmitted": true,
+    "toolAccepted": true
+  },
+  "derivativesCreated": false,
+  "imageGenerationRequests": 0,
+  "repoEdits": false,
+  "browserOrWebGL": false,
+  "materialDescriptor": {
+    "path": "q-v28-skin-source/young_caucasian_male.mhmat",
+    "bytes": 1462,
+    "crc32": "dc98b0ac",
+    "sha256": "6eda60b07ff2afbde078a2535ef3913593d84e9de92b2eb76c30f396a181fe2e",
+    "diffuseTexture": "young_lightskinned_male_diffuse.png",
+    "observedNameInconsistency": "MHMAT name says old_caucasian_male_detailed; folder/tags/reference/catalog say young. Original preserved."
+  },
+  "originalPNG": {
+    "path": "/workspace/scratch/e72662e3b71f/q-v28-skin-source/young_lightskinned_male_diffuse.png",
+    "bytes": 3693828,
+    "sha256": "862a26e335e958b70534cb5f0d7c47ef30ab148a56c42b3e9da969cf76f12963",
+    "zipCRC32": "e723c591",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "decodedBytes": 12582912,
+    "pngChunkCRCsAllValid": true
+  },
+  "visualInspection": {
+    "tool": "view_image",
+    "originalImage": true,
+    "gameplayFrame": false,
+    "observations": [
+      "Face and ears include varying skin color, visible lip color and dark eye sockets.",
+      "Scalp/back-of-head areas contain closely cropped hair/stubble color.",
+      "Two eye-region body UV islands contain red inner tissue, not iris or sclera artwork.",
+      "Mouth-region island contains red interior tissue; no separate teeth image.",
+      "Full-body background includes an original MakeHuman public-domain mark outside retained body/head UV regions."
+    ],
+    "limitations": [
+      "No photographic scan or captured person provenance established.",
+      "Color includes visible dark socket/crease detail; no illumination-free albedo certification.",
+      "Existing independent iris/white/lid materials will not automatically receive this head image.",
+      "Packed v27 UV coordinates do not align directly with the full original PNG."
+    ]
+  },
+  "sessions": [
+    {
+      "sessionId": 42538,
+      "exitCode": 1,
+      "status": "closed",
+      "seconds": 263.39385074599704,
+      "cause": "proxy CONNECT timeout after six successful payload ranges"
+    },
+    {
+      "sessionId": 14873,
+      "exitCode": 0,
+      "status": "closed",
+      "seconds": 327.96532374399976,
+      "result": "All remaining ranges and complete original PNG verified"
+    }
+  ],
+  "timing": {
+    "initialMetadataAndDelegationStart": "2026-09-16T02:48:35Z",
+    "firstTransferStart": "2026-09-16T02:50:28Z",
+    "firstTransferSeconds": 263.39385074599704,
+    "resumedTransferStart": "2026-09-16T02:56:19Z",
+    "resumedTransferSeconds": 327.96532374399976,
+    "sumTransferProcessSeconds": 591.3591744899968,
+    "pngDecodeVerifiedAt": "2026-09-16T03:01:57Z",
+    "derivativeGenerationRequests": 0,
+    "repoIntegrationSeconds": 0,
+    "explanation": "Process wall includes network waits, extraction and checks. UV subtask ran concurrently; its time is not added as serial acquisition time. No image derivative or repository integration was performed."
+  },
+  "backgroundDownloadRunning": false
+}

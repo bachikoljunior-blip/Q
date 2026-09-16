@@ -1,0 +1,6 @@
+
+> q-ash-pilgrim@0.21.0 test:artifacts
+> node scripts/stage-site.mjs && node scripts/verify-artifacts.mjs
+
+{"root":"artifacts/site-QDkzCf","files":34}
+Verified staged production build: initial 163175 bytes, 3 JS chunks, 963797 JS bytes, 0 imported runtime models, 14 vault assets (891845 bytes) and 6 title/score assets (4841043 bytes); source, build, staged output and standalone bytes agree.

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "sourceType": "Official MakeHuman graphical skin asset; no photographic scan or illumination-free albedo claim",
+  "sourceCatalog": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+  "sourceArchive": "https://files2.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+  "entry": "skins/young_caucasian_male/young_lightskinned_male_diffuse.png",
+  "authors": [
+    "Data Collection AB",
+    "Joel Palmius",
+    "Jonas Hauquier"
+  ],
+  "license": "CC0-1.0",
+  "licenseDeclaration": "Exact material descriptor header explicitly releases this asset CC0 September 2020; full license retained",
+  "source": {
+    "path": "src/assets/characters/skin/sources/young_lightskinned_male_diffuse.png",
+    "bytes": 3693828,
+    "sha256": "862a26e335e958b70534cb5f0d7c47ef30ab148a56c42b3e9da969cf76f12963",
+    "runtimeIncluded": false,
+    "license": "CC0-1.0"
+  },
+  "materialDescriptor": {
+    "path": "src/assets/characters/skin/sources/young_caucasian_male.mhmat",
+    "bytes": 1462,
+    "sha256": "6eda60b07ff2afbde078a2535ef3913593d84e9de92b2eb76c30f396a181fe2e",
+    "runtimeIncluded": false,
+    "license": "CC0-1.0"
+  },
+  "licenseFile": {
+    "path": "src/assets/characters/skin/LICENSE-CC0.md",
+    "bytes": 6962,
+    "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c",
+    "runtimeIncluded": false,
+    "license": "CC0-1.0"
+  },
+  "runtime": {
+    "path": "src/assets/characters/skin/young-male-q95.webp",
+    "bytes": 541954,
+    "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04",
+    "runtimeIncluded": true,
+    "license": "CC0-1.0"
+  },
+  "codec": {
+    "format": "WebP",
+    "quality": 95,
+    "method": 6,
+    "Pillow": "12.3.0",
+    "libwebp": "1.6.0",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "operation": "Same pixel positions and dimensions; standard lossy format export only, no crop/resize/retouch/color correction/generation",
+    "script": {
+      "path": "scripts/characters/export-skin-codec.py",
+      "bytes": 1414,
+      "sha256": "c14524e7225855339cd703cea40af565fac470fac2c189c6badc6620eada9d3e",
+      "runtimeIncluded": false
+    }
+  },
+  "roles": {
+    "applied": [
+      "smith"
+    ],
+    "basis": "Existing smith-only chin beard mesh; all human recipes adult-proportioned. Exact age/gender unspecified in narrative. Young male descriptor is source metadata, not character biography.",
+    "excluded": [
+      "player",
+      "npc",
+      "sena",
+      "healer",
+      "patient",
+      "porter",
+      "scout",
+      "traveler",
+      "courier",
+      "soldier",
+      "ranger",
+      "wolf",
+      "boss"
+    ]
+  },
+  "textureContract": {
+    "colorSpace": "sRGB",
+    "flipY": true,
+    "uv": "unchanged MakeHuman original OBJ UV; positive v up",
+    "wrap": "clamp",
+    "generateMipmaps": true,
+    "anisotropy": 2,
+    "sharedAcrossClonesAndQualities": true,
+    "RGBA8BaseBytes": 16777216,
+    "RGBA8MipBytes": 22369620,
+    "browserGPUAllocationMeasured": false
+  },
+  "limits": [
+    "source eye-body UV islands contain red tissue; independent runtime eye/iris/lid materials unchanged",
+    "source mouth UV contains red oral tissue, not teeth",
+    "map contains socket/crease darkness; source is not calibrated pure albedo",
+    "same-size format export reduces delivery bytes, not decoded/GPU memory",
+    "actual WebGL, mip appearance, face-neck seam and PS4 quality not verified"
+  ],
+  "neckTint": {
+    "referenceLinearRGB": [
+      0.756385085539447,
+      0.3947322188942361,
+      0.23747912103991894
+    ],
+    "sourceVertices": 46,
+    "originalUVSides": 47,
+    "method": "q95 sRGB texels decoded to linear then bilinear sample at original surface collar UVs; equally average both UV sides of source vertex857, then mean46 geometric vertices. Synthetic cap UVs excluded.",
+    "target": "Existing smith skin linear RGB from sRGB hex0x98765d. Native MeshStandard material color = target / reference, multiplied with linear texture.",
+    "notGuaranteed": "Only mean source base color normalized; local texture/normal/roughness and baked source darkness can leave a visible face-neck transition. No rendered seam claim.",
+    "measurementScript": "scripts/characters/measure-skin-boundary.py"
+  }
+}

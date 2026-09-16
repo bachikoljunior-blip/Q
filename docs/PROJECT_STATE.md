@@ -1,5 +1,16 @@
 # 制作状況 — 2026-09-16
 
+## 2026-09-16 — 継続中：肌と37支持部を結合検証、家屋・橋の接地へ
+
+v29は鍛冶師の原UV肌と廃塔/柱37支持部の接地・カメラ/矢/予測高さの結合。20必須command / 263 tests成功、103.597秒。初期163,956 B / 3 chunks、単体16,324,272 B / SHA256 `d2cdd7b59083b3ae66d2c1fead0b50ef05730c35b7ee892d4c57ea5039012a98`、固定stage `artifacts/site-V23mJs`。実source・比較・残る肌/全screen不足は[結合記録](SKIN_GROUNDING_V29.md)。見える浮きの幾何欠陥は減ったが、WebGL画面・GPU・実機・実聴・PS4到達は未判定。
+
+PR43 `1658d8666017de525f35814db3b1a32cfd404931` / exact tree `6c77adec864ba88ad072942628f481e843869b43`、push35052217739 / PR35052368771はsuccess。以前のPR39〜42もCI成功。03:42Z頃のfresh mainは依然`547676fdce8d8e97abed9f065aad0b6e24af2fd6`、PR39はopen/merged=false、03:14再timeout以後追加merge mutationなし。全stackは先行actual main確認→retarget→requiredCI→通常mergeの順。Site23 owner onlyへ未merge候補を先行配信しない。現在のv29保存のfullSHAはこのcommit/後続remote readbackから取り、自己参照を捏造しない。
+
+Q定期再開のfresh readbackはdisabled / nextnull、latest prompt一致・有効総数20で空きなし。再enableは試していない。親の最新正式preview statusもmailbox不在、rootの再作成/別browser/server/live Site訪問による代替は許可されていない。これらを他の制作全体の停止条件にしない。
+
+次の独立実装は家屋の基礎と橋ramp/取付の実地面一致。既存Ultraのcombat_vfx_ultraがQ-settlement-v30、frame_quality_audit_ultraがread-only予算比較を担当し、統合担当がv29のexact remote保存/通常main readbackを続ける。素材取得・組込・手戻り・検証時間を分け、期限9/20の完成根拠不足を維持する。親はexact Sites/configure操作だけを行う。
+
+
 ## 2026-09-16 — 継続中：元スキンへ正しく対応するUVを修復、肌と建築接地を制作
 
 v27の頭は無地のままだった。肌素材の調査で見つかった同一UV島内のseam属性喪失を、原OBJのcornerと原atlas座標を保持する方法へ修復した。187 seam頂点の全cornerを残し、1,500 surface三角形の反転と正の面積重複は独立計算で0。46内側capのUVを首領域へ収めた。0.0061235%のUV面積差は口内の境界4edgeのLOD置換で説明し、完全同一の面分割とは称さない。[修復・誤差・工程](ANATOMICAL_HEAD_UV_V28.md) / [独立原UV対照](evidence/head-uv-v28-audit/independent-uv-audit.md)。

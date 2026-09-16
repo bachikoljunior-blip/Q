@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "assetFamily": "Q authored articulated actors",
-  "origin": "Q procedural costumes, equipment, body geometry and surface microstructure, with a registered artist-authored MakeHuman hm08 CC0 anatomical head. No photographs, scans, image-generation output or mocap incorporated.",
+  "origin": "Q procedural costumes, equipment, body geometry and surface microstructure, with registered MakeHuman hm08 CC0 anatomical head. The smith face alone uses the official MakeHuman CC0 skin color image. No scans, image-generation output or mocap provenance is claimed.",
   "license": "Q project-authored source under repository terms; MakeHuman head source and derivative are CC0-1.0 (see anatomical-head-provenance.json and sources/MAKEHUMAN-LICENSE-ASSETS.md).",
   "recipe": {
     "file": "detailed-geometry.js",
-    "sha256": "38635124d5ff5fa6f6ce21c659ed777b64a7f2d5b0122cee5b1e478e74ccd5a2",
-    "bytes": 29602
+    "sha256": "a320835670bd43147e793651834034a87ad23d16f87c191b412a5de881a17849",
+    "bytes": 29688
   },
   "separateUnmodifiedAssets": "The adjacent pilgrim.glb, knight.glb, keeper.glb and provenance.json preserve Kay Lousberg CC0 attribution. They are not the source of the new procedural bodies.",
   "families": [
@@ -55,6 +55,7 @@
     "bytes": 26225,
     "origin": "Original analytic poses with a continuous saved combat clock, two-hand weapon frames and fixed-length arm IK, and visual-only contact/transition logic. No motion capture imported."
   },
-  "qualityBoundary": "Artist-authored MakeHuman anatomical head registered to the existing Q actor; not a scan or photogrammetry. Head surface is existing flat skin with procedural microstructure, no acquired diffuse map. CPU source-distance/topology/weight/contact and ray checks do not establish WebGL appearance, device FPS or PS4/flagship parity.",
-  "anatomicalHead": "anatomical-head-provenance.json"
+  "qualityBoundary": "Smith face uses an acquired CC0 graphical skin color map; all other roles retain flat skin. Actual lit appearance, face-neck boundary, device FPS and PS4/flagship parity remain unverified. Source contains socket/crease darkness, not calibrated illumination-free albedo.",
+  "anatomicalHead": "anatomical-head-provenance.json",
+  "skinColorMap": "skin/provenance.json"
 }

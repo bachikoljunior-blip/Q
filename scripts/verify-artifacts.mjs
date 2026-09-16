@@ -103,6 +103,17 @@ assert((await readFile(`dist/${skyOutput}`)).equals(skyBytes));assert((await rea
 assert(embedded.some(data=>data.equals(skyBytes)),'standalone omits the complete HDR sky');
 assert(!entry.includes(skyOutput),'HDR sky must remain behind the scene import');
 
+const skin=JSON.parse(await readFile('src/assets/characters/skin/provenance.json','utf8'));
+const skinOutputs=Object.keys(manifest).filter(path=>path.startsWith('src/assets/characters/skin/')).sort();
+assert.deepEqual(skinOutputs,[skin.runtime.path],'only the selected WebP skin belongs in runtime');
+for(const asset of [skin.source,skin.materialDescriptor,skin.licenseFile,skin.runtime]){
+  const bytes=await readFile(asset.path);assert.equal(bytes.length,asset.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);
+  if(!asset.runtimeIncluded){assert(!manifest[asset.path]);assert(!embedded.some(data=>data.equals(bytes)),'retained skin source must not be embedded');continue;}
+  const output=manifest[asset.path]?.file;assert(output);assert((await readFile(`dist/${output}`)).equals(bytes));assert((await readFile(`${root}/${output}`)).equals(bytes));
+  assert(embedded.some(data=>data.equals(bytes)),'standalone omits the complete skin WebP');assert(!entry.includes(output),'skin must remain behind the scene import');
+}
+assert(Buffer.byteLength(standalone)<16*1024*1024,'standalone exceeds the existing publishing blob limit');
+
 const provenance=JSON.parse(await readFile('src/assets/vaults/provenance.json','utf8'));
 assert.equal(provenance.schemaVersion,1,'unsupported vault asset provenance schema');
 const generator=await readFile(provenance.generator);

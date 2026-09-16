@@ -120,10 +120,13 @@ export function steerAround(actor, goal, obstacles, radius = .48) {
   return { x: x / length, z: z / length };
 }
 
+export function obstacleCylinder(obstacle, floorAt) {
+  return {...obstacle,y:Number.isFinite(obstacle.y)?obstacle.y:floorAt(obstacle.x,obstacle.z),height:obstacle.height??obstacle.r*1.5};
+}
 export function cameraFraction(target, desired, obstacles, floorAt) {
   let fraction = 1;
   for (const o of queryObstacles(obstacles,Math.min(target.x,desired.x)-.35,Math.min(target.z,desired.z)-.35,Math.max(target.x,desired.x)+.35,Math.max(target.z,desired.z)+.35)) {
-    const t = segmentCylinder(target,desired,{...o,y:floorAt(o.x,o.z),height:o.height??o.r*1.5},.35);
+    const t = segmentCylinder(target,desired,obstacleCylinder(o,floorAt),.35);
     if (t === null) continue;
     fraction = Math.min(fraction, Math.max(.05, t - .045));
   }

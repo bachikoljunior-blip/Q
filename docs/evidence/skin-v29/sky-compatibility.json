@@ -1,0 +1,259 @@
+{
+  "checkedAt": "2026-09-16T03:29:53.587Z",
+  "repo": "/workspace/scratch/e72662e3b71f/Q-skin-v29",
+  "boundary": "Real HDR parsing, CPU radiance processing, native Three PMREM and material-uniform control flow, actual SceneView async install. Renderer/other asset loaders explicitly doubled: no GPU uploads, GLSL compilation, pixels, browser or FPS.",
+  "sourceHashes": {
+    "src/sky-field.js": "dbc0bb4051e87c17373a956aadd2840370c0b3480048daf6e0d8397381cffc58",
+    "src/sky-texture-loader.js": "99240b6018c501b03023c023e9fce4b85d31f5babade32c5113037caa8edb2f2",
+    "src/sky-lighting.js": "7bd023cf23cc5269e2ce25e9c289d31e9f50ac870556e0f277c16414a4d40762",
+    "src/sky-assets.js": "9e09e20c5d7e00478d5ab49e2850696cce35a8b928648c202c363f10fcb6a2c0",
+    "src/sky-exposure.js": "211f200b8d36aa8b42e060541dcdb118ec335de75dd58226ea926be6da15b5c2",
+    "src/assets/sky/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "src/environment-atmosphere.js": "c78303af10af15142d6d9510dd398fd528205b6e3f2de711dc4093ff8ec1aef2",
+    "src/environment-materials.js": "39f68f90bb5bc01c12d05e5f382d4108846ecb7716d82e99ab275031a4ba76f0",
+    "src/scene.js": "70314006f29d35ae098c052ed93ffa1d8d6b346f00d1c476f82ed31c49477145",
+    "vite.config.js": "8fbb0f0226fc7d37a68f1024cbfdc40d663318268054a595c85a044c8ac86d48",
+    "scripts/package.mjs": "8b30aa37af6c5f0c8669c2871de75e250701f82147177ce5906979e06447cb72",
+    "node_modules/three/src/extras/PMREMGenerator.js": "78f7cc24a9aa22852f4c46052f39e5fe5507bee6313a824851ba899ed2219ecc",
+    "node_modules/three/src/renderers/webgl/WebGLMaterials.js": "745d17a34b26ea6d59e35b6f13f6277d80c219f77db464516708bf726f02a8a8",
+    "node_modules/three/src/renderers/shaders/ShaderChunk/tonemapping_pars_fragment.glsl.js": "447958b93d07616c83d9273829ed810eb734d02ebbe60f12fc9bdda4f7928f44"
+  },
+  "changedDuringRun": [],
+  "source": {
+    "bytes": 1435119,
+    "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+    "width": 1024,
+    "height": 512,
+    "decodedBytes": 4194304,
+    "parseMs": 97.65044500000002,
+    "sourceUnmodified": true,
+    "peakLuminance": 60671.4816,
+    "peakPixel": [
+      609,
+      119
+    ]
+  },
+  "field": {
+    "width": 512,
+    "height": 256,
+    "bytes": 1048576,
+    "prepareMs": 356.183076,
+    "peakLuminance": 15.349460937499998,
+    "solarCorePeak": 3.423558984375,
+    "horizon": [
+      0.4473476334132392,
+      0.4796986952114205,
+      0.582211221594139
+    ],
+    "sunFill": [
+      3.489043277788196,
+      3.3649916443306744,
+      3.8315254443634936
+    ],
+    "rotationError": 1.2412670766236366e-16
+  },
+  "pmrem": {
+    "nativeCalls": 19,
+    "budget": {
+      "visibleBytes": 4194304,
+      "environmentBytes": 1572864,
+      "temporaryInputBytes": 1048576,
+      "temporaryPingBytes": 1572864,
+      "pmremFace": 128
+    },
+    "faultCases": [
+      {
+        "failAt": 1,
+        "rendererRestored": true,
+        "targets": [
+          {
+            "width": 384,
+            "height": 512,
+            "disposed": 0
+          }
+        ],
+        "allObservedTemporaryTargetsDisposed": false
+      },
+      {
+        "failAt": 3,
+        "rendererRestored": true,
+        "targets": [
+          {
+            "width": 384,
+            "height": 512,
+            "disposed": 0
+          },
+          {
+            "width": 384,
+            "height": 512,
+            "disposed": 1
+          }
+        ],
+        "allObservedTemporaryTargetsDisposed": false
+      },
+      {
+        "failAt": 19,
+        "rendererRestored": true,
+        "targets": [
+          {
+            "width": 384,
+            "height": 512,
+            "disposed": 0
+          },
+          {
+            "width": 384,
+            "height": 512,
+            "disposed": 1
+          }
+        ],
+        "allObservedTemporaryTargetsDisposed": false
+      }
+    ],
+    "capabilitySamples": [
+      {
+        "capability": "float",
+        "supported": true,
+        "nativeCalls": 19,
+        "targets": 2,
+        "unsupportedSkipsSourcePreparation": false,
+        "actualSceneBoot": true
+      },
+      {
+        "capability": "half",
+        "supported": true,
+        "nativeCalls": 19,
+        "targets": 2,
+        "unsupportedSkipsSourcePreparation": false,
+        "actualSceneBoot": true
+      },
+      {
+        "capability": "none",
+        "supported": false,
+        "nativeCalls": 0,
+        "targets": 0,
+        "unsupportedSkipsSourcePreparation": true,
+        "actualSceneBoot": true
+      },
+      {
+        "capability": "undefined",
+        "supported": false,
+        "nativeCalls": 0,
+        "targets": 0,
+        "unsupportedSkipsSourcePreparation": true,
+        "actualSceneBoot": true
+      }
+    ]
+  },
+  "fogSamples": [
+    {
+      "day": -0.21,
+      "cycle": 0,
+      "hemisphereIntensity": 0.54,
+      "environmentIntensity": 0,
+      "sunIntensity": 0,
+      "rawHorizon": [
+        0.04373502925049377,
+        0.06847816983662762,
+        0.10224173307914941
+      ],
+      "nativeFogSRGB": [
+        0.16721243501041813,
+        0.24027509321112334,
+        0.3196349297141934
+      ],
+      "expectedLowerSkySRGB": [
+        0.16721243501041813,
+        0.24027509321112334,
+        0.3196349297141934
+      ],
+      "maxSRGBGap": 0
+    },
+    {
+      "day": 0.04,
+      "cycle": 0.5,
+      "hemisphereIntensity": 0.23606068631300814,
+      "environmentIntensity": 0.4521097291094003,
+      "sunIntensity": 1.4095185672234245,
+      "rawHorizon": [
+        0.2484444745027647,
+        0.27159391132834604,
+        0.3342280660698647
+      ],
+      "nativeFogSRGB": [
+        0.5779060754685469,
+        0.6001848854692237,
+        0.6527979351467361
+      ],
+      "expectedLowerSkySRGB": [
+        0.5779060754685468,
+        0.6001848854692238,
+        0.6527979351467361
+      ],
+      "maxSRGBGap": 1.1102230246251565e-16
+    },
+    {
+      "day": 0.29,
+      "cycle": 1,
+      "hemisphereIntensity": 0.14,
+      "environmentIntensity": 0.85,
+      "sunIntensity": 2.65,
+      "rawHorizon": [
+        0.4473476334132392,
+        0.4796986952114205,
+        0.582211221594139
+      ],
+      "nativeFogSRGB": [
+        0.7352211154948691,
+        0.7491490164420882,
+        0.7873559381242827
+      ],
+      "expectedLowerSkySRGB": [
+        0.7352211154948691,
+        0.7491490164420882,
+        0.7873559381242827
+      ],
+      "maxSRGBGap": 0
+    },
+    {
+      "day": 0.54,
+      "cycle": 0.5000000000000001,
+      "hemisphereIntensity": 0.23606068631300814,
+      "environmentIntensity": 0.4521097291094005,
+      "sunIntensity": 1.409518567223425,
+      "rawHorizon": [
+        0.24844447450276474,
+        0.2715939113283461,
+        0.33422806606986477
+      ],
+      "nativeFogSRGB": [
+        0.5779060754685469,
+        0.6001848854692238,
+        0.6527979351467362
+      ],
+      "expectedLowerSkySRGB": [
+        0.5779060754685469,
+        0.6001848854692238,
+        0.6527979351467362
+      ],
+      "maxSRGBGap": 0
+    }
+  ],
+  "loader": {
+    "calls": 3,
+    "decoderDisposals": 2,
+    "concurrentSharedCPUData": true
+  },
+  "scene": {
+    "awaitedSkyBeforeConstruction": true,
+    "installedActualSource": true,
+    "qualitySwitches": 3,
+    "pmremBakesAcrossQualitySwitches": 1,
+    "releaseClearedEnvironment": true
+  },
+  "failures": [],
+  "limitations": [
+    "Native PMREM output has no explicit dispose after exception at pass 1; public API does not return that target. Actual GPU reclamation is unmeasured; not a permanent leak claim.",
+    "Native PMREM output has no explicit dispose after exception at pass 3; public API does not return that target. Actual GPU reclamation is unmeasured; not a permanent leak claim.",
+    "Native PMREM output has no explicit dispose after exception at pass 19; public API does not return that target. Actual GPU reclamation is unmeasured; not a permanent leak claim."
+  ]
+}

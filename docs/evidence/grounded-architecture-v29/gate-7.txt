@@ -1,0 +1,34 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 test:expedition
+> node scripts/simulate-expedition.mjs
+
+{
+  "passed": true,
+  "renderingTested": false,
+  "routes": [
+    {
+      "route": "north",
+      "completionSeconds": 108,
+      "simulatedSeconds": 1908,
+      "reloads": 153,
+      "steps": 114154,
+      "hp": 132,
+      "reported": true,
+      "courierRange": {
+        "minX": -398,
+        "maxX": -247
+      }
+    },
+    {
+      "route": "south",
+      "completionSeconds": 106,
+      "simulatedSeconds": 106,
+      "reloads": 15,
+      "steps": 6039,
+      "hp": 132,
+      "reported": true,
+      "courierRange": null
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "mode": "normal",
+  "sourceMutationPersisted": false,
+  "appliedInMemoryMutations": 0,
+  "passed": true,
+  "differences": [],
+  "rows": [
+    {
+      "name": "elevated upper hit",
+      "expectedHit": true,
+      "hit": {
+        "live": true,
+        "forecast": true,
+        "camera": true
+      },
+      "liveFraction": 0.32,
+      "forecastTime": 0.3199999999999997,
+      "cameraFraction": 0.22999999999999998,
+      "metrics": {
+        "trajectories": 1,
+        "reusedPlayerImpacts": 0,
+        "bodySweeps": 0,
+        "obstacleSweeps": 1,
+        "terrainFrames": 19,
+        "terrainSamples": 20,
+        "exactFrames": 1,
+        "fallbackFrames": 0,
+        "sharedBodies": 0,
+        "sharedObstacles": 1
+      }
+    },
+    {
+      "name": "elevated lower miss",
+      "expectedHit": false,
+      "hit": {
+        "live": false,
+        "forecast": false,
+        "camera": false
+      },
+      "liveFraction": 1,
+      "forecastTime": null,
+      "cameraFraction": 1,
+      "metrics": {
+        "trajectories": 1,
+        "reusedPlayerImpacts": 0,
+        "bodySweeps": 0,
+        "obstacleSweeps": 1,
+        "terrainFrames": 60,
+        "terrainSamples": 61,
+        "exactFrames": 0,
+        "fallbackFrames": 0,
+        "sharedBodies": 0,
+        "sharedObstacles": 1
+      }
+    },
+    {
+      "name": "fallback upper miss",
+      "expectedHit": false,
+      "hit": {
+        "live": false,
+        "forecast": false,
+        "camera": false
+      },
+      "liveFraction": 1,
+      "forecastTime": null,
+      "cameraFraction": 1,
+      "metrics": {
+        "trajectories": 1,
+        "reusedPlayerImpacts": 0,
+        "bodySweeps": 0,
+        "obstacleSweeps": 1,
+        "terrainFrames": 60,
+        "terrainSamples": 61,
+        "exactFrames": 0,
+        "fallbackFrames": 0,
+        "sharedBodies": 0,
+        "sharedObstacles": 1
+      }
+    },
+    {
+      "name": "fallback lower hit",
+      "expectedHit": true,
+      "hit": {
+        "live": true,
+        "forecast": true,
+        "camera": true
+      },
+      "liveFraction": 0.32,
+      "forecastTime": 0.3199999999999997,
+      "cameraFraction": 0.22999999999999998,
+      "metrics": {
+        "trajectories": 1,
+        "reusedPlayerImpacts": 0,
+        "bodySweeps": 0,
+        "obstacleSweeps": 1,
+        "terrainFrames": 19,
+        "terrainSamples": 20,
+        "exactFrames": 1,
+        "fallbackFrames": 0,
+        "sharedBodies": 0,
+        "sharedObstacles": 1
+      }
+    },
+    {
+      "name": "zero base hit",
+      "expectedHit": true,
+      "hit": {
+        "live": true,
+        "forecast": true,
+        "camera": true
+      },
+      "liveFraction": 0.32,
+      "forecastTime": 0.32000000000001816,
+      "cameraFraction": 0.22999999999999998,
+      "metrics": {
+        "trajectories": 1,
+        "reusedPlayerImpacts": 0,
+        "bodySweeps": 0,
+        "obstacleSweeps": 1,
+        "terrainFrames": 19,
+        "terrainSamples": 20,
+        "exactFrames": 1,
+        "fallbackFrames": 0,
+        "sharedBodies": 0,
+        "sharedObstacles": 1
+      }
+    },
+    {
+      "name": "negative terrain fallback miss",
+      "expectedHit": false,
+      "hit": {
+        "live": false,
+        "forecast": false,
+        "camera": false
+      },
+      "liveFraction": 1,
+      "forecastTime": null,
+      "cameraFraction": 1,
+      "metrics": {
+        "trajectories": 1,
+        "reusedPlayerImpacts": 0,
+        "bodySweeps": 0,
+        "obstacleSweeps": 1,
+        "terrainFrames": 60,
+        "terrainSamples": 61,
+        "exactFrames": 0,
+        "fallbackFrames": 0,
+        "sharedBodies": 0,
+        "sharedObstacles": 1
+      }
+    }
+  ]
+}

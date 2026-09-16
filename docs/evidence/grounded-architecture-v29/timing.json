@@ -1,0 +1,26 @@
+{
+  "implementationStartedUnix": 1789528442.4917958,
+  "setupAndPlanningSeconds": null,
+  "heardOrRendered": false,
+  "mainSiteIntegrationSeconds": null,
+  "worktreeCreatedUnix": 1789527831,
+  "readyForIndependentReviewUnix": 1789529044.769185,
+  "wallThroughValidationSeconds": 1213.7691850662231,
+  "mediaAcquisitionSeconds": 0,
+  "newMediaGenerationSeconds": 0,
+  "validationCommandSeconds": 67.0545522689863,
+  "editingAndReviewDurationsNotSeparatelyTimed": true,
+  "localReadyUnix": 1789529132.6950903,
+  "localReadyWallSeconds": 1301.6950902938843,
+  "rework": {
+    "sourceEditingSeconds": null,
+    "verificationCorrections": [
+      "Compare JSON save representation after omitted undefined fields",
+      "Add high elevated-cylinder case to detect forecast-only static sweep omission"
+    ],
+    "verificationCorrectionSeconds": null
+  },
+  "finalSaveUnix": 1789529312.936484,
+  "finalSaveWallSeconds": 1481.9364840984344,
+  "independentReviewReceived": true
+}

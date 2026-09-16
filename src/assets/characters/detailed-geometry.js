@@ -1,9 +1,10 @@
-// Q costumes/surfaces and a registered CC0 MakeHuman anatomical head; no scans or image maps.
+// Q costumes/surfaces and a registered CC0 MakeHuman anatomical head.
 // The CC0 KayKit models alongside this file remain a separate, unmodified asset family.
 import * as T from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { clone as cloneSkeleton } from 'three/addons/utils/SkeletonUtils.js';
 import { HEAD_ATTRIBUTES, HEAD_INDICES } from './anatomical-head-data.js';
+import { registerFaceSkin } from '../../skin-materials.js';
 
 export const ACTOR_FAMILIES = Object.freeze(['player','npc','sena','smith','healer','patient','porter','scout','traveler','courier','soldier','ranger','wolf','boss']);
 const themes = { ember:[0x58403a,0xc38450], tide:[0x405e63,0x9dc7bc], gale:[0x68727a,0xc2c6b6], moss:[0x48594b,0xadb982] };
@@ -98,9 +99,9 @@ function faceSurface(){
   geometry.userData.source='MakeHuman hm08 CC0 registered anatomical head';
   anatomicalHead=geometry;return geometry;
 }
-function faceMaterial(skin){
-  const key=`face/${skin.color.getHex()}`;
-  if(!materials.has(key)){const mat=skin.clone();mat.name='Q anatomical face';materials.set(key,mat);}
+function faceMaterial(skin,role){
+  const key=`face/${role}/${skin.color.getHex()}`;
+  if(!materials.has(key)){const mat=skin.clone();mat.name='Q anatomical face';registerFaceSkin(mat,skin,role);materials.set(key,mat);}
   return materials.get(key);
 }
 function helmetGeometry(){
@@ -193,7 +194,7 @@ function makeHuman(type,options){
   }
   const neck=group(chest,'neck',0,.6,0);ellipsoid(neck,m.skin,[0,.018,0],[.08,.12,.078]);
   const head=group(neck,'head',0,.16,0);
-  mesh(head,faceSurface(),faceMaterial(m.skin));
+  mesh(head,faceSurface(),faceMaterial(m.skin,type));
   for(const s of [-1,1]){
     ellipsoid(head,m.eyeWhite,[s*.046,.050,.100],[.022,.008,.010]);
     ellipsoid(head,m.eye,[s*.046,.050,.109],[.008,.008,.003]);
