@@ -1,0 +1,975 @@
+{
+  "baseline": "d07bcad57709449513d2828ecf585db956e60894",
+  "scope": "Production geometry method execution and native triangle/ray arithmetic only; no renderer, pixels, occlusion/appearance acceptance, gameplay traversal, device or PS4-quality claim",
+  "sourceHashes": {
+    "src/environment-models.js": "1422af004d6309d5685017430a2e13b473766d51594f2506e83fdc6b38d878ec",
+    "src/scene.js": "965711336afa602023a255218e95cb7c21bfd2b9c4eae926a1707fdff655a7c6",
+    "src/core.js": "df561b92de125935f9b40e67cb24e71ad9b632e542c6ab6c7cf9fe009f734050",
+    "src/terrain-surface.js": "be555011070f2d0aac57445d48ed88deb12d5d5c4a3d29a337fc17882842204b",
+    "src/spatial.js": "f80b41f74b68301fa7467629605b609635efadd01943818229925923c0d8c88d",
+    "src/main.js": "0559c31dbcf10dea5c02ffbbaea4e4c6a4c07068a63c8589be6b88b81082b929"
+  },
+  "sourceUnchangedDuringAudit": true,
+  "conditions": {
+    "seed": 87123,
+    "scene": "existing makeWorld / default structures",
+    "terrainTriangles": 104570,
+    "cameraFov": 54,
+    "zoomRange": [
+      5,
+      17
+    ],
+    "pitchRange": [
+      -0.12,
+      1.1
+    ],
+    "cameraProbe": "24 azimuths; legal player centers at 2/4/6m; zoom5; pitches-.12/.3; real cameraFraction; angular size estimate without occlusion proof"
+  },
+  "houses": [
+    {
+      "x": 15,
+      "z": 91,
+      "collider": {
+        "x": 15,
+        "z": 91,
+        "r": 4,
+        "type": "house",
+        "height": 6
+      },
+      "footprintGap": {
+        "samples": 2624,
+        "min": -0.3877875302397822,
+        "max": 0.5381185124990127,
+        "mean": 0.013354032013327995
+      },
+      "footprintScope": "actual foundation underside intersections below localY .6; beveled corners without foundation underneath excluded",
+      "worstBurial": {
+        "x": 12.4,
+        "z": 88.75,
+        "bottom": 0.43265111544096313,
+        "terrain": 0.8204386456807453,
+        "gap": -0.3877875302397822,
+        "heightField": 0.8260686081010734
+      },
+      "worstFloat": {
+        "x": 16.3,
+        "z": 93.35000000000001,
+        "bottom": 0.6602641707213495,
+        "terrain": 0.12214565822233676,
+        "gap": 0.5381185124990127,
+        "heightField": 0.11682707970666828
+      },
+      "floatOver10cm": 817,
+      "buriedOver10cm": 654,
+      "triangles": 8642,
+      "draws": 7
+    },
+    {
+      "x": -16,
+      "z": 82,
+      "collider": {
+        "x": -16,
+        "z": 82,
+        "r": 4,
+        "type": "house",
+        "height": 6
+      },
+      "footprintGap": {
+        "samples": 2624,
+        "min": -0.7265992062198176,
+        "max": 1.0632163646223323,
+        "mean": 0.02894252742724419
+      },
+      "footprintScope": "actual foundation underside intersections below localY .6; beveled corners without foundation underneath excluded",
+      "worstBurial": {
+        "x": -13.399999999999997,
+        "z": 79.75,
+        "bottom": -0.8030629659600106,
+        "terrain": -0.07646375974019301,
+        "gap": -0.7265992062198176,
+        "heightField": -0.07539091307824797
+      },
+      "worstFloat": {
+        "x": -18.7,
+        "z": 84.25,
+        "bottom": -0.7207030953564069,
+        "terrain": -1.7839194599787391,
+        "gap": 1.0632163646223323,
+        "heightField": -1.766772681898333
+      },
+      "floatOver10cm": 1150,
+      "buriedOver10cm": 1084,
+      "triangles": 8642,
+      "draws": 7
+    },
+    {
+      "x": 20,
+      "z": 71,
+      "collider": {
+        "x": 20,
+        "z": 71,
+        "r": 4,
+        "type": "house",
+        "height": 6
+      },
+      "footprintGap": {
+        "samples": 2624,
+        "min": -0.31238679146156656,
+        "max": 0.3532408812115464,
+        "mean": -0.018325329656498784
+      },
+      "footprintScope": "actual foundation underside intersections below localY .6; beveled corners without foundation underneath excluded",
+      "worstBurial": {
+        "x": 22.6,
+        "z": 68.75,
+        "bottom": 0.9013543155254331,
+        "terrain": 1.2137411069869997,
+        "gap": -0.31238679146156656,
+        "heightField": 1.207006419105358
+      },
+      "worstFloat": {
+        "x": 18.700000000000003,
+        "z": 73.35000000000001,
+        "bottom": 1.1202099770774316,
+        "terrain": 0.7669690958658852,
+        "gap": 0.3532408812115464,
+        "heightField": 0.766255981209014
+      },
+      "floatOver10cm": 392,
+      "buriedOver10cm": 664,
+      "triangles": 8642,
+      "draws": 7
+    },
+    {
+      "x": -17,
+      "z": 105,
+      "collider": {
+        "x": -17,
+        "z": 105,
+        "r": 4,
+        "type": "house",
+        "height": 6
+      },
+      "footprintGap": {
+        "samples": 2624,
+        "min": -1.0918242761555348,
+        "max": 0.5075128701275009,
+        "mean": -0.047985912095950184
+      },
+      "footprintScope": "actual foundation underside intersections below localY .6; beveled corners without foundation underneath excluded",
+      "worstBurial": {
+        "x": -14.399999999999997,
+        "z": 102.75,
+        "bottom": -6.347646591371598,
+        "terrain": -5.255822315216063,
+        "gap": -1.0918242761555348,
+        "heightField": -5.254546859427328
+      },
+      "worstFloat": {
+        "x": -18.299999999999997,
+        "z": 107.35000000000001,
+        "bottom": -6.128790929819603,
+        "terrain": -6.636303799947104,
+        "gap": 0.5075128701275009,
+        "heightField": -6.646251178633653
+      },
+      "floatOver10cm": 703,
+      "buriedOver10cm": 790,
+      "triangles": 8642,
+      "draws": 7
+    }
+  ],
+  "supports": [
+    {
+      "actualOctagonalFoundation": {
+        "samples": 168,
+        "min": 6.107591717378291,
+        "max": 11.356044947781859,
+        "mean": 8.934616222297324
+      },
+      "worstFoundation": {
+        "x": -64.53553390593274,
+        "z": -179.53553390593274,
+        "gap": 11.356044947781859
+      },
+      "place": "ruins",
+      "type": "tower",
+      "x": -61,
+      "z": -176,
+      "bottom": 7.5,
+      "terrain": -1.220543658733368,
+      "gap": 8.720543658733368,
+      "colliderBase": -1.2140271899600985,
+      "colliderBaseGap": 8.714027189960099,
+      "supportFootprint": 10
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -44.5,
+      "z": -160.93782217350892,
+      "bottom": 8,
+      "terrain": 3.1333832655650724,
+      "gap": 4.866616734434928,
+      "colliderBase": 3.145080157852869,
+      "colliderBaseGap": 4.854919842147131,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -51.5,
+      "z": -160.93782217350892,
+      "bottom": 8,
+      "terrain": 3.1641364551175717,
+      "gap": 4.835863544882429,
+      "colliderBase": 3.187494135035621,
+      "colliderBaseGap": 4.812505864964379,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -41,
+      "z": -167,
+      "bottom": 8,
+      "terrain": 3.3558905760447186,
+      "gap": 4.644109423955282,
+      "colliderBase": 3.3601008729067994,
+      "colliderBaseGap": 4.639899127093201,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -55,
+      "z": -167,
+      "bottom": 8,
+      "terrain": 3.501709127426148,
+      "gap": 4.498290872573852,
+      "colliderBase": 3.504745169998005,
+      "colliderBaseGap": 4.495254830001995,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -43,
+      "z": -172,
+      "bottom": 8,
+      "terrain": 3.518985112508138,
+      "gap": 4.481014887491861,
+      "colliderBase": 3.5351448893889352,
+      "colliderBaseGap": 4.464855110611065,
+      "supportFootprint": 1.3
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -44.5,
+      "z": -173.06217782649108,
+      "bottom": 8,
+      "terrain": 3.64353565227521,
+      "gap": 4.35646434772479,
+      "colliderBase": 3.6450613058190013,
+      "colliderBaseGap": 4.354938694180999,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -53,
+      "z": -172,
+      "bottom": 8,
+      "terrain": 3.6453967571258543,
+      "gap": 4.354603242874146,
+      "colliderBase": 3.664378995417435,
+      "colliderBaseGap": 4.335621004582565,
+      "supportFootprint": 1.3
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -51.5,
+      "z": -173.06217782649108,
+      "bottom": 8,
+      "terrain": 3.726524244747756,
+      "gap": 4.273475755252244,
+      "colliderBase": 3.737686813398631,
+      "colliderBaseGap": 4.262313186601369,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": -0.01722092687431509,
+      "z": -234.636265288163,
+      "bottom": 12,
+      "terrain": 10.287677288129913,
+      "gap": 1.7123227118700868,
+      "colliderBase": 10.328537352348185,
+      "colliderBaseGap": 1.6714626476518148,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": 8.017220926874316,
+      "z": -234.636265288163,
+      "bottom": 12,
+      "terrain": 10.311807873974697,
+      "gap": 1.688192126025303,
+      "colliderBase": 10.344620152541884,
+      "colliderBaseGap": 1.655379847458116,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": -6.517220926874316,
+      "z": -239.35879172019784,
+      "bottom": 12,
+      "terrain": 10.792990009365862,
+      "gap": 1.2070099906341376,
+      "colliderBase": 10.806266443038261,
+      "colliderBaseGap": 1.1937335569617389,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": 14.517220926874316,
+      "z": -239.35879172019784,
+      "bottom": 12,
+      "terrain": 11.088593729759143,
+      "gap": 0.9114062702408567,
+      "colliderBase": 11.093932572513426,
+      "colliderBaseGap": 0.9060674274865743,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": -9,
+      "z": -247,
+      "bottom": 12,
+      "terrain": 11.413657315572104,
+      "gap": 0.5863426844278958,
+      "colliderBase": 11.432970423904429,
+      "colliderBaseGap": 0.567029576095571,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "grove",
+      "type": "pillar",
+      "x": -97,
+      "z": 2,
+      "bottom": 3,
+      "terrain": 2.4175249258677165,
+      "gap": 0.5824750741322835,
+      "colliderBase": 2.4358642679788503,
+      "colliderBaseGap": 0.5641357320211497,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "grove",
+      "type": "pillar",
+      "x": -100.5,
+      "z": 8.06217782649107,
+      "bottom": 3,
+      "terrain": 2.4911384668974788,
+      "gap": 0.5088615331025212,
+      "colliderBase": 2.502353426965754,
+      "colliderBaseGap": 0.49764657303424586,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "grove",
+      "type": "pillar",
+      "x": -99,
+      "z": -3,
+      "bottom": 3,
+      "terrain": 2.518392276763916,
+      "gap": 0.4816077232360838,
+      "colliderBase": 2.5283701433582437,
+      "colliderBaseGap": 0.4716298566417563,
+      "supportFootprint": 1.3
+    },
+    {
+      "place": "grove",
+      "type": "pillar",
+      "x": -100.5,
+      "z": -4.06217782649107,
+      "bottom": 3,
+      "terrain": 2.5707979627285162,
+      "gap": 0.42920203727148376,
+      "colliderBase": 2.5786766882560515,
+      "colliderBaseGap": 0.42132331174394855,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "grove",
+      "type": "pillar",
+      "x": -107.5,
+      "z": -4.0621778264910695,
+      "bottom": 3,
+      "terrain": 2.7903558533425423,
+      "gap": 0.20964414665745768,
+      "colliderBase": 2.7908571458120006,
+      "colliderBaseGap": 0.20914285418799938,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "grove",
+      "type": "pillar",
+      "x": -107.5,
+      "z": 8.062177826491071,
+      "bottom": 3,
+      "terrain": 2.811049513605038,
+      "gap": 0.18895048639496181,
+      "colliderBase": 2.805179135207818,
+      "colliderBaseGap": 0.19482086479218186,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "grove",
+      "type": "pillar",
+      "x": -109,
+      "z": -3,
+      "bottom": 3,
+      "terrain": 2.8440344015757244,
+      "gap": 0.1559655984242756,
+      "colliderBase": 2.8471745869496634,
+      "colliderBaseGap": 0.1528254130503366,
+      "supportFootprint": 1.3
+    },
+    {
+      "place": "grove",
+      "type": "pillar",
+      "x": -111,
+      "z": 2.000000000000001,
+      "bottom": 3,
+      "terrain": 2.9593379497528076,
+      "gap": 0.04066205024719238,
+      "colliderBase": 2.9563131201197024,
+      "colliderBaseGap": 0.043686879880297624,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": -6.517220926874316,
+      "z": -254.64120827980216,
+      "bottom": 12,
+      "terrain": 12.158707414701038,
+      "gap": -0.15870741470103766,
+      "colliderBase": 12.169994081103786,
+      "colliderBaseGap": -0.1699940811037859,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": 17,
+      "z": -247,
+      "bottom": 12,
+      "terrain": 12.36347745259603,
+      "gap": -0.3634774525960296,
+      "colliderBase": 12.357773150142759,
+      "colliderBaseGap": -0.35777315014275857,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": -5,
+      "z": -256,
+      "bottom": 12,
+      "terrain": 12.370627530415852,
+      "gap": -0.3706275304158524,
+      "colliderBase": 12.377603579263724,
+      "colliderBaseGap": -0.3776035792637238,
+      "supportFootprint": 1.9
+    },
+    {
+      "place": "flood",
+      "type": "pillar",
+      "x": 111,
+      "z": -88,
+      "bottom": 1,
+      "terrain": 1.7980533917744954,
+      "gap": -0.7980533917744954,
+      "colliderBase": 1.795495124688622,
+      "colliderBaseGap": -0.7954951246886219,
+      "supportFootprint": 1.3
+    },
+    {
+      "place": "flood",
+      "type": "pillar",
+      "x": 109.5,
+      "z": -89.06217782649107,
+      "bottom": 1,
+      "terrain": 1.8005128838667264,
+      "gap": -0.8005128838667264,
+      "colliderBase": 1.792165283650611,
+      "colliderBaseGap": -0.792165283650611,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "flood",
+      "type": "pillar",
+      "x": 113,
+      "z": -83,
+      "bottom": 1,
+      "terrain": 1.8721135059992473,
+      "gap": -0.8721135059992473,
+      "colliderBase": 1.8740206476289893,
+      "colliderBaseGap": -0.8740206476289893,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "flood",
+      "type": "pillar",
+      "x": 102.5,
+      "z": -89.06217782649107,
+      "bottom": 1,
+      "terrain": 1.918211669851535,
+      "gap": -0.918211669851535,
+      "colliderBase": 1.918830377468,
+      "colliderBaseGap": -0.918830377468,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "flood",
+      "type": "pillar",
+      "x": 101,
+      "z": -88,
+      "bottom": 1,
+      "terrain": 1.983760444323222,
+      "gap": -0.983760444323222,
+      "colliderBase": 1.9823840754406414,
+      "colliderBaseGap": -0.9823840754406414,
+      "supportFootprint": 1.3
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": -0.017220926874318643,
+      "z": -259.36373471183697,
+      "bottom": 12,
+      "terrain": 13.064224946267602,
+      "gap": -1.0642249462676023,
+      "colliderBase": 13.055542158614438,
+      "colliderBaseGap": -1.055542158614438,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "flood",
+      "type": "pillar",
+      "x": 109.5,
+      "z": -76.93782217350893,
+      "bottom": 1,
+      "terrain": 2.1354040883031673,
+      "gap": -1.1354040883031673,
+      "colliderBase": 2.1310357988857627,
+      "colliderBaseGap": -1.1310357988857627,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "flood",
+      "type": "pillar",
+      "x": 99,
+      "z": -83,
+      "bottom": 1,
+      "terrain": 2.170395358403524,
+      "gap": -1.1703953584035238,
+      "colliderBase": 2.162104968577134,
+      "colliderBaseGap": -1.1621049685771339,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "flood",
+      "type": "pillar",
+      "x": 102.5,
+      "z": -76.93782217350893,
+      "bottom": 1,
+      "terrain": 2.309206296347227,
+      "gap": -1.3092062963472268,
+      "colliderBase": 2.293486697657135,
+      "colliderBaseGap": -1.2934866976571349,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": 14.517220926874316,
+      "z": -254.64120827980216,
+      "bottom": 12,
+      "terrain": 13.469480158354383,
+      "gap": -1.4694801583543828,
+      "colliderBase": 13.45672512493463,
+      "colliderBaseGap": -1.4567251249346302,
+      "supportFootprint": 1.35
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": 13,
+      "z": -256,
+      "bottom": 12,
+      "terrain": 13.560366439819337,
+      "gap": -1.5603664398193366,
+      "colliderBase": 13.545063319741837,
+      "colliderBaseGap": -1.5450633197418373,
+      "supportFootprint": 1.9
+    },
+    {
+      "place": "crown",
+      "type": "pillar",
+      "x": 8.017220926874314,
+      "z": -259.36373471183697,
+      "bottom": 12,
+      "terrain": 13.712884701342638,
+      "gap": -1.712884701342638,
+      "colliderBase": 13.696476768085809,
+      "colliderBaseGap": -1.6964767680858088,
+      "supportFootprint": 1.35
+    }
+  ],
+  "bridges": [
+    {
+      "x": 145.48564102807228,
+      "z": -120,
+      "top": -0.5280848138437249,
+      "deckUndersideMinusTerrain": {
+        "samples": 2268,
+        "min": 0.5803460102093566,
+        "max": 2.999856362047871,
+        "mean": 1.6346952234731158
+      },
+      "worstDeckFloat": {
+        "x": 158.7856410280723,
+        "z": -122.6,
+        "gap": 2.999856362047871
+      },
+      "ramps": [
+        {
+          "side": -1,
+          "visibleMinusPhysics": {
+            "samples": 760,
+            "min": -0.13307798713480046,
+            "max": 0.014258995008312514,
+            "mean": -0.041551515301558185
+          },
+          "worst": {
+            "x": 127.98564102807228,
+            "z": -120,
+            "delta": -0.13307798713480046,
+            "terrainGap": 0.4121999793536024,
+            "visible": -1.1146440260044108,
+            "physics": -0.9815660388696104
+          }
+        },
+        {
+          "side": 1,
+          "visibleMinusPhysics": {
+            "samples": 760,
+            "min": -0.05585687939788686,
+            "max": 0.013069383019950642,
+            "mean": -0.015936153035067572
+          },
+          "worst": {
+            "x": 162.98564102807228,
+            "z": -120,
+            "delta": -0.05585687939788686,
+            "terrainGap": 1.5581453493444108,
+            "visible": -2.7203168677870124,
+            "physics": -2.6644599883891256
+          }
+        }
+      ],
+      "deckEndHorizontalGaps": {
+        "negative": 0.015000000000000568,
+        "positive": 0.036000000000001364
+      },
+      "supportPiersOrAbutments": 0
+    },
+    {
+      "x": 175.48337798009877,
+      "z": 25,
+      "top": 3.5391119527874473,
+      "deckUndersideMinusTerrain": {
+        "samples": 2268,
+        "min": 0.549133151734646,
+        "max": 5.156958554290126,
+        "mean": 2.8508304392655965
+      },
+      "worstDeckFloat": {
+        "x": 188.78337798009878,
+        "z": 27.4,
+        "gap": 5.156958554290126
+      },
+      "ramps": [
+        {
+          "side": -1,
+          "visibleMinusPhysics": {
+            "samples": 760,
+            "min": -0.0007784278090157137,
+            "max": 0.0707456018861774,
+            "mean": 0.026229673076514828
+          },
+          "worst": {
+            "x": 157.98337798009877,
+            "z": 25,
+            "delta": 0.0707456018861774,
+            "terrainGap": 0.6723432244857928,
+            "visible": 3.580320423648161,
+            "physics": 3.5095748217619835
+          }
+        },
+        {
+          "side": 1,
+          "visibleMinusPhysics": {
+            "samples": 760,
+            "min": 0,
+            "max": 0.14775916034648717,
+            "mean": 0.05673582012523562
+          },
+          "worst": {
+            "x": 192.98337798009877,
+            "z": 25,
+            "delta": 0.14775916034648717,
+            "terrainGap": 2.9000740786855737,
+            "visible": 1.5697771194591317,
+            "physics": 1.4220179591126445
+          }
+        }
+      ],
+      "deckEndHorizontalGaps": {
+        "negative": 0.015000000000000568,
+        "positive": 0.036000000000001364
+      },
+      "supportPiersOrAbutments": 0
+    }
+  ],
+  "roof": {
+    "samples": 10735,
+    "missingRoofHits": 0,
+    "roofHoleExamples": [],
+    "wallAboveRoof": 0,
+    "maxWallAboveRoof": 0,
+    "scope": "vertical raycasts within wall footprint against actual batched roof/plaster; not a rendered roof/shadow acceptance"
+  },
+  "openings": [
+    {
+      "label": "closed door",
+      "wallExistsBehindFacade": true,
+      "wallZ": 2.3245519880923347
+    },
+    {
+      "label": "left window",
+      "wallExistsBehindFacade": true,
+      "wallZ": 2.3072508913734353
+    },
+    {
+      "label": "right window",
+      "wallExistsBehindFacade": true,
+      "wallZ": 2.308290882934013
+    }
+  ],
+  "camera": [
+    {
+      "place": "ruins",
+      "type": "tower",
+      "x": -61,
+      "z": -176,
+      "gap": 8.720543658733368,
+      "closestSampledLegalCamera": {
+        "player": {
+          "x": -55.80384757729337,
+          "z": -173,
+          "y": 2.0652911365056195
+        },
+        "camera": [
+          -54.53447617673487,
+          3.5180799335694597,
+          -172.26712808018596
+        ],
+        "pitch": -0.12,
+        "zoom": 5,
+        "fraction": 0.2952721776775247,
+        "distance": 7.475324818057207,
+        "gapAngularDegrees": 60.50905056015826
+      }
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -44.5,
+      "z": -160.93782217350892,
+      "gap": 4.866616734434928,
+      "closestSampledLegalCamera": {
+        "player": {
+          "x": -45.91421356237309,
+          "z": -162.35203573588203,
+          "y": 4.511143008963487
+        },
+        "camera": [
+          -46.94659844300961,
+          5.964507410009195,
+          -163.38442061651855
+        ],
+        "pitch": -0.12,
+        "zoom": 5,
+        "fraction": 0.29411764705882354,
+        "distance": 3.4828070970532776,
+        "gapAngularDegrees": 69.88114908552122
+      }
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -51.5,
+      "z": -160.93782217350892,
+      "gap": 4.835863544882429,
+      "closestSampledLegalCamera": {
+        "player": {
+          "x": -50.08578643762691,
+          "z": -162.35203573588203,
+          "y": 4.533244404892579
+        },
+        "camera": [
+          -49.05340155699039,
+          5.986608805938286,
+          -163.38442061651855
+        ],
+        "pitch": -0.12,
+        "zoom": 5,
+        "fraction": 0.29411764705882354,
+        "distance": 3.4835816284723182,
+        "gapAngularDegrees": 69.52853613862548
+      }
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -41,
+      "z": -167,
+      "gap": 4.644109423955282,
+      "closestSampledLegalCamera": {
+        "player": {
+          "x": -43,
+          "z": -167,
+          "y": 4.6967122031140764
+        },
+        "camera": [
+          -44.460012699785096,
+          6.150076604159783,
+          -167
+        ],
+        "pitch": -0.12,
+        "zoom": 5,
+        "fraction": 0.29411764705882354,
+        "distance": 3.4920761535728007,
+        "gapAngularDegrees": 67.24380928817317
+      }
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -55,
+      "z": -167,
+      "gap": 4.498290872573852,
+      "closestSampledLegalCamera": {
+        "player": {
+          "x": -53,
+          "z": -167,
+          "y": 4.771810144278466
+        },
+        "camera": [
+          -51.539987300214904,
+          6.225174545324173,
+          -167
+        ],
+        "pitch": -0.12,
+        "zoom": 5,
+        "fraction": 0.29411764705882354,
+        "distance": 3.4923727360678023,
+        "gapAngularDegrees": 65.56440160855722
+      }
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -43,
+      "z": -172,
+      "gap": 4.481014887491861,
+      "closestSampledLegalCamera": {
+        "player": {
+          "x": -44.41421356237309,
+          "z": -170.5857864376269,
+          "y": 4.768149074891537
+        },
+        "camera": [
+          -45.44659844300961,
+          6.221513475937244,
+          -169.55340155699037
+        ],
+        "pitch": -0.12,
+        "zoom": 5,
+        "fraction": 0.29411764705882354,
+        "distance": 3.4907235944570454,
+        "gapAngularDegrees": 65.38843937145364
+      }
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -44.5,
+      "z": -173.06217782649108,
+      "gap": 4.35646434772479,
+      "closestSampledLegalCamera": {
+        "player": {
+          "x": -45.5,
+          "z": -171.3301270189222,
+          "y": 4.846053464769431
+        },
+        "camera": [
+          -46.23000634989255,
+          6.299417865815138,
+          -170.06571893106042
+        ],
+        "pitch": -0.12,
+        "zoom": 5,
+        "fraction": 0.29411764705882354,
+        "distance": 3.492826569281395,
+        "gapAngularDegrees": 63.89782239059005
+      }
+    },
+    {
+      "place": "ruins",
+      "type": "pillar",
+      "x": -53,
+      "z": -172,
+      "gap": 4.354603242874146,
+      "closestSampledLegalCamera": {
+        "player": {
+          "x": -54.732050807568875,
+          "z": -173,
+          "y": 2.550453227633016
+        },
+        "camera": [
+          -55.93596476893718,
+          4.609583185332079,
+          -173.69508004967713
+        ],
+        "pitch": 0.3,
+        "zoom": 5,
+        "fraction": 0.2910304620786877,
+        "distance": 3.600671322309398,
+        "gapAngularDegrees": 62.322140078583395
+      }
+    }
+  ],
+  "constructionAndAuditMs": 3281.036456
+}

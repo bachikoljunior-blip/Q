@@ -1,0 +1,444 @@
+{
+  "checkedAt": "2026-09-16T03:13:59Z",
+  "sourceSHA256": "862a26e335e958b70534cb5f0d7c47ef30ab148a56c42b3e9da969cf76f12963",
+  "sourceDimensions": [
+    2048,
+    2048
+  ],
+  "sourceOBJ_SHA256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+  "regions": {
+    "headQuads": 3116,
+    "headPixels": 747388,
+    "frontSubsetPixels": 61086,
+    "frontSubsetDefinition": "Original source outer-head triangle centroid abs(X)<.55, Z>1.2,6.7<Y<7.9; numerical frontal subset, not perceptual certification."
+  },
+  "metricDefinition": "8-bit decoded RGB MAE/RMSE/PSNR/absolute-error percentiles, plus Gaussian-window SSIM on decoded Rec709-weighted code-value luminance (sigma1.5 truncate3.5). Same pixel positions; no registration/resizing.",
+  "candidates": [
+    {
+      "name": "candidate-a.webp",
+      "format": "WEBP",
+      "settings": {
+        "lossless": true,
+        "method": 6,
+        "exact": true
+      },
+      "bytes": 2846230,
+      "sha256": "4107302da4f3c0a13130dcb229762b739a1675ae682b31929f7ac8184b99e569",
+      "encodeSeconds": 2.9252568220035755,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "standaloneBase64Bytes": 3794976,
+      "pixelsExactlyEqual": true,
+      "metrics": {
+        "wholeImage": {
+          "pixels": 4194304,
+          "mae": 0.0,
+          "rmse": 0.0,
+          "psnrDb": null,
+          "absErrorP95": 0.0,
+          "absErrorP99": 0.0,
+          "maxChannelError": 0.0,
+          "luminanceSSIM": 1.0
+        },
+        "headEarsExactOriginalUV": {
+          "pixels": 747388,
+          "mae": 0.0,
+          "rmse": 0.0,
+          "psnrDb": null,
+          "absErrorP95": 0.0,
+          "absErrorP99": 0.0,
+          "maxChannelError": 0.0,
+          "luminanceSSIM": 1.0
+        },
+        "frontFaceCoordinateSubset": {
+          "pixels": 61086,
+          "mae": 0.0,
+          "rmse": 0.0,
+          "psnrDb": null,
+          "absErrorP95": 0.0,
+          "absErrorP99": 0.0,
+          "maxChannelError": 0.0,
+          "luminanceSSIM": 1.0
+        }
+      },
+      "estimatedStandaloneFromBase15594292": 19389268,
+      "raw16MiBHeadroomBeforeLoaderOverhead": -2612052
+    },
+    {
+      "name": "candidate-b.webp",
+      "format": "WEBP",
+      "settings": {
+        "quality": 95,
+        "method": 6
+      },
+      "bytes": 541954,
+      "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04",
+      "encodeSeconds": 1.241937898004835,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "standaloneBase64Bytes": 722608,
+      "pixelsExactlyEqual": false,
+      "metrics": {
+        "wholeImage": {
+          "pixels": 4194304,
+          "mae": 1.0374306440353394,
+          "rmse": 1.5454920742506755,
+          "psnrDb": 44.349467964439285,
+          "absErrorP95": 3.0,
+          "absErrorP99": 5.0,
+          "maxChannelError": 59.0,
+          "luminanceSSIM": 0.9864681959152222
+        },
+        "headEarsExactOriginalUV": {
+          "pixels": 747388,
+          "mae": 1.425155758857727,
+          "rmse": 1.8812778280740987,
+          "psnrDb": 42.64174486630998,
+          "absErrorP95": 4.0,
+          "absErrorP99": 5.0,
+          "maxChannelError": 59.0,
+          "luminanceSSIM": 0.9839865565299988
+        },
+        "frontFaceCoordinateSubset": {
+          "pixels": 61086,
+          "mae": 1.2091859579086304,
+          "rmse": 1.5862314487391542,
+          "psnrDb": 44.1234724890646,
+          "absErrorP95": 3.0,
+          "absErrorP99": 4.0,
+          "maxChannelError": 9.0,
+          "luminanceSSIM": 0.9813637733459473
+        }
+      },
+      "estimatedStandaloneFromBase15594292": 16316900,
+      "raw16MiBHeadroomBeforeLoaderOverhead": 460316
+    },
+    {
+      "name": "candidate-c.webp",
+      "format": "WEBP",
+      "settings": {
+        "quality": 90,
+        "method": 6
+      },
+      "bytes": 289854,
+      "sha256": "d1a39164417b6f48a9643ca184df29bf572f2deb8cc2243b625f6a2fa7174356",
+      "encodeSeconds": 0.8872447609974188,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "standaloneBase64Bytes": 386472,
+      "pixelsExactlyEqual": false,
+      "metrics": {
+        "wholeImage": {
+          "pixels": 4194304,
+          "mae": 1.2311887741088867,
+          "rmse": 1.845709842084338,
+          "psnrDb": 42.80753504743003,
+          "absErrorP95": 4.0,
+          "absErrorP99": 6.0,
+          "maxChannelError": 60.0,
+          "luminanceSSIM": 0.9766362905502319
+        },
+        "headEarsExactOriginalUV": {
+          "pixels": 747388,
+          "mae": 1.83912992477417,
+          "rmse": 2.430730957483962,
+          "psnrDb": 40.416065765800255,
+          "absErrorP95": 5.0,
+          "absErrorP99": 7.0,
+          "maxChannelError": 60.0,
+          "luminanceSSIM": 0.9674501419067383
+        },
+        "frontFaceCoordinateSubset": {
+          "pixels": 61086,
+          "mae": 1.429787516593933,
+          "rmse": 1.8642500112379334,
+          "psnrDb": 42.72072052106569,
+          "absErrorP95": 4.0,
+          "absErrorP99": 5.0,
+          "maxChannelError": 14.0,
+          "luminanceSSIM": 0.9724752902984619
+        }
+      },
+      "estimatedStandaloneFromBase15594292": 15980764,
+      "raw16MiBHeadroomBeforeLoaderOverhead": 796452
+    },
+    {
+      "name": "candidate-d.webp",
+      "format": "WEBP",
+      "settings": {
+        "quality": 85,
+        "method": 6
+      },
+      "bytes": 182612,
+      "sha256": "33e02c0a9a7a55779531974998741aab879ee1e670ab5b78f2e41c8b186df100",
+      "encodeSeconds": 0.493184935003228,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "standaloneBase64Bytes": 243484,
+      "pixelsExactlyEqual": false,
+      "metrics": {
+        "wholeImage": {
+          "pixels": 4194304,
+          "mae": 1.4328937530517578,
+          "rmse": 2.170454809632755,
+          "psnrDb": 41.39978864951959,
+          "absErrorP95": 5.0,
+          "absErrorP99": 7.0,
+          "maxChannelError": 62.0,
+          "luminanceSSIM": 0.9646992087364197
+        },
+        "headEarsExactOriginalUV": {
+          "pixels": 747388,
+          "mae": 2.24924635887146,
+          "rmse": 3.01075121506715,
+          "psnrDb": 38.55730620275756,
+          "absErrorP95": 6.0,
+          "absErrorP99": 9.0,
+          "maxChannelError": 62.0,
+          "luminanceSSIM": 0.942244291305542
+        },
+        "frontFaceCoordinateSubset": {
+          "pixels": 61086,
+          "mae": 1.6052013635635376,
+          "rmse": 2.09630201444656,
+          "psnrDb": 41.70172657528126,
+          "absErrorP95": 4.0,
+          "absErrorP99": 6.0,
+          "maxChannelError": 16.0,
+          "luminanceSSIM": 0.9636054039001465
+        }
+      },
+      "estimatedStandaloneFromBase15594292": 15837776,
+      "raw16MiBHeadroomBeforeLoaderOverhead": 939440
+    },
+    {
+      "name": "candidate-e.jpg",
+      "format": "JPEG",
+      "settings": {
+        "quality": 90,
+        "subsampling": 0,
+        "optimize": true,
+        "progressive": true
+      },
+      "bytes": 594723,
+      "sha256": "a3c08541425a08bb580a1282fe3eb0ef70c1e19185f275dc7265c8821e0c8b67",
+      "encodeSeconds": 0.07552728200244019,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "standaloneBase64Bytes": 792964,
+      "pixelsExactlyEqual": false,
+      "metrics": {
+        "wholeImage": {
+          "pixels": 4194304,
+          "mae": 0.98527592420578,
+          "rmse": 1.6125809671345421,
+          "psnrDb": 43.98037301605911,
+          "absErrorP95": 3.0,
+          "absErrorP99": 5.0,
+          "maxChannelError": 33.0,
+          "luminanceSSIM": 0.9826085567474365
+        },
+        "headEarsExactOriginalUV": {
+          "pixels": 747388,
+          "mae": 1.6175382137298584,
+          "rmse": 2.176300808632796,
+          "psnrDb": 41.37642514017457,
+          "absErrorP95": 4.0,
+          "absErrorP99": 6.0,
+          "maxChannelError": 25.0,
+          "luminanceSSIM": 0.9750615358352661
+        },
+        "frontFaceCoordinateSubset": {
+          "pixels": 61086,
+          "mae": 1.1446049213409424,
+          "rmse": 1.5132442534832482,
+          "psnrDb": 44.53262294142814,
+          "absErrorP95": 3.0,
+          "absErrorP99": 4.0,
+          "maxChannelError": 13.0,
+          "luminanceSSIM": 0.9824309945106506
+        }
+      },
+      "estimatedStandaloneFromBase15594292": 16387256,
+      "raw16MiBHeadroomBeforeLoaderOverhead": 389960
+    },
+    {
+      "name": "candidate-f.jpg",
+      "format": "JPEG",
+      "settings": {
+        "quality": 85,
+        "subsampling": 2,
+        "optimize": true,
+        "progressive": true
+      },
+      "bytes": 353083,
+      "sha256": "9e562a9e630453e35fb70a5e6f57fd8c9e5721c871fc2eb2afdbea6cfd822fd6",
+      "encodeSeconds": 0.044730239002092276,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "standaloneBase64Bytes": 470780,
+      "pixelsExactlyEqual": false,
+      "metrics": {
+        "wholeImage": {
+          "pixels": 4194304,
+          "mae": 1.18850839138031,
+          "rmse": 1.9708179935667522,
+          "psnrDb": 42.237873234094,
+          "absErrorP95": 4.0,
+          "absErrorP99": 7.0,
+          "maxChannelError": 66.0,
+          "luminanceSSIM": 0.9772400856018066
+        },
+        "headEarsExactOriginalUV": {
+          "pixels": 747388,
+          "mae": 1.9341440200805664,
+          "rmse": 2.6126534886879136,
+          "psnrDb": 39.789167330931534,
+          "absErrorP95": 5.0,
+          "absErrorP99": 8.0,
+          "maxChannelError": 66.0,
+          "luminanceSSIM": 0.9654103517532349
+        },
+        "frontFaceCoordinateSubset": {
+          "pixels": 61086,
+          "mae": 1.3301628828048706,
+          "rmse": 1.7574077224924705,
+          "psnrDb": 43.233352999302134,
+          "absErrorP95": 3.0,
+          "absErrorP99": 5.0,
+          "maxChannelError": 23.0,
+          "luminanceSSIM": 0.9780428409576416
+        }
+      },
+      "estimatedStandaloneFromBase15594292": 16065072,
+      "raw16MiBHeadroomBeforeLoaderOverhead": 712144
+    },
+    {
+      "name": "candidate-g.webp",
+      "format": "WEBP",
+      "settings": {
+        "quality": 93,
+        "method": 6
+      },
+      "bytes": 379448,
+      "sha256": "5a195e7049ebae7ad31812df5b30abedb5897b9d30cc4f71615c38be1705ccb6",
+      "encodeSeconds": 1.3548752639981103,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "standaloneBase64Bytes": 505932,
+      "pixelsExactlyEqual": false,
+      "metrics": {
+        "wholeImage": {
+          "pixels": 4194304,
+          "mae": 1.1356616020202637,
+          "rmse": 1.6958767000444166,
+          "psnrDb": 43.54291814126665,
+          "absErrorP95": 3.0,
+          "absErrorP99": 5.0,
+          "maxChannelError": 59.0,
+          "luminanceSSIM": 0.9813532829284668
+        },
+        "headEarsExactOriginalUV": {
+          "pixels": 747388,
+          "mae": 1.6283719539642334,
+          "rmse": 2.1423933980587924,
+          "psnrDb": 41.51281918148038,
+          "absErrorP95": 4.0,
+          "absErrorP99": 6.0,
+          "maxChannelError": 59.0,
+          "luminanceSSIM": 0.9763654470443726
+        },
+        "frontFaceCoordinateSubset": {
+          "pixels": 61086,
+          "mae": 1.3293826580047607,
+          "rmse": 1.7344780968618925,
+          "psnrDb": 43.34742721058398,
+          "absErrorP95": 3.0,
+          "absErrorP99": 5.0,
+          "maxChannelError": 14.0,
+          "luminanceSSIM": 0.9763641357421875
+        }
+      },
+      "estimatedStandaloneFromBase15594292": 16100224,
+      "raw16MiBHeadroomBeforeLoaderOverhead": 676992
+    },
+    {
+      "name": "candidate-h.jpg",
+      "format": "JPEG",
+      "settings": {
+        "quality": 85,
+        "subsampling": 0,
+        "optimize": true,
+        "progressive": true
+      },
+      "bytes": 436309,
+      "sha256": "1e06559391a708203f1cbdff44e7160494bd8cbe3750395159b55a3cfea315a6",
+      "encodeSeconds": 0.21785655900021084,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "standaloneBase64Bytes": 581748,
+      "pixelsExactlyEqual": false,
+      "metrics": {
+        "wholeImage": {
+          "pixels": 4194304,
+          "mae": 1.1076828241348267,
+          "rmse": 1.8343550984799362,
+          "psnrDb": 42.86113538567907,
+          "absErrorP95": 4.0,
+          "absErrorP99": 6.0,
+          "maxChannelError": 43.0,
+          "luminanceSSIM": 0.9772425889968872
+        },
+        "headEarsExactOriginalUV": {
+          "pixels": 747388,
+          "mae": 1.8460897207260132,
+          "rmse": 2.491288169342579,
+          "psnrDb": 40.202324295870014,
+          "absErrorP95": 5.0,
+          "absErrorP99": 7.0,
+          "maxChannelError": 43.0,
+          "luminanceSSIM": 0.9654634594917297
+        },
+        "frontFaceCoordinateSubset": {
+          "pixels": 61086,
+          "mae": 1.2583461999893188,
+          "rmse": 1.656907580849285,
+          "psnrDb": 43.744837909170386,
+          "absErrorP95": 3.0,
+          "absErrorP99": 4.0,
+          "maxChannelError": 13.0,
+          "luminanceSSIM": 0.9779530763626099
+        }
+      },
+      "estimatedStandaloneFromBase15594292": 16176040,
+      "raw16MiBHeadroomBeforeLoaderOverhead": 601176
+    }
+  ],
+  "originalStillExact": true,
+  "gpuRGBA8BaseBytesUnchanged": 16777216,
+  "gpuRGBA8MipBytesUnchanged": 22369620
+}

@@ -1,5 +1,5 @@
 import {angleDelta,distance,groundAt,heightAt} from './core.js';
-import {queryObstacles,segmentCylinder} from './spatial.js';
+import {queryObstacles,segmentCylinder,obstacleCylinder} from './spatial.js';
 import {vaultByWarden} from './vault-slices.js';
 
 const labels={boss:'灰冠の番人',ranger:'弓兵',wolf:'灰を喰う獣',knight:'火を失った兵'};
@@ -57,7 +57,7 @@ function staticContactTime(game,arrow,horizon,knownPlayerImpactTime,bodyCache,ob
   const scanTime=Math.min(horizon,first),scanTo={x:arrow.x+arrow.vx*scanTime,y:arrow.y+arrow.vy*scanTime,z:arrow.z+arrow.vz*scanTime};
   const obstacleGuard=.08+FORECAST_GUARD;
   for(const obstacle of queryObstacles(game.obstacles,Math.min(arrow.x,scanTo.x)-obstacleGuard,Math.min(arrow.z,scanTo.z)-obstacleGuard,Math.max(arrow.x,scanTo.x)+obstacleGuard,Math.max(arrow.z,scanTo.z)+obstacleGuard)){
-    let body=obstacleCache.get(obstacle);if(!body){body={...obstacle,y:heightAt(obstacle.x,obstacle.z),height:obstacle.height??obstacle.r*1.5};obstacleCache.set(obstacle,body);}
+    let body=obstacleCache.get(obstacle);if(!body){body=obstacleCylinder(obstacle,heightAt);obstacleCache.set(obstacle,body);}
     const fraction=segmentCylinder(arrow,scanTo,body,obstacleGuard);if(metrics)metrics.obstacleSweeps++;
     if(fraction!==null)first=Math.min(first,fraction*scanTime);
   }

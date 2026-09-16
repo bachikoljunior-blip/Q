@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-16T03:31:57.607893+00:00",
+  "baseHead": "d03974f06357b490f3d9b45ac052fbea0e10b442",
+  "startedAt": "2026-09-16T03:20:38Z",
+  "runtimeSkinBytes": 541954,
+  "runtimeSHA256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04",
+  "initialJsBytes": 163175,
+  "jsChunks": 3,
+  "standaloneBytes": 16322634,
+  "standaloneSHA256": "65dc6614ac2c030f01851bca5efd43743122fff14200f2adb379d42711889311",
+  "standalone16MiBHeadroom": 454582,
+  "stageFiles": 34,
+  "stagedBytes": 12471960,
+  "GPU_RGBA8_baseBytes": 16777216,
+  "GPU_RGBA8_mipBytes": 22369620,
+  "GPU_ActualAllocationMeasured": false,
+  "verification": {
+    "focusedTests": 15,
+    "focusedMs": 17010.698616,
+    "allTests": 262,
+    "allTestsMs": 34768.811693,
+    "artifactGate": "pass",
+    "nativeSkyControlFlowOracle": "pass",
+    "codecReproductionSeconds": 0.8829235080047511
+  },
+  "timingBoundary": {
+    "sourceAcquisitionSecondsThisUnit": 0,
+    "newImageGenerationSecondsThisUnit": 0,
+    "previousAssetDownloadProcessSeconds": 591.3591744899968,
+    "initialCodecExportSecondsPreviousUnit": 1.242,
+    "currentCodecReproductionSeconds": 0.8829235080047511,
+    "implementationAndReworkSecondsIsolated": null,
+    "reason": "No isolated timer for coding/rework; source acquisition was previous finite unit. Integration wall includes parallel review and tests; do not sum concurrent timings or infer improvement ratio."
+  },
+  "remaining": [
+    "official WebGL/frame comparison unavailable",
+    "source texture appearance only observed, native shader GPU compile/render not observed",
+    "scene-ground/HDR/material seam and skin roughness appearance unverified",
+    "fullbody atlas remains2048 square even with one role and partial UV coverage",
+    "only smith chosen; others deliberately remain untextured"
+  ],
+  "jsChunkScope": "Current manifest/staged production graph; old unreferenced dist files are excluded by stage-site.",
+  "completedAt": "2026-09-16T03:34:52.531460+00:00",
+  "integrationWallSeconds": 854.531479
+}

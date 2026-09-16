@@ -1,0 +1,90 @@
+[
+  {
+    "command": [
+      "node",
+      "scripts/verify-architecture-grounding.mjs",
+      "docs/evidence/grounded-architecture-v29/geometry.json"
+    ],
+    "seconds": 0.6924499230008223,
+    "exitCode": 0,
+    "log": "gate-0.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "test"
+    ],
+    "seconds": 33.54436828500184,
+    "exitCode": 0,
+    "log": "gate-1.txt"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/verify-main-runtime.mjs"
+    ],
+    "seconds": 4.748121681994235,
+    "exitCode": 0,
+    "log": "gate-2.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:journey"
+    ],
+    "seconds": 0.6762159979989519,
+    "exitCode": 0,
+    "log": "gate-3.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:crossing"
+    ],
+    "seconds": 1.3682006859962712,
+    "exitCode": 0,
+    "log": "gate-4.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:forge"
+    ],
+    "seconds": 1.0090243619997636,
+    "exitCode": 0,
+    "log": "gate-5.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:session"
+    ],
+    "seconds": 6.234009173997038,
+    "exitCode": 0,
+    "log": "gate-6.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:expedition"
+    ],
+    "seconds": 6.75084671699733,
+    "exitCode": 0,
+    "log": "gate-7.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:vaults"
+    ],
+    "seconds": 12.03131544200005,
+    "exitCode": 0,
+    "log": "gate-8.txt"
+  }
+]

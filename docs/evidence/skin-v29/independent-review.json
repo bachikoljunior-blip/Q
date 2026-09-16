@@ -1,0 +1,51 @@
+{
+  "reviewed": [
+    "original PNG",
+    "candidate-b.webp",
+    "candidate-g.webp"
+  ],
+  "reviewMethod": "Direct view_image detail=original of full untouched images, same-layout head/ears/eye contours/lips/scalp compared; PIL used only for read-only full decode/dimension/mode; no crop, resize, retouch or imagery written. Encoding parameters were not read before visual conclusions.",
+  "files": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-v28-skin-source/young_lightskinned_male_diffuse.png",
+      "sha256": "862a26e335e958b70534cb5f0d7c47ef30ab148a56c42b3e9da969cf76f12963",
+      "bytes": 3693828,
+      "width": 2048,
+      "height": 2048,
+      "mode": "RGB"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-v29-skin-codec/candidate-b.webp",
+      "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04",
+      "bytes": 541954,
+      "width": 2048,
+      "height": 2048,
+      "mode": "RGB"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-v29-skin-codec/candidate-g.webp",
+      "sha256": "5a195e7049ebae7ad31812df5b30abedb5897b9d30cc4f71615c38be1705ccb6",
+      "bytes": 379448,
+      "width": 2048,
+      "height": 2048,
+      "mode": "RGB"
+    }
+  ],
+  "sourceIntegrity": "Expected source SHA256 matches; all three decode as2048x2048 RGB.",
+  "observations": {
+    "layout": "Both candidates retain visible head silhouette and ear/eye/lip/scalp landmarks at the same original atlas positions; no visible flip, rotation, crop or offset.",
+    "scalp": "Fine stubble pattern remains legible in both. Slight smoothing of fine grain relative to source is plausible/visible at inspection, but no obvious block grid or large blotches in the compared head regions.",
+    "ears": "Outer ear contours and dark inner folds retain their structure; no blocking halo or color bleed identified at the reviewed display scale.",
+    "eyeContours": "Dark eye corners and lid color gradients remain distinguishable. Separate red eye-related chart interiors preserve their shapes. This does not verify rendered eyeballs.",
+    "lips": "Pink lips, small center highlight/slit and nearby nostril shading remain recognizable and spatially aligned. The thin bright center mark also exists in the source, so it is not classified as a new codec artifact.",
+    "bVersusG": "No reliable visual winner for head fidelity from this direct full2048 inspection. Both have small texture changes from the PNG; neither is claimed pixel-identical.",
+    "blockingCodecArtifacts": "No blocking head-region artifact identified in b or g at reviewed display scale."
+  },
+  "decision": "Both b and g are visually eligible for the next bounded integration comparison. Choose final encoding with parent quantitative masked error/bytes evidence; this review alone does not establish a superiority ranking.",
+  "boundaries": [
+    "Only b and g reviewed after parent narrowed request; c/d were not reviewed.",
+    "This is a source-asset codec inspection, not a rendered skin or game-screen comparison.",
+    "No MIP/filtering/seam/flipY/material tint/mobile GPU test performed.",
+    "No PS4-quality claim or blanket all-pixel absence-of-artifact claim."
+  ]
+}

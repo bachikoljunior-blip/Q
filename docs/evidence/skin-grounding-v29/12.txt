@@ -1,0 +1,45 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 test:crossing
+> node scripts/simulate-crossing.mjs
+
+{
+  "passed": true,
+  "results": [
+    {
+      "choice": "haven",
+      "gatherings": [],
+      "seconds": 90,
+      "level": 2,
+      "hp": 132,
+      "potions": 3,
+      "witness": "patient-nagi",
+      "campDefeated": 3
+    },
+    {
+      "choice": "road",
+      "gatherings": [
+        {
+          "id": "road-watch",
+          "choice": "light",
+          "seconds": 67,
+          "reloads": 5,
+          "hp": 132
+        },
+        {
+          "id": "road-watch",
+          "choice": "rest",
+          "seconds": 67,
+          "reloads": 5,
+          "hp": 132
+        }
+      ],
+      "seconds": 66,
+      "level": 2,
+      "hp": 132,
+      "potions": 4,
+      "witness": "traveler-asa",
+      "campDefeated": 3
+    }
+  ]
+}

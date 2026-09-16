@@ -7,7 +7,7 @@ import { SALT_REACH } from './world-regions.js';
 import { VillageScene } from './village-scene.js';
 import { createDetailedActor } from './actor-models.js';
 import { surfaceMaterial, clothMaterial, installEnvironmentTextures } from './environment-materials.js';
-import { block, beam, part, batchProp, chamferBox, rockGeometry, mountainGeometry, treeTrunkGeometry, distantTreeGeometry, coniferGeometry, broadleafGeometry, grassGeometry, createHouse, createCrate, createHerb, createTent, createCart, createBoat, createBrazier, createLantern } from './environment-models.js';
+import { block, beam, part, batchProp, groundedSupportGeometry, chamferBox, rockGeometry, mountainGeometry, treeTrunkGeometry, distantTreeGeometry, coniferGeometry, broadleafGeometry, grassGeometry, createHouse, createCrate, createHerb, createTent, createCart, createBoat, createBrazier, createLantern } from './environment-models.js';
 import { loadEnvironmentTextures } from './environment-assets.js';
 import { bakeGroundContact } from './environment-contact.js';
 import { skyMaterial, updateAtmosphere, installSkyAtmosphere, releaseSkyAtmosphere } from './environment-atmosphere.js';
@@ -17,6 +17,8 @@ import { createTerrainSurface } from './terrain-surface.js';
 import { createWaterSurface } from './water-surface.js';
 import { forestMaterial, configureForestMesh, installForestTextures } from './forest-materials.js';
 import { loadForestTextures } from './forest-assets.js';
+import { loadSkinTexture } from './skin-assets.js';
+import { installSkinTexture } from './skin-materials.js';
 import { WeaponTrails } from './weapon-trails.js';
 import { loadVaultTextures } from './vault-textures.js';
 import { VaultScene, animateVaultWarden, decorateVaultWarden } from './vault-scene.js';
@@ -33,9 +35,10 @@ function mesh(geometry,mat,parent,pos=[0,0,0],scale=[1,1,1],shadow=false){const 
 function addBox(parent,color,x,y,z,sx,sy,sz,shadow=false){const family=color===C.wood?'wood':color===C.gold?'metal':'stone';return mesh(box,surfaceMaterial(family,color),parent,[x,y,z],[sx,sy,sz],shadow);}
 
 export async function createSceneView(canvas,game,settings){
-  const [vaultTextures,environmentTextures,forestTextures,skySource]=await Promise.all([loadVaultTextures(),loadEnvironmentTextures(),loadForestTextures(),loadSkySource()]);
+  const [vaultTextures,environmentTextures,forestTextures,skySource,skinTexture]=await Promise.all([loadVaultTextures(),loadEnvironmentTextures(),loadForestTextures(),loadSkySource(),loadSkinTexture()]);
   installEnvironmentTextures(environmentTextures);
   installForestTextures(forestTextures);
+  installSkinTexture(skinTexture);
   return new SceneView(canvas,game,settings,null,vaultTextures,skySource);
 }
 
@@ -112,9 +115,9 @@ export class SceneView {
   createStructures(){for(const o of this.game.obstacles.filter(o=>o.type==='house')){const g=createHouse();g.position.set(o.x,heightAt(o.x,o.z),o.z);this.scene.add(g);bakeStaticTransforms(g);}
     for(const p of PLACES){const g=new T.Group();g.position.set(p.x,heightAt(p.x,p.z),p.z);this.scene.add(g);const boss=p.type==='boss';mesh(new T.CylinderGeometry(boss?10:3.4,boss?11:3.8,.5,12),surfaceMaterial('stone',C.stone),g,[0,.2,0]);mesh(new T.CylinderGeometry(1.1,1.35,.75,8),surfaceMaterial('stone',0x536460),g,[0,.68,0]);const flame=mesh(new T.IcosahedronGeometry(1,1),new T.MeshStandardMaterial({color:0xf3d28a,emissive:0xffb340,emissiveIntensity:2,transparent:true,opacity:.95}),g,[0,1.55,0],[.24,.76,.24]);const glow=new T.PointLight(0xf7c17b,6,13,2);glow.position.y=2;g.add(glow);const ring=mesh(new T.TorusGeometry(1.4,.027,4,36),material(C.gold,{emissive:0xc79c4e,emissiveIntensity:.8}),g,[0,1.8,0]);const beam=mesh(new T.CylinderGeometry(.045,.28,28,8,1,true),new T.MeshBasicMaterial({color:0xf8dca0,transparent:true,opacity:.055,side:T.DoubleSide,depthWrite:false}),g,[0,15,0]);ring.material=ring.material.clone();const bowl=createBrazier();bowl.position.y=.7;g.add(bowl);this.beacons.set(p.id,{g,flame,glow,ring,beam});
       if(p.type!=='camp'){
-        const n=boss?10:6,r=boss?13:7;for(let i=0;i<n;i++){const a=i/n*Math.PI*2,x=Math.cos(a)*r,z=Math.sin(a)*r,h=boss?14:(i%3===0?7:4.4);addBox(g,C.stone,x,h/2,z,1.35,h,1.35,true);addBox(g,0x7e8980,x,h+.3,z,1.8,.6,1.8);if(i%2===0)mesh(new T.ConeGeometry(.6,2,4),material(C.dark),g,[x,h+1.7,z]);}
-        const arch=new T.Mesh(new T.TorusGeometry(boss?9:5,boss?.95:.65,5,24,Math.PI),surfaceMaterial('stone',C.stone));arch.position.set(0,boss?13:6,-(boss?9:5));arch.rotation.z=0;g.add(arch);for(const side of [-1,1])addBox(g,C.stone,side*(boss?9:5),boss?6.5:3,-(boss?9:5),boss?1.9:1.3,boss?13:6,1.7,true);const masonry=new T.Group();g.add(masonry);for(let i=0;i<19;i++){const a=(i+.5)/19*Math.PI,r=boss?9:5;block(masonry,surfaceMaterial('stone',0x90958a),[Math.cos(a)*r,(boss?13:6)+Math.sin(a)*r,-(boss?9:5)],[boss?1.42:.78,boss?1.85:1.28,1.8],[0,0,a-Math.PI/2]);}batchProp(masonry);
-        if(p.id==='ruins'){const tower=mesh(new T.CylinderGeometry(4,5,17,8,1,true),surfaceMaterial('stone',0x667a79),g,[-13,8,-9]);mesh(new T.TorusGeometry(4.3,.4,4,8),material(C.gold),g,[-13,16.4,-9]).rotation.x=Math.PI/2;for(let j=0;j<5;j++)addBox(g,C.dark,-13+Math.sin(j*1.26)*4.1,12,-9+Math.cos(j*1.26)*4.1,.5,2.1,.4);}
+        const supports=this.game.obstacles.filter(o=>o.architecture?.place===p.id),columns=supports.filter(o=>o.architecture.kind==='column'),origin={x:p.x,y:g.position.y,z:p.z};const n=boss?10:6,r=boss?13:7;for(let i=0;i<n;i++){const a=i/n*Math.PI*2,x=Math.cos(a)*r,z=Math.sin(a)*r,h=boss?14:(i%3===0?7:4.4);mesh(groundedSupportGeometry(columns[i],origin),surfaceMaterial('stone',C.stone),g,[0,0,0],[1,1,1],true);addBox(g,0x7e8980,x,h+.3,z,1.8,.6,1.8);if(i%2===0)mesh(new T.ConeGeometry(.6,2,4),material(C.dark),g,[x,h+1.7,z]);}
+        const arch=new T.Mesh(new T.TorusGeometry(boss?9:5,boss?.95:.65,5,24,Math.PI),surfaceMaterial('stone',C.stone));arch.position.set(0,boss?13:6,-(boss?9:5));arch.rotation.z=0;g.add(arch);for(const o of supports.filter(o=>o.architecture.kind==='arch-post'))mesh(groundedSupportGeometry(o,origin),surfaceMaterial('stone',C.stone),g,[0,0,0],[1,1,1],true);const masonry=new T.Group();g.add(masonry);for(let i=0;i<19;i++){const a=(i+.5)/19*Math.PI,r=boss?9:5;block(masonry,surfaceMaterial('stone',0x90958a),[Math.cos(a)*r,(boss?13:6)+Math.sin(a)*r,-(boss?9:5)],[boss?1.42:.78,boss?1.85:1.28,1.8],[0,0,a-Math.PI/2]);}batchProp(masonry);
+        if(p.id==='ruins'){const tower=mesh(groundedSupportGeometry(supports.find(o=>o.architecture.kind==='tower'),origin),surfaceMaterial('stone',0x667a79),g);mesh(new T.TorusGeometry(4.3,.4,4,8),material(C.gold),g,[-13,16.4,-9]).rotation.x=Math.PI/2;for(let j=0;j<5;j++)addBox(g,C.dark,-13+Math.sin(j*1.26)*4.1,12,-9+Math.cos(j*1.26)*4.1,.5,2.1,.4);}
       }
       // The beacon group stays mutable; bake only its stonework, not its live
       // flame, light, rotating ring or beam. Their exact hierarchy is retained.

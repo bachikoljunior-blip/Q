@@ -1,0 +1,267 @@
+{
+  "baseline": "d03974f06357b490f3d9b45ac052fbea0e10b442",
+  "checkedAt": "2026-09-16T03:31:28.468Z",
+  "boundary": "Actual identical actor recipes; CPU arrays/counts, no draw/GPU/FPS measurement",
+  "rows": [
+    {
+      "role": "player",
+      "options": {},
+      "before": {
+        "triangles": 7822,
+        "draws": 14,
+        "geometrySHA256": "098c41eab5636adeebd67164eb97e403b9317a0ab12b583254bb11215d533d58"
+      },
+      "after": {
+        "triangles": 7822,
+        "draws": 14,
+        "geometrySHA256": "098c41eab5636adeebd67164eb97e403b9317a0ab12b583254bb11215d533d58"
+      }
+    },
+    {
+      "role": "npc",
+      "options": {},
+      "before": {
+        "triangles": 6618,
+        "draws": 12,
+        "geometrySHA256": "b8b771a78cd14e28d102e6f9dd6b5ce6cb97ea77c0ce86cbf21a80d8e7ac2102"
+      },
+      "after": {
+        "triangles": 6618,
+        "draws": 12,
+        "geometrySHA256": "b8b771a78cd14e28d102e6f9dd6b5ce6cb97ea77c0ce86cbf21a80d8e7ac2102"
+      }
+    },
+    {
+      "role": "sena",
+      "options": {},
+      "before": {
+        "triangles": 6786,
+        "draws": 12,
+        "geometrySHA256": "b68abad38b10815141054acf38411de805a0d2de7fed17f0a69f1500357a45ff"
+      },
+      "after": {
+        "triangles": 6786,
+        "draws": 12,
+        "geometrySHA256": "b68abad38b10815141054acf38411de805a0d2de7fed17f0a69f1500357a45ff"
+      }
+    },
+    {
+      "role": "smith",
+      "options": {},
+      "before": {
+        "triangles": 6242,
+        "draws": 11,
+        "geometrySHA256": "ec9604415e1b7545c79cec620040af4d263793209308bf9d9db9ff0c17ca50ee"
+      },
+      "after": {
+        "triangles": 6242,
+        "draws": 11,
+        "geometrySHA256": "ec9604415e1b7545c79cec620040af4d263793209308bf9d9db9ff0c17ca50ee"
+      }
+    },
+    {
+      "role": "healer",
+      "options": {},
+      "before": {
+        "triangles": 7038,
+        "draws": 11,
+        "geometrySHA256": "81154d85905fe1b534f847f5c4bf06d913a18d2fdb0983c61fc2619b2b770a36"
+      },
+      "after": {
+        "triangles": 7038,
+        "draws": 11,
+        "geometrySHA256": "81154d85905fe1b534f847f5c4bf06d913a18d2fdb0983c61fc2619b2b770a36"
+      }
+    },
+    {
+      "role": "patient",
+      "options": {},
+      "before": {
+        "triangles": 6270,
+        "draws": 10,
+        "geometrySHA256": "7eadb0f088e1264e7a97be88f3c2d1e073c678cb686452103f5bd80511f119b3"
+      },
+      "after": {
+        "triangles": 6270,
+        "draws": 10,
+        "geometrySHA256": "7eadb0f088e1264e7a97be88f3c2d1e073c678cb686452103f5bd80511f119b3"
+      }
+    },
+    {
+      "role": "porter",
+      "options": {},
+      "before": {
+        "triangles": 6450,
+        "draws": 10,
+        "geometrySHA256": "f3cd906178e6538f1e492da5fd6c6abd5e2610f9aff55ee55ebcf6bc37700886"
+      },
+      "after": {
+        "triangles": 6450,
+        "draws": 10,
+        "geometrySHA256": "f3cd906178e6538f1e492da5fd6c6abd5e2610f9aff55ee55ebcf6bc37700886"
+      }
+    },
+    {
+      "role": "scout",
+      "options": {},
+      "before": {
+        "triangles": 6798,
+        "draws": 11,
+        "geometrySHA256": "7b2526d8938335e7aae3f5eb8847f30dc222e2986a6bb7399f49eb09b871c1f5"
+      },
+      "after": {
+        "triangles": 6798,
+        "draws": 11,
+        "geometrySHA256": "7b2526d8938335e7aae3f5eb8847f30dc222e2986a6bb7399f49eb09b871c1f5"
+      }
+    },
+    {
+      "role": "traveler",
+      "options": {},
+      "before": {
+        "triangles": 6578,
+        "draws": 10,
+        "geometrySHA256": "2ab850c6c49c26c042ac5183c2e333608de68de54382f5dd28ebff0f79eb430b"
+      },
+      "after": {
+        "triangles": 6578,
+        "draws": 10,
+        "geometrySHA256": "2ab850c6c49c26c042ac5183c2e333608de68de54382f5dd28ebff0f79eb430b"
+      }
+    },
+    {
+      "role": "courier",
+      "options": {},
+      "before": {
+        "triangles": 6398,
+        "draws": 10,
+        "geometrySHA256": "89fc815eaa4588b5888a4b8ed077c046bf828009dc8236a10d52e93642ddb01d"
+      },
+      "after": {
+        "triangles": 6398,
+        "draws": 10,
+        "geometrySHA256": "89fc815eaa4588b5888a4b8ed077c046bf828009dc8236a10d52e93642ddb01d"
+      }
+    },
+    {
+      "role": "soldier",
+      "options": {},
+      "before": {
+        "triangles": 7454,
+        "draws": 13,
+        "geometrySHA256": "e5a378e9a63b741b655568bbecbe11005854f71e9f0201204b5532ea1cf32854"
+      },
+      "after": {
+        "triangles": 7454,
+        "draws": 13,
+        "geometrySHA256": "e5a378e9a63b741b655568bbecbe11005854f71e9f0201204b5532ea1cf32854"
+      }
+    },
+    {
+      "role": "ranger",
+      "options": {},
+      "before": {
+        "triangles": 7078,
+        "draws": 12,
+        "geometrySHA256": "a10d6710769180e2a950a531297b8da763f8ae9606de161eaa53243441f1d549"
+      },
+      "after": {
+        "triangles": 7078,
+        "draws": 12,
+        "geometrySHA256": "a10d6710769180e2a950a531297b8da763f8ae9606de161eaa53243441f1d549"
+      }
+    },
+    {
+      "role": "wolf",
+      "options": {},
+      "before": {
+        "triangles": 4028,
+        "draws": 6,
+        "geometrySHA256": "d987c454f4a5d5d0d7ea3aa73ecb5b67b94538e983f76d564ca51360ba477ed5"
+      },
+      "after": {
+        "triangles": 4028,
+        "draws": 6,
+        "geometrySHA256": "d987c454f4a5d5d0d7ea3aa73ecb5b67b94538e983f76d564ca51360ba477ed5"
+      }
+    },
+    {
+      "role": "boss",
+      "options": {},
+      "before": {
+        "triangles": 7950,
+        "draws": 14,
+        "geometrySHA256": "eaa203fe9c1d73e4fe1b754aca9a33ceef83240bc6aa4839675e3af4f1d42d80"
+      },
+      "after": {
+        "triangles": 7950,
+        "draws": 14,
+        "geometrySHA256": "eaa203fe9c1d73e4fe1b754aca9a33ceef83240bc6aa4839675e3af4f1d42d80"
+      }
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "ember"
+      },
+      "before": {
+        "triangles": 7854,
+        "draws": 13,
+        "geometrySHA256": "3828fc0bd7265b3a80a875742a8d6c2eba6d1028d9dfe2eee7a4d3335b7becd7"
+      },
+      "after": {
+        "triangles": 7854,
+        "draws": 13,
+        "geometrySHA256": "3828fc0bd7265b3a80a875742a8d6c2eba6d1028d9dfe2eee7a4d3335b7becd7"
+      }
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "tide"
+      },
+      "before": {
+        "triangles": 7786,
+        "draws": 13,
+        "geometrySHA256": "d08f678217421f67be645e76749c2b091ea8ae14e22666497f1f795fb252b4c4"
+      },
+      "after": {
+        "triangles": 7786,
+        "draws": 13,
+        "geometrySHA256": "d08f678217421f67be645e76749c2b091ea8ae14e22666497f1f795fb252b4c4"
+      }
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "gale"
+      },
+      "before": {
+        "triangles": 7794,
+        "draws": 14,
+        "geometrySHA256": "6cc677a14c5ca6ca2c0f24b125c0b15e62ec8b6cb6ea828c11c0ecf91567b701"
+      },
+      "after": {
+        "triangles": 7794,
+        "draws": 14,
+        "geometrySHA256": "6cc677a14c5ca6ca2c0f24b125c0b15e62ec8b6cb6ea828c11c0ecf91567b701"
+      }
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "moss"
+      },
+      "before": {
+        "triangles": 7998,
+        "draws": 13,
+        "geometrySHA256": "25d98d23fa0e9e8f2ca5207df432eafe821f0dc3acb1297c451b5dc25c464112"
+      },
+      "after": {
+        "triangles": 7998,
+        "draws": 13,
+        "geometrySHA256": "25d98d23fa0e9e8f2ca5207df432eafe821f0dc3acb1297c451b5dc25c464112"
+      }
+    }
+  ]
+}

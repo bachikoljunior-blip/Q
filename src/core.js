@@ -1,5 +1,6 @@
 // Deterministic world and combat simulation. No DOM or rendering dependencies.
-import { moveCircle, steerAround, lineClear, indexObstacles, queryObstacles } from './spatial.js';
+import { moveCircle, steerAround, lineClear, indexObstacles, queryObstacles, obstacleCylinder } from './spatial.js';
+import { landmarkSupports } from './architecture-grounding.js';
 import { findPath } from './navigation.js';
 import { WEAPONS, SENA, EAST_CAMP, SUPPLY_ID, crossingText } from './content.js';
 import { segmentCylinder, segmentTerrain } from './spatial.js';
@@ -50,12 +51,7 @@ export function makeWorld() {
   // Buildings and major rocks share colliders with the renderer.
   for(const b of [{x:15,z:91,r:4},{x:-16,z:82,r:4},{x:20,z:71,r:4},{x:-17,z:105,r:4}])obstacles.push({...b,type:'house',height:6});
   for(let i=0;i<85;i++){const x=(rng()-.5)*450,z=145-rng()*440,r=1+rng()*2.5;if(PLACES.some(p=>distance({x,z},p)<26)||Math.abs(x)<10||inRiver(x,z))continue;obstacles.push({x,z,r,type:'rock'});}
-  for(const p of PLACES.filter(p=>p.type!=='camp')) {
-    const boss=p.type==='boss',count=boss?10:6,radius=boss?13:7;
-    for(let i=0;i<count;i++){const a=i/count*TAU;obstacles.push({x:p.x+Math.cos(a)*radius,z:p.z+Math.sin(a)*radius,r:.96,height:boss?14:i%3===0?7:4.4,type:'pillar'});}
-    for(const side of [-1,1])obstacles.push({x:p.x+side*(boss?9:5),z:p.z-(boss?9:5),r:boss?1.25:1,height:boss?13:6,type:'pillar'});
-    if(p.id==='ruins')obstacles.push({x:p.x-13,z:p.z-9,r:5,height:17,type:'tower'});
-  }
+  obstacles.push(...landmarkSupports(PLACES,heightAt));
   spawn(EAST_CAMP.x-7,EAST_CAMP.z+7,'ranger');spawn(EAST_CAMP.x+7,EAST_CAMP.z-6,'ranger');spawn(EAST_CAMP.x,EAST_CAMP.z+2,'knight');
   for(const e of enemies.slice(-3)){e.encounter='crossing';if(e.type==='ranger'){e.hp=e.maxHp=82;}}
   pickups.push({id:SUPPLY_ID,x:EAST_CAMP.x,z:EAST_CAMP.z,type:'supplies',taken:false});
@@ -217,7 +213,7 @@ export class Game {
   projectileContact(arrow,dt){
       const from={x:arrow.x,y:arrow.y,z:arrow.z},to={x:arrow.x+arrow.vx*dt,y:arrow.y+arrow.vy*dt,z:arrow.z+arrow.vz*dt};
       const terrain=segmentTerrain(from,to,groundAt,.1);let first=terrain??1.01,target=terrain===null?null:'wall';
-      for(const o of queryObstacles(this.obstacles,Math.min(from.x,to.x)-.08,Math.min(from.z,to.z)-.08,Math.max(from.x,to.x)+.08,Math.max(from.z,to.z)+.08)){const t=segmentCylinder(from,to,{...o,y:heightAt(o.x,o.z),height:o.height??o.r*1.5},.08);if(t!==null&&t<first){first=t;target='wall';}}
+      for(const o of queryObstacles(this.obstacles,Math.min(from.x,to.x)-.08,Math.min(from.z,to.z)-.08,Math.max(from.x,to.x)+.08,Math.max(from.z,to.z)+.08)){const t=segmentCylinder(from,to,obstacleCylinder(o,heightAt),.08);if(t!==null&&t<first){first=t;target='wall';}}
       const victims=arrow.owner==='player'?this.enemies.filter(e=>!e.dead):[this.player];
       for(const victim of victims){const body=victim.type==='boss'?4.7:victim.type==='wolf'?1.35:2.1;const t=segmentCylinder(from,to,{...victim,y:victim.y+.15,height:body-.15,r:victim.type==='boss'?1.25:.48},.12);if(t!==null&&t<first){first=t;target=victim;}}
     return {from,to,target,fraction:target?first:1};

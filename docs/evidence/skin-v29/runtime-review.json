@@ -1,0 +1,240 @@
+{
+  "status": "PASS independent CPU/source contract; no WebGL or browser",
+  "sourceFiles": [
+    {
+      "path": "src/skin-texture-loader.js",
+      "sha256": "b6a8f15968944f98e34f952ad2798e7a0ae3c6786f328c46c0b5ea5e6c55cb52"
+    },
+    {
+      "path": "src/skin-materials.js",
+      "sha256": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63"
+    },
+    {
+      "path": "src/skin-assets.js",
+      "sha256": "85d52c671d3ae6ce50ffb6461b7df0b416fa9a3353a70d399dbf6adb8aced076"
+    },
+    {
+      "path": "src/assets/characters/detailed-geometry.js",
+      "sha256": "a320835670bd43147e793651834034a87ad23d16f87c191b412a5de881a17849"
+    },
+    {
+      "path": "src/assets/characters/anatomical-head-data.js",
+      "sha256": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba"
+    },
+    {
+      "path": "src/assets/characters/skin/young-male-q95.webp",
+      "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+    },
+    {
+      "path": "src/scene.js",
+      "sha256": "70314006f29d35ae098c052ed93ffa1d8d6b346f00d1c476f82ed31c49477145"
+    }
+  ],
+  "actorRolesChecked": [
+    "player",
+    "npc",
+    "sena",
+    "smith",
+    "healer",
+    "patient",
+    "porter",
+    "scout",
+    "traveler",
+    "courier",
+    "soldier",
+    "ranger",
+    "wolf",
+    "boss"
+  ],
+  "oneChangedMaterial": [
+    {
+      "role": "smith",
+      "material": "Q anatomical face",
+      "base": [
+        0.3139887133649649,
+        0.181164244239483,
+        0.10946171076915331
+      ],
+      "tint": [
+        0.4151175365138658,
+        0.458954794080348,
+        0.4609319349415707
+      ]
+    }
+  ],
+  "unchangedMaterialReferences": 163,
+  "unaffectedAliasesAndThemes": [
+    [
+      "keeper",
+      {}
+    ],
+    [
+      "knight",
+      {}
+    ],
+    [
+      "archer",
+      {}
+    ],
+    [
+      "soldier",
+      {
+        "theme": "ember"
+      }
+    ],
+    [
+      "soldier",
+      {
+        "theme": "tide"
+      }
+    ],
+    [
+      "soldier",
+      {
+        "theme": "gale"
+      }
+    ],
+    [
+      "soldier",
+      {
+        "theme": "moss"
+      }
+    ]
+  ],
+  "smithClonesShareMaterialTextureAndGeometry": true,
+  "smithClonesKeepSeparateSkeletons": true,
+  "uvMaxAbsErrorFromV28OriginalUVData": 2.9766082709770103e-08,
+  "uvCount": 1012,
+  "textureProperties": {
+    "colorSpace": "srgb",
+    "flipY": true,
+    "repeat": [
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "rotation": 0,
+    "channel": 0,
+    "anisotropy": 2
+  },
+  "installNullRestoresExistingFlatMaterial": true,
+  "cacheSingleConcurrentLoad": true,
+  "cacheFailureRetry": true,
+  "lateDecodeDisposedAndRejected": true,
+  "invalidSizeDisposedAndRejected": true,
+  "reference": [
+    0.756385085539447,
+    0.3947322188942361,
+    0.23747912103991894
+  ],
+  "colorBoundary": "Tint multiplication matches exactly the declared neck-reference average; this script does not prove image-sampled reference accuracy or rendered color continuity.",
+  "correctedIndependentNeckColorSampling": {
+    "geometricSourceVertexCount": 46,
+    "originalSourceUVSideCount": 47,
+    "source857BothSides": {
+      "sourceVertex": 857,
+      "sides": [
+        {
+          "renderIndex": 242,
+          "sourceUVId": 906,
+          "uv": [
+            0.274316,
+            0.962204
+          ],
+          "linearRGB": [
+            0.799102738014409,
+            0.4452011945162279,
+            0.27467731206038465
+          ]
+        },
+        {
+          "renderIndex": 708,
+          "sourceUVId": 8171,
+          "uv": [
+            0.486744,
+            0.962204
+          ],
+          "linearRGB": [
+            0.7835377915261935,
+            0.4396571738409188,
+            0.2704977910130658
+          ]
+        }
+      ],
+      "meanLinearRGB": [
+        0.7913202647703013,
+        0.44242918417857335,
+        0.2725875515367252
+      ]
+    },
+    "verifiedReference": [
+      0.756385085539447,
+      0.3947322188942361,
+      0.23747912103991894
+    ],
+    "referenceMatchesFinalRuntimeMaxAbsError": 0,
+    "decodedImageSHA256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04",
+    "equalVertexWeightedMeanTintedLinearRGB": [
+      0.31398871336496487,
+      0.18116424423948302,
+      0.1094617107691533
+    ],
+    "meanTintedLinearMinusFlatNeck": [
+      -5.551115123125783e-17,
+      2.7755575615628914e-17,
+      -1.3877787807814457e-17
+    ],
+    "meanLinearMaxAbsError": 5.551115123125783e-17,
+    "flatNeckSRGB255": [
+      151.999999997631,
+      117.99999999684898,
+      92.99999999627398
+    ],
+    "meanOf46EncodedPerVertexValuesSRGB255": [
+      151.96635661513918,
+      117.88788673546233,
+      92.86186758241664
+    ],
+    "meanOfEncodedValuesMinusFlat255": [
+      -0.03364338249181742,
+      -0.11211326138665356,
+      -0.13813241385734898
+    ],
+    "all47SideValuesSRGBMin255": [
+      147.1746013183406,
+      111.45051274257048,
+      85.33130609748478
+    ],
+    "all47SideValuesSRGBMax255": [
+      157.969727652463,
+      127.67904862726152,
+      102.58665897989421
+    ],
+    "largestLocalChannelDifferenceFromFlat255": 9.679048630412538,
+    "interpretation": "Bilinear linear-light sampling gives mean tinted linear RGB equal to the declared flat-neck base color. Local source shading/color variation remains; zero rendered seam difference is not implied. The source is not established as calibrated albedo. Mean of sRGB-encoded samples is not the sRGB encoding of their linear mean."
+  },
+  "initialReviewFindingResolved": "Initial constant sampled synthetic cap UVs although comment said original neck UVs. Author replaced it with actual region4/sourceUV>=0 rim coordinates, 47 UV sides on46 geometric source vertices with source857 sides averaged; independent readback verifies exact mean.",
+  "hdrNativeMaterialContract": {
+    "materialType": "MeshStandardMaterial",
+    "metalness": 0,
+    "roughness": 1,
+    "bumpScale": 0.00018,
+    "retainsSharedSkinRoughnessMap": true,
+    "retainsSharedSkinBumpMap": true,
+    "mapColorSpace": "srgb",
+    "tintLinearRGB": [
+      0.4151175365138658,
+      0.458954794080348,
+      0.4609319349415707
+    ],
+    "privateEnvironmentMap": null,
+    "nativeOnBeforeCompile": true,
+    "nativeProgramCacheKey": true,
+    "userDataKeys": [],
+    "boundary": "Actual material CPU properties verified; null envMap permits standard Three scene.environment inheritance. No HDR rendered pixel or real GPU shader compile performed.",
+    "sceneDiffScope": "Only added skin imports, load in existing Promise.all, and install before SceneView construction. Existing sky/HDR installation unchanged."
+  }
+}

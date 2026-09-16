@@ -82,9 +82,9 @@ await assert.rejects(load(),/network/);await assert.rejects(load(),/unexpected d
 globalThis.__qSkyAuditRenderer=RendererBoundary;let resolveSky;
 globalThis.__qSkyAuditPromise=new Promise(resolve=>{resolveSky=resolve;});
 const sceneURL=moduleURL('src/scene.js'),rendererModule='data:text/javascript,'+encodeURIComponent('export * from '+JSON.stringify(threeURL)+'; export class WebGLRenderer extends globalThis.__qSkyAuditRenderer {}');
-const emptyStub='data:text/javascript,'+encodeURIComponent('export function loadVaultTextures(){return Promise.resolve({})} export function loadEnvironmentTextures(){return Promise.resolve({})} export function loadForestTextures(){return Promise.resolve({})}');
+const emptyStub='data:text/javascript,'+encodeURIComponent('export function loadVaultTextures(){return Promise.resolve({})} export function loadEnvironmentTextures(){return Promise.resolve({})} export function loadForestTextures(){return Promise.resolve({})} export function loadSkinTexture(){return Promise.resolve(null)}');
 const skyStub='data:text/javascript,'+encodeURIComponent('export function loadSkySource(){return globalThis.__qSkyAuditPromise}');
-const hooks=registerHooks({resolve(specifier,context,next){if(context.parentURL===sceneURL){if(specifier==='three')return{url:rendererModule,shortCircuit:true};if(specifier==='./sky-assets.js')return{url:skyStub,shortCircuit:true};if(['./vault-textures.js','./environment-assets.js','./forest-assets.js'].includes(specifier))return{url:emptyStub,shortCircuit:true};}return next(specifier,context);}});
+const hooks=registerHooks({resolve(specifier,context,next){if(context.parentURL===sceneURL){if(specifier==='three')return{url:rendererModule,shortCircuit:true};if(specifier==='./sky-assets.js')return{url:skyStub,shortCircuit:true};if(['./vault-textures.js','./environment-assets.js','./forest-assets.js','./skin-assets.js'].includes(specifier))return{url:emptyStub,shortCircuit:true};}return next(specifier,context);}});
 let createSceneView;try{({createSceneView}=await import(sceneURL));}finally{hooks.deregister();}
 const {Game}=await import(moduleURL('src/core.js'));
 Object.assign(globalThis,{innerWidth:1280,innerHeight:720,devicePixelRatio:1,addEventListener(){}});
