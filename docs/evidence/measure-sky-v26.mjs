@@ -1,0 +1,25 @@
+// Run from repository root after build/package/stage; CPU/bytes, never GPU pixels.
+import {readFileSync,statSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {Script} from 'node:vm';
+import assert from 'node:assert/strict';
+import * as T from 'three';
+import {HDRLoader} from 'three/addons/loaders/HDRLoader.js';
+import {prepareSkyEnvironment} from '../../src/sky-field.js';
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const provenance=JSON.parse(readFileSync('src/assets/sky/provenance.json'));
+const bytes=readFileSync(provenance.source.path),parseStart=performance.now();
+const source=new HDRLoader().parse(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength)),parseMs=performance.now()-parseStart;
+const fieldStart=performance.now(),field=prepareSkyEnvironment(source),fieldMs=performance.now()-fieldStart;
+const lum=(data,i)=>.2126*T.DataUtils.fromHalfFloat(data[i])+.7152*T.DataUtils.fromHalfFloat(data[i+1])+.0722*T.DataUtils.fromHalfFloat(data[i+2]);
+const peak=a=>{let max=0;for(let i=0;i<a.length;i+=4)max=Math.max(max,lum(a,i));return max;};
+const manifest=JSON.parse(readFileSync('dist/.vite/manifest.json')),stage=JSON.parse(readFileSync('artifacts/latest-site.json'));
+const runtimeHDRs=Object.keys(manifest).filter(p=>p.endsWith('.hdr'));assert.deepEqual(runtimeHDRs,[provenance.source.path]);
+const emitted=manifest[provenance.source.path].file;assert(readFileSync('dist/'+emitted).equals(bytes));assert(readFileSync(stage.root+'/dist/'+emitted).equals(bytes));
+const standalone=readFileSync('release/Q-ash-pilgrim.html','utf8');assert(standalone.includes(bytes.toString('base64')));assert(standalone.includes('Permission is hereby granted'));
+const script=standalone.match(/<script>([\s\S]*)<\/script>/)[1];new Script(script);
+const js=stage.files.filter(p=>p.endsWith('.js')).map(path=>({path,bytes:statSync(stage.root+'/dist/'+path).size}));
+assert.equal(js.length,3);assert.equal(js.find(a=>a.path.includes('/index-')).bytes,163175);
+const vfov=54,hfov=2*Math.atan(Math.tan(vfov*Math.PI/360)*16/9)*180/Math.PI;
+const report={checkedAt:new Date().toISOString(),scope:'Actual HDR parsing/CPU fields, emitted bytes, native JavaScript syntax; no WebGL compilation/drawing or device timing',source:{...provenance.source,parseMs},field:{cpuMs:fieldMs,bytes:field.data.byteLength,sourcePeak:peak(source.data),iblPeak:peak(field.data),sourceSolarPixel:lum(source.data,(119*1024+609)*4),iblSolarPixel:lum(field.data,(59*512+304)*4),annulusRGB:field.sunFill,horizonRGB:field.horizon},angleResolution:{verticalFovDegrees:vfov,sourceSamplesVertical:512*vfov/180,horizontalFovDegrees:hfov,sourceSamplesHorizontal:1024*hfov/360},distribution:{js,stageFiles:stage.files.length,stageBytes:stage.files.reduce((n,p)=>n+statSync(stage.root+'/dist/'+p).size,0),standaloneBytes:Buffer.byteLength(standalone),baselineStandaloneBytes:13576431,standaloneIncrease:Buffer.byteLength(standalone)-13576431,sourceHDRBase64Bytes:4*Math.ceil(bytes.length/3)},sourceHashes:Object.fromEntries(['src/sky-field.js','src/sky-texture-loader.js','src/sky-assets.js','src/sky-lighting.js','src/sky-exposure.js','src/environment-atmosphere.js','src/environment-materials.js','src/scene.js'].map(p=>[p,hash(readFileSync(p))]))};
+writeFileSync('docs/evidence/sky-v26-measurements.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report.distribution));

@@ -120,19 +120,21 @@ export function surfaceMaterial(kind,color,options={}) {
       #endif`;
     shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>\n${normals}`);
     if(kind==='leaf')shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',`outgoingLight+=diffuseColor.rgb*max(dot(-normalize(qNormal),qSunDirection),0.0)*qDaylight*.11;\n#include <opaque_fragment>`);
-    if(kind==='metal')shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',`vec3 qMetalNormal=inverseTransformDirection(normal,viewMatrix);vec3 qMetalView=normalize(cameraPosition-qWorld);outgoingLight+=qSky(reflect(-qMetalView,qMetalNormal))*diffuse*.22*(1.0-roughnessFactor*.6);\n#include <opaque_fragment>`);
+    if(kind==='metal')shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',`vec3 qMetalNormal=inverseTransformDirection(normal,viewMatrix);vec3 qMetalView=normalize(cameraPosition-qWorld);if(qHDRActive<.5)outgoingLight+=qSky(reflect(-qMetalView,qMetalNormal))*diffuse*.22*(1.0-roughnessFactor*.6);\n#include <opaque_fragment>`);
     if(kind==='water')shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',`
       vec3 qWorldNormal=inverseTransformDirection(normal,viewMatrix);
       vec3 qView=normalize(cameraPosition-qWorld);
       float qFresnel=.02+.98*pow(1.0-max(dot(qView,qWorldNormal),0.0),5.0);
-      vec3 qReflection=qSky(reflect(-qView,qWorldNormal));
-      outgoingLight=mix(outgoingLight,qReflection,clamp(qFresnel*.86+.09,.0,.9));
+      if(qHDRActive<.5){
+        vec3 qReflection=qSky(reflect(-qView,qWorldNormal));
+        outgoingLight=mix(outgoingLight,qReflection,clamp(qFresnel*.86+.09,.0,.9));
+      }
       float qBank=1.0-smoothstep(8.7,10.5,abs(qWorld.x-(166.0+sin(qWorld.z*.017)*23.0)));
       float qEnds=smoothstep(-205.0,-202.5,qWorld.z)*(1.0-smoothstep(217.5,220.0,qWorld.z));
       diffuseColor.a*=qBank*qEnds;
       #include <opaque_fragment>`);
   };
-  material.customProgramCacheKey=()=>`q-surface-v24:${kind}:${finish}:${groundContact}:${!!wind}:${!!flow}:${material.userData.authoredSurface&&authoredTextures.has(kind)}:${material.userData.authoredSurface&&kind==='stone'&&authoredTextures.has('stoneNormal')}`;
+  material.customProgramCacheKey=()=>`q-surface-v26:${kind}:${finish}:${groundContact}:${!!wind}:${!!flow}:${material.userData.authoredSurface&&authoredTextures.has(kind)}:${material.userData.authoredSurface&&kind==='stone'&&authoredTextures.has('stoneNormal')}`;
   if(!unique&&!wind&&!flow)materials.set(key,material);return material;
 }
 

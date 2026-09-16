@@ -1,5 +1,18 @@
 # 制作状況 — 2026-09-16
 
+## 2026-09-16 — 継続中：実天空と全材質の環境光を結合、頭部と実楽器へ継続
+
+継続分類 **ACTIVE**。Poly Haven CC0の実HDR天空を、可視の雲・太陽・共有環境光・水/金属/人物/小物の反射へ結合した。原本1,435,119 Bを維持し、太陽の二重計上を除いた別の照明用画像をnative PMREMへ渡す。昼夜・影・fogの色処理を揃え、浮動小数点描画非対応時は既存の空と光で起動する。[出所・具体的費用・修正・限界](SHARED_SKY_V26.md)。独立監査が指摘したfogの最大約9.1/255の計算不一致を修正し、最終CPU計算では1.11e−16以下。native PMREMが出力を返す前に例外を投げた場合の内部出力回収は公開APIから保証できず、実GPU回収は未測定である。
+
+最終19必須command・251/251 tests成功、wall 85.592秒。初期JS163,175 B、3 chunks、全JS869,437 B、既存上限は維持。単体版15,505,597 B、SHA256 `dbbfca53f1ecd9e17f602aeec638c15dcd112ca1a9843ce98c3a520216784f89`、固定stage33public filesを照合した。5.5 MiBの定常追加GPU texture payloadは形式上の計算であり端末実測ではない。検証と正規配信は区別する。[統合検証](evidence/shared-sky-v26-validation.json)。
+
+最新実readbackのmainは `547676fdce8d8e97abed9f065aad0b6e24af2fd6`。PR39 head `bfc5d10d8b1042dc6063569a624c115b6c1e7833` はCI成功後の通常mergeがtimeout、確認後一回のretryは405「Merge already in progress」。PRはopen/merged=falseのまま、重複mutationを行わない。PR40 head `1641ab6de66d2b27820d9f7281a464a6feb31a8d` はpush/PR CI成功、PR39をbaseとした保全済みstack。実main反映確認後に順番にmainへretarget・CI・通常mergeする。Siteは23、source `f11819aceea515d166846e4bf85082bf2e51e9d1`、同一owner限定で未更新。テスト用merge SHAや固定stageを公開成功へ読み替えない。
+
+利用上限の実停止後にユーザー「続けて」を受領し、同じUltra担当で再開した。正規previewのmanaged-linux configureは依然configured:false、定期再開も20件上限でdisabled、latest prompt保存のみ成功。実行可能な制作は続け、停止中taskを背景稼働と説明しない。次の有限単位は原UVを保持するCC0解剖学的頭部と既存曲のCC0実録楽器化。首/眼/helmet/全theme予算、同じ48秒と音量/位相/出所を独立検査し、全画面知覚品質を未判定のまま統合する。
+
+期限2026-09-20は **NO-GO / evidence insufficient**。完成0/7・指定10作品比較0/10。画面全てのPS4写実目標は未達であり、局所改修・検査数・service待ちを終了条件にしない。
+
+
 ## 2026-09-16 — 継続中：写真の森・人物の連続動作・実武器の残像を統合
 
 継続分類 **ACTIVE**、単独Ultra writer継続。PR39の地形・水・影を基点に805本の写真枝葉、保存攻撃の連続動作と固定長両腕、剣/大剣/槍の実骨格に追従する残像を結合した。独立した実SceneView/非同期loader/Game接続検査は近遠の材質と影12path、9更新条件99/99release表示、407武器座標の誤差0、停止・死亡・移動・新規開始の消去を確認した。texture decoding/rendererは明示boundaryであり、WebGL画面や実機品質を合格にしない。

@@ -51,6 +51,8 @@ jobs:
         run: node scripts/verify-world-surfaces.mjs
       - name: Verify loaded foliage and same-frame actor trail integration
         run: node scripts/verify-scene-integration.mjs . artifacts/scene-integration-report.json
+      - name: Verify shared HDR loading, lighting and capability fallback
+        run: node scripts/verify-sky-integration.mjs . artifacts/sky-integration-report.json
       - run: npm run test:journey
       - run: npm run test:crossing
       - run: npm run test:forge

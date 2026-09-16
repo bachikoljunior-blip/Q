@@ -1,0 +1,17 @@
+✔ original HDR hash, linear half data and measured solar direction match the shared level-horizon sampling (9.20544ms)
+✔ IBL copy retains directional cloud radiance, removes the direct solar spike and replaces synthetic lower sky (183.335054ms)
+✔ native Three PMREM control flow uses exactly two face128 atlases and 19 render calls; resources release once (147.448163ms)
+✔ loader failure and invalid decode retry; concurrent successful loads share CPU data, not uploaded textures (3.725027ms)
+✔ generator exception restores public renderer state and disposes owned temporary input (90.645043ms)
+✔ same saved day controls photo, IBL, direct sun and foliage; active water/metal retain only native PBR reflection (111.498011ms)
+✔ fog display values match the official Three ACES shader matrix/fit across day and night radiance (0.915412ms)
+✔ real SceneView retains one sky across quality switches and failed replacement, then explicitly releases it (2286.342751ms)
+✔ explicit float/half-float support bakes once; unsupported or unknown capability keeps the analytic scene (1304.833933ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4360.044437

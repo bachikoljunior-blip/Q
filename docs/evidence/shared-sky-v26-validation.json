@@ -1,0 +1,212 @@
+{
+  "startedAt": "2026-09-16T02:42:15.873843+00:00",
+  "scope": "Required local source, gameplay, asset and CPU integration gates; no WebGL pixels or device timing.",
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "scripts/generate-vault-assets.mjs",
+        "--verify"
+      ],
+      "exitCode": 0,
+      "wallMs": 648.86,
+      "log": "artifacts/v26-gate-00.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-soundscape.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 78.41,
+      "log": "artifacts/v26-gate-01.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-main-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 4073.605,
+      "log": "artifacts/v26-gate-02.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-gathering-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 7546.173,
+      "log": "artifacts/v26-gate-03.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:vaults"
+      ],
+      "exitCode": 0,
+      "wallMs": 8063.841,
+      "log": "artifacts/v26-gate-04.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "wallMs": 33785.315,
+      "log": "artifacts/v26-gate-05.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-world-surfaces.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 2031.356,
+      "log": "artifacts/v26-gate-06.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-scene-integration.mjs",
+        ".",
+        "/workspace/scratch/e72662e3b71f/Q-ps4-v26/artifacts/scene-integration-report.json"
+      ],
+      "exitCode": 0,
+      "wallMs": 2804.889,
+      "log": "artifacts/v26-gate-07.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-sky-integration.mjs",
+        ".",
+        "/workspace/scratch/e72662e3b71f/Q-ps4-v26/artifacts/sky-integration-report.json"
+      ],
+      "exitCode": 0,
+      "wallMs": 4364.179,
+      "log": "artifacts/v26-gate-08.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:journey"
+      ],
+      "exitCode": 0,
+      "wallMs": 862.461,
+      "log": "artifacts/v26-gate-09.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:crossing"
+      ],
+      "exitCode": 0,
+      "wallMs": 1788.9,
+      "log": "artifacts/v26-gate-10.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:forge"
+      ],
+      "exitCode": 0,
+      "wallMs": 1127.512,
+      "log": "artifacts/v26-gate-11.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:session"
+      ],
+      "exitCode": 0,
+      "wallMs": 5578.092,
+      "log": "artifacts/v26-gate-12.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:expedition"
+      ],
+      "exitCode": 0,
+      "wallMs": 5875.823,
+      "log": "artifacts/v26-gate-13.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "review:combat"
+      ],
+      "exitCode": 0,
+      "wallMs": 1409.751,
+      "log": "artifacts/v26-gate-14.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "compare:touch"
+      ],
+      "exitCode": 0,
+      "wallMs": 1569.289,
+      "log": "artifacts/v26-gate-15.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "wallMs": 2740.851,
+      "log": "artifacts/v26-gate-16.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "package"
+      ],
+      "exitCode": 0,
+      "wallMs": 731.283,
+      "log": "artifacts/v26-gate-17.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:artifacts"
+      ],
+      "exitCode": 0,
+      "wallMs": 489.177,
+      "log": "artifacts/v26-gate-18.log"
+    }
+  ],
+  "wallMs": 85591.846,
+  "finishedAt": "2026-09-16T02:43:41.465691+00:00",
+  "tests": {
+    "passed": 251,
+    "failed": 0
+  },
+  "sourceAuthorHead": "141097b15ed0a8c72378e2fb811ae8daf49ed959",
+  "baseRemote": "1641ab6de66d2b27820d9f7281a464a6feb31a8d",
+  "stage": "artifacts/site-2f35io",
+  "standalone": {
+    "bytes": 15505597,
+    "sha256": "dbbfca53f1ecd9e17f602aeec638c15dcd112ca1a9843ce98c3a520216784f89"
+  },
+  "initialJsBytes": 163175,
+  "jsChunks": 3,
+  "totalJsBytes": 869437,
+  "main": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+  "delivery": "Not merged or deployed: PR39 normal merge unresolved; PR40 CI passed, stacked.",
+  "evidenceBoundary": "Actual native Three source and data control flow; explicit nonrendering renderer doubles, no WebGL/game pixels/device FPS/physical touch/audio listening/PS4 comparison."
+}

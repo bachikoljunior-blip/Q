@@ -87,6 +87,16 @@ for(const asset of [...forest.sources,...forest.derivatives]){
 }
 assert.equal(createHash('sha256').update(await readFile(forest.generator.path)).digest('hex'),forest.generator.sha256);
 
+const sky=JSON.parse(await readFile('src/assets/sky/provenance.json','utf8'));
+const skyOutputs=Object.keys(manifest).filter(path=>path.startsWith('src/assets/sky/')).sort();
+assert.deepEqual(skyOutputs,[sky.source.path],'only the original selected HDR belongs in the sky runtime');
+assert.equal(sky.source.license,'CC0-1.0');assert.equal(sky.source.runtimeIncluded,true);
+const skyBytes=await readFile(sky.source.path),skyOutput=manifest[sky.source.path]?.file;
+assert.equal(skyBytes.length,sky.source.bytes);assert.equal(createHash('sha256').update(skyBytes).digest('hex'),sky.source.sha256);assert(skyOutput);
+assert((await readFile(`dist/${skyOutput}`)).equals(skyBytes));assert((await readFile(`${root}/${skyOutput}`)).equals(skyBytes));
+assert(embedded.some(data=>data.equals(skyBytes)),'standalone omits the complete HDR sky');
+assert(!entry.includes(skyOutput),'HDR sky must remain behind the scene import');
+
 const provenance=JSON.parse(await readFile('src/assets/vaults/provenance.json','utf8'));
 assert.equal(provenance.schemaVersion,1,'unsupported vault asset provenance schema');
 const generator=await readFile(provenance.generator);
