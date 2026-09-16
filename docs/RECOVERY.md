@@ -1,6 +1,10 @@
 # 制作停止時の復旧
 
 
+最新追記（2026-09-16 03:14Z頃）: PR39の最初の405から1時間以上後、公式通常merge仕様の独立確認と同一head/base/main/成功CIの直前readbackに基づき、元payloadを1回だけ再試行した。結果はReadTimeout、PRopen/mergedfalse/main547676f維持。新しいtest merge16fff61d98870b7e8ed1e24df375fe0c9eabda3bは親547+bfc/tree3fe6であり実mainではない。追加mutationは行わずreadbackを続ける。通常mergeのexactly-once保証や、別merge-asyncのUUID追跡が利用可能だったと説明しない。PR42までexact tree/CI成功のstack保全を進め、別の肌/接地制作を継続する。
+
+
+
 2026-09-16の直接指定「達成するまで止めない」と利用上限後の「続けて」に従い、同じUltra所有担当の保存済み成果から継続する。局所単位の完了、正式描画/人間QA不在、通常mergeの未完了は、独立して実行可能な制作の終了条件にしない。実usage制約が再発した場合はその原応答と処理ID/確定SHA/未保存差分を保全し、稼働していない担当をbackground-runningと説明しない。Q定期再開は20件上限でdisabledのまま、保存済みpromptのみから次回実行を保証しない。
 
 PR39は通常mergeのtimeout後、一回のretryが405「Merge already in progress」。正規readbackでopen/merged=false、実main547676fdce8d8e97abed9f065aad0b6e24af2fd6のまま。原因未公開の操作を二重発火せず、mergecommit/mainの実変化を確認する。保存済みPR40/41と後続unitはfeatureへmergeせず、先行PRがmainへ入ってからretarget/requiredCI/expected-head通常mergeの順序を守る。未確認のtest mergeを実main・Site反映へ読み替えない。正規previewはmanaged-linux configured:false、監督mailbox不在。別browser/server/CIに移して迂回しない。

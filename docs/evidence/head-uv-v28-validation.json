@@ -1,0 +1,222 @@
+{
+  "startedAt": "2026-09-16T03:19:06.482305+00:00",
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "scripts/generate-vault-assets.mjs",
+        "--verify"
+      ],
+      "exitCode": 0,
+      "wallMs": 160.473,
+      "log": "artifacts/v28-gate-00.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-soundscape.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 114.96,
+      "log": "artifacts/v28-gate-01.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-main-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 4057.341,
+      "log": "artifacts/v28-gate-02.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-gathering-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 12063.245,
+      "log": "artifacts/v28-gate-03.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:vaults"
+      ],
+      "exitCode": 0,
+      "wallMs": 8154.093,
+      "log": "artifacts/v28-gate-04.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "wallMs": 37439.419,
+      "log": "artifacts/v28-gate-05.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-world-surfaces.mjs"
+      ],
+      "exitCode": 0,
+      "wallMs": 2149.941,
+      "log": "artifacts/v28-gate-06.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-scene-integration.mjs",
+        ".",
+        "/workspace/scratch/e72662e3b71f/Q-ps4-v28/artifacts/scene-integration-report.json"
+      ],
+      "exitCode": 0,
+      "wallMs": 2944.599,
+      "log": "artifacts/v28-gate-07.log"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-sky-integration.mjs",
+        ".",
+        "/workspace/scratch/e72662e3b71f/Q-ps4-v28/artifacts/sky-integration-report.json"
+      ],
+      "exitCode": 0,
+      "wallMs": 4085.951,
+      "log": "artifacts/v28-gate-08.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:journey"
+      ],
+      "exitCode": 0,
+      "wallMs": 707.321,
+      "log": "artifacts/v28-gate-09.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:crossing"
+      ],
+      "exitCode": 0,
+      "wallMs": 1475.834,
+      "log": "artifacts/v28-gate-10.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:forge"
+      ],
+      "exitCode": 0,
+      "wallMs": 1169.2,
+      "log": "artifacts/v28-gate-11.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:session"
+      ],
+      "exitCode": 0,
+      "wallMs": 7693.516,
+      "log": "artifacts/v28-gate-12.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:expedition"
+      ],
+      "exitCode": 0,
+      "wallMs": 9597.939,
+      "log": "artifacts/v28-gate-13.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "review:combat"
+      ],
+      "exitCode": 0,
+      "wallMs": 1029.831,
+      "log": "artifacts/v28-gate-14.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "compare:touch"
+      ],
+      "exitCode": 0,
+      "wallMs": 2090.382,
+      "log": "artifacts/v28-gate-15.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "wallMs": 4261.881,
+      "log": "artifacts/v28-gate-16.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "package"
+      ],
+      "exitCode": 0,
+      "wallMs": 835.933,
+      "log": "artifacts/v28-gate-17.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:artifacts"
+      ],
+      "exitCode": 0,
+      "wallMs": 470.892,
+      "log": "artifacts/v28-gate-18.log"
+    }
+  ],
+  "wallMs": 100515.381,
+  "finishedAt": "2026-09-16T03:20:46.997702+00:00",
+  "tests": {
+    "passed": 258,
+    "failed": 0
+  },
+  "authorHead": "81f6ace299a7b52ce10f8738d34b45d00d8a8118",
+  "baseRemote": "689d641b9dca28e855f9af0da0ad4017c9f25fbc",
+  "baseTree": "b6df0c0871f9b430df5672ffa3eced1b52c8d710",
+  "stage": "artifacts/site-eLB28M",
+  "standalone": {
+    "bytes": 15598643,
+    "sha256": "fa6f5dde8e631301d8279fdcff05be06ac9d06054858bd2bf836992f53ad9d3b"
+  },
+  "initialJsBytes": 163175,
+  "jsChunks": 3,
+  "totalJsBytes": 962483,
+  "headTriangles": 1546,
+  "runtimeVertices": 1012,
+  "geometrySourceSampleErrorMm": {
+    "max": 7.062869,
+    "p95": 2.074158
+  },
+  "independentUV": "head-uv-v28-audit/independent-uv-audit.json",
+  "realUsedActorBudget": {
+    "maxTriangles": 7998,
+    "maxMeshes": 14
+  },
+  "unusedCartesianBudgetPass": false,
+  "evidenceBoundary": "No rendering, skin appearance, device measurement or PS4 acceptance; exact UV geometry/source contracts only."
+}

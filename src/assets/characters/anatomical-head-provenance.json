@@ -11,9 +11,9 @@
     "licenseFile": "sources/MAKEHUMAN-LICENSE-ASSETS.md"
   },
   "generator": "scripts/characters/generate-anatomical-head.py",
-  "generatorSha256": "e776910c846ce1b77b33d2722dcb7e907248ac3bc9e3a75dd33e7d567774c6aa",
-  "outputBytes": 99284,
-  "outputSha256": "9a8bb68a01f52f52eba6849c8dd34202b9e4d8d8e93d1987f3ee2e1541fe2118",
+  "generatorSha256": "8bf8805f3f7a173198e9bf17edc60c2f31041a496e3a0abec445618c3165b85f",
+  "outputBytes": 120150,
+  "outputSha256": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
   "registrationAnchors": [
     [
       [
@@ -63,12 +63,12 @@
     "neckBoundary": 46
   },
   "lod": {
-    "surfaceTriangles": 1450,
+    "surfaceTriangles": 1500,
     "capTriangles": 46,
-    "totalTriangles": 1496,
-    "renderVertices": 938,
-    "collapses": 3495,
-    "lockedVertices": 375,
+    "totalTriangles": 1546,
+    "renderVertices": 1012,
+    "collapses": 3470,
+    "lockedVertices": 408,
     "protectedGroups": {
       "nose_ridges": 38,
       "lip_contours": 40,
@@ -77,61 +77,54 @@
       "extrema": 6
     },
     "uvIslandCount": 5,
-    "atlasRectangles": [
-      [
-        0.02,
-        0.02,
-        0.66,
-        0.96
-      ],
-      [
-        0.71,
-        0.02,
-        0.27,
-        0.19
-      ],
-      [
-        0.71,
-        0.26,
-        0.12,
-        0.18
-      ],
-      [
-        0.86,
-        0.26,
-        0.12,
-        0.18
-      ],
-      [
-        0.71,
-        0.5,
-        0.27,
-        0.15
-      ]
-    ],
+    "uvLayout": "Original OBJ corner UV coordinates; no atlas repack",
+    "uvSeamVertices": 187,
     "sourceVertexDistanceM": {
       "max": 0.0070628691242974485,
-      "p95": 0.002031412580309757,
-      "mean": 0.0006864692129858296,
+      "p95": 0.002074157733827385,
+      "mean": 0.0006931183626770623,
       "samples": 4244,
       "boundary": "Exact distances from all registered AND collar-fitted source vertices to LOD triangles. Registration/collar deformation of original MakeHuman is separate; not a continuous Hausdorff bound or perceptual proof."
     }
   },
+  "uvIntegrity": {
+    "sourceTriangleSigns": {
+      "positive": 8440,
+      "negative": 0,
+      "zero": 0
+    },
+    "sourceAbsoluteArea": 0.2086042268575,
+    "retainedTriangleSigns": {
+      "positive": 1500,
+      "negative": 0
+    },
+    "retainedAbsoluteArea": 0.208591453018,
+    "newOrientationReversals": 0,
+    "cap": {
+      "sourceUV": false,
+      "method": "Small planar XZ patch at mean source neck-boundary UV; hidden under retained neck",
+      "centre": [
+        0.38053029787234055,
+        0.9285537021276593
+      ],
+      "radiusScale": 0.001
+    }
+  },
   "normalStrategy": {
     "method": "Registered source smooth normals at retained source IDs if they face every surviving incident triangle; final mesh normals at neck cap or sharp folds.",
-    "sourceNormalsTransferred": 665
+    "sourceNormalsTransferred": 694
   },
   "normalComparison": {
-    "samples": 703,
-    "meanDegrees": 1.4152367263330408,
-    "p95Degrees": 6.494678552502683,
+    "samples": 728,
+    "meanDegrees": 1.2225970023556323,
+    "p95Degrees": 1.4787793334710982e-06,
     "maxDegrees": 60.0272753205157,
     "boundary": "Same retained source vertex smooth normals; excludes capped neck boundary. Not a rendered shading test."
   },
   "candidateCentroidToSourceDistanceM": {
-    "samples": 1450,
-    "max": 0.004655737832463404,
-    "p95": 0.002008535426981492
+    "samples": 1500,
+    "max": 0.005150615591749446,
+    "p95": 0.0019983126340578283
   },
   "archivedUnappliedSources": [
     {
@@ -151,10 +144,10 @@
     }
   ],
   "texture": {
-    "status": "unverified/not included",
+    "status": "not included in this unit",
     "expectedSourceDiffuseBytes": 3693828,
     "observedBytes": null,
-    "reason": "Bounded official archive transfer was stopped; no PNG saved or decoded. Existing flat skin material retained."
+    "reason": "Original diffuse independently retrieved and verified in separate research scratch; no PNG is included or sampled by this unit. Existing flat skin material retained."
   },
   "morphsApplied": [],
   "qualityBoundary": "CPU topology, source-vertex distance, normals and projected footprint do not establish rendered appearance, device performance, anatomical likeness or PS4 quality."

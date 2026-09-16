@@ -1,5 +1,20 @@
 # 制作状況 — 2026-09-16
 
+## 2026-09-16 — 継続中：元スキンへ正しく対応するUVを修復、肌と建築接地を制作
+
+v27の頭は無地のままだった。肌素材の調査で見つかった同一UV島内のseam属性喪失を、原OBJのcornerと原atlas座標を保持する方法へ修復した。187 seam頂点の全cornerを残し、1,500 surface三角形の反転と正の面積重複は独立計算で0。46内側capのUVを首領域へ収めた。0.0061235%のUV面積差は口内の境界4edgeのLOD置換で説明し、完全同一の面分割とは称さない。[修復・誤差・工程](ANATOMICAL_HEAD_UV_V28.md) / [独立原UV対照](evidence/head-uv-v28-audit/independent-uv-audit.md)。
+
+同じ頭を1,496→1,546triとし、実使用family既定＋soldier4themeの上限は最大7,998tri/14drawで維持。原形状sample→LODはp952.074158mm、max7.062869mmで既存2.1mm gateを変更していない。弱い面積重みを含む比較後に採用した。未使用family×themeを総当たりした70組の一部は以前から上限超過し、その全組を合格と扱わない。現在の実Scene適用範囲と別にevidenceへ保存した。
+
+結合19必須command・258/258 tests成功、wall100.515秒。初期JS163,175 B・3 chunks、全JS962,483 B、単体版15,598,643 B / SHA256 `fa6f5dde8e631301d8279fdcff05be06ac9d06054858bd2bf836992f53ad9d3b`、固定stage33public filesのbytes一致。肌はまだ本unitのruntimeへ貼っていない。別の20分単位で、公式CC0原PNG3,693,828 Bを保持し、同寸法WebP q95/541,954 Bを実際のface materialと遅延loaderへ接続中。元head領域PSNR42.642dB/前面44.123dB、21.333MiB GPU mip計算は低くなっていない。画面/端末/PS4品質は未確認。
+
+背景の新しい独立計測で、廃塔の実基礎外周が実triangle地面から6.108〜11.356m浮く欠陥を特定。別担当が37支持部の上端を保持して下を地面へ延ばし、camera/projectile/forecastの明示vertical boundsも同じlayoutへ接続中。住宅/橋の別の差と実画面不足は残す。記録の更新だけでなく実制作を継続している。
+
+リモート保全はPR39 head `bfc5d10d8b1042dc6063569a624c115b6c1e7833`、PR40 `1641ab6de66d2b27820d9f7281a464a6feb31a8d`、PR41 `173c4a7286c42fccb093d68b9cca91ec55319029`、PR42 `689d641b9dca28e855f9af0da0ad4017c9f25fbc`、各push/PR CI成功。03:14Z頃、公式通常merge仕様と直前同head/base/main/CIを独立確認してPR39を同payloadで1回だけ再試行したが再びReadTimeout。PRはopen/merged=false、実main `547676fdce8d8e97abed9f065aad0b6e24af2fd6` のまま。新test merge `16fff61d98870b7e8ed1e24df375fe0c9eabda3b` のtree一致を実main反映としない。追加mutationを停止しreadbackへ戻す。後続はfeatureへmergeせず、実main反映後に順番retarget/requiredCI/通常mergeする。Site23・owner限定は未更新。
+
+fresh Q定期再開はdisabled/next_run=null、有効task20、保存済みprompt/予定/title/timezone一致。空き根拠がないので再enableせず、他taskを変更しない。正式configureはmanaged-linux/configured:false。期限2026-09-20は **NO-GO / evidence insufficient**、完成0/7・10作品比較0/10。実画面/実機/実聴/外部比較と全体残量を局所の検査成功へ読み替えず、実行可能な品質制作を続ける。
+
+
 ## 2026-09-16 — 継続中：頭部の造形・目と衣装の接続、実録楽器の曲を結合
 
 同じUltra担当の完成頭部 `7b8b4b69f01a405d0326e4188f267c0257d8a577` と実楽器曲 `7d361843d3ac8d1b1f7377f3684cfc31617e3395` を、v26の実天空・環境光へ結合した。頭はCC0 MakeHuman原型から眼窩・鼻・顎・耳を登録し1,496triへ制限、首の前傾露出・閉眼・フード/兜の前方遮蔽を修正。全family/4themeの既存8,000tri/14draw上限を維持する。肌の画像は未適用であり、原UVの同一島内seam欠落を次v28で直してから素材を貼る。[頭部と残る誤差](ANATOMICAL_HEAD_V27.md)。

@@ -1,0 +1,425 @@
+{
+  "boundary": "CPU scene construction, all family/theme pairs; no GPU or perceptual claim",
+  "rows": [
+    {
+      "family": "player",
+      "theme": null,
+      "triangles": 7822,
+      "draws": 14
+    },
+    {
+      "family": "player",
+      "theme": "ember",
+      "triangles": 8222,
+      "draws": 14
+    },
+    {
+      "family": "player",
+      "theme": "tide",
+      "triangles": 8154,
+      "draws": 14
+    },
+    {
+      "family": "player",
+      "theme": "gale",
+      "triangles": 8162,
+      "draws": 15
+    },
+    {
+      "family": "player",
+      "theme": "moss",
+      "triangles": 8366,
+      "draws": 14
+    },
+    {
+      "family": "npc",
+      "theme": null,
+      "triangles": 6618,
+      "draws": 12
+    },
+    {
+      "family": "npc",
+      "theme": "ember",
+      "triangles": 7018,
+      "draws": 12
+    },
+    {
+      "family": "npc",
+      "theme": "tide",
+      "triangles": 6950,
+      "draws": 12
+    },
+    {
+      "family": "npc",
+      "theme": "gale",
+      "triangles": 6958,
+      "draws": 12
+    },
+    {
+      "family": "npc",
+      "theme": "moss",
+      "triangles": 7162,
+      "draws": 12
+    },
+    {
+      "family": "sena",
+      "theme": null,
+      "triangles": 6786,
+      "draws": 12
+    },
+    {
+      "family": "sena",
+      "theme": "ember",
+      "triangles": 7186,
+      "draws": 12
+    },
+    {
+      "family": "sena",
+      "theme": "tide",
+      "triangles": 7118,
+      "draws": 12
+    },
+    {
+      "family": "sena",
+      "theme": "gale",
+      "triangles": 7126,
+      "draws": 12
+    },
+    {
+      "family": "sena",
+      "theme": "moss",
+      "triangles": 7330,
+      "draws": 12
+    },
+    {
+      "family": "smith",
+      "theme": null,
+      "triangles": 6242,
+      "draws": 11
+    },
+    {
+      "family": "smith",
+      "theme": "ember",
+      "triangles": 6642,
+      "draws": 11
+    },
+    {
+      "family": "smith",
+      "theme": "tide",
+      "triangles": 6574,
+      "draws": 11
+    },
+    {
+      "family": "smith",
+      "theme": "gale",
+      "triangles": 6582,
+      "draws": 12
+    },
+    {
+      "family": "smith",
+      "theme": "moss",
+      "triangles": 6786,
+      "draws": 11
+    },
+    {
+      "family": "healer",
+      "theme": null,
+      "triangles": 7038,
+      "draws": 11
+    },
+    {
+      "family": "healer",
+      "theme": "ember",
+      "triangles": 7438,
+      "draws": 11
+    },
+    {
+      "family": "healer",
+      "theme": "tide",
+      "triangles": 7370,
+      "draws": 11
+    },
+    {
+      "family": "healer",
+      "theme": "gale",
+      "triangles": 7378,
+      "draws": 11
+    },
+    {
+      "family": "healer",
+      "theme": "moss",
+      "triangles": 7582,
+      "draws": 11
+    },
+    {
+      "family": "patient",
+      "theme": null,
+      "triangles": 6270,
+      "draws": 10
+    },
+    {
+      "family": "patient",
+      "theme": "ember",
+      "triangles": 6670,
+      "draws": 10
+    },
+    {
+      "family": "patient",
+      "theme": "tide",
+      "triangles": 6602,
+      "draws": 10
+    },
+    {
+      "family": "patient",
+      "theme": "gale",
+      "triangles": 6610,
+      "draws": 10
+    },
+    {
+      "family": "patient",
+      "theme": "moss",
+      "triangles": 6814,
+      "draws": 10
+    },
+    {
+      "family": "porter",
+      "theme": null,
+      "triangles": 6450,
+      "draws": 10
+    },
+    {
+      "family": "porter",
+      "theme": "ember",
+      "triangles": 6850,
+      "draws": 10
+    },
+    {
+      "family": "porter",
+      "theme": "tide",
+      "triangles": 6782,
+      "draws": 10
+    },
+    {
+      "family": "porter",
+      "theme": "gale",
+      "triangles": 6790,
+      "draws": 11
+    },
+    {
+      "family": "porter",
+      "theme": "moss",
+      "triangles": 6994,
+      "draws": 10
+    },
+    {
+      "family": "scout",
+      "theme": null,
+      "triangles": 6798,
+      "draws": 11
+    },
+    {
+      "family": "scout",
+      "theme": "ember",
+      "triangles": 7198,
+      "draws": 11
+    },
+    {
+      "family": "scout",
+      "theme": "tide",
+      "triangles": 7130,
+      "draws": 11
+    },
+    {
+      "family": "scout",
+      "theme": "gale",
+      "triangles": 7138,
+      "draws": 12
+    },
+    {
+      "family": "scout",
+      "theme": "moss",
+      "triangles": 7342,
+      "draws": 11
+    },
+    {
+      "family": "traveler",
+      "theme": null,
+      "triangles": 6578,
+      "draws": 10
+    },
+    {
+      "family": "traveler",
+      "theme": "ember",
+      "triangles": 6978,
+      "draws": 10
+    },
+    {
+      "family": "traveler",
+      "theme": "tide",
+      "triangles": 6910,
+      "draws": 10
+    },
+    {
+      "family": "traveler",
+      "theme": "gale",
+      "triangles": 6918,
+      "draws": 11
+    },
+    {
+      "family": "traveler",
+      "theme": "moss",
+      "triangles": 7122,
+      "draws": 10
+    },
+    {
+      "family": "courier",
+      "theme": null,
+      "triangles": 6398,
+      "draws": 10
+    },
+    {
+      "family": "courier",
+      "theme": "ember",
+      "triangles": 6798,
+      "draws": 10
+    },
+    {
+      "family": "courier",
+      "theme": "tide",
+      "triangles": 6730,
+      "draws": 10
+    },
+    {
+      "family": "courier",
+      "theme": "gale",
+      "triangles": 6738,
+      "draws": 10
+    },
+    {
+      "family": "courier",
+      "theme": "moss",
+      "triangles": 6942,
+      "draws": 10
+    },
+    {
+      "family": "soldier",
+      "theme": null,
+      "triangles": 7454,
+      "draws": 13
+    },
+    {
+      "family": "soldier",
+      "theme": "ember",
+      "triangles": 7854,
+      "draws": 13
+    },
+    {
+      "family": "soldier",
+      "theme": "tide",
+      "triangles": 7786,
+      "draws": 13
+    },
+    {
+      "family": "soldier",
+      "theme": "gale",
+      "triangles": 7794,
+      "draws": 14
+    },
+    {
+      "family": "soldier",
+      "theme": "moss",
+      "triangles": 7998,
+      "draws": 13
+    },
+    {
+      "family": "ranger",
+      "theme": null,
+      "triangles": 7078,
+      "draws": 12
+    },
+    {
+      "family": "ranger",
+      "theme": "ember",
+      "triangles": 7478,
+      "draws": 12
+    },
+    {
+      "family": "ranger",
+      "theme": "tide",
+      "triangles": 7410,
+      "draws": 12
+    },
+    {
+      "family": "ranger",
+      "theme": "gale",
+      "triangles": 7418,
+      "draws": 12
+    },
+    {
+      "family": "ranger",
+      "theme": "moss",
+      "triangles": 7622,
+      "draws": 12
+    },
+    {
+      "family": "wolf",
+      "theme": null,
+      "triangles": 4028,
+      "draws": 6
+    },
+    {
+      "family": "wolf",
+      "theme": "ember",
+      "triangles": 4028,
+      "draws": 6
+    },
+    {
+      "family": "wolf",
+      "theme": "tide",
+      "triangles": 4028,
+      "draws": 6
+    },
+    {
+      "family": "wolf",
+      "theme": "gale",
+      "triangles": 4028,
+      "draws": 6
+    },
+    {
+      "family": "wolf",
+      "theme": "moss",
+      "triangles": 4028,
+      "draws": 6
+    },
+    {
+      "family": "boss",
+      "theme": null,
+      "triangles": 7950,
+      "draws": 14
+    },
+    {
+      "family": "boss",
+      "theme": "ember",
+      "triangles": 8046,
+      "draws": 14
+    },
+    {
+      "family": "boss",
+      "theme": "tide",
+      "triangles": 7978,
+      "draws": 14
+    },
+    {
+      "family": "boss",
+      "theme": "gale",
+      "triangles": 7986,
+      "draws": 15
+    },
+    {
+      "family": "boss",
+      "theme": "moss",
+      "triangles": 8190,
+      "draws": 14
+    }
+  ]
+}
