@@ -47,6 +47,8 @@ jobs:
           path: artifacts/vault-runtime-report.json
           if-no-files-found: error
       - run: npm test
+      - name: Verify terrain contact, shallow stream and stable shadow geometry
+        run: node scripts/verify-world-surfaces.mjs
       - run: npm run test:journey
       - run: npm run test:crossing
       - run: npm run test:forge

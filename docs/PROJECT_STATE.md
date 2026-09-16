@@ -1,5 +1,19 @@
 # 制作状況 — 2026-09-15
 
+## 2026-09-16 — PS4相当の全画面品質へ継続中：地形・水・影の修正を段階統合
+
+直接原文「PS4相当の品質達成 これ達成するまで絶対止めんな」を受領。現在の継続分類は **ACTIVE**、単独Ultra writer `/root/ultra_q_ps4_quality_continuation`。最新main `547676fdce8d8e97abed9f065aad0b6e24af2fd6` を実fetchして既存正本と照合。前のv23は正常な完了checkpointで、ユーザー停止ではなく本目標は未達。旧PR3/13・他repoを変更せず再開した。
+
+最初の有限単位は足元・地形・浅い流れ・岸・布草の裏面normal・sun shadow。独立Ultra監査で同じ約56万地点の地形最大ずれ1.502110m→0.059330m、全5拠点exact接地、水面の埋没7,740/29,756→0を確認。密な別sample集合では地形最大0.088640mを残す。実画面/実機/PS4相当の確認とは別である。実装・出所・手戻り・予算・検証は [WORLD_SURFACES_V24.md](WORLD_SURFACES_V24.md)、機械証拠は [baseline](evidence/world-surfaces-v24-baseline.json) / [candidate](evidence/world-surfaces-v24-candidate.json)。この記録時点のGitHub/Site反映は下の統合結果で更新する。
+
+同時に隔離Ultra担当が人物の連続した攻撃/武器/接地、写真cutoutの樹冠・枝、実武器に追従するVFXを制作中。ここに列挙しただけで実装済みとは数えない。局所単位公開や正式previewの不足で主制作を終えず、これらの具体的な続きへ進む。正式previewはmanaged-linuxだが監督mailbox不在。既存定期再開は20件上限で拒否、継続prompt保存のみ成功しdisabledのまま。人間の準備待ちや他taskの変更、制限迂回、新しいwatcherは行わない。
+
+継続確認直後・環境不足発生時・統合前の期限2026-09-20判断は **NO-GO / evidence insufficient**。完成受入0/7、指定10作品比較0/10。実行可能な改善を続け、実際のruntime制限が生じた場合は成果・未完了操作・次地点を保存する。古いACTIVE記録を永続的な稼働証明にしない。
+
+
+必須ローカル検証は17command / 223tests全成功、wall 88.166秒。初期JS 163,175 B（165,000 B上限維持）、単体版 13,120,704 B / SHA256 `aa700800e365583088f61e4aa1beaace660f55ce1ea696a88e66aced0405569c`。source/stage/単体版の照合成功。GitHub/同一Siteの結果は反映後に追記する。
+
+
 ## 2026-09-15 — タイトル映像と画面全体の写実方向改修をmain / owner-only Siteへ反映完了
 
 最新原文「タイトル画面は映像あるといいな」「モデル、アニメはps4のリアリスティック描画のゲームくらいのクオリティがいいな」「モデルというか画面に映るもの全て」を受領。基点c33be61a3f50fa5d703e9c1fcf39a8140bc04507から単独writer・排他worktreeで制作。人物だけでなく地形/岩/草木/建築小物/水空/光影/VFX/カメラ/HUD/メニューを棚卸しし、以下の一貫した有限改修を行った。カメラの移動・遮蔽・既存保存/進行と前回の48秒三層音楽/24効果音を保持する。

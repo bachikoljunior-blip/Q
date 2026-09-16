@@ -51,6 +51,18 @@ export function skyMaterial() {
       }` });
 }
 const nightTop=new T.Color(0x101d30),dayTop=new T.Color(0x567586),nightHorizon=new T.Color(0x3b4a5a),dayHorizon=new T.Color(0xb7b6a5);
+const shadowRight=new T.Vector3(),shadowUp=new T.Vector3(),worldUp=new T.Vector3(0,1,0),shadowAnchor=new T.Vector3();
+export function stableShadowAnchor(position,direction,shadow,target=new T.Vector3()) {
+  shadowRight.crossVectors(worldUp,direction).normalize();
+  shadowUp.crossVectors(direction,shadowRight).normalize();
+  const horizontal=(shadow.camera.right-shadow.camera.left)/shadow.mapSize.x;
+  const vertical=(shadow.camera.top-shadow.camera.bottom)/shadow.mapSize.y;
+  const x=position.x*shadowRight.x+position.y*shadowRight.y+position.z*shadowRight.z;
+  const y=position.x*shadowUp.x+position.y*shadowUp.y+position.z*shadowUp.z;
+  const depth=position.x*direction.x+position.y*direction.y+position.z*direction.z;
+  return target.copy(shadowRight).multiplyScalar(Math.round(x/horizontal)*horizontal)
+    .addScaledVector(shadowUp,Math.round(y/vertical)*vertical).addScaledVector(direction,depth);
+}
 export function updateAtmosphere(view, day, time) {
   const cycle=(Math.sin((day-.04)*Math.PI*2)+1)/2;
   const daylight=.16+cycle*.84;
@@ -63,8 +75,11 @@ export function updateAtmosphere(view, day, time) {
   view.scene.fog.color.copy(atmosphere.horizon.value);
   view.scene.fog.density=.0026+(1-cycle)*.0011;
   const p=view.game.player;
-  view.sun.position.set(p.x+atmosphere.sun.value.x*135,p.y+atmosphere.sun.value.y*135,p.z+atmosphere.sun.value.z*135);
-  view.sun.target.position.set(p.x,p.y,p.z);
+  // Hold the projected world on shadow-map texels while walking. This keeps
+  // thin branches and masonry shadows from crawling through subpixel samples.
+  stableShadowAnchor(p,atmosphere.sun.value,view.sun.shadow,shadowAnchor);
+  view.sun.position.copy(shadowAnchor).addScaledVector(atmosphere.sun.value,135);
+  view.sun.target.position.copy(shadowAnchor);
   // Keep the visual horizon centred on the player throughout the wide west map.
   view.sky.position.set(p.x,p.y,p.z);
 }
