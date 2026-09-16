@@ -1,0 +1,74 @@
+{
+  "boundary": "Actual main bundle + actual async SceneView/native Three + actual vault cache. Other asset loaders, DOM, sound, timers and WebGLRenderer are explicit boundary doubles. No image decoding, GPU shader compilation, screen or device performance.",
+  "sourceHashes": {
+    "src/main.js": "697482115caaee6a3ae57a5ff4b50ab76b09d3f41efe81c8042cfca40b7c337e",
+    "src/scene.js": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b",
+    "src/vault-scene.js": "6e82542449cf7d67e4d46410fa85aee773f81052ba068825b2bcda8646a3b96e",
+    "src/vault-textures.js": "87bde10a08cd4b512b7c3739f71ca39ba3f7bcc0f6da9c4102d46bfb365f9306"
+  },
+  "startup": {
+    "beforeNearResolved": {
+      "requests": [
+        "ember",
+        "tide"
+      ],
+      "constructors": 0
+    },
+    "afterNearResolved": [
+      {
+        "theme": "ember",
+        "map": "ember",
+        "version": 0
+      },
+      {
+        "theme": "tide",
+        "map": "tide",
+        "version": 0
+      },
+      {
+        "theme": "gale",
+        "map": "Q original stone albedo-roughness",
+        "version": 0
+      },
+      {
+        "theme": "moss",
+        "map": "Q original stone albedo-roughness",
+        "version": 0
+      }
+    ]
+  },
+  "lifecycle": {
+    "title": {
+      "renderCallsAdded": 0,
+      "generationUnchanged": true,
+      "readyMapsHeld": 4,
+      "materialUnchanged": true
+    },
+    "resume": {
+      "requests": 4,
+      "allFourApplied": true
+    },
+    "newGame": {
+      "constructors": 1,
+      "requests": 4,
+      "allRetained": true
+    },
+    "explicitStreamingDispose": {
+      "laterRequests": 0,
+      "materialChanges": 0,
+      "calledByMain": false
+    }
+  },
+  "material": {
+    "regionalMaterials": 4,
+    "globalPhotoInstallCannotReplaceMaps": true,
+    "globalPhotoNormalNotUsed": true
+  },
+  "cache": {
+    "retainedThemes": 4,
+    "requests": 4,
+    "disposedMaps": 4,
+    "pendingTimers": 0
+  },
+  "mainErrors": []
+}

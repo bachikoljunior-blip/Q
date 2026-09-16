@@ -1,0 +1,581 @@
+{
+  "activeVariants": [
+    {
+      "role": "player",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 14,
+      "triangles": 7822
+    },
+    {
+      "role": "player",
+      "options": {},
+      "weaponType": "spear",
+      "meshes": 14,
+      "triangles": 7724
+    },
+    {
+      "role": "player",
+      "options": {},
+      "weaponType": "greatsword",
+      "meshes": 14,
+      "triangles": 7822
+    },
+    {
+      "role": "npc",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 12,
+      "triangles": 6718
+    },
+    {
+      "role": "sena",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 12,
+      "triangles": 6786
+    },
+    {
+      "role": "smith",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 11,
+      "triangles": 6242
+    },
+    {
+      "role": "healer",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 11,
+      "triangles": 7038
+    },
+    {
+      "role": "patient",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 10,
+      "triangles": 6270
+    },
+    {
+      "role": "porter",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 10,
+      "triangles": 6450
+    },
+    {
+      "role": "scout",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 11,
+      "triangles": 6798
+    },
+    {
+      "role": "traveler",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 10,
+      "triangles": 6578
+    },
+    {
+      "role": "courier",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 10,
+      "triangles": 6398
+    },
+    {
+      "role": "soldier",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 13,
+      "triangles": 7454
+    },
+    {
+      "role": "ranger",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 12,
+      "triangles": 7108
+    },
+    {
+      "role": "wolf",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 6,
+      "triangles": 4028
+    },
+    {
+      "role": "boss",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 14,
+      "triangles": 7950
+    },
+    {
+      "role": "keeper",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 12,
+      "triangles": 6718
+    },
+    {
+      "role": "knight",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 13,
+      "triangles": 7454
+    },
+    {
+      "role": "archer",
+      "options": {},
+      "weaponType": "sword",
+      "meshes": 12,
+      "triangles": 7108
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "ember"
+      },
+      "weaponType": "sword",
+      "meshes": 13,
+      "triangles": 7854
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "tide"
+      },
+      "weaponType": "sword",
+      "meshes": 13,
+      "triangles": 7786
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "gale"
+      },
+      "weaponType": "sword",
+      "meshes": 14,
+      "triangles": 7794
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "moss"
+      },
+      "weaponType": "sword",
+      "meshes": 13,
+      "triangles": 7998
+    }
+  ],
+  "rawGeometryCountBoundary": "roles counts traverse all template meshes, including hidden weapons; activeVariants are production actor initialization visibility counts.",
+  "boundary": "Native Three materials, geometry, bone references and cache; decode double. No image perception, WebGL shader compilation or actual upload count.",
+  "roles": [
+    {
+      "role": "player",
+      "options": {},
+      "meshes": 22,
+      "triangles": 8208,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "b3947b",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "npc",
+      "options": {},
+      "meshes": 12,
+      "triangles": 6718,
+      "face": true,
+      "headData": "identity-head-data.js",
+      "uvCorners": 1062,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "ab8770",
+      "faceGeometrySHA256": "cfdc378628481f3cfde13bdff6e75c7e212caaf8558dd9338a8f46d76d8d6648",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "sena",
+      "options": {},
+      "meshes": 12,
+      "triangles": 6786,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "b18e79",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "smith",
+      "options": {},
+      "meshes": 11,
+      "triangles": 6242,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "98765d",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "healer",
+      "options": {},
+      "meshes": 11,
+      "triangles": 7038,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "bc9a81",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "patient",
+      "options": {},
+      "meshes": 10,
+      "triangles": 6270,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "b19985",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "porter",
+      "options": {},
+      "meshes": 10,
+      "triangles": 6450,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "8f6c55",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "scout",
+      "options": {},
+      "meshes": 11,
+      "triangles": 6798,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "b29071",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "traveler",
+      "options": {},
+      "meshes": 10,
+      "triangles": 6578,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "b7997e",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "courier",
+      "options": {},
+      "meshes": 10,
+      "triangles": 6398,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "a27d63",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "soldier",
+      "options": {},
+      "meshes": 13,
+      "triangles": 7454,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "a68e79",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "ranger",
+      "options": {},
+      "meshes": 12,
+      "triangles": 7108,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "ac8b70",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "wolf",
+      "options": {},
+      "meshes": 6,
+      "triangles": 4028,
+      "face": false
+    },
+    {
+      "role": "boss",
+      "options": {},
+      "meshes": 14,
+      "triangles": 7950,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "8b8270",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "keeper",
+      "options": {},
+      "meshes": 12,
+      "triangles": 6718,
+      "face": true,
+      "headData": "identity-head-data.js",
+      "uvCorners": 1062,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "ab8770",
+      "faceGeometrySHA256": "cfdc378628481f3cfde13bdff6e75c7e212caaf8558dd9338a8f46d76d8d6648",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "knight",
+      "options": {},
+      "meshes": 13,
+      "triangles": 7454,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "a68e79",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "archer",
+      "options": {},
+      "meshes": 12,
+      "triangles": 7108,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "ac8b70",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "ember"
+      },
+      "meshes": 13,
+      "triangles": 7854,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "a68e79",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "tide"
+      },
+      "meshes": 13,
+      "triangles": 7786,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "a68e79",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "gale"
+      },
+      "meshes": 14,
+      "triangles": 7794,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "a68e79",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    },
+    {
+      "role": "soldier",
+      "options": {
+        "theme": "moss"
+      },
+      "meshes": 13,
+      "triangles": 7998,
+      "face": true,
+      "headData": "anatomical-head-data.js",
+      "uvCorners": 1012,
+      "maxNativeUVError": 2.9766082709770103e-8,
+      "originalColor": "a68e79",
+      "faceGeometrySHA256": "6801b58135cd2cbeb16ddeb8b73800423dede38531e983089ecb3575bbd6813b",
+      "roughness": 1,
+      "bumpScale": 0.00018,
+      "roughnessMapName": "Q skin microstructure",
+      "headBone": true,
+      "neckBone": true,
+      "lidBones": 2
+    }
+  ],
+  "counts": {
+    "variants": 21,
+    "uniqueMaterials": 93,
+    "uniqueFaceMaterials": 13,
+    "uniqueGeometry": 219,
+    "changedMaterialReferences": 1,
+    "unchangedMaterialReferences": 253,
+    "changedRoles": [
+      "smith"
+    ],
+    "extraSmithClones": 12,
+    "loadAsyncCalls": 1,
+    "textureCloneCalls": 0,
+    "textureVersionBeforeAfterClones": [
+      1,
+      1
+    ],
+    "disposals": 1
+  },
+  "protected": "Only smith face map/color change after installing existing texture; all eyes/iris/lid/neck/body/cloth/hair and their roughness/bump references remain unchanged; detach restores exact flat color.",
+  "sourceHashes": {
+    "src/assets/characters/detailed-geometry.js": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4",
+    "src/skin-materials.js": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63",
+    "src/skin-texture-loader.js": "b6a8f15968944f98e34f952ad2798e7a0ae3c6786f328c46c0b5ea5e6c55cb52",
+    "src/skin-assets.js": "85d52c671d3ae6ce50ffb6461b7df0b416fa9a3353a70d399dbf6adb8aced076",
+    "src/assets/characters/anatomical-head-data.js": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
+    "src/assets/characters/identity-head-data.js": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe"
+  },
+  "durationSeconds": 0.29159585800000004
+}

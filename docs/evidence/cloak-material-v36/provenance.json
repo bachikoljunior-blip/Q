@@ -1,0 +1,69 @@
+{
+  "asset": "Hessian 380",
+  "sourceKind": "Photographic PBR texture set, acquired public JPEG variants; not generated imagery",
+  "assetPage": "https://polyhaven.com/a/hessian_380",
+  "licensePage": "https://polyhaven.com/license",
+  "license": "CC0-1.0 as stated for assets on official page and license page",
+  "authors": {
+    "photography": "colormass",
+    "processing": "Rico Cilliers"
+  },
+  "publishedFileLinks": {
+    "diff": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/hessian_380/hessian_380_diff_4k.jpg",
+    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/hessian_380/hessian_380_nor_gl_4k.jpg",
+    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/hessian_380/hessian_380_rough_4k.jpg"
+  },
+  "published4KReadResults": {
+    "diff": "web reader content-length limit: 13502150 B",
+    "nor_gl": "web reader content-length limit: 13561983 B",
+    "rough": "web reader content-length limit: 15482885 B"
+  },
+  "acquiredFiles": [
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_diff_1k.jpg",
+      "urlDerivation": "1K variant of the exact official individual 4K link",
+      "beganAt": "2026-09-16T06:27:03.251647+00:00",
+      "status": 200,
+      "bytes": 944914,
+      "sha256": "5727302df3a9c845e6320ff186ac13fc7d0f1ffcd6fda71667e808e09379fe6f",
+      "file": "hessian_380_diff_1k.jpg"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_nor_gl_1k.jpg",
+      "urlDerivation": "1K variant of the exact official individual 4K link",
+      "beganAt": "2026-09-16T06:27:03.252439+00:00",
+      "status": 200,
+      "bytes": 1076074,
+      "sha256": "3994fd74148cb413892edd08155976497b3e7e15a403a182f07325a6b1e7be1a",
+      "file": "hessian_380_nor_gl_1k.jpg"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_rough_1k.jpg",
+      "urlDerivation": "1K variant of the exact official individual 4K link",
+      "beganAt": "2026-09-16T06:27:03.253317+00:00",
+      "status": 200,
+      "bytes": 956823,
+      "sha256": "a828755c5ddc9af0697eeed46427c5145df1dea5f1e2839f643156a285282fed",
+      "file": "hessian_380_rough_1k.jpg"
+    }
+  ],
+  "sourceVerificationBoundary": "Official asset page lists 1K as a resolution, but exact acquired 1K links were inferred by substituting resolution in the published 4K links. API metadata unavailable, independently published 1K URL and official expected digest not verified. HTTP200 and local SHA prove received bytes only.",
+  "chronology": "Native one-shot 1K requests began 2026-09-16T06:27:03Z and all completed 06:27:14Z. The parent later clarified no unlisted URL construction. On receipt, a normal session termination/poll returned already-complete exit0; no subsequent fetch, URL construction or alternative route was attempted. The archived script now refuses execution.",
+  "forbiddenPriorCandidate": "No requests to rejected poly_wool_herringbone resource. No cotton_jersey acquisition/research repeated.",
+  "rasterChanges": "None: original bytes preserved, decoded for inspection and numerical analysis only. No crop, resize, retouch, recolor, generated image or codec export.",
+  "runtimeAdoption": "Not adopted. Kept only as evidence/reuse candidate under docs; no src import or runtime changes.",
+  "physicalScale": {
+    "pageDensityPixelsPerCM": 299.1,
+    "pageLargestResolution": 8192,
+    "derivedTileMeters": 0.2738883316616516,
+    "exactPhysicalMetadataVerified": false
+  },
+  "timing": {
+    "taskStartUTC": "2026-09-16T06:23:39Z",
+    "acquisitionCompletedUTC": "2026-09-16T06:27:14.844939+00:00",
+    "nativeDownloadWallSeconds": 11.597423560000607,
+    "integrationSeconds": 0,
+    "separateAnalysisStopwatch": "not measured; no invented GPU or combined implementation time"
+  },
+  "capturedAt": "2026-09-16T06:32:01.015534+00:00"
+}

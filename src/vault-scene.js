@@ -29,11 +29,15 @@ function terrainFloor(slice, groundAt, baseY) {
 }
 
 export class VaultScene {
-  constructor(scene, game, groundAt, textures = {}) {
-    this.groups = new Map(); this.altars = new Map();
+  constructor(scene, game, groundAt, textures = {}, loadTextures = null) {
+    this.groups = new Map(); this.altars = new Map(); this.textureMaterials = new Map();
+    this.loadTextures = loadTextures; this.readyTextures = textures; this.textureCheckAt = 0; this.textureGeneration = 0;
     for (const slice of VAULT_SLICES) {
       const group = new T.Group(), y = groundAt(slice.center.x, slice.center.z); group.position.set(0, y, 0); group.userData.vaultId = slice.id; scene.add(group);
-      const style = styles[slice.theme], texture = textures[slice.theme], stone = surfaceMaterial('stone',style.stone, texture ? { map: texture } : {}), dark = surfaceMaterial('metal',0x414746), accent = surfaceMaterial('metal',style.accent, { unique:true,emissive: style.emissive, emissiveIntensity: 1.5 });
+      const style = styles[slice.theme], texture = textures[slice.theme], stone = surfaceMaterial('stone',style.stone, { unique:true, ...(texture ? { map: texture } : {}) }), dark = surfaceMaterial('metal',0x414746), accent = surfaceMaterial('metal',style.accent, { unique:true,emissive: style.emissive, emissiveIntensity: 1.5 });
+      // Regional ownership: late maps cannot mutate cached world stone or use
+      // the global photographic normal shader meant for that different map.
+      stone.userData.authoredSurface = false; this.textureMaterials.set(slice.theme, stone);
       const floor = mesh(terrainFloor(slice, groundAt, y), stone, group); floor.userData.assetRole = 'terrain-floor';
       for (const wall of slice.walls) {
         const pillar = mesh(cylinder, stone, group, [wall.x, groundAt(wall.x, wall.z) - y + wall.height / 2, wall.z], [wall.r, wall.height, wall.r]); pillar.userData.assetRole = 'closed-space-wall';
@@ -56,7 +60,28 @@ export class VaultScene {
       this.groups.set(slice.id, group); this.altars.set(slice.id, { memory, halo, light, accent });
     }
   }
-  update(game, time) {
+  updateTextures(game, time, active) {
+    if (this.texturesDisposed) return;
+    if (this.textureGame !== game || this.textureActive !== active) {
+      this.textureGame = game; this.textureActive = active; this.textureGeneration++; this.texturePending = false; this.textureCheckAt = 0;
+    }
+    if (!active) return;
+    // Async completion stores results only. Maps change in the current active
+    // frame, never in a callback from an old game, title or disposed view.
+    for (const [theme, texture] of Object.entries(this.readyTextures)) {
+      const material = this.textureMaterials.get(theme);
+      if (material && material.map !== texture) { material.map = texture; material.userData.textureBytes = texture.image.width * texture.image.height * 4; material.needsUpdate = true; }
+    }
+    if (!this.loadTextures || this.texturePending || time < this.textureCheckAt) return;
+    this.textureCheckAt = time + .5; this.texturePending = true;
+    const generation = this.textureGeneration;
+    this.loadTextures(game.player, 120).then(textures => {
+      if (!this.texturesDisposed && generation === this.textureGeneration) this.readyTextures = textures;
+    }).catch(() => {}).finally(() => { if (generation === this.textureGeneration) this.texturePending = false; });
+  }
+  disposeTextureStreaming() { this.texturesDisposed = true; this.textureGeneration++; this.loadTextures = null; this.readyTextures = {}; }
+  update(game, time, active = false) {
+    this.updateTextures(game, time, active);
     for (const slice of VAULT_SLICES) {
       const altar = this.altars.get(slice.id), progress = game.vaults[slice.id], dead = game.enemies.find(enemy => enemy.id === slice.warden.id)?.dead;
       const ready = !!dead && !progress.claimed; altar.memory.visible = altar.halo.visible = ready; altar.light.intensity = ready ? 4 + Math.sin(time * 3) : 0;

@@ -1,0 +1,365 @@
+{
+  "at": "2026-09-16T06:38:42.026Z",
+  "elapsedSeconds": 19.665673767,
+  "cases": 108,
+  "bodyMinBefore": -0.8268538165433148,
+  "bodyMinAfter": -0.022270535199008235,
+  "newlyNegative": [
+    {
+      "role": "player",
+      "location": "player-origin",
+      "yaw": 0,
+      "t": 0.45,
+      "before": 0.13110405596047858,
+      "after": -0.009761490732785427,
+      "worst": {
+        "mesh": "Q leather skin",
+        "triangle": 340,
+        "indices": [
+          321,
+          320,
+          334
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          0.17176409127951014,
+          -1.6151674738924486,
+          101.59637118664506
+        ]
+      }
+    },
+    {
+      "role": "boss",
+      "location": "player-origin",
+      "yaw": 0,
+      "t": 0.45,
+      "before": 0.30241885352073483,
+      "after": -0.022270535199008235,
+      "worst": {
+        "mesh": "Q leather skin",
+        "triangle": 340,
+        "indices": [
+          321,
+          320,
+          334
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          0.39543146849066,
+          -1.8757763200854976,
+          102.37190823190694
+        ]
+      }
+    },
+    {
+      "role": "player",
+      "location": "salt-archer",
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": 0.01934552688202018,
+      "after": -0.006584975543560745,
+      "worst": {
+        "mesh": "Q leather skin",
+        "triangle": 76,
+        "indices": [
+          48,
+          47,
+          61
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          -388.53067064871044,
+          51.489384672928146,
+          -37.49759395239386
+        ]
+      }
+    },
+    {
+      "role": "player",
+      "location": "salt-archer",
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": 0.1095447961859719,
+      "after": -0.009001475462113717,
+      "worst": {
+        "mesh": "Q leather skin",
+        "triangle": 340,
+        "indices": [
+          321,
+          320,
+          334
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          -388.73085611355714,
+          51.39914141133485,
+          -38.57478518724003
+        ]
+      }
+    },
+    {
+      "role": "boss",
+      "location": "salt-archer",
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": 0.04021021611237785,
+      "after": -0.01497446097861399,
+      "worst": {
+        "mesh": "Q leather skin",
+        "triangle": 76,
+        "indices": [
+          48,
+          47,
+          61
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          -387.92047149889135,
+          51.37686246907408,
+          -36.84452652439124
+        ]
+      }
+    },
+    {
+      "role": "boss",
+      "location": "salt-archer",
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": 0.2541788688474611,
+      "after": -0.02072508868694456,
+      "worst": {
+        "mesh": "Q leather skin",
+        "triangle": 340,
+        "indices": [
+          321,
+          320,
+          334
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          -388.3808880249582,
+          51.164147377108954,
+          -39.32207181837208
+        ]
+      }
+    }
+  ],
+  "continuity": [
+    {
+      "role": "player",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.20876150000757585,
+      "step": 0.1944472008211325,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.20348683871813092,
+      "step": 0.16416033882562633,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.20876150000757585,
+      "step": 0.09729459324888946,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.20348683871813092,
+      "step": 0.08217270732665495,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.20876150000757585,
+      "step": 0.04865890186321016,
+      "savedError": 0
+    },
+    {
+      "role": "player",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.20348683871813092,
+      "step": 0.041089042690289644,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.2358452839992756,
+      "step": 0.11961169048910564,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.22842580986889263,
+      "step": 0.10031846606998161,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.2358452839992756,
+      "step": 0.05992644195341694,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.22842580986889263,
+      "step": 0.05503870065981147,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.2358452839992756,
+      "step": 0.029977419116436765,
+      "savedError": 0
+    },
+    {
+      "role": "npc",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.22842580986889263,
+      "step": 0.027816671138685203,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.30139873298046416,
+      "step": 0.12210930257486446,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.309217625903494,
+      "step": 0.10991202235616007,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.30139873298046416,
+      "step": 0.06116869158917951,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.309217625903494,
+      "step": 0.05530904184541924,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.30139873298046416,
+      "step": 0.030596517620703576,
+      "savedError": 0
+    },
+    {
+      "role": "ranger",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.309217625903494,
+      "step": 0.027998513010740977,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 30,
+      "key": "before",
+      "entry": 0.4486129905167735,
+      "step": 0.3817794342194344,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 30,
+      "key": "after",
+      "entry": 0.46659516399943124,
+      "step": 0.3437486195450297,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 60,
+      "key": "before",
+      "entry": 0.4486129905167735,
+      "step": 0.19116809627826514,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 60,
+      "key": "after",
+      "entry": 0.46659516399943124,
+      "step": 0.17223476404151858,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 120,
+      "key": "before",
+      "entry": 0.4486129905167735,
+      "step": 0.09560255250749444,
+      "savedError": 0
+    },
+    {
+      "role": "boss",
+      "hz": 120,
+      "key": "after",
+      "entry": 0.46659516399943124,
+      "step": 0.08615616464837668,
+      "savedError": 0
+    }
+  ]
+}

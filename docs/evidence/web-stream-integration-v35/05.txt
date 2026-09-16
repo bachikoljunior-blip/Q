@@ -1,0 +1,13 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 test:vaults
+> node scripts/verify-vault-runtime.mjs
+
+{
+  "passed": true,
+  "slices": 4,
+  "scenarios": 8,
+  "reloads": 8,
+  "sourceFingerprint": "sha256:f32e8383ed083a9c10f8f73060af2c7eabc05bdf0dde23fbee2b1483991bdfbe",
+  "report": "artifacts/vault-runtime-report.json"
+}

@@ -1,0 +1,41 @@
+{
+  "began": "2026-09-16T06:23:39Z",
+  "ended": "2026-09-16T06:27:14.844939+00:00",
+  "nativeDownloadWallSeconds": 11.597423560000607,
+  "records": [
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_diff_1k.jpg",
+      "urlDerivation": "1K variant of the exact official individual 4K link",
+      "beganAt": "2026-09-16T06:27:03.251647+00:00",
+      "status": 200,
+      "bytes": 944914,
+      "sha256": "5727302df3a9c845e6320ff186ac13fc7d0f1ffcd6fda71667e808e09379fe6f",
+      "file": "hessian_380_diff_1k.jpg"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_nor_gl_1k.jpg",
+      "urlDerivation": "1K variant of the exact official individual 4K link",
+      "beganAt": "2026-09-16T06:27:03.252439+00:00",
+      "status": 200,
+      "bytes": 1076074,
+      "sha256": "3994fd74148cb413892edd08155976497b3e7e15a403a182f07325a6b1e7be1a",
+      "file": "hessian_380_nor_gl_1k.jpg"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_rough_1k.jpg",
+      "urlDerivation": "1K variant of the exact official individual 4K link",
+      "beganAt": "2026-09-16T06:27:03.253317+00:00",
+      "status": 200,
+      "bytes": 956823,
+      "sha256": "a828755c5ddc9af0697eeed46427c5145df1dea5f1e2839f643156a285282fed",
+      "file": "hessian_380_rough_1k.jpg"
+    }
+  ],
+  "priorAPIAttempt": {
+    "info": "403 Forbidden",
+    "files": "Remote end closed connection without response",
+    "session": 70414,
+    "exitCode": 130,
+    "savedBytes": 0
+  }
+}

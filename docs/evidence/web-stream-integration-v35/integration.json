@@ -1,0 +1,35 @@
+{
+  "sourceHead": "4b2f27e9303c8775171bf8600b59b90085c04274",
+  "gates": 27,
+  "passed": true,
+  "seconds": 123.6666849539979,
+  "tests": [
+    "\u2139 tests 311",
+    "\u2139 pass 311",
+    "\u2139 fail 0"
+  ],
+  "stage": "artifacts/site-wA36rr",
+  "publicFiles": 34,
+  "webBytes": 12590981,
+  "mediaCount": 27,
+  "mediaBytes": 11441662,
+  "JS": [
+    {
+      "path": "assets/index-DOSEgRK3.js",
+      "bytes": 164988
+    },
+    {
+      "path": "assets/scene-FWfQywgh.js",
+      "bytes": 336585
+    },
+    {
+      "path": "assets/three-CQW9fVDb.js",
+      "bytes": 579597
+    }
+  ],
+  "receiptBytes": 12457,
+  "receiptSha256": "07e66395ffe16e581ab582c1c5bf17b3b4d802859269af76ed20ad4253e199ed",
+  "standaloneBytes": 15503291,
+  "standaloneSha256": "534351f4f563d5442d732664c758b12ea19483b44df5087993961eca125b19b5",
+  "sourceFingerprint": "sha256:f32e8383ed083a9c10f8f73060af2c7eabc05bdf0dde23fbee2b1483991bdfbe"
+}

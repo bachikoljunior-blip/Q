@@ -1,0 +1,22 @@
+{
+  "boundary": "Actual cache and native textures with controlled Image promises and logical timers; no real HTTP, decoder, GPU or browser time.",
+  "sourceSHA256": "87bde10a08cd4b512b7c3739f71ca39ba3f7bcc0f6da9c4102d46bfb365f9306",
+  "deadline": {
+    "pendingAt7999": true,
+    "resolvedAt8000": true,
+    "hungRequestsAfter30Loads": 2,
+    "lateImageDisposed": true,
+    "threeImagesDisposedExactlyOnce": true
+  },
+  "negativeControl": {
+    "removedBusyGuard": true,
+    "detected": true,
+    "message": "hung-slot bound must prevent extra requests\n\n3 !== 2\n"
+  },
+  "retry": {
+    "noRetryAt3999": true,
+    "retryAt4000": true,
+    "wrongDimensionsDisposed": true,
+    "noDuplicatesAfterReady100Loads": true
+  }
+}

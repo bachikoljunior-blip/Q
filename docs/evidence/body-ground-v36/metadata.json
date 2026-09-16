@@ -1,0 +1,78 @@
+{
+  "base": "e731685be92c4c98a20115d2244e580e371ca084",
+  "recordedAt": "2026-09-16T06:43:11.662Z",
+  "worktreeRecordedAt": "2026-09-16T06:28:07Z",
+  "candidateSavedAt": "2026-09-16T06:35:25Z",
+  "inputs": {
+    "src/actor-models.js": {
+      "bytes": 31704,
+      "sha256": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc"
+    },
+    "src/character-motion.js": {
+      "bytes": 4931,
+      "sha256": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059"
+    },
+    "src/bow-contact.js": {
+      "bytes": 5819,
+      "sha256": "0b81d2dc277555e13ff552d2dbdd891e6cd0a4660cc10a1668c9269d1249005c"
+    },
+    "src/core.js": {
+      "bytes": 39729,
+      "sha256": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390"
+    },
+    "src/assets/characters/detailed-geometry.js": {
+      "bytes": 31187,
+      "sha256": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4"
+    },
+    "src/assets/characters/detailed-provenance.json": {
+      "bytes": 2806,
+      "sha256": "8ce53e4d0fb3d6fe676a19ae046ba7f41d1dfa147c256461f95a26f16773e8e9"
+    },
+    "docs/evidence/body-ground-v36/rejected-rigid-support.js": {
+      "bytes": 34864,
+      "sha256": "b0f6e30d04f24514e8a31c7a28a7636bebd0dae91cd1e83f7b41f7cbe0409cbb"
+    },
+    "docs/evidence/body-ground-v36/source-before.js": {
+      "bytes": 31704,
+      "sha256": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc"
+    }
+  },
+  "buildIdentity": {
+    "version": "0.21.0",
+    "sourceFingerprint": "sha256:1f3e9ed20d94316a1021fca348832a67926121104d363b8f27b226bd109fe12d"
+  },
+  "productionInputDiff": [],
+  "animateCapeByteIdentical": true,
+  "adoption": "rejected; runtime restored exactly",
+  "newSourceAssets": 0,
+  "newRuntimeDependencies": 0,
+  "buildOrPackageRun": false,
+  "reason": "No production build identity inputs changed; tests validate restoration, not candidate acceptance.",
+  "regressionTests": {
+    "passed": 26,
+    "failed": 0,
+    "milliseconds": 13809.516521
+  },
+  "knownCompletedSessions": [
+    41005,
+    66472,
+    17843,
+    74305
+  ],
+  "rework": [
+    "A small diagnosis script initially redeclared an identifier; parsing stopped before execution. The saved diagnose-body-ground.mjs corrects it.",
+    "A raw comparison-file cmp reports different timestamps on replay. All numerical fields match exactly after excluding only at."
+  ],
+  "limits": [
+    "No renderer or device results",
+    "No new artifact budget/performance acceptance",
+    "Pelvis-only candidate incomplete; six new negative foot cases and support/entry gaps remain"
+  ],
+  "finalRecordedAt": "2026-09-16T06:44:11.592Z",
+  "wallSecondsSinceRecordedWorktree": 964.596,
+  "review": {
+    "files": 7,
+    "reviewSha256": "8ce9ade76573cab5f09966c4982afb038582e9df5a0577a492e717c002036351",
+    "boundary": "Independent rejection verification; not source or rendered-quality acceptance"
+  }
+}

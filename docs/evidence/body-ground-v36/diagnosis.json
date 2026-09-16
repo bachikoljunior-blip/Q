@@ -1,0 +1,1017 @@
+{
+  "rejectedCases": [
+    {
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "role": "player",
+      "yaw": 0,
+      "time": 0.45,
+      "before": 0.13110405596047858,
+      "after": -0.009761490732785427,
+      "worst": {
+        "point": [
+          0.17176409127951014,
+          -1.6151674738924486,
+          101.59637118664506
+        ],
+        "bone": "foot-1",
+        "mesh": "Q leather skin",
+        "index": 334
+      }
+    },
+    {
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "role": "boss",
+      "yaw": 0,
+      "time": 0.45,
+      "before": 0.30241885352073483,
+      "after": -0.022270535199008235,
+      "worst": {
+        "point": [
+          0.39543146849066,
+          -1.8757763200854976,
+          102.37190823190694
+        ],
+        "bone": "foot-1",
+        "mesh": "Q leather skin",
+        "index": 334
+      }
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "player",
+      "yaw": 1.1,
+      "time": 0.45,
+      "before": 0.01934552688202018,
+      "after": -0.006584975543560745,
+      "worst": {
+        "point": [
+          -388.53067064871044,
+          51.489384672928146,
+          -37.49759395239386
+        ],
+        "bone": "foot-0",
+        "mesh": "Q leather skin",
+        "index": 61
+      }
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "player",
+      "yaw": 2.4,
+      "time": 0.45,
+      "before": 0.1095447961859719,
+      "after": -0.009001475462113717,
+      "worst": {
+        "point": [
+          -388.73085611355714,
+          51.39914141133485,
+          -38.57478518724003
+        ],
+        "bone": "foot-1",
+        "mesh": "Q leather skin",
+        "index": 334
+      }
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "boss",
+      "yaw": 1.1,
+      "time": 0.45,
+      "before": 0.04021021611237785,
+      "after": -0.01497446097861399,
+      "worst": {
+        "point": [
+          -387.92047149889135,
+          51.37686246907408,
+          -36.84452652439124
+        ],
+        "bone": "foot-0",
+        "mesh": "Q leather skin",
+        "index": 61
+      }
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "boss",
+      "yaw": 2.4,
+      "time": 0.45,
+      "before": 0.2541788688474611,
+      "after": -0.02072508868694456,
+      "worst": {
+        "point": [
+          -388.3808880249582,
+          51.164147377108954,
+          -39.32207181837208
+        ],
+        "bone": "foot-1",
+        "mesh": "Q leather skin",
+        "index": 334
+      }
+    }
+  ],
+  "settled": [
+    {
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "role": "player",
+      "yaw": 0,
+      "beforeMin": -0.17683438845580524,
+      "afterMin": 0.006000000000000005,
+      "beforeBottomMedian": 0.0830461495310102,
+      "afterBottomMedian": 0.13023871969392853,
+      "theoreticalUniformLiftBottomMedian": 0.26588053798681544,
+      "beforeContacts": 10,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "role": "player",
+      "yaw": 1.1,
+      "beforeMin": -0.017653060582874414,
+      "afterMin": 0.006000000000000005,
+      "beforeBottomMedian": 0.1350594684398685,
+      "afterBottomMedian": 0.125278825725736,
+      "theoreticalUniformLiftBottomMedian": 0.1587125290227429,
+      "beforeContacts": 12,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "role": "player",
+      "yaw": 2.4,
+      "beforeMin": -0.21753768478565783,
+      "afterMin": 0.006000000000000005,
+      "beforeBottomMedian": 0.11280687907328124,
+      "afterBottomMedian": 0.1327343268590646,
+      "theoreticalUniformLiftBottomMedian": 0.33634456385893907,
+      "beforeContacts": 10,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "role": "boss",
+      "yaw": 0,
+      "beforeMin": -0.6158211244972855,
+      "afterMin": 0.013800000000000257,
+      "beforeBottomMedian": 0.03187806670033089,
+      "afterBottomMedian": 0.39033511357551565,
+      "theoreticalUniformLiftBottomMedian": 0.6614991911976165,
+      "beforeContacts": 11,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "role": "boss",
+      "yaw": 1.1,
+      "beforeMin": -0.07290481527988368,
+      "afterMin": 0.013800000000000034,
+      "beforeBottomMedian": 0.33373671860909315,
+      "afterBottomMedian": 0.40627455279986124,
+      "theoreticalUniformLiftBottomMedian": 0.42044153388897687,
+      "beforeContacts": 13,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "role": "boss",
+      "yaw": 2.4,
+      "beforeMin": -0.4766910917923237,
+      "afterMin": 0.013800000000000034,
+      "beforeBottomMedian": 0.3757341521285682,
+      "afterBottomMedian": 0.35785824467210237,
+      "theoreticalUniformLiftBottomMedian": 0.866225243920892,
+      "beforeContacts": 9,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "role": "player",
+      "yaw": 0,
+      "beforeMin": 0.008156225117964766,
+      "afterMin": 0.006559154045891802,
+      "beforeBottomMedian": 0.11676575641982012,
+      "afterBottomMedian": 0.12069103640062195,
+      "theoreticalUniformLiftBottomMedian": 0.11676575641982012,
+      "beforeContacts": 4,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "role": "player",
+      "yaw": 1.1,
+      "beforeMin": 0.007790102946200861,
+      "afterMin": 0.007428579743027797,
+      "beforeBottomMedian": 0.11770364725164306,
+      "afterBottomMedian": 0.12040218921853807,
+      "theoreticalUniformLiftBottomMedian": 0.11770364725164306,
+      "beforeContacts": 4,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "role": "player",
+      "yaw": 2.4,
+      "beforeMin": 0.007247330358680415,
+      "afterMin": 0.008697403174627638,
+      "beforeBottomMedian": 0.11703497797398654,
+      "afterBottomMedian": 0.11905484548563017,
+      "theoreticalUniformLiftBottomMedian": 0.11703497797398654,
+      "beforeContacts": 4,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "role": "boss",
+      "yaw": 0,
+      "beforeMin": 0.020189712616392796,
+      "afterMin": 0.013799999999999812,
+      "beforeBottomMedian": 0.30420332233463654,
+      "afterBottomMedian": 0.3039058287061831,
+      "theoreticalUniformLiftBottomMedian": 0.30420332233463654,
+      "beforeContacts": 4,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "role": "boss",
+      "yaw": 1.1,
+      "beforeMin": 0.0182595997212065,
+      "afterMin": 0.01636484979035835,
+      "beforeBottomMedian": 0.31277108224095684,
+      "afterBottomMedian": 0.2985947182322892,
+      "theoreticalUniformLiftBottomMedian": 0.31277108224095684,
+      "beforeContacts": 4,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "enemy-23",
+        "x": 4,
+        "z": -247
+      },
+      "role": "boss",
+      "yaw": 2.4,
+      "beforeMin": 0.01537087642651258,
+      "afterMin": 0.023040629262231604,
+      "beforeBottomMedian": 0.29337822996085094,
+      "afterBottomMedian": 0.28733772240510547,
+      "theoreticalUniformLiftBottomMedian": 0.29337822996085094,
+      "beforeContacts": 4,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "role": "player",
+      "yaw": 0,
+      "beforeMin": -0.017717237543657394,
+      "afterMin": 0.005999999999999783,
+      "beforeBottomMedian": 0.11695995530937608,
+      "afterBottomMedian": 0.12395923984811663,
+      "theoreticalUniformLiftBottomMedian": 0.14067719285303348,
+      "beforeContacts": 9,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "role": "player",
+      "yaw": 1.1,
+      "beforeMin": -0.1881301579343324,
+      "afterMin": 0.006000000000000227,
+      "beforeBottomMedian": 0.10852909310266057,
+      "afterBottomMedian": 0.12913881976649355,
+      "theoreticalUniformLiftBottomMedian": 0.302659251036993,
+      "beforeContacts": 10,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "role": "player",
+      "yaw": 2.4,
+      "beforeMin": -0.09396331145306203,
+      "afterMin": 0.005999999999999339,
+      "beforeBottomMedian": 0.0999141225847171,
+      "afterBottomMedian": 0.12282379008993516,
+      "theoreticalUniformLiftBottomMedian": 0.19987743403777913,
+      "beforeContacts": 10,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "role": "boss",
+      "yaw": 0,
+      "beforeMin": -0.03981258735399207,
+      "afterMin": 0.013799999999999812,
+      "beforeBottomMedian": 0.30721047175305216,
+      "afterBottomMedian": 0.39824963029354343,
+      "theoreticalUniformLiftBottomMedian": 0.3608230591070442,
+      "beforeContacts": 7,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "role": "boss",
+      "yaw": 1.1,
+      "beforeMin": -0.4216153433843992,
+      "afterMin": 0.013799999999998924,
+      "beforeBottomMedian": 0.3407772184174318,
+      "afterBottomMedian": 0.3465949315640935,
+      "theoreticalUniformLiftBottomMedian": 0.776192561801831,
+      "beforeContacts": 10,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-24",
+        "x": 204,
+        "z": -35
+      },
+      "role": "boss",
+      "yaw": 2.4,
+      "beforeMin": -0.2166654985530192,
+      "afterMin": 0.013799999999999812,
+      "beforeBottomMedian": 0.28304470109796576,
+      "afterBottomMedian": 0.3122742663217206,
+      "theoreticalUniformLiftBottomMedian": 0.513510199650985,
+      "beforeContacts": 10,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "role": "player",
+      "yaw": 0,
+      "beforeMin": -0.024876411428316203,
+      "afterMin": 0.006000000000000227,
+      "beforeBottomMedian": 0.10219339648500991,
+      "afterBottomMedian": 0.11665078544116891,
+      "theoreticalUniformLiftBottomMedian": 0.13306980791332612,
+      "beforeContacts": 10,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "role": "player",
+      "yaw": 1.1,
+      "beforeMin": -0.18097902167380653,
+      "afterMin": 0.005999999999999339,
+      "beforeBottomMedian": 0.10042309240743386,
+      "afterBottomMedian": 0.12882764242406974,
+      "theoreticalUniformLiftBottomMedian": 0.2874021140812404,
+      "beforeContacts": 12,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "role": "player",
+      "yaw": 2.4,
+      "beforeMin": -0.05165637060425965,
+      "afterMin": 0.006000000000000227,
+      "beforeBottomMedian": 0.10223974024992533,
+      "afterBottomMedian": 0.12273082328941864,
+      "theoreticalUniformLiftBottomMedian": 0.15989611085418498,
+      "beforeContacts": 7,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "role": "boss",
+      "yaw": 0,
+      "beforeMin": -0.0562861711182876,
+      "afterMin": 0.013799999999998924,
+      "beforeBottomMedian": 0.2896437876920963,
+      "afterBottomMedian": 0.32539570830582587,
+      "theoreticalUniformLiftBottomMedian": 0.35972995881038394,
+      "beforeContacts": 10,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "role": "boss",
+      "yaw": 1.1,
+      "beforeMin": -0.40401571309389883,
+      "afterMin": 0.0138000000000007,
+      "beforeBottomMedian": 0.34394295375241946,
+      "afterBottomMedian": 0.3465834819252498,
+      "theoreticalUniformLiftBottomMedian": 0.7617586668463183,
+      "beforeContacts": 12,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "enemy-25",
+        "x": 218,
+        "z": -48
+      },
+      "role": "boss",
+      "yaw": 2.4,
+      "beforeMin": -0.11480811642055588,
+      "afterMin": 0.0138000000000007,
+      "beforeBottomMedian": 0.2900227909583606,
+      "afterBottomMedian": 0.31403599066064114,
+      "theoreticalUniformLiftBottomMedian": 0.4186309073789165,
+      "beforeContacts": 6,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "player",
+      "yaw": 0,
+      "beforeMin": -0.07263082724212921,
+      "afterMin": 0.006000000000000227,
+      "beforeBottomMedian": 0.08706585781598619,
+      "afterBottomMedian": 0.12603283392334674,
+      "theoreticalUniformLiftBottomMedian": 0.1656966850581154,
+      "beforeContacts": 8,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "player",
+      "yaw": 1.1,
+      "beforeMin": -0.10986009038975197,
+      "afterMin": 0.006000000000000227,
+      "beforeBottomMedian": 0.064160960600816,
+      "afterBottomMedian": 0.1216813536215895,
+      "theoreticalUniformLiftBottomMedian": 0.18002105099056798,
+      "beforeContacts": 10,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "player",
+      "yaw": 2.4,
+      "beforeMin": -0.15678790710153123,
+      "afterMin": 0.006000000000000227,
+      "beforeBottomMedian": 0.08114332614704978,
+      "afterBottomMedian": 0.13044027730964558,
+      "theoreticalUniformLiftBottomMedian": 0.24393123324858101,
+      "beforeContacts": 9,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "boss",
+      "yaw": 0,
+      "beforeMin": -0.16524731381613833,
+      "afterMin": 0.013800000000003365,
+      "beforeBottomMedian": 0.2960991623804148,
+      "afterBottomMedian": 0.3137978107322681,
+      "theoreticalUniformLiftBottomMedian": 0.47514647619655315,
+      "beforeContacts": 8,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "boss",
+      "yaw": 1.1,
+      "beforeMin": -0.5026507265199314,
+      "afterMin": 0.013800000000003365,
+      "beforeBottomMedian": 0.09299238280819822,
+      "afterBottomMedian": 0.30345152787528207,
+      "theoreticalUniformLiftBottomMedian": 0.6094431093281296,
+      "beforeContacts": 12,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "role": "boss",
+      "yaw": 2.4,
+      "beforeMin": -0.5213509071926978,
+      "afterMin": 0.013800000000003365,
+      "beforeBottomMedian": 0.06844813729690458,
+      "afterBottomMedian": 0.3727281625268546,
+      "theoreticalUniformLiftBottomMedian": 0.6035990444896024,
+      "beforeContacts": 11,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "role": "player",
+      "yaw": 0,
+      "beforeMin": -0.019099295795818705,
+      "afterMin": 0.006000000000000227,
+      "beforeBottomMedian": 0.11861245226748096,
+      "afterBottomMedian": 0.12080917149103776,
+      "theoreticalUniformLiftBottomMedian": 0.14371174806329967,
+      "beforeContacts": 11,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "role": "player",
+      "yaw": 1.1,
+      "beforeMin": -0.08307722714277688,
+      "afterMin": 0.006000000000000227,
+      "beforeBottomMedian": 0.1113559688681427,
+      "afterBottomMedian": 0.12194428021109793,
+      "theoreticalUniformLiftBottomMedian": 0.20043319601091958,
+      "beforeContacts": 6,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "role": "player",
+      "yaw": 2.4,
+      "beforeMin": -0.0040504464576187615,
+      "afterMin": 0.006000000000000227,
+      "beforeBottomMedian": 0.12013234665609573,
+      "afterBottomMedian": 0.12126503842535818,
+      "theoreticalUniformLiftBottomMedian": 0.1301827931137145,
+      "beforeContacts": 5,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "role": "boss",
+      "yaw": 0,
+      "beforeMin": -0.04180061067995311,
+      "afterMin": 0.013799999999999812,
+      "beforeBottomMedian": 0.2776581291391924,
+      "afterBottomMedian": 0.33483906003423947,
+      "theoreticalUniformLiftBottomMedian": 0.3332587398191455,
+      "beforeContacts": 11,
+      "afterContacts": 3
+    },
+    {
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "role": "boss",
+      "yaw": 1.1,
+      "beforeMin": -0.1763617228504195,
+      "afterMin": 0.013799999999999812,
+      "beforeBottomMedian": 0.3092110336058891,
+      "afterBottomMedian": 0.3200808952563321,
+      "theoreticalUniformLiftBottomMedian": 0.49937275645630863,
+      "beforeContacts": 6,
+      "afterContacts": 4
+    },
+    {
+      "location": {
+        "id": "author-actual",
+        "x": 45,
+        "z": -33
+      },
+      "role": "boss",
+      "yaw": 2.4,
+      "beforeMin": -0.009174426081521858,
+      "afterMin": 0.013799999999999812,
+      "beforeBottomMedian": 0.3089789156264562,
+      "afterBottomMedian": 0.3002951927832651,
+      "theoreticalUniformLiftBottomMedian": 0.331953341707978,
+      "beforeContacts": 3,
+      "afterContacts": 3
+    }
+  ],
+  "flatSupport": [
+    {
+      "role": "player",
+      "points": {
+        "pelvis": {
+          "point": [
+            2.8779198388773484e-17,
+            0.008168469489572769,
+            0.2229364533251036
+          ],
+          "mesh": "Q cloth skin",
+          "index": 1016
+        },
+        "head": {
+          "point": [
+            -0.07540632271591755,
+            0.10229015260614224,
+            -0.7779681383423791
+          ],
+          "mesh": "Q cloth skin",
+          "index": 282
+        },
+        "foot-0": {
+          "point": [
+            -0.13300000131130219,
+            0.10513780559246556,
+            0.9512458888248558
+          ],
+          "mesh": "Q leather skin",
+          "index": 61
+        },
+        "foot-1": {
+          "point": [
+            0.13300000131130219,
+            0.10513780559246556,
+            0.9512458888248558
+          ],
+          "mesh": "Q leather skin",
+          "index": 334
+        }
+      },
+      "pelvisBelowHeadFeetPlane": -0.09576983328719388
+    },
+    {
+      "role": "npc",
+      "points": {
+        "pelvis": {
+          "point": [
+            2.8779198388773484e-17,
+            0.1481684694895729,
+            0.2229364533251036
+          ],
+          "mesh": "Q cloth skin",
+          "index": 776
+        },
+        "head": {
+          "point": [
+            -0.04924495182575539,
+            0.2856126012804173,
+            -0.8335346447808483
+          ],
+          "mesh": "Q cloth skin",
+          "index": 191
+        },
+        "foot-0": {
+          "point": [
+            -0.13300000131130219,
+            0.24513780559246567,
+            0.9512458888248558
+          ],
+          "mesh": "Q leather skin",
+          "index": 61
+        },
+        "foot-1": {
+          "point": [
+            0.13300000131130219,
+            0.24513780559246567,
+            0.9512458888248558
+          ],
+          "mesh": "Q leather skin",
+          "index": 334
+        }
+      },
+      "pelvisBelowHeadFeetPlane": -0.11345658041263186
+    },
+    {
+      "role": "ranger",
+      "points": {
+        "pelvis": {
+          "point": [
+            2.8779198388773484e-17,
+            0.1481684694895729,
+            0.2229364533251036
+          ],
+          "mesh": "Q cloth skin",
+          "index": 1016
+        },
+        "head": {
+          "point": [
+            -0.07540632271591755,
+            0.24229015260614237,
+            -0.7779681383423791
+          ],
+          "mesh": "Q cloth skin",
+          "index": 282
+        },
+        "foot-0": {
+          "point": [
+            -0.13300000131130219,
+            0.24513780559246567,
+            0.9512458888248558
+          ],
+          "mesh": "Q leather skin",
+          "index": 61
+        },
+        "foot-1": {
+          "point": [
+            0.13300000131130219,
+            0.24513780559246567,
+            0.9512458888248558
+          ],
+          "mesh": "Q leather skin",
+          "index": 334
+        }
+      },
+      "pelvisBelowHeadFeetPlane": -0.09576983328719385
+    },
+    {
+      "role": "boss",
+      "points": {
+        "pelvis": {
+          "point": [
+            6.619215629417902e-17,
+            0.018787479826017254,
+            0.5127538426477384
+          ],
+          "mesh": "Q cloth skin",
+          "index": 725
+        },
+        "head": {
+          "point": [
+            -0.2283621716120346,
+            0.3260932592083565,
+            -1.8341692744671545
+          ],
+          "mesh": "Q metal skin",
+          "index": 183
+        },
+        "foot-0": {
+          "point": [
+            -0.305900003015995,
+            0.24181695286267066,
+            2.1878655442971686
+          ],
+          "mesh": "Q leather skin",
+          "index": 61
+        },
+        "foot-1": {
+          "point": [
+            0.305900003015995,
+            0.24181695286267066,
+            2.1878655442971686
+          ],
+          "mesh": "Q leather skin",
+          "index": 334
+        }
+      },
+      "pelvisBelowHeadFeetPlane": -0.258072528019064
+    }
+  ],
+  "attachments": [
+    {
+      "role": "player",
+      "time": 0,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "player",
+      "time": 0.15,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "player",
+      "time": 0.45,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "player",
+      "time": 0.8,
+      "changedBones": []
+    },
+    {
+      "role": "npc",
+      "time": 0,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "npc",
+      "time": 0.15,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "npc",
+      "time": 0.45,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "npc",
+      "time": 0.8,
+      "changedBones": []
+    },
+    {
+      "role": "ranger",
+      "time": 0,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "ranger",
+      "time": 0.15,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "ranger",
+      "time": 0.45,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "ranger",
+      "time": 0.8,
+      "changedBones": []
+    },
+    {
+      "role": "boss",
+      "time": 0,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "boss",
+      "time": 0.15,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "boss",
+      "time": 0.45,
+      "changedBones": [
+        "pelvis"
+      ]
+    },
+    {
+      "role": "boss",
+      "time": 0.8,
+      "changedBones": []
+    }
+  ],
+  "initialization": [
+    {
+      "role": "player",
+      "milliseconds": 3.916850000000011,
+      "supportPoints": 237,
+      "sourceVertices": 5702
+    },
+    {
+      "role": "npc",
+      "milliseconds": 8.57785100000001,
+      "supportPoints": 245,
+      "sourceVertices": 4913
+    },
+    {
+      "role": "ranger",
+      "milliseconds": 2.7722099999999728,
+      "supportPoints": 293,
+      "sourceVertices": 5501
+    },
+    {
+      "role": "boss",
+      "milliseconds": 2.9192509999999743,
+      "supportPoints": 237,
+      "sourceVertices": 5839
+    }
+  ],
+  "uniformBoundary": "Arithmetic vertical translation of all baseline body vertices only; no candidate rerender, cape result, CPU or physically accepted support claim."
+}
