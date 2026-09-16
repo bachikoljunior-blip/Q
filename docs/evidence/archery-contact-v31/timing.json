@@ -1,0 +1,14 @@
+{
+  "worktreeCreatedUnix": 1789531557,
+  "baselineSourceCaptureUnix": 1789532118.4146574,
+  "finalSourceReadyUnix": 1789533030.0568054,
+  "readyToCommitUnix": 1789533286.9598067,
+  "mediaAcquisitionSeconds": 0,
+  "mediaGenerationSeconds": 0,
+  "firstMeasurementWallSeconds": 561.415,
+  "implementationAndReviewRepairWallSeconds": 911.642,
+  "gateCommandSeconds": 52.406,
+  "parentIntegrationSeconds": null,
+  "exclusiveEditingSeconds": null,
+  "note": "Wall intervals include reading and review waits; separate exclusive keyboard/rework labor was not sampled. Six final gates ran after the final runtime source; later verifier changes add actual Game save/launch assertions and received a focused rerun."
+}

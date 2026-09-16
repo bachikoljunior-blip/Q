@@ -1,0 +1,60 @@
+[
+  {
+    "name": "tests",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit": 0,
+    "seconds": 39.94
+  },
+  {
+    "name": "main-runtime",
+    "command": [
+      "node",
+      "scripts/verify-main-runtime.mjs"
+    ],
+    "exit": 0,
+    "seconds": 4.915
+  },
+  {
+    "name": "archery",
+    "command": [
+      "node",
+      "scripts/verify-archery-contact.mjs",
+      "docs/evidence/archery-contact-v31/geometry.json"
+    ],
+    "exit": 0,
+    "seconds": 1.305
+  },
+  {
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit": 0,
+    "seconds": 3.21
+  },
+  {
+    "name": "package",
+    "command": [
+      "npm",
+      "run",
+      "package"
+    ],
+    "exit": 0,
+    "seconds": 1.52
+  },
+  {
+    "name": "artifacts",
+    "command": [
+      "npm",
+      "run",
+      "test:artifacts"
+    ],
+    "exit": 0,
+    "seconds": 1.516
+  }
+]

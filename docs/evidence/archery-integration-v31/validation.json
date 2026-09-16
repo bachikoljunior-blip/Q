@@ -1,0 +1,377 @@
+{
+  "startedAt": "2026-09-16T04:39:57.043242+00:00",
+  "scope": "Combined native source/geometry, explicit Node production boundaries and delivery artifacts; no WebGL/device/listening acceptance",
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "scripts/generate-vault-assets.mjs",
+        "--verify"
+      ],
+      "exitCode": 0,
+      "seconds": 0.18289196799742058,
+      "log": "01.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-soundscape.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.11458137800218537,
+      "log": "02.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-main-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 5.6500636669952655,
+      "log": "03.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-gathering-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 13.656946085000527,
+      "log": "04.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:vaults"
+      ],
+      "exitCode": 0,
+      "seconds": 7.539260366997041,
+      "log": "05.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "seconds": 32.6746642979997,
+      "log": "06.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-archery-contact.mjs",
+        "artifacts/archery-contact-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 1.706278410005325,
+      "log": "07.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-world-surfaces.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 1.947605516994372,
+      "log": "08.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-architecture-grounding.mjs",
+        "artifacts/architecture-grounding-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 0.7930456359972595,
+      "log": "09.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-settlement-contact.mjs",
+        "artifacts/settlement-contact-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 4.7890881819985225,
+      "log": "10.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-scene-integration.mjs",
+        ".",
+        "artifacts/scene-integration-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 3.1645916250054142,
+      "log": "11.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-sky-integration.mjs",
+        ".",
+        "artifacts/sky-integration-report.json"
+      ],
+      "exitCode": 0,
+      "seconds": 4.3854485749980086,
+      "log": "12.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:journey"
+      ],
+      "exitCode": 0,
+      "seconds": 0.573651708997204,
+      "log": "13.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:crossing"
+      ],
+      "exitCode": 0,
+      "seconds": 0.996796302999428,
+      "log": "14.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:forge"
+      ],
+      "exitCode": 0,
+      "seconds": 3.0292206820013234,
+      "log": "15.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:session"
+      ],
+      "exitCode": 0,
+      "seconds": 8.081864971005416,
+      "log": "16.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:expedition"
+      ],
+      "exitCode": 0,
+      "seconds": 6.877322061998711,
+      "log": "17.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "review:combat"
+      ],
+      "exitCode": 0,
+      "seconds": 0.7990762389963493,
+      "log": "18.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "compare:touch"
+      ],
+      "exitCode": 0,
+      "seconds": 1.3124369679935626,
+      "log": "19.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "seconds": 4.8078456170042045,
+      "log": "20.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "package"
+      ],
+      "exitCode": 0,
+      "seconds": 2.14130136899621,
+      "log": "21.txt"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:artifacts"
+      ],
+      "exitCode": 0,
+      "seconds": 2.4542002820016933,
+      "log": "22.txt"
+    }
+  ],
+  "elapsedSeconds": 107.68706331899739,
+  "passed": true,
+  "tests": 270,
+  "baseLocal": "fb07441c63cc8e7c985972691eccaed0e1fa50b3",
+  "baseRemote": "7618ef0c0465ba8f14126d4ce331c94bdef5686d",
+  "authorCommit": "3f4940c26d86dcc54e812efc6ca3425ad1a10115",
+  "delivery": {
+    "stage": "/workspace/scratch/e72662e3b71f/Q-ps4-v31/artifacts/site-r5J1Mn",
+    "files": {
+      "assets/crown-branch-rgba-DvI_Tv4J.png": {
+        "bytes": 162720,
+        "sha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7"
+      },
+      "assets/ember-ambient-DxlfqX62.wav": {
+        "bytes": 176444,
+        "sha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13"
+      },
+      "assets/ember-stone-CGtrIuNR.png": {
+        "bytes": 16849,
+        "sha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9"
+      },
+      "assets/forest_floor_diff_1k-FrvyY1gs.jpg": {
+        "bytes": 1329853,
+        "sha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b"
+      },
+      "assets/gale-ambient-Bk5IsviT.wav": {
+        "bytes": 176444,
+        "sha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0"
+      },
+      "assets/gale-stone-DFcyxpvg.png": {
+        "bytes": 17052,
+        "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
+      },
+      "assets/index-D9sgQo73.css": {
+        "bytes": 58611,
+        "sha256": "51975300bec048ed0242e6d35157f24a8b01723a7645f70c4b98793090d5edef"
+      },
+      "assets/index-DVm0juXQ.js": {
+        "bytes": 164493,
+        "sha256": "76f77f706eb83290d78a6ca4db3f1c450d3b901e4ba549172a7eaa6ec51df18b"
+      },
+      "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr": {
+        "bytes": 1435119,
+        "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+      },
+      "assets/moss-ambient-P9AOr4W8.wav": {
+        "bytes": 176444,
+        "sha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36"
+      },
+      "assets/moss-stone-DiwO4PmY.png": {
+        "bytes": 17328,
+        "sha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419"
+      },
+      "assets/north-gate-v22-M69S2yqx.webp": {
+        "bytes": 162962,
+        "sha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a"
+      },
+      "assets/north-gate-v23-BAPO0H9x.mp4": {
+        "bytes": 3178191,
+        "sha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c"
+      },
+      "assets/pilgrim-foley-CW54U_6w.wav": {
+        "bytes": 826370,
+        "sha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+      },
+      "assets/pilgrim-harmony-LSIdyu7z.mp3": {
+        "bytes": 288594,
+        "sha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0"
+      },
+      "assets/pilgrim-motif-yb4axZNo.mp3": {
+        "bytes": 192463,
+        "sha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4"
+      },
+      "assets/pilgrim-pulse-BJS9Fs4r.mp3": {
+        "bytes": 192463,
+        "sha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13"
+      },
+      "assets/pine-branch-rgba-DpLH-kJr.png": {
+        "bytes": 165258,
+        "sha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a"
+      },
+      "assets/rock_face_03_diff_1k-Clx6WbHJ.jpg": {
+        "bytes": 927082,
+        "sha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d"
+      },
+      "assets/rock_face_03_nor_gl_1k-B8WSHJ2I.jpg": {
+        "bytes": 1146788,
+        "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
+      },
+      "assets/scene-07OSPvyK.js": {
+        "bytes": 229675,
+        "sha256": "55154f869a325b351d1cfc90d437727cdd3b27d652bcf650a1ab58569c7eddd9"
+      },
+      "assets/shared-alert-JeJkFdAY.wav": {
+        "bytes": 21212,
+        "sha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a"
+      },
+      "assets/shared-claim-BPXeWqKz.wav": {
+        "bytes": 39734,
+        "sha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a"
+      },
+      "assets/shared-impact-DwWqEia4.wav": {
+        "bytes": 7982,
+        "sha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153"
+      },
+      "assets/shared-seal-slkiLvkd.wav": {
+        "bytes": 30914,
+        "sha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5"
+      },
+      "assets/shared-step-D8_A5LtE.wav": {
+        "bytes": 7100,
+        "sha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088"
+      },
+      "assets/shared-swing-BkmUzsmF.wav": {
+        "bytes": 10628,
+        "sha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25"
+      },
+      "assets/three-gEIhRU3M.js": {
+        "bytes": 578362,
+        "sha256": "4e8e7d9622b561c76e2121e476b708998351988bab0e8120ce2196998263788a"
+      },
+      "assets/tide-ambient-BP0Z0aTJ.wav": {
+        "bytes": 176444,
+        "sha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba"
+      },
+      "assets/tide-stone-COv3Sj_E.png": {
+        "bytes": 17270,
+        "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
+      },
+      "assets/young-male-q95-DLRShmkN.webp": {
+        "bytes": 541954,
+        "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+      },
+      "icon.svg": {
+        "bytes": 380,
+        "sha256": "6f7b0fc7f276f4ccec8c34425ddc82254bf75eb6f37284f1d67f426dacedf9c7"
+      },
+      "index.html": {
+        "bytes": 7302,
+        "sha256": "c617a749aa291b908512493caef09a3887d7eca0edd42709e0128bf7f549f9c4"
+      },
+      "manifest.webmanifest": {
+        "bytes": 274,
+        "sha256": "4a9b130f07936394acfa34a5df0fe32f2eb87a6969335c1bed192a7ccbfb0b2b"
+      }
+    },
+    "publicFiles": 34,
+    "initialJSBytes": 164493,
+    "JSChunks": 3,
+    "allJSBytes": 972530,
+    "standaloneBytes": 16331434,
+    "standaloneSHA256": "8f659340f1eecf5984287486c8f94d00de384ff6b677625e0c03716958e8945e",
+    "headroom16MiB": 445782
+  }
+}

@@ -1,0 +1,23 @@
+✔ saved attack clocks cross windup/strike/recovery continuously for all enemy forms (160.710643ms)
+✔ real enemy game ticks preserve strike events and bound the formerly skipped shoulder and body movement (311.094904ms)
+✔ each player weapon travels forward at its existing impact clock and stays above the flat floor throughout the attack (67.020247ms)
+✔ two-hand equipment follows the passive parry exit on every frame while retaining both grips (4.330446ms)
+✔ fresh or previously equipped drink exits never seed a two-hand transition from a zero target (9.701284ms)
+✔ hidden re-grasp starts without an elbow-pole flip and lowers through consecutive saved drink frames (7.65407ms)
+✔ sampled actual blade centerlines clear skinned head and torso triangles through all nine attacks (2854.786449ms)
+✔ weighted attacks preserve world stance on slopes, and saved two-hand grips reconstruct independently of prior pose (32.70004ms)
+✔ real ranger grip, draw finger, bowstrings and saved release share the existing Game launch line (1453.186048ms)
+✔ all shipped actor roles and four warden variants have independently bound authored skins within declared geometry budgets (918.162728ms)
+✔ flat and sloping support keep stance ankles at the sampled floor through walk/run with no world transform or game mutation (111.3775ms)
+✔ stance feet counter world displacement and teleportation does not invent a high-speed stride (36.783876ms)
+✔ saved gameplay actions reconstruct the same articulated pose and impact phase without advancing gameplay (404.182819ms)
+✔ windup, release, recovery, hit, live death and settled reload are distinct finite poses for every enemy family (169.865212ms)
+✔ authored geometry recipe matches provenance and preserves separate third-party attribution (52.172476ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4174.537361

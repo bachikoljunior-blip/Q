@@ -1,0 +1,43 @@
+✔ saved attack clocks cross windup/strike/recovery continuously for all enemy forms (420.7496ms)
+✔ real enemy game ticks preserve strike events and bound the formerly skipped shoulder and body movement (496.653806ms)
+✔ each player weapon travels forward at its existing impact clock and stays above the flat floor throughout the attack (65.239817ms)
+✔ two-hand equipment follows the passive parry exit on every frame while retaining both grips (4.32938ms)
+✔ fresh or previously equipped drink exits never seed a two-hand transition from a zero target (6.970295ms)
+✔ hidden re-grasp starts without an elbow-pole flip and lowers through consecutive saved drink frames (8.431624ms)
+✔ sampled actual blade centerlines clear skinned head and torso triangles through all nine attacks (2197.482298ms)
+✔ weighted attacks preserve world stance on slopes, and saved two-hand grips reconstruct independently of prior pose (26.42219ms)
+✔ all shipped actor roles and four warden variants have independently bound authored skins within declared geometry budgets (1289.527085ms)
+✔ flat and sloping support keep stance ankles at the sampled floor through walk/run with no world transform or game mutation (282.108898ms)
+✔ stance feet counter world displacement and teleportation does not invent a high-speed stride (83.215199ms)
+✔ saved gameplay actions reconstruct the same articulated pose and impact phase without advancing gameplay (1037.231282ms)
+✔ windup, release, recovery, hit, live death and settled reload are distinct finite poses for every enemy family (378.429562ms)
+✖ authored geometry recipe matches provenance and preserves separate third-party attribution (28.053361ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3564.69645
+
+✖ failing tests:
+
+test at tests/detailed-actors.test.mjs:86:1
+✖ authored geometry recipe matches provenance and preserves separate third-party attribution (28.053361ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '51a6a10a890bfd3b531119b39808a18a32b2bea45fa4441871a57e38da06046d'
+  - 'a320835670bd43147e793651834034a87ad23d16f87c191b412a5de881a17849'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/e72662e3b71f/Q-archery-v31/tests/detailed-actors.test.mjs:89:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '51a6a10a890bfd3b531119b39808a18a32b2bea45fa4441871a57e38da06046d',
+    expected: 'a320835670bd43147e793651834034a87ad23d16f87c191b412a5de881a17849',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
