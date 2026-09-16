@@ -1,0 +1,104 @@
+{
+  "cases": 27,
+  "sourceUnchangedDuringRun": true,
+  "candidateActor": {
+    "sha256": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+    "bytes": 38244
+  },
+  "groundFailures": [],
+  "allGameUnchanged": true,
+  "canonicalErrorMax": 0,
+  "entryPersistentImprovedCases": 27,
+  "groups": {
+    "heal": {
+      "baseline": {
+        "entryPersistentMax": 1.0207290575775356,
+        "entryUnionMax": 3.323407912797212,
+        "entryLocalUnionMax": 3.3234079127972125,
+        "firstSkinMax": 1.0207290575775356,
+        "firstCapeMax": 0.11561198154144404,
+        "groundMin": {
+          "skin": 0.0016294607560647378,
+          "rigid": 0.03132516242070693,
+          "cape": 0.011990199806357626
+        }
+      },
+      "candidate": {
+        "entryPersistentMax": 0.22369185085617688,
+        "entryUnionMax": 3.9567376704095008,
+        "entryLocalUnionMax": 3.9567376704095008,
+        "firstSkinMax": 0.22369185085617688,
+        "firstCapeMax": 0.0764900365911832,
+        "groundMin": {
+          "skin": 0.0016976528874419472,
+          "rigid": 0.03132516242070693,
+          "cape": 0.011990199806357626
+        }
+      },
+      "rootAboveGround": [
+        0,
+        0
+      ]
+    },
+    "jump": {
+      "baseline": {
+        "entryPersistentMax": 1.690190028540575,
+        "entryUnionMax": 1.690190028540575,
+        "entryLocalUnionMax": 1.7379589980549908,
+        "firstSkinMax": 0.8060654022234066,
+        "firstCapeMax": 0.23640845228858162,
+        "groundMin": {
+          "skin": 0.7575155814645613,
+          "rigid": 0.9619599773959706,
+          "cape": 0.5035966654023349
+        }
+      },
+      "candidate": {
+        "entryPersistentMax": 0.07529850487254808,
+        "entryUnionMax": 0.07529850487254808,
+        "entryLocalUnionMax": 0.09693867966791851,
+        "firstSkinMax": 0.060330301257800666,
+        "firstCapeMax": 0.07219184399530476,
+        "groundMin": {
+          "skin": 0.7575155814645613,
+          "rigid": 0.9619599773959706,
+          "cape": 0.5035966654023349
+        }
+      },
+      "rootAboveGround": [
+        1.094166666666667,
+        1.094166666666667
+      ]
+    },
+    "dodge-tail": {
+      "baseline": {
+        "entryPersistentMax": 0.9180168592906245,
+        "entryUnionMax": 0.9180168592906245,
+        "entryLocalUnionMax": 0.9697618827171045,
+        "firstSkinMax": 0.7505274548223076,
+        "firstCapeMax": 0.46047959240216335,
+        "groundMin": {
+          "skin": 0.001814364067279306,
+          "rigid": 0.02462356788307485,
+          "cape": 0.011985964773410407
+        }
+      },
+      "candidate": {
+        "entryPersistentMax": 0.2989667865914483,
+        "entryUnionMax": 0.2989667865914483,
+        "entryLocalUnionMax": 0.17827166434721956,
+        "firstSkinMax": 0.28926728089293624,
+        "firstCapeMax": 0.2989667865914483,
+        "groundMin": {
+          "skin": 0.0020111686093249315,
+          "rigid": 0.02462356788307485,
+          "cape": 0.011985964773410407
+        }
+      },
+      "rootAboveGround": [
+        0,
+        0
+      ]
+    }
+  }
+}

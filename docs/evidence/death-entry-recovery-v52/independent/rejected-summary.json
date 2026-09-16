@@ -1,0 +1,65 @@
+{
+  "heal": {
+    "cases": 9,
+    "entryBeforeMax": 3.323407912797212,
+    "entryAfterMax": 0.28193974176112824,
+    "entryAfterSkinMax": 0.07005734374093872,
+    "entryAfterCapeMax": 0.0764900365911832,
+    "rootAboveGround": [
+      0,
+      0
+    ],
+    "groundBefore": {
+      "skin": 0.0016294607560647378,
+      "rigid": 0.03132516242070693,
+      "cape": 0.011990199806357626
+    },
+    "groundAfter": {
+      "skin": 0.0016976528874419472,
+      "rigid": -0.4808126078833268,
+      "cape": 0.011990199806357626
+    }
+  },
+  "jump": {
+    "cases": 9,
+    "entryBeforeMax": 1.690190028540575,
+    "entryAfterMax": 0.07529850487254808,
+    "entryAfterSkinMax": 0.060330301257800666,
+    "entryAfterCapeMax": 0.07219184399530476,
+    "rootAboveGround": [
+      1.094166666666667,
+      1.094166666666667
+    ],
+    "groundBefore": {
+      "skin": 0.7575155814645613,
+      "rigid": 0.9619599773959706,
+      "cape": 0.5035966654023349
+    },
+    "groundAfter": {
+      "skin": 0.7575155814645613,
+      "rigid": 0.9619599773959706,
+      "cape": 0.5035966654023349
+    }
+  },
+  "dodge-tail": {
+    "cases": 9,
+    "entryBeforeMax": 0.9180168592906245,
+    "entryAfterMax": 0.2989667865914483,
+    "entryAfterSkinMax": 0.28926728089293624,
+    "entryAfterCapeMax": 0.2989667865914483,
+    "rootAboveGround": [
+      0,
+      0
+    ],
+    "groundBefore": {
+      "skin": 0.001814364067279306,
+      "rigid": 0.02462356788307485,
+      "cape": 0.011985964773410407
+    },
+    "groundAfter": {
+      "skin": 0.0020111686093249315,
+      "rigid": 0.02462356788307485,
+      "cape": 0.011985964773410407
+    }
+  }
+}

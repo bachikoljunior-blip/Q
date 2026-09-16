@@ -423,42 +423,7 @@ function animateCape(actor,motion){
   }
   pos.needsUpdate=true;actor.cape.geometry.computeVertexNormals();
 }
-// Live player deaths retain the last displayed local pose. Explicit saved clocks
-// and first-seen corpses remain canonical. Fixed node transforms are cached;
-// player identity is observed by reference, without mutating Game state.
-function deathEntryPose(actor,state,previousDead){
-  if(actor.type!=='player')return;
-  const samePlayer=actor.displayedPlayer===state;actor.displayedPlayer=state;
-  if(!state.dead||!samePlayer||Number.isFinite(state.deathElapsed)){if(actor.deathEntry)actor.deathEntry.active=false;return;}
-  if(actor.deathEntry?.active&&actor.deathEntry.weapon!==(state.weaponType||'sword'))actor.deathEntry.active=false;
-  if(previousDead!==false)return;
-  let entry=actor.deathEntry;
-  if(!entry){
-    const nodes=actor.rest.map(r=>r.node);
-    entry=actor.deathEntry={active:false,poses:nodes.map(node=>({node,position:node.position.clone(),quaternion:node.quaternion.clone(),scale:node.scale.clone()})),fromWeapon:new Quaternion(),targetWeapon:new Quaternion(),rotation:new Quaternion(),inverse:new Quaternion()};
-  }
-  for(const p of entry.poses){p.position.copy(p.node.position);p.quaternion.copy(p.node.quaternion);p.scale.copy(p.node.scale);}
-  entry.weapon=state.weaponType||'sword';entry.weaponVisible=actor[entry.weapon].visible;entry.active=true;
-  actor.g.updateWorldMatrix(true,true);actor.g.getWorldQuaternion(entry.inverse).invert();
-  actor[entry.weapon].getWorldQuaternion(entry.fromWeapon).premultiply(entry.inverse);
-}
-function blendDeathEntry(actor,motion){
-  const entry=actor.deathEntry;if(motion.state!=='death'||!entry?.active)return;
-  const weight=smooth(actor.deathAge/.24);
-  if(weight===1){entry.active=false;return;}
-  actor.g.updateWorldMatrix(true,true);actor.g.getWorldQuaternion(entry.inverse).invert();
-  const weapon=actor[entry.weapon];weapon.getWorldQuaternion(entry.targetWeapon).premultiply(entry.inverse);
-  // A hidden healing weapon has no displayed orientation to retain on reappearance.
-  if(entry.weaponVisible)entry.targetWeapon.slerp(entry.fromWeapon,1-weight);
-  for(const p of entry.poses){p.node.position.lerpVectors(p.position,p.node.position,weight);p.node.quaternion.slerp(p.quaternion,1-weight);p.node.scale.lerpVectors(p.scale,p.node.scale,weight);}
-  // The carry grip distributes cancelling rotations across wrist and equipment.
-  // Interpolate their combined orientation once, then solve the attached wrist.
-  actor.g.updateMatrixWorld(true);actor.g.getWorldQuaternion(entry.rotation).multiply(entry.targetWeapon);
-  actor.hands[1].parent.getWorldQuaternion(entry.inverse).invert();entry.inverse.multiply(entry.rotation);
-  entry.rotation.copy(weapon.quaternion).invert();actor.hands[1].quaternion.copy(entry.inverse).multiply(entry.rotation);
-}
 export function animateDetailedActor(actor,state={},dt=0){
-  deathEntryPose(actor,state,actor.lastDead);
   const delta=Number.isFinite(dt)?clamp(dt,0,.1):0;actor.time+=delta;actor.frameDelta=delta;
   const x=Number.isFinite(state.x)?state.x:actor.g.position.x,z=Number.isFinite(state.z)?state.z:actor.g.position.z;
   const valid=Number.isFinite(x)&&Number.isFinite(z),last=actor.lastPosition;
@@ -485,5 +450,5 @@ export function animateDetailedActor(actor,state={},dt=0){
 
   for(const [weapon,node]of [['sword',actor.sword],['greatsword',actor.greatsword],['spear',actor.spear]])if(node)node.visible=motion.state!=='drink'&&weapon===(state.weaponType||'sword');
   if(actor.flask)actor.flask.visible=motion.state==='drink';
-  blendDeathEntry(actor,motion);supportFallenBody(actor,motion);animateCape(actor,motion);return motion;
+  supportFallenBody(actor,motion);animateCape(actor,motion);return motion;
 }

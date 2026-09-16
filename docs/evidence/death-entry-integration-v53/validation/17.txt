@@ -1,0 +1,31 @@
+{
+  "reportPath": "/workspace/scratch/e72662e3b71f/Q-ps4-v53/artifacts/sky-integration-report.json",
+  "failures": [],
+  "changedDuringRun": [],
+  "field": {
+    "width": 512,
+    "height": 256,
+    "bytes": 1048576,
+    "prepareMs": 242.433945,
+    "peakLuminance": 15.349460937499998,
+    "solarCorePeak": 3.423558984375,
+    "horizon": [
+      0.4473476334132392,
+      0.4796986952114205,
+      0.582211221594139
+    ],
+    "sunFill": [
+      3.489043277788196,
+      3.3649916443306744,
+      3.8315254443634936
+    ],
+    "rotationError": 1.2412670766236366e-16
+  },
+  "scene": {
+    "awaitedSkyBeforeConstruction": true,
+    "installedActualSource": true,
+    "qualitySwitches": 3,
+    "pmremBakesAcrossQualitySwitches": 1,
+    "releaseClearedEnvironment": true
+  }
+}
