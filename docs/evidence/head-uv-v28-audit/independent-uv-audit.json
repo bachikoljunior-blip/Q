@@ -1,0 +1,118 @@
+{
+  "sourceHash": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+  "dataHash": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
+  "dataBytes": 120150,
+  "sourceSeamVertices": 187,
+  "missingOriginalSeamUVs": {},
+  "originalSurfaceTriangles": 8440,
+  "currentSurfaceTriangles": 1500,
+  "capTriangles": 46,
+  "sourcePositive": 8440,
+  "sourceNegative": 0,
+  "sourceZero": 0,
+  "currentSurfacePositive": 1500,
+  "currentSurfaceNegative": 0,
+  "currentSurfaceZero": 0,
+  "allCurrentCornersAreOriginalVertexUVPairs": true,
+  "capUVBounds": [
+    [
+      0.3800142,
+      0.3810464
+    ],
+    [
+      0.9280482,
+      0.9290679
+    ]
+  ],
+  "capUVSignedAreaSum": 8.088497999999493e-07,
+  "capMinimumAbsoluteTriangleUVArea": 1.0228489999992739e-08,
+  "sourceUVArea": 0.2086042268575,
+  "surfaceUVArea": 0.208591453018,
+  "surfaceMinusSourceArea": -1.2773839499991002e-05,
+  "sourceUVBoundaryEdges": 426,
+  "currentUVBoundaryEdges": 426,
+  "removedUVBoundaryEdges": [
+    [
+      4214,
+      759
+    ],
+    [
+      4266,
+      4214
+    ],
+    [
+      8026,
+      11448
+    ],
+    [
+      11448,
+      11500
+    ]
+  ],
+  "addedUVBoundaryEdges": [
+    [
+      747,
+      759
+    ],
+    [
+      4266,
+      747
+    ],
+    [
+      8015,
+      11500
+    ],
+    [
+      8026,
+      8015
+    ]
+  ],
+  "UVBoundaryDeltaArea": -1.2773839499991002e-05,
+  "sourceUVEdgeMaxIncidence": 2,
+  "currentUVEdgeMaxIncidence": 2,
+  "ancestryIdsUniqueInRange": true,
+  "ancestryBoundary": "IDs are independently range/uniqueness/region checked; full collapse history not independently replayed.",
+  "exactSurfaceUVOverlapCheck": {
+    "trianglePairBBoxCandidates": 5207,
+    "intersectionAlgorithm": "Sutherland-Hodgman convex triangle clipping, float64; positive area threshold 1e-12 UV^2; all 1500 surface triangles tested against every bounding-box-intersecting later triangle, including adjacency",
+    "positiveAreaOverlapPairs": [],
+    "maximumPairIntersectionArea": 6.776263578034403e-21,
+    "interpretation": "No substantial overlap if list is empty; floating intersections below threshold are numerical noise, not rendered texel proof."
+  },
+  "ancestryRegionAndCornerRegionMatch": true,
+  "capAllVerticesWithinExistingHeadLocalNeckEllipsoid": true,
+  "capMaxNeckEllipsoidNormalizedRadiusSquared": 0.2800006137974862,
+  "capUVAllVerticesWithinOriginalCollarTriangleUnion": true,
+  "boundaryChangeExplanation": "Only two single-UV mouth-interior slit endpoints move under QEM: source vertex3719/UV4214 ->699/747 and mirrored10387/11448 ->7424/8015. Adjacent seam vertices697 (UV759/4266) and7422 (UV8026/11500) keep both sides. The 4 removed/4 added UV boundary edges explain the entire -0.0000127738395 UV area delta. This is bounded boundary approximation, not dropped seam corners.",
+  "sourcePNGDirectLayoutContract": "Each non-cap runtime UV equals its exact original OBJ UV within 6e-8; no crop, scale, island translation or axis swap. Thus a full original-layout 2048x2048 source image is the corresponding coordinate space. Actual image-origin/Three.js flipY behavior and material color require later rendered integration; not validated here.",
+  "finalFileHashes": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-head-v28/src/assets/characters/anatomical-head-data.js",
+      "sha256": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
+      "bytes": 120150
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-head-v28/src/assets/characters/anatomical-head-provenance.json",
+      "sha256": "a802d4cf094f08998ae52195e7db42fe560980c4cb2f8ea49e0aede01961ff39",
+      "bytes": 4655
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-head-v28/scripts/characters/generate-anatomical-head.py",
+      "sha256": "8bf8805f3f7a173198e9bf17edc60c2f31041a496e3a0abec445618c3165b85f",
+      "bytes": 17238
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-head-v28/src/assets/characters/sources/makehuman-hm08.obj",
+      "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+      "bytes": 1749303
+    }
+  ],
+  "sourcePNG": {
+    "path": "/workspace/scratch/e72662e3b71f/q-v28-skin-source/young_lightskinned_male_diffuse.png",
+    "sha256": "862a26e335e958b70534cb5f0d7c47ef30ab148a56c42b3e9da969cf76f12963",
+    "bytes": 3693828,
+    "width": 2048,
+    "height": 2048,
+    "boundary": "File SHA256 and IHDR dimensions read independently here; pixel decode and full acquisition/CRC validated by acquisition owner, not duplicated in UV audit."
+  }
+}

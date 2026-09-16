@@ -33,11 +33,11 @@ test('derived head is closed at every UV split, outward, finite and within its u
  assert([...edges.values()].every(n=>n===2),'closed manifold after welding source IDs at UV seams');assert(volume>0,'positive oriented volume');
  const seen=new Set(),todo=[S[0]];while(todo.length){const n=todo.pop();if(seen.has(n))continue;seen.add(n);todo.push(...neighbours.get(n));}assert.equal(seen.size,new Set(S).size);
  for(const v of A){assert(v.every(Number.isFinite));assert(Math.abs(Math.hypot(...v.slice(3,6))-1)<1e-5);assert(v[6]>=0&&v[6]<=1&&v[7]>=0&&v[7]<=1);assert(Math.abs(v[0])<=.142001&&v[1]<=.198001&&v[1]>=-.139&&v[2]>=-.112001&&v[2]<=.14315);}
- assert.equal(I.length/3,1496);
+ assert.equal(I.length/3,1546);
 });
 test('every human shares one independent skeleton and immutable face geometry without texturing hands or duplicating old head skin',()=>{
  for(const [family,options] of [...ACTOR_FAMILIES.filter(f=>f!=='wolf').map(f=>[f,{}]),...['ember','tide','gale','moss'].map(theme=>['soldier',{theme}])]){
-  const a=createDetailedActor(family,options),b=createDetailedActor(family,options),fa=face(a),fb=face(b);assert(fa&&fb);assert.equal(fa.geometry,fb.geometry);assert.notEqual(fa.skeleton,fb.skeleton);assert.equal(fa.geometry.index.count/3,1496);assert.equal(fa.material.map,null);
+  const a=createDetailedActor(family,options),b=createDetailedActor(family,options),fa=face(a),fb=face(b);assert(fa&&fb);assert.equal(fa.geometry,fb.geometry);assert.notEqual(fa.skeleton,fb.skeleton);assert.equal(fa.geometry.index.count/3,1546);assert.equal(fa.material.map,null);
   const palettes=new Set();let triangles=0,draws=0;
   a.g.traverse(n=>{if(!n.isMesh)return;if(n.isSkinnedMesh){palettes.add(n.skeleton);if(n.material.name==='Q skin'){assert.notEqual(n.material,fa.material);const w=n.geometry.attributes.skinWeight,idx=n.geometry.attributes.skinIndex;for(let i=0;i<w.count;i++)for(let k=0;k<4;k++)if(w.getComponent(i,k)>.99)assert.notEqual(n.skeleton.bones[idx.getComponent(i,k)].name,'head','old analytic face/ears must be removed');}}});
   a.g.traverseVisible(n=>{if(n.isMesh){triangles+=(n.geometry.index?.count??n.geometry.attributes.position.count)/3;draws++;}});assert.equal(palettes.size,1);assert(triangles<8000);assert(draws<=14);const before=b.head.quaternion.clone();a.animate({healTimer:.45},0);assert(b.head.quaternion.equals(before));
