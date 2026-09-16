@@ -1,0 +1,145 @@
+{
+  "readbackUTC": "2026-09-16T06:18:26.679742+00:00",
+  "initialJSBytes": 164988,
+  "jsChunks": 3,
+  "totalJSBytes": 1078176,
+  "selectedStartupRows": [
+    {
+      "location": "new-game",
+      "point": [
+        0,
+        101
+      ],
+      "distances": {
+        "ember": 57.0087712549569,
+        "tide": 57.0087712549569,
+        "gale": 95.71311299921238,
+        "moss": 95.71311299921238
+      },
+      "startup": [
+        "ember",
+        "tide"
+      ],
+      "prefetch": [
+        "ember",
+        "tide",
+        "gale",
+        "moss"
+      ],
+      "startupBytes": 34119
+    },
+    {
+      "location": "ember",
+      "point": [
+        55,
+        116
+      ],
+      "distances": {
+        "ember": 0.0,
+        "tide": 110.0,
+        "gale": 41.72529209005013,
+        "moss": 142.97202523570826
+      },
+      "startup": [
+        "ember",
+        "gale"
+      ],
+      "prefetch": [
+        "ember",
+        "tide",
+        "gale"
+      ],
+      "startupBytes": 33901
+    },
+    {
+      "location": "tide",
+      "point": [
+        -55,
+        116
+      ],
+      "distances": {
+        "ember": 110.0,
+        "tide": 0.0,
+        "gale": 142.97202523570826,
+        "moss": 41.72529209005013
+      },
+      "startup": [
+        "tide",
+        "moss"
+      ],
+      "prefetch": [
+        "ember",
+        "tide",
+        "moss"
+      ],
+      "startupBytes": 34598
+    },
+    {
+      "location": "gale",
+      "point": [
+        85,
+        145
+      ],
+      "distances": {
+        "ember": 41.72529209005013,
+        "tide": 142.97202523570826,
+        "gale": 0.0,
+        "moss": 170.0
+      },
+      "startup": [
+        "ember",
+        "gale"
+      ],
+      "prefetch": [
+        "ember",
+        "gale"
+      ],
+      "startupBytes": 33901
+    },
+    {
+      "location": "moss",
+      "point": [
+        -85,
+        145
+      ],
+      "distances": {
+        "ember": 142.97202523570826,
+        "tide": 41.72529209005013,
+        "gale": 170.0,
+        "moss": 0.0
+      },
+      "startup": [
+        "tide",
+        "moss"
+      ],
+      "prefetch": [
+        "tide",
+        "moss"
+      ],
+      "startupBytes": 34598
+    },
+    {
+      "location": "outside",
+      "point": [
+        0,
+        -250
+      ],
+      "distances": {
+        "ember": 370.10944327320266,
+        "tide": 370.10944327320266,
+        "gale": 404.04207701673846,
+        "moss": 404.04207701673846
+      },
+      "startup": [],
+      "prefetch": [],
+      "startupBytes": 0
+    }
+  ],
+  "newGameStartupVaultBytes": 34119,
+  "oldStartupVaultBytes": 68499,
+  "startupBytesDeferred": 34380,
+  "allAssetCount": 27,
+  "allAssetBytes": 11441662,
+  "mediaAllExact": true,
+  "boundary": "Raw file sums and native source control-flow. Not actual HTTP/cache/device/GPU transfer/performance. Runtime prefetch at new-game includes all4, so total eventual media unchanged."
+}

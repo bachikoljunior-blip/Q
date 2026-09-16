@@ -1,3 +1,13 @@
+## 2026-09-16 現在地: Web主軸へ地域素材の優先読込を結合
+
+[結合記録](WEB_STREAM_INTEGRATION_V35.md)。通常URLは以前から複数ファイルで単体復元CPUなし。v34は必須単体HTMLという制作/保存制約の解除、v35は実際の開始待機を近傍2枚34,119 Bへ分け、残34,380 Bを最初のactive frameから先読みし遠方失敗を隔離する変更。全27媒体/11,441,662 Bは不変、総GPU/HTTP減ではない。27工程/311tests全成功123.666685秒、初期JS164,988 B/3chunks、通常34files12,590,981 B、任意HTML15,503,291 B。sourceFingerprint f32e8383ed083a9c10f8f73060af2c7eabc05bdf0dde23fbee2b1483991bdfbe。
+
+v34はremote c6888d1d0891bb3111968bcadfa73f7b327966aa/PR49/tree8c1bad23a6b1db4269ff67bfdbb366bd9100b9adへ保存。実main547/PR39未merge/Site23は変わらず、03:14後のmerge mutation無し。最新公式preview statusもmailbox不在、Q automation disabled/active20。主体Ultra・単独writer・通常main→同一owner限定Site・期限9月20・PS4全画面の目標を保持し、人間の準備待ちにしない。
+
+不採用素材/rigid death候補とblocked生成はその根拠・元sourceを保全しruntimeへ入れていない。次はplayerの関節別支持と握り武器の接地、明示公式CC0別skin原素材の適合、原音/再生sampleRate/cache実態の比較。固定テストの通過や資料保存を画面/音の合格とせず、未解消工程と期限内達成の根拠不足を明示して制作継続。
+
+---
+
 ## 2026-09-16 現在地: 通常Web主軸と布接地を結合・検証
 
 最新ユーザーの遊ぶ方法見直しを実装し、単体HTMLは任意、通常固定stage＋小さいreceiptを主契約へ変更。旧通常Siteも複数ファイルで単体復元CPUは元々無い。方式変更だけではruntime/転送/端末費用は変わらず、16MiB単体保存guardを美術採用条件から外した。布処理の結合分だけdeferred JS +2998 B。27工程/306tests全成功123.953893秒、原27媒体11,441,662 B保持、初期164,988 B/3chunks、通常34files12,588,790 B。実値と制約は[結合記録](WEB_CLOAK_INTEGRATION_V34.md)。

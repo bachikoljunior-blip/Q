@@ -1,0 +1,86 @@
+{
+  "docs/BODY_GROUND_V36.md": {
+    "bytes": 9202,
+    "sha256": "4808c95a0996c2b7d5ccafd6688f3bebfd9a1d9edb931f0d06b2b00549024760"
+  },
+  "docs/evidence/body-ground-v36/comparison.json": {
+    "bytes": 531851,
+    "sha256": "7fb305e152eaf794a2892271da555f2859d80329a11bfcc7ee8e4afbe54e8ce0"
+  },
+  "docs/evidence/body-ground-v36/contracts.json": {
+    "bytes": 44113,
+    "sha256": "41c5e8f1c9066f162b00e0ace4abccbbebd00ded532d303efcb65bdc5af03139"
+  },
+  "docs/evidence/body-ground-v36/diagnosis.json": {
+    "bytes": 24977,
+    "sha256": "dc102eafc281211d418dbfbb5eb9ee516fbad69adbd9125c09da16239c3f7f54"
+  },
+  "docs/evidence/body-ground-v36/metadata.json": {
+    "bytes": 2908,
+    "sha256": "7128955a5bc8f723a2094ed03de115c57abf2a2c5748ae79b335ec1ecfc92e29"
+  },
+  "docs/evidence/body-ground-v36/rejected-rigid-support.js": {
+    "bytes": 34864,
+    "sha256": "b0f6e30d04f24514e8a31c7a28a7636bebd0dae91cd1e83f7b41f7cbe0409cbb"
+  },
+  "docs/evidence/body-ground-v36/replay.json": {
+    "bytes": 282,
+    "sha256": "dc139a12b2127259987b15e1dd06b1647c9095b32df9701f05d25a3221f365ed"
+  },
+  "docs/evidence/body-ground-v36/review/HASHES.json": {
+    "bytes": 744,
+    "sha256": "7c575d91a742c5c770302e8ba6e37f38ea31b61eb890ee2e597df4068c4357b5"
+  },
+  "docs/evidence/body-ground-v36/review/REVIEW.md": {
+    "bytes": 6785,
+    "sha256": "8ce9ade76573cab5f09966c4982afb038582e9df5a0577a492e717c002036351"
+  },
+  "docs/evidence/body-ground-v36/review/finalize.py": {
+    "bytes": 3276,
+    "sha256": "cb44526b3e2d5d2eda7bb51b4b3337d6c1c7d1b0a537895ebd8283e847b23508"
+  },
+  "docs/evidence/body-ground-v36/review/oracle.mjs": {
+    "bytes": 8047,
+    "sha256": "cc7df9bf82aac66be547cdf0ac328f5c27152577ad4660239d57016c71602eeb"
+  },
+  "docs/evidence/body-ground-v36/review/report.json": {
+    "bytes": 1019454,
+    "sha256": "f329fe35c962f03d078cdb97de44c830e54d91166e76b130b8d2e019b5aaa086"
+  },
+  "docs/evidence/body-ground-v36/review/run.txt": {
+    "bytes": 7405,
+    "sha256": "1da130192b28728742b2f9cd5d31250d589c337595ab443d6f2a0dd558d219f2"
+  },
+  "docs/evidence/body-ground-v36/review/summary.json": {
+    "bytes": 7486,
+    "sha256": "fd6c446ef80212fe834bf231bfd5c5a263817061ae787cd70a552375f70d2cae"
+  },
+  "docs/evidence/body-ground-v36/runtime-regression.txt": {
+    "bytes": 3254,
+    "sha256": "2395ebd4a59f7cea8c7836a1fe36f1c6c7eb9f37dea18f05a5958712941ab832"
+  },
+  "docs/evidence/body-ground-v36/source-before.js": {
+    "bytes": 31704,
+    "sha256": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc"
+  },
+  "docs/evidence/body-ground-v36/summary.json": {
+    "bytes": 4684,
+    "sha256": "661c774669573e6a25749ad836e6cb6ed93a02b84663a97e30cb1d0732189afc"
+  },
+  "scripts/compare-body-ground-contracts.mjs": {
+    "bytes": 4371,
+    "sha256": "260ff826240731b5c059ff52caebb857601782b62c9963aef4e04bb59f8ede14"
+  },
+  "scripts/compare-body-ground.mjs": {
+    "bytes": 2389,
+    "sha256": "f307dda845c7e21e99eb5d545135fe8b6c4092f29ab341d8828703fac00038bf"
+  },
+  "scripts/diagnose-body-ground.mjs": {
+    "bytes": 2795,
+    "sha256": "a06679c1c7625f8036a448e09553f9f8b9f0947b84c1b417a63e07cd5730c928"
+  },
+  "tests/fixtures/body-ground-oracle.mjs": {
+    "bytes": 3475,
+    "sha256": "54f30e04a1a9eea9480724494b77861bd257866f67b8d33489910cd67e37969d"
+  }
+}

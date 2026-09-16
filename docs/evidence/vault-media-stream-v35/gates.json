@@ -1,0 +1,82 @@
+[
+  {
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit": 0,
+    "seconds": 43.40238809585571,
+    "log": "final-1.txt"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/verify-main-runtime.mjs"
+    ],
+    "exit": 0,
+    "seconds": 3.758554697036743,
+    "log": "final-2.txt"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/verify-scene-integration.mjs",
+      ".",
+      "/workspace/scratch/e72662e3b71f/Q-region-stream-v35/docs/evidence/vault-media-stream-v35/scene.json"
+    ],
+    "exit": 0,
+    "seconds": 3.0731124877929688,
+    "log": "final-3.txt"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/verify-sky-integration.mjs",
+      ".",
+      "/workspace/scratch/e72662e3b71f/Q-region-stream-v35/docs/evidence/vault-media-stream-v35/sky.json"
+    ],
+    "exit": 0,
+    "seconds": 4.747921466827393,
+    "log": "final-4.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:vaults"
+    ],
+    "exit": 0,
+    "seconds": 18.705176830291748,
+    "log": "final-5.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:journey"
+    ],
+    "exit": 0,
+    "seconds": 0.51108717918396,
+    "log": "final-6.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:session"
+    ],
+    "exit": 0,
+    "seconds": 6.14679217338562,
+    "log": "final-7.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit": 0,
+    "seconds": 3.0061564445495605,
+    "log": "final-8.txt"
+  }
+]

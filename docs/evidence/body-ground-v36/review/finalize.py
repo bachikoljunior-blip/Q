@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,hashlib,subprocess,datetime
+p=Path(__file__).resolve().parent; root=p.parent/'Q-body-ground-v36'; r=json.loads((p/'report.json').read_text());hash=lambda b:hashlib.sha256(b).hexdigest()
+base='e731685be92c4c98a20115d2244e580e371ca084'; source=(root/'src/actor-models.js').read_bytes();candidate=(root/'docs/evidence/body-ground-v36/rejected-rigid-support.js').read_bytes();assert hash(source)==r['oldHash'];assert hash(candidate)==r['candidateHash'];assert source==subprocess.check_output(['git','show',base+':src/actor-models.js'],cwd=root)
+s=source.decode(); c=candidate.decode();start='function animateCape(actor,motion){';end='function animateDetailedActor'
+assert s[s.index(start):s.index(end)]==c[c.index(start):c.index(end)]
+neg=[x for x in r['terrain'] if x['before']['triangleMin']>=0 and x['after']['triangleMin']<-.001];assert len(neg)==6
+attachment=max(abs(a-b) for x in r['terrain']+r['flat'] for ap,bp in zip(x['before']['topInChest'],x['after']['topInChest']) for a,b in zip(ap,bp));assert attachment<1e-10
+assert len(r['terrain'])==108 and len(r['flat'])==20 and all(x['savedError']==0 for x in r['continuity'])
+paths=['src/actor-models.js','src/assets/characters/detailed-geometry.js','src/assets/characters/detailed-provenance.json','src/core.js','src/scene.js','src/bow-contact.js','src/character-motion.js']
+files={}
+for path in paths:
+ b=(root/path).read_bytes();assert b==subprocess.check_output(['git','show',base+':'+path],cwd=root);files[path]={'sha256':hash(b),'bytes':len(b)}
+summary={'reviewStartedUTC':'2026-09-16T06:35:33Z','finalizedUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'runAt':r['at'],'nativeOracleWallSeconds':r['elapsedSeconds'],'base':base,'candidateHash':r['candidateHash'],'unchangedProductionSource':files,'terrainCases':108,'flatCases':20,'totalTriangleSamplesBeforeAndAfter':sum(x[y]['samples'] for x in r['terrain']+r['flat'] for y in ['before','after']),'surfaceMinBefore':min(x['before']['triangleMin'] for x in r['terrain']),'surfaceMinAfter':min(x['after']['triangleMin'] for x in r['terrain']),'newlyNegativeSix':[{'role':x['role'],'location':x['location'],'yaw':x['yaw'],'t':x['t'],'before':x['before']['triangleMin'],'after':x['after']['triangleMin'],'newWorst':x['after']['worst']} for x in neg],'attachmentChestLocalMaxError':attachment,'savedPhaseMaxError':max(x['savedError'] for x in r['continuity']),'flatSettledPartGaps':[{'role':x['role'],'before':{k:x['before']['parts'].get(k) for k in ['pelvis','chest','head','foot-0','foot-1']},'after':{k:x['after']['parts'].get(k) for k in ['pelvis','chest','head','foot-0','foot-1']}} for x in r['flat'] if x['t']==.8],'verdict':'Reject candidate: six newly penetrating boot cases coexist with improved global penetration; positive support gaps also remain. Production source is restored exactly.','boundary':'Node real geometry; not rendering/device/perceptual/full-contact acceptance. No new implementation, production mutation or asset generation in review.'}
+(p/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+print(json.dumps({k:summary[k] for k in ['finalizedUTC','candidateHash','terrainCases','flatCases','surfaceMinBefore','surfaceMinAfter','attachmentChestLocalMaxError','verdict']},indent=2))

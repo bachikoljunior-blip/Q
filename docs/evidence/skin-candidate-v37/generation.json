@@ -1,0 +1,39 @@
+{
+  "status": "blocked_no_candidate_returned",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in edit",
+  "callCount": 1,
+  "referenceImagePaths": [
+    "src/assets/characters/skin/sources/young_lightskinned_male_diffuse.png"
+  ],
+  "numLastImagesProvided": false,
+  "promptPath": "docs/evidence/skin-candidate-v37/prompt.txt",
+  "startedUTC": "2026-09-16T06:44:55.591Z",
+  "errorRecordedUTC": "2026-09-16T06:46:38.220Z",
+  "toolReportedWallSeconds": 39.9,
+  "error": {
+    "httpStatus": 400,
+    "message": "Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 1b93ceee-fb03-4102-9b56-d07f29da5a73. safety_violations=[sexual].",
+    "type": "image_generation_user_error",
+    "param": null,
+    "code": "moderation_blocked",
+    "moderation_details": {
+      "moderation_stage": "output",
+      "categories": [
+        "sexual"
+      ]
+    },
+    "requestId": "1b93ceee-fb03-4102-9b56-d07f29da5a73"
+  },
+  "retryCalls": 0,
+  "fallbackCalls": 0,
+  "candidateReturned": false,
+  "candidateDimensions": null,
+  "candidateColorSpace": null,
+  "candidateImageHash": null,
+  "uvLandmarkComparison": "not executable: no returned candidate",
+  "runtimeAdoption": false,
+  "sourceRuntimeEdits": 0,
+  "assetProductionBoundary": "The image service returned no image. Output moderation failure is not a UV, aesthetic or pixel-quality rejection.",
+  "generatedOutputLicense": "not applicable: no output returned"
+}

@@ -14,6 +14,7 @@ export async function runStandalone(html,markup,media){
   runtime=createMainRuntime({code:match[1],html:markup},{allowTimers:true,setupContext({context,document,window}){
     const navigator={...context.navigator};window.navigator=navigator;document.defaultView=window;document.readyState='complete';
     window.devicePixelRatio=1;window.setTimeout=()=>0;window.clearTimeout=()=>{};window.cancelAnimationFrame=()=>{};
+    context.clearTimeout=window.clearTimeout;
     window.matchMedia=()=>({matches:false,addEventListener(){},removeEventListener(){}});
     const video=document.getElementById('title-video');video.paused=true;video.play=()=>{video.paused=false;return Promise.resolve();};video.pause=()=>{video.paused=true;};video.load=()=>{};
     const elementPrototype=Object.getPrototypeOf(video);elementPrototype.getContext=()=>null;

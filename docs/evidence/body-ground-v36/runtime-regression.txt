@@ -1,0 +1,34 @@
+✔ base: every retained surface corner uses its exact original OBJ vertex/UV pair, including same-island seams (17.463979ms)
+✔ base: LOD preserves each source face orientation without swapping UV corners and the authored cap is nondegenerate (19.796587ms)
+✔ Mira: every retained surface corner uses its exact original OBJ vertex/UV pair, including same-island seams (9.876497ms)
+✔ Mira: LOD preserves each source face orientation without swapping UV corners and the authored cap is nondegenerate (6.898ms)
+✔ head source, all archived inputs, generator and generated runtime bytes match provenance (6.008468ms)
+✔ derived head is closed at every UV split, outward, finite and within its unchanged silhouette envelope (10.900462ms)
+✔ every human shares one independent skeleton and immutable face geometry without texturing hands or duplicating old head skin (640.851209ms)
+✔ existing two eyelid bones close the registered sockets monotonically and corrected hoods expose the eyes (12856.028591ms)
+✔ capped neck rim stays inside the existing animated neck through pitch, drinking, recoil and death (124.593803ms)
+✔ real ranger grip, draw finger, bowstrings and saved release share the existing Game launch line (2525.739805ms)
+✔ saved death cloth keeps finite area and contacts while the entire remaining actor stays exact (2314.830475ms)
+✔ saved phases, first seen settled corpses and independent clones reconstruct the same cape (142.343609ms)
+✔ 30, 60 and 120 Hz give identical explicit saved phase geometry (90.636502ms)
+✔ real spawn slopes preserve the old neckline and never deepen its existing floor penetration (110.099377ms)
+✔ ordinary cape UV reduces measured stretching at unchanged area density through saved motion (827.469391ms)
+✔ every actually used family and warden theme retains the complete geometry/material/skin contract and budget (567.302311ms)
+✔ all shipped actor roles and four warden variants have independently bound authored skins within declared geometry budgets (1555.269993ms)
+✔ flat and sloping support keep stance ankles at the sampled floor through walk/run with no world transform or game mutation (139.827113ms)
+✔ stance feet counter world displacement and teleportation does not invent a high-speed stride (33.132748ms)
+✔ saved gameplay actions reconstruct the same articulated pose and impact phase without advancing gameplay (420.607961ms)
+✔ windup, release, recovery, hit, live death and settled reload are distinct finite poses for every enemy family (177.882983ms)
+✔ authored geometry recipe matches provenance and preserves separate third-party attribution (23.697857ms)
+✔ one deferred decode is shared, decode failure retries, late release disposes and cannot poison new load (2.058081ms)
+✔ invalid decode is disposed, cache can recover, invalid install retains prior face material (168.286729ms)
+✔ only smith face shares sRGB map across clones; eyes, lids, body and every other role remain unchanged (424.485822ms)
+✔ real scene waits for skin, rejects failed decode, installs before actor construction and shares every quality (2527.06671ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13809.516521

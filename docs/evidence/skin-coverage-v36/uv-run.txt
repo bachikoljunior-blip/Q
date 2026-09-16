@@ -1,0 +1,282 @@
+{
+  "boundary": "Source IDs and actual UV triangle math; sampled color is pre-lighting. No browser, WebGL, GPU or perceived appearance.",
+  "heads": {
+    "base": {
+      "renderVertices": 1012,
+      "triangles": 1546,
+      "sourceCorners": 965,
+      "syntheticCorners": 47,
+      "sourceUVMaxError": 0.0,
+      "sourceVertexUVPairMismatches": 0,
+      "sourceSurfaceUVArea": 0.208591453018,
+      "regions": [
+        {
+          "id": 0,
+          "triangles": 980,
+          "absoluteUVArea": 0.1781927657125,
+          "percentFullAtlas": 17.81927657125,
+          "bounds": [
+            [
+              0.641249,
+              0.148696
+            ],
+            [
+              0.993515,
+              0.817634
+            ]
+          ],
+          "positive": 980,
+          "negative": 0
+        },
+        {
+          "id": 1,
+          "triangles": 206,
+          "absoluteUVArea": 0.015622804996499998,
+          "percentFullAtlas": 1.5622804996499997,
+          "bounds": [
+            [
+              0.757634,
+              0.011863
+            ],
+            [
+              0.92374,
+              0.13644
+            ]
+          ],
+          "positive": 206,
+          "negative": 0
+        },
+        {
+          "id": 2,
+          "triangles": 94,
+          "absoluteUVArea": 0.004273233675500001,
+          "percentFullAtlas": 0.4273233675500001,
+          "bounds": [
+            [
+              0.011809,
+              0.547391
+            ],
+            [
+              0.076822,
+              0.632858
+            ]
+          ],
+          "positive": 94,
+          "negative": 0
+        },
+        {
+          "id": 3,
+          "triangles": 92,
+          "absoluteUVArea": 0.004273239934000002,
+          "percentFullAtlas": 0.4273239934000002,
+          "bounds": [
+            [
+              0.086143,
+              0.547391
+            ],
+            [
+              0.151156,
+              0.632858
+            ]
+          ],
+          "positive": 92,
+          "negative": 0
+        },
+        {
+          "id": 4,
+          "triangles": 128,
+          "absoluteUVArea": 0.006229408699499998,
+          "percentFullAtlas": 0.6229408699499999,
+          "bounds": [
+            [
+              0.274316,
+              0.911745
+            ],
+            [
+              0.486744,
+              0.973856
+            ]
+          ],
+          "positive": 128,
+          "negative": 0
+        },
+        {
+          "id": 5,
+          "triangles": 46,
+          "absoluteUVArea": 8.088497999999493e-07,
+          "percentFullAtlas": 8.088497999999493e-05,
+          "bounds": [
+            [
+              0.3800142,
+              0.9280482
+            ],
+            [
+              0.3810464,
+              0.9290679
+            ]
+          ],
+          "positive": 46,
+          "negative": 0
+        }
+      ],
+      "neckGeometricVertices": 46,
+      "neckOriginalUVSides": 47,
+      "neckMeanLinearRGB": [
+        0.756385085539447,
+        0.3947322188942361,
+        0.23747912103991894
+      ]
+    },
+    "npc": {
+      "renderVertices": 1062,
+      "triangles": 1646,
+      "sourceCorners": 1015,
+      "syntheticCorners": 47,
+      "sourceUVMaxError": 0.0,
+      "sourceVertexUVPairMismatches": 0,
+      "sourceSurfaceUVArea": 0.208591453018,
+      "regions": [
+        {
+          "id": 0,
+          "triangles": 1040,
+          "absoluteUVArea": 0.17819276571249998,
+          "percentFullAtlas": 17.819276571249997,
+          "bounds": [
+            [
+              0.641249,
+              0.148696
+            ],
+            [
+              0.993515,
+              0.817634
+            ]
+          ],
+          "positive": 1040,
+          "negative": 0
+        },
+        {
+          "id": 1,
+          "triangles": 220,
+          "absoluteUVArea": 0.0156228049965,
+          "percentFullAtlas": 1.56228049965,
+          "bounds": [
+            [
+              0.757634,
+              0.011863
+            ],
+            [
+              0.92374,
+              0.13644
+            ]
+          ],
+          "positive": 220,
+          "negative": 0
+        },
+        {
+          "id": 2,
+          "triangles": 104,
+          "absoluteUVArea": 0.004273233675500002,
+          "percentFullAtlas": 0.42732336755000017,
+          "bounds": [
+            [
+              0.011809,
+              0.547391
+            ],
+            [
+              0.076822,
+              0.632858
+            ]
+          ],
+          "positive": 104,
+          "negative": 0
+        },
+        {
+          "id": 3,
+          "triangles": 104,
+          "absoluteUVArea": 0.004273239934000002,
+          "percentFullAtlas": 0.4273239934000002,
+          "bounds": [
+            [
+              0.086143,
+              0.547391
+            ],
+            [
+              0.151156,
+              0.632858
+            ]
+          ],
+          "positive": 104,
+          "negative": 0
+        },
+        {
+          "id": 4,
+          "triangles": 132,
+          "absoluteUVArea": 0.006229408699499998,
+          "percentFullAtlas": 0.6229408699499999,
+          "bounds": [
+            [
+              0.274316,
+              0.911745
+            ],
+            [
+              0.486744,
+              0.973856
+            ]
+          ],
+          "positive": 132,
+          "negative": 0
+        },
+        {
+          "id": 5,
+          "triangles": 46,
+          "absoluteUVArea": 8.088497999999493e-07,
+          "percentFullAtlas": 8.088497999999493e-05,
+          "bounds": [
+            [
+              0.3800142,
+              0.9280482
+            ],
+            [
+              0.3810464,
+              0.9290679
+            ]
+          ],
+          "positive": 46,
+          "negative": 0
+        }
+      ],
+      "neckGeometricVertices": 46,
+      "neckOriginalUVSides": 47,
+      "neckMeanLinearRGB": [
+        0.756385085539447,
+        0.3947322188942361,
+        0.23747912103991894
+      ]
+    }
+  },
+  "neckBoundaryEqualAcrossHeads": true,
+  "sharedProtectedPositions": {
+    "1": {
+      "sharedCorners": 151,
+      "maxPositionDeltaM": 0.0
+    },
+    "2": {
+      "sharedCorners": 62,
+      "maxPositionDeltaM": 0.0
+    },
+    "3": {
+      "sharedCorners": 61,
+      "maxPositionDeltaM": 0.0
+    },
+    "4": {
+      "sharedCorners": 114,
+      "maxPositionDeltaM": 0.0
+    }
+  },
+  "sharedSourceCorners": {
+    "count": 916,
+    "uvMaxError": 0.0,
+    "maxPositionDeltaM": 0.008235335316184759
+  },
+  "durationSeconds": 0.5415961350008729
+}

@@ -1,0 +1,305 @@
+{
+  "reviewStartedUTC": "2026-09-16T06:35:33Z",
+  "finalizedUTC": "2026-09-16T06:43:04.242698+00:00",
+  "runAt": "2026-09-16T06:38:42.026Z",
+  "nativeOracleWallSeconds": 19.665673767,
+  "base": "e731685be92c4c98a20115d2244e580e371ca084",
+  "candidateHash": "b0f6e30d04f24514e8a31c7a28a7636bebd0dae91cd1e83f7b41f7cbe0409cbb",
+  "unchangedProductionSource": {
+    "src/actor-models.js": {
+      "sha256": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc",
+      "bytes": 31704
+    },
+    "src/assets/characters/detailed-geometry.js": {
+      "sha256": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4",
+      "bytes": 31187
+    },
+    "src/assets/characters/detailed-provenance.json": {
+      "sha256": "8ce53e4d0fb3d6fe676a19ae046ba7f41d1dfa147c256461f95a26f16773e8e9",
+      "bytes": 2806
+    },
+    "src/core.js": {
+      "sha256": "32464f35ce8db7776984e5cc18f01882e766d780a640309501819d794d188390",
+      "bytes": 39729
+    },
+    "src/scene.js": {
+      "sha256": "95b32fb3cf484793834afc847af6de37094bae1bb575eee4e95829d8b9010a01",
+      "bytes": 30234
+    },
+    "src/bow-contact.js": {
+      "sha256": "0b81d2dc277555e13ff552d2dbdd891e6cd0a4660cc10a1668c9269d1249005c",
+      "bytes": 5819
+    },
+    "src/character-motion.js": {
+      "sha256": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+      "bytes": 4931
+    }
+  },
+  "terrainCases": 108,
+  "flatCases": 20,
+  "totalTriangleSamplesBeforeAndAfter": 19086680,
+  "surfaceMinBefore": -0.8268538165433148,
+  "surfaceMinAfter": -0.022270535199008235,
+  "newlyNegativeSix": [
+    {
+      "role": "player",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": 0.13110405596047858,
+      "after": -0.009761490732785427,
+      "newWorst": {
+        "mesh": "Q leather skin",
+        "triangle": 340,
+        "indices": [
+          321,
+          320,
+          334
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          0.17176409127951014,
+          -1.6151674738924486,
+          101.59637118664506
+        ]
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "player-origin",
+        "x": 0,
+        "z": 101
+      },
+      "yaw": 0,
+      "t": 0.45,
+      "before": 0.30241885352073483,
+      "after": -0.022270535199008235,
+      "newWorst": {
+        "mesh": "Q leather skin",
+        "triangle": 340,
+        "indices": [
+          321,
+          320,
+          334
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          0.39543146849066,
+          -1.8757763200854976,
+          102.37190823190694
+        ]
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": 0.01934552688202018,
+      "after": -0.006584975543560745,
+      "newWorst": {
+        "mesh": "Q leather skin",
+        "triangle": 76,
+        "indices": [
+          48,
+          47,
+          61
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          -388.53067064871044,
+          51.489384672928146,
+          -37.49759395239386
+        ]
+      }
+    },
+    {
+      "role": "player",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": 0.1095447961859719,
+      "after": -0.009001475462113717,
+      "newWorst": {
+        "mesh": "Q leather skin",
+        "triangle": 340,
+        "indices": [
+          321,
+          320,
+          334
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          -388.73085611355714,
+          51.39914141133485,
+          -38.57478518724003
+        ]
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 1.1,
+      "t": 0.45,
+      "before": 0.04021021611237785,
+      "after": -0.01497446097861399,
+      "newWorst": {
+        "mesh": "Q leather skin",
+        "triangle": 76,
+        "indices": [
+          48,
+          47,
+          61
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          -387.92047149889135,
+          51.37686246907408,
+          -36.84452652439124
+        ]
+      }
+    },
+    {
+      "role": "boss",
+      "location": {
+        "id": "salt-archer",
+        "x": -389,
+        "z": -38
+      },
+      "yaw": 2.4,
+      "t": 0.45,
+      "before": 0.2541788688474611,
+      "after": -0.02072508868694456,
+      "newWorst": {
+        "mesh": "Q leather skin",
+        "triangle": 340,
+        "indices": [
+          321,
+          320,
+          334
+        ],
+        "barycentric": [
+          0,
+          0,
+          1
+        ],
+        "point": [
+          -388.3808880249582,
+          51.164147377108954,
+          -39.32207181837208
+        ]
+      }
+    }
+  ],
+  "attachmentChestLocalMaxError": 2.2737367544323206e-13,
+  "savedPhaseMaxError": 0,
+  "flatSettledPartGaps": [
+    {
+      "role": "player",
+      "before": {
+        "pelvis": 0.008168469489572769,
+        "chest": 0.02880304332695377,
+        "head": 0.10229015260614224,
+        "foot-0": 0.10513780559246556,
+        "foot-1": 0.10513780559246556
+      },
+      "after": {
+        "pelvis": 0.008168469489572769,
+        "chest": 0.02880304332695377,
+        "head": 0.10229015260614224,
+        "foot-0": 0.10513780559246556,
+        "foot-1": 0.10513780559246556
+      }
+    },
+    {
+      "role": "npc",
+      "before": {
+        "pelvis": 0.1481684694895729,
+        "chest": 0.05187136836713763,
+        "head": 0.2856126012804173,
+        "foot-0": 0.24513780559246567,
+        "foot-1": 0.24513780559246567
+      },
+      "after": {
+        "pelvis": 0.1481684694895729,
+        "chest": 0.05187136836713763,
+        "head": 0.2856126012804173,
+        "foot-0": 0.24513780559246567,
+        "foot-1": 0.24513780559246567
+      }
+    },
+    {
+      "role": "ranger",
+      "before": {
+        "pelvis": 0.1481684694895729,
+        "chest": 0.1688030433269539,
+        "head": 0.24229015260614237,
+        "foot-0": 0.24513780559246567,
+        "foot-1": 0.24513780559246567
+      },
+      "after": {
+        "pelvis": 0.1481684694895729,
+        "chest": 0.1688030433269539,
+        "head": 0.24229015260614237,
+        "foot-0": 0.24513780559246567,
+        "foot-1": 0.24513780559246567
+      }
+    },
+    {
+      "role": "boss",
+      "before": {
+        "pelvis": 0.018787479826017254,
+        "chest": 0.06624699965199361,
+        "head": 0.3260932592083565,
+        "foot-0": 0.24181695286267066,
+        "foot-1": 0.24181695286267066
+      },
+      "after": {
+        "pelvis": 0.018787479826017254,
+        "chest": 0.06624699965199361,
+        "head": 0.3260932592083565,
+        "foot-0": 0.24181695286267066,
+        "foot-1": 0.24181695286267066
+      }
+    }
+  ],
+  "verdict": "Reject candidate: six newly penetrating boot cases coexist with improved global penetration; positive support gaps also remain. Production source is restored exactly.",
+  "boundary": "Node real geometry; not rendering/device/perceptual/full-contact acceptance. No new implementation, production mutation or asset generation in review."
+}

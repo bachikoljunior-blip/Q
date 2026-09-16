@@ -1,0 +1,473 @@
+{
+  "boundary": "Source IDs and actual UV triangle math; sampled color is pre-lighting. No browser, WebGL, GPU or perceived appearance.",
+  "heads": {
+    "base": {
+      "renderVertices": 1012,
+      "triangles": 1546,
+      "sourceCorners": 965,
+      "syntheticCorners": 47,
+      "sourceUVMaxError": 0.0,
+      "sourceVertexUVPairMismatches": 0,
+      "sourceSurfaceUVArea": 0.208591453018,
+      "regions": [
+        {
+          "id": 0,
+          "triangles": 980,
+          "absoluteUVArea": 0.1781927657125,
+          "percentFullAtlas": 17.81927657125,
+          "bounds": [
+            [
+              0.641249,
+              0.148696
+            ],
+            [
+              0.993515,
+              0.817634
+            ]
+          ],
+          "positive": 980,
+          "negative": 0
+        },
+        {
+          "id": 1,
+          "triangles": 206,
+          "absoluteUVArea": 0.015622804996499998,
+          "percentFullAtlas": 1.5622804996499997,
+          "bounds": [
+            [
+              0.757634,
+              0.011863
+            ],
+            [
+              0.92374,
+              0.13644
+            ]
+          ],
+          "positive": 206,
+          "negative": 0
+        },
+        {
+          "id": 2,
+          "triangles": 94,
+          "absoluteUVArea": 0.004273233675500001,
+          "percentFullAtlas": 0.4273233675500001,
+          "bounds": [
+            [
+              0.011809,
+              0.547391
+            ],
+            [
+              0.076822,
+              0.632858
+            ]
+          ],
+          "positive": 94,
+          "negative": 0
+        },
+        {
+          "id": 3,
+          "triangles": 92,
+          "absoluteUVArea": 0.004273239934000002,
+          "percentFullAtlas": 0.4273239934000002,
+          "bounds": [
+            [
+              0.086143,
+              0.547391
+            ],
+            [
+              0.151156,
+              0.632858
+            ]
+          ],
+          "positive": 92,
+          "negative": 0
+        },
+        {
+          "id": 4,
+          "triangles": 128,
+          "absoluteUVArea": 0.006229408699499998,
+          "percentFullAtlas": 0.6229408699499999,
+          "bounds": [
+            [
+              0.274316,
+              0.911745
+            ],
+            [
+              0.486744,
+              0.973856
+            ]
+          ],
+          "positive": 128,
+          "negative": 0
+        },
+        {
+          "id": 5,
+          "triangles": 46,
+          "absoluteUVArea": 8.088497999999493e-07,
+          "percentFullAtlas": 8.088497999999493e-05,
+          "bounds": [
+            [
+              0.3800142,
+              0.9280482
+            ],
+            [
+              0.3810464,
+              0.9290679
+            ]
+          ],
+          "positive": 46,
+          "negative": 0
+        }
+      ],
+      "neckGeometricVertices": 46,
+      "neckOriginalUVSides": 47,
+      "neckMeanLinearRGB": [
+        0.756385085539447,
+        0.3947322188942361,
+        0.23747912103991894
+      ]
+    },
+    "npc": {
+      "renderVertices": 1062,
+      "triangles": 1646,
+      "sourceCorners": 1015,
+      "syntheticCorners": 47,
+      "sourceUVMaxError": 0.0,
+      "sourceVertexUVPairMismatches": 0,
+      "sourceSurfaceUVArea": 0.208591453018,
+      "regions": [
+        {
+          "id": 0,
+          "triangles": 1040,
+          "absoluteUVArea": 0.17819276571249998,
+          "percentFullAtlas": 17.819276571249997,
+          "bounds": [
+            [
+              0.641249,
+              0.148696
+            ],
+            [
+              0.993515,
+              0.817634
+            ]
+          ],
+          "positive": 1040,
+          "negative": 0
+        },
+        {
+          "id": 1,
+          "triangles": 220,
+          "absoluteUVArea": 0.0156228049965,
+          "percentFullAtlas": 1.56228049965,
+          "bounds": [
+            [
+              0.757634,
+              0.011863
+            ],
+            [
+              0.92374,
+              0.13644
+            ]
+          ],
+          "positive": 220,
+          "negative": 0
+        },
+        {
+          "id": 2,
+          "triangles": 104,
+          "absoluteUVArea": 0.004273233675500002,
+          "percentFullAtlas": 0.42732336755000017,
+          "bounds": [
+            [
+              0.011809,
+              0.547391
+            ],
+            [
+              0.076822,
+              0.632858
+            ]
+          ],
+          "positive": 104,
+          "negative": 0
+        },
+        {
+          "id": 3,
+          "triangles": 104,
+          "absoluteUVArea": 0.004273239934000002,
+          "percentFullAtlas": 0.4273239934000002,
+          "bounds": [
+            [
+              0.086143,
+              0.547391
+            ],
+            [
+              0.151156,
+              0.632858
+            ]
+          ],
+          "positive": 104,
+          "negative": 0
+        },
+        {
+          "id": 4,
+          "triangles": 132,
+          "absoluteUVArea": 0.006229408699499998,
+          "percentFullAtlas": 0.6229408699499999,
+          "bounds": [
+            [
+              0.274316,
+              0.911745
+            ],
+            [
+              0.486744,
+              0.973856
+            ]
+          ],
+          "positive": 132,
+          "negative": 0
+        },
+        {
+          "id": 5,
+          "triangles": 46,
+          "absoluteUVArea": 8.088497999999493e-07,
+          "percentFullAtlas": 8.088497999999493e-05,
+          "bounds": [
+            [
+              0.3800142,
+              0.9280482
+            ],
+            [
+              0.3810464,
+              0.9290679
+            ]
+          ],
+          "positive": 46,
+          "negative": 0
+        }
+      ],
+      "neckGeometricVertices": 46,
+      "neckOriginalUVSides": 47,
+      "neckMeanLinearRGB": [
+        0.756385085539447,
+        0.3947322188942361,
+        0.23747912103991894
+      ]
+    }
+  },
+  "neckBoundaryEqualAcrossHeads": true,
+  "sharedProtectedPositions": {
+    "1": {
+      "sharedCorners": 151,
+      "maxPositionDeltaM": 0.0
+    },
+    "2": {
+      "sharedCorners": 62,
+      "maxPositionDeltaM": 0.0
+    },
+    "3": {
+      "sharedCorners": 61,
+      "maxPositionDeltaM": 0.0
+    },
+    "4": {
+      "sharedCorners": 114,
+      "maxPositionDeltaM": 0.0
+    }
+  },
+  "sharedSourceCorners": {
+    "count": 916,
+    "uvMaxError": 0.0,
+    "maxPositionDeltaM": 0.008235335316184759
+  },
+  "hypotheticalAllRoleNeckCalibrationNotInstalled": {
+    "player": {
+      "existingSkinSRGBHex": "b3947b",
+      "linearTint": [
+        0.5959739178578952,
+        0.7502257394339222,
+        0.8340494048175902
+      ],
+      "maxCollarSRGBChannelDelta255": 12.273879441964874,
+      "meanLinearResidual": 0.0,
+      "adopted": false
+    },
+    "npc": {
+      "existingSkinSRGBHex": "ab8770",
+      "linearTint": [
+        0.5384032811954464,
+        0.613786032324033,
+        0.682288931041962
+      ],
+      "maxCollarSRGBChannelDelta255": 11.28856527402758,
+      "meanLinearResidual": 0.0,
+      "adopted": false
+    },
+    "sena": {
+      "existingSkinSRGBHex": "b18e79",
+      "linearTint": [
+        0.5812610299254635,
+        0.6852690965303305,
+        0.8051304969612525
+      ],
+      "maxCollarSRGBChannelDelta255": 12.094731411430843,
+      "meanLinearResidual": 0.0,
+      "adopted": false
+    },
+    "smith": {
+      "existingSkinSRGBHex": "98765d",
+      "linearTint": [
+        0.4151175365280816,
+        0.4589547941066373,
+        0.4609319349800836
+      ],
+      "maxCollarSRGBChannelDelta255": 9.6790486306436,
+      "meanLinearResidual": 0.0,
+      "adopted": true
+    },
+    "healer": {
+      "existingSkinSRGBHex": "bc9a81",
+      "linearTint": [
+        0.6648550687298581,
+        0.8186390510968987,
+        0.9244021064587318
+      ],
+      "maxCollarSRGBChannelDelta255": 12.811323533567084,
+      "meanLinearResidual": 0.0,
+      "adopted": false
+    },
+    "patient": {
+      "existingSkinSRGBHex": "b19985",
+      "linearTint": [
+        0.5812610299254635,
+        0.8069946228798789,
+        0.9876682258798597
+      ],
+      "maxCollarSRGBChannelDelta255": 13.169619594635233,
+      "meanLinearResidual": 0.0,
+      "adopted": false
+    },
+    "porter": {
+      "existingSkinSRGBHex": "8f6c55",
+      "linearTint": [
+        0.36314480191592785,
+        0.3799025836570704,
+        0.3825250438253799
+      ],
+      "maxCollarSRGBChannelDelta255": 8.945926219687795,
+      "meanLinearResidual": 0.0,
+      "adopted": false
+    },
+    "traveler": {
+      "existingSkinSRGBHex": "b7997e",
+      "linearTint": [
+        0.6260455225796674,
+        0.8069946228798789,
+        0.8785482666081833
+      ],
+      "maxCollarSRGBChannelDelta255": 12.542601487766,
+      "meanLinearResidual": 0.0,
+      "adopted": false
+    },
+    "courier": {
+      "existingSkinSRGBHex": "a27d63",
+      "linearTint": [
+        0.4776757060536549,
+        0.5195388837648072,
+        0.5254012100709141
+      ],
+      "maxCollarSRGBChannelDelta255": 10.192234318312632,
+      "meanLinearResidual": 2.7755575615628914e-17,
+      "adopted": false
+    },
+    "scout": {
+      "existingSkinSRGBHex": "b29071",
+      "linearTint": [
+        0.5885906570972567,
+        0.7065404092376277,
+        0.6953545801355302
+      ],
+      "maxCollarSRGBChannelDelta255": 11.5851668991286,
+      "meanLinearResidual": 5.551115123125783e-17,
+      "adopted": false
+    },
+    "soldier": {
+      "existingSkinSRGBHex": "a68e79",
+      "linearTint": [
+        0.5041426896467318,
+        0.6852690965303305,
+        0.8051304969612525
+      ],
+      "maxCollarSRGBChannelDelta255": 12.094731411430843,
+      "meanLinearResidual": 0.0,
+      "adopted": false
+    },
+    "ranger": {
+      "existingSkinSRGBHex": "ac8b70",
+      "linearTint": [
+        0.5454134691057295,
+        0.654070887967655,
+        0.682288931041962
+      ],
+      "maxCollarSRGBChannelDelta255": 11.28856527402758,
+      "meanLinearResidual": 5.551115123125783e-17,
+      "adopted": false
+    },
+    "boss": {
+      "existingSkinSRGBHex": "8b8270",
+      "linearTint": [
+        0.3413378421356128,
+        0.5655174486190595,
+        0.682288931041962
+      ],
+      "maxCollarSRGBChannelDelta255": 11.28856527402758,
+      "meanLinearResidual": 0.0,
+      "adopted": false
+    }
+  },
+  "sourceHashes": {
+    "src/assets/characters/anatomical-head-data.js": {
+      "bytes": 120150,
+      "sha256": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba"
+    },
+    "src/assets/characters/identity-head-data.js": {
+      "bytes": 126806,
+      "sha256": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe"
+    },
+    "src/assets/characters/anatomical-head-provenance.json": {
+      "bytes": 4655,
+      "sha256": "a802d4cf094f08998ae52195e7db42fe560980c4cb2f8ea49e0aede01961ff39"
+    },
+    "src/assets/characters/identity-head-provenance.json": {
+      "bytes": 7776,
+      "sha256": "1a9719383cef9c042553294c9c5b1d82f5ee3103aeab3bf2cae0636faa5ff1f5"
+    },
+    "src/assets/characters/detailed-geometry.js": {
+      "bytes": 31187,
+      "sha256": "9ec7ee675a006592c6f2ea8fb3084ee310b54568fbf1ed9f280ea79f46a633f4"
+    },
+    "src/assets/characters/skin/provenance.json": {
+      "bytes": 4334,
+      "sha256": "835a8e780e0b06159549bfdd7be51adf610ab395dcc1190892d7ff62b07f49d5"
+    },
+    "src/assets/characters/skin/sources/young_lightskinned_male_diffuse.png": {
+      "bytes": 3693828,
+      "sha256": "862a26e335e958b70534cb5f0d7c47ef30ab148a56c42b3e9da969cf76f12963"
+    },
+    "src/assets/characters/skin/young-male-q95.webp": {
+      "bytes": 541954,
+      "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+    },
+    "src/skin-materials.js": {
+      "bytes": 1532,
+      "sha256": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63"
+    },
+    "src/skin-texture-loader.js": {
+      "bytes": 1664,
+      "sha256": "b6a8f15968944f98e34f952ad2798e7a0ae3c6786f328c46c0b5ea5e6c55cb52"
+    },
+    "src/skin-assets.js": {
+      "bytes": 337,
+      "sha256": "85d52c671d3ae6ce50ffb6461b7df0b416fa9a3353a70d399dbf6adb8aced076"
+    }
+  },
+  "durationSeconds": 0.5415961350008729
+}

@@ -1,0 +1,58 @@
+{
+  "base": "337a7e2717d9f130bc6468a45003db2ddddd65db",
+  "allTrackedSrcFiles": 132,
+  "allSrcGitBlobIDsMatchBase": true,
+  "changedSrcFiles": [],
+  "sources": [
+    {
+      "path": "src/assets/characters/skin/sources/young_lightskinned_male_diffuse.png",
+      "bytes": 3693828,
+      "sha256": "862a26e335e958b70534cb5f0d7c47ef30ab148a56c42b3e9da969cf76f12963",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "encodedFormat": "PNG",
+      "metadataKeys": [
+        "dpi"
+      ]
+    },
+    {
+      "path": "src/assets/characters/skin/young-male-q95.webp",
+      "bytes": 541954,
+      "sha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "encodedFormat": "WEBP",
+      "metadataKeys": [
+        "background",
+        "loop"
+      ]
+    },
+    {
+      "path": "src/assets/characters/skin/provenance.json",
+      "bytes": 4334,
+      "sha256": "835a8e780e0b06159549bfdd7be51adf610ab395dcc1190892d7ff62b07f49d5"
+    },
+    {
+      "path": "src/assets/characters/skin/LICENSE-CC0.md",
+      "bytes": 6962,
+      "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c"
+    },
+    {
+      "path": "src/assets/characters/anatomical-head-data.js",
+      "bytes": 120150,
+      "sha256": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba"
+    },
+    {
+      "path": "src/assets/characters/identity-head-data.js",
+      "bytes": 126806,
+      "sha256": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe"
+    }
+  ],
+  "imageManipulations": 0
+}
