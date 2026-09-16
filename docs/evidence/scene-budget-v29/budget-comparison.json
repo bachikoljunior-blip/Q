@@ -1,0 +1,644 @@
+{
+  "checkedAt": "2026-09-16T03:54:55.264518+00:00",
+  "baselineCommit": "f11819aceea515d166846e4bf85082bf2e51e9d1",
+  "candidateCommit": "62f731e3ba0924c70f3879174053db7824a449ae",
+  "conditions": {
+    "points": [
+      [
+        0,
+        80
+      ],
+      [
+        -105,
+        0
+      ],
+      [
+        -300,
+        -130
+      ],
+      [
+        170,
+        -200
+      ]
+    ],
+    "qualityOrder": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "framesPerCondition": 2,
+    "dt": 0.016666666666666666,
+    "day": 0.29,
+    "yaw": 0.05,
+    "pitch": 0.3,
+    "zoom": 9
+  },
+  "sameCamerasAndActorFamilies": true,
+  "actorCount": 44,
+  "geometry": {
+    "allocation": {
+      "baseline": {
+        "nodes": 3589,
+        "meshObjects": 1590,
+        "visibleMeshObjects": 1473,
+        "frustumCandidateMeshes": 1473,
+        "visibleTriangles": 766444,
+        "frustumCandidateTriangles": 766444,
+        "instanceExpandedTriangles": 193222,
+        "visibleMaterialGroups": 1473,
+        "transparentExtraTriangles": 80,
+        "castShadowEligibleTriangles": 457670,
+        "uniqueGeometryCount": 743,
+        "uniqueBufferAttributes": 2958,
+        "geometryBufferSourceBytes": 20895502,
+        "uniqueTypedArrayBytes": 20895502,
+        "uniqueMaterialsIncludingCustomShadows": 222,
+        "materialTextureObjects": 18,
+        "instanceBufferSourceBytes": 1509260,
+        "activePoints": 300
+      },
+      "candidate": {
+        "nodes": 3615,
+        "meshObjects": 1616,
+        "visibleMeshObjects": 1499,
+        "frustumCandidateMeshes": 1499,
+        "visibleTriangles": 800714,
+        "frustumCandidateTriangles": 800714,
+        "instanceExpandedTriangles": 200500,
+        "visibleMaterialGroups": 1499,
+        "transparentExtraTriangles": 80,
+        "castShadowEligibleTriangles": 487228,
+        "uniqueGeometryCount": 793,
+        "uniqueBufferAttributes": 3170,
+        "geometryBufferSourceBytes": 21726006,
+        "uniqueTypedArrayBytes": 21726006,
+        "uniqueMaterialsIncludingCustomShadows": 238,
+        "materialTextureObjects": 21,
+        "instanceBufferSourceBytes": 1509260,
+        "activePoints": 300
+      }
+    },
+    "geometryGroups": {
+      "baseline": {
+        "actor": {
+          "uniqueGeometryCount": 203,
+          "uniqueBufferAttributes": 1140,
+          "geometryBufferSourceBytes": 5779492,
+          "uniqueTypedArrayBytes": 5779492
+        },
+        "world": {
+          "uniqueGeometryCount": 540,
+          "uniqueBufferAttributes": 1818,
+          "geometryBufferSourceBytes": 15116010,
+          "uniqueTypedArrayBytes": 15116010
+        }
+      },
+      "candidate": {
+        "actor": {
+          "uniqueGeometryCount": 220,
+          "uniqueBufferAttributes": 1242,
+          "geometryBufferSourceBytes": 6132976,
+          "uniqueTypedArrayBytes": 6132976
+        },
+        "world": {
+          "uniqueGeometryCount": 573,
+          "uniqueBufferAttributes": 1928,
+          "geometryBufferSourceBytes": 15593030,
+          "uniqueTypedArrayBytes": 15593030
+        }
+      }
+    },
+    "retainedExplicitGeometry": {
+      "baseline": {
+        "uniqueGeometryCount": 746,
+        "uniqueBufferAttributes": 2969,
+        "geometryBufferSourceBytes": 20898272,
+        "uniqueTypedArrayBytes": 20898272
+      },
+      "candidate": {
+        "uniqueGeometryCount": 796,
+        "uniqueBufferAttributes": 3181,
+        "geometryBufferSourceBytes": 21728776,
+        "uniqueTypedArrayBytes": 21728776
+      }
+    },
+    "treeCPUCopyBytes": {
+      "baseline": 142704,
+      "candidate": 142704
+    }
+  },
+  "textureFormatPayloadRows": [
+    {
+      "name": "Environment 3 x 1024 RGBA8+mips",
+      "baselineBytes": 16777212,
+      "candidateBytes": 16777212,
+      "deltaBytes": 0
+    },
+    {
+      "name": "Vault 4 x 128 RGBA8+mips",
+      "baselineBytes": 349520,
+      "candidateBytes": 349520,
+      "deltaBytes": 0
+    },
+    {
+      "name": "Procedural environment 7 x 128 RGBA8+mips",
+      "baselineBytes": 611660,
+      "candidateBytes": 611660,
+      "deltaBytes": 0
+    },
+    {
+      "name": "Procedural actor 5 x 64 RGBA8+mips",
+      "baselineBytes": 109220,
+      "candidateBytes": 109220,
+      "deltaBytes": 0
+    },
+    {
+      "name": "Static terrain contact 512 R8",
+      "baselineBytes": 262144,
+      "candidateBytes": 262144,
+      "deltaBytes": 0
+    },
+    {
+      "name": "Native 44 skeleton palettes RGBA32F",
+      "baselineBytes": 153344,
+      "candidateBytes": 153344,
+      "deltaBytes": 0
+    },
+    {
+      "name": "Smith skin 2048 RGBA8+mips",
+      "baselineBytes": 0,
+      "candidateBytes": 22369620,
+      "deltaBytes": 22369620
+    },
+    {
+      "name": "Forest 2 x 512 RGBA8 manual mips",
+      "baselineBytes": 0,
+      "candidateBytes": 2796200,
+      "deltaBytes": 2796200
+    },
+    {
+      "name": "Visible HDR 1024 x 512 RGBA16F",
+      "baselineBytes": 0,
+      "candidateBytes": 4194304,
+      "deltaBytes": 4194304
+    },
+    {
+      "name": "PMREM 384 x 512 RGBA16F",
+      "baselineBytes": 0,
+      "candidateBytes": 1572864,
+      "deltaBytes": 1572864
+    }
+  ],
+  "textureTotals": {
+    "estimatedGpuPayloadBytes": {
+      "baseline": 18263100,
+      "candidate": 49196088,
+      "delta": 30932988
+    },
+    "measuredUniqueTypedPixelBytes": {
+      "baseline": 956160,
+      "candidate": 7946664,
+      "delta": 6990504
+    },
+    "browserImageRGBAEstimateBytes": {
+      "baseline": 12845056,
+      "candidate": 29622272,
+      "delta": 16777216
+    }
+  },
+  "skinFaceUsers": [
+    {
+      "name": "Q anatomical face skin",
+      "family": "smith",
+      "id": "resident:smith-ren"
+    }
+  ],
+  "samples": [
+    {
+      "quality": "low",
+      "point": [
+        0,
+        80
+      ],
+      "baselineVisibleTriangles": 432016,
+      "candidateVisibleTriangles": 442368,
+      "delta": 10352,
+      "baselineFrustumCandidateTriangles": 286922,
+      "candidateFrustumCandidateTriangles": 297146
+    },
+    {
+      "quality": "low",
+      "point": [
+        -105,
+        0
+      ],
+      "baselineVisibleTriangles": 403648,
+      "candidateVisibleTriangles": 412044,
+      "delta": 8396,
+      "baselineFrustumCandidateTriangles": 244186,
+      "candidateFrustumCandidateTriangles": 252454
+    },
+    {
+      "quality": "low",
+      "point": [
+        -300,
+        -130
+      ],
+      "baselineVisibleTriangles": 363432,
+      "candidateVisibleTriangles": 370166,
+      "delta": 6734,
+      "baselineFrustumCandidateTriangles": 174884,
+      "candidateFrustumCandidateTriangles": 182578
+    },
+    {
+      "quality": "low",
+      "point": [
+        170,
+        -200
+      ],
+      "baselineVisibleTriangles": 371892,
+      "candidateVisibleTriangles": 378626,
+      "delta": 6734,
+      "baselineFrustumCandidateTriangles": 163340,
+      "candidateFrustumCandidateTriangles": 200874
+    },
+    {
+      "quality": "medium",
+      "point": [
+        0,
+        80
+      ],
+      "baselineVisibleTriangles": 458636,
+      "candidateVisibleTriangles": 475748,
+      "delta": 17112,
+      "baselineFrustumCandidateTriangles": 313542,
+      "candidateFrustumCandidateTriangles": 330526
+    },
+    {
+      "quality": "medium",
+      "point": [
+        -105,
+        0
+      ],
+      "baselineVisibleTriangles": 430504,
+      "candidateVisibleTriangles": 445170,
+      "delta": 14666,
+      "baselineFrustumCandidateTriangles": 271042,
+      "candidateFrustumCandidateTriangles": 285580
+    },
+    {
+      "quality": "medium",
+      "point": [
+        -300,
+        -130
+      ],
+      "baselineVisibleTriangles": 386962,
+      "candidateVisibleTriangles": 395386,
+      "delta": 8424,
+      "baselineFrustumCandidateTriangles": 198414,
+      "candidateFrustumCandidateTriangles": 207798
+    },
+    {
+      "quality": "medium",
+      "point": [
+        170,
+        -200
+      ],
+      "baselineVisibleTriangles": 400366,
+      "candidateVisibleTriangles": 416902,
+      "delta": 16536,
+      "baselineFrustumCandidateTriangles": 191814,
+      "candidateFrustumCandidateTriangles": 239150
+    },
+    {
+      "quality": "high",
+      "point": [
+        0,
+        80
+      ],
+      "baselineVisibleTriangles": 559980,
+      "candidateVisibleTriangles": 582964,
+      "delta": 22984,
+      "baselineFrustumCandidateTriangles": 414886,
+      "candidateFrustumCandidateTriangles": 437742
+    },
+    {
+      "quality": "high",
+      "point": [
+        -105,
+        0
+      ],
+      "baselineVisibleTriangles": 533204,
+      "candidateVisibleTriangles": 555196,
+      "delta": 21992,
+      "baselineFrustumCandidateTriangles": 373742,
+      "candidateFrustumCandidateTriangles": 395606
+    },
+    {
+      "quality": "high",
+      "point": [
+        -300,
+        -130
+      ],
+      "baselineVisibleTriangles": 487498,
+      "candidateVisibleTriangles": 500548,
+      "delta": 13050,
+      "baselineFrustumCandidateTriangles": 298710,
+      "candidateFrustumCandidateTriangles": 312582
+    },
+    {
+      "quality": "high",
+      "point": [
+        170,
+        -200
+      ],
+      "baselineVisibleTriangles": 506068,
+      "candidateVisibleTriangles": 535786,
+      "delta": 29718,
+      "baselineFrustumCandidateTriangles": 297516,
+      "candidateFrustumCandidateTriangles": 358034
+    }
+  ],
+  "runtimeAssetEncodedBytes": {
+    "baseline": 9136611,
+    "candidate": 11441662,
+    "inventory": [
+      {
+        "source": "src/assets/characters/skin/young-male-q95.webp",
+        "baselineBytes": 0,
+        "candidateBytes": 541954,
+        "baselineSha256": null,
+        "candidateSha256": "7628814980308b9525b27f09f98a099a0144d1a29e67bc6377702b4605678c04"
+      },
+      {
+        "source": "src/assets/environment/forest_floor_diff_1k.jpg",
+        "baselineBytes": 1329853,
+        "candidateBytes": 1329853,
+        "baselineSha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b",
+        "candidateSha256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b"
+      },
+      {
+        "source": "src/assets/environment/rock_face_03_diff_1k.jpg",
+        "baselineBytes": 927082,
+        "candidateBytes": 927082,
+        "baselineSha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d",
+        "candidateSha256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d"
+      },
+      {
+        "source": "src/assets/environment/rock_face_03_nor_gl_1k.jpg",
+        "baselineBytes": 1146788,
+        "candidateBytes": 1146788,
+        "baselineSha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0",
+        "candidateSha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
+      },
+      {
+        "source": "src/assets/forest/crown-branch-rgba.png",
+        "baselineBytes": 0,
+        "candidateBytes": 162720,
+        "baselineSha256": null,
+        "candidateSha256": "4429579a8690a83dc3a754df2296b4c5500a545c02f6041422cbf89e0c4a3fd7"
+      },
+      {
+        "source": "src/assets/forest/pine-branch-rgba.png",
+        "baselineBytes": 0,
+        "candidateBytes": 165258,
+        "baselineSha256": null,
+        "candidateSha256": "b5166137ad014fa27a0755965100d05cc48646f065338d2ffe18799bfcf9705a"
+      },
+      {
+        "source": "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+        "baselineBytes": 0,
+        "candidateBytes": 1435119,
+        "baselineSha256": null,
+        "candidateSha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-foley.wav",
+        "baselineBytes": 826370,
+        "candidateBytes": 826370,
+        "baselineSha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a",
+        "candidateSha256": "edfaefae46daa19d91b5b87135b2a7c86e2a80f9eb8f83ac34d5ceab67616f0a"
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-harmony.mp3",
+        "baselineBytes": 288594,
+        "candidateBytes": 288594,
+        "baselineSha256": "9ad667bf90a66e98402a6753917e2f9ce883497b1f1edbca66c3a88462abb36c",
+        "candidateSha256": "d6505642c16b9daebe68addaf41222fff2205c27d107133502fc4e43c9d307d0"
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-motif.mp3",
+        "baselineBytes": 192463,
+        "candidateBytes": 192463,
+        "baselineSha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4",
+        "candidateSha256": "4474985e73d606698b32f8f7a35377aad80d2060c57dd9463cb8c37db56e48a4"
+      },
+      {
+        "source": "src/assets/soundscape/pilgrim-pulse.mp3",
+        "baselineBytes": 192463,
+        "candidateBytes": 192463,
+        "baselineSha256": "c5bbaa8d3d0a45bf2a52a935f7eb90147a19fc8c43ea2d9e3f73d966371b1333",
+        "candidateSha256": "5002960fb6e22e53cd1f7e4e689951725f2210ca0d58b7df309ac9eaf362ef13"
+      },
+      {
+        "source": "src/assets/title/north-gate-v22.webp",
+        "baselineBytes": 162962,
+        "candidateBytes": 162962,
+        "baselineSha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a",
+        "candidateSha256": "7741ecd38590876e2277f9c425c1c6c14c82cb9fd459338a6c7c6a191949858a"
+      },
+      {
+        "source": "src/assets/title/north-gate-v23.mp4",
+        "baselineBytes": 3178191,
+        "candidateBytes": 3178191,
+        "baselineSha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c",
+        "candidateSha256": "31bad03ee0d2151a7259ed35a9c05919003d32d1216107cb594da84d7b0a2e3c"
+      },
+      {
+        "source": "src/assets/vaults/ember-ambient.wav",
+        "baselineBytes": 176444,
+        "candidateBytes": 176444,
+        "baselineSha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13",
+        "candidateSha256": "a3d849b42fb580d0aa243695f6ebc3dbc0901e1f146dff06fa19dbe8d98e1c13"
+      },
+      {
+        "source": "src/assets/vaults/ember-stone.png",
+        "baselineBytes": 16849,
+        "candidateBytes": 16849,
+        "baselineSha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9",
+        "candidateSha256": "82fcc88b20583c8946c0f5deba0a76f66a2ee1e63809e69028348540c33268b9"
+      },
+      {
+        "source": "src/assets/vaults/gale-ambient.wav",
+        "baselineBytes": 176444,
+        "candidateBytes": 176444,
+        "baselineSha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0",
+        "candidateSha256": "96ce6f3608f911ec19502524232fb10f03d9ea7d75216b74e59725d5541af7e0"
+      },
+      {
+        "source": "src/assets/vaults/gale-stone.png",
+        "baselineBytes": 17052,
+        "candidateBytes": 17052,
+        "baselineSha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c",
+        "candidateSha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
+      },
+      {
+        "source": "src/assets/vaults/moss-ambient.wav",
+        "baselineBytes": 176444,
+        "candidateBytes": 176444,
+        "baselineSha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36",
+        "candidateSha256": "782dfb4465bf6657ac7f096b6f925d6f0b9b68848ad7ba353af1d5a311c91f36"
+      },
+      {
+        "source": "src/assets/vaults/moss-stone.png",
+        "baselineBytes": 17328,
+        "candidateBytes": 17328,
+        "baselineSha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419",
+        "candidateSha256": "b78bb88e7dec18e5c8c196d7136759e053bd4fe6d38e432f57a221d12cdf0419"
+      },
+      {
+        "source": "src/assets/vaults/shared-alert.wav",
+        "baselineBytes": 21212,
+        "candidateBytes": 21212,
+        "baselineSha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a",
+        "candidateSha256": "fd8b563b65707d229b4bb0b0c31b00708909e9f9a29a74b028daeb2f0442551a"
+      },
+      {
+        "source": "src/assets/vaults/shared-claim.wav",
+        "baselineBytes": 39734,
+        "candidateBytes": 39734,
+        "baselineSha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a",
+        "candidateSha256": "453718222735fe885f7233dbf873df6b625bf0496e7c543e07a67ea4f758ac2a"
+      },
+      {
+        "source": "src/assets/vaults/shared-impact.wav",
+        "baselineBytes": 7982,
+        "candidateBytes": 7982,
+        "baselineSha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153",
+        "candidateSha256": "e4f5b1fda70b0ab8e890187e633820bce0fc860d4fe6bc8af224cfbcb5ed8153"
+      },
+      {
+        "source": "src/assets/vaults/shared-seal.wav",
+        "baselineBytes": 30914,
+        "candidateBytes": 30914,
+        "baselineSha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5",
+        "candidateSha256": "e86033c153d455f36caee37ad3cf98b1836d8e71690b52cd7627491b954bf2c5"
+      },
+      {
+        "source": "src/assets/vaults/shared-step.wav",
+        "baselineBytes": 7100,
+        "candidateBytes": 7100,
+        "baselineSha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088",
+        "candidateSha256": "9d97dce18abaa72288e9fbfbd1add936b81df2878804a3f561e1e4925213c088"
+      },
+      {
+        "source": "src/assets/vaults/shared-swing.wav",
+        "baselineBytes": 10628,
+        "candidateBytes": 10628,
+        "baselineSha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25",
+        "candidateSha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25"
+      },
+      {
+        "source": "src/assets/vaults/tide-ambient.wav",
+        "baselineBytes": 176444,
+        "candidateBytes": 176444,
+        "baselineSha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba",
+        "candidateSha256": "380e61797d626055b5d4320b541c5c6fd7c3f32484dbdf03dbd8b5b0e25288ba"
+      },
+      {
+        "source": "src/assets/vaults/tide-stone.png",
+        "baselineBytes": 17270,
+        "candidateBytes": 17270,
+        "baselineSha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567",
+        "candidateSha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
+      }
+    ],
+    "boundary": "Encoded runtime source asset bytes referenced by candidate Vite manifest, baseline same asset paths from exact git tree; source-only originals excluded; not measured network requests/cache/decoded/GPU bytes."
+  },
+  "titleLifecycle": {
+    "boundary": "Actual title module, existing explicit DOM/video/RAF test boundary; no browser decoder or memory measurement",
+    "states": [
+      {
+        "phase": "world loading",
+        "cycle": 0,
+        "sourceAttached": true
+      },
+      {
+        "phase": "game started",
+        "cycle": 0,
+        "sourceAttached": false,
+        "releaseLoadCalls": 1
+      },
+      {
+        "phase": "world loading",
+        "cycle": 1,
+        "sourceAttached": true
+      },
+      {
+        "phase": "game started",
+        "cycle": 1,
+        "sourceAttached": false,
+        "releaseLoadCalls": 2
+      },
+      {
+        "phase": "world loading",
+        "cycle": 2,
+        "sourceAttached": true
+      },
+      {
+        "phase": "game started",
+        "cycle": 2,
+        "sourceAttached": false,
+        "releaseLoadCalls": 3
+      }
+    ],
+    "sourceReleaseRequests": 3,
+    "canvasAt1280x720Dpr1": {
+      "width": 1280,
+      "height": 720,
+      "ratio": 1,
+      "pixelWidth": 1280,
+      "pixelHeight": 720
+    },
+    "canvasRGBAEquivalentBytes": 3686400,
+    "canvasCapPixels": 1600000,
+    "canvasCapRGBAEquivalentBytes": 6400000
+  },
+  "nativePMREMRendererMethodCalls": 19,
+  "geometryDisposalEventsIn12Conditions": 0,
+  "sourceHashes": {
+    "src/scene.js": "6f4272cabe1aa1a738ef40dc0ce039c9eb575133ea21bda5e19b0319d76654ad",
+    "src/actor-models.js": "d299e3d02b0fca392b3e22eb9b7753133d7413d452403e482ee86b76337f7ff7",
+    "src/assets/characters/detailed-geometry.js": "a320835670bd43147e793651834034a87ad23d16f87c191b412a5de881a17849",
+    "src/environment-atmosphere.js": "c78303af10af15142d6d9510dd398fd528205b6e3f2de711dc4093ff8ec1aef2",
+    "src/environment-materials.js": "39f68f90bb5bc01c12d05e5f382d4108846ecb7716d82e99ab275031a4ba76f0",
+    "src/forest-materials.js": "881295c31be465ee1784e2f458bfae777744ba8d67394920f815a707b3c3d0a8",
+    "src/weapon-trails.js": "29239925d0b70ca70032e728425ce475ac57718379aaf6936509119b28cc5b3b",
+    "src/sky-field.js": "dbc0bb4051e87c17373a956aadd2840370c0b3480048daf6e0d8397381cffc58",
+    "src/sky-lighting.js": "7bd023cf23cc5269e2ce25e9c289d31e9f50ac870556e0f277c16414a4d40762",
+    "src/sky-exposure.js": "211f200b8d36aa8b42e060541dcdb118ec335de75dd58226ea926be6da15b5c2",
+    "src/assets/characters/anatomical-head-data.js": "2717bc737546fa74fcbe3e14dec1e19182f54b41eda0522c205e9faa64b23dba",
+    "src/assets/characters/anatomical-head-provenance.json": "a802d4cf094f08998ae52195e7db42fe560980c4cb2f8ea49e0aede01961ff39",
+    "src/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+    "src/main.js": "0559c31dbcf10dea5c02ffbbaea4e4c6a4c07068a63c8589be6b88b81082b929",
+    "src/title-cinematic.js": "dbb8e3a946fa202c6d2e486b45bbcb55bd979d7ed7405567819b41f05c2c7f28",
+    "src/skin-assets.js": "85d52c671d3ae6ce50ffb6461b7df0b416fa9a3353a70d399dbf6adb8aced076",
+    "src/skin-materials.js": "20000dafc7ffac8f49a82a5a40b352ba2cde23965b8423acc3696e27db5e1c63",
+    "src/skin-texture-loader.js": "b6a8f15968944f98e34f952ad2798e7a0ae3c6786f328c46c0b5ea5e6c55cb52",
+    "src/sky-assets.js": "9e09e20c5d7e00478d5ab49e2850696cce35a8b928648c202c363f10fcb6a2c0",
+    "src/sky-texture-loader.js": "99240b6018c501b03023c023e9fce4b85d31f5babade32c5113037caa8edb2f2",
+    "src/forest-assets.js": "484deeeb535da5f6ecbfdc0bb234928cd50923eae321adcd46a1bf9c51962302",
+    "src/forest-texture-loader.js": "76b78d8f7fe2d200e1fbde179599d17708c43de9bbcbe9ad782f61f7ec6f8a45",
+    "src/environment-assets.js": "56a1752a93c58a542f6d5eacc8e7a1e3ad022d79c16662b429c5761606b65fcd",
+    "src/environment-contact.js": "ec18f2f1c7389d08658f583f545ae1495e7edffa756638b822cf659c4aed16b4",
+    "src/vault-textures.js": "5eaecaceb972f866030b6af2c5f10bacd8af23ee076c2041e0ffac27fd5ce9ff"
+  },
+  "nativeSourceHashes": {
+    "package-lock.json": "3efc7f9d03f5ad50566a29ae5f414f0d5163bf88cd571083c3b1502043112ff6",
+    "node_modules/three/src/renderers/webgl/WebGLTextures.js": "a1947fd09ac98b3a57e40018dc8eccfce9c40f2cf4b6200b3180a00af5406451",
+    "node_modules/three/src/renderers/webgl/WebGLShadowMap.js": "88669e97ab02b2132a175eb94f9bfeea2a705d5f6c59e677bcb6421f258ff696",
+    "node_modules/three/src/objects/Skeleton.js": "37eaa7755b39775411fe32bafbf9a0273bdad6bb7976114ed63f8700f4b4b0e9",
+    "node_modules/three/src/extras/PMREMGenerator.js": "78f7cc24a9aa22852f4c46052f39e5fe5507bee6313a824851ba899ed2219ecc"
+  },
+  "boundary": "CPU structure/typed arrays and calculated texture payloads; renderer/image-metadata/DOM boundaries explicit. No WebGL allocation, pixels, frame time, decoder memory or PS4-equivalence measurement."
+}

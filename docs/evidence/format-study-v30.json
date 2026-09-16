@@ -1,0 +1,56 @@
+{
+  "webpVersion": "1.6.0",
+  "results": [
+    {
+      "source": "src/assets/environment/forest_floor_diff_1k.jpg",
+      "sourceBytes": 1329853,
+      "candidateBytes": 1704926,
+      "sourceSHA256": "f12e5adea1741f9eb7a528bfc621f8267885b9530b74c3a8afdb823899bdbf0b",
+      "candidateSHA256": "ece1d94a183a056dca621763ccc131527959548fa8e2c449ce46157539e7d446",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sameDecodedPixels": true,
+      "iccBytes": 9012,
+      "exifBytes": 246,
+      "seconds": 10.025000178997288,
+      "scope": "Standard lossless file-format serialization only, no crop/resize/retouch/color/image generation; CPU decode equality, not browser/GPU evidence"
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_diff_1k.jpg",
+      "sourceBytes": 927082,
+      "candidateBytes": 1345314,
+      "sourceSHA256": "ea48e0e47ad42c8bd312476178b1248ec66f0eb19156a26a1c222f2a40caaf2d",
+      "candidateSHA256": "e08ecf03f6c6fb8ce7462d00d2f4ed6500eb1ab3c977de870e18f1db72b8226b",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sameDecodedPixels": true,
+      "iccBytes": 596,
+      "exifBytes": 126,
+      "seconds": 6.516424934001407,
+      "scope": "Standard lossless file-format serialization only, no crop/resize/retouch/color/image generation; CPU decode equality, not browser/GPU evidence"
+    },
+    {
+      "source": "src/assets/environment/rock_face_03_nor_gl_1k.jpg",
+      "sourceBytes": 1146788,
+      "candidateBytes": 1862694,
+      "sourceSHA256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0",
+      "candidateSHA256": "82d5a30853a5f798f101e8a1a67b0b86973b05a26a3ddd40fa957c505e4ddb6b",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sameDecodedPixels": true,
+      "iccBytes": 596,
+      "exifBytes": 126,
+      "seconds": 10.982756627003255,
+      "scope": "Standard lossless file-format serialization only, no crop/resize/retouch/color/image generation; CPU decode equality, not browser/GPU evidence"
+    }
+  ]
+}

@@ -1,6 +1,9 @@
 # 制作停止時の復旧
 
 
+2026-09-16 03:56Zの既存Q継続設定: 最新の「達成するまで止めない」に従い、未達でも固定回数で終了するCOUNT=168だけの削除を既存taskへ一回保存した。serviceはDTSTART末尾Zを除去する正規化を行ったためliteral一致ではない。既に過去の開始点と無期限HOURLYの毎時14分32秒はUTC/AsiaTokyoの整数時間差で今後の集合が変わらず、追加保存はしない。prompt/title/timezone/enabledは完全保持、disabled/nextnull・20件上限は解消していない。新規task/他task変更/再enableなし、期限9/20は変えていない。設定修正を実制作や再開成功へ読み替えない。
+
+
 最新継続点（2026-09-16 03:42Z頃）: main547676f、PR39通常mergeは未完了、追加mutationなし。PR43まで全CI成功、v29は20gate/263testsと固定stageを保全してstack公開へ進む。詳細はPROJECT_STATE最新項を読む。03:30Zの正式preview statusはmailbox不在のまま、Sites skillはlive Site browser QAも禁止。Qautomationはfresh disabled/nextnull/20件上限で再試行しない。家屋・橋の有限制作を既存Ultraが続行しているが、この記録は将来の稼働を保証しない。
 
 

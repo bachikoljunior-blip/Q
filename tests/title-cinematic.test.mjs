@@ -110,7 +110,7 @@ test('presentation state does not mutate saves, button availability or sound and
   b.nodes.continue.emit('click'); b.nodes.start.disabled = true; b.nodes.start.emit('click'); assert.deepEqual(b.cues, []);
   b.nodes.start.disabled = false; b.nodes.start.emit('click'); assert.deepEqual(b.cues, ['start']);
   b.api.setLaunching(true); assert(b.root.classList.contains('is-launching')); assert.equal(b.nodes.start.disabled, false);
-  b.api.setActive(false); assert(!b.root.classList.contains('is-launching')); b.nodes.start.emit('click'); assert.deepEqual(b.cues, ['start']);
+  b.api.setActive(false); assert(b.root.classList.contains('is-launching'), 'panel visibility must not cancel a pending launch'); b.api.setLaunching(false); b.nodes.start.emit('click'); assert.deepEqual(b.cues, ['start']);
   b.api.dispose();
 });
 
@@ -210,4 +210,45 @@ test('queued deliberate pause cannot block focus resume or a new media owner', a
   b.focus(false); b.focus(true); b.timersRun(); b.plays[2].resolve(); await flushMedia();
   assert.equal(b.nodes['title-motion'].textContent,'動きを止める'); assert(!b.video.paused);
   b.api.dispose(); await flushMedia();
+});
+
+test('launch releases the movie immediately while poster/loading remain, including settings and lifecycle returns', async () => {
+  const b=titleBoundary({videoAvailable:true,queuedPause:true});b.timersRun();b.plays[0].resolve();await flushMedia();
+  assert(b.root.classList.contains('has-video'));
+  b.api.setLaunching(true);
+  assert(b.video.paused);assert.equal(b.video.src,'');assert.equal(b.video.loads,1);
+  assert(!b.root.classList.contains('has-video'));assert(b.root.classList.contains('is-launching'));
+  assert(!b.nodes['title-loading'].classList.contains('hidden'));assert.equal(b.frames.size,0);assert.equal(b.timers.size,0);
+  b.api.setActive(false);b.api.setActive(true);b.win.emit('pageshow');b.focus(false);b.focus(true);b.timersRun();await flushMedia();
+  assert.equal(b.video.src,'');assert.equal(b.plays.length,1);assert(b.root.classList.contains('is-launching'));
+  b.api.setLaunching(false);b.timersRun();assert.equal(b.plays.length,2,'failed launch can resume eligible title');
+  b.plays[1].resolve();await flushMedia();assert(b.root.classList.contains('has-video'));b.api.dispose();
+});
+
+test('launch cancels queued source attachment and stale play completions cannot reacquire the decoder', async () => {
+  const b=titleBoundary({videoAvailable:true});
+  b.api.setLaunching(true);b.timersRun();assert.equal(b.video.src,'');assert.equal(b.plays.length,0);
+  b.api.setLaunching(false);b.timersRun();assert.equal(b.plays.length,1);
+  b.api.setLaunching(true);b.plays[0].resolve();await flushMedia();
+  assert.equal(b.video.src,'');assert(!b.root.classList.contains('has-video'));assert.equal(b.frames.size,0);
+  b.api.setActive(false);b.api.setLaunching(false);b.timersRun();assert.equal(b.plays.length,1,'completed launch stays detached');b.api.dispose();
+});
+
+test('failed launch preserves manual pause, reduced motion, data saving, autoplay block and hidden-page policy', async () => {
+  for(const policy of ['paused','reduced','saveData','blocked','hidden']){
+    const b=titleBoundary({videoAvailable:true});b.timersRun();
+    if(policy==='blocked')b.plays[0].reject(Error('NotAllowedError'));else b.plays[0].resolve();await flushMedia();
+    if(policy==='paused')b.nodes['title-motion'].emit('click');
+    b.api.setLaunching(true);
+    if(policy==='reduced')b.reduce(true);
+    if(policy==='saveData'){b.connection.saveData=true;b.connection.emit('change');}
+    if(policy==='hidden'){b.doc.hidden=true;b.doc.emit('visibilitychange');}
+    b.api.setLaunching(false);b.timersRun();await flushMedia();
+    assert.equal(b.video.src,'',policy);assert.equal(b.plays.length,1,policy+' must not bypass its policy');
+    if(policy==='paused'||policy==='blocked')b.nodes['title-motion'].emit('click');
+    if(policy==='reduced')b.reduce(false);
+    if(policy==='saveData'){b.connection.saveData=false;b.connection.emit('change');}
+    if(policy==='hidden'){b.doc.hidden=false;b.doc.emit('visibilitychange');}
+    b.timersRun();assert.equal(b.plays.length,2,policy+' resumes only after policy allows it');b.api.dispose();
+  }
 });

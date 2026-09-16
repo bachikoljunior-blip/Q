@@ -1,6 +1,6 @@
 // Deterministic world and combat simulation. No DOM or rendering dependencies.
 import { moveCircle, steerAround, lineClear, indexObstacles, queryObstacles, obstacleCylinder } from './spatial.js';
-import { landmarkSupports } from './architecture-grounding.js';
+import { landmarkSupports, houseFoundation } from './architecture-grounding.js';
 import { findPath } from './navigation.js';
 import { WEAPONS, SENA, EAST_CAMP, SUPPLY_ID, crossingText } from './content.js';
 import { segmentCylinder, segmentTerrain } from './spatial.js';
@@ -49,7 +49,7 @@ export function makeWorld() {
   for(const [x,z,type] of fixed) pickups.push({id:`loot-${pickups.length}`,x,z,type,taken:false});
   for(let i=0;i<56;i++) { const x=(rng()-.5)*370,z=125-rng()*350;if(!inRiver(x,z))pickups.push({id:`loot-${pickups.length}`,x,z,type:i%9===0?'chest':'herb',taken:false}); }
   // Buildings and major rocks share colliders with the renderer.
-  for(const b of [{x:15,z:91,r:4},{x:-16,z:82,r:4},{x:20,z:71,r:4},{x:-17,z:105,r:4}])obstacles.push({...b,type:'house',height:6});
+  for(const b of [{x:15,z:91,r:4},{x:-16,z:82,r:4},{x:20,z:71,r:4},{x:-17,z:105,r:4}]){const y=Math.min(...houseFoundation((x,z)=>heightAt(b.x+x,b.z+z)).map(p=>p[1]),heightAt(b.x,b.z)-.12);obstacles.push({...b,type:'house',y,height:heightAt(b.x,b.z)+6-y});}
   for(let i=0;i<85;i++){const x=(rng()-.5)*450,z=145-rng()*440,r=1+rng()*2.5;if(PLACES.some(p=>distance({x,z},p)<26)||Math.abs(x)<10||inRiver(x,z))continue;obstacles.push({x,z,r,type:'rock'});}
   obstacles.push(...landmarkSupports(PLACES,heightAt));
   spawn(EAST_CAMP.x-7,EAST_CAMP.z+7,'ranger');spawn(EAST_CAMP.x+7,EAST_CAMP.z-6,'ranger');spawn(EAST_CAMP.x,EAST_CAMP.z+2,'knight');

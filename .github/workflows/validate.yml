@@ -51,6 +51,8 @@ jobs:
         run: node scripts/verify-world-surfaces.mjs
       - name: Verify architecture contact and shared vertical collision bounds
         run: node scripts/verify-architecture-grounding.mjs artifacts/architecture-grounding-report.json
+      - name: Verify settlement foundations, bridge contact and matching occlusion
+        run: node scripts/verify-settlement-contact.mjs artifacts/settlement-contact-report.json
       - name: Verify loaded foliage and same-frame actor trail integration
         run: node scripts/verify-scene-integration.mjs . artifacts/scene-integration-report.json
       - name: Verify shared HDR loading, lighting and capability fallback

@@ -1,0 +1,49 @@
+{
+  "boundary": "Actual title module, existing explicit DOM/video/RAF test boundary; no browser decoder or memory measurement",
+  "states": [
+    {
+      "phase": "world loading",
+      "cycle": 0,
+      "sourceAttached": true
+    },
+    {
+      "phase": "game started",
+      "cycle": 0,
+      "sourceAttached": false,
+      "releaseLoadCalls": 1
+    },
+    {
+      "phase": "world loading",
+      "cycle": 1,
+      "sourceAttached": true
+    },
+    {
+      "phase": "game started",
+      "cycle": 1,
+      "sourceAttached": false,
+      "releaseLoadCalls": 2
+    },
+    {
+      "phase": "world loading",
+      "cycle": 2,
+      "sourceAttached": true
+    },
+    {
+      "phase": "game started",
+      "cycle": 2,
+      "sourceAttached": false,
+      "releaseLoadCalls": 3
+    }
+  ],
+  "sourceReleaseRequests": 3,
+  "canvasAt1280x720Dpr1": {
+    "width": 1280,
+    "height": 720,
+    "ratio": 1,
+    "pixelWidth": 1280,
+    "pixelHeight": 720
+  },
+  "canvasRGBAEquivalentBytes": 3686400,
+  "canvasCapPixels": 1600000,
+  "canvasCapRGBAEquivalentBytes": 6400000
+}

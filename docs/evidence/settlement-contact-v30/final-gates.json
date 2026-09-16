@@ -1,0 +1,129 @@
+[
+  {
+    "name": "tests",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit": 0,
+    "seconds": 34.04
+  },
+  {
+    "name": "architecture",
+    "command": [
+      "node",
+      "scripts/verify-architecture-grounding.mjs"
+    ],
+    "exit": 0,
+    "seconds": 1.311
+  },
+  {
+    "name": "settlement",
+    "command": [
+      "node",
+      "scripts/verify-settlement-contact.mjs",
+      "docs/evidence/settlement-contact-v30/geometry.json"
+    ],
+    "exit": 0,
+    "seconds": 2.003
+  },
+  {
+    "name": "main-runtime",
+    "command": [
+      "node",
+      "scripts/verify-main-runtime.mjs"
+    ],
+    "exit": 0,
+    "seconds": 3.683
+  },
+  {
+    "name": "crossing",
+    "command": [
+      "npm",
+      "run",
+      "test:crossing"
+    ],
+    "exit": 0,
+    "seconds": 1.226
+  },
+  {
+    "name": "journey",
+    "command": [
+      "npm",
+      "run",
+      "test:journey"
+    ],
+    "exit": 0,
+    "seconds": 0.626
+  },
+  {
+    "name": "session",
+    "command": [
+      "npm",
+      "run",
+      "test:session"
+    ],
+    "exit": 0,
+    "seconds": 6.542
+  },
+  {
+    "name": "forge",
+    "command": [
+      "npm",
+      "run",
+      "test:forge"
+    ],
+    "exit": 0,
+    "seconds": 1.085
+  },
+  {
+    "name": "expedition",
+    "command": [
+      "npm",
+      "run",
+      "test:expedition"
+    ],
+    "exit": 0,
+    "seconds": 5.372
+  },
+  {
+    "name": "vaults",
+    "command": [
+      "npm",
+      "run",
+      "test:vaults"
+    ],
+    "exit": 0,
+    "seconds": 7.397
+  },
+  {
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit": 0,
+    "seconds": 2.454
+  },
+  {
+    "name": "package",
+    "command": [
+      "npm",
+      "run",
+      "package"
+    ],
+    "exit": 0,
+    "seconds": 0.673
+  },
+  {
+    "name": "artifacts",
+    "command": [
+      "npm",
+      "run",
+      "test:artifacts"
+    ],
+    "exit": 0,
+    "seconds": 0.461
+  }
+]

@@ -158,6 +158,7 @@
 /* One silent encoded title loop. The retained painting is visible before playback. */
 #title-screen #title-video{display:block;width:100%;height:100%;object-fit:cover;object-position:68% 50%;opacity:0;transition:opacity 1.2s;pointer-events:none}
 #title-screen.has-video #title-video{opacity:1}
+#title-screen.is-launching #title-video{opacity:0;transition:none}
 #title-screen.has-video .title-mist,#title-screen.has-video .title-emberlight,#title-screen.has-video #title-embers{visibility:hidden}
 #title-screen .title-utilities{flex-wrap:wrap;justify-content:flex-end;column-gap:10px;row-gap:0}
 #title-screen #title-motion{min-height:44px;white-space:nowrap}

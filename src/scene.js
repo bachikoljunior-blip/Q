@@ -15,6 +15,7 @@ import { loadSkySource } from './sky-assets.js';
 import { createSkyLighting } from './sky-lighting.js';
 import { createTerrainSurface } from './terrain-surface.js';
 import { createWaterSurface } from './water-surface.js';
+import { bridgeRampGeometry, bridgePierGeometry } from './settlement-contact.js';
 import { forestMaterial, configureForestMesh, installForestTextures } from './forest-materials.js';
 import { loadForestTextures } from './forest-assets.js';
 import { loadSkinTexture } from './skin-assets.js';
@@ -106,13 +107,17 @@ export class SceneView {
 
   }
   createWater(){const geo=createWaterSurface();this.waterMat=surfaceMaterial('water',0x49695e,{roughness:.27,metalness:0,transparent:true,opacity:.82,depthWrite:false,flow:this.sway,worldScale:.25});mesh(geo,this.waterMat,this.scene);for(const b of BRIDGES){
-      const {x,z,top}=b;const bridge=new T.Group();this.scene.add(bridge);const wood=surfaceMaterial('wood',0x88775c);for(let plank=0;plank<44;plank++)block(bridge,wood,[x-13.19+plank*.613,top-.18,z],[.59,.36,5.3]);for(const side of[-1,1]){block(bridge,wood,[x,top-.6,z+side*1.85],[27,.5,.28]);for(let j=-10;j<=10;j+=5)beam(bridge,wood,[x+j,top+.15,z+side*2.8],[x+j+4.5,top+1.4,z+side*2.8],.045);}batchProp(bridge);
+      const {x,z,top}=b;const bridge=new T.Group();this.scene.add(bridge);const wood=surfaceMaterial('wood',0x88775c);for(let plank=0;plank<44;plank++)block(bridge,wood,[x-13.19+plank*.613,top-.18,z],[.59,.36,5.3]);for(const side of[-1,1]){block(bridge,wood,[x,top-.6,z+side*1.85],[27,.5,.28]);for(let j=-10;j<=10;j+=5)beam(bridge,wood,[x+j,top+.15,z+side*2.8],[x+j+4.5,top+1.4,z+side*2.8],.045);}
+      part(bridge,new T.BoxGeometry(27,.12,5.3),wood,[x,top-.068,z]);
+      for(const end of[-1,1])part(bridge,new T.BoxGeometry(.045,.12,5.3),wood,[x+end*13.4775,top-.06,z]);
+      for(const station of[-10,0,10]){part(bridge,new T.BoxGeometry(.38,.3,4.08),wood,[x+station,top-.6,z]);for(const side of[-1,1])part(bridge,bridgePierGeometry(x+station,z+side*1.85,top-.4,heightAt),wood);}
+      bridge.userData.contactBridge={x,z,top};batchProp(bridge);
       for(let i=-12;i<=12;i+=4)for(const side of [-1,1])addBox(this.scene,C.wood,x+i,top+.75,z+side*2.8,.15,1.65,.15);
-      for(const side of [-1,1]){addBox(this.scene,C.wood,x,top+1.4,z+side*2.8,27,.12,.12);const inner=x+side*13.5,outer=x+side*21.5,geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute([inner,top,z-2.65,inner,top,z+2.65,outer,heightAt(outer,z-2.65)+.015,z-2.65,outer,heightAt(outer,z+2.65)+.015,z+2.65],3));geo.setIndex([0,1,2,2,1,3]);geo.computeVertexNormals();mesh(geo,surfaceMaterial('wood',0x7b7360,{side:T.DoubleSide}),this.scene);}
+      for(const side of [-1,1]){addBox(this.scene,C.wood,x,top+1.4,z+side*2.8,27,.12,.12);const geo=bridgeRampGeometry(b,side,groundAt);mesh(geo,surfaceMaterial('wood',0x7b7360,{side:T.DoubleSide}),this.scene);}
     }
   }
 
-  createStructures(){for(const o of this.game.obstacles.filter(o=>o.type==='house')){const g=createHouse();g.position.set(o.x,heightAt(o.x,o.z),o.z);this.scene.add(g);bakeStaticTransforms(g);}
+  createStructures(){for(const o of this.game.obstacles.filter(o=>o.type==='house')){const base=heightAt(o.x,o.z),g=createHouse({groundHeight:(x,z)=>heightAt(o.x+x,o.z+z)-base});g.position.set(o.x,base,o.z);this.scene.add(g);bakeStaticTransforms(g);}
     for(const p of PLACES){const g=new T.Group();g.position.set(p.x,heightAt(p.x,p.z),p.z);this.scene.add(g);const boss=p.type==='boss';mesh(new T.CylinderGeometry(boss?10:3.4,boss?11:3.8,.5,12),surfaceMaterial('stone',C.stone),g,[0,.2,0]);mesh(new T.CylinderGeometry(1.1,1.35,.75,8),surfaceMaterial('stone',0x536460),g,[0,.68,0]);const flame=mesh(new T.IcosahedronGeometry(1,1),new T.MeshStandardMaterial({color:0xf3d28a,emissive:0xffb340,emissiveIntensity:2,transparent:true,opacity:.95}),g,[0,1.55,0],[.24,.76,.24]);const glow=new T.PointLight(0xf7c17b,6,13,2);glow.position.y=2;g.add(glow);const ring=mesh(new T.TorusGeometry(1.4,.027,4,36),material(C.gold,{emissive:0xc79c4e,emissiveIntensity:.8}),g,[0,1.8,0]);const beam=mesh(new T.CylinderGeometry(.045,.28,28,8,1,true),new T.MeshBasicMaterial({color:0xf8dca0,transparent:true,opacity:.055,side:T.DoubleSide,depthWrite:false}),g,[0,15,0]);ring.material=ring.material.clone();const bowl=createBrazier();bowl.position.y=.7;g.add(bowl);this.beacons.set(p.id,{g,flame,glow,ring,beam});
       if(p.type!=='camp'){
         const supports=this.game.obstacles.filter(o=>o.architecture?.place===p.id),columns=supports.filter(o=>o.architecture.kind==='column'),origin={x:p.x,y:g.position.y,z:p.z};const n=boss?10:6,r=boss?13:7;for(let i=0;i<n;i++){const a=i/n*Math.PI*2,x=Math.cos(a)*r,z=Math.sin(a)*r,h=boss?14:(i%3===0?7:4.4);mesh(groundedSupportGeometry(columns[i],origin),surfaceMaterial('stone',C.stone),g,[0,0,0],[1,1,1],true);addBox(g,0x7e8980,x,h+.3,z,1.8,.6,1.8);if(i%2===0)mesh(new T.ConeGeometry(.6,2,4),material(C.dark),g,[x,h+1.7,z]);}
