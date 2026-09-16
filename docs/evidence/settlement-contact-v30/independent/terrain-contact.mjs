@@ -1,0 +1,10 @@
+// Independent native indexed-terrain contact rays; CPU only.
+import fs from 'node:fs';import {pathToFileURL} from 'node:url';
+const repo='/workspace/scratch/e72662e3b71f/Q-settlement-v30',out='/workspace/scratch/e72662e3b71f/q-v30-settlement-audit';const u=f=>pathToFileURL(repo+'/'+f);
+const T=await import(u('node_modules/three/build/three.module.js'));const {createTerrainSurface}=await import(u('src/terrain-surface.js'));const{Game,heightAt,BRIDGES}=await import(u('src/core.js'));const {houseFootingGeometry,bridgePierGeometry}=await import(u('src/settlement-contact.js'));
+const terrain=new T.Mesh(createTerrainSurface(),new T.MeshBasicMaterial()),raycaster=new T.Raycaster();terrain.updateMatrixWorld(true);
+function ground(x,z){raycaster.set(new T.Vector3(x,50,z),new T.Vector3(0,-1,0));const hit=raycaster.intersectObject(terrain)[0];if(!hit)throw Error('native terrain hole');return hit.point.y;}
+const records=[];
+for(const o of new Game().obstacles.filter(o=>o.type==='house')){const base=heightAt(o.x,o.z),geometry=houseFootingGeometry((x,z)=>heightAt(o.x+x,o.z+z)-base),points=geometry.userData.contactRing;for(let i=0;i<points.length;i+=2){const p=points[i],x=o.x+p[0],z=o.z+p[2];records.push({kind:'foundation',house:[o.x,o.z],x,z,meshBottom:p[1]+base,terrain:ground(x,z),gap:p[1]+base-ground(x,z)});}}
+for(const b of BRIDGES)for(const station of[-10,0,10])for(const side of[-1,1]){const g=bridgePierGeometry(b.x+station,b.z+side*1.85,b.top-.4,heightAt);for(const p of[g.userData.contactRing[0],g.userData.contactRing[2]])records.push({kind:'pier',x:p[0],z:p[2],meshBottom:p[1],terrain:ground(p[0],p[2]),gap:p[1]-ground(p[0],p[2])});}
+const gaps=records.map(r=>r.gap),result={checkedAt:new Date().toISOString(),boundary:'Native Raycaster on actual indexed production terrain mesh; no rendered terrain pixels',samples:records.length,minGap:Math.min(...gaps),maxGap:Math.max(...gaps),records};if(result.maxGap>=0)throw Error('support floats over indexed terrain');fs.writeFileSync(out+'/terrain-contact.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({samples:result.samples,minGap:result.minGap,maxGap:result.maxGap}));

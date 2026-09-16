@@ -1,0 +1,154 @@
+{
+  "base": "26bd980546bbf0dcc7fb0d83697cf35202c3e365",
+  "boundary": "Production title controller + production main compiled separately, with explicit DOM/video/timer/Scene/audio device fixtures. Source detachment is a release request, not measured physical reclamation.",
+  "rows": [
+    {
+      "version": "before",
+      "sourceSha256": {
+        "main": "0559c31dbcf10dea5c02ffbbaea4e4c6a4c07068a63c8589be6b88b81082b929",
+        "title": "dbb8e3a946fa202c6d2e486b45bbcb55bd979d7ed7405567819b41f05c2c7f28"
+      },
+      "title": {
+        "playing": {
+          "sourceAttached": true,
+          "paused": false,
+          "loadCalls": 0,
+          "pendingTimers": 0,
+          "animationFrames": 0,
+          "hasVideo": true,
+          "loadingVisible": false
+        },
+        "afterLaunchRequest": {
+          "sourceAttached": true,
+          "paused": false,
+          "loadCalls": 0,
+          "pendingTimers": 0,
+          "animationFrames": 0,
+          "hasVideo": true,
+          "loadingVisible": true
+        },
+        "afterSettingsRoundtrip": {
+          "sourceAttached": true,
+          "paused": false,
+          "loadCalls": 1,
+          "pendingTimers": 0,
+          "animationFrames": 1,
+          "hasVideo": false,
+          "loadingVisible": false
+        },
+        "afterFailedLaunch": {
+          "sourceAttached": true,
+          "paused": false,
+          "loadCalls": 1,
+          "pendingTimers": 0,
+          "animationFrames": 1,
+          "hasVideo": false,
+          "loadingVisible": false
+        }
+      },
+      "mainStart": {
+        "events": [
+          "audio:start",
+          "title:launching:true",
+          "scene:requested"
+        ],
+        "sceneCalls": 1,
+        "launching": true,
+        "sourceStage": "Production main reaches deferred Scene factory; title API is a call recorder in this boundary.",
+        "failure": {
+          "playing": false,
+          "launching": false,
+          "audioRunning": false
+        }
+      },
+      "importReadPending": {
+        "sceneCalls": 0,
+        "launching": false,
+        "disabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "invalidImportRecovery": {
+        "launching": false,
+        "sceneCalls": 0,
+        "audioRunning": false
+      }
+    },
+    {
+      "version": "after",
+      "sourceSha256": {
+        "main": "952655c3c0600d5d657e4a4b222c75835b849d414b501a8de3308fc3fbd18891",
+        "title": "ee014186a34625da90768da0434f2eedd69e35501b515f3d658959359a3888e3"
+      },
+      "title": {
+        "playing": {
+          "sourceAttached": true,
+          "paused": false,
+          "loadCalls": 0,
+          "pendingTimers": 0,
+          "animationFrames": 0,
+          "hasVideo": true,
+          "loadingVisible": false
+        },
+        "afterLaunchRequest": {
+          "sourceAttached": false,
+          "paused": true,
+          "loadCalls": 1,
+          "pendingTimers": 0,
+          "animationFrames": 0,
+          "hasVideo": false,
+          "loadingVisible": true
+        },
+        "afterSettingsRoundtrip": {
+          "sourceAttached": false,
+          "paused": true,
+          "loadCalls": 1,
+          "pendingTimers": 0,
+          "animationFrames": 0,
+          "hasVideo": false,
+          "loadingVisible": true
+        },
+        "afterFailedLaunch": {
+          "sourceAttached": true,
+          "paused": false,
+          "loadCalls": 1,
+          "pendingTimers": 0,
+          "animationFrames": 1,
+          "hasVideo": false,
+          "loadingVisible": false
+        }
+      },
+      "mainStart": {
+        "events": [
+          "audio:start",
+          "title:launching:true",
+          "scene:requested"
+        ],
+        "sceneCalls": 1,
+        "launching": true,
+        "sourceStage": "Production main reaches deferred Scene factory; title API is a call recorder in this boundary.",
+        "failure": {
+          "playing": false,
+          "launching": false,
+          "audioRunning": false
+        }
+      },
+      "importReadPending": {
+        "sceneCalls": 0,
+        "launching": true,
+        "disabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "invalidImportRecovery": {
+        "launching": false,
+        "sceneCalls": 0,
+        "audioRunning": false
+      }
+    }
+  ]
+}

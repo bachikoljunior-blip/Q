@@ -36,3 +36,11 @@ export function landmarkSupports(places, floorAt) {
   }
   return result;
 }
+
+// The four existing houses use the same lower contour for mesh and vertical ray bounds.
+export function houseFoundation(floorAt) {
+  const corners=[[-2.85,-2.4],[2.85,-2.4],[2.85,2.4],[-2.85,2.4]],ring=[];
+  for(let i=0;i<4;i++){const a=corners[i],b=corners[(i+1)%4],n=i%2?10:12;for(let j=0;j<n;j++){const t=j/n;ring.push([a[0]*(1-t)+b[0]*t,a[1]*(1-t)+b[1]*t]);}}
+  for(const x of[.72,-.72]){const i=ring.findIndex((p,i)=>Math.abs(p[1]-2.4)<1e-6&&p[0]>x&&ring[(i+1)%ring.length][0]<x);ring.splice(i+1,0,[x,2.4]);}
+  return ring.map(([x,z])=>[x,floorAt(x,z)-FOUNDATION_OVERLAP,z]);
+}

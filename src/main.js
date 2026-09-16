@@ -84,7 +84,8 @@ activate('continue',()=>startGame(false,$('continue')));activate('close-panel',c
 activate('import-title-save',()=>$('title-save-file').click());$('title-save-file').onchange=e=>{importSaveFile(e.target.files[0]);e.target.value='';};
 async function importSaveFile(file){
   if(!file)return;
-  const lifecycleToken=lifecycleGate.begin();
+  const lifecycleToken=lifecycleGate.begin(),fromTitle=!playing;
+  if(fromTitle)setLaunchControls(true);
   try{
     if(file.size>100000)throw Error('セーブファイルが大きすぎます。');
     let data;try{data=JSON.parse(await file.text());}catch{throw Error('灰の巡礼のセーブファイルを選んでください。');}
@@ -95,6 +96,7 @@ async function importSaveFile(file){
     if(saved===null)return;
     $('save-status').classList.add('hidden');notify(saved?'旅の記録を読み込んだ':'記録を読み込みましたが、端末に保存できません。セーブファイルを保管してください。');
   }catch(error){if(playing)notify(error.message);else{$('save-status').textContent=error.message;$('save-status').classList.remove('hidden');}}
+  finally{if(fromTitle)setLaunchControls(false);}
 }
 activate('respawn',()=>{audio.start();game.respawn();view.snapCamera();$('death-screen').classList.add('hidden');clearInput('respawn');save();});
 function dialogue(npc='keeper'){const resident=game.residents.find(n=>n.id===npc);if(resident){residentDialogue(resident);return;}if(npc==='ferryman'){senaDialogue();return;}const delivered=game.relicDelivered;panel('dialogue','WINDFALL HAVEN','火を待つ人',`<div class="dialogue-speaker">灯守 ミラ</div><p class="dialogue-text">${game.ending?game.ending==='release'?'朝、窓を開けたら、灰が花みたいに舞っていた。火はもう、誰か一人のものじゃないんだね。':'門に、火が戻ったね。ありがとう。でも今度こそ、王冠が誰かを焼かないように見届けなくちゃ。':game.bossDefeated?'番人は、火を守りたかっただけなのかもしれない。最後に火をどうするかは、あなたが決めて。':delivered?'それは……父がつけていた巡礼の印。帰ってこなかった人にも、道の続きを歩いてくれる人がいたんだね。ありがとう。':'この谷の火は、北の王冠に吸い上げられたの。森、水殿、廃塔。三つの灯火をともせば、門は開く。<br><br>番人は、まだ王を待っている。あなたなら、その終わらない夜を止められるかもしれない。'}</p><div class="journal"><h3>灯守の願い</h3><p>${delivered?'巡礼の遺物を届けた。ミラは父の足跡を知った。':game.relic?'鞄の中に、ミラが探していた巡礼の印がある。':'東の草原に、父の巡礼の印が落ちているはず。見つけたら、どうか持ち帰って。'}</p>${game.crossingChoice==='haven'?'<p>セナから薬草が届いたよ。村の薬師が霊薬に加えてくれた。傷の治りがよくなったでしょう？</p>':''}</div><div class="panel-actions">${game.relic&&!delivered?'<button id="deliver-relic" class="primary">父の巡礼の印を渡す</button>':''}<button id="dialogue-leave" class="primary">${game.ending?'また風を追ってくる':'火を探しに行く'}</button><button id="dialogue-tips">戦い方を聞く</button></div>`);if(game.relic&&!delivered)activate('deliver-relic',()=>{if(game.deliverRelic()){save();dialogue();}});activate('dialogue-leave',()=>{closePanel();save();});activate('dialogue-tips',()=>{panel('tips','MIRA’S ADVICE','刃より先に、敵を見る',`<p>敵の足元が橙色に光ったら攻撃の予兆。距離を取るか、回避しよう。受け流しは敵の方を向き、攻撃が届く直前に使う。</p><p>回避にも斬撃にもスタミナを使う。使い切る前に少し離れれば、すぐに戻る。残火の力は周りの敵をひるませる。</p><p>番人の広い衝撃波は、跳躍でも越えられる。灯火で休むと生命力と霊薬が回復する。霊薬は飲み終わるまで隙ができる。被弾や回避で中断するので、まず敵との距離を取ろう。</p><div class="panel-actions"><button id="tips-close" class="primary">覚えておく</button></div>`);activate('tips-close',closePanel);});}

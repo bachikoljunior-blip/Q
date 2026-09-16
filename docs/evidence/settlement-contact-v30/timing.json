@@ -1,0 +1,15 @@
+{
+  "worktreeCreatedUnix": 1789529312,
+  "implementationStartedUnix": 1789530265.1164544,
+  "mediaAcquisitionSeconds": 0,
+  "newMediaGenerationSeconds": 0,
+  "sourceEditingSeconds": null,
+  "mainSiteIntegrationSeconds": null,
+  "sourceReadyUnix": 1789531191.520057,
+  "preimplementationWallSeconds": 953.116,
+  "implementationAndPreliminaryVerificationWallSeconds": 529.497,
+  "independentReviewAndReworkToSourceReadyWallSeconds": 396.907,
+  "finalGateCommandSeconds": 66.873,
+  "readyToCommitWallSecondsSinceWorktree": 2126.464,
+  "timeAccounting": "Wall intervals include reading/waits and can overlap independent review; exclusive keyboard editing and rework labor were not separately sampled. Runtime source reached the final hashes before final 13 gates. Parent integration/deployment time remains separate."
+}

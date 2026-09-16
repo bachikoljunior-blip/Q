@@ -31,6 +31,8 @@ export const scenarios = [
       assert.equal(runtime.state.playing, false);
       await runtime.click('start'); await runtime.flush();
       assert.equal(runtime.sceneCalls, 1);
+      assert(runtime.events.indexOf('title:launching:true')<runtime.events.indexOf('scene:requested'));
+      assert.equal(runtime.titleState.launching,true);
       for (const id of ['start', 'continue', 'import-title-save']) assert.equal(runtime.element(id).disabled, true);
       await runtime.click('start'); assert.equal(runtime.sceneCalls, 1);
       runtime.scene.resolve(); await runtime.flush();
@@ -82,6 +84,10 @@ export const scenarios = [
     async run(compiled, viewport) {
       const runtime = createMainRuntime(compiled, { viewport }), file = deferred(), save = saveFixture();
       await runtime.importFile(save, { delayed: file });
+      assert.equal(runtime.titleState.launching,true);assert.equal(runtime.sceneCalls,0);
+      for(const id of ['start','continue','import-title-save'])assert(runtime.element(id).disabled);
+      await runtime.click('title-settings');await runtime.click('settings-close');
+      assert.equal(runtime.titleState.launching,true,'settings does not release import ownership');
       await runtime.interrupt('blur');
       file.resolve(JSON.stringify(save)); await runtime.flush();
       runtime.scene.resolve(); await runtime.flush();
@@ -89,6 +95,19 @@ export const scenarios = [
       assert.equal(runtime.view.game.player.hp, 73);
       assert.equal(JSON.parse(runtime.values.get(SAVE_KEY)).player.herbs, 7);
       assert.equal(runtime.errors.length, 0);
+    },
+  },
+  {
+    id: 'title-import-invalid-file-restores-controls',
+    async run(compiled, viewport) {
+      const runtime=createMainRuntime(compiled,{viewport}),file=deferred();
+      await runtime.importFile('invalid',{delayed:file});
+      assert.equal(runtime.titleState.launching,true);assert.equal(runtime.sceneCalls,0);
+      file.resolve('invalid');await runtime.flush();
+      assert.equal(runtime.titleState.launching,false);assert.equal(runtime.titleState.active,true);
+      assert.equal(runtime.sceneCalls,0);assert.equal(runtime.audioRunning,false);
+      assert.equal(runtime.values.has(SAVE_KEY),false);assert.equal(hidden(runtime,'save-status'),false);
+      for(const id of ['start','continue','import-title-save'])assert.equal(runtime.element(id).disabled,false);
     },
   },
   {
@@ -113,6 +132,7 @@ export const scenarios = [
       await runtime.click('start'); await runtime.flush();
       runtime.scene.reject(Error('fixture scene unavailable')); await runtime.flush();
       assert.equal(runtime.state.playing, false); assert.equal(runtime.audioRunning, false);
+      assert.equal(runtime.titleState.launching,false);assert.equal(runtime.titleState.active,true);
       assert.equal(hidden(runtime, 'fatal'), false); assert.equal(hidden(runtime, 'title-screen'), false);
       assert.equal(hidden(runtime, 'hud'), true); assert.equal(runtime.values.has(SAVE_KEY), false);
       assert.deepEqual(runtime.errors, ['fixture scene unavailable']);
@@ -123,7 +143,7 @@ export const scenarios = [
     id: 'storage-and-gamepad-failure',
     async run(compiled, viewport) {
       const saved = saveFixture(), runtime = createMainRuntime(compiled, { save: saved, storageFailure: true, viewport });
-      const launch = runtime.click('continue'); runtime.scene.resolve(); await launch; await runtime.flush();
+      const launch = runtime.click('continue'); assert.equal(runtime.titleState.launching,true); runtime.scene.resolve(); await launch; await runtime.flush();
       assert.equal(runtime.view.game.player.hp, 73);
       await runtime.document.emit('keydown', { code: 'KeyW' }); runtime.frames(12);
       const previousSave = runtime.values.get(SAVE_KEY);

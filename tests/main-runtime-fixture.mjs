@@ -123,7 +123,7 @@ export function createMainRuntime(compiled, { save, saveRaw, storageFailure = fa
   const devices = {
     mountTitleCinematic({root}) {
       if(root.id!=='title-screen')throw Error('Title must mount on the production title root');
-      return {setActive(value){if(value&&root.classList.contains('hidden'))throw Error('Title must be visible before activation measures its canvas');titleState.active=value;},setSaveAvailable(value){titleState.saveAvailable=value;},setLaunching(value){titleState.launching=value;},dispose(){titleState.active=false;}};
+      return {setActive(value){if(value&&root.classList.contains('hidden'))throw Error('Title must be visible before activation measures its canvas');titleState.active=value;},setSaveAvailable(value){titleState.saveAvailable=value;},setLaunching(value){titleState.launching=value;events.push('title:launching:'+value);},dispose(){titleState.active=false;}};
     },
     Soundscape: class {
       get active() { return audioRunning; }

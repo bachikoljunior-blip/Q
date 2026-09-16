@@ -1,5 +1,18 @@
 # 制作状況 — 2026-09-16
 
+## 2026-09-16 — 継続中：住宅・橋と読み込み動画を結合検証、人物形状と弓動作へ
+
+v30は住宅4棟・橋2本の基礎/接続と、世界・セーブ読込開始時のタイトル動画source解放要求を結合。21必須command / 269 tests、103.658秒ですべて成功。初期JS164,493 B / 3 chunks、単体16,327,411 B / SHA256 `d4bb44ef71a72ff9cfb2cc8a594787c9b43581f3cb20f601782165dd602a054b`、固定stage `artifacts/site-3v09AD`の34public filesと一致。作者commit `b6843fdb82029d6748459073bac75f06d51880ce` と `5c21d19aaf291ef1ba7391b83c8a2727e712a2fd` を結合し、基点はv29local62f731e / remote26bd980。同じ画面の具体的欠陥への[結合記録](SETTLEMENT_TITLE_V30.md)と[実gates](evidence/settlement-title-v30/validation.json)を保存した。
+
+独立指摘の扉下端の遮蔽は入口notchで解消。基礎を下へ延ばした際の旧44すり抜けを、house下端だけの共有bounds修復でlive矢/forecast44wall・camera通過0にした。上端・x/z/r・住民・保存維持。橋ramp独立13,932点の最大差4.411mm、継目/板間の穴0。タイトルは同条件でlaunch直後のvideo source空/paused/load1/RAF0を確認し、設定往復でも読込中再開しない。実描画、石積み造形、物理decoder/GPU回収、FPS・実聴・PS4全画面の合格ではない。
+
+PR44 remote `26bd980546bbf0dcc7fb0d83697cf35202c3e365` / exacttree `cd070360045ea6b2744cb907d86d0fac12315e3b`、CI35053514459/35053642930は両success。PR39〜44の保存済み全unitはまだmainではない。04:05Z頃のnative mainは`547676fdce8d8e97abed9f065aad0b6e24af2fd6`、PR39open/mergedfalse/03:14testmerge16fff61dのまま、再mutationなし。実main→retarget/requiredCI/通常mergeの順を保持し、Site23 owner onlyへ未merge候補を先行配信しない。
+
+既存Qの回数終了COUNT168だけを最新『達成まで』に合わせて除去済み（serviceはDTSTART末尾Zを正規化）。prompt/title/timezone/enabled維持、disabled/nextnull/20件上限は未解決。固定9/20期限を延ばしたことにも、実行再開成功にも読み替えない。直近の『続けて』を同じUltra担当で受領し、新producerを重ねず現制作を続けている。
+
+次は実13人型family/29actor共通の頭形状へ、原CC0 morphの少量basis差分で主要役を作り分ける。同時に弓兵の手/弦/実射出が別駆動である点を同条件bone点で測り、客観的欠陥だけ修復する。独立監査のv29texture推定49,196,088 B・実初期残507 B・単体残449,805 Bを方法選択に含め、面数/別atlasを無制限に足す方法は採らない。完成0/7・指定10作品比較0/10と画面/実機/実聴不足を維持し、期限見通しの根拠不足を記録しながら実制作を継続する。
+
+
 ## 2026-09-16 — 継続中：肌と37支持部を結合検証、家屋・橋の接地へ
 
 v29は鍛冶師の原UV肌と廃塔/柱37支持部の接地・カメラ/矢/予測高さの結合。20必須command / 263 tests成功、103.597秒。初期163,956 B / 3 chunks、単体16,324,272 B / SHA256 `d2cdd7b59083b3ae66d2c1fead0b50ef05730c35b7ee892d4c57ea5039012a98`、固定stage `artifacts/site-V23mJs`。実source・比較・残る肌/全screen不足は[結合記録](SKIN_GROUNDING_V29.md)。見える浮きの幾何欠陥は減ったが、WebGL画面・GPU・実機・実聴・PS4到達は未判定。

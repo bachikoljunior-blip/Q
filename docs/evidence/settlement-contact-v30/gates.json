@@ -1,0 +1,70 @@
+[
+  {
+    "name": "tests",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit": 0,
+    "seconds": 48.135
+  },
+  {
+    "name": "main-runtime",
+    "command": [
+      "node",
+      "scripts/verify-main-runtime.mjs"
+    ],
+    "exit": 0,
+    "seconds": 5.478
+  },
+  {
+    "name": "crossing",
+    "command": [
+      "npm",
+      "run",
+      "test:crossing"
+    ],
+    "exit": 0,
+    "seconds": 1.44
+  },
+  {
+    "name": "journey",
+    "command": [
+      "npm",
+      "run",
+      "test:journey"
+    ],
+    "exit": 0,
+    "seconds": 0.87
+  },
+  {
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit": 0,
+    "seconds": 3.369
+  },
+  {
+    "name": "package",
+    "command": [
+      "npm",
+      "run",
+      "package"
+    ],
+    "exit": 0,
+    "seconds": 0.931
+  },
+  {
+    "name": "artifacts",
+    "command": [
+      "npm",
+      "run",
+      "test:artifacts"
+    ],
+    "exit": 0,
+    "seconds": 0.614
+  }
+]

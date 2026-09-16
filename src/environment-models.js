@@ -2,6 +2,7 @@ import * as T from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { surfaceMaterial } from './environment-materials.js';
 import { forestCrownGeometry, forestTrunkGeometry } from './forest-geometry.js';
+import { houseFootingGeometry } from './settlement-contact.js';
 
 const unitBox=new T.BoxGeometry(1,1,1),unitCylinder=new T.CylinderGeometry(1,1,1,10);
 const geometries=new Map(), propTemplates=new Map();
@@ -76,10 +77,10 @@ export function createLantern(){
   const g=new T.Group(),{iron,brass}=palette(),glass=new T.MeshStandardMaterial({color:0xffdd9a,emissive:0xeb9a39,emissiveIntensity:1.5,transparent:true,opacity:.76,roughness:.3});g.userData.environmentFamily='lantern';
   part(g,new T.CylinderGeometry(.15,.18,.3,8),glass,[0,.24,0]);for(const y of[.07,.43])part(g,new T.CylinderGeometry(.2,.2,.05,8),iron,[0,y,0]);for(let i=0;i<4;i++){const a=i*Math.PI*.5;beam(g,brass,[Math.sin(a)*.15,.08,Math.cos(a)*.15],[Math.sin(a)*.15,.44,Math.cos(a)*.15],.018);}part(g,new T.ConeGeometry(.23,.17,8),iron,[0,.52,0]);part(g,new T.TorusGeometry(.09,.018,4,12),iron,[0,.67,0]);return batchProp(g);
 }
-export function createHouse(){
-  if(propTemplates.has('house'))return propTemplates.get('house').clone(true);
+export function createHouse({groundHeight=null}={}){
+  if(!groundHeight&&propTemplates.has('house'))return propTemplates.get('house').clone(true);
   const g=new T.Group(),{stone,wood,darkWood}=palette(),plaster=surfaceMaterial('stone',0xb9ad93,{finish:'plaster',worldScale:2.3}),roof=surfaceMaterial('stone',0x4c6467),dark=surfaceMaterial('wood',0x292e2a);g.userData.environmentFamily='house';
-  block(g,stone,[0,.25,0],[5.7,.5,4.8]);block(g,plaster,[0,1.95,0],[5.65,3.1,4.75]);
+  if(groundHeight){const footing=houseFootingGeometry(groundHeight);g.userData.footing={bottom:footing.userData.contactRing,top:footing.userData.copingRing};part(g,footing,stone);}else block(g,stone,[0,.25,0],[5.7,.5,4.8]);block(g,plaster,[0,1.95,0],[5.65,3.1,4.75]);
   // Close the previously open gable: the roof now has supporting walls and
   // timber joinery rather than floating slate rows over an empty triangle.
   const gable=new T.BufferGeometry();gable.setAttribute('position',new T.Float32BufferAttribute([-2.825,3.5,2.38,2.825,3.5,2.38,0,5.2,2.38,2.825,3.5,-2.38,-2.825,3.5,-2.38,0,5.2,-2.38],3));gable.setAttribute('uv',new T.Float32BufferAttribute([0,0,1,0,.5,1,0,0,1,0,.5,1],2));gable.computeVertexNormals();part(g,gable,plaster);
@@ -91,7 +92,9 @@ export function createHouse(){
   block(g,darkWood,[0,5.28,0],[.22,.18,6.05]);for(const z of[-2.85,2.85])for(const side of[-1,1])beam(g,wood,[0,5.25,z],[side*3.2,3.15,z],.075);
   block(g,dark,[0,1.18,2.39],[1.3,2.1,.08]);for(let i=0;i<6;i++)block(g,wood,[(i-2.5)*.19,1.16,2.455],[.17,1.98,.07]);for(const y of[.55,1.72])block(g,darkWood,[0,y,2.51],[1.19,.1,.05]);
   for(const x of[-1.83,1.83]){block(g,dark,[x,1.98,2.44],[.88,1.05,.07]);block(g,surfaceMaterial('cloth',0xe3ba70,{emissive:0x604116,emissiveIntensity:.28}),[x,1.98,2.48],[.64,.8,.025]);block(g,wood,[x,1.98,2.52],[.065,.91,.06]);block(g,wood,[x,1.98,2.52],[.73,.065,.06]);block(g,stone,[x,1.45,2.55],[1.04,.14,.26]);}
-  block(g,stone,[1.75,4.6,-.8],[.84,2.8,.8]);for(let row=0;row<8;row++)block(g,stone,[1.75,3.45+row*.34,-.8],[.89,.29,.85]);block(g,darkWood,[1.75,6.08,-.8],[1.04,.16,1]);batchProp(g);propTemplates.set('house',g);return g.clone(true);
+  block(g,stone,[1.75,4.6,-.8],[.84,2.8,.8]);for(let row=0;row<8;row++)block(g,stone,[1.75,3.45+row*.34,-.8],[.89,.29,.85]);block(g,darkWood,[1.75,6.08,-.8],[1.04,.16,1]);batchProp(g);
+  if(groundHeight){const shared=propTemplates.get('house-surfaces');if(shared){for(const m of g.children)if(m.material!==stone){const original=shared.children.find(n=>n.material===m.material);m.geometry.dispose();m.geometry=original.geometry;}}else propTemplates.set('house-surfaces',g);}
+  else propTemplates.set('house',g);return g.clone(true);
 }
 export function createTent(color=0x948460){
   const g=new T.Group(),{wood}=palette(),cloth=surfaceMaterial('cloth',color,{side:T.DoubleSide});g.userData.environmentFamily='tent';

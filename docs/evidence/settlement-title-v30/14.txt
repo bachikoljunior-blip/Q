@@ -1,0 +1,30 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> q-ash-pilgrim@0.21.0 test:forge
+> node scripts/simulate-forge.mjs
+
+{
+  "passed": true,
+  "seconds": 103,
+  "reloads": 4,
+  "level": 2,
+  "hp": 132,
+  "bellReward": true,
+  "gatherings": [
+    {
+      "id": "hearth",
+      "choice": "medicine",
+      "seconds": 67,
+      "reloads": 5,
+      "hp": 132
+    },
+    {
+      "id": "hearth",
+      "choice": "tools",
+      "seconds": 67,
+      "reloads": 5,
+      "hp": 132
+    }
+  ],
+  "renderingTested": false
+}

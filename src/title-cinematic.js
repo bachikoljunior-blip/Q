@@ -44,7 +44,7 @@ export function mountTitleCinematic({ root, onCue = () => {}, videoSource = '' }
   let context = null;
   try { context = canvas?.getContext?.('2d', { alpha: true }) || null; } catch { /* optional decoration */ }
   const motion = win.matchMedia?.('(prefers-reduced-motion: reduce)');
-  let reduced = !!motion?.matches, active = true, disposed = false, pageHidden = false;
+  let reduced = !!motion?.matches, active = true, launching = false, disposed = false, pageHidden = false;
   let blurred = typeof doc.hasFocus === 'function' && !doc.hasFocus();
   let frameId = null, previousTime = null, elapsed = 0;
   let size = null, pointerX = 0, pointerY = 0, driftX = 0, driftY = 0;
@@ -54,7 +54,7 @@ export function mountTitleCinematic({ root, onCue = () => {}, videoSource = '' }
     target.addEventListener(name, handler, options);
     listeners.push(() => target.removeEventListener(name, handler, options));
   };
-  const motionAllowed = () => !disposed && active && !doc.hidden && !pageHidden && !blurred && !reduced && !saveData && !userPaused;
+  const motionAllowed = () => !disposed && active && !launching && !doc.hidden && !pageHidden && !blurred && !reduced && !saveData && !userPaused;
   const canAnimate = () => motionAllowed() && !mediaReady && !!context;
   function motionLabel() {
     if (!motionButton) return;
@@ -93,7 +93,7 @@ export function mountTitleCinematic({ root, onCue = () => {}, videoSource = '' }
   function synchronizeVideo() {
     motionLabel();
     if (!video || !videoSource) return;
-    if (!motionAllowed()) { stopVideo(disposed || !active || pageHidden || doc.hidden || reduced || saveData); return; }
+    if (!motionAllowed()) { stopVideo(disposed || !active || launching || pageHidden || doc.hidden || reduced || saveData); return; }
     if (mediaBlocked || !pageLoaded || videoPending || loadTimer !== null || (!video.paused && sourceAttached)) return;
     // First paint and the small poster load finish before any MP4 source is attached.
     loadTimer = win.setTimeout(() => { loadTimer = null; playVideo(); }, sourceAttached ? 0 : 300);
@@ -206,15 +206,16 @@ export function mountTitleCinematic({ root, onCue = () => {}, videoSource = '' }
     setActive(value) {
       if (disposed) return;
       active = !!value;
-      if (!active) api.setLaunching(false);
-      else { blurred = typeof doc.hasFocus === 'function' && !doc.hasFocus(); measure(); }
+      if (active) { blurred = typeof doc.hasFocus === 'function' && !doc.hasFocus(); measure(); }
       synchronize();
     },
     setSaveAvailable(value) { if (!disposed) root.classList.toggle('has-save', !!value); },
     setLaunching(value) {
       if (disposed) return;
-      root.classList.toggle('is-launching', !!value);
-      root.querySelector('#title-loading')?.classList.toggle('hidden', !value);
+      launching = !!value;
+      root.classList.toggle('is-launching', launching);
+      root.querySelector('#title-loading')?.classList.toggle('hidden', !launching);
+      synchronize();
     },
     dispose() {
       if (disposed) return;

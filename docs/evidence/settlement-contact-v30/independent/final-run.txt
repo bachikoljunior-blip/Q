@@ -1,0 +1,121 @@
+{
+  "failures": [],
+  "changedDuringRun": [],
+  "newlyExposedHouseVolume": 0,
+  "houseCount": 4,
+  "doorRays": 360,
+  "windowRays": 480,
+  "closedMeshes": 20,
+  "bridges": [
+    {
+      "z": -120,
+      "sampling": [
+        {
+          "version": "baseline",
+          "rampMisses": 0,
+          "rampErrors": {
+            "count": 6966,
+            "min": -0.1324605413485711,
+            "max": 0.014936085882888417,
+            "rms": 0.04093561867927624
+          },
+          "seamMisses": 249,
+          "seamErrors": {
+            "count": 633,
+            "min": -0.16918397105690786,
+            "max": 0.0005276829620738388,
+            "rms": 0.01795552448475594
+          },
+          "plankGapSamples": 258,
+          "plankGapHoles": 215,
+          "plankGapTopErrors": {
+            "count": 43,
+            "min": -0.3903535684032391,
+            "max": -0.3538260723872575,
+            "rms": 0.35879669253810326
+          }
+        },
+        {
+          "version": "candidate",
+          "rampMisses": 0,
+          "rampErrors": {
+            "count": 6966,
+            "min": -0.004327041329021508,
+            "max": 0.0000011113046314292774,
+            "rms": 0.0014479822780938988
+          },
+          "seamMisses": 0,
+          "seamErrors": {
+            "count": 882,
+            "min": -0.008000016917231845,
+            "max": 1.306760578634325e-7,
+            "rms": 0.0031286184199679503
+          },
+          "plankGapSamples": 258,
+          "plankGapHoles": 0,
+          "plankGapTopErrors": {
+            "count": 258,
+            "min": -0.008000016917231845,
+            "max": -0.008000016917230068,
+            "rms": 0.008000016917230944
+          }
+        }
+      ]
+    },
+    {
+      "z": 25,
+      "sampling": [
+        {
+          "version": "baseline",
+          "rampMisses": 0,
+          "rampErrors": {
+            "count": 6966,
+            "min": -0.0028598592036317427,
+            "max": 0.14674048735919487,
+            "rms": 0.0512440306841366
+          },
+          "seamMisses": 249,
+          "seamErrors": {
+            "count": 633,
+            "min": -0.16919179348052893,
+            "max": 0.020568238984332687,
+            "rms": 0.01804510823291373
+          },
+          "plankGapSamples": 258,
+          "plankGapHoles": 215,
+          "plankGapTopErrors": {
+            "count": 43,
+            "min": -0.39034023288966857,
+            "max": -0.35382604144891516,
+            "rms": 0.35879618192885193
+          }
+        },
+        {
+          "version": "candidate",
+          "rampMisses": 0,
+          "rampErrors": {
+            "count": 6966,
+            "min": -0.0009676001183471783,
+            "max": 0.00441130515267929,
+            "rms": 0.0014121629864229566
+          },
+          "seamMisses": 0,
+          "seamErrors": {
+            "count": 882,
+            "min": -0.00799999714474886,
+            "max": 0.003556989355976814,
+            "rms": 0.0031306692014457026
+          },
+          "plankGapSamples": 258,
+          "plankGapHoles": 0,
+          "plankGapTopErrors": {
+            "count": 258,
+            "min": -0.007999997144747972,
+            "max": -0.007999997144746196,
+            "rms": 0.007999997144747278
+          }
+        }
+      ]
+    }
+  ]
+}
