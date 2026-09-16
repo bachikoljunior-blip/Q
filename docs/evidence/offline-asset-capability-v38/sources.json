@@ -1,0 +1,21 @@
+{
+  "checkedAtUtc": "2026-09-16",
+  "evidenceType": "Official primary-source indexed public search results; subsequent direct detailed-page/directory reads failed as recorded in reachability.json.",
+  "sources": [
+    {"url":"https://docs.blender.org/api/main/info_advanced_blender_as_bpy.html","supports":"Precompiled pip module; 3D conversion/rendering uses; operation broadly equivalent to background mode."},
+    {"url":"https://www.blender.org/download/requirements/","supports":"Portable application, Linux glibc2.28+, SSE4.2 baseline; interactive GPU requirements are not a local CPU-render result."},
+    {"url":"https://pypi.org/project/bpy/4.5.6/","supports":"Official linked bpy project package entry, Linux wheel CPython3.11/manylinux2.28/x86_64, upload2026-01-20."},
+    {"url":"https://download.blender.org/pypi/bpy/","file":"bpy-4.5.6-cp311-cp311-manylinux_2_28_x86_64.whl","bytes":373031882},
+    {"url":"https://download.blender.org/release/Blender4.5/","file":"blender-4.5.0-linux-x64.tar.xz","bytes":376170648}
+  ],
+  "derivedOfficialDistributionUrls": [
+    "https://download.blender.org/pypi/bpy/bpy-4.5.6-cp311-cp311-manylinux_2_28_x86_64.whl",
+    "https://download.blender.org/release/Blender4.5/blender-4.5.0-linux-x64.tar.xz"
+  ],
+  "artifactUrlsDerivedFromIndexedDirectoryAndFileNames": true,
+  "artifactDirectRequestsPerformed": false,
+  "archiveSha256Verified": false,
+  "latestSuitablePatchDetermined": false,
+  "unpackedBytesMeasured": false,
+  "blenderStartupOrCyclesCpuVerified": false
+}

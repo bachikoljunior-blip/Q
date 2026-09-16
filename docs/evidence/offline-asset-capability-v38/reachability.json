@@ -1,0 +1,20 @@
+{
+  "dateUtc": "2026-09-16",
+  "successfulPriorEvidence": "Official public search/indexed results for Blender requirements, Python-module use, PyPI bpy4.5.6, Blender-hosted wheel and portable archive directory entries.",
+  "tool": "web.open",
+  "requests": [
+    {"url":"https://docs.blender.org/api/current/info_advanced_blender_as_bpy.html","result":"Failed to fetch https://docs.blender.org/api/current/info_advanced_blender_as_bpy.html: (402) Payment Required"},
+    {"url":"https://docs.blender.org/manual/en/4.5/advanced/command_line/render.html","result":"Failed to fetch https://docs.blender.org/manual/en/4.5/advanced/command_line/render.html: (402) Payment Required"},
+    {"url":"https://docs.blender.org/manual/en/4.5/getting_started/installing/linux.html","result":"Failed to fetch https://docs.blender.org/manual/en/4.5/getting_started/installing/linux.html: (402) Payment Required"},
+    {"url":"https://download.blender.org/release/Blender4.5/","result":"Failed to fetch https://download.blender.org/release/Blender4.5/: (402) Payment Required"}
+  ],
+  "distributionDirectoryAttempts": 1,
+  "executionHostArchiveHeadOrGetAttempts": 0,
+  "packageBytesDownloaded": 0,
+  "installs": 0,
+  "alternateHostOrToolAttemptsAfterFailure": 0,
+  "originOf402Known": false,
+  "interpretedAsPublisherPaymentRequirement": false,
+  "runtimeCapabilityEstablished": false,
+  "renderOrImageCreated": false
+}

@@ -1,3 +1,13 @@
+## 2026-09-16 現在地: player死亡支持の結合検証と実再生経路の改善
+
+[結合記録](PLAYER_SUPPORT_INTEGRATION_V37.md)。既存player関節を調整し、頭・胴・踵を地面へ近づける支持をv35地域素材読込へ結合。27工程317通常tests＋任意2成功122.213450秒、通常34files12,593,412 B、初期164,988 B/3chunks、全27媒体不変。有限な接触条件では新しい地面侵入0、cloth交差42→38だが位置入替5面と残存交差・死亡開始pop・first-use CPUばらつきは残る。形状/材質/他役/非死亡/ゲーム保存は維持、PS4の動作自然さ合格ではない。
+
+v34 PR49 requiredCI35066041371、v35 PR50 requiredCI35067515715はいずれも成功。v35 remote80affeb1a54756bd382f9b85d71bd09404480072/treeaccb02e9e0190bc65743e30aecad835979ae1e41はnative全差分0。PR39open/unmerged、実main547676fdce8d8e97abed9f065aad0b6e24af2fd6/Site23のまま、03:14後merge mutationなし。通常先行main確認→retarget/requiredCI/merge→同一owner限定Siteだけを進める。
+
+公式個別3D素材表示の調査も保存したがBlenderは未導入、official directory402の発生元不明・迂回0・新画像0。現在の期限9月20/全画面目標は実画面/実聴/実機/指定比較と配信の根拠不足。次は実Gameの死亡入り連続性、録音44.1kHzを保持するdecoderとactive/cache所有権、頭以外のCC0source/既存shapeの有限比較。単体HTML制約解除を旧通常SiteのCPU改善と呼ばず、媒体priorityの効果も実HTTP未測定と区別する。人間準備待ちにしない。Qはlatestprompt保持/COUNT無しhourly/disabled/active20、他task変更0。既存Ultra/単独writerで具体制作継続。
+
+---
+
 ## 2026-09-16 現在地: Web主軸へ地域素材の優先読込を結合
 
 [結合記録](WEB_STREAM_INTEGRATION_V35.md)。通常URLは以前から複数ファイルで単体復元CPUなし。v34は必須単体HTMLという制作/保存制約の解除、v35は実際の開始待機を近傍2枚34,119 Bへ分け、残34,380 Bを最初のactive frameから先読みし遠方失敗を隔離する変更。全27媒体/11,441,662 Bは不変、総GPU/HTTP減ではない。27工程/311tests全成功123.666685秒、初期JS164,988 B/3chunks、通常34files12,590,981 B、任意HTML15,503,291 B。sourceFingerprint f32e8383ed083a9c10f8f73060af2c7eabc05bdf0dde23fbee2b1483991bdfbe。

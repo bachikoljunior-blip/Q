@@ -3,13 +3,14 @@ import assert from 'node:assert/strict';
 import {createDetailedActor,createBefore,cloakCases,measure,worldPoints,nonCapeContract} from './fixtures/cloak-ground-oracle.mjs';
 import {groundAt} from '../src/core.js';
 
-test('saved death cloth keeps finite area and contacts while the entire remaining actor stays exact',()=>{
+test('saved death cloth keeps finite area, contacts and unchanged family contracts',()=>{
   for(const role of cloakCases){
     const a=createDetailedActor(role),b=createBefore(role),uv=Array.from(a.cape.geometry.attributes.uv.array);let previous;
     for(let frame=0;frame<=72;frame++){
       const time=frame/60,state=Object.freeze({dead:true,deathElapsed:time});a.animate(state,1/60);b.animate(state,1/60);
       const metric=measure(a),points=worldPoints(a),scale=a.g.scale.y;
-      assert.equal(nonCapeContract(a),nonCapeContract(b),role+' non-cape state');assert.equal(metric.degenerate,0);assert(metric.finiteNormals);
+      // v37 separately verifies the player's new whole-body death support.
+      if(role!=='player')assert.equal(nonCapeContract(a),nonCapeContract(b),role+' non-cape state');assert.equal(metric.degenerate,0);assert(metric.finiteNormals);
       assert(metric.minFloorGap>=.01199*scale);assert(metric.edgeMax<1.12,role+' edge');
       assert(metric.areaRatio>(role==='boss'&&time<.2?.89:.95),role+' area');
       if(time>=.2)assert(metric.uvStretchP95<(role==='boss'?2.7:1.4),role+' UV');
@@ -39,7 +40,7 @@ test('real spawn slopes preserve the old neckline and never deepen its existing 
   for(const role of ['player','npc','ranger','boss'])for(const [x,z,yaw]of [[0,101,0],[-389,-38,2.4]])for(const time of [0,.25,.5,.8]){
     const a=createDetailedActor(role,{groundHeight:groundAt}),b=createBefore(role,{groundHeight:groundAt});
     for(const actor of [a,b]){actor.g.position.set(x,groundAt(x,z),z);actor.g.rotation.y=yaw;actor.animate({dead:true,deathElapsed:time},0);}
-    const after=worldPoints(a),before=worldPoints(b);for(let i=0;i<9;i++)assert(after[i].distanceTo(before[i])<1e-7,'original neckline attachment');
+    const after=worldPoints(a),before=worldPoints(b);if(role!=='player')for(let i=0;i<9;i++)assert(after[i].distanceTo(before[i])<1e-7,'original neckline attachment');
     assert(measure(a,groundAt).minFloorGap>=Math.min(0,measure(b,groundAt).minFloorGap)-1e-6,`${role} ${x},${z} ${time}`);
   }
 });

@@ -1,0 +1,233 @@
+{
+  "at": "2026-09-16T07:13:20.337Z",
+  "files": {
+    "docs/evidence/body-pose-v37/arm-abduction-before-wrist.js": {
+      "bytes": 35440,
+      "sha256": "8e39c93cb5869fcf07c2fab4f7bb8dc86466346d3940fbcec2ff1be080abee11"
+    },
+    "docs/evidence/body-pose-v37/arm-abduction-weapon-failure.json": {
+      "bytes": 24195,
+      "sha256": "8833fcee1dfcd64cfa9549d92aa582d2a3f6c1e5c09aada1a8d1ea74fd16f4fc"
+    },
+    "docs/evidence/body-pose-v37/artifacts.txt": {
+      "bytes": 327,
+      "sha256": "fc5f659dea55b9921cdc766e2768eb58667659e5e8f8e1711584404241b421a2"
+    },
+    "docs/evidence/body-pose-v37/build.txt": {
+      "bytes": 2903,
+      "sha256": "1140505149b4c909b3e034e9ca759bf41ba2705a8e80d2dea58e859c916d6a24"
+    },
+    "docs/evidence/body-pose-v37/comparison.json": {
+      "bytes": 530414,
+      "sha256": "99047be63697539c76a19c7403f6f0c656e8ce231d23de1e2f16838f228e0c4e"
+    },
+    "docs/evidence/body-pose-v37/contracts.json": {
+      "bytes": 44118,
+      "sha256": "157668ea6a3833844c761d631e7558f62053f0bd279022ed15ae246aa30c726a"
+    },
+    "docs/evidence/body-pose-v37/first-unrestricted-flat.json": {
+      "bytes": 27051,
+      "sha256": "a44effdafd273516ef87a5a2f551b40b0fef4ba689f10878ff57177d80036f3b"
+    },
+    "docs/evidence/body-pose-v37/metadata.json": {
+      "bytes": 2524,
+      "sha256": "693f64393002d9ce7423539a04bfc063aab1a45bf3fffd9fa1f4a5ec01ae8dd1"
+    },
+    "docs/evidence/body-pose-v37/package.txt": {
+      "bytes": 252,
+      "sha256": "4bf5f0a195ce2f71fda48a04daf5d5741c70f1c67b3c6d81643b43350490fd27"
+    },
+    "docs/evidence/body-pose-v37/player-cpu.json": {
+      "bytes": 952,
+      "sha256": "d203418a9b1787791186cd7e2bfe6d80d6d2bcc9097f7b141187e10ab52ad002"
+    },
+    "docs/evidence/body-pose-v37/pre-arm-fix.js": {
+      "bytes": 35441,
+      "sha256": "85715efac19fb1ab9d5f57f8fa1d9bf7b257082d2a97c7f41f7d79901696ad93"
+    },
+    "docs/evidence/body-pose-v37/pre-weapon-comparison.json": {
+      "bytes": 530428,
+      "sha256": "35b71975104c1c02266b6b2dee765cdfab00efbfd28b49565244f5c6e6062a2b"
+    },
+    "docs/evidence/body-pose-v37/pre-weapon-contracts.json": {
+      "bytes": 44118,
+      "sha256": "9bc8da4b40d69d3eb721cb3d1b8a3db7be8bf7ce0556aa392632006a308f1b42"
+    },
+    "docs/evidence/body-pose-v37/pre-weapon-fix.js": {
+      "bytes": 35347,
+      "sha256": "3f856a997083027b9004757e624ed002da53e6378b3201217f5667eb38d7d4b5"
+    },
+    "docs/evidence/body-pose-v37/review/HASHES.json": {
+      "bytes": 3740,
+      "sha256": "e4ae9d0024479676b05bb2ea4c25e78e95317cf686abb642a13aa8702a546bf0"
+    },
+    "docs/evidence/body-pose-v37/review/REVIEW.md": {
+      "bytes": 7615,
+      "sha256": "41682af3695fb6f5a0529c2e44f99b90f34cae115cd4b3e4240ac8bbf7b7b129"
+    },
+    "docs/evidence/body-pose-v37/review/arm-body-run.txt": {
+      "bytes": 1410,
+      "sha256": "b81a68b0dceb4eeaafbb44c6372fa113c75c01add21ce0944325640d98ccd764"
+    },
+    "docs/evidence/body-pose-v37/review/body-check.mjs": {
+      "bytes": 3577,
+      "sha256": "a1a4b0ffa41eec3b9535cb58ed3774e9506a1c97846615363e69fc4fd9e63a9d"
+    },
+    "docs/evidence/body-pose-v37/review/body-report.json": {
+      "bytes": 1409,
+      "sha256": "0376daf4a3eef7ee8e9b20f3aae9b5bfc898306116028d9669a8c6a55a03ce40"
+    },
+    "docs/evidence/body-pose-v37/review/body-run.txt": {
+      "bytes": 1410,
+      "sha256": "b81a68b0dceb4eeaafbb44c6372fa113c75c01add21ce0944325640d98ccd764"
+    },
+    "docs/evidence/body-pose-v37/review/body-trace-run.txt": {
+      "bytes": 140133,
+      "sha256": "a29b2b92f35cece6c27c2c5dc09e1060ca3b0332a562c7b193a1df98dd0543cf"
+    },
+    "docs/evidence/body-pose-v37/review/body-trace.json": {
+      "bytes": 140132,
+      "sha256": "c0689f4312aaf6d34d8049c98cf235a9e3c5524c2289b20eb5b902a4f9d243b3"
+    },
+    "docs/evidence/body-pose-v37/review/body-trace.mjs": {
+      "bytes": 3944,
+      "sha256": "6919b3f7c5616ad2a0ca8b9eb9a136b3bb42186fa399ded53737952eceea9ea2"
+    },
+    "docs/evidence/body-pose-v37/review/finalize.py": {
+      "bytes": 3637,
+      "sha256": "c0ffb5d6aa6d2d35c954fc96cd4bd7c51ba82437e43e74be22981589736a3234"
+    },
+    "docs/evidence/body-pose-v37/review/first-preflight-run.txt": {
+      "bytes": 10978,
+      "sha256": "70e72644b35a5d5813071d9dec8fa755f0a8f438d1c37afa2643dd7bfa9ca4bb"
+    },
+    "docs/evidence/body-pose-v37/review/first-preflight.json": {
+      "bytes": 104408,
+      "sha256": "430225d0c47ab5034e73783e592c9e069ea577cad04a6019c459545b0fbd1cc1"
+    },
+    "docs/evidence/body-pose-v37/review/pre-arm-body-report.json": {
+      "bytes": 1409,
+      "sha256": "786fa29843aad566def1bd7dd6b98aab81bd27d7895c8bd0a1a7ac9860c7dc4a"
+    },
+    "docs/evidence/body-pose-v37/review/pre-arm-body-run.txt": {
+      "bytes": 1410,
+      "sha256": "27f006b7c5f1100308cdbd6397863aa930e49e77bf15020b6a33c9b96103e767"
+    },
+    "docs/evidence/body-pose-v37/review/pre-arm-body-trace-run.txt": {
+      "bytes": 152348,
+      "sha256": "41e7e7272aecfc507bc7a4ca6ca5f41427c5c2957854240754fdcc01087857c4"
+    },
+    "docs/evidence/body-pose-v37/review/pre-arm-body-trace.json": {
+      "bytes": 152347,
+      "sha256": "f6e7910d7cf5bbfd3e21f0b96b2fccc81d5cdd0302148e9ea966fb833b0dd925"
+    },
+    "docs/evidence/body-pose-v37/review/pre-arm-preflight-run.txt": {
+      "bytes": 140,
+      "sha256": "2150c5e142314f90a26d19a3e6b0486fb3957f555a48eeedfbb8614d208f1e25"
+    },
+    "docs/evidence/body-pose-v37/review/pre-arm-preflight.json": {
+      "bytes": 104370,
+      "sha256": "27cf1bc109052b3a06f6fe32f181dccb0815e1ea7ef0b902f468a211684bc4c6"
+    },
+    "docs/evidence/body-pose-v37/review/pre-arm-report.json": {
+      "bytes": 612178,
+      "sha256": "b7964f3c5aa9e4ea14f85dcb474333bb40171c693889c3b5314e1e5d1b532446"
+    },
+    "docs/evidence/body-pose-v37/review/pre-arm-run.txt": {
+      "bytes": 20414,
+      "sha256": "a7c4bee5567203563d99158b8d56fac60c6d0a185ef205408cfa0a6c6994aa9e"
+    },
+    "docs/evidence/body-pose-v37/review/preflight-run.txt": {
+      "bytes": 140,
+      "sha256": "2f19a9ea0d94f5a3ba06ddde3b50036ac2327bfb95e335d9f6d039214d92e941"
+    },
+    "docs/evidence/body-pose-v37/review/preflight.json": {
+      "bytes": 104376,
+      "sha256": "197bc093a9350fefc8af78e6a7a5499f4b724f627be4dd7a0c5eeebea1d3f83f"
+    },
+    "docs/evidence/body-pose-v37/review/preflight.mjs": {
+      "bytes": 2906,
+      "sha256": "e9ff90e4184f01979bdd5f0d93d7924d3eae96aca885fac4bf27dfd3636b266b"
+    },
+    "docs/evidence/body-pose-v37/review/report.json": {
+      "bytes": 612189,
+      "sha256": "41a62508870a9118c67bf2d947d125169e0729f9eb44d7bafe496a6ee71cd2c2"
+    },
+    "docs/evidence/body-pose-v37/review/run.txt": {
+      "bytes": 20436,
+      "sha256": "c8e82d8b1d1e5c8fa124c4c69ba680503c758e1b61af1346582cd8731c0f67d3"
+    },
+    "docs/evidence/body-pose-v37/review/summary.json": {
+      "bytes": 27790,
+      "sha256": "0292fb065697c9551b4034fa9924ce175072be16f14fc51eaf98bda832a2d60d"
+    },
+    "docs/evidence/body-pose-v37/review/verify.mjs": {
+      "bytes": 8405,
+      "sha256": "f625170ff35df2fa5229addb2bee6aded7b5fd11cb88ffe980356672ce1c6c6b"
+    },
+    "docs/evidence/body-pose-v37/source-before.js": {
+      "bytes": 31704,
+      "sha256": "d3f543c2537cd076dfe18ad05ca815374f242dda64847e01421844fc7a0d23fc"
+    },
+    "docs/evidence/body-pose-v37/stage.json": {
+      "bytes": 1395,
+      "sha256": "918f79d11ea66a2b78c45b9b189095d965806ac8523670b9073806bf26d866f0"
+    },
+    "docs/evidence/body-pose-v37/tests.txt": {
+      "bytes": 3842,
+      "sha256": "4255d976e1bfcda8907c7b015af69c84d12ccca785a419f5152c88e2163638cf"
+    },
+    "docs/evidence/body-pose-v37/weapons.json": {
+      "bytes": 1834847,
+      "sha256": "4f3e27687b1c27c1e1e2a30914c9e3041dd0785b7665c30046ea9c89b8cd3c20"
+    },
+    "docs/evidence/body-pose-v37/web-manifest.json": {
+      "bytes": 12457,
+      "sha256": "2c23942747cc929153103cb5f1d2534151a7ed94c897b01834c32fce44d710e3"
+    },
+    "src/actor-models.js": {
+      "bytes": 35442,
+      "sha256": "04b1a72d8d1f5305dbc0e47dbe10e15c824fd0a29955d5fc08bcb40b8d544a96"
+    },
+    "src/assets/characters/detailed-provenance.json": {
+      "bytes": 2806,
+      "sha256": "2958373ed0b29ce019fd8b50ebb3bbcd46c6be65c66f3e0d62084313364fca7d"
+    },
+    "docs/PLAYER_BODY_SUPPORT_V37.md": {
+      "bytes": 8963,
+      "sha256": "3c9a41487ee3ef64887ef5e54db9077337cd1e29154b3645e5a049b62340cffd"
+    },
+    "tests/body-pose.test.mjs": {
+      "bytes": 4453,
+      "sha256": "57372cfb555f7dc675c3146c89a57ad97e8a7b688972e685deff53ac592c6da3"
+    },
+    "tests/cloak-ground.test.mjs": {
+      "bytes": 3822,
+      "sha256": "5ab45762d0c7c99af557261eee230e9dacc313f8dfa99a6c68b490dd25f62511"
+    },
+    "tests/fixtures/body-pose-oracle.mjs": {
+      "bytes": 3524,
+      "sha256": "8f02b999520057a46c53bbe431f96c994d279b7a48f272646f958af5348acdda"
+    },
+    "tests/fixtures/cloak-ground-oracle.mjs": {
+      "bytes": 5036,
+      "sha256": "7f2e76b6df207aaea4bf6a04ee20c4cd265c9c56ad1a61e37b10b74bbfd7d2a4"
+    },
+    "scripts/compare-body-pose.mjs": {
+      "bytes": 2373,
+      "sha256": "3523f2203df24f839279664daaf6106897fed7029bcf5474d092a533ba0bbb66"
+    },
+    "scripts/compare-body-pose-contracts.mjs": {
+      "bytes": 4355,
+      "sha256": "a126202d0b7725f380351292b1a17e7ee5a94267b8a8a7789e8fac02925a8805"
+    },
+    "scripts/compare-body-pose-weapons.mjs": {
+      "bytes": 1544,
+      "sha256": "7e615ae86b59e206dd06d200644465f516fbab7733f8c86324e4a55083f591e3"
+    },
+    "scripts/time-body-pose.mjs": {
+      "bytes": 1291,
+      "sha256": "efb98ec6b945866fed3a13f6a38cfec00ea98a84a286d24a353425f6451904fb"
+    }
+  }
+}

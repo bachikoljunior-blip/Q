@@ -1,0 +1,411 @@
+{
+  "sourceHash": "3f856a997083027b9004757e624ed002da53e6378b3201217f5667eb38d7d4b5",
+  "newRigidPenetrations": [
+    {
+      "where": "flat",
+      "weaponType": "sword",
+      "t": 0.8,
+      "before": {
+        "skin": {
+          "min": 0.008168469489572769,
+          "mesh": "Q cloth skin",
+          "material": "Q cloth",
+          "path": "Q cloth skin",
+          "vertex": 1016,
+          "world": [
+            2.8779198388773484e-17,
+            0.008168469489572769,
+            0.2229364533251036
+          ]
+        },
+        "rigid": {
+          "min": 0.1383316829103256,
+          "mesh": "",
+          "material": "Q metal",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 92,
+          "world": [
+            0.047748225004061215,
+            0.1383316829103256,
+            -0.004285430362278922
+          ]
+        },
+        "cape": {
+          "min": 0.011999991343828342,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 77,
+          "world": [
+            0.059555825959809974,
+            0.011999991343828342,
+            0.26841560461523273
+          ]
+        }
+      },
+      "after": {
+        "skin": {
+          "min": 0.006000000000000005,
+          "mesh": "Q metal skin",
+          "material": "Q metal",
+          "path": "Q metal skin",
+          "vertex": 328,
+          "world": [
+            -0.005572454441341988,
+            0.006000000000000005,
+            -0.35994399631937846
+          ]
+        },
+        "rigid": {
+          "min": -0.07056165936118158,
+          "mesh": "",
+          "material": "Q metal",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 8,
+          "world": [
+            -0.21306305007665152,
+            -0.07056165936118158,
+            1.1847472197711304
+          ]
+        },
+        "cape": {
+          "min": 0.011999997258186096,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 109,
+          "world": [
+            -0.3748154786903282,
+            0.011999997258186096,
+            0.7018660026248476
+          ]
+        }
+      }
+    },
+    {
+      "where": "flat",
+      "weaponType": "spear",
+      "t": 0.8,
+      "before": {
+        "skin": {
+          "min": 0.008168469489572769,
+          "mesh": "Q cloth skin",
+          "material": "Q cloth",
+          "path": "Q cloth skin",
+          "vertex": 1016,
+          "world": [
+            2.8779198388773484e-17,
+            0.008168469489572769,
+            0.2229364533251036
+          ]
+        },
+        "rigid": {
+          "min": 0.01862473980655363,
+          "mesh": "",
+          "material": "Q metal",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/spear/Mesh",
+          "vertex": 4,
+          "world": [
+            0.6484326341879112,
+            0.01862473980655363,
+            -1.3954986543260688
+          ]
+        },
+        "cape": {
+          "min": 0.011999991343828342,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 77,
+          "world": [
+            0.059555825959809974,
+            0.011999991343828342,
+            0.26841560461523273
+          ]
+        }
+      },
+      "after": {
+        "skin": {
+          "min": 0.006000000000000005,
+          "mesh": "Q metal skin",
+          "material": "Q metal",
+          "path": "Q metal skin",
+          "vertex": 328,
+          "world": [
+            -0.005572454441341988,
+            0.006000000000000005,
+            -0.35994399631937846
+          ]
+        },
+        "rigid": {
+          "min": -0.047395776768422895,
+          "mesh": "",
+          "material": "Q leather",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/spear/Mesh",
+          "vertex": 13,
+          "world": [
+            -0.10728343028207077,
+            -0.047395776768422895,
+            0.8406498769941055
+          ]
+        },
+        "cape": {
+          "min": 0.011999997258186096,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 109,
+          "world": [
+            -0.3748154786903282,
+            0.011999997258186096,
+            0.7018660026248476
+          ]
+        }
+      }
+    },
+    {
+      "where": "flat",
+      "weaponType": "greatsword",
+      "t": 0.8,
+      "before": {
+        "skin": {
+          "min": 0.008168469489572769,
+          "mesh": "Q cloth skin",
+          "material": "Q cloth",
+          "path": "Q cloth skin",
+          "vertex": 1016,
+          "world": [
+            2.8779198388773484e-17,
+            0.008168469489572769,
+            0.2229364533251036
+          ]
+        },
+        "rigid": {
+          "min": 0.03935946259115683,
+          "mesh": "",
+          "material": "Q metal",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 52,
+          "world": [
+            -0.007045501458184026,
+            0.03935946259115683,
+            0.04467455483204504
+          ]
+        },
+        "cape": {
+          "min": 0.011999991343828342,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 77,
+          "world": [
+            0.059555825959809974,
+            0.011999991343828342,
+            0.26841560461523273
+          ]
+        }
+      },
+      "after": {
+        "skin": {
+          "min": 0.006000000000000005,
+          "mesh": "Q metal skin",
+          "material": "Q metal",
+          "path": "Q metal skin",
+          "vertex": 328,
+          "world": [
+            -0.005572454441341988,
+            0.006000000000000005,
+            -0.35994399631937846
+          ]
+        },
+        "rigid": {
+          "min": -0.07329749247585687,
+          "mesh": "",
+          "material": "Q metal",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 70,
+          "world": [
+            0.12312916719170278,
+            -0.07329749247585687,
+            0.09650712201211384
+          ]
+        },
+        "cape": {
+          "min": 0.011999997258186096,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 109,
+          "world": [
+            -0.3748154786903282,
+            0.011999997258186096,
+            0.7018660026248476
+          ]
+        }
+      }
+    },
+    {
+      "where": "start",
+      "weaponType": "sword",
+      "t": 0.8,
+      "before": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "mesh": "Q cloth skin",
+          "material": "Q cloth",
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ]
+        },
+        "rigid": {
+          "min": 0.1255755866909405,
+          "mesh": "",
+          "material": "Q metal",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 81,
+          "world": [
+            0.05803536579847545,
+            -1.2728097146896629,
+            100.96977015139088
+          ]
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ]
+        }
+      },
+      "after": {
+        "skin": {
+          "min": 0.006000000000000227,
+          "mesh": "Q metal skin",
+          "material": "Q metal",
+          "path": "Q metal skin",
+          "vertex": 328,
+          "world": [
+            0.005588026861696405,
+            -1.2695353018074358,
+            100.60124243457585
+          ]
+        },
+        "rigid": {
+          "min": -0.07197483510790881,
+          "mesh": "",
+          "material": "Q metal",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/sword/Mesh",
+          "vertex": 8,
+          "world": [
+            -0.16918627965105232,
+            -1.8669724070930716,
+            102.03215397448295
+          ]
+        },
+        "cape": {
+          "min": 0.019314044657620988,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 32,
+          "world": [
+            0.07929389975516972,
+            -1.304008696232845,
+            100.75962639648608
+          ]
+        }
+      }
+    },
+    {
+      "where": "start",
+      "weaponType": "greatsword",
+      "t": 0.8,
+      "before": {
+        "skin": {
+          "min": -0.17683438845580524,
+          "mesh": "Q cloth skin",
+          "material": "Q cloth",
+          "path": "Q cloth skin",
+          "vertex": 247,
+          "world": [
+            -0.04952099487405559,
+            -1.2882901909457387,
+            100.1115811103216
+          ]
+        },
+        "rigid": {
+          "min": 0.0556378510248563,
+          "mesh": "",
+          "material": "Q metal",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 52,
+          "world": [
+            -0.007045501458184026,
+            -1.3753216052179198,
+            101.04467455483204
+          ]
+        },
+        "cape": {
+          "min": -0.061602319639050496,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 8,
+          "world": [
+            0.2207738213660836,
+            -1.277213685784092,
+            100.48658252045718
+          ]
+        }
+      },
+      "after": {
+        "skin": {
+          "min": 0.006000000000000227,
+          "mesh": "Q metal skin",
+          "material": "Q metal",
+          "path": "Q metal skin",
+          "vertex": 328,
+          "world": [
+            0.005588026861696405,
+            -1.2695353018074358,
+            100.60124243457585
+          ]
+        },
+        "rigid": {
+          "min": -0.07848441887663782,
+          "mesh": "",
+          "material": "Q metal",
+          "path": "body/pelvis/spine/chest/arm-1/elbow-1/hand-1/greatsword/Mesh",
+          "vertex": 70,
+          "world": [
+            0.14842586369649824,
+            -1.4814625123250353,
+            101.00853107050938
+          ]
+        },
+        "cape": {
+          "min": 0.019314044657620988,
+          "mesh": "cape",
+          "material": "Q cloth",
+          "path": "body/pelvis/spine/chest/cape",
+          "vertex": 32,
+          "world": [
+            0.07929389975516972,
+            -1.304008696232845,
+            100.75962639648608
+          ]
+        }
+      }
+    }
+  ],
+  "skinNegatives": []
+}
