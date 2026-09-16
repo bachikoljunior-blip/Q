@@ -1,0 +1,15 @@
+{
+  "firstExactTaskClock": "2026-09-16T13:26:46Z",
+  "firstCompletedSweepAt": "2026-09-16T13:31:27.000Z",
+  "finalSweepStartedAt": "2026-09-16T13:36:40.742Z",
+  "finalSweepEndedAt": "2026-09-16T13:36:45.965Z",
+  "checkpointDocumentationAt": "2026-09-16T13:39:20.156430+00:00",
+  "phases": {
+    "shapeDecision": "13:26:46 through initial source implementation: retain original net and top edge; exclusive specification timer not instrumented",
+    "codeAndFirstVerification": "initial clock to first completed sweep (4m41 wall window, includes reads/install/tool wait)",
+    "limitedRefinementAndVerification": "first completed sweep to final sweep: 16/32/64 comparison, local crossings, 6 tests, CPU plot creation and view; no extra shape candidate",
+    "rework": "one missing parenthesis repaired before first successful execution; direct query count then corrected to include normal-gradient samples; final sweep rerun, exclusive repair time not measured",
+    "newImageGenerationSeconds": 0
+  },
+  "measurementLimits": "solver timings in sequences.json/refine-check.json exclude image/specification/code, native animation and later geometric oracles. Host CPU only, not GPU/device."
+}

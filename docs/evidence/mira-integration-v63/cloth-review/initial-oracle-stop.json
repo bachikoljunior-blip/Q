@@ -1,0 +1,8 @@
+{
+  "phase": "JavaScript parse, before imports/native work",
+  "error": "SyntaxError: Unexpected token ;",
+  "cause": "Independent reviewer cross-vector literal omitted third component and closing bracket",
+  "sourceChanged": false,
+  "nativeExecutionsAtFailure": 0,
+  "repair": "Correct independent cross product literal only"
+}

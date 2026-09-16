@@ -1,0 +1,13 @@
+✔ the single reduced-support candidate solves 51 nodes and preserves reference arrays, all 153 outputs, pins and non-contact poses (20.581423ms)
+✔ the output is the declared three-support quadratic displacement per row, not an independent Y clip (4.540245ms)
+✔ same flat-plane yaw/translation gives the same reconstructed physical surface (3.690504ms)
+✔ same-source evidence records the real rejection instead of relaxing v63 metrics (11.156347ms)
+✔ limited shape inspection distinguishes folded shape retention from unacceptable metric deformation (1.240666ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 136.929972

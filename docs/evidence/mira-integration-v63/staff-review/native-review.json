@@ -1,0 +1,1260 @@
+{
+  "start": "2026-09-16T13:56:07.207Z",
+  "finish": "2026-09-16T13:56:07.529Z",
+  "sources": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/review/staff-v63/staff-parts.mjs",
+      "bytes": 6295,
+      "sha256": "afd01a6bde340780208d698a0578f1ce397f8c1e682fbdcba91ac7475689edef"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/native-report.json",
+      "bytes": 19729,
+      "sha256": "8379be1ceac1fd256c768251bb618d6b94c4ed69c3be503569ccf034927d67fa"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/docs/evidence/mira-staff-v63/parts.json",
+      "bytes": 593485,
+      "sha256": "8f7e471e156b594dce04d1156ada39e0ff9cf9d1677f4b64aa3cae24fde23d00"
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/scripts/export-mira-staff-v63.mjs",
+      "bytes": 3116,
+      "sha256": "dd77cb556d73ede383918968dd30f45bd5ecd6742aae9e6f4d3e81cd5debaab2"
+    }
+  ],
+  "solids": [
+    {
+      "id": "S01",
+      "vertices": 86,
+      "welded": 34,
+      "triangles": 64,
+      "finite": true,
+      "minAreaMm2": 61.99471152803536,
+      "minNormalDot": 0.8744408760725789,
+      "signedVolumeMm3": 1618989.6790993495,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -20.999999716877937,
+          29.999999329447746,
+          -20.999999716877937
+        ],
+        "max": [
+          20.999999716877937,
+          1417.9999828338623,
+          20.999999716877937
+        ]
+      }
+    },
+    {
+      "id": "S02",
+      "vertices": 498,
+      "welded": 160,
+      "triangles": 320,
+      "finite": true,
+      "minAreaMm2": 4.634511046676845,
+      "minNormalDot": 0.8156854510307312,
+      "signedVolumeMm3": 13847.573807408897,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -21.99999988079071,
+          4.000000189989805,
+          -21.99999988079071
+        ],
+        "max": [
+          21.99999988079071,
+          54.999999701976776,
+          21.99999988079071
+        ]
+      }
+    },
+    {
+      "id": "S03",
+      "vertices": 154,
+      "welded": 66,
+      "triangles": 128,
+      "finite": true,
+      "minAreaMm2": 4.634514999766311,
+      "minNormalDot": 0.7895001173019409,
+      "signedVolumeMm3": 5841.835383130937,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -21.99999988079071,
+          0,
+          -21.99999988079071
+        ],
+        "max": [
+          21.99999988079071,
+          4.000000189989805,
+          21.99999988079071
+        ]
+      }
+    },
+    {
+      "id": "S04",
+      "vertices": 168,
+      "welded": 64,
+      "triangles": 128,
+      "finite": true,
+      "minAreaMm2": 13.3512573885098,
+      "minNormalDot": 0.8744402445901918,
+      "signedVolumeMm3": 103057.47326081747,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -24.000000208616257,
+          1029.9999713897705,
+          -24.000000208616257
+        ],
+        "max": [
+          24.000000208616257,
+          1240.0000095367432,
+          24.000000208616257
+        ]
+      }
+    },
+    {
+      "id": "S06",
+      "vertices": 541,
+      "welded": 192,
+      "triangles": 384,
+      "finite": true,
+      "minAreaMm2": 4.668121085455078,
+      "minNormalDot": 0.7520425829781854,
+      "signedVolumeMm3": 18788.3331878563,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -26.000000536441803,
+          1384.9999904632568,
+          -26.000000536441803
+        ],
+        "max": [
+          26.000000536441803,
+          1422.9999780654907,
+          26.000000536441803
+        ]
+      }
+    },
+    {
+      "id": "S15",
+      "vertices": 684,
+      "welded": 210,
+      "triangles": 416,
+      "finite": true,
+      "minAreaMm2": 1.2987884880125469,
+      "minNormalDot": 0.821547572622076,
+      "signedVolumeMm3": 7282.508895761006,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -11.988578364253044,
+          1674.0000247955322,
+          -11.988578364253044
+        ],
+        "max": [
+          11.988578364253044,
+          1700.0000476837158,
+          11.988578364253044
+        ]
+      }
+    },
+    {
+      "id": "S17",
+      "vertices": 288,
+      "welded": 128,
+      "triangles": 256,
+      "finite": true,
+      "minAreaMm2": 1.0141093751987036,
+      "minNormalDot": 0.8405941824408398,
+      "signedVolumeMm3": 3625.357801080345,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -27.499999850988388,
+          1024.999976158142,
+          -27.499999850988388
+        ],
+        "max": [
+          27.499999850988388,
+          1034.999966621399,
+          27.499999850988388
+        ]
+      }
+    },
+    {
+      "id": "S18",
+      "vertices": 288,
+      "welded": 128,
+      "triangles": 256,
+      "finite": true,
+      "minAreaMm2": 1.0141093751987045,
+      "minNormalDot": 0.8405941824408398,
+      "signedVolumeMm3": 3625.357801080923,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -27.499999850988388,
+          1235.0000143051147,
+          -27.499999850988388
+        ],
+        "max": [
+          27.499999850988388,
+          1245.0000047683716,
+          27.499999850988388
+        ]
+      }
+    },
+    {
+      "id": "S05-A",
+      "vertices": 658,
+      "welded": 324,
+      "triangles": 644,
+      "finite": true,
+      "minAreaMm2": 3.1877737738807723,
+      "minNormalDot": 0.7220698377644497,
+      "signedVolumeMm3": 3835.445997875189,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -25.499459356069565,
+          1028.8137197494507,
+          -25.499459356069565
+        ],
+        "max": [
+          25.49370750784874,
+          1241.186261177063,
+          25.49370750784874
+        ]
+      }
+    },
+    {
+      "id": "S05-B",
+      "vertices": 656,
+      "welded": 324,
+      "triangles": 644,
+      "finite": true,
+      "minAreaMm2": 3.187773995789018,
+      "minNormalDot": 0.8490681535423646,
+      "signedVolumeMm3": 4674.949223213714,
+      "openNonmanifold": 0,
+      "winding": 0,
+      "boundsMm": {
+        "min": [
+          -26.87278389930725,
+          1028.8137197494507,
+          -26.87278389930725
+        ],
+        "max": [
+          26.82582102715969,
+          1241.186261177063,
+          26.69580653309822
+        ]
+      }
+    }
+  ],
+  "interfaces": {
+    "S06topMm": 1422.9999780654907,
+    "S15stemBottomMm": 1674.0000247955322,
+    "S01S02": {
+      "shaftBottomMm": 29.999999329447746,
+      "ferruleInnerRadiusMm": 18.5,
+      "radialDesignClearanceMm": [
+        0.44596541786743416,
+        0.5
+      ],
+      "axialOverlapMm": 25,
+      "actualTouch": false,
+      "note": "socket clearance + insertion, no geometric wood-to-ferrule contact"
+    },
+    "S01S03": {
+      "axialGapMm": 25.99999913945794,
+      "actualTouch": false
+    },
+    "S01S06": {
+      "shaftTopMm": 1417.9999828338623,
+      "seatMm": 1418,
+      "radialInnerClearanceMm": 0.1999999999999993,
+      "contact": "wood top annulus shares y1418 with socket underside, radii6.3..21"
+    },
+    "S04S17S18": {
+      "gripEndMm": [
+        1030,
+        1240
+      ],
+      "retainerSeatsMm": [
+        1030,
+        1240
+      ],
+      "radialContactBandMm": [
+        23.8,
+        24
+      ],
+      "contact": "coincident annulus at each end, not full grip annular cross-section"
+    },
+    "S01S04numericalCrossingRadiusResidualMm": [
+      -3.7062171998059057e-07,
+      4.751681821346665e-07
+    ]
+  },
+  "wrapChecks": [
+    {
+      "id": "S05-A",
+      "sampledOuterFaceMinimumAboveGripMm": 1.1628560273190374,
+      "sampledInnerMinusGripMm": [
+        -0.12172207394371881,
+        0.4611320154962115
+      ],
+      "sampledMaxBeyondCollarFullCylinderMm": {
+        "S17": -1.499882198004915,
+        "S18": -1.4755171789411357
+      },
+      "sampledMaxBeyondCollarActualBevel": {
+        "S17": {
+          "beyondMm": -1.2733415774936816,
+          "pointMm": [
+            25.11756494641304,
+            1034.5750451087952,
+            3.574758709874004
+          ],
+          "nominalOuterR": 27.124954891204833
+        },
+        "S18": {
+          "beyondMm": -1.1990830194771789,
+          "pointMm": [
+            6.334437445426981,
+            1235.221266746521,
+            -24.44069708387057
+          ],
+          "nominalOuterR": 26.921266746520995
+        }
+      },
+      "scope": "vertices/centres/edge midpoints from frozen native triangles, not continuous clearance proof"
+    },
+    {
+      "id": "S05-B",
+      "sampledOuterFaceMinimumAboveGripMm": 1.3706704825162888,
+      "sampledInnerMinusGripMm": [
+        -0.3151535327806876,
+        2.5587249221668884
+      ],
+      "sampledMaxBeyondCollarFullCylinderMm": {
+        "S17": -0.3068790922047384,
+        "S18": -1.4755171789411357
+      },
+      "sampledMaxBeyondCollarActualBevel": {
+        "S17": {
+          "beyondMm": 0.04573305551458162,
+          "pointMm": [
+            11.194039757053057,
+            1034.8220268885295,
+            24.2794385800759
+          ],
+          "nominalOuterR": 26.877973111470464
+        },
+        "S18": {
+          "beyondMm": -1.2405706719142273,
+          "pointMm": [
+            -24.992884136736393,
+            1235.425055027008,
+            4.361956496722996
+          ],
+          "nominalOuterR": 27.125055027008056
+        }
+      },
+      "scope": "vertices/centres/edge midpoints from frozen native triangles, not continuous clearance proof"
+    }
+  ],
+  "crossingBounds": [
+    {
+      "a": "S01",
+      "b": "S04",
+      "pairs": 100,
+      "classifications": {
+        "outer-wall / down-face": 16,
+        "outer-wall / inner-wall": 48,
+        "outer-wall / up-face": 36
+      },
+      "y": [
+        1029.9999713897705,
+        1240.0000095367432
+      ],
+      "r": [
+        19.8466493684846,
+        20.61527384297701
+      ]
+    },
+    {
+      "a": "S04",
+      "b": "S05-A",
+      "pairs": 288,
+      "classifications": {
+        "outer-wall / inside": 166,
+        "outer-wall / edge-2": 59,
+        "outer-wall / edge-1": 58,
+        "outer-wall / terminal": 5
+      },
+      "y": [
+        1031.1923265204261,
+        1237.5297125675083
+      ],
+      "r": [
+        23.878461455274444,
+        24.000000208616257
+      ]
+    },
+    {
+      "a": "S04",
+      "b": "S05-B",
+      "pairs": 254,
+      "classifications": {
+        "outer-wall / inside": 183,
+        "outer-wall / edge-2": 32,
+        "outer-wall / edge-1": 33,
+        "outer-wall / terminal": 6
+      },
+      "y": [
+        1031.1923265204261,
+        1237.5297125675083
+      ],
+      "r": [
+        23.648194502438745,
+        24.000000208616257
+      ]
+    },
+    {
+      "a": "S17",
+      "b": "S05-A",
+      "pairs": 9,
+      "classifications": {
+        "up-face / edge-1": 3,
+        "up-face / outside": 1,
+        "up-face / terminal": 3,
+        "up-face / inside": 2
+      },
+      "y": [
+        1029.9999713897705,
+        1029.9999713897705
+      ],
+      "r": [
+        23.926311482721875,
+        25.436715972429006
+      ]
+    },
+    {
+      "a": "S17",
+      "b": "S05-B",
+      "pairs": 29,
+      "classifications": {
+        "outer-wall / outside": 5,
+        "outer-wall / edge-2": 1,
+        "up-face / edge-2": 6,
+        "up-face / outside": 6,
+        "inner-wall / edge-2": 6,
+        "inner-wall / outside": 2,
+        "up-face / inside": 1,
+        "up-face / terminal": 2
+      },
+      "y": [
+        1029.9999713897705,
+        1034.999966621399
+      ],
+      "r": [
+        23.926311482721875,
+        27.18568871699095
+      ]
+    },
+    {
+      "a": "S18",
+      "b": "S05-A",
+      "pairs": 9,
+      "classifications": {
+        "down-face / inside": 2,
+        "down-face / edge-2": 3,
+        "down-face / terminal": 3,
+        "down-face / outside": 1
+      },
+      "y": [
+        1240.0000095367432,
+        1240.0000095367432
+      ],
+      "r": [
+        23.926311450472376,
+        25.436715405610133
+      ]
+    },
+    {
+      "a": "S18",
+      "b": "S05-B",
+      "pairs": 9,
+      "classifications": {
+        "down-face / inside": 1,
+        "down-face / edge-1": 3,
+        "down-face / terminal": 3,
+        "down-face / outside": 2
+      },
+      "y": [
+        1240.0000095367432,
+        1240.0000095367432
+      ],
+      "r": [
+        23.926311450472376,
+        25.494697071054738
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": "S01",
+      "b": "S01",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S01",
+      "b": "S02",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S01",
+      "b": "S03",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S01",
+      "b": "S04",
+      "pairs": 100,
+      "classifications": {
+        "outer-wall / down-face": 16,
+        "outer-wall / inner-wall": 48,
+        "outer-wall / up-face": 36
+      },
+      "samples": [
+        {
+          "a": "S01",
+          "b": "S04",
+          "faceA": 16,
+          "faceB": 0,
+          "tagA": "outer-wall",
+          "tagB": "down-face",
+          "point": [
+            19.940151012065044,
+            1029.9999713897705,
+            1.1122082786370369
+          ],
+          "r": 19.971144925592707
+        },
+        {
+          "a": "S01",
+          "b": "S04",
+          "faceA": 16,
+          "faceB": 96,
+          "tagA": "outer-wall",
+          "tagB": "inner-wall",
+          "point": [
+            20.12999643188683,
+            1141.6800367209657,
+            1.3713077401313651
+          ],
+          "r": 20.176650893196346
+        },
+        {
+          "a": "S01",
+          "b": "S04",
+          "faceA": 16,
+          "faceB": 96,
+          "tagA": "outer-wall",
+          "tagB": "inner-wall",
+          "point": [
+            20.141334815061352,
+            1033.7746382459088,
+            0.14180384806656024
+          ],
+          "r": 20.141833989578235
+        }
+      ]
+    },
+    {
+      "a": "S01",
+      "b": "S06",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S01",
+      "b": "S15",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S01",
+      "b": "S17",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S01",
+      "b": "S18",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S01",
+      "b": "S05-A",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S01",
+      "b": "S05-B",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S02",
+      "b": "S02",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S02",
+      "b": "S03",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S02",
+      "b": "S04",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S02",
+      "b": "S06",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S02",
+      "b": "S15",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S02",
+      "b": "S17",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S02",
+      "b": "S18",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S02",
+      "b": "S05-A",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S02",
+      "b": "S05-B",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S03",
+      "b": "S03",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S03",
+      "b": "S04",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S03",
+      "b": "S06",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S03",
+      "b": "S15",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S03",
+      "b": "S17",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S03",
+      "b": "S18",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S03",
+      "b": "S05-A",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S03",
+      "b": "S05-B",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S04",
+      "b": "S04",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S04",
+      "b": "S06",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S04",
+      "b": "S15",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S04",
+      "b": "S17",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S04",
+      "b": "S18",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S04",
+      "b": "S05-A",
+      "pairs": 288,
+      "classifications": {
+        "outer-wall / inside": 166,
+        "outer-wall / edge-2": 59,
+        "outer-wall / edge-1": 58,
+        "outer-wall / terminal": 5
+      },
+      "samples": [
+        {
+          "a": "S04",
+          "b": "S05-A",
+          "faceA": 32,
+          "faceB": 0,
+          "tagA": "outer-wall",
+          "tagB": "inside",
+          "point": [
+            23.878278210759163,
+            1031.1923265204261,
+            0.6119376566500745
+          ],
+          "r": 23.88611810248878
+        },
+        {
+          "a": "S04",
+          "b": "S05-A",
+          "faceA": 32,
+          "faceB": 0,
+          "tagA": "outer-wall",
+          "tagB": "inside",
+          "point": [
+            23.95734554936006,
+            1037.1837643661618,
+            0.2144394003546527
+          ],
+          "r": 23.958305241144807
+        },
+        {
+          "a": "S04",
+          "b": "S05-A",
+          "faceA": 32,
+          "faceB": 7,
+          "tagA": "outer-wall",
+          "tagB": "edge-2",
+          "point": [
+            24.000000208616257,
+            1037.0192891186362,
+            0
+          ],
+          "r": 24.000000208616257
+        }
+      ]
+    },
+    {
+      "a": "S04",
+      "b": "S05-B",
+      "pairs": 254,
+      "classifications": {
+        "outer-wall / inside": 183,
+        "outer-wall / edge-2": 32,
+        "outer-wall / edge-1": 33,
+        "outer-wall / terminal": 6
+      },
+      "samples": [
+        {
+          "a": "S04",
+          "b": "S05-B",
+          "faceA": 32,
+          "faceB": 80,
+          "tagA": "outer-wall",
+          "tagB": "inside",
+          "point": [
+            23.533602347805754,
+            1059.179119675214,
+            2.344739809036527
+          ],
+          "r": 23.65012144232518
+        },
+        {
+          "a": "S04",
+          "b": "S05-B",
+          "faceA": 32,
+          "faceB": 80,
+          "tagA": "outer-wall",
+          "tagB": "inside",
+          "point": [
+            23.946407595988827,
+            1055.385359097597,
+            0.2694281918005341
+          ],
+          "r": 23.947923256595097
+        },
+        {
+          "a": "S04",
+          "b": "S05-B",
+          "faceA": 32,
+          "faceB": 81,
+          "tagA": "outer-wall",
+          "tagB": "inside",
+          "point": [
+            23.871039661301346,
+            1060.6856853609552,
+            0.6483282932707728
+          ],
+          "r": 23.879842212361396
+        }
+      ]
+    },
+    {
+      "a": "S06",
+      "b": "S06",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S06",
+      "b": "S15",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S06",
+      "b": "S17",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S06",
+      "b": "S18",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S06",
+      "b": "S05-A",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S06",
+      "b": "S05-B",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S15",
+      "b": "S15",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S15",
+      "b": "S17",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S15",
+      "b": "S18",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S15",
+      "b": "S05-A",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S15",
+      "b": "S05-B",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S17",
+      "b": "S17",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S17",
+      "b": "S18",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S17",
+      "b": "S05-A",
+      "pairs": 9,
+      "classifications": {
+        "up-face / edge-1": 3,
+        "up-face / outside": 1,
+        "up-face / terminal": 3,
+        "up-face / inside": 2
+      },
+      "samples": [
+        {
+          "a": "S17",
+          "b": "S05-A",
+          "faceA": 192,
+          "faceB": 2,
+          "tagA": "up-face",
+          "tagB": "edge-1",
+          "point": [
+            24.06926650396385,
+            1029.9999713897705,
+            3.999164556962391
+          ],
+          "r": 24.39923988964616
+        },
+        {
+          "a": "S17",
+          "b": "S05-A",
+          "faceA": 192,
+          "faceB": 2,
+          "tagA": "up-face",
+          "tagB": "edge-1",
+          "point": [
+            24.4167277135959,
+            1029.9999713897705,
+            4.034292757672215
+          ],
+          "r": 24.747769804458915
+        },
+        {
+          "a": "S17",
+          "b": "S05-A",
+          "faceA": 192,
+          "faceB": 3,
+          "tagA": "up-face",
+          "tagB": "edge-1",
+          "point": [
+            25.087580996161147,
+            1029.9999713897705,
+            4.199976097917593
+          ],
+          "r": 25.436715972429006
+        }
+      ]
+    },
+    {
+      "a": "S17",
+      "b": "S05-B",
+      "pairs": 29,
+      "classifications": {
+        "outer-wall / outside": 5,
+        "outer-wall / edge-2": 1,
+        "up-face / edge-2": 6,
+        "up-face / outside": 6,
+        "inner-wall / edge-2": 6,
+        "inner-wall / outside": 2,
+        "up-face / inside": 1,
+        "up-face / terminal": 2
+      },
+      "samples": [
+        {
+          "a": "S17",
+          "b": "S05-B",
+          "faceA": 101,
+          "faceB": 21,
+          "tagA": "outer-wall",
+          "tagB": "outside",
+          "point": [
+            10.81923329730654,
+            1034.4282036598536,
+            24.940045346301645
+          ],
+          "r": 27.18568871699095
+        },
+        {
+          "a": "S17",
+          "b": "S05-B",
+          "faceA": 101,
+          "faceB": 21,
+          "tagA": "outer-wall",
+          "tagB": "outside",
+          "point": [
+            10.399731233895654,
+            1034.5241513276546,
+            25.10717171249163
+          ],
+          "r": 27.17580690867899
+        },
+        {
+          "a": "S17",
+          "b": "S05-B",
+          "faceA": 101,
+          "faceB": 22,
+          "tagA": "outer-wall",
+          "tagB": "edge-2",
+          "point": [
+            11.338301936599729,
+            1034.999966621399,
+            23.918786300693135
+          ],
+          "r": 26.47008554772211
+        }
+      ]
+    },
+    {
+      "a": "S18",
+      "b": "S18",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S18",
+      "b": "S05-A",
+      "pairs": 9,
+      "classifications": {
+        "down-face / inside": 2,
+        "down-face / edge-2": 3,
+        "down-face / terminal": 3,
+        "down-face / outside": 1
+      },
+      "samples": [
+        {
+          "a": "S18",
+          "b": "S05-A",
+          "faceA": 216,
+          "faceB": 632,
+          "tagA": "down-face",
+          "tagB": "inside",
+          "point": [
+            5.268556676415501,
+            1240.0000095367432,
+            -23.409458852935416
+          ],
+          "r": 23.995008923521546
+        },
+        {
+          "a": "S18",
+          "b": "S05-A",
+          "faceA": 216,
+          "faceB": 632,
+          "tagA": "down-face",
+          "tagB": "inside",
+          "point": [
+            3.536939319488334,
+            1240.0000095367432,
+            -23.677724432458895
+          ],
+          "r": 23.94043805048695
+        },
+        {
+          "a": "S18",
+          "b": "S05-A",
+          "faceA": 216,
+          "faceB": 633,
+          "tagA": "down-face",
+          "tagB": "inside",
+          "point": [
+            5.93763396329561,
+            1240.0000095367432,
+            -23.17785327727579
+          ],
+          "r": 23.926311450472376
+        }
+      ]
+    },
+    {
+      "a": "S18",
+      "b": "S05-B",
+      "pairs": 9,
+      "classifications": {
+        "down-face / inside": 1,
+        "down-face / edge-1": 3,
+        "down-face / terminal": 3,
+        "down-face / outside": 2
+      },
+      "samples": [
+        {
+          "a": "S18",
+          "b": "S05-B",
+          "faceA": 206,
+          "faceB": 633,
+          "tagA": "down-face",
+          "tagB": "inside",
+          "point": [
+            -23.677724432458895,
+            1240.0000095367432,
+            3.5369393194883343
+          ],
+          "r": 23.94043805048695
+        },
+        {
+          "a": "S18",
+          "b": "S05-B",
+          "faceA": 206,
+          "faceB": 633,
+          "tagA": "down-face",
+          "tagB": "inside",
+          "point": [
+            -23.17785327727579,
+            1240.0000095367432,
+            5.93763396329561
+          ],
+          "r": 23.926311450472376
+        },
+        {
+          "a": "S18",
+          "b": "S05-B",
+          "faceA": 206,
+          "faceB": 634,
+          "tagA": "down-face",
+          "tagB": "edge-1",
+          "point": [
+            -24.039904180103537,
+            1240.0000095367432,
+            3.5630724240744227
+          ],
+          "r": 24.302519994596423
+        }
+      ]
+    },
+    {
+      "a": "S05-A",
+      "b": "S05-A",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S05-A",
+      "b": "S05-B",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    },
+    {
+      "a": "S05-B",
+      "b": "S05-B",
+      "pairs": 0,
+      "classifications": {},
+      "samples": []
+    }
+  ],
+  "limits": [
+    "native Three CPU only",
+    "hand/skeleton not included",
+    "S07-S14/S16 excluded, so no final lantern joint certification",
+    "coplanar overlaps not returned by strict crossings",
+    "sampling is not continuous nonpenetration proof",
+    "geometry contact is distinct from physical adhesive/fastener design",
+    "no rendered or aesthetic acceptance"
+  ],
+  "reviewerCorrection": {
+    "original": "regular16-gon radius formula was half-sector rotated; affected only derived scalar clearance, not native triangle crossing/topology",
+    "fix": "delta = angle modulo (2pi/16) minus pi/16",
+    "nativeBatchRepeated": false,
+    "sourceData": "unchanged native-snapshot.json and crossing-points.json",
+    "prior": "native-before-polygon-phase-fix.json retained"
+  }
+}

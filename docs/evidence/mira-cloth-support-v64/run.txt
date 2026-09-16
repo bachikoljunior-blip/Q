@@ -1,0 +1,285 @@
+{"terrain":"flat","hz":30,"minimumV63":0.003,"minimumAfter":0.003000000000000001,"maxV63Step":0.08420025855300899,"maxAfterStep":0.08420025855300899,"maxV63Stretch":1.0226443178748903,"maxStretch":1.0556725613274802,"minStretch":0.837070047409033,"minQuadDot":0.7647759454735785,"activeFrames":26,"activeV63CPU":{"median":3.501764000000037,"p95":6.871640999999954,"max":22.043304999999975},"activeCandidateCPU":{"median":0.7505009999999857,"p95":2.9193709999999555,"max":3.3024819999999977}}
+{"terrain":"flat","hz":60,"minimumV63":0.003,"minimumAfter":0.003,"maxV63Step":0.04551481826907261,"maxAfterStep":0.04417751039873515,"maxV63Stretch":1.0233846233437633,"maxStretch":1.056436710276871,"minStretch":0.8305952917491607,"minQuadDot":0.7638053306267308,"activeFrames":52,"activeV63CPU":{"median":2.5254149999999527,"p95":3.4409100000000308,"max":3.9592689999999493},"activeCandidateCPU":{"median":0.5915479999999889,"p95":1.0566139999999677,"max":3.9866799999999785}}
+{"terrain":"flat","hz":120,"minimumV63":0.003,"minimumAfter":0.003,"maxV63Step":0.023872302248339153,"maxAfterStep":0.022315353297291913,"maxV63Stretch":1.0248660371817737,"maxStretch":1.056436710276871,"minStretch":0.8301316708302117,"minQuadDot":0.7637261699292749,"activeFrames":103,"activeV63CPU":{"median":2.595598999999993,"p95":3.270375999999942,"max":7.882586000000174},"activeCandidateCPU":{"median":0.5521820000001298,"p95":0.8524010000000999,"max":1.064640000000054}}
+{"terrain":"cross-slope","hz":30,"minimumV63":0.0029999999999998916,"minimumAfter":0.002999999999999947,"maxV63Step":0.08589590963191068,"maxAfterStep":0.08454723236948683,"maxV63Stretch":1.0271023639963648,"maxStretch":1.0631620936585269,"minStretch":0.8296674816707327,"minQuadDot":0.5324668476798301,"activeFrames":26,"activeV63CPU":{"median":2.8258240000000114,"p95":5.912822000000006,"max":6.2725450000000365},"activeCandidateCPU":{"median":0.5627040000001671,"p95":0.8067630000000463,"max":1.1197380000000976}}
+{"terrain":"cross-slope","hz":60,"minimumV63":0.0029999999999998916,"minimumAfter":0.002999999999999947,"maxV63Step":0.049085423179126134,"maxAfterStep":0.04904888176735251,"maxV63Stretch":1.0271023639963648,"maxStretch":1.0631660531307572,"minStretch":0.8296674816707327,"minQuadDot":0.5324668476798301,"activeFrames":52,"activeV63CPU":{"median":2.7903259999998227,"p95":3.7393990000000485,"max":4.16560400000003},"activeCandidateCPU":{"median":0.5974750000000313,"p95":0.8113490000000638,"max":1.0675770000000284}}
+{"terrain":"cross-slope","hz":120,"minimumV63":0.0029999999999998916,"minimumAfter":0.002999999999999947,"maxV63Step":0.02577354379986065,"maxAfterStep":0.02948123050158838,"maxV63Stretch":1.0331091627798754,"maxStretch":1.0631893102354713,"minStretch":0.829611980771708,"minQuadDot":0.5324668476798301,"activeFrames":103,"activeV63CPU":{"median":2.650985000000219,"p95":3.282596999999896,"max":9.293754999999692},"activeCandidateCPU":{"median":0.5573529999996936,"p95":0.7762309999998251,"max":0.909755000000132}}
+{"terrain":"along-slope","hz":30,"minimumV63":0.0029999999999998916,"minimumAfter":0.0030000000000000027,"maxV63Step":0.09683190114761957,"maxAfterStep":0.09620657183391865,"maxV63Stretch":1.031222965290964,"maxStretch":1.0740921038106894,"minStretch":0.8192059166513356,"minQuadDot":0.76641607048952,"activeFrames":27,"activeV63CPU":{"median":2.739172999999937,"p95":3.1314060000004247,"max":3.888173999999708},"activeCandidateCPU":{"median":0.5956350000001294,"p95":0.8847609999997985,"max":1.0181420000003527}}
+{"terrain":"along-slope","hz":60,"minimumV63":0.0029999999999998916,"minimumAfter":0.0029999999999998916,"maxV63Step":0.05484010048814915,"maxAfterStep":0.052383942086581856,"maxV63Stretch":1.031222965290964,"maxStretch":1.075501759972245,"minStretch":0.8192059166513356,"minQuadDot":0.76641607048952,"activeFrames":53,"activeV63CPU":{"median":2.8109950000002755,"p95":4.702818000000207,"max":5.644264999999905},"activeCandidateCPU":{"median":0.5670509999999922,"p95":1.1470440000002782,"max":1.248674999999821}}
+{"terrain":"along-slope","hz":120,"minimumV63":0.0029999999999998916,"minimumAfter":0.0029999999999998916,"maxV63Step":0.02989646834321547,"maxAfterStep":0.02872822531393205,"maxV63Stretch":1.0319374458132275,"maxStretch":1.075501759972245,"minStretch":0.8192059166513356,"minQuadDot":0.76641607048952,"activeFrames":105,"activeV63CPU":{"median":2.8143350000000282,"p95":4.56473700000015,"max":6.75273100000004},"activeCandidateCPU":{"median":0.5849130000001423,"p95":0.9976879999999255,"max":1.241095000000314}}
+{"terrain":"diagonal-slope","hz":30,"minimumV63":0.0029999999999999194,"minimumAfter":0.002999999999999954,"maxV63Step":0.09524430156259008,"maxAfterStep":0.09519244551499775,"maxV63Stretch":1.0323559924467294,"maxStretch":1.0756401323335154,"minStretch":0.8237989058810196,"minQuadDot":0.7760620444386315,"activeFrames":27,"activeV63CPU":{"median":3.0013709999998355,"p95":4.1958230000000185,"max":6.559968000000026},"activeCandidateCPU":{"median":0.6171840000001794,"p95":1.130775999999969,"max":1.8627660000001924}}
+{"terrain":"diagonal-slope","hz":60,"minimumV63":0.0029999999999999194,"minimumAfter":0.002999999999999947,"maxV63Step":0.05375836958569712,"maxAfterStep":0.05405302456931535,"maxV63Stretch":1.0323559924467294,"maxStretch":1.0774731108110895,"minStretch":0.8237989058810196,"minQuadDot":0.7760620444386315,"activeFrames":53,"activeV63CPU":{"median":2.8701979999996183,"p95":4.281246000000465,"max":6.710979000000407},"activeCandidateCPU":{"median":0.5767289999994318,"p95":0.848254999999881,"max":1.2554270000000542}}
+{"terrain":"diagonal-slope","hz":120,"minimumV63":0.0029999999999999055,"minimumAfter":0.002999999999999947,"maxV63Step":0.029302540470961883,"maxAfterStep":0.03723943514011931,"maxV63Stretch":1.032651913416422,"maxStretch":1.0774731108110895,"minStretch":0.8237989058810196,"minQuadDot":0.7760620444386315,"activeFrames":105,"activeV63CPU":{"median":2.673522999999477,"p95":3.303902999999991,"max":8.881980999999541},"activeCandidateCPU":{"median":0.5808369999995193,"p95":0.917409000000589,"max":1.1870410000001357}}
+{"terrain":"actual-spawn","hz":30,"minimumV63":0.0029999999999998916,"minimumAfter":0.003000000000006109,"maxV63Step":0.0842002585530086,"maxAfterStep":0.0842002585530086,"maxV63Stretch":1.0105276490407233,"maxStretch":1.013193658536762,"minStretch":0.9563046333125241,"minQuadDot":0.9822888314856975,"activeFrames":7,"activeV63CPU":{"median":3.8626380000005156,"p95":4.441165999999612,"max":4.839399000000412},"activeCandidateCPU":{"median":1.2429080000001704,"p95":1.4211009999999078,"max":1.5668550000000323}}
+{"terrain":"actual-spawn","hz":60,"minimumV63":0.0029995703879883706,"minimumAfter":0.003000000000006109,"maxV63Step":0.04211169943103975,"maxAfterStep":0.04211169943103975,"maxV63Stretch":1.0107004151450356,"maxStretch":1.013193658536762,"minStretch":0.9563046333125241,"minQuadDot":0.9817067757687337,"activeFrames":13,"activeV63CPU":{"median":4.21469100000013,"p95":4.884237000000212,"max":5.740569999999934},"activeCandidateCPU":{"median":1.2424470000005385,"p95":1.5341870000002018,"max":1.6975410000004558}}
+{"terrain":"actual-spawn","hz":120,"minimumV63":0.002998016337262488,"minimumAfter":0.003000000000006109,"maxV63Step":0.02106491662283386,"maxAfterStep":0.02106491662283386,"maxV63Stretch":1.0107004151450356,"maxStretch":1.0132267375080939,"minStretch":0.9560656683244156,"minQuadDot":0.9816407155123275,"activeFrames":25,"activeV63CPU":{"median":6.4738780000006955,"p95":7.201901999999791,"max":9.7541369999999},"activeCandidateCPU":{"median":2.357295000000704,"p95":2.602222999999867,"max":2.70015500000045}}
+{
+  "v63ScalarDelta": 0,
+  "at": "2026-09-16T13:44:40.647Z",
+  "fixed": [
+    {
+      "name": "idle 2s",
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3142611942001837,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997868511911544,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3142611942001837,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997868511911544,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "active": false,
+      "v63Ms": 0.36263999999999896,
+      "candidateMs": 0.2716250000000002,
+      "pinResidual": 0,
+      "v63EvidenceDelta": 0
+    },
+    {
+      "name": "walk 2m/s 1s",
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3217622894065386,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997857841364748,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3217622894065386,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997857841364748,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "active": false,
+      "v63Ms": 0.05110299999999768,
+      "candidateMs": 0.061065999999996734,
+      "pinResidual": 0,
+      "v63EvidenceDelta": 0
+    },
+    {
+      "name": "turn right .6rad 1s",
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3169698500350995,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997857841364745,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3169698500350995,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997857841364745,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "active": false,
+      "v63Ms": 0.06216999999999473,
+      "candidateMs": 0.0416049999999899,
+      "pinResidual": 0,
+      "v63EvidenceDelta": 0
+    },
+    {
+      "name": "sealed canonical",
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3226065770493337,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997865661310378,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3226065770493337,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997865661310378,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "active": false,
+      "v63Ms": 0.027608000000000743,
+      "candidateMs": 0.03206600000000037,
+      "pinResidual": 0,
+      "v63EvidenceDelta": 0
+    },
+    {
+      "name": "death .45s explicit",
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.003,
+        "edgeLengthRatio": {
+          "min": 0.9795903338415469,
+          "p95": 1.0088594394495132,
+          "max": 1.0187413187248158
+        },
+        "triangleAreaRatio": {
+          "min": 0.959499005904713,
+          "max": 1.0269100314268005
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.8652301143565304,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0.061826700050850336
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.0030000000000000027,
+        "edgeLengthRatio": {
+          "min": 0.8322298193214581,
+          "p95": 1.0229050790390488,
+          "max": 1.052213733573541
+        },
+        "triangleAreaRatio": {
+          "min": 0.8366184772307542,
+          "max": 1.0870809123693332
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.8900632188906651,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0.07524365168736283
+      },
+      "active": true,
+      "v63Ms": 7.280691999999988,
+      "candidateMs": 3.2964059999999904,
+      "pinResidual": 0,
+      "v63EvidenceDelta": 0
+    },
+    {
+      "name": "death 1s explicit",
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.003,
+        "edgeLengthRatio": {
+          "min": 0.99349960492308,
+          "p95": 1.0009763684188684,
+          "max": 1.0063186776089545
+        },
+        "triangleAreaRatio": {
+          "min": 0.9937678660688964,
+          "max": 1.0076672717650088
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9690482601289669,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0.012561387332063311
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.003000000000000001,
+        "edgeLengthRatio": {
+          "min": 0.9592565055725389,
+          "p95": 1.0035466596690126,
+          "max": 1.0136187182479626
+        },
+        "triangleAreaRatio": {
+          "min": 0.9626107625029331,
+          "max": 1.012852034664866
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9973911139362774,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0.012635941900230747
+      },
+      "active": true,
+      "v63Ms": 9.941072999999989,
+      "candidateMs": 4.901407999999975,
+      "pinResidual": 0,
+      "v63EvidenceDelta": 0
+    }
+  ]
+}

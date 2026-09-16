@@ -1,0 +1,37 @@
+{
+  "start": "2026-09-16T14:06:55.509Z",
+  "finish": "2026-09-16T14:06:55.635Z",
+  "source": {
+    "path": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v63/review/staff-v63/staff-parts.mjs",
+    "sha256": "c71aad81b0acaff2070b3681dcdae8ba057c51a28468cef5a16957fa69d1f5cc"
+  },
+  "recoveredPrior": {
+    "sha256": "bb16b0fe5584dcf85be6fd016da4b8510df49bafe05e73194b864e76a9238f7e",
+    "exactHashMatchesPreviouslyReviewedBytes": true,
+    "method": "reverse only the declared foot text diff, require full old SHA, rewrite import locations only for temporary Node data-URL loading"
+  },
+  "unchanged": {
+    "allNonS01NativeAttributes": true,
+    "allNonS01Profiles": true,
+    "visibleS01SideTrianglesY30AndAbove": true,
+    "visibleSideTriangles": 32
+  },
+  "support": {
+    "woodPlaneMm": 4.000000189989805,
+    "discPlaneMm": 4.000000189989805,
+    "gapMm": 0,
+    "woodFaces": 16,
+    "discFaces": 16,
+    "woodContactAreaMm2": 991.9154362123227,
+    "minimumInsideDiscPolygonMm": 3.138512956251221,
+    "coverage": 1,
+    "method": "all vertices of each wooden cap triangle are inside the same convex disc top polygon and coplanar; hence every point of those triangles is supported"
+  },
+  "S01S02properCrossings": 0,
+  "limits": [
+    "radial ferrule clearance still exists",
+    "no adhesive/retention strength or physical material simulation",
+    "only hidden wood extension rechecked, no full sweep or new plot",
+    "no hand/device/render approval"
+  ]
+}

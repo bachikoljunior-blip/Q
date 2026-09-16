@@ -1,0 +1,729 @@
+{
+  "createdAt": "2026-09-16T13:40:30.907Z",
+  "base": "22d1d041dd6aef60de7764b1eebf6cf78028c857",
+  "sources": [
+    {
+      "path": "review/head-micro-v63/surfaces.mjs",
+      "bytes": 5840,
+      "sha256": "b93311bafce2b211a944604ce02f7cc0878bb0e14d5eae3066ca420b490b3d0b"
+    },
+    {
+      "path": "review/head-micro-v63/inspect.mjs",
+      "bytes": 3298,
+      "sha256": "71d4ad1f1f153774039c7a83f2cc42d8bfc31458d44d45e7f749481a82e3d6c2"
+    },
+    {
+      "path": "scripts/export-mira-head-micro-v63.mjs",
+      "bytes": 6765,
+      "sha256": "48906ea958a295495842fafab0c4f502ae5f60b4afab2e3d82b89990a6ae5886"
+    },
+    {
+      "path": "tests/mira-head-micro-v63.test.mjs",
+      "bytes": 1711,
+      "sha256": "3e05c1fb7d61b9064039621913a5a4659ab20b00c26253b5b4fe85a6f400964f"
+    },
+    {
+      "path": "src/assets/characters/identity-head-data.js",
+      "bytes": 126806,
+      "sha256": "40e71eb3f48cc13293f1608443e09afff1b0e756bdf66e7edda2f86f542796fe"
+    },
+    {
+      "path": "src/assets/characters/detailed-geometry.js",
+      "bytes": 31318,
+      "sha256": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033"
+    },
+    {
+      "path": "src/actor-models.js",
+      "bytes": 38244,
+      "sha256": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b"
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/references/mira-F07-F11-v1.png",
+      "bytes": 1784906,
+      "sha256": "e425743db3d881f7cfca8a6be0bd0e6879b17a8918cb3be4f1b05b52e0353720"
+    },
+    {
+      "path": "docs/evidence/mira-head-micro-v63/references/mira-F07-F11-v2.png",
+      "bytes": 1764903,
+      "sha256": "e92542a8696c2adc5af4d4d2754bd726bbf27771d480dc490ac1519ce46fad4d"
+    }
+  ],
+  "geometry": {
+    "vertices": 513,
+    "triangles": 896,
+    "finite": true,
+    "minTriangleAreaM2": 0.000004752340618905198,
+    "minFaceVertexNormalDot": 0.9675467378170403,
+    "minUvSignedArea": 0.0011160714285714246,
+    "maxNormalUnitError": 4.440892098500626e-16,
+    "nonManifoldEdges": 0,
+    "windingConflicts": 0,
+    "boundaryEdges": 128,
+    "boundaryLoops": 1,
+    "boundaryAllDegree2": true,
+    "euler": 1,
+    "seams": [
+      {
+        "id": "F05-R:F07-R",
+        "samples": 9,
+        "positionErrorM": 0,
+        "normalVectorError": 1.6837937733381868e-15,
+        "longitudinalDerivativeErrorM": 8.469999434971913e-17,
+        "storedPositionErrorM": 0,
+        "allEdgesSharedByTwoFaces": true
+      },
+      {
+        "id": "F07-R:F09-R",
+        "samples": 9,
+        "positionErrorM": 0,
+        "normalVectorError": 2.795470146924422e-15,
+        "longitudinalDerivativeErrorM": 9.115142429335957e-17,
+        "storedPositionErrorM": 0,
+        "allEdgesSharedByTwoFaces": true
+      },
+      {
+        "id": "F09-R:F11",
+        "samples": 9,
+        "positionErrorM": 0,
+        "normalVectorError": 1.5287078389028013e-15,
+        "longitudinalDerivativeErrorM": 8.57241298821548e-17,
+        "storedPositionErrorM": 0,
+        "allEdgesSharedByTwoFaces": true
+      },
+      {
+        "id": "F11:F09-L",
+        "samples": 9,
+        "positionErrorM": 0,
+        "normalVectorError": 1.4679000040126846e-15,
+        "longitudinalDerivativeErrorM": 8.751331781207571e-17,
+        "storedPositionErrorM": 0,
+        "allEdgesSharedByTwoFaces": true
+      },
+      {
+        "id": "F09-L:F07-L",
+        "samples": 9,
+        "positionErrorM": 0,
+        "normalVectorError": 2.023684124003798e-15,
+        "longitudinalDerivativeErrorM": 8.811302451006347e-17,
+        "storedPositionErrorM": 0,
+        "allEdgesSharedByTwoFaces": true
+      },
+      {
+        "id": "F07-L:F05-L",
+        "samples": 9,
+        "positionErrorM": 0,
+        "normalVectorError": 1.4088688899021424e-15,
+        "longitudinalDerivativeErrorM": 6.879004331057075e-17,
+        "storedPositionErrorM": 0,
+        "allEdgesSharedByTwoFaces": true
+      }
+    ]
+  },
+  "constructMs": 3.2679489999999873,
+  "oldHeadDistance": {
+    "samples": 513,
+    "minM": 6.602600726445738e-7,
+    "medianM": 0.004883083898397872,
+    "p95M": 0.012186173086067604,
+    "maxM": 0.015357926829421205,
+    "meaning": "candidate vertices to old indexed MakeHuman-derived triangles, not generated reference fidelity; no requirement to preserve old shape"
+  },
+  "rig": {
+    "headLocal": [
+      0,
+      0.16,
+      0
+    ],
+    "neckLocal": [
+      0,
+      0.6,
+      0
+    ],
+    "headWorld": [
+      0,
+      1.7449999999999999,
+      0
+    ],
+    "neckWorld": [
+      0,
+      1.585,
+      0
+    ],
+    "headToNeck": 0.16,
+    "missingBones": 0
+  },
+  "poses": [
+    {
+      "id": "idle",
+      "requested": {
+        "id": "idle",
+        "state": {},
+        "dt": 0.5
+      },
+      "actualMotion": "idle",
+      "headWorld": [
+        0.9999976101563431,
+        0.000013872578519087203,
+        -0.002187184032875508,
+        0,
+        -0.0000029344850587352545,
+        0.9999875696535513,
+        0.004993017218971729,
+        0,
+        0.0021868164421778627,
+        -0.005013891054191821,
+        1.0013778882265254,
+        0,
+        6.108514437540831e-7,
+        1.722317149269426,
+        0.006222783595535717,
+        1
+      ],
+      "maxSeamPositionM": 0,
+      "maxSeamNormalVectorError": 2.8092495676097516e-15,
+      "finite": true,
+      "minWorldY": 1.623637175920304,
+      "minNormalLength": 0.9999999999999997,
+      "scope": "head bone weight1 only; unchanged runtime head remains separate; no integration, mouth blendshape or neck weld"
+    },
+    {
+      "id": "walking",
+      "requested": {
+        "id": "walking",
+        "state": {
+          "x": 0,
+          "z": 0,
+          "speed": 2.3
+        },
+        "dt": 0.1
+      },
+      "actualMotion": "idle",
+      "headWorld": [
+        0.9999976101563431,
+        0.000013872578519087203,
+        -0.002187184032875508,
+        0,
+        -0.0000029344850587352545,
+        0.9999875696535513,
+        0.004993017218971729,
+        0,
+        0.0021868164421778627,
+        -0.005013891054191821,
+        1.0013778882265254,
+        0,
+        6.108514437540831e-7,
+        1.722317149269426,
+        0.006222783595535717,
+        1
+      ],
+      "maxSeamPositionM": 0,
+      "maxSeamNormalVectorError": 2.8092495676097516e-15,
+      "finite": true,
+      "minWorldY": 1.623637175920304,
+      "minNormalLength": 0.9999999999999997,
+      "scope": "head bone weight1 only; unchanged runtime head remains separate; no integration, mouth blendshape or neck weld"
+    },
+    {
+      "id": "hit",
+      "requested": {
+        "id": "hit",
+        "state": {
+          "hit": 0.1,
+          "hp": 20
+        },
+        "dt": 0.05
+      },
+      "actualMotion": "idle",
+      "headWorld": [
+        0.9999994025413431,
+        0.000006933251121999363,
+        -0.001093346464646574,
+        0,
+        -0.0000014659413742110622,
+        0.9999875349770964,
+        0.0049964843204500075,
+        0,
+        0.0010932646916521234,
+        -0.005006965945041196,
+        1.0006859659931413,
+        0,
+        3.0575878563693626e-7,
+        1.7221437042238403,
+        0.006223338439035147,
+        1
+      ],
+      "maxSeamPositionM": 0,
+      "maxSeamNormalVectorError": 2.795470146924422e-15,
+      "finite": true,
+      "minWorldY": 1.6234643298410671,
+      "minNormalLength": 0.9999999999999998,
+      "scope": "head bone weight1 only; unchanged runtime head remains separate; no integration, mouth blendshape or neck weld"
+    },
+    {
+      "id": "death-.45",
+      "requested": {
+        "id": "death-.45",
+        "state": {
+          "dead": true,
+          "deathElapsed": 0.45
+        },
+        "dt": 0
+      },
+      "actualMotion": "death",
+      "headWorld": [
+        0.9912004474310254,
+        0.12860978955144375,
+        0.03132403301090591,
+        0,
+        -0.059290817251117026,
+        0.642941988588123,
+        -0.7636165256855328,
+        0,
+        -0.1183480967410529,
+        0.7550398144084078,
+        0.6449097662897403,
+        0,
+        -0.04207122538650522,
+        1.0786103818530657,
+        -0.5787991039841842,
+        1
+      ],
+      "maxSeamPositionM": 0,
+      "maxSeamNormalVectorError": 2.77833173273172e-15,
+      "finite": true,
+      "minWorldY": 1.057859093636265,
+      "minNormalLength": 0.9999999999999998,
+      "scope": "head bone weight1 only; unchanged runtime head remains separate; no integration, mouth blendshape or neck weld"
+    }
+  ],
+  "rayProbe": [
+    {
+      "target": [
+        0.046,
+        0.05,
+        0.109
+      ],
+      "hits": 0,
+      "scope": "front ray to existing left/right eye centre, mouth centre or nose; no complete facial occlusion guarantee"
+    },
+    {
+      "target": [
+        -0.046,
+        0.05,
+        0.109
+      ],
+      "hits": 0,
+      "scope": "front ray to existing left/right eye centre, mouth centre or nose; no complete facial occlusion guarantee"
+    },
+    {
+      "target": [
+        0,
+        -0.045,
+        0.134
+      ],
+      "hits": 0,
+      "scope": "front ray to existing left/right eye centre, mouth centre or nose; no complete facial occlusion guarantee"
+    },
+    {
+      "target": [
+        0,
+        0.005,
+        0.142
+      ],
+      "hits": 0,
+      "scope": "front ray to existing left/right eye centre, mouth centre or nose; no complete facial occlusion guarantee"
+    }
+  ],
+  "hollow": [
+    {
+      "id": "F07-R",
+      "midpointDeviationFromEndpointChordM": [
+        -0.002335937499999996,
+        -0.0008984375000000017,
+        -0.002648437500000017
+      ],
+      "meaning": "authored submalar longitudinal profile at width .5; not image-calibrated depth"
+    },
+    {
+      "id": "F07-L",
+      "midpointDeviationFromEndpointChordM": [
+        0.0023359374999999682,
+        -0.0008984375000000017,
+        -0.002648437500000017
+      ],
+      "meaning": "authored submalar longitudinal profile at width .5; not image-calibrated depth"
+    }
+  ],
+  "interfaces": {
+    "stationControls": [
+      [
+        [
+          -0.039,
+          0.03,
+          0.116
+        ],
+        [
+          -0.057,
+          0.031,
+          0.12
+        ],
+        [
+          -0.085,
+          0.035,
+          0.11
+        ],
+        [
+          -0.102,
+          0.034,
+          0.081
+        ]
+      ],
+      [
+        [
+          -0.039,
+          -0.008,
+          0.116
+        ],
+        [
+          -0.057,
+          -0.008,
+          0.112
+        ],
+        [
+          -0.083,
+          -0.006,
+          0.093
+        ],
+        [
+          -0.1,
+          -0.003,
+          0.058
+        ]
+      ],
+      [
+        [
+          -0.036,
+          -0.047,
+          0.118
+        ],
+        [
+          -0.056,
+          -0.049,
+          0.109
+        ],
+        [
+          -0.086,
+          -0.054,
+          0.074
+        ],
+        [
+          -0.094,
+          -0.06,
+          0.041
+        ]
+      ],
+      [
+        [
+          -0.026,
+          -0.057,
+          0.127
+        ],
+        [
+          -0.03,
+          -0.069,
+          0.131
+        ],
+        [
+          -0.033,
+          -0.086,
+          0.116
+        ],
+        [
+          -0.034,
+          -0.094,
+          0.081
+        ]
+      ],
+      [
+        [
+          0.026,
+          -0.057,
+          0.127
+        ],
+        [
+          0.03,
+          -0.069,
+          0.131
+        ],
+        [
+          0.033,
+          -0.086,
+          0.116
+        ],
+        [
+          0.034,
+          -0.094,
+          0.081
+        ]
+      ],
+      [
+        [
+          0.036,
+          -0.047,
+          0.118
+        ],
+        [
+          0.056,
+          -0.049,
+          0.109
+        ],
+        [
+          0.086,
+          -0.054,
+          0.074
+        ],
+        [
+          0.094,
+          -0.06,
+          0.041
+        ]
+      ],
+      [
+        [
+          0.039,
+          -0.008,
+          0.116
+        ],
+        [
+          0.057,
+          -0.008,
+          0.112
+        ],
+        [
+          0.083,
+          -0.006,
+          0.093
+        ],
+        [
+          0.1,
+          -0.003,
+          0.058
+        ]
+      ],
+      [
+        [
+          0.039,
+          0.03,
+          0.116
+        ],
+        [
+          0.057,
+          0.031,
+          0.12
+        ],
+        [
+          0.085,
+          0.035,
+          0.11
+        ],
+        [
+          0.102,
+          0.034,
+          0.081
+        ]
+      ]
+    ],
+    "sharedTangents": [
+      [
+        [
+          0,
+          -0.038,
+          0
+        ],
+        [
+          0,
+          -0.039,
+          -0.007999999999999993
+        ],
+        [
+          0.0020000000000000018,
+          -0.041,
+          -0.017
+        ],
+        [
+          0.001999999999999988,
+          -0.037000000000000005,
+          -0.023
+        ]
+      ],
+      [
+        [
+          0.0015000000000000013,
+          -0.0385,
+          0.000999999999999994
+        ],
+        [
+          0.0005000000000000004,
+          -0.04,
+          -0.005499999999999998
+        ],
+        [
+          -0.0004999999999999935,
+          -0.0445,
+          -0.018000000000000002
+        ],
+        [
+          0.003999999999999997,
+          -0.047,
+          -0.02
+        ]
+      ],
+      [
+        [
+          0.006500000000000001,
+          -0.0245,
+          0.005499999999999998
+        ],
+        [
+          0.013500000000000002,
+          -0.030500000000000003,
+          0.009500000000000001
+        ],
+        [
+          0.025,
+          -0.039999999999999994,
+          0.011500000000000003
+        ],
+        [
+          0.033,
+          -0.0455,
+          0.0115
+        ]
+      ],
+      [
+        [
+          0.031,
+          -0.005000000000000001,
+          0.004500000000000004
+        ],
+        [
+          0.043,
+          -0.010000000000000002,
+          0.011000000000000003
+        ],
+        [
+          0.0595,
+          -0.015999999999999997,
+          0.021000000000000005
+        ],
+        [
+          0.064,
+          -0.017,
+          0.02
+        ]
+      ],
+      [
+        [
+          0.031,
+          0.005000000000000001,
+          -0.004500000000000004
+        ],
+        [
+          0.043,
+          0.010000000000000002,
+          -0.011000000000000003
+        ],
+        [
+          0.0595,
+          0.015999999999999997,
+          -0.021000000000000005
+        ],
+        [
+          0.064,
+          0.017,
+          -0.02
+        ]
+      ],
+      [
+        [
+          0.006500000000000001,
+          0.0245,
+          -0.005499999999999998
+        ],
+        [
+          0.013500000000000002,
+          0.030500000000000003,
+          -0.009500000000000001
+        ],
+        [
+          0.025,
+          0.039999999999999994,
+          -0.011500000000000003
+        ],
+        [
+          0.033,
+          0.0455,
+          -0.0115
+        ]
+      ],
+      [
+        [
+          0.0015000000000000013,
+          0.0385,
+          -0.000999999999999994
+        ],
+        [
+          0.0005000000000000004,
+          0.04,
+          0.005499999999999998
+        ],
+        [
+          -0.0004999999999999935,
+          0.0445,
+          0.018000000000000002
+        ],
+        [
+          0.003999999999999997,
+          0.047,
+          0.02
+        ]
+      ],
+      [
+        [
+          0,
+          0.038,
+          0
+        ],
+        [
+          0,
+          0.039,
+          0.007999999999999993
+        ],
+        [
+          0.0020000000000000018,
+          0.041,
+          0.017
+        ],
+        [
+          0.001999999999999988,
+          0.037000000000000005,
+          0.023
+        ]
+      ]
+    ],
+    "weight": "head:1",
+    "neck": "unwelded, no neck source or eye/hair changes",
+    "UV": "new continuous chart, not original skin UV"
+  },
+  "limits": {
+    "completeHead": false,
+    "expressionApproved": false,
+    "exactReferenceReconstruction": false,
+    "runtimeAdopted": false,
+    "webgl": false,
+    "device": false,
+    "newRuntimeBytes": 0,
+    "geometryOnlyBytes": 38208,
+    "byteMeaning": "estimated typed Float32 attributes incl4skinindices/4weights+Uint16 indices; current author JSON is CPU arrays, GPU allocation not measured"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "geometry": {
+    "vertices": 513,
+    "triangles": 896,
+    "edgeCount": 1408,
+    "boundaryEdges": 128,
+    "boundaryComponents": 1,
+    "boundaryDegree2": true,
+    "euler": 1,
+    "duplicateTriangles": 0,
+    "nonManifold": 0,
+    "windingConflict": 0,
+    "minAreaM2": 0.000004752340618905198,
+    "minFaceVertexNormalDot": 0.9675467378170403,
+    "minUvArea": 0.0011160714285714246,
+    "maxNormalUnitError": 4.440892098500626e-16,
+    "maxIndependentPositionErrorM": 6.206335383118183e-17,
+    "maxIndependentNormalError": 2.5410021990585447e-15,
+    "weightErrors": 0,
+    "seams": [
+      {
+        "id": "F05-R:F07-R",
+        "maxPositionM": 0,
+        "maxNormalVector": 1.8038988979531736e-15,
+        "maxDU": 0,
+        "maxDV": 1.249000902703301e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F07-R:F09-R",
+        "maxPositionM": 0,
+        "maxNormalVector": 2.042629342666091e-15,
+        "maxDU": 0,
+        "maxDV": 1.316562550716263e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F09-R:F11",
+        "maxPositionM": 0,
+        "maxNormalVector": 2.152946912258037e-15,
+        "maxDU": 0,
+        "maxDV": 1.3329179921125024e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F11:F09-L",
+        "maxPositionM": 0,
+        "maxNormalVector": 2.152946912258037e-15,
+        "maxDU": 0,
+        "maxDV": 1.3329179921125024e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F09-L:F07-L",
+        "maxPositionM": 0,
+        "maxNormalVector": 2.042629342666091e-15,
+        "maxDU": 0,
+        "maxDV": 1.316562550716263e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      },
+      {
+        "id": "F07-L:F05-L",
+        "maxPositionM": 0,
+        "maxNormalVector": 1.8038988979531736e-15,
+        "maxDU": 0,
+        "maxDV": 1.249000902703301e-16,
+        "maxUv": 0,
+        "expectedTwoNeighborUses": true
+      }
+    ]
+  },
+  "poses": [
+    {
+      "id": "idle",
+      "actualMotion": "idle",
+      "archivedMatrixDifference": 0,
+      "maxNativeSkinRegistrationErrorM": 5.922603275774287e-8,
+      "maxSeamPositionM": 0,
+      "maxSeamNormal": 2.1534971048122414e-15,
+      "minWorldY": 1.6236371492031116,
+      "nativeVertices": 513
+    },
+    {
+      "id": "walking",
+      "actualMotion": "walk",
+      "archivedMatrixDifference": 0,
+      "maxNativeSkinRegistrationErrorM": 5.922589216810464e-8,
+      "maxSeamPositionM": 0,
+      "maxSeamNormal": 2.1632467764761047e-15,
+      "minWorldY": 1.6337191652863357,
+      "nativeVertices": 513
+    },
+    {
+      "id": "hit",
+      "actualMotion": "hit",
+      "archivedMatrixDifference": 0,
+      "maxNativeSkinRegistrationErrorM": 5.92258232546687e-8,
+      "maxSeamPositionM": 0,
+      "maxSeamNormal": 2.1242083858945795e-15,
+      "minWorldY": 1.5734492715440254,
+      "nativeVertices": 513
+    },
+    {
+      "id": "death-.45",
+      "actualMotion": "death",
+      "archivedMatrixDifference": 0,
+      "maxNativeSkinRegistrationErrorM": 5.9225823118797215e-8,
+      "maxSeamPositionM": 0,
+      "maxSeamNormal": 2.2023747557895893e-15,
+      "minWorldY": 1.0578591074616883,
+      "nativeVertices": 513
+    }
+  ],
+  "batchMs": 188.2006
+}

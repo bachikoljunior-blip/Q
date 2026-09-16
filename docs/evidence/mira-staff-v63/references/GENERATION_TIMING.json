@@ -1,0 +1,29 @@
+{
+  "initial": [
+    {
+      "i": 0,
+      "elapsedMs": 34465,
+      "finishedUTC": "2026-09-16T13:32:18.216Z"
+    },
+    {
+      "i": 1,
+      "elapsedMs": 86133,
+      "finishedUTC": "2026-09-16T13:33:09.884Z"
+    },
+    {
+      "i": 2,
+      "elapsedMs": 177113,
+      "finishedUTC": "2026-09-16T13:34:40.864Z"
+    },
+    {
+      "i": 3,
+      "elapsedMs": 129140,
+      "finishedUTC": "2026-09-16T13:33:52.891Z"
+    }
+  ],
+  "correction": {
+    "elapsedMs": 38206,
+    "finishedUTC": "2026-09-16T13:40:14.498Z",
+    "prompt": "Use case: precise-object-edit. Edit target: the attached grip part sheet. Supporting reference: original complete staff close-up. Produce a NEW clean sheet devoted ONLY to S05, ONE narrow flat leather helical strip wound 1.8 turns, keeping its shape/material/diameter/length and endpoints fixed. Remove the entire S04 row and all assembly thumbnails. FOUR clearly separated views: FRONT, TRUE SIDE (camera physically rotated 90 degrees around the vertical object axis), BACK (180 degrees), THREE-QUARTER (45 degrees). Use orthographic or long-lens technical product photography with soft light. In particular do NOT repeat the identical S-shaped frontal silhouette as SIDE or THREE-QUARTER: after camera rotation the projected upper/lower free endpoints must shift, occlusions must change, and the same strip curvature must be seen from the new angle. Keep one winding direction, exactly the same top and bottom endpoints, a narrow thin rectangular band, no tube or doubled strips, no extra coil. A tiny dot embossed in the top free end can identify that same end in all views. Plain gray background. This is a shape reference, no dimensions, no precise numerical diagrams, no other staff parts, no hands. No unrelated redesign."
+  }
+}

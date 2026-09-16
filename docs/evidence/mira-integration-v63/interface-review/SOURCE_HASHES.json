@@ -1,0 +1,167 @@
+{
+  "readAt": "2026-09-16T13:33:40.695415+00:00",
+  "repository": "/workspace/scratch/e72662e3b71f/Q-mira-micro-v62",
+  "requestedCommit": "22d1d041dd6aef60de7764b1eebf6cf78028c857",
+  "observedLocalHead": "623535f6a5c039ba1482c18103da55085e03a995",
+  "tree": "837c6b5dd804a33746e3a1116254bc5202c7dd6d",
+  "sameTree": true,
+  "gitStatus": "",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 33230,
+      "sha256": "ac46c2b36877df6668e99b1f143725bc1785ed20ec305e06319f2f74ded73c92",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "bytes": 299686,
+      "sha256": "6785815d8c731126c7c366cd3122e13173408ffa6fc23ec12e52a308ee74b0e6",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/MIRA_MICRO_PARTS_V61.md",
+      "bytes": 6535,
+      "sha256": "503cb3a8749cc6a8c781ab8fcb4e4876e4914d89bca63da170f45c64923a1dd9",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/MIRA_MICRO_INTEGRATION_V62.md",
+      "bytes": 6472,
+      "sha256": "2b840fa7a48a0afd9e9aab4efe9a44135c008c5dfa3345df1b4f00338677ed16",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/PART_INDEX.json",
+      "bytes": 20643,
+      "sha256": "85cd0c072c5f05d36a59e801aba3f09cfef337c26fbef9f206c9c3c23abbfb97",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/head/type-manifest.json",
+      "bytes": 14152,
+      "sha256": "a001358d32ca2d23ce8461cbf2f9c1af5cb8b7dd0d16c7fe0c6e10910ee8c646",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/head/parts-draft.json",
+      "bytes": 52766,
+      "sha256": "7d8de5a4f8b942c8c12b8a39b08bb3e12137358dbcf393a7b198d6bc4c5bfb64",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/cloth/types.json",
+      "bytes": 24165,
+      "sha256": "0496452d44c4f39daf3eb55869fe60d4bb2c76622d2cdfa9ecfa9fc0facd5597",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/cloth/parts.json",
+      "bytes": 160027,
+      "sha256": "1cc8ad4f3f9ff3c1447854b76f8f4831598399e18be2aac7f8c564eb9e377fef",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/cloth/PLAN.md",
+      "bytes": 5656,
+      "sha256": "ff371170c5326c0aa52b5398205d9d56353ddea787f65bb7d0f5d1bcedc3079a",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/accessories/STAFF_MICRO_BOM.json",
+      "bytes": 19418,
+      "sha256": "c581b436baa0d6bef4b8182af149e0648dbe1f3a7665af431ca3138424a1c081",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/planning/accessories/HANDS_BOOTS_MICRO_PLAN.json",
+      "bytes": 54588,
+      "sha256": "c89fb35ac5d065905dd2fa8ea3a31bab70336e47e83501725b43d204646e709b",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/references/head/face-patches-manifest.json",
+      "bytes": 4085,
+      "sha256": "0fedb711c75149db46956a5d0f521ddb6dc74fb8e977c4892580e80ec1aa5bdd",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/references/head/REVIEW.md",
+      "bytes": 4690,
+      "sha256": "389b1db01b4181bd60f5017de57a9ccf251ebed982cd29272a8f983e90f4378d",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "review/micro-v61/mira-micro-parts.js",
+      "bytes": 3628,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "review/lantern-micro-v62/mira-lantern-ribs.js",
+      "bytes": 5927,
+      "sha256": "33e596ff22332c317d819265e08c819f01c677c8a3cb63eea5aaa42bc17723e6",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "review/cloth-micro-v62/surfaces.mjs",
+      "bytes": 5895,
+      "sha256": "adc1b85b596eee63a799bb7a3d4d3c8c8c799dc88a469b535b26b05a0ca23193",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/meshes.json",
+      "bytes": 194878,
+      "sha256": "085c522e4811861d2b0203cd41001004e8c149275f1101c0a2e8a67aa7019aa6",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v62/independent/ribs-native-v62/result.json",
+      "bytes": 12635,
+      "sha256": "a4d22c2551c70cb77834d1cda77b247eba02310dcdea4c235c1c655738c0c1a7",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v62/independent/cloth-native-v62/native-check.json",
+      "bytes": 2945,
+      "sha256": "299eb190ab6533c43e544b261feb14d995dbb57ce2f067e16d86913d2f33c5e6",
+      "originalBitmapViewed": false
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/references/staff-caps-micro-v1.png",
+      "bytes": 1894355,
+      "sha256": "01a18ebd2631e2e5c73b52c3c261620e1c2487458200c1c68993e89066258532",
+      "originalBitmapViewed": true
+    },
+    {
+      "path": "docs/evidence/mira-micro-v62/references/staff-ribs/staff-ribs-micro-v2.png",
+      "bytes": 1610260,
+      "sha256": "b435f2b73dbcdc8b2dc16c13872c1d3b9ab300dfddbc77e9ad33758457c2a589",
+      "originalBitmapViewed": true
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "bytes": 1885563,
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+      "originalBitmapViewed": true
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/references/head/mira-face-patches-F01-F05-F09-v2.png",
+      "bytes": 1593624,
+      "sha256": "bdb78e0536808201b80aca8d1c8505faaec13c88a1577b65d93570a261b56049",
+      "originalBitmapViewed": true
+    },
+    {
+      "path": "docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+      "bytes": 1874282,
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+      "originalBitmapViewed": true
+    },
+    {
+      "path": "docs/evidence/character-reference-v60/references/mira-hands-staff-views-v1.png",
+      "bytes": 1974979,
+      "sha256": "6bb80bcdcbd52ae8b6a1ecbb0071fe2d56d44f9ad4d7d2d2521bf65ced78ef5f",
+      "originalBitmapViewed": true
+    }
+  ]
+}

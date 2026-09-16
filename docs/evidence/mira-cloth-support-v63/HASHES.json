@@ -1,0 +1,106 @@
+{
+  "at": "2026-09-16T13:39:20.156430+00:00",
+  "base": "22d1d041dd6aef60de7764b1eebf6cf78028c857",
+  "files": [
+    {
+      "path": "review/cloth-support-v63/README.md",
+      "bytes": 8938,
+      "sha256": "e2e7f9e49ad967ce96c57ccfb352f8430415e4f84a72c908744febc87f54b85c"
+    },
+    {
+      "path": "review/cloth-support-v63/measure.mjs",
+      "bytes": 1878,
+      "sha256": "7739f57f0ce0b687cafc260f2f808de91825601a15941ade29174dc4b56afb7f"
+    },
+    {
+      "path": "review/cloth-support-v63/plot.py",
+      "bytes": 2477,
+      "sha256": "33a3facce7e79d2d7d4d460e352435f21da3f2ac318de1b04e869723644c5a44"
+    },
+    {
+      "path": "review/cloth-support-v63/refine-check.mjs",
+      "bytes": 4409,
+      "sha256": "806abf7f764fd122813ed08f82abefca7314f46d2be1a85117be3f2fe1fcb2ef"
+    },
+    {
+      "path": "review/cloth-support-v63/support.mjs",
+      "bytes": 3544,
+      "sha256": "f8c83633e6b766ddf5de78701d8ff077194ce8a2c5e97c3a1f45c64dc37baadc"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/boundary-contract.json",
+      "bytes": 4187,
+      "sha256": "07646ec718909f2f5336bda00b77ca399256d8b2454eb74ac4e474deebe31310"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/cpu-death-support.png",
+      "bytes": 438383,
+      "sha256": "df16e1e301fcdf44df27af3a318b7a6eca437fd267fed3b5e7a415b0fd9f3546"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/death-.45s-explicit.obj",
+      "bytes": 26085,
+      "sha256": "eec822c948cec9d6b6bfc11413ac370ef50c566eedd4d0167d355cee0088bf72"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/death-1s-explicit.obj",
+      "bytes": 26049,
+      "sha256": "f9be426c4102200e084c88d6d9c8f0e861bbb6dd2f058da52a579e7667c9bc33"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/fixed.json",
+      "bytes": 195445,
+      "sha256": "45ccef954a663c7e29fe927e359840ef908a0649acaceaa4074fee690212645e"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/refine-check.json",
+      "bytes": 99375,
+      "sha256": "d18c007024985647f3d69fadd3700710dbc70edeb9e279c079a2a1320ef3ef96"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/refine-run.txt",
+      "bytes": 13520,
+      "sha256": "e7482abe2e8baffe1ffa06510eaee3af389d5dee0016f73a04bc0fd1446ba8b2"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/run.txt",
+      "bytes": 12394,
+      "sha256": "58e287e5e9a7890af204ca894a7045521968d66c661b2666d48235f85d87814d"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/selected.json",
+      "bytes": 771089,
+      "sha256": "1fac460a83b3b6e0fd552adc2a9b83c0c9659bcb195349b819b4000732073e1e"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/sequences.json",
+      "bytes": 733996,
+      "sha256": "308bd102d9d6f880f89881cafc96b4c7c0ee0b52bb70b9b8788a7879198d7cb4"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/test-run.txt",
+      "bytes": 903,
+      "sha256": "c2140ffde3e3efcd27f2a0d3f95faa1880711c424eb836ff1450d81d233e1176"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/timing.json",
+      "bytes": 1190,
+      "sha256": "36fc19c1cbe950304068c33d47d47a7fb5656bd69878af9f5ae215f21d9ec7d4"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/validation.json",
+      "bytes": 358,
+      "sha256": "b1729b8604885132e4c65869b9e09322010bd6562b4847428ceb84d6b284100d"
+    },
+    {
+      "path": "scripts/export-mira-cloth-support-v63.mjs",
+      "bytes": 6632,
+      "sha256": "aad6e2b6dbf024107ccf575686f97561c4dfad13de9fa27578870b2df67b3246"
+    },
+    {
+      "path": "tests/mira-cloth-support-v63.test.mjs",
+      "bytes": 4440,
+      "sha256": "f2361052f311234e336ce449a8bfa0f1be07c21c9aeeb6ae25fd5d214b46332d"
+    }
+  ]
+}

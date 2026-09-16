@@ -1,0 +1,279 @@
+{"terrain":"flat","hz":30,"origin":[0,0],"yaw":0,"minimumBefore":-0.059494568279486126,"minimumAfter":0.003,"maxBeforeStep":0.08420025855300899,"maxAfterStep":0.08420025855300899,"maxStretch":1.0226443178748903,"minStretch":0.9739828024290147,"minQuadDot":0.7492359001840794,"cpuMs":{"median":3.1781520000000683,"p95":14.99212799999998,"max":18.736919999999998}}
+{"terrain":"flat","hz":60,"origin":[0,0],"yaw":0,"minimumBefore":-0.0596567699258356,"minimumAfter":0.003,"maxBeforeStep":0.04211169943104009,"maxAfterStep":0.04551481826907261,"maxStretch":1.0233846233437633,"minStretch":0.9739828024290147,"minQuadDot":0.6356852964552315,"cpuMs":{"median":2.4924680000000308,"p95":3.2354239999999663,"max":3.754126000000042}}
+{"terrain":"flat","hz":120,"origin":[0,0],"yaw":0,"minimumBefore":-0.05971171179004575,"minimumAfter":0.003,"maxBeforeStep":0.021064916622834353,"maxAfterStep":0.023872302248339153,"maxStretch":1.0248660371817737,"minStretch":0.9729832216519236,"minQuadDot":0.6356852964552315,"cpuMs":{"median":2.7642789999999877,"p95":4.268033999999943,"max":15.630817999999863}}
+{"terrain":"cross-slope","hz":30,"origin":[2,3],"yaw":0.7,"minimumBefore":-0.09511408030237778,"minimumAfter":0.0029999999999998916,"maxBeforeStep":0.08420025855300889,"maxAfterStep":0.08589590963191068,"maxStretch":1.0271023639963648,"minStretch":0.9666834056367221,"minQuadDot":0.44495372919501985,"cpuMs":{"median":3.131607000000031,"p95":6.605009999999993,"max":54.544257000000016}}
+{"terrain":"cross-slope","hz":60,"origin":[2,3],"yaw":0.7,"minimumBefore":-0.0954555781982499,"minimumAfter":0.0029999999999998916,"maxBeforeStep":0.04211169943103985,"maxAfterStep":0.049085423179126134,"maxStretch":1.0271023639963648,"minStretch":0.9666834056367221,"minQuadDot":0.3752068778349786,"cpuMs":{"median":2.5942799999997987,"p95":3.1022689999999784,"max":4.835435000000189}}
+{"terrain":"cross-slope","hz":120,"origin":[2,3],"yaw":0.7,"minimumBefore":-0.0954555781982499,"minimumAfter":0.0029999999999998916,"maxBeforeStep":0.0210649166228342,"maxAfterStep":0.02577354379986065,"maxStretch":1.0331091627798754,"minStretch":0.9635133401870121,"minQuadDot":0.34036039204257984,"cpuMs":{"median":2.6073849999997947,"p95":3.303266000000349,"max":4.7466990000002625}}
+{"terrain":"along-slope","hz":30,"origin":[2,3],"yaw":0,"minimumBefore":-0.12809744844788756,"minimumAfter":0.0029999999999998916,"maxBeforeStep":0.08420025855300908,"maxAfterStep":0.09683190114761957,"maxStretch":1.031222965290964,"minStretch":0.9762358814349491,"minQuadDot":0.6973246497841004,"cpuMs":{"median":2.7474099999999453,"p95":3.373326000000361,"max":3.601496999999654}}
+{"terrain":"along-slope","hz":60,"origin":[2,3],"yaw":0,"minimumBefore":-0.12809744844788756,"minimumAfter":0.0029999999999998916,"maxBeforeStep":0.042111699431040116,"maxAfterStep":0.05484010048814915,"maxStretch":1.031222965290964,"minStretch":0.9762358814349491,"minQuadDot":0.6341376292757664,"cpuMs":{"median":2.7244299999997565,"p95":3.411518000000342,"max":5.278649000000314}}
+{"terrain":"along-slope","hz":120,"origin":[2,3],"yaw":0,"minimumBefore":-0.12809744844788756,"minimumAfter":0.0029999999999998916,"maxBeforeStep":0.021064916622834245,"maxAfterStep":0.02989646834321547,"maxStretch":1.0319374458132275,"minStretch":0.9732120088068098,"minQuadDot":0.6341376292757664,"cpuMs":{"median":2.764075000000048,"p95":3.282387000000199,"max":5.2103729999998905}}
+{"terrain":"diagonal-slope","hz":30,"origin":[2,3],"yaw":2.4,"minimumBefore":-0.12846818133127313,"minimumAfter":0.0029999999999999194,"maxBeforeStep":0.08420025855300894,"maxAfterStep":0.09524430156259008,"maxStretch":1.0323559924467294,"minStretch":0.9752555772239091,"minQuadDot":0.6998110449746326,"cpuMs":{"median":2.681919999999991,"p95":3.209258999999747,"max":3.4617819999998574}}
+{"terrain":"diagonal-slope","hz":60,"origin":[2,3],"yaw":2.4,"minimumBefore":-0.12846818133127313,"minimumAfter":0.0029999999999999194,"maxBeforeStep":0.042111699431040116,"maxAfterStep":0.05375836958569712,"maxStretch":1.0323559924467294,"minStretch":0.9734135741473695,"minQuadDot":0.6998110449746326,"cpuMs":{"median":2.6105569999999716,"p95":3.4129509999997936,"max":4.0679009999998925}}
+{"terrain":"diagonal-slope","hz":120,"origin":[2,3],"yaw":2.4,"minimumBefore":-0.12846818133127313,"minimumAfter":0.0029999999999999055,"maxBeforeStep":0.02106491662283446,"maxAfterStep":0.029302540470961883,"maxStretch":1.032651913416422,"minStretch":0.9734135741473695,"minQuadDot":0.6964898290948568,"cpuMs":{"median":2.711124000000382,"p95":3.687993000000006,"max":5.321762999999919}}
+{"terrain":"actual-spawn","hz":30,"origin":[0,101],"yaw":1.1,"minimumBefore":-0.01540784849197463,"minimumAfter":0.0029999999999998916,"maxBeforeStep":0.0842002585530086,"maxAfterStep":0.0842002585530086,"maxStretch":1.0105276490407233,"minStretch":0.9891900770636142,"minQuadDot":0.8909135601900119,"cpuMs":{"median":0.032427000000097905,"p95":3.7979230000000825,"max":4.234457999999904}}
+{"terrain":"actual-spawn","hz":60,"origin":[0,101],"yaw":1.1,"minimumBefore":-0.015448485003658918,"minimumAfter":0.0029995703879883706,"maxBeforeStep":0.04211169943103975,"maxAfterStep":0.04211169943103975,"maxStretch":1.0107004151450356,"minStretch":0.9890729537647859,"minQuadDot":0.8877309889387268,"cpuMs":{"median":0.031313000000409374,"p95":4.019723999999769,"max":5.85756500000025}}
+{"terrain":"actual-spawn","hz":120,"origin":[0,101],"yaw":1.1,"minimumBefore":-0.015563731818637683,"minimumAfter":0.002998016337262488,"maxBeforeStep":0.02106491662283386,"maxAfterStep":0.02106491662283386,"maxStretch":1.0107004151450356,"minStretch":0.9890729537647859,"minQuadDot":0.8877309889387268,"cpuMs":{"median":0.03172299999914685,"p95":3.755196000000069,"max":4.9851559999997335}}
+{
+  "fixed": [
+    {
+      "name": "idle 2s",
+      "motion": "idle",
+      "active": false,
+      "solveMs": 1.997033000000016,
+      "pinResidual": 0,
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3142611942001837,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997868511911544,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3142611942001837,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997868511911544,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      }
+    },
+    {
+      "name": "walk 2m/s 1s",
+      "motion": "walk",
+      "active": false,
+      "solveMs": 0.0603980000000206,
+      "pinResidual": 0,
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3217622894065386,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997857841364748,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3217622894065386,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997857841364748,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      }
+    },
+    {
+      "name": "turn right .6rad 1s",
+      "motion": "idle",
+      "active": false,
+      "solveMs": 0.09855400000003556,
+      "pinResidual": 0,
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3169698500350995,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997857841364745,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3169698500350995,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997857841364745,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      }
+    },
+    {
+      "name": "sealed canonical",
+      "motion": "sealed",
+      "active": false,
+      "solveMs": 0.05830100000002858,
+      "pinResidual": 0,
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3226065770493337,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997865661310378,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.3226065770493337,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997865661310378,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      }
+    },
+    {
+      "name": "death .45s explicit",
+      "motion": "death",
+      "active": true,
+      "solveMs": 6.904806000000008,
+      "pinResidual": 0,
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": -0.0517834525740484,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997865661310377,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.003,
+        "edgeLengthRatio": {
+          "min": 0.9795903338415469,
+          "p95": 1.0088594394495132,
+          "max": 1.0187413187248158
+        },
+        "triangleAreaRatio": {
+          "min": 0.959499005904713,
+          "max": 1.0269100314268005
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.8652301143565304,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0.061826700050850336
+      }
+    },
+    {
+      "name": "death 1s explicit",
+      "motion": "death",
+      "active": true,
+      "solveMs": 14.011691999999982,
+      "pinResidual": 0,
+      "baseline": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": -0.0094444176408634,
+        "edgeLengthRatio": {
+          "min": 1,
+          "p95": 1,
+          "max": 1
+        },
+        "triangleAreaRatio": {
+          "min": 1,
+          "max": 1
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9997865661310374,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0
+      },
+      "candidate": {
+        "finite": true,
+        "sampleCount": 2560,
+        "minTriangleSampleGapM": 0.003,
+        "edgeLengthRatio": {
+          "min": 0.99349960492308,
+          "p95": 1.0009763684188684,
+          "max": 1.0063186776089545
+        },
+        "triangleAreaRatio": {
+          "min": 0.9937678660688964,
+          "max": 1.0076672717650088
+        },
+        "zeroArea": 0,
+        "minWithinQuadNormalDot": 0.9690482601289669,
+        "withinQuadReversed": 0,
+        "maxDisplacementM": 0.012561387332063311
+      }
+    }
+  ],
+  "baselineExactMax": 0,
+  "at": "2026-09-16T13:36:45.965Z"
+}

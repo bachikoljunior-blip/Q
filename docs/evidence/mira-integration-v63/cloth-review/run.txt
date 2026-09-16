@@ -1,0 +1,971 @@
+{
+  "source": {
+    "repo": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-support-v63",
+    "head": "f5368df90c3f1e730dd680a1c486bb1c2db91e69",
+    "tree": "9bd911c67234525d25fae781eef8a23117c77787",
+    "supportSha256": "f8c83633e6b766ddf5de78701d8ff077194ce8a2c5e97c3a1f45c64dc37baadc"
+  },
+  "manifestChecks": [
+    {
+      "path": "review/cloth-support-v63/README.md",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "review/cloth-support-v63/measure.mjs",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "review/cloth-support-v63/plot.py",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "review/cloth-support-v63/refine-check.mjs",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "review/cloth-support-v63/support.mjs",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/boundary-contract.json",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/cpu-death-support.png",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/death-.45s-explicit.obj",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/death-1s-explicit.obj",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/fixed.json",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/refine-check.json",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/refine-run.txt",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/run.txt",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/selected.json",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/sequences.json",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/test-run.txt",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/timing.json",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "docs/evidence/mira-cloth-support-v63/validation.json",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "scripts/export-mira-cloth-support-v63.mjs",
+      "bytesMatch": true,
+      "hashMatch": true
+    },
+    {
+      "path": "tests/mira-cloth-support-v63.test.mjs",
+      "bytesMatch": true,
+      "hashMatch": true
+    }
+  ],
+  "preserved": [
+    {
+      "path": "src/actor-models.js",
+      "baseExact": true,
+      "sha256": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b"
+    },
+    {
+      "path": "src/core.js",
+      "baseExact": true,
+      "sha256": "a6b7271063f683d2228dc1d547a82d7dd5b3257b3f4a538ced63c88ac37e3b3f"
+    },
+    {
+      "path": "review/cloth-micro-v62/surfaces.mjs",
+      "baseExact": true,
+      "sha256": "adc1b85b596eee63a799bb7a3d4d3c8c8c799dc88a469b535b26b05a0ca23193"
+    },
+    {
+      "path": "docs/evidence/mira-cloth-micro-v62/meshes.json",
+      "baseExact": true,
+      "sha256": "085c522e4811861d2b0203cd41001004e8c149275f1101c0a2e8a67aa7019aa6"
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "baseExact": true,
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc"
+    }
+  ],
+  "restExact": true,
+  "registration": [
+    {
+      "terrain": "flat",
+      "nativeBindVsInitializedChestMatrixMaxComponent": 0.022999078400786632,
+      "anchor": "Initialized chest pose, not original Skeleton boneInverse: createDetailedActor calls animate({},0) before returning"
+    },
+    {
+      "terrain": "along-slope",
+      "nativeBindVsInitializedChestMatrixMaxComponent": 0.022999078400786632,
+      "anchor": "Initialized chest pose, not original Skeleton boneInverse: createDetailedActor calls animate({},0) before returning"
+    },
+    {
+      "terrain": "actual-spawn",
+      "nativeBindVsInitializedChestMatrixMaxComponent": 0.022999078400786632,
+      "anchor": "Initialized chest pose, not original Skeleton boneInverse: createDetailedActor calls animate({},0) before returning"
+    },
+    {
+      "terrain": "independent-diagonal",
+      "nativeBindVsInitializedChestMatrixMaxComponent": 0.022999078400786632,
+      "anchor": "Initialized chest pose, not original Skeleton boneInverse: createDetailedActor calls animate({},0) before returning"
+    },
+    {
+      "terrain": "along-slope",
+      "nativeBindVsInitializedChestMatrixMaxComponent": 0.022999078400786632,
+      "anchor": "Initialized chest pose, not original Skeleton boneInverse: createDetailedActor calls animate({},0) before returning"
+    },
+    {
+      "terrain": "along-slope",
+      "nativeBindVsInitializedChestMatrixMaxComponent": 0.022999078400786632,
+      "anchor": "Initialized chest pose, not original Skeleton boneInverse: createDetailedActor calls animate({},0) before returning"
+    },
+    {
+      "terrain": "along-slope",
+      "nativeBindVsInitializedChestMatrixMaxComponent": 0.022999078400786632,
+      "anchor": "Initialized chest pose, not original Skeleton boneInverse: createDetailedActor calls animate({},0) before returning"
+    }
+  ],
+  "counts": {
+    "vertices": 153,
+    "triangles": 256,
+    "structuralEdges": 408,
+    "bendLinks": 254,
+    "pins": [
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ]
+  },
+  "samples": [
+    {
+      "terrain": "flat",
+      "age": 0,
+      "baseline": {
+        "minGapM": 0.30299999999999994,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386461,
+        "minWithinQuadDot": 0.9997865661310377,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.30299999999999994,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386461,
+        "minWithinQuadDot": 0.9997865661310377,
+        "sampleCount": 3840
+      },
+      "active": false,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 153,
+      "solveMs": 0.35345499999999674,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0
+    },
+    {
+      "terrain": "flat",
+      "age": 0.45,
+      "baseline": {
+        "minGapM": -0.0517834525740484,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.000585790197138646,
+        "minWithinQuadDot": 0.9997865661310377,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.003,
+        "minEdgeRatio": 0.9795903338415469,
+        "maxEdgeRatio": 1.0187413187248158,
+        "minAreaM2": 0.0005850297790214063,
+        "minWithinQuadDot": 0.8652301143565304,
+        "sampleCount": 3840
+      },
+      "active": true,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 11706,
+      "solveMs": 6.059910000000059,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0.061826700050850336
+    },
+    {
+      "terrain": "flat",
+      "age": 0.8,
+      "baseline": {
+        "minGapM": -0.0094444176408634,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386473,
+        "minWithinQuadDot": 0.9997865661310374,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.003,
+        "minEdgeRatio": 0.99349960492308,
+        "maxEdgeRatio": 1.0063186776089545,
+        "minAreaM2": 0.0005857713801609601,
+        "minWithinQuadDot": 0.9690482601289669,
+        "sampleCount": 3840
+      },
+      "active": true,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 10482,
+      "solveMs": 9.443966000000046,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0.012561387332063311
+    },
+    {
+      "terrain": "flat",
+      "age": 1,
+      "baseline": {
+        "minGapM": -0.0094444176408634,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386473,
+        "minWithinQuadDot": 0.9997865661310374,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.003,
+        "minEdgeRatio": 0.99349960492308,
+        "maxEdgeRatio": 1.0063186776089545,
+        "minAreaM2": 0.0005857713801609601,
+        "minWithinQuadDot": 0.9690482601289669,
+        "sampleCount": 3840
+      },
+      "active": true,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 10482,
+      "solveMs": 11.049551000000065,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0.012561387332063311
+    },
+    {
+      "terrain": "along-slope",
+      "age": 0,
+      "baseline": {
+        "minGapM": 0.33959999999999974,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386421,
+        "minWithinQuadDot": 0.9997865661310378,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.33959999999999974,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386421,
+        "minWithinQuadDot": 0.9997865661310378,
+        "sampleCount": 3840
+      },
+      "active": false,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 153,
+      "solveMs": 0.06238499999994929,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0
+    },
+    {
+      "terrain": "along-slope",
+      "age": 0.45,
+      "baseline": {
+        "minGapM": -0.0992263794454109,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386486,
+        "minWithinQuadDot": 0.9997865661310374,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.0030000000000000027,
+        "minEdgeRatio": 0.9808548354747517,
+        "maxEdgeRatio": 1.0257452647798637,
+        "minAreaM2": 0.0005839146719471718,
+        "minWithinQuadDot": 0.7926973659281629,
+        "sampleCount": 3840
+      },
+      "active": true,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 12910,
+      "solveMs": 11.98655999999994,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0.1191919874023429
+    },
+    {
+      "terrain": "along-slope",
+      "age": 0.8,
+      "baseline": {
+        "minGapM": -0.1032022972832154,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386455,
+        "minWithinQuadDot": 0.9997865661310374,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.0029999999999998916,
+        "minEdgeRatio": 0.99031204660219,
+        "maxEdgeRatio": 1.012562709825898,
+        "minAreaM2": 0.0005848945230459636,
+        "minWithinQuadDot": 0.7550691836513921,
+        "sampleCount": 3840
+      },
+      "active": true,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 16614,
+      "solveMs": 25.83824900000002,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0.10614166537378057
+    },
+    {
+      "terrain": "along-slope",
+      "age": 1,
+      "baseline": {
+        "minGapM": -0.1032022972832154,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386455,
+        "minWithinQuadDot": 0.9997865661310374,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.0029999999999998916,
+        "minEdgeRatio": 0.99031204660219,
+        "maxEdgeRatio": 1.012562709825898,
+        "minAreaM2": 0.0005848945230459636,
+        "minWithinQuadDot": 0.7550691836513921,
+        "sampleCount": 3840
+      },
+      "active": true,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 16614,
+      "solveMs": 15.543031999999926,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0.10614166537378057
+    },
+    {
+      "terrain": "actual-spawn",
+      "age": 0,
+      "baseline": {
+        "minGapM": 0.2882280944454938,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971384984,
+        "minWithinQuadDot": 0.999786566131048,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.2882280944454938,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971384984,
+        "minWithinQuadDot": 0.999786566131048,
+        "sampleCount": 3840
+      },
+      "active": false,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 153,
+      "solveMs": 0.062231999999994514,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0
+    },
+    {
+      "terrain": "actual-spawn",
+      "age": 0.45,
+      "baseline": {
+        "minGapM": -0.012040048382473634,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971387107,
+        "minWithinQuadDot": 0.9997865661310412,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.0030000000001841887,
+        "minEdgeRatio": 0.9910272683740374,
+        "maxEdgeRatio": 1.0066048580671552,
+        "minAreaM2": 0.0005856587411872282,
+        "minWithinQuadDot": 0.9373939121120362,
+        "sampleCount": 3840
+      },
+      "active": true,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 10526,
+      "solveMs": 5.130611999999928,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0.016687912238536995
+    },
+    {
+      "terrain": "actual-spawn",
+      "age": 0.8,
+      "baseline": {
+        "minGapM": 0.042932440805570016,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971387253,
+        "minWithinQuadDot": 0.9997865661310468,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.042932440805570016,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971387253,
+        "minWithinQuadDot": 0.9997865661310468,
+        "sampleCount": 3840
+      },
+      "active": false,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 153,
+      "solveMs": 0.07946300000003248,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0
+    },
+    {
+      "terrain": "actual-spawn",
+      "age": 1,
+      "baseline": {
+        "minGapM": 0.042932440805570016,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971387253,
+        "minWithinQuadDot": 0.9997865661310468,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.042932440805570016,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971387253,
+        "minWithinQuadDot": 0.9997865661310468,
+        "sampleCount": 3840
+      },
+      "active": false,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 153,
+      "solveMs": 0.04326899999989564,
+      "archiveDelta": {
+        "beforeMax": 0,
+        "afterMax": 0
+      },
+      "maxMoveM": 0
+    },
+    {
+      "terrain": "independent-diagonal",
+      "age": 0,
+      "baseline": {
+        "minGapM": 0.2844035603043481,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386462,
+        "minWithinQuadDot": 0.9997865661310369,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.2844035603043481,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386462,
+        "minWithinQuadDot": 0.9997865661310369,
+        "sampleCount": 3840
+      },
+      "active": false,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 153,
+      "solveMs": 0.024555999999961386,
+      "archiveDelta": null,
+      "maxMoveM": 0
+    },
+    {
+      "terrain": "independent-diagonal",
+      "age": 0.45,
+      "baseline": {
+        "minGapM": -0.023389715402596156,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386541,
+        "minWithinQuadDot": 0.9997865661310374,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.0030000000000000027,
+        "minEdgeRatio": 0.9810355734873056,
+        "maxEdgeRatio": 1.0082839645909174,
+        "minAreaM2": 0.0005854633089939993,
+        "minWithinQuadDot": 0.8636195694646304,
+        "sampleCount": 3840
+      },
+      "active": true,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 11014,
+      "solveMs": 3.528203000000076,
+      "archiveDelta": null,
+      "maxMoveM": 0.03039445463276458
+    },
+    {
+      "terrain": "independent-diagonal",
+      "age": 0.8,
+      "baseline": {
+        "minGapM": 0.04122965970981629,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386618,
+        "minWithinQuadDot": 0.9997865661310372,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.04122965970981629,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386618,
+        "minWithinQuadDot": 0.9997865661310372,
+        "sampleCount": 3840
+      },
+      "active": false,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 153,
+      "solveMs": 0.026612999999997555,
+      "archiveDelta": null,
+      "maxMoveM": 0
+    },
+    {
+      "terrain": "independent-diagonal",
+      "age": 1,
+      "baseline": {
+        "minGapM": 0.04122965970981629,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386618,
+        "minWithinQuadDot": 0.9997865661310372,
+        "sampleCount": 3840
+      },
+      "candidate": {
+        "minGapM": 0.04122965970981629,
+        "minEdgeRatio": 1,
+        "maxEdgeRatio": 1,
+        "minAreaM2": 0.0005857901971386618,
+        "minWithinQuadDot": 0.9997865661310372,
+        "sampleCount": 3840
+      },
+      "active": false,
+      "pinResidual": 0,
+      "pinnedBelowFloor": [],
+      "heightQueries": 153,
+      "solveMs": 0.02786900000000969,
+      "archiveDelta": null,
+      "maxMoveM": 0
+    }
+  ],
+  "sequences": [
+    {
+      "hz": 30,
+      "from": 0.3,
+      "to": 0.4,
+      "frames": [
+        {
+          "age": 0.3,
+          "active": false,
+          "minGapM": 0.040978694020190665,
+          "pinResidual": 0,
+          "beforeStepM": null,
+          "afterStepM": null,
+          "authorStepM": 0.07405402705809058,
+          "solveMs": 0.025353999999992993
+        },
+        {
+          "age": 0.3333333333333333,
+          "active": true,
+          "minGapM": 0.0029999999999998916,
+          "pinResidual": 0,
+          "beforeStepM": 0.07844601448332351,
+          "afterStepM": 0.07844601448332351,
+          "authorStepM": 0.07844601448332351,
+          "solveMs": 3.451922999999965
+        },
+        {
+          "age": 0.36666666666666664,
+          "active": true,
+          "minGapM": 0.002999999999999947,
+          "pinResidual": 0,
+          "beforeStepM": 0.08165052204571395,
+          "afterStepM": 0.09683190114761957,
+          "authorStepM": 0.09683190114761957,
+          "solveMs": 3.9391500000000406
+        },
+        {
+          "age": 0.4,
+          "active": true,
+          "minGapM": 0.0030000000000000027,
+          "pinResidual": 0,
+          "beforeStepM": 0.08358836449631091,
+          "afterStepM": 0.08358836449631091,
+          "authorStepM": 0.08358836449631091,
+          "solveMs": 6.343747000000008
+        }
+      ],
+      "maxBeforeStepM": 0.08358836449631091,
+      "maxAfterStepM": 0.09683190114761957
+    },
+    {
+      "hz": 60,
+      "from": 0.3,
+      "to": 0.4,
+      "frames": [
+        {
+          "age": 0.3,
+          "active": false,
+          "minGapM": 0.040978694020190665,
+          "pinResidual": 0,
+          "beforeStepM": null,
+          "afterStepM": null,
+          "authorStepM": 0.03764945876045844,
+          "solveMs": 0.06478300000003401
+        },
+        {
+          "age": 0.31666666666666665,
+          "active": false,
+          "minGapM": 0.0202059067879371,
+          "pinResidual": 0,
+          "beforeStepM": 0.038749120188012603,
+          "afterStepM": 0.038749120188012603,
+          "authorStepM": 0.038749120188012603,
+          "solveMs": 0.02695800000003601
+        },
+        {
+          "age": 0.3333333333333333,
+          "active": true,
+          "minGapM": 0.0029999999999998916,
+          "pinResidual": 0,
+          "beforeStepM": 0.03970295827178318,
+          "afterStepM": 0.03970295827178318,
+          "authorStepM": 0.03970295827178318,
+          "solveMs": 3.743402999999944
+        },
+        {
+          "age": 0.35,
+          "active": true,
+          "minGapM": 0.0030000000000000027,
+          "pinResidual": 0,
+          "beforeStepM": 0.04050548128161751,
+          "afterStepM": 0.05484010048814915,
+          "authorStepM": 0.05484010048814915,
+          "solveMs": 2.759189000000106
+        },
+        {
+          "age": 0.36666666666666664,
+          "active": true,
+          "minGapM": 0.002999999999999947,
+          "pinResidual": 0,
+          "beforeStepM": 0.04115168651993889,
+          "afterStepM": 0.04327458061644665,
+          "authorStepM": 0.04327458061644665,
+          "solveMs": 2.893756999999937
+        },
+        {
+          "age": 0.38333333333333336,
+          "active": true,
+          "minGapM": 0.0030000000000000027,
+          "pinResidual": 0,
+          "beforeStepM": 0.041637161179154454,
+          "afterStepM": 0.041637161179154454,
+          "authorStepM": 0.041637161179154454,
+          "solveMs": 2.6925759999999173
+        },
+        {
+          "age": 0.4,
+          "active": true,
+          "minGapM": 0.0030000000000000027,
+          "pinResidual": 0,
+          "beforeStepM": 0.04195816587221713,
+          "afterStepM": 0.04195816587221713,
+          "authorStepM": 0.04195816587221713,
+          "solveMs": 2.8391520000000128
+        }
+      ],
+      "maxBeforeStepM": 0.04195816587221713,
+      "maxAfterStepM": 0.05484010048814915
+    },
+    {
+      "hz": 120,
+      "from": 0.3,
+      "to": 0.4,
+      "frames": [
+        {
+          "age": 0.3,
+          "active": false,
+          "minGapM": 0.040978694020190665,
+          "pinResidual": 0,
+          "beforeStepM": null,
+          "afterStepM": null,
+          "authorStepM": 0.01897142537881388,
+          "solveMs": 0.0327350000000024
+        },
+        {
+          "age": 0.30833333333333335,
+          "active": false,
+          "minGapM": 0.030471586700546782,
+          "pinResidual": 0,
+          "beforeStepM": 0.01924644508859239,
+          "afterStepM": 0.01924644508859239,
+          "authorStepM": 0.01924644508859239,
+          "solveMs": 0.03555800000003728
+        },
+        {
+          "age": 0.31666666666666665,
+          "active": false,
+          "minGapM": 0.0202059067879371,
+          "pinResidual": 0,
+          "beforeStepM": 0.019503411623152566,
+          "afterStepM": 0.019503411623152566,
+          "authorStepM": 0.019503411623152566,
+          "solveMs": 0.033820999999989
+        },
+        {
+          "age": 0.325,
+          "active": false,
+          "minGapM": 0.01020172762442978,
+          "pinResidual": 0,
+          "beforeStepM": 0.019741968106610934,
+          "afterStepM": 0.019741968106610934,
+          "authorStepM": 0.019741968106610934,
+          "solveMs": 0.03255699999999706
+        },
+        {
+          "age": 0.3333333333333333,
+          "active": true,
+          "minGapM": 0.0029999999999998916,
+          "pinResidual": 0,
+          "beforeStepM": 0.01996177033163632,
+          "afterStepM": 0.02117684166905742,
+          "authorStepM": 0.02117684166905742,
+          "solveMs": 3.545323000000053
+        },
+        {
+          "age": 0.3416666666666667,
+          "active": true,
+          "minGapM": 0.002999999999999947,
+          "pinResidual": 0,
+          "beforeStepM": 0.02016248858548522,
+          "afterStepM": 0.02989646834321547,
+          "authorStepM": 0.02989646834321547,
+          "solveMs": 2.619358000000034
+        },
+        {
+          "age": 0.35,
+          "active": true,
+          "minGapM": 0.0030000000000000027,
+          "pinResidual": 0,
+          "beforeStepM": 0.020343809357298428,
+          "afterStepM": 0.02650276194228976,
+          "authorStepM": 0.02650276194228976,
+          "solveMs": 4.13957999999991
+        },
+        {
+          "age": 0.35833333333333334,
+          "active": true,
+          "minGapM": 0.0030000000000000027,
+          "pinResidual": 0,
+          "beforeStepM": 0.02050543691937323,
+          "afterStepM": 0.023194661708539576,
+          "authorStepM": 0.023194661708539576,
+          "solveMs": 2.7956080000000156
+        },
+        {
+          "age": 0.36666666666666664,
+          "active": true,
+          "minGapM": 0.002999999999999947,
+          "pinResidual": 0,
+          "beforeStepM": 0.020647094775659302,
+          "afterStepM": 0.020647094775659302,
+          "authorStepM": 0.020647094775659302,
+          "solveMs": 2.526617999999985
+        },
+        {
+          "age": 0.375,
+          "active": true,
+          "minGapM": 0.0030000000000000027,
+          "pinResidual": 0,
+          "beforeStepM": 0.020768526971318337,
+          "afterStepM": 0.020768526971318337,
+          "authorStepM": 0.020768526971318337,
+          "solveMs": 2.792399000000046
+        },
+        {
+          "age": 0.38333333333333336,
+          "active": true,
+          "minGapM": 0.0030000000000000027,
+          "pinResidual": 0,
+          "beforeStepM": 0.0208694992578313,
+          "afterStepM": 0.0208694992578313,
+          "authorStepM": 0.0208694992578313,
+          "solveMs": 2.5382299999999987
+        },
+        {
+          "age": 0.39166666666666666,
+          "active": true,
+          "minGapM": 0.003000000000000058,
+          "pinResidual": 0,
+          "beforeStepM": 0.020949800108782987,
+          "afterStepM": 0.020949800108782987,
+          "authorStepM": 0.020949800108782987,
+          "solveMs": 2.9728079999999864
+        },
+        {
+          "age": 0.4,
+          "active": true,
+          "minGapM": 0.0030000000000000027,
+          "pinResidual": 0,
+          "beforeStepM": 0.021009241582165782,
+          "afterStepM": 0.021009241582165782,
+          "authorStepM": 0.021009241582165782,
+          "solveMs": 2.7714990000000626
+        }
+      ],
+      "maxBeforeStepM": 0.021009241582165782,
+      "maxAfterStepM": 0.02989646834321547
+    }
+  ],
+  "maxRateCoordinateError": 0,
+  "negative": {
+    "buriedPins": [
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "pinResidual": 0,
+    "reason": "Intentionally infeasible, not a newly supported pose"
+  },
+  "cpu": {
+    "activeSamples": 26,
+    "activeMedianMs": 3.4767229999999927,
+    "activeMaxMs": 25.83824900000002,
+    "inactiveSamples": 15,
+    "inactiveMedianMs": 0.033820999999989,
+    "maxHeightQueries": 26210,
+    "note": "One host batch, includes cold/JIT/noise; no device or frame-rate claim. The active negative is included."
+  },
+  "solverCallCount": 41,
+  "nativeAndMetricsBatchMs": 365.322793,
+  "limits": [
+    "No full1275frame resweep",
+    "No body collision/global self intersection/full cloth seam/UV normal continuity checked",
+    "Explicit canonical death ages; not actual live Game death capture path",
+    "Barycentric terrain samples finite; no arbitrary heightfield guarantee",
+    "No renderer/GL/image comparison/device performance"
+  ],
+  "readback": {
+    "head": "f5368df90c3f1e730dd680a1c486bb1c2db91e69",
+    "status": "",
+    "supportHashUnchanged": true,
+    "endedAt": "2026-09-16T13:50:46.946Z"
+  }
+}
