@@ -1,0 +1,174 @@
+{
+  "scope": "Production source and geometry/Node/packaging checks; no WebGL pixels, device FPS, real audio or PS4 parity",
+  "startedAt": "2026-09-16T01:42:29.114508+00:00",
+  "finishedAt": "2026-09-16T01:43:57.280449+00:00",
+  "wallMs": 88165.958,
+  "commands": [
+    {
+      "command": [
+        "node",
+        "scripts/generate-vault-assets.mjs",
+        "--verify"
+      ],
+      "exit": 0,
+      "wallMs": 191.406,
+      "log": "artifacts/v24-gate-00.log"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-soundscape.mjs"
+      ],
+      "exit": 0,
+      "wallMs": 62.875,
+      "log": "artifacts/v24-gate-01.log"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-main-runtime.mjs"
+      ],
+      "exit": 0,
+      "wallMs": 4452.356,
+      "log": "artifacts/v24-gate-02.log"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-gathering-runtime.mjs"
+      ],
+      "exit": 0,
+      "wallMs": 9231.557,
+      "log": "artifacts/v24-gate-03.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:vaults"
+      ],
+      "exit": 0,
+      "wallMs": 9984.711,
+      "log": "artifacts/v24-gate-04.log"
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit": 0,
+      "wallMs": 40657.971,
+      "log": "artifacts/v24-gate-05.log"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-world-surfaces.mjs"
+      ],
+      "exit": 0,
+      "wallMs": 2161.793,
+      "log": "artifacts/v24-gate-06.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:journey"
+      ],
+      "exit": 0,
+      "wallMs": 762.322,
+      "log": "artifacts/v24-gate-07.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:crossing"
+      ],
+      "exit": 0,
+      "wallMs": 1242.9,
+      "log": "artifacts/v24-gate-08.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:forge"
+      ],
+      "exit": 0,
+      "wallMs": 1146.697,
+      "log": "artifacts/v24-gate-09.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:session"
+      ],
+      "exit": 0,
+      "wallMs": 5571.242,
+      "log": "artifacts/v24-gate-10.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:expedition"
+      ],
+      "exit": 0,
+      "wallMs": 5527.178,
+      "log": "artifacts/v24-gate-11.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "review:combat"
+      ],
+      "exit": 0,
+      "wallMs": 2090.01,
+      "log": "artifacts/v24-gate-12.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "compare:touch"
+      ],
+      "exit": 0,
+      "wallMs": 1579.723,
+      "log": "artifacts/v24-gate-13.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit": 0,
+      "wallMs": 2393.428,
+      "log": "artifacts/v24-gate-14.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "package"
+      ],
+      "exit": 0,
+      "wallMs": 665.258,
+      "log": "artifacts/v24-gate-15.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:artifacts"
+      ],
+      "exit": 0,
+      "wallMs": 443.154,
+      "log": "artifacts/v24-gate-16.log"
+    }
+  ],
+  "allPassed": true
+}

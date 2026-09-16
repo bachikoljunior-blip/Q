@@ -1,0 +1,220 @@
+{
+  "scope": "Source geometry/material arithmetic only; no WebGL pixels, browser, culling, GPU timings, FPS, real device or perceptual quality claim.",
+  "sha": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+  "terrain": {
+    "gridStepMeters": {
+      "main": 3.3,
+      "west": 3.272727272727273
+    },
+    "vertices": 51657,
+    "triangles": 102000,
+    "sampleDomain": "Integer grid x[-510,330], z[-330,330], render - analytic height, includes unplayable outskirts",
+    "count": 555901,
+    "sum": 558.2587042479125,
+    "max": 0.7831831701849605,
+    "min": -1.502109802130498,
+    "maxAt": {
+      "x": -61,
+      "z": -147
+    },
+    "minAt": {
+      "x": -48,
+      "z": -167
+    },
+    "over005": 6909,
+    "over010": 3378,
+    "over020": 1487,
+    "mean": 0.0010042412304491492,
+    "p50": -0.00009273232826956246,
+    "p95": 0.010757787276567399,
+    "anchors": [
+      {
+        "id": "haven",
+        "name": "風待ちの集落",
+        "en": "WINDFALL HAVEN",
+        "x": 0,
+        "z": 86,
+        "type": "camp",
+        "analyticHeight": 3,
+        "renderedHeight": 2.914336623567522,
+        "error": -0.0856633764324779
+      },
+      {
+        "id": "grove",
+        "name": "琥珀の森",
+        "en": "AMBER GROVE",
+        "x": -104,
+        "z": 2,
+        "type": "beacon",
+        "analyticHeight": 3,
+        "renderedHeight": 2.8944913979732627,
+        "error": -0.10550860202673729
+      },
+      {
+        "id": "flood",
+        "name": "沈黙の水殿",
+        "en": "THE DROWNED SANCTUM",
+        "x": 106,
+        "z": -83,
+        "type": "beacon",
+        "analyticHeight": 1,
+        "renderedHeight": 1.1614357558163704,
+        "error": 0.16143575581637037
+      },
+      {
+        "id": "ruins",
+        "name": "星読みの廃塔",
+        "en": "ASTRAL WATCH",
+        "x": -48,
+        "z": -167,
+        "type": "beacon",
+        "analyticHeight": 8,
+        "renderedHeight": 6.497890197869502,
+        "error": -1.502109802130498
+      },
+      {
+        "id": "crown",
+        "name": "灰冠の門",
+        "en": "THE CINDER CROWN",
+        "x": 4,
+        "z": -247,
+        "type": "boss",
+        "analyticHeight": 12,
+        "renderedHeight": 11.998664393569484,
+        "error": -0.0013356064305156679
+      }
+    ],
+    "seamNormalDegrees": {
+      "count": 201,
+      "sum": 149.11611837227287,
+      "max": 2.2957377274430333,
+      "min": 0.022389926986102947,
+      "maxAt": {
+        "x": -330,
+        "z": -191.4
+      },
+      "minAt": {
+        "x": -330,
+        "z": -221.10000000000002
+      },
+      "over005": 198,
+      "over010": 195,
+      "over020": 183,
+      "mean": 0.7418712356829495,
+      "p50": 0.6164584088232612,
+      "p95": 1.48719763516112
+    }
+  },
+  "water": {
+    "domain": "z[-220,220] step .5m; across21m dx[-10.5,10.5] step .5m; fixed mesh interpolated exactly before shader wave displacement <=.056m; no bridge mesh occlusion",
+    "againstAnalytic": {
+      "count": 37883,
+      "sum": 9528.986329735038,
+      "max": 2.455806483291714,
+      "min": -2.234322083620492,
+      "maxAt": {
+        "x": 156.23433627378787,
+        "z": -63.5,
+        "dx": 10.5,
+        "waterY": -0.5381602392296431
+      },
+      "minAt": {
+        "x": 198.9031233937439,
+        "z": 79,
+        "dx": 10.5,
+        "waterY": -5.496908659478856
+      },
+      "over005": 36397,
+      "over010": 35008,
+      "over020": 31914,
+      "mean": 0.25153726816078553,
+      "p50": 0.31210577121415106,
+      "p95": 1.4748557236814577
+    },
+    "againstRendered": {
+      "count": 37883,
+      "sum": 9300.671893270352,
+      "max": 2.447335397057592,
+      "min": -2.2410624321593176,
+      "maxAt": {
+        "x": 156.32566555746962,
+        "z": -63,
+        "dx": 10.5,
+        "waterY": -0.539065398220721
+      },
+      "minAt": {
+        "x": 198.85253664350728,
+        "z": 78.5,
+        "dx": 10.5,
+        "waterY": -5.502604755433957
+      },
+      "over005": 36319,
+      "over010": 34821,
+      "over020": 31540,
+      "mean": 0.24551043722171823,
+      "p50": 0.3023592446826022,
+      "p95": 1.471928274791876
+    },
+    "againstRenderedInGameplayWater": {
+      "count": 29756,
+      "sum": 7759.263925970696,
+      "max": 2.078130304286593,
+      "min": -1.7889962695467538,
+      "maxAt": {
+        "x": 154.41699484115136,
+        "z": -62.5,
+        "dx": 8.5,
+        "waterY": -0.539970557211799
+      },
+      "minAt": {
+        "x": 197.4814966941393,
+        "z": 80,
+        "dx": 9,
+        "waterY": -5.481265173603551
+      },
+      "over005": 28429,
+      "over010": 27166,
+      "over020": 24396,
+      "mean": 0.2607630032924686,
+      "p50": 0.3102748518736598,
+      "p95": 1.2914780042716059
+    },
+    "aboveRenderedCount": 26926,
+    "underRenderedCount": 10957,
+    "gameplayWaterHiddenUnderTerrainCount": 7740,
+    "visibleWaterOutsideGameplayWaterCount": 4910
+  },
+  "doubleSidedBump": {
+    "front": [
+      -0.034973198940590956,
+      -0.017486599470295478,
+      0.9992352546797112
+    ],
+    "back": [
+      -0.034973198940590956,
+      -0.017486599470295478,
+      -0.9992352546797112
+    ],
+    "correctedBack": [
+      0.034973198940590956,
+      0.017486599470295478,
+      -0.9992352546797112
+    ],
+    "originalOppositionErrorRadians": 0.07822239130780766,
+    "fixedOppositionErrorRadians": 0
+  },
+  "shadow": {
+    "mapPixels": 1024,
+    "worldWidthMeters": 70,
+    "texelMeters": 0.068359375,
+    "snap": "Absent; sun.target translates freely with player",
+    "cameraNear": 1,
+    "cameraFar": 220
+  },
+  "structuralBudgets": {
+    "extraRenderPasses": 0,
+    "existingAuthoredTextures": 3,
+    "existingAuthoredBytes": 3403723,
+    "existingAuthoredRgba8MipBytes": 16777212
+  }
+}

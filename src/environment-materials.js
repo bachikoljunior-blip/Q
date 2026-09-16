@@ -62,7 +62,7 @@ export function surfaceMaterial(kind,color,options={}) {
       #endif
       transformed.x+=(sin(qSurfaceTime*1.1+qPhase+position.y*1.8)*.024+sin(qSurfaceTime*2.3+qPhase)*.006)*qRoot;
       transformed.z+=cos(qSurfaceTime*.85+qPhase)*.018*qRoot;`;
-    if(flow)deformation='transformed.y+=sin(position.z*.72+qSurfaceTime*1.3)*.035+sin(position.x*1.13-qSurfaceTime*.8)*.021;';
+    if(flow)deformation='transformed.y+=sin(position.z*.72+qSurfaceTime*1.3)*.012+sin(position.x*1.13-qSurfaceTime*.8)*.009;';
     shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>\nqHeight=position.y;\n${deformation}`);
     shader.vertexShader=shader.vertexShader.replace('#include <project_vertex>',`vec4 qLocal=vec4(transformed,1.0); vec3 qN=normal;
       #ifdef USE_INSTANCING
@@ -89,6 +89,8 @@ export function surfaceMaterial(kind,color,options={}) {
       vec3 qP=qWorld*qSurfaceScale;${flow?'qP.z-=qSurfaceTime*.035;':''}
       vec4 qSurface=texture2D(map,qP.yz)*qBlend.x+texture2D(map,qP.xz)*qBlend.y+texture2D(map,qP.xy)*qBlend.z;
       ${photo?earthVariation:''}
+      ${kind==='earth'?`float qWetBank=(1.0-smoothstep(10.5,14.0,abs(qWorld.x-(166.0+sin(qWorld.z*.017)*23.0))))*smoothstep(-205.0,-202.5,qWorld.z)*(1.0-smoothstep(217.5,220.0,qWorld.z));
+      qSurface.rgb*=mix(1.0,.63,qWetBank);qSurface.a*=mix(1.0,.78,qWetBank);`:''}
       ${photo?'diffuseColor.rgb=mix(vec3(.86),diffuseColor.rgb,.3)*qSurface.rgb;':'diffuseColor.rgb*=qSurface.rgb;'}
       ${groundContact?'diffuseColor.rgb*=texture2D(qGroundContact,(qWorld.xz-qContactBounds.xy)/qContactBounds.zw).r;':''}
       ${kind==='leaf'?'diffuseColor.rgb*=mix(.64,1.07,smoothstep(-.35,.45,qHeight));':''}
@@ -112,7 +114,7 @@ export function surfaceMaterial(kind,color,options={}) {
       #endif`;
     else normals=`
       #ifdef USE_MAP
-      vec3 qDx=dFdx(-vViewPosition),qDy=dFdy(-vViewPosition);vec3 qRx=cross(qDy,normal),qRy=cross(normal,qDx);float qDet=dot(qDx,qRx);
+      vec3 qDx=dFdx(-vViewPosition),qDy=dFdy(-vViewPosition);vec3 qRx=cross(qDy,normal),qRy=cross(normal,qDx);float qDet=dot(qDx,qRx)*faceDirection;
       vec3 qGradient=sign(qDet)*(dFdx(qSurface.r)*qRx+dFdy(qSurface.r)*qRy);
       normal=normalize((abs(qDet)+.000001)*normal-qRelief*qGradient);
       #endif`;
@@ -125,9 +127,12 @@ export function surfaceMaterial(kind,color,options={}) {
       float qFresnel=.02+.98*pow(1.0-max(dot(qView,qWorldNormal),0.0),5.0);
       vec3 qReflection=qSky(reflect(-qView,qWorldNormal));
       outgoingLight=mix(outgoingLight,qReflection,clamp(qFresnel*.86+.09,.0,.9));
+      float qBank=1.0-smoothstep(8.7,10.5,abs(qWorld.x-(166.0+sin(qWorld.z*.017)*23.0)));
+      float qEnds=smoothstep(-205.0,-202.5,qWorld.z)*(1.0-smoothstep(217.5,220.0,qWorld.z));
+      diffuseColor.a*=qBank*qEnds;
       #include <opaque_fragment>`);
   };
-  material.customProgramCacheKey=()=>`q-surface-v23:${kind}:${finish}:${groundContact}:${!!wind}:${!!flow}:${material.userData.authoredSurface&&authoredTextures.has(kind)}:${material.userData.authoredSurface&&kind==='stone'&&authoredTextures.has('stoneNormal')}`;
+  material.customProgramCacheKey=()=>`q-surface-v24:${kind}:${finish}:${groundContact}:${!!wind}:${!!flow}:${material.userData.authoredSurface&&authoredTextures.has(kind)}:${material.userData.authoredSurface&&kind==='stone'&&authoredTextures.has('stoneNormal')}`;
   if(!unique&&!wind&&!flow)materials.set(key,material);return material;
 }
 
