@@ -1,3 +1,13 @@
+## 2026-09-17 00:42 UTC：プレイ反映完了・停止
+
+最新指定「プレイに反映して」を完了。保存済み19部品の灯具付き杖を固定NPCミラへ組み込み、同じ[所有者限定プレイ版](https://q-ash-pilgrim.juurooo.chatgpt.site)をversion25へ更新。正式private deployが `succeeded` を返した。配信sourceは `45f2598d06908faca154dfb9e90888fe5a06eb16`、tree `3c5c77c6d7cea045ef744f097cafa39aee05e743`。同一sourceの[必須CI35167450484](https://github.com/bachikoljunior-blip/Q/actions/runs/35167450484)成功。通常web/単体版/実SceneView更新順の限定検証済み。[配信原応答と証拠](evidence/mira-assembly-v65/play-reflection/PUBLICATION.json)。
+
+旧杖を除去し、右手への追従と接地を反映。頭/服/手靴の未受理候補は採用していない。指と革の微小な接触不整合、実描画/端末/PS4全体品質の未確認を残す。GitHub mainは既存PR39障害で `547676fdce8d8e97abed9f065aad0b6e24af2fd6` のまま、成果はPR59に保存。main反映とプレイ配信を混同しない。
+
+親の今回の限定実装・配信、既存Ultra担当の独立監査を終了。新しい制作・造形・画像生成へ進まず、Q automation再有効化0。他repo変更0。明示停止を維持し自律再開しない。下の配信待ちは経過記録。
+
+---
+
 ## 2026-09-17 最新指定：保存済み成果をプレイ版へ反映して終了
 
 ユーザー原文「プレイに反映して」。直前の制作停止を維持し、保存済みの杖をゲームへ組み込むための限定修正・必要検証・既存owner-only Site更新だけを行う。新しい全身/頭/服/手靴の制作とQ automation再開はしない。下記の「runtime差分0/再配信不要」は直前の停止時点の記録であり、今回の実装後には適用しない。

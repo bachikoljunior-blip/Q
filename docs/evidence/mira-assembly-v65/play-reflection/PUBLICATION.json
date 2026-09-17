@@ -1,0 +1,69 @@
+{
+  "dateUTC": "2026-09-17T00:42:55.531932+00:00",
+  "request": "プレイに反映して",
+  "result": "deployed-and-production-stopped",
+  "githubSource": "45f2598d06908faca154dfb9e90888fe5a06eb16",
+  "githubTree": "3c5c77c6d7cea045ef744f097cafa39aee05e743",
+  "pullRequest": "https://github.com/bachikoljunior-blip/Q/pull/59",
+  "ci": {
+    "workflow_runs": [
+      {
+        "conclusion": "success",
+        "id": 35167450484,
+        "jobs_url": "https://api.github.com/repos/bachikoljunior-blip/Q/actions/runs/35167450484/jobs",
+        "logs_url": "https://api.github.com/repos/bachikoljunior-blip/Q/actions/runs/35167450484/logs",
+        "name": "Validate game",
+        "run_number": 198,
+        "status": "completed",
+        "workflow_id": 357062956
+      }
+    ]
+  },
+  "siteVersion": {
+    "archive_storage": {
+      "archive_format": "tar",
+      "content_hash": "sha256:6e2fe3f5be9696eb2dcbae0b0e09e9b0482928946b07bd4ef14938da9ea4dddd",
+      "file_count": 35,
+      "sediment_file_id": "file_00000000cf308206bfc510f4b993195f",
+      "size_bytes": 14100480
+    },
+    "deployment_id": null,
+    "id": "appgprj_6aa6871ebd648191802ba2398d06115b~appgver_73611dce4124819198f26b9cdefe121c",
+    "project_id": "appgprj_6aa6871ebd648191802ba2398d06115b",
+    "screenshot_url": null,
+    "source": {
+      "commit_sha": "45f2598d06908faca154dfb9e90888fe5a06eb16"
+    },
+    "version_number": 25
+  },
+  "deployment": {
+    "env_set_revision": 0,
+    "failure_message": null,
+    "id": "appgdep_6aab3780d5fc8191b430f3de00c75cbd",
+    "project_id": "appgprj_6aa6871ebd648191802ba2398d06115b",
+    "provider_deployment_id": "site---6aa6871ebd648191802ba2398d06115b",
+    "screenshot_asset_pointer": null,
+    "status": "succeeded",
+    "title": "Q — 灰の巡礼",
+    "type": "publish",
+    "updated_at": "2026-09-17T00:42:55.531932+00:00",
+    "url": "https://q-ash-pilgrim.juurooo.chatgpt.site",
+    "version_id": "appgprj_6aa6871ebd648191802ba2398d06115b~appgver_73611dce4124819198f26b9cdefe121c"
+  },
+  "audience": "existing owner-only; enforced by successful native private deployment",
+  "main": {
+    "sha": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+    "reflected": false,
+    "reason": "PR39 old merge terminal remains unknown; no retry or bypass"
+  },
+  "stopped": {
+    "reviewer": "completed; no pending operations",
+    "broaderProduction": true,
+    "automationReenabled": false
+  },
+  "quality": {
+    "wholeCharacterComplete": false,
+    "ps4EquivalentVerified": false,
+    "actualRenderingVerified": false
+  }
+}
