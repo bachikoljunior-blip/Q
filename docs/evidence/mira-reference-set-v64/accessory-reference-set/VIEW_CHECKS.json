@@ -1,0 +1,154 @@
+{
+  "AHB-01": {
+    "status": "rework required",
+    "viewed": true,
+    "defects": [
+      "AH01/AH02 include complete finger-root tubes and side/thumb coverage; not the isolated open palm/back patches in the ledger",
+      "AH03 wraps too much of hand instead of one clearly bounded thenar surface"
+    ],
+    "preservedEvidence": "Original v1 retained; no 3D adoption",
+    "v2": {
+      "viewed": true,
+      "status": "conditional surface partitions selected",
+      "fixed": "AH01/AH02 finger tubes removed; all three are visibly open perimeter patches",
+      "remaining": "Precise AH01/AH03 overlap boundaries and four finger-port matching are not certified by these images; skin-patch edge rim is illustrative only"
+    }
+  },
+  "AHB-05": {
+    "status": "partial/rework required",
+    "viewed": true,
+    "defects": [
+      "AB01 already includes heel block and heel fasteners, duplicating separately planned AB02/AB11"
+    ],
+    "usable": [
+      "AB02 low block family and four flush seating points",
+      "AB11 thin head/front/reverse/thickness family"
+    ],
+    "preservedEvidence": "Original v1 retained; one targeted sole-only correction planned",
+    "v2": {
+      "viewed": true,
+      "status": "selected top/bottom foot outline, side/3Q heel-thickness unresolved",
+      "fixed": "separate fasteners absent and heel slab separation line reduced",
+      "remaining": "side still has a thickened heel step rather than unambiguous same-thickness sole; exact AB01/AB02 underside partition is not fixed by this view. One correction cap reached; no further regeneration."
+    }
+  },
+  "AHB-02": {
+    "status": "conditional surface-family reference",
+    "viewed": true,
+    "types": [
+      "AH04",
+      "AH05",
+      "AH09"
+    ],
+    "accepted": [
+      "three distinguishable single curved surfaces, reverse and side/oblique direction changes shown"
+    ],
+    "limits": [
+      "border thickness is illustrative, not a physical skin seam to model",
+      "AH09 first-web extent overlaps potential thenar region and requires code-native common boundary registration; not exact surface coverage proof"
+    ]
+  },
+  "AHB-03": {
+    "status": "rework required for AH07 only",
+    "viewed": true,
+    "usable": [
+      "AH06 open two-ended phalanx family with thumb-width variant",
+      "AH07 pad and closed distal silhouette"
+    ],
+    "defects": [
+      "AH07 dorsal view includes a nail plate although AH08 is separate; cannot silently duplicate nail geometry"
+    ],
+    "limits": [
+      "one loft type has variable width/length per digit; not a substitute for exact per-instance anatomical registration"
+    ],
+    "v2": {
+      "viewed": true,
+      "status": "selected distal silhouette; dorsal nail-seat interpretation remains ambiguous",
+      "fixed": "no white free edge or separate protruding ivory nail is clear; pad/side/open proximal end retained",
+      "remaining": "dorsal pink oval still resembles a nail surface; do not treat this as independently proved bare nail bed. Native AH08 seating/coverage remains unresolved before construction."
+    }
+  },
+  "AHB-04": {
+    "status": "conditional selected views",
+    "viewed": true,
+    "usable": [
+      "AH08 outer/side/oblique thin curved keratin shell",
+      "AH10 front/side/oblique open short wrist sleeve"
+    ],
+    "excluded": [
+      "AH10 reverse is an unmarked cutaway rather than a true outside reverse view",
+      "AH08 reverse top corners are more flared than the front and are not an exact border template"
+    ],
+    "limits": [
+      "use selected views for surface family only; shared perimeter and inner tube continuity from exact native contract, not mismatched generated reverse silhouette"
+    ]
+  },
+  "AHB-06": {
+    "status": "partial/rework for AB03 and AB05",
+    "viewed": true,
+    "usable": [
+      "AB04 toe surface/inside/side family"
+    ],
+    "defects": [
+      "AB03 and AB05 extend into a closed ankle rim, duplicating separate AB07 tube",
+      "Generated +X right label contradicts actor anatomical right; all image coordinate text is excluded"
+    ],
+    "limits": [
+      "AB04 extra rear seam and welt-like thickness are surface cues, not separately approved geometry"
+    ],
+    "v2": {
+      "viewed": true,
+      "status": "conditional AB05 and selected AB03 views; AB03 side inconsistency unresolved",
+      "fixed": [
+        "front/reverse/3Q AB03 show open perimeter",
+        "AB05 separates into open quarter panel and medial outline"
+      ],
+      "excluded": [
+        "AB03 side still implies a complete ankle opening unlike the open front/reverse patch",
+        "darkened sheet background obscures captions and is not material color acceptance"
+      ],
+      "remaining": "Use no side template from this sheet for AB03; one targeted correction limit reached."
+    }
+  },
+  "AHB-07": {
+    "status": "conditional shape-only reference",
+    "viewed": true,
+    "usable": [
+      "AB06 open curved heel-back surface",
+      "AB07 open shin tube with differentiated front/back seam",
+      "AB08 short open folded top ring"
+    ],
+    "excluded": [
+      "AB06 invented side rivets are not in canonical boot; do not instantiate them"
+    ],
+    "limits": [
+      "fold patterns and apparent circumference are not exact same-object measurements; shared rim remains authored"
+    ]
+  },
+  "AHB-08": {
+    "status": "partial/rework AB09 flat blank",
+    "viewed": true,
+    "usable": [
+      "AB10 top/underside/oblique closed welt foot outline",
+      "AB09 material and thin flexible strip family"
+    ],
+    "defects": [
+      "AB09 requested flat blank was returned as precurved S/spiral forms; cannot use as the promised flat-front/back view"
+    ],
+    "excluded": [
+      "AB10 straight side edge is a schematic edge, not a full corresponding side silhouette",
+      "AB10 added heel clasp/block must not become new hardware"
+    ],
+    "v2": {
+      "viewed": true,
+      "status": "selected flat-blank appearance reference",
+      "fixed": [
+        "one straight flat strip front/reverse/edge/oblique",
+        "no buckle, loops or extra paths"
+      ],
+      "limits": [
+        "exact length/width/thickness and path come from separate authored registration, not image ratios"
+      ]
+    }
+  }
+}

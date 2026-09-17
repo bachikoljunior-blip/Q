@@ -1,0 +1,16 @@
+{
+  "readAtUTC": "2026-09-17T00:02:46.892773+00:00",
+  "counterpartyFile": "/workspace/scratch/e72662e3b71f/Q-accessory-registration-v65/docs/evidence/mira-assembly-v65/accessory-registration/EXTERNAL_PORTS.json",
+  "counterpartySHA256": "e464904b47e32846241f39b9a29150656321767bdc6e136f47214416b36ba344",
+  "counterpartySchema": 1,
+  "counterpartyUnit": "mm",
+  "ownUnit": "metre",
+  "conversion": 0.001,
+  "checkedPortIds": [
+    "R-wrist",
+    "R-trousers-to-boots",
+    "L-wrist",
+    "L-trousers-to-boots"
+  ],
+  "result": "registered hand/boot overlap values agree; no weld, trianglecontact or posedclearance"
+}

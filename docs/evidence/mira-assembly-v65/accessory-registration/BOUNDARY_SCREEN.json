@@ -1,0 +1,10 @@
+{
+  "status": "PASS finite directed boundary self-intersection screen",
+  "loops": 90,
+  "sampledSegments": 13952,
+  "linearSubsegmentsPerCanonicalInterval": 4,
+  "intersectionToleranceMm": 1e-05,
+  "failures": [],
+  "elapsedSeconds": 0.3289144070004113,
+  "limits": "Piecewise linear screen of analytic/Hermite boundary curves only. No continuous global surface self-intersection or surface normal-orientation acceptance. Reversed hole/loft boundary winding is intentional; closed solid registrations are not asserted to be a single open patch."
+}

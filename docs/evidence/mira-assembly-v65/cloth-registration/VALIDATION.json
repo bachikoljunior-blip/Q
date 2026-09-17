@@ -1,0 +1,313 @@
+{
+  "scope": "author boundary algebra only; NOT surface interior validity, trianglecontact, posedclearance or wholeperson acceptance",
+  "counts": {
+    "types": 40,
+    "placements": 96,
+    "canonicalCurves": 269,
+    "curveSamples": 8877,
+    "sharedCurveCount": 148
+  },
+  "checks": {
+    "exact40types96placements": {
+      "pass": true,
+      "detail": null
+    },
+    "closed ordered patch perimeters": {
+      "pass": true,
+      "detail": []
+    },
+    "all canonical samples finite/unit frames/normalized valid boneweights": {
+      "pass": true,
+      "detail": []
+    },
+    "coincident knot weights shared": {
+      "pass": true,
+      "detail": []
+    },
+    "gusset-FR": {
+      "pass": true,
+      "detail": [
+        "TR01-R",
+        "TR03-C"
+      ]
+    },
+    "gusset-BR": {
+      "pass": true,
+      "detail": [
+        "TR02-R",
+        "TR03-C"
+      ]
+    },
+    "gusset-BL": {
+      "pass": true,
+      "detail": [
+        "TR02-L",
+        "TR03-C"
+      ]
+    },
+    "gusset-FL": {
+      "pass": true,
+      "detail": [
+        "TR01-L",
+        "TR03-C"
+      ]
+    },
+    "boot shared Rfront": {
+      "pass": true,
+      "detail": [
+        "TR01-R-boot",
+        "TR01-R-boot"
+      ]
+    },
+    "boot shared Rrear": {
+      "pass": true,
+      "detail": [
+        "TR02-R-boot",
+        "TR02-R-boot"
+      ]
+    },
+    "S05R190mm": {
+      "pass": true,
+      "detail": null
+    },
+    "S06R190mm": {
+      "pass": true,
+      "detail": null
+    },
+    "NECK-lower-front-R shared": {
+      "pass": true,
+      "detail": [
+        "T04-R",
+        "C01-R"
+      ]
+    },
+    "NECK-lower-rear-R shared": {
+      "pass": true,
+      "detail": [
+        "T04-R",
+        "C02-C"
+      ]
+    },
+    "boot shared Lfront": {
+      "pass": true,
+      "detail": [
+        "TR01-L-boot",
+        "TR01-L-boot"
+      ]
+    },
+    "boot shared Lrear": {
+      "pass": true,
+      "detail": [
+        "TR02-L-boot",
+        "TR02-L-boot"
+      ]
+    },
+    "S05L190mm": {
+      "pass": true,
+      "detail": null
+    },
+    "S06L190mm": {
+      "pass": true,
+      "detail": null
+    },
+    "NECK-lower-front-L shared": {
+      "pass": true,
+      "detail": [
+        "T04-L",
+        "C01-L"
+      ]
+    },
+    "NECK-lower-rear-L shared": {
+      "pass": true,
+      "detail": [
+        "T04-L",
+        "C02-C"
+      ]
+    },
+    "B01closed4segments": {
+      "pass": true,
+      "detail": {
+        "B01-front-R-endB": 2,
+        "B01-front-R-endA": 2,
+        "B01-front-L-endB": 2,
+        "B01-rear-L-endB": 2
+      }
+    },
+    "TR04closed4segments": {
+      "pass": true,
+      "detail": {
+        "TR04-front-R-endB": 2,
+        "TR04-front-R-endA": 2,
+        "TR04-front-L-endB": 2,
+        "TR04-rear-L-endB": 2
+      }
+    },
+    "smoothnode actual normal/tangent plane equality": {
+      "pass": true,
+      "detail": {
+        "nodeCount": 209,
+        "maxNormalDifferenceDegrees": 8.671583530747724e-05,
+        "maxTangentRank": 2,
+        "errors": []
+      }
+    },
+    "normal repair changescurve notnormalonly": {
+      "pass": true,
+      "detail": {
+        "rank3NodesBefore": 103,
+        "rankAbove2After": 0,
+        "maxHermiteDeviationFromPolylineM": 0.003043169966784458,
+        "maximumEndpointTangentChangeDegrees": 64.85466209940711
+      }
+    },
+    "crease/layer domains explicitly classified": {
+      "pass": true,
+      "detail": {
+        "count": 15
+      }
+    },
+    "W02-R canonicalprojection W02-R-edge0": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W02-R-edge1": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W02-R-edge2": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W02-R-edge3": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W02-R-edge4": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W01-0-R": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W01-1-R": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W01-2-R": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W03-0-R": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W03-1-R": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection W03-2-R": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R canonicalprojection P04-R-inner": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-R exactsample surfaceconstraints": {
+      "pass": true,
+      "detail": {
+        "samplesRead": 396,
+        "maxResidualM": 2.429667578240924e-12,
+        "uniqueConstraints": 391,
+        "rangeX": [
+          -0.2950000000000087,
+          -0.16998990975461115
+        ]
+      }
+    },
+    "W02-R supportweight count": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W02-L-edge0": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W02-L-edge1": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W02-L-edge2": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W02-L-edge3": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W02-L-edge4": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W01-0-L": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W01-1-L": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W01-2-L": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W03-0-L": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W03-1-L": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection W03-2-L": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L canonicalprojection P04-L-inner": {
+      "pass": true,
+      "detail": null
+    },
+    "W02-L exactsample surfaceconstraints": {
+      "pass": true,
+      "detail": {
+        "samplesRead": 396,
+        "maxResidualM": 2.429667578240924e-12,
+        "uniqueConstraints": 391,
+        "rangeX": [
+          0.16998990975461115,
+          0.2950000000000087
+        ]
+      }
+    },
+    "W02-L supportweight count": {
+      "pass": true,
+      "detail": null
+    },
+    "all type image byte identities": {
+      "pass": true,
+      "detail": null
+    },
+    "all patches fixed interior supports": {
+      "pass": true,
+      "detail": null
+    },
+    "no newmesh runtime or remote": {
+      "pass": true,
+      "detail": null
+    }
+  },
+  "passed": true,
+  "failed": [],
+  "seconds": 0.210186
+}

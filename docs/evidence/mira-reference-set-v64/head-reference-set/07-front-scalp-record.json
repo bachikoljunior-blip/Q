@@ -1,0 +1,25 @@
+{
+  "id": "07-front-scalp",
+  "initial": {
+    "start": "2026-09-16T14:34:23.037Z",
+    "returned": "2026-09-16T14:35:22.328Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-860fd5cc-1d48-45b6-9501-446c1dde9eb4.png",
+    "terminal": "success"
+  },
+  "observation": {
+    "adoption": "v2 conditional; v1 BACK locator rejected",
+    "findings": [
+      "One targeted correction removes S01 frontal band falsely shown on posterior head; v2 says front patch occluded from back.",
+      "S01 band and S02 crown are distinct curved open surfaces; shape and image scale not calibrated.",
+      "S02 profile/top and S01 top locator remain schematic with no common registered cut curves.",
+      "Hair hides actual scalp; no measured skull fit or watertight scalp coverage claim."
+    ],
+    "seen": true
+  },
+  "correction": {
+    "start": "2026-09-16T14:49:13.307Z",
+    "returned": "2026-09-16T14:50:04.186Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-9013fd87-bb34-436c-bf66-0f02f7e20b7e.png",
+    "terminal": "success"
+  }
+}

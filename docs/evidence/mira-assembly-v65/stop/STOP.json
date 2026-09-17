@@ -1,0 +1,101 @@
+{
+  "status": "USER_REQUESTED_STOP_PRESERVED_NOT_COMPLETE",
+  "instruction": "現在できたものを反映して停止して",
+  "recordedUTC": "2026-09-17T00:17:05.257244+00:00",
+  "instructionOverridesPriorContinue": true,
+  "newProductionAfterStop": false,
+  "integrator": "/root/ultra_q_recover_reference_assembly",
+  "formalChildStatus": "all five descendant agents completed according to official collaboration.list_agents after their stop receipts",
+  "children": [
+    {
+      "task": "head_registration_v65",
+      "savedCommit": "bc52c1fb12458d9ed6729eaa6525030957556716",
+      "disposition": "head numerical repair partial; not accepted",
+      "pendingToolIDs": []
+    },
+    {
+      "task": "accessory_registration_v65",
+      "savedCommit": "557d2d2513ce76b84570092a5a282736270d095e",
+      "disposition": "hand/boot numerical repair partial; not independently rechecked",
+      "pendingToolIDs": []
+    },
+    {
+      "task": "accessory_registration_v65:head-review",
+      "savedCommit": "19ff7e631031178726fdea26ee47db429e1359f3",
+      "disposition": "partial independent findings HREV-01..03; not accepted",
+      "pendingToolIDs": []
+    },
+    {
+      "task": "cloth_registration_v65",
+      "savedCommit": "ced283cecaa9fbabee52eec7ab940d6d2a2271d5",
+      "disposition": "fixed numerical candidate; six guide-zero failures; evaluator not implemented",
+      "pendingToolIDs": []
+    },
+    {
+      "task": "recover_reference_assets",
+      "savedCommit": "c837cec483979f97d69ef3a391958d7527e19ee7",
+      "disposition": "completed rejection evidence on initial accessory candidate",
+      "pendingToolIDs": []
+    },
+    {
+      "task": "cloth_registration_v65/cloth_image_check",
+      "savedCommit": "187fb8273c5aaa02cb9e0a96539ca05162e6d0b3",
+      "disposition": "whole-reference draft 120types287placements74PNGs; stopped unaccepted",
+      "pendingToolIDs": []
+    }
+  ],
+  "parentWork": {
+    "staffAdapterFinal": "be53e1e5775f09c3f20086d58fc0207bc8d23fc5",
+    "staffAdapterImplementation": "264debb52543aca973ee5cf5883d8472f35a6d45",
+    "samplingReviewFinal": "6d97bcaa0d1e3e7d3fa27d581d239c3c2552a8ad",
+    "externalPortsInitial": "80848d545eb5c8372797c5c766607e473be9aef1",
+    "newPartAssembler": "checkout/read only; no authored implementation; cancelled"
+  },
+  "acceptedScope": {
+    "staffAttachment": "standing CPU adapter only; no runtime import/grasp surface/animation/GL acceptance",
+    "sampleSelection": "sampled canonical curve helper after independent negative-case closure; no full-surface guarantee"
+  },
+  "unaccepted": [
+    "whole-reference draft final authority/check incomplete",
+    "head surface/neck repair and old hash/report mismatch explicitly preserved",
+    "accessory repair not independently rechecked",
+    "clothing guide interpolation rejects six parameters; full surface evaluator absent",
+    "new full-character mesh/animation/material/trianglecontact/device/perceptual quality incomplete"
+  ],
+  "runtimeComparison": {
+    "existingSiteVersion": 24,
+    "source": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+    "checkedTrackedPaths": [
+      "src",
+      "public",
+      "index.html",
+      "package.json",
+      "package-lock.json",
+      "vite.config.js"
+    ],
+    "changedPaths": [],
+    "sameRuntime": true,
+    "deploymentNeeded": false,
+    "deploymentPerformed": false
+  },
+  "git": {
+    "lastPreservedRemote": "d384cfc5d1ddb9fac215c9d8eab1fbce17c3edd1",
+    "lastRequiredCIRun": 35165094589,
+    "lastRequiredCI": "success",
+    "finalSaveTarget": "existing PR59 feat/mira-reference-set-v64-20260916; nonforce normal Git data save",
+    "finalSaveResult": "reported by integrator after exact-tree readback; this record is an input to that final saved tree",
+    "mainObserved": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+    "PR39": "open/unmerged; previous merge terminal unknown",
+    "mainReflection": "blocked; no retry, bypass, force, direct main push or new PR"
+  },
+  "automation": {
+    "source": "parent fresh official automations.peek receipt",
+    "QEnabled": false,
+    "configurationChanged": false
+  },
+  "previewActive": false,
+  "localPendingToolIDs": [],
+  "remoteKnownPendingMutationIDs": [],
+  "unknownPriorRemoteOperation": "PR39 old merge terminal remains unknown; distinct from current local pending tool count",
+  "resumePolicy": "Do not resume automatically. Await a new direct user instruction."
+}

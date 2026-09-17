@@ -1,0 +1,59 @@
+{
+  "sourceFiles": [
+    {
+      "path": "review/staff-batch-v64/staff-batch.mjs",
+      "bytes": 6452,
+      "sha256": "84bb4facea8ef49eae5ca67668cbb5608525842cbf20c8e47e0fc6ea7db493d2"
+    },
+    {
+      "path": "review/staff-batch-v64/inspect-batch.mjs",
+      "bytes": 3522,
+      "sha256": "9c7889ad9ba798ba2010016fa3e9ac0b9265620b8d958a9d5f80b7fd22cfc917"
+    },
+    {
+      "path": "scripts/export-mira-staff-batch-v64.mjs",
+      "bytes": 3726,
+      "sha256": "bc7ba1cfdda7c9bd03911a8349736f92a761d9c24a4a755cc1dde35330b66135"
+    },
+    {
+      "path": "tests/mira-staff-batch-v64.test.mjs",
+      "bytes": 5058,
+      "sha256": "017523a4605c7713757150b74c3d13e238c391f46d7a3fb2ce39948525282a6b"
+    }
+  ],
+  "memory": {
+    "addedGeometryBytes": 32528,
+    "coexistingSourceAndBatchGeometryBytes": 614112,
+    "totalAllocatedTemporaryTransformedGeometryBytes": 323320,
+    "largestTemporaryBucketGeometryBytes": 234976,
+    "note": "Typed geometry/index byte counts only. Temporary clone sums describe allocations, not simultaneous peak RSS, GC, GPU, object or material size."
+  },
+  "source": {
+    "meshes": 19,
+    "materials": 5,
+    "uniqueGeometries": 17,
+    "triangles": 7512,
+    "uniqueBufferBytes": 290792,
+    "perMeshBufferBytes": 323320
+  },
+  "batch": {
+    "meshes": 4,
+    "materials": 4,
+    "uniqueGeometries": 4,
+    "triangles": 7512,
+    "uniqueBufferBytes": 323320,
+    "perMeshBufferBytes": 323320
+  },
+  "positionMm": 0.000059101730620625403,
+  "normalError": 3.534270402482708e-8,
+  "otherMismatch": 0,
+  "indexMismatch": 0,
+  "materialMismatch": 0,
+  "timing": {
+    "startedUTC": "2026-09-16T14:18:50.333Z",
+    "sourceConstructionMs": 88.19717200000014,
+    "batchConstructionMs": 21.12496599999986,
+    "cornerAuditMs": 29.14681900000005,
+    "finishedUTC": "2026-09-16T14:18:50.472Z"
+  }
+}

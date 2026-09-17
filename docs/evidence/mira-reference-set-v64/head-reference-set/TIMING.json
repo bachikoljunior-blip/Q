@@ -1,0 +1,146 @@
+{
+  "planningStarted": "2026-09-16T14:21:16.525Z",
+  "checkpoint": "2026-09-16T14:55:44.727388+00:00",
+  "elapsedWallSeconds": 2068.202388,
+  "requestToReturnTotalSeconds": 1013.3,
+  "planningToFirstCallSeconds": 205.199,
+  "calls": [
+    {
+      "sheet": "01-face-transitions",
+      "kind": "initial",
+      "request": "2026-09-16T14:24:41.724Z",
+      "return": "2026-09-16T14:25:40.783Z",
+      "requestToReturnSeconds": 59.059
+    },
+    {
+      "sheet": "02-nose",
+      "kind": "initial",
+      "request": "2026-09-16T14:26:18.531Z",
+      "return": "2026-09-16T14:27:13.582Z",
+      "requestToReturnSeconds": 55.051
+    },
+    {
+      "sheet": "02-nose",
+      "kind": "correction",
+      "request": "2026-09-16T14:47:59.145Z",
+      "return": "2026-09-16T14:48:46.491Z",
+      "requestToReturnSeconds": 47.346
+    },
+    {
+      "sheet": "03-central-mouth",
+      "kind": "initial",
+      "request": "2026-09-16T14:27:37.318Z",
+      "return": "2026-09-16T14:28:30.698Z",
+      "requestToReturnSeconds": 53.38
+    },
+    {
+      "sheet": "04-corners",
+      "kind": "initial",
+      "request": "2026-09-16T14:29:05.274Z",
+      "return": "2026-09-16T14:29:53.988Z",
+      "requestToReturnSeconds": 48.714
+    },
+    {
+      "sheet": "05-eye-and-brow",
+      "kind": "initial",
+      "request": "2026-09-16T14:30:31.162Z",
+      "return": "2026-09-16T14:31:25.560Z",
+      "requestToReturnSeconds": 54.398
+    },
+    {
+      "sheet": "05-eye-and-brow",
+      "kind": "correction",
+      "request": "2026-09-16T14:31:50.876Z",
+      "return": "2026-09-16T14:32:42.963Z",
+      "requestToReturnSeconds": 52.087
+    },
+    {
+      "sheet": "06-eyelids",
+      "kind": "initial",
+      "request": "2026-09-16T14:33:11.079Z",
+      "return": "2026-09-16T14:33:59.759Z",
+      "requestToReturnSeconds": 48.68
+    },
+    {
+      "sheet": "07-front-scalp",
+      "kind": "initial",
+      "request": "2026-09-16T14:34:23.037Z",
+      "return": "2026-09-16T14:35:22.328Z",
+      "requestToReturnSeconds": 59.291
+    },
+    {
+      "sheet": "07-front-scalp",
+      "kind": "correction",
+      "request": "2026-09-16T14:49:13.307Z",
+      "return": "2026-09-16T14:50:04.186Z",
+      "requestToReturnSeconds": 50.879
+    },
+    {
+      "sheet": "08-side-rear-scalp",
+      "kind": "initial",
+      "request": "2026-09-16T14:35:56.286Z",
+      "return": "2026-09-16T14:36:50.272Z",
+      "requestToReturnSeconds": 53.986
+    },
+    {
+      "sheet": "08-side-rear-scalp",
+      "kind": "correction",
+      "request": "2026-09-16T14:50:31.926Z",
+      "return": "2026-09-16T14:51:22.453Z",
+      "requestToReturnSeconds": 50.527
+    },
+    {
+      "sheet": "09-ear-outer",
+      "kind": "initial",
+      "request": "2026-09-16T14:37:19.170Z",
+      "return": "2026-09-16T14:38:08.635Z",
+      "requestToReturnSeconds": 49.465
+    },
+    {
+      "sheet": "10-ear-inner",
+      "kind": "initial",
+      "request": "2026-09-16T14:38:45.612Z",
+      "return": "2026-09-16T14:39:39.358Z",
+      "requestToReturnSeconds": 53.746
+    },
+    {
+      "sheet": "11-neck",
+      "kind": "initial",
+      "request": "2026-09-16T14:40:08.124Z",
+      "return": "2026-09-16T14:41:13.718Z",
+      "requestToReturnSeconds": 65.594
+    },
+    {
+      "sheet": "11-neck",
+      "kind": "correction",
+      "request": "2026-09-16T14:41:41.700Z",
+      "return": "2026-09-16T14:42:39.519Z",
+      "requestToReturnSeconds": 57.819
+    },
+    {
+      "sheet": "12-hair-front",
+      "kind": "initial",
+      "request": "2026-09-16T14:43:37.026Z",
+      "return": "2026-09-16T14:44:30.463Z",
+      "requestToReturnSeconds": 53.437
+    },
+    {
+      "sheet": "12-hair-front",
+      "kind": "correction",
+      "request": "2026-09-16T14:45:01.573Z",
+      "return": "2026-09-16T14:45:49.045Z",
+      "requestToReturnSeconds": 47.472
+    },
+    {
+      "sheet": "13-hair-back",
+      "kind": "initial",
+      "request": "2026-09-16T14:46:20.518Z",
+      "return": "2026-09-16T14:47:12.887Z",
+      "requestToReturnSeconds": 52.369
+    }
+  ],
+  "callWindowMeaning": "includes prompt write/tool coordination, not pure model GPU latency",
+  "otherWallMeaning": "planning, inspection, corrections decision, communications and records; not exclusive inspection",
+  "geometryStarted": false,
+  "activeCalls": 0
+}

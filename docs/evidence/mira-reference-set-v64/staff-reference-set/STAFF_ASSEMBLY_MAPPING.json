@@ -1,0 +1,865 @@
+{
+  "sourceCommit": "b21985680bb43a3be5a2c4d2244e6b6d24b5af69",
+  "coordinateFrame": "staff foot underside origin; +Y up, +Z character front; placement in actual hand undefined",
+  "newGeometryProduced": false,
+  "instances": [
+    {
+      "id": "S01",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -20.999999716877937,
+          4.000000189989805,
+          -20.999999716877937
+        ],
+        "max": [
+          20.999999716877937,
+          1417.9999828338623,
+          20.999999716877937
+        ]
+      },
+      "nativeVertices": 111,
+      "triangles": 96,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S02",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -21.99999988079071,
+          4.000000189989805,
+          -21.99999988079071
+        ],
+        "max": [
+          21.99999988079071,
+          54.999999701976776,
+          21.99999988079071
+        ]
+      },
+      "nativeVertices": 498,
+      "triangles": 320,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S03",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -21.99999988079071,
+          0.0,
+          -21.99999988079071
+        ],
+        "max": [
+          21.99999988079071,
+          4.000000189989805,
+          21.99999988079071
+        ]
+      },
+      "nativeVertices": 154,
+      "triangles": 128,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S04",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -24.000000208616257,
+          1029.9999713897705,
+          -24.000000208616257
+        ],
+        "max": [
+          24.000000208616257,
+          1240.0000095367432,
+          24.000000208616257
+        ]
+      },
+      "nativeVertices": 168,
+      "triangles": 128,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S06",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -26.000000536441803,
+          1384.9999904632568,
+          -26.000000536441803
+        ],
+        "max": [
+          26.000000536441803,
+          1422.9999780654907,
+          26.000000536441803
+        ]
+      },
+      "nativeVertices": 541,
+      "triangles": 384,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S15",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -11.988578364253044,
+          1674.0000247955322,
+          -11.988578364253044
+        ],
+        "max": [
+          11.988578364253044,
+          1700.0000476837158,
+          11.988578364253044
+        ]
+      },
+      "nativeVertices": 684,
+      "triangles": 416,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S17",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -27.499999850988388,
+          1024.999976158142,
+          -27.499999850988388
+        ],
+        "max": [
+          27.499999850988388,
+          1034.999966621399,
+          27.499999850988388
+        ]
+      },
+      "nativeVertices": 288,
+      "triangles": 256,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S18",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -27.499999850988388,
+          1235.0000143051147,
+          -27.499999850988388
+        ],
+        "max": [
+          27.499999850988388,
+          1245.0000047683716,
+          27.499999850988388
+        ]
+      },
+      "nativeVertices": 288,
+      "triangles": 256,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S05-A",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -25.499459356069565,
+          1028.8137197494507,
+          -25.499459356069565
+        ],
+        "max": [
+          25.49370750784874,
+          1241.186261177063,
+          25.49370750784874
+        ]
+      },
+      "nativeVertices": 658,
+      "triangles": 644,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S05-B",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -26.87278389930725,
+          1028.8137197494507,
+          -26.87278389930725
+        ],
+        "max": [
+          26.82582102715969,
+          1241.186261177063,
+          26.668628677725792
+        ]
+      },
+      "nativeVertices": 656,
+      "triangles": 644,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S09",
+      "nativeMatrixWorldColumnMajor": [
+        -1,
+        0,
+        -1.2246467991473532e-16,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.2246467991473532e-16,
+        0,
+        -1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -73.49999994039536,
+          1447.0000026226044,
+          -4.000000189989808
+        ],
+        "max": [
+          -15.250000171363354,
+          1661.9999987483025,
+          4.0000001899898034
+        ]
+      },
+      "nativeVertices": 458,
+      "triangles": 364,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S10",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          15.250000171363354,
+          1447.0000026226044,
+          -4.000000189989805
+        ],
+        "max": [
+          73.49999994039536,
+          1661.9999987483025,
+          4.000000189989805
+        ]
+      },
+      "nativeVertices": 458,
+      "triangles": 364,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S11",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -4.000000189989805,
+          1447.0000026226044,
+          15.250000171363354
+        ],
+        "max": [
+          4.000000189989805,
+          1661.9999987483025,
+          56.0000017285347
+        ]
+      },
+      "nativeVertices": 422,
+      "triangles": 364,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S12",
+      "nativeMatrixWorldColumnMajor": [
+        -1,
+        0,
+        -1.2246467991473532e-16,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.2246467991473532e-16,
+        0,
+        -1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -4.0000001899898034,
+          1447.0000026226044,
+          -56.0000017285347
+        ],
+        "max": [
+          4.000000189989808,
+          1661.9999987483025,
+          -15.250000171363354
+        ]
+      },
+      "nativeVertices": 422,
+      "triangles": 364,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S13",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.665,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -19.999999552965164,
+          1661.999999973923,
+          -19.999999552965164
+        ],
+        "max": [
+          19.999999552965164,
+          1668.000000026077,
+          19.999999552965164
+        ]
+      },
+      "nativeVertices": 192,
+      "triangles": 384,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S07",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -17.999999225139618,
+          1422.9999986886978,
+          -17.999999225139618
+        ],
+        "max": [
+          17.999999225139618,
+          1448.3922255635262,
+          17.999999225139618
+        ]
+      },
+      "nativeVertices": 838,
+      "triangles": 672,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S14",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -17.999999225139618,
+          1661.9999987483025,
+          -17.999999225139618
+        ],
+        "max": [
+          17.999999225139618,
+          1678.0000013709068,
+          17.999999225139618
+        ]
+      },
+      "nativeVertices": 933,
+      "triangles": 544,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S16",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -52.000001072883606,
+          1447.0000026226044,
+          -39.000000804662704
+        ],
+        "max": [
+          52.000001072883606,
+          1661.9999987483025,
+          39.000000804662704
+        ]
+      },
+      "nativeVertices": 534,
+      "triangles": 800,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    },
+    {
+      "id": "S08",
+      "nativeMatrixWorldColumnMajor": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1.2246467991473532e-16,
+        0,
+        0,
+        -1.2246467991473532e-16,
+        -1,
+        0,
+        0,
+        1.444,
+        0,
+        1
+      ],
+      "boundsMm": {
+        "min": [
+          -19.999999552965164,
+          1440.999999973923,
+          -19.999999552965164
+        ],
+        "max": [
+          19.999999552965164,
+          1447.000000026077,
+          19.999999552965164
+        ]
+      },
+      "nativeVertices": 192,
+      "triangles": 384,
+      "source": "docs/evidence/mira-staff-v63/assembly/parts.json",
+      "registrationStatus": "existing candidate geometry, authored exact values; not measurements from images"
+    }
+  ],
+  "interfaces": [
+    {
+      "a": "S03",
+      "b": "S01",
+      "kind": "wood bottom support",
+      "nominalYmm": 4
+    },
+    {
+      "a": "S03",
+      "b": "S02",
+      "kind": "foot sleeve rim",
+      "nominalYmm": 4
+    },
+    {
+      "a": "S01",
+      "b": "S04",
+      "kind": "near-coincident fitted wood/leather sides",
+      "nominalYmm": null
+    },
+    {
+      "a": "S04",
+      "b": "S05-A",
+      "kind": "inner wrap over sleeve",
+      "nominalYmm": null
+    },
+    {
+      "a": "S04",
+      "b": "S05-B",
+      "kind": "inner wrap over sleeve",
+      "nominalYmm": null
+    },
+    {
+      "a": "S17",
+      "b": "S05-A",
+      "kind": "concealed lower retention",
+      "nominalYmm": null
+    },
+    {
+      "a": "S17",
+      "b": "S05-B",
+      "kind": "concealed lower retention",
+      "nominalYmm": null
+    },
+    {
+      "a": "S18",
+      "b": "S05-A",
+      "kind": "concealed upper retention",
+      "nominalYmm": null
+    },
+    {
+      "a": "S18",
+      "b": "S05-B",
+      "kind": "concealed upper retention",
+      "nominalYmm": null
+    },
+    {
+      "a": "S01",
+      "b": "S06",
+      "kind": "wood top support",
+      "nominalYmm": 1418
+    },
+    {
+      "a": "S06",
+      "b": "S07",
+      "kind": "cup lower annulus",
+      "nominalYmm": 1423
+    },
+    {
+      "a": "S07",
+      "b": "S08",
+      "kind": "lower cage ring",
+      "nominalYmm": 1441
+    },
+    {
+      "a": "S08",
+      "b": "S09",
+      "kind": "lower pad",
+      "nominalYmm": 1447
+    },
+    {
+      "a": "S09",
+      "b": "S13",
+      "kind": "upper pad",
+      "nominalYmm": 1662
+    },
+    {
+      "a": "S08",
+      "b": "S10",
+      "kind": "lower pad",
+      "nominalYmm": 1447
+    },
+    {
+      "a": "S10",
+      "b": "S13",
+      "kind": "upper pad",
+      "nominalYmm": 1662
+    },
+    {
+      "a": "S08",
+      "b": "S11",
+      "kind": "lower pad",
+      "nominalYmm": 1447
+    },
+    {
+      "a": "S11",
+      "b": "S13",
+      "kind": "upper pad",
+      "nominalYmm": 1662
+    },
+    {
+      "a": "S08",
+      "b": "S12",
+      "kind": "lower pad",
+      "nominalYmm": 1447
+    },
+    {
+      "a": "S12",
+      "b": "S13",
+      "kind": "upper pad",
+      "nominalYmm": 1662
+    },
+    {
+      "a": "S13",
+      "b": "S14",
+      "kind": "upper ring",
+      "nominalYmm": 1668
+    },
+    {
+      "a": "S07",
+      "b": "S16",
+      "kind": "shared curved lower cradle",
+      "nominalYmm": null
+    },
+    {
+      "a": "S16",
+      "b": "S14",
+      "kind": "closed glass top",
+      "nominalYmm": 1662
+    },
+    {
+      "a": "S14",
+      "b": "S15",
+      "kind": "finial stem support",
+      "nominalYmm": 1674
+    }
+  ],
+  "limits": [
+    "Recorded overlaps are not all exact welded seams",
+    "No fastener or load-bearing simulation",
+    "Exact hand contact/pose transform remains undefined",
+    "Generated views have stated exclusions and calibration limits"
+  ],
+  "nativeMatrixWorldTranslationUnits": "metres; rotation/scale components are dimensionless; Three.js source values retained unchanged",
+  "boundsMmUnits": "millimetres",
+  "interfaceNominalYmmUnits": "millimetres"
+}

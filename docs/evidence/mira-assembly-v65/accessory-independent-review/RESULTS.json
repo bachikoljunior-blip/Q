@@ -1,0 +1,1390 @@
+{
+  "fixedSourceCommit": "ab94ce91bbb6be7a727fa910618d68c18984b239",
+  "status": "REJECT finite numerical assembly registration: three reproducible defects",
+  "authorVerifierUsedForVerdict": false,
+  "authorSourceImportedOrExecuted": false,
+  "counts": {
+    "types": 21,
+    "placements": 90,
+    "curves": 164,
+    "samples": 3156,
+    "junctions": 114,
+    "nativeBones": 41,
+    "validWeightRecords": 4070
+  },
+  "findings": [
+    {
+      "id": "A01",
+      "severity": "blocking numerical registration",
+      "issue": "Directed patch boundary is not a closed chain",
+      "affectedPlacementCount": 26,
+      "counterexample": {
+        "instanceID": "R-palm",
+        "vertices": [
+          {
+            "positionMm": [
+              22.627417,
+              -15,
+              -16.970563
+            ],
+            "incoming": [],
+            "outgoing": [
+              "R.wrist.palm",
+              "R.hand.palm-thenar"
+            ]
+          },
+          {
+            "positionMm": [
+              40.424621,
+              -87.0,
+              5.221825
+            ],
+            "incoming": [
+              "R.MCP.index.palmar",
+              "R.first-web.palmar"
+            ],
+            "outgoing": []
+          }
+        ]
+      },
+      "reason": "Degree two after ignoring direction is insufficient; a face boundary cannot have two outgoing and zero incoming arcs at the same ordinary boundary vertex.",
+      "allFailures": [
+        {
+          "instanceID": "R-palm",
+          "vertices": [
+            {
+              "positionMm": [
+                22.627417,
+                -15,
+                -16.970563
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.wrist.palm",
+                "R.hand.palm-thenar"
+              ]
+            },
+            {
+              "positionMm": [
+                40.424621,
+                -87.0,
+                5.221825
+              ],
+              "incoming": [
+                "R.MCP.index.palmar",
+                "R.first-web.palmar"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "R-back",
+          "vertices": [
+            {
+              "positionMm": [
+                -22.627417,
+                -15,
+                16.970563
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.wrist.back",
+                "R.hand.back-ulnar"
+              ]
+            },
+            {
+              "positionMm": [
+                25.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "R.MCP.index.dorsal",
+                "R.web.index-middle.dorsal"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                18.424621,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.MCP.middle.dorsal",
+                "R.web.index-middle.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                3.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "R.MCP.middle.dorsal",
+                "R.web.middle-ring.dorsal"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                -3.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.MCP.ring.dorsal",
+                "R.web.middle-ring.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                -18.424621,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "R.MCP.ring.dorsal",
+                "R.web.ring-little.dorsal"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                -26.636039,
+                -87.0,
+                19.717514
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.MCP.little.dorsal",
+                "R.web.ring-little.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                -39.363961,
+                -87.0,
+                19.717514
+              ],
+              "incoming": [
+                "R.MCP.little.dorsal",
+                "R.hand.back-ulnar"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "R-thenar",
+          "vertices": [
+            {
+              "positionMm": [
+                22.627417,
+                -15,
+                -16.970563
+              ],
+              "incoming": [
+                "R.wrist.thenar",
+                "R.hand.palm-thenar"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                36.245005,
+                -42.234876,
+                5.778393
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.MCP.thumb.palmar",
+                "R.hand.palm-thenar"
+              ]
+            }
+          ]
+        },
+        {
+          "instanceID": "R-ulnar",
+          "vertices": [
+            {
+              "positionMm": [
+                -22.627417,
+                -15,
+                16.970563
+              ],
+              "incoming": [
+                "R.wrist.ulnar",
+                "R.hand.back-ulnar"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                -39.363961,
+                -87.0,
+                19.717514
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.MCP.little.ulnar",
+                "R.hand.back-ulnar"
+              ]
+            }
+          ]
+        },
+        {
+          "instanceID": "R-first-web",
+          "vertices": [
+            {
+              "positionMm": [
+                40.424621,
+                -87.0,
+                5.221825
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.MCP.index.radial",
+                "R.first-web.palmar"
+              ]
+            },
+            {
+              "positionMm": [
+                36.245005,
+                -42.234876,
+                5.778393
+              ],
+              "incoming": [
+                "R.MCP.thumb.ulnar",
+                "R.first-web.palmar"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "R-web-index-middle",
+          "vertices": [
+            {
+              "positionMm": [
+                25.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.MCP.index.ulnar",
+                "R.web.index-middle.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                18.424621,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "R.MCP.middle.radial",
+                "R.web.index-middle.dorsal"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "R-web-middle-ring",
+          "vertices": [
+            {
+              "positionMm": [
+                3.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.MCP.middle.ulnar",
+                "R.web.middle-ring.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                -3.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "R.MCP.ring.radial",
+                "R.web.middle-ring.dorsal"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "R-web-ring-little",
+          "vertices": [
+            {
+              "positionMm": [
+                -18.424621,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.MCP.ring.ulnar",
+                "R.web.ring-little.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                -26.636039,
+                -87.0,
+                19.717514
+              ],
+              "incoming": [
+                "R.MCP.little.radial",
+                "R.web.ring-little.dorsal"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "L-palm",
+          "vertices": [
+            {
+              "positionMm": [
+                -22.627417,
+                -15,
+                -16.970563
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.wrist.palm",
+                "L.hand.palm-thenar"
+              ]
+            },
+            {
+              "positionMm": [
+                -40.424621,
+                -87.0,
+                5.221825
+              ],
+              "incoming": [
+                "L.MCP.index.palmar",
+                "L.first-web.palmar"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "L-back",
+          "vertices": [
+            {
+              "positionMm": [
+                22.627417,
+                -15,
+                16.970563
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.wrist.back",
+                "L.hand.back-ulnar"
+              ]
+            },
+            {
+              "positionMm": [
+                -25.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "L.MCP.index.dorsal",
+                "L.web.index-middle.dorsal"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                -18.424621,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.MCP.middle.dorsal",
+                "L.web.index-middle.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                -3.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "L.MCP.middle.dorsal",
+                "L.web.middle-ring.dorsal"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                3.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.MCP.ring.dorsal",
+                "L.web.middle-ring.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                18.424621,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "L.MCP.ring.dorsal",
+                "L.web.ring-little.dorsal"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                26.636039,
+                -87.0,
+                19.717514
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.MCP.little.dorsal",
+                "L.web.ring-little.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                39.363961,
+                -87.0,
+                19.717514
+              ],
+              "incoming": [
+                "L.MCP.little.dorsal",
+                "L.hand.back-ulnar"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "L-thenar",
+          "vertices": [
+            {
+              "positionMm": [
+                -22.627417,
+                -15,
+                -16.970563
+              ],
+              "incoming": [
+                "L.wrist.thenar",
+                "L.hand.palm-thenar"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                -36.245005,
+                -42.234876,
+                5.778393
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.MCP.thumb.palmar",
+                "L.hand.palm-thenar"
+              ]
+            }
+          ]
+        },
+        {
+          "instanceID": "L-ulnar",
+          "vertices": [
+            {
+              "positionMm": [
+                22.627417,
+                -15,
+                16.970563
+              ],
+              "incoming": [
+                "L.wrist.ulnar",
+                "L.hand.back-ulnar"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                39.363961,
+                -87.0,
+                19.717514
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.MCP.little.ulnar",
+                "L.hand.back-ulnar"
+              ]
+            }
+          ]
+        },
+        {
+          "instanceID": "L-first-web",
+          "vertices": [
+            {
+              "positionMm": [
+                -40.424621,
+                -87.0,
+                5.221825
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.MCP.index.radial",
+                "L.first-web.palmar"
+              ]
+            },
+            {
+              "positionMm": [
+                -36.245005,
+                -42.234876,
+                5.778393
+              ],
+              "incoming": [
+                "L.MCP.thumb.ulnar",
+                "L.first-web.palmar"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "L-web-index-middle",
+          "vertices": [
+            {
+              "positionMm": [
+                -25.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.MCP.index.ulnar",
+                "L.web.index-middle.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                -18.424621,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "L.MCP.middle.radial",
+                "L.web.index-middle.dorsal"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "L-web-middle-ring",
+          "vertices": [
+            {
+              "positionMm": [
+                -3.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.MCP.middle.ulnar",
+                "L.web.middle-ring.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                3.575379,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [
+                "L.MCP.ring.radial",
+                "L.web.middle-ring.dorsal"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "L-web-ring-little",
+          "vertices": [
+            {
+              "positionMm": [
+                18.424621,
+                -87.0,
+                20.778175
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.MCP.ring.ulnar",
+                "L.web.ring-little.dorsal"
+              ]
+            },
+            {
+              "positionMm": [
+                26.636039,
+                -87.0,
+                19.717514
+              ],
+              "incoming": [
+                "L.MCP.little.radial",
+                "L.web.ring-little.dorsal"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "R-boot-vamp",
+          "vertices": [
+            {
+              "positionMm": [
+                33.941125,
+                40,
+                41.012193
+              ],
+              "incoming": [
+                "R.boot.ankle-vamp",
+                "R.boot.vamp-inner"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                -70.168849,
+                -100,
+                121.5
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.boot.toe-vamp",
+                "R.boot.vamp-outer"
+              ]
+            }
+          ]
+        },
+        {
+          "instanceID": "R-boot-toe",
+          "vertices": [
+            {
+              "positionMm": [
+                70.168849,
+                -100,
+                121.5
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.boot.welt-toe",
+                "R.boot.toe-vamp"
+              ]
+            },
+            {
+              "positionMm": [
+                -70.168849,
+                -100,
+                121.5
+              ],
+              "incoming": [
+                "R.boot.welt-toe",
+                "R.boot.toe-vamp"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "R-boot-heel-back",
+          "vertices": [
+            {
+              "positionMm": [
+                -58.447228,
+                -88,
+                -59.544355
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.boot.welt-heel-back",
+                "R.boot.heel-outer"
+              ]
+            },
+            {
+              "positionMm": [
+                -33.941125,
+                40,
+                -41.012193
+              ],
+              "incoming": [
+                "R.boot.ankle-heel-back",
+                "R.boot.heel-outer"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "R-boot-quarter-inner",
+          "vertices": [
+            {
+              "positionMm": [
+                70.168849,
+                -100,
+                121.5
+              ],
+              "incoming": [
+                "R.boot.welt-quarter-inner",
+                "R.boot.vamp-inner"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                33.941125,
+                40,
+                41.012193
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.boot.ankle-quarter-inner",
+                "R.boot.vamp-inner"
+              ]
+            }
+          ]
+        },
+        {
+          "instanceID": "R-boot-quarter-outer",
+          "vertices": [
+            {
+              "positionMm": [
+                -58.447228,
+                -88,
+                -59.544355
+              ],
+              "incoming": [
+                "R.boot.welt-quarter-outer",
+                "R.boot.heel-outer"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                -33.941125,
+                40,
+                -41.012193
+              ],
+              "incoming": [],
+              "outgoing": [
+                "R.boot.ankle-quarter-outer",
+                "R.boot.heel-outer"
+              ]
+            }
+          ]
+        },
+        {
+          "instanceID": "L-boot-vamp",
+          "vertices": [
+            {
+              "positionMm": [
+                -33.941125,
+                40,
+                41.012193
+              ],
+              "incoming": [
+                "L.boot.ankle-vamp",
+                "L.boot.vamp-inner"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                70.168849,
+                -100,
+                121.5
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.boot.toe-vamp",
+                "L.boot.vamp-outer"
+              ]
+            }
+          ]
+        },
+        {
+          "instanceID": "L-boot-toe",
+          "vertices": [
+            {
+              "positionMm": [
+                -70.168849,
+                -100,
+                121.5
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.boot.welt-toe",
+                "L.boot.toe-vamp"
+              ]
+            },
+            {
+              "positionMm": [
+                70.168849,
+                -100,
+                121.5
+              ],
+              "incoming": [
+                "L.boot.welt-toe",
+                "L.boot.toe-vamp"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "L-boot-heel-back",
+          "vertices": [
+            {
+              "positionMm": [
+                58.447228,
+                -88,
+                -59.544355
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.boot.welt-heel-back",
+                "L.boot.heel-outer"
+              ]
+            },
+            {
+              "positionMm": [
+                33.941125,
+                40,
+                -41.012193
+              ],
+              "incoming": [
+                "L.boot.ankle-heel-back",
+                "L.boot.heel-outer"
+              ],
+              "outgoing": []
+            }
+          ]
+        },
+        {
+          "instanceID": "L-boot-quarter-inner",
+          "vertices": [
+            {
+              "positionMm": [
+                -70.168849,
+                -100,
+                121.5
+              ],
+              "incoming": [
+                "L.boot.welt-quarter-inner",
+                "L.boot.vamp-inner"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                -33.941125,
+                40,
+                41.012193
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.boot.ankle-quarter-inner",
+                "L.boot.vamp-inner"
+              ]
+            }
+          ]
+        },
+        {
+          "instanceID": "L-boot-quarter-outer",
+          "vertices": [
+            {
+              "positionMm": [
+                58.447228,
+                -88,
+                -59.544355
+              ],
+              "incoming": [
+                "L.boot.welt-quarter-outer",
+                "L.boot.heel-outer"
+              ],
+              "outgoing": []
+            },
+            {
+              "positionMm": [
+                33.941125,
+                40,
+                -41.012193
+              ],
+              "incoming": [],
+              "outgoing": [
+                "L.boot.ankle-quarter-outer",
+                "L.boot.heel-outer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "severity": "blocking differential registration",
+      "issue": "Linear interpolated normal is not orthogonal to actual Hermite boundary derivative between knots",
+      "counterexample": {
+        "curveID": "R.MCP.thumb.palmar",
+        "segment": 7,
+        "segmentLocalT": 0.5,
+        "positionMm": [
+          36.99462744058162,
+          -41.844924883819985,
+          4.9614993281359245
+        ],
+        "actualHermiteDerivativeMm": [
+          -1.3411621263441968,
+          -0.4827300624089352,
+          2.019132966284842
+        ],
+        "interpolatedNormal": [
+          -0.3094867332182247,
+          -0.5201015399250882,
+          -0.7960605191374983
+        ],
+        "normalTangentAbsDot": 0.38081573607969627,
+        "angleFromPerpendicularDegrees": 22.384220380140032,
+        "a": {
+          "sample": 7,
+          "u": 0.875,
+          "positionMm": [
+            37.6926344624,
+            -41.5710101932,
+            3.9931896814
+          ],
+          "normal": [
+            -0.4547768744,
+            -0.5451060402,
+            -0.7042992258
+          ],
+          "tangent": [
+            -0.6533968234,
+            -0.333158745,
+            0.6797630777
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 2.3834418372
+        },
+        "b": {
+          "sample": 8,
+          "u": 1.0,
+          "positionMm": [
+            36.2450049718,
+            -42.2348760468,
+            5.7783927858
+          ],
+          "normal": [
+            -0.154864148,
+            -0.4794135935,
+            -0.8638169378
+          ],
+          "tangent": [
+            -0.7372671983,
+            -0.5259325391,
+            0.4240660828
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "junctionID": "JN.0038",
+          "tangentMagnitudeMm": 2.3923417685
+        }
+      },
+      "sampledInteriorCount": 44880,
+      "sampledAboveOneDegreeCount": 4666,
+      "reason": "For a differentiable surface containing this boundary, its normal must be perpendicular to the actual boundary tangent. Sample-endpoint success does not establish the declared interpolation."
+    },
+    {
+      "id": "A03",
+      "severity": "blocking nail seat registration",
+      "issue": "Registered recessed floor rises above the uncut elliptical tip surface",
+      "counterexample": {
+        "seatID": "R.thumb.nail-seat",
+        "declaredDepthMm": 0.4,
+        "declaredPlateProudMm": 0.1,
+        "samplesAboveUncutTip": 24,
+        "worst": {
+          "sample": 26,
+          "rootLocalPointMm": [
+            -7.852976029600093,
+            -54.67878402680083,
+            6.663293315892277
+          ],
+          "tipRadiiMm": [
+            8.091819588983164,
+            8.428978738524128
+          ],
+          "uncutTipOuterZmm": 2.032801688089899,
+          "floorMinusTipOuterZmm": 4.630491627802378,
+          "plateTopMinusTipOuterZmm": 5.130491627802378
+        }
+      },
+      "allSeats": [
+        {
+          "seatID": "R.index.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 16,
+          "worst": {
+            "sample": 6,
+            "rootLocalPointMm": [
+              5.5432771951000035,
+              -71.60475887800001,
+              6.6163416662999985
+            ],
+            "tipRadiiMm": [
+              8.001025859799102,
+              8.382027091218106
+            ],
+            "uncutTipOuterZmm": 6.044361794318049,
+            "floorMinusTipOuterZmm": 0.5719798719819496,
+            "plateTopMinusTipOuterZmm": 1.0719798719819496
+          }
+        },
+        {
+          "seatID": "R.middle.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 16,
+          "worst": {
+            "sample": 6,
+            "rootLocalPointMm": [
+              5.5432771951,
+              -81.60475887800001,
+              6.148673904599999
+            ],
+            "tipRadiiMm": [
+              7.554615723677941,
+              7.914359329567366
+            ],
+            "uncutTipOuterZmm": 5.377082381757555,
+            "floorMinusTipOuterZmm": 0.7715915228424439,
+            "plateTopMinusTipOuterZmm": 1.271591522842444
+          }
+        },
+        {
+          "seatID": "R.ring.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 16,
+          "worst": {
+            "sample": 6,
+            "rootLocalPointMm": [
+              5.5432771951,
+              -76.60475887800001,
+              6.3668726796
+            ],
+            "tipRadiiMm": [
+              7.762896372497255,
+              8.132558104520934
+            ],
+            "uncutTipOuterZmm": 5.693367427639517,
+            "floorMinusTipOuterZmm": 0.6735052519604832,
+            "plateTopMinusTipOuterZmm": 1.1735052519604832
+          }
+        },
+        {
+          "seatID": "R.little.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 6,
+          "worst": {
+            "sample": 27,
+            "rootLocalPointMm": [
+              -4.157348061500002,
+              -61.00006604859999,
+              5.305521102499998
+            ],
+            "tipRadiiMm": [
+              6.453159014292982,
+              6.81166784842037
+            ],
+            "uncutTipOuterZmm": 5.209754125529483,
+            "floorMinusTipOuterZmm": 0.0957669769705154,
+            "plateTopMinusTipOuterZmm": 0.5957669769705154
+          }
+        },
+        {
+          "seatID": "R.thumb.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 24,
+          "worst": {
+            "sample": 26,
+            "rootLocalPointMm": [
+              -7.852976029600093,
+              -54.67878402680083,
+              6.663293315892277
+            ],
+            "tipRadiiMm": [
+              8.091819588983164,
+              8.428978738524128
+            ],
+            "uncutTipOuterZmm": 2.032801688089899,
+            "floorMinusTipOuterZmm": 4.630491627802378,
+            "plateTopMinusTipOuterZmm": 5.130491627802378
+          }
+        },
+        {
+          "seatID": "L.index.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 16,
+          "worst": {
+            "sample": 6,
+            "rootLocalPointMm": [
+              -5.5432771951000035,
+              -71.60475887800001,
+              6.6163416662999985
+            ],
+            "tipRadiiMm": [
+              8.001025859799102,
+              8.382027091218106
+            ],
+            "uncutTipOuterZmm": 6.044361794318049,
+            "floorMinusTipOuterZmm": 0.5719798719819496,
+            "plateTopMinusTipOuterZmm": 1.0719798719819496
+          }
+        },
+        {
+          "seatID": "L.middle.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 16,
+          "worst": {
+            "sample": 6,
+            "rootLocalPointMm": [
+              -5.5432771951,
+              -81.60475887800001,
+              6.148673904599999
+            ],
+            "tipRadiiMm": [
+              7.554615723677941,
+              7.914359329567366
+            ],
+            "uncutTipOuterZmm": 5.377082381757555,
+            "floorMinusTipOuterZmm": 0.7715915228424439,
+            "plateTopMinusTipOuterZmm": 1.271591522842444
+          }
+        },
+        {
+          "seatID": "L.ring.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 16,
+          "worst": {
+            "sample": 6,
+            "rootLocalPointMm": [
+              -5.5432771951,
+              -76.60475887800001,
+              6.3668726796
+            ],
+            "tipRadiiMm": [
+              7.762896372497255,
+              8.132558104520934
+            ],
+            "uncutTipOuterZmm": 5.693367427639517,
+            "floorMinusTipOuterZmm": 0.6735052519604832,
+            "plateTopMinusTipOuterZmm": 1.1735052519604832
+          }
+        },
+        {
+          "seatID": "L.little.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 6,
+          "worst": {
+            "sample": 27,
+            "rootLocalPointMm": [
+              4.157348061500002,
+              -61.00006604859999,
+              5.305521102499998
+            ],
+            "tipRadiiMm": [
+              6.453159014292982,
+              6.81166784842037
+            ],
+            "uncutTipOuterZmm": 5.209754125529483,
+            "floorMinusTipOuterZmm": 0.0957669769705154,
+            "plateTopMinusTipOuterZmm": 0.5957669769705154
+          }
+        },
+        {
+          "seatID": "L.thumb.nail-seat",
+          "declaredDepthMm": 0.4,
+          "declaredPlateProudMm": 0.1,
+          "samplesAboveUncutTip": 24,
+          "worst": {
+            "sample": 26,
+            "rootLocalPointMm": [
+              7.852976029600093,
+              -54.67878402680083,
+              6.663293315892277
+            ],
+            "tipRadiiMm": [
+              8.091819588983164,
+              8.428978738524128
+            ],
+            "uncutTipOuterZmm": 2.032801688089899,
+            "floorMinusTipOuterZmm": 4.630491627802378,
+            "plateTopMinusTipOuterZmm": 5.130491627802378
+          }
+        }
+      ],
+      "reason": "The floor formula omits the elliptical cross-section lateral height reduction. Its registered contour cannot retain the stated 0.4 mm recess and 0.1 mm proud plate relative to the specified underlying tip without another explicitly authored transition/surface."
+    }
+  ],
+  "passedLimitedChecks": {
+    "IDTypeCorrespondence": true,
+    "boneWeightsUseNative41AndNormalize": true,
+    "bindSkeletonMatchesSavedNative41Within1eMinus9Tolerance": true,
+    "bindSkeletonMaxSerializationError": 3.5930702857456254e-11,
+    "properMatrixMaxError": 8.087286396118998e-11,
+    "sharedTwoOwnerCurvesNoAttributeOverrides": true,
+    "undirectedBoundaryDegreeTwo": true,
+    "sharedJunctionAttributes": {
+      "positionMm": 0,
+      "normalDifference": 0,
+      "weightDifference": 0,
+      "actualEndpointTangentPlaneDot": 1.0745509343434989e-10
+    },
+    "actualHermiteEndpointNormalDotMax": 1.0745509343434989e-10,
+    "actualHermiteEndpointDerivativeErrorMmMax": 0,
+    "counterexampleDerivativeFiniteDifferenceErrorMm": 2.598141072263453e-09,
+    "sampleNormalLengthErrorMax": 6.49120757145738e-11,
+    "soleAndHeel": [
+      {
+        "side": "R",
+        "thicknessMm": 8,
+        "heelMm": 12,
+        "rearTotalMm": 20,
+        "lowestAnalyticLowerSurfaceMm": -108,
+        "rearLowerMm": -96
+      },
+      {
+        "side": "L",
+        "thicknessMm": 8,
+        "heelMm": 12,
+        "rearTotalMm": 20,
+        "lowestAnalyticLowerSurfaceMm": -108,
+        "rearLowerMm": -96
+      }
+    ],
+    "heelSeatContainment": [
+      {
+        "id": "R-boot-fastener-1",
+        "continuousSeatCircleClearanceFromDeclaredHeelPolygonMm": 1.5211314812107974
+      },
+      {
+        "id": "R-boot-fastener-2",
+        "continuousSeatCircleClearanceFromDeclaredHeelPolygonMm": 1.5211314812107974
+      },
+      {
+        "id": "R-boot-fastener-3",
+        "continuousSeatCircleClearanceFromDeclaredHeelPolygonMm": 11.9
+      },
+      {
+        "id": "R-boot-fastener-4",
+        "continuousSeatCircleClearanceFromDeclaredHeelPolygonMm": 11.9
+      },
+      {
+        "id": "L-boot-fastener-1",
+        "continuousSeatCircleClearanceFromDeclaredHeelPolygonMm": 1.5211314812107974
+      },
+      {
+        "id": "L-boot-fastener-2",
+        "continuousSeatCircleClearanceFromDeclaredHeelPolygonMm": 1.5211314812107974
+      },
+      {
+        "id": "L-boot-fastener-3",
+        "continuousSeatCircleClearanceFromDeclaredHeelPolygonMm": 11.9
+      },
+      {
+        "id": "L-boot-fastener-4",
+        "continuousSeatCircleClearanceFromDeclaredHeelPolygonMm": 11.9
+      }
+    ],
+    "externalPortContourChecksAgainstDeclaredPartners": [
+      {
+        "id": "R-wrist",
+        "savedSkinContourMaxPartnerEllipseLevel": 0.41127126654064267,
+        "containedInDeclaredPartnerOpening": true,
+        "registeredOverlapMm": 9,
+        "actualOtherAuthorClothContourValidated": false
+      },
+      {
+        "id": "R-trousers-to-boots",
+        "savedApertureHermiteEllipseLevelDeviation": 2.546755343735274e-05,
+        "declaredTrouserWithinDeclaredBootMaxEllipseLevel": 0.8961777777777777,
+        "declaredOverlapMm": 40,
+        "footToKneeMm": -435,
+        "actualOtherAuthorClothContourValidated": false
+      },
+      {
+        "id": "L-wrist",
+        "savedSkinContourMaxPartnerEllipseLevel": 0.41127126654064267,
+        "containedInDeclaredPartnerOpening": true,
+        "registeredOverlapMm": 9,
+        "actualOtherAuthorClothContourValidated": false
+      },
+      {
+        "id": "L-trousers-to-boots",
+        "savedApertureHermiteEllipseLevelDeviation": 2.546755343735274e-05,
+        "declaredTrouserWithinDeclaredBootMaxEllipseLevel": 0.8961777777777777,
+        "declaredOverlapMm": 40,
+        "footToKneeMm": -435,
+        "actualOtherAuthorClothContourValidated": false
+      }
+    ]
+  },
+  "surfaceExistenceScope": "Directed boundaries and normal/tangent compatibility are necessary conditions. No surface was constructed and passing those conditions would not prove existence, nonintersection or all control constraints.",
+  "notTested": [
+    "actual other-author clothing contour fixed-source integration",
+    "gripping pose or triangle contact",
+    "moving cloth or terrain support",
+    "new mesh/renderer/material/performance/whole-screen quality"
+  ],
+  "newVisualInspection": [
+    "AH07-bare-seat-v1.png",
+    "AH08-nail-plate-v2.png"
+  ],
+  "otherImageReview": "Previously traced source restrictions are retained; no claim of fresh inspection of all 18 author readback images.",
+  "newMesh": 0,
+  "runtimeEdits": 0,
+  "remoteWrites": 0,
+  "elapsedScriptSeconds": 0.652738,
+  "recordedAt": "2026-09-17T00:09:23.366281+00:00",
+  "pendingToolsAtScriptEnd": 0
+}

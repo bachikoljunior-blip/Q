@@ -1,0 +1,486 @@
+{
+  "source": {
+    "meshes": 19,
+    "materials": 5,
+    "uniqueGeometries": 17,
+    "triangles": 7512,
+    "uniqueBufferBytes": 290792,
+    "perMeshBufferBytes": 323320
+  },
+  "batch": {
+    "meshes": 4,
+    "materials": 4,
+    "uniqueGeometries": 4,
+    "triangles": 7512,
+    "uniqueBufferBytes": 323320,
+    "perMeshBufferBytes": 323320
+  },
+  "parts": [
+    {
+      "id": "S01",
+      "bucketId": "wood",
+      "corners": 288,
+      "maxPositionMm": 0,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S02",
+      "bucketId": "bronze",
+      "corners": 960,
+      "maxPositionMm": 0,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S03",
+      "bucketId": "bronze",
+      "corners": 384,
+      "maxPositionMm": 0,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S06",
+      "bucketId": "bronze",
+      "corners": 1152,
+      "maxPositionMm": 0,
+      "maxNormalError": 2.7511145575052693e-8,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S15",
+      "bucketId": "bronze",
+      "corners": 1248,
+      "maxPositionMm": 0,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S17",
+      "bucketId": "bronze",
+      "corners": 768,
+      "maxPositionMm": 0,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S18",
+      "bucketId": "bronze",
+      "corners": 768,
+      "maxPositionMm": 0,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S09",
+      "bucketId": "bronze",
+      "corners": 1092,
+      "maxPositionMm": 0.00005787611012664229,
+      "maxNormalError": 3.016218542649111e-8,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S10",
+      "bucketId": "bronze",
+      "corners": 1092,
+      "maxPositionMm": 0.00005787611012664229,
+      "maxNormalError": 3.016218527465716e-8,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S11",
+      "bucketId": "bronze",
+      "corners": 1092,
+      "maxPositionMm": 0.00005787611012664229,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S12",
+      "bucketId": "bronze",
+      "corners": 1092,
+      "maxPositionMm": 0.00005787611012664229,
+      "maxNormalError": 2.5438405243138006e-16,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S13",
+      "bucketId": "bronze",
+      "corners": 1152,
+      "maxPositionMm": 0.000059101730620625403,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S07",
+      "bucketId": "bronze",
+      "corners": 2016,
+      "maxPositionMm": 0.00005787611012664229,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S14",
+      "bucketId": "bronze",
+      "corners": 1632,
+      "maxPositionMm": 0.00005787611012664229,
+      "maxNormalError": 3.3983336569886045e-8,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S08",
+      "bucketId": "bronze",
+      "corners": 1152,
+      "maxPositionMm": 0.00005621090526375383,
+      "maxNormalError": 2.5438405243138006e-16,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S04",
+      "bucketId": "leather",
+      "corners": 384,
+      "maxPositionMm": 0,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S05-A",
+      "bucketId": "leather",
+      "corners": 1932,
+      "maxPositionMm": 0,
+      "maxNormalError": 3.534270402482708e-8,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S05-B",
+      "bucketId": "leather",
+      "corners": 1932,
+      "maxPositionMm": 0,
+      "maxNormalError": 1.861880419186213e-9,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    },
+    {
+      "id": "S16",
+      "bucketId": "glass",
+      "corners": 2400,
+      "maxPositionMm": 0.00005787611012664229,
+      "maxNormalError": 0,
+      "otherAttributeMismatch": 0,
+      "indexMismatch": 0,
+      "materialEqual": true,
+      "sourceMatrixPreserved": true
+    }
+  ],
+  "partCount": 19,
+  "totalCorners": 22536,
+  "maxPositionMm": 0.000059101730620625403,
+  "maxNormalError": 3.534270402482708e-8,
+  "otherAttributeMismatch": 0,
+  "indexMismatch": 0,
+  "materialMismatch": 0,
+  "limitations": "Native CPU attribute/corner equivalence only; Float32 world baking adds measured rounding. Coarser per-bucket culling and static per-part state remain explicit tradeoffs; no WebGL measurements.",
+  "materialBuckets": [
+    {
+      "id": "wood",
+      "renderKey": "{\"json\":{\"type\":\"MeshStandardMaterial\",\"blending\":1,\"side\":0,\"shadowSide\":null,\"vertexColors\":false,\"opacity\":1,\"transparent\":false,\"blendSrc\":204,\"blendDst\":205,\"blendEquation\":100,\"blendSrcAlpha\":null,\"blendDstAlpha\":null,\"blendEquationAlpha\":null,\"blendColor\":0,\"blendAlpha\":0,\"depthFunc\":3,\"depthTest\":true,\"depthWrite\":true,\"colorWrite\":true,\"clipIntersection\":false,\"clipShadows\":false,\"stencilWriteMask\":255,\"stencilFunc\":519,\"stencilRef\":0,\"stencilFuncMask\":255,\"stencilFail\":7680,\"stencilZFail\":7680,\"stencilZPass\":7680,\"stencilWrite\":false,\"polygonOffset\":false,\"polygonOffsetFactor\":0,\"polygonOffsetUnits\":0,\"dithering\":false,\"alphaTest\":0,\"alphaHash\":false,\"alphaToCoverage\":false,\"premultipliedAlpha\":false,\"forceSinglePass\":false,\"allowOverride\":true,\"visible\":true,\"toneMapped\":true,\"color\":3746079,\"roughness\":0.9,\"metalness\":0,\"emissive\":0,\"emissiveIntensity\":1,\"envMapRotation\":[0,0,0,\"XYZ\"],\"envMapIntensity\":1,\"wireframe\":false,\"wireframeLinewidth\":1,\"wireframeLinecap\":\"round\",\"wireframeLinejoin\":\"round\",\"flatShading\":false,\"fog\":true},\"defines\":{\"STANDARD\":\"\"},\"precise\":{\"blendColor\":[0,0,0],\"color\":[0.040915196900556984,0.02217388478862708,0.013702083043526807],\"emissive\":[0,0,0],\"normalScale\":[1,1],\"envMapRotation\":[0,0,0,\"XYZ\"]}}",
+      "flags": {
+        "visible": true,
+        "castShadow": false,
+        "receiveShadow": false,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "layerMask": 1
+      },
+      "attributes": {
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array"
+        }
+      },
+      "partIds": [
+        "S01"
+      ],
+      "triangles": 96,
+      "bufferBytes": 4128,
+      "materialNames": [
+        ""
+      ],
+      "transmission": 0,
+      "transparent": false
+    },
+    {
+      "id": "bronze",
+      "renderKey": "{\"json\":{\"type\":\"MeshStandardMaterial\",\"blending\":1,\"side\":0,\"shadowSide\":null,\"vertexColors\":false,\"opacity\":1,\"transparent\":false,\"blendSrc\":204,\"blendDst\":205,\"blendEquation\":100,\"blendSrcAlpha\":null,\"blendDstAlpha\":null,\"blendEquationAlpha\":null,\"blendColor\":0,\"blendAlpha\":0,\"depthFunc\":3,\"depthTest\":true,\"depthWrite\":true,\"colorWrite\":true,\"clipIntersection\":false,\"clipShadows\":false,\"stencilWriteMask\":255,\"stencilFunc\":519,\"stencilRef\":0,\"stencilFuncMask\":255,\"stencilFail\":7680,\"stencilZFail\":7680,\"stencilZPass\":7680,\"stencilWrite\":false,\"polygonOffset\":false,\"polygonOffsetFactor\":0,\"polygonOffsetUnits\":0,\"dithering\":false,\"alphaTest\":0,\"alphaHash\":false,\"alphaToCoverage\":false,\"premultipliedAlpha\":false,\"forceSinglePass\":false,\"allowOverride\":true,\"visible\":true,\"toneMapped\":true,\"color\":10848077,\"roughness\":0.46,\"metalness\":0.7,\"emissive\":0,\"emissiveIntensity\":1,\"envMapRotation\":[0,0,0,\"XYZ\"],\"envMapIntensity\":1,\"wireframe\":false,\"wireframeLinewidth\":1,\"wireframeLinecap\":\"round\",\"wireframeLinejoin\":\"round\",\"flatShading\":false,\"fog\":true},\"defines\":{\"STANDARD\":\"\"},\"precise\":{\"blendColor\":[0,0,0],\"color\":[0.37626212298046485,0.24228112245478564,0.07421356837213867],\"emissive\":[0,0,0],\"normalScale\":[1,1],\"envMapRotation\":[0,0,0,\"XYZ\"]}}",
+      "flags": {
+        "visible": true,
+        "castShadow": false,
+        "receiveShadow": false,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "layerMask": 1
+      },
+      "attributes": {
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array"
+        }
+      },
+      "partIds": [
+        "S02",
+        "S03",
+        "S06",
+        "S15",
+        "S17",
+        "S18",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S07",
+        "S14",
+        "S08"
+      ],
+      "triangles": 5200,
+      "bufferBytes": 234976,
+      "materialNames": [
+        "",
+        "Mira micro bronze candidate"
+      ],
+      "transmission": 0,
+      "transparent": false
+    },
+    {
+      "id": "leather",
+      "renderKey": "{\"json\":{\"type\":\"MeshStandardMaterial\",\"blending\":1,\"side\":0,\"shadowSide\":null,\"vertexColors\":false,\"opacity\":1,\"transparent\":false,\"blendSrc\":204,\"blendDst\":205,\"blendEquation\":100,\"blendSrcAlpha\":null,\"blendDstAlpha\":null,\"blendEquationAlpha\":null,\"blendColor\":0,\"blendAlpha\":0,\"depthFunc\":3,\"depthTest\":true,\"depthWrite\":true,\"colorWrite\":true,\"clipIntersection\":false,\"clipShadows\":false,\"stencilWriteMask\":255,\"stencilFunc\":519,\"stencilRef\":0,\"stencilFuncMask\":255,\"stencilFail\":7680,\"stencilZFail\":7680,\"stencilZPass\":7680,\"stencilWrite\":false,\"polygonOffset\":false,\"polygonOffsetFactor\":0,\"polygonOffsetUnits\":0,\"dithering\":false,\"alphaTest\":0,\"alphaHash\":false,\"alphaToCoverage\":false,\"premultipliedAlpha\":false,\"forceSinglePass\":false,\"allowOverride\":true,\"visible\":true,\"toneMapped\":true,\"color\":3484452,\"roughness\":0.85,\"metalness\":0,\"emissive\":0,\"emissiveIntensity\":1,\"envMapRotation\":[0,0,0,\"XYZ\"],\"envMapIntensity\":1,\"wireframe\":false,\"wireframeLinewidth\":1,\"wireframeLinecap\":\"round\",\"wireframeLinejoin\":\"round\",\"flatShading\":false,\"fog\":true},\"defines\":{\"STANDARD\":\"\"},\"precise\":{\"blendColor\":[0,0,0],\"color\":[0.035601314869097636,0.024157632443547246,0.01764195448412081],\"emissive\":[0,0,0],\"normalScale\":[1,1],\"envMapRotation\":[0,0,0,\"XYZ\"]}}",
+      "flags": {
+        "visible": true,
+        "castShadow": false,
+        "receiveShadow": false,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "layerMask": 1
+      },
+      "attributes": {
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array"
+        }
+      },
+      "partIds": [
+        "S04",
+        "S05-A",
+        "S05-B"
+      ],
+      "triangles": 1416,
+      "bufferBytes": 55920,
+      "materialNames": [
+        ""
+      ],
+      "transmission": 0,
+      "transparent": false
+    },
+    {
+      "id": "glass",
+      "renderKey": "{\"json\":{\"type\":\"MeshPhysicalMaterial\",\"blending\":1,\"side\":0,\"shadowSide\":null,\"vertexColors\":true,\"opacity\":1,\"transparent\":false,\"blendSrc\":204,\"blendDst\":205,\"blendEquation\":100,\"blendSrcAlpha\":null,\"blendDstAlpha\":null,\"blendEquationAlpha\":null,\"blendColor\":0,\"blendAlpha\":0,\"depthFunc\":3,\"depthTest\":true,\"depthWrite\":true,\"colorWrite\":true,\"clipIntersection\":false,\"clipShadows\":false,\"stencilWriteMask\":255,\"stencilFunc\":519,\"stencilRef\":0,\"stencilFuncMask\":255,\"stencilFail\":7680,\"stencilZFail\":7680,\"stencilZPass\":7680,\"stencilWrite\":false,\"polygonOffset\":false,\"polygonOffsetFactor\":0,\"polygonOffsetUnits\":0,\"dithering\":false,\"alphaTest\":0,\"alphaHash\":false,\"alphaToCoverage\":false,\"premultipliedAlpha\":false,\"forceSinglePass\":false,\"allowOverride\":true,\"visible\":true,\"toneMapped\":true,\"color\":16777215,\"roughness\":0.3,\"metalness\":0,\"sheen\":0,\"sheenColor\":0,\"sheenRoughness\":1,\"emissive\":16761975,\"emissiveIntensity\":0.45,\"specularIntensity\":1,\"specularColor\":16777215,\"clearcoat\":0,\"clearcoatRoughness\":0,\"dispersion\":0,\"retroreflectivity\":0,\"iridescence\":0,\"iridescenceIOR\":1.3,\"iridescenceThicknessRange\":[100,400],\"anisotropy\":0,\"anisotropyRotation\":0,\"envMapRotation\":[0,0,0,\"XYZ\"],\"envMapIntensity\":1,\"reflectivity\":0.4591836734693877,\"transmission\":0.22,\"thickness\":0.04,\"attenuationDistance\":null,\"attenuationColor\":16777215,\"wireframe\":false,\"wireframeLinewidth\":1,\"wireframeLinecap\":\"round\",\"wireframeLinejoin\":\"round\",\"flatShading\":false,\"fog\":true},\"defines\":{\"STANDARD\":\"\",\"PHYSICAL\":\"\"},\"precise\":{\"blendColor\":[0,0,0],\"color\":[1,1,1],\"emissive\":[1,0.55201140150344,0.1844749944900301],\"normalScale\":[1,1],\"envMapRotation\":[0,0,0,\"XYZ\"],\"clearcoatNormalScale\":[1,1],\"sheenColor\":[0,0,0],\"attenuationColor\":[1,1,1],\"specularColor\":[1,1,1]}}",
+      "flags": {
+        "visible": true,
+        "castShadow": false,
+        "receiveShadow": false,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "layerMask": 1
+      },
+      "attributes": {
+        "color": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array"
+        }
+      },
+      "partIds": [
+        "S16"
+      ],
+      "triangles": 800,
+      "bufferBytes": 28296,
+      "materialNames": [
+        "Mira warm ivory luminous glass candidate"
+      ],
+      "transmission": 0.22,
+      "transparent": false
+    }
+  ],
+  "memory": {
+    "addedGeometryBytes": 32528,
+    "coexistingSourceAndBatchGeometryBytes": 614112,
+    "totalAllocatedTemporaryTransformedGeometryBytes": 323320,
+    "largestTemporaryBucketGeometryBytes": 234976,
+    "note": "Typed geometry/index byte counts only. Temporary clone sums describe allocations, not simultaneous peak RSS, GC, GPU, object or material size."
+  },
+  "rendering": {
+    "sourceOpaqueMeshes": 18,
+    "batchOpaqueMeshes": 3,
+    "sourceTransmissiveMeshes": 1,
+    "batchTransmissiveMeshes": 1,
+    "groupCount": 0,
+    "measuredWebGLDrawCalls": null,
+    "note": "19 to 4 native single-material render objects; single fully visible main pass submission opportunity only. Shadow/transmission passes, culling and actual device/GPU speed are unmeasured."
+  },
+  "timing": {
+    "startedUTC": "2026-09-16T14:18:50.333Z",
+    "sourceConstructionMs": 88.19717200000014,
+    "batchConstructionMs": 21.12496599999986,
+    "cornerAuditMs": 29.14681900000005,
+    "finishedUTC": "2026-09-16T14:18:50.472Z"
+  },
+  "sourceFiles": [
+    {
+      "path": "review/staff-v63/assembly.mjs",
+      "bytes": 760,
+      "sha256": "dabaaee77dbf0e16f80605c3b1a3a39e2897b2c9d89898b22eefb71d98236481"
+    },
+    {
+      "path": "review/staff-v63/staff-parts.mjs",
+      "bytes": 6759,
+      "sha256": "c71aad81b0acaff2070b3681dcdae8ba057c51a28468cef5a16957fa69d1f5cc"
+    },
+    {
+      "path": "review/lantern-v63/lantern-head.js",
+      "bytes": 7525,
+      "sha256": "db88b7c1eb36c1c58fde73dfad4668505e46893f39708a44320a600574fbaf5d"
+    },
+    {
+      "path": "review/lantern-micro-v62/mira-lantern-ribs.js",
+      "bytes": 5927,
+      "sha256": "33e596ff22332c317d819265e08c819f01c677c8a3cb63eea5aaa42bc17723e6"
+    },
+    {
+      "path": "review/micro-v61/mira-micro-parts.js",
+      "bytes": 3628,
+      "sha256": "84a7787bb459586304256198f73388207d4e4893ec3d6d6eea5bc63f62978f8c"
+    },
+    {
+      "path": "review/staff-batch-v64/staff-batch.mjs",
+      "bytes": 6452,
+      "sha256": "84bb4facea8ef49eae5ca67668cbb5608525842cbf20c8e47e0fc6ea7db493d2"
+    },
+    {
+      "path": "review/staff-batch-v64/inspect-batch.mjs",
+      "bytes": 3522,
+      "sha256": "9c7889ad9ba798ba2010016fa3e9ac0b9265620b8d958a9d5f80b7fd22cfc917"
+    },
+    {
+      "path": "scripts/export-mira-staff-batch-v64.mjs",
+      "bytes": 3726,
+      "sha256": "bc7ba1cfdda7c9bd03911a8349736f92a761d9c24a4a755cc1dde35330b66135"
+    },
+    {
+      "path": "tests/mira-staff-batch-v64.test.mjs",
+      "bytes": 5058,
+      "sha256": "017523a4605c7713757150b74c3d13e238c391f46d7a3fb2ce39948525282a6b"
+    }
+  ]
+}

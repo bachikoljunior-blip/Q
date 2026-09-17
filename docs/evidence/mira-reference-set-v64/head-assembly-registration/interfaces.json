@@ -1,0 +1,4404 @@
+{
+  "frame": {
+    "id": "HEAD_LOCAL_M",
+    "units": "metres",
+    "origin": "existing head group origin",
+    "up": "+Y",
+    "face": "+Z",
+    "anatomicalR": "-X",
+    "anatomicalL": "+X",
+    "mirror": "[-x,y,z]; negative determinant requires winding reversal; do not mirror entire hairstyle",
+    "pixelToMetreCalibration": null
+  },
+  "interfaces": [
+    {
+      "id": "HI-001",
+      "a": "F05-R",
+      "b": "F07-R",
+      "kind": "existing-skin-C1",
+      "region": "F05-R:v=1 <-> F07-R:v=0",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "inner facial edge (u=0) to outer/underside (u=1)",
+      "aPort": "F05-R::HI-001",
+      "bPort": "F07-R::HI-001",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "existing-v63 numeric; source unchanged, not rerun geometry",
+      "curveM": [
+        [
+          -0.039,
+          -0.008,
+          0.116
+        ],
+        [
+          -0.057,
+          -0.008,
+          0.112
+        ],
+        [
+          -0.083,
+          -0.006,
+          0.093
+        ],
+        [
+          -0.1,
+          -0.003,
+          0.058
+        ]
+      ],
+      "tangentM": [
+        [
+          0.0015000000000000013,
+          -0.0385,
+          0.000999999999999994
+        ],
+        [
+          0.0005000000000000004,
+          -0.04,
+          -0.005499999999999998
+        ],
+        [
+          -0.0004999999999999935,
+          -0.0445,
+          -0.018000000000000002
+        ],
+        [
+          0.003999999999999997,
+          -0.047,
+          -0.02
+        ]
+      ],
+      "UVCorrespondence": {
+        "a": [
+          "u",
+          0.14285714285714285
+        ],
+        "b": [
+          "u",
+          0.14285714285714285
+        ]
+      },
+      "gapOrClearanceM": 0,
+      "actualSharedVertices": true,
+      "source": "frozen v63 assembly.json/surfaces.mjs",
+      "parameterCorrespondence": "u_B=u_A; v_A=1, v_B=0; both derivative dV equal; outward perimeter direction opposite",
+      "nativeIndices": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "sharedWeight": {
+        "head": 1
+      }
+    },
+    {
+      "id": "HI-002",
+      "a": "F07-R",
+      "b": "F09-R",
+      "kind": "existing-skin-C1",
+      "region": "F07-R:v=1 <-> F09-R:v=0",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "inner facial edge (u=0) to outer/underside (u=1)",
+      "aPort": "F07-R::HI-002",
+      "bPort": "F09-R::HI-002",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "existing-v63 numeric; source unchanged, not rerun geometry",
+      "curveM": [
+        [
+          -0.036,
+          -0.047,
+          0.118
+        ],
+        [
+          -0.056,
+          -0.049,
+          0.109
+        ],
+        [
+          -0.086,
+          -0.054,
+          0.074
+        ],
+        [
+          -0.094,
+          -0.06,
+          0.041
+        ]
+      ],
+      "tangentM": [
+        [
+          0.006500000000000001,
+          -0.0245,
+          0.005499999999999998
+        ],
+        [
+          0.013500000000000002,
+          -0.030500000000000003,
+          0.009500000000000001
+        ],
+        [
+          0.025,
+          -0.039999999999999994,
+          0.011500000000000003
+        ],
+        [
+          0.033,
+          -0.0455,
+          0.0115
+        ]
+      ],
+      "UVCorrespondence": {
+        "a": [
+          "u",
+          0.2857142857142857
+        ],
+        "b": [
+          "u",
+          0.2857142857142857
+        ]
+      },
+      "gapOrClearanceM": 0,
+      "actualSharedVertices": true,
+      "source": "frozen v63 assembly.json/surfaces.mjs",
+      "parameterCorrespondence": "u_B=u_A; v_A=1, v_B=0; both derivative dV equal; outward perimeter direction opposite",
+      "nativeIndices": [
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152
+      ],
+      "sharedWeight": {
+        "head": 1
+      }
+    },
+    {
+      "id": "HI-003",
+      "a": "F09-R",
+      "b": "F11",
+      "kind": "existing-skin-C1",
+      "region": "F09-R:v=1 <-> F11:v=0",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "inner facial edge (u=0) to outer/underside (u=1)",
+      "aPort": "F09-R::HI-003",
+      "bPort": "F11::HI-003",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "existing-v63 numeric; source unchanged, not rerun geometry",
+      "curveM": [
+        [
+          -0.026,
+          -0.057,
+          0.127
+        ],
+        [
+          -0.03,
+          -0.069,
+          0.131
+        ],
+        [
+          -0.033,
+          -0.086,
+          0.116
+        ],
+        [
+          -0.034,
+          -0.094,
+          0.081
+        ]
+      ],
+      "tangentM": [
+        [
+          0.031,
+          -0.005000000000000001,
+          0.004500000000000004
+        ],
+        [
+          0.043,
+          -0.010000000000000002,
+          0.011000000000000003
+        ],
+        [
+          0.0595,
+          -0.015999999999999997,
+          0.021000000000000005
+        ],
+        [
+          0.064,
+          -0.017,
+          0.02
+        ]
+      ],
+      "UVCorrespondence": {
+        "a": [
+          "u",
+          0.42857142857142855
+        ],
+        "b": [
+          "u",
+          0.42857142857142855
+        ]
+      },
+      "gapOrClearanceM": 0,
+      "actualSharedVertices": true,
+      "source": "frozen v63 assembly.json/surfaces.mjs",
+      "parameterCorrespondence": "u_B=u_A; v_A=1, v_B=0; both derivative dV equal; outward perimeter direction opposite",
+      "nativeIndices": [
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224
+      ],
+      "sharedWeight": {
+        "head": 1
+      }
+    },
+    {
+      "id": "HI-004",
+      "a": "F11",
+      "b": "F09-L",
+      "kind": "existing-skin-C1",
+      "region": "F11:v=1 <-> F09-L:v=0",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "inner facial edge (u=0) to outer/underside (u=1)",
+      "aPort": "F11::HI-004",
+      "bPort": "F09-L::HI-004",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "existing-v63 numeric; source unchanged, not rerun geometry",
+      "curveM": [
+        [
+          0.026,
+          -0.057,
+          0.127
+        ],
+        [
+          0.03,
+          -0.069,
+          0.131
+        ],
+        [
+          0.033,
+          -0.086,
+          0.116
+        ],
+        [
+          0.034,
+          -0.094,
+          0.081
+        ]
+      ],
+      "tangentM": [
+        [
+          0.031,
+          0.005000000000000001,
+          -0.004500000000000004
+        ],
+        [
+          0.043,
+          0.010000000000000002,
+          -0.011000000000000003
+        ],
+        [
+          0.0595,
+          0.015999999999999997,
+          -0.021000000000000005
+        ],
+        [
+          0.064,
+          0.017,
+          -0.02
+        ]
+      ],
+      "UVCorrespondence": {
+        "a": [
+          "u",
+          0.5714285714285714
+        ],
+        "b": [
+          "u",
+          0.5714285714285714
+        ]
+      },
+      "gapOrClearanceM": 0,
+      "actualSharedVertices": true,
+      "source": "frozen v63 assembly.json/surfaces.mjs",
+      "parameterCorrespondence": "u_B=u_A; v_A=1, v_B=0; both derivative dV equal; outward perimeter direction opposite",
+      "nativeIndices": [
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296
+      ],
+      "sharedWeight": {
+        "head": 1
+      }
+    },
+    {
+      "id": "HI-005",
+      "a": "F09-L",
+      "b": "F07-L",
+      "kind": "existing-skin-C1",
+      "region": "F09-L:v=1 <-> F07-L:v=0",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "inner facial edge (u=0) to outer/underside (u=1)",
+      "aPort": "F09-L::HI-005",
+      "bPort": "F07-L::HI-005",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "existing-v63 numeric; source unchanged, not rerun geometry",
+      "curveM": [
+        [
+          0.036,
+          -0.047,
+          0.118
+        ],
+        [
+          0.056,
+          -0.049,
+          0.109
+        ],
+        [
+          0.086,
+          -0.054,
+          0.074
+        ],
+        [
+          0.094,
+          -0.06,
+          0.041
+        ]
+      ],
+      "tangentM": [
+        [
+          0.006500000000000001,
+          0.0245,
+          -0.005499999999999998
+        ],
+        [
+          0.013500000000000002,
+          0.030500000000000003,
+          -0.009500000000000001
+        ],
+        [
+          0.025,
+          0.039999999999999994,
+          -0.011500000000000003
+        ],
+        [
+          0.033,
+          0.0455,
+          -0.0115
+        ]
+      ],
+      "UVCorrespondence": {
+        "a": [
+          "u",
+          0.7142857142857143
+        ],
+        "b": [
+          "u",
+          0.7142857142857143
+        ]
+      },
+      "gapOrClearanceM": 0,
+      "actualSharedVertices": true,
+      "source": "frozen v63 assembly.json/surfaces.mjs",
+      "parameterCorrespondence": "u_B=u_A; v_A=1, v_B=0; both derivative dV equal; outward perimeter direction opposite",
+      "nativeIndices": [
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368
+      ],
+      "sharedWeight": {
+        "head": 1
+      }
+    },
+    {
+      "id": "HI-006",
+      "a": "F07-L",
+      "b": "F05-L",
+      "kind": "existing-skin-C1",
+      "region": "F07-L:v=1 <-> F05-L:v=0",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "inner facial edge (u=0) to outer/underside (u=1)",
+      "aPort": "F07-L::HI-006",
+      "bPort": "F05-L::HI-006",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "existing-v63 numeric; source unchanged, not rerun geometry",
+      "curveM": [
+        [
+          0.039,
+          -0.008,
+          0.116
+        ],
+        [
+          0.057,
+          -0.008,
+          0.112
+        ],
+        [
+          0.083,
+          -0.006,
+          0.093
+        ],
+        [
+          0.1,
+          -0.003,
+          0.058
+        ]
+      ],
+      "tangentM": [
+        [
+          0.0015000000000000013,
+          0.0385,
+          -0.000999999999999994
+        ],
+        [
+          0.0005000000000000004,
+          0.04,
+          0.005499999999999998
+        ],
+        [
+          -0.0004999999999999935,
+          0.0445,
+          0.018000000000000002
+        ],
+        [
+          0.003999999999999997,
+          0.047,
+          0.02
+        ]
+      ],
+      "UVCorrespondence": {
+        "a": [
+          "u",
+          0.8571428571428571
+        ],
+        "b": [
+          "u",
+          0.8571428571428571
+        ]
+      },
+      "gapOrClearanceM": 0,
+      "actualSharedVertices": true,
+      "source": "frozen v63 assembly.json/surfaces.mjs",
+      "parameterCorrespondence": "u_B=u_A; v_A=1, v_B=0; both derivative dV equal; outward perimeter direction opposite",
+      "nativeIndices": [
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440
+      ],
+      "sharedWeight": {
+        "head": 1
+      }
+    },
+    {
+      "id": "HI-007",
+      "a": "F01-L",
+      "b": "F03-L",
+      "kind": "skin-seam-proposal",
+      "region": "forehead lateral to temple",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior hairline to brow tail",
+      "aPort": "F01-L::HI-007",
+      "bPort": "F03-L::HI-007",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-008",
+      "a": "F01-R",
+      "b": "F03-R",
+      "kind": "skin-seam-proposal",
+      "region": "forehead lateral to temple",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior hairline to brow tail",
+      "aPort": "F01-R::HI-008",
+      "bPort": "F03-R::HI-008",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-009",
+      "a": "F01-L",
+      "b": "E03-L",
+      "kind": "skin-seam-proposal",
+      "region": "sub-brow boundary",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral",
+      "aPort": "F01-L::HI-009",
+      "bPort": "E03-L::HI-009",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-010",
+      "a": "F01-R",
+      "b": "E03-R",
+      "kind": "skin-seam-proposal",
+      "region": "sub-brow boundary",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral",
+      "aPort": "F01-R::HI-010",
+      "bPort": "E03-R::HI-010",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-011",
+      "a": "F03-L",
+      "b": "E03-L",
+      "kind": "skin-seam-proposal",
+      "region": "outer brow/upper orbital transition",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to lateral canthus",
+      "aPort": "F03-L::HI-011",
+      "bPort": "E03-L::HI-011",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-012",
+      "a": "F03-R",
+      "b": "E03-R",
+      "kind": "skin-seam-proposal",
+      "region": "outer brow/upper orbital transition",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to lateral canthus",
+      "aPort": "F03-R::HI-012",
+      "bPort": "E03-R::HI-012",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-013",
+      "a": "F03-L",
+      "b": "F05-L",
+      "kind": "skin-seam-proposal",
+      "region": "temple to upper-lateral malar cut",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "lateral upper cheek toward ear-front; end requires F21 review",
+      "aPort": "F03-L::HI-013",
+      "bPort": "F05-L::HI-013",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-014",
+      "a": "F03-R",
+      "b": "F05-R",
+      "kind": "skin-seam-proposal",
+      "region": "temple to upper-lateral malar cut",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "lateral upper cheek toward ear-front; end requires F21 review",
+      "aPort": "F03-R::HI-014",
+      "bPort": "F05-R::HI-014",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-015",
+      "a": "F03-L",
+      "b": "F18-L",
+      "kind": "skin-seam-proposal",
+      "region": "outer orbital transition",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "outer canthus toward malar plane",
+      "aPort": "F03-L::HI-015",
+      "bPort": "F18-L::HI-015",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-016",
+      "a": "F03-R",
+      "b": "F18-R",
+      "kind": "skin-seam-proposal",
+      "region": "outer orbital transition",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "outer canthus toward malar plane",
+      "aPort": "F03-R::HI-016",
+      "bPort": "F18-R::HI-016",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-017",
+      "a": "F18-L",
+      "b": "E04-L",
+      "kind": "skin-seam-proposal",
+      "region": "lower orbital skin to lower lid skin",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial canthus to lateral canthus",
+      "aPort": "F18-L::HI-017",
+      "bPort": "E04-L::HI-017",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-018",
+      "a": "F18-R",
+      "b": "E04-R",
+      "kind": "skin-seam-proposal",
+      "region": "lower orbital skin to lower lid skin",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial canthus to lateral canthus",
+      "aPort": "F18-R::HI-018",
+      "bPort": "E04-R::HI-018",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-019",
+      "a": "F18-L",
+      "b": "E05-L",
+      "kind": "skin-seam-proposal",
+      "region": "medial infraorbital corner",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F18-L::HI-019",
+      "bPort": "E05-L::HI-019",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-020",
+      "a": "F18-R",
+      "b": "E05-R",
+      "kind": "skin-seam-proposal",
+      "region": "medial infraorbital corner",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F18-R::HI-020",
+      "bPort": "E05-R::HI-020",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-021",
+      "a": "F18-L",
+      "b": "F05-L",
+      "kind": "skin-seam-proposal",
+      "region": "infraorbital to malar",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral",
+      "aPort": "F18-L::HI-021",
+      "bPort": "F05-L::HI-021",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-022",
+      "a": "F18-R",
+      "b": "F05-R",
+      "kind": "skin-seam-proposal",
+      "region": "infraorbital to malar",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral",
+      "aPort": "F18-R::HI-022",
+      "bPort": "F05-R::HI-022",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-023",
+      "a": "F18-L",
+      "b": "F19-L",
+      "kind": "skin-seam-proposal",
+      "region": "infraorbital to nasal-side plane",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "nasal side to malar side",
+      "aPort": "F18-L::HI-023",
+      "bPort": "F19-L::HI-023",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-024",
+      "a": "F18-R",
+      "b": "F19-R",
+      "kind": "skin-seam-proposal",
+      "region": "infraorbital to nasal-side plane",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "nasal side to malar side",
+      "aPort": "F18-R::HI-024",
+      "bPort": "F19-R::HI-024",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-025",
+      "a": "F19-L",
+      "b": "F05-L",
+      "kind": "skin-seam-proposal",
+      "region": "medial malar section",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F19-L::HI-025",
+      "bPort": "F05-L::HI-025",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-026",
+      "a": "F19-R",
+      "b": "F05-R",
+      "kind": "skin-seam-proposal",
+      "region": "medial malar section",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F19-R::HI-026",
+      "bPort": "F05-R::HI-026",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-027",
+      "a": "F19-L",
+      "b": "F07-L",
+      "kind": "skin-seam-proposal",
+      "region": "upper medial lower-cheek section",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to mouth-corner neighborhood; split parameter unset",
+      "aPort": "F19-L::HI-027",
+      "bPort": "F07-L::HI-027",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-028",
+      "a": "F19-R",
+      "b": "F07-R",
+      "kind": "skin-seam-proposal",
+      "region": "upper medial lower-cheek section",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to mouth-corner neighborhood; split parameter unset",
+      "aPort": "F19-R::HI-028",
+      "bPort": "F07-R::HI-028",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-029",
+      "a": "F19-L",
+      "b": "F20-L",
+      "kind": "skin-seam-proposal",
+      "region": "nasolabial to commissure skin",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "nose-side to lower-cheek-side",
+      "aPort": "F19-L::HI-029",
+      "bPort": "F20-L::HI-029",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-030",
+      "a": "F19-R",
+      "b": "F20-R",
+      "kind": "skin-seam-proposal",
+      "region": "nasolabial to commissure skin",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "nose-side to lower-cheek-side",
+      "aPort": "F19-R::HI-030",
+      "bPort": "F20-R::HI-030",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-031",
+      "a": "F19-L",
+      "b": "F14-L",
+      "kind": "skin-seam-proposal",
+      "region": "ala lateral cut",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to nasal-floor level",
+      "aPort": "F19-L::HI-031",
+      "bPort": "F14-L::HI-031",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-032",
+      "a": "F19-R",
+      "b": "F14-R",
+      "kind": "skin-seam-proposal",
+      "region": "ala lateral cut",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to nasal-floor level",
+      "aPort": "F19-R::HI-032",
+      "bPort": "F14-R::HI-032",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-033",
+      "a": "F20-L",
+      "b": "F07-L",
+      "kind": "skin-seam-proposal",
+      "region": "commissure to lower cheek",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "upper to lower endpoint; F07 inner-edge split unset",
+      "aPort": "F20-L::HI-033",
+      "bPort": "F07-L::HI-033",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-034",
+      "a": "F20-R",
+      "b": "F07-R",
+      "kind": "skin-seam-proposal",
+      "region": "commissure to lower cheek",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "upper to lower endpoint; F07 inner-edge split unset",
+      "aPort": "F20-R::HI-034",
+      "bPort": "F07-R::HI-034",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-035",
+      "a": "F20-L",
+      "b": "F09-L",
+      "kind": "skin-seam-proposal",
+      "region": "lower commissure/adjacent skin to jaw inner border",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "upper cheek-side endpoint to chin-side endpoint; shape not yet fixed",
+      "aPort": "F20-L::HI-035",
+      "bPort": "F09-L::HI-035",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-036",
+      "a": "F20-R",
+      "b": "F09-R",
+      "kind": "skin-seam-proposal",
+      "region": "lower commissure/adjacent skin to jaw inner border",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "upper cheek-side endpoint to chin-side endpoint; shape not yet fixed",
+      "aPort": "F20-R::HI-036",
+      "bPort": "F09-R::HI-036",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-037",
+      "a": "E05-L",
+      "b": "E03-L",
+      "kind": "skin-seam-proposal",
+      "region": "upper medial lid endpoint",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "skin to free lid margin",
+      "aPort": "E05-L::HI-037",
+      "bPort": "E03-L::HI-037",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-038",
+      "a": "E05-R",
+      "b": "E03-R",
+      "kind": "skin-seam-proposal",
+      "region": "upper medial lid endpoint",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "skin to free lid margin",
+      "aPort": "E05-R::HI-038",
+      "bPort": "E03-R::HI-038",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-039",
+      "a": "E05-L",
+      "b": "E04-L",
+      "kind": "skin-seam-proposal",
+      "region": "lower medial lid endpoint",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "free lid margin to skin",
+      "aPort": "E05-L::HI-039",
+      "bPort": "E04-L::HI-039",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-040",
+      "a": "E05-R",
+      "b": "E04-R",
+      "kind": "skin-seam-proposal",
+      "region": "lower medial lid endpoint",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "free lid margin to skin",
+      "aPort": "E05-R::HI-040",
+      "bPort": "E04-R::HI-040",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-041",
+      "a": "E03-L",
+      "b": "E04-L",
+      "kind": "skin-seam-proposal",
+      "region": "outer canthus short endpoint connection ONLY",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "outer skin to shared canthal point",
+      "aPort": "E03-L::HI-041",
+      "bPort": "E04-L::HI-041",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-042",
+      "a": "E03-R",
+      "b": "E04-R",
+      "kind": "skin-seam-proposal",
+      "region": "outer canthus short endpoint connection ONLY",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "outer skin to shared canthal point",
+      "aPort": "E03-R::HI-042",
+      "bPort": "E04-R::HI-042",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-043",
+      "a": "A01a-L",
+      "b": "A01b-L",
+      "kind": "skin-seam-proposal",
+      "region": "upper helix/antihelix root boundary",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior; exact crease topology pending",
+      "aPort": "A01a-L::HI-043",
+      "bPort": "A01b-L::HI-043",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-044",
+      "a": "A01a-R",
+      "b": "A01b-R",
+      "kind": "skin-seam-proposal",
+      "region": "upper helix/antihelix root boundary",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior; exact crease topology pending",
+      "aPort": "A01a-R::HI-044",
+      "bPort": "A01b-R::HI-044",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-045",
+      "a": "A01a-L",
+      "b": "A02a-L",
+      "kind": "skin-seam-proposal",
+      "region": "helix-root to upper concha",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial superior root to concha rim",
+      "aPort": "A01a-L::HI-045",
+      "bPort": "A02a-L::HI-045",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-046",
+      "a": "A01a-R",
+      "b": "A02a-R",
+      "kind": "skin-seam-proposal",
+      "region": "helix-root to upper concha",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial superior root to concha rim",
+      "aPort": "A01a-R::HI-046",
+      "bPort": "A02a-R::HI-046",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-047",
+      "a": "A01a-L",
+      "b": "A03-L",
+      "kind": "skin-seam-proposal",
+      "region": "inferior helix end to lobe",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "A01a-L::HI-047",
+      "bPort": "A03-L::HI-047",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-048",
+      "a": "A01a-R",
+      "b": "A03-R",
+      "kind": "skin-seam-proposal",
+      "region": "inferior helix end to lobe",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "A01a-R::HI-048",
+      "bPort": "A03-R::HI-048",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-049",
+      "a": "A01a-L",
+      "b": "A04-L",
+      "kind": "skin-seam-proposal",
+      "region": "posterior helix root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A01a-L::HI-049",
+      "bPort": "A04-L::HI-049",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-050",
+      "a": "A01a-R",
+      "b": "A04-R",
+      "kind": "skin-seam-proposal",
+      "region": "posterior helix root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A01a-R::HI-050",
+      "bPort": "A04-R::HI-050",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-051",
+      "a": "A01b-L",
+      "b": "A02a-L",
+      "kind": "skin-seam-proposal",
+      "region": "antihelix to concha rim",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A01b-L::HI-051",
+      "bPort": "A02a-L::HI-051",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-052",
+      "a": "A01b-R",
+      "b": "A02a-R",
+      "kind": "skin-seam-proposal",
+      "region": "antihelix to concha rim",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A01b-R::HI-052",
+      "bPort": "A02a-R::HI-052",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-053",
+      "a": "A01b-L",
+      "b": "A03-L",
+      "kind": "skin-seam-proposal",
+      "region": "antihelix lower base",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "A01b-L::HI-053",
+      "bPort": "A03-L::HI-053",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-054",
+      "a": "A01b-R",
+      "b": "A03-R",
+      "kind": "skin-seam-proposal",
+      "region": "antihelix lower base",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "A01b-R::HI-054",
+      "bPort": "A03-R::HI-054",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-055",
+      "a": "A02a-L",
+      "b": "A02b-L",
+      "kind": "skin-seam-proposal",
+      "region": "concha to tragus hinge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A02a-L::HI-055",
+      "bPort": "A02b-L::HI-055",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-056",
+      "a": "A02a-R",
+      "b": "A02b-R",
+      "kind": "skin-seam-proposal",
+      "region": "concha to tragus hinge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A02a-R::HI-056",
+      "bPort": "A02b-R::HI-056",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-057",
+      "a": "A02a-L",
+      "b": "A03-L",
+      "kind": "skin-seam-proposal",
+      "region": "concha lower base to lobe",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "A02a-L::HI-057",
+      "bPort": "A03-L::HI-057",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-058",
+      "a": "A02a-R",
+      "b": "A03-R",
+      "kind": "skin-seam-proposal",
+      "region": "concha lower base to lobe",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "A02a-R::HI-058",
+      "bPort": "A03-R::HI-058",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-059",
+      "a": "A02a-L",
+      "b": "A04-L",
+      "kind": "skin-seam-proposal",
+      "region": "concha posterior root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A02a-L::HI-059",
+      "bPort": "A04-L::HI-059",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-060",
+      "a": "A02a-R",
+      "b": "A04-R",
+      "kind": "skin-seam-proposal",
+      "region": "concha posterior root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A02a-R::HI-060",
+      "bPort": "A04-R::HI-060",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-061",
+      "a": "A02b-L",
+      "b": "A04-L",
+      "kind": "skin-seam-proposal",
+      "region": "tragus anterior root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A02b-L::HI-061",
+      "bPort": "A04-L::HI-061",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-062",
+      "a": "A02b-R",
+      "b": "A04-R",
+      "kind": "skin-seam-proposal",
+      "region": "tragus anterior root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "A02b-R::HI-062",
+      "bPort": "A04-R::HI-062",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-063",
+      "a": "A03-L",
+      "b": "A04-L",
+      "kind": "skin-seam-proposal",
+      "region": "lobe posterior root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "inferior to superior",
+      "aPort": "A03-L::HI-063",
+      "bPort": "A04-L::HI-063",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-064",
+      "a": "A03-R",
+      "b": "A04-R",
+      "kind": "skin-seam-proposal",
+      "region": "lobe posterior root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "inferior to superior",
+      "aPort": "A03-R::HI-064",
+      "bPort": "A04-R::HI-064",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-065",
+      "a": "F01-L",
+      "b": "F12",
+      "kind": "skin-seam-proposal",
+      "region": "medial forehead to upper glabellar bridge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F01-L::HI-065",
+      "bPort": "F12::HI-065",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-066",
+      "a": "F01-R",
+      "b": "F12",
+      "kind": "skin-seam-proposal",
+      "region": "medial forehead to upper glabellar bridge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F01-R::HI-066",
+      "bPort": "F12::HI-066",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-067",
+      "a": "E05-L",
+      "b": "F12",
+      "kind": "skin-seam-proposal",
+      "region": "inner canthus to nasal bridge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "E05-L::HI-067",
+      "bPort": "F12::HI-067",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-068",
+      "a": "E05-R",
+      "b": "F12",
+      "kind": "skin-seam-proposal",
+      "region": "inner canthus to nasal bridge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "E05-R::HI-068",
+      "bPort": "F12::HI-068",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-069",
+      "a": "F18-L",
+      "b": "F12",
+      "kind": "skin-seam-proposal",
+      "region": "medial infraorbital to bridge flank",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F18-L::HI-069",
+      "bPort": "F12::HI-069",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-070",
+      "a": "F18-R",
+      "b": "F12",
+      "kind": "skin-seam-proposal",
+      "region": "medial infraorbital to bridge flank",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F18-R::HI-070",
+      "bPort": "F12::HI-070",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-071",
+      "a": "F14-L",
+      "b": "F13",
+      "kind": "skin-seam-proposal",
+      "region": "wing to central tip side cut",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F14-L::HI-071",
+      "bPort": "F13::HI-071",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-072",
+      "a": "F14-R",
+      "b": "F13",
+      "kind": "skin-seam-proposal",
+      "region": "wing to central tip side cut",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F14-R::HI-072",
+      "bPort": "F13::HI-072",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-073",
+      "a": "F14-L",
+      "b": "F15",
+      "kind": "skin-seam-proposal",
+      "region": "alar underside to nasal-floor side",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "F14-L::HI-073",
+      "bPort": "F15::HI-073",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-074",
+      "a": "F14-R",
+      "b": "F15",
+      "kind": "skin-seam-proposal",
+      "region": "alar underside to nasal-floor side",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "F14-R::HI-074",
+      "bPort": "F15::HI-074",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-075",
+      "a": "F19-L",
+      "b": "F16b",
+      "kind": "skin-seam-proposal",
+      "region": "nasolabial plane to philtrum flank",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F19-L::HI-075",
+      "bPort": "F16b::HI-075",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-076",
+      "a": "F19-R",
+      "b": "F16b",
+      "kind": "skin-seam-proposal",
+      "region": "nasolabial plane to philtrum flank",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior",
+      "aPort": "F19-R::HI-076",
+      "bPort": "F16b::HI-076",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-077",
+      "a": "F20-L",
+      "b": "F16a",
+      "kind": "skin-seam-proposal",
+      "region": "upper lip lateral end",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "vermilion rim to mouth seam",
+      "aPort": "F20-L::HI-077",
+      "bPort": "F16a::HI-077",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-078",
+      "a": "F20-R",
+      "b": "F16a",
+      "kind": "skin-seam-proposal",
+      "region": "upper lip lateral end",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "vermilion rim to mouth seam",
+      "aPort": "F20-R::HI-078",
+      "bPort": "F16a::HI-078",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-079",
+      "a": "F20-L",
+      "b": "F17",
+      "kind": "skin-seam-proposal",
+      "region": "lower lip lateral end",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "mouth seam to sublabial skin",
+      "aPort": "F20-L::HI-079",
+      "bPort": "F17::HI-079",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-080",
+      "a": "F20-R",
+      "b": "F17",
+      "kind": "skin-seam-proposal",
+      "region": "lower lip lateral end",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "mouth seam to sublabial skin",
+      "aPort": "F20-R::HI-080",
+      "bPort": "F17::HI-080",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-081",
+      "a": "F09-L",
+      "b": "N01",
+      "kind": "skin-seam-proposal",
+      "region": "under-jaw continuation",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "F09-L::HI-081",
+      "bPort": "N01::HI-081",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-082",
+      "a": "F09-R",
+      "b": "N01",
+      "kind": "skin-seam-proposal",
+      "region": "under-jaw continuation",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "F09-R::HI-082",
+      "bPort": "N01::HI-082",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-083",
+      "a": "F03-L",
+      "b": "S01",
+      "kind": "skin-seam-proposal",
+      "region": "temple superior hairline",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "F03-L::HI-083",
+      "bPort": "S01::HI-083",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-084",
+      "a": "F03-R",
+      "b": "S01",
+      "kind": "skin-seam-proposal",
+      "region": "temple superior hairline",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "F03-R::HI-084",
+      "bPort": "S01::HI-084",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-085",
+      "a": "F01-L",
+      "b": "S01",
+      "kind": "skin-seam-proposal",
+      "region": "forehead hairline",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral",
+      "aPort": "F01-L::HI-085",
+      "bPort": "S01::HI-085",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-086",
+      "a": "F01-R",
+      "b": "S01",
+      "kind": "skin-seam-proposal",
+      "region": "forehead hairline",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral",
+      "aPort": "F01-R::HI-086",
+      "bPort": "S01::HI-086",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-087",
+      "a": "A04-L",
+      "b": "N02",
+      "kind": "skin-seam-proposal",
+      "region": "lower postauricular to upper neck",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "A04-L::HI-087",
+      "bPort": "N02::HI-087",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-088",
+      "a": "A04-R",
+      "b": "N02",
+      "kind": "skin-seam-proposal",
+      "region": "lower postauricular to upper neck",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anterior to posterior",
+      "aPort": "A04-R::HI-088",
+      "bPort": "N02::HI-088",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-089",
+      "a": "F01-L",
+      "b": "F01-R",
+      "kind": "skin-seam-proposal",
+      "region": "forehead midline",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "hairline to glabella",
+      "aPort": "F01-L::HI-089",
+      "bPort": "F01-R::HI-089",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-090",
+      "a": "F12",
+      "b": "F13",
+      "kind": "skin-seam-proposal",
+      "region": "bridge to tip superior cut",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L",
+      "aPort": "F12::HI-090",
+      "bPort": "F13::HI-090",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-091",
+      "a": "F13",
+      "b": "F15",
+      "kind": "skin-seam-proposal",
+      "region": "tip lower central cut",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L",
+      "aPort": "F13::HI-091",
+      "bPort": "F15::HI-091",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-092",
+      "a": "F15",
+      "b": "F16b",
+      "kind": "skin-seam-proposal",
+      "region": "nasal base to philtrum superior cut",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L",
+      "aPort": "F15::HI-092",
+      "bPort": "F16b::HI-092",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-093",
+      "a": "F16b",
+      "b": "F16a",
+      "kind": "skin-seam-proposal",
+      "region": "philtrum lower / upper vermilion",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L",
+      "aPort": "F16b::HI-093",
+      "bPort": "F16a::HI-093",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-094",
+      "a": "F17",
+      "b": "F11",
+      "kind": "skin-seam-proposal",
+      "region": "lower lip apron to existing chin inner curve",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L along F11 u=0",
+      "aPort": "F17::HI-094",
+      "bPort": "F11::HI-094",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-095",
+      "a": "F11",
+      "b": "N01",
+      "kind": "skin-seam-proposal",
+      "region": "underchin to anterior neck",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L along F11 u=1",
+      "aPort": "F11::HI-095",
+      "bPort": "N01::HI-095",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-096",
+      "a": "S01",
+      "b": "S02",
+      "kind": "skin-seam-proposal",
+      "region": "anterior scalp to crown",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L",
+      "aPort": "S01::HI-096",
+      "bPort": "S02::HI-096",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-097",
+      "a": "S02",
+      "b": "S05",
+      "kind": "skin-seam-proposal",
+      "region": "crown to posterior scalp",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L",
+      "aPort": "S02::HI-097",
+      "bPort": "S05::HI-097",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-098",
+      "a": "S05",
+      "b": "N02",
+      "kind": "skin-seam-proposal",
+      "region": "nape scalp boundary",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L",
+      "aPort": "S05::HI-098",
+      "bPort": "N02::HI-098",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-099",
+      "a": "S03",
+      "b": "S01",
+      "kind": "skin-seam-proposal",
+      "region": "anterior side scalp",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S03::HI-099",
+      "bPort": "S01::HI-099",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-100",
+      "a": "S03",
+      "b": "S02",
+      "kind": "skin-seam-proposal",
+      "region": "upper side scalp",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S03::HI-100",
+      "bPort": "S02::HI-100",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-101",
+      "a": "S03",
+      "b": "S05",
+      "kind": "skin-seam-proposal",
+      "region": "posterior side scalp",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S03::HI-101",
+      "bPort": "S05::HI-101",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-102",
+      "a": "S03",
+      "b": "F03-L",
+      "kind": "skin-seam-proposal",
+      "region": "temple scalp edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S03::HI-102",
+      "bPort": "F03-L::HI-102",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-103",
+      "a": "S03",
+      "b": "A04-L",
+      "kind": "skin-seam-proposal",
+      "region": "postauricular root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S03::HI-103",
+      "bPort": "A04-L::HI-103",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-104",
+      "a": "S03",
+      "b": "N02",
+      "kind": "skin-seam-proposal",
+      "region": "lateral nape scalp",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S03::HI-104",
+      "bPort": "N02::HI-104",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-105",
+      "a": "N01",
+      "b": "N02",
+      "kind": "skin-seam-proposal",
+      "region": "L neck side boundary",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "jaw/ear level to collar cut",
+      "aPort": "N01::HI-105",
+      "bPort": "N02::HI-105",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-106",
+      "a": "E01-L",
+      "b": "E02-L",
+      "kind": "optical-seat",
+      "region": "anterior iris/cornea fitting",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "optical axis approximately +Z; native author dimensions below",
+      "aPort": "E01-L::HI-106",
+      "bPort": "E02-L::HI-106",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-107",
+      "a": "E01-L",
+      "b": "E03-L",
+      "kind": "sliding-contact",
+      "region": "E03 eyeball-facing surface",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral free margin",
+      "aPort": "E01-L::HI-107",
+      "bPort": "E03-L::HI-107",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-108",
+      "a": "E01-L",
+      "b": "E04-L",
+      "kind": "sliding-contact",
+      "region": "E04 eyeball-facing surface",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral free margin",
+      "aPort": "E01-L::HI-108",
+      "bPort": "E04-L::HI-108",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-109",
+      "a": "B01-L",
+      "b": "F01-L",
+      "kind": "surface-overlay",
+      "region": "eyebrow strip support/overlap",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial root to lateral taper",
+      "aPort": "B01-L::HI-109",
+      "bPort": "F01-L::HI-109",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-110",
+      "a": "B01-L",
+      "b": "E03-L",
+      "kind": "surface-overlay",
+      "region": "eyebrow strip support/overlap",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial root to lateral taper",
+      "aPort": "B01-L::HI-110",
+      "bPort": "E03-L::HI-110",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-111",
+      "a": "B01-L",
+      "b": "F03-L",
+      "kind": "surface-overlay",
+      "region": "eyebrow strip support/overlap",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial root to lateral taper",
+      "aPort": "B01-L::HI-111",
+      "bPort": "F03-L::HI-111",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-112",
+      "a": "S04",
+      "b": "S01",
+      "kind": "skin-seam-proposal",
+      "region": "anterior side scalp",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S04::HI-112",
+      "bPort": "S01::HI-112",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-113",
+      "a": "S04",
+      "b": "S02",
+      "kind": "skin-seam-proposal",
+      "region": "upper side scalp",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S04::HI-113",
+      "bPort": "S02::HI-113",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-114",
+      "a": "S04",
+      "b": "S05",
+      "kind": "skin-seam-proposal",
+      "region": "posterior side scalp",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S04::HI-114",
+      "bPort": "S05::HI-114",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-115",
+      "a": "S04",
+      "b": "F03-R",
+      "kind": "skin-seam-proposal",
+      "region": "temple scalp edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S04::HI-115",
+      "bPort": "F03-R::HI-115",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-116",
+      "a": "S04",
+      "b": "A04-R",
+      "kind": "skin-seam-proposal",
+      "region": "postauricular root",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S04::HI-116",
+      "bPort": "A04-R::HI-116",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-117",
+      "a": "S04",
+      "b": "N02",
+      "kind": "skin-seam-proposal",
+      "region": "lateral nape scalp",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "superior to inferior unless transverse; exact endpoint chart pending",
+      "aPort": "S04::HI-117",
+      "bPort": "N02::HI-117",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-118",
+      "a": "N01",
+      "b": "N02",
+      "kind": "skin-seam-proposal",
+      "region": "R neck side boundary",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "jaw/ear level to collar cut",
+      "aPort": "N01::HI-118",
+      "bPort": "N02::HI-118",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-119",
+      "a": "E01-R",
+      "b": "E02-R",
+      "kind": "optical-seat",
+      "region": "anterior iris/cornea fitting",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "optical axis approximately +Z; native author dimensions below",
+      "aPort": "E01-R::HI-119",
+      "bPort": "E02-R::HI-119",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-120",
+      "a": "E01-R",
+      "b": "E03-R",
+      "kind": "sliding-contact",
+      "region": "E03 eyeball-facing surface",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral free margin",
+      "aPort": "E01-R::HI-120",
+      "bPort": "E03-R::HI-120",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-121",
+      "a": "E01-R",
+      "b": "E04-R",
+      "kind": "sliding-contact",
+      "region": "E04 eyeball-facing surface",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial to lateral free margin",
+      "aPort": "E01-R::HI-121",
+      "bPort": "E04-R::HI-121",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-122",
+      "a": "B01-R",
+      "b": "F01-R",
+      "kind": "surface-overlay",
+      "region": "eyebrow strip support/overlap",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial root to lateral taper",
+      "aPort": "B01-R::HI-122",
+      "bPort": "F01-R::HI-122",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-123",
+      "a": "B01-R",
+      "b": "E03-R",
+      "kind": "surface-overlay",
+      "region": "eyebrow strip support/overlap",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial root to lateral taper",
+      "aPort": "B01-R::HI-123",
+      "bPort": "E03-R::HI-123",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-124",
+      "a": "B01-R",
+      "b": "F03-R",
+      "kind": "surface-overlay",
+      "region": "eyebrow strip support/overlap",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "medial root to lateral taper",
+      "aPort": "B01-R::HI-124",
+      "bPort": "F03-R::HI-124",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-125",
+      "a": "F16a",
+      "b": "F17",
+      "kind": "closed-mouth-contact",
+      "region": "mouth seam; NOT permanent upper/lower lip weld",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "anatomical R to L",
+      "aPort": "F16a::HI-125",
+      "bPort": "F17::HI-125",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-126",
+      "a": "H01",
+      "b": "S01",
+      "kind": "root-support",
+      "region": "frontmost lifted forelock from +X part to -X forehead",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H01::HI-126",
+      "bPort": "S01::HI-126",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H01",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-127",
+      "a": "H02",
+      "b": "S01",
+      "kind": "root-support",
+      "region": "forelock behind H01 along frontal part",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H02::HI-127",
+      "bPort": "S01::HI-127",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H02",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-128",
+      "a": "H03",
+      "b": "S01",
+      "kind": "root-support",
+      "region": "forelock behind H02 closer crown",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H03::HI-128",
+      "bPort": "S01::HI-128",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H03",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-129",
+      "a": "H04",
+      "b": "S01",
+      "kind": "root-support",
+      "region": "lateral forelock continuation behind H03",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H04::HI-129",
+      "bPort": "S01::HI-129",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H04",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-130",
+      "a": "H05",
+      "b": "S02",
+      "kind": "root-support",
+      "region": "low anterior crown left of central crown",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H05::HI-130",
+      "bPort": "S02::HI-130",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H05",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-131",
+      "a": "H06",
+      "b": "S02",
+      "kind": "root-support",
+      "region": "low anterior crown near center",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H06::HI-131",
+      "bPort": "S02::HI-131",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H06",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-132",
+      "a": "H07",
+      "b": "S02",
+      "kind": "root-support",
+      "region": "low crown overlap behind H05",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H07::HI-132",
+      "bPort": "S02::HI-132",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H07",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-133",
+      "a": "H08",
+      "b": "S02",
+      "kind": "root-support",
+      "region": "low crown overlap behind H06",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H08::HI-133",
+      "bPort": "S02::HI-133",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H08",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-134",
+      "a": "H09",
+      "b": "S01",
+      "kind": "root-support",
+      "region": "short front-right fringe under H01",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H09::HI-134",
+      "bPort": "S01::HI-134",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H09",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-135",
+      "a": "H10",
+      "b": "S01",
+      "kind": "root-support",
+      "region": "short medial fringe under H02",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H10::HI-135",
+      "bPort": "S01::HI-135",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H10",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-136",
+      "a": "H11",
+      "b": "S03",
+      "kind": "root-support",
+      "region": "upper anatomical-left side fall",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H11::HI-136",
+      "bPort": "S03::HI-136",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H11",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-137",
+      "a": "H12",
+      "b": "S03",
+      "kind": "root-support",
+      "region": "lower anatomical-left side fall",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H12::HI-137",
+      "bPort": "S03::HI-137",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H12",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-138",
+      "a": "H13",
+      "b": "S03",
+      "kind": "root-support",
+      "region": "left ear-edge terminal",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H13::HI-138",
+      "bPort": "S03::HI-138",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H13",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-139",
+      "a": "H14",
+      "b": "S04",
+      "kind": "root-support",
+      "region": "upper anatomical-right side fall",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H14::HI-139",
+      "bPort": "S04::HI-139",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H14",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-140",
+      "a": "H15",
+      "b": "S04",
+      "kind": "root-support",
+      "region": "lower anatomical-right side fall",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H15::HI-140",
+      "bPort": "S04::HI-140",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H15",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-141",
+      "a": "H16",
+      "b": "S04",
+      "kind": "root-support",
+      "region": "right ear-edge terminal",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H16::HI-141",
+      "bPort": "S04::HI-141",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H16",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-142",
+      "a": "H17",
+      "b": "S02",
+      "kind": "root-support",
+      "region": "left posterior crown arc",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H17::HI-142",
+      "bPort": "S02::HI-142",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H17",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-143",
+      "a": "H18",
+      "b": "S02",
+      "kind": "root-support",
+      "region": "right posterior crown arc",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H18::HI-143",
+      "bPort": "S02::HI-143",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H18",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-144",
+      "a": "H19",
+      "b": "S05",
+      "kind": "root-support",
+      "region": "left middle occipital arc",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H19::HI-144",
+      "bPort": "S05::HI-144",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H19",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-145",
+      "a": "H20",
+      "b": "S05",
+      "kind": "root-support",
+      "region": "right middle occipital arc",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H20::HI-145",
+      "bPort": "S05::HI-145",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H20",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-146",
+      "a": "H21",
+      "b": "S05",
+      "kind": "root-support",
+      "region": "left outer nape terminal",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H21::HI-146",
+      "bPort": "S05::HI-146",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H21",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-147",
+      "a": "H22",
+      "b": "S05",
+      "kind": "root-support",
+      "region": "left inner nape terminal",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H22::HI-147",
+      "bPort": "S05::HI-147",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H22",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-148",
+      "a": "H23",
+      "b": "S05",
+      "kind": "root-support",
+      "region": "right inner nape terminal",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H23::HI-148",
+      "bPort": "S05::HI-148",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H23",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-149",
+      "a": "H24",
+      "b": "S05",
+      "kind": "root-support",
+      "region": "right outer nape terminal",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "root centerline to taper tip; anchor tangent on named scalp",
+      "aPort": "H24::HI-149",
+      "bPort": "S05::HI-149",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement",
+      "anchorId": "ROOT-H24",
+      "anchorM": null,
+      "supportCount": 1,
+      "rootMustRemainUnderVisibleHair": true
+    },
+    {
+      "id": "HI-150",
+      "a": "H01",
+      "b": "H02",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H01::HI-150",
+      "bPort": "H02::HI-150",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-151",
+      "a": "H02",
+      "b": "H03",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H02::HI-151",
+      "bPort": "H03::HI-151",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-152",
+      "a": "H03",
+      "b": "H04",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H03::HI-152",
+      "bPort": "H04::HI-152",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-153",
+      "a": "H01",
+      "b": "H09",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H01::HI-153",
+      "bPort": "H09::HI-153",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-154",
+      "a": "H02",
+      "b": "H10",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H02::HI-154",
+      "bPort": "H10::HI-154",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-155",
+      "a": "H04",
+      "b": "H05",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H04::HI-155",
+      "bPort": "H05::HI-155",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-156",
+      "a": "H05",
+      "b": "H06",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H05::HI-156",
+      "bPort": "H06::HI-156",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-157",
+      "a": "H05",
+      "b": "H07",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H05::HI-157",
+      "bPort": "H07::HI-157",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-158",
+      "a": "H06",
+      "b": "H08",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H06::HI-158",
+      "bPort": "H08::HI-158",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-159",
+      "a": "H07",
+      "b": "H17",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H07::HI-159",
+      "bPort": "H17::HI-159",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-160",
+      "a": "H08",
+      "b": "H18",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H08::HI-160",
+      "bPort": "H18::HI-160",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-161",
+      "a": "H11",
+      "b": "H12",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H11::HI-161",
+      "bPort": "H12::HI-161",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-162",
+      "a": "H12",
+      "b": "H13",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H12::HI-162",
+      "bPort": "H13::HI-162",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-163",
+      "a": "H14",
+      "b": "H15",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H14::HI-163",
+      "bPort": "H15::HI-163",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-164",
+      "a": "H15",
+      "b": "H16",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H15::HI-164",
+      "bPort": "H16::HI-164",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-165",
+      "a": "H17",
+      "b": "H19",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H17::HI-165",
+      "bPort": "H19::HI-165",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-166",
+      "a": "H18",
+      "b": "H20",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H18::HI-166",
+      "bPort": "H20::HI-166",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-167",
+      "a": "H19",
+      "b": "H21",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H19::HI-167",
+      "bPort": "H21::HI-167",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-168",
+      "a": "H19",
+      "b": "H22",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H19::HI-168",
+      "bPort": "H22::HI-168",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-169",
+      "a": "H20",
+      "b": "H23",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H20::HI-169",
+      "bPort": "H23::HI-169",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    },
+    {
+      "id": "HI-170",
+      "a": "H20",
+      "b": "H24",
+      "kind": "hair-overlap",
+      "region": "author proposed visible overlap; not a welded shared edge",
+      "frame": "HEAD_LOCAL_M",
+      "canonicalDirection": "first ID over second ID; actual ordering remains unrendered",
+      "aPort": "H20::HI-170",
+      "bPort": "H24::HI-170",
+      "sideTraversal": {
+        "a": "+t",
+        "b": "-t for boundary loop; contact/overlap has no weld winding"
+      },
+      "status": "author semantic pairing only; geometry unresolved",
+      "curveM": null,
+      "tangentM": null,
+      "UVCorrespondence": null,
+      "gapOrClearanceM": null,
+      "actualSharedVertices": false,
+      "source": "author v64 design, not image measurement"
+    }
+  ],
+  "openPorts": [
+    {
+      "id": "OPEN-F05-L-outer-u1",
+      "owner": "F05-L",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "outer-u1",
+      "reason": "preauricular skin ownership unresolved between temple, ear-front and cheek external boundary",
+      "requiredReference": "F21 small preauricular-face proposal, true side + front3Q + reverse with F03/F05/F07/A04 neighbor locator",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-F07-L-outer-u1",
+      "owner": "F07-L",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "outer-u1",
+      "reason": "preauricular skin ownership unresolved between temple, ear-front and cheek external boundary",
+      "requiredReference": "F21 small preauricular-face proposal, true side + front3Q + reverse with F03/F05/F07/A04 neighbor locator",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-F14-L-nostril-inner",
+      "owner": "F14-L",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "nostril-inner",
+      "reason": "nasal tunnel extent / internal shadow terminus unspecified",
+      "requiredReference": "underside nasal assembly F13/F14/F15; open rim identity and depth",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-A02a-L-ear-canal",
+      "owner": "A02a-L",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "ear-canal",
+      "reason": "canal entrance and hidden interior extent unspecified",
+      "requiredReference": "concha/tragus rear-cut view identifying canal terminus",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-A01a-L-inner-attachment-section",
+      "owner": "A01a-L",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "inner-attachment-section",
+      "reason": "independent image review cannot distinguish closed round rod from open rolled skin edge",
+      "requiredReference": "single A01a reverse attachment plus qualitative transverse section; no tube/closed solid assumed",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-F05-R-outer-u1",
+      "owner": "F05-R",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "outer-u1",
+      "reason": "preauricular skin ownership unresolved between temple, ear-front and cheek external boundary",
+      "requiredReference": "F21 small preauricular-face proposal, true side + front3Q + reverse with F03/F05/F07/A04 neighbor locator",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-F07-R-outer-u1",
+      "owner": "F07-R",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "outer-u1",
+      "reason": "preauricular skin ownership unresolved between temple, ear-front and cheek external boundary",
+      "requiredReference": "F21 small preauricular-face proposal, true side + front3Q + reverse with F03/F05/F07/A04 neighbor locator",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-F14-R-nostril-inner",
+      "owner": "F14-R",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "nostril-inner",
+      "reason": "nasal tunnel extent / internal shadow terminus unspecified",
+      "requiredReference": "underside nasal assembly F13/F14/F15; open rim identity and depth",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-A02a-R-ear-canal",
+      "owner": "A02a-R",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "ear-canal",
+      "reason": "canal entrance and hidden interior extent unspecified",
+      "requiredReference": "concha/tragus rear-cut view identifying canal terminus",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-A01a-R-inner-attachment-section",
+      "owner": "A01a-R",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "inner-attachment-section",
+      "reason": "independent image review cannot distinguish closed round rod from open rolled skin edge",
+      "requiredReference": "single A01a reverse attachment plus qualitative transverse section; no tube/closed solid assumed",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-N01-costume-cut",
+      "owner": "N01",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "costume-cut",
+      "reason": "cloth frame/clearance curve is not yet shared",
+      "requiredReference": "one head-neck/collar cross section registered to chest and head; collar remains costume ownership",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-N02-costume-cut",
+      "owner": "N02",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "costume-cut",
+      "reason": "cloth frame/clearance curve is not yet shared",
+      "requiredReference": "one head-neck/collar cross section registered to chest and head; collar remains costume ownership",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-F16a-inner-mouth",
+      "owner": "F16a",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "inner-mouth",
+      "reason": "closed neutral contact does not provide expression-revealed cavity",
+      "requiredReference": "closed/open lip cross-section if mouth opening will be required",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    },
+    {
+      "id": "OPEN-F17-shape",
+      "owner": "F17",
+      "frame": "HEAD_LOCAL_M",
+      "boundary": "shape",
+      "reason": "isolated true-side upper spike remains inconsistent",
+      "requiredReference": "single F17 orthographic side + front with exact same cut perimeter, no upper lip",
+      "targetInstance": null,
+      "curveM": null,
+      "status": "blocked; no geometry may be invented to close this"
+    }
+  ],
+  "interpretation": "semantic proposals have no registered curves; only six existing C1 records have numeric geometry"
+}

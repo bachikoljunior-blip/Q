@@ -1,0 +1,512 @@
+[
+  {
+    "owner": "F05-R",
+    "nativeEdge": "u0",
+    "controlsM": [
+      [
+        -0.039,
+        0.03,
+        0.116
+      ],
+      [
+        -0.039,
+        0.017333333333333333,
+        0.116
+      ],
+      [
+        -0.0395,
+        0.004833333333333334,
+        0.11566666666666667
+      ],
+      [
+        -0.039,
+        -0.008,
+        0.116
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "F18-R",
+      "F19-R"
+    ],
+    "status": "one ordered subdivision parameter needed; not fixed",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F05-R",
+    "nativeEdge": "u1",
+    "controlsM": [
+      [
+        -0.102,
+        0.034,
+        0.081
+      ],
+      [
+        -0.10133333333333333,
+        0.021666666666666667,
+        0.07333333333333333
+      ],
+      [
+        -0.10133333333333333,
+        0.012666666666666666,
+        0.06466666666666666
+      ],
+      [
+        -0.1,
+        -0.003,
+        0.058
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [],
+    "status": "blocked F21 preauricular ownership; no current type stretched to fill",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F05-R",
+    "nativeEdge": "v0",
+    "controlsM": [
+      [
+        -0.039,
+        0.03,
+        0.116
+      ],
+      [
+        -0.057,
+        0.031,
+        0.12
+      ],
+      [
+        -0.085,
+        0.035,
+        0.11
+      ],
+      [
+        -0.102,
+        0.034,
+        0.081
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "F18-R",
+      "F03-R"
+    ],
+    "status": "inner-to-outer ordered split needed, not a direct forehead join",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F07-R",
+    "nativeEdge": "u0",
+    "controlsM": [
+      [
+        -0.039,
+        -0.008,
+        0.116
+      ],
+      [
+        -0.0385,
+        -0.020833333333333336,
+        0.11633333333333334
+      ],
+      [
+        -0.03816666666666666,
+        -0.03883333333333333,
+        0.11616666666666667
+      ],
+      [
+        -0.036,
+        -0.047,
+        0.118
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "F19-R",
+      "F20-R"
+    ],
+    "status": "one ordered subdivision parameter needed; not fixed",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F07-R",
+    "nativeEdge": "u1",
+    "controlsM": [
+      [
+        -0.1,
+        -0.003,
+        0.058
+      ],
+      [
+        -0.09866666666666668,
+        -0.018666666666666665,
+        0.051333333333333335
+      ],
+      [
+        -0.105,
+        -0.04483333333333333,
+        0.03716666666666667
+      ],
+      [
+        -0.094,
+        -0.06,
+        0.041
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [],
+    "status": "blocked F21 preauricular ownership; no current type stretched to fill",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F09-R",
+    "nativeEdge": "u0",
+    "controlsM": [
+      [
+        -0.036,
+        -0.047,
+        0.118
+      ],
+      [
+        -0.03383333333333333,
+        -0.05516666666666667,
+        0.11983333333333332
+      ],
+      [
+        -0.03633333333333333,
+        -0.05533333333333333,
+        0.1255
+      ],
+      [
+        -0.026,
+        -0.057,
+        0.127
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "F20-R"
+    ],
+    "status": "full edge candidate; compatibility not proven",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F09-R",
+    "nativeEdge": "u1",
+    "controlsM": [
+      [
+        -0.094,
+        -0.06,
+        0.041
+      ],
+      [
+        -0.083,
+        -0.07516666666666666,
+        0.044833333333333336
+      ],
+      [
+        -0.05533333333333333,
+        -0.08833333333333333,
+        0.07433333333333333
+      ],
+      [
+        -0.034,
+        -0.094,
+        0.081
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "N01"
+    ],
+    "status": "subsequence of upper N01 boundary; parameter/order/weight fit pending",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F11",
+    "nativeEdge": "u0",
+    "controlsM": [
+      [
+        -0.026,
+        -0.057,
+        0.127
+      ],
+      [
+        -0.015666666666666666,
+        -0.05866666666666667,
+        0.1285
+      ],
+      [
+        0.015666666666666666,
+        -0.05866666666666667,
+        0.1285
+      ],
+      [
+        0.026,
+        -0.057,
+        0.127
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "F17"
+    ],
+    "status": "full curve known only on F11 side; F17 side unresolved",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F11",
+    "nativeEdge": "u1",
+    "controlsM": [
+      [
+        -0.034,
+        -0.094,
+        0.081
+      ],
+      [
+        -0.01266666666666667,
+        -0.09966666666666667,
+        0.08766666666666667
+      ],
+      [
+        0.01266666666666667,
+        -0.09966666666666667,
+        0.08766666666666667
+      ],
+      [
+        0.034,
+        -0.094,
+        0.081
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "N01"
+    ],
+    "status": "subsequence of upper N01 boundary; parameter/order/weight fit pending",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F09-L",
+    "nativeEdge": "u0",
+    "controlsM": [
+      [
+        0.026,
+        -0.057,
+        0.127
+      ],
+      [
+        0.03633333333333333,
+        -0.05533333333333333,
+        0.1255
+      ],
+      [
+        0.03383333333333333,
+        -0.05516666666666667,
+        0.11983333333333332
+      ],
+      [
+        0.036,
+        -0.047,
+        0.118
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "F20-L"
+    ],
+    "status": "full edge candidate; compatibility not proven",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F09-L",
+    "nativeEdge": "u1",
+    "controlsM": [
+      [
+        0.034,
+        -0.094,
+        0.081
+      ],
+      [
+        0.05533333333333333,
+        -0.08833333333333333,
+        0.07433333333333333
+      ],
+      [
+        0.083,
+        -0.07516666666666666,
+        0.044833333333333336
+      ],
+      [
+        0.094,
+        -0.06,
+        0.041
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "N01"
+    ],
+    "status": "subsequence of upper N01 boundary; parameter/order/weight fit pending",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F07-L",
+    "nativeEdge": "u0",
+    "controlsM": [
+      [
+        0.036,
+        -0.047,
+        0.118
+      ],
+      [
+        0.03816666666666666,
+        -0.03883333333333333,
+        0.11616666666666667
+      ],
+      [
+        0.0385,
+        -0.020833333333333336,
+        0.11633333333333334
+      ],
+      [
+        0.039,
+        -0.008,
+        0.116
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "F19-L",
+      "F20-L"
+    ],
+    "status": "one ordered subdivision parameter needed; not fixed",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F07-L",
+    "nativeEdge": "u1",
+    "controlsM": [
+      [
+        0.094,
+        -0.06,
+        0.041
+      ],
+      [
+        0.105,
+        -0.04483333333333333,
+        0.03716666666666667
+      ],
+      [
+        0.09866666666666668,
+        -0.018666666666666665,
+        0.051333333333333335
+      ],
+      [
+        0.1,
+        -0.003,
+        0.058
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [],
+    "status": "blocked F21 preauricular ownership; no current type stretched to fill",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F05-L",
+    "nativeEdge": "u0",
+    "controlsM": [
+      [
+        0.039,
+        -0.008,
+        0.116
+      ],
+      [
+        0.0395,
+        0.004833333333333334,
+        0.11566666666666667
+      ],
+      [
+        0.039,
+        0.017333333333333333,
+        0.116
+      ],
+      [
+        0.039,
+        0.03,
+        0.116
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "F18-L",
+      "F19-L"
+    ],
+    "status": "one ordered subdivision parameter needed; not fixed",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F05-L",
+    "nativeEdge": "u1",
+    "controlsM": [
+      [
+        0.1,
+        -0.003,
+        0.058
+      ],
+      [
+        0.10133333333333333,
+        0.012666666666666666,
+        0.06466666666666666
+      ],
+      [
+        0.10133333333333333,
+        0.021666666666666667,
+        0.07333333333333333
+      ],
+      [
+        0.102,
+        0.034,
+        0.081
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [],
+    "status": "blocked F21 preauricular ownership; no current type stretched to fill",
+    "registeredOtherSide": false
+  },
+  {
+    "owner": "F05-L",
+    "nativeEdge": "v1",
+    "controlsM": [
+      [
+        0.039,
+        0.03,
+        0.116
+      ],
+      [
+        0.057,
+        0.031,
+        0.12
+      ],
+      [
+        0.085,
+        0.035,
+        0.11
+      ],
+      [
+        0.102,
+        0.034,
+        0.081
+      ]
+    ],
+    "parameter": "v increasing for u0/u1, u increasing for v0/v1",
+    "targets": [
+      "F18-L",
+      "F03-L"
+    ],
+    "status": "inner-to-outer ordered split needed, not a direct forehead join",
+    "registeredOtherSide": false
+  }
+]

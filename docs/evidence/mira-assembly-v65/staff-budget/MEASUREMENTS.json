@@ -1,0 +1,1212 @@
+{
+  "schema": "q-staff-budget-v65/1",
+  "source": "bc761f25aae76209d26623b509f97e1f3a5a12ca",
+  "startedAt": "2026-09-16T23:35:42.774Z",
+  "finishedAt": "2026-09-16T23:35:42.952Z",
+  "wallMs": 177.47553899999997,
+  "constructionMs": {
+    "existingStaff": 60.95045499999999,
+    "existingBatch": 17.95333099999999,
+    "meaning": "Node constructors only; not total production time or GPU/FPS"
+  },
+  "scope": "Existing geometry reconstructed unchanged; analytical future subdivision plan only; no new shape or runtime import",
+  "original": {
+    "meshes": 19,
+    "materials": 5,
+    "uniqueGeometries": 17,
+    "triangles": 7512,
+    "uniqueBufferBytes": 290792,
+    "perMeshBufferBytes": 323320
+  },
+  "batch": {
+    "meshes": 4,
+    "materials": 4,
+    "uniqueGeometries": 4,
+    "triangles": 7512,
+    "uniqueBufferBytes": 323320,
+    "perMeshBufferBytes": 323320
+  },
+  "equality": {
+    "maxPositionMm": 0.000059101730620625403,
+    "maxNormalError": 3.534270402482708e-8,
+    "otherAttributeMismatch": 0,
+    "indexMismatch": 0,
+    "materialMismatch": 0
+  },
+  "parts": [
+    {
+      "id": "S01",
+      "triangles": 96,
+      "vertices": 111,
+      "uniquePositionValues": 50,
+      "indexBytes": 576,
+      "attributes": {
+        "position": {
+          "count": 111,
+          "itemSize": 3,
+          "bytes": 1332,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 111,
+          "itemSize": 2,
+          "bytes": 888,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 111,
+          "itemSize": 3,
+          "bytes": 1332,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 4128
+    },
+    {
+      "id": "S02",
+      "triangles": 320,
+      "vertices": 498,
+      "uniquePositionValues": 160,
+      "indexBytes": 1920,
+      "attributes": {
+        "position": {
+          "count": 498,
+          "itemSize": 3,
+          "bytes": 5976,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 498,
+          "itemSize": 2,
+          "bytes": 3984,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 498,
+          "itemSize": 3,
+          "bytes": 5976,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 17856
+    },
+    {
+      "id": "S03",
+      "triangles": 128,
+      "vertices": 154,
+      "uniquePositionValues": 66,
+      "indexBytes": 768,
+      "attributes": {
+        "position": {
+          "count": 154,
+          "itemSize": 3,
+          "bytes": 1848,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 154,
+          "itemSize": 2,
+          "bytes": 1232,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 154,
+          "itemSize": 3,
+          "bytes": 1848,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 5696
+    },
+    {
+      "id": "S04",
+      "triangles": 128,
+      "vertices": 168,
+      "uniquePositionValues": 64,
+      "indexBytes": 768,
+      "attributes": {
+        "position": {
+          "count": 168,
+          "itemSize": 3,
+          "bytes": 2016,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 168,
+          "itemSize": 2,
+          "bytes": 1344,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 168,
+          "itemSize": 3,
+          "bytes": 2016,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 6144
+    },
+    {
+      "id": "S06",
+      "triangles": 384,
+      "vertices": 541,
+      "uniquePositionValues": 192,
+      "indexBytes": 2304,
+      "attributes": {
+        "position": {
+          "count": 541,
+          "itemSize": 3,
+          "bytes": 6492,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 541,
+          "itemSize": 2,
+          "bytes": 4328,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 541,
+          "itemSize": 3,
+          "bytes": 6492,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 19616
+    },
+    {
+      "id": "S15",
+      "triangles": 416,
+      "vertices": 684,
+      "uniquePositionValues": 210,
+      "indexBytes": 2496,
+      "attributes": {
+        "position": {
+          "count": 684,
+          "itemSize": 3,
+          "bytes": 8208,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 684,
+          "itemSize": 2,
+          "bytes": 5472,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 684,
+          "itemSize": 3,
+          "bytes": 8208,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 24384
+    },
+    {
+      "id": "S17",
+      "triangles": 256,
+      "vertices": 288,
+      "uniquePositionValues": 128,
+      "indexBytes": 1536,
+      "attributes": {
+        "position": {
+          "count": 288,
+          "itemSize": 3,
+          "bytes": 3456,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 288,
+          "itemSize": 2,
+          "bytes": 2304,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 288,
+          "itemSize": 3,
+          "bytes": 3456,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 10752
+    },
+    {
+      "id": "S18",
+      "triangles": 256,
+      "vertices": 288,
+      "uniquePositionValues": 128,
+      "indexBytes": 1536,
+      "attributes": {
+        "position": {
+          "count": 288,
+          "itemSize": 3,
+          "bytes": 3456,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 288,
+          "itemSize": 2,
+          "bytes": 2304,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 288,
+          "itemSize": 3,
+          "bytes": 3456,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 10752
+    },
+    {
+      "id": "S05-A",
+      "triangles": 644,
+      "vertices": 658,
+      "uniquePositionValues": 324,
+      "indexBytes": 3864,
+      "attributes": {
+        "position": {
+          "count": 658,
+          "itemSize": 3,
+          "bytes": 7896,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 658,
+          "itemSize": 2,
+          "bytes": 5264,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 658,
+          "itemSize": 3,
+          "bytes": 7896,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 24920
+    },
+    {
+      "id": "S05-B",
+      "triangles": 644,
+      "vertices": 656,
+      "uniquePositionValues": 324,
+      "indexBytes": 3864,
+      "attributes": {
+        "position": {
+          "count": 656,
+          "itemSize": 3,
+          "bytes": 7872,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 656,
+          "itemSize": 2,
+          "bytes": 5248,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 656,
+          "itemSize": 3,
+          "bytes": 7872,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 24856
+    },
+    {
+      "id": "S09",
+      "triangles": 364,
+      "vertices": 458,
+      "uniquePositionValues": 184,
+      "indexBytes": 2184,
+      "attributes": {
+        "position": {
+          "count": 458,
+          "itemSize": 3,
+          "bytes": 5496,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 458,
+          "itemSize": 2,
+          "bytes": 3664,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 458,
+          "itemSize": 3,
+          "bytes": 5496,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 16840
+    },
+    {
+      "id": "S10",
+      "triangles": 364,
+      "vertices": 458,
+      "uniquePositionValues": 184,
+      "indexBytes": 2184,
+      "attributes": {
+        "position": {
+          "count": 458,
+          "itemSize": 3,
+          "bytes": 5496,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 458,
+          "itemSize": 2,
+          "bytes": 3664,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 458,
+          "itemSize": 3,
+          "bytes": 5496,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 16840
+    },
+    {
+      "id": "S11",
+      "triangles": 364,
+      "vertices": 422,
+      "uniquePositionValues": 184,
+      "indexBytes": 2184,
+      "attributes": {
+        "position": {
+          "count": 422,
+          "itemSize": 3,
+          "bytes": 5064,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 422,
+          "itemSize": 2,
+          "bytes": 3376,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 422,
+          "itemSize": 3,
+          "bytes": 5064,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 15688
+    },
+    {
+      "id": "S12",
+      "triangles": 364,
+      "vertices": 422,
+      "uniquePositionValues": 184,
+      "indexBytes": 2184,
+      "attributes": {
+        "position": {
+          "count": 422,
+          "itemSize": 3,
+          "bytes": 5064,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 422,
+          "itemSize": 2,
+          "bytes": 3376,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 422,
+          "itemSize": 3,
+          "bytes": 5064,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 15688
+    },
+    {
+      "id": "S13",
+      "triangles": 384,
+      "vertices": 192,
+      "uniquePositionValues": 192,
+      "indexBytes": 2304,
+      "attributes": {
+        "position": {
+          "count": 192,
+          "itemSize": 3,
+          "bytes": 2304,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 192,
+          "itemSize": 2,
+          "bytes": 1536,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 192,
+          "itemSize": 3,
+          "bytes": 2304,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 8448
+    },
+    {
+      "id": "S07",
+      "triangles": 672,
+      "vertices": 838,
+      "uniquePositionValues": 338,
+      "indexBytes": 4032,
+      "attributes": {
+        "position": {
+          "count": 838,
+          "itemSize": 3,
+          "bytes": 10056,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 838,
+          "itemSize": 2,
+          "bytes": 6704,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 838,
+          "itemSize": 3,
+          "bytes": 10056,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 30848
+    },
+    {
+      "id": "S14",
+      "triangles": 544,
+      "vertices": 933,
+      "uniquePositionValues": 274,
+      "indexBytes": 3264,
+      "attributes": {
+        "position": {
+          "count": 933,
+          "itemSize": 3,
+          "bytes": 11196,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 933,
+          "itemSize": 2,
+          "bytes": 7464,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 933,
+          "itemSize": 3,
+          "bytes": 11196,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 33120
+    },
+    {
+      "id": "S16",
+      "triangles": 800,
+      "vertices": 534,
+      "uniquePositionValues": 402,
+      "indexBytes": 4800,
+      "attributes": {
+        "position": {
+          "count": 534,
+          "itemSize": 3,
+          "bytes": 6408,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 534,
+          "itemSize": 2,
+          "bytes": 4272,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 534,
+          "itemSize": 3,
+          "bytes": 6408,
+          "type": "Float32Array"
+        },
+        "color": {
+          "count": 534,
+          "itemSize": 3,
+          "bytes": 6408,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 28296
+    },
+    {
+      "id": "S08",
+      "triangles": 384,
+      "vertices": 192,
+      "uniquePositionValues": 192,
+      "indexBytes": 2304,
+      "attributes": {
+        "position": {
+          "count": 192,
+          "itemSize": 3,
+          "bytes": 2304,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "count": 192,
+          "itemSize": 2,
+          "bytes": 1536,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "count": 192,
+          "itemSize": 3,
+          "bytes": 2304,
+          "type": "Float32Array"
+        }
+      },
+      "bufferBytes": 8448
+    }
+  ],
+  "largestParts": [
+    {
+      "id": "S16",
+      "triangles": 800,
+      "fraction": 0.10649627263045794
+    },
+    {
+      "id": "S07",
+      "triangles": 672,
+      "fraction": 0.08945686900958466
+    },
+    {
+      "id": "S05-A",
+      "triangles": 644,
+      "fraction": 0.08572949946751864
+    },
+    {
+      "id": "S05-B",
+      "triangles": 644,
+      "fraction": 0.08572949946751864
+    },
+    {
+      "id": "S14",
+      "triangles": 544,
+      "fraction": 0.0724174653887114
+    },
+    {
+      "id": "S15",
+      "triangles": 416,
+      "fraction": 0.055378061767838126
+    },
+    {
+      "id": "S06",
+      "triangles": 384,
+      "fraction": 0.051118210862619806
+    },
+    {
+      "id": "S13",
+      "triangles": 384,
+      "fraction": 0.051118210862619806
+    },
+    {
+      "id": "S08",
+      "triangles": 384,
+      "fraction": 0.051118210862619806
+    },
+    {
+      "id": "S09",
+      "triangles": 364,
+      "fraction": 0.04845580404685836
+    },
+    {
+      "id": "S10",
+      "triangles": 364,
+      "fraction": 0.04845580404685836
+    },
+    {
+      "id": "S11",
+      "triangles": 364,
+      "fraction": 0.04845580404685836
+    },
+    {
+      "id": "S12",
+      "triangles": 364,
+      "fraction": 0.04845580404685836
+    },
+    {
+      "id": "S02",
+      "triangles": 320,
+      "fraction": 0.042598509052183174
+    },
+    {
+      "id": "S17",
+      "triangles": 256,
+      "fraction": 0.03407880724174654
+    },
+    {
+      "id": "S18",
+      "triangles": 256,
+      "fraction": 0.03407880724174654
+    },
+    {
+      "id": "S03",
+      "triangles": 128,
+      "fraction": 0.01703940362087327
+    },
+    {
+      "id": "S04",
+      "triangles": 128,
+      "fraction": 0.01703940362087327
+    },
+    {
+      "id": "S01",
+      "triangles": 96,
+      "fraction": 0.012779552715654952
+    }
+  ],
+  "existingKeeper": {
+    "triangles": 6718,
+    "draws": 13,
+    "parts": [
+      {
+        "name": "cape",
+        "material": "Q cloth",
+        "triangles": 192
+      },
+      {
+        "name": "Q upper cloth skin",
+        "material": "Q upper cloth",
+        "triangles": 816
+      },
+      {
+        "name": "Q skin skin",
+        "material": "Q skin",
+        "triangles": 1068
+      },
+      {
+        "name": "Q anatomical face skin",
+        "material": "Q anatomical face",
+        "triangles": 1646
+      },
+      {
+        "name": "Q eye skin",
+        "material": "Q eye",
+        "triangles": 160
+      },
+      {
+        "name": "Q eye skin",
+        "material": "Q eye",
+        "triangles": 160
+      },
+      {
+        "name": "Q cloth skin",
+        "material": "Q cloth",
+        "triangles": 244
+      },
+      {
+        "name": "Q leather skin",
+        "material": "Q leather",
+        "triangles": 752
+      },
+      {
+        "name": "Q leather skin",
+        "material": "Q leather",
+        "triangles": 32
+      },
+      {
+        "name": "Q metal skin",
+        "material": "Q metal",
+        "triangles": 508
+      },
+      {
+        "name": "Q cloth skin",
+        "material": "Q cloth",
+        "triangles": 100
+      },
+      {
+        "name": "Q cloth skin",
+        "material": "Q cloth",
+        "triangles": 512
+      },
+      {
+        "name": "Q leather skin",
+        "material": "Q leather",
+        "triangles": 528
+      }
+    ]
+  },
+  "simpleAddition": {
+    "triangles": 14230,
+    "existingActorGuardExclusive": 8000,
+    "accepted": false,
+    "reason": "The future staff replaces the existing object; this intentionally naive total is not a candidate budget"
+  },
+  "circleAnalysis": {
+    "formula": "r*(1-cos(pi/n)); exact regular circle chord sagitta, not full surface/reference error",
+    "rows": [
+      {
+        "radiusMm": 12,
+        "segments": 12,
+        "sagittaMm": 0.40889008453118025,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.11111427353046231
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.1666714102956935
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.22222854706092462
+          }
+        ]
+      },
+      {
+        "radiusMm": 12,
+        "segments": 16,
+        "sagittaMm": 0.23057663516123483,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.06265829443728015
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.09398744165592023
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.1253165888745603
+          }
+        ]
+      },
+      {
+        "radiusMm": 12,
+        "segments": 24,
+        "sagittaMm": 0.10266166351427541,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.02789790359895024
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.04184685539842536
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.05579580719790048
+          }
+        ]
+      },
+      {
+        "radiusMm": 12,
+        "segments": 32,
+        "sagittaMm": 0.057783279933636855,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.015702379233272397
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.0235535688499086
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.031404758466544794
+          }
+        ]
+      },
+      {
+        "radiusMm": 18,
+        "segments": 12,
+        "sagittaMm": 0.6133351267967704,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.16667141029569346
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.2500071154435402
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.3333428205913869
+          }
+        ]
+      },
+      {
+        "radiusMm": 18,
+        "segments": 16,
+        "sagittaMm": 0.34586495274185225,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.09398744165592023
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.14098116248388032
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.18797488331184045
+          }
+        ]
+      },
+      {
+        "radiusMm": 18,
+        "segments": 24,
+        "sagittaMm": 0.15399249527141312,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.04184685539842536
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.06277028309763803
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.08369371079685071
+          }
+        ]
+      },
+      {
+        "radiusMm": 18,
+        "segments": 32,
+        "sagittaMm": 0.08667491990045528,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.023553568849908595
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.03533035327486289
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.04710713769981719
+          }
+        ]
+      },
+      {
+        "radiusMm": 27.5,
+        "segments": 12,
+        "sagittaMm": 0.9370397770506214,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.2546368768406428
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.3819553152609642
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.5092737536812856
+          }
+        ]
+      },
+      {
+        "radiusMm": 27.5,
+        "segments": 16,
+        "sagittaMm": 0.5284047889111632,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.14359192475210034
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.21538788712815052
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.2871838495042007
+          }
+        ]
+      },
+      {
+        "radiusMm": 27.5,
+        "segments": 24,
+        "sagittaMm": 0.2352663122202145,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.0639326957475943
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.09589904362139144
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.1278653914951886
+          }
+        ]
+      },
+      {
+        "radiusMm": 27.5,
+        "segments": 32,
+        "sagittaMm": 0.13242001651458446,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.035984619076249245
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.05397692861437387
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.07196923815249849
+          }
+        ]
+      },
+      {
+        "radiusMm": 52,
+        "segments": 12,
+        "sagittaMm": 1.7718570329684478,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.48149518529867
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.7222427779480051
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.96299037059734
+          }
+        ]
+      },
+      {
+        "radiusMm": 52,
+        "segments": 16,
+        "sagittaMm": 0.9991654190320176,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.2715192758948806
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.40727891384232096
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.5430385517897612
+          }
+        ]
+      },
+      {
+        "radiusMm": 52,
+        "segments": 24,
+        "sagittaMm": 0.44486720856186013,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.12089091559545102
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.18133637339317654
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.24178183119090205
+          }
+        ]
+      },
+      {
+        "radiusMm": 52,
+        "segments": 32,
+        "sagittaMm": 0.2503942130457597,
+        "projectedPixelScenarios": [
+          {
+            "height": 720,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.06804364334418038
+          },
+          {
+            "height": 1080,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.10206546501627059
+          },
+          {
+            "height": 1440,
+            "distanceM": 2.6,
+            "fovDeg": 54,
+            "pixelError": 0.13608728668836076
+          }
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "radiusMm": 18,
+        "errorMm": 0.25,
+        "minimumUniformSegments": 19
+      },
+      {
+        "radiusMm": 27.5,
+        "errorMm": 0.25,
+        "minimumUniformSegments": 24
+      },
+      {
+        "radiusMm": 52,
+        "errorMm": 0.25,
+        "minimumUniformSegments": 33
+      }
+    ],
+    "cameraBasis": "Production vertical fov54 and nearest dialogue candidate distance2.6m; heights are analysis scenarios, not acquired frames. A projected curve need not lie at the target distance."
+  },
+  "decisions": [
+    {
+      "option": "Existing exact material batching",
+      "result": "Keep as available representation",
+      "reason": "19 to 4 material buckets and corner/normal/UV equivalence measured; bytes increase and culling granularity worsens; no GPU acceptance."
+    },
+    {
+      "option": "Uniformly lower all subdivisions",
+      "result": "Reject as global method",
+      "reason": "At R52, sixteen sides already deviate about1mm from the analytic circle. Fine contacts, curved silhouette, deformation and close shots require independent error bounds."
+    },
+    {
+      "option": "Shared boundary sampling with adaptive interiors",
+      "result": "Select for the later assembly experiment",
+      "reason": "Freeze all seam/contact curves, derive per-span samples from curvature/error, retain feature stations; no candidate mesh is produced in this unit."
+    },
+    {
+      "option": "Separate high-detail near actor and existing distant representation",
+      "result": "Plan only",
+      "reason": "Allows high detail to be loaded and drawn selectively rather than restricting every author surface to the current8000 test; transition, loading, actual draw/GPU costs still require implementation and measurement."
+    }
+  ],
+  "nextGate": "Whole reference and numerical attachment registration must be accepted before changed mesh generation; then compare actual full actor projected shape/contact/animation and memory against the fixed baseline.",
+  "newGeometryVariants": 0,
+  "runtimeImports": 0,
+  "inputHashes": {
+    "review/staff-v63/assembly.mjs": "dabaaee77dbf0e16f80605c3b1a3a39e2897b2c9d89898b22eefb71d98236481",
+    "review/staff-v63/staff-parts.mjs": "c71aad81b0acaff2070b3681dcdae8ba057c51a28468cef5a16957fa69d1f5cc",
+    "review/lantern-v63/lantern-head.js": "db88b7c1eb36c1c58fde73dfad4668505e46893f39708a44320a600574fbaf5d",
+    "review/staff-batch-v64/staff-batch.mjs": "84bb4facea8ef49eae5ca67668cbb5608525842cbf20c8e47e0fc6ea7db493d2",
+    "src/dialogue-camera.js": "f24bf36795b7aa2a78b2c0f85fc37acf6e0bbe9d778a62dad61cea197f808f4e",
+    "src/actor-models.js": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b"
+  },
+  "limits": [
+    "No image similarity, WebGL, material, FPS, mobile, animation or PS4 acceptance.",
+    "Attribute-position duplication can encode real UV/normal seams; it is not automatically removable.",
+    "Circle sagitta is not the error bound of glass elliptical loft, rib spline, wrap lift, or complete model.",
+    "The current8000 guard is not a quality criterion and is unchanged here."
+  ]
+}

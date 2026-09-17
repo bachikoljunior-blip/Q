@@ -28,7 +28,9 @@ test('actual scenery graph stays identical through actor, weather, effects, qual
   const a = nodesOf(baseline.scene), b = nodesOf(candidate.scene);
   assert.equal(a.length, b.length);
   assert.equal(appearanceDigest(baseline), appearanceDigest(candidate));
-  const baked = b.filter(n => !n.matrixAutoUpdate); assert(baked.length > 200);
+  // The keeper's affine equipment matrix is driven by its adapter in both
+  // variants; it is not part of the static-scenery bake under comparison.
+  const baked = b.filter((n,i) => !n.matrixAutoUpdate&&a[i].matrixAutoUpdate); assert(baked.length > 200);
   for (const node of b) assert.equal(node.matrixWorldAutoUpdate, true);
   assert.equal(candidate.scene.matrixAutoUpdate, true);
   const excluded = [candidate.camera, candidate.sun, candidate.sun.target, candidate.player.g,
@@ -37,7 +39,8 @@ test('actual scenery graph stays identical through actor, weather, effects, qual
     ...candidate.residentModels.values(), ...candidate.enemyModels.values(),
     ...[...candidate.village.bells.values()].map(b => b.swing), candidate.village.flame, candidate.village.charm,
     candidate.expeditionScene.root, ...[...candidate.gatheringScene.markers.values()].map(m => m.group)].map(n => n.g || n);
-  for (const node of excluded) node.traverse(n => assert.equal(n.matrixAutoUpdate, true));
+  for (const node of excluded) node.traverse(n => assert.equal(n.matrixAutoUpdate, n!==candidate.npc.staff));
+  assert.equal(baseline.npc.staff.matrixAutoUpdate,false);
   for (const beacon of candidate.beacons.values()) for (const key of ['g', 'flame', 'ring', 'glow', 'beam']) assert.equal(beacon[key].matrixAutoUpdate, true);
   for (let i = 0; i < a.length; i++) {
     assert.equal(a[i].type, b[i].type); assert.equal(a[i].children.length, b[i].children.length);

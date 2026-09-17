@@ -1,0 +1,137 @@
+{
+  "fixedSourceCommit": "ab94ce91bbb6be7a727fa910618d68c18984b239",
+  "sourceJSONSHA256": "232fe62810cc14630eebf07a8e693f8c4d23a766f933840d69d9298143677055",
+  "counterexamples": [
+    {
+      "id": "A01",
+      "issue": "Directed patch boundary is not a closed chain",
+      "counterexample": {
+        "instanceID": "R-palm",
+        "vertices": [
+          {
+            "positionMm": [
+              22.627417,
+              -15,
+              -16.970563
+            ],
+            "incoming": [],
+            "outgoing": [
+              "R.wrist.palm",
+              "R.hand.palm-thenar"
+            ]
+          },
+          {
+            "positionMm": [
+              40.424621,
+              -87.0,
+              5.221825
+            ],
+            "incoming": [
+              "R.MCP.index.palmar",
+              "R.first-web.palmar"
+            ],
+            "outgoing": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "A02",
+      "issue": "Linear interpolated normal is not orthogonal to actual Hermite boundary derivative between knots",
+      "counterexample": {
+        "curveID": "R.MCP.thumb.palmar",
+        "segment": 7,
+        "segmentLocalT": 0.5,
+        "positionMm": [
+          36.99462744058162,
+          -41.844924883819985,
+          4.9614993281359245
+        ],
+        "actualHermiteDerivativeMm": [
+          -1.3411621263441968,
+          -0.4827300624089352,
+          2.019132966284842
+        ],
+        "interpolatedNormal": [
+          -0.3094867332182247,
+          -0.5201015399250882,
+          -0.7960605191374983
+        ],
+        "normalTangentAbsDot": 0.38081573607969627,
+        "angleFromPerpendicularDegrees": 22.384220380140032,
+        "a": {
+          "sample": 7,
+          "u": 0.875,
+          "positionMm": [
+            37.6926344624,
+            -41.5710101932,
+            3.9931896814
+          ],
+          "normal": [
+            -0.4547768744,
+            -0.5451060402,
+            -0.7042992258
+          ],
+          "tangent": [
+            -0.6533968234,
+            -0.333158745,
+            0.6797630777
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 2.3834418372
+        },
+        "b": {
+          "sample": 8,
+          "u": 1.0,
+          "positionMm": [
+            36.2450049718,
+            -42.2348760468,
+            5.7783927858
+          ],
+          "normal": [
+            -0.154864148,
+            -0.4794135935,
+            -0.8638169378
+          ],
+          "tangent": [
+            -0.7372671983,
+            -0.5259325391,
+            0.4240660828
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "junctionID": "JN.0038",
+          "tangentMagnitudeMm": 2.3923417685
+        }
+      }
+    },
+    {
+      "id": "A03",
+      "issue": "Registered recessed floor rises above the uncut elliptical tip surface",
+      "counterexample": {
+        "seatID": "R.thumb.nail-seat",
+        "declaredDepthMm": 0.4,
+        "declaredPlateProudMm": 0.1,
+        "samplesAboveUncutTip": 24,
+        "worst": {
+          "sample": 26,
+          "rootLocalPointMm": [
+            -7.852976029600093,
+            -54.67878402680083,
+            6.663293315892277
+          ],
+          "tipRadiiMm": [
+            8.091819588983164,
+            8.428978738524128
+          ],
+          "uncutTipOuterZmm": 2.032801688089899,
+          "floorMinusTipOuterZmm": 4.630491627802378,
+          "plateTopMinusTipOuterZmm": 5.130491627802378
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1036 @@
+{
+  "scope": "Actual source PNGs displayed individually via view_image; qualitative local shape observations, no pixel edits or camera calibration.",
+  "recordedAt": "2026-09-16T23:51:09.293Z",
+  "inspectionStartPreciselyRecorded": false,
+  "images": [
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-face-patches-F01-F05-F09-v2.png",
+      "types": [
+        "head:F01",
+        "head:F05",
+        "head:F09"
+      ],
+      "excluded": [
+        "BACK thick boxed rim as a real skin step",
+        "clay grain as canonical skin material"
+      ],
+      "index": 0,
+      "labels": [
+        "FRONT",
+        "PROFILE",
+        "BACK",
+        "3/4"
+      ],
+      "observation": "F01 forehead, F05 cheek and F09 jaw each have front convex surface, narrow profile, concave back and oblique panel. All are single local patches rather than complete face regions.",
+      "remaining": [
+        "Shared facial cut contours and actual thickness are not determined by these different panel magnifications."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-F07-F11-v2.png",
+      "types": [
+        "head:F07",
+        "head:F11"
+      ],
+      "excluded": [
+        "UNDERSIDE arc as proof of full reverse-surface detail"
+      ],
+      "index": 1,
+      "labels": [
+        "FRONT",
+        "TRUE SIDE",
+        "UNDERSIDE",
+        "THREE-QUARTER"
+      ],
+      "observation": "F07 lower cheek and F11 chin each show one shallow curved patch. Underside is a thin transverse arc; it is not a complete rear-face panel.",
+      "remaining": [
+        "F07 recess depth and lower/upper seam shapes require author registration; whole back-face detail is not independently shown."
+      ],
+      "visibleViewFamilies": [
+        "front convex surface",
+        "side-like profile",
+        "underside narrow arc",
+        "oblique surface"
+      ],
+      "viewFamilyInterpretation": "Four qualitative families; the underside arc does not expose the complete attachment back."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/02-nose-v2.png",
+      "types": [
+        "head:F14",
+        "head:F12"
+      ],
+      "excluded": [
+        "RIGHT VIEW (+X) as anatomical-right coordinate authority",
+        "thick illustrated boundary as an extra anatomical flange"
+      ],
+      "index": 2,
+      "labels": [
+        "FRONT VIEW",
+        "RIGHT VIEW (+X)",
+        "REVERSE VIEW",
+        "THREE-QUARTER FRONT-LEFT",
+        "THREE-QUARTER BACK-RIGHT"
+      ],
+      "observation": "F12 is a narrow bridge with exposed and concave back surfaces; F14 is a curled wing with a free nostril-side opening. F13 row remains a separate central tip, not part of either adopted row.",
+      "remaining": [
+        "F14 nasal-floor/nostril undercut termination with F15 and common edge tangent are not fixed."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/03-central-mouth-v1.png",
+      "types": [
+        "head:F16a",
+        "head:F15"
+      ],
+      "excluded": [
+        "grain/thick border as measured anatomy",
+        "closed mouth or nostril cavity completion inferred from this sheet"
+      ],
+      "index": 3,
+      "labels": [
+        "FRONT",
+        "SIDE (R)",
+        "REVERSE",
+        "THREE-QUARTER (L)",
+        "THREE-QUARTER (R)"
+      ],
+      "observation": "F15 shows a central nasal-floor stem with paired curled lower arms. F16a is one upper-vermilion strip with exposed ridge, side projection and hollow reverse; no lower-lip surface is included.",
+      "remaining": [
+        "F15 arm endpoints to F14 and F16a contact/commissure curves require explicit author allocation."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/08-side-rear-scalp-v2.png",
+      "types": [
+        "head:S-SIDE",
+        "head:S05"
+      ],
+      "excluded": [
+        "thick reverse rims as anatomical raised borders",
+        "locator as proof of complete skull coverage"
+      ],
+      "index": 4,
+      "labels": [
+        "FRONT",
+        "SIDE",
+        "REVERSE",
+        "THREE-QUARTER"
+      ],
+      "observation": "S-SIDE has an open side-scalp surface with an ear-side cutout; S05 is a rear patch with a concave attachment face. Detached shapes are bare scalp, without separate hair fringe.",
+      "remaining": [
+        "S-SIDE notch intervals and S02/S05 extent need registration; front/oblique panels do not prove exact camera spacing."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/10-ear-inner-v1.png",
+      "types": [
+        "head:A02a",
+        "head:A02b",
+        "head:A04"
+      ],
+      "excluded": [
+        "A02a central depression as an already open canal or complete inner-ear termination",
+        "illustrated rims as required flanges"
+      ],
+      "index": 5,
+      "labels": [
+        "FRONT",
+        "RIGHT SIDE",
+        "BACK",
+        "THREE-QUARTER FRONT-LEFT",
+        "THREE-QUARTER BACK-RIGHT"
+      ],
+      "observation": "A02a is an exposed concave bowl with convex reverse; A02b is a tragus flap; A04 is a posterior root surface shown separately. Each has five visible directional representations.",
+      "remaining": [
+        "A02a has no explicit canal opening/termination; A04 receiving intervals to the helix/scalp and inner-ear edge network are not labelled. These are concrete author-boundary decisions, not a missing label."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/06-eyelids-v1.png",
+      "types": [
+        "head:E03",
+        "head:E04"
+      ],
+      "excluded": [
+        "exaggerated crease grain and thick rim as prescribed eyelid tissue",
+        "eye contact inferred as weld"
+      ],
+      "index": 6,
+      "labels": [
+        "FRONT",
+        "RIGHT SIDE",
+        "REVERSE",
+        "THREE-QUARTER FRONT-LEFT",
+        "THREE-QUARTER BACK-LEFT"
+      ],
+      "observation": "E03 upper lid and E04 lower lid have separate curved bands, side thickness/profile and concave reverse/oblique-reverse views. The two ends are visible but not labelled medial versus lateral.",
+      "remaining": [
+        "E04 medial/lateral endpoints, E05 junction, E04/F18 ownership and blinking contacts remain explicit author-boundary work."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/11-neck-v2.png",
+      "types": [
+        "head:N01",
+        "head:N02"
+      ],
+      "excluded": [
+        "SIDE labels as calibrated orthographic 90-degree views",
+        "two side-labelled panels as proof of an independently calibrated 3Q camera"
+      ],
+      "index": 7,
+      "labels": [
+        "FRONT exposed face",
+        "SIDE (RIGHT, 90 degrees label)",
+        "REVERSE attachment face",
+        "SIDE (LEFT, 90 degrees label)"
+      ],
+      "observation": "N01 anterior half and N02 posterior half each show an open curved sheet, an inner reverse and two different side-labelled panels. No panel is labelled three-quarter; side panels still show surface width, so exact 90-degree camera claims are unsupported.",
+      "remaining": [
+        "Neck half-contour, jaw/occiput upper edge and collar cut remain unregistered; absence of the 3Q word alone does not make the open-surface shape unreadable."
+      ],
+      "visibleViewFamilies": [
+        "front/exposed face",
+        "reverse/attachment face",
+        "two side-labelled presentations"
+      ],
+      "viewFamilyInterpretation": "Four displayed panels, three qualitative families. Neither side label proves strict 90 degrees; no separate oblique panel is claimed."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/12-hair-front-v2.png",
+      "types": [
+        "head:HT01",
+        "head:HT02",
+        "head:HT03"
+      ],
+      "excluded": [
+        "root label as a calibrated attachment cross-section",
+        "global mirroring of the entire hairstyle"
+      ],
+      "index": 8,
+      "labels": [
+        "FRONT / EXPOSED FACE",
+        "RIGHT SIDE",
+        "REVERSE / ATTACHMENT FACE",
+        "THREE-QUARTER VIEW"
+      ],
+      "observation": "Each HT01/HT02/HT03 row shows one tapering lock with root-to-tip orientation, narrow side and concave reverse. HT01 and HT02 frontal arches differ in depth but their side panels are very similar; local shape family is visible, exact raised-versus-shallow 3D root lift is not settled.",
+      "remaining": [
+        "Individual 24 placements, cross-sections, root-lift and overlap require authored registration; no new mandatory image solely from similar HT01/HT02 side panels."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/13-hair-back-v1.png",
+      "types": [
+        "head:HT04",
+        "head:HT05",
+        "head:HT06"
+      ],
+      "excluded": [
+        "RIGHT SIDE (+Z VIEW) as actor world coordinate",
+        "representative locator as every hair instance"
+      ],
+      "index": 9,
+      "labels": [
+        "FRONT",
+        "RIGHT SIDE (+Z VIEW label)",
+        "REVERSE",
+        "THREE-QUARTER FRONT-LEFT",
+        "THREE-QUARTER BACK-LEFT"
+      ],
+      "observation": "HT04 ear taper, HT05 S-shaped posterior lock and HT06 nape taper each have exposed face, narrow side, reverse and two obliques. Root and tip placement is legible as shape direction.",
+      "remaining": [
+        "Individual roots, taper cross-sections, density and overlap need author values; local camera mapping remains uncalibrated."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/01-face-transitions-v1.png",
+      "types": [
+        "head:F18"
+      ],
+      "excluded": [
+        "F18/E04 overlapping broad locators as two simultaneous exact ownership polygons",
+        "shading as calibrated saddle depth"
+      ],
+      "index": 10,
+      "labels": [
+        "FRONT",
+        "SIDE (L +X)",
+        "REVERSE / ATTACHMENT",
+        "THREE-QUARTER FRONT",
+        "THREE-QUARTER BACK"
+      ],
+      "observation": "F18 is shown as a convex/concave crescent under the eye from five indicated views. The detached face and reverse read as a simple curved strip; a saddle with established opposite-direction curvature is not demonstrated.",
+      "remaining": [
+        "Author must define the F18 double-curvature choice and E04 shared interval; this is not a newly demonstrated impossible surface."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/04-corners-v1.png",
+      "types": [
+        "head:F20"
+      ],
+      "excluded": [
+        "large detached scale as actual facial scale",
+        "creased clay grain and border thickness as exact anatomy"
+      ],
+      "index": 11,
+      "labels": [
+        "FRONT / EXPOSED FACE",
+        "RIGHT SIDE",
+        "REVERSE / ATTACHMENT",
+        "THREE-QUARTER FRONT-LEFT",
+        "THREE-QUARTER BACK-LEFT"
+      ],
+      "observation": "F20 shows the adjacent upper/lower lip ends and corner crease as one local mouth-corner patch, plus side and hollow reverse views. No whole lip or mouth cavity is included.",
+      "remaining": [
+        "F16a/F17 contact termination, corner motion, and F19/F07 cut intervals remain author choices."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "types": [
+        "cloth:T01",
+        "cloth:S05",
+        "cloth:P01"
+      ],
+      "excluded": [
+        "ornamental swirl as canonical fabric",
+        "per-piece illustrated hem as an extra physical boundary",
+        "locator as proof of assembled cape centre closure"
+      ],
+      "index": 12,
+      "labels": [
+        "FRONT",
+        "TRUE PROFILE",
+        "BACK",
+        "3/4"
+      ],
+      "observation": "T01 front-torso strip, S05 front-forearm half and P01 rear-cape strip each show an outer surface, narrow side, back and oblique. S05 is a half-panel; no opposing sleeve wall closes it.",
+      "remaining": [
+        "Shared long edges and waist/forearm/cape boundary placement remain author registration; P01 existing centre-gap issue is not solved by this drawing."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-01-v2.png",
+      "types": [
+        "cloth:T02",
+        "cloth:T03",
+        "cloth:T04"
+      ],
+      "excluded": [
+        "T02 left shoulder text as side authority (rear locator highlights image-right/anatomical Right)",
+        "T04 HOODIE neighbour label in place of ARMHOLE",
+        "grain/piping as measured geometry"
+      ],
+      "index": 13,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "T02 rear torso quarter, T03 narrow underarm panel and T04 arched shoulder bridge each have four visible surface/profile views. They are independent open surfaces rather than the whole garment.",
+      "remaining": [
+        "Exact shoulder/armhole cut curves and per-side placement remain authored."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-02-v1.png",
+      "types": [
+        "cloth:T05",
+        "cloth:S01"
+      ],
+      "excluded": [
+        "same-sheet S02 row as the current adopted S02 reference"
+      ],
+      "index": 14,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "T05 is an open crescent, not a full armhole ring. S01 is a bent upper-arm front half with two independent long edges, not a closed sleeve tube.",
+      "remaining": [
+        "T05 front/rear four-instance arc assignment and S01/S02 matching edges need registration; row shape appearance is usable."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/S02-v2.png",
+      "types": [
+        "cloth:S02"
+      ],
+      "excluded": [
+        "thick rendered sewing edge as calibrated panel thickness"
+      ],
+      "index": 15,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "S02 is one bent rear upper-arm half with visible concave inside and separated long edges; rear placement context identifies the posterior sleeve side.",
+      "remaining": [
+        "Shoulder/elbow arc and S01 shared-edge matching remain author registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-03-v1.png",
+      "types": [
+        "cloth:S04"
+      ],
+      "excluded": [
+        "S03 old row as the current S03 selection",
+        "S06 bottom closed-tube row as adopted S06 geometry"
+      ],
+      "index": 16,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "Only S04 middle row is adopted: a single shield-like inner-elbow gusset with bent side profile and inner surface. It has no complete sleeve ring.",
+      "remaining": [
+        "S04 contour lengths and concavity in the assembled elbow remain author fit."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/S06-v2.png",
+      "types": [
+        "cloth:S06"
+      ],
+      "excluded": [
+        "old closed-tube S06 variant"
+      ],
+      "index": 17,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "S06 correction is one long open rear-forearm panel. Inner face has separate longitudinal borders, short ends are open arcs and 3Q has no second opposing wall.",
+      "remaining": [
+        "Common side edges to S05 and lower cuff overlap need exact registration; grain and rim are not dimensions."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/C01-v2.png",
+      "types": [
+        "cloth:C01"
+      ],
+      "excluded": [
+        "illustrated angular sweep as measured 90-degree arc"
+      ],
+      "index": 18,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "C01 is one curved front collar strip with exposed outer and inner surfaces, thin side profile and oblique open ends. It does not include the full neck ring.",
+      "remaining": [
+        "Ends to rear collar and neck/garment cut need authored coordinates; curve radius is not measured from this image."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-04-v1.png",
+      "types": [
+        "cloth:C02"
+      ],
+      "excluded": [
+        "old C01 and W01 rows on this sheet as their current selected shapes",
+        "INNER FACE label alone as proof of a calibrated opposite camera"
+      ],
+      "index": 19,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "C02 middle row shows one broad curved rear-collar strip with two open ends and narrow thickness profile. The inner-labelled panel is similar in silhouette to the outer one; it still establishes a curved strip rather than an entire closed collar.",
+      "remaining": [
+        "Precise front/back orientation, endpoint angles, neck circumference and correspondence to C01 are author registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four displayed panels include an INNER FACE with a similar broad silhouette; its opposite camera direction is unverified. Outer, profile-like and oblique aspects are directly distinct."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/W01-v2.png",
+      "types": [
+        "cloth:W01"
+      ],
+      "excluded": [
+        "whole three-layer locator as one part's geometry"
+      ],
+      "index": 20,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "W01 correction has one shallow U-shaped fold, with a doubled fold-section visible in side view and inside/oblique representations. The complete three-layer cowl is only context.",
+      "remaining": [
+        "Three placements and their W02 endpoints/layer spacing require authored registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/W02-v2.png",
+      "types": [
+        "cloth:W02"
+      ],
+      "excluded": [
+        "Treating the shoulder locator as the complete cowl or exact fold coordinates."
+      ],
+      "index": 21,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "W02 is an isolated arched shoulder bridge strip. Outer face, thin profile, concave inner face and oblique face are visible; the context locator identifies a shoulder section, not the complete cowl.",
+      "remaining": [
+        "W01/W03 fold endpoint allocation, brooch clearance and P04 layer registration require authored correspondence."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/W03-v2.png",
+      "types": [
+        "cloth:W03"
+      ],
+      "excluded": [
+        "Treating the entire context cowl or all three layers as this one type."
+      ],
+      "index": 22,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "W03 is a single rear fold strip with a central low V and open ends. Its profile shows a folded section and its inner/oblique views expose the hollow. The context shows the rear layered cowl.",
+      "remaining": [
+        "Three placements and W02 endpoint correspondence are not metrically registered by these panels."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v2.png",
+      "types": [
+        "cloth:P02"
+      ],
+      "excluded": [
+        "The lower P04-RB row is an older subset and is not the selected new P04 sheet.",
+        "Assuming the P01 center-gap issue is solved by this P02 sheet."
+      ],
+      "index": 23,
+      "labels": [
+        "FRONT",
+        "TRUE PROFILE",
+        "BACK",
+        "THREE-QUARTER"
+      ],
+      "observation": "The P02-R row shows one long flaring side-cape panel with a broad longitudinal bend, a thin profile and a concave back. Four distinct presentations are available.",
+      "remaining": [
+        "The profile and oblique depth are not calibrated; P01 shared seams and endpoints require authored registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/P03-v2.png",
+      "types": [
+        "cloth:P03"
+      ],
+      "excluded": [
+        "Using the locator's whole cape as the isolated P03.",
+        "Copying cloth ornament or damaged hem into exact boundary dimensions."
+      ],
+      "index": 24,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "P03 is a long tapered open front-cape edge panel with a longitudinal fold. The inner and oblique presentations reveal an open folded surface, not a tube.",
+      "remaining": [
+        "Long edge orientation, P01/P02/P03 join allocation and hem coordinates require authored registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/L01-v2.png",
+      "types": [
+        "cloth:L01"
+      ],
+      "excluded": [
+        "Treating the full skirt or mirrored neighbor as part of this panel."
+      ],
+      "index": 25,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "L01 is one open flaring front skirt panel. Broad outer/inner faces, thin edge profile and a slightly turned oblique face are visible; the locator distinguishes it from the whole skirt.",
+      "remaining": [
+        "The top attachment curve and center/side seam placement are not calibrated."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/L02-v2.png",
+      "types": [
+        "cloth:L02"
+      ],
+      "excluded": [
+        "Inferring exact hidden cape/skirt interfaces from the placement locator."
+      ],
+      "index": 26,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "L02 is one flaring rear skirt panel with four presentations including a narrow profile. The locator gives rear context, with much of the neighboring skirt obscured by the cape.",
+      "remaining": [
+        "Rear panel placement, mirrored mate and overlap with the cape require authored registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/L03-v2.png",
+      "types": [
+        "cloth:L03"
+      ],
+      "excluded": [
+        "Using the old L03 row in cloth-07-v1 instead of this v2."
+      ],
+      "index": 27,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "L03-v2 is the selected narrow flaring side skirt panel. A rolled upper edge, thin profile and slight transverse curvature are visible in four presentations.",
+      "remaining": [
+        "Side allocation relative to L01/L02, upper attachment and exact rolled-edge thickness need authored registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-07-v1.png",
+      "types": [
+        "cloth:L04",
+        "cloth:L05"
+      ],
+      "excluded": [
+        "The upper L03 row is superseded and not adopted.",
+        "Treating the profile opening as a complete closed garment volume."
+      ],
+      "index": 28,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "Only rows L04 and L05 are selected here: L04 is a straight narrow vertical slit binding and L05 a curved horizontal hem binding. The profile exposes a folded/rolled section in each, with broad opposite and oblique presentations.",
+      "remaining": [
+        "The fold opening direction, seam allocation, and bending along each placement require authored decisions."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-08-v1.png",
+      "types": [
+        "cloth:B01",
+        "cloth:B02",
+        "cloth:B03"
+      ],
+      "excluded": [
+        "Inferring a buckle pin or hidden threading mechanism not shown.",
+        "Treating decoration and stitch marks as exact boundary coordinates."
+      ],
+      "index": 29,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "B01 is an open curved belt segment, B02 a pointed hanging tongue with slight profile bend, and B03 a closed round metal buckle. Four presentations show face, reverse, narrow thickness and oblique curvature.",
+      "remaining": [
+        "B01 segment closure, B02 threading/layer order, and B03 attachment dimensions remain authored registration tasks."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-09-v1.png",
+      "types": [
+        "cloth:B04",
+        "cloth:F01",
+        "cloth:F02"
+      ],
+      "excluded": [
+        "Treating a bracer panel as the whole closed bracer.",
+        "Inferring the eye's exact hinge axis or binding mechanism from the locator alone."
+      ],
+      "index": 30,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "B04 is a buckle pin with an eye at one end, visible from opposed faces, thickness profile and oblique. F01 and F02 are separate open tapered bracer panels, each with convex outer, concave inner, curved profile and oblique presentations.",
+      "remaining": [
+        "B04-to-B03 pin fit and F01/F02 side allocation and shared boundaries require numeric/authored correspondence."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/F03-v2.png",
+      "types": [
+        "cloth:F03"
+      ],
+      "excluded": [
+        "Treating multiple visible wrist wraps in the locator as a single closed ring.",
+        "Using RIGHT WRIST captions as calibrated global axes or placement coordinates."
+      ],
+      "index": 31,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "F03-v2 presents a single twisted/helical open leather strip with both faces, an S-like side profile and an oblique winding view. Both front and rear wrist locators are present.",
+      "remaining": [
+        "Strip handedness, winding pitch, end overlaps and exact bracer contacts require authored registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/F04-v2.png",
+      "types": [
+        "cloth:F04"
+      ],
+      "excluded": [
+        "Inventing a rear pin, clasp or hidden fastening geometry from the dish image.",
+        "Treating the whole cape shown in the locator as part of F04."
+      ],
+      "index": 32,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "F04-v2 is a shallow circular brooch shell: convex outer disk, curved thickness profile, concave inner dish and oblique face are visible. The inner dish has no depicted fastening hardware.",
+      "remaining": [
+        "Rear fastening and contact to P04/W02 are not specified by these views."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-10-v1.png",
+      "types": [
+        "cloth:F05"
+      ],
+      "excluded": [
+        "The F03/F04 rows are superseded by their selected v2 sheets.",
+        "Assuming F05 by itself includes a rear pin or the filled F04 disk."
+      ],
+      "index": 33,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "Only F05 is selected from this sheet: an annular brooch frame with a faceted thickness section, opposed annular faces and an oblique view. The central opening is visible.",
+      "remaining": [
+        "F04-to-F05 fit, rear attachment and cape-contact offset require authored registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/TR04-v2.png",
+      "types": [
+        "cloth:TR04"
+      ],
+      "excluded": [
+        "Treating the segment as a complete closed waist ring.",
+        "Inferring exact belt pressure or hidden back closure from the locator."
+      ],
+      "index": 34,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "TR04-v2 is an open curved waistband segment. Four presentations show outer/inner weave faces, a bent side profile and a U-like oblique curvature; the locator places it under the leather belt.",
+      "remaining": [
+        "Front/back segment allocation, TR01/TR02 top edge and B01 overlap require authored registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four qualitative presentation families, not four measured camera directions; paired obliques retain their displayed labels without calibrated azimuth."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/TR05-v1.png",
+      "types": [
+        "cloth:TR05"
+      ],
+      "excluded": [
+        "Interpreting the rectangular TRUE PROFILE panel as calibrated thickness.",
+        "Closing the band solely because the locator shows a complete trouser/boot cuff."
+      ],
+      "index": 35,
+      "labels": [
+        "OUTER FACE",
+        "TRUE PROFILE",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "observation": "TR05 is an open curved cuff band with visibly separate ends. Outer, inner, profile-labelled rectangular face and oblique presentations establish the local open band; the profile label does not prove a pure edge-on camera.",
+      "remaining": [
+        "Endpoint overlap, leg placement and boot clearance require authored registration."
+      ],
+      "visibleViewFamilies": [
+        "outer/front face",
+        "profile-like presentation",
+        "inner/reverse face",
+        "oblique presentation"
+      ],
+      "viewFamilyInterpretation": "Four displayed panels; the TRUE PROFILE is a broad rectangular face and is not accepted as an edge-thickness projection. Outer, inner and oblique aspects are directly distinct."
+    }
+  ]
+}

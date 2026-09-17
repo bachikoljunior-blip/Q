@@ -1,0 +1,1949 @@
+[
+  {
+    "legacyOwner": "F01-L",
+    "oldDeclaration": "S01",
+    "newOwners": [
+      "F01-L"
+    ],
+    "interfaceIds": [
+      "HI-085"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F01-L",
+    "oldDeclaration": "F03-L",
+    "newOwners": [
+      "F01-L"
+    ],
+    "interfaceIds": [
+      "HI-007"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F01-L",
+    "oldDeclaration": "F05-L",
+    "newOwners": [
+      "F01-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "obsolete-direct-seam-rejected-use-E03-E04-E05-F18"
+  },
+  {
+    "legacyOwner": "F03-L",
+    "oldDeclaration": "F01-L",
+    "newOwners": [
+      "F03-L"
+    ],
+    "interfaceIds": [
+      "HI-007"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F03-L",
+    "oldDeclaration": "F05-L",
+    "newOwners": [
+      "F03-L"
+    ],
+    "interfaceIds": [
+      "HI-013"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F03-L",
+    "oldDeclaration": "S03/S04",
+    "newOwners": [
+      "F03-L"
+    ],
+    "interfaceIds": [
+      "HI-102"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F05-L",
+    "oldDeclaration": "F03-L",
+    "newOwners": [
+      "F05-L"
+    ],
+    "interfaceIds": [
+      "HI-013"
+    ],
+    "openPortIds": [
+      "OPEN-F05-L-outer-u1"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F05-L",
+    "oldDeclaration": "F07-L",
+    "newOwners": [
+      "F05-L"
+    ],
+    "interfaceIds": [
+      "HI-006"
+    ],
+    "openPortIds": [
+      "OPEN-F05-L-outer-u1"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F05-L",
+    "oldDeclaration": "F12",
+    "newOwners": [
+      "F05-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F05-L-outer-u1"
+    ],
+    "status": "obsolete-direct-seam-rejected-use-E03-E04-E05-F18"
+  },
+  {
+    "legacyOwner": "F07-L",
+    "oldDeclaration": "F05-L",
+    "newOwners": [
+      "F07-L"
+    ],
+    "interfaceIds": [
+      "HI-006"
+    ],
+    "openPortIds": [
+      "OPEN-F07-L-outer-u1"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F07-L",
+    "oldDeclaration": "F09-L",
+    "newOwners": [
+      "F07-L"
+    ],
+    "interfaceIds": [
+      "HI-005"
+    ],
+    "openPortIds": [
+      "OPEN-F07-L-outer-u1"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F07-L",
+    "oldDeclaration": "F16",
+    "newOwners": [
+      "F07-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F07-L-outer-u1"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F09-L",
+    "oldDeclaration": "F07-L",
+    "newOwners": [
+      "F09-L"
+    ],
+    "interfaceIds": [
+      "HI-005"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F09-L",
+    "oldDeclaration": "F11",
+    "newOwners": [
+      "F09-L"
+    ],
+    "interfaceIds": [
+      "HI-004"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F09-L",
+    "oldDeclaration": "N01",
+    "newOwners": [
+      "F09-L"
+    ],
+    "interfaceIds": [
+      "HI-081"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F14-L",
+    "oldDeclaration": "F12",
+    "newOwners": [
+      "F14-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F14-L-nostril-inner"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F14-L",
+    "oldDeclaration": "F13",
+    "newOwners": [
+      "F14-L"
+    ],
+    "interfaceIds": [
+      "HI-071"
+    ],
+    "openPortIds": [
+      "OPEN-F14-L-nostril-inner"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F14-L",
+    "oldDeclaration": "F16",
+    "newOwners": [
+      "F14-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F14-L-nostril-inner"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F01-R",
+    "oldDeclaration": "S01",
+    "newOwners": [
+      "F01-R"
+    ],
+    "interfaceIds": [
+      "HI-086"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F01-R",
+    "oldDeclaration": "F03-R",
+    "newOwners": [
+      "F01-R"
+    ],
+    "interfaceIds": [
+      "HI-008"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F01-R",
+    "oldDeclaration": "F05-R",
+    "newOwners": [
+      "F01-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "obsolete-direct-seam-rejected-use-E03-E04-E05-F18"
+  },
+  {
+    "legacyOwner": "F03-R",
+    "oldDeclaration": "F01-R",
+    "newOwners": [
+      "F03-R"
+    ],
+    "interfaceIds": [
+      "HI-008"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F03-R",
+    "oldDeclaration": "F05-R",
+    "newOwners": [
+      "F03-R"
+    ],
+    "interfaceIds": [
+      "HI-014"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F03-R",
+    "oldDeclaration": "S03/S04",
+    "newOwners": [
+      "F03-R"
+    ],
+    "interfaceIds": [
+      "HI-115"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F05-R",
+    "oldDeclaration": "F03-R",
+    "newOwners": [
+      "F05-R"
+    ],
+    "interfaceIds": [
+      "HI-014"
+    ],
+    "openPortIds": [
+      "OPEN-F05-R-outer-u1"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F05-R",
+    "oldDeclaration": "F07-R",
+    "newOwners": [
+      "F05-R"
+    ],
+    "interfaceIds": [
+      "HI-001"
+    ],
+    "openPortIds": [
+      "OPEN-F05-R-outer-u1"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F05-R",
+    "oldDeclaration": "F12",
+    "newOwners": [
+      "F05-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F05-R-outer-u1"
+    ],
+    "status": "obsolete-direct-seam-rejected-use-E03-E04-E05-F18"
+  },
+  {
+    "legacyOwner": "F07-R",
+    "oldDeclaration": "F05-R",
+    "newOwners": [
+      "F07-R"
+    ],
+    "interfaceIds": [
+      "HI-001"
+    ],
+    "openPortIds": [
+      "OPEN-F07-R-outer-u1"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F07-R",
+    "oldDeclaration": "F09-R",
+    "newOwners": [
+      "F07-R"
+    ],
+    "interfaceIds": [
+      "HI-002"
+    ],
+    "openPortIds": [
+      "OPEN-F07-R-outer-u1"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F07-R",
+    "oldDeclaration": "F16",
+    "newOwners": [
+      "F07-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F07-R-outer-u1"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F09-R",
+    "oldDeclaration": "F07-R",
+    "newOwners": [
+      "F09-R"
+    ],
+    "interfaceIds": [
+      "HI-002"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F09-R",
+    "oldDeclaration": "F11",
+    "newOwners": [
+      "F09-R"
+    ],
+    "interfaceIds": [
+      "HI-003"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F09-R",
+    "oldDeclaration": "N01",
+    "newOwners": [
+      "F09-R"
+    ],
+    "interfaceIds": [
+      "HI-082"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F14-R",
+    "oldDeclaration": "F12",
+    "newOwners": [
+      "F14-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F14-R-nostril-inner"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F14-R",
+    "oldDeclaration": "F13",
+    "newOwners": [
+      "F14-R"
+    ],
+    "interfaceIds": [
+      "HI-072"
+    ],
+    "openPortIds": [
+      "OPEN-F14-R-nostril-inner"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F14-R",
+    "oldDeclaration": "F16",
+    "newOwners": [
+      "F14-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F14-R-nostril-inner"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F11",
+    "oldDeclaration": "F09-L",
+    "newOwners": [
+      "F11"
+    ],
+    "interfaceIds": [
+      "HI-004"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F11",
+    "oldDeclaration": "F09-R",
+    "newOwners": [
+      "F11"
+    ],
+    "interfaceIds": [
+      "HI-003"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F11",
+    "oldDeclaration": "F17",
+    "newOwners": [
+      "F11"
+    ],
+    "interfaceIds": [
+      "HI-094"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F11",
+    "oldDeclaration": "N01",
+    "newOwners": [
+      "F11"
+    ],
+    "interfaceIds": [
+      "HI-095"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F12",
+    "oldDeclaration": "F05-L",
+    "newOwners": [
+      "F12"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F12",
+    "oldDeclaration": "F05-R",
+    "newOwners": [
+      "F12"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F12",
+    "oldDeclaration": "F13",
+    "newOwners": [
+      "F12"
+    ],
+    "interfaceIds": [
+      "HI-090"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F13",
+    "oldDeclaration": "F12",
+    "newOwners": [
+      "F13"
+    ],
+    "interfaceIds": [
+      "HI-090"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F13",
+    "oldDeclaration": "F14-L",
+    "newOwners": [
+      "F13"
+    ],
+    "interfaceIds": [
+      "HI-071"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F13",
+    "oldDeclaration": "F14-R",
+    "newOwners": [
+      "F13"
+    ],
+    "interfaceIds": [
+      "HI-072"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F16",
+    "oldDeclaration": "F14-L",
+    "newOwners": [
+      "F16a",
+      "F16b"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F16a-inner-mouth"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F16",
+    "oldDeclaration": "F14-R",
+    "newOwners": [
+      "F16a",
+      "F16b"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F16a-inner-mouth"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F16",
+    "oldDeclaration": "F17",
+    "newOwners": [
+      "F16a",
+      "F16b"
+    ],
+    "interfaceIds": [
+      "HI-125"
+    ],
+    "openPortIds": [
+      "OPEN-F16a-inner-mouth"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F16",
+    "oldDeclaration": "F07-L",
+    "newOwners": [
+      "F16a",
+      "F16b"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F16a-inner-mouth"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F16",
+    "oldDeclaration": "F07-R",
+    "newOwners": [
+      "F16a",
+      "F16b"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-F16a-inner-mouth"
+    ],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "F17",
+    "oldDeclaration": "F16",
+    "newOwners": [
+      "F17"
+    ],
+    "interfaceIds": [
+      "HI-125"
+    ],
+    "openPortIds": [
+      "OPEN-F17-shape"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "F17",
+    "oldDeclaration": "F11",
+    "newOwners": [
+      "F17"
+    ],
+    "interfaceIds": [
+      "HI-094"
+    ],
+    "openPortIds": [
+      "OPEN-F17-shape"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "S01",
+    "oldDeclaration": "adjacent scalp loops",
+    "newOwners": [
+      "S01"
+    ],
+    "interfaceIds": [
+      "HI-096",
+      "HI-099",
+      "HI-112"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "S01",
+    "oldDeclaration": "forehead/temple/ear root",
+    "newOwners": [
+      "S01"
+    ],
+    "interfaceIds": [
+      "HI-083",
+      "HI-084",
+      "HI-085",
+      "HI-086"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "S02",
+    "oldDeclaration": "adjacent scalp loops",
+    "newOwners": [
+      "S02"
+    ],
+    "interfaceIds": [
+      "HI-096",
+      "HI-097",
+      "HI-100",
+      "HI-113"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "S02",
+    "oldDeclaration": "forehead/temple/ear root",
+    "newOwners": [
+      "S02"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "S03",
+    "oldDeclaration": "adjacent scalp loops",
+    "newOwners": [
+      "S03"
+    ],
+    "interfaceIds": [
+      "HI-099",
+      "HI-100",
+      "HI-101"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "S03",
+    "oldDeclaration": "forehead/temple/ear root",
+    "newOwners": [
+      "S03"
+    ],
+    "interfaceIds": [
+      "HI-102",
+      "HI-103"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "S04",
+    "oldDeclaration": "adjacent scalp loops",
+    "newOwners": [
+      "S04"
+    ],
+    "interfaceIds": [
+      "HI-112",
+      "HI-113",
+      "HI-114"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "S04",
+    "oldDeclaration": "forehead/temple/ear root",
+    "newOwners": [
+      "S04"
+    ],
+    "interfaceIds": [
+      "HI-115",
+      "HI-116"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "S05",
+    "oldDeclaration": "adjacent scalp loops",
+    "newOwners": [
+      "S05"
+    ],
+    "interfaceIds": [
+      "HI-097",
+      "HI-101",
+      "HI-114"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "S05",
+    "oldDeclaration": "forehead/temple/ear root",
+    "newOwners": [
+      "S05"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "A01-L",
+    "oldDeclaration": "same-side adjacent ear patches",
+    "newOwners": [
+      "A01a-L",
+      "A01b-L"
+    ],
+    "interfaceIds": [
+      "HI-043",
+      "HI-045",
+      "HI-047",
+      "HI-049",
+      "HI-051",
+      "HI-053"
+    ],
+    "openPortIds": [
+      "OPEN-A01a-L-inner-attachment-section"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "A01-L",
+    "oldDeclaration": "temple/scalp",
+    "newOwners": [
+      "A01a-L",
+      "A01b-L"
+    ],
+    "interfaceIds": [
+      "HI-049"
+    ],
+    "openPortIds": [
+      "OPEN-A01a-L-inner-attachment-section"
+    ],
+    "status": "ear-to-head-routed-through-A04-not-direct-all-ear-to-temple"
+  },
+  {
+    "legacyOwner": "A02-L",
+    "oldDeclaration": "same-side adjacent ear patches",
+    "newOwners": [
+      "A02a-L",
+      "A02b-L"
+    ],
+    "interfaceIds": [
+      "HI-045",
+      "HI-051",
+      "HI-055",
+      "HI-057",
+      "HI-059",
+      "HI-061"
+    ],
+    "openPortIds": [
+      "OPEN-A02a-L-ear-canal"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "A02-L",
+    "oldDeclaration": "temple/scalp",
+    "newOwners": [
+      "A02a-L",
+      "A02b-L"
+    ],
+    "interfaceIds": [
+      "HI-059",
+      "HI-061"
+    ],
+    "openPortIds": [
+      "OPEN-A02a-L-ear-canal"
+    ],
+    "status": "ear-to-head-routed-through-A04-not-direct-all-ear-to-temple"
+  },
+  {
+    "legacyOwner": "A03-L",
+    "oldDeclaration": "same-side adjacent ear patches",
+    "newOwners": [
+      "A03-L"
+    ],
+    "interfaceIds": [
+      "HI-047",
+      "HI-053",
+      "HI-057",
+      "HI-063"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "A03-L",
+    "oldDeclaration": "temple/scalp",
+    "newOwners": [
+      "A03-L"
+    ],
+    "interfaceIds": [
+      "HI-063"
+    ],
+    "openPortIds": [],
+    "status": "ear-to-head-routed-through-A04-not-direct-all-ear-to-temple"
+  },
+  {
+    "legacyOwner": "E01-L",
+    "oldDeclaration": "preserved eye center",
+    "newOwners": [
+      "E01-L"
+    ],
+    "interfaceIds": [
+      "HI-106",
+      "HI-107",
+      "HI-108"
+    ],
+    "openPortIds": [],
+    "status": "existing-rig-center-reference-not-adjacency"
+  },
+  {
+    "legacyOwner": "E01-L",
+    "oldDeclaration": "orbital rim",
+    "newOwners": [
+      "E01-L"
+    ],
+    "interfaceIds": [
+      "HI-107",
+      "HI-108"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "E01-L",
+    "oldDeclaration": "same-side eyelid bone",
+    "newOwners": [
+      "E01-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "rig-reference-only-no-skin-weld-to-bone"
+  },
+  {
+    "legacyOwner": "E02-L",
+    "oldDeclaration": "preserved eye center",
+    "newOwners": [
+      "E02-L"
+    ],
+    "interfaceIds": [
+      "HI-106"
+    ],
+    "openPortIds": [],
+    "status": "existing-rig-center-reference-not-adjacency"
+  },
+  {
+    "legacyOwner": "E02-L",
+    "oldDeclaration": "orbital rim",
+    "newOwners": [
+      "E02-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "E02-L",
+    "oldDeclaration": "same-side eyelid bone",
+    "newOwners": [
+      "E02-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "rig-reference-only-no-skin-weld-to-bone"
+  },
+  {
+    "legacyOwner": "E03-L",
+    "oldDeclaration": "preserved eye center",
+    "newOwners": [
+      "E03-L"
+    ],
+    "interfaceIds": [
+      "HI-107"
+    ],
+    "openPortIds": [],
+    "status": "existing-rig-center-reference-not-adjacency"
+  },
+  {
+    "legacyOwner": "E03-L",
+    "oldDeclaration": "orbital rim",
+    "newOwners": [
+      "E03-L"
+    ],
+    "interfaceIds": [
+      "HI-009",
+      "HI-011",
+      "HI-037",
+      "HI-041",
+      "HI-107",
+      "HI-110"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "E03-L",
+    "oldDeclaration": "same-side eyelid bone",
+    "newOwners": [
+      "E03-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "rig-reference-only-no-skin-weld-to-bone"
+  },
+  {
+    "legacyOwner": "B01-L",
+    "oldDeclaration": "preserved eye center",
+    "newOwners": [
+      "B01-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "obsolete-brow-to-eye-center-use-skin-overlay"
+  },
+  {
+    "legacyOwner": "B01-L",
+    "oldDeclaration": "orbital rim",
+    "newOwners": [
+      "B01-L"
+    ],
+    "interfaceIds": [
+      "HI-109",
+      "HI-110",
+      "HI-111"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "B01-L",
+    "oldDeclaration": "same-side eyelid bone",
+    "newOwners": [
+      "B01-L"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "rig-reference-only-no-skin-weld-to-bone"
+  },
+  {
+    "legacyOwner": "A01-R",
+    "oldDeclaration": "same-side adjacent ear patches",
+    "newOwners": [
+      "A01a-R",
+      "A01b-R"
+    ],
+    "interfaceIds": [
+      "HI-044",
+      "HI-046",
+      "HI-048",
+      "HI-050",
+      "HI-052",
+      "HI-054"
+    ],
+    "openPortIds": [
+      "OPEN-A01a-R-inner-attachment-section"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "A01-R",
+    "oldDeclaration": "temple/scalp",
+    "newOwners": [
+      "A01a-R",
+      "A01b-R"
+    ],
+    "interfaceIds": [
+      "HI-050"
+    ],
+    "openPortIds": [
+      "OPEN-A01a-R-inner-attachment-section"
+    ],
+    "status": "ear-to-head-routed-through-A04-not-direct-all-ear-to-temple"
+  },
+  {
+    "legacyOwner": "A02-R",
+    "oldDeclaration": "same-side adjacent ear patches",
+    "newOwners": [
+      "A02a-R",
+      "A02b-R"
+    ],
+    "interfaceIds": [
+      "HI-046",
+      "HI-052",
+      "HI-056",
+      "HI-058",
+      "HI-060",
+      "HI-062"
+    ],
+    "openPortIds": [
+      "OPEN-A02a-R-ear-canal"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "A02-R",
+    "oldDeclaration": "temple/scalp",
+    "newOwners": [
+      "A02a-R",
+      "A02b-R"
+    ],
+    "interfaceIds": [
+      "HI-060",
+      "HI-062"
+    ],
+    "openPortIds": [
+      "OPEN-A02a-R-ear-canal"
+    ],
+    "status": "ear-to-head-routed-through-A04-not-direct-all-ear-to-temple"
+  },
+  {
+    "legacyOwner": "A03-R",
+    "oldDeclaration": "same-side adjacent ear patches",
+    "newOwners": [
+      "A03-R"
+    ],
+    "interfaceIds": [
+      "HI-048",
+      "HI-054",
+      "HI-058",
+      "HI-064"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "A03-R",
+    "oldDeclaration": "temple/scalp",
+    "newOwners": [
+      "A03-R"
+    ],
+    "interfaceIds": [
+      "HI-064"
+    ],
+    "openPortIds": [],
+    "status": "ear-to-head-routed-through-A04-not-direct-all-ear-to-temple"
+  },
+  {
+    "legacyOwner": "E01-R",
+    "oldDeclaration": "preserved eye center",
+    "newOwners": [
+      "E01-R"
+    ],
+    "interfaceIds": [
+      "HI-119",
+      "HI-120",
+      "HI-121"
+    ],
+    "openPortIds": [],
+    "status": "existing-rig-center-reference-not-adjacency"
+  },
+  {
+    "legacyOwner": "E01-R",
+    "oldDeclaration": "orbital rim",
+    "newOwners": [
+      "E01-R"
+    ],
+    "interfaceIds": [
+      "HI-120",
+      "HI-121"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "E01-R",
+    "oldDeclaration": "same-side eyelid bone",
+    "newOwners": [
+      "E01-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "rig-reference-only-no-skin-weld-to-bone"
+  },
+  {
+    "legacyOwner": "E02-R",
+    "oldDeclaration": "preserved eye center",
+    "newOwners": [
+      "E02-R"
+    ],
+    "interfaceIds": [
+      "HI-119"
+    ],
+    "openPortIds": [],
+    "status": "existing-rig-center-reference-not-adjacency"
+  },
+  {
+    "legacyOwner": "E02-R",
+    "oldDeclaration": "orbital rim",
+    "newOwners": [
+      "E02-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "old-direct-pair-superseded-see-complete-owner-interface-list"
+  },
+  {
+    "legacyOwner": "E02-R",
+    "oldDeclaration": "same-side eyelid bone",
+    "newOwners": [
+      "E02-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "rig-reference-only-no-skin-weld-to-bone"
+  },
+  {
+    "legacyOwner": "E03-R",
+    "oldDeclaration": "preserved eye center",
+    "newOwners": [
+      "E03-R"
+    ],
+    "interfaceIds": [
+      "HI-120"
+    ],
+    "openPortIds": [],
+    "status": "existing-rig-center-reference-not-adjacency"
+  },
+  {
+    "legacyOwner": "E03-R",
+    "oldDeclaration": "orbital rim",
+    "newOwners": [
+      "E03-R"
+    ],
+    "interfaceIds": [
+      "HI-010",
+      "HI-012",
+      "HI-038",
+      "HI-042",
+      "HI-120",
+      "HI-123"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "E03-R",
+    "oldDeclaration": "same-side eyelid bone",
+    "newOwners": [
+      "E03-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "rig-reference-only-no-skin-weld-to-bone"
+  },
+  {
+    "legacyOwner": "B01-R",
+    "oldDeclaration": "preserved eye center",
+    "newOwners": [
+      "B01-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "obsolete-brow-to-eye-center-use-skin-overlay"
+  },
+  {
+    "legacyOwner": "B01-R",
+    "oldDeclaration": "orbital rim",
+    "newOwners": [
+      "B01-R"
+    ],
+    "interfaceIds": [
+      "HI-122",
+      "HI-123",
+      "HI-124"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "B01-R",
+    "oldDeclaration": "same-side eyelid bone",
+    "newOwners": [
+      "B01-R"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [],
+    "status": "rig-reference-only-no-skin-weld-to-bone"
+  },
+  {
+    "legacyOwner": "N01",
+    "oldDeclaration": "shared 46-point neck rim",
+    "newOwners": [
+      "N01"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-N01-costume-cut"
+    ],
+    "status": "unsubstantiated-point-count-dropped-neck-cut-unregistered"
+  },
+  {
+    "legacyOwner": "N01",
+    "oldDeclaration": "jaw/scalp",
+    "newOwners": [
+      "N01"
+    ],
+    "interfaceIds": [
+      "HI-081",
+      "HI-082",
+      "HI-095"
+    ],
+    "openPortIds": [
+      "OPEN-N01-costume-cut"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "N01",
+    "oldDeclaration": "costume opening",
+    "newOwners": [
+      "N01"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-N01-costume-cut"
+    ],
+    "status": "explicit-external-open-port"
+  },
+  {
+    "legacyOwner": "N02",
+    "oldDeclaration": "shared 46-point neck rim",
+    "newOwners": [
+      "N02"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-N02-costume-cut"
+    ],
+    "status": "unsubstantiated-point-count-dropped-neck-cut-unregistered"
+  },
+  {
+    "legacyOwner": "N02",
+    "oldDeclaration": "jaw/scalp",
+    "newOwners": [
+      "N02"
+    ],
+    "interfaceIds": [
+      "HI-087",
+      "HI-088",
+      "HI-098",
+      "HI-104",
+      "HI-117"
+    ],
+    "openPortIds": [
+      "OPEN-N02-costume-cut"
+    ],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "N02",
+    "oldDeclaration": "costume opening",
+    "newOwners": [
+      "N02"
+    ],
+    "interfaceIds": [],
+    "openPortIds": [
+      "OPEN-N02-costume-cut"
+    ],
+    "status": "explicit-external-open-port"
+  },
+  {
+    "legacyOwner": "H01",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H01"
+    ],
+    "interfaceIds": [
+      "HI-126"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H01",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H01"
+    ],
+    "interfaceIds": [
+      "HI-150",
+      "HI-153"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H02",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H02"
+    ],
+    "interfaceIds": [
+      "HI-127"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H02",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H02"
+    ],
+    "interfaceIds": [
+      "HI-150",
+      "HI-151",
+      "HI-154"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H03",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H03"
+    ],
+    "interfaceIds": [
+      "HI-128"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H03",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H03"
+    ],
+    "interfaceIds": [
+      "HI-151",
+      "HI-152"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H04",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H04"
+    ],
+    "interfaceIds": [
+      "HI-129"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H04",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H04"
+    ],
+    "interfaceIds": [
+      "HI-152",
+      "HI-155"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H05",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H05"
+    ],
+    "interfaceIds": [
+      "HI-130"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H05",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H05"
+    ],
+    "interfaceIds": [
+      "HI-155",
+      "HI-156",
+      "HI-157"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H06",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H06"
+    ],
+    "interfaceIds": [
+      "HI-131"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H06",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H06"
+    ],
+    "interfaceIds": [
+      "HI-156",
+      "HI-158"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H07",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H07"
+    ],
+    "interfaceIds": [
+      "HI-132"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H07",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H07"
+    ],
+    "interfaceIds": [
+      "HI-157",
+      "HI-159"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H08",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H08"
+    ],
+    "interfaceIds": [
+      "HI-133"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H08",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H08"
+    ],
+    "interfaceIds": [
+      "HI-158",
+      "HI-160"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H09",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H09"
+    ],
+    "interfaceIds": [
+      "HI-134"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H09",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H09"
+    ],
+    "interfaceIds": [
+      "HI-153"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H10",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H10"
+    ],
+    "interfaceIds": [
+      "HI-135"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H10",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H10"
+    ],
+    "interfaceIds": [
+      "HI-154"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H11",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H11"
+    ],
+    "interfaceIds": [
+      "HI-136"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H11",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H11"
+    ],
+    "interfaceIds": [
+      "HI-161"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H12",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H12"
+    ],
+    "interfaceIds": [
+      "HI-137"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H12",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H12"
+    ],
+    "interfaceIds": [
+      "HI-161",
+      "HI-162"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H13",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H13"
+    ],
+    "interfaceIds": [
+      "HI-138"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H13",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H13"
+    ],
+    "interfaceIds": [
+      "HI-162"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H14",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H14"
+    ],
+    "interfaceIds": [
+      "HI-139"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H14",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H14"
+    ],
+    "interfaceIds": [
+      "HI-163"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H15",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H15"
+    ],
+    "interfaceIds": [
+      "HI-140"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H15",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H15"
+    ],
+    "interfaceIds": [
+      "HI-163",
+      "HI-164"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H16",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H16"
+    ],
+    "interfaceIds": [
+      "HI-141"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H16",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H16"
+    ],
+    "interfaceIds": [
+      "HI-164"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H17",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H17"
+    ],
+    "interfaceIds": [
+      "HI-142"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H17",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H17"
+    ],
+    "interfaceIds": [
+      "HI-159",
+      "HI-165"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H18",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H18"
+    ],
+    "interfaceIds": [
+      "HI-143"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H18",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H18"
+    ],
+    "interfaceIds": [
+      "HI-160",
+      "HI-166"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H19",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H19"
+    ],
+    "interfaceIds": [
+      "HI-144"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H19",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H19"
+    ],
+    "interfaceIds": [
+      "HI-165",
+      "HI-167",
+      "HI-168"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H20",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H20"
+    ],
+    "interfaceIds": [
+      "HI-145"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H20",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H20"
+    ],
+    "interfaceIds": [
+      "HI-166",
+      "HI-169",
+      "HI-170"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H21",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H21"
+    ],
+    "interfaceIds": [
+      "HI-146"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H21",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H21"
+    ],
+    "interfaceIds": [
+      "HI-167"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H22",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H22"
+    ],
+    "interfaceIds": [
+      "HI-147"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H22",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H22"
+    ],
+    "interfaceIds": [
+      "HI-168"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H23",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H23"
+    ],
+    "interfaceIds": [
+      "HI-148"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H23",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H23"
+    ],
+    "interfaceIds": [
+      "HI-169"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H24",
+    "oldDeclaration": "one scalp-root loop/anchor",
+    "newOwners": [
+      "H24"
+    ],
+    "interfaceIds": [
+      "HI-149"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  },
+  {
+    "legacyOwner": "H24",
+    "oldDeclaration": "neighboring visible overlap",
+    "newOwners": [
+      "H24"
+    ],
+    "interfaceIds": [
+      "HI-170"
+    ],
+    "openPortIds": [],
+    "status": "replacement-IDs-not-geometric-validation"
+  }
+]

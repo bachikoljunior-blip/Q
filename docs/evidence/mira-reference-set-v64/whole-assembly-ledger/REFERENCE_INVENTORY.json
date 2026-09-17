@@ -1,0 +1,371 @@
+{
+  "base": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+  "references": [
+    {
+      "id": "canonical:complete-six-views-v1",
+      "path": "docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1874282,
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+      "typeKeys": [],
+      "rawImagePresent": true,
+      "status": "canonical-context",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Whole/region design context; does not count as an isolated micro-part reference. Cameras and millimetres are not calibrated."
+    },
+    {
+      "id": "canonical:head-views-v1",
+      "path": "docs/evidence/character-reference-v60/references/mira-head-views-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 2379503,
+      "sha256": "85bd4853238384211bf9cf2f931337acfed89f4a4c4f6c4bc6ec9d208eac21fe",
+      "typeKeys": [],
+      "rawImagePresent": true,
+      "status": "canonical-context",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Whole/region design context; does not count as an isolated micro-part reference. Cameras and millimetres are not calibrated."
+    },
+    {
+      "id": "canonical:upper-views-v1",
+      "path": "docs/evidence/character-reference-v60/references/mira-upper-views-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 2271191,
+      "sha256": "561d93036b3322ea25e88ef41be355ddd82bb0d1f2c2ec673fe0d6ec1f0fa6c4",
+      "typeKeys": [],
+      "rawImagePresent": true,
+      "status": "canonical-context",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Whole/region design context; does not count as an isolated micro-part reference. Cameras and millimetres are not calibrated."
+    },
+    {
+      "id": "canonical:cape-views-v2",
+      "path": "docs/evidence/character-reference-v60/references/mira-cape-views-v2.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 2401843,
+      "sha256": "4080eac540f7f92b30adbf484a756e3c435191f8f7213c7a3806434f790d34a2",
+      "typeKeys": [],
+      "rawImagePresent": true,
+      "status": "canonical-context",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Whole/region design context; does not count as an isolated micro-part reference. Cameras and millimetres are not calibrated."
+    },
+    {
+      "id": "canonical:lower-views-v1",
+      "path": "docs/evidence/character-reference-v60/references/mira-lower-views-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 2325104,
+      "sha256": "8a68d3532b9271287436505661ca58bd83511ef18431af6346812f9799b81325",
+      "typeKeys": [],
+      "rawImagePresent": true,
+      "status": "canonical-context",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Whole/region design context; does not count as an isolated micro-part reference. Cameras and millimetres are not calibrated."
+    },
+    {
+      "id": "canonical:hands-staff-views-v1",
+      "path": "docs/evidence/character-reference-v60/references/mira-hands-staff-views-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1974979,
+      "sha256": "6bb80bcdcbd52ae8b6a1ecbb0071fe2d56d44f9ad4d7d2d2521bf65ced78ef5f",
+      "typeKeys": [],
+      "rawImagePresent": true,
+      "status": "canonical-context",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Whole/region design context; does not count as an isolated micro-part reference. Cameras and millimetres are not calibrated."
+    },
+    {
+      "id": "canonical:garment-assembly-v1",
+      "path": "docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 2682065,
+      "sha256": "4920620758835d3f635eaa54d0e1b6184081580454ac384b6439fc4ec7006a2a",
+      "typeKeys": [],
+      "rawImagePresent": true,
+      "status": "canonical-context",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Whole/region design context; does not count as an isolated micro-part reference. Cameras and millimetres are not calibrated."
+    },
+    {
+      "id": "head-cheeks",
+      "path": "docs/evidence/mira-micro-v61/references/head/mira-face-patches-F01-F05-F09-v2.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1593624,
+      "sha256": "bdb78e0536808201b80aca8d1c8505faaec13c88a1577b65d93570a261b56049",
+      "typeKeys": [
+        "head:F01",
+        "head:F05",
+        "head:F09"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Anatomical-left conceptual surface only; artificial thickness/back boxes excluded. Opposite side and exact shared curves unresolved."
+    },
+    {
+      "id": "head-jaw",
+      "path": "docs/evidence/mira-head-micro-v63/references/mira-F07-F11-v2.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1764903,
+      "sha256": "e92542a8696c2adc5af4d4d2754bd726bbf27771d480dc490ac1519ce46fad4d",
+      "typeKeys": [
+        "head:F07",
+        "head:F11"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Placement/continuity reference; isolated F07 depth and exact orthographic interpretation rejected."
+    },
+    {
+      "id": "cloth-first3",
+      "path": "docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1885563,
+      "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+      "typeKeys": [
+        "cloth:T01",
+        "cloth:S05",
+        "cloth:P01"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Right instance shape concept only; decorative swirls and per-part artificial hems excluded; mirrored side and seams not fixed."
+    },
+    {
+      "id": "staff-caps",
+      "path": "docs/evidence/mira-micro-v61/references/staff-caps-micro-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1894355,
+      "sha256": "01a18ebd2631e2e5c73b52c3c261620e1c2487458200c1c68993e89066258532",
+      "typeKeys": [
+        "staff:S13",
+        "staff:S14"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Axisymmetric shape concept; dimensions authored in native profiles, not measured from sheet."
+    },
+    {
+      "id": "staff-ribs",
+      "path": "docs/evidence/mira-micro-v62/references/staff-ribs/staff-ribs-micro-v2.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1610260,
+      "sha256": "b435f2b73dbcdc8b2dc16c13872c1d3b9ab300dfddbc77e9ad33758457c2a589",
+      "typeKeys": [
+        "staff:S09",
+        "staff:S10",
+        "staff:S11",
+        "staff:S12"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "TOP rejected; front/side/three-quarter conditional. Image box ends differ from authored tapered ends."
+    },
+    {
+      "id": "staff-shaft",
+      "path": "docs/evidence/mira-staff-v63/references/shaft-foot-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1868223,
+      "sha256": "cb87b32ddc39df04ab3898a532ed253f0f4c48140f5e1419dbad11a5210e6760",
+      "typeKeys": [
+        "staff:S01",
+        "staff:S02",
+        "staff:S03"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Lathe/wood shape reference; internal sockets and registration are authored."
+    },
+    {
+      "id": "staff-grip",
+      "path": "docs/evidence/mira-staff-v63/references/grip-strips-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1971203,
+      "sha256": "4b7cd0a7a445fd5d6595c5dda4947078ab49eb6953eb4dfc54f458a01f3ee5f8",
+      "typeKeys": [
+        "staff:S04"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Sleeve row only. Strip rows do not establish consistent formed-wrap cameras."
+    },
+    {
+      "id": "staff-strip-blank",
+      "path": "docs/evidence/mira-staff-v63/references/S05-flat-blank-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 2037802,
+      "sha256": "66e834fa0eea5e624a2fefceef2f8b1e6ae710772653fa15aaf8b84d5cebc543",
+      "typeKeys": [
+        "staff:S05"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": false,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Straight strip blank concept; picture aspect ratio not metric. Formed A/B winding is author design, not validated multiview reference."
+    },
+    {
+      "id": "staff-collars",
+      "path": "docs/evidence/mira-staff-v63/references/collars-neck-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 2390637,
+      "sha256": "cd97eb9d416488f8d59ecc0eea395a4f9d5f2e50b3dc2af7ae78e403dd35e3a5",
+      "typeKeys": [
+        "staff:S06",
+        "staff:S17",
+        "staff:S18"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Isolated parts conditional; assembly thumbnail swaps upper/lower collars and is excluded."
+    },
+    {
+      "id": "staff-finial",
+      "path": "docs/evidence/mira-staff-v63/references/finial-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1898046,
+      "sha256": "73330e0d816dc84ebd051cfccf9104f61f7666f285721c687f2929d4a585c5fd",
+      "typeKeys": [
+        "staff:S15"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Ball/stem concept; assembly thumbnail attachment is excluded."
+    },
+    {
+      "id": "staff-cup-ring",
+      "path": "docs/evidence/mira-lantern-v63/references/lower-cup-ring-glass-v1.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1725935,
+      "sha256": "1225a270841c4755e2de630ab746dc49f899102ff80de915c6ccc079a74dccbc",
+      "typeKeys": [
+        "staff:S07",
+        "staff:S08"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Cup/ring rows only; lipped glass row rejected. Exact cradle added as native author interface."
+    },
+    {
+      "id": "staff-glass",
+      "path": "docs/evidence/mira-lantern-v63/references/glass-multiview-v2.png",
+      "origin": "base",
+      "gitCommit": "645ed4b1a31bdc6f07ff66a90e0058f7392394bb",
+      "bytes": 1285938,
+      "sha256": "6c86735438a9444765c78f377f0a364281fe50360159d5fd20309f49a4434ce4",
+      "typeKeys": [
+        "staff:S16"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": true,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Closed oval glass concept; exact radii/truncated contact top authored, not calibrated from pictures."
+    },
+    {
+      "id": "postbase-cloth-adjacent",
+      "path": "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v2.png",
+      "origin": "post-base",
+      "gitCommit": "93a3d87380329c85b7b9f738c3f1216bbcff096c",
+      "bytes": 1875444,
+      "sha256": "409535188a6e448e7fb59f415be5302e49513024e429edb3e9d49f85d4fbee4a",
+      "typeKeys": [
+        "cloth:P02",
+        "cloth:P04"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": false,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "P02 conditional author reference; P04-RB is only rear-right subset, not complete shoulder type. Both raw sheets viewed in this audit; no exact projection/seam acceptance."
+    },
+    {
+      "id": "postbase-lowerlip",
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/face/mira-F17-v2.png",
+      "origin": "post-base",
+      "gitCommit": "014bdddf690f6f26db32ddab843b0ba51b17ce0d",
+      "bytes": 1811045,
+      "sha256": "ed060ee2a97891c8fd074093bba2aba6be60e88b09014da661c6c4634832afb6",
+      "typeKeys": [
+        "head:F17"
+      ],
+      "rawImagePresent": true,
+      "status": "selected-conditional",
+      "entireTypeScope": false,
+      "allAnglesFixed": null,
+      "exactDimensionsFromImage": false,
+      "limits": "Raw partial reference: TRUE SIDE upper protrusion remains inconsistent; not promoted to accepted complete type."
+    }
+  ],
+  "imageStatusPolicy": "Raw existence != all-angle consistency != calibrated dimensions != assembled geometry != runtime appearance. No count promotion from prompts or planned sheets.",
+  "viewedInThisLedgerPass": [
+    "canonical:complete-six-views-v1",
+    "canonical:lower-views-v1",
+    "postbase-cloth-adjacent",
+    "postbase-lowerlip"
+  ],
+  "remainingSelectionBasis": "Previously inspected fixed reference versions and their preserved adoption/review documents; not claimed re-viewed this pass."
+}

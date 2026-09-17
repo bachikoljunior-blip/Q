@@ -1,0 +1,1485 @@
+{
+  "coverage": {
+    "instances": 82,
+    "types": 41,
+    "idDifference": []
+  },
+  "boundaries": {
+    "brokenLoops": [],
+    "sameDirectionSkinPairs": [],
+    "maxPositionRowErrorM": 3.122502256758253e-17,
+    "maxTangentRowError": 7.932658106267456e-15,
+    "maxFrameNormalDotAnalyticTangent": 6.913240567557181e-15,
+    "maxNativeSubcurveErrorM": 4.6027415078689346e-17,
+    "maxIncidentTangentRank": 2,
+    "maxEndpointNormalDifference": 1.9214517718208464e-14,
+    "maxEndpointWeightDifference": 0
+  },
+  "topology": {
+    "skinFaces": 52,
+    "edges": 171,
+    "nodes": 118,
+    "euler": -1,
+    "openBoundaryComponents": [
+      [
+        "EIL-R",
+        "EIU-R",
+        "EO-R"
+      ],
+      [
+        "CUT-B",
+        "CUT-F",
+        "CUT-L",
+        "CUT-R"
+      ],
+      [
+        "EIL-L",
+        "EIU-L",
+        "EO-L"
+      ]
+    ],
+    "openNodeDegrees": {
+      "2": 10
+    }
+  },
+  "declaredDiskBoundaryOrientation": {
+    "flippedInstances": [
+      {
+        "instance": "E03-L",
+        "positive": {
+          "curveId": "HC030",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0008273382568098394,
+          "positionM": [
+            0.05052013382770727,
+            0.07199751039894403,
+            0.10574273308679816
+          ],
+          "radialDerivativeM": [
+            0.006917852852300485,
+            0.013401409420787465,
+            -0.0035578579000413125
+          ],
+          "normal": [
+            0.479088551947676,
+            -0.01430522108431836,
+            0.8776499985999019
+          ]
+        },
+        "negative": {
+          "curveId": "HC042",
+          "t": 0.25,
+          "signedBoundaryJacobian": -3.7548651631988895e-05,
+          "positionM": [
+            0.02959269906183411,
+            0.05222144182862072,
+            0.11159995328125549
+          ],
+          "radialDerivativeM": [
+            0.0006402573322239549,
+            -0.002892707817490845,
+            -0.00010366459692430854
+          ],
+          "normal": [
+            -0.974413044219897,
+            -0.2176783050972712,
+            0.05599441707966928
+          ]
+        }
+      },
+      {
+        "instance": "E05-L",
+        "positive": {
+          "curveId": "HC052",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0003581641924126436,
+          "positionM": [
+            0.01851534453311484,
+            0.03800012388757821,
+            0.12949945137480878
+          ],
+          "radialDerivativeM": [
+            -0.007915002297057066,
+            -0.008268142573831752,
+            0.003269030147530435
+          ],
+          "normal": [
+            0.06701124735052096,
+            0.3107215993608481,
+            0.9481358449184188
+          ]
+        },
+        "negative": {
+          "curveId": "HC042",
+          "t": 0.25,
+          "signedBoundaryJacobian": -0.00012116728620335403,
+          "positionM": [
+            0.02959269906183411,
+            0.05222144182862072,
+            0.11159995328125549
+          ],
+          "radialDerivativeM": [
+            -0.0019973480877839307,
+            0.007435424862928181,
+            -0.005852571842613238
+          ],
+          "normal": [
+            -0.974413044219897,
+            -0.2176783050972712,
+            0.05599441707966928
+          ]
+        }
+      },
+      {
+        "instance": "F18-L",
+        "positive": {
+          "curveId": "HC051",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0007228557929959813,
+          "positionM": [
+            0.022462906925142703,
+            0.030012735481307222,
+            0.12602732561673566
+          ],
+          "radialDerivativeM": [
+            -0.022604760448166863,
+            -0.004341811591062707,
+            0.012410878122694492
+          ],
+          "normal": [
+            0.27220476419731526,
+            0.6390814642630492,
+            0.7193604439943031
+          ]
+        },
+        "negative": {
+          "curveId": "HC045",
+          "t": 0.5,
+          "signedBoundaryJacobian": -0.0003529414126797189,
+          "positionM": [
+            0.069,
+            0.0425,
+            0.10949999999999999
+          ],
+          "radialDerivativeM": [
+            0.020375876060539925,
+            0.0025516762500292964,
+            -0.011797851811441357
+          ],
+          "normal": [
+            0.3811838046762247,
+            0.5127964940769979,
+            0.7692455152387287
+          ]
+        }
+      },
+      {
+        "instance": "F21-L",
+        "positive": {
+          "curveId": "HC034",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0033227519012289227,
+          "positionM": [
+            0.10190100838949731,
+            0.03436602993071066,
+            0.0458916480927415
+          ],
+          "radialDerivativeM": [
+            0.008683880661423596,
+            0.043355157293229356,
+            -0.004133614427591062
+          ],
+          "normal": [
+            0.9607754785754422,
+            -0.20973879702765522,
+            -0.181439016723311
+          ]
+        },
+        "negative": {
+          "curveId": "HC022",
+          "t": 0.99,
+          "signedBoundaryJacobian": -0.0011935062012765276,
+          "positionM": [
+            0.094324825,
+            -0.0595417215,
+            0.0408903745
+          ],
+          "radialDerivativeM": [
+            -0.020758140481005244,
+            -0.04079227908511575,
+            -0.011889647122812996
+          ],
+          "normal": [
+            0.8161809556792711,
+            -0.4998222190611508,
+            0.28987307035883597
+          ]
+        }
+      },
+      {
+        "instance": "E03-R",
+        "positive": {
+          "curveId": "HC075",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0008273382568098394,
+          "positionM": [
+            -0.05052013382770727,
+            0.07199751039894403,
+            0.10574273308679816
+          ],
+          "radialDerivativeM": [
+            -0.006917852852300485,
+            0.013401409420787465,
+            -0.0035578579000413125
+          ],
+          "normal": [
+            -0.479088551947676,
+            -0.01430522108431836,
+            0.8776499985999019
+          ]
+        },
+        "negative": {
+          "curveId": "HC086",
+          "t": 0.25,
+          "signedBoundaryJacobian": -3.7548651631988895e-05,
+          "positionM": [
+            -0.02959269906183411,
+            0.05222144182862072,
+            0.11159995328125549
+          ],
+          "radialDerivativeM": [
+            -0.0006402573322239549,
+            -0.002892707817490845,
+            -0.00010366459692430854
+          ],
+          "normal": [
+            0.974413044219897,
+            -0.2176783050972712,
+            0.05599441707966928
+          ]
+        }
+      },
+      {
+        "instance": "E05-R",
+        "positive": {
+          "curveId": "HC096",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0003581641924126436,
+          "positionM": [
+            -0.01851534453311484,
+            0.03800012388757821,
+            0.12949945137480878
+          ],
+          "radialDerivativeM": [
+            0.007915002297057066,
+            -0.008268142573831752,
+            0.003269030147530435
+          ],
+          "normal": [
+            -0.06701124735052096,
+            0.3107215993608481,
+            0.9481358449184188
+          ]
+        },
+        "negative": {
+          "curveId": "HC086",
+          "t": 0.25,
+          "signedBoundaryJacobian": -0.00012116728620335403,
+          "positionM": [
+            -0.02959269906183411,
+            0.05222144182862072,
+            0.11159995328125549
+          ],
+          "radialDerivativeM": [
+            0.0019973480877839307,
+            0.007435424862928181,
+            -0.005852571842613238
+          ],
+          "normal": [
+            0.974413044219897,
+            -0.2176783050972712,
+            0.05599441707966928
+          ]
+        }
+      },
+      {
+        "instance": "F18-R",
+        "positive": {
+          "curveId": "HC095",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0007228557929959813,
+          "positionM": [
+            -0.022462906925142703,
+            0.030012735481307222,
+            0.12602732561673566
+          ],
+          "radialDerivativeM": [
+            0.022604760448166863,
+            -0.004341811591062707,
+            0.012410878122694492
+          ],
+          "normal": [
+            -0.27220476419731526,
+            0.6390814642630492,
+            0.7193604439943031
+          ]
+        },
+        "negative": {
+          "curveId": "HC089",
+          "t": 0.5,
+          "signedBoundaryJacobian": -0.0003529414126797189,
+          "positionM": [
+            -0.069,
+            0.0425,
+            0.10949999999999999
+          ],
+          "radialDerivativeM": [
+            -0.020375876060539925,
+            0.0025516762500292964,
+            -0.011797851811441357
+          ],
+          "normal": [
+            -0.3811838046762247,
+            0.5127964940769979,
+            0.7692455152387287
+          ]
+        }
+      },
+      {
+        "instance": "F21-R",
+        "positive": {
+          "curveId": "HC078",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0033227519012289227,
+          "positionM": [
+            -0.10190100838949731,
+            0.03436602993071066,
+            0.0458916480927415
+          ],
+          "radialDerivativeM": [
+            -0.008683880661423596,
+            0.043355157293229356,
+            -0.004133614427591062
+          ],
+          "normal": [
+            -0.9607754785754422,
+            -0.20973879702765522,
+            -0.181439016723311
+          ]
+        },
+        "negative": {
+          "curveId": "HC009",
+          "t": 0.99,
+          "signedBoundaryJacobian": -0.0011935062012765278,
+          "positionM": [
+            -0.094324825,
+            -0.0595417215,
+            0.0408903745
+          ],
+          "radialDerivativeM": [
+            0.020758140481005213,
+            -0.04079227908511579,
+            -0.011889647122812982
+          ],
+          "normal": [
+            -0.8161809556792715,
+            -0.49982221906115,
+            0.289873070358836
+          ]
+        }
+      },
+      {
+        "instance": "F13",
+        "positive": {
+          "curveId": "HC119",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.00011834871297531194,
+          "positionM": [
+            0.0,
+            -0.0010494540885556893,
+            0.1491907514844291
+          ],
+          "radialDerivativeM": [
+            2.6202307036154376e-19,
+            -0.0052056555269922875,
+            -0.001349614395886889
+          ],
+          "normal": [
+            5.687406467681812e-17,
+            -0.25096215878372613,
+            0.9679968981658009
+          ]
+        },
+        "negative": {
+          "curveId": "HC118",
+          "t": 0.5,
+          "signedBoundaryJacobian": -2.800777130229184e-05,
+          "positionM": [
+            8.673617379884035e-19,
+            0.002,
+            0.14623320381162846
+          ],
+          "radialDerivativeM": [
+            8.673617379884035e-19,
+            -0.001,
+            0.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "instance": "F15",
+        "positive": {
+          "curveId": "HC119",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0001451744212497161,
+          "positionM": [
+            0.0,
+            -0.0010494540885556893,
+            0.1491907514844291
+          ],
+          "radialDerivativeM": [
+            -3.252187236996951e-19,
+            0.006385604113110545,
+            0.0016555269922879177
+          ],
+          "normal": [
+            5.687406467681812e-17,
+            -0.25096215878372613,
+            0.9679968981658009
+          ]
+        },
+        "negative": {
+          "curveId": "HC103",
+          "t": 0.25,
+          "signedBoundaryJacobian": -2.394429691437368e-06,
+          "positionM": [
+            -0.01723630073784732,
+            -0.005145159032331789,
+            0.13174971489847287
+          ],
+          "radialDerivativeM": [
+            -0.010655257834109762,
+            0.0024626677036429998,
+            -0.014739207879570641
+          ],
+          "normal": [
+            -0.8097903164627865,
+            -0.1978413665412984,
+            0.5523571643856642
+          ]
+        }
+      },
+      {
+        "instance": "A02a-L",
+        "positive": {
+          "curveId": "HC136",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.000633307360458333,
+          "positionM": [
+            0.11199999999999999,
+            -0.007500000000000003,
+            0.024
+          ],
+          "radialDerivativeM": [
+            -0.0024979938924194773,
+            -0.0003197347806904028,
+            0.016894789047954335
+          ],
+          "normal": [
+            0.9890306517029794,
+            -0.02377807049341623,
+            0.14578399553994242
+          ]
+        },
+        "negative": {
+          "curveId": "HC134",
+          "t": 0.5,
+          "signedBoundaryJacobian": -9.241795025119058e-05,
+          "positionM": [
+            0.1175,
+            0.028,
+            0.018
+          ],
+          "radialDerivativeM": [
+            -0.013860969685235935,
+            0.015551624515075912,
+            0.006887226385845307
+          ],
+          "normal": [
+            0.7711961539872415,
+            0.615677970502263,
+            0.1618552708857558
+          ]
+        }
+      },
+      {
+        "instance": "A02b-L",
+        "positive": {
+          "curveId": "HC136",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.00023591379222071438,
+          "positionM": [
+            0.11199999999999999,
+            -0.007500000000000003,
+            0.024
+          ],
+          "radialDerivativeM": [
+            0.0009235364007358984,
+            -0.0007626214042273218,
+            -0.006389861043049325
+          ],
+          "normal": [
+            0.9890306517029794,
+            -0.02377807049341623,
+            0.14578399553994242
+          ]
+        },
+        "negative": {
+          "curveId": "HC139",
+          "t": 0.99,
+          "signedBoundaryJacobian": -4.4708392346313546e-05,
+          "positionM": [
+            0.11200001257942743,
+            0.010923613676662293,
+            0.025993867504833543
+          ],
+          "radialDerivativeM": [
+            0.0010793972466400879,
+            0.01765869417630479,
+            -0.004321202060491169
+          ],
+          "normal": [
+            0.9883568240829437,
+            -0.023632629778243316,
+            0.15030730886567556
+          ]
+        }
+      },
+      {
+        "instance": "A04-L",
+        "positive": {
+          "curveId": "HC143",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.002636178518374323,
+          "positionM": [
+            0.10771106307929142,
+            -0.055854309601918034,
+            0.003204031550008231
+          ],
+          "radialDerivativeM": [
+            0.0013038276378028882,
+            -0.053729250067792014,
+            0.0007786925943350942
+          ],
+          "normal": [
+            0.998531221710428,
+            0.02492814928164862,
+            0.04810391504723794
+          ]
+        },
+        "negative": {
+          "curveId": "HC140",
+          "t": 0.75,
+          "signedBoundaryJacobian": -0.0020982675313524343,
+          "positionM": [
+            0.10958689184365818,
+            -0.05399479904328002,
+            -0.002163628234860778
+          ],
+          "radialDerivativeM": [
+            0.0011788639273937096,
+            -0.05196447479041443,
+            -0.004380330747327822
+          ],
+          "normal": [
+            0.9889513444704598,
+            0.009967700720958239,
+            0.14790498035024752
+          ]
+        }
+      },
+      {
+        "instance": "A02a-R",
+        "positive": {
+          "curveId": "HC157",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.000633307360458333,
+          "positionM": [
+            -0.11199999999999999,
+            -0.007500000000000003,
+            0.024
+          ],
+          "radialDerivativeM": [
+            0.0024979938924194773,
+            -0.0003197347806904028,
+            0.016894789047954335
+          ],
+          "normal": [
+            -0.9890306517029794,
+            -0.02377807049341623,
+            0.14578399553994242
+          ]
+        },
+        "negative": {
+          "curveId": "HC155",
+          "t": 0.5,
+          "signedBoundaryJacobian": -9.241795025119058e-05,
+          "positionM": [
+            -0.1175,
+            0.028,
+            0.018
+          ],
+          "radialDerivativeM": [
+            0.013860969685235935,
+            0.015551624515075912,
+            0.006887226385845307
+          ],
+          "normal": [
+            -0.7711961539872415,
+            0.615677970502263,
+            0.1618552708857558
+          ]
+        }
+      },
+      {
+        "instance": "A02b-R",
+        "positive": {
+          "curveId": "HC157",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.00023591379222071438,
+          "positionM": [
+            -0.11199999999999999,
+            -0.007500000000000003,
+            0.024
+          ],
+          "radialDerivativeM": [
+            -0.0009235364007358984,
+            -0.0007626214042273218,
+            -0.006389861043049325
+          ],
+          "normal": [
+            -0.9890306517029794,
+            -0.02377807049341623,
+            0.14578399553994242
+          ]
+        },
+        "negative": {
+          "curveId": "HC160",
+          "t": 0.99,
+          "signedBoundaryJacobian": -4.4708392346313546e-05,
+          "positionM": [
+            -0.11200001257942743,
+            0.010923613676662293,
+            0.025993867504833543
+          ],
+          "radialDerivativeM": [
+            -0.0010793972466400879,
+            0.01765869417630479,
+            -0.004321202060491169
+          ],
+          "normal": [
+            -0.9883568240829437,
+            -0.023632629778243316,
+            0.15030730886567556
+          ]
+        }
+      },
+      {
+        "instance": "A04-R",
+        "positive": {
+          "curveId": "HC164",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.002636178518374323,
+          "positionM": [
+            -0.10771106307929142,
+            -0.055854309601918034,
+            0.003204031550008231
+          ],
+          "radialDerivativeM": [
+            -0.0013038276378028882,
+            -0.053729250067792014,
+            0.0007786925943350942
+          ],
+          "normal": [
+            -0.998531221710428,
+            0.02492814928164862,
+            0.04810391504723794
+          ]
+        },
+        "negative": {
+          "curveId": "HC161",
+          "t": 0.75,
+          "signedBoundaryJacobian": -0.0020982675313524343,
+          "positionM": [
+            -0.10958689184365818,
+            -0.05399479904328002,
+            -0.002163628234860778
+          ],
+          "radialDerivativeM": [
+            -0.0011788639273937096,
+            -0.05196447479041443,
+            -0.004380330747327822
+          ],
+          "normal": [
+            -0.9889513444704598,
+            0.009967700720958239,
+            0.14790498035024752
+          ]
+        }
+      },
+      {
+        "instance": "S01",
+        "positive": {
+          "curveId": "HC167",
+          "t": 0.75,
+          "signedBoundaryJacobian": 0.007715528730882402,
+          "positionM": [
+            -0.10014712619837755,
+            0.11531361294485537,
+            0.01517725071655944
+          ],
+          "radialDerivativeM": [
+            -0.0765256197099198,
+            -0.06062847362967056,
+            -0.06961431697096121
+          ],
+          "normal": [
+            -0.7376056755750927,
+            0.18554772466652436,
+            0.6492379450020515
+          ]
+        },
+        "negative": {
+          "curveId": "HC037",
+          "t": 0.75,
+          "signedBoundaryJacobian": -0.0017385664388764176,
+          "positionM": [
+            0.09414602695157505,
+            0.12075901411267295,
+            0.05183781479625947
+          ],
+          "radialDerivativeM": [
+            0.04175977131962852,
+            -0.02689240547664256,
+            -0.05923769923684734
+          ],
+          "normal": [
+            0.7089664695696031,
+            -0.3024532668449212,
+            0.637093844265386
+          ]
+        }
+      }
+    ],
+    "sampledFaces": 41,
+    "allExtrema": [
+      {
+        "instance": "F01-L",
+        "min": 0.0007815296321764372,
+        "max": 0.004083329740933478
+      },
+      {
+        "instance": "F03-L",
+        "min": 0.00024452088005861466,
+        "max": 0.0040730652003657004
+      },
+      {
+        "instance": "E03-L",
+        "min": -3.7548651631988895e-05,
+        "max": 0.0008273382568098394
+      },
+      {
+        "instance": "E04-L",
+        "min": 2.125814176437292e-05,
+        "max": 0.000353200676641909
+      },
+      {
+        "instance": "E05-L",
+        "min": -0.00012116728620335403,
+        "max": 0.0003581641924126436
+      },
+      {
+        "instance": "F18-L",
+        "min": -0.0003529414126797189,
+        "max": 0.0007228557929959813
+      },
+      {
+        "instance": "F19-L",
+        "min": 3.221017202059593e-05,
+        "max": 0.0007713690587517667
+      },
+      {
+        "instance": "F14-L",
+        "min": 2.5278281038823297e-05,
+        "max": 0.00013223425261211467
+      },
+      {
+        "instance": "F20-L",
+        "min": 5.675696043315375e-05,
+        "max": 0.000509606884317654
+      },
+      {
+        "instance": "F21-L",
+        "min": -0.0011935062012765276,
+        "max": 0.0033227519012289227
+      },
+      {
+        "instance": "F01-R",
+        "min": 0.0007815296321764372,
+        "max": 0.004083329740933478
+      },
+      {
+        "instance": "F03-R",
+        "min": 0.0002445208800586144,
+        "max": 0.0040730652003657004
+      },
+      {
+        "instance": "E03-R",
+        "min": -3.7548651631988895e-05,
+        "max": 0.0008273382568098394
+      },
+      {
+        "instance": "E04-R",
+        "min": 2.125814176437292e-05,
+        "max": 0.000353200676641909
+      },
+      {
+        "instance": "E05-R",
+        "min": -0.00012116728620335403,
+        "max": 0.0003581641924126436
+      },
+      {
+        "instance": "F18-R",
+        "min": -0.0003529414126797189,
+        "max": 0.0007228557929959813
+      },
+      {
+        "instance": "F19-R",
+        "min": 3.221017202059593e-05,
+        "max": 0.0007713690587517667
+      },
+      {
+        "instance": "F14-R",
+        "min": 2.5278281038823297e-05,
+        "max": 0.00013223425261211467
+      },
+      {
+        "instance": "F20-R",
+        "min": 5.675696043315375e-05,
+        "max": 0.0005096068843176538
+      },
+      {
+        "instance": "F21-R",
+        "min": -0.0011935062012765278,
+        "max": 0.0033227519012289227
+      },
+      {
+        "instance": "F12",
+        "min": 0.00010895441347772789,
+        "max": 0.001270109495771003
+      },
+      {
+        "instance": "F13",
+        "min": -2.800777130229184e-05,
+        "max": 0.00011834871297531194
+      },
+      {
+        "instance": "F15",
+        "min": -2.394429691437368e-06,
+        "max": 0.0001451744212497161
+      },
+      {
+        "instance": "F16b",
+        "min": 0.00021351579274093657,
+        "max": 0.00036009991674375237
+      },
+      {
+        "instance": "F16a",
+        "min": 3.2732514381085283e-05,
+        "max": 0.00029703165953621087
+      },
+      {
+        "instance": "F17",
+        "min": 0.000434884378710016,
+        "max": 0.0010388723209170093
+      },
+      {
+        "instance": "A01b-L",
+        "min": 5.545840286443545e-05,
+        "max": 0.001166421303292538
+      },
+      {
+        "instance": "A02a-L",
+        "min": -9.241795025119058e-05,
+        "max": 0.000633307360458333
+      },
+      {
+        "instance": "A02b-L",
+        "min": -4.4708392346313546e-05,
+        "max": 0.00023591379222071438
+      },
+      {
+        "instance": "A03-L",
+        "min": 0.00011605895286224911,
+        "max": 0.0007428289161874
+      },
+      {
+        "instance": "A04-L",
+        "min": -0.0020982675313524343,
+        "max": 0.002636178518374323
+      },
+      {
+        "instance": "A01b-R",
+        "min": 5.545840286443545e-05,
+        "max": 0.001166421303292538
+      },
+      {
+        "instance": "A02a-R",
+        "min": -9.241795025119058e-05,
+        "max": 0.000633307360458333
+      },
+      {
+        "instance": "A02b-R",
+        "min": -4.4708392346313546e-05,
+        "max": 0.00023591379222071438
+      },
+      {
+        "instance": "A03-R",
+        "min": 0.00011605895286224911,
+        "max": 0.0007428289161874
+      },
+      {
+        "instance": "A04-R",
+        "min": -0.0020982675313524343,
+        "max": 0.002636178518374323
+      },
+      {
+        "instance": "S01",
+        "min": -0.0017385664388764176,
+        "max": 0.007715528730882402
+      },
+      {
+        "instance": "S02",
+        "min": 0.005471301346999645,
+        "max": 0.010887211040252193
+      },
+      {
+        "instance": "S05",
+        "min": 0.014347751060435307,
+        "max": 0.020761993424762128
+      },
+      {
+        "instance": "S03",
+        "min": 0.0018133729039425297,
+        "max": 0.011482300205853146
+      },
+      {
+        "instance": "S04",
+        "min": 0.0018133729039425297,
+        "max": 0.011482300205853144
+      }
+    ],
+    "meaning": "At r=1 the exact radial derivative is D; a sign reversal relative to the canonical normal within one patch prevents a consistently oriented regular skin patch under this declared evaluator."
+  },
+  "hairRoots": [
+    {
+      "id": "ROOT-H01",
+      "support": "S01",
+      "r": 0.8015625,
+      "s": 0.061376953124999994,
+      "generatorAlgebraResidualM": 6.938893903907228e-18,
+      "writtenMagnitudePreservingResidualM": 0.0004956385578316283,
+      "clearanceM": 0.0005999999999999969,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H02",
+      "support": "S01",
+      "r": 0.3568359375,
+      "s": 0.17021484374999998,
+      "generatorAlgebraResidualM": 0.0,
+      "writtenMagnitudePreservingResidualM": 0.0015620610245003865,
+      "clearanceM": 0.000599999999999997,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H03",
+      "support": "S01",
+      "r": 0.29404296875,
+      "s": 0.236572265625,
+      "generatorAlgebraResidualM": 2.943923360032078e-17,
+      "writtenMagnitudePreservingResidualM": 0.0023132601158211644,
+      "clearanceM": 0.0006000000000000009,
+      "matrixDeterminant": 1.0
+    },
+    {
+      "id": "ROOT-H04",
+      "support": "S01",
+      "r": 0.58525390625,
+      "s": 0.40664062500000003,
+      "generatorAlgebraResidualM": 6.938893903907228e-18,
+      "writtenMagnitudePreservingResidualM": 0.0015213001076037286,
+      "clearanceM": 0.0005999999999999998,
+      "matrixDeterminant": 1.0
+    },
+    {
+      "id": "ROOT-H05",
+      "support": "S02",
+      "r": 0.617724609375,
+      "s": 0.9623535156249999,
+      "generatorAlgebraResidualM": 6.938893903907228e-18,
+      "writtenMagnitudePreservingResidualM": 0.00019197372298682816,
+      "clearanceM": 0.0006000000000000019,
+      "matrixDeterminant": 1.0
+    },
+    {
+      "id": "ROOT-H06",
+      "support": "S02",
+      "r": 0.49565429687499996,
+      "s": 0.06977539062499999,
+      "generatorAlgebraResidualM": 0.0,
+      "writtenMagnitudePreservingResidualM": 0.00039519718613747974,
+      "clearanceM": 0.0006000000000000091,
+      "matrixDeterminant": 1.0
+    },
+    {
+      "id": "ROOT-H07",
+      "support": "S02",
+      "r": 0.297705078125,
+      "s": 0.27607421875000004,
+      "generatorAlgebraResidualM": 3.469446951953614e-18,
+      "writtenMagnitudePreservingResidualM": 0.0005163983669964613,
+      "clearanceM": 0.0006000000000000046,
+      "matrixDeterminant": 0.9999999999999999
+    },
+    {
+      "id": "ROOT-H08",
+      "support": "S02",
+      "r": 0.4710449218750001,
+      "s": 0.240234375,
+      "generatorAlgebraResidualM": 2.8609792490763984e-17,
+      "writtenMagnitudePreservingResidualM": 0.0011484607989665028,
+      "clearanceM": 0.0005999999999999967,
+      "matrixDeterminant": 0.9999999999999999
+    },
+    {
+      "id": "ROOT-H09",
+      "support": "S01",
+      "r": 0.98,
+      "s": 0.9803222656249999,
+      "generatorAlgebraResidualM": 0.0,
+      "writtenMagnitudePreservingResidualM": 5.786719488836078e-05,
+      "clearanceM": 0.0005999999999999991,
+      "matrixDeterminant": 1.0
+    },
+    {
+      "id": "ROOT-H10",
+      "support": "S01",
+      "r": 0.98,
+      "s": 0.011132812500000002,
+      "generatorAlgebraResidualM": 0.0,
+      "writtenMagnitudePreservingResidualM": 5.312735916468701e-05,
+      "clearanceM": 0.0005999999999999968,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H11",
+      "support": "S03",
+      "r": 0.5459960937500001,
+      "s": 0.958935546875,
+      "generatorAlgebraResidualM": 0.0,
+      "writtenMagnitudePreservingResidualM": 0.0009596440001410629,
+      "clearanceM": 0.0006000000000000014,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H12",
+      "support": "S03",
+      "r": 0.160302734375,
+      "s": 0.9407226562499998,
+      "generatorAlgebraResidualM": 1.3877787807814457e-17,
+      "writtenMagnitudePreservingResidualM": 9.471889056177042e-05,
+      "clearanceM": 0.0005999999999999946,
+      "matrixDeterminant": 0.9999999999999999
+    },
+    {
+      "id": "ROOT-H13",
+      "support": "S03",
+      "r": 0.98,
+      "s": 0.11669921875,
+      "generatorAlgebraResidualM": 6.992893892674703e-18,
+      "writtenMagnitudePreservingResidualM": 1.570730834799041e-06,
+      "clearanceM": 0.0006000000000000045,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H14",
+      "support": "S04",
+      "r": 0.546142578125,
+      "s": 0.04106445312499999,
+      "generatorAlgebraResidualM": 3.469446951953614e-18,
+      "writtenMagnitudePreservingResidualM": 0.0009598491964394227,
+      "clearanceM": 0.000600000000000006,
+      "matrixDeterminant": 1.0
+    },
+    {
+      "id": "ROOT-H15",
+      "support": "S04",
+      "r": 0.16030273437499998,
+      "s": 0.059277343749999996,
+      "generatorAlgebraResidualM": 1.962615573354719e-17,
+      "writtenMagnitudePreservingResidualM": 9.471889056178324e-05,
+      "clearanceM": 0.0006000000000000009,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H16",
+      "support": "S04",
+      "r": 0.98,
+      "s": 0.88330078125,
+      "generatorAlgebraResidualM": 6.992893892674703e-18,
+      "writtenMagnitudePreservingResidualM": 1.570730834799041e-06,
+      "clearanceM": 0.0006000000000000035,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H17",
+      "support": "S02",
+      "r": 0.6446289062499999,
+      "s": 0.2966796875,
+      "generatorAlgebraResidualM": 1.3877787807814457e-17,
+      "writtenMagnitudePreservingResidualM": 0.0010397844021643049,
+      "clearanceM": 0.00059999999999999,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H18",
+      "support": "S02",
+      "r": 0.6490234375000001,
+      "s": 0.45283203125,
+      "generatorAlgebraResidualM": 6.938893903907228e-18,
+      "writtenMagnitudePreservingResidualM": 0.0010374052910443322,
+      "clearanceM": 0.0005999999999999934,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H19",
+      "support": "S05",
+      "r": 0.310986328125,
+      "s": 0.055566406250000006,
+      "generatorAlgebraResidualM": 0.0,
+      "writtenMagnitudePreservingResidualM": 0.0005950914310128818,
+      "clearanceM": 0.0005999999999999936,
+      "matrixDeterminant": 0.9999999999999999
+    },
+    {
+      "id": "ROOT-H20",
+      "support": "S05",
+      "r": 0.310986328125,
+      "s": 0.6944335937499999,
+      "generatorAlgebraResidualM": 1.3877787807814457e-17,
+      "writtenMagnitudePreservingResidualM": 0.0005950914310128822,
+      "clearanceM": 0.0005999999999999943,
+      "matrixDeterminant": 1.0
+    },
+    {
+      "id": "ROOT-H21",
+      "support": "S05",
+      "r": 0.5517089843750002,
+      "s": 0.18676757812499997,
+      "generatorAlgebraResidualM": 1.3985787785349405e-17,
+      "writtenMagnitudePreservingResidualM": 0.0002109483445677181,
+      "clearanceM": 0.0006000000000000058,
+      "matrixDeterminant": 1.0
+    },
+    {
+      "id": "ROOT-H22",
+      "support": "S05",
+      "r": 0.32890624999999996,
+      "s": 0.282177734375,
+      "generatorAlgebraResidualM": 0.0,
+      "writtenMagnitudePreservingResidualM": 8.496354407409649e-05,
+      "clearanceM": 0.000600000000000006,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H23",
+      "support": "S05",
+      "r": 0.32890624999999996,
+      "s": 0.467822265625,
+      "generatorAlgebraResidualM": 1.4304896245381992e-17,
+      "writtenMagnitudePreservingResidualM": 8.496354407408928e-05,
+      "clearanceM": 0.0005999999999999973,
+      "matrixDeterminant": 1.0000000000000002
+    },
+    {
+      "id": "ROOT-H24",
+      "support": "S05",
+      "r": 0.553076171875,
+      "s": 0.563427734375,
+      "generatorAlgebraResidualM": 7.152448122690996e-18,
+      "writtenMagnitudePreservingResidualM": 0.00021233619208107927,
+      "clearanceM": 0.000599999999999997,
+      "matrixDeterminant": 1.0
+    }
+  ],
+  "eyeRims": [
+    {
+      "curveId": "HC041",
+      "minSphereRadicandM2": 5.624999999999993e-05,
+      "radialGapMm": [
+        0.13727323229984628,
+        0.32258613592600627
+      ]
+    },
+    {
+      "curveId": "HC049",
+      "minSphereRadicandM2": 5.624999999999993e-05,
+      "radialGapMm": [
+        0.13727323229984628,
+        0.33458745180275223
+      ]
+    },
+    {
+      "curveId": "HC050",
+      "minSphereRadicandM2": 5.173437500000002e-05,
+      "radialGapMm": [
+        0.1317946921132393,
+        0.17288743423293784
+      ]
+    },
+    {
+      "curveId": "HC085",
+      "minSphereRadicandM2": 5.624999999999993e-05,
+      "radialGapMm": [
+        0.13727323229984628,
+        0.32258613592600627
+      ]
+    },
+    {
+      "curveId": "HC093",
+      "minSphereRadicandM2": 5.624999999999993e-05,
+      "radialGapMm": [
+        0.13727323229984628,
+        0.33458745180275223
+      ]
+    },
+    {
+      "curveId": "HC094",
+      "minSphereRadicandM2": 5.173437500000002e-05,
+      "radialGapMm": [
+        0.1317946921132393,
+        0.17288743423293784
+      ]
+    }
+  ],
+  "neckUpperLinearLoft": [
+    {
+      "instance": "N01",
+      "curveId": "HC109",
+      "midpointM": [
+        -0.09730845243258479,
+        -0.058516605148304396,
+        0.0333917011922381
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.2866099657750302
+    },
+    {
+      "instance": "N01",
+      "curveId": "HC065",
+      "midpointM": [
+        0.09730845243258479,
+        -0.058516605148304396,
+        0.0333917011922381
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.3723175836707564
+    },
+    {
+      "instance": "N01",
+      "curveId": "HC025",
+      "midpointM": [
+        0.06787499999999999,
+        -0.0805625,
+        0.059937500000000005
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.30579514336709307
+    },
+    {
+      "instance": "N01",
+      "curveId": "HC028",
+      "midpointM": [
+        0.0,
+        -0.09825,
+        0.08600000000000001
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.07463710036292041
+    },
+    {
+      "instance": "N01",
+      "curveId": "HC012",
+      "midpointM": [
+        -0.06787499999999999,
+        -0.0805625,
+        0.059937500000000005
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.23371341915565322
+    },
+    {
+      "instance": "N02",
+      "curveId": "HC164",
+      "midpointM": [
+        -0.10771106307929142,
+        -0.055854309601918034,
+        0.003204031550008231
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.5829127459770242
+    },
+    {
+      "instance": "N02",
+      "curveId": "HC175",
+      "midpointM": [
+        -0.09234410693818891,
+        -0.06409217186754282,
+        -0.04885697391704612
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.725133967444451
+    },
+    {
+      "instance": "N02",
+      "curveId": "HC172",
+      "midpointM": [
+        0.0,
+        -0.07358122012910043,
+        -0.0866065785798953
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.4550607124180629
+    },
+    {
+      "instance": "N02",
+      "curveId": "HC174",
+      "midpointM": [
+        0.09234410693818891,
+        -0.06409217186754282,
+        -0.04885697391704612
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.7251339674444511
+    },
+    {
+      "instance": "N02",
+      "curveId": "HC143",
+      "midpointM": [
+        0.10771106307929142,
+        -0.055854309601918034,
+        0.003204031550008231
+      ],
+      "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.5829127459770241
+    }
+  ],
+  "issues": [
+    {
+      "id": "HREV-01",
+      "severity": "blocking numerical surface consistency",
+      "summary": "Declared Hermite interiors reverse orientation against their own canonical boundary normal",
+      "instances": [
+        "E03-L",
+        "E05-L",
+        "F18-L",
+        "F21-L",
+        "E03-R",
+        "E05-R",
+        "F18-R",
+        "F21-R",
+        "F13",
+        "F15",
+        "A02a-L",
+        "A02b-L",
+        "A04-L",
+        "A02a-R",
+        "A02b-R",
+        "A04-R",
+        "S01"
+      ],
+      "witness": {
+        "instance": "E03-L",
+        "positive": {
+          "curveId": "HC030",
+          "t": 0.5,
+          "signedBoundaryJacobian": 0.0008273382568098394,
+          "positionM": [
+            0.05052013382770727,
+            0.07199751039894403,
+            0.10574273308679816
+          ],
+          "radialDerivativeM": [
+            0.006917852852300485,
+            0.013401409420787465,
+            -0.0035578579000413125
+          ],
+          "normal": [
+            0.479088551947676,
+            -0.01430522108431836,
+            0.8776499985999019
+          ]
+        },
+        "negative": {
+          "curveId": "HC042",
+          "t": 0.25,
+          "signedBoundaryJacobian": -3.7548651631988895e-05,
+          "positionM": [
+            0.02959269906183411,
+            0.05222144182862072,
+            0.11159995328125549
+          ],
+          "radialDerivativeM": [
+            0.0006402573322239549,
+            -0.002892707817490845,
+            -0.00010366459692430854
+          ],
+          "normal": [
+            -0.974413044219897,
+            -0.2176783050972712,
+            0.05599441707966928
+          ]
+        }
+      }
+    },
+    {
+      "id": "HREV-02",
+      "severity": "blocking reproducibility ambiguity",
+      "summary": "surfaceRecipe says projection magnitude is preserved; producer surface_value does not renormalize D, so one registry has two different surfaces",
+      "witness": {
+        "id": "ROOT-H03",
+        "support": "S01",
+        "r": 0.29404296875,
+        "s": 0.236572265625,
+        "generatorAlgebraResidualM": 2.943923360032078e-17,
+        "writtenMagnitudePreservingResidualM": 0.0023132601158211644,
+        "clearanceM": 0.0006000000000000009,
+        "matrixDeterminant": 1.0
+      }
+    },
+    {
+      "id": "HREV-03",
+      "severity": "blocking normal contract not implemented",
+      "summary": "Declared upper-neck linear loft does not satisfy its canonical upper-contour normal; both angular traversals fail",
+      "witness": {
+        "instance": "N02",
+        "curveId": "HC174",
+        "midpointM": [
+          0.09234410693818891,
+          -0.06409217186754282,
+          -0.04885697391704612
+        ],
+        "minAbsNormalDotLinearLoftDirectionBothTraversals": 0.7251339674444511
+      }
+    }
+  ],
+  "candidateSHA": "fd5e1335bc224b040aa923374807ddcc9ffe5883",
+  "independence": "No author verify/check result used; standalone analytic evaluation and incidence/rank/orientation oracles",
+  "elapsedSeconds": 0.18107331300052465
+}

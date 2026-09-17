@@ -1,0 +1,17 @@
+# Existing staff cost and bounded next subdivision experiment
+
+This unit reconstructs the fixed v63 geometry and existing v64 batching without changing shapes. It is an analysis prerequisite to the later full-character assembly. `node review/staff-budget-v65/measure.mjs` writes the measurements and exact input hashes.
+
+The current keeper has 6,718 triangles / 13 mesh draws, including its old staff. The separate complete staff prototype has 7,512 triangles / 19 draws / 290,792 unique geometry bytes. It must replace the old prop; 14,230 is only the deliberately naive sum and is not a proposed actor. Simply importing all new parts under the old 8,000-triangle test would be an inappropriate integration strategy.
+
+The preserved exact material batching changes 19 to 4 draws but retains all 7,512 triangles and uses 323,320 geometry bytes: 32,528 bytes more because formerly shared rib geometry is transformed into the batch. The new comparison found maximum indexed-position difference 0.000059102 mm, normal-vector difference 3.54e-8, and no UV/other attribute/index/material mismatch. These are CPU attribute comparisons, not rendering, GPU memory or frame-rate measurements.
+
+The most expensive parts are S16 glass 800 triangles, S07 cup 672, the two S05 leather strips 644 each, S14 receiver 544 and S15 finial 416. Cost is distributed over many pieces, so optimizing a single hidden small cap cannot solve the whole actor budget.
+
+Do not lower every subdivision count. A 52 mm-radius circle sampled at sixteen sides has a 0.9992 mm chord deviation; twelve sides increases this to 1.7719 mm. With the production vertical field of view 54 degrees and a 2.6 m target-distance analysis scenario, the former projects to 0.5430 pixels at a 1440-pixel height. This is an analytic scenario, not a rendered image, and glass is an elliptical loft with other approximation errors. Conversely, forcing a 0.25 mm radial error would require 33 uniform segments at that radius. Fewer triangles alone are therefore not evidence of preserved quality.
+
+The selected next experiment is a shared boundary sampler: retain every named contact curve, bevel/feature station and the fifteen contact seats; use one vertex/normal/weight source per shared edge, then adapt only unconstrained surface interiors against a declared geometric and projection error. Keep the authored complete physical component model and its contact registration distinct from a render representation. Compare that full representation against the exact current model before modifying the actor regression budget. Near-only detail and a stable existing distant representation are a second runtime option; their transition, animation, loading and measured GPU cost are not implemented here.
+
+No geometry variant or new runtime import was made. The whole-person reference/registration gate remains in force. Changes to the fixed 8,000 guard, arbitrary detail deletion, WebGL/PS4 acceptance and deadline certainty are not justified by this analysis. All actual-mesh, material and device costs remain separate gates.
+
+Timing: the JSON's approximately 61 ms baseline constructor and 18 ms batch constructor are Node execution samples. They do not represent the time spent reading source, designing the comparison, implementing, measuring or writing this report. The integration owner performed this finite analysis alongside recovery; the separate full production wall timer was not started before source reading, so its exact duration is unmeasured and no total-production speed is claimed.

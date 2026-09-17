@@ -1,0 +1,28 @@
+✔ two integral flat rib types make four tracked placements with closed outward surfaces (125.715098ms)
+✔ rib top faces contact actual 16 and 24 sided ring faces, not a circular radius proxy (27.384833ms)
+✔ every native rib triangle clears the authored glow envelope; inward placement fails (8.652267ms)
+✔ crease normals preserve face orientation and resource disposal is shared exactly once (8.622834ms)
+✔ nine head-core parts are closed, consistently oriented solids and have no proper crossings (575.703118ms)
+✔ upper/lower pads and cup/ring/glass receivers have real face contact (222.193835ms)
+✔ the actual closed glass stays clear of revised cap, while one millimetre uplift is detected (50.272221ms)
+✔ original four ribs and upper ring remain byte-identical; disposal owns each shared resource once (30.196522ms)
+✔ authored S06 and S15 boundary preserves shaft and ball dimensions without claiming their mesh integration (0.208927ms)
+✔ paired 16-angle glass/cradle reduces triangles while keeping the actual shared contacts (129.750709ms)
+✔ actual parent S06/S15 snapshot contacts the candidate; displaced finial fails without hiding Float32 gaps (61.263117ms)
+✔ reference ring and cap are closed, finite solids with no degenerate triangles (54.705757ms)
+✔ ring/cap seat, open finial socket and glass datum agree without adding a finial (4.794352ms)
+✔ all 7512 world triangles, precise materials, UV/color and 19 ID ranges survive the four authored buckets (235.855966ms)
+✔ same oracle retains root placement, rotated lower ring and nonuniform normal transform (87.38113ms)
+✔ source/batch ownership and temporary transform clones dispose exactly once without disposing borrowed parts (144.046852ms)
+✔ index, UV, vertex color and tiny non-quantized material differences remain detectable (61.508943ms)
+✔ custom hooks, clipping, texture ownership and changing one bronze render state fail explicitly (158.54308ms)
+✔ whole staff places each planned component once and seats wood/cup/finial on their actual receivers (207.711726ms)
+✔ two blank instances retain physical width and thickness; winding is not certified inextensible (20.961702ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1282.948714

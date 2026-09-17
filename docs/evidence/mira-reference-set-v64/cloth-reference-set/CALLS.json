@@ -1,0 +1,631 @@
+{
+  "taskStarted": "2026-09-16T14:19:13.583Z",
+  "snapshotAt": "2026-09-16T15:15:33.103Z",
+  "allTerminal": true,
+  "calls": [
+    {
+      "id": "cloth-01-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"T02\". ONE rear torso quarter, from under the shoulder bridge down to the belt waist, gently fitted at waist. Not a whole torso; no sleeve, collar or cape. Neighbours for placement only: T03; top T04/C02; bottom WAIST.\n2. Label exactly \"T03\". ONE underarm side trapezoid, shallow wrap between front and rear torso; top follows the armpit. No arm or whole shirt. Neighbours for placement only: front T01; rear T02; top T05; bottom WAIST.\n3. Label exactly \"T04\". ONE small shoulder bridge saddle between front/rear torso, neck opening and outer armhole. Just one broad bend, not shoulder armour. Neighbours for placement only: inner COLLAR; T01/T02; outer ARMHOLE.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-upper-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:24:27.452Z",
+        "started": "2026-09-16T14:23:33.105Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-f4f34062-b6ce-4216-99e9-0a52ebd4fc79.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-01-prompt.txt",
+      "promptSHA256": "d45e96213642649967079a7c5bdb71d030585ea4492038a750d2eff6bf56edfd",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-02-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"T05\". ONE shallow crescent gusset half of an armhole, open on both long edges, a narrow curved cloth patch, not an entire sleeve ring. Neighbours for placement only: shared ARMHOLE16; T03/T04; S01/S02.\n2. Label exactly \"S01\". ONE tapered open front half of the upper sleeve, wider at shoulder and narrower above elbow; one shallow barrel curve, no elbow/cuff/arm. Neighbours for placement only: ARMHOLE; side S02; bottom S03/S04.\n3. Label exactly \"S02\". ONE complementary open rear half of the upper sleeve, slightly fuller rear surface, matching S01 side edges; not a full tube. Neighbours for placement only: ARMHOLE; side S01; bottom S03/S04.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-upper-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:25:25.103Z",
+        "started": "2026-09-16T14:24:27.453Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-aa18e228-b3e4-4163-ad13-2c49553c06fc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-02-prompt.txt",
+      "promptSHA256": "08c1face208de8cc6f228e48f4e6b86aa6dd0cff6a3374f337647bb3782fc957",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-03-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"S03\". ONE narrow cloth strip with one broad rounded outward elbow fold. Not a stack of pleats, no entire sleeve. Neighbours for placement only: top S01/S02; bottom S05/S06; ends S04.\n2. Label exactly \"S04\". ONE shallow concave inner-elbow gusset, broad smooth depression for a bent elbow, no extra folds. Neighbours for placement only: top S01/S02; bottom S05/S06; ends S03.\n3. Label exactly \"S06\". ONE open rear forearm sleeve half-shell, narrowing toward wrist, counterpart of existing S05 front half; no bracer or hand. Neighbours for placement only: S03/S04; sides S05; bottom CUFF.\n\nAdditional layout constraint: completely uniform light neutral grey all the way to all four page edges. NO vignette, NO dark gradient. Print only the type IDs and five view labels, no explanatory paragraphs. Rear-surface part locators must use a REAR character view so rear is not incorrectly marked on front. All depicted interior patch borders are raw thin cut edges, not piping or ornamental stitching.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-upper-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:27:20.026Z",
+        "started": "2026-09-16T14:26:20.277Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-d608c963-c63f-4fab-8a01-6ffaf1ca9897.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-03-prompt.txt",
+      "promptSHA256": "9b9ae9fc3c4bf313ce50a24a7ace08fbbd72c5c84e95aa0c6358192ec6f01294",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-04-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"C01\". ONE front half of the upright neck collar, thin open curved strip, open front edge and rear joining edge. Not a complete collar ring. Neighbours for placement only: lower T01/T04; back C02; front OPEN.\n2. Label exactly \"C02\". ONE rear U-shaped upright collar strip, open at both front ends that join C01, no front fastening. Neighbours for placement only: lower T02/T04; ends C01.\n3. Label exactly \"W01\". ONE soft shallow U-shaped cowl fold strip across upper chest, single fold only; no whole scarf and no hood. Neighbours for placement only: ends W02; adjacent W01.\n\nAdditional layout constraint: completely uniform light neutral grey all the way to all four page edges. NO vignette, NO dark gradient. Print only the type IDs and five view labels, no explanatory paragraphs. Rear-surface part locators must use a REAR character view so rear is not incorrectly marked on front. All depicted interior patch borders are raw thin cut edges, not piping or ornamental stitching.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-cape-views-v2.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:28:34.940Z",
+        "started": "2026-09-16T14:27:47.873Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-8b7aaba9-7f16-48a5-9a0b-22199f635f6f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-04-prompt.txt",
+      "promptSHA256": "61465b4d3b19ac87037121fc8578a2a2c5924fe2538c8f76185a26dbd6e58322",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-05-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"W02\". ONE small side-cowl crescent bridge, joining front drape to rear drape over shoulder; brooch seat is a small plain patch, no attached brooch. Neighbours for placement only: front W01; rear W03; lower P04; brooch seat.\n2. Label exactly \"W03\". ONE broad shallow soft V-shaped back cowl fold strip, one fold only. It lies on upper back and is NOT a wearable hood. Neighbours for placement only: ends W02; upper C02; lower P04.\n3. Label exactly \"P03\". ONE long narrow cape front-opening wedge panel, upper end narrow near shoulder, lower end slightly broader; gentle wrap, one curve, no whole cape. Neighbours for placement only: outer P02; top W02/P04; inner OPEN; bottom HEM.\n\nAdditional layout constraint: completely uniform light neutral grey all the way to all four page edges. NO vignette, NO dark gradient. Print only the type IDs and five view labels, no explanatory paragraphs. Rear-surface part locators must use a REAR character view so rear is not incorrectly marked on front. All depicted interior patch borders are raw thin cut edges, not piping or ornamental stitching.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-cape-views-v2.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:31:03.232Z",
+        "started": "2026-09-16T14:29:51.180Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-68301ef0-2756-45a1-8861-1a9da2f0e482.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-05-prompt.txt",
+      "promptSHA256": "3b8beeba377e6a0c950fefe3c30a94f0ad9894d2f0c25ad68ce8433e2ed13527",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-06-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"P04\". ONE small complete right shoulder cape connector saddle, approximately wider than tall, covering the transition from cowl below to the upper ends of three cape strips. Not merely the old narrow P04-RB back subsection, and not a whole mantle. Neighbours for placement only: inner W02/W03; outer P01/P02/P03.\n2. Label exactly \"L01\". ONE lower-front long tunic panel from belt seam to knee-level hem, slight flare, open centre split edge. Not the complete skirt or any leg. Neighbours for placement only: WAIST; side L03; inner L04/OPEN; bottom L05.\n3. Label exactly \"L02\". ONE lower-back long tunic panel from belt seam to hem, slight flare and shallow curve, no entire skirt. Neighbours for placement only: WAIST; side L03; rear centre; bottom L05.\n\nAdditional layout constraint: completely uniform light neutral grey all the way to all four page edges. NO vignette, NO dark gradient. Print only the type IDs and five view labels, no explanatory paragraphs. Rear-surface part locators must use a REAR character view so rear is not incorrectly marked on front. All depicted interior patch borders are raw thin cut edges, not piping or ornamental stitching.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-cape-views-v2.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:32:27.137Z",
+        "started": "2026-09-16T14:31:33.700Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-8ad7f272-0e8a-4bfc-8cc9-5acaf83e7be3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-06-prompt.txt",
+      "promptSHA256": "a786336109715a2fe2b808206d1b69f6430a3b320ac92666a750fecec694f653",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-07-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"L03\". ONE narrow flared side insert of the lower tunic, long trapezoid with mild wrap, from waist seam to hem. Neighbours for placement only: WAIST; front L01; rear L02; bottom L05.\n2. Label exactly \"L04\". ONE very narrow turnback strip folded ONCE along the centre split edge of the lower-front tunic, not a wide decorative band. Neighbours for placement only: fold along L01 front edge; inside free edge.\n3. Label exactly \"L05\". ONE short gently curved hem turnback strip with a single thin folded cross-section, a reusable section following the lower tunic hem. Not the full hem ring. Neighbours for placement only: corresponding lower panel hem; joined endpoints.\n\nAdditional layout constraint: completely uniform light neutral grey all the way to all four page edges. NO vignette, NO dark gradient. Print only the type IDs and five view labels, no explanatory paragraphs. Rear-surface part locators must use a REAR character view so rear is not incorrectly marked on front. All depicted interior patch borders are raw thin cut edges, not piping or ornamental stitching.\n\nCRITICAL ISOLATION: L03 is exactly ONE narrow side-insert sector, roughly three times taller than its width, with TWO open long vertical edges and open top/bottom. It is not a skirt, not a pair, has NO centre slit or centre seam, and has no front/back panels attached. Its locator is a slim stripe at the side of the LOWER TUNIC seen from side with the cape lifted aside; do not mark the cape. L04 is one extremely narrow folded tape along ONE side of a slit, roughly forty times longer than wide, not the panel carrying it. L05 is one short horizontal tape-like arc, roughly eighteen times longer than tall, showing ONE turned-under hem fold and TWO exposed cut ends. Do not generate a skirt ring or the full lower garment. Only these three separate simple small objects.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:34:50.162Z",
+        "started": "2026-09-16T14:34:04.726Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-2286eaed-392a-4f60-866b-200eaa84b1db.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-07-prompt.txt",
+      "promptSHA256": "ac2945aa09668e43c4c7755b6ecd1315556bde9f6b7bb61a80843544dfa24543",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-08-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"B01\". ONE plain dark worn brown leather belt arc segment, one smooth curve, no buckle, stitching only at true belt edges. Neighbours for placement only: continuous WAIST path.\n2. Label exactly \"B02\". ONE tapered leather hanging belt tail with a single soft bend and pointed bottom. Canonical hanging tail is on anatomical LEFT (+X), image RIGHT in frontal placement; keep old type ID B02 but do not label it anatomical right. Neighbours for placement only: top B03-hanger; bottom FREE.\n3. Label exactly \"B03\". ONE worn bronze oval hardware ring with one bevelled round-section rim and open centre. Show a plain ring alone, no pin/strap; catalogue type shared by central buckle and smaller anatomical LEFT hanger. Neighbours for placement only: belt or tail hinge; closed opening.\n\nAdditional layout constraint: completely uniform light neutral grey all the way to all four page edges. NO vignette, NO dark gradient. Print only the type IDs and five view labels, no explanatory paragraphs. Rear-surface part locators must use a REAR character view so rear is not incorrectly marked on front. All depicted interior patch borders are raw thin cut edges, not piping or ornamental stitching.\n\nCRITICAL ISOLATION: B01 is only ONE quarter belt arc with TWO obvious unjoined cut ends; the other three-quarters, all buckles and tails are ABSENT. B02 is exactly ONE hanging strip without any ring, buckle or other belt piece. Its only locator is anatomical LEFT/front image RIGHT. B03 is exactly ONE empty oval bronze ring, no pin, leather or duplicate ring; mark its position as the centre buckle aperture (not a new extra buckle on the body). Preserve simple clean geometry without accessories in isolated views.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:36:13.575Z",
+        "started": "2026-09-16T14:35:20.242Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-41e039f1-7d6f-473b-b232-842b83a00433.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-08-prompt.txt",
+      "promptSHA256": "d6cb5181de5cd3d8104838d25cd379e44f32ec716d395ca2911a775fcde8e1b0",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-09-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"B04\". ONE small bronze buckle pin, a single bent rod with hinge curl at one end and straight blunt tip; not the entire buckle. Neighbours for placement only: hinge B03; tip explicit belt hole.\n2. Label exactly \"F01\". ONE dark-brown leather bracer FRONT open tapered half-shell, fitted over forearm, no wrap ribbons, hand or whole sleeve. Neighbours for placement only: top CUFF; side F02; bottom WRIST.\n3. Label exactly \"F02\". ONE complementary dark-brown leather bracer REAR open tapered half-shell, not a full tube; plain seam edges, no wrap ribbons. Neighbours for placement only: top CUFF; side F01; bottom WRIST.\n\nAdditional layout constraint: completely uniform light neutral grey all the way to all four page edges. NO vignette, NO dark gradient. Print only the type IDs and five view labels, no explanatory paragraphs. Rear-surface part locators must use a REAR character view so rear is not incorrectly marked on front. All depicted interior patch borders are raw thin cut edges, not piping or ornamental stitching.\n\nCRITICAL ISOLATION: B04 is exactly ONE short bent pin wire, there is NO ring or belt attached. F01 and F02 are each exactly ONE OPEN HALF of a tapered forearm shell, like a longitudinally cut half-pipe. The entire opposite half is ABSENT. Each has TWO long free longitudinal cut edges and semicircular rather than closed-oval end rims. The concave inside must be plainly visible in INNER FACE and 3/4 views, and the exterior in OUTER FACE. No closed tube, no glove, no hand, no straps or cross wraps. F01 locator: one half of right forearm front. F02 locator: opposite rear half shown on REAR body view with right side IMAGE RIGHT. The skin is only on tiny context locators, not part of isolated objects.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-hands-staff-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:37:33.590Z",
+        "started": "2026-09-16T14:36:28.492Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-b18e61bb-a043-4099-8b26-ef76075fce79.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-09-prompt.txt",
+      "promptSHA256": "034a56fb8a8200802e462419b6a41282408cdcc6d5042b1ac83d3aece395fa4b",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-10-v1",
+      "prompt": "Use case: stylized-concept. Asset type: multi-angle micro-part reference sheet for the SAME Mira clothing in the references. These are shape references for a later 3D assembly, NOT finished 3D, NOT a screenshot, NOT a sewing pattern or precision CAD.\nCreate a clear landscape sheet with exactly THREE horizontal rows, one isolated type per row. In each row show the SAME individual small curved part in four consistent angles: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, then a small PLACEMENT locator at far right on the matching complete garment. The locator marks only that one small region in muted orange; the locator is not an extra part type. Large black readable part ID at row left. Light neutral grey background; diffuse even lighting and soft shadow to expose curvature. Keep profile a genuine narrow edge view and inner view the opposite side of the SAME surface. No different shape variants in different angles.\nReferences: first image governs finished identity, subdued cloth colour and whole proportion; other images give matching garment construction. Use plain matte muted grey-olive/taupe wool for cloth, dark worn brown for leather, aged bronze for metal. Ignore decorative spiral/brocade motifs in cape source. Absolutely no invented ornament, no pattern, no thick cutaway rim, no arbitrary patch-border piping, no grid, no armour, no full garment replacing a small part. Show thin cloth with unobtrusive raw cut edges at internal subdivision boundaries; true hems are only for explicit turnback strips. Preserve the original overall clothing design, not new fashion.\nAnatomical RIGHT is -X, LEFT is +X, FRONT is +Z. Front locator: character right/staff is image left; rear locator: character right/staff is image right. Represent the right-hand instance for symmetric cloth parts, with the mirrored left as a future shared-type placement, not an unrelated design. Exception hanging belt tail/hanger is anatomical LEFT (front image right). These are visual shapes only; exact size, seams, weights and placements are defined in a separate author ledger. Do not print numerical dimensions.\n\nThe three rows, top to bottom:\n1. Label exactly \"F03\". ONE thin dark leather cross-wrap ribbon following a bracer arc, one simple strip with slight twist. Only one ribbon, not all X-wraps or entire bracer. Neighbours for placement only: F01/F02; explicit overlap order.\n2. Label exactly \"F04\". ONE shallow convex bronze brooch centre disc, plain gently domed metal, no ornament engraving and no outer rim. Neighbours for placement only: seat W02; rim F05.\n3. Label exactly \"F05\". ONE shallow bevelled circular bronze brooch rim ring, open centre sized to surround F04 disc, no entire assembled brooch. Neighbours for placement only: inner F04; back W02.\n\nAdditional layout constraint: completely uniform light neutral grey all the way to all four page edges. NO vignette, NO dark gradient. Print only the type IDs and five view labels, no explanatory paragraphs. Rear-surface part locators must use a REAR character view so rear is not incorrectly marked on front. All depicted interior patch borders are raw thin cut edges, not piping or ornamental stitching.\n\nCRITICAL ISOLATION: F03 is exactly ONE narrow, unbranched leather ribbon only, with TWO cut ends, following ONE shallow helical arc. No second crossing ribbon, no complete X, no sleeve/bracer underneath. F04 is ONE solid plain convex disc, no rim ring and no filigree, like a shallow smooth coin without stamping. F05 is ONE empty plain circular rim ring, no disc insert or fastening pin, so the background is clearly visible through the centre. Keep these three single primitives separate; show depth from profile. Locators indicate a single ribbon path and individual brooch centre/rim respectively, no new brooches.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-hands-staff-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-garment-assembly-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:38:48.216Z",
+        "started": "2026-09-16T14:37:48.904Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-5c966297-ce14-404e-a471-85e5b5bb7978.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-10-prompt.txt",
+      "promptSHA256": "8d4605d6fb5a71e2d35001a7856fbfa8e43960643dec95f0ae7c376165411f5f",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "S06-v2",
+      "promptFile": "S06-v2-prompt.txt",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-03-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:40:39.498Z",
+        "started": "2026-09-16T14:40:00.513Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-1106c486-2372-4732-aa64-11fe9d570db3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "inputPathAudit": "First target retained; prompt also refers to a second canonical context image, whose exact submitted path was not retained in the compacted call record. Do not treat reconstructed list as exact complete receipt.",
+      "prompt": "Use case: precise-object-edit. Make a replacement SINGLE-TYPE technical concept reference sheet for S06, the one open rear forearm cloth shell. The first reference has an incorrect CLOSED TUBE in its bottom S06 row: correct this topology, and REMOVE all S03/S04 rows. The second reference supplies only Mira's colour and forearm placement, NOT the entire outfit.\nShow only ONE small physical part repeated in four views on uniform light grey: OUTER, TRUE SIDE, INNER, THREE-QUARTER. Title \"S06\". One small rear-view locator at far right with ONLY the right forearm rear patch coloured orange; character right is image RIGHT in that rear view.\nThe actual part is a thin longitudinal HALF-PIPE, open for its entire length: imagine cutting a tapered sleeve tube lengthwise in half and throwing away the other half. It has TWO long exposed cut edges, ONE open semicircular elbow rim, and ONE smaller open semicircular wrist rim. There is NO closed oval rim anywhere and NO second sheet covering the opening. In INNER and THREE-QUARTER the full concave trough and both free long edges must be visible. In OUTER show its convex back. Long dimension about twice its flat width, mild taper to wrist, one smooth barrel curvature, no folds.\nPlain matte grey-olive wool, thin raw edges. No brocade, spiral, embroidery, piping, thick rolled rims, leather, hand, whole arm or whole sleeve. Do not print paragraphs or dimensions. The missing front half S05 is not present at all. Keep one object topology identical in all four views; this is a visual shape reference, not a precision dimension drawing.\n",
+      "promptSHA256": "313c3d9af6d82564b3338522226333f09cce4a0d219ffef54e439c317a1dd487",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "P04-v2",
+      "promptFile": "P04-v2-prompt.txt",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-06-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:43:57.867Z",
+        "started": "2026-09-16T14:43:22.910Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-3ef18bee-1ee4-4eae-b347-91054b2a8d46.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "prompt": "Use case: precise-object-edit. Make one replacement SINGLE-TYPE shape-reference sheet, correcting only the stated physical-part error from reference 1. Discard the other labelled rows entirely. Reference 2 governs only the SAME Mira palette/placement, not the size of the isolated small part. Wide opaque light-grey canvas, no transparency and no vignette. Exactly one isolated object, repeated in OUTER FACE / TRUE PROFILE / INNER FACE / THREE-QUARTER views, plus a small PLACEMENT locator. Large part ID, those view labels, no other text or dimensions. The four views must depict the same object topology. Plain matte muted grey-olive wool; no brocade/spirals/piping/extra thick rims. Raw thin cut edges where divided from neighbours; do not turn an internal cut into decoration. No whole garment in any isolated view. Right=-X, front+Z. The locator is only context. This is visual reference, not precision CAD or a game screenshot.\nLabel exactly \"P04\".\nThe first image incorrectly shows an entire cowl with a brooch for P04. REMOVE that assembly completely. The replacement is ONE SMALL FOUR-EDGED SADDLE PATCH only, roughly rectangular, wider than tall, with just one smooth shallow double curvature over ONE right shoulder. There is NO neck opening, NO front cowl, NO brooch, NO metal, NO dangling flaps and NO pleats. Four thin raw cut edges are visible, no other garment pieces attached. It joins cowl above to the tops of cape panels below, but those neighbours are ABSENT. Use a small BACK THREE-QUARTER locator that marks only a palm-sized patch on the right shoulder, image right in a rear view. The source cloth texture is NOT ornament: use plain matte cloth.\n",
+      "promptSHA256": "234d1a015221458e5711221580678f65461a9fd9daaf3f83b2d61a752d1cd0a6",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "W02-v2",
+      "promptFile": "W02-v2-prompt.txt",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-05-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:44:28.274Z",
+        "started": "2026-09-16T14:43:22.910Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-a4a575f1-73c0-4657-8c12-bf559e63714c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "prompt": "Use case: precise-object-edit. Make one replacement SINGLE-TYPE shape-reference sheet, correcting only the stated physical-part error from reference 1. Discard the other labelled rows entirely. Reference 2 governs only the SAME Mira palette/placement, not the size of the isolated small part. Wide opaque light-grey canvas, no transparency and no vignette. Exactly one isolated object, repeated in OUTER FACE / TRUE PROFILE / INNER FACE / THREE-QUARTER views, plus a small PLACEMENT locator. Large part ID, those view labels, no other text or dimensions. The four views must depict the same object topology. Plain matte muted grey-olive wool; no brocade/spirals/piping/extra thick rims. Raw thin cut edges where divided from neighbours; do not turn an internal cut into decoration. No whole garment in any isolated view. Right=-X, front+Z. The locator is only context. This is visual reference, not precision CAD or a game screenshot.\nLabel exactly \"W02\".\nThe first image incorrectly turns W02 into a whole front scarf. Correct it to ONE SMALL SIDE BRIDGE PATCH, a plain crescent-like thin quadrilateral curved over ONLY one shoulder, slightly taller than wide. It has four open cut edges. A single shallow curvature is enough. NO draping across the chest, NO U-shaped scarf, NO nested folds, NO brooch, NO fastening tabs, NO neck ring. Front fold W01 and back fold W03 are not attached and not shown. On a small RIGHT SIDE three-quarter locator, mark only the short bridge on top of the right shoulder between the front and back cowl, not the chest span.\n",
+      "promptSHA256": "30e9d5d34d95c3b0bcd27a82bb2d5586103de16411cc2f07ff6890673a429136",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "W01-v2",
+      "promptFile": "W01-v2-prompt.txt",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-04-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:45:21.919Z",
+        "started": "2026-09-16T14:44:51.011Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-6f995a3a-9f13-4160-87c3-29da811cba35.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "prompt": "Use case: precise-object-edit. Make one replacement SINGLE-TYPE shape-reference sheet, correcting only the stated physical-part error from reference 1. Discard the other labelled rows entirely. Reference 2 governs only the SAME Mira palette/placement, not the size of the isolated small part. Wide opaque light-grey canvas, no transparency and no vignette. Exactly one isolated object, repeated in OUTER FACE / TRUE PROFILE / INNER FACE / THREE-QUARTER views, plus a small PLACEMENT locator. Large part ID, those view labels, no other text or dimensions. The four views must depict the same object topology. Plain matte muted grey-olive wool; no brocade/spirals/piping/extra thick rims. Raw thin cut edges where divided from neighbours; do not turn an internal cut into decoration. No whole garment in any isolated view. Right=-X, front+Z. The locator is only context. This is visual reference, not precision CAD or a game screenshot.\nLabel exactly \"W01\".\nThe first W01 incorrectly contains several stacked cowl folds. Replace it with exactly ONE narrow U-shaped folded strip: ONE continuous rolled-over soft ridge from its left end to its right end, the centre sagging below the two ends. There are no second or third ridges and no parallel nested U bands. The strip itself is narrow, NOT the whole front scarf. Show its ONE folded cross-section in TRUE PROFILE. The two ends are freely cut and unattached. Tiny frontal locator marks ONE single narrow stripe across the front cowl, not all cowl layers.\n",
+      "promptSHA256": "4d80ee196431866d80ee376d9bd4603bb4ab31ec0fb5ca4a2a324e96ca7e9810",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "W03-v2",
+      "promptFile": "W03-v2-prompt.txt",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-05-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:45:52.910Z",
+        "started": "2026-09-16T14:44:51.011Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-cc58a9f1-d920-4213-b851-60cf61cfee75.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "prompt": "Use case: precise-object-edit. Make one replacement SINGLE-TYPE shape-reference sheet, correcting only the stated physical-part error from reference 1. Discard the other labelled rows entirely. Reference 2 governs only the SAME Mira palette/placement, not the size of the isolated small part. Wide opaque light-grey canvas, no transparency and no vignette. Exactly one isolated object, repeated in OUTER FACE / TRUE PROFILE / INNER FACE / THREE-QUARTER views, plus a small PLACEMENT locator. Large part ID, those view labels, no other text or dimensions. The four views must depict the same object topology. Plain matte muted grey-olive wool; no brocade/spirals/piping/extra thick rims. Raw thin cut edges where divided from neighbours; do not turn an internal cut into decoration. No whole garment in any isolated view. Right=-X, front+Z. The locator is only context. This is visual reference, not precision CAD or a game screenshot.\nLabel exactly \"W03\".\nThe first W03 incorrectly contains several stacked rear cowl folds. Replace it with exactly ONE narrow shallow V-shaped folded strip: ONE soft rounded ridge from left end down to centre and up to right end. No second or third nested V, no hood, no whole rear cowl. Exactly two free ends, one continuous simple fold. Tiny REAR locator marks ONE narrow V row of the rear cowl, not the entire drape.\n",
+      "promptSHA256": "d151fd99a0585d15777c835d517205f6824ff2af423d3387dd2fc2bbc25eecd1",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "L01-v2",
+      "promptFile": "L01-v2-prompt.txt",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-06-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:47:22.118Z",
+        "started": "2026-09-16T14:46:15.031Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-27cbe1db-d4ba-42ad-ae00-8c3c9456cdaf.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "prompt": "Use case: precise-object-edit. Make one replacement SINGLE-TYPE shape-reference sheet, correcting only the stated physical-part error from reference 1. Discard the other labelled rows entirely. Reference 2 governs only the SAME Mira palette/placement, not the size of the isolated small part. Wide opaque light-grey canvas, no transparency and no vignette. Exactly one isolated object, repeated in OUTER FACE / TRUE PROFILE / INNER FACE / THREE-QUARTER views, plus a small PLACEMENT locator. Large part ID, those view labels, no other text or dimensions. The four views must depict the same object topology. Plain matte muted grey-olive wool; no brocade/spirals/piping/extra thick rims. Raw thin cut edges where divided from neighbours; do not turn an internal cut into decoration. No whole garment in any isolated view. Right=-X, front+Z. The locator is only context. This is visual reference, not precision CAD or a game screenshot.\nLabel exactly \"L01\".\nThe first L01 incorrectly shows TWO front skirt panels together. Replace with exactly ONE right lower-front panel only: one thin elongated flared trapezoidal surface, ONE continuous face, FOUR boundary edges, with a nearly straight inner vertical edge and sloping outer side edge. The whole left panel is absent. There is NO centre split inside this individual panel and no centre seam. It is only half the front of the long tunic, not a complete skirt. Same single panel in all four views. Tiny FRONT locator marks only image LEFT of the split (anatomical right), from belt seam to knee, not both sides and not cape.\n",
+      "promptSHA256": "d1f1d0c421307a7d5425daaac9accf242757fcb1115c4b271c3b94331e7801a3",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "L02-v2",
+      "promptFile": "L02-v2-prompt.txt",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-06-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:46:48.312Z",
+        "started": "2026-09-16T14:46:15.031Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-1f6aa4e1-97c3-4aa1-a2d6-00eb855aca31.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "prompt": "Use case: precise-object-edit. Make one replacement SINGLE-TYPE shape-reference sheet, correcting only the stated physical-part error from reference 1. Discard the other labelled rows entirely. Reference 2 governs only the SAME Mira palette/placement, not the size of the isolated small part. Wide opaque light-grey canvas, no transparency and no vignette. Exactly one isolated object, repeated in OUTER FACE / TRUE PROFILE / INNER FACE / THREE-QUARTER views, plus a small PLACEMENT locator. Large part ID, those view labels, no other text or dimensions. The four views must depict the same object topology. Plain matte muted grey-olive wool; no brocade/spirals/piping/extra thick rims. Raw thin cut edges where divided from neighbours; do not turn an internal cut into decoration. No whole garment in any isolated view. Right=-X, front+Z. The locator is only context. This is visual reference, not precision CAD or a game screenshot.\nLabel exactly \"L02\".\nThe first L02 is too broad and depicts the complete rear skirt width. Replace with exactly ONE rear-right quarter panel only, one thin gently flared trapezoid, taller than wide, with one straight centre-back cut edge and one slightly sloping side cut edge. No centre seam within this panel, no opposite half, no full skirt or circular tube. Four raw open edges. Tiny REAR locator with cape lifted aside marks only image RIGHT half of the rear LOWER TUNIC below belt and above knee; do not colour the cape surface.\n",
+      "promptSHA256": "24664d643f6510a5d4600aadf1cf51fe5678bcc9ba35ae438895fddccd464ece",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "C01-v2",
+      "promptFile": "C01-v2-prompt.txt",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-04-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:49:51.024Z",
+        "started": "2026-09-16T14:49:18.704Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-e5b52ee9-04bc-4b9e-a710-0cae9e8c66b0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "prompt": "Use case: precise-object-edit. Make one replacement SINGLE-TYPE shape-reference sheet, correcting only the stated physical-part error from reference 1. Discard the other labelled rows entirely. Reference 2 governs only the SAME Mira palette/placement, not the size of the isolated small part. Wide opaque light-grey canvas, no transparency and no vignette. Exactly one isolated object, repeated in OUTER FACE / TRUE PROFILE / INNER FACE / THREE-QUARTER views, plus a small PLACEMENT locator. Large part ID, those view labels, no other text or dimensions. The four views must depict the same object topology. Plain matte muted grey-olive wool; no brocade/spirals/piping/extra thick rims. Raw thin cut edges where divided from neighbours; do not turn an internal cut into decoration. No whole garment in any isolated view. Right=-X, front+Z. The locator is only context. This is visual reference, not precision CAD or a game screenshot.\nLabel exactly \"C01\".\nThe first C01 wraps most of a collar. Replace with exactly ONE FRONT-RIGHT QUARTER collar strip only, approximately a 90-degree arc, thin upright rectangle curved once. Both vertical ends are free, the arc never forms a U or C or closed ring. The front-left quarter and entire back collar are ABSENT. Show the same quarter strip from the convex outside, edge view, concave inside and 3/4. Tiny frontal neckline locator marks only anatomical RIGHT (image LEFT) from centre-front opening to side of neck, NOT the whole front collar.\n",
+      "promptSHA256": "4c0c66f82436c3cc150695cf631839d8108e3d82e7b62b20a6d8e63f9f3819ec",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "P03-v2",
+      "promptFile": "P03-v2-prompt.txt",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-05-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:50:25.887Z",
+        "started": "2026-09-16T14:49:18.704Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-6bcb77f7-dabe-43bd-a7bf-3cc1de2d25e3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "prompt": "Use case: precise-object-edit. Make one replacement SINGLE-TYPE shape-reference sheet, correcting only the stated physical-part error from reference 1. Discard the other labelled rows entirely. Reference 2 governs only the SAME Mira palette/placement, not the size of the isolated small part. Wide opaque light-grey canvas, no transparency and no vignette. Exactly one isolated object, repeated in OUTER FACE / TRUE PROFILE / INNER FACE / THREE-QUARTER views, plus a small PLACEMENT locator. Large part ID, those view labels, no other text or dimensions. The four views must depict the same object topology. Plain matte muted grey-olive wool; no brocade/spirals/piping/extra thick rims. Raw thin cut edges where divided from neighbours; do not turn an internal cut into decoration. No whole garment in any isolated view. Right=-X, front+Z. The locator is only context. This is visual reference, not precision CAD or a game screenshot.\nLabel exactly \"P03\".\nKeep a single long narrow cape front-opening wedge panel, ONE curved cloth surface with no attached side/rear panels. Correct the locator: it belongs to the OUTER CAPE front edge beside the right arm, from SHOULDER down toward ankle. It is not the knee-length split lower tunic. Use a FRONT three-quarter context showing staff/anatomical right at image LEFT, and highlight only the narrow OUTER CAPE edge from the right shoulder to cape hem on image LEFT. No orange on the central skirt. Preserve one panel and thin raw internal edge; do not enlarge to an entire cape.\n",
+      "promptSHA256": "08f6fd28718e95379b363b702e1714827bac068594c7ed63115d32722a2f8efe",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR01-v1",
+      "prompt": "Use case: stylized-concept. SINGLE-TYPE micro-part reference sheet for Mira, no 3D implementation. Reference 1 gives complete garment identity, reference 2 the clothing layer context; never copy the whole outfit into isolated views. One type only shown in OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER plus one small PLACEMENT context. Uniform opaque light grey, no vignette. Simple shape with thin physical cut edges, NOT ornamental piping. No text besides type ID and view labels. All four views depict the same topology. Right=-X/Left=+X; front camera gives anatomical right on image left, rear camera on image right. Dimensions and exact seam coordinates belong to an author ledger, not generated text. No extra seams/folds/patterns/embroidery. Keep single-object scale and only one surface or one folded strip.\nTitle exactly \"TR01\".\nONE front half of ONE right trouser leg from waist to boot-top. A thin long open tapered trough, wider at thigh, narrower at shin, with one gentle knee bend. The entire rear wall and entire other leg are ABSENT. TWO free long edges (inseam and outseam), one short waist-segment edge at top, one smaller half-circular open rim at bottom. Upper inner cut edge curves to meet the separate crotch gusset, but that gusset is not attached. No closed tube, no whole trousers, no two-leg garment. Front outside view and concave inner view of the SAME single wall. Plain dark drab-brown cloth matching trousers under the long tunic, no leather, no boot, no belt. Locator on a small front figure with outer tunic hidden as ghosted context marks ONLY the front of anatomical RIGHT leg (image LEFT), waist to boot top.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:51:44.552Z",
+        "started": "2026-09-16T14:50:51.919Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-f6179851-a65a-4e65-b2cc-76721520be36.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR01-v1-prompt.txt",
+      "promptSHA256": "d8af03fbf882537bc59fd8c1958bbfad0786ac4042e4f28a751fda56710d12d4",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR02-v1",
+      "prompt": "Use case: stylized-concept. SINGLE-TYPE micro-part reference sheet for Mira, no 3D implementation. Reference 1 gives complete garment identity, reference 2 the clothing layer context; never copy the whole outfit into isolated views. One type only shown in OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER plus one small PLACEMENT context. Uniform opaque light grey, no vignette. Simple shape with thin physical cut edges, NOT ornamental piping. No text besides type ID and view labels. All four views depict the same topology. Right=-X/Left=+X; front camera gives anatomical right on image left, rear camera on image right. Dimensions and exact seam coordinates belong to an author ledger, not generated text. No extra seams/folds/patterns/embroidery. Keep single-object scale and only one surface or one folded strip.\nTitle exactly \"TR02\".\nONE rear half of ONE right trouser leg, from the right half of the seat/waist to boot-top. One thin long tapered open half-shell with a gentle outward seat bulge near top and one gentle knee bend below. Opposite leg and front wall are ABSENT. TWO long exposed free seam edges, open partial waist edge, open semicircular bottom edge. Do not add a crotch bridge: its upper inner cutout awaits separate TR03. Not a complete pair of trousers, no belt, leather or boot. Plain dark drab-brown cloth. Locator uses a REAR view with coat ghosted aside and only the right rear leg (image RIGHT) marked, including right seat but not left buttock.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:52:44.429Z",
+        "started": "2026-09-16T14:50:51.919Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-831b20e4-cc66-4966-93e8-5a89a8654e97.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR02-v1-prompt.txt",
+      "promptSHA256": "98157237fe9f496495395a5af37d05b3f4fc7811db4c1ab61d07ba0cd389b409",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR03-v1",
+      "prompt": "Use case: stylized-concept. SINGLE-TYPE micro-part reference sheet for Mira, no 3D implementation. Reference 1 gives complete garment identity, reference 2 the clothing layer context; never copy the whole outfit into isolated views. One type only shown in OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER plus one small PLACEMENT context. Uniform opaque light grey, no vignette. Simple shape with thin physical cut edges, NOT ornamental piping. No text besides type ID and view labels. All four views depict the same topology. Right=-X/Left=+X; front camera gives anatomical right on image left, rear camera on image right. Dimensions and exact seam coordinates belong to an author ledger, not generated text. No extra seams/folds/patterns/embroidery. Keep single-object scale and only one surface or one folded strip.\nTitle exactly \"TR03\".\nONE small diamond-shaped soft saddle patch, the crotch gusset ONLY. Thin dark drab-brown cloth, one shallow saddle bend. FOUR free cut edges. Absolutely no legs, no waistband, no attached front or rear trouser panels, no full underwear or shorts. Wider at centre, tapering to front/back tips; small single curved diamond. Outer and inner are opposite faces of the same patch. Locator is a small neutral garment-only diagrammatic view of trousers with a translucent/ghosted front wall exposing the crotch seam, no anatomy or skin, indicating the single gusset at the junction of inseams.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:54:02.408Z",
+        "started": "2026-09-16T14:53:15.505Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-ecabc17f-7234-4da1-bc2c-5adfcf8145c8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR03-v1-prompt.txt",
+      "promptSHA256": "a1dc597566821484d533f52509eeed5dd8743a248e256cb854a12a3badfb578d",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR04-v1",
+      "prompt": "Use case: stylized-concept. SINGLE-TYPE micro-part reference sheet for Mira, no 3D implementation. Reference 1 gives complete garment identity, reference 2 the clothing layer context; never copy the whole outfit into isolated views. One type only shown in OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER plus one small PLACEMENT context. Uniform opaque light grey, no vignette. Simple shape with thin physical cut edges, NOT ornamental piping. No text besides type ID and view labels. All four views depict the same topology. Right=-X/Left=+X; front camera gives anatomical right on image left, rear camera on image right. Dimensions and exact seam coordinates belong to an author ledger, not generated text. No extra seams/folds/patterns/embroidery. Keep single-object scale and only one surface or one folded strip.\nTitle exactly \"TR04\".\nONE short quarter-arc CLOTH waistband segment, thin soft dark drab-brown fabric with TWO free short cut ends. This is the under-trouser waistband, NOT the outer brown leather belt B01. No buckle, no leather, no metal, no entire ring, no pants attached. One shallow curve across the strip. Locator marks one quarter of the hidden trousers waist with outer tunic and leather belt ghosted aside, showing fabric clearly distinct from the outer belt.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:54:44.380Z",
+        "started": "2026-09-16T14:53:15.505Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-3293a3ce-f830-4804-a02b-289cc5029fe5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR04-v1-prompt.txt",
+      "promptSHA256": "8e515ca90da4d5995c289603dd951355fc914dcbabe7d97cc4cb9b11fbce9296",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR05-v1",
+      "prompt": "Use case: stylized-concept. SINGLE-TYPE micro-part reference sheet for Mira, no 3D implementation. Reference 1 gives complete garment identity, reference 2 the clothing layer context; never copy the whole outfit into isolated views. One type only shown in OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER plus one small PLACEMENT context. Uniform opaque light grey, no vignette. Simple shape with thin physical cut edges, NOT ornamental piping. No text besides type ID and view labels. All four views depict the same topology. Right=-X/Left=+X; front camera gives anatomical right on image left, rear camera on image right. Dimensions and exact seam coordinates belong to an author ledger, not generated text. No extra seams/folds/patterns/embroidery. Keep single-object scale and only one surface or one folded strip.\nTitle exactly \"TR05\".\nONE thin cloth ankle/boot-entry turnback strip, a short open curved arc with TWO cut ends and a single thin turned-under edge. Plain dark drab-brown cloth, no leather, no metal. Not an entire boot, no boot cuff as the isolated object. Not a closed rigid ring. Locator shows the cloth at the trouser bottom going just INSIDE the top of the boot, with boot upper semi-transparent so cloth underlap is clear; no invented exterior band.\n\nBACKGROUND REQUIREMENT: the entire image is a photograph of a solid, opaque, evenly lit light-grey paper backdrop, including all corners and behind labels. No alpha transparency, black vignette, fading mask or dark gradients. Use bold near-black high-contrast labels on that grey opaque paper.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-lower-views-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:57:14.715Z",
+        "started": "2026-09-16T14:56:38.592Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-ac54e3e4-373a-4c65-83f1-a37f9956b567.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR05-v1-prompt.txt",
+      "promptSHA256": "00ec2d7c00a978107810b471996e83734cd3660e184990479cff1564d03511b3",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "PH01-v1",
+      "prompt": "Use case: stylized-concept. SINGLE-TYPE micro-part reference sheet for Mira, no 3D implementation. Reference 1 gives complete garment identity, reference 2 the clothing layer context; never copy the whole outfit into isolated views. One type only shown in OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER plus one small PLACEMENT context. Uniform opaque light grey, no vignette. Simple shape with thin physical cut edges, NOT ornamental piping. No text besides type ID and view labels. All four views depict the same topology. Right=-X/Left=+X; front camera gives anatomical right on image left, rear camera on image right. Dimensions and exact seam coordinates belong to an author ledger, not generated text. No extra seams/folds/patterns/embroidery. Keep single-object scale and only one surface or one folded strip.\nTitle exactly \"PH01\".\nONE short cape HEM turnback strip only, a thin gently curved horizontal grey-olive wool band with ONE soft folded cross-section and TWO raw open cut ends. No full cape, no skirt, no lower-tunic hem, no closed ring, no solid end caps. Preserve the subdued cape material. The locator is a small BACK cape view highlighting only ONE short section of the ANKLE-LENGTH outer cape bottom edge, not the knee-length tunic. This type later follows six cape-sector boundaries; do not draw six distinct objects.\n\nBACKGROUND REQUIREMENT: the entire image is a photograph of a solid, opaque, evenly lit light-grey paper backdrop, including all corners and behind labels. No alpha transparency, black vignette, fading mask or dark gradients. Use bold near-black high-contrast labels on that grey opaque paper.\n",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+        "/workspace/scratch/e72662e3b71f/Q-mira-cloth-join-v64/docs/evidence/character-reference-v60/references/mira-cape-views-v2.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T14:57:50.191Z",
+        "started": "2026-09-16T14:56:38.592Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-5aa0eaea-2909-4f6c-926b-a4336a7ed1d3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "PH01-v1-prompt.txt",
+      "promptSHA256": "8b40a1af717bcc3c712617b9b32a3f57caef4ed2152cea3d8f730e8c0f3a1d0f",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR01-v2",
+      "prompt": "Use case: precise-object-edit. Edit target is the supplied TR01 reference sheet. Make ONE targeted structural correction consistently in every angle: this is ONE thin FRONT HALF-WALL of ONE trouser leg, NOT a tubular trouser leg. The entire rear wall is missing from waist all the way to ankle. The two long free edges must remain separated along the full length, like a cut length of half-pipe. Top and bottom edges are OPEN SEMICIRCULAR ARCS, never complete oval rings. The three-quarter view must clearly show the absent opposite wall and both long cut edges against the background; do not fill the opening with a ghost wall, connecting membrane, rim or shadow. Keep the same long tapered single-leg silhouette, upper inner cutout for a separate crotch gusset, single gentle knee bend, plain drab-brown cloth. No extra folds or embroidered seams. Four consistent views labelled OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER plus the existing small anatomical RIGHT placement context (front view, image left). Title \"TR01\". The figures must be painted on a completely OPAQUE, solid very light grey paper background across the entire canvas including all corners, with clear BLACK labels. No transparency, no black vignette, no dark background. No new garment design. This is shape-reference concept art, not an exact measured drawing.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR01-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:04:01.283Z",
+        "started": "2026-09-16T15:02:47.817Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-2e170ec6-0540-41de-b463-54ac24b248be.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR01-v2-prompt.txt",
+      "promptSHA256": "ad59d0086e3d49f1a005bac684b16904742a39825c26fef1131fa8019fc25c14",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR02-v2",
+      "prompt": "Use case: precise-object-edit. Edit target is the supplied TR02 reference sheet. Make ONE targeted structural correction consistently in every angle: this is ONE thin REAR HALF-WALL of ONE trouser leg, NOT a tubular trouser leg. The entire front wall is missing from waist all the way to ankle. The two long free edges must remain separated along the full length, like a cut length of half-pipe. Top and bottom edges are OPEN SEMICIRCULAR ARCS, never complete oval rings. The three-quarter view must clearly show the absent opposite wall and both long cut edges against the background; do not fill the opening with a ghost wall, connecting membrane, rim or shadow. Keep the same long tapered single-leg silhouette, rear seat bulge, upper inner cutout for a separate crotch gusset, single gentle knee bend, plain drab-brown cloth. No extra folds or embroidered seams. Four consistent views labelled OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER plus the existing small anatomical RIGHT placement context (rear view, image right). Title \"TR02\". The figures must be painted on a completely OPAQUE, solid very light grey paper background across the entire canvas including all corners, with clear BLACK labels. No transparency, no black vignette, no dark background. No new garment design. This is shape-reference concept art, not an exact measured drawing.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR02-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:03:20.996Z",
+        "started": "2026-09-16T15:02:47.817Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-a94e1298-8807-4ee1-9fe2-e47ff9e57f21.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR02-v2-prompt.txt",
+      "promptSHA256": "f889170e1e0286304658b7121945503b026e2947ce47a391f898a7c275ec4bd5",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR03-v2",
+      "prompt": "Use case: precise-object-edit. Edit the supplied TR03 micro-part reference sheet ONLY to fix its unreadable dark/transparent background. Keep the isolated small single diamond cloth saddle patch with four free edges, all four views, brown fabric, silhouettes and small placement context unchanged. Replace all dark/vignetted/transparent surrounding areas with uniform fully OPAQUE pale grey paper, even at all four corners. Make all view labels and title \"TR03\" BLACK and clearly readable. Preserve the isolated part: do not add a leg, whole waistband ring, leather belt, new seam or new ornament. No gradients, no black vignette, no transparency. Same reference content with readable presentation; not a redesign.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR03-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:05:04.026Z",
+        "started": "2026-09-16T15:04:17.207Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-f743e453-4528-404c-8619-3e7486e46e14.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR03-v2-prompt.txt",
+      "promptSHA256": "73040277748c3ba688f624ab46e9c3703dbf0a28eb1d6ecd1cc859be493eb374",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR04-v2",
+      "prompt": "Use case: precise-object-edit. Edit the supplied TR04 micro-part reference sheet ONLY to fix its unreadable dark/transparent background. Keep the isolated single short curved fabric waistband strip with two free ends, all four views, brown fabric, silhouettes and small placement context unchanged. Replace all dark/vignetted/transparent surrounding areas with uniform fully OPAQUE pale grey paper, even at all four corners. Make all view labels and title \"TR04\" BLACK and clearly readable. Preserve the isolated part: do not add a leg, whole waistband ring, leather belt, new seam or new ornament. No gradients, no black vignette, no transparency. Same reference content with readable presentation; not a redesign.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR04-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:05:34.622Z",
+        "started": "2026-09-16T15:04:17.208Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-9c2f0a38-8f88-4dc6-93d3-3fc92f7e2ab3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR04-v2-prompt.txt",
+      "promptSHA256": "7844eb75dd5c2a001570ffbc5f81404fbc331044f7501f749f015b14645ad97c",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "S02-v2",
+      "prompt": "Use case: precise-object-edit. Produce a SINGLE TYPE reference sheet from only the specified row of the supplied reference. Four views of the SAME isolated part: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, plus small PLACEMENT context. Opaque uniform very light grey background including corners, black readable labels, no vignette/transparency. Preserve Mira's restrained plain wool/brown leather/aged brass identity as relevant; no ornament/piping. This is qualitative shape reference, not measured CAD. Take ONLY S02 (bottom row), one shallow curved REAR upper-sleeve half-panel with two free long edges, one shoulder arc and one elbow arc. Keep its geometry/material. Fix its locator: show a REAR three-quarter Mira with cape removed as context, highlight only the back surface of anatomical RIGHT upper arm (right side of straight rear image, staff-hand side). No front sleeve highlight. No entire sleeve tube. Title S02.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-02-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:08:26.521Z",
+        "started": "2026-09-16T15:07:19.909Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-98987ec0-3388-4898-b36e-d7a6ff1c7ef3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "S02-v2-prompt.txt",
+      "promptSHA256": "2aed1be9e3f358d1f0ccb200c2e5b37f5d255d2fb2a98b9edf5d242263ef5b65",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "F03-v2",
+      "prompt": "Use case: precise-object-edit. Produce a SINGLE TYPE reference sheet from only the specified row of the supplied reference. Four views of the SAME isolated part: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, plus small PLACEMENT context. Opaque uniform very light grey background including corners, black readable labels, no vignette/transparency. Preserve Mira's restrained plain wool/brown leather/aged brass identity as relevant; no ornament/piping. This is qualitative shape reference, not measured CAD. Take ONLY F03 (top row), one narrow brown leather ribbon with a single gentle helical bend. Keep this one ribbon, not an assembled X or entire cuff. Fix placement: front and rear context must BOTH highlight the same anatomical RIGHT wrist wrap, the staff hand; on front figure image LEFT, on rear figure image RIGHT. Opposite wrist unhighlighted. Make only ONE strip highlighted, not the whole cuff. Title F03.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-10-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:07:50.863Z",
+        "started": "2026-09-16T15:07:19.909Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-f64a432d-5eaf-4fca-a5a5-2417b511f368.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "F03-v2-prompt.txt",
+      "promptSHA256": "e85d730b33ec82f717ccc85956f08cc4bd522850a656d80ad889250e8d0adf8e",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "L03-v2",
+      "prompt": "Use case: precise-object-edit. Produce a SINGLE TYPE reference sheet from only the specified row of the supplied reference. Four views of the SAME isolated part: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, plus small PLACEMENT context. Opaque uniform very light grey background including corners, black readable labels, no vignette/transparency. Preserve Mira's restrained plain wool/brown leather/aged brass identity as relevant; no ornament/piping. This is qualitative shape reference, not measured CAD. Take ONLY L03 (top row). Correct the 3/4 view doubled wall: ONE single gently curved trapezoid cloth surface from waist to lower tunic hem; one front-facing wall and its reverse only. Two long free edges; no return wall, pleat, doubled strip or hollow tube. Profile is a single shallow curve, not a closed loop. Retain width taper, muted cloth and side-of-tunic locator. Title L03.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-07-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:09:14.098Z",
+        "started": "2026-09-16T15:08:45.584Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-13e74b94-d68c-4249-b64f-73a24d93a8a7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "L03-v2-prompt.txt",
+      "promptSHA256": "debe64bedacc5a1223531992ffb901e2512f9b6566341bbe71b57cd91a75c9ab",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "F04-v2",
+      "prompt": "Use case: precise-object-edit. Produce a SINGLE TYPE reference sheet from only the specified row of the supplied reference. Four views of the SAME isolated part: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, plus small PLACEMENT context. Opaque uniform very light grey background including corners, black readable labels, no vignette/transparency. Preserve Mira's restrained plain wool/brown leather/aged brass identity as relevant; no ornament/piping. This is qualitative shape reference, not measured CAD. Take ONLY F04 (middle row). Make its profile consistent with the thin domed shell shown by the inner face: ONE shallow convex brass cap, concave inside, thin uniform rim. Side profile must show a shallow crescent thin metal shell with open back; never a double-convex solid lens. Same round outside diameter and modest shallow dome in all views. Do not add separate rim F05, pin, whole clasp, or decoration. Keep small right-side upper-cowl brooch locator (front image LEFT). Title F04.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-10-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:09:44.642Z",
+        "started": "2026-09-16T15:08:45.584Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-27bfa6c7-e506-4fa7-af66-404e0201fb68.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "F04-v2-prompt.txt",
+      "promptSHA256": "80e67ef7b8595c2bdc78084450c31a21405cae1cf96dac5a4ae5e76872c4d822",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "S03-v2",
+      "prompt": "Use case: precise-object-edit. Produce a SINGLE TYPE reference sheet from only the specified row of the supplied reference. Four views of the SAME isolated part: OUTER FACE, TRUE PROFILE, INNER FACE, THREE-QUARTER, plus small PLACEMENT context. Opaque uniform very light grey background including corners, black readable labels, no vignette/transparency. Preserve Mira's restrained plain wool/brown leather/aged brass identity as relevant; no ornament/piping. This is qualitative shape reference, not measured CAD. Take ONLY S03 (top row), outer elbow fold. Correct its scale class to ONE SHORT wide cloth strip with one gentle elbow fold, about twice as wide across the elbow as tall along the arm. Not the entire upper-plus-forearm sleeve. The two short side ends and long top/bottom free edges are visible; no tube, no extra pleats. All views show the same short one-fold strip. Placement: highlight ONLY a short band at back/outside of the anatomical RIGHT elbow, staff hand side, with rear 3/4 context. Title S03.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-03-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:11:21.906Z",
+        "started": "2026-09-16T15:09:58.461Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-dd472f8c-ede5-4dbd-aa2e-f7896e0646f6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "S03-v2-prompt.txt",
+      "promptSHA256": "bcfadc477ae34ce2dcc50afb15d7e93ac0a64b20ffa22683d9eff7fcaf71c908",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "cloth-01-v2",
+      "prompt": "Use case: precise-object-edit. Fix ONLY presentation of this three-row T02/T03/T04 reference sheet: replace its entire transparent/dark vignetted background with uniform fully opaque pale grey paper including the corners, and make its labels black and readable. Keep all isolated parts, all four view silhouettes, row order, cloth identity and placement locators unchanged. No shape redesign and no new seams or folds. Do not retain a dark gradient.",
+      "referencePaths": [
+        "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/cloth-01-v1.png"
+      ],
+      "time": {
+        "ended": "2026-09-16T15:10:47.972Z",
+        "started": "2026-09-16T15:09:58.461Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-7f734b85-fa84-4df4-9bb3-8ccdb8ab77c7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "cloth-01-v2-prompt.txt",
+      "promptSHA256": "f554a3be88d026b954dae3b040007928a5b8d764e3bab0bd651cc06d571ffee0",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR01-method-b",
+      "prompt": "Use case: stylized-concept. A clean sculptural material study of ONE small blue-grey fabric surface, on uniform opaque pale-grey paper. Do not depict any person, clothing item, trousers, leg, sleeve, anatomy, mannequin, silhouette locator, or assembled object. The subject is only a single thin tapered quadrilateral sheet, gently curved ACROSS its width into a shallow open trough, with a small broad bend along its length. One upper corner has a small concave cutout. Both long edges are completely FREE and widely separated; both short edges are incomplete OPEN ARCS with no closing chord and no circumferential rim. The opposite wall does not exist. Show the same one-surface sculpture in four isolated angles in a row: convex outside, true side profile, concave reverse, three-quarter looking clearly into the open trough. The last view must let the pale background be seen through the entirely missing opposite half. This is like a curved piece of cloth held in shape, not a hollow cylindrical object. One soft surface, four visible boundaries, no rolled edges, no ornamental stitches, no extra fold, no end caps. High quality neutral art reference. Labels only \"TR01 / SURFACE STUDY\", \"OUTSIDE\", \"PROFILE\", \"REVERSE\", \"THREE-QUARTER\". No dimensions or placement diagram.",
+      "referencePaths": [],
+      "time": {
+        "ended": "2026-09-16T15:13:33.615Z",
+        "started": "2026-09-16T15:13:09.934Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-ee29ad34-7185-480c-9d9b-609348675ceb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR01-method-b-prompt.txt",
+      "promptSHA256": "349a41214b4cbc5b10c1a2b3cca52b6ff08c58e959785d7b666c8abd9907d317",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    },
+    {
+      "id": "TR02-method-b",
+      "prompt": "Use case: stylized-concept. One isolated shallow blue-grey cloth surface study on fully opaque pale-grey paper. No person, garment, trousers, leg, sleeve, mannequin, anatomical cue, or placement locator anywhere. A single long tapered quadrilateral cloth sheet, a little wider at its upper end, with one gentle rounded bulge in its upper third and a subtle broad bend halfway down. The sheet is curved across its width, like a HALF-PIPE WITH THE OTHER HALF COMPLETELY REMOVED; it has TWO visibly separated long free edges for its ENTIRE length. The four-edge boundary never forms a circular opening: both short ends are open arcs, not round or oval rims. Show one and the same thin open surface from convex outside, true side, concave reverse and a three-quarter view looking into the wide open missing half. Pale background is visible through that missing half, which must not be filled by a second wall or a shadow. No rolled edges, closed tube, seam decoration, endcap or extra patch. Single simple surface concept art, not a measured engineering diagram. Labels only \"TR02 / SURFACE STUDY\", \"OUTSIDE\", \"PROFILE\", \"REVERSE\", \"THREE-QUARTER\".",
+      "referencePaths": [],
+      "time": {
+        "ended": "2026-09-16T15:13:57.673Z",
+        "started": "2026-09-16T15:13:09.934Z"
+      },
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-5f58e92f-4c26-4014-88ce-8c4fb6a1442e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "promptFile": "TR02-method-b-prompt.txt",
+      "promptSHA256": "f8112793bd1c6744b4252ce70fb8bc3a48b0ae90affa248ba9c4135a9155f0a4",
+      "status": "terminal-generated-inspected",
+      "serviceJobID": "not exposed; raw output UUID retained"
+    }
+  ]
+}

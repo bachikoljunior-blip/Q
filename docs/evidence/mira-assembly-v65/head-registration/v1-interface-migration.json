@@ -1,0 +1,2770 @@
+{
+  "records": [
+    {
+      "v1Id": "HI-001",
+      "a": "F05-R",
+      "b": "F07-R",
+      "v1Kind": "existing-skin-C1",
+      "canonicalCurveIds": [
+        "HC006"
+      ],
+      "commonNodeIds": [
+        "J1-R",
+        "O1-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "existing-skin-C1"
+    },
+    {
+      "v1Id": "HI-002",
+      "a": "F07-R",
+      "b": "F09-R",
+      "v1Kind": "existing-skin-C1",
+      "canonicalCurveIds": [
+        "HC010"
+      ],
+      "commonNodeIds": [
+        "J2-R",
+        "O2-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "existing-skin-C1"
+    },
+    {
+      "v1Id": "HI-003",
+      "a": "F09-R",
+      "b": "F11",
+      "v1Kind": "existing-skin-C1",
+      "canonicalCurveIds": [
+        "HC013"
+      ],
+      "commonNodeIds": [
+        "J3-R",
+        "O3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "existing-skin-C1"
+    },
+    {
+      "v1Id": "HI-004",
+      "a": "F11",
+      "b": "F09-L",
+      "v1Kind": "existing-skin-C1",
+      "canonicalCurveIds": [
+        "HC026"
+      ],
+      "commonNodeIds": [
+        "J3-L",
+        "O3-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "existing-skin-C1"
+    },
+    {
+      "v1Id": "HI-005",
+      "a": "F09-L",
+      "b": "F07-L",
+      "v1Kind": "existing-skin-C1",
+      "canonicalCurveIds": [
+        "HC023"
+      ],
+      "commonNodeIds": [
+        "J2-L",
+        "O2-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "existing-skin-C1"
+    },
+    {
+      "v1Id": "HI-006",
+      "a": "F07-L",
+      "b": "F05-L",
+      "v1Kind": "existing-skin-C1",
+      "canonicalCurveIds": [
+        "HC019"
+      ],
+      "commonNodeIds": [
+        "J1-L",
+        "O1-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "existing-skin-C1"
+    },
+    {
+      "v1Id": "HI-007",
+      "a": "F01-L",
+      "b": "F03-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC031"
+      ],
+      "commonNodeIds": [
+        "BT-L",
+        "FH-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-008",
+      "a": "F01-R",
+      "b": "F03-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC076"
+      ],
+      "commonNodeIds": [
+        "BT-R",
+        "FH-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-009",
+      "a": "F01-L",
+      "b": "E03-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC030"
+      ],
+      "commonNodeIds": [
+        "BI-L",
+        "BT-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-010",
+      "a": "F01-R",
+      "b": "E03-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC075"
+      ],
+      "commonNodeIds": [
+        "BI-R",
+        "BT-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-011",
+      "a": "F03-L",
+      "b": "E03-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC038"
+      ],
+      "commonNodeIds": [
+        "BT-L",
+        "OC-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-012",
+      "a": "F03-R",
+      "b": "E03-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC082"
+      ],
+      "commonNodeIds": [
+        "BT-R",
+        "OC-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-013",
+      "a": "F03-L",
+      "b": "F05-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC015"
+      ],
+      "commonNodeIds": [
+        "O0-L",
+        "Q-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-014",
+      "a": "F03-R",
+      "b": "F05-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC002"
+      ],
+      "commonNodeIds": [
+        "O0-R",
+        "Q-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-015",
+      "a": "F03-L",
+      "b": "F18-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC039"
+      ],
+      "commonNodeIds": [
+        "OC-L",
+        "Q-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-016",
+      "a": "F03-R",
+      "b": "F18-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC083"
+      ],
+      "commonNodeIds": [
+        "OC-R",
+        "Q-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-017",
+      "a": "F18-L",
+      "b": "E04-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC045",
+        "HC046",
+        "HC047"
+      ],
+      "commonNodeIds": [
+        "CL-L",
+        "LM-L",
+        "LO-L",
+        "OC-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-018",
+      "a": "F18-R",
+      "b": "E04-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC089",
+        "HC090",
+        "HC091"
+      ],
+      "commonNodeIds": [
+        "CL-R",
+        "LM-R",
+        "LO-R",
+        "OC-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-019",
+      "a": "F18-L",
+      "b": "E05-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC051"
+      ],
+      "commonNodeIds": [
+        "BL-L",
+        "CL-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-020",
+      "a": "F18-R",
+      "b": "E05-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC095"
+      ],
+      "commonNodeIds": [
+        "BL-R",
+        "CL-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-021",
+      "a": "F18-L",
+      "b": "F05-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC014",
+        "HC016"
+      ],
+      "commonNodeIds": [
+        "D-L",
+        "J0-L",
+        "Q-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-022",
+      "a": "F18-R",
+      "b": "F05-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC001",
+        "HC003"
+      ],
+      "commonNodeIds": [
+        "D-R",
+        "J0-R",
+        "Q-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-023",
+      "a": "F18-L",
+      "b": "F19-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC053"
+      ],
+      "commonNodeIds": [
+        "BL-L",
+        "D-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-024",
+      "a": "F18-R",
+      "b": "F19-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC097"
+      ],
+      "commonNodeIds": [
+        "BL-R",
+        "D-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-025",
+      "a": "F19-L",
+      "b": "F05-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC017"
+      ],
+      "commonNodeIds": [
+        "D-L",
+        "J1-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-026",
+      "a": "F19-R",
+      "b": "F05-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC004"
+      ],
+      "commonNodeIds": [
+        "D-R",
+        "J1-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-027",
+      "a": "F19-L",
+      "b": "F07-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC020"
+      ],
+      "commonNodeIds": [
+        "E-L",
+        "J1-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-028",
+      "a": "F19-R",
+      "b": "F07-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC007"
+      ],
+      "commonNodeIds": [
+        "E-R",
+        "J1-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-029",
+      "a": "F19-L",
+      "b": "F20-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC054"
+      ],
+      "commonNodeIds": [
+        "E-L",
+        "MU-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-030",
+      "a": "F19-R",
+      "b": "F20-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC098"
+      ],
+      "commonNodeIds": [
+        "E-R",
+        "MU-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-031",
+      "a": "F19-L",
+      "b": "F14-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC057",
+        "HC058"
+      ],
+      "commonNodeIds": [
+        "BL-L",
+        "NA-L",
+        "NB-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-032",
+      "a": "F19-R",
+      "b": "F14-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC101",
+        "HC102"
+      ],
+      "commonNodeIds": [
+        "BL-R",
+        "NA-R",
+        "NB-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-033",
+      "a": "F20-L",
+      "b": "F07-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC021"
+      ],
+      "commonNodeIds": [
+        "E-L",
+        "J2-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-034",
+      "a": "F20-R",
+      "b": "F07-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC008"
+      ],
+      "commonNodeIds": [
+        "E-R",
+        "J2-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-035",
+      "a": "F20-L",
+      "b": "F09-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC024"
+      ],
+      "commonNodeIds": [
+        "J2-L",
+        "J3-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-036",
+      "a": "F20-R",
+      "b": "F09-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC011"
+      ],
+      "commonNodeIds": [
+        "J2-R",
+        "J3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-037",
+      "a": "E05-L",
+      "b": "E03-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC042",
+        "HC043"
+      ],
+      "commonNodeIds": [
+        "BU-L",
+        "CU-L",
+        "EIU-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-038",
+      "a": "E05-R",
+      "b": "E03-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC086",
+        "HC087"
+      ],
+      "commonNodeIds": [
+        "BU-R",
+        "CU-R",
+        "EIU-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-039",
+      "a": "E05-L",
+      "b": "E04-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC048"
+      ],
+      "commonNodeIds": [
+        "CL-L",
+        "EIL-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-040",
+      "a": "E05-R",
+      "b": "E04-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC092"
+      ],
+      "commonNodeIds": [
+        "CL-R",
+        "EIL-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-041",
+      "a": "E03-L",
+      "b": "E04-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC040"
+      ],
+      "commonNodeIds": [
+        "EO-L",
+        "OC-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-042",
+      "a": "E03-R",
+      "b": "E04-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC084"
+      ],
+      "commonNodeIds": [
+        "EO-R",
+        "OC-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-043",
+      "a": "A01a-L",
+      "b": "A01b-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC123",
+        "HC124",
+        "HC125"
+      ],
+      "commonNodeIds": [
+        "H0-L",
+        "H1-L",
+        "H2-L",
+        "H3-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-044",
+      "a": "A01a-R",
+      "b": "A01b-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC144",
+        "HC145",
+        "HC146"
+      ],
+      "commonNodeIds": [
+        "H0-R",
+        "H1-R",
+        "H2-R",
+        "H3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-045",
+      "a": "A01a-L",
+      "b": "A02a-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [
+        "H0-L"
+      ],
+      "disposition": "v1 edge proposal replaced by point junction only",
+      "reason": "new closed trim topology assigns the finite skin interval to the intervening named small face; no duplicate ownership"
+    },
+    {
+      "v1Id": "HI-046",
+      "a": "A01a-R",
+      "b": "A02a-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [
+        "H0-R"
+      ],
+      "disposition": "v1 edge proposal replaced by point junction only",
+      "reason": "new closed trim topology assigns the finite skin interval to the intervening named small face; no duplicate ownership"
+    },
+    {
+      "v1Id": "HI-047",
+      "a": "A01a-L",
+      "b": "A03-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC126"
+      ],
+      "commonNodeIds": [
+        "H3-L",
+        "R3-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-048",
+      "a": "A01a-R",
+      "b": "A03-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC147"
+      ],
+      "commonNodeIds": [
+        "H3-R",
+        "R3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-049",
+      "a": "A01a-L",
+      "b": "A04-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC127",
+        "HC128",
+        "HC129",
+        "HC130"
+      ],
+      "commonNodeIds": [
+        "H0-L",
+        "R0-L",
+        "R1-L",
+        "R2-L",
+        "R3-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-050",
+      "a": "A01a-R",
+      "b": "A04-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC148",
+        "HC149",
+        "HC150",
+        "HC151"
+      ],
+      "commonNodeIds": [
+        "H0-R",
+        "R0-R",
+        "R1-R",
+        "R2-R",
+        "R3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-051",
+      "a": "A01b-L",
+      "b": "A02a-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC132",
+        "HC133",
+        "HC134"
+      ],
+      "commonNodeIds": [
+        "CB-L",
+        "CD-L",
+        "CT-L",
+        "H0-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-052",
+      "a": "A01b-R",
+      "b": "A02a-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC153",
+        "HC154",
+        "HC155"
+      ],
+      "commonNodeIds": [
+        "CB-R",
+        "CD-R",
+        "CT-R",
+        "H0-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-053",
+      "a": "A01b-L",
+      "b": "A03-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC131"
+      ],
+      "commonNodeIds": [
+        "CD-L",
+        "H3-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-054",
+      "a": "A01b-R",
+      "b": "A03-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC152"
+      ],
+      "commonNodeIds": [
+        "CD-R",
+        "H3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-055",
+      "a": "A02a-L",
+      "b": "A02b-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC136"
+      ],
+      "commonNodeIds": [
+        "TD-L",
+        "TT-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-056",
+      "a": "A02a-R",
+      "b": "A02b-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC157"
+      ],
+      "commonNodeIds": [
+        "TD-R",
+        "TT-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-057",
+      "a": "A02a-L",
+      "b": "A03-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC135"
+      ],
+      "commonNodeIds": [
+        "CD-L",
+        "TD-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-058",
+      "a": "A02a-R",
+      "b": "A03-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC156"
+      ],
+      "commonNodeIds": [
+        "CD-R",
+        "TD-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-059",
+      "a": "A02a-L",
+      "b": "A04-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC137"
+      ],
+      "commonNodeIds": [
+        "H0-L",
+        "TT-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-060",
+      "a": "A02a-R",
+      "b": "A04-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC158"
+      ],
+      "commonNodeIds": [
+        "H0-R",
+        "TT-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-061",
+      "a": "A02b-L",
+      "b": "A04-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC139"
+      ],
+      "commonNodeIds": [
+        "EFM-L",
+        "TT-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-062",
+      "a": "A02b-R",
+      "b": "A04-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC160"
+      ],
+      "commonNodeIds": [
+        "EFM-R",
+        "TT-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-063",
+      "a": "A03-L",
+      "b": "A04-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC140",
+        "HC141"
+      ],
+      "commonNodeIds": [
+        "EFLW-L",
+        "LB-L",
+        "R3-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-064",
+      "a": "A03-R",
+      "b": "A04-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC161",
+        "HC162"
+      ],
+      "commonNodeIds": [
+        "EFLW-R",
+        "LB-R",
+        "R3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-065",
+      "a": "F01-L",
+      "b": "F12",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC029"
+      ],
+      "commonNodeIds": [
+        "BI-L",
+        "BROW-M"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-066",
+      "a": "F01-R",
+      "b": "F12",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC074"
+      ],
+      "commonNodeIds": [
+        "BI-R",
+        "BROW-M"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-067",
+      "a": "E05-L",
+      "b": "F12",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC052"
+      ],
+      "commonNodeIds": [
+        "BL-L",
+        "BU-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-068",
+      "a": "E05-R",
+      "b": "F12",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC096"
+      ],
+      "commonNodeIds": [
+        "BL-R",
+        "BU-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-069",
+      "a": "F18-L",
+      "b": "F12",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [
+        "BL-L"
+      ],
+      "disposition": "v1 edge proposal replaced by point junction only",
+      "reason": "new closed trim topology assigns the finite skin interval to the intervening named small face; no duplicate ownership"
+    },
+    {
+      "v1Id": "HI-070",
+      "a": "F18-R",
+      "b": "F12",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [
+        "BL-R"
+      ],
+      "disposition": "v1 edge proposal replaced by point junction only",
+      "reason": "new closed trim topology assigns the finite skin interval to the intervening named small face; no duplicate ownership"
+    },
+    {
+      "v1Id": "HI-071",
+      "a": "F14-L",
+      "b": "F13",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC061"
+      ],
+      "commonNodeIds": [
+        "NL-L",
+        "NT-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-072",
+      "a": "F14-R",
+      "b": "F13",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC105"
+      ],
+      "commonNodeIds": [
+        "NL-R",
+        "NT-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-073",
+      "a": "F14-L",
+      "b": "F15",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC059",
+        "HC060"
+      ],
+      "commonNodeIds": [
+        "NB-L",
+        "NL-L",
+        "NM-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-074",
+      "a": "F14-R",
+      "b": "F15",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC103",
+        "HC104"
+      ],
+      "commonNodeIds": [
+        "NB-R",
+        "NL-R",
+        "NM-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-075",
+      "a": "F19-L",
+      "b": "F16b",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC056"
+      ],
+      "commonNodeIds": [
+        "NB-L",
+        "PH-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-076",
+      "a": "F19-R",
+      "b": "F16b",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC100"
+      ],
+      "commonNodeIds": [
+        "NB-R",
+        "PH-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-077",
+      "a": "F20-L",
+      "b": "F16a",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC064"
+      ],
+      "commonNodeIds": [
+        "MC-L",
+        "MU-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-078",
+      "a": "F20-R",
+      "b": "F16a",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC108"
+      ],
+      "commonNodeIds": [
+        "MC-R",
+        "MU-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-079",
+      "a": "F20-L",
+      "b": "F17",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC063"
+      ],
+      "commonNodeIds": [
+        "J3-L",
+        "MC-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-080",
+      "a": "F20-R",
+      "b": "F17",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC107"
+      ],
+      "commonNodeIds": [
+        "J3-R",
+        "MC-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-081",
+      "a": "F09-L",
+      "b": "N01",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC025"
+      ],
+      "commonNodeIds": [
+        "O2-L",
+        "O3-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-082",
+      "a": "F09-R",
+      "b": "N01",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC012"
+      ],
+      "commonNodeIds": [
+        "O2-R",
+        "O3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-083",
+      "a": "F03-L",
+      "b": "S01",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC037"
+      ],
+      "commonNodeIds": [
+        "FH-L",
+        "TF-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-084",
+      "a": "F03-R",
+      "b": "S01",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC081"
+      ],
+      "commonNodeIds": [
+        "FH-R",
+        "TF-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-085",
+      "a": "F01-L",
+      "b": "S01",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC032"
+      ],
+      "commonNodeIds": [
+        "FH-L",
+        "FOREHEAD-M"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-086",
+      "a": "F01-R",
+      "b": "S01",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC077"
+      ],
+      "commonNodeIds": [
+        "FH-R",
+        "FOREHEAD-M"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-087",
+      "a": "A04-L",
+      "b": "N02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC143"
+      ],
+      "commonNodeIds": [
+        "EBL-L",
+        "EFLW-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-088",
+      "a": "A04-R",
+      "b": "N02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC164"
+      ],
+      "commonNodeIds": [
+        "EBL-R",
+        "EFLW-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-089",
+      "a": "F01-L",
+      "b": "F01-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC033"
+      ],
+      "commonNodeIds": [
+        "BROW-M",
+        "FOREHEAD-M"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-090",
+      "a": "F12",
+      "b": "F13",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC118"
+      ],
+      "commonNodeIds": [
+        "NT-L",
+        "NT-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-091",
+      "a": "F13",
+      "b": "F15",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC119"
+      ],
+      "commonNodeIds": [
+        "NL-L",
+        "NL-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-092",
+      "a": "F15",
+      "b": "F16b",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC120"
+      ],
+      "commonNodeIds": [
+        "NB-L",
+        "NB-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-093",
+      "a": "F16b",
+      "b": "F16a",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC121"
+      ],
+      "commonNodeIds": [
+        "PH-L",
+        "PH-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-094",
+      "a": "F17",
+      "b": "F11",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC027"
+      ],
+      "commonNodeIds": [
+        "J3-L",
+        "J3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-095",
+      "a": "F11",
+      "b": "N01",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC028"
+      ],
+      "commonNodeIds": [
+        "O3-L",
+        "O3-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-096",
+      "a": "S01",
+      "b": "S02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC166"
+      ],
+      "commonNodeIds": [
+        "SCF-L",
+        "SCF-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-097",
+      "a": "S02",
+      "b": "S05",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC169"
+      ],
+      "commonNodeIds": [
+        "SCB-L",
+        "SCB-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-098",
+      "a": "S05",
+      "b": "N02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC172"
+      ],
+      "commonNodeIds": [
+        "SB-L",
+        "SB-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-099",
+      "a": "S03",
+      "b": "S01",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC165"
+      ],
+      "commonNodeIds": [
+        "SCF-L",
+        "TF-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-100",
+      "a": "S03",
+      "b": "S02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC168"
+      ],
+      "commonNodeIds": [
+        "SCB-L",
+        "SCF-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-101",
+      "a": "S03",
+      "b": "S05",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC171"
+      ],
+      "commonNodeIds": [
+        "SB-L",
+        "SCB-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-102",
+      "a": "S03",
+      "b": "F03-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC036"
+      ],
+      "commonNodeIds": [
+        "EBU-L",
+        "TF-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-103",
+      "a": "S03",
+      "b": "A04-L",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC142"
+      ],
+      "commonNodeIds": [
+        "EBL-L",
+        "EBU-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-104",
+      "a": "S03",
+      "b": "N02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC174"
+      ],
+      "commonNodeIds": [
+        "EBL-L",
+        "SB-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-105",
+      "a": "N01",
+      "b": "N02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC176",
+        "HC179"
+      ],
+      "commonNodeIds": [
+        "CUT-L",
+        "CUT-R",
+        "EFLW-L",
+        "EFLW-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-106",
+      "a": "E01-L",
+      "b": "E02-L",
+      "v1Kind": "optical-seat",
+      "canonicalCurveIds": [
+        "HC069"
+      ],
+      "commonNodeIds": [
+        "OPTIC-L"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "optical-seat"
+    },
+    {
+      "v1Id": "HI-107",
+      "a": "E01-L",
+      "b": "E03-L",
+      "v1Kind": "sliding-contact",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "numeric offset sphere/lid sliding contact, not a weld",
+      "eyeSide": "L"
+    },
+    {
+      "v1Id": "HI-108",
+      "a": "E01-L",
+      "b": "E04-L",
+      "v1Kind": "sliding-contact",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "numeric offset sphere/lid sliding contact, not a weld",
+      "eyeSide": "L"
+    },
+    {
+      "v1Id": "HI-109",
+      "a": "B01-L",
+      "b": "F01-L",
+      "v1Kind": "surface-overlay",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "brow overlay, not a skin seam",
+      "normalOffsetM": 0.0004
+    },
+    {
+      "v1Id": "HI-110",
+      "a": "B01-L",
+      "b": "E03-L",
+      "v1Kind": "surface-overlay",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "brow overlay, not a skin seam",
+      "normalOffsetM": 0.0004
+    },
+    {
+      "v1Id": "HI-111",
+      "a": "B01-L",
+      "b": "F03-L",
+      "v1Kind": "surface-overlay",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "brow overlay, not a skin seam",
+      "normalOffsetM": 0.0004
+    },
+    {
+      "v1Id": "HI-112",
+      "a": "S04",
+      "b": "S01",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC167"
+      ],
+      "commonNodeIds": [
+        "SCF-R",
+        "TF-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-113",
+      "a": "S04",
+      "b": "S02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC170"
+      ],
+      "commonNodeIds": [
+        "SCB-R",
+        "SCF-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-114",
+      "a": "S04",
+      "b": "S05",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC173"
+      ],
+      "commonNodeIds": [
+        "SB-R",
+        "SCB-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-115",
+      "a": "S04",
+      "b": "F03-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC080"
+      ],
+      "commonNodeIds": [
+        "EBU-R",
+        "TF-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-116",
+      "a": "S04",
+      "b": "A04-R",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC163"
+      ],
+      "commonNodeIds": [
+        "EBL-R",
+        "EBU-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-117",
+      "a": "S04",
+      "b": "N02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC175"
+      ],
+      "commonNodeIds": [
+        "EBL-R",
+        "SB-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-118",
+      "a": "N01",
+      "b": "N02",
+      "v1Kind": "skin-seam-proposal",
+      "canonicalCurveIds": [
+        "HC176",
+        "HC179"
+      ],
+      "commonNodeIds": [
+        "CUT-L",
+        "CUT-R",
+        "EFLW-L",
+        "EFLW-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "skin-seam-proposal"
+    },
+    {
+      "v1Id": "HI-119",
+      "a": "E01-R",
+      "b": "E02-R",
+      "v1Kind": "optical-seat",
+      "canonicalCurveIds": [
+        "HC113"
+      ],
+      "commonNodeIds": [
+        "OPTIC-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "optical-seat"
+    },
+    {
+      "v1Id": "HI-120",
+      "a": "E01-R",
+      "b": "E03-R",
+      "v1Kind": "sliding-contact",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "numeric offset sphere/lid sliding contact, not a weld",
+      "eyeSide": "R"
+    },
+    {
+      "v1Id": "HI-121",
+      "a": "E01-R",
+      "b": "E04-R",
+      "v1Kind": "sliding-contact",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "numeric offset sphere/lid sliding contact, not a weld",
+      "eyeSide": "R"
+    },
+    {
+      "v1Id": "HI-122",
+      "a": "B01-R",
+      "b": "F01-R",
+      "v1Kind": "surface-overlay",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "brow overlay, not a skin seam",
+      "normalOffsetM": 0.0004
+    },
+    {
+      "v1Id": "HI-123",
+      "a": "B01-R",
+      "b": "E03-R",
+      "v1Kind": "surface-overlay",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "brow overlay, not a skin seam",
+      "normalOffsetM": 0.0004
+    },
+    {
+      "v1Id": "HI-124",
+      "a": "B01-R",
+      "b": "F03-R",
+      "v1Kind": "surface-overlay",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "brow overlay, not a skin seam",
+      "normalOffsetM": 0.0004
+    },
+    {
+      "v1Id": "HI-125",
+      "a": "F16a",
+      "b": "F17",
+      "v1Kind": "closed-mouth-contact",
+      "canonicalCurveIds": [
+        "HC122"
+      ],
+      "commonNodeIds": [
+        "MC-L",
+        "MC-R"
+      ],
+      "disposition": "numeric shared canonical curve",
+      "kind": "contact"
+    },
+    {
+      "v1Id": "HI-126",
+      "a": "H01",
+      "b": "S01",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H01"
+    },
+    {
+      "v1Id": "HI-127",
+      "a": "H02",
+      "b": "S01",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H02"
+    },
+    {
+      "v1Id": "HI-128",
+      "a": "H03",
+      "b": "S01",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H03"
+    },
+    {
+      "v1Id": "HI-129",
+      "a": "H04",
+      "b": "S01",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H04"
+    },
+    {
+      "v1Id": "HI-130",
+      "a": "H05",
+      "b": "S02",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H05"
+    },
+    {
+      "v1Id": "HI-131",
+      "a": "H06",
+      "b": "S02",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H06"
+    },
+    {
+      "v1Id": "HI-132",
+      "a": "H07",
+      "b": "S02",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H07"
+    },
+    {
+      "v1Id": "HI-133",
+      "a": "H08",
+      "b": "S02",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H08"
+    },
+    {
+      "v1Id": "HI-134",
+      "a": "H09",
+      "b": "S01",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H09"
+    },
+    {
+      "v1Id": "HI-135",
+      "a": "H10",
+      "b": "S01",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H10"
+    },
+    {
+      "v1Id": "HI-136",
+      "a": "H11",
+      "b": "S03",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H11"
+    },
+    {
+      "v1Id": "HI-137",
+      "a": "H12",
+      "b": "S03",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H12"
+    },
+    {
+      "v1Id": "HI-138",
+      "a": "H13",
+      "b": "S03",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H13"
+    },
+    {
+      "v1Id": "HI-139",
+      "a": "H14",
+      "b": "S04",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H14"
+    },
+    {
+      "v1Id": "HI-140",
+      "a": "H15",
+      "b": "S04",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H15"
+    },
+    {
+      "v1Id": "HI-141",
+      "a": "H16",
+      "b": "S04",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H16"
+    },
+    {
+      "v1Id": "HI-142",
+      "a": "H17",
+      "b": "S02",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H17"
+    },
+    {
+      "v1Id": "HI-143",
+      "a": "H18",
+      "b": "S02",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H18"
+    },
+    {
+      "v1Id": "HI-144",
+      "a": "H19",
+      "b": "S05",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H19"
+    },
+    {
+      "v1Id": "HI-145",
+      "a": "H20",
+      "b": "S05",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H20"
+    },
+    {
+      "v1Id": "HI-146",
+      "a": "H21",
+      "b": "S05",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H21"
+    },
+    {
+      "v1Id": "HI-147",
+      "a": "H22",
+      "b": "S05",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H22"
+    },
+    {
+      "v1Id": "HI-148",
+      "a": "H23",
+      "b": "S05",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H23"
+    },
+    {
+      "v1Id": "HI-149",
+      "a": "H24",
+      "b": "S05",
+      "v1Kind": "root-support",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "exact root on canonical scalp surface",
+      "recordId": "ROOT-H24"
+    },
+    {
+      "v1Id": "HI-150",
+      "a": "H01",
+      "b": "H02",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-150"
+    },
+    {
+      "v1Id": "HI-151",
+      "a": "H02",
+      "b": "H03",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-151"
+    },
+    {
+      "v1Id": "HI-152",
+      "a": "H03",
+      "b": "H04",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-152"
+    },
+    {
+      "v1Id": "HI-153",
+      "a": "H01",
+      "b": "H09",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-153"
+    },
+    {
+      "v1Id": "HI-154",
+      "a": "H02",
+      "b": "H10",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-154"
+    },
+    {
+      "v1Id": "HI-155",
+      "a": "H04",
+      "b": "H05",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-155"
+    },
+    {
+      "v1Id": "HI-156",
+      "a": "H05",
+      "b": "H06",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-156"
+    },
+    {
+      "v1Id": "HI-157",
+      "a": "H05",
+      "b": "H07",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-157"
+    },
+    {
+      "v1Id": "HI-158",
+      "a": "H06",
+      "b": "H08",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-158"
+    },
+    {
+      "v1Id": "HI-159",
+      "a": "H07",
+      "b": "H17",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-159"
+    },
+    {
+      "v1Id": "HI-160",
+      "a": "H08",
+      "b": "H18",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-160"
+    },
+    {
+      "v1Id": "HI-161",
+      "a": "H11",
+      "b": "H12",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-161"
+    },
+    {
+      "v1Id": "HI-162",
+      "a": "H12",
+      "b": "H13",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-162"
+    },
+    {
+      "v1Id": "HI-163",
+      "a": "H14",
+      "b": "H15",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-163"
+    },
+    {
+      "v1Id": "HI-164",
+      "a": "H15",
+      "b": "H16",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-164"
+    },
+    {
+      "v1Id": "HI-165",
+      "a": "H17",
+      "b": "H19",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-165"
+    },
+    {
+      "v1Id": "HI-166",
+      "a": "H18",
+      "b": "H20",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-166"
+    },
+    {
+      "v1Id": "HI-167",
+      "a": "H19",
+      "b": "H21",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-167"
+    },
+    {
+      "v1Id": "HI-168",
+      "a": "H19",
+      "b": "H22",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-168"
+    },
+    {
+      "v1Id": "HI-169",
+      "a": "H20",
+      "b": "H23",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-169"
+    },
+    {
+      "v1Id": "HI-170",
+      "a": "H20",
+      "b": "H24",
+      "v1Kind": "hair-overlap",
+      "canonicalCurveIds": [],
+      "commonNodeIds": [],
+      "disposition": "explicit overlap order retained",
+      "recordId": "HI-170"
+    }
+  ],
+  "hairOverlapOrders": [
+    {
+      "id": "HI-150",
+      "over": "H01",
+      "under": "H02",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC182",
+        "HC183"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-151",
+      "over": "H02",
+      "under": "H03",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC183",
+        "HC184"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-152",
+      "over": "H03",
+      "under": "H04",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC184",
+        "HC185"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-153",
+      "over": "H01",
+      "under": "H09",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC182",
+        "HC190"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-154",
+      "over": "H02",
+      "under": "H10",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC183",
+        "HC191"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-155",
+      "over": "H04",
+      "under": "H05",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC185",
+        "HC186"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-156",
+      "over": "H05",
+      "under": "H06",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC186",
+        "HC187"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-157",
+      "over": "H05",
+      "under": "H07",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC186",
+        "HC188"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-158",
+      "over": "H06",
+      "under": "H08",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC187",
+        "HC189"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-159",
+      "over": "H07",
+      "under": "H17",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC188",
+        "HC198"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-160",
+      "over": "H08",
+      "under": "H18",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC189",
+        "HC199"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-161",
+      "over": "H11",
+      "under": "H12",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC192",
+        "HC193"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-162",
+      "over": "H12",
+      "under": "H13",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC193",
+        "HC194"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-163",
+      "over": "H14",
+      "under": "H15",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC195",
+        "HC196"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-164",
+      "over": "H15",
+      "under": "H16",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC196",
+        "HC197"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-165",
+      "over": "H17",
+      "under": "H19",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC198",
+        "HC200"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-166",
+      "over": "H18",
+      "under": "H20",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC199",
+        "HC201"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-167",
+      "over": "H19",
+      "under": "H21",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC200",
+        "HC202"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-168",
+      "over": "H19",
+      "under": "H22",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC200",
+        "HC203"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-169",
+      "over": "H20",
+      "under": "H23",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC201",
+        "HC204"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    },
+    {
+      "id": "HI-170",
+      "over": "H20",
+      "under": "H24",
+      "kind": "overlap-order-design",
+      "spineSources": [
+        "HC201",
+        "HC205"
+      ],
+      "overVRange": [
+        0.15,
+        0.9
+      ],
+      "underVRange": [
+        0.1,
+        0.9
+      ],
+      "minimumIntendedNormalSeparationM": 0.0008,
+      "contactWeld": false,
+      "status": "numeric placement and layer-order specification; full strip-intersection acceptance awaits construction"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "author": "/root/ultra_q_recover_reference_assembly",
+  "reasoningRequest": "ultra",
+  "effectiveReasoning": "not independently exposed",
+  "recordedAt": "2026-09-16T23:37:32.378016+00:00",
+  "source": "bc761f25aae76209d26623b509f97e1f3a5a12ca",
+  "newShape": 0,
+  "files": {
+    "review/staff-budget-v65/measure.mjs": {
+      "bytes": 6017,
+      "sha256": "c602df5422ee8a5288f8eaeba6d39f86c0b07c13f2187de821c27ee33e1076cb"
+    },
+    "review/staff-budget-v65/README.md": {
+      "bytes": 3547,
+      "sha256": "550932c2a02157f8138e09860fe34ff141e4da2363f7b6c1e29c641d4b9d3a52"
+    },
+    "docs/evidence/mira-assembly-v65/staff-budget/MEASUREMENTS.json": {
+      "bytes": 29444,
+      "sha256": "878b87d836feb026bb2c2af4f6f2e2385fb7fb7ceb864691a54b60e9a853bb47"
+    }
+  },
+  "timingLimitation": "No independent wall timer before source reading; constructor samples are not total production time."
+}

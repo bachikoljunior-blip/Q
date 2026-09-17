@@ -1,0 +1,12 @@
+{
+  "scope": "One-part reference correction; no mesh/runtime edit. Awaiting independent review.",
+  "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-0aab4af1-daaa-4841-84d5-a51750294a8a.png",
+  "file": "AB03-open-patch-v3.png",
+  "reference": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/AHB-06-v2.png",
+  "prompt": "Create a corrected sculpting-reference image for ONLY the small leather component AB03 from the TOP ROW of the attached design sheet. The bottom row AB05 is a different part and must not appear. AB03 is a SINGLE OPEN saddle-curved leather patch over the instep, with exactly four free cut edges: a concave short top edge, broad arched short bottom edge, and two long curved side edges. It is NOT a complete boot, NOT a tube, and NOT a closed ankle ring. Preserve the same aged dark-brown leather, stitched edge, silhouette and scale relationships of the attached top-row FRONT, REVERSE and THREE-QUARTER views. The attached top-row SIDE is WRONG because it has a closed oval ankle opening: correct that topology. Show the SAME detached patch in four well-separated views, FRONT, REVERSE, TRUE SIDE, and THREE-QUARTER, on a light warm-gray studio background with bright readable lighting. In TRUE SIDE show a single thin bent sheet in profile with the far and near free side edges distinguishable, and empty background where the back-of-ankle wall would be. In THREE-QUARTER make the opening between the two free long side edges especially unambiguous. No rear wall joining those edges. No sole, heel, foot, leg, toe cap, other clothing or extra decorative hardware. No cylindrical collar and no closed elliptical rim. This is a qualitative multiview 3D sculpting reference, not a CAD drawing; omit numbers, dimension arrows or false precision. Small heading 'AB03 — OPEN INSTEP PATCH' and simple view labels only. Keep all views fully inside the canvas. The goal is one small straightforward surface component that can be modeled and later connected to separately defined neighboring components.",
+  "start": "2026-09-16T14:53:50.957Z",
+  "finish": "2026-09-16T14:54:35.501Z",
+  "elapsedIncludesPreparation": true,
+  "toolWallSeconds": 36.6,
+  "initialObservation": "All four views now depict an open patch without the closed ankle ring present in prior SIDE. This addresses topology; exact calibrated projections, edge curves and complete boot are not verified."
+}

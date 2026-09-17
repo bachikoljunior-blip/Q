@@ -1,0 +1,301 @@
+{
+  "at": "2026-09-16T23:55:37.692Z",
+  "reviewer": "/root",
+  "base": "26e03460e78f44660e0e6adb54040e909598bc7f",
+  "helperSha256": "513930214276201e5fae61b113a7c306569b91826a3957e2075758b0eda4a025",
+  "limits": {
+    "positionToleranceM": 0.00025,
+    "normalToleranceRad": 0.025,
+    "weightTolerance": 0.015
+  },
+  "ordinary": [
+    {
+      "id": "line",
+      "masterCount": 257,
+      "selectedCount": 2,
+      "independentMaximum": {
+        "positionM": 0,
+        "normalRad": 0,
+        "weight": 0
+      }
+    },
+    {
+      "id": "three-turn-spiral",
+      "masterCount": 257,
+      "selectedCount": 97,
+      "independentMaximum": {
+        "positionM": 0.0001624746814570679,
+        "normalRad": 0,
+        "weight": 0
+      }
+    },
+    {
+      "id": "figure-eight",
+      "masterCount": 257,
+      "selectedCount": 54,
+      "independentMaximum": {
+        "positionM": 0.00022876071687719934,
+        "normalRad": 0,
+        "weight": 0
+      }
+    },
+    {
+      "id": "sharp-feature",
+      "masterCount": 257,
+      "selectedCount": 5,
+      "independentMaximum": {
+        "positionM": 1.5515838457795457e-17,
+        "normalRad": 0,
+        "weight": 0
+      }
+    },
+    {
+      "id": "closed-loop",
+      "masterCount": 257,
+      "selectedCount": 33,
+      "independentMaximum": {
+        "positionM": 0.00014445819983409722,
+        "normalRad": 0,
+        "weight": 0
+      }
+    },
+    {
+      "id": "nonuniform-parameter",
+      "masterCount": 257,
+      "selectedCount": 16,
+      "independentMaximum": {
+        "positionM": 0.00023850690909362968,
+        "normalRad": 0,
+        "weight": 0
+      }
+    },
+    {
+      "id": "rotating-normal",
+      "masterCount": 257,
+      "selectedCount": 30,
+      "independentMaximum": {
+        "positionM": 1.3877787807814457e-17,
+        "normalRad": 0.021254030818039612,
+        "weight": 0
+      }
+    },
+    {
+      "id": "nonlinear-three-bone-weights",
+      "masterCount": 257,
+      "selectedCount": 9,
+      "independentMaximum": {
+        "positionM": 1.3877787807814457e-17,
+        "normalRad": 0,
+        "weight": 0.0078125
+      }
+    },
+    {
+      "id": "normal-jump",
+      "masterCount": 257,
+      "selectedCount": 4,
+      "independentMaximum": {
+        "positionM": 1.3877787807814457e-17,
+        "normalRad": 0,
+        "weight": 0
+      }
+    }
+  ],
+  "invalidInputRejections": 26,
+  "contractProbes": [
+    {
+      "id": "inherited-bone-key",
+      "status": "FAIL-open",
+      "indices": [
+        0,
+        2
+      ],
+      "reportedMaximum": {
+        "positionM": 0,
+        "normalRad": 0,
+        "weight": "NaN"
+      },
+      "independentMaximum": {
+        "positionM": 0,
+        "normalRad": 0,
+        "weight": 1
+      },
+      "input": {
+        "id": "inherited-bone-key",
+        "parameter": [
+          0,
+          0.5,
+          1
+        ],
+        "positions": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0.5,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "normals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "weights": [
+          {
+            "head": 1
+          },
+          {
+            "constructor": 1
+          },
+          {
+            "head": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "finite-parameter-overflow",
+      "status": "FAIL-open",
+      "indices": [
+        0,
+        2
+      ],
+      "reportedMaximum": {
+        "positionM": "NaN",
+        "normalRad": 3.141592653589793,
+        "weight": "NaN"
+      },
+      "independentMaximum": {
+        "positionM": 1.379311422413372,
+        "normalRad": 0,
+        "weight": 0
+      },
+      "input": {
+        "id": "finite-parameter-overflow",
+        "parameter": [
+          -1e+308,
+          9e+307,
+          1e+308
+        ],
+        "positions": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "normals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "weights": [
+          {
+            "head": 1
+          },
+          {
+            "head": 1
+          },
+          {
+            "head": 1
+          }
+        ]
+      }
+    }
+  ],
+  "dense": [
+    {
+      "id": "HI-001",
+      "selectedCount": 9,
+      "sampleCount": 32769,
+      "maxPositionM": 0.00020542292243155497,
+      "maxNormalRad": 0.003976608245592566,
+      "continuousProof": false
+    },
+    {
+      "id": "HI-002",
+      "selectedCount": 9,
+      "sampleCount": 32769,
+      "maxPositionM": 0.00023316631318753456,
+      "maxNormalRad": 0.008263714631090206,
+      "continuousProof": false
+    },
+    {
+      "id": "HI-003",
+      "selectedCount": 10,
+      "sampleCount": 32769,
+      "maxPositionM": 0.00024531451884815623,
+      "maxNormalRad": 0.007812461231055489,
+      "continuousProof": false
+    },
+    {
+      "id": "HI-004",
+      "selectedCount": 10,
+      "sampleCount": 32769,
+      "maxPositionM": 0.00024531451884815623,
+      "maxNormalRad": 0.007812461231055489,
+      "continuousProof": false
+    },
+    {
+      "id": "HI-005",
+      "selectedCount": 9,
+      "sampleCount": 32769,
+      "maxPositionM": 0.00023316631318753456,
+      "maxNormalRad": 0.008263714631090206,
+      "continuousProof": false
+    },
+    {
+      "id": "HI-006",
+      "selectedCount": 9,
+      "sampleCount": 32769,
+      "maxPositionM": 0.00020542292243155497,
+      "maxNormalRad": 0.003976608245592566,
+      "continuousProof": false
+    }
+  ],
+  "wallMs": 542.723487,
+  "scope": "CPU numerical review only. No mesh, no rendering, no surface interior or visual quality acceptance. Dense grid is not an interval proof.",
+  "decision": "changes required before helper acceptance"
+}

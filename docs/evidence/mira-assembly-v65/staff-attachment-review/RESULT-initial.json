@@ -1,0 +1,754 @@
+{
+  "started": "2026-09-16T23:53:34.055Z",
+  "fixedCandidate": "51f105b0f8a7834f498c24ae5c783c669776f4b4",
+  "sourceBase": "bc761f25aae76209d26623b509f97e1f3a5a12ca",
+  "evidence": "Native CPU scene/bone/skin matrices, with explicit renderer and asset-loader doubles; no GL, pixels, grasp surfaces or device-performance acceptance.",
+  "cases": [
+    {
+      "name": "real-SceneView",
+      "frames": [
+        {
+          "gripGapM": 4.440892098500626e-16,
+          "targetGapM": 1.4485751647352964e-14,
+          "groundGapM": 0,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 0,
+          "targetGapM": 6.217248937900877e-15,
+          "groundGapM": 4.440892098500626e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0041302292355903
+          ]
+        },
+        {
+          "gripGapM": 9.930136612989092e-16,
+          "targetGapM": 1.4238583238573986e-14,
+          "groundGapM": 1.1102230246251565e-15,
+          "chestScale": [
+            1,
+            1,
+            1.008
+          ]
+        },
+        {
+          "gripGapM": 9.930136612989092e-16,
+          "targetGapM": 1.4238583238573986e-14,
+          "groundGapM": 1.1102230246251565e-15,
+          "chestScale": [
+            1,
+            1,
+            1.0060054501010252
+          ]
+        },
+        {
+          "gripGapM": 9.930136612989092e-16,
+          "targetGapM": 1.434896150467636e-14,
+          "groundGapM": 1.7763568394002505e-15,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 4.440892098500626e-16,
+          "targetGapM": 1.5203165631859585e-14,
+          "groundGapM": 1.7763568394002505e-15,
+          "chestScale": [
+            1,
+            1,
+            0.994689485457108
+          ]
+        },
+        {
+          "gripGapM": 0,
+          "targetGapM": 1.4238583238573986e-14,
+          "groundGapM": 6.661338147750939e-16,
+          "chestScale": [
+            1,
+            1,
+            0.992
+          ]
+        },
+        {
+          "gripGapM": 1.7763568394002505e-15,
+          "targetGapM": 2.6645352591003757e-15,
+          "groundGapM": 0,
+          "chestScale": [
+            1,
+            1,
+            1.0059157343654808
+          ]
+        },
+        {
+          "gripGapM": 1.7763568394002505e-15,
+          "targetGapM": 2.808666774861361e-15,
+          "groundGapM": 8.881784197001252e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0033383348190308
+          ]
+        }
+      ]
+    },
+    {
+      "name": "flat",
+      "frames": [
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 6.661338147750939e-16,
+          "groundGapM": 4.440892098500626e-16,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 9.155133597044475e-16,
+          "groundGapM": 2.220446049250313e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0041302292355903
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 8.881784197001252e-16,
+          "groundGapM": 0,
+          "chestScale": [
+            1,
+            1,
+            1.008
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 5.438959822042073e-16,
+          "groundGapM": 2.220446049250313e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0060054501010252
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 6.280369834735101e-16,
+          "groundGapM": 4.440892098500626e-16,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 2.220446049250313e-16,
+          "targetGapM": 7.021666937153402e-16,
+          "groundGapM": 2.220446049250313e-16,
+          "chestScale": [
+            1,
+            1,
+            0.994689485457108
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 1.0175362097255202e-15,
+          "groundGapM": 2.220446049250313e-16,
+          "chestScale": [
+            1,
+            1,
+            0.992
+          ]
+        },
+        {
+          "gripGapM": 0,
+          "targetGapM": 1.0175362097255202e-15,
+          "groundGapM": 2.220446049250313e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0059157343654808
+          ]
+        },
+        {
+          "gripGapM": 4.440892098500626e-16,
+          "targetGapM": 1.2560739669470201e-15,
+          "groundGapM": 0,
+          "chestScale": [
+            1,
+            1,
+            1.0033383348190308
+          ]
+        }
+      ]
+    },
+    {
+      "name": "nested-affine-ancestors",
+      "frames": [
+        {
+          "gripGapM": 5.087681048627601e-16,
+          "targetGapM": 8.3820000221454525e-16,
+          "groundGapM": 6.591949208711867e-16,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 2.220446049250313e-16,
+          "targetGapM": 5.438959822042073e-16,
+          "groundGapM": 6.938893903907228e-18,
+          "chestScale": [
+            1,
+            1,
+            1.0041302292355903
+          ]
+        },
+        {
+          "gripGapM": 2.220446049250313e-16,
+          "targetGapM": 3.1401849173675503e-16,
+          "groundGapM": 1.3877787807814457e-17,
+          "chestScale": [
+            1,
+            1,
+            1.008
+          ]
+        },
+        {
+          "gripGapM": 2.220446049250313e-16,
+          "targetGapM": 2.220446049250313e-16,
+          "groundGapM": 2.220446049250313e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0060054501010252
+          ]
+        },
+        {
+          "gripGapM": 2.482534153247273e-16,
+          "targetGapM": 4.002966042486721e-16,
+          "groundGapM": 0,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 8.308148362110449e-16,
+          "groundGapM": 0,
+          "chestScale": [
+            1,
+            1,
+            0.994689485457108
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 1.1157603309187458e-15,
+          "groundGapM": 6.938893903907228e-18,
+          "chestScale": [
+            1,
+            1,
+            0.992
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 1.2803716525534355e-15,
+          "groundGapM": 4.510281037539698e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0059157343654808
+          ]
+        },
+        {
+          "gripGapM": 5.978733960281817e-16,
+          "targetGapM": 1.0877919644084146e-15,
+          "groundGapM": 2.498001805406602e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0033383348190308
+          ]
+        }
+      ]
+    },
+    {
+      "name": "root-affine",
+      "frames": [
+        {
+          "gripGapM": 6.280369834735101e-16,
+          "targetGapM": 1.368774871883577e-15,
+          "groundGapM": 2.3592239273284576e-16,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 6.661338147750939e-16,
+          "targetGapM": 5.438959822042073e-16,
+          "groundGapM": 2.220446049250313e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0041302292355903
+          ]
+        },
+        {
+          "gripGapM": 6.280369834735101e-16,
+          "targetGapM": 9.155133597044475e-16,
+          "groundGapM": 2.0816681711721685e-16,
+          "chestScale": [
+            1,
+            1,
+            1.008
+          ]
+        },
+        {
+          "gripGapM": 7.691850745534255e-16,
+          "targetGapM": 1.2947314098277875e-15,
+          "groundGapM": 1.8041124150158794e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0060054501010252
+          ]
+        },
+        {
+          "gripGapM": 6.280369834735101e-16,
+          "targetGapM": 5.438959822042073e-16,
+          "groundGapM": 2.220446049250313e-16,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 6.661338147750939e-16,
+          "groundGapM": 4.163336342344337e-17,
+          "chestScale": [
+            1,
+            1,
+            0.994689485457108
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 6.661338147750939e-16,
+          "groundGapM": 4.163336342344337e-17,
+          "chestScale": [
+            1,
+            1,
+            0.992
+          ]
+        },
+        {
+          "gripGapM": 7.691850745534255e-16,
+          "targetGapM": 1.2947314098277875e-15,
+          "groundGapM": 1.8041124150158794e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0059157343654808
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 5.438959822042073e-16,
+          "groundGapM": 2.498001805406602e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0033383348190308
+          ]
+        }
+      ]
+    },
+    {
+      "name": "changed-parent-between-calls",
+      "frames": [
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 3.1401849173675503e-16,
+          "groundGapM": 1.942890293094024e-16,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 6.661338147750939e-16,
+          "targetGapM": 1.2560739669470201e-15,
+          "groundGapM": 0,
+          "chestScale": [
+            1,
+            1,
+            1.0041302292355903
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 2.220446049250313e-16,
+          "groundGapM": 1.942890293094024e-16,
+          "chestScale": [
+            1,
+            1,
+            1.008
+          ]
+        },
+        {
+          "gripGapM": 6.661338147750939e-16,
+          "targetGapM": 1.5059797815742444e-15,
+          "groundGapM": 2.7755575615628914e-17,
+          "chestScale": [
+            1,
+            1,
+            1.0060054501010252
+          ]
+        },
+        {
+          "gripGapM": 7.447602459741819e-16,
+          "targetGapM": 1.355199909595506e-15,
+          "groundGapM": 3.400058012914542e-16,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 3.1401849173675503e-16,
+          "groundGapM": 1.942890293094024e-16,
+          "chestScale": [
+            1,
+            1,
+            0.994689485457108
+          ]
+        },
+        {
+          "gripGapM": 3.3306690738754696e-16,
+          "targetGapM": 3.1401849173675503e-16,
+          "groundGapM": 2.1510571102112408e-16,
+          "chestScale": [
+            1,
+            1,
+            0.992
+          ]
+        },
+        {
+          "gripGapM": 1.0778315928076987e-15,
+          "targetGapM": 8.95090418262362e-16,
+          "groundGapM": 7.632783294297951e-17,
+          "chestScale": [
+            1,
+            1,
+            1.0059157343654808
+          ]
+        },
+        {
+          "gripGapM": 4.002966042486721e-16,
+          "targetGapM": 4.996003610813204e-16,
+          "groundGapM": 2.0816681711721685e-17,
+          "chestScale": [
+            1,
+            1,
+            1.0033383348190308
+          ]
+        }
+      ]
+    },
+    {
+      "name": "body-scale",
+      "frames": [
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 2.220446049250313e-16,
+          "groundGapM": 1.942890293094024e-16,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 4.965068306494546e-16,
+          "targetGapM": 8.881784197001252e-16,
+          "groundGapM": 2.7755575615628914e-17,
+          "chestScale": [
+            1,
+            1,
+            1.0041302292355903
+          ]
+        },
+        {
+          "gripGapM": 2.220446049250313e-16,
+          "targetGapM": 6.661338147750939e-16,
+          "groundGapM": 5.551115123125783e-17,
+          "chestScale": [
+            1,
+            1,
+            1.008
+          ]
+        },
+        {
+          "gripGapM": 4.440892098500626e-16,
+          "targetGapM": 6.661338147750939e-16,
+          "groundGapM": 2.636779683484747e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0060054501010252
+          ]
+        },
+        {
+          "gripGapM": 4.440892098500626e-16,
+          "targetGapM": 6.280369834735101e-16,
+          "groundGapM": 4.163336342344337e-17,
+          "chestScale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "gripGapM": 6.280369834735101e-16,
+          "targetGapM": 4.965068306494546e-16,
+          "groundGapM": 2.7755575615628914e-17,
+          "chestScale": [
+            1,
+            1,
+            0.994689485457108
+          ]
+        },
+        {
+          "gripGapM": 4.440892098500626e-16,
+          "targetGapM": 7.021666937153402e-16,
+          "groundGapM": 1.6653345369377348e-16,
+          "chestScale": [
+            1,
+            1,
+            0.992
+          ]
+        },
+        {
+          "gripGapM": 4.440892098500626e-16,
+          "targetGapM": 4.965068306494546e-16,
+          "groundGapM": 1.8041124150158794e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0059157343654808
+          ]
+        },
+        {
+          "gripGapM": 6.280369834735101e-16,
+          "targetGapM": 9.155133597044475e-16,
+          "groundGapM": 2.498001805406602e-16,
+          "chestScale": [
+            1,
+            1,
+            1.0033383348190308
+          ]
+        }
+      ]
+    }
+  ],
+  "defects": [
+    {
+      "name": "nan-hand-scale",
+      "result": {
+        "ok": true,
+        "gripResidualMetres": "NaN",
+        "groundResidualMetres": "NaN",
+        "upperLengthMetres": 0.32999999999999996,
+        "lowerLengthMetres": 0.31000000000000005,
+        "reachMetres": 0.3480846398073866
+      },
+      "visible": true,
+      "worldMatrixFinite": false,
+      "armRotationChanged": false
+    },
+    {
+      "name": "nan-elbow-scale",
+      "result": {
+        "ok": true,
+        "gripResidualMetres": "NaN",
+        "groundResidualMetres": "NaN",
+        "upperLengthMetres": 0.32999999999999996,
+        "lowerLengthMetres": "NaN",
+        "reachMetres": 0.3480846398073866
+      },
+      "visible": true,
+      "worldMatrixFinite": false,
+      "armRotationChanged": false
+    },
+    {
+      "name": "nan-hand-translation",
+      "result": {
+        "ok": true,
+        "gripResidualMetres": "NaN",
+        "groundResidualMetres": "NaN",
+        "upperLengthMetres": 0.32999999999999996,
+        "lowerLengthMetres": "NaN",
+        "reachMetres": 0.3480846398073866
+      },
+      "visible": true,
+      "worldMatrixFinite": false,
+      "armRotationChanged": false
+    },
+    {
+      "name": "changed-lower-length",
+      "result": {
+        "ok": true,
+        "gripResidualMetres": 0.049999999999999954,
+        "groundResidualMetres": 0.0018015686101406914,
+        "upperLengthMetres": 0.32999999999999996,
+        "lowerLengthMetres": 0.35999999999999993,
+        "reachMetres": 0.3480846398073866
+      },
+      "visible": true,
+      "worldMatrixFinite": true,
+      "armRotationChanged": false
+    },
+    {
+      "name": "changed-upper-direction",
+      "result": {
+        "ok": true,
+        "gripResidualMetres": 0.029999999999999975,
+        "groundResidualMetres": 0.00012758853869776487,
+        "upperLengthMetres": 0.3313608305156178,
+        "lowerLengthMetres": 0.31000000000000005,
+        "reachMetres": 0.3480846398073866
+      },
+      "visible": true,
+      "worldMatrixFinite": true,
+      "armRotationChanged": false
+    }
+  ],
+  "negatives": [
+    {
+      "name": "unreachable-terrain",
+      "result": {
+        "ok": false,
+        "reason": "unreachable",
+        "reach": 19.714006341807714
+      },
+      "recovered": true
+    },
+    {
+      "name": "nonfinite-terrain",
+      "result": {
+        "ok": false,
+        "reason": "invalid-ground-height"
+      },
+      "recovered": true
+    },
+    {
+      "name": "zero-root-scale",
+      "result": {
+        "ok": false,
+        "reason": "singular-or-reflected-frame"
+      },
+      "recovered": true
+    },
+    {
+      "name": "reflected-parent",
+      "result": {
+        "ok": false,
+        "reason": "singular-or-reflected-frame"
+      },
+      "recovered": true
+    },
+    {
+      "name": "nonfinite-parent",
+      "result": {
+        "ok": false,
+        "reason": "singular-or-reflected-frame"
+      },
+      "recovered": true
+    },
+    {
+      "name": "unsupported-finite-hand-scale",
+      "result": {
+        "ok": false,
+        "reason": "unsupported-arm-scale"
+      },
+      "recovered": true
+    },
+    {
+      "name": "undefined-heading",
+      "result": {
+        "ok": false,
+        "reason": "undefined-horizontal-heading"
+      },
+      "recovered": true
+    }
+  ],
+  "order": {
+    "beforeRequiredUpdateGapM": 0.510420683368276,
+    "afterRequiredUpdateGapM": 0,
+    "repeats": 256,
+    "maxDrift": 0,
+    "contract": "animate -> adapter.update -> renderer matrix prefix; reverse order is unsupported"
+  },
+  "totals": {
+    "frames": 54,
+    "partPlacements": 1026,
+    "skinSamples": 1944,
+    "maxGripGapM": 1.7763568394002505e-15,
+    "maxTargetGapM": 1.5203165631859585e-14,
+    "maxGroundGapM": 1.7763568394002505e-15,
+    "maxRigidDistanceErrorM": 1.0706713293728853e-14,
+    "maxJointLengthErrorM": 9.048317650695026e-15,
+    "maxRepeatMatrixError": 0
+  },
+  "scope": {
+    "changedFiles": [
+      "A\tdocs/evidence/mira-assembly-v65/staff-attachment/VALIDATION.json",
+      "A\tdocs/evidence/mira-assembly-v65/staff-attachment/WORK.json",
+      "A\treview/staff-attachment-v65/README.md",
+      "A\treview/staff-attachment-v65/attachment.mjs",
+      "A\treview/staff-attachment-v65/verify.mjs",
+      "A\ttests/staff-attachment-v65.test.mjs"
+    ],
+    "runtimeSourceDelta": 0,
+    "newGeometrySourceDelta": 0,
+    "gameSaveDelta": 0,
+    "boneRestDelta": 0,
+    "sceneImportsAdapter": false,
+    "sourceEditsByReviewer": 0,
+    "remoteOperations": 0
+  },
+  "sourceHashes": {
+    "review/staff-attachment-v65/attachment.mjs": "2d8dd74086ac29b556150c5d4656cbf323875335be0dd4ff3b3c4a2a89f6aeab",
+    "src/scene.js": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b",
+    "src/actor-models.js": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+    "src/assets/characters/detailed-geometry.js": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+    "review/staff-v63/assembly.mjs": "dabaaee77dbf0e16f80605c3b1a3a39e2897b2c9d89898b22eefb71d98236481"
+  },
+  "finished": "2026-09-16T23:53:35.896Z",
+  "runSeconds": 1.84088586,
+  "decision": "repair-required-invalid-chain-handling"
+}

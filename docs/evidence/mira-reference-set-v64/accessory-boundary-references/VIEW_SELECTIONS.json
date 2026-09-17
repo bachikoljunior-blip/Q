@@ -1,0 +1,62 @@
+{
+  "AH07": {
+    "image": "AH07-bare-seat-v1.png",
+    "status": "conditional boundary appearance reference; independent review pending",
+    "selected": [
+      "DORSAL: recessed matte skin seat",
+      "PALMAR: closed fingertip pad",
+      "SIDE: visible step/seat",
+      "OBLIQUE: empty seat and exposed skin lip"
+    ],
+    "resolvedAppearance": "Nail plate is visually absent; skin texture continues across the recessed floor.",
+    "owners": [
+      "hands:AH07 skin seat",
+      "hands:AH08 separate plate"
+    ],
+    "limits": [
+      "Seat depth/rim thickness appears exaggerated and is not a dimensional template.",
+      "Common AH08 underside curvature/perimeter not verified.",
+      "No assembled finger geometry or contact."
+    ]
+  },
+  "AB01": {
+    "image": "AB01-thin-outsole-v1.png",
+    "status": "conditional thin-layer appearance reference; independent review pending",
+    "selected": [
+      "TOP",
+      "BOTTOM",
+      "TRUE INNER SIDE",
+      "THREE-QUARTER"
+    ],
+    "resolvedAppearance": "No tall integrated heel block or metal heads; continuous sole layer.",
+    "owners": [
+      "boots:AB01 sole thickness only",
+      "boots:AB02 separate heel height"
+    ],
+    "limits": [
+      "Apparent heel/centre/toe thickness is not exactly uniform; do not measure eight millimetres from pixels.",
+      "No proven matching rear underside with AB02.",
+      "No assembled boot union or final exterior measurement."
+    ]
+  },
+  "AB02": {
+    "image": "AB02-empty-heel-v1.png",
+    "status": "conditional empty-seat appearance reference; independent review pending",
+    "selected": [
+      "TOP CONTACT",
+      "BOTTOM EMPTY SEATS",
+      "TRUE SIDE",
+      "THREE-QUARTER"
+    ],
+    "resolvedAppearance": "Four bottom recesses show dark floor/rims without metallic heads.",
+    "owners": [
+      "boots:AB02 block and empty seats",
+      "boots:AB11 separate fastener heads"
+    ],
+    "limits": [
+      "Side layer lines are material finish, not an extra AB01 layer.",
+      "Image does not prove a closed manifold or exact blind-seat depth.",
+      "No matching top-seat mesh with AB01."
+    ]
+  }
+}

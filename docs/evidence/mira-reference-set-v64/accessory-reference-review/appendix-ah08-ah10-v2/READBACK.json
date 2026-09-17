@@ -1,0 +1,59 @@
+{
+  "scope": "Local independent visual readback of 3 unmodified generated reference PNGs only",
+  "startedAt": "2026-09-16T15:13:02.473290+00:00",
+  "endedAt": "2026-09-16T15:14:20.175765+00:00",
+  "elapsedSeconds": 77.702475,
+  "timingMeaning": "wall time includes tool display, inspection, judgement, communication and report writing; not construction or rendering time",
+  "inputFiles": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/AHB-04-v1.png",
+      "bytes": 1955600,
+      "sha256": "fe4acc0ced996ddbf2df0a882be65940041f3b4aef73e8b3c6d6883ccb0f3f45",
+      "pngWidthHeight": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-supplement/AH08-nail-plate-v2.png",
+      "bytes": 1825130,
+      "sha256": "d8f03ecdb3efd76ade20cac6a270b222cc02ad0ab2ee3da5c1df3cb976946f81",
+      "pngWidthHeight": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-supplement/AH10-wrist-sleeve-v2.png",
+      "bytes": 1918397,
+      "sha256": "27c20062318f4dfe36245cad8f2d5d2403996150f99faed079f1577df476e294",
+      "pngWidthHeight": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "findings": {
+    "AH08": {
+      "oldNotchAndFlareAbsent": true,
+      "outlineOwnershipLocallyConsistent": true,
+      "calibratedShapeProven": false
+    },
+    "AH10": {
+      "uncutRearExteriorNowShown": true,
+      "bothEndOpeningsShown": true,
+      "calibratedWristEllipseProven": false
+    }
+  },
+  "newClearTopologicalConflictObserved": false,
+  "allHandsBootsAccepted": false,
+  "oldReviewChanged": false,
+  "newImages": 0,
+  "imageEdits": 0,
+  "new3D": 0,
+  "sourceEdits": 0,
+  "gitWrites": 0,
+  "remoteWrites": 0,
+  "browserOrGLCalls": 0,
+  "unfinishedTools": 0
+}

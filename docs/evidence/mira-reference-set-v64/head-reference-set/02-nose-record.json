@@ -1,0 +1,26 @@
+{
+  "id": "02-nose",
+  "initial": {
+    "start": "2026-09-16T14:26:18.531Z",
+    "returned": "2026-09-16T14:27:13.582Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-b0471a7e-4f59-4d1a-b05e-950ffe07abab.png",
+    "terminal": "success"
+  },
+  "observation": {
+    "adoption": "v2 conditional; v1 F13 scope rejected",
+    "findings": [
+      "v1 F13 duplicated lateral wings/nostril arches, overlapping F14.",
+      "One targeted correction v2 isolates F13 to a small central dome with open cut borders, removing wing/nostril duplication in front/profile/3Q.",
+      "F12 bridge and F14 curled wing remain separate; F13/F14 seam coordinates and tangent match still unspecified.",
+      "RIGHT VIEW (+X) label is a camera-view label and must not override anatomical L=+X.",
+      "No exact projection/common-edge acceptance."
+    ],
+    "seen": true
+  },
+  "correction": {
+    "start": "2026-09-16T14:47:59.145Z",
+    "returned": "2026-09-16T14:48:46.491Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-4cfa290c-d2ad-4cfb-a5b1-59b65a991241.png",
+    "terminal": "success"
+  }
+}

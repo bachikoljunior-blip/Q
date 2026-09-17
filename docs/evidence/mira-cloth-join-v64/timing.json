@@ -1,0 +1,18 @@
+{
+  "firstGeneration": {
+    "ended": "2026-09-16T14:03:19.036Z",
+    "started": "2026-09-16T14:02:20.233Z"
+  },
+  "targetedCorrectionGeneration": {
+    "ended": "2026-09-16T14:05:17.582Z",
+    "started": "2026-09-16T14:04:32.433Z"
+  },
+  "codeStarted": "2026-09-16T14:09:01.722Z",
+  "firstMesh": "2026-09-16T14:10:09.932Z",
+  "firstVerification": "2026-09-16T14:12:40.833Z",
+  "cpuPlotInspected": "2026-09-16T14:14:15.163Z",
+  "docsFixed": "2026-09-16T14:15:58.300Z",
+  "timingScope": "Wall-clock markers, not exclusive active CPU. Initial reference/spec reading before first-generation marker was not timed. A single targeted image correction; no geometry rework. Metadata-only boundary labels were fixed after the first passing mesh tests.",
+  "initialMeshBuildMs": 102.693457,
+  "imageGenerationSeconds": 103.952
+}

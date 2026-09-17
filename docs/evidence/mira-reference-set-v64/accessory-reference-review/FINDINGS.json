@@ -1,0 +1,83 @@
+{
+  "scope": "Frozen 54-file initial reference set, excludes later AB03 supplement",
+  "all21TypesPictured": true,
+  "all90PlannedPlacementsAccounted": true,
+  "allTypesConstructionFixed": false,
+  "findings": [
+    {
+      "id": "B1",
+      "type": "AB03",
+      "class": "cross-view topology contradiction",
+      "image": "AHB-06-v2.png",
+      "views": "SIDE versus FRONT/REVERSE/THREE-QUARTER",
+      "observation": "Closed ankle ring in side versus open four-edge vamp patch elsewhere.",
+      "minimalRepair": "One AB03-only sheet: no rear wall; both side edges free; upper edge an open arc in every view."
+    },
+    {
+      "id": "B2",
+      "type": "AH07",
+      "class": "ownership ambiguity",
+      "image": "AHB-03-v2.png",
+      "views": "DORSAL and thumb inset versus AH08",
+      "observation": "Pink oval does not distinguish a bare nail bed from an installed nail plate.",
+      "minimalRepair": "One bare fingertip sheet with skin seat and side/recess clearly shown; no keratin plate.",
+      "duplicatePlateProven": false
+    },
+    {
+      "id": "B3",
+      "type": "AB01",
+      "class": "vertical partition unregistered",
+      "image": "AHB-05-v2.png",
+      "views": "SIDE/THREE-QUARTER versus separate AB02",
+      "observation": "Thick rear step remains; outsole lower seat and separate heel upper seat undefined.",
+      "minimalRepair": "One outsole-only sheet without heel block/fasteners; register rear underside in all views; author height partition separately.",
+      "duplicateHeelProven": false
+    },
+    {
+      "id": "A1",
+      "type": "AH08",
+      "class": "required reverse-view perimeter mismatch",
+      "image": "AHB-04-v1.png",
+      "views": "REVERSE versus OUTER",
+      "observation": "Reverse has flared corners/concave upper edge; outer has convex round upper edge.",
+      "minimalRepair": "Same nail-only outline and proximal/distal landmarks shown from both sides plus thin section."
+    },
+    {
+      "id": "A2",
+      "type": "AH10",
+      "class": "cutaway mislabeled as reverse coverage",
+      "image": "AHB-04-v1.png",
+      "views": "REVERSE",
+      "observation": "Missing front wall/cutaway rather than outside rear view of closed skin sleeve.",
+      "minimalRepair": "Separate cutaway from true exterior rear; preserve the same two open rims."
+    },
+    {
+      "id": "A3",
+      "type": "AB02",
+      "class": "assembled hardware shown on isolated part",
+      "image": "AHB-05-v1.png",
+      "views": "BOTTOM",
+      "observation": "Four golden discs read as already mounted fastener heads, not bare seats.",
+      "minimalRepair": "Explicitly exclude metal discs from AB02; retain them as AB11 placement reference.",
+      "requiresNewImageNecessarily": false
+    },
+    {
+      "id": "L1",
+      "type": "AB10",
+      "class": "side silhouette unregistered",
+      "image": "AHB-08-v1.png",
+      "views": "SIDE",
+      "observation": "Straight edge may be a projected flat loop; does not establish curved sole-following profile.",
+      "topologyContradictionProven": false
+    }
+  ],
+  "globalLimits": [
+    "mirror and thumb/medial variants not numerically registered",
+    "right-hand staff grip unregistered",
+    "all four wrist/boot interface ports remain null/unvalidated",
+    "source figures do not establish precise cameras or mm",
+    "skin internal caps/artificial rims are not separate approved parts"
+  ],
+  "new3D": 0,
+  "newImage": 0
+}

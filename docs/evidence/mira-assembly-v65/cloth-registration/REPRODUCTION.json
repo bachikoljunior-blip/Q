@@ -1,0 +1,10 @@
+{
+  "sourceSHA256": "fa5548d76c2486978dde255e8770788f8f7f515cd04f6933ebc275aac52bf0f7",
+  "sameSourceBytesAfterRerun": true,
+  "commands": [
+    "python review/cloth-registration-v65/generate.py",
+    "python review/cloth-registration-v65/export_ports.py",
+    "python review/cloth-registration-v65/check.py"
+  ],
+  "scope": "Deterministic author numeric source and finite checks only"
+}

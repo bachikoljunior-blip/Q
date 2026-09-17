@@ -1,0 +1,16 @@
+[
+  {
+    "name": "staff-ribs-top-corrected-v3",
+    "prompt": "Use case: precise-object-edit. Edit only the two TOP-view panels of this bowed metal-part reference sheet; preserve the FRONT, TRUE SIDE and THREE-QUARTER parts exactly, and preserve the two different bow types and all other labels. These are single planar bronze bows whose upper and lower ends lie directly above one another. Looking straight down, their two small terminal seats must therefore project onto the SAME inboard location, not onto opposite ends of a bar. In the upper WIDE BOW TOP panel show one thin straight horizontal footprint, with one small seating-pad footprint at its LEFT inboard end only; the RIGHT end is merely the projected farthest curved ribbon edge, with NO terminal block there. In the lower DEPTH BOW TOP panel show one narrow vertical footprint, with one small seating-pad footprint at its BOTTOM inboard end only; TOP end is just the furthest bowed ribbon edge, with NO terminal block there. The overlapping upper/lower seats occupy one footprint in each TOP panel. Do not add any second seat, extra metal, extra curve, assembly, measurements or new ornament. The top views may be enlarged to keep the thin sections readable; they are visual references, not dimensioned CAD. Same worn bronze and pale backdrop.",
+    "startedUTC": "2026-09-16T14:28:17.364Z",
+    "finishedUTC": "2026-09-16T14:28:59.377Z",
+    "selection": "Both TOP panels now have one overlapping-end pad footprint instead of erroneous blocks on opposite ends. Qualitative projection contradiction corrected. Pixel-calibrated dimensions/edge details still authored separately; no 3D change."
+  },
+  {
+    "name": "S05-flat-blank-v2",
+    "prompt": "Use case: precise-object-edit. Correct only the proportions of the SAME S05 unbent leather ribbon in this reference sheet. Retain its length, square-cut ends, dark worn brown leather, labels, pale background and five views. The OUTER and INNER broad-face ribbons currently look too wide. Make each only HALF as wide while keeping its full length, so the long strip is approximately forty-three times longer than wide. Match that narrower width in the THREE-QUARTER view; it is the same straight flexible strip with no bends, holes, stitching or fittings. Thickness is approximately one-fifth of its width, so the SIDE view is a very thin straight edge. Replace the END panel's thick perspective block with a straight-on small rectangular cut end, about five times wider than thick, without showing a length receding behind it. This is a visual multi-angle part reference, not a numeric chart; add no measurements or arrows. Preserve the same leather surface character and no new objects. All five panels must depict one coherent long thin rectangular strip.",
+    "startedUTC": "2026-09-16T14:29:30.345Z",
+    "finishedUTC": "2026-09-16T14:30:03.174Z",
+    "selection": "Long strip narrowed, end view now frontal. Approximate visual proportions still differ from precise requested 43:1 and 5.33:1; rectangle/material reference only, exact authored size remains explicit. No 3D change."
+  }
+]

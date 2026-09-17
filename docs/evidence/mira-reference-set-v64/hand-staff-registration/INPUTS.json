@@ -1,0 +1,48 @@
+{
+  "baseCommit": "d080086eb2589895ef7edcd21db902203131b861",
+  "sourceHashes": {
+    "src/actor-models.js": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+    "src/assets/characters/detailed-geometry.js": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+    "src/scene.js": "43ea82a2b11e706b8064c7ee3f8f8f8a37f2384e2d4eb67dddafeb23e4e56c5b",
+    "src/core.js": "a6b7271063f683d2228dc1d547a82d7dd5b3257b3f4a538ced63c88ac37e3b3f",
+    "src/character-motion.js": "b20eadf883e927449d0959e2e8ace7e6b42356efaf0c8d5c8eb1540b6fecb059",
+    "review/staff-v63/staff-parts.mjs": "c71aad81b0acaff2070b3681dcdae8ba057c51a28468cef5a16957fa69d1f5cc",
+    "review/staff-v63/assembly.mjs": "dabaaee77dbf0e16f80605c3b1a3a39e2897b2c9d89898b22eefb71d98236481",
+    "review/lantern-v63/lantern-head.js": "db88b7c1eb36c1c58fde73dfad4668505e46893f39708a44320a600574fbaf5d"
+  },
+  "sourceFilesMatchExactBase": true,
+  "inputs": [
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-complete-six-views-v1.png",
+      "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+      "bytes": 1874282
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v60/references/mira-hands-staff-views-v1.png",
+      "sha256": "6bb80bcdcbd52ae8b6a1ecbb0071fe2d56d44f9ad4d7d2d2521bf65ced78ef5f",
+      "bytes": 1974979
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/TYPE_REFERENCE_COVERAGE.json",
+      "sha256": "957d7485f3e88afcaa529ffa229074f2776b039748645ca994dbd9d2e676456b",
+      "bytes": 66862
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/accessory-reference-set/HASHES.json",
+      "sha256": "8062555932a2bde04ec4bc635bf6bad5c435d575a780936979c2a351c170680e",
+      "bytes": 8520
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/whole-assembly-ledger/source-snapshot/cloth-types.json",
+      "sha256": "0496452d44c4f39daf3eb55869fe60d4bb2c76622d2cdfa9ecfa9fc0facd5597",
+      "bytes": 24165
+    },
+    {
+      "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/whole-assembly-ledger/ASSEMBLY_INTERFACES.json",
+      "sha256": "59f3fc08a880df12a272bf3cc40bf5b207b861a70e755b45253e80174020d9d3",
+      "bytes": 29169
+    }
+  ],
+  "originalImagesViewedThisUnit": 2,
+  "sourceScope": "read-only; parent-owned documentation changes are outside this measurement"
+}

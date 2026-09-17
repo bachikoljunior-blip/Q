@@ -3,13 +3,13 @@
   "delivery": "web",
   "buildIdentity": {
     "version": "0.21.0",
-    "sourceFingerprint": "sha256:790cdc052798349b86f1e5d26459c23a7bae2fe6336025327ca722dc6ef0c8d6"
+    "sourceFingerprint": "sha256:d8caeef159bfef602ec7eb492cd1eb6e5e9515406d97da69005b01aa8312a2f9"
   },
   "entry": "index.html",
-  "manifestSha256": "64e81321ed4e1f6d828ddd70ae1e26d32f074855490482fb6bcb56809140398a",
+  "manifestSha256": "9c30b5927e31d9278a7dc1e73775944ac82f5e4cbbf496befce25de8ae4296f3",
   "hostingSha256": "da86ae52fe08fe3c8e7aea2654404eb7dcd8e1e144876fc93670b9b278e340d0",
   "fileCount": 34,
-  "totalBytes": 14039068,
+  "totalBytes": 14070587,
   "files": [
     {
       "path": "assets/crown-branch-rgba-DvI_Tv4J.png",
@@ -42,14 +42,14 @@
       "sha256": "6cce7c8096977e705c4b334b91cb53893ebcee23793156c8c5b47d04508f555c"
     },
     {
+      "path": "assets/index-BKayRuhf.js",
+      "bytes": 165611,
+      "sha256": "84da2e69a96f39a1713c21959cef9784258900a6c2891113a5d0c2ce6b56f347"
+    },
+    {
       "path": "assets/index-DvxNsySP.css",
       "bytes": 60193,
       "sha256": "8cc97c2228e81d67448628b2ad5a2afa274ca4053a1d0137e3bb13a28e7f9e7b"
-    },
-    {
-      "path": "assets/index-lchlWnQn.js",
-      "bytes": 165611,
-      "sha256": "847478ae24a3527c1eb458a331900bcd419c32d74d1983d10b559744d0ee486b"
     },
     {
       "path": "assets/kloofendal_48d_partly_cloudy_puresky_1k-C35ymwQp.hdr",
@@ -112,9 +112,9 @@
       "sha256": "c6423169583f31715cf0636954bad524e806848a5f2861fcea6794275f726ff0"
     },
     {
-      "path": "assets/scene-CiSYgvYm.js",
-      "bytes": 342454,
-      "sha256": "66381a027b9b16b751ce9bc2e11840bc23951ceaccdb8df430c58c00f665fcef"
+      "path": "assets/scene-CrQ_oRRJ.js",
+      "bytes": 370657,
+      "sha256": "d574be4c15ff32bf351c72121b60ec0cd993c5a2d5dddc6eb3648ffbb570c3c2"
     },
     {
       "path": "assets/shared-alert-JeJkFdAY.wav",
@@ -147,9 +147,9 @@
       "sha256": "f7d132bc00ac35ba4a5ad817f4d4dcbb26da2be5d21b6b6f7669e8ea14c03b25"
     },
     {
-      "path": "assets/three-BKjThcRT.js",
-      "bytes": 579597,
-      "sha256": "ed23c58b66da87b688939b3a5f8690acc646547606e9fe613d5699401c59cc9a"
+      "path": "assets/three-DPSdrPIK.js",
+      "bytes": 582913,
+      "sha256": "0c6a432b9e8a315aac5ca2f5c9fbf3f4fa5cadec0d6ebd24ae2819b5b13a8c61"
     },
     {
       "path": "assets/tide-ambient-BP0Z0aTJ.wav",
@@ -174,7 +174,7 @@
     {
       "path": "index.html",
       "bytes": 7302,
-      "sha256": "b8f3cfab3460fc8aa19cd26773f82bae3a8bc18ebd6f894ba086df68071f74b4"
+      "sha256": "bb2e039404e8c36044fb777329dc74e1da2f1357dec7ed2edd7aa678ab011fcc"
     },
     {
       "path": "manifest.webmanifest",
@@ -346,5 +346,5 @@
       "sha256": "ef97ceddecfc56a53b94a8beec2efdeaeb8bf6dc614a04ec58f0c9b7af4b6567"
     }
   ],
-  "contentSha256": "ab18d6ac7aec07e11c81c22394f9f092a4723f5e04076ed741e9c7849ae950a8"
+  "contentSha256": "038bec677e0eab46ac572a10b7f5cda0671ecaf0a6a7bf226eecc593b54542bb"
 }

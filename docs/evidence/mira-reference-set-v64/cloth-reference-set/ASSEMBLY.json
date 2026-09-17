@@ -1,0 +1,232 @@
+{
+  "coordinates": "Anatomical Right=-X, Left=+X, front=+Z. Camera +Z: Right on image left. Bone suffix0=-X,1=+X is an index, not anatomical naming.",
+  "authorityOrder": [
+    "canonical complete: overall identity/proportions",
+    "garment assembly: neck/waist layer and bent sleeves",
+    "cape-v2: cape directions only, not swirl texture",
+    "hands/staff: cuff/grip",
+    "lower-front: belt hardware",
+    "this author semantic edge table",
+    "isolated micro images: qualitative surface only"
+  ],
+  "numericalCoordinates": "not a CAD measurement; final canonical edge arrays/UV/weights/time solver ownership not yet constructed",
+  "interfaces": [
+    {
+      "id": "UPPER-CENTRE",
+      "from": "T01-R/inside",
+      "to": "T01-L/inside",
+      "contract": "front opening policy, not automatic weld",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "UPPER-SIDE",
+      "from": "T01/side + T02/side",
+      "to": "T03/front + T03/rear",
+      "contract": "left/right copies separate",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "SHOULDER",
+      "from": "T01/top + T02/top",
+      "to": "T04/front + T04/rear",
+      "contract": "same author shoulder contour",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "ARMHOLE",
+      "from": "T03/top + T04/outer",
+      "to": "T05 inner arcs; S01/S02 shoulder arcs",
+      "contract": "front/rear half loops and sampling order pending",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "UPPER-SLEEVE",
+      "from": "S01 side edges",
+      "to": "S02 side edges",
+      "contract": "shared long seams, not duplicate closed tubes",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "ELBOW",
+      "from": "S01/S02 bottom",
+      "to": "S03/S04 top",
+      "contract": "one outer fold and inner gusset",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "FOREARM",
+      "from": "S03/S04 bottom",
+      "to": "S05/S06 top",
+      "contract": "single seam loop shared across both families",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "FOREARM-LONG",
+      "from": "S05 long edges",
+      "to": "S06 long edges",
+      "contract": "no independent overlapping walls",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "CUFF",
+      "from": "S05/S06 bottom",
+      "to": "F01/F02 top",
+      "contract": "clothing cuff rests beneath bracer; overlap distinct from weld",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "BRACER",
+      "from": "F01 sides",
+      "to": "F02 sides",
+      "contract": "wrap F03 overlays; actual fastening order pending",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "NECK",
+      "from": "T01/T02/T04 inner top",
+      "to": "C01/C02 lower",
+      "contract": "inner standing collar, outside cowl separate layer",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "COWL",
+      "from": "W01 ends",
+      "to": "W02 front",
+      "contract": "three authored U-layer copies; no silent extra folds",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "COWL-REAR",
+      "from": "W03 ends",
+      "to": "W02 rear",
+      "contract": "three V-layer copies; back drape not worn hood",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "CAPE-SHOULDER",
+      "from": "W02/W03 lower",
+      "to": "P04 inner",
+      "contract": "P04-RB old subset does not cover all arc",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "CAPE-TOP",
+      "from": "P04 outer",
+      "to": "P01/P02/P03 top",
+      "contract": "one canonical solved boundary owner required later",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "CAPE-LONG",
+      "from": "P01 outside",
+      "to": "P02 rear",
+      "contract": "existing prototype shared edge is not full outfit weld",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "CAPE-EDGE",
+      "from": "P02 front",
+      "to": "P03 outside",
+      "contract": "P03 opening edge remains free",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "CAPE-CENTRE",
+      "from": "P01-R inside",
+      "to": "P01-L inside",
+      "contract": "old prototype x=+-5 mm gives 10 mm gap; no silent closure",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "CAPE-HEM",
+      "from": "P01/P02/P03 bottom",
+      "to": "PH01 top",
+      "contract": "six copies; shared adjacent endpoints, no independent solid caps",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "WAIST",
+      "from": "T01/T02/T03 bottom",
+      "to": "L01/L02/L03 top",
+      "contract": "single waist join hidden by outer belt; no double exposed upper hem",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "LOWER-SIDE",
+      "from": "L01 side + L02 side",
+      "to": "L03 front + L03 rear",
+      "contract": "rear centre policy pending",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "LOWER-SPLIT",
+      "from": "L01 inside",
+      "to": "L04 fold edge",
+      "contract": "remaining inner edge free",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "LOWER-HEM",
+      "from": "L01/L02/L03 bottom",
+      "to": "L05 top",
+      "contract": "six matching copies, distinct from cape hem PH01",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "BELT",
+      "from": "B01 ends",
+      "to": "adjacent B01 ends",
+      "contract": "leather overlays waist; four segments not free caps",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "BELT-HARDWARE",
+      "from": "B03 buckle ring",
+      "to": "B04 hinge; B01 hole",
+      "contract": "requires geometric clearance specification",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "HANGER",
+      "from": "B03-hanger-R (legacy ID, Left)",
+      "to": "B02-R top (legacy ID, Left)",
+      "contract": "canonical Left +X, bottom free",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "BROOCH",
+      "from": "F04 boundary",
+      "to": "F05 inner opening",
+      "contract": "two-size fittings onto W02; no image-derived tolerance",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "TROUSER-WAIST",
+      "from": "TR04 lower",
+      "to": "TR01/TR02 top",
+      "contract": "four cloth waist segments separate from B01",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "TROUSER-LONG",
+      "from": "TR01 inseam/outseam",
+      "to": "TR02 inseam/outseam",
+      "contract": "method-B silhouettes not yet congruent shared curves",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "TROUSER-GUSSET",
+      "from": "TR03 four edges",
+      "to": "TR01-R/L and TR02-R/L upper inner cutouts",
+      "contract": "no double ownership of crotch; exact cutout registration pending",
+      "status": "author design contract; exact shared vertices not implemented"
+    },
+    {
+      "id": "BOOT-UNDERLAP",
+      "from": "TR01/TR02 bottom",
+      "to": "TR05 upper",
+      "contract": "cloth runs inside AB07/AB08 boot; depth unmeasured",
+      "status": "author design contract; exact shared vertices not implemented"
+    }
+  ]
+}

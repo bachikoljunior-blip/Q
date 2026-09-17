@@ -1,0 +1,852 @@
+{
+  "version": 1,
+  "coordinateFrame": "source matrixWorld baked into attributes / metres",
+  "sourceWorldMatrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "staticOnly": true,
+  "gameImported": false,
+  "buckets": [
+    {
+      "id": "wood",
+      "renderKey": "{\"json\":{\"type\":\"MeshStandardMaterial\",\"blending\":1,\"side\":0,\"shadowSide\":null,\"vertexColors\":false,\"opacity\":1,\"transparent\":false,\"blendSrc\":204,\"blendDst\":205,\"blendEquation\":100,\"blendSrcAlpha\":null,\"blendDstAlpha\":null,\"blendEquationAlpha\":null,\"blendColor\":0,\"blendAlpha\":0,\"depthFunc\":3,\"depthTest\":true,\"depthWrite\":true,\"colorWrite\":true,\"clipIntersection\":false,\"clipShadows\":false,\"stencilWriteMask\":255,\"stencilFunc\":519,\"stencilRef\":0,\"stencilFuncMask\":255,\"stencilFail\":7680,\"stencilZFail\":7680,\"stencilZPass\":7680,\"stencilWrite\":false,\"polygonOffset\":false,\"polygonOffsetFactor\":0,\"polygonOffsetUnits\":0,\"dithering\":false,\"alphaTest\":0,\"alphaHash\":false,\"alphaToCoverage\":false,\"premultipliedAlpha\":false,\"forceSinglePass\":false,\"allowOverride\":true,\"visible\":true,\"toneMapped\":true,\"color\":3746079,\"roughness\":0.9,\"metalness\":0,\"emissive\":0,\"emissiveIntensity\":1,\"envMapRotation\":[0,0,0,\"XYZ\"],\"envMapIntensity\":1,\"wireframe\":false,\"wireframeLinewidth\":1,\"wireframeLinecap\":\"round\",\"wireframeLinejoin\":\"round\",\"flatShading\":false,\"fog\":true},\"defines\":{\"STANDARD\":\"\"},\"precise\":{\"blendColor\":[0,0,0],\"color\":[0.040915196900556984,0.02217388478862708,0.013702083043526807],\"emissive\":[0,0,0],\"normalScale\":[1,1],\"envMapRotation\":[0,0,0,\"XYZ\"]}}",
+      "flags": {
+        "visible": true,
+        "castShadow": false,
+        "receiveShadow": false,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "layerMask": 1
+      },
+      "attributes": {
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array"
+        }
+      },
+      "partIds": [
+        "S01"
+      ],
+      "triangles": 96,
+      "bufferBytes": 4128,
+      "materialNames": [
+        ""
+      ],
+      "transmission": 0,
+      "transparent": false
+    },
+    {
+      "id": "bronze",
+      "renderKey": "{\"json\":{\"type\":\"MeshStandardMaterial\",\"blending\":1,\"side\":0,\"shadowSide\":null,\"vertexColors\":false,\"opacity\":1,\"transparent\":false,\"blendSrc\":204,\"blendDst\":205,\"blendEquation\":100,\"blendSrcAlpha\":null,\"blendDstAlpha\":null,\"blendEquationAlpha\":null,\"blendColor\":0,\"blendAlpha\":0,\"depthFunc\":3,\"depthTest\":true,\"depthWrite\":true,\"colorWrite\":true,\"clipIntersection\":false,\"clipShadows\":false,\"stencilWriteMask\":255,\"stencilFunc\":519,\"stencilRef\":0,\"stencilFuncMask\":255,\"stencilFail\":7680,\"stencilZFail\":7680,\"stencilZPass\":7680,\"stencilWrite\":false,\"polygonOffset\":false,\"polygonOffsetFactor\":0,\"polygonOffsetUnits\":0,\"dithering\":false,\"alphaTest\":0,\"alphaHash\":false,\"alphaToCoverage\":false,\"premultipliedAlpha\":false,\"forceSinglePass\":false,\"allowOverride\":true,\"visible\":true,\"toneMapped\":true,\"color\":10848077,\"roughness\":0.46,\"metalness\":0.7,\"emissive\":0,\"emissiveIntensity\":1,\"envMapRotation\":[0,0,0,\"XYZ\"],\"envMapIntensity\":1,\"wireframe\":false,\"wireframeLinewidth\":1,\"wireframeLinecap\":\"round\",\"wireframeLinejoin\":\"round\",\"flatShading\":false,\"fog\":true},\"defines\":{\"STANDARD\":\"\"},\"precise\":{\"blendColor\":[0,0,0],\"color\":[0.37626212298046485,0.24228112245478564,0.07421356837213867],\"emissive\":[0,0,0],\"normalScale\":[1,1],\"envMapRotation\":[0,0,0,\"XYZ\"]}}",
+      "flags": {
+        "visible": true,
+        "castShadow": false,
+        "receiveShadow": false,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "layerMask": 1
+      },
+      "attributes": {
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array"
+        }
+      },
+      "partIds": [
+        "S02",
+        "S03",
+        "S06",
+        "S15",
+        "S17",
+        "S18",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S07",
+        "S14",
+        "S08"
+      ],
+      "triangles": 5200,
+      "bufferBytes": 234976,
+      "materialNames": [
+        "",
+        "Mira micro bronze candidate"
+      ],
+      "transmission": 0,
+      "transparent": false
+    },
+    {
+      "id": "leather",
+      "renderKey": "{\"json\":{\"type\":\"MeshStandardMaterial\",\"blending\":1,\"side\":0,\"shadowSide\":null,\"vertexColors\":false,\"opacity\":1,\"transparent\":false,\"blendSrc\":204,\"blendDst\":205,\"blendEquation\":100,\"blendSrcAlpha\":null,\"blendDstAlpha\":null,\"blendEquationAlpha\":null,\"blendColor\":0,\"blendAlpha\":0,\"depthFunc\":3,\"depthTest\":true,\"depthWrite\":true,\"colorWrite\":true,\"clipIntersection\":false,\"clipShadows\":false,\"stencilWriteMask\":255,\"stencilFunc\":519,\"stencilRef\":0,\"stencilFuncMask\":255,\"stencilFail\":7680,\"stencilZFail\":7680,\"stencilZPass\":7680,\"stencilWrite\":false,\"polygonOffset\":false,\"polygonOffsetFactor\":0,\"polygonOffsetUnits\":0,\"dithering\":false,\"alphaTest\":0,\"alphaHash\":false,\"alphaToCoverage\":false,\"premultipliedAlpha\":false,\"forceSinglePass\":false,\"allowOverride\":true,\"visible\":true,\"toneMapped\":true,\"color\":3484452,\"roughness\":0.85,\"metalness\":0,\"emissive\":0,\"emissiveIntensity\":1,\"envMapRotation\":[0,0,0,\"XYZ\"],\"envMapIntensity\":1,\"wireframe\":false,\"wireframeLinewidth\":1,\"wireframeLinecap\":\"round\",\"wireframeLinejoin\":\"round\",\"flatShading\":false,\"fog\":true},\"defines\":{\"STANDARD\":\"\"},\"precise\":{\"blendColor\":[0,0,0],\"color\":[0.035601314869097636,0.024157632443547246,0.01764195448412081],\"emissive\":[0,0,0],\"normalScale\":[1,1],\"envMapRotation\":[0,0,0,\"XYZ\"]}}",
+      "flags": {
+        "visible": true,
+        "castShadow": false,
+        "receiveShadow": false,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "layerMask": 1
+      },
+      "attributes": {
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array"
+        }
+      },
+      "partIds": [
+        "S04",
+        "S05-A",
+        "S05-B"
+      ],
+      "triangles": 1416,
+      "bufferBytes": 55920,
+      "materialNames": [
+        ""
+      ],
+      "transmission": 0,
+      "transparent": false
+    },
+    {
+      "id": "glass",
+      "renderKey": "{\"json\":{\"type\":\"MeshPhysicalMaterial\",\"blending\":1,\"side\":0,\"shadowSide\":null,\"vertexColors\":true,\"opacity\":1,\"transparent\":false,\"blendSrc\":204,\"blendDst\":205,\"blendEquation\":100,\"blendSrcAlpha\":null,\"blendDstAlpha\":null,\"blendEquationAlpha\":null,\"blendColor\":0,\"blendAlpha\":0,\"depthFunc\":3,\"depthTest\":true,\"depthWrite\":true,\"colorWrite\":true,\"clipIntersection\":false,\"clipShadows\":false,\"stencilWriteMask\":255,\"stencilFunc\":519,\"stencilRef\":0,\"stencilFuncMask\":255,\"stencilFail\":7680,\"stencilZFail\":7680,\"stencilZPass\":7680,\"stencilWrite\":false,\"polygonOffset\":false,\"polygonOffsetFactor\":0,\"polygonOffsetUnits\":0,\"dithering\":false,\"alphaTest\":0,\"alphaHash\":false,\"alphaToCoverage\":false,\"premultipliedAlpha\":false,\"forceSinglePass\":false,\"allowOverride\":true,\"visible\":true,\"toneMapped\":true,\"color\":16777215,\"roughness\":0.3,\"metalness\":0,\"sheen\":0,\"sheenColor\":0,\"sheenRoughness\":1,\"emissive\":16761975,\"emissiveIntensity\":0.45,\"specularIntensity\":1,\"specularColor\":16777215,\"clearcoat\":0,\"clearcoatRoughness\":0,\"dispersion\":0,\"retroreflectivity\":0,\"iridescence\":0,\"iridescenceIOR\":1.3,\"iridescenceThicknessRange\":[100,400],\"anisotropy\":0,\"anisotropyRotation\":0,\"envMapRotation\":[0,0,0,\"XYZ\"],\"envMapIntensity\":1,\"reflectivity\":0.4591836734693877,\"transmission\":0.22,\"thickness\":0.04,\"attenuationDistance\":null,\"attenuationColor\":16777215,\"wireframe\":false,\"wireframeLinewidth\":1,\"wireframeLinecap\":\"round\",\"wireframeLinejoin\":\"round\",\"flatShading\":false,\"fog\":true},\"defines\":{\"STANDARD\":\"\",\"PHYSICAL\":\"\"},\"precise\":{\"blendColor\":[0,0,0],\"color\":[1,1,1],\"emissive\":[1,0.55201140150344,0.1844749944900301],\"normalScale\":[1,1],\"envMapRotation\":[0,0,0,\"XYZ\"],\"clearcoatNormalScale\":[1,1],\"sheenColor\":[0,0,0],\"attenuationColor\":[1,1,1],\"specularColor\":[1,1,1]}}",
+      "flags": {
+        "visible": true,
+        "castShadow": false,
+        "receiveShadow": false,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "layerMask": 1
+      },
+      "attributes": {
+        "color": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array"
+        }
+      },
+      "partIds": [
+        "S16"
+      ],
+      "triangles": 800,
+      "bufferBytes": 28296,
+      "materialNames": [
+        "Mira warm ivory luminous glass candidate"
+      ],
+      "transmission": 0.22,
+      "transparent": false
+    }
+  ],
+  "parts": [
+    {
+      "id": "S01",
+      "partId": "S01",
+      "bucketId": "wood",
+      "firstIndex": 0,
+      "indexCount": 288,
+      "firstVertex": 0,
+      "vertexCount": 111,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "d3c94dab-db4d-4a6e-9a45-31480ce780a0",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S01",
+      "sourceUserData": {
+        "partId": "S01"
+      }
+    },
+    {
+      "id": "S02",
+      "partId": "S02",
+      "bucketId": "bronze",
+      "firstIndex": 0,
+      "indexCount": 960,
+      "firstVertex": 0,
+      "vertexCount": 498,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "258c335b-e782-4c9a-916d-c369b6079428",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S02",
+      "sourceUserData": {
+        "partId": "S02"
+      }
+    },
+    {
+      "id": "S03",
+      "partId": "S03",
+      "bucketId": "bronze",
+      "firstIndex": 960,
+      "indexCount": 384,
+      "firstVertex": 498,
+      "vertexCount": 154,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "258c335b-e782-4c9a-916d-c369b6079428",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S03",
+      "sourceUserData": {
+        "partId": "S03"
+      }
+    },
+    {
+      "id": "S06",
+      "partId": "S06",
+      "bucketId": "bronze",
+      "firstIndex": 1344,
+      "indexCount": 1152,
+      "firstVertex": 652,
+      "vertexCount": 541,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "258c335b-e782-4c9a-916d-c369b6079428",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S06",
+      "sourceUserData": {
+        "partId": "S06"
+      }
+    },
+    {
+      "id": "S15",
+      "partId": "S15",
+      "bucketId": "bronze",
+      "firstIndex": 2496,
+      "indexCount": 1248,
+      "firstVertex": 1193,
+      "vertexCount": 684,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "258c335b-e782-4c9a-916d-c369b6079428",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S15",
+      "sourceUserData": {
+        "partId": "S15"
+      }
+    },
+    {
+      "id": "S17",
+      "partId": "S17",
+      "bucketId": "bronze",
+      "firstIndex": 3744,
+      "indexCount": 768,
+      "firstVertex": 1877,
+      "vertexCount": 288,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "258c335b-e782-4c9a-916d-c369b6079428",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S17",
+      "sourceUserData": {
+        "partId": "S17"
+      }
+    },
+    {
+      "id": "S18",
+      "partId": "S18",
+      "bucketId": "bronze",
+      "firstIndex": 4512,
+      "indexCount": 768,
+      "firstVertex": 2165,
+      "vertexCount": 288,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "258c335b-e782-4c9a-916d-c369b6079428",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S18",
+      "sourceUserData": {
+        "partId": "S18"
+      }
+    },
+    {
+      "id": "S09",
+      "partId": "S09",
+      "bucketId": "bronze",
+      "firstIndex": 5280,
+      "indexCount": 1092,
+      "firstVertex": 2453,
+      "vertexCount": 458,
+      "sourceWorldMatrix": [
+        -1,
+        0,
+        -1.2246467991473532e-16,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.2246467991473532e-16,
+        0,
+        -1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "afb07974-a9b7-4908-b539-0ea7409d320f",
+      "sourceMaterialName": "Mira micro bronze candidate",
+      "sourceGeometryName": "Mira integral wide bronze rib",
+      "sourceUserData": {
+        "partId": "S09",
+        "type": "wide",
+        "side": "-X",
+        "integralEnds": true
+      }
+    },
+    {
+      "id": "S10",
+      "partId": "S10",
+      "bucketId": "bronze",
+      "firstIndex": 6372,
+      "indexCount": 1092,
+      "firstVertex": 2911,
+      "vertexCount": 458,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "afb07974-a9b7-4908-b539-0ea7409d320f",
+      "sourceMaterialName": "Mira micro bronze candidate",
+      "sourceGeometryName": "Mira integral wide bronze rib",
+      "sourceUserData": {
+        "partId": "S10",
+        "type": "wide",
+        "side": "+X",
+        "integralEnds": true
+      }
+    },
+    {
+      "id": "S11",
+      "partId": "S11",
+      "bucketId": "bronze",
+      "firstIndex": 7464,
+      "indexCount": 1092,
+      "firstVertex": 3369,
+      "vertexCount": 422,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "afb07974-a9b7-4908-b539-0ea7409d320f",
+      "sourceMaterialName": "Mira micro bronze candidate",
+      "sourceGeometryName": "Mira integral depth bronze rib",
+      "sourceUserData": {
+        "partId": "S11",
+        "type": "depth",
+        "side": "+Z",
+        "integralEnds": true
+      }
+    },
+    {
+      "id": "S12",
+      "partId": "S12",
+      "bucketId": "bronze",
+      "firstIndex": 8556,
+      "indexCount": 1092,
+      "firstVertex": 3791,
+      "vertexCount": 422,
+      "sourceWorldMatrix": [
+        -1,
+        0,
+        -1.2246467991473532e-16,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.2246467991473532e-16,
+        0,
+        -1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "afb07974-a9b7-4908-b539-0ea7409d320f",
+      "sourceMaterialName": "Mira micro bronze candidate",
+      "sourceGeometryName": "Mira integral depth bronze rib",
+      "sourceUserData": {
+        "partId": "S12",
+        "type": "depth",
+        "side": "-Z",
+        "integralEnds": true
+      }
+    },
+    {
+      "id": "S13",
+      "partId": "S13",
+      "bucketId": "bronze",
+      "firstIndex": 9648,
+      "indexCount": 1152,
+      "firstVertex": 4213,
+      "vertexCount": 192,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.665,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "afb07974-a9b7-4908-b539-0ea7409d320f",
+      "sourceMaterialName": "Mira micro bronze candidate",
+      "sourceGeometryName": "Mira micro S13",
+      "sourceUserData": {
+        "partId": "S13",
+        "reusedProfile": true
+      }
+    },
+    {
+      "id": "S07",
+      "partId": "S07",
+      "bucketId": "bronze",
+      "firstIndex": 10800,
+      "indexCount": 2016,
+      "firstVertex": 4405,
+      "vertexCount": 838,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "afb07974-a9b7-4908-b539-0ea7409d320f",
+      "sourceMaterialName": "Mira micro bronze candidate",
+      "sourceGeometryName": "S07 lower cup with shared glass cradle",
+      "sourceUserData": {
+        "partId": "S07",
+        "version": "v63",
+        "internalJoinAuthored": true
+      }
+    },
+    {
+      "id": "S14",
+      "partId": "S14",
+      "bucketId": "bronze",
+      "firstIndex": 12816,
+      "indexCount": 1632,
+      "firstVertex": 5243,
+      "vertexCount": 933,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "afb07974-a9b7-4908-b539-0ea7409d320f",
+      "sourceMaterialName": "Mira micro bronze candidate",
+      "sourceGeometryName": "S14 v63 internal glass and finial seats",
+      "sourceUserData": {
+        "partId": "S14",
+        "version": "v63",
+        "internalJoinAuthored": true
+      }
+    },
+    {
+      "id": "S08",
+      "partId": "S08",
+      "bucketId": "bronze",
+      "firstIndex": 14448,
+      "indexCount": 1152,
+      "firstVertex": 6176,
+      "vertexCount": 192,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1.2246467991473532e-16,
+        0,
+        0,
+        -1.2246467991473532e-16,
+        -1,
+        0,
+        0,
+        1.444,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "afb07974-a9b7-4908-b539-0ea7409d320f",
+      "sourceMaterialName": "Mira micro bronze candidate",
+      "sourceGeometryName": "Mira micro S13",
+      "sourceUserData": {
+        "partId": "S08",
+        "sourceProfile": "S13 flipped / current lower-ring visual reference"
+      }
+    },
+    {
+      "id": "S04",
+      "partId": "S04",
+      "bucketId": "leather",
+      "firstIndex": 0,
+      "indexCount": 384,
+      "firstVertex": 0,
+      "vertexCount": 168,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "3b8c91f6-1796-4f5d-b0d3-1953a212645f",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S04",
+      "sourceUserData": {
+        "partId": "S04"
+      }
+    },
+    {
+      "id": "S05-A",
+      "partId": "S05-A",
+      "bucketId": "leather",
+      "firstIndex": 384,
+      "indexCount": 1932,
+      "firstVertex": 168,
+      "vertexCount": 658,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "3b8c91f6-1796-4f5d-b0d3-1953a212645f",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S05-A",
+      "sourceUserData": {
+        "partId": "S05-A"
+      }
+    },
+    {
+      "id": "S05-B",
+      "partId": "S05-B",
+      "bucketId": "leather",
+      "firstIndex": 2316,
+      "indexCount": 1932,
+      "firstVertex": 826,
+      "vertexCount": 656,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "3b8c91f6-1796-4f5d-b0d3-1953a212645f",
+      "sourceMaterialName": "",
+      "sourceGeometryName": "S05-B",
+      "sourceUserData": {
+        "partId": "S05-B"
+      }
+    },
+    {
+      "id": "S16",
+      "partId": "S16",
+      "bucketId": "glass",
+      "firstIndex": 0,
+      "indexCount": 2400,
+      "firstVertex": 0,
+      "vertexCount": 534,
+      "sourceWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.556,
+        0,
+        1
+      ],
+      "sourceMaterialUUID": "3c52a4f2-7554-419e-9f9f-6ddc092167c6",
+      "sourceMaterialName": "Mira warm ivory luminous glass candidate",
+      "sourceGeometryName": "S16 closed ivory glass",
+      "sourceUserData": {
+        "partId": "S16",
+        "version": "v63",
+        "internalJoinAuthored": false
+      }
+    }
+  ]
+}

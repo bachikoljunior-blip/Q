@@ -1,0 +1,3220 @@
+{
+  "schema": 1,
+  "source": "ACCESSORY_REGISTRATION.json",
+  "ports": [
+    {
+      "id": "R-wrist",
+      "owner": "hands:R-wrist",
+      "frame": "hand-0",
+      "unit": "mm",
+      "kind": "overlap",
+      "curveID": "R.wrist.bracer-overlap",
+      "counterparts": [
+        "cloth:F01-R",
+        "cloth:F02-R"
+      ],
+      "sharedCanonical": "ACCESSORY_REGISTRATION.json#curves/R.wrist.bracer-overlap",
+      "skinYRangeMm": [
+        -15,
+        9
+      ],
+      "bracerOpeningYmm": 0,
+      "longitudinalOverlapMm": 9,
+      "bracerInnerRadiiMm": [
+        46,
+        44
+      ],
+      "axisClearanceMm": [
+        16.5,
+        20
+      ],
+      "clothSleeveOpeningYmm": 20,
+      "clothDirectSkinWeld": false,
+      "deformedClearanceValidated": false,
+      "orderedSamples": [
+        {
+          "sample": 0,
+          "u": 0.0,
+          "positionMm": [
+            0.0,
+            0,
+            24.0
+          ],
+          "normal": [
+            -0.0,
+            0.0,
+            1.0
+          ],
+          "tangent": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "junctionID": "JN.0006",
+          "tangentMagnitudeMm": 5.7736107207
+        },
+        {
+          "sample": 1,
+          "u": 0.03125,
+          "positionMm": [
+            5.7551644995,
+            0,
+            23.5388467297
+          ],
+          "normal": [
+            0.1597487799,
+            0.0,
+            0.9871577013
+          ],
+          "tangent": [
+            0.9871577013,
+            0.0,
+            -0.1597487799
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.7368211601
+        },
+        {
+          "sample": 2,
+          "u": 0.0625,
+          "positionMm": [
+            11.2891612548,
+            0,
+            22.1731087803
+          ],
+          "normal": [
+            0.3193424425,
+            0.0,
+            0.9476393852
+          ],
+          "tangent": [
+            0.9476393852,
+            0.0,
+            -0.3193424425
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.6307730758
+        },
+        {
+          "sample": 3,
+          "u": 0.09375,
+          "positionMm": [
+            16.3893218741,
+            0,
+            19.9552706953
+          ],
+          "normal": [
+            0.4775978947,
+            0.0,
+            0.87857854
+          ],
+          "tangent": [
+            0.87857854,
+            0.0,
+            -0.4775978947
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.4683359021
+        },
+        {
+          "sample": 4,
+          "u": 0.125,
+          "positionMm": [
+            20.859650045,
+            0,
+            16.9705627485
+          ],
+          "normal": [
+            0.6310874674,
+            0.0,
+            0.7757116787
+          ],
+          "tangent": [
+            0.7757116787,
+            0.0,
+            -0.6310874674
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.2705159534
+        },
+        {
+          "sample": 5,
+          "u": 0.15625,
+          "positionMm": [
+            24.5283535629,
+            0,
+            13.3336855925
+          ],
+          "normal": [
+            0.7727738821,
+            0.0,
+            0.6346814375
+          ],
+          "tangent": [
+            0.6346814375,
+            0.0,
+            -0.7727738821
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.0652815985
+        },
+        {
+          "sample": 6,
+          "u": 0.1875,
+          "positionMm": [
+            27.2544462091,
+            0,
+            9.1844023768
+          ],
+          "normal": [
+            0.8911463271,
+            0.0,
+            0.4537160165
+          ],
+          "tangent": [
+            0.4537160165,
+            0.0,
+            -0.8911463271
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.884854219
+        },
+        {
+          "sample": 7,
+          "u": 0.21875,
+          "positionMm": [
+            28.9331657719,
+            0,
+            4.6821677284
+          ],
+          "normal": [
+            0.9713873525,
+            0.0,
+            0.2375007608
+          ],
+          "tangent": [
+            0.2375007608,
+            0.0,
+            -0.9713873525
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.7606869811
+        },
+        {
+          "sample": 8,
+          "u": 0.25,
+          "positionMm": [
+            29.5,
+            0,
+            0.0
+          ],
+          "normal": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "tangent": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.7163540663
+        },
+        {
+          "sample": 9,
+          "u": 0.28125,
+          "positionMm": [
+            28.9331657719,
+            0,
+            -4.6821677284
+          ],
+          "normal": [
+            0.9713873525,
+            0.0,
+            -0.2375007608
+          ],
+          "tangent": [
+            -0.2375007608,
+            0.0,
+            -0.9713873525
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.7606869811
+        },
+        {
+          "sample": 10,
+          "u": 0.3125,
+          "positionMm": [
+            27.2544462091,
+            0,
+            -9.1844023768
+          ],
+          "normal": [
+            0.8911463271,
+            0.0,
+            -0.4537160165
+          ],
+          "tangent": [
+            -0.4537160165,
+            0.0,
+            -0.8911463271
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.884854219
+        },
+        {
+          "sample": 11,
+          "u": 0.34375,
+          "positionMm": [
+            24.5283535629,
+            0,
+            -13.3336855925
+          ],
+          "normal": [
+            0.7727738821,
+            0.0,
+            -0.6346814375
+          ],
+          "tangent": [
+            -0.6346814375,
+            0.0,
+            -0.7727738821
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.0652815985
+        },
+        {
+          "sample": 12,
+          "u": 0.375,
+          "positionMm": [
+            20.859650045,
+            0,
+            -16.9705627485
+          ],
+          "normal": [
+            0.6310874674,
+            0.0,
+            -0.7757116787
+          ],
+          "tangent": [
+            -0.7757116787,
+            0.0,
+            -0.6310874674
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.2705159534
+        },
+        {
+          "sample": 13,
+          "u": 0.40625,
+          "positionMm": [
+            16.3893218741,
+            0,
+            -19.9552706953
+          ],
+          "normal": [
+            0.4775978947,
+            0.0,
+            -0.87857854
+          ],
+          "tangent": [
+            -0.87857854,
+            0.0,
+            -0.4775978947
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.4683359021
+        },
+        {
+          "sample": 14,
+          "u": 0.4375,
+          "positionMm": [
+            11.2891612548,
+            0,
+            -22.1731087803
+          ],
+          "normal": [
+            0.3193424425,
+            0.0,
+            -0.9476393852
+          ],
+          "tangent": [
+            -0.9476393852,
+            0.0,
+            -0.3193424425
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.6307730758
+        },
+        {
+          "sample": 15,
+          "u": 0.46875,
+          "positionMm": [
+            5.7551644995,
+            0,
+            -23.5388467297
+          ],
+          "normal": [
+            0.1597487799,
+            0.0,
+            -0.9871577013
+          ],
+          "tangent": [
+            -0.9871577013,
+            0.0,
+            -0.1597487799
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.7368211601
+        },
+        {
+          "sample": 16,
+          "u": 0.5,
+          "positionMm": [
+            0.0,
+            0,
+            -24.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "tangent": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.7736107207
+        },
+        {
+          "sample": 17,
+          "u": 0.53125,
+          "positionMm": [
+            -5.7551644995,
+            0,
+            -23.5388467297
+          ],
+          "normal": [
+            -0.1597487799,
+            0.0,
+            -0.9871577013
+          ],
+          "tangent": [
+            -0.9871577013,
+            0.0,
+            0.1597487799
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.7368211601
+        },
+        {
+          "sample": 18,
+          "u": 0.5625,
+          "positionMm": [
+            -11.2891612548,
+            0,
+            -22.1731087803
+          ],
+          "normal": [
+            -0.3193424425,
+            0.0,
+            -0.9476393852
+          ],
+          "tangent": [
+            -0.9476393852,
+            0.0,
+            0.3193424425
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.6307730758
+        },
+        {
+          "sample": 19,
+          "u": 0.59375,
+          "positionMm": [
+            -16.3893218741,
+            0,
+            -19.9552706953
+          ],
+          "normal": [
+            -0.4775978947,
+            0.0,
+            -0.87857854
+          ],
+          "tangent": [
+            -0.87857854,
+            0.0,
+            0.4775978947
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.4683359021
+        },
+        {
+          "sample": 20,
+          "u": 0.625,
+          "positionMm": [
+            -20.859650045,
+            0,
+            -16.9705627485
+          ],
+          "normal": [
+            -0.6310874674,
+            0.0,
+            -0.7757116787
+          ],
+          "tangent": [
+            -0.7757116787,
+            0.0,
+            0.6310874674
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.2705159534
+        },
+        {
+          "sample": 21,
+          "u": 0.65625,
+          "positionMm": [
+            -24.5283535629,
+            0,
+            -13.3336855925
+          ],
+          "normal": [
+            -0.7727738821,
+            0.0,
+            -0.6346814375
+          ],
+          "tangent": [
+            -0.6346814375,
+            0.0,
+            0.7727738821
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.0652815985
+        },
+        {
+          "sample": 22,
+          "u": 0.6875,
+          "positionMm": [
+            -27.2544462091,
+            0,
+            -9.1844023768
+          ],
+          "normal": [
+            -0.8911463271,
+            0.0,
+            -0.4537160165
+          ],
+          "tangent": [
+            -0.4537160165,
+            0.0,
+            0.8911463271
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.884854219
+        },
+        {
+          "sample": 23,
+          "u": 0.71875,
+          "positionMm": [
+            -28.9331657719,
+            0,
+            -4.6821677284
+          ],
+          "normal": [
+            -0.9713873525,
+            0.0,
+            -0.2375007608
+          ],
+          "tangent": [
+            -0.2375007608,
+            0.0,
+            0.9713873525
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.7606869811
+        },
+        {
+          "sample": 24,
+          "u": 0.75,
+          "positionMm": [
+            -29.5,
+            0,
+            -0.0
+          ],
+          "normal": [
+            -1.0,
+            0.0,
+            -0.0
+          ],
+          "tangent": [
+            -0.0,
+            0.0,
+            1.0
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.7163540663
+        },
+        {
+          "sample": 25,
+          "u": 0.78125,
+          "positionMm": [
+            -28.9331657719,
+            0,
+            4.6821677284
+          ],
+          "normal": [
+            -0.9713873525,
+            0.0,
+            0.2375007608
+          ],
+          "tangent": [
+            0.2375007608,
+            0.0,
+            0.9713873525
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.7606869811
+        },
+        {
+          "sample": 26,
+          "u": 0.8125,
+          "positionMm": [
+            -27.2544462091,
+            0,
+            9.1844023768
+          ],
+          "normal": [
+            -0.8911463271,
+            0.0,
+            0.4537160165
+          ],
+          "tangent": [
+            0.4537160165,
+            0.0,
+            0.8911463271
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 4.884854219
+        },
+        {
+          "sample": 27,
+          "u": 0.84375,
+          "positionMm": [
+            -24.5283535629,
+            0,
+            13.3336855925
+          ],
+          "normal": [
+            -0.7727738821,
+            0.0,
+            0.6346814375
+          ],
+          "tangent": [
+            0.6346814375,
+            0.0,
+            0.7727738821
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.0652815985
+        },
+        {
+          "sample": 28,
+          "u": 0.875,
+          "positionMm": [
+            -20.859650045,
+            0,
+            16.9705627485
+          ],
+          "normal": [
+            -0.6310874674,
+            0.0,
+            0.7757116787
+          ],
+          "tangent": [
+            0.7757116787,
+            0.0,
+            0.6310874674
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.2705159534
+        },
+        {
+          "sample": 29,
+          "u": 0.90625,
+          "positionMm": [
+            -16.3893218741,
+            0,
+            19.9552706953
+          ],
+          "normal": [
+            -0.4775978947,
+            0.0,
+            0.87857854
+          ],
+          "tangent": [
+            0.87857854,
+            0.0,
+            0.4775978947
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.4683359021
+        },
+        {
+          "sample": 30,
+          "u": 0.9375,
+          "positionMm": [
+            -11.2891612548,
+            0,
+            22.1731087803
+          ],
+          "normal": [
+            -0.3193424425,
+            0.0,
+            0.9476393852
+          ],
+          "tangent": [
+            0.9476393852,
+            0.0,
+            0.3193424425
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.6307730758
+        },
+        {
+          "sample": 31,
+          "u": 0.96875,
+          "positionMm": [
+            -5.7551644995,
+            0,
+            23.5388467297
+          ],
+          "normal": [
+            -0.1597487799,
+            0.0,
+            0.9871577013
+          ],
+          "tangent": [
+            0.9871577013,
+            0.0,
+            0.1597487799
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "tangentMagnitudeMm": 5.7368211601
+        },
+        {
+          "sample": 32,
+          "u": 1.0,
+          "positionMm": [
+            0.0,
+            0,
+            24.0
+          ],
+          "normal": [
+            -0.0,
+            0.0,
+            1.0
+          ],
+          "tangent": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "hand-0": 1
+          },
+          "junctionID": "JN.0006",
+          "tangentMagnitudeMm": 5.7736107207
+        }
+      ]
+    },
+    {
+      "id": "R-trousers-to-boots",
+      "owner": "boots:R-boot-rim",
+      "additionalOwner": "boots:R-boot-shaft",
+      "frame": "foot-0",
+      "unit": "mm",
+      "kind": "overlap",
+      "curveID": "R.boot.rim-aperture",
+      "counterparts": [
+        "cloth:TR05-R",
+        "cloth:TR01-R",
+        "cloth:TR02-R"
+      ],
+      "sharedCanonical": "ACCESSORY_REGISTRATION.json#curves/R.boot.rim-aperture",
+      "footToKneeTranslationMm": [
+        0,
+        -435,
+        0
+      ],
+      "bootTopFootYmm": 340,
+      "bootTopKneeYmm": -95,
+      "bootInnerStationsMm": [
+        [
+          300,
+          73,
+          75
+        ],
+        [
+          340,
+          75,
+          77
+        ]
+      ],
+      "trouserFootYRangeMm": [
+        300,
+        345
+      ],
+      "trouserRadiiAtBottomTopMm": [
+        [
+          69,
+          71
+        ],
+        [
+          70,
+          72
+        ]
+      ],
+      "longitudinalOverlapMm": 40,
+      "minimumRegisteredAxisClearanceMm": 4,
+      "deformedClearanceValidated": false,
+      "orderedSamples": [
+        {
+          "sample": 0,
+          "u": 0.0,
+          "positionMm": [
+            0.0,
+            340,
+            77.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "tangent": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "junctionID": "JN.0052",
+          "tangentMagnitudeMm": 14.7063875211
+        },
+        {
+          "sample": 1,
+          "u": 0.03125,
+          "positionMm": [
+            14.6317741512,
+            340,
+            75.520466591
+          ],
+          "normal": [
+            -0.2000870524,
+            0.0,
+            -0.9797781236
+          ],
+          "tangent": [
+            0.9797781236,
+            0.0,
+            -0.2000870524
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.721199389
+        },
+        {
+          "sample": 2,
+          "u": 0.0625,
+          "positionMm": [
+            28.7012574274,
+            340,
+            71.1387240034
+          ],
+          "normal": [
+            -0.3913427106,
+            0.0,
+            -0.9202450124
+          ],
+          "tangent": [
+            0.9202450124,
+            0.0,
+            -0.3913427106
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.7633019687
+        },
+        {
+          "sample": 3,
+          "u": 0.09375,
+          "positionMm": [
+            41.6677674765,
+            340,
+            64.0231601473
+          ],
+          "normal": [
+            -0.5656867676,
+            0.0,
+            -0.8246202041
+          ],
+          "tangent": [
+            0.8246202041,
+            0.0,
+            -0.5656867676
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.8260986867
+        },
+        {
+          "sample": 4,
+          "u": 0.125,
+          "positionMm": [
+            53.033008589,
+            340,
+            54.4472221514
+          ],
+          "normal": [
+            -0.7163488097,
+            0.0,
+            -0.6977423471
+          ],
+          "tangent": [
+            0.6977423471,
+            0.0,
+            -0.7163488097
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.8998458996
+        },
+        {
+          "sample": 5,
+          "u": 0.15625,
+          "positionMm": [
+            62.3602209227,
+            340,
+            42.7789079425
+          ],
+          "normal": [
+            -0.8381281532,
+            0.0,
+            -0.5454733713
+          ],
+          "tangent": [
+            0.5454733713,
+            0.0,
+            -0.8381281532
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.9732441868
+        },
+        {
+          "sample": 6,
+          "u": 0.1875,
+          "positionMm": [
+            69.2909649383,
+            340,
+            29.4666242921
+          ],
+          "normal": [
+            -0.9273678101,
+            0.0,
+            -0.3741509652
+          ],
+          "tangent": [
+            0.3741509652,
+            0.0,
+            -0.9273678101
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.035198454
+        },
+        {
+          "sample": 7,
+          "u": 0.21875,
+          "positionMm": [
+            73.5588960302,
+            340,
+            15.0219547952
+          ],
+          "normal": [
+            -0.9817436736,
+            0.0,
+            -0.1902087256
+          ],
+          "tangent": [
+            0.1902087256,
+            0.0,
+            -0.9817436736
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.0764584842
+        },
+        {
+          "sample": 8,
+          "u": 0.25,
+          "positionMm": [
+            75.0,
+            340,
+            0.0
+          ],
+          "normal": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "tangent": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.0909213278
+        },
+        {
+          "sample": 9,
+          "u": 0.28125,
+          "positionMm": [
+            73.5588960302,
+            340,
+            -15.0219547952
+          ],
+          "normal": [
+            -0.9817436736,
+            0.0,
+            0.1902087256
+          ],
+          "tangent": [
+            -0.1902087256,
+            0.0,
+            -0.9817436736
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.0764584842
+        },
+        {
+          "sample": 10,
+          "u": 0.3125,
+          "positionMm": [
+            69.2909649383,
+            340,
+            -29.4666242921
+          ],
+          "normal": [
+            -0.9273678101,
+            0.0,
+            0.3741509652
+          ],
+          "tangent": [
+            -0.3741509652,
+            0.0,
+            -0.9273678101
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.035198454
+        },
+        {
+          "sample": 11,
+          "u": 0.34375,
+          "positionMm": [
+            62.3602209227,
+            340,
+            -42.7789079425
+          ],
+          "normal": [
+            -0.8381281532,
+            0.0,
+            0.5454733713
+          ],
+          "tangent": [
+            -0.5454733713,
+            0.0,
+            -0.8381281532
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.9732441868
+        },
+        {
+          "sample": 12,
+          "u": 0.375,
+          "positionMm": [
+            53.033008589,
+            340,
+            -54.4472221514
+          ],
+          "normal": [
+            -0.7163488097,
+            0.0,
+            0.6977423471
+          ],
+          "tangent": [
+            -0.6977423471,
+            0.0,
+            -0.7163488097
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.8998458996
+        },
+        {
+          "sample": 13,
+          "u": 0.40625,
+          "positionMm": [
+            41.6677674765,
+            340,
+            -64.0231601473
+          ],
+          "normal": [
+            -0.5656867676,
+            0.0,
+            0.8246202041
+          ],
+          "tangent": [
+            -0.8246202041,
+            0.0,
+            -0.5656867676
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.8260986867
+        },
+        {
+          "sample": 14,
+          "u": 0.4375,
+          "positionMm": [
+            28.7012574274,
+            340,
+            -71.1387240034
+          ],
+          "normal": [
+            -0.3913427106,
+            0.0,
+            0.9202450124
+          ],
+          "tangent": [
+            -0.9202450124,
+            0.0,
+            -0.3913427106
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.7633019687
+        },
+        {
+          "sample": 15,
+          "u": 0.46875,
+          "positionMm": [
+            14.6317741512,
+            340,
+            -75.520466591
+          ],
+          "normal": [
+            -0.2000870524,
+            0.0,
+            0.9797781236
+          ],
+          "tangent": [
+            -0.9797781236,
+            0.0,
+            -0.2000870524
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.721199389
+        },
+        {
+          "sample": 16,
+          "u": 0.5,
+          "positionMm": [
+            0.0,
+            340,
+            -77.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "tangent": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.7063875211
+        },
+        {
+          "sample": 17,
+          "u": 0.53125,
+          "positionMm": [
+            -14.6317741512,
+            340,
+            -75.520466591
+          ],
+          "normal": [
+            0.2000870524,
+            0.0,
+            0.9797781236
+          ],
+          "tangent": [
+            -0.9797781236,
+            0.0,
+            0.2000870524
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.721199389
+        },
+        {
+          "sample": 18,
+          "u": 0.5625,
+          "positionMm": [
+            -28.7012574274,
+            340,
+            -71.1387240034
+          ],
+          "normal": [
+            0.3913427106,
+            0.0,
+            0.9202450124
+          ],
+          "tangent": [
+            -0.9202450124,
+            0.0,
+            0.3913427106
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.7633019687
+        },
+        {
+          "sample": 19,
+          "u": 0.59375,
+          "positionMm": [
+            -41.6677674765,
+            340,
+            -64.0231601473
+          ],
+          "normal": [
+            0.5656867676,
+            0.0,
+            0.8246202041
+          ],
+          "tangent": [
+            -0.8246202041,
+            0.0,
+            0.5656867676
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.8260986867
+        },
+        {
+          "sample": 20,
+          "u": 0.625,
+          "positionMm": [
+            -53.033008589,
+            340,
+            -54.4472221514
+          ],
+          "normal": [
+            0.7163488097,
+            0.0,
+            0.6977423471
+          ],
+          "tangent": [
+            -0.6977423471,
+            0.0,
+            0.7163488097
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.8998458996
+        },
+        {
+          "sample": 21,
+          "u": 0.65625,
+          "positionMm": [
+            -62.3602209227,
+            340,
+            -42.7789079425
+          ],
+          "normal": [
+            0.8381281532,
+            0.0,
+            0.5454733713
+          ],
+          "tangent": [
+            -0.5454733713,
+            0.0,
+            0.8381281532
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.9732441868
+        },
+        {
+          "sample": 22,
+          "u": 0.6875,
+          "positionMm": [
+            -69.2909649383,
+            340,
+            -29.4666242921
+          ],
+          "normal": [
+            0.9273678101,
+            0.0,
+            0.3741509652
+          ],
+          "tangent": [
+            -0.3741509652,
+            0.0,
+            0.9273678101
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.035198454
+        },
+        {
+          "sample": 23,
+          "u": 0.71875,
+          "positionMm": [
+            -73.5588960302,
+            340,
+            -15.0219547952
+          ],
+          "normal": [
+            0.9817436736,
+            0.0,
+            0.1902087256
+          ],
+          "tangent": [
+            -0.1902087256,
+            0.0,
+            0.9817436736
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.0764584842
+        },
+        {
+          "sample": 24,
+          "u": 0.75,
+          "positionMm": [
+            -75.0,
+            340,
+            -0.0
+          ],
+          "normal": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "tangent": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.0909213278
+        },
+        {
+          "sample": 25,
+          "u": 0.78125,
+          "positionMm": [
+            -73.5588960302,
+            340,
+            15.0219547952
+          ],
+          "normal": [
+            0.9817436736,
+            0.0,
+            -0.1902087256
+          ],
+          "tangent": [
+            0.1902087256,
+            0.0,
+            0.9817436736
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.0764584842
+        },
+        {
+          "sample": 26,
+          "u": 0.8125,
+          "positionMm": [
+            -69.2909649383,
+            340,
+            29.4666242921
+          ],
+          "normal": [
+            0.9273678101,
+            0.0,
+            -0.3741509652
+          ],
+          "tangent": [
+            0.3741509652,
+            0.0,
+            0.9273678101
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 15.035198454
+        },
+        {
+          "sample": 27,
+          "u": 0.84375,
+          "positionMm": [
+            -62.3602209227,
+            340,
+            42.7789079425
+          ],
+          "normal": [
+            0.8381281532,
+            0.0,
+            -0.5454733713
+          ],
+          "tangent": [
+            0.5454733713,
+            0.0,
+            0.8381281532
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.9732441868
+        },
+        {
+          "sample": 28,
+          "u": 0.875,
+          "positionMm": [
+            -53.033008589,
+            340,
+            54.4472221514
+          ],
+          "normal": [
+            0.7163488097,
+            0.0,
+            -0.6977423471
+          ],
+          "tangent": [
+            0.6977423471,
+            0.0,
+            0.7163488097
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.8998458996
+        },
+        {
+          "sample": 29,
+          "u": 0.90625,
+          "positionMm": [
+            -41.6677674765,
+            340,
+            64.0231601473
+          ],
+          "normal": [
+            0.5656867676,
+            0.0,
+            -0.8246202041
+          ],
+          "tangent": [
+            0.8246202041,
+            0.0,
+            0.5656867676
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.8260986867
+        },
+        {
+          "sample": 30,
+          "u": 0.9375,
+          "positionMm": [
+            -28.7012574274,
+            340,
+            71.1387240034
+          ],
+          "normal": [
+            0.3913427106,
+            0.0,
+            -0.9202450124
+          ],
+          "tangent": [
+            0.9202450124,
+            0.0,
+            0.3913427106
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.7633019687
+        },
+        {
+          "sample": 31,
+          "u": 0.96875,
+          "positionMm": [
+            -14.6317741512,
+            340,
+            75.520466591
+          ],
+          "normal": [
+            0.2000870524,
+            0.0,
+            -0.9797781236
+          ],
+          "tangent": [
+            0.9797781236,
+            0.0,
+            0.2000870524
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "tangentMagnitudeMm": 14.721199389
+        },
+        {
+          "sample": 32,
+          "u": 1.0,
+          "positionMm": [
+            0.0,
+            340,
+            77.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "tangent": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "knee-0": 1
+          },
+          "junctionID": "JN.0052",
+          "tangentMagnitudeMm": 14.7063875211
+        }
+      ]
+    },
+    {
+      "id": "L-wrist",
+      "owner": "hands:L-wrist",
+      "frame": "hand-1",
+      "unit": "mm",
+      "kind": "overlap",
+      "curveID": "L.wrist.bracer-overlap",
+      "counterparts": [
+        "cloth:F01-L",
+        "cloth:F02-L"
+      ],
+      "sharedCanonical": "ACCESSORY_REGISTRATION.json#curves/L.wrist.bracer-overlap",
+      "skinYRangeMm": [
+        -15,
+        9
+      ],
+      "bracerOpeningYmm": 0,
+      "longitudinalOverlapMm": 9,
+      "bracerInnerRadiiMm": [
+        46,
+        44
+      ],
+      "axisClearanceMm": [
+        16.5,
+        20
+      ],
+      "clothSleeveOpeningYmm": 20,
+      "clothDirectSkinWeld": false,
+      "deformedClearanceValidated": false,
+      "orderedSamples": [
+        {
+          "sample": 0,
+          "u": 0.0,
+          "positionMm": [
+            0.0,
+            0,
+            24.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "tangent": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "junctionID": "JN.0063",
+          "tangentMagnitudeMm": 5.7736107207
+        },
+        {
+          "sample": 1,
+          "u": 0.03125,
+          "positionMm": [
+            -5.7551644995,
+            0,
+            23.5388467297
+          ],
+          "normal": [
+            -0.1597487799,
+            0.0,
+            0.9871577013
+          ],
+          "tangent": [
+            -0.9871577013,
+            0.0,
+            -0.1597487799
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.7368211601
+        },
+        {
+          "sample": 2,
+          "u": 0.0625,
+          "positionMm": [
+            -11.2891612548,
+            0,
+            22.1731087803
+          ],
+          "normal": [
+            -0.3193424425,
+            0.0,
+            0.9476393852
+          ],
+          "tangent": [
+            -0.9476393852,
+            0.0,
+            -0.3193424425
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.6307730758
+        },
+        {
+          "sample": 3,
+          "u": 0.09375,
+          "positionMm": [
+            -16.3893218741,
+            0,
+            19.9552706953
+          ],
+          "normal": [
+            -0.4775978947,
+            0.0,
+            0.87857854
+          ],
+          "tangent": [
+            -0.87857854,
+            0.0,
+            -0.4775978947
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.4683359021
+        },
+        {
+          "sample": 4,
+          "u": 0.125,
+          "positionMm": [
+            -20.859650045,
+            0,
+            16.9705627485
+          ],
+          "normal": [
+            -0.6310874674,
+            0.0,
+            0.7757116787
+          ],
+          "tangent": [
+            -0.7757116787,
+            0.0,
+            -0.6310874674
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.2705159534
+        },
+        {
+          "sample": 5,
+          "u": 0.15625,
+          "positionMm": [
+            -24.5283535629,
+            0,
+            13.3336855925
+          ],
+          "normal": [
+            -0.7727738821,
+            0.0,
+            0.6346814375
+          ],
+          "tangent": [
+            -0.6346814375,
+            0.0,
+            -0.7727738821
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.0652815985
+        },
+        {
+          "sample": 6,
+          "u": 0.1875,
+          "positionMm": [
+            -27.2544462091,
+            0,
+            9.1844023768
+          ],
+          "normal": [
+            -0.8911463271,
+            0.0,
+            0.4537160165
+          ],
+          "tangent": [
+            -0.4537160165,
+            0.0,
+            -0.8911463271
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.884854219
+        },
+        {
+          "sample": 7,
+          "u": 0.21875,
+          "positionMm": [
+            -28.9331657719,
+            0,
+            4.6821677284
+          ],
+          "normal": [
+            -0.9713873525,
+            0.0,
+            0.2375007608
+          ],
+          "tangent": [
+            -0.2375007608,
+            0.0,
+            -0.9713873525
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.7606869811
+        },
+        {
+          "sample": 8,
+          "u": 0.25,
+          "positionMm": [
+            -29.5,
+            0,
+            0.0
+          ],
+          "normal": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "tangent": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.7163540663
+        },
+        {
+          "sample": 9,
+          "u": 0.28125,
+          "positionMm": [
+            -28.9331657719,
+            0,
+            -4.6821677284
+          ],
+          "normal": [
+            -0.9713873525,
+            0.0,
+            -0.2375007608
+          ],
+          "tangent": [
+            0.2375007608,
+            0.0,
+            -0.9713873525
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.7606869811
+        },
+        {
+          "sample": 10,
+          "u": 0.3125,
+          "positionMm": [
+            -27.2544462091,
+            0,
+            -9.1844023768
+          ],
+          "normal": [
+            -0.8911463271,
+            0.0,
+            -0.4537160165
+          ],
+          "tangent": [
+            0.4537160165,
+            0.0,
+            -0.8911463271
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.884854219
+        },
+        {
+          "sample": 11,
+          "u": 0.34375,
+          "positionMm": [
+            -24.5283535629,
+            0,
+            -13.3336855925
+          ],
+          "normal": [
+            -0.7727738821,
+            0.0,
+            -0.6346814375
+          ],
+          "tangent": [
+            0.6346814375,
+            0.0,
+            -0.7727738821
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.0652815985
+        },
+        {
+          "sample": 12,
+          "u": 0.375,
+          "positionMm": [
+            -20.859650045,
+            0,
+            -16.9705627485
+          ],
+          "normal": [
+            -0.6310874674,
+            0.0,
+            -0.7757116787
+          ],
+          "tangent": [
+            0.7757116787,
+            0.0,
+            -0.6310874674
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.2705159534
+        },
+        {
+          "sample": 13,
+          "u": 0.40625,
+          "positionMm": [
+            -16.3893218741,
+            0,
+            -19.9552706953
+          ],
+          "normal": [
+            -0.4775978947,
+            0.0,
+            -0.87857854
+          ],
+          "tangent": [
+            0.87857854,
+            0.0,
+            -0.4775978947
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.4683359021
+        },
+        {
+          "sample": 14,
+          "u": 0.4375,
+          "positionMm": [
+            -11.2891612548,
+            0,
+            -22.1731087803
+          ],
+          "normal": [
+            -0.3193424425,
+            0.0,
+            -0.9476393852
+          ],
+          "tangent": [
+            0.9476393852,
+            0.0,
+            -0.3193424425
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.6307730758
+        },
+        {
+          "sample": 15,
+          "u": 0.46875,
+          "positionMm": [
+            -5.7551644995,
+            0,
+            -23.5388467297
+          ],
+          "normal": [
+            -0.1597487799,
+            0.0,
+            -0.9871577013
+          ],
+          "tangent": [
+            0.9871577013,
+            0.0,
+            -0.1597487799
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.7368211601
+        },
+        {
+          "sample": 16,
+          "u": 0.5,
+          "positionMm": [
+            -0.0,
+            0,
+            -24.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "tangent": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.7736107207
+        },
+        {
+          "sample": 17,
+          "u": 0.53125,
+          "positionMm": [
+            5.7551644995,
+            0,
+            -23.5388467297
+          ],
+          "normal": [
+            0.1597487799,
+            0.0,
+            -0.9871577013
+          ],
+          "tangent": [
+            0.9871577013,
+            0.0,
+            0.1597487799
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.7368211601
+        },
+        {
+          "sample": 18,
+          "u": 0.5625,
+          "positionMm": [
+            11.2891612548,
+            0,
+            -22.1731087803
+          ],
+          "normal": [
+            0.3193424425,
+            0.0,
+            -0.9476393852
+          ],
+          "tangent": [
+            0.9476393852,
+            0.0,
+            0.3193424425
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.6307730758
+        },
+        {
+          "sample": 19,
+          "u": 0.59375,
+          "positionMm": [
+            16.3893218741,
+            0,
+            -19.9552706953
+          ],
+          "normal": [
+            0.4775978947,
+            0.0,
+            -0.87857854
+          ],
+          "tangent": [
+            0.87857854,
+            0.0,
+            0.4775978947
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.4683359021
+        },
+        {
+          "sample": 20,
+          "u": 0.625,
+          "positionMm": [
+            20.859650045,
+            0,
+            -16.9705627485
+          ],
+          "normal": [
+            0.6310874674,
+            0.0,
+            -0.7757116787
+          ],
+          "tangent": [
+            0.7757116787,
+            0.0,
+            0.6310874674
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.2705159534
+        },
+        {
+          "sample": 21,
+          "u": 0.65625,
+          "positionMm": [
+            24.5283535629,
+            0,
+            -13.3336855925
+          ],
+          "normal": [
+            0.7727738821,
+            0.0,
+            -0.6346814375
+          ],
+          "tangent": [
+            0.6346814375,
+            0.0,
+            0.7727738821
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.0652815985
+        },
+        {
+          "sample": 22,
+          "u": 0.6875,
+          "positionMm": [
+            27.2544462091,
+            0,
+            -9.1844023768
+          ],
+          "normal": [
+            0.8911463271,
+            0.0,
+            -0.4537160165
+          ],
+          "tangent": [
+            0.4537160165,
+            0.0,
+            0.8911463271
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.884854219
+        },
+        {
+          "sample": 23,
+          "u": 0.71875,
+          "positionMm": [
+            28.9331657719,
+            0,
+            -4.6821677284
+          ],
+          "normal": [
+            0.9713873525,
+            0.0,
+            -0.2375007608
+          ],
+          "tangent": [
+            0.2375007608,
+            0.0,
+            0.9713873525
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.7606869811
+        },
+        {
+          "sample": 24,
+          "u": 0.75,
+          "positionMm": [
+            29.5,
+            0,
+            -0.0
+          ],
+          "normal": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "tangent": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.7163540663
+        },
+        {
+          "sample": 25,
+          "u": 0.78125,
+          "positionMm": [
+            28.9331657719,
+            0,
+            4.6821677284
+          ],
+          "normal": [
+            0.9713873525,
+            0.0,
+            0.2375007608
+          ],
+          "tangent": [
+            -0.2375007608,
+            0.0,
+            0.9713873525
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.7606869811
+        },
+        {
+          "sample": 26,
+          "u": 0.8125,
+          "positionMm": [
+            27.2544462091,
+            0,
+            9.1844023768
+          ],
+          "normal": [
+            0.8911463271,
+            0.0,
+            0.4537160165
+          ],
+          "tangent": [
+            -0.4537160165,
+            0.0,
+            0.8911463271
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 4.884854219
+        },
+        {
+          "sample": 27,
+          "u": 0.84375,
+          "positionMm": [
+            24.5283535629,
+            0,
+            13.3336855925
+          ],
+          "normal": [
+            0.7727738821,
+            0.0,
+            0.6346814375
+          ],
+          "tangent": [
+            -0.6346814375,
+            0.0,
+            0.7727738821
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.0652815985
+        },
+        {
+          "sample": 28,
+          "u": 0.875,
+          "positionMm": [
+            20.859650045,
+            0,
+            16.9705627485
+          ],
+          "normal": [
+            0.6310874674,
+            0.0,
+            0.7757116787
+          ],
+          "tangent": [
+            -0.7757116787,
+            0.0,
+            0.6310874674
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.2705159534
+        },
+        {
+          "sample": 29,
+          "u": 0.90625,
+          "positionMm": [
+            16.3893218741,
+            0,
+            19.9552706953
+          ],
+          "normal": [
+            0.4775978947,
+            0.0,
+            0.87857854
+          ],
+          "tangent": [
+            -0.87857854,
+            0.0,
+            0.4775978947
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.4683359021
+        },
+        {
+          "sample": 30,
+          "u": 0.9375,
+          "positionMm": [
+            11.2891612548,
+            0,
+            22.1731087803
+          ],
+          "normal": [
+            0.3193424425,
+            0.0,
+            0.9476393852
+          ],
+          "tangent": [
+            -0.9476393852,
+            0.0,
+            0.3193424425
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.6307730758
+        },
+        {
+          "sample": 31,
+          "u": 0.96875,
+          "positionMm": [
+            5.7551644995,
+            0,
+            23.5388467297
+          ],
+          "normal": [
+            0.1597487799,
+            0.0,
+            0.9871577013
+          ],
+          "tangent": [
+            -0.9871577013,
+            0.0,
+            0.1597487799
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "tangentMagnitudeMm": 5.7368211601
+        },
+        {
+          "sample": 32,
+          "u": 1.0,
+          "positionMm": [
+            0.0,
+            0,
+            24.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "tangent": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "hand-1": 1
+          },
+          "junctionID": "JN.0063",
+          "tangentMagnitudeMm": 5.7736107207
+        }
+      ]
+    },
+    {
+      "id": "L-trousers-to-boots",
+      "owner": "boots:L-boot-rim",
+      "additionalOwner": "boots:L-boot-shaft",
+      "frame": "foot-1",
+      "unit": "mm",
+      "kind": "overlap",
+      "curveID": "L.boot.rim-aperture",
+      "counterparts": [
+        "cloth:TR05-L",
+        "cloth:TR01-L",
+        "cloth:TR02-L"
+      ],
+      "sharedCanonical": "ACCESSORY_REGISTRATION.json#curves/L.boot.rim-aperture",
+      "footToKneeTranslationMm": [
+        0,
+        -435,
+        0
+      ],
+      "bootTopFootYmm": 340,
+      "bootTopKneeYmm": -95,
+      "bootInnerStationsMm": [
+        [
+          300,
+          73,
+          75
+        ],
+        [
+          340,
+          75,
+          77
+        ]
+      ],
+      "trouserFootYRangeMm": [
+        300,
+        345
+      ],
+      "trouserRadiiAtBottomTopMm": [
+        [
+          69,
+          71
+        ],
+        [
+          70,
+          72
+        ]
+      ],
+      "longitudinalOverlapMm": 40,
+      "minimumRegisteredAxisClearanceMm": 4,
+      "deformedClearanceValidated": false,
+      "orderedSamples": [
+        {
+          "sample": 0,
+          "u": 0.0,
+          "positionMm": [
+            0.0,
+            340,
+            77.0
+          ],
+          "normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "tangent": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "junctionID": "JN.0109",
+          "tangentMagnitudeMm": 14.7063875211
+        },
+        {
+          "sample": 1,
+          "u": 0.03125,
+          "positionMm": [
+            -14.6317741512,
+            340,
+            75.520466591
+          ],
+          "normal": [
+            0.2000870524,
+            0.0,
+            -0.9797781236
+          ],
+          "tangent": [
+            -0.9797781236,
+            0.0,
+            -0.2000870524
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.721199389
+        },
+        {
+          "sample": 2,
+          "u": 0.0625,
+          "positionMm": [
+            -28.7012574274,
+            340,
+            71.1387240034
+          ],
+          "normal": [
+            0.3913427106,
+            0.0,
+            -0.9202450124
+          ],
+          "tangent": [
+            -0.9202450124,
+            0.0,
+            -0.3913427106
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.7633019687
+        },
+        {
+          "sample": 3,
+          "u": 0.09375,
+          "positionMm": [
+            -41.6677674765,
+            340,
+            64.0231601473
+          ],
+          "normal": [
+            0.5656867676,
+            0.0,
+            -0.8246202041
+          ],
+          "tangent": [
+            -0.8246202041,
+            0.0,
+            -0.5656867676
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.8260986867
+        },
+        {
+          "sample": 4,
+          "u": 0.125,
+          "positionMm": [
+            -53.033008589,
+            340,
+            54.4472221514
+          ],
+          "normal": [
+            0.7163488097,
+            0.0,
+            -0.6977423471
+          ],
+          "tangent": [
+            -0.6977423471,
+            0.0,
+            -0.7163488097
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.8998458996
+        },
+        {
+          "sample": 5,
+          "u": 0.15625,
+          "positionMm": [
+            -62.3602209227,
+            340,
+            42.7789079425
+          ],
+          "normal": [
+            0.8381281532,
+            0.0,
+            -0.5454733713
+          ],
+          "tangent": [
+            -0.5454733713,
+            0.0,
+            -0.8381281532
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.9732441868
+        },
+        {
+          "sample": 6,
+          "u": 0.1875,
+          "positionMm": [
+            -69.2909649383,
+            340,
+            29.4666242921
+          ],
+          "normal": [
+            0.9273678101,
+            0.0,
+            -0.3741509652
+          ],
+          "tangent": [
+            -0.3741509652,
+            0.0,
+            -0.9273678101
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.035198454
+        },
+        {
+          "sample": 7,
+          "u": 0.21875,
+          "positionMm": [
+            -73.5588960302,
+            340,
+            15.0219547952
+          ],
+          "normal": [
+            0.9817436736,
+            0.0,
+            -0.1902087256
+          ],
+          "tangent": [
+            -0.1902087256,
+            0.0,
+            -0.9817436736
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.0764584842
+        },
+        {
+          "sample": 8,
+          "u": 0.25,
+          "positionMm": [
+            -75.0,
+            340,
+            0.0
+          ],
+          "normal": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "tangent": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.0909213278
+        },
+        {
+          "sample": 9,
+          "u": 0.28125,
+          "positionMm": [
+            -73.5588960302,
+            340,
+            -15.0219547952
+          ],
+          "normal": [
+            0.9817436736,
+            0.0,
+            0.1902087256
+          ],
+          "tangent": [
+            0.1902087256,
+            0.0,
+            -0.9817436736
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.0764584842
+        },
+        {
+          "sample": 10,
+          "u": 0.3125,
+          "positionMm": [
+            -69.2909649383,
+            340,
+            -29.4666242921
+          ],
+          "normal": [
+            0.9273678101,
+            0.0,
+            0.3741509652
+          ],
+          "tangent": [
+            0.3741509652,
+            0.0,
+            -0.9273678101
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.035198454
+        },
+        {
+          "sample": 11,
+          "u": 0.34375,
+          "positionMm": [
+            -62.3602209227,
+            340,
+            -42.7789079425
+          ],
+          "normal": [
+            0.8381281532,
+            0.0,
+            0.5454733713
+          ],
+          "tangent": [
+            0.5454733713,
+            0.0,
+            -0.8381281532
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.9732441868
+        },
+        {
+          "sample": 12,
+          "u": 0.375,
+          "positionMm": [
+            -53.033008589,
+            340,
+            -54.4472221514
+          ],
+          "normal": [
+            0.7163488097,
+            0.0,
+            0.6977423471
+          ],
+          "tangent": [
+            0.6977423471,
+            0.0,
+            -0.7163488097
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.8998458996
+        },
+        {
+          "sample": 13,
+          "u": 0.40625,
+          "positionMm": [
+            -41.6677674765,
+            340,
+            -64.0231601473
+          ],
+          "normal": [
+            0.5656867676,
+            0.0,
+            0.8246202041
+          ],
+          "tangent": [
+            0.8246202041,
+            0.0,
+            -0.5656867676
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.8260986867
+        },
+        {
+          "sample": 14,
+          "u": 0.4375,
+          "positionMm": [
+            -28.7012574274,
+            340,
+            -71.1387240034
+          ],
+          "normal": [
+            0.3913427106,
+            0.0,
+            0.9202450124
+          ],
+          "tangent": [
+            0.9202450124,
+            0.0,
+            -0.3913427106
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.7633019687
+        },
+        {
+          "sample": 15,
+          "u": 0.46875,
+          "positionMm": [
+            -14.6317741512,
+            340,
+            -75.520466591
+          ],
+          "normal": [
+            0.2000870524,
+            0.0,
+            0.9797781236
+          ],
+          "tangent": [
+            0.9797781236,
+            0.0,
+            -0.2000870524
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.721199389
+        },
+        {
+          "sample": 16,
+          "u": 0.5,
+          "positionMm": [
+            -0.0,
+            340,
+            -77.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "tangent": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.7063875211
+        },
+        {
+          "sample": 17,
+          "u": 0.53125,
+          "positionMm": [
+            14.6317741512,
+            340,
+            -75.520466591
+          ],
+          "normal": [
+            -0.2000870524,
+            0.0,
+            0.9797781236
+          ],
+          "tangent": [
+            0.9797781236,
+            0.0,
+            0.2000870524
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.721199389
+        },
+        {
+          "sample": 18,
+          "u": 0.5625,
+          "positionMm": [
+            28.7012574274,
+            340,
+            -71.1387240034
+          ],
+          "normal": [
+            -0.3913427106,
+            0.0,
+            0.9202450124
+          ],
+          "tangent": [
+            0.9202450124,
+            0.0,
+            0.3913427106
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.7633019687
+        },
+        {
+          "sample": 19,
+          "u": 0.59375,
+          "positionMm": [
+            41.6677674765,
+            340,
+            -64.0231601473
+          ],
+          "normal": [
+            -0.5656867676,
+            0.0,
+            0.8246202041
+          ],
+          "tangent": [
+            0.8246202041,
+            0.0,
+            0.5656867676
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.8260986867
+        },
+        {
+          "sample": 20,
+          "u": 0.625,
+          "positionMm": [
+            53.033008589,
+            340,
+            -54.4472221514
+          ],
+          "normal": [
+            -0.7163488097,
+            0.0,
+            0.6977423471
+          ],
+          "tangent": [
+            0.6977423471,
+            0.0,
+            0.7163488097
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.8998458996
+        },
+        {
+          "sample": 21,
+          "u": 0.65625,
+          "positionMm": [
+            62.3602209227,
+            340,
+            -42.7789079425
+          ],
+          "normal": [
+            -0.8381281532,
+            0.0,
+            0.5454733713
+          ],
+          "tangent": [
+            0.5454733713,
+            0.0,
+            0.8381281532
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.9732441868
+        },
+        {
+          "sample": 22,
+          "u": 0.6875,
+          "positionMm": [
+            69.2909649383,
+            340,
+            -29.4666242921
+          ],
+          "normal": [
+            -0.9273678101,
+            0.0,
+            0.3741509652
+          ],
+          "tangent": [
+            0.3741509652,
+            0.0,
+            0.9273678101
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.035198454
+        },
+        {
+          "sample": 23,
+          "u": 0.71875,
+          "positionMm": [
+            73.5588960302,
+            340,
+            -15.0219547952
+          ],
+          "normal": [
+            -0.9817436736,
+            0.0,
+            0.1902087256
+          ],
+          "tangent": [
+            0.1902087256,
+            0.0,
+            0.9817436736
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.0764584842
+        },
+        {
+          "sample": 24,
+          "u": 0.75,
+          "positionMm": [
+            75.0,
+            340,
+            -0.0
+          ],
+          "normal": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "tangent": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.0909213278
+        },
+        {
+          "sample": 25,
+          "u": 0.78125,
+          "positionMm": [
+            73.5588960302,
+            340,
+            15.0219547952
+          ],
+          "normal": [
+            -0.9817436736,
+            0.0,
+            -0.1902087256
+          ],
+          "tangent": [
+            -0.1902087256,
+            0.0,
+            0.9817436736
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.0764584842
+        },
+        {
+          "sample": 26,
+          "u": 0.8125,
+          "positionMm": [
+            69.2909649383,
+            340,
+            29.4666242921
+          ],
+          "normal": [
+            -0.9273678101,
+            0.0,
+            -0.3741509652
+          ],
+          "tangent": [
+            -0.3741509652,
+            0.0,
+            0.9273678101
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 15.035198454
+        },
+        {
+          "sample": 27,
+          "u": 0.84375,
+          "positionMm": [
+            62.3602209227,
+            340,
+            42.7789079425
+          ],
+          "normal": [
+            -0.8381281532,
+            0.0,
+            -0.5454733713
+          ],
+          "tangent": [
+            -0.5454733713,
+            0.0,
+            0.8381281532
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.9732441868
+        },
+        {
+          "sample": 28,
+          "u": 0.875,
+          "positionMm": [
+            53.033008589,
+            340,
+            54.4472221514
+          ],
+          "normal": [
+            -0.7163488097,
+            0.0,
+            -0.6977423471
+          ],
+          "tangent": [
+            -0.6977423471,
+            0.0,
+            0.7163488097
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.8998458996
+        },
+        {
+          "sample": 29,
+          "u": 0.90625,
+          "positionMm": [
+            41.6677674765,
+            340,
+            64.0231601473
+          ],
+          "normal": [
+            -0.5656867676,
+            0.0,
+            -0.8246202041
+          ],
+          "tangent": [
+            -0.8246202041,
+            0.0,
+            0.5656867676
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.8260986867
+        },
+        {
+          "sample": 30,
+          "u": 0.9375,
+          "positionMm": [
+            28.7012574274,
+            340,
+            71.1387240034
+          ],
+          "normal": [
+            -0.3913427106,
+            0.0,
+            -0.9202450124
+          ],
+          "tangent": [
+            -0.9202450124,
+            0.0,
+            0.3913427106
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.7633019687
+        },
+        {
+          "sample": 31,
+          "u": 0.96875,
+          "positionMm": [
+            14.6317741512,
+            340,
+            75.520466591
+          ],
+          "normal": [
+            -0.2000870524,
+            0.0,
+            -0.9797781236
+          ],
+          "tangent": [
+            -0.9797781236,
+            0.0,
+            0.2000870524
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "tangentMagnitudeMm": 14.721199389
+        },
+        {
+          "sample": 32,
+          "u": 1.0,
+          "positionMm": [
+            0.0,
+            340,
+            77.0
+          ],
+          "normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "tangent": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "boneWeights": {
+            "knee-1": 1
+          },
+          "junctionID": "JN.0109",
+          "tangentMagnitudeMm": 14.7063875211
+        }
+      ]
+    }
+  ]
+}

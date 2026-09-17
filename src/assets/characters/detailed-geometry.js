@@ -271,8 +271,12 @@ function makeHuman(type,options){
   }
   if(p.cloak){const cape=mesh(chest,cloakGeometry(type==='boss'),m.cloth);cape.name='cape';cape.userData.dynamicSurface=true;}
   if(p.keeper){
-    const staff=group(right,'staff');beam(staff,m.wood,[0,.7,0],[0,-.79,0],.026);
-    mesh(staff,shapes.ring,m.trim,[0,.77,0],[.093,.13,.093]);ellipsoid(staff,m.paper,[0,.77,0],[.05,.069,.047]);
+    // Keep the authored bone order even when the scene supplies rigid equipment.
+    const staff=group(right,'staff');
+    if(!options.omitKeeperStaff){
+      beam(staff,m.wood,[0,.7,0],[0,-.79,0],.026);
+      mesh(staff,shapes.ring,m.trim,[0,.77,0],[.093,.13,.093]);ellipsoid(staff,m.paper,[0,.77,0],[.05,.069,.047]);
+    }
     mesh(chest,shell([[-.76,.31,.21],[-.35,.27,.18],[-.16,.24,.17]]),m.cloth);
     beam(chest,m.trim,[-.18,.45,.135],[.18,.45,.135],.012);
   }
@@ -414,7 +418,8 @@ export function buildActorGeometry(type='player',options={}){
   type=type==='knight'?'soldier':type==='keeper'?'npc':type==='archer'?'ranger':type;
   if(!ACTOR_FAMILIES.includes(type))throw Error(`Unknown Q actor family: ${type}`);
   if(options.theme&&!themes[options.theme])throw Error(`Unknown Q actor theme: ${options.theme}`);
-  const key=`${type}/${options.theme||''}`;
+  if(options.omitKeeperStaff&&type!=='npc')throw Error('Only the keeper has replaceable staff equipment');
+  const key=`${type}/${options.theme||''}/${options.omitKeeperStaff?'without-staff':''}`;
   if(!templates.has(key)){const template=type==='wolf'?makeWolf():makeHuman(type,options);batchJointMeshes(template);bindArticulatedSkin(template);templates.set(key,template);}
   const model=cloneSkeleton(templates.get(key));
   // SkeletonUtils clones each material skin's Skeleton separately. All these

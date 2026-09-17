@@ -1,0 +1,392 @@
+{
+  "at": "2026-09-16T23:54:21.643Z",
+  "source": "docs/evidence/mira-reference-set-v64/head-assembly-registration/interfaces.json",
+  "scope": "Unchanged six existing cubic boundary curves only; no mesh generated",
+  "limits": {
+    "positionToleranceM": 0.00025,
+    "normalToleranceRad": 0.025,
+    "weightTolerance": 0.015
+  },
+  "rows": [
+    {
+      "id": "HI-001",
+      "ownerA": "F05-R",
+      "ownerB": "F07-R",
+      "master129": {
+        "sampleCount": 32769,
+        "maxPositionM": 8.399582195305941e-7,
+        "maxNormalRad": 0.000019435421800727812,
+        "continuousIntervalProof": false
+      },
+      "oldUniform9": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0002090251956996633,
+        "maxNormalRad": 0.003976608245595436,
+        "continuousIntervalProof": false
+      },
+      "selected": {
+        "curveId": "HI-001",
+        "indices": [
+          0,
+          16,
+          32,
+          48,
+          65,
+          81,
+          97,
+          113,
+          128
+        ],
+        "parameter": [
+          0,
+          0.125,
+          0.25,
+          0.375,
+          0.5078125,
+          0.6328125,
+          0.7578125,
+          0.8828125,
+          1
+        ],
+        "maximum": {
+          "positionM": 0.0002047183461449603,
+          "normalRad": 0.00396159569027514,
+          "weight": 0
+        },
+        "limits": {
+          "positionToleranceM": 0.00025,
+          "normalToleranceRad": 0.025,
+          "weightTolerance": 0.015
+        },
+        "sampleCount": 129,
+        "selectedCount": 9,
+        "scope": "supplied master samples only",
+        "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+      },
+      "denseSelected": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.00020542292243154155,
+        "maxNormalRad": 0.003976608245595436,
+        "continuousIntervalProof": false
+      }
+    },
+    {
+      "id": "HI-002",
+      "ownerA": "F07-R",
+      "ownerB": "F09-R",
+      "master129": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0000012758336496699676,
+        "maxNormalRad": 0.00005742802357462736,
+        "continuousIntervalProof": false
+      },
+      "oldUniform9": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0003012012579544857,
+        "maxNormalRad": 0.01032435819743062,
+        "continuousIntervalProof": false
+      },
+      "selected": {
+        "curveId": "HI-002",
+        "indices": [
+          0,
+          14,
+          28,
+          43,
+          59,
+          78,
+          96,
+          113,
+          128
+        ],
+        "parameter": [
+          0,
+          0.109375,
+          0.21875,
+          0.3359375,
+          0.4609375,
+          0.609375,
+          0.75,
+          0.8828125,
+          1
+        ],
+        "maximum": {
+          "positionM": 0.00023312757835198462,
+          "normalRad": 0.0082261723406445,
+          "weight": 0
+        },
+        "limits": {
+          "positionToleranceM": 0.00025,
+          "normalToleranceRad": 0.025,
+          "weightTolerance": 0.015
+        },
+        "sampleCount": 129,
+        "selectedCount": 9,
+        "scope": "supplied master samples only",
+        "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+      },
+      "denseSelected": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.00023316631318753378,
+        "maxNormalRad": 0.008263714631090295,
+        "continuousIntervalProof": false
+      }
+    },
+    {
+      "id": "HI-003",
+      "ownerA": "F09-R",
+      "ownerB": "F11",
+      "master129": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0000010069206505856015,
+        "maxNormalRad": 0.00003275256926073832,
+        "continuousIntervalProof": false
+      },
+      "oldUniform9": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0002533207718662707,
+        "maxNormalRad": 0.007907247961271867,
+        "continuousIntervalProof": false
+      },
+      "selected": {
+        "curveId": "HI-003",
+        "indices": [
+          0,
+          16,
+          24,
+          33,
+          49,
+          65,
+          81,
+          97,
+          113,
+          128
+        ],
+        "parameter": [
+          0,
+          0.125,
+          0.1875,
+          0.2578125,
+          0.3828125,
+          0.5078125,
+          0.6328125,
+          0.7578125,
+          0.8828125,
+          1
+        ],
+        "maximum": {
+          "positionM": 0.00024531277987591214,
+          "normalRad": 0.007784572949809486,
+          "weight": 0
+        },
+        "limits": {
+          "positionToleranceM": 0.00025,
+          "normalToleranceRad": 0.025,
+          "weightTolerance": 0.015
+        },
+        "sampleCount": 129,
+        "selectedCount": 10,
+        "scope": "supplied master samples only",
+        "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+      },
+      "denseSelected": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0002453145188481645,
+        "maxNormalRad": 0.007812461231054162,
+        "continuousIntervalProof": false
+      }
+    },
+    {
+      "id": "HI-004",
+      "ownerA": "F11",
+      "ownerB": "F09-L",
+      "master129": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0000010069206505856015,
+        "maxNormalRad": 0.00003275256926073832,
+        "continuousIntervalProof": false
+      },
+      "oldUniform9": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0002533207718662707,
+        "maxNormalRad": 0.007907247961271867,
+        "continuousIntervalProof": false
+      },
+      "selected": {
+        "curveId": "HI-004",
+        "indices": [
+          0,
+          16,
+          24,
+          33,
+          49,
+          65,
+          81,
+          97,
+          113,
+          128
+        ],
+        "parameter": [
+          0,
+          0.125,
+          0.1875,
+          0.2578125,
+          0.3828125,
+          0.5078125,
+          0.6328125,
+          0.7578125,
+          0.8828125,
+          1
+        ],
+        "maximum": {
+          "positionM": 0.00024531277987591214,
+          "normalRad": 0.007784572949809486,
+          "weight": 0
+        },
+        "limits": {
+          "positionToleranceM": 0.00025,
+          "normalToleranceRad": 0.025,
+          "weightTolerance": 0.015
+        },
+        "sampleCount": 129,
+        "selectedCount": 10,
+        "scope": "supplied master samples only",
+        "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+      },
+      "denseSelected": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0002453145188481645,
+        "maxNormalRad": 0.007812461231054162,
+        "continuousIntervalProof": false
+      }
+    },
+    {
+      "id": "HI-005",
+      "ownerA": "F09-L",
+      "ownerB": "F07-L",
+      "master129": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0000012758336496699676,
+        "maxNormalRad": 0.00005742802357462736,
+        "continuousIntervalProof": false
+      },
+      "oldUniform9": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0003012012579544857,
+        "maxNormalRad": 0.01032435819743062,
+        "continuousIntervalProof": false
+      },
+      "selected": {
+        "curveId": "HI-005",
+        "indices": [
+          0,
+          14,
+          28,
+          43,
+          59,
+          78,
+          96,
+          113,
+          128
+        ],
+        "parameter": [
+          0,
+          0.109375,
+          0.21875,
+          0.3359375,
+          0.4609375,
+          0.609375,
+          0.75,
+          0.8828125,
+          1
+        ],
+        "maximum": {
+          "positionM": 0.00023312757835198462,
+          "normalRad": 0.0082261723406445,
+          "weight": 0
+        },
+        "limits": {
+          "positionToleranceM": 0.00025,
+          "normalToleranceRad": 0.025,
+          "weightTolerance": 0.015
+        },
+        "sampleCount": 129,
+        "selectedCount": 9,
+        "scope": "supplied master samples only",
+        "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+      },
+      "denseSelected": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.00023316631318753378,
+        "maxNormalRad": 0.008263714631090295,
+        "continuousIntervalProof": false
+      }
+    },
+    {
+      "id": "HI-006",
+      "ownerA": "F07-L",
+      "ownerB": "F05-L",
+      "master129": {
+        "sampleCount": 32769,
+        "maxPositionM": 8.399582195305941e-7,
+        "maxNormalRad": 0.000019435421800727812,
+        "continuousIntervalProof": false
+      },
+      "oldUniform9": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.0002090251956996633,
+        "maxNormalRad": 0.003976608245595436,
+        "continuousIntervalProof": false
+      },
+      "selected": {
+        "curveId": "HI-006",
+        "indices": [
+          0,
+          16,
+          32,
+          48,
+          65,
+          81,
+          97,
+          113,
+          128
+        ],
+        "parameter": [
+          0,
+          0.125,
+          0.25,
+          0.375,
+          0.5078125,
+          0.6328125,
+          0.7578125,
+          0.8828125,
+          1
+        ],
+        "maximum": {
+          "positionM": 0.0002047183461449603,
+          "normalRad": 0.00396159569027514,
+          "weight": 0
+        },
+        "limits": {
+          "positionToleranceM": 0.00025,
+          "normalToleranceRad": 0.025,
+          "weightTolerance": 0.015
+        },
+        "sampleCount": 129,
+        "selectedCount": 9,
+        "scope": "supplied master samples only",
+        "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+      },
+      "denseSelected": {
+        "sampleCount": 32769,
+        "maxPositionM": 0.00020542292243154155,
+        "maxNormalRad": 0.003976608245595436,
+        "continuousIntervalProof": false
+      }
+    }
+  ],
+  "wallMs": 878.384079,
+  "newGeometry": 0,
+  "decision": "Canonical adaptive indices can replace independent uniform boundary sampling after full assembly registration; some edges need more samples than existing9 to meet the new numeric error limits.",
+  "limitsOfEvidence": "Dense32769-point checks include between-master values but are not analytic continuous-interval proofs. They say nothing about unregistered surface interiors, references or rendered appearance."
+}

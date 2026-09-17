@@ -1,0 +1,44 @@
+[
+  {
+    "id": "TR01",
+    "raw": "/workspace/scratch/e72662e3b71f/generated_images/exec-ee29ad34-7185-480c-9d9b-609348675ceb.png",
+    "output": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR01-method-b.png",
+    "time": {
+      "ended": "2026-09-16T15:13:33.615Z",
+      "started": "2026-09-16T15:13:09.934Z"
+    },
+    "kind": "surface-only method comparison",
+    "status": "generated-inspected",
+    "referencePaths": [],
+    "prompt": "TR01-method-b-prompt.txt",
+    "bytes": 1640510,
+    "sha256": "a429a8dffe2657aa7907ba5827f90ed164eb1ff442f39949d0b197665b1e0977",
+    "mode": "RGB",
+    "size": [
+      1942,
+      809
+    ],
+    "alphaExtrema": null
+  },
+  {
+    "id": "TR02",
+    "raw": "/workspace/scratch/e72662e3b71f/generated_images/exec-5f58e92f-4c26-4014-88ce-8c4fb6a1442e.png",
+    "output": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/cloth-reference-set/TR02-method-b.png",
+    "time": {
+      "ended": "2026-09-16T15:13:57.673Z",
+      "started": "2026-09-16T15:13:09.934Z"
+    },
+    "kind": "surface-only method comparison",
+    "status": "generated-inspected",
+    "referencePaths": [],
+    "prompt": "TR02-method-b-prompt.txt",
+    "bytes": 1687651,
+    "sha256": "92eda1a1205de61856bdabac7f345e31e9eb29687285e69e8f2f774737162a70",
+    "mode": "RGB",
+    "size": [
+      1536,
+      1024
+    ],
+    "alphaExtrema": null
+  }
+]

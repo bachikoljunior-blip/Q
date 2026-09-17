@@ -1,0 +1,57 @@
+{
+  "identical": true,
+  "files": {
+    "docs/evidence/mira-assembly-v65/head-registration/native-v63-preserved.json": "19276931eb7c1297174aeb42ec5198df6c2873b68962a4ad6ac58b7957b4f41f",
+    "docs/evidence/mira-assembly-v65/head-registration/verification.json": "0257fbda7ba471c33d3a2c3d10c7ccb6d305dae7e9f0f26995e3ecd1b1cd3670",
+    "docs/evidence/mira-assembly-v65/head-registration/registration.json": "b4d3bc3e6137bb92c5dbcbba09d2926c6d49cb134dd6d3b72c405ed579a0eaf4",
+    "docs/evidence/mira-assembly-v65/head-registration/reference-review.json": "afb04475716361fa208bb6c97203c10ab1c7335421e2d79a26e70600d9dcc6d1",
+    "docs/evidence/mira-assembly-v65/head-registration/external-ports.json": "4c77c3edb6fa1734ad7d6a0b824983482c070cf7aa7c21c7b9c552950e8e045d",
+    "docs/evidence/mira-assembly-v65/head-registration/external-neck-contract.json": "0656e4538a6068a782fc840b284b6ffa7f566466e2f26c922fefb15cd92cea5f",
+    "docs/evidence/mira-assembly-v65/head-registration/v1-interface-migration.json": "4139a1e1b5402804c2f62f41eeecc12246023af99010e42f724bcafd6bf0b89b",
+    "docs/evidence/mira-assembly-v65/head-registration/registered-curves.svg": "e625b7e9209151cb1cea047ac8054ad875e966839e95b6cd59827ab5ee86c760",
+    "docs/evidence/mira-assembly-v65/head-registration/registered-curves.png": "50172df5076d52c3bd12a0bf9d61c93a7810ff3dcf80f4cdde0495f7de402873"
+  },
+  "twoRuns": [
+    {
+      "run": 1,
+      "script": "generate.py",
+      "seconds": 1.034898821999377,
+      "exitCode": 0
+    },
+    {
+      "run": 1,
+      "script": "verify.py",
+      "seconds": 0.130287595999107,
+      "exitCode": 0
+    },
+    {
+      "run": 1,
+      "script": "plot.py",
+      "seconds": 2.0543426830008684,
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "script": "generate.py",
+      "seconds": 1.1162084600000526,
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "script": "verify.py",
+      "seconds": 0.18748942899765098,
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "script": "plot.py",
+      "seconds": 1.9434442940000736,
+      "exitCode": 0
+    }
+  ],
+  "scope": "generator + verifier + curve projection; no meshes",
+  "packagingCorrection": {
+    "description": "SVG lines stripped of trailing whitespace by plot generator; two successive SVG hashes identical",
+    "sha256": "e625b7e9209151cb1cea047ac8054ad875e966839e95b6cd59827ab5ee86c760"
+  }
+}

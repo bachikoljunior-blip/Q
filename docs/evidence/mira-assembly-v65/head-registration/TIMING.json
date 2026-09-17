@@ -1,0 +1,99 @@
+{
+  "measuredStartUTC": "2026-09-16T23:28:49+00:00",
+  "startEvidence": "git worktree HEAD reflog creation; excludes uninstrumented initial tool lookup seconds",
+  "recordedEndUTC": "2026-09-16T23:58:52.148560+00:00",
+  "observedWallSeconds": 1803.14856,
+  "segments": [
+    {
+      "start": "2026-09-16T23:28:49+00:00",
+      "end": "2026-09-16T23:31:33+00:00",
+      "seconds": 164,
+      "activities": [
+        "planning",
+        "v1 and raw image reading"
+      ],
+      "individualSplitAvailable": false
+    },
+    {
+      "start": "2026-09-16T23:31:33+00:00",
+      "end": "2026-09-16T23:44:01+00:00",
+      "seconds": 748,
+      "activities": [
+        "numeric design",
+        "generator writing",
+        "initial revisions"
+      ],
+      "individualSplitAvailable": false
+    },
+    {
+      "start": "2026-09-16T23:44:01+00:00",
+      "end": "2026-09-16T23:57:42.917114+00:00",
+      "seconds": 821.917114,
+      "activities": [
+        "repairs",
+        "independent numeric verification",
+        "integrator node-plane correction",
+        "curve projection inspection",
+        "report and reproducibility"
+      ],
+      "individualSplitAvailable": false
+    },
+    {
+      "start": "2026-09-16T23:57:42.917114+00:00",
+      "end": "2026-09-16T23:58:52.148560+00:00",
+      "seconds": 69.231446,
+      "activities": [
+        "SVG whitespace packaging correction",
+        "deterministic plot verification",
+        "Git staging"
+      ],
+      "individualSplitAvailable": false
+    }
+  ],
+  "phaseTimingLimitation": "Planning, raw reading, design, repair and validation were not each timed by separate stopwatches; overlapping combined wall segments are reported honestly, with no invented per-phase seconds.",
+  "finalReproductionSeconds": 6.474763324000378,
+  "scriptRuns": [
+    {
+      "run": 1,
+      "script": "generate.py",
+      "seconds": 1.034898821999377,
+      "exitCode": 0
+    },
+    {
+      "run": 1,
+      "script": "verify.py",
+      "seconds": 0.130287595999107,
+      "exitCode": 0
+    },
+    {
+      "run": 1,
+      "script": "plot.py",
+      "seconds": 2.0543426830008684,
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "script": "generate.py",
+      "seconds": 1.1162084600000526,
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "script": "verify.py",
+      "seconds": 0.18748942899765098,
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "script": "plot.py",
+      "seconds": 1.9434442940000736,
+      "exitCode": 0
+    }
+  ],
+  "meshBuildSeconds": null,
+  "meshBuildStatus": "not invoked",
+  "newMeshes": 0,
+  "newImageCalls": 0,
+  "remoteWrites": 0,
+  "pendingTools": []
+}

@@ -1,0 +1,272 @@
+{
+  "tool": "image_gen.imagegen",
+  "initialCalls": 8,
+  "targetedCorrectionCalls": 5,
+  "returnedCalls": 13,
+  "pendingCalls": 0,
+  "maxTargetedCorrectionsPerSheet": 1,
+  "calls": [
+    {
+      "id": "AHB-01",
+      "end": "2026-09-16T14:26:37.160Z",
+      "start": "2026-09-16T14:24:54.945Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-d88b05ea-b70a-4cfb-b53a-7159aaf83671.png",
+      "copy": "AHB-01-v1.png",
+      "bytes": 2096488,
+      "sha256": "62cbdf71bb17a3adae24fcd4239eb14acbe813ab05eb6471bc4a5fd6ad88ee5b",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "version": 1,
+      "prompt": "prompts/AHB-01-v1.txt",
+      "promptSHA256": "8a1cdc1ef68fa05785d82c5b4a7f5913ff9c61ecd1d1f034405f8c18800ea7e7",
+      "durationSeconds": 102.215
+    },
+    {
+      "id": "AHB-01",
+      "version": 2,
+      "end": "2026-09-16T14:36:25.280Z",
+      "start": "2026-09-16T14:35:37.341Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-a950ab6a-2f65-4cf8-99d0-0a43487a3a79.png",
+      "copy": "AHB-01-v2.png",
+      "bytes": 2061811,
+      "sha256": "e16676da1bde261f67412d9c4cc17a80687b9487c9fbb23d402ad79a2e94fcc1",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "prompt": "prompts/AHB-01-v2.txt",
+      "promptSHA256": "0548ded82f692ca829b26b085196b06f8d378724133b2cc13a1d19c3abcb6c97",
+      "durationSeconds": 47.939
+    },
+    {
+      "id": "AHB-02",
+      "end": "2026-09-16T14:28:33.418Z",
+      "start": "2026-09-16T14:27:46.725Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-4cf62e55-2b0a-44c5-97e1-eb78aabeb2f1.png",
+      "copy": "AHB-02-v1.png",
+      "bytes": 1895552,
+      "sha256": "b6c98cbb0a8a590ad6c1f2ede76b14d44f980e36e570701836d14af5029d3534",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "version": 1,
+      "prompt": "prompts/AHB-02-v1.txt",
+      "promptSHA256": "d8c55370bd39b442cdf9254b76e8dd7f576bcca9d589135aaf07a0d6c8957c3a",
+      "durationSeconds": 46.693
+    },
+    {
+      "id": "AHB-03",
+      "end": "2026-09-16T14:29:29.836Z",
+      "start": "2026-09-16T14:27:46.725Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-be702925-01ce-4b8e-b826-370af80176c3.png",
+      "copy": "AHB-03-v1.png",
+      "bytes": 2077816,
+      "sha256": "c4ee11afe8d61a31949c2028a6f8e39272d7d3cff07352768744591350e362cd",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "version": 1,
+      "prompt": "prompts/AHB-03-v1.txt",
+      "promptSHA256": "586046c51d48e01fd82bc03a66f0be5cdeb2dfb05922e9845ac5cb016687edec",
+      "durationSeconds": 103.111
+    },
+    {
+      "id": "AHB-03",
+      "version": 2,
+      "end": "2026-09-16T14:37:32.300Z",
+      "start": "2026-09-16T14:35:37.341Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-184fb7fe-ec16-4f26-aad2-ec51dec0758e.png",
+      "copy": "AHB-03-v2.png",
+      "bytes": 1924275,
+      "sha256": "a915651b2a4380db645bd6577ccc7b549102e1ab11a7cafabfc896d3d57c514d",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "prompt": "prompts/AHB-03-v2.txt",
+      "promptSHA256": "f2dfdc9c10716e4ca4f9b79d6b44213f085803edbfdcbc34a908f3c404b0c523",
+      "durationSeconds": 114.959
+    },
+    {
+      "id": "AHB-04",
+      "end": "2026-09-16T14:30:23.802Z",
+      "start": "2026-09-16T14:27:46.725Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-555a06d7-e5fe-4be4-a182-d6f5f0be884b.png",
+      "copy": "AHB-04-v1.png",
+      "bytes": 1955600,
+      "sha256": "fe4acc0ced996ddbf2df0a882be65940041f3b4aef73e8b3c6d6883ccb0f3f45",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "version": 1,
+      "prompt": "prompts/AHB-04-v1.txt",
+      "promptSHA256": "dbe7baeea8a2b2e21bf198532741a21915a868209e89c9df4cce0458f63b866f",
+      "durationSeconds": 157.077
+    },
+    {
+      "id": "AHB-05",
+      "end": "2026-09-16T14:25:43.436Z",
+      "start": "2026-09-16T14:24:54.945Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-d4e0742f-f224-4b1e-8a5b-c52774612278.png",
+      "copy": "AHB-05-v1.png",
+      "bytes": 2049678,
+      "sha256": "ed538024843c079be2edd23e7134eb150994e619823efdec8bc8f30d6c360b86",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "version": 1,
+      "prompt": "prompts/AHB-05-v1.txt",
+      "promptSHA256": "4193995bd8125cfacad366d1c15964ff7cb4e3f258af1c0644723b8b218634f0",
+      "durationSeconds": 48.491
+    },
+    {
+      "id": "AHB-05",
+      "version": 2,
+      "end": "2026-09-16T14:36:59.740Z",
+      "start": "2026-09-16T14:35:37.341Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-6b46f607-cad3-480d-935c-b9efdbfe7056.png",
+      "copy": "AHB-05-v2.png",
+      "bytes": 1803997,
+      "sha256": "9d90e19a4e8b4615a6108f7c7162afc00c33b5412699860e79b467524e5643fa",
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "prompt": "prompts/AHB-05-v2.txt",
+      "promptSHA256": "44e5c8a104fabfb06a781312d7bbb98e530bf7a60181ccb0bf373265cf43b4fe",
+      "durationSeconds": 82.399
+    },
+    {
+      "id": "AHB-06",
+      "end": "2026-09-16T14:31:46.673Z",
+      "start": "2026-09-16T14:31:07.060Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-7d624a23-e8ce-4c8e-9034-c979b57110c7.png",
+      "copy": "AHB-06-v1.png",
+      "bytes": 2322916,
+      "sha256": "60c415d8956ae68a28305a9525d9d2346cd7841c274e3d1ef700fb41c4071f9c",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "version": 1,
+      "prompt": "prompts/AHB-06-v1.txt",
+      "promptSHA256": "02af348dc633e6051eb1d2fdf5331dab4c736ae3cd34f2275b0008db4846f6de",
+      "durationSeconds": 39.613
+    },
+    {
+      "id": "AHB-06",
+      "version": 2,
+      "end": "2026-09-16T14:39:32.150Z",
+      "start": "2026-09-16T14:38:34.189Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-4fd1bf2f-0d6d-4753-b955-58e5e98c08e2.png",
+      "copy": "AHB-06-v2.png",
+      "bytes": 2218697,
+      "sha256": "b5c4c124cffe4511fafa34b8f48bfedc376fad99febd952f7d3e52349d4f87ef",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "imageEditedByCode": false,
+      "prompt": "prompts/AHB-06-v2.txt",
+      "promptSHA256": "ba0a0b66d441caf391262ecbda24affc4e4e2c9d2353815033ddd3337781fcd2",
+      "durationSeconds": 57.961
+    },
+    {
+      "id": "AHB-07",
+      "end": "2026-09-16T14:33:36.082Z",
+      "start": "2026-09-16T14:31:07.060Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-b0565f1f-ce9e-4e55-a4a2-0b178f568a1c.png",
+      "copy": "AHB-07-v1.png",
+      "bytes": 2390286,
+      "sha256": "86cdd1fdf3e0c781003c83e4ccece3d1ec2bb08566c39667ad948f42f0ad1f9f",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "version": 1,
+      "prompt": "prompts/AHB-07-v1.txt",
+      "promptSHA256": "4e21407241540a7a358d442368c2f217686247b90b838884f857bb72aa548ef1",
+      "durationSeconds": 149.022
+    },
+    {
+      "id": "AHB-08",
+      "end": "2026-09-16T14:32:39.954Z",
+      "start": "2026-09-16T14:31:07.060Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-e7dc14d6-647a-473f-a91d-4e2b89c49737.png",
+      "copy": "AHB-08-v1.png",
+      "bytes": 2133927,
+      "sha256": "aa7ead17b8a1f0e1b156614abe6fc0df76dd19f47c5156087925e539362f98cc",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "version": 1,
+      "prompt": "prompts/AHB-08-v1.txt",
+      "promptSHA256": "d3d5a410f4ceed9600f650250b392af8a9a22546425edaab5af9b8b7089cd7cb",
+      "durationSeconds": 92.894
+    },
+    {
+      "id": "AHB-08",
+      "version": 2,
+      "end": "2026-09-16T14:40:04.065Z",
+      "start": "2026-09-16T14:38:34.189Z",
+      "state": "returned",
+      "originalPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-1b7c2a62-976f-42c2-86fc-616d5aa828bb.png",
+      "copy": "AHB-08-v2.png",
+      "bytes": 2192399,
+      "sha256": "f2697408c055d0493bbcd4481a15b3d2d372285d5d1e3eaa47bfb2974f3b683f",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "imageEditedByCode": false,
+      "prompt": "prompts/AHB-08-v2.txt",
+      "promptSHA256": "19b15b58987fa3d36444d9aa414e51fb64a63801f0c2e5d435d0c4ecf8b7aa92",
+      "durationSeconds": 89.876
+    }
+  ],
+  "inputs": "Original full PNGs and associated first-sheet outputs were visually referenced. See INPUTS.json and exact saved prompt texts; no raster edited with code.",
+  "originalToolResponseImagesDelivered": true
+}

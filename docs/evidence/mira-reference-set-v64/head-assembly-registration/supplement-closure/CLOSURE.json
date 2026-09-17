@@ -1,0 +1,43 @@
+{
+  "recorded": "2026-09-16T15:24:47.643269+00:00",
+  "baseManifestSHA256": "d1b41758a2cce09d791c83a6c41aa787575fd97bb92ccc18727ceaeba1b4ae7c",
+  "baseFilesVerifiedUnchanged": 15,
+  "supplements": [
+    {
+      "directory": "F21-supplement",
+      "manifestSHA256": "bd2889c2e61a93bea3f5fa18d426cf9d4ab88544f00804b89d9e181d8720d311",
+      "filesExcludingManifest": 4,
+      "bytesExcludingManifest": 2151619
+    },
+    {
+      "directory": "F17-side-supplement",
+      "manifestSHA256": "46945feb2f537e8cc7cfbe6b9f952441544aa543c427262e933b3990c6477b01",
+      "filesExcludingManifest": 7,
+      "bytesExcludingManifest": 3518398
+    },
+    {
+      "directory": "A01a-attachment-supplement",
+      "manifestSHA256": "2c4e7719d92787b9338f87f32be5ea622292141d3e9174558146c4fc90b8d4f7",
+      "filesExcludingManifest": 5,
+      "bytesExcludingManifest": 1939332
+    }
+  ],
+  "selectedImages": 3,
+  "generatedImagesIncludingCorrection": 4,
+  "toolCallsCompleted": 4,
+  "unfinishedCalls": 0,
+  "sourceOrMeshWrites": 0,
+  "referenceSet40_80Modified": false,
+  "proposedF21Revision": [
+    41,
+    82
+  ],
+  "numericCurveRegistration": "next author-design unit; not performed here",
+  "newImageComparison": "F21 new ear-front receiver candidate; F17 single-ridge correspondence; A01a longitudinal attachment visibility",
+  "limits": [
+    "No whole-face closure or exact generated-camera calibration",
+    "No runtime or WebGL evidence",
+    "No skin/eye/hair material adoption",
+    "Independent image/assembly approval pending"
+  ]
+}

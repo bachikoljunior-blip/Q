@@ -8,6 +8,7 @@ import { ExpeditionScene } from './expedition-scene.js';
 import { SALT_REACH } from './world-regions.js';
 import { VillageScene } from './village-scene.js';
 import { createDetailedActor } from './actor-models.js';
+import { createMiraKeeper } from './mira-keeper.js';
 import { surfaceMaterial, clothMaterial, installEnvironmentTextures } from './environment-materials.js';
 import { block, beam, part, batchProp, groundedSupportGeometry, chamferBox, rockGeometry, mountainGeometry, treeTrunkGeometry, distantTreeGeometry, coniferGeometry, broadleafGeometry, grassGeometry, createHouse, createCrate, createHerb, createTent, createCart, createBoat, createBrazier, createLantern } from './environment-models.js';
 import { loadEnvironmentTextures } from './environment-assets.js';
@@ -54,7 +55,7 @@ export class SceneView {
     bakeGroundContact(game.obstacles);this.createSky();
     for(const method of ['createTerrain','createMountains','createVegetation','createWater'])this.createStaticScenery(method);
     this.createStructures();this.createStaticScenery('createCrossing');this.createParticles();
-    this.player=createDetailedActor('player',{groundHeight:groundAt});this.scene.add(this.player.g);this.npc=createDetailedActor('npc',{groundHeight:groundAt});this.npc.g.position.set(7,heightAt(7,80),80);this.npc.g.rotation.y=1.4;this.scene.add(this.npc.g);this.sena=createDetailedActor('sena',{groundHeight:groundAt});this.sena.g.position.set(SENA.x,heightAt(SENA.x,SENA.z),SENA.z);this.sena.g.rotation.y=-1.5;this.scene.add(this.sena.g);
+    this.player=createDetailedActor('player',{groundHeight:groundAt});this.scene.add(this.player.g);this.npc=createMiraKeeper({groundHeight:groundAt});this.npc.g.position.set(7,heightAt(7,80),80);this.npc.g.rotation.y=1.4;this.npc.animate({moving:false},0);this.scene.add(this.npc.g);this.sena=createDetailedActor('sena',{groundHeight:groundAt});this.sena.g.position.set(SENA.x,heightAt(SENA.x,SENA.z),SENA.z);this.sena.g.rotation.y=-1.5;this.scene.add(this.sena.g);
     this.residentModels=new Map();for(const n of game.residents){const model=createDetailedActor(n.role,{groundHeight:groundAt});this.residentModels.set(n.id,model);this.scene.add(model.g);}
     this.village=new VillageScene(this.scene,this.player);this.expeditionScene=new ExpeditionScene(this.scene,groundAt);this.expeditionScene.update(game);this.gatheringScene=new GatheringScene(this.scene,groundAt);this.gatheringScene.update(game);this.vaultScene=new VaultScene(this.scene,game,groundAt,vaultTextures,loadVaultTextures);
     this.telegraphRing=new T.RingGeometry(.7,1,32);this.telegraphArc=new T.RingGeometry(.04,1,32,1,-Math.PI/2-1.5,3);

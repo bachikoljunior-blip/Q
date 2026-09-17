@@ -1,0 +1,44 @@
+{
+  "scope": "Actual new bitmap inspection only; seven files displayed via view_image at original source paths, no pixel edits.",
+  "newInspectedImageCount": 7,
+  "wholeSelectedImageCount": 73,
+  "notNewlyInspectedSelectedImageCount": 66,
+  "files": [
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/F21-supplement/mira-F21-v1.png",
+      "sha256": "1b2e15fb5568cc29124811d3083c4fb12809688be285b36aae862dbdd272bf21",
+      "observation": "Global front is narrow, anatomical-left side is broad; reverse is shown but orientation needs author registration. Placement is in front of ear. No metric scale accepted."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/F17-side-supplement/mira-F17-side-v2.png",
+      "sha256": "742d1b3b6a103f945ed56b6ac80868c0b5797980318e7a089b0301ae2b93d8d4",
+      "observation": "Detached LEFT SIDE shows one lip ridge and recession; FRONT/TOP/3Q retain a single lower-lip surface intent. Left locator faces left. No mouth weld or cavity inferred."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/A01a-attachment-supplement/mira-A01a-attachment-v1.png",
+      "sha256": "4b50e5fa2feb0d4d12e8908a66c7206c9f8284e33e3df827a941886711aac2b7",
+      "observation": "Reverse and reverse 3Q display two longitudinal skin-edge intents and an open rolled strip. The U section is qualitative; its from-above/toward-+X caption is not a global camera basis."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-F17-v2.png",
+      "sha256": "ed060ee2a97891c8fd074093bba2aba6be60e88b09014da661c6c4634832afb6",
+      "observation": "The old detached TRUE SIDE has two projections with an intervening notch, unlike the one-ridge FRONT/3Q. This side is retained as rejected correspondence evidence."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/09-ear-outer-v1.png",
+      "sha256": "e5ca86a123f1396690cf2001d3d1a025e6211015121cd4df03473038055d568e",
+      "observation": "A01a old REVERSE repeats an exposed C rim without two long attachment edges; A01b fork and A03 lobe rows remain local surface references."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/07-front-scalp-v2.png",
+      "sha256": "465638d2e1fa6c859c2bef83ad110f3ae9349616b85c2cf8d90f6a5f353f2cf1",
+      "observation": "S01 BACK locator explicitly says front patch occluded from back; detached reverse is a different, allowed attachment-face panel. S02 has its own posterior locator."
+    },
+    {
+      "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-08-v1.png",
+      "sha256": "aa7ead17b8a1f0e1b156614abe6fc0df76dd19f47c5156087925e539362f98cc",
+      "observation": "AB10 TOP/UNDERSIDE/3Q show a foot-outline ring. Its straight SIDE is not an accepted corresponding sole-following profile. AB09 row belongs to the superseded wrapped-strip version."
+    }
+  ],
+  "limits": "No inherited claim that all 120 types or all 73 images were freshly visually inspected. Prior reviews are attributed source evidence, not a new blind comparison."
+}

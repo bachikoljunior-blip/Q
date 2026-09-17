@@ -1,0 +1,41 @@
+{
+  "status": "stopped; checkpoint saved as unaccepted intermediate",
+  "instruction": "現在できたものを反映して停止して",
+  "receivedVia": "/root/ultra_q_recover_reference_assembly",
+  "canonicalAgent": "/root/ultra_q_recover_reference_assembly/cloth_registration_v65/cloth_image_check",
+  "baseCommit": "9df1730a0ab04228277f5f796e73edc0b13fea23",
+  "recordedUTC": "2026-09-17T00:14:15.801477+00:00",
+  "scope": "docs/evidence/mira-assembly-v65/whole-reference-closure/ only",
+  "writtenBeforeStop": [
+    "build_closure.py",
+    "IMAGE_OBSERVATIONS.json",
+    "INSTANCE_REFERENCE_BINDINGS.json",
+    "WHOLE_REFERENCE_SELECTION.json",
+    "INPUTS.json",
+    "CHECKS.json",
+    "RUN.json"
+  ],
+  "referenceClosureAccepted": false,
+  "fullAssemblyReady": false,
+  "unfinishedTools": [],
+  "lastAsyncTool": {
+    "kind": "exec_command",
+    "sessionID": 36486,
+    "terminalExitCode": 0
+  },
+  "additionalImageInspectionAfterStop": 0,
+  "additionalEnumerationAfterStop": 0,
+  "newVerificationAfterStop": 0,
+  "newGeometry": 0,
+  "runtimeChanges": 0,
+  "remoteOperations": 0,
+  "existingDraftFacts": "Pre-stop draft contains120types/287instances/74unique selected originalPNG paths. This is not final acceptance.",
+  "unresolved": [
+    "Deterministic --check was not run.",
+    "Final whole-reference review report and closure decision were not completed; draft authority pointer REVIEW.md remains unresolved.",
+    "Numerical internal and external-port acceptance belongs to separate reviewers and remains outside this checkpoint.",
+    "Generator still recreates the pre-stop draft; it is not an acceptance command and must not override this stop record."
+  ],
+  "nextPointIfResumed": "Read STOP.json and existing draft before any further work; integrator decides how to resume unfinished whole-reference closure and numeric gates.",
+  "priorCompletedAdapterReview": "4500de5131aa59d9ee6bc2cd7d53fc0f9660c81b already delivered; unchanged"
+}

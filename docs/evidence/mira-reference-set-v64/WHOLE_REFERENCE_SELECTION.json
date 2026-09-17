@@ -1,0 +1,2389 @@
+{
+  "schema": "mira-reference-kit-v64/1",
+  "scope": "Image inventory and explicit selection, before numerical assembly acceptance",
+  "canonical": {
+    "path": "docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png",
+    "sha256": "dcbbc3b81f776a5cf162227eec3aaa9011ed65afaff80a4fcc049f0f44bb26a6",
+    "bytes": 1874282,
+    "meaning": "generated design reference, not rendered game"
+  },
+  "typeCount": 120,
+  "placementCount": 287,
+  "counts": {
+    "head": {
+      "types": 41,
+      "instances": 82
+    },
+    "cloth": {
+      "types": 40,
+      "instances": 96
+    },
+    "hands": {
+      "types": 10,
+      "instances": 56
+    },
+    "boots": {
+      "types": 11,
+      "instances": 34
+    },
+    "staff": {
+      "types": 18,
+      "instances": 19
+    }
+  },
+  "newGeometry": 0,
+  "newRuntimeImports": 0,
+  "allReferencesAssemblyReady": false,
+  "remaining": [
+    "Cloth TR03 four boundary ownerships and numerical connections",
+    "Concrete head/cloth/hand/boot shared curves and placement frames",
+    "Cross-domain neck/collar, cuffs/wrists, pelvis/cloth, trouser/boot and right-hand/staff contracts",
+    "Independent review of the final authored numerical registration"
+  ],
+  "limits": [
+    "Unique IDs and byte preservation do not establish consistent geometry.",
+    "Precise dimensions and shared curves come from explicit author design, not image pixels.",
+    "No WebGL, material, animation or device acceptance is implied."
+  ],
+  "types": [
+    {
+      "id": "head:F01",
+      "group": "head",
+      "instances": [
+        "head:F01-L",
+        "head:F01-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-face-patches-F01-F05-F09-v2.png",
+          "sha256": "bdb78e0536808201b80aca8d1c8505faaec13c88a1577b65d93570a261b56049",
+          "bytes": 1593624,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F03",
+      "group": "head",
+      "instances": [
+        "head:F03-L",
+        "head:F03-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/01-face-transitions-v1.png",
+          "sha256": "743c0c8f4dee78c5d58aa1ede0df25f1ce5564f138e80852b0fdbaf8cc7391c4",
+          "bytes": 1847723,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F05",
+      "group": "head",
+      "instances": [
+        "head:F05-L",
+        "head:F05-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-face-patches-F01-F05-F09-v2.png",
+          "sha256": "bdb78e0536808201b80aca8d1c8505faaec13c88a1577b65d93570a261b56049",
+          "bytes": 1593624,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F07",
+      "group": "head",
+      "instances": [
+        "head:F07-L",
+        "head:F07-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-F07-F11-v2.png",
+          "sha256": "e92542a8696c2adc5af4d4d2754bd726bbf27771d480dc490ac1519ce46fad4d",
+          "bytes": 1764903,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F09",
+      "group": "head",
+      "instances": [
+        "head:F09-L",
+        "head:F09-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-face-patches-F01-F05-F09-v2.png",
+          "sha256": "bdb78e0536808201b80aca8d1c8505faaec13c88a1577b65d93570a261b56049",
+          "bytes": 1593624,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F14",
+      "group": "head",
+      "instances": [
+        "head:F14-L",
+        "head:F14-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/02-nose-v2.png",
+          "sha256": "7b33caa548f89db6ba68d44e8b33aa923c17e6b177491e515e9cb6d3a95983f6",
+          "bytes": 1888019,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F11",
+      "group": "head",
+      "instances": [
+        "head:F11"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-F07-F11-v2.png",
+          "sha256": "e92542a8696c2adc5af4d4d2754bd726bbf27771d480dc490ac1519ce46fad4d",
+          "bytes": 1764903,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F12",
+      "group": "head",
+      "instances": [
+        "head:F12"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/02-nose-v2.png",
+          "sha256": "7b33caa548f89db6ba68d44e8b33aa923c17e6b177491e515e9cb6d3a95983f6",
+          "bytes": 1888019,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F13",
+      "group": "head",
+      "instances": [
+        "head:F13"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/02-nose-v2.png",
+          "sha256": "7b33caa548f89db6ba68d44e8b33aa923c17e6b177491e515e9cb6d3a95983f6",
+          "bytes": 1888019,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F16a",
+      "group": "head",
+      "instances": [
+        "head:F16a"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/03-central-mouth-v1.png",
+          "sha256": "c6d2981eab25c3da606a70c16e98d5ba679dcf4d414b59eb4eac84df79ca6337",
+          "bytes": 1923717,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F16b",
+      "group": "head",
+      "instances": [
+        "head:F16b"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/03-central-mouth-v1.png",
+          "sha256": "c6d2981eab25c3da606a70c16e98d5ba679dcf4d414b59eb4eac84df79ca6337",
+          "bytes": 1923717,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F17",
+      "group": "head",
+      "instances": [
+        "head:F17"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-F17-v2.png",
+          "sha256": "ed060ee2a97891c8fd074093bba2aba6be60e88b09014da661c6c4634832afb6",
+          "bytes": 1811045,
+          "meaning": "generated design reference, not rendered game"
+        },
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/F17-side-supplement/mira-F17-side-v2.png",
+          "sha256": "742d1b3b6a103f945ed56b6ac80868c0b5797980318e7a089b0301ae2b93d8d4",
+          "bytes": 1801257,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:S01",
+      "group": "head",
+      "instances": [
+        "head:S01"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/07-front-scalp-v2.png",
+          "sha256": "465638d2e1fa6c859c2bef83ad110f3ae9349616b85c2cf8d90f6a5f353f2cf1",
+          "bytes": 2207473,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:S02",
+      "group": "head",
+      "instances": [
+        "head:S02"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/07-front-scalp-v2.png",
+          "sha256": "465638d2e1fa6c859c2bef83ad110f3ae9349616b85c2cf8d90f6a5f353f2cf1",
+          "bytes": 2207473,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:S-SIDE",
+      "group": "head",
+      "instances": [
+        "head:S03",
+        "head:S04"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/08-side-rear-scalp-v2.png",
+          "sha256": "d615cbb4fdd5d85f93fe5a3bba5deede07d32bdc4d58bfe79b7a1d4f97c7d535",
+          "bytes": 1947664,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:S05",
+      "group": "head",
+      "instances": [
+        "head:S05"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/08-side-rear-scalp-v2.png",
+          "sha256": "d615cbb4fdd5d85f93fe5a3bba5deede07d32bdc4d58bfe79b7a1d4f97c7d535",
+          "bytes": 1947664,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:A01a",
+      "group": "head",
+      "instances": [
+        "head:A01a-L",
+        "head:A01a-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/09-ear-outer-v1.png",
+          "sha256": "e5ca86a123f1396690cf2001d3d1a025e6211015121cd4df03473038055d568e",
+          "bytes": 2222999,
+          "meaning": "generated design reference, not rendered game"
+        },
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/A01a-attachment-supplement/mira-A01a-attachment-v1.png",
+          "sha256": "4b50e5fa2feb0d4d12e8908a66c7206c9f8284e33e3df827a941886711aac2b7",
+          "bytes": 1933156,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:A01b",
+      "group": "head",
+      "instances": [
+        "head:A01b-L",
+        "head:A01b-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/09-ear-outer-v1.png",
+          "sha256": "e5ca86a123f1396690cf2001d3d1a025e6211015121cd4df03473038055d568e",
+          "bytes": 2222999,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:A02a",
+      "group": "head",
+      "instances": [
+        "head:A02a-L",
+        "head:A02a-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/10-ear-inner-v1.png",
+          "sha256": "cb31d50613cce1716f07fdcad235bdadec37f6b5ba595fb32e6948685fd6237b",
+          "bytes": 2039251,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:A02b",
+      "group": "head",
+      "instances": [
+        "head:A02b-L",
+        "head:A02b-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/10-ear-inner-v1.png",
+          "sha256": "cb31d50613cce1716f07fdcad235bdadec37f6b5ba595fb32e6948685fd6237b",
+          "bytes": 2039251,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:A03",
+      "group": "head",
+      "instances": [
+        "head:A03-L",
+        "head:A03-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/09-ear-outer-v1.png",
+          "sha256": "e5ca86a123f1396690cf2001d3d1a025e6211015121cd4df03473038055d568e",
+          "bytes": 2222999,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:E01",
+      "group": "head",
+      "instances": [
+        "head:E01-L",
+        "head:E01-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/05-eye-and-brow-v2.png",
+          "sha256": "685b8f0cf504b368bfab3107272289057b0407fa958e2ee48d5a617446ee06b0",
+          "bytes": 1920488,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:E02",
+      "group": "head",
+      "instances": [
+        "head:E02-L",
+        "head:E02-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/05-eye-and-brow-v2.png",
+          "sha256": "685b8f0cf504b368bfab3107272289057b0407fa958e2ee48d5a617446ee06b0",
+          "bytes": 1920488,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:E03",
+      "group": "head",
+      "instances": [
+        "head:E03-L",
+        "head:E03-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/06-eyelids-v1.png",
+          "sha256": "f77c07476b3d50750c70c08df867ace8d5750e8e70a7912f4afe9e63156ad4ec",
+          "bytes": 2044237,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:B01",
+      "group": "head",
+      "instances": [
+        "head:B01-L",
+        "head:B01-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/05-eye-and-brow-v2.png",
+          "sha256": "685b8f0cf504b368bfab3107272289057b0407fa958e2ee48d5a617446ee06b0",
+          "bytes": 1920488,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:N01",
+      "group": "head",
+      "instances": [
+        "head:N01"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/11-neck-v2.png",
+          "sha256": "74d7b6831d2f14890599b00ff3a48ea53fce10b5a3c685a328aa256caa5d2448",
+          "bytes": 2097344,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:N02",
+      "group": "head",
+      "instances": [
+        "head:N02"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/11-neck-v2.png",
+          "sha256": "74d7b6831d2f14890599b00ff3a48ea53fce10b5a3c685a328aa256caa5d2448",
+          "bytes": 2097344,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:HT01",
+      "group": "head",
+      "instances": [
+        "head:H01",
+        "head:H02",
+        "head:H03",
+        "head:H04",
+        "head:H09",
+        "head:H10"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/12-hair-front-v2.png",
+          "sha256": "85e5bc80b48b7f829f238303d7d3f30d71d1180e9e9195e82bf4c78b35b4bea0",
+          "bytes": 1931890,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:HT02",
+      "group": "head",
+      "instances": [
+        "head:H05",
+        "head:H06",
+        "head:H07",
+        "head:H08"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/12-hair-front-v2.png",
+          "sha256": "85e5bc80b48b7f829f238303d7d3f30d71d1180e9e9195e82bf4c78b35b4bea0",
+          "bytes": 1931890,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:HT03",
+      "group": "head",
+      "instances": [
+        "head:H11",
+        "head:H12",
+        "head:H14",
+        "head:H15"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/12-hair-front-v2.png",
+          "sha256": "85e5bc80b48b7f829f238303d7d3f30d71d1180e9e9195e82bf4c78b35b4bea0",
+          "bytes": 1931890,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:HT04",
+      "group": "head",
+      "instances": [
+        "head:H13",
+        "head:H16"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/13-hair-back-v1.png",
+          "sha256": "cc316172c47605032a0f963014d03fba2996f1c05b619b66b3f1ed21df17dd4e",
+          "bytes": 2006505,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:HT05",
+      "group": "head",
+      "instances": [
+        "head:H17",
+        "head:H18",
+        "head:H19",
+        "head:H20"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/13-hair-back-v1.png",
+          "sha256": "cc316172c47605032a0f963014d03fba2996f1c05b619b66b3f1ed21df17dd4e",
+          "bytes": 2006505,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:HT06",
+      "group": "head",
+      "instances": [
+        "head:H21",
+        "head:H22",
+        "head:H23",
+        "head:H24"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/13-hair-back-v1.png",
+          "sha256": "cc316172c47605032a0f963014d03fba2996f1c05b619b66b3f1ed21df17dd4e",
+          "bytes": 2006505,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:E04",
+      "group": "head",
+      "instances": [
+        "head:E04-L",
+        "head:E04-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/06-eyelids-v1.png",
+          "sha256": "f77c07476b3d50750c70c08df867ace8d5750e8e70a7912f4afe9e63156ad4ec",
+          "bytes": 2044237,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:E05",
+      "group": "head",
+      "instances": [
+        "head:E05-L",
+        "head:E05-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/04-corners-v1.png",
+          "sha256": "baf34c9e29d596969585d557aab7a605c2f5a17be93fd6a820aa01114d9ea15d",
+          "bytes": 2012380,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F18",
+      "group": "head",
+      "instances": [
+        "head:F18-L",
+        "head:F18-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/01-face-transitions-v1.png",
+          "sha256": "743c0c8f4dee78c5d58aa1ede0df25f1ce5564f138e80852b0fdbaf8cc7391c4",
+          "bytes": 1847723,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F19",
+      "group": "head",
+      "instances": [
+        "head:F19-L",
+        "head:F19-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/01-face-transitions-v1.png",
+          "sha256": "743c0c8f4dee78c5d58aa1ede0df25f1ce5564f138e80852b0fdbaf8cc7391c4",
+          "bytes": 1847723,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F20",
+      "group": "head",
+      "instances": [
+        "head:F20-L",
+        "head:F20-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/04-corners-v1.png",
+          "sha256": "baf34c9e29d596969585d557aab7a605c2f5a17be93fd6a820aa01114d9ea15d",
+          "bytes": 2012380,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F15",
+      "group": "head",
+      "instances": [
+        "head:F15"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/03-central-mouth-v1.png",
+          "sha256": "c6d2981eab25c3da606a70c16e98d5ba679dcf4d414b59eb4eac84df79ca6337",
+          "bytes": 1923717,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:A04",
+      "group": "head",
+      "instances": [
+        "head:A04-L",
+        "head:A04-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-reference-set/10-ear-inner-v1.png",
+          "sha256": "cb31d50613cce1716f07fdcad235bdadec37f6b5ba595fb32e6948685fd6237b",
+          "bytes": 2039251,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed base shape plus any listed local supplement; excluded locators are not coordinates.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "head:F21",
+      "group": "head",
+      "instances": [
+        "head:F21-L",
+        "head:F21-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/head-assembly-registration/F21-supplement/mira-F21-v1.png",
+          "sha256": "1b2e15fb5568cc29124811d3083c4fb12809688be285b36aae862dbdd272bf21",
+          "bytes": 2145438,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Explicit new revision: preauricular patch, separate from the preserved 40-type/80-instance base.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:T01",
+      "group": "cloth",
+      "instances": [
+        "cloth:T01-R",
+        "cloth:T01-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+          "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+          "bytes": 1885563,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "not exact multi-view CAD; swirls/rims rejected; shared edges unresolved Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:T02",
+      "group": "cloth",
+      "instances": [
+        "cloth:T02-R",
+        "cloth:T02-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-01-v2.png",
+          "sha256": "6bb55000c12fb0da11ba3807081bafbcd56af2b669f380abe9b3722f1333306c",
+          "bytes": 1859673,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Ignore generated text left shoulder: rear locator image-right is anatomical Right. Existing author placement is authoritative; no all-panel consistency claim. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:T03",
+      "group": "cloth",
+      "instances": [
+        "cloth:T03-R",
+        "cloth:T03-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-01-v2.png",
+          "sha256": "6bb55000c12fb0da11ba3807081bafbcd56af2b669f380abe9b3722f1333306c",
+          "bytes": 1859673,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Single side surface readable; contour and grain/piping are not measured geometry or material. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:T04",
+      "group": "cloth",
+      "instances": [
+        "cloth:T04-R",
+        "cloth:T04-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-01-v2.png",
+          "sha256": "6bb55000c12fb0da11ba3807081bafbcd56af2b669f380abe9b3722f1333306c",
+          "bytes": 1859673,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Single shoulder saddle readable. Ignore generated HOODIE neighbour text; ARMHOLE from author ledger controls. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:T05",
+      "group": "cloth",
+      "instances": [
+        "cloth:T05-R-front",
+        "cloth:T05-R-rear",
+        "cloth:T05-L-front",
+        "cloth:T05-L-rear"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-02-v1.png",
+          "sha256": "36182e4c7b4aa340d79831b0754444eef1cb082b36902cf1db220f2a681abf20",
+          "bytes": 2047449,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "One crescent patch, not complete annular armhole. Four placements require front/rear adjacency registration. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:S01",
+      "group": "cloth",
+      "instances": [
+        "cloth:S01-R",
+        "cloth:S01-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-02-v1.png",
+          "sha256": "36182e4c7b4aa340d79831b0754444eef1cb082b36902cf1db220f2a681abf20",
+          "bytes": 2047449,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Half-panel with one broad bend; exact shoulder and elbow arc correspondence unmeasured. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:S02",
+      "group": "cloth",
+      "instances": [
+        "cloth:S02-R",
+        "cloth:S02-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/S02-v2.png",
+          "sha256": "191b21af54b8cc7d2f3c1099a0ef35ec4ffcc7077a75909ce3d70fe468af9215",
+          "bytes": 2068089,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Repaired locator shows rear anatomical Right upper arm; not front S01. Exact cut contours remain author registration. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:S03",
+      "group": "cloth",
+      "instances": [
+        "cloth:S03-R",
+        "cloth:S03-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/S03-v2.png",
+          "sha256": "01aa626ca1940ad8662d4eab2397aba762f1257e390d599c90f82e73da326e37",
+          "bytes": 1880151,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "One-fold topology agrees. Image remains taller than old 180x90 nominal author ratio; this is uncalibrated aspect/scale, not proof of a different topology. Final author width/height and fold depth must be registered together before mesh. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:S04",
+      "group": "cloth",
+      "instances": [
+        "cloth:S04-R",
+        "cloth:S04-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-03-v1.png",
+          "sha256": "250c76f9fcaa650bef57b7c53e7425203012357f6afe1b6c81e733b9552ff987",
+          "bytes": 1917813,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Single concave gusset; elbow seam lengths unmeasured. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:S05",
+      "group": "cloth",
+      "instances": [
+        "cloth:S05-R",
+        "cloth:S05-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+          "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+          "bytes": 1885563,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "not exact multi-view CAD; swirls/rims rejected; shared edges unresolved Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:S06",
+      "group": "cloth",
+      "instances": [
+        "cloth:S06-R",
+        "cloth:S06-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/S06-v2.png",
+          "sha256": "6b569ec4c96b5da70b7abc65ffa2750d65ccacb6671a065ff2fff081154465a5",
+          "bytes": 1669268,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": " Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:C01",
+      "group": "cloth",
+      "instances": [
+        "cloth:C01-R",
+        "cloth:C01-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/C01-v2.png",
+          "sha256": "ae5dad88812d11858129bbd887eb6c18442b027313338b50e7ac961719865406",
+          "bytes": 1424707,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Front collar half is readable; illustrated angular sweep not a measured 90-degree arc. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:C02",
+      "group": "cloth",
+      "instances": [
+        "cloth:C02-C"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-04-v1.png",
+          "sha256": "ea4a70f37ec9a4933194b2652e292dcf90f19156ca6f64da7839becb7435cfde",
+          "bytes": 1980460,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Rear curved stand-collar strip; exact end angles and wall thickness not measured. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:W01",
+      "group": "cloth",
+      "instances": [
+        "cloth:W01-0",
+        "cloth:W01-1",
+        "cloth:W01-2"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/W01-v2.png",
+          "sha256": "e89dec51440d51f46b30bd4ce90992628af90ee38b5436bae85b338139af6d17",
+          "bytes": 1209373,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Corrected from multiple pleats to one U fold. Three layer instances are author placements, not three different shapes. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:W02",
+      "group": "cloth",
+      "instances": [
+        "cloth:W02-R",
+        "cloth:W02-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/W02-v2.png",
+          "sha256": "ce3651f4d19d49b2afc68d224fd4fe200d91b3ebff1f9424ddf390314e0701e7",
+          "bytes": 1650172,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Corrected from entire scarf to one shoulder bridge. Brooch attachment is separate. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:W03",
+      "group": "cloth",
+      "instances": [
+        "cloth:W03-0",
+        "cloth:W03-1",
+        "cloth:W03-2"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/W03-v2.png",
+          "sha256": "edc2f90888e4ebeeb37ee35884964ddef6701e09d5bc0e7e0a12db8bc63dbe26",
+          "bytes": 1254441,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Corrected to one V strip. Context lacks individual layer highlight; author 3-layer mapping controls. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:P01",
+      "group": "cloth",
+      "instances": [
+        "cloth:P01-R",
+        "cloth:P01-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-micro-v61/references/cloth/mira-cloth-three-micro-parts-v2.png",
+          "sha256": "8af4e2f24dbd3113d126c6eeac6e6d351fa210b12819fe283a8d86164bf7d5bc",
+          "bytes": 1885563,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "not exact multi-view CAD; swirls/rims rejected; shared edges unresolved Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:P02",
+      "group": "cloth",
+      "instances": [
+        "cloth:P02-R",
+        "cloth:P02-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-cloth-join-v64/mira-cape-adjacent-parts-v2.png",
+          "sha256": "409535188a6e448e7fb59f415be5302e49513024e429edb3e9d49f85d4fbee4a",
+          "bytes": 1875444,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "profile/3q depth not exactly reconciled; no measured dimensions Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:P03",
+      "group": "cloth",
+      "instances": [
+        "cloth:P03-R",
+        "cloth:P03-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/P03-v2.png",
+          "sha256": "b1fd5e177089c695d7f357633f8100a721a935dd4cead920f8800b79420d918b",
+          "bytes": 1575035,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Corrected placement to outer cape edge, staff side, rather than tunic split. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:P04",
+      "group": "cloth",
+      "instances": [
+        "cloth:P04-R",
+        "cloth:P04-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/P04-v2.png",
+          "sha256": "2f547c0754f5d9d3508b2c37d06d24fba3fda01f018daca8d07b24079db0f63d",
+          "bytes": 1509187,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Corrected entire cowl into single shoulder saddle; older P04-RB image covers only back subdivision, not whole type. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:L01",
+      "group": "cloth",
+      "instances": [
+        "cloth:L01-R",
+        "cloth:L01-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/L01-v2.png",
+          "sha256": "27f482e1587da82b1dc5fc2c67c8a9524c8d3343ff6a4648d884bbfc98df543b",
+          "bytes": 1993573,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Corrected pair of panels to one front half. No second front wall is present. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:L02",
+      "group": "cloth",
+      "instances": [
+        "cloth:L02-R",
+        "cloth:L02-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/L02-v2.png",
+          "sha256": "75055d823970683cd8e41305b64118655ff65d98980a9083299d4ed9cb1c24c2",
+          "bytes": 1984324,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Corrected full-width rear to one quarter. Context unhighlighted; rear quarter mapping comes from canonical and ledger. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:L03",
+      "group": "cloth",
+      "instances": [
+        "cloth:L03-R",
+        "cloth:L03-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/L03-v2.png",
+          "sha256": "0c8d756575df48931788f18ffc13261be99c8fe84413765a40df8e3fc19162fa",
+          "bytes": 1804971,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Corrected doubled return wall into one panel; decorative edge rolls are excluded. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:L04",
+      "group": "cloth",
+      "instances": [
+        "cloth:L04-R",
+        "cloth:L04-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-07-v1.png",
+          "sha256": "6a00837ee926e9941d2d5f2e751ea4fc885b4601e461ada4baad6bb84cc5dfd0",
+          "bytes": 1806963,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "One turnback strip; thick drawn rim is illustrative, not runtime thickness. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:L05",
+      "group": "cloth",
+      "instances": [
+        "cloth:L05-front-R",
+        "cloth:L05-front-L",
+        "cloth:L05-side-R",
+        "cloth:L05-side-L",
+        "cloth:L05-rear-R",
+        "cloth:L05-rear-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-07-v1.png",
+          "sha256": "6a00837ee926e9941d2d5f2e751ea4fc885b4601e461ada4baad6bb84cc5dfd0",
+          "bytes": 1806963,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Tunic hem only, not cape hem. Shared adjacent ends are not independent solid caps. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:B01",
+      "group": "cloth",
+      "instances": [
+        "cloth:B01-front-R",
+        "cloth:B01-front-L",
+        "cloth:B01-rear-R",
+        "cloth:B01-rear-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-08-v1.png",
+          "sha256": "40097bcc008935c4a11763c28c8d5b4a52b6f9e6f3917954e3acc9cf3d4e53bb",
+          "bytes": 1928325,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Leather segment remains separate from trouser fabric TR04. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:B02",
+      "group": "cloth",
+      "instances": [
+        "cloth:B02-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-08-v1.png",
+          "sha256": "40097bcc008935c4a11763c28c8d5b4a52b6f9e6f3917954e3acc9cf3d4e53bb",
+          "bytes": 1928325,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Legacy B02-R ID retained; canonical hanging tail is anatomical Left (+X), front image-right. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:B03",
+      "group": "cloth",
+      "instances": [
+        "cloth:B03-buckle-C",
+        "cloth:B03-hanger-R"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-08-v1.png",
+          "sha256": "40097bcc008935c4a11763c28c8d5b4a52b6f9e6f3917954e3acc9cf3d4e53bb",
+          "bytes": 1928325,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Two scale instances; hanger legacy R alias maps Left (+X). Exact ring proportions/pin clearance unresolved. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:B04",
+      "group": "cloth",
+      "instances": [
+        "cloth:B04-C"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-09-v1.png",
+          "sha256": "393bd8dc8f01537f4d752f073963c174fd3ac078b178b64fd4b44a47766156e6",
+          "bytes": 2006352,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Single pin/hinge part; belt-hole contact needs author fit. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:F01",
+      "group": "cloth",
+      "instances": [
+        "cloth:F01-R",
+        "cloth:F01-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-09-v1.png",
+          "sha256": "393bd8dc8f01537f4d752f073963c174fd3ac078b178b64fd4b44a47766156e6",
+          "bytes": 2006352,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Open front half-shell readable; thick edge rims excluded. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:F02",
+      "group": "cloth",
+      "instances": [
+        "cloth:F02-R",
+        "cloth:F02-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-09-v1.png",
+          "sha256": "393bd8dc8f01537f4d752f073963c174fd3ac078b178b64fd4b44a47766156e6",
+          "bytes": 2006352,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Open rear half-shell readable; mirror shares shape, not automatically mirrored twist or winding. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:F03",
+      "group": "cloth",
+      "instances": [
+        "cloth:F03-R-0",
+        "cloth:F03-R-1",
+        "cloth:F03-R-2",
+        "cloth:F03-L-0",
+        "cloth:F03-L-1",
+        "cloth:F03-L-2"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/F03-v2.png",
+          "sha256": "9dc81ba31e72ddbf1b0fc1594e805cb399859bf2ba478bfab9c75a3cd01b0d99",
+          "bytes": 1484672,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Shape is one ribbon. Old front/rear locator sides conflict; repaired contexts lack a precise highlighted strip. Discard both locator claims; use canonical wrists plus author R=-X/L=+X and wrap order. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:F04",
+      "group": "cloth",
+      "instances": [
+        "cloth:F04-R",
+        "cloth:F04-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/F04-v2.png",
+          "sha256": "b5c28dc961e64afcdcc8e1eb26e4183dcab3e780b9b173462da45614778dffe7",
+          "bytes": 1467723,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Corrected double-convex profile to a thin concave-backed dome. Exact thickness/contact with F05 unresolved. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:F05",
+      "group": "cloth",
+      "instances": [
+        "cloth:F05-R",
+        "cloth:F05-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/cloth-10-v1.png",
+          "sha256": "0ee71d6ebad812bd175d4136445027ca3aca659f63bff6080fc5bf8e4617f47d",
+          "bytes": 1896140,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Separate rim with central opening; F04 seat is author fit. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:TR01",
+      "group": "cloth",
+      "instances": [
+        "cloth:TR01-R",
+        "cloth:TR01-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/TR01-method-b.png",
+          "sha256": "a429a8dffe2657aa7907ba5827f90ed164eb1ff442f39949d0b197665b1e0977",
+          "bytes": 1640510,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "v1/v2 closed-ankle topology rejected. Method B is an open one-surface reference; blue-grey is proxy only. Upper cutout location and TR03 mating edges are not yet registered to actual trouser contours. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:TR02",
+      "group": "cloth",
+      "instances": [
+        "cloth:TR02-R",
+        "cloth:TR02-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/TR02-method-b.png",
+          "sha256": "92eda1a1205de61856bdabac7f345e31e9eb29687285e69e8f2f774737162a70",
+          "bytes": 1687651,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "v1/v2 mixed open/closed views rejected. Method B open surface class readable; seat/crotch contour and matching TR01 seams still require author registration. Proxy blue-grey is not canonical colour. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:TR03",
+      "group": "cloth",
+      "instances": [
+        "cloth:TR03-C"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/TR03-v2.png",
+          "sha256": "875cf46b6a524d29f1392308ee55cfba8a6c3e7fd72593b7ba88d7b6ee3496fb",
+          "bytes": 2049419,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "One curved diamond patch visible; exact saddle curvature and four seam lengths must match both front/rear leg pieces, not duplicate their crotch region. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:TR04",
+      "group": "cloth",
+      "instances": [
+        "cloth:TR04-front-R",
+        "cloth:TR04-front-L",
+        "cloth:TR04-rear-R",
+        "cloth:TR04-rear-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/TR04-v2.png",
+          "sha256": "850e1dae61e856a18745128dc270585b3702ec91b675af10d1571ff1682446c8",
+          "bytes": 2023820,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fabric waist arc only; not external leather belt. Four instances share endpoints; no independent end caps. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:TR05",
+      "group": "cloth",
+      "instances": [
+        "cloth:TR05-R",
+        "cloth:TR05-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/TR05-v1.png",
+          "sha256": "b7afe4303310d4dbcef9411a0f3ca7ef20b87c51ee2a78aa53a2de1baeedb0dd",
+          "bytes": 1926742,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Cloth underlap inside boots only. Joint with TR01/TR02 and overlap depth with AB07/AB08 not measured. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "cloth:PH01",
+      "group": "cloth",
+      "instances": [
+        "cloth:PH01-P01-R",
+        "cloth:PH01-P01-L",
+        "cloth:PH01-P02-R",
+        "cloth:PH01-P02-L",
+        "cloth:PH01-P03-R",
+        "cloth:PH01-P03-L"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/PH01-v1.png",
+          "sha256": "2a9dc2184fa51daca9151d1bbec92510b932dc40cc3887fd76be3a85b47095c1",
+          "bytes": 2025999,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Cape-specific hem only. Ignore generated swirl texture/rolled thickness; share P01/P02/P03 hem and endpoints, no capped independent solids. Nominal dimensions are author choices, not measurements of generated pixels.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH01",
+      "group": "hands",
+      "instances": [
+        "hands:R-palm",
+        "hands:L-palm"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-01-v2.png",
+          "sha256": "e16676da1bde261f67412d9c4cc17a80687b9487c9fbb23d402ad79a2e94fcc1",
+          "bytes": 2061811,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH02",
+      "group": "hands",
+      "instances": [
+        "hands:R-back",
+        "hands:L-back"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-01-v2.png",
+          "sha256": "e16676da1bde261f67412d9c4cc17a80687b9487c9fbb23d402ad79a2e94fcc1",
+          "bytes": 2061811,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH03",
+      "group": "hands",
+      "instances": [
+        "hands:R-thenar",
+        "hands:L-thenar"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-01-v2.png",
+          "sha256": "e16676da1bde261f67412d9c4cc17a80687b9487c9fbb23d402ad79a2e94fcc1",
+          "bytes": 2061811,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH04",
+      "group": "hands",
+      "instances": [
+        "hands:R-ulnar",
+        "hands:L-ulnar"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-02-v1.png",
+          "sha256": "b6c98cbb0a8a590ad6c1f2ede76b14d44f980e36e570701836d14af5029d3534",
+          "bytes": 1895552,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH05",
+      "group": "hands",
+      "instances": [
+        "hands:R-web-index-middle",
+        "hands:R-web-middle-ring",
+        "hands:R-web-ring-little",
+        "hands:L-web-index-middle",
+        "hands:L-web-middle-ring",
+        "hands:L-web-ring-little"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-02-v1.png",
+          "sha256": "b6c98cbb0a8a590ad6c1f2ede76b14d44f980e36e570701836d14af5029d3534",
+          "bytes": 1895552,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH06",
+      "group": "hands",
+      "instances": [
+        "hands:R-index-proximal",
+        "hands:R-index-middle",
+        "hands:R-middle-proximal",
+        "hands:R-middle-middle",
+        "hands:R-ring-proximal",
+        "hands:R-ring-middle",
+        "hands:R-little-proximal",
+        "hands:R-little-middle",
+        "hands:R-thumb-proximal",
+        "hands:L-index-proximal",
+        "hands:L-index-middle",
+        "hands:L-middle-proximal",
+        "hands:L-middle-middle",
+        "hands:L-ring-proximal",
+        "hands:L-ring-middle",
+        "hands:L-little-proximal",
+        "hands:L-little-middle",
+        "hands:L-thumb-proximal"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-03-v1.png",
+          "sha256": "c4ee11afe8d61a31949c2028a6f8e39272d7d3cff07352768744591350e362cd",
+          "bytes": 2077816,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH07",
+      "group": "hands",
+      "instances": [
+        "hands:R-index-tip",
+        "hands:R-middle-tip",
+        "hands:R-ring-tip",
+        "hands:R-little-tip",
+        "hands:R-thumb-tip",
+        "hands:L-index-tip",
+        "hands:L-middle-tip",
+        "hands:L-ring-tip",
+        "hands:L-little-tip",
+        "hands:L-thumb-tip"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-boundary-references/AH07-bare-seat-v1.png",
+          "sha256": "590fff116383ed2b15fca34846f5ec56afa6d5499475a0def96e05e46ea72d8c",
+          "bytes": 1929112,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH08",
+      "group": "hands",
+      "instances": [
+        "hands:R-index-nail",
+        "hands:R-middle-nail",
+        "hands:R-ring-nail",
+        "hands:R-little-nail",
+        "hands:R-thumb-nail",
+        "hands:L-index-nail",
+        "hands:L-middle-nail",
+        "hands:L-ring-nail",
+        "hands:L-little-nail",
+        "hands:L-thumb-nail"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-supplement/AH08-nail-plate-v2.png",
+          "sha256": "d8f03ecdb3efd76ade20cac6a270b222cc02ad0ab2ee3da5c1df3cb976946f81",
+          "bytes": 1825130,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH09",
+      "group": "hands",
+      "instances": [
+        "hands:R-first-web",
+        "hands:L-first-web"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-02-v1.png",
+          "sha256": "b6c98cbb0a8a590ad6c1f2ede76b14d44f980e36e570701836d14af5029d3534",
+          "bytes": 1895552,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "hands:AH10",
+      "group": "hands",
+      "instances": [
+        "hands:R-wrist",
+        "hands:L-wrist"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-supplement/AH10-wrist-sleeve-v2.png",
+          "sha256": "27c20062318f4dfe36245cad8f2d5d2403996150f99faed079f1577df476e294",
+          "bytes": 1918397,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB01",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-sole",
+        "boots:L-boot-sole"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-boundary-references/AB01-thin-outsole-v1.png",
+          "sha256": "d422406e07fc7cee3e8af4e376365d383b74bd002954327a1837272745c9a7e3",
+          "bytes": 1693074,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB02",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-heel",
+        "boots:L-boot-heel"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-boundary-references/AB02-empty-heel-v1.png",
+          "sha256": "a22276520c11f8003b44e55f805c5de672b6829a2366aa22d073d15e274fe0b1",
+          "bytes": 2213292,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB03",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-vamp",
+        "boots:L-boot-vamp"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-supplement/AB03-open-patch-v3.png",
+          "sha256": "59447625cc4570ed5d7cbee7ca8a8653b28ba2cdad6106fed7a28364365c1cb4",
+          "bytes": 2142927,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB04",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-toe",
+        "boots:L-boot-toe"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-06-v1.png",
+          "sha256": "60c415d8956ae68a28305a9525d9d2346cd7841c274e3d1ef700fb41c4071f9c",
+          "bytes": 2322916,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB05",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-quarter-inner",
+        "boots:R-boot-quarter-outer",
+        "boots:L-boot-quarter-inner",
+        "boots:L-boot-quarter-outer"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-06-v2.png",
+          "sha256": "b5c4c124cffe4511fafa34b8f48bfedc376fad99febd952f7d3e52349d4f87ef",
+          "bytes": 2218697,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB06",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-heel-back",
+        "boots:L-boot-heel-back"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-07-v1.png",
+          "sha256": "86cdd1fdf3e0c781003c83e4ccece3d1ec2bb08566c39667ad948f42f0ad1f9f",
+          "bytes": 2390286,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB07",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-shaft",
+        "boots:L-boot-shaft"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-07-v1.png",
+          "sha256": "86cdd1fdf3e0c781003c83e4ccece3d1ec2bb08566c39667ad948f42f0ad1f9f",
+          "bytes": 2390286,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB08",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-rim",
+        "boots:L-boot-rim"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-07-v1.png",
+          "sha256": "86cdd1fdf3e0c781003c83e4ccece3d1ec2bb08566c39667ad948f42f0ad1f9f",
+          "bytes": 2390286,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB09",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-wrap-shaft-a",
+        "boots:R-boot-wrap-shaft-b",
+        "boots:R-boot-wrap-instep",
+        "boots:L-boot-wrap-shaft-a",
+        "boots:L-boot-wrap-shaft-b",
+        "boots:L-boot-wrap-instep"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-08-v2.png",
+          "sha256": "f2697408c055d0493bbcd4481a15b3d2d372285d5d1e3eaa47bfb2974f3b683f",
+          "bytes": 2192399,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB10",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-welt",
+        "boots:L-boot-welt"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-08-v1.png",
+          "sha256": "aa7ead17b8a1f0e1b156614abe6fc0df76dd19f47c5156087925e539362f98cc",
+          "bytes": 2133927,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "boots:AB11",
+      "group": "boots",
+      "instances": [
+        "boots:R-boot-fastener-1",
+        "boots:R-boot-fastener-2",
+        "boots:R-boot-fastener-3",
+        "boots:R-boot-fastener-4",
+        "boots:L-boot-fastener-1",
+        "boots:L-boot-fastener-2",
+        "boots:L-boot-fastener-3",
+        "boots:L-boot-fastener-4"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/accessory-reference-set/AHB-05-v1.png",
+          "sha256": "ed538024843c079be2edd23e7134eb150994e619823efdec8bc8f30d6c360b86",
+          "bytes": 2049678,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "Fixed original or locally corrected shape selection; numerical joins and triangle contact remain separate.",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S01",
+      "group": "staff",
+      "instances": [
+        "staff:S01"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-staff-v63/references/shaft-foot-v1.png",
+          "sha256": "cb87b32ddc39df04ab3898a532ed253f0f4c48140f5e1419dbad11a5210e6760",
+          "bytes": 1868223,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: S03 front label uses face orientation; exact assembly axes come from authored specification",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S02",
+      "group": "staff",
+      "instances": [
+        "staff:S02"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-staff-v63/references/shaft-foot-v1.png",
+          "sha256": "cb87b32ddc39df04ab3898a532ed253f0f4c48140f5e1419dbad11a5210e6760",
+          "bytes": 1868223,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: S03 front label uses face orientation; exact assembly axes come from authored specification",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S03",
+      "group": "staff",
+      "instances": [
+        "staff:S03"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-staff-v63/references/shaft-foot-v1.png",
+          "sha256": "cb87b32ddc39df04ab3898a532ed253f0f4c48140f5e1419dbad11a5210e6760",
+          "bytes": 1868223,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: S03 front label uses face orientation; exact assembly axes come from authored specification",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S04",
+      "group": "staff",
+      "instances": [
+        "staff:S04"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-staff-v63/references/grip-strips-v1.png",
+          "sha256": "4b7cd0a7a445fd5d6595c5dda4947078ab49eb6953eb4dfc54f458a01f3ee5f8",
+          "bytes": 1971203,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: S05 region of this sheet excluded; isolated S04 only",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S05",
+      "group": "staff",
+      "instances": [
+        "staff:S05-A",
+        "staff:S05-B"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/staff-reference-set/S05-flat-blank-v2.png",
+          "sha256": "b29dfea136239d427049cc517a64d38eeab795a8968a7e6b3996b6c016f4baf8",
+          "bytes": 1791930,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: flat blank type replaces inconsistent pre-wound helix; aspect not calibrated, assembly winding/edge strain separately authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S06",
+      "group": "staff",
+      "instances": [
+        "staff:S06"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-staff-v63/references/collars-neck-v1.png",
+          "sha256": "cd97eb9d416488f8d59ecc0eea395a4f9d5f2e50b3dc2af7ae78e403dd35e3a5",
+          "bytes": 2390637,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: thumbnail swaps S17/S18 and is explicitly excluded; actual S17 lower/S18 upper",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S07",
+      "group": "staff",
+      "instances": [
+        "staff:S07"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-lantern-v63/references/lower-cup-ring-glass-v1.png",
+          "sha256": "1225a270841c4755e2de630ab746dc49f899102ff80de915c6ccc079a74dccbc",
+          "bytes": 1725935,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: only cup/ring rows; old S16 lip is excluded; internal cradle authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S08",
+      "group": "staff",
+      "instances": [
+        "staff:S08"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-lantern-v63/references/lower-cup-ring-glass-v1.png",
+          "sha256": "1225a270841c4755e2de630ab746dc49f899102ff80de915c6ccc079a74dccbc",
+          "bytes": 1725935,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: only cup/ring rows; old S16 lip is excluded; internal cradle authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S09",
+      "group": "staff",
+      "instances": [
+        "staff:S09"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/staff-reference-set/staff-ribs-top-corrected-v3.png",
+          "sha256": "09764b88da5fcc3325466131cc24d2b789a4f9f93ef972c0275d3ca26fd66535",
+          "bytes": 1538050,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: overlapping endpoints now project onto one TOP pad; precise magnification and pad curves remain authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S10",
+      "group": "staff",
+      "instances": [
+        "staff:S10"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/staff-reference-set/staff-ribs-top-corrected-v3.png",
+          "sha256": "09764b88da5fcc3325466131cc24d2b789a4f9f93ef972c0275d3ca26fd66535",
+          "bytes": 1538050,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: overlapping endpoints now project onto one TOP pad; precise magnification and pad curves remain authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S11",
+      "group": "staff",
+      "instances": [
+        "staff:S11"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/staff-reference-set/staff-ribs-top-corrected-v3.png",
+          "sha256": "09764b88da5fcc3325466131cc24d2b789a4f9f93ef972c0275d3ca26fd66535",
+          "bytes": 1538050,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: overlapping endpoints now project onto one TOP pad; precise magnification and pad curves remain authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S12",
+      "group": "staff",
+      "instances": [
+        "staff:S12"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-reference-set-v64/staff-reference-set/staff-ribs-top-corrected-v3.png",
+          "sha256": "09764b88da5fcc3325466131cc24d2b789a4f9f93ef972c0275d3ca26fd66535",
+          "bytes": 1538050,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: overlapping endpoints now project onto one TOP pad; precise magnification and pad curves remain authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S13",
+      "group": "staff",
+      "instances": [
+        "staff:S13"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-micro-v61/references/staff-caps-micro-v1.png",
+          "sha256": "01a18ebd2631e2e5c73b52c3c261620e1c2487458200c1c68993e89066258532",
+          "bytes": 1894355,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: axisymmetric isolated visual references; internal support revisions separately authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S14",
+      "group": "staff",
+      "instances": [
+        "staff:S14"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-micro-v61/references/staff-caps-micro-v1.png",
+          "sha256": "01a18ebd2631e2e5c73b52c3c261620e1c2487458200c1c68993e89066258532",
+          "bytes": 1894355,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: axisymmetric isolated visual references; internal support revisions separately authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S15",
+      "group": "staff",
+      "instances": [
+        "staff:S15"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-staff-v63/references/finial-v1.png",
+          "sha256": "73330e0d816dc84ebd051cfccf9104f61f7666f285721c687f2929d4a585c5fd",
+          "bytes": 1898046,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: wrong grip-attachment thumbnail excluded; part goes above lantern S14",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S16",
+      "group": "staff",
+      "instances": [
+        "staff:S16"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-lantern-v63/references/glass-multiview-v2.png",
+          "sha256": "6c86735438a9444765c78f377f0a364281fe50360159d5fd20309f49a4434ce4",
+          "bytes": 1285938,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: closed oval without vase lip; exact ellipsoid and hidden seats authored",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S17",
+      "group": "staff",
+      "instances": [
+        "staff:S17"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-staff-v63/references/collars-neck-v1.png",
+          "sha256": "cd97eb9d416488f8d59ecc0eea395a4f9d5f2e50b3dc2af7ae78e403dd35e3a5",
+          "bytes": 2390637,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: thumbnail swaps S17/S18 and is explicitly excluded; actual S17 lower/S18 upper",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    },
+    {
+      "id": "staff:S18",
+      "group": "staff",
+      "instances": [
+        "staff:S18"
+      ],
+      "references": [
+        {
+          "path": "docs/evidence/mira-staff-v63/references/collars-neck-v1.png",
+          "sha256": "cd97eb9d416488f8d59ecc0eea395a4f9d5f2e50b3dc2af7ae78e403dd35e3a5",
+          "bytes": 2390637,
+          "meaning": "generated design reference, not rendered game"
+        }
+      ],
+      "selectionBasis": "qualitative shape reference with stated exclusions; not calibrated projection: thumbnail swaps S17/S18 and is explicitly excluded; actual S17 lower/S18 upper",
+      "dimensionsFromImage": false,
+      "assemblyAccepted": false
+    }
+  ]
+}

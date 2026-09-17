@@ -1,0 +1,25 @@
+{
+  "id": "08-side-rear-scalp",
+  "initial": {
+    "start": "2026-09-16T14:35:56.286Z",
+    "returned": "2026-09-16T14:36:50.272Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-994f4069-90fd-447f-bae6-6a25b4444328.png",
+    "terminal": "success"
+  },
+  "observation": {
+    "adoption": "v2 conditional; v1 hair contamination rejected",
+    "findings": [
+      "One targeted correction removes unintended hair fringe/strands from detached side/rear scalp panels, leaving clean curved surfaces.",
+      "S-SIDE ear notch and S05 posterior locator retained.",
+      "S05 locator spans lower occiput; boundary to S02 is not registered and cannot prove full skull coverage.",
+      "FRONT versus 3Q remains weakly differentiated, strict same-object projection unproven."
+    ],
+    "seen": true
+  },
+  "correction": {
+    "start": "2026-09-16T14:50:31.926Z",
+    "returned": "2026-09-16T14:51:22.453Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-00fa3001-af6b-44d7-9a7b-43750315317c.png",
+    "terminal": "success"
+  }
+}

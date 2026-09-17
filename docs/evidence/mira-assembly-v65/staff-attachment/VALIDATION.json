@@ -1,0 +1,91 @@
+{
+  "evidence": "CPU world matrices and native bones/19 existing mesh parts. No WebGL image, grasp surface, animation-quality or device-performance acceptance.",
+  "cases": [
+    {
+      "name": "flat",
+      "frames": 6,
+      "gripMaxMm": 2.9504581591051766e-13,
+      "worldStaffLengthMetres": 1.7,
+      "armLocalMetres": [
+        0.33,
+        0.31
+      ]
+    },
+    {
+      "name": "actual-scene",
+      "frames": 6,
+      "gripMaxMm": 1.4465315589708831e-11,
+      "worldStaffLengthMetres": 1.7,
+      "armLocalMetres": [
+        0.33,
+        0.31
+      ]
+    },
+    {
+      "name": "slope",
+      "frames": 6,
+      "gripMaxMm": 1.88411095042053e-12,
+      "worldStaffLengthMetres": 1.7,
+      "armLocalMetres": [
+        0.33,
+        0.31
+      ]
+    },
+    {
+      "name": "parent-rotation",
+      "frames": 6,
+      "gripMaxMm": 4.484050470211362e-13,
+      "worldStaffLengthMetres": 1.7,
+      "armLocalMetres": [
+        0.33,
+        0.31
+      ]
+    },
+    {
+      "name": "parent-nonuniform",
+      "frames": 6,
+      "gripMaxMm": 5.117875266520903e-13,
+      "worldStaffLengthMetres": 1.7,
+      "armLocalMetres": [
+        0.33,
+        0.31
+      ]
+    },
+    {
+      "name": "root-nonuniform",
+      "frames": 6,
+      "gripMaxMm": 6.866350197783356e-13,
+      "worldStaffLengthMetres": 1.7,
+      "armLocalMetres": [
+        0.33,
+        0.31
+      ]
+    }
+  ],
+  "summary": {
+    "frames": 36,
+    "partPlacements": 684,
+    "maxGripResidualMm": 1.4465315589708831e-11,
+    "maxLengthErrorMm": 2.220446049250313e-13,
+    "maxPartRigidError": 4.6629367034256575e-15,
+    "maxRepeatedMatrixError": 0,
+    "maxNaiveScaleError": 0.007998111827928645,
+    "maxNaiveShear": 0.001455517072642909
+  },
+  "verificationSeconds": 0.3873220720000001,
+  "failureRecovery": {
+    "unreachable": "no arm mutation, staff hidden",
+    "invalidTerrain": "staff hidden",
+    "singularReflection": "rejected",
+    "armScale": "rejected without overwriting scale",
+    "nonfiniteChain": "rejected before world propagation or rotation writes",
+    "changedTranslations": "rejected instead of reusing cached lengths",
+    "validAfterFailure": "recovered"
+  },
+  "sourceHashes": {
+    "review/staff-attachment-v65/attachment.mjs": "7e6cfccb9970db50d528d0be4cf8ab75cd8382dd849f215fed1b385c2eaae62c",
+    "review/staff-v63/assembly.mjs": "dabaaee77dbf0e16f80605c3b1a3a39e2897b2c9d89898b22eefb71d98236481",
+    "src/actor-models.js": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+    "src/assets/characters/detailed-geometry.js": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033"
+  }
+}

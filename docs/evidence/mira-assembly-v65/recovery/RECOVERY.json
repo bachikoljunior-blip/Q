@@ -1,0 +1,92 @@
+{
+  "schema": "q-recovery-v65/1",
+  "recordedAt": "2026-09-16T23:32:25.465318+00:00",
+  "integrationOwner": "/root/ultra_q_recover_reference_assembly",
+  "spawnRequested": {
+    "reasoning_effort": "ultra",
+    "fork_turns": "none",
+    "model": "omitted"
+  },
+  "acceptedResponse": {
+    "task_name": "/root/ultra_q_recover_reference_assembly"
+  },
+  "effectiveReasoning": "not independently exposed",
+  "repo": "bachikoljunior-blip/Q",
+  "source": "bc761f25aae76209d26623b509f97e1f3a5a12ca",
+  "tree": "90e3046fd63170cf1ea069231b0e0e8f57d651e0",
+  "trackedFiles": 2371,
+  "gitFsckExit": 0,
+  "worktree": "Q-recovery-v65",
+  "upstreamRead": {
+    "main": "547676fdce8d8e97abed9f065aad0b6e24af2fd6",
+    "pr59": {
+      "state": "open",
+      "draft": true,
+      "head": "bc761f25aae76209d26623b509f97e1f3a5a12ca",
+      "ci": 35116949424,
+      "ciConclusion": "success"
+    },
+    "pr39": {
+      "state": "open",
+      "merged": false,
+      "head": "bfc5d10d8b1042dc6063569a624c115b6c1e7833",
+      "unknownPriorMergeTerminal": true
+    }
+  },
+  "handoff": {
+    "cause": "prior integration thread failed to load model context: thread-store internal error; official list then contained root only (parent receipt)",
+    "formalCurrentAgentsAtCheck": [
+      "/root",
+      "/root/ultra_q_recover_reference_assembly",
+      "/root/ultra_q_recover_reference_assembly/recover_reference_assets"
+    ],
+    "localQWorkerObserved": false,
+    "parentPendingTools": 0,
+    "parentSourceRemoteWrites": 0,
+    "parentExplicitHandoffReceived": true,
+    "scope": "Q candidate local production and PR59 preservation single writer",
+    "excludes": "unresolved previous PR39 merge; no retry, bypass, force or claimed completion",
+    "otherEnvironmentProcesses": "not globally observable"
+  },
+  "recoveredReferences": {
+    "types": 120,
+    "placements": 287,
+    "selectedPNGs": 73,
+    "bytes": 138102453,
+    "hashErrors": [],
+    "meaning": "byte restoration and inventory only; not new visual or geometry acceptance"
+  },
+  "notRecovered": [
+    "head authored-v2 final numerical registration",
+    "clothing final numerical registration and TR02 cutout supplement",
+    "hands/boots final shared numerical registration and normal repair",
+    "whole selection per-type view exclusion-policy final repair"
+  ],
+  "libraryRecovery": {
+    "originalArtifactsRecovered": 0,
+    "scope": "finite targeted search and recent inventory; latest source not located",
+    "absenceProven": false
+  },
+  "newMesh": 0,
+  "newRuntimeImport": 0,
+  "remoteMutationsInRecoveryUnit": 0,
+  "siteLastKnown": {
+    "version": 24,
+    "source": "2bee64cff6482cb7770ba69e07673eefc8ad54ef",
+    "audience": "owner-only",
+    "freshReadInThisUnit": false
+  },
+  "deadline": {
+    "date": "2026-09-20",
+    "assessment": "evidence insufficient",
+    "reason": "unrecovered registration rework, whole model/material/motion remaining, actual WebGL/device/touch/listening/ten-target comparison and delivery unresolved",
+    "alternative": "single canonical boundary-coordinate/normal/weight owner shared by all incident parts, early bounded Git checkpoints, analytic subdivision budget before assembly",
+    "effectMeasuredYet": false
+  },
+  "subsequentUserInstruction": {
+    "text": "親も作業して",
+    "effect": "Parent may now perform bounded substantive work; current single remote writer and new-child Ultra settings unchanged",
+    "parentAssignedScope": "existing right-hand/staff rigid attachment adapter and bounded CPU verification; isolated worktree",
+    "at": "2026-09-16T23:36:37.434852+00:00"
+  }
+}

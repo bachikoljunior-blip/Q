@@ -1,0 +1,392 @@
+{
+  "createdAt": "2026-09-16T12:02:00.041041+00:00",
+  "status": "Planning only; no generated image or new geometry.",
+  "minimumPracticalTypeCount": 30,
+  "instanceCount": 62,
+  "hairTypeCount": 6,
+  "hairInstanceCount": 24,
+  "countsByCategory": {
+    "face": 11,
+    "scalp": 4,
+    "ear": 3,
+    "eyeAndLid": 3,
+    "brow": 1,
+    "neck": 2,
+    "hair": 6
+  },
+  "minimumMeaning": "Practical minimum under this decomposition before visual acceptance; not a mathematical minimum. Shared topology/algorithm does not make visually different patches one reference type.",
+  "pageProposal": {
+    "typesPerPage": 3,
+    "pages": 10,
+    "perTypeViews": [
+      "exposed surface/front",
+      "side/profile",
+      "attachment/seam face"
+    ],
+    "boundary": "30 type panels grouped into 10 sheets, not 62 separate pages. If joins become illegible split pages instead of simplifying shapes. No generation invoked."
+  },
+  "types": [
+    {
+      "id": "F01",
+      "name": "forehead",
+      "instanceIds": [
+        "F01-L",
+        "F01-R"
+      ],
+      "shapeRequirement": "Continuous convex forehead patch; local slope changes at brow, no separate solid",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F03",
+      "name": "temple",
+      "instanceIds": [
+        "F03-L",
+        "F03-R"
+      ],
+      "shapeRequirement": "Recessed transition from brow to side scalp",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F05",
+      "name": "malar cheek",
+      "instanceIds": [
+        "F05-L",
+        "F05-R"
+      ],
+      "shapeRequirement": "Defined cheek plane with rounded anatomical transition",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F07",
+      "name": "lower cheek",
+      "instanceIds": [
+        "F07-L",
+        "F07-R"
+      ],
+      "shapeRequirement": "Submalar hollow; its low point must continue into jaw",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F09",
+      "name": "jaw corner",
+      "instanceIds": [
+        "F09-L",
+        "F09-R"
+      ],
+      "shapeRequirement": "Angular mandibular transition with curved underside",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F14",
+      "name": "nasal ala",
+      "instanceIds": [
+        "F14-L",
+        "F14-R"
+      ],
+      "shapeRequirement": "Nostril wing curved patch with actual undercut, not a sphere",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F11",
+      "name": "chin",
+      "instanceIds": [
+        "F11"
+      ],
+      "shapeRequirement": "Broad chin plane joined through underside",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F12",
+      "name": "nasal bridge",
+      "instanceIds": [
+        "F12"
+      ],
+      "shapeRequirement": "Straight bridge joining orbital medial rims",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F13",
+      "name": "nasal tip",
+      "instanceIds": [
+        "F13"
+      ],
+      "shapeRequirement": "Defined rounded tip with continuous alar transition",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F16",
+      "name": "upper lip and philtrum",
+      "instanceIds": [
+        "F16"
+      ],
+      "shapeRequirement": "Thin closed upper lip, actual vermilion border and philtrum",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "F17",
+      "name": "lower lip",
+      "instanceIds": [
+        "F17"
+      ],
+      "shapeRequirement": "Thin lower lip and crease; closed-mouth seam remains shared",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "S01",
+      "name": "front scalp",
+      "instanceIds": [
+        "S01"
+      ],
+      "shapeRequirement": "Subset of one common curved head surface, with continuous registered boundary",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "S02",
+      "name": "crown",
+      "instanceIds": [
+        "S02"
+      ],
+      "shapeRequirement": "Subset of one common curved head surface, with continuous registered boundary",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "S-SIDE",
+      "name": "side scalp",
+      "instanceIds": [
+        "S03",
+        "S04"
+      ],
+      "shapeRequirement": "Subset of one common curved head surface, with continuous registered boundary",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "S05",
+      "name": "rear scalp",
+      "instanceIds": [
+        "S05"
+      ],
+      "shapeRequirement": "Subset of one common curved head surface, with continuous registered boundary",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "A01",
+      "name": "helix and antihelix",
+      "instanceIds": [
+        "A01-L",
+        "A01-R"
+      ],
+      "shapeRequirement": "Curved source patch with real folds; shared ear-root seam",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "A02",
+      "name": "concha and tragus",
+      "instanceIds": [
+        "A02-L",
+        "A02-R"
+      ],
+      "shapeRequirement": "Curved source patch with real folds; shared ear-root seam",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "A03",
+      "name": "earlobe",
+      "instanceIds": [
+        "A03-L",
+        "A03-R"
+      ],
+      "shapeRequirement": "Curved source patch with real folds; shared ear-root seam",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "E01",
+      "name": "eyeball",
+      "instanceIds": [
+        "E01-L",
+        "E01-R"
+      ],
+      "shapeRequirement": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "E02",
+      "name": "iris and pupil",
+      "instanceIds": [
+        "E02-L",
+        "E02-R"
+      ],
+      "shapeRequirement": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "E03",
+      "name": "upper lid",
+      "instanceIds": [
+        "E03-L",
+        "E03-R"
+      ],
+      "shapeRequirement": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "B01",
+      "name": "eyebrow",
+      "instanceIds": [
+        "B01-L",
+        "B01-R"
+      ],
+      "shapeRequirement": "Use actual existing eye/lid geometry or a narrow curved brow strip as appropriate",
+      "instanceCount": 2,
+      "operation": "Canonical anatomical-L surface + mirrored R, constrained seam/asymmetry fit",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "N01",
+      "name": "front neck transition",
+      "instanceIds": [
+        "N01"
+      ],
+      "shapeRequirement": "Curved cut-ring section tucked into existing neck; collar belongs to costume",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "N02",
+      "name": "rear neck transition",
+      "instanceIds": [
+        "N02"
+      ],
+      "shapeRequirement": "Curved cut-ring section tucked into existing neck; collar belongs to costume",
+      "instanceCount": 1,
+      "operation": "Unique central/curved patch",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "HT01",
+      "name": "raised swept forelock",
+      "instanceIds": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H09",
+        "H10"
+      ],
+      "shapeRequirement": "Raised root, dominant lateral bow, taper; short fringe retains same curve family.",
+      "instanceCount": 6,
+      "operation": "Bounded curve/taper variation and placement",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "HT02",
+      "name": "broad shallow top overlap",
+      "instanceIds": [
+        "H05",
+        "H06",
+        "H07",
+        "H08"
+      ],
+      "shapeRequirement": "Low broad section, shallow curve and overlapping edge; not a scaled tall forelock.",
+      "instanceCount": 4,
+      "operation": "Bounded curve/taper variation and placement",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "HT03",
+      "name": "short side fall",
+      "instanceIds": [
+        "H11",
+        "H12",
+        "H14",
+        "H15"
+      ],
+      "shapeRequirement": "Close scalp-following downward shallow curve.",
+      "instanceCount": 4,
+      "operation": "Bounded curve/taper variation and placement",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "HT04",
+      "name": "ear-edge tapered terminal",
+      "instanceIds": [
+        "H13",
+        "H16"
+      ],
+      "shapeRequirement": "Short tight taper approaching ear/sideburn, distinct silhouette break.",
+      "instanceCount": 2,
+      "operation": "Bounded curve/taper variation and placement",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "HT05",
+      "name": "posterior crown flow",
+      "instanceIds": [
+        "H17",
+        "H18",
+        "H19",
+        "H20"
+      ],
+      "shapeRequirement": "Long posterior arc and small S twist from crown into back.",
+      "instanceCount": 4,
+      "operation": "Bounded curve/taper variation and placement",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    },
+    {
+      "id": "HT06",
+      "name": "nape taper",
+      "instanceIds": [
+        "H21",
+        "H22",
+        "H23",
+        "H24"
+      ],
+      "shapeRequirement": "Narrow downward terminal, small outward tip, staggered lower edge.",
+      "instanceCount": 4,
+      "operation": "Bounded curve/taper variation and placement",
+      "referenceStatus": "Requires accepted micro-part view; practical planning minimum, not proven image fidelity."
+    }
+  ]
+}

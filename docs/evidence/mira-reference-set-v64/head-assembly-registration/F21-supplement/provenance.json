@@ -1,0 +1,70 @@
+{
+  "type": "F21",
+  "instances": [
+    "F21-L",
+    "F21-R"
+  ],
+  "revision": {
+    "frozenBaselineTypes": 40,
+    "frozenBaselineInstances": 80,
+    "proposedTypes": 41,
+    "proposedInstances": 82,
+    "adopted": false
+  },
+  "raw": {
+    "path": "/workspace/scratch/e72662e3b71f/q-character-reference-v64/head-assembly-registration/F21-supplement/mira-F21-v1.png",
+    "originalToolPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-378deeb3-57f9-442a-87e9-5e303edca9ca.png",
+    "sha256": "1b2e15fb5568cc29124811d3083c4fb12809688be285b36aae862dbdd272bf21",
+    "bytes": 2145438,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB"
+  },
+  "timing": {
+    "promptPreparationStarted": "2026-09-16T15:10:39.220Z",
+    "resultReturned": "2026-09-16T15:11:54.991Z",
+    "toolReportedSeconds": 58.0,
+    "promptAndCallWindowSeconds": 75.771,
+    "inspectionRecorded": "2026-09-16T15:16:51.524847+00:00",
+    "pureGenerationComputeTimeKnown": false
+  },
+  "generator": "builtin image_gen; one call; raw byte copy; no pixel modification",
+  "imageStatus": "conditional location and surface-shape reference; not exact registered geometry",
+  "observations": [
+    "Profile locator covers the side-face immediately anterior to ear, under F03 and posterior to F05/F07; front locator marks anatomical L (+X, viewer right).",
+    "True +X view shows a broad taper; global +Z view shows a narrow foreshortened strip, consistent at qualitative level.",
+    "One local smooth thin surface is shown; no ear, neck, nose or full-head filler is added.",
+    "Reverse labels need an explicit view transform before semantic anterior/posterior edges are used numerically.",
+    "Thick rendered border, grain and locator face/eye-color drift are not material or exact identity prescriptions."
+  ],
+  "blockedPorts": [
+    "OPEN-F05-L-outer-u1",
+    "OPEN-F07-L-outer-u1",
+    "OPEN-F05-R-outer-u1",
+    "OPEN-F07-R-outer-u1"
+  ],
+  "interfacesProposed": {
+    "anterior": [
+      "F05-L/R u1",
+      "F07-L/R u1"
+    ],
+    "superior": [
+      "F03-L/R"
+    ],
+    "posteriorCandidate": [
+      "A02b-L/R tragus boundary",
+      "A03-L/R lobe boundary; exact partition unresolved"
+    ],
+    "inferiorCandidate": [
+      "F09-L/R jaw region; exact receiver curve unresolved"
+    ]
+  },
+  "limits": [
+    "No source edge is changed or declared closed.",
+    "No dimensions inferred from uncalibrated pixels.",
+    "Exact counterpart curves, UV, normals and weights must be selected as a later author design against existing source/rig.",
+    "No new mesh, runtime integration or whole-face acceptance."
+  ]
+}

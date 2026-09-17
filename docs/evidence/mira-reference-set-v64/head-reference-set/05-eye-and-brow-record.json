@@ -1,0 +1,25 @@
+{
+  "id": "05-eye-and-brow",
+  "initial": {
+    "start": "2026-09-16T14:30:31.162Z",
+    "returned": "2026-09-16T14:31:25.560Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-a3fb00ec-05a7-4025-ade2-34af8e17866e.png",
+    "terminal": "success"
+  },
+  "observation": {
+    "adoption": "v2 conditional; v1 structurally rejected",
+    "findings": [
+      "v1 E01 BACK incorrectly duplicated an anterior socket. One targeted correction v2 removes that hole in back and rear 3Q.",
+      "E01 v2 anterior corneal seat plus closed posterior body are readable; socket/lens depth and optical model remain unspecified.",
+      "E02 gray-blue iris shallow convex cap and reverse cavity are shown; image is not a deliverable texture or exact corneal design.",
+      "B01 curved tapered hairy strip and reverse are readable but hair thickness/fiber count and fit remain unfixed."
+    ],
+    "seen": true
+  },
+  "correction": {
+    "start": "2026-09-16T14:31:50.876Z",
+    "returned": "2026-09-16T14:32:42.963Z",
+    "rawPath": "/workspace/scratch/e72662e3b71f/generated_images/exec-475ba0ca-c69d-4cc2-b75e-1cfedcc2d0b4.png",
+    "terminal": "success"
+  }
+}
