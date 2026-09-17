@@ -39,17 +39,27 @@
     "frontOpenHalfAngleDegrees": 12
   },
   "skinCut": {
-    "headY": -0.21,
-    "chestY": 0.55,
+    "headY": -0.28,
+    "chestY": 0.48,
     "radiiM": [
-      0.098,
-      0.078
+      0.106,
+      0.086
     ],
     "owners": [
       "head:N01",
       "head:N02"
     ],
-    "receiver": "body:neck-to-chest skin continuation",
+    "receiver": null,
+    "receiverRequired": false,
+    "terminalPolicy": "intentional hidden free cut, no cap",
+    "coveredBy": [
+      "cloth:T01-R",
+      "cloth:T01-L",
+      "cloth:T02-R",
+      "cloth:T02-L",
+      "cloth:T04-R",
+      "cloth:T04-L"
+    ],
     "curveIds": [
       "HC177",
       "HC178",
@@ -57,7 +67,8 @@
       "HC181"
     ]
   },
-  "verticalUnderlapM": 0.01,
+  "verticalUnderlapM": 0.08,
+  "underActualFrontOpeningM": 0.02,
   "collarZoneNeckSections": [
     {
       "y": -0.2,
@@ -77,7 +88,6 @@
   },
   "interpretation": "positive radial air gap, separate layers; not a weld or posed collision test",
   "pending": [
-    "torso skin cut receiver must be authored or supplied",
     "neck/chest/head skin blend and collar in animated poses untested"
   ]
 }

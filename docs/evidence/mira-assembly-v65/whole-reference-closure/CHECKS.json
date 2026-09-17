@@ -1,0 +1,55 @@
+{
+  "types": 120,
+  "instances": 287,
+  "selectedOriginalPNGs": 74,
+  "selectionRoleCounts": {
+    "primaryTypeReferenceUses": 120,
+    "secondaryTypeReferenceUses": 3,
+    "uniquePrimaryPNGs": 72,
+    "uniqueSecondaryPNGs": 3,
+    "primarySecondarySharedPNGPaths": [
+      "docs/evidence/mira-reference-set-v64/head-reference-set/09-ear-outer-v1.png"
+    ],
+    "uniqueSelectedUnionPNGs": 74,
+    "excludedRules": 210,
+    "newSupplementRejectedWholePNGs": [
+      "docs/evidence/mira-assembly-v65/cloth-registration/TR02-notched-open-v65.png"
+    ],
+    "meaning": "Roles are per type-reference use. A shared sheet can be primary for another type; primary and secondary unique counts must not be added without de-duplication. Exclusion rules are scoped elements/views, not a count of whole rejected images."
+  },
+  "groups": {
+    "head": 41,
+    "cloth": 40,
+    "hands": 10,
+    "boots": 11,
+    "staff": 18
+  },
+  "uniqueTypeAndInstanceIDs": true,
+  "allAuthorPrimaryImagesSelected": true,
+  "allPriorExclusionsPreserved": true,
+  "obsoleteLimitsRetainedAsHistory": true,
+  "everyTypeAdoptedViewsNonempty": true,
+  "explicitEmptyExclusionPolicies": 20,
+  "duplicateAcceptedViewEntries": 0,
+  "newTR02SHA256": "1d8d8d1d8a1220a2dbd3b38ccc7461a2bf9dd798c2ab8b9234efa3fc9e418c12",
+  "oldTR02AllowedViews": [
+    "profile"
+  ],
+  "negativeControlsDetected": [
+    "dropped-exclusion",
+    "duplicate-instance",
+    "old-TR02-notch-repromotion",
+    "false-full-assembly"
+  ],
+  "referenceClosure": "intermediate-stopped-unaccepted",
+  "requiredNewImageBlockers": [],
+  "fullAssemblyReady": false,
+  "numericAndPortReviewByThisTask": false,
+  "pngCopies": 0,
+  "newGeometry": 0,
+  "runtimeWrites": 0,
+  "remoteWrites": 0,
+  "preStopDraftReferenceClosure": "conditional-qualitative-reference-closure",
+  "status": "Recorded pre-stop checks only; no final reference closure acceptance",
+  "newChecksAfterStop": 0
+}

@@ -19,6 +19,8 @@
     "ordered curve samples unit normals/tangents, perpendicular, valid normalized weights",
     "every open patch boundary endpoint degree2; coincident shared junction normal/weights identical",
     "both shared owners resolve identical canonical attributes with opposite traversal",
+    "all directed patch cycles close; actual interpolated normals orthogonal at quarter segments",
+    "analytic elliptical nail seat normal-depth0.4 and plate proud0.1 at257 samples each",
     "separate UV charts in range",
     "8+12=20 rear partition and -108 support",
     "all8 fastener seats within actual heel footprint",
@@ -34,9 +36,9 @@
     "meaning": "authored interpolation derivatives changed into common normal domain; actual surface not yet built"
   },
   "maxima": {
-    "normalLengthError": 6.49120757145738e-11,
+    "normalLengthError": 6.707856492482733e-11,
     "tangentLengthError": 8.14580625174699e-11,
-    "normalTangentDot": 1.074551142510316e-10,
+    "normalTangentDot": 1.1702287749937312e-10,
     "weightSumError": 0,
     "sharedPositionDifferenceMm": 0,
     "sharedNormalAngleDegrees": 0,
@@ -66,12 +68,16 @@
       "rejected": true
     },
     {
+      "fault": "reversed part boundary",
+      "rejected": true
+    },
+    {
       "fault": "unknown bone",
       "rejected": true
     }
   ],
   "regenerationIdentical": true,
-  "elapsedSeconds": 0.6817711709991272,
+  "elapsedSeconds": 1.094590557997435,
   "notTested": [
     "surface area/interior self-intersection",
     "triangle nail/strap/grip contact",

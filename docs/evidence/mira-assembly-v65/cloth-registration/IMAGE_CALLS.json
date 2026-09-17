@@ -1,0 +1,32 @@
+{
+  "schema": "Q.image-call-observation.v65",
+  "tool": "image_gen.imagegen",
+  "builtin": true,
+  "newProductionNotRecovery": true,
+  "observations": [
+    {
+      "operation": "add upper side notch to TR02 method-B open sheet",
+      "orchestrationWindowStart": "2026-09-16T23:31:19.955Z",
+      "returnedAt": "2026-09-16T23:31:54.940Z",
+      "toolReportedWallSeconds": 24.1,
+      "promptFile": "TR02-notch-prompt.txt",
+      "referenceImage": "docs/evidence/mira-reference-set-v64/cloth-reference-set/TR02-method-b.png",
+      "output": "TR02-notched-open-v65.png",
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-a18b7d05-ae9c-4708-915d-001e4c493e15.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "status": "terminal-success; reverse wrong-side notch, retained as rejected multiview iteration"
+    },
+    {
+      "operation": "reverse-view-only notch reflection",
+      "orchestrationWindowStart": "2026-09-16T23:33:16.905Z",
+      "returnedAt": "2026-09-16T23:33:48.210Z",
+      "toolReportedWallSeconds": 22.8,
+      "promptFile": "TR02-reverse-fix-prompt.txt",
+      "referenceImage": "docs/evidence/mira-assembly-v65/cloth-registration/TR02-notched-open-v65.png",
+      "output": "TR02-notched-open-v65-v2.png",
+      "outputHint": "Generated images are saved to /workspace/scratch/e72662e3b71f/generated_images as /workspace/scratch/e72662e3b71f/generated_images/exec-f1dce605-2c5f-4c33-b283-4e5886248de9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "status": "terminal-success; selected qualitative notched-open-sheet reference"
+    }
+  ],
+  "limits": "Orchestration timestamps include prompt save/view handling before image call; wallSeconds are tool-observed call durations. No independent service-internal receipt ID or CAD calibration supplied.",
+  "pendingTools": 0
+}

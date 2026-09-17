@@ -1,0 +1,776 @@
+{
+  "at": "2026-09-17T00:06:24.158Z",
+  "reviewer": "/root",
+  "provisionalCloth": false,
+  "sources": [
+    {
+      "path": "docs/evidence/mira-assembly-v65/head-registration/external-ports.json",
+      "commit": "fd5e1335bc224b040aa923374807ddcc9ffe5883",
+      "sha256": "4c77c3edb6fa1734ad7d6a0b824983482c070cf7aa7c21c7b9c552950e8e045d",
+      "bytes": 52123
+    },
+    {
+      "path": "docs/evidence/mira-assembly-v65/head-registration/external-neck-contract.json",
+      "commit": "fd5e1335bc224b040aa923374807ddcc9ffe5883",
+      "sha256": "0656e4538a6068a782fc840b284b6ffa7f566466e2f26c922fefb15cd92cea5f",
+      "bytes": 1515
+    },
+    {
+      "path": "docs/evidence/mira-assembly-v65/accessory-registration/EXTERNAL_PORTS.json",
+      "commit": "ab94ce91bbb6be7a727fa910618d68c18984b239",
+      "sha256": "e464904b47e32846241f39b9a29150656321767bdc6e136f47214416b36ba344",
+      "bytes": 68147
+    },
+    {
+      "path": "docs/evidence/mira-assembly-v65/cloth-registration/EXTERNAL_PORTS.json",
+      "commit": "ced283cecaa9fbabee52eec7ab940d6d2a2271d5",
+      "sha256": "49cad16eed5d08540391727837713a82f229311e10ae628e51574e226d57de44",
+      "bytes": 532710
+    }
+  ],
+  "rig": {
+    "sourceCommit": "f2d051da18eb7267d98714ac968971e4731ba27c",
+    "boneCount": 41,
+    "actorModelsSha256": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+    "geometrySha256": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
+    "chestBindOrigins": {
+      "chest": [
+        0,
+        0,
+        0
+      ],
+      "neck": [
+        0,
+        0.5999999999999999,
+        0
+      ],
+      "head": [
+        0,
+        0.7599999999999998,
+        0
+      ],
+      "hand-0": [
+        -0.313,
+        -0.18000000000000016,
+        0
+      ],
+      "hand-1": [
+        0.313,
+        -0.18000000000000016,
+        0
+      ],
+      "knee-0": [
+        -0.133,
+        -0.44500000000000006,
+        0
+      ],
+      "knee-1": [
+        0.133,
+        -0.44500000000000006,
+        0
+      ],
+      "foot-0": [
+        -0.133,
+        -0.8800000000000001,
+        0
+      ],
+      "foot-1": [
+        0.133,
+        -0.8800000000000001,
+        0
+      ]
+    },
+    "rightIsNegativeX": true,
+    "leftIsPositiveX": true
+  },
+  "portSummaries": [
+    {
+      "id": "PORT-HC177",
+      "frame": "head",
+      "unit": "metres",
+      "count": 5,
+      "kind": "open",
+      "normalLengthError": 2.220446049250313e-16,
+      "tangentLengthError": 2.220446049250313e-16,
+      "normalTangentDot": 5.551115123125783e-17,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "neck"
+      ]
+    },
+    {
+      "id": "PORT-HC178",
+      "frame": "head",
+      "unit": "metres",
+      "count": 5,
+      "kind": "open",
+      "normalLengthError": 2.220446049250313e-16,
+      "tangentLengthError": 2.220446049250313e-16,
+      "normalTangentDot": 5.551115123125783e-17,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "neck"
+      ]
+    },
+    {
+      "id": "PORT-HC180",
+      "frame": "head",
+      "unit": "metres",
+      "count": 5,
+      "kind": "open",
+      "normalLengthError": 2.220446049250313e-16,
+      "tangentLengthError": 1.1102230246251565e-16,
+      "normalTangentDot": 5.551115123125783e-17,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "neck"
+      ]
+    },
+    {
+      "id": "PORT-HC181",
+      "frame": "head",
+      "unit": "metres",
+      "count": 5,
+      "kind": "open",
+      "normalLengthError": 2.220446049250313e-16,
+      "tangentLengthError": 2.220446049250313e-16,
+      "normalTangentDot": 5.551115123125783e-17,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "neck"
+      ]
+    },
+    {
+      "id": "PORT-NECK-COLLAR",
+      "frame": "chest",
+      "unit": "metres",
+      "count": 51,
+      "kind": "overlap",
+      "normalLengthError": 2.220446049250313e-16,
+      "tangentLengthError": 2.220446049250313e-16,
+      "normalTangentDot": 1.1102230246251565e-16,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "head",
+        "neck"
+      ]
+    },
+    {
+      "id": "CLOTH-NECK-lower-inner",
+      "frame": "chest",
+      "unit": "metre",
+      "count": 129,
+      "kind": "overlap",
+      "normalLengthError": 6.148990205900873e-10,
+      "tangentLengthError": 6.148990205900873e-10,
+      "normalTangentDot": 7.558820930286814e-10,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "chest"
+      ]
+    },
+    {
+      "id": "CLOTH-NECK-lower-outer",
+      "frame": "chest",
+      "unit": "metre",
+      "count": 129,
+      "kind": "overlap",
+      "normalLengthError": 5.732722074824892e-10,
+      "tangentLengthError": 5.732722074824892e-10,
+      "normalTangentDot": 6.891976433998082e-10,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "chest"
+      ]
+    },
+    {
+      "id": "CLOTH-NECK-upper-inner",
+      "frame": "chest",
+      "unit": "metre",
+      "count": 129,
+      "kind": "overlap",
+      "normalLengthError": 5.981163342383411e-10,
+      "tangentLengthError": 5.981163342383411e-10,
+      "normalTangentDot": 6.544869752492938e-10,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "chest"
+      ]
+    },
+    {
+      "id": "CLOTH-NECK-upper-outer",
+      "frame": "chest",
+      "unit": "metre",
+      "count": 129,
+      "kind": "overlap",
+      "normalLengthError": 5.348204101807141e-10,
+      "tangentLengthError": 5.348204101807141e-10,
+      "normalTangentDot": 6.063161778202542e-10,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "chest"
+      ]
+    },
+    {
+      "id": "CLOTH-CUFF-CLOTH-R",
+      "frame": "hand-0",
+      "unit": "metre",
+      "count": 65,
+      "kind": "overlap",
+      "normalLengthError": 4.217777238579856e-10,
+      "tangentLengthError": 4.2420045254232264e-10,
+      "normalTangentDot": 5.031907113206557e-10,
+      "weightSumError": 0,
+      "originErrorM": 1.6653345369377348e-16,
+      "bones": [
+        "hand-0"
+      ]
+    },
+    {
+      "id": "CLOTH-CUFF-BRACER-INNER-R",
+      "frame": "hand-0",
+      "unit": "metre",
+      "count": 65,
+      "kind": "overlap",
+      "normalLengthError": 5.713766126902442e-10,
+      "tangentLengthError": 5.713766126902442e-10,
+      "normalTangentDot": 3.0178690102466987e-10,
+      "weightSumError": 0,
+      "originErrorM": 1.6653345369377348e-16,
+      "bones": [
+        "hand-0"
+      ]
+    },
+    {
+      "id": "CLOTH-BOOT-UNDERLAP-TOP-R",
+      "frame": "foot-0",
+      "unit": "metre",
+      "count": 65,
+      "kind": "overlap",
+      "normalLengthError": 4.854163737633144e-10,
+      "tangentLengthError": 4.854163737633144e-10,
+      "normalTangentDot": 4.7316547902021e-10,
+      "weightSumError": 0,
+      "originErrorM": 1.1102230246251565e-16,
+      "bones": [
+        "knee-0"
+      ]
+    },
+    {
+      "id": "CLOTH-BOOT-UNDERLAP-BOTTOM-R",
+      "frame": "foot-0",
+      "unit": "metre",
+      "count": 65,
+      "kind": "overlap",
+      "normalLengthError": 4.962223965065959e-10,
+      "tangentLengthError": 4.962223965065959e-10,
+      "normalTangentDot": 8.702977227770248e-10,
+      "weightSumError": 0,
+      "originErrorM": 1.1102230246251565e-16,
+      "bones": [
+        "knee-0"
+      ]
+    },
+    {
+      "id": "CLOTH-CUFF-CLOTH-L",
+      "frame": "hand-1",
+      "unit": "metre",
+      "count": 65,
+      "kind": "overlap",
+      "normalLengthError": 4.217777238579856e-10,
+      "tangentLengthError": 4.2420045254232264e-10,
+      "normalTangentDot": 5.031907113206557e-10,
+      "weightSumError": 0,
+      "originErrorM": 1.6653345369377348e-16,
+      "bones": [
+        "hand-1"
+      ]
+    },
+    {
+      "id": "CLOTH-CUFF-BRACER-INNER-L",
+      "frame": "hand-1",
+      "unit": "metre",
+      "count": 65,
+      "kind": "overlap",
+      "normalLengthError": 5.713766126902442e-10,
+      "tangentLengthError": 5.713766126902442e-10,
+      "normalTangentDot": 3.0178690102466987e-10,
+      "weightSumError": 0,
+      "originErrorM": 1.6653345369377348e-16,
+      "bones": [
+        "hand-1"
+      ]
+    },
+    {
+      "id": "CLOTH-BOOT-UNDERLAP-TOP-L",
+      "frame": "foot-1",
+      "unit": "metre",
+      "count": 65,
+      "kind": "overlap",
+      "normalLengthError": 4.854163737633144e-10,
+      "tangentLengthError": 4.854163737633144e-10,
+      "normalTangentDot": 8.09309119720325e-10,
+      "weightSumError": 0,
+      "originErrorM": 1.1102230246251565e-16,
+      "bones": [
+        "knee-1"
+      ]
+    },
+    {
+      "id": "CLOTH-BOOT-UNDERLAP-BOTTOM-L",
+      "frame": "foot-1",
+      "unit": "metre",
+      "count": 65,
+      "kind": "overlap",
+      "normalLengthError": 4.962223965065959e-10,
+      "tangentLengthError": 4.962223965065959e-10,
+      "normalTangentDot": 8.702977227770248e-10,
+      "weightSumError": 0,
+      "originErrorM": 1.1102230246251565e-16,
+      "bones": [
+        "knee-1"
+      ]
+    },
+    {
+      "id": "R-wrist",
+      "frame": "hand-0",
+      "unit": "mm",
+      "count": 33,
+      "kind": "overlap",
+      "normalLengthError": 4.2280623446799837e-11,
+      "tangentLengthError": 4.2280623446799837e-11,
+      "normalTangentDot": 0,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "hand-0"
+      ]
+    },
+    {
+      "id": "R-trousers-to-boots",
+      "frame": "foot-0",
+      "unit": "mm",
+      "count": 33,
+      "kind": "overlap",
+      "normalLengthError": 4.761191441104984e-11,
+      "tangentLengthError": 4.761191441104984e-11,
+      "normalTangentDot": 0,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "knee-0"
+      ]
+    },
+    {
+      "id": "L-wrist",
+      "frame": "hand-1",
+      "unit": "mm",
+      "count": 33,
+      "kind": "overlap",
+      "normalLengthError": 4.2280623446799837e-11,
+      "tangentLengthError": 4.2280623446799837e-11,
+      "normalTangentDot": 0,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "hand-1"
+      ]
+    },
+    {
+      "id": "L-trousers-to-boots",
+      "frame": "foot-1",
+      "unit": "mm",
+      "count": 33,
+      "kind": "overlap",
+      "normalLengthError": 4.761191441104984e-11,
+      "tangentLengthError": 4.761191441104984e-11,
+      "normalTangentDot": 0,
+      "weightSumError": 0,
+      "originErrorM": null,
+      "bones": [
+        "knee-1"
+      ]
+    }
+  ],
+  "wrists": [
+    {
+      "side": "R",
+      "planeErrorM": 0,
+      "clearance": {
+        "innerSamples": 33,
+        "outerSamples": 65,
+        "minimumXZDistanceM": 0.01647828090516533,
+        "witness": {
+          "distance": 0.01647828090516533,
+          "closest": [
+            -0.2670434096006341,
+            0.0008452064937253738
+          ],
+          "u": 0.8040216312534001,
+          "direction": "inner-point-to-outer-segment",
+          "innerIndex": 8,
+          "outerSegment": [
+            31,
+            32
+          ],
+          "innerPoint": [
+            -0.2835,
+            0
+          ]
+        },
+        "outsideSampleCount": 0,
+        "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+      },
+      "weightMatch": true,
+      "sleeveToWristOpeningM": 0.02,
+      "skinToSleeveDirectWeld": false,
+      "longitudinalSkinUnderlapM": 0.009000000000000001,
+      "layer": "skin under bracer; sleeve under bracer, not a shared skin-cloth edge"
+    },
+    {
+      "side": "L",
+      "planeErrorM": 0,
+      "clearance": {
+        "innerSamples": 33,
+        "outerSamples": 65,
+        "minimumXZDistanceM": 0.01647828090516533,
+        "witness": {
+          "distance": 0.01647828090516533,
+          "closest": [
+            0.2670434096006341,
+            0.0008452064937253738
+          ],
+          "u": 0.1959783687465999,
+          "direction": "inner-point-to-outer-segment",
+          "innerIndex": 8,
+          "outerSegment": [
+            0,
+            1
+          ],
+          "innerPoint": [
+            0.2835,
+            0
+          ]
+        },
+        "outsideSampleCount": 0,
+        "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+      },
+      "weightMatch": true,
+      "sleeveToWristOpeningM": 0.02,
+      "skinToSleeveDirectWeld": false,
+      "longitudinalSkinUnderlapM": 0.009000000000000001,
+      "layer": "skin under bracer; sleeve under bracer, not a shared skin-cloth edge"
+    }
+  ],
+  "boots": [
+    {
+      "side": "R",
+      "footInKnee": [
+        0,
+        -0.435,
+        0
+      ],
+      "translationErrorM": 0,
+      "weightMatch": true,
+      "openingClearance": {
+        "innerSamples": 65,
+        "outerSamples": 33,
+        "minimumXZDistanceM": 0.004740414221819912,
+        "witness": {
+          "distance": 0.004740414221819912,
+          "closest": [
+            -0.1403272177222621,
+            0.07625908756497485
+          ],
+          "u": 0.4992256136169823,
+          "direction": "inner-point-to-outer-segment",
+          "innerIndex": 15,
+          "outerSegment": [
+            31,
+            32
+          ],
+          "innerPoint": [
+            -0.13985030922222225,
+            0.071542724
+          ]
+        },
+        "outsideSampleCount": 0,
+        "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+      },
+      "registeredEnvelopeStations": [
+        {
+          "footY": 0.3,
+          "innerSamples": 65,
+          "outerSamples": 513,
+          "minimumXZDistanceM": 0.003999228395759843,
+          "witness": {
+            "distance": 0.003999228395759843,
+            "closest": [
+              -0.18467325500733325,
+              0.05297636567136266
+            ],
+            "u": 0.913494513169085,
+            "direction": "inner-point-to-outer-segment",
+            "innerIndex": 8,
+            "outerSegment": [
+              447,
+              448
+            ],
+            "innerPoint": [
+              -0.181790368,
+              0.050204581
+            ]
+          },
+          "outsideSampleCount": 0,
+          "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+        },
+        {
+          "footY": 0.34,
+          "innerSamples": 65,
+          "outerSamples": 513,
+          "minimumXZDistanceM": 0.005110160189537019,
+          "witness": {
+            "distance": 0.005110160189537019,
+            "closest": [
+              -0.1861013627374691,
+              0.05437617869732057
+            ],
+            "u": 0.8943200387087393,
+            "direction": "inner-point-to-outer-segment",
+            "innerIndex": 8,
+            "outerSegment": [
+              447,
+              448
+            ],
+            "innerPoint": [
+              -0.1824189075555556,
+              0.050833120555555555
+            ]
+          },
+          "outsideSampleCount": 0,
+          "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+        }
+      ],
+      "overlapM": 0.040000000000000036,
+      "exposedTrouserM": 0.004999999999999949,
+      "scope": "Declared bind envelope and sampled port curves; both use knee weights. No posed surface or boot sole contact acceptance."
+    },
+    {
+      "side": "L",
+      "footInKnee": [
+        0,
+        -0.435,
+        0
+      ],
+      "translationErrorM": 0,
+      "weightMatch": true,
+      "openingClearance": {
+        "innerSamples": 65,
+        "outerSamples": 33,
+        "minimumXZDistanceM": 0.004740414221819912,
+        "witness": {
+          "distance": 0.004740414221819912,
+          "closest": [
+            0.12567278227773793,
+            0.07625908756497485
+          ],
+          "u": 0.5007743863830183,
+          "direction": "inner-point-to-outer-segment",
+          "innerIndex": 15,
+          "outerSegment": [
+            0,
+            1
+          ],
+          "innerPoint": [
+            0.12614969077777777,
+            0.071542724
+          ]
+        },
+        "outsideSampleCount": 0,
+        "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+      },
+      "registeredEnvelopeStations": [
+        {
+          "footY": 0.3,
+          "innerSamples": 65,
+          "outerSamples": 513,
+          "minimumXZDistanceM": 0.003999228395759836,
+          "witness": {
+            "distance": 0.003999228395759836,
+            "closest": [
+              0.0813267449926668,
+              0.05297636567136269
+            ],
+            "u": 0.9134945131691344,
+            "direction": "inner-point-to-outer-segment",
+            "innerIndex": 8,
+            "outerSegment": [
+              447,
+              448
+            ],
+            "innerPoint": [
+              0.084209632,
+              0.050204581
+            ]
+          },
+          "outsideSampleCount": 0,
+          "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+        },
+        {
+          "footY": 0.34,
+          "innerSamples": 65,
+          "outerSamples": 513,
+          "minimumXZDistanceM": 0.005110160189537024,
+          "witness": {
+            "distance": 0.005110160189537024,
+            "closest": [
+              0.18610136273746913,
+              -0.054376178697320546
+            ],
+            "u": 0.8943200387086979,
+            "direction": "inner-point-to-outer-segment",
+            "innerIndex": 40,
+            "outerSegment": [
+              191,
+              192
+            ],
+            "innerPoint": [
+              0.1824189075555556,
+              -0.050833120555555555
+            ]
+          },
+          "outsideSampleCount": 0,
+          "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+        }
+      ],
+      "overlapM": 0.040000000000000036,
+      "exposedTrouserM": 0.004999999999999949,
+      "scope": "Declared bind envelope and sampled port curves; both use knee weights. No posed surface or boot sole contact acceptance."
+    }
+  ],
+  "neck": {
+    "rows": [
+      {
+        "end": "lower",
+        "y": 0.56,
+        "skinSamples": 2049,
+        "clearance": {
+          "innerSamples": 2049,
+          "outerSamples": 129,
+          "minimumXZDistanceM": 0.005972627905392328,
+          "witness": {
+            "distance": 0.005972627905392328,
+            "closest": [
+              0.09994810536131248,
+              -0.0018179904049344929
+            ],
+            "u": 0.43082178977645796,
+            "direction": "inner-point-to-outer-segment",
+            "innerIndex": 483,
+            "outerSegment": [
+              32,
+              33
+            ],
+            "innerPoint": [
+              0.09397790927896738,
+              -0.0016475708209003608
+            ]
+          },
+          "outsideSampleCount": null,
+          "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+        },
+        "minSameParameterGapM": 0.006000000000000019,
+        "maxSameParameterGapM": 0.009999999999999995,
+        "frontOpenDegrees": 24,
+        "skinWeightBones": [
+          "head",
+          "neck"
+        ]
+      },
+      {
+        "end": "upper",
+        "y": 0.66,
+        "skinSamples": 2049,
+        "clearance": {
+          "innerSamples": 2049,
+          "outerSamples": 129,
+          "minimumXZDistanceM": 0.006975653006752106,
+          "witness": {
+            "distance": 0.006975653006752106,
+            "closest": [
+              0.0019518470562956357,
+              -0.08295375636563947
+            ],
+            "u": 0.53745727156712,
+            "direction": "inner-point-to-outer-segment",
+            "innerIndex": 1016,
+            "outerSegment": [
+              63,
+              64
+            ],
+            "innerPoint": [
+              0.0017866245566283614,
+              -0.07598006033009179
+            ]
+          },
+          "outsideSampleCount": null,
+          "scope": "Independent sampled polylines in common CHEST bind frame; not a continuous or triangle-contact proof"
+        },
+        "minSameParameterGapM": 0.007000000000000006,
+        "maxSameParameterGapM": 0.008000000000000007,
+        "frontOpenDegrees": 24,
+        "skinWeightBones": [
+          "head",
+          "neck"
+        ]
+      }
+    ],
+    "cutHeightErrorM": 2.220446049250313e-16,
+    "underlapM": 0.010000000000000009,
+    "layerWeights": "skin neck/head vs cloth chest: intentional separate layers, posed gap not verified"
+  },
+  "findings": [
+    {
+      "id": "MISSING_TORSO_SKIN_RECEIVER",
+      "ports": [
+        "PORT-HC177",
+        "PORT-HC178",
+        "PORT-HC180",
+        "PORT-HC181"
+      ],
+      "counterpart": "body:neck-to-chest skin continuation",
+      "declaredPending": "torso skin cut receiver must be authored or supplied",
+      "reason": "The four open skin cut curves name a receiver without a matched port/loop/normal/weights contract. Collar overlap is a separate layer and cannot satisfy this skin continuation.",
+      "existingRuntimeNeck": {
+        "source": "src/assets/characters/detailed-geometry.js",
+        "centreChestY": 0.618,
+        "radiiM": [
+          0.08,
+          0.12,
+          0.078
+        ],
+        "cutChestY": 0.55,
+        "analyticRadiiAtCutM": [
+          0.06591577116964416,
+          0.06426787689040306
+        ],
+        "axisDifferenceToAuthoredCutM": [
+          0.032084228830355846,
+          0.013732123109596941
+        ]
+      },
+      "scope": "Receiver registration required before claiming whole-person boundary coverage. No new geometry authored."
+    }
+  ],
+  "newMeshes": 0,
+  "scope": "Read-only independent external bind-port registration review. No triangle geometry, motion collision, rendering, visual or PS4-quality acceptance."
+}

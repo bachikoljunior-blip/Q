@@ -126,24 +126,24 @@ face('S05',['SCB-L','SB-L','SB-R','SCB-R'],guide=[0,.047,-.104],normal=[0,.1,-1]
 for side,sgn,pid in [('L',1,'S03'),('R',-1,'S04')]:
  face(pid,[x+'-'+side for x in ['TF','EBU','EBL','SB','SCB','SCF']],typ='S-SIDE',guide=[sgn*.117,.072,-.039],normal=[sgn,.1,-.2])
 # One front half and one back half, with an explicit shared side seam.
-for side,sgn in [('L',1),('R',-1)]:node('CUT-'+side,[sgn*.098,-.210,0])
-node('CUT-F',[0,-.210,.078]);node('CUT-B',[0,-.210,-.078])
+for side,sgn in [('L',1),('R',-1)]:node('CUT-'+side,[sgn*.106,-.280,0])
+node('CUT-F',[0,-.280,.086]);node('CUT-B',[0,-.280,-.086])
 face('N01',['O2-R','O3-R','O3-L','O2-L','EFLW-L','CUT-L','CUT-F','CUT-R','EFLW-R'],guide=[0,-.15,.076],normal=[0,0,1])
 face('N02',['EFLW-L','EBL-L','SB-L','SB-R','EBL-R','EFLW-R','CUT-R','CUT-B','CUT-L'],guide=[0,-.15,-.076],normal=[0,0,-1])
 for pid in ['N01','N02']:
- P[pid]['weightPolicy']='linear head/neck weights by section: upper contour head1; HEAD y=-.100 head .35 neck .65; y=-.200 neck1; y=-.210 neck1'
- P[pid]['sectionDefinition']={'frame':'HEAD_LOCAL_M','angleConvention':'x=rx*sin(theta),z=rz*cos(theta); front theta[-pi/2,pi/2]','lowerSections':[{'y':-.210,'rx':.098,'rz':.078},{'y':-.200,'rx':.094,'rz':.076},{'y':-.100,'rx':.078,'rz':.076}],'betweenSections':'linear radius in y; smooth Hermite derivatives reserved for later version','upperTransition':'blend from ring y=-.100 to upper registered contour; keep collar-zone envelope fixed','clothWeld':False}
+ P[pid]['weightPolicy']='linear head/neck weights by section: upper contour head1; HEAD y=-.100 head .35 neck .65; y=-.200 neck1; y=-.280 chest1'
+ P[pid]['sectionDefinition']={'frame':'HEAD_LOCAL_M','angleConvention':'x=rx*sin(theta),z=rz*cos(theta); front theta[-pi/2,pi/2]','lowerSections':[{'y':-.280,'rx':.106,'rz':.086},{'y':-.200,'rx':.094,'rz':.076},{'y':-.100,'rx':.078,'rz':.076}],'betweenSections':'collar -.200..-.100 exact linear radius; lower -.280..-.200 cubic Hermite radii with drx/dy bottom=-.15/top=-.16 and drz/dy bottom=-.125/top=0','upperTransition':'canonical-curve-constrained cubic Hermite loft; upper normals and both side curves fixed; exact derivative into collar zone at ring y=-.100','clothWeld':False}
 # Lower cut uses exact quarter ellipses, not straight chord approximations.
 for a,b,t0,t1 in [('CUT-R','CUT-F',-math.pi/2,0),('CUT-F','CUT-L',0,math.pi/2),('CUT-L','CUT-B',math.pi/2,math.pi),('CUT-B','CUT-R',math.pi,3*math.pi/2)]:
  cid=pair_index[tuple(sorted([a,b]))+('',)];rev=C[cid]['endpointIds']!=[a,b]
- C[cid].update(kind='ellipse-arc',controlPointsM=None,definition={'kind':'ellipse-arc','y':-.210,'rx':.098,'rz':.078,'thetaRange':[t1,t0] if rev else [t0,t1]})
- C[cid]['externalPort']='BODY_NECK_CUT';C[cid]['joinPolicy']='skin continuation under garment; receiver torso skin, not collar cloth'
+ C[cid].update(kind='ellipse-arc',controlPointsM=None,definition={'kind':'ellipse-arc','y':-.280,'rx':.106,'rz':.086,'thetaRange':[t1,t0] if rev else [t0,t1]})
+ C[cid]['externalPort']='HIDDEN_NECK_FREE_CUT';C[cid]['joinPolicy']='intentional free skin cut wholly inside T01/T02/T04 garment envelope; no torso receiver or cap'
 # Side neck curve must use the same registered section law, including exact cut endpoints.
 for side,sgn in [('L',1),('R',-1)]:
  cid=pair_index[tuple(sorted(['EFLW-'+side,'CUT-'+side]))+('',)]
  controls=[N['EFLW-'+side],[sgn*.078,-.100,0],[sgn*.094,-.200,0],N['CUT-'+side]]
  if C[cid]['endpointIds'][0]=='CUT-'+side:controls=list(reversed(controls))
- C[cid].update(kind='piecewise-linear',controlPointsM=None,definition={'kind':'piecewise-linear','pointsM':controls,'breaks':[0,.3,.9,1] if C[cid]['endpointIds'][0]!='CUT-'+side else [0,.1,.7,1]})
+ C[cid].update(kind='piecewise-linear',controlPointsM=None,definition={'kind':'piecewise-linear','pointsM':controls,'breaks':[0,.3,.65,1] if C[cid]['endpointIds'][0]!='CUT-'+side else [0,.35,.7,1]})
 # Orient skin loops consistently before owner registration; no topology is tessellated.
 adj=collections.defaultdict(list)
 refs=collections.defaultdict(list)
@@ -270,7 +270,8 @@ def weight(y,owners):
   side=any(x.get('role')=='trim' for x in owners) and {x['instance'] for x in owners}=={'N01','N02'}
   h=min(1,.35+.65*(y+.100)/.043) if side else 1
   return {'head':h,'neck':1-h} if h<1 else {'head':1}
- if y<=-.200:return {'neck':1}
+ if y<=-.200:
+  chest=min(1,max(0,(-.200-y)/.080));return {'neck':1-chest,'chest':chest}
  h=.35*(y+.200)/.100;return {'head':h,'neck':1-h}
 # Smooth-skin node contracts are one tangent plane across ALL incident curves.
 # Retained v63 partials have priority; authored endpoint controls are changed to fit,
@@ -289,7 +290,7 @@ for nid,inc in skin_incidence.items():
  if fixed:
   n=fixed[0];assert all(dot(n,q)>1-1e-10 for q in fixed),('conflicting-native-normal',nid)
  elif nid.startswith('CUT-'):
-  q=N[nid];st=q[0]/.098;ct=q[2]/.078;n=unit([st/.098,.4/.098*st*st+.2/.078*ct*ct,ct/.078]);kind='exact-neck-loft-cut-normal'
+  q=N[nid];st=q[0]/.106;ct=q[2]/.086;n=unit([st/.106,.15/.106*st*st+.125/.086*ct*ct,ct/.086]);kind='exact-neck-loft-cut-normal'
  else:
   ocular=[C[cid] for cid,end in inc if C[cid]['kind']=='sphere-projected-bezier-xy']
   if ocular:
@@ -317,6 +318,18 @@ for cid,c in C.items():
    nid=c['endpointIds'][end];segments[seg][idx]=projected_control(segments[seg][0 if end==0 else 3],segments[seg][idx],node_contracts[nid]['normal'],cid,nid)
   c.update(kind='piecewise-cubic',definition={'kind':'piecewise-cubic','segments':segments,'breaks':d['breaks'],'collarMiddleSegments':'retained exact linear ellipse sections; only upper terminal tangent changed'})
  if all(nid in node_contracts for nid in c['endpointIds']):c['skinNodeNormalIds']=c['endpointIds']
+# Re-author the upper side interval as Hermite, and the lower hidden flare with
+# analytic endpoint derivatives. Shared N01/N02 sides are the same curve source.
+neck_side_curves={}
+for side,sgn in [('L',1),('R',-1)]:
+ cid=pair_index[tuple(sorted(['EFLW-'+side,'CUT-'+side]))+('',)];c=C[cid];top=N['EFLW-'+side];ring=[sgn*.078,-.100,0];mid=[sgn*.094,-.200,0];cut=N['CUT-'+side];delta=sub(ring,top);n=node_contracts['EFLW-'+side]['normal'];At=mul(unit(sub(delta,mul(n,dot(delta,n)))),math.sqrt(dot(delta,delta)));Ar=[sgn*(.016*.3/.35),-.100*.3/.35,0]
+ upper=[top,add(top,mul(At,1/3)),sub(ring,mul(Ar,1/3)),ring]
+ middle=[ring,lerp(ring,mid,1/3),lerp(ring,mid,2/3),mid]
+ # dy/dv=-.08; dx/dy is -.16 at upper and -.15 at lower.
+ lower=[mid,add(mid,[sgn*.0128/3,-.080/3,0]),sub(cut,[sgn*.012/3,-.080/3,0]),cut]
+ segments=[upper,middle,lower];breaks=[0,.3,.65,1]
+ if c['endpointIds'][0]=='CUT-'+side:segments=[list(reversed(cp)) for cp in reversed(segments)];breaks=[0,.35,.7,1]
+ c.update(kind='piecewise-cubic',definition={'kind':'piecewise-cubic','segments':segments,'breaks':breaks,'source':'exact upper transition / collar line / lower hidden neck flare'});neck_side_curves[side]={'curveId':cid,'upperControlsM':upper,'topDerivativeM':At,'ringDerivativeM':Ar}
 def skin_curve_normal(c,t):
  a,b=[node_contracts[nid]['normal'] for nid in c['skinNodeNormalIds']];n=lerp(a,b,t);tan=tangent(c,t);n=sub(n,mul(tan,dot(n,tan)))
  if dot(n,n)<1e-14:n=cross(tan,[0,1,0] if abs(tan[1])<.9 else [1,0,0])
@@ -344,7 +357,7 @@ for j,pid in enumerate(['F05-R','F07-R','F09-R','F11','F09-L','F07-L','F05-L']):
 # constrain each new interior. This is an evaluator specification, not a new mesh.
 def boundary_value(pid,s):
  loop=P[pid]['boundaryLoops'][0];x=(s%1)*len(loop);j=min(len(loop)-1,int(x));e=loop[j];lt=x-j;t=lt if e['direction']==1 else 1-lt;c=C[e['curveId']]
- return evalcurve(c,t),tangent(c,t),c,t
+ return evalcurve(c,t),mul(tangent(c,t),e['direction']),c,t
 def canonical_normal(c,t):
  if 'nativeConstraint' in c:
   nc=c['nativeConstraint'];a,b=nc['sourceRange'];st=b-(b-a)*t if nc['reversed'] else a+(b-a)*t;ed=nc['edge'];u,v=(float(ed[1]),st) if ed[0]=='u' else (st,float(ed[1]));return native_frame(nc['instance'],u,v)[0]
@@ -353,12 +366,14 @@ def canonical_normal(c,t):
 for pid,p in P.items():
  if p['layer']!='skin' or pid in native_nets or pid in ['N01','N02']:continue
  n=unit(p['normalHint']);u=unit(cross([0,1,0],n)) if abs(n[1])<.9 else [1,0,0];v=unit(cross(n,u));center=p['interiorGuideM'];radius=sum(math.sqrt(dot(sub(N[C[e['curveId']]['endpointIds'][0]],center),sub(N[C[e['curveId']]['endpointIds'][0]],center))) for e in p['boundaryLoops'][0])/len(p['boundaryLoops'][0])
- p['surfaceRecipe']={'kind':'boundary-Hermite-disk','centerM':center,'centerAxisU':[sum((boundary_value(pid,j/64)[0][k]-center[k])*math.cos(j/64*math.tau) for j in range(64))/32 for k in range(3)],'centerAxisV':[sum((boundary_value(pid,j/64)[0][k]-center[k])*math.sin(j/64*math.tau) for j in range(64))/32 for k in range(3)],'parameters':'r in [0,1], s in [0,1) equally spaced registered boundary segments','formula':'H00(r)*G + H10(r)*(axisU*cos(2pi*s)+axisV*sin(2pi*s)) + H01(r)*B(s) + H11(r)*D(s)','basis':{'H00':'2r^3-3r^2+1','H10':'r^3-2r^2+r','H01':'-2r^3+3r^2','H11':'r^3-r^2'},'boundaryDerivative':'D=project(B-G onto canonical normal tangent plane), magnitude preserved; fixed fallback cross(normal,curveTangent)*radius only at exact zero','boundarySource':'curveId and direction only; no copied endpoint controls','renderAcceptance':False}
+ p['surfaceRecipe']={'kind':'boundary-Hermite-disk','centerM':center,'centerAxisU':[sum((boundary_value(pid,j/64)[0][k]-center[k])*math.cos(j/64*math.tau) for j in range(64))/32 for k in range(3)],'centerAxisV':[sum((boundary_value(pid,j/64)[0][k]-center[k])*math.sin(j/64*math.tau) for j in range(64))/32 for k in range(3)],'parameters':'r in [0,1], s in [0,1) equally spaced registered boundary segments','formula':'H00(r)*G + H10(r)*(axisU*cos(2pi*s)+axisV*sin(2pi*s)) + H01(r)*B(s) + H11(r)*D(s)','basis':{'H00':'2r^3-3r^2+1','H10':'r^3-2r^2+r','H01':'-2r^3+3r^2','H11':'r^3-r^2'},'boundaryDerivative':'D=normalize(cross(orientedBoundaryTangent,canonicalNormal))*distance(B,G); orientedBoundaryTangent includes the owner loop direction; this exact formula is used by generator and root placement','boundarySource':'curveId and direction only; no copied endpoint controls','renderAcceptance':False}
 for pid in native_nets:P[pid]['surfaceRecipe']={'kind':'retained-bicubic','source':'review/head-micro-v63/surfaces.mjs','controlNet':native_nets[pid],'uv':'exact v63 ribbon'}
-for pid in ['N01','N02']:P[pid]['surfaceRecipe']={'kind':'piecewise-neck-loft','lower':'exact elliptic sections linear in y from -.210 to -.100','upper':'linear loft from ellipse at y=-.100 to ordered upper contour using equal edge intervals; side seams use the one canonical piecewise source','upperContourCurveIds':[e['curveId'] for e in P[pid]['boundaryLoops'][0] if not C[e['curveId']].get('externalPort') and C[e['curveId']]['kind'] not in ['piecewise-linear','piecewise-cubic']],'normalPolicy':'partials of the loft; upper contour must retain native normal contract in construction; transition refinement recorded as acceptance risk'}
+for pid in ['N01','N02']:
+ names=['EFLW-R','O2-R','O3-R','O3-L','O2-L','EFLW-L'] if pid=='N01' else ['EFLW-L','EBL-L','SB-L','SB-R','EBL-R','EFLW-R'];toprefs=[edge(a,b) for a,b in zip(names,names[1:])];startside='R' if pid=='N01' else 'L';endside='L' if pid=='N01' else 'R'
+ P[pid]['surfaceRecipe']={'kind':'neck-Hermite-plus-elliptic-sections','upperContour':toprefs,'upperContourCurveIds':[e['curveId'] for e in toprefs],'thetaRange':[-math.pi/2,math.pi/2] if pid=='N01' else [math.pi/2,3*math.pi/2],'upperParameters':'s in [0,1] equally spans ordered 5 upper curves; v=0 upper contour, v=1 HEAD y=-.100 ellipse','upperFormula':'H00(v)*B(s)+H10(v)*A(s)+H01(v)*R(s)+H11(v)*E(s)','topDerivativeRecipe':'baseA=normalize(cross(orientedUpperTangent,canonicalNormal))*distance(R,B). Add endpoint corrections with ws=max(0,1-s/.2)^2 and we=max(0,1-(1-s)/.2)^2; project corrected A onto canonical normal plane. Endpoint corrections are stored canonical side top derivative minus baseA endpoint.','ringDerivativeScaleM':.100*.3/.35,'ringDerivativeRecipe':'E=[.16*scale*sin(theta),-scale,0]','sideSources':[neck_side_curves[startside],neck_side_curves[endside]],'lowerSections':P[pid]['sectionDefinition']['lowerSections'],'lowerFormula':'P(theta,y)=[rx(y)*sin(theta),y,rz(y)*cos(theta)]','lowerRadiusLaw':'-.200..-.100: rx=.094-.16*(y+.200),rz=.076. -.280..-.200: cubic Hermite rx endpoints(.106,.094) slopes(-.15,-.16); rz endpoints(.086,.076) slopes(-.125,0); derivative units per metre y.','lowerWeightLaw':'y<=-.200: chest=clamp((-.200-y)/.080),neck=1-chest; -.200..-.100: head=.35*(y+.200)/.100,neck=1-head','terminal':'whole free neck cut at chest .480, covered by shirt; no cap and no unowned receiver'}
+
 def surface_value(pid,r,s):
- p=P[pid];sp=p['surfaceRecipe'];G=sp['centerM'];B,tan,c,t=boundary_value(pid,s);n=canonical_normal(c,t);D=sub(B,G);D=sub(D,mul(n,dot(D,n)));
- if dot(D,D)<1e-14:D=mul(cross(n,tan),.03)
+ p=P[pid];sp=p['surfaceRecipe'];G=sp['centerM'];B,tan,c,t=boundary_value(pid,s);n=canonical_normal(c,t);D=mul(unit(cross(tan,n)),math.sqrt(dot(sub(B,G),sub(B,G))))
  T=add(mul(sp['centerAxisU'],math.cos(s*math.tau)),mul(sp['centerAxisV'],math.sin(s*math.tau)))
  h00=2*r**3-3*r*r+1;h10=r**3-2*r*r+r;h01=-2*r**3+3*r*r;h11=r**3-r*r
  return add(add(mul(G,h00),mul(T,h10)),add(mul(B,h01),mul(D,h11)))
@@ -422,7 +437,7 @@ for i in range(101):
  for j in range(337):
   th=math.radians(12+j);r=lambda a,b:1/math.sqrt((math.sin(th)/a)**2+(math.cos(th)/b)**2)
   clearance.append((r(cx,cz)-r(rx,rz))*1000)
-external={'id':'HEAD_NECK_COLLAR_V65','frames':{'headFromChestTranslation':[0,-.760,0],'neckFromChestTranslation':[0,-.600,0],'poseConversion':'inverse(M_head)*M_chest; translation valid identity bind only'},'collar':{'owners':['cloth:C01','cloth:C02'],'lowerChestY':.560,'upperChestY':.660,'innerLower':[.100,.086],'innerUpper':[.086,.083],'outerLower':[.104,.090],'outerUpper':[.090,.087],'frontOpenHalfAngleDegrees':12},'skinCut':{'headY':-.210,'chestY':.550,'radiiM':[.098,.078],'owners':['head:N01','head:N02'],'receiver':'body:neck-to-chest skin continuation','curveIds':[c['id'] for c in C.values() if c.get('externalPort')]},'verticalUnderlapM':.010,'collarZoneNeckSections':P['N01']['sectionDefinition']['lowerSections'][1:],'staticSameRayGapMM':{'min':min(clearance),'max':max(clearance),'samples':len(clearance)},'interpretation':'positive radial air gap, separate layers; not a weld or posed collision test','pending':['torso skin cut receiver must be authored or supplied','neck/chest/head skin blend and collar in animated poses untested']}
+external={'id':'HEAD_NECK_COLLAR_V65','frames':{'headFromChestTranslation':[0,-.760,0],'neckFromChestTranslation':[0,-.600,0],'poseConversion':'inverse(M_head)*M_chest; translation valid identity bind only'},'collar':{'owners':['cloth:C01','cloth:C02'],'lowerChestY':.560,'upperChestY':.660,'innerLower':[.100,.086],'innerUpper':[.086,.083],'outerLower':[.104,.090],'outerUpper':[.090,.087],'frontOpenHalfAngleDegrees':12},'skinCut':{'headY':-.280,'chestY':.480,'radiiM':[.106,.086],'owners':['head:N01','head:N02'],'receiver':None,'receiverRequired':False,'terminalPolicy':'intentional hidden free cut, no cap','coveredBy':['cloth:T01-R','cloth:T01-L','cloth:T02-R','cloth:T02-L','cloth:T04-R','cloth:T04-L'],'curveIds':[c['id'] for c in C.values() if c.get('externalPort')]},'verticalUnderlapM':.080,'underActualFrontOpeningM':.020,'collarZoneNeckSections':P['N01']['sectionDefinition']['lowerSections'][1:],'staticSameRayGapMM':{'min':min(clearance),'max':max(clearance),'samples':len(clearance)},'interpretation':'positive radial air gap, separate layers; not a weld or posed collision test','pending':['neck/chest/head skin blend and collar in animated poses untested']}
 for pid,p in P.items():
  typ=p['type'];p['imageFitIntent']={'reference':p['selectedImage'],'use':'qualitative isolated exposed/reverse/profile contour only; not a metric projection fit','feature':{'F01':'forehead shallow convex patch','F03':'temple concave orbital trim','F05':'malar prominence retained','F07':'submalar hollow retained','F09':'jaw turn retained','F11':'broad chin retained','F12':'narrow bridge with superior glabellar join','F13':'central single nasal tip','F14':'alar arch with underside open to nasal floor','F15':'columella and nasal floor','F16a':'single upper vermilion ridge','F16b':'philtral concavity','F17':'single lower-lip ridge and apron','F18':'infraorbital crescent','F19':'nasolabial side plane','F20':'oral commissure short fold','F21':'preauricular strip anterior to ear','E03':'upper lid arc','E04':'lower lid shallow arc','E05':'small medial canthal wedge, raised tear bump excluded','A01a':'open U roll, two longitudinal trims','A01b':'forked antihelix and scapha transition','A02a':'concha blind bowl','A02b':'anterior tragus flap','A03':'rounded lobe','A04':'posterior ear/root transition','S01':'anterior scalp band','S02':'crown dome','S-SIDE':'side scalp ear cutout','S05':'occipital sheet','N01':'single anterior neck half','N02':'single posterior neck half','E01':'near spherical globe with posterior closed body','E02':'iris and corneal cap','B01':'arched tapered brow strip','HT01':'raised swept single forelock','HT02':'shallow crown overlap','HT03':'short side fall','HT04':'ear-edge taper','HT05':'posterior crown flow','HT06':'nape taper'}[typ]}
 for side in ['L','R']:
@@ -443,7 +458,7 @@ for oldi in old_interfaces:
  elif common_nodes:row.update(disposition='v1 edge proposal replaced by point junction only',reason='new closed trim topology assigns the finite skin interval to the intervening named small face; no duplicate ownership')
  else:row.update(disposition='v1 adjacency proposal superseded',reason='new explicit trim loops and named intervening faces replace qualitative pair; no hidden filler or duplicate whole-edge owner')
  migration.append(row)
-registration={'version':'head-authored-v65-new-reconstruction','baseSHA':'bc761f25aae76209d26623b509f97e1f3a5a12ca','previousUnrecoveredV2':'not used; 41/82/154 reported previously is not evidence for this result','frame':{'id':'HEAD_LOCAL_M','units':'metres','up':'+Y','front':'+Z','anatomicalRight':'-X','anatomicalLeft':'+X'},'status':'author design candidate, independent full assembly acceptance pending; no new mesh','nodes':N,'skinNodeContracts':node_contracts,'endpointTangentRepairs':tangent_repairs,'curves':C,'instances':P,'hairRoots':hair,'hairOverlapOrders':hair_overlaps,'v1InterfaceMigration':migration,'eyeContract':eyes,'mouthContactCurveId':mouthcid,'externalContract':external,'referenceReview':reference_notes,'limits':['No generated-camera metric calibration','No mesh watertightness, intersections, visual likeness, expression or runtime acceptance','No new surface tessellation, renderer, runtime import or remote write','Scalp root centers evaluate on the same registered trim/interior recipe; full hair-width support and interlock acceptance require construction','Original seven bicubic surfaces and six C1 seams retained verbatim']}
+registration={'version':'head-authored-v65-revision2','baseSHA':'bc761f25aae76209d26623b509f97e1f3a5a12ca','previousUnrecoveredV2':'not used; 41/82/154 reported previously is not evidence for this result','frame':{'id':'HEAD_LOCAL_M','units':'metres','up':'+Y','front':'+Z','anatomicalRight':'-X','anatomicalLeft':'+X'},'status':'author design candidate, independent full assembly acceptance pending; no new mesh','nodes':N,'skinNodeContracts':node_contracts,'endpointTangentRepairs':tangent_repairs,'curves':C,'instances':P,'hairRoots':hair,'hairOverlapOrders':hair_overlaps,'v1InterfaceMigration':migration,'eyeContract':eyes,'mouthContactCurveId':mouthcid,'externalContract':external,'referenceReview':reference_notes,'limits':['No generated-camera metric calibration','No mesh watertightness, intersections, visual likeness, expression or runtime acceptance','No new surface tessellation, renderer, runtime import or remote write','Scalp root centers evaluate on the same registered trim/interior recipe; full hair-width support and interlock acceptance require construction','Original seven bicubic surfaces and six C1 seams retained verbatim']}
 # All outputs are deterministic; wall-clock timing is maintained in a separate receipt.
 OUT.mkdir(parents=True,exist_ok=True)
 def write(name,obj):
@@ -453,7 +468,7 @@ write('native-v63-preserved.json',{'controlNets':native_nets,'source':'docs/evid
 write('external-neck-contract.json',external)
 ports=[]
 for cid in external['skinCut']['curveIds']:
- c=C[cid];ports.append({'id':'PORT-'+cid,'owner':[o['instance'] for o in c['owners']],'frame':'HEAD_LOCAL_M','unit':'metres','kind':'open','counterpartId':'body:neck-to-chest skin continuation','canonicalSource':'registration.json#/curves/'+cid,'curveId':cid,'orderedSamples':c['frameSamples'],'garmentRelation':'10mm below collar lower rim; separate skin/cloth overlap, not welded'})
+ c=C[cid];ports.append({'id':'PORT-'+cid,'owner':[o['instance'] for o in c['owners']],'frame':'HEAD_LOCAL_M','unit':'metres','kind':'open','counterpartId':external['skinCut']['coveredBy'],'receiverRequired':False,'terminalPolicy':'intentional hidden free cut','canonicalSource':'registration.json#/curves/'+cid,'curveId':cid,'orderedSamples':c['frameSamples'],'garmentRelation':'80mm below collar lower rim and 20mm below actual shirt front opening; full azimuth garment-envelope cover is recorded separately, no skin-to-cloth weld'})
 collar_samples=[]
 for y,rx,rz in [(-.200,.094,.076),(-.150,.086,.076),(-.100,.078,.076)]:
  for deg in range(12,349,21):

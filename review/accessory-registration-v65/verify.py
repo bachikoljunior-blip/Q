@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Finite registration validation. It never validates geometry that has not been built."""
 import collections,copy,hashlib,itertools,json,math,pathlib,subprocess,time
+from curve_eval import evaluate as evaluate_curve, nail as evaluate_nail
 ROOT=pathlib.Path(__file__).resolve().parents[2];OUT=ROOT/'docs/evidence/mira-assembly-v65/accessory-registration'
 def check(data):
  cs={c['id']:c for c in data['curves']};ps={p['id']:p for p in data['instances']};bn={b['name'] for b in data['bindBones']}
@@ -51,6 +52,12 @@ def check(data):
    if cc['kind'] in ('weld','open') and not cc['closed']:
     for row in [cc['samples'][0],cc['samples'][-1]]:endpoints[tuple(round(v,6) for v in row['positionMm'])]+=1
   assert all(n==2 for n in endpoints.values()),(p['id'],'open boundary endpoints',endpoints)
+  for loop in p.get('boundaryLoops',[]):
+   for edge,nex in zip(loop,loop[1:]+loop[:1]):
+    c1=cs[edge['curveID']];c2=cs[nex['curveID']]
+    last=c1['samples'][-1 if edge['direction']==1 else 0]['positionMm'];first=c2['samples'][0 if nex['direction']==1 else -1]['positionMm']
+    assert math.dist(last,first)<1e-7,(p['id'],'directed boundary failure',edge,nex)
+    assert next(u['direction'] for u in p['boundaryUses'] if u['curveID']==edge['curveID'])==edge['direction']
   for r in p['interiorControls']:
    assert set(r['boneWeights'])<=bn and abs(sum(r['boneWeights'].values())-1)<1e-7
  for j in data['joins']:
@@ -79,10 +86,16 @@ def check(data):
    h=ps[f'{s}-boot-fastener-{i}']['surfaceRegistration'];assert h['outerYmm']==-108 and h['topYmm']==-107
    x,_,z=h['centerMm']
    assert all(inside(x+3.1*math.cos(t),z+3.1*math.sin(t)) for t in [k*math.pi/16 for k in range(32)]),(s,i,'seat outside heel')
+ for c in cs.values():
+  for i in range((len(c['samples'])-1)*4+1):
+   ev=evaluate_curve(c,i/((len(c['samples'])-1)*4));err=abs(sum(a*b for a,b in zip(ev['normal'],ev['tangent'])));assert err<1e-7,(c['id'],i,'interior curve frame')
  for seat in data['nailSeats']:
   assert seat['depthMm']==.4 and seat['plateThicknessMm']==.5 and abs(seat['plateProudMm']-.1)<1e-8
   assert seat['owners'][0].endswith('-tip') and seat['owners'][1].endswith('-nail')
   assert seat['contourCurveID'] in cs and not seat['meshContactValidated']
+  for i in range(257):
+   ev=evaluate_nail(seat['definition'],i/256);n=ev['normal'];delta=[ev['skinPositionMm'][j]-ev['positionMm'][j] for j in range(3)];proud=[ev['outerPlatePositionMm'][j]-ev['skinPositionMm'][j] for j in range(3)]
+   assert ev['ellipseDomainRatio']<1 and abs(sum(a*b for a,b in zip(delta,n))-.4)<1e-8 and abs(sum(a*b for a,b in zip(proud,n))-.1)<1e-8
  for port in data['externalPorts']:
   assert port['curveID'] in cs and port['kind']=='overlap' and not port['deformedClearanceValidated']
   if 'trousers' in port['id']:
@@ -101,7 +114,7 @@ start=time.perf_counter();path=OUT/'ACCESSORY_REGISTRATION.json';d=json.loads(pa
 ports=json.loads((OUT/'EXTERNAL_PORTS.json').read_text());cs={c['id']:c for c in d['curves']}
 for port in ports['ports']:assert port['orderedSamples']==cs[port['curveID']]['samples']
 negative=[]
-for label,mut in [('normal nonunit',lambda d:d['curves'][0]['samples'][0].update(normal=[1,1,1])),('per-owner duplicate normal',lambda d:d['instances'][0]['boundaryUses'][0].update(normal=[0,1,0])),('22mm heel substitution',lambda d:d['constraints'].update(heelMm=14,rearEnvelopeMm=22)),('renamed placement',lambda d:d['instances'][0].update(id='unknown')),('open endpoint',lambda d:d['curves'][0]['samples'][0]['positionMm'].__setitem__(0,999)),('unknown bone',lambda d:d['curves'][0]['samples'][0].update(boneWeights={'new-third-phalanx':1}))]:
+for label,mut in [('normal nonunit',lambda d:d['curves'][0]['samples'][0].update(normal=[1,1,1])),('per-owner duplicate normal',lambda d:d['instances'][0]['boundaryUses'][0].update(normal=[0,1,0])),('22mm heel substitution',lambda d:d['constraints'].update(heelMm=14,rearEnvelopeMm=22)),('renamed placement',lambda d:d['instances'][0].update(id='unknown')),('open endpoint',lambda d:d['curves'][0]['samples'][0]['positionMm'].__setitem__(0,999)),('reversed part boundary',lambda d:d['instances'][0]['boundaryUses'][0].update(direction=-d['instances'][0]['boundaryUses'][0]['direction'])),('unknown bone',lambda d:d['curves'][0]['samples'][0].update(boneWeights={'new-third-phalanx':1}))]:
  c=copy.deepcopy(d);mut(c)
  try:check(c)
  except (AssertionError,KeyError):negative.append({'fault':label,'rejected':True})
@@ -110,5 +123,5 @@ for label,mut in [('normal nonunit',lambda d:d['curves'][0]['samples'][0].update
 files=['ACCESSORY_REGISTRATION.json','EXTERNAL_PORTS.json','INPUT_HASHES.json'];before={n:(OUT/n).read_bytes() for n in files}
 subprocess.run(['python',str(ROOT/'review/accessory-registration-v65/generate.py')],cwd=ROOT,check=True,capture_output=True)
 assert all((OUT/n).read_bytes()==before[n] for n in files)
-report={'status':'PASS numerical author-registration consistency only','counts':{'types':21,'placements':90,'handPlacements':56,'bootPlacements':34,'canonicalCurves':len(d['curves']),'twoOwnerJoins':len(d['joins']),'sharedJunctions':len(d['junctions']),'canonicalSamples':sum(len(c['samples']) for c in d['curves']),'externalPorts':4,'existingBones':41,'newMeshes':0},'checks':['90 IDs/types match fixed v64 ledger','native41bones only and proper transforms','ordered curve samples unit normals/tangents, perpendicular, valid normalized weights','every open patch boundary endpoint degree2; coincident shared junction normal/weights identical','both shared owners resolve identical canonical attributes with opposite traversal','separate UV charts in range','8+12=20 rear partition and -108 support','all8 fastener seats within actual heel footprint','AH07 bare floor/AH08 separate plate','four sampled external ports including 40mm hem and9mm wrist overlap','right rigid staff scale1 retained; contact not accepted','source hashes and deterministic regeneration'], 'junctionRepair':{'sourceRank3Junctions':sum(j['sourceMaxTripleProduct']>1e-7 for j in d['junctions']),'repairedMaxTripleProduct':maxima['junctionTripleProduct'],'maxHermiteDerivativeRepairAngleDegrees':max(j['maxDerivativeRepairAngleDegrees'] for j in d['junctions']),'meaning':'authored interpolation derivatives changed into common normal domain; actual surface not yet built'},'maxima':maxima,'negativeControls':negative,'regenerationIdentical':True,'elapsedSeconds':time.perf_counter()-start,'notTested':['surface area/interior self-intersection','triangle nail/strap/grip contact','posed cloth clearance','runtime/render/material/device/PS4 or fixed10 comparison']}
+report={'status':'PASS numerical author-registration consistency only','counts':{'types':21,'placements':90,'handPlacements':56,'bootPlacements':34,'canonicalCurves':len(d['curves']),'twoOwnerJoins':len(d['joins']),'sharedJunctions':len(d['junctions']),'canonicalSamples':sum(len(c['samples']) for c in d['curves']),'externalPorts':4,'existingBones':41,'newMeshes':0},'checks':['90 IDs/types match fixed v64 ledger','native41bones only and proper transforms','ordered curve samples unit normals/tangents, perpendicular, valid normalized weights','every open patch boundary endpoint degree2; coincident shared junction normal/weights identical','both shared owners resolve identical canonical attributes with opposite traversal','all directed patch cycles close; actual interpolated normals orthogonal at quarter segments','analytic elliptical nail seat normal-depth0.4 and plate proud0.1 at257 samples each','separate UV charts in range','8+12=20 rear partition and -108 support','all8 fastener seats within actual heel footprint','AH07 bare floor/AH08 separate plate','four sampled external ports including 40mm hem and9mm wrist overlap','right rigid staff scale1 retained; contact not accepted','source hashes and deterministic regeneration'], 'junctionRepair':{'sourceRank3Junctions':sum(j['sourceMaxTripleProduct']>1e-7 for j in d['junctions']),'repairedMaxTripleProduct':maxima['junctionTripleProduct'],'maxHermiteDerivativeRepairAngleDegrees':max(j['maxDerivativeRepairAngleDegrees'] for j in d['junctions']),'meaning':'authored interpolation derivatives changed into common normal domain; actual surface not yet built'},'maxima':maxima,'negativeControls':negative,'regenerationIdentical':True,'elapsedSeconds':time.perf_counter()-start,'notTested':['surface area/interior self-intersection','triangle nail/strap/grip contact','posed cloth clearance','runtime/render/material/device/PS4 or fixed10 comparison']}
 (OUT/'VERIFICATION.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False))

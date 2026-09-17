@@ -1,0 +1,664 @@
+{
+  "sourceCommit": "ced283cecaa9fbabee52eec7ab940d6d2a2271d5",
+  "sourcePath": "docs/evidence/mira-assembly-v65/cloth-registration/CLOTH_AUTHOR_SOURCE.json",
+  "sourceSHA256": "fa5548d76c2486978dde255e8770788f8f7f515cd04f6933ebc275aac52bf0f7",
+  "scope": "directed numerical boundary/ownership, orientability, endpoint plane+weights, exact registered Hermite evaluation and RBF derivative contract; no mesh/surface interiors/posed contacts or screen acceptance",
+  "counts": {
+    "types": 40,
+    "parts": 96,
+    "curves": 269,
+    "components": 26
+  },
+  "passed": false,
+  "failures": [
+    {
+      "kind": "zero-guide-normal-projection",
+      "curve": "T05-R-front-radial0",
+      "t": 0.953125,
+      "length": 0.0
+    },
+    {
+      "kind": "zero-guide-normal-projection",
+      "curve": "T05-R-front-radial1",
+      "t": 0.046875,
+      "length": 0.0
+    },
+    {
+      "kind": "zero-guide-normal-projection",
+      "curve": "T05-R-front-radial1",
+      "t": 0.265625,
+      "length": 0.0
+    },
+    {
+      "kind": "zero-guide-normal-projection",
+      "curve": "T05-L-front-radial0",
+      "t": 0.953125,
+      "length": 0.0
+    },
+    {
+      "kind": "zero-guide-normal-projection",
+      "curve": "T05-L-front-radial1",
+      "t": 0.046875,
+      "length": 0.0
+    },
+    {
+      "kind": "zero-guide-normal-projection",
+      "curve": "T05-L-front-radial1",
+      "t": 0.265625,
+      "length": 0.0
+    }
+  ],
+  "perimeterCoverage": [
+    {
+      "part": "T01-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "T02-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 5
+    },
+    {
+      "part": "T03-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 5
+    },
+    {
+      "part": "T04-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "T05-R-front",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "T05-R-rear",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "S01-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S02-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S03-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S04-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S05-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S06-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F01-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F02-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F03-R-0",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F03-R-1",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F03-R-2",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L01-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L03-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L02-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L04-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L05-front-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L05-side-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L05-rear-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "T01-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "T02-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 5
+    },
+    {
+      "part": "T03-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 5
+    },
+    {
+      "part": "T04-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "T05-L-front",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "T05-L-rear",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "S01-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S02-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S03-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S04-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S05-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "S06-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F01-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F02-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F03-L-0",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F03-L-1",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "F03-L-2",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L01-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L03-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L02-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L04-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L05-front-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L05-side-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "L05-rear-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "C01-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "C01-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "C02-C",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "W01-0",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "W03-0",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "W01-1",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "W03-1",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "W01-2",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "W03-2",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "W02-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 5
+    },
+    {
+      "part": "P01-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "PH01-P01-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "P02-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "PH01-P02-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "P03-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "PH01-P03-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "P04-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "F04-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 1
+    },
+    {
+      "part": "F05-R",
+      "kind": "two independent loops",
+      "boundaryEdges": 2
+    },
+    {
+      "part": "W02-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 5
+    },
+    {
+      "part": "P01-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "PH01-P01-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "P02-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "PH01-P02-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "P03-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "PH01-P03-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "P04-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "F04-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 1
+    },
+    {
+      "part": "F05-L",
+      "kind": "two independent loops",
+      "boundaryEdges": 2
+    },
+    {
+      "part": "B01-front-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "TR04-front-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "B01-front-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "TR04-front-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "B01-rear-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "TR04-rear-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "B01-rear-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "TR04-rear-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "B03-buckle-C",
+      "kind": "closed centreline",
+      "boundaryEdges": 1
+    },
+    {
+      "part": "B03-hanger-R",
+      "kind": "closed centreline",
+      "boundaryEdges": 1
+    },
+    {
+      "part": "B02-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "B04-C",
+      "kind": "open extrusion axis, not a perimeter",
+      "boundaryEdges": 1
+    },
+    {
+      "part": "TR03-C",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 4
+    },
+    {
+      "part": "TR01-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "TR02-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "TR05-R",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "TR01-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "TR02-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    },
+    {
+      "part": "TR05-L",
+      "kind": "one oriented perimeter",
+      "boundaryEdges": 6
+    }
+  ],
+  "partOrientationAssignments": {
+    "T01-R": 1,
+    "L01-R": 1,
+    "T03-R": 1,
+    "T05-R-front": 1,
+    "T04-R": 1,
+    "T01-L": -1,
+    "L05-front-R": -1,
+    "L03-R": 1,
+    "L04-R": 1,
+    "T02-R": 1,
+    "T05-R-rear": 1,
+    "S01-R": -1,
+    "C02-C": -1,
+    "C01-R": -1,
+    "L01-L": -1,
+    "T03-L": -1,
+    "T05-L-front": -1,
+    "T04-L": -1,
+    "L05-side-R": -1,
+    "L02-R": 1,
+    "T02-L": -1,
+    "S02-R": -1,
+    "S04-R": -1,
+    "C01-L": -1,
+    "L05-front-L": 1,
+    "L03-L": -1,
+    "L04-L": -1,
+    "T05-L-rear": -1,
+    "S01-L": -1,
+    "L05-rear-R": -1,
+    "L02-L": -1,
+    "S03-R": -1,
+    "S05-R": -1,
+    "L05-side-L": 1,
+    "S02-L": -1,
+    "S04-L": -1,
+    "L05-rear-L": 1,
+    "S06-R": -1,
+    "S03-L": -1,
+    "S05-L": -1,
+    "S06-L": -1,
+    "F01-R": 1,
+    "F02-R": 1,
+    "F03-R-0": 1,
+    "F03-R-1": 1,
+    "F03-R-2": 1,
+    "F01-L": 1,
+    "F02-L": 1,
+    "F03-L-0": 1,
+    "F03-L-1": 1,
+    "F03-L-2": 1,
+    "W01-0": 1,
+    "W03-0": 1,
+    "W01-1": 1,
+    "W03-1": 1,
+    "W01-2": 1,
+    "W03-2": 1,
+    "W02-R": 1,
+    "P01-R": 1,
+    "PH01-P01-R": -1,
+    "P02-R": 1,
+    "P04-R": 1,
+    "P01-L": -1,
+    "PH01-P02-R": -1,
+    "PH01-P01-L": 1,
+    "P03-R": 1,
+    "P02-L": -1,
+    "P04-L": -1,
+    "PH01-P03-R": -1,
+    "PH01-P02-L": 1,
+    "P03-L": -1,
+    "PH01-P03-L": 1,
+    "F04-R": 1,
+    "F05-R": 1,
+    "W02-L": 1,
+    "F04-L": 1,
+    "F05-L": 1,
+    "B01-front-R": 1,
+    "B01-front-L": 1,
+    "B01-rear-R": 1,
+    "B01-rear-L": 1,
+    "TR04-front-R": 1,
+    "TR01-R": 1,
+    "TR04-front-L": 1,
+    "TR04-rear-R": 1,
+    "TR03-C": 1,
+    "TR02-R": -1,
+    "TR05-R": 1,
+    "TR01-L": -1,
+    "TR04-rear-L": 1,
+    "TR02-L": 1,
+    "TR05-L": 1,
+    "B03-buckle-C": 1,
+    "B03-hanger-R": 1,
+    "B02-R": 1,
+    "B04-C": 1
+  },
+  "nodePlane": {
+    "groups": 209,
+    "maxAngleDegrees": 8.671583530747724e-05,
+    "maxDot": 7.524367691960948e-12,
+    "maxRank": 2
+  },
+  "curveProbe": {
+    "samplesPerCurve": 129,
+    "minimumSpeedMPerT": 0.012052616130649856,
+    "minimumGuideNormalProjectionLength": 0.0
+  },
+  "shoulderConstraints": [
+    {
+      "part": "W02-R",
+      "constraintResidualM": 2.4296953338165395e-12,
+      "gradientFiniteDifferenceError": 8.931720330007664e-07,
+      "chainRuleNormalDotDerivative": 4.3678009079959085e-17,
+      "interiorCurveSamples": 372
+    },
+    {
+      "part": "W02-L",
+      "constraintResidualM": 2.4296953338165395e-12,
+      "gradientFiniteDifferenceError": 8.931720330007664e-07,
+      "chainRuleNormalDotDerivative": 4.3678009079959085e-17,
+      "interiorCurveSamples": 372
+    }
+  ],
+  "wallSeconds": 1.7971990529986215,
+  "limits": [
+    "A compatible node normal does not prove a globally regular surface.",
+    "The projected RBF curves lie on their registered parent by definition; no tessellation/contact acceptance inferred.",
+    "General radial/loft/Coons interior recipes require actual surface-evaluator validation next."
+  ]
+}

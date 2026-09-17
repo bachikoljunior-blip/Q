@@ -1,0 +1,628 @@
+[
+  {
+    "instanceID": "R-palm",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-back",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-thenar",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-ulnar",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-first-web",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-wrist",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "R.wrist.proximal"
+    ],
+    "surfaceFamily": "uncapped elliptical sleeve"
+  },
+  {
+    "instanceID": "R-web-index-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-web-middle-ring",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-web-ring-little",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-index-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "R.PIP.index.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "R-index-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.PIP.index.loop",
+      "R.DIP.index.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "R-index-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.DIP.index.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "R-index-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "R-middle-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "R.PIP.middle.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "R-middle-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.PIP.middle.loop",
+      "R.DIP.middle.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "R-middle-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.DIP.middle.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "R-middle-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "R-ring-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "R.PIP.ring.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "R-ring-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.PIP.ring.loop",
+      "R.DIP.ring.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "R-ring-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.DIP.ring.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "R-ring-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "R-little-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "R.PIP.little.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "R-little-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.PIP.little.loop",
+      "R.DIP.little.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "R-little-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.DIP.little.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "R-little-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "R-thumb-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "R.IP.thumb.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "R-thumb-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.IP.thumb.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "R-thumb-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "L-palm",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-back",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-thenar",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-ulnar",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-first-web",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-wrist",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "L.wrist.proximal"
+    ],
+    "surfaceFamily": "uncapped elliptical sleeve"
+  },
+  {
+    "instanceID": "L-web-index-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-web-middle-ring",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-web-ring-little",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-index-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "L.PIP.index.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "L-index-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.PIP.index.loop",
+      "L.DIP.index.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "L-index-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.DIP.index.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "L-index-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "L-middle-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "L.PIP.middle.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "L-middle-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.PIP.middle.loop",
+      "L.DIP.middle.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "L-middle-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.DIP.middle.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "L-middle-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "L-ring-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "L.PIP.ring.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "L-ring-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.PIP.ring.loop",
+      "L.DIP.ring.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "L-ring-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.DIP.ring.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "L-ring-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "L-little-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "L.PIP.little.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "L-little-middle",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.PIP.little.loop",
+      "L.DIP.little.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "L-little-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.DIP.little.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "L-little-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "L-thumb-proximal",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "L.IP.thumb.loop"
+    ],
+    "surfaceFamily": "open loft"
+  },
+  {
+    "instanceID": "L-thumb-tip",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.IP.thumb.loop"
+    ],
+    "surfaceFamily": "proximal-open distal-closed loft with bare skin nail recess"
+  },
+  {
+    "instanceID": "L-thumb-nail",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "single curved plate"
+  },
+  {
+    "instanceID": "R-boot-sole",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.boot.sole-welt"
+    ],
+    "surfaceFamily": "thin continuous slab without integral heel"
+  },
+  {
+    "instanceID": "R-boot-heel",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "separate closed heel with four empty blind seats"
+  },
+  {
+    "instanceID": "R-boot-vamp",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-boot-toe",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-boot-heel-back",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-boot-shaft",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "R.boot.shaft-rim"
+    ],
+    "surfaceFamily": "uncapped loft"
+  },
+  {
+    "instanceID": "R-boot-rim",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "R.boot.shaft-rim",
+      "R.boot.rim-aperture"
+    ],
+    "surfaceFamily": "single folded ring"
+  },
+  {
+    "instanceID": "R-boot-welt",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "R.boot.sole-welt"
+    ],
+    "surfaceFamily": "continuous annular strip"
+  },
+  {
+    "instanceID": "R-boot-quarter-inner",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-boot-quarter-outer",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "R-boot-wrap-shaft-a",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "one flat strip deformed onto author route"
+  },
+  {
+    "instanceID": "R-boot-wrap-shaft-b",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "one flat strip deformed onto author route"
+  },
+  {
+    "instanceID": "R-boot-wrap-instep",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "one flat strip deformed onto author route"
+  },
+  {
+    "instanceID": "R-boot-fastener-1",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "closed disc"
+  },
+  {
+    "instanceID": "R-boot-fastener-2",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "closed disc"
+  },
+  {
+    "instanceID": "R-boot-fastener-3",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "closed disc"
+  },
+  {
+    "instanceID": "R-boot-fastener-4",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "closed disc"
+  },
+  {
+    "instanceID": "L-boot-sole",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.boot.sole-welt"
+    ],
+    "surfaceFamily": "thin continuous slab without integral heel"
+  },
+  {
+    "instanceID": "L-boot-heel",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "separate closed heel with four empty blind seats"
+  },
+  {
+    "instanceID": "L-boot-vamp",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-boot-toe",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-boot-heel-back",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-boot-shaft",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "L.boot.shaft-rim"
+    ],
+    "surfaceFamily": "uncapped loft"
+  },
+  {
+    "instanceID": "L-boot-rim",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [
+      "L.boot.shaft-rim",
+      "L.boot.rim-aperture"
+    ],
+    "surfaceFamily": "single folded ring"
+  },
+  {
+    "instanceID": "L-boot-welt",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [
+      "L.boot.sole-welt"
+    ],
+    "surfaceFamily": "continuous annular strip"
+  },
+  {
+    "instanceID": "L-boot-quarter-inner",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-boot-quarter-outer",
+    "openEdgeCycleComponentsIgnoringDirection": 1,
+    "closedCurveComponents": [],
+    "surfaceFamily": "open bounded patch"
+  },
+  {
+    "instanceID": "L-boot-wrap-shaft-a",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "one flat strip deformed onto author route"
+  },
+  {
+    "instanceID": "L-boot-wrap-shaft-b",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "one flat strip deformed onto author route"
+  },
+  {
+    "instanceID": "L-boot-wrap-instep",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "one flat strip deformed onto author route"
+  },
+  {
+    "instanceID": "L-boot-fastener-1",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "closed disc"
+  },
+  {
+    "instanceID": "L-boot-fastener-2",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "closed disc"
+  },
+  {
+    "instanceID": "L-boot-fastener-3",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "closed disc"
+  },
+  {
+    "instanceID": "L-boot-fastener-4",
+    "openEdgeCycleComponentsIgnoringDirection": 0,
+    "closedCurveComponents": [],
+    "surfaceFamily": "closed disc"
+  }
+]

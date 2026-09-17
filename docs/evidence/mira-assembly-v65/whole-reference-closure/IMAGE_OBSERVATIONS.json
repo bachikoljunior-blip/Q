@@ -1,0 +1,175 @@
+{
+  "canonicalAgent": "/root/ultra_q_recover_reference_assembly/cloth_registration_v65/cloth_image_check",
+  "records": [
+    {
+      "id": "head:F16b",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/03-central-mouth-v1.png",
+      "sha256": "c6d2981eab25c3da606a70c16e98d5ba679dcf4d414b59eb4eac84df79ca6337",
+      "views": [
+        "FRONT (exposed face)",
+        "SIDE (R)",
+        "REVERSE (attachment face)",
+        "THREE-QUARTER (L)",
+        "THREE-QUARTER (R)"
+      ],
+      "scope": "Single philtral surface, central groove/ridges, narrow side and concave reverse. Five displayed views resolve incomplete REVERSE-only enumeration; uncalibrated thickness and crease relief remain authored.",
+      "exclusions": [
+        "SIDE true-90-degree caption as calibrated camera",
+        "illustrated thick rim and grain as anatomy"
+      ],
+      "method": "formal view_image of unchanged original PNG",
+      "stage": "current final-reference task",
+      "calibrated": false,
+      "numericalAssemblyAccepted": false
+    },
+    {
+      "id": "head:E05",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/04-corners-v1.png",
+      "sha256": "baf34c9e29d596969585d557aab7a605c2f5a17be93fd6a820aa01114d9ea15d",
+      "views": [
+        "FRONT / EXPOSED FACE",
+        "RIGHT SIDE",
+        "REVERSE / ATTACHMENT FACE",
+        "THREE-QUARTER (FRONT-LEFT)",
+        "THREE-QUARTER (BACK-LEFT)"
+      ],
+      "scope": "Medial canthus wedge and reverse surface are displayed. The conspicuous round caruncle is not adopted as a literal large bump; the author explicitly registers the small canthal wedge.",
+      "exclusions": [
+        "prominent near-round caruncle mound as exact anatomy",
+        "90-degree caption as calibrated camera",
+        "thick border as added tissue"
+      ],
+      "method": "formal view_image of unchanged original PNG",
+      "stage": "current final-reference task",
+      "calibrated": false,
+      "numericalAssemblyAccepted": false
+    },
+    {
+      "id": "head:E01",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/05-eye-and-brow-v2.png",
+      "sha256": "685b8f0cf504b368bfab3107272289057b0407fa958e2ee48d5a617446ee06b0",
+      "views": [
+        "FRONT (EXPOSED FACE)",
+        "RIGHT SIDE",
+        "BACK (ATTACHMENT FACE)",
+        "THREE-QUARTER (FRONT-LEFT)",
+        "THREE-QUARTER (BACK-LEFT)"
+      ],
+      "scope": "Near-spherical eye body with anterior cap seat and closed rear. The small rear mark is not a posterior open socket.",
+      "exclusions": [
+        "TRUE 90-degree caption as calibrated camera",
+        "locator scale or optical appearance as dimensional evidence"
+      ],
+      "method": "formal view_image of unchanged original PNG",
+      "stage": "current final-reference task",
+      "calibrated": false,
+      "numericalAssemblyAccepted": false
+    },
+    {
+      "id": "head:E02",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/05-eye-and-brow-v2.png",
+      "sha256": "685b8f0cf504b368bfab3107272289057b0407fa958e2ee48d5a617446ee06b0",
+      "views": [
+        "FRONT (EXPOSED FACE)",
+        "RIGHT SIDE",
+        "BACK (ATTACHMENT FACE)",
+        "THREE-QUARTER (FRONT-LEFT)",
+        "THREE-QUARTER (BACK-LEFT)"
+      ],
+      "scope": "One convex iris/corneal cap with concave reverse and narrow side; exact optical thickness/overlap are authored.",
+      "exclusions": [
+        "TRUE 90-degree caption as calibrated camera",
+        "locator scale or optical appearance as dimensional evidence"
+      ],
+      "method": "formal view_image of unchanged original PNG",
+      "stage": "current final-reference task",
+      "calibrated": false,
+      "numericalAssemblyAccepted": false
+    },
+    {
+      "id": "head:B01",
+      "path": "docs/evidence/mira-reference-set-v64/head-reference-set/05-eye-and-brow-v2.png",
+      "sha256": "685b8f0cf504b368bfab3107272289057b0407fa958e2ee48d5a617446ee06b0",
+      "views": [
+        "FRONT (EXPOSED FACE)",
+        "RIGHT SIDE",
+        "BACK (ATTACHMENT FACE)",
+        "THREE-QUARTER (FRONT-LEFT)",
+        "THREE-QUARTER (BACK-LEFT)"
+      ],
+      "scope": "One tapered eyebrow strip, exposed hair direction, backing, edge and obliques; individual rendered hairs are not required geometry.",
+      "exclusions": [
+        "TRUE 90-degree caption as calibrated camera",
+        "locator scale or optical appearance as dimensional evidence"
+      ],
+      "method": "formal view_image of unchanged original PNG",
+      "stage": "current final-reference task",
+      "calibrated": false,
+      "numericalAssemblyAccepted": false
+    },
+    {
+      "id": "cloth:PH01",
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/PH01-v1.png",
+      "sha256": "2a9dc2184fa51daca9151d1bbec92510b932dc40cc3887fd76be3a85b47095c1",
+      "views": [
+        "FRONT",
+        "BACK",
+        "RIGHT PROFILE (oblique reference only)",
+        "LEFT PROFILE (oblique reference only)",
+        "THREE-QUARTER"
+      ],
+      "scope": "One curved hem turnback strip with exposed front, reverse fold and open short ends. Both labelled profiles are oblique. Their absence from prior adoption enumeration was not an absent original image.",
+      "exclusions": [
+        "profile labels as exact 90-degree views",
+        "ornamental grain or rolled outline as material/metric authority",
+        "independent solid end caps"
+      ],
+      "method": "formal view_image of unchanged original PNG",
+      "stage": "current final-reference task",
+      "calibrated": false,
+      "numericalAssemblyAccepted": false
+    },
+    {
+      "id": "cloth:TR03",
+      "path": "docs/evidence/mira-reference-set-v64/cloth-reference-set/TR03-v2.png",
+      "sha256": "875cf46b6a524d29f1392308ee55cfba8a6c3e7fd72593b7ba88d7b6ee3496fb",
+      "views": [
+        "OUTER FACE",
+        "TRUE PROFILE (qualitative side only)",
+        "INNER FACE",
+        "THREE-QUARTER"
+      ],
+      "scope": "Single four-edge diamond cloth patch with convex/reverse appearances and a bent thin side. The placement panel shows region only, not four seam identities. All four edge assignments belong to explicit author design.",
+      "exclusions": [
+        "placement locator as proof of four edge-to-panel correspondences",
+        "TRUE PROFILE as exact projection"
+      ],
+      "method": "formal view_image of unchanged original PNG",
+      "stage": "same canonical worker, earlier finite cloth image review in this continuous thread",
+      "calibrated": false,
+      "numericalAssemblyAccepted": false
+    },
+    {
+      "id": "cloth:TR02",
+      "path": "docs/evidence/mira-assembly-v65/cloth-registration/TR02-notched-open-v65-v2.png",
+      "sha256": "1d8d8d1d8a1220a2dbd3b38ccc7461a2bf9dd798c2ab8b9234efa3fc9e418c12",
+      "views": [
+        "OUTSIDE",
+        "PROFILE (qualitative side only)",
+        "REVERSE",
+        "THREE-QUARTER"
+      ],
+      "scope": "One open sheet with a continuous upper-side notch. OUTSIDE notch is image-left; REVERSE notch image-right. This fixes the first supplement reflection contradiction. Both long edges and both short arcs remain open; no opposing wall.",
+      "exclusions": [
+        "camera labels as exact projection or global axes",
+        "blue-grey proxy colour as canonical material",
+        "notch contour as measured TR03 seam coordinates"
+      ],
+      "method": "formal view_image of unchanged original PNG",
+      "stage": "same canonical worker, earlier two-stage TR02 supplement inspection in this continuous thread",
+      "calibrated": false,
+      "numericalAssemblyAccepted": false
+    }
+  ],
+  "otherImages": "prior accepted policies and earlier independent reviews retain their own provenance; no claim of freshly inspecting all 74 selected images"
+}

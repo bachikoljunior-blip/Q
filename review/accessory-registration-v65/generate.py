@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Author-designed registration only. No vertices/faces, renderer or runtime imports."""
 import copy, hashlib, itertools, json, math, pathlib
+from curve_eval import nail as evaluate_nail, evaluate as evaluate_curve
 ROOT=pathlib.Path(__file__).resolve().parents[2]
 OUT=ROOT/'docs/evidence/mira-assembly-v65/accessory-registration'
 SRC=ROOT/'docs/evidence/mira-reference-set-v64'
@@ -44,7 +45,7 @@ def curve(cid,frame,points,normal,weights,owners,kind='weld',closed=False,metada
   nn=unit(sub(seed,mul(tangent,dot(seed,tangent))))
   w=weights(p,t) if callable(weights) else weights
   rows.append({'sample':i,'u':t,'positionMm':p,'normal':nn,'tangent':tangent,'boneWeights':{k:v for k,v in w.items() if v>1e-12}})
- c={'id':cid,'frame':frame,'unit':'mm','kind':kind,'closed':closed,'interpolation':'piecewise cubic Hermite: uniform knots sample/(N-1), segment-local derivative=tangent*tangentMagnitudeMm; exact shared endpoint and junction derivatives; normalized linear normal/weight interpolation','samples':rows,'owners':owners}
+ c={'id':cid,'frame':frame,'unit':'mm','kind':kind,'closed':closed,'interpolation':'piecewise cubic Hermite: uniform knots sample/(N-1), segment-local derivative=tangent*tangentMagnitudeMm; exact shared endpoint and junction derivatives; normal = normalized(linear normal seed projected perpendicular to ACTUAL Hermite derivative at t); normalized linear weights','samples':rows,'owners':owners}
  if metadata:c.update(metadata)
  curves[cid]=c
  for k,pid in enumerate(owners):
@@ -117,22 +118,17 @@ for side,si,sgn in [('R',0,1),('L',1,-1)]:
   instances[f'{side}-{digit}-tip']['surfaceRegistration']['nailSeatOverride']='The registered bare skin floor replaces the loft inside the seat contour; only AH08 supplies keratin. Distal radius profile smoothstep [0,1],[.55,.91],[.9,.60],[1,0].'
   # Analytic nail underside shares the recessed skin floor; no extra plate in AH07.
   np=instances[f'{side}-{digit}-nail']['sourcePlacement'];width=np['width_mm'];length=np['length_mm'];s0=L-length/2-2
-  def tipfactor(ss):
-   tt=clamp((ss-tp['section_start_mm'])/tp['section_length_mm']);st=[(0,1),(.55,.91),(.9,.60),(1,0)]
-   for (a,fa),(b,fb) in zip(st,st[1:]):
-    if tt<=b:return fa+(fb-fa)*smooth((tt-a)/(b-a))
-   return 0
-  def seat(t,u=1):
-   x=width/2*u*math.sin(t); ss=s0+length/2*u*math.cos(t); z=rz*tipfactor(ss)-.4-1.6*(x/(width/2))**2
-   return add(root,rot([sgn*x,-ss,z],q))
-  def seatnormal(p,t):
-   angle=t*2*PI;x=width/2*math.sin(angle);ss=s0+length/2*math.cos(angle)
-   dx=-3.2*x/(width/2)**2*sgn;dy=-rz*(tipfactor(ss+.001)-tipfactor(ss-.001))/.002
-   return rot(unit([-dx,-dy,1]),q)
+  nail_definition={'widthLengthMm':[width,length],'digitLengthMm':L,'tipArclengthRangeMm':[tp['section_start_mm'],L],'tipRadiiMm':[rx,rz],'radialSign':sgn,'rootPositionHandMm':root,'rootQuaternion':q,'normalDepthMm':.4,'plateThicknessMm':.5}
+  def seat(t,u=1):return evaluate_nail(nail_definition,t/(2*PI),u)['positionMm']
+  def seatnormal(p,t):return evaluate_nail(nail_definition,t)['normal']
   npts=[seat(2*PI*i/32) for i in range(33)]
   nw=dweights(si,chain,s0,L,pivot)
   cid=curve(f'{side}.{digit}.nail-seat',H,npts,seatnormal,nw,[f'{side}-{digit}-tip',f'{side}-{digit}-nail'],'contact',True)
-  nailSeats.append({'id':f'{side}.{digit}.nail-seat','owners':[f'{side}-{digit}-tip',f'{side}-{digit}-nail'],'frame':H,'contourCurveID':cid,'widthLengthMm':[width,length],'floorCenterMm':seat(0,0),'depthMm':.4,'plateThicknessMm':.5,'plateProudMm':.1,'clearancePerSideMm':.1,'bedOuterWidthLengthMm':[width+.2,length+.2],'undersideControlRows':[seat(2*PI*i/8,u) for u in [0,.5,1] for i in range(8)],'interpolation':'floor z=rz*tipRadiusProfile(s)-0.4-1.6*(x/(width/2))^2 in digit root frame; tipRadiusProfile is smoothstep between [0,1],[.55,.91],[.9,.60],[1,0] over distal section; plate underside equals floor; upper surface +0.5mm root +Z','meshContactValidated':False})
+  curves[cid]['evaluator']='analytic-normal-offset-elliptic-nail';curves[cid]['definition']=nail_definition
+  curves[cid]['interpolation']='analytic ellipsoidal tip skin minus 0.4mm outward normal; curve_eval.nail defines position and analytic derivative; canonical samples are readback only'
+  for row in curves[cid]['samples']:
+   ev=evaluate_nail(nail_definition,row['u']);row['positionMm']=ev['positionMm'];row['normal']=ev['normal'];row['tangent']=unit(ev['derivative'])
+  nailSeats.append({'id':f'{side}.{digit}.nail-seat','owners':[f'{side}-{digit}-tip',f'{side}-{digit}-nail'],'frame':H,'contourCurveID':cid,'widthLengthMm':[width,length],'floorCenterMm':seat(0,0),'depthMm':.4,'plateThicknessMm':.5,'plateProudMm':.1,'clearancePerSideMm':.1,'bedOuterWidthLengthMm':[width+.2,length+.2],'supportSamples':[evaluate_nail(nail_definition,i/32) for i in range(33)],'definition':nail_definition,'undersideControlRows':[seat(2*PI*i/8,u) for u in [0,.5,1] for i in range(8)],'interpolation':'tip elliptical skin z=(rz/rx)*sqrt((rx*f(s))^2-x^2); floor is skin minus0.4mm analytic surface normal; plate exterior skin plus0.1mm normal; exact evaluator and analytic derivative in curve_eval.nail','meshContactValidated':False})
   inst=instances[f'{side}-{digit}-nail'];inst['frame']=H;inst['localToFrameMatrixMm']=matrix(seat(0,0),q);inst['surfaceRegistration']={'family':'single curved plate','seatID':cid,'thicknessMm':.5};inst['interiorControls']=[{'positionMm':seat(ang,u),'boneWeights':nw,'sourceFeature':'matching concave underside'} for u in [0,.5] for ang in [0,PI/2,PI,3*PI/2]]
  # Wrist stays an open sleeve: controls lie on the skin, never in its central hole.
  instances[f'{side}-wrist']['surfaceRegistration']={'family':'uncapped elliptical sleeve','stationsYRxRzMm':[[-15,32,24],[0,29.5,24],[9,28,24]],'endsOpen':True,'internalCap':False}
@@ -247,6 +243,59 @@ for c in curves.values():
   left=rows[i-1]['positionMm'] if i else (rows[-2]['positionMm'] if c['closed'] else rows[1]['positionMm'])
   right=rows[i+1]['positionMm'] if i<count-1 else (rows[1]['positionMm'] if c['closed'] else rows[-2]['positionMm'])
   r['tangentMagnitudeMm']=(norm(sub(r['positionMm'],left))+norm(sub(right,r['positionMm'])))/2
+
+# Construct directed cycles, then orient connected cycles so every weld cancels.
+# Contact seats and overlay routes are interior constraints, not patch boundary edges.
+cycles=[];edge_cycles={}
+for pid,p in instances.items():
+ uses={u['curveID']:u for u in p['boundaryUses'] if curves[u['curveID']]['kind'] in ('weld','open')}
+ remaining=set(uses)
+ while remaining:
+  first=min(remaining);c=curves[first];chain=[]
+  if c['closed']:
+   chain=[{'curveID':first,'direction':1}];remaining.remove(first)
+  else:
+   key=lambda pos:tuple(round(v,7) for v in pos)
+   start=key(c['samples'][0]['positionMm']);at=start;cid=first
+   while True:
+    cc=curves[cid];a=key(cc['samples'][0]['positionMm']);b=key(cc['samples'][-1]['positionMm']);direction=1 if at==a else -1
+    assert at in (a,b),(pid,cid,at)
+    chain.append({'curveID':cid,'direction':direction});remaining.remove(cid);at=b if direction==1 else a
+    if at==start:break
+    candidates=[k for k in remaining if not curves[k]['closed'] and at in (key(curves[k]['samples'][0]['positionMm']),key(curves[k]['samples'][-1]['positionMm']))]
+    assert len(candidates)==1,(pid,at,candidates)
+    cid=candidates[0]
+  ci=len(cycles);cycles.append({'instance':pid,'edges':chain})
+  for e in chain:edge_cycles.setdefault(e['curveID'],[]).append((ci,e['direction']))
+adj={i:[] for i in range(len(cycles))}
+for cid,owners in edge_cycles.items():
+ if len(owners)==2:
+  (a,da),(b,db)=owners;adj[a].append((b,-da*db));adj[b].append((a,-da*db))
+orient={}
+for seed in adj:
+ if seed in orient:continue
+ orient[seed]=1;queue=[seed]
+ for a in queue:
+  for b,relative in adj[a]:
+   if b in orient:assert orient[b]==orient[a]*relative,('non-orientable boundary',a,b)
+   else:orient[b]=orient[a]*relative;queue.append(b)
+ # Choose the component sign by signed circulation against canonical normals.
+ score=0
+ for ci in queue:
+  cycle=cycles[ci];part=instances[cycle['instance']];pts=[r['positionMm'] for u in part['boundaryUses'] if curves[u['curveID']]['kind'] in ('weld','open') for r in curves[u['curveID']]['samples']];G=[sum(p[k] for p in pts)/len(pts) for k in range(3)]
+  for e in cycle['edges']:
+   for row in curves[e['curveID']]['samples']:
+    score+=dot(cross(sub(row['positionMm'],G),mul(row['tangent'],e['direction']*orient[ci])),row['normal'])
+ if score<0:
+  for ci in queue:orient[ci]*=-1
+for ci,cycle in enumerate(cycles):
+ pid=cycle['instance'];chain=cycle['edges']
+ if orient[ci]<0:chain=[{'curveID':e['curveID'],'direction':-e['direction']} for e in reversed(chain)]
+ instances[pid].setdefault('boundaryLoops',[]).append(chain)
+ for e in chain:
+  use=next(u for u in instances[pid]['boundaryUses'] if u['curveID']==e['curveID']);use['direction']=e['direction']
+for j in joins:
+ if j['kind']=='weld':j['directions']=[next(u['direction'] for u in instances[pid]['boundaryUses'] if u['curveID']==j['curveID']) for pid in j['owners']]
 
 # Explicit controls for each skin/leather patch, with reproducible boundary interpolation.
 feature={'AH01':'palm shallow palmar bowl','AH02':'dorsal metacarpal rise','AH03':'thenar bulge and thumb cutout','AH04':'ulnar convex side','AH05':'interdigital saddle','AH09':'broad thumb opposition saddle','AH10':'minimum uncapped wrist skin','AB03':'open instep with four free joining edges','AB04':'broad flattened toe','AB05':'open medial/lateral quarter','AB06':'open rear heel panel without rivets','AB10':'continuous welt without clasp'}
