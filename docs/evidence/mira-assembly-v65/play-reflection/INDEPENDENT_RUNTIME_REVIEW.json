@@ -1,0 +1,276 @@
+{
+  "status": "CONDITIONAL_RUNTIME_INTEGRATION_REVIEW_NO_BLOCKING_LIVE_FAILURE_FOUND",
+  "reviewer": "/root/ultra_q_recover_reference_assembly",
+  "author": "parent /root",
+  "instructionScope": "Apply saved completed staff work to play, then stop. No new full-body modeling or autonomous continuation.",
+  "readOnlyRuntimeSource": true,
+  "remoteAndSitesWrites": 0,
+  "reviewWindow": {
+    "firstReadUTC": "2026-09-17T00:30:19Z",
+    "recordedUTC": "2026-09-17T00:36:42.882071+00:00",
+    "earlierAssignmentOverheadNotMeasured": true
+  },
+  "reviewedSourceHashes": {
+    "src/mira-keeper.js": "bb7b0f6768fcbef0a7091e95a2fe122531dfdf81e328c9695d7231ef791887b9",
+    "src/scene.js": "38c7ad1b5b655c3a8d3f652106a0744e97c122d0ccee4331b176338acf80ed87",
+    "src/actor-models.js": "ee276f96ac89769f9f3c57c146f85c06af7efd429623b0ab85a46bf51acaa84b",
+    "src/assets/characters/detailed-geometry.js": "98972ef568c0975d3f91bfed28654026bdf5decea143f868e97f70c724672603"
+  },
+  "sourceStableDuringNativeRun": true,
+  "counts": {
+    "oldActorTriangles": 6718,
+    "oldActorMeshes": 13,
+    "removedStaffTriangles": 292,
+    "bodyTriangles": 6426,
+    "staffTriangles": 7512,
+    "staffMaterialMeshes": 4,
+    "combinedTriangles": 13938,
+    "combinedMeshes": 15,
+    "gpuPasses": "unmeasured; transmission is not counted as one GPU pass"
+  },
+  "actualChecks": {
+    "boneNamesAndOrderPreserved": true,
+    "boneCount": 41,
+    "oldStaffInfluencedVerticesAfter": 0,
+    "idleBreathingSamples": 17,
+    "maximumGripResidualM": 2.909716423516991e-14,
+    "visibilityAndFailureRecovery": [
+      {
+        "input": {
+          "moving": true,
+          "x": 7,
+          "z": 80.1
+        },
+        "motion": "walk",
+        "visible": false,
+        "status": "unsupported-motion"
+      },
+      {
+        "input": {
+          "dead": true,
+          "deathElapsed": 0.3
+        },
+        "motion": "death",
+        "visible": false,
+        "status": "unsupported-motion"
+      },
+      {
+        "input": {
+          "moving": false,
+          "dead": false,
+          "x": 7,
+          "z": 80
+        },
+        "motion": "idle",
+        "visible": true,
+        "status": "ok"
+      },
+      {
+        "input": "invalid ground",
+        "visible": false,
+        "status": "invalid-ground-height"
+      },
+      {
+        "input": "valid recovery",
+        "visible": true,
+        "status": "ok"
+      }
+    ],
+    "disposal": {
+      "ownedGeometries": 4,
+      "ownedMaterials": 4,
+      "cape": 1,
+      "sharedGeometry": 0,
+      "sharedMaterial": 0,
+      "expectedOwnedGeometryCount": 4,
+      "expectedOwnedMaterialCount": 4,
+      "staffParent": null,
+      "visibleAfterUpdate": false
+    },
+    "nativeFailures": []
+  },
+  "sourceFlowInspection": [
+    "SceneView replaces only the fixed village npc with createMiraKeeper and calls its animate after setting actual ground/heading before adding it to scene.",
+    "SceneView.update calls npc.animate through animateModel before renderer.render. The actor rest reset precedes the wrapper IK.",
+    "Other actors use createDetailedActor; omitted staff has a separate geometry cache key and retains its staff bone.",
+    "Main reuses SceneView for save/newgame; ordinary restart does not allocate a second keeper factory.",
+    "Static transform comparison distinguishes an affine staff matrix already present in both variants; existing appearance/world assertions remain.",
+    "Mira has no vaultAdornment; animateVaultWarden returns immediately after the wrapper and does not overwrite its arm solve."
+  ],
+  "provenanceChecks": {
+    "geometryHashAndBytes": true,
+    "animationHashAndBytes": true
+  },
+  "contact": {
+    "method": "Exact current skinned triangle positions clipped to grip axial interval; conservative inscribed-circle test for the preserved 16-sided radius24mm leather core. This proves interior overlap, not full contact distances or screen impact.",
+    "currentTriangleOverlap": {
+      "scope": "Exact current skinned triangle positions clipped to grip axial interval; conservative inscribed-circle test for the preserved 16-sided radius24mm leather core. This proves interior overlap, not full contact distances or screen impact.",
+      "count": 6,
+      "worst": [
+        {
+          "mesh": "Q skin skin",
+          "face": 493,
+          "vertices": [
+            362,
+            356,
+            363
+          ],
+          "bones": [
+            "finger-tip-0-3"
+          ],
+          "conservativeGripPenetrationM": 0.0015037721228711685,
+          "point": [
+            -0.016177953288064373,
+            1.1679999988079073,
+            0.014960559492770642
+          ],
+          "radius": 0.022035074606806364
+        },
+        {
+          "mesh": "Q skin skin",
+          "face": 494,
+          "vertices": [
+            356,
+            357,
+            363
+          ],
+          "bones": [
+            "finger-tip-0-3"
+          ],
+          "conservativeGripPenetrationM": 0.0015037721228711685,
+          "point": [
+            -0.016177953288064373,
+            1.1679999988079073,
+            0.014960559492770642
+          ],
+          "radius": 0.022035074606806364
+        },
+        {
+          "mesh": "Q skin skin",
+          "face": 495,
+          "vertices": [
+            363,
+            357,
+            364
+          ],
+          "bones": [
+            "finger-tip-0-3"
+          ],
+          "conservativeGripPenetrationM": 0.0015037721228711685,
+          "point": [
+            -0.016177953288064373,
+            1.1679999988079073,
+            0.014960559492770642
+          ],
+          "radius": 0.022035074606806364
+        },
+        {
+          "mesh": "Q skin skin",
+          "face": 504,
+          "vertices": [
+            362,
+            363,
+            369
+          ],
+          "bones": [
+            "finger-tip-0-3",
+            "finger-0-3"
+          ],
+          "conservativeGripPenetrationM": 0.0015037721228711685,
+          "point": [
+            -0.016177953288064373,
+            1.1679999988079073,
+            0.014960559492770642
+          ],
+          "radius": 0.022035074606806364
+        },
+        {
+          "mesh": "Q skin skin",
+          "face": 505,
+          "vertices": [
+            369,
+            363,
+            370
+          ],
+          "bones": [
+            "finger-0-3",
+            "finger-tip-0-3"
+          ],
+          "conservativeGripPenetrationM": 0.0015037721228711685,
+          "point": [
+            -0.016177953288064373,
+            1.1679999988079073,
+            0.014960559492770642
+          ],
+          "radius": 0.022035074606806364
+        },
+        {
+          "mesh": "Q skin skin",
+          "face": 506,
+          "vertices": [
+            363,
+            364,
+            370
+          ],
+          "bones": [
+            "finger-tip-0-3",
+            "finger-0-3"
+          ],
+          "conservativeGripPenetrationM": 0.0015037721228711685,
+          "point": [
+            -0.016177953288064373,
+            1.1679999988079073,
+            0.014960559492770642
+          ],
+          "radius": 0.022035074606806364
+        }
+      ]
+    },
+    "sampledHandAndSleeve": {
+      "sleeve": {
+        "count": 220,
+        "minGripRadius": 0.07193223084039113,
+        "insideGripCount": 0,
+        "insideShaftCount": 0,
+        "maxShaftPenetrationM": 0,
+        "time": 0
+      },
+      "finger": {
+        "count": 210,
+        "minGripRadius": 0.022035074606806364,
+        "insideGripCount": 1,
+        "insideShaftCount": 0,
+        "maxShaftPenetrationM": 0,
+        "time": 0
+      },
+      "palm": {
+        "count": 55,
+        "minGripRadius": 0.03228002372787302,
+        "insideGripCount": 0,
+        "insideShaftCount": 0,
+        "maxShaftPenetrationM": 0,
+        "time": 0
+      }
+    },
+    "interpretation": "Small existing finger/leather interpenetration and palm gap remain. Point attachment is not physically exact whole-hand grasp. No new surface has been authored here."
+  },
+  "nonBlockingSourceNote": {
+    "status": "closed by author",
+    "previousFactoryHash": "07983e519b5ba5dd0cf126b9b9821123384f46691637ca37face017cd90dde3a",
+    "currentFactoryHash": "bb7b0f6768fcbef0a7091e95a2fe122531dfdf81e328c9695d7231ef791887b9",
+    "onlyDifference": "left arm rotation.x -.055 and left elbow rotation.x -.19 restored to existing idle values",
+    "independentComparison": "Replacing just these two numeric strings in current source reproduces the exact prior reviewed factory hash.",
+    "focusedReadback": "17 idle native samples, visibility/recovery/disposal rerun on final source; right-hand/shaft geometry and pose code unchanged."
+  },
+  "limits": [
+    "Native CPU calculations are not an actual WebGL frame, GPU timing, device acceptance or natural-grasp/PS4 quality acceptance.",
+    "Full triangle collision against every clothing layer and every possible pose was not tested.",
+    "Factory explicitly hides staff in unsupported motion; general walking/death staff animation is not implemented.",
+    "No broader production or new independent-review project was started."
+  ],
+  "reproduction": {
+    "auditScript": "Q-play-runtime-audit-v66/audit.mjs",
+    "contactScript": "Q-play-runtime-audit-v66/contact-triangles.mjs",
+    "worldUpdate": "Actual skin positions use updateMatrixWorld(true), including SkinnedMesh bind inverse update; a preliminary diagnostic using only updateWorldMatrix was corrected and is excluded."
+  }
+}

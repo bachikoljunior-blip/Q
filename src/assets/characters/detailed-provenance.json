@@ -5,8 +5,8 @@
   "license": "Q project-authored source under repository terms; MakeHuman head source and derivative are CC0-1.0 (see anatomical-head-provenance.json and sources/MAKEHUMAN-LICENSE-ASSETS.md).",
   "recipe": {
     "file": "detailed-geometry.js",
-    "sha256": "ed1d6757449fc83a3fb1a5872808b044e4709b52bc3de88fdedc7f6eced08033",
-    "bytes": 31318
+    "sha256": "98972ef568c0975d3f91bfed28654026bdf5decea143f868e97f70c724672603",
+    "bytes": 31602
   },
   "separateUnmodifiedAssets": "The adjacent pilgrim.glb, knight.glb, keeper.glb and provenance.json preserve Kay Lousberg CC0 attribution. They are not the source of the new procedural bodies.",
   "families": [
@@ -58,5 +58,13 @@
   "qualityBoundary": "Smith face uses an acquired CC0 graphical skin color map; all other roles retain flat skin. Actual lit appearance, face-neck boundary, device FPS and PS4/flagship parity remain unverified. Source contains socket/crease darkness, not calibrated illumination-free albedo.",
   "anatomicalHead": "anatomical-head-provenance.json",
   "skinColorMap": "skin/provenance.json",
-  "upperCloth": "cloth-material-provenance.json"
+  "upperCloth": "cloth-material-provenance.json",
+  "keeperEquipment": {
+    "entry": "../../mira-keeper.js",
+    "origin": "Q-authored saved v63 staff (18 types / 19 placements), v64 material batching and v65 right-hand registration. Exact dimensions are authored; multiview generated references remain conditional. Adopted only for the stationary village keeper. No new whole-character mesh is claimed.",
+    "triangles": 7512,
+    "meshes": 4,
+    "materialAcceptance": false,
+    "devicePerformanceMeasured": false
+  }
 }
