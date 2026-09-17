@@ -1,0 +1,45 @@
+{
+  "author": "/root/ultra_q_recover_reference_assembly",
+  "reasoningRequest": "ultra",
+  "effectiveReasoning": "not independently exposed",
+  "recordedAt": "2026-09-16T23:45:59.887990+00:00",
+  "newGeometry": 0,
+  "runtimeImport": 0,
+  "source": "bc761f25aae76209d26623b509f97e1f3a5a12ca",
+  "timing": "Numeric execution times are in result JSON. Independent full preparation stopwatch was not started before planning; no total production-speed claim.",
+  "files": {
+    "review/assembly-sampling-v65/measure-fixed-curves.mjs": {
+      "bytes": 3049,
+      "sha256": "c74b93ac8c833828348240f40d85a8f97c52a7375fc1c8e01a7776fc976b1ef5"
+    },
+    "review/assembly-sampling-v65/shared-curve.mjs": {
+      "bytes": 4425,
+      "sha256": "b708c82f64df8ac7297f3f8fcf8b935d202f335aa6bb4a9a3570ccff0919bfe5"
+    },
+    "review/assembly-sampling-v65/README.md": {
+      "bytes": 2335,
+      "sha256": "ce2ceb6572dd7eaa7da07443f5ca383d6580206a4814fbc4cc40be204f056ba5"
+    },
+    "review/assembly-sampling-v65/check.mjs": {
+      "bytes": 4281,
+      "sha256": "069f32434e5f62529182bc50b29118317504646ae6b2e072abeffb12fc22ed7f"
+    },
+    "docs/evidence/mira-assembly-v65/shared-sampling/FIXED_CURVES.json": {
+      "bytes": 10509,
+      "sha256": "7b6884550bc62e30234efcde069e773572f1f8814b4fc47d96e4f7dd7a171e09"
+    },
+    "docs/evidence/mira-assembly-v65/shared-sampling/CHECK.json": {
+      "bytes": 3908,
+      "sha256": "1e14e39afa8f159d600c3a1c92890ca35a25a0226b64442b2d6a6a04c45be980"
+    }
+  },
+  "independentReviewRepair": {
+    "reporter": "/root",
+    "issues": [
+      "Inherited constructor weight key produced NaN and dropped non-linear weight change",
+      "Finite but overflowing parameter span produced NaN successful result"
+    ],
+    "fix": "Own-key weight lookup; finite parameter/coordinate spans; reject nonfinite derived errors before returning selection",
+    "at": "2026-09-16T23:54:22.557870+00:00"
+  }
+}

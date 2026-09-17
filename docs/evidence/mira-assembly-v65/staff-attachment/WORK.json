@@ -1,0 +1,19 @@
+{
+  "author": "/root",
+  "authorization": "親も作業して",
+  "base": "bc761f25aae76209d26623b509f97e1f3a5a12ca",
+  "began": "2026-09-16T23:36:30Z",
+  "ended": "2026-09-16T23:43:13.025Z",
+  "elapsedSeconds": 403.025,
+  "timingScope": "From branch/worktree creation through implementation and validation. Earlier scope coordination and initial source inspection were not timed; this is a lower bound on total work, not the 0.319-second verification runtime.",
+  "runtimeImported": false,
+  "newShapes": 0,
+  "remoteWrites": 0,
+  "pendingOperations": 0,
+  "commands": [
+    "node --test tests/staff-attachment-v65.test.mjs",
+    "node review/staff-attachment-v65/verify.mjs",
+    "node --test tests/staff-attachment-v65.test.mjs tests/mira-staff-v63.test.mjs tests/mira-staff-batch-v64.test.mjs"
+  ],
+  "result": "9 related tests passed; independent review pending"
+}

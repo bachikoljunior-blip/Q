@@ -1,0 +1,73 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "docs/evidence/mira-assembly-v65/head-registration/REPORT.md": {
+      "sha256": "c927d06b780f24add02f42bf6f1dda8d79e971ebd4dae6bb8326444c38ef3370",
+      "bytes": 5720
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/REPRODUCIBILITY.json": {
+      "sha256": "aedec515e3fb71b01e83a1c43b2c715436674f0fdaf895abd40a0755870084fa",
+      "bytes": 2375
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/SOURCE_HASHES.json": {
+      "sha256": "87d7630d1eaf59145e1fed79ee2a04cb700e4c797639346d7e961ca4d2fb288d",
+      "bytes": 4001
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/TIMING.json": {
+      "sha256": "277f1398f2f3bf020c3a11d62e200732e68976b860a4571db147068c2a491cf6",
+      "bytes": 2640
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/external-neck-contract.json": {
+      "sha256": "0656e4538a6068a782fc840b284b6ffa7f566466e2f26c922fefb15cd92cea5f",
+      "bytes": 1515
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/external-ports.json": {
+      "sha256": "4c77c3edb6fa1734ad7d6a0b824983482c070cf7aa7c21c7b9c552950e8e045d",
+      "bytes": 52123
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/native-v63-preserved.json": {
+      "sha256": "19276931eb7c1297174aeb42ec5198df6c2873b68962a4ad6ac58b7957b4f41f",
+      "bytes": 26173
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/reference-review.json": {
+      "sha256": "afb04475716361fa208bb6c97203c10ab1c7335421e2d79a26e70600d9dcc6d1",
+      "bytes": 2323
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/registered-curves.png": {
+      "sha256": "50172df5076d52c3bd12a0bf9d61c93a7810ff3dcf80f4cdde0495f7de402873",
+      "bytes": 559247
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/registered-curves.svg": {
+      "sha256": "e625b7e9209151cb1cea047ac8054ad875e966839e95b6cd59827ab5ee86c760",
+      "bytes": 1510362
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/registration.json": {
+      "sha256": "b4d3bc3e6137bb92c5dbcbba09d2926c6d49cb134dd6d3b72c405ed579a0eaf4",
+      "bytes": 2015245
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/v1-interface-migration.json": {
+      "sha256": "4139a1e1b5402804c2f62f41eeecc12246023af99010e42f724bcafd6bf0b89b",
+      "bytes": 62798
+    },
+    "docs/evidence/mira-assembly-v65/head-registration/verification.json": {
+      "sha256": "0257fbda7ba471c33d3a2c3d10c7ccb6d305dae7e9f0f26995e3ecd1b1cd3670",
+      "bytes": 2695
+    },
+    "review/head-registration-v65/README.md": {
+      "sha256": "4b97db4ebc622be9fdbe8c9f055502369f669d78c432a1d07003eb77fb53b241",
+      "bytes": 1447
+    },
+    "review/head-registration-v65/generate.py": {
+      "sha256": "514c6d42113b2263de57d90c801aa6444d5d011bde93632a83b8576a2f2a9e95",
+      "bytes": 49447
+    },
+    "review/head-registration-v65/plot.py": {
+      "sha256": "369b70ec8c65a43698b210db8872dad14f6a691d55e57316d1a0278356b090f2",
+      "bytes": 1918
+    },
+    "review/head-registration-v65/verify.py": {
+      "sha256": "c8cf70f268ee6d9b96bf46916631452c27202a1e28a2a6d7e6f6f8bf439207af",
+      "bytes": 10293
+    }
+  }
+}

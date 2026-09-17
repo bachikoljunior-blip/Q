@@ -1,0 +1,11 @@
+# One shared curve, one sample selection
+
+`shared-curve.mjs` returns canonical sample indices for every incident owner, with optional reversed traversal. It creates no geometry. A stack subdivision retains explicit feature samples and subdivides whenever linear interpolation exceeds the supplied position, normal or bone-weight tolerance. It rejects nonfinite/invalid parameters, non-unit normals and invalid weights. Bone names and incident-owner identity remain the registry's responsibility.
+
+The error contract covers the supplied master samples. Smooth interpolation of endpoint normals does not prove a continuous analytic surface bound, and an absent feature cannot be recovered by the sampler. Final construction must inspect the analytic curve between selected samples (or provide a certified interval bound), preserve corners/UV seams and use one result for all incident parts. Never run separate simplification on the two sides of a shared seam.
+
+`node review/assembly-sampling-v65/check.mjs` checks straight reduction, curvature, an independent exact circular sagitta bound, non-linear weights, changing normals, feature retention, opposite traversal identity, immutable inputs and invalid-input rejection. These are numeric algorithm checks, not model-quality tests.
+
+`node review/assembly-sampling-v65/measure-fixed-curves.mjs` uses the six unchanged v63 bicubic head boundaries and their transverse derivatives. Against 32,769 independently evaluated points on each curve, the selected 9/10 samples reduce the worst position interpolation error from 0.301201 mm under uniform nine-point sampling to 0.245315 mm under the declared 0.25 mm sampled-error target. Some curves keep nine samples with different parameter positions; two require ten. This supports curvature-aware placement, not the claim that all shapes can use fewer vertices. The dense check includes between-master points but is not an interval proof.
+
+New head/cloth/hand/boot registration, new surfaces, render imports, actual contact, WebGL, device cost and visual-quality acceptance remain separate. This unit is permitted while registration is being completed because it changes no character shape. The tolerance is an authored experimental accuracy value, not a measured PS4 visual threshold or permission to change the 8,000-triangle runtime guard.

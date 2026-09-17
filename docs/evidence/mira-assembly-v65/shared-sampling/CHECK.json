@@ -1,0 +1,201 @@
+{
+  "at": "2026-09-16T23:54:21.585Z",
+  "scope": "numeric shared-index selection; no geometry created",
+  "cases": [
+    "straight reduction",
+    "curvature",
+    "continuous circle oracle",
+    "weight transition",
+    "normal bend",
+    "feature retention",
+    "reversed-owner identity and immutable inputs",
+    "bad parameter/normal/weight/direction rejection",
+    "own-key weight names and parameter/coordinate overflow rejection"
+  ],
+  "line": {
+    "curveId": "line",
+    "indices": [
+      0,
+      64
+    ],
+    "parameter": [
+      0,
+      1
+    ],
+    "maximum": {
+      "positionM": 0,
+      "normalRad": 0,
+      "weight": 0
+    },
+    "limits": {
+      "positionToleranceM": 0.00025,
+      "normalToleranceRad": 0.025,
+      "weightTolerance": 0.015
+    },
+    "sampleCount": 65,
+    "selectedCount": 2,
+    "scope": "supplied master samples only",
+    "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+  },
+  "arc": {
+    "curveId": "half-circle",
+    "indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      124,
+      128
+    ],
+    "parameter": [
+      0,
+      0.03125,
+      0.0625,
+      0.09375,
+      0.125,
+      0.15625,
+      0.1875,
+      0.21875,
+      0.25,
+      0.28125,
+      0.3125,
+      0.34375,
+      0.375,
+      0.40625,
+      0.4375,
+      0.46875,
+      0.5,
+      0.53125,
+      0.5625,
+      0.59375,
+      0.625,
+      0.65625,
+      0.6875,
+      0.71875,
+      0.75,
+      0.78125,
+      0.8125,
+      0.84375,
+      0.875,
+      0.90625,
+      0.9375,
+      0.96875,
+      1
+    ],
+    "maximum": {
+      "positionM": 0.00006263627733104019,
+      "normalRad": 0.00001479386652950991,
+      "weight": 0
+    },
+    "limits": {
+      "positionToleranceM": 0.00025,
+      "normalToleranceRad": 0.025,
+      "weightTolerance": 0.015
+    },
+    "sampleCount": 129,
+    "selectedCount": 33,
+    "scope": "supplied master samples only",
+    "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+  },
+  "independentContinuousCircleSagittaM": 0.00006263627733103494,
+  "weighted": {
+    "curveId": "weight-transition",
+    "indices": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64
+    ],
+    "parameter": [
+      0,
+      0.125,
+      0.25,
+      0.375,
+      0.5,
+      0.625,
+      0.75,
+      0.875,
+      1
+    ],
+    "maximum": {
+      "positionM": 1.3877787807814457e-17,
+      "normalRad": 0,
+      "weight": 0.00390625
+    },
+    "limits": {
+      "positionToleranceM": 0.00025,
+      "normalToleranceRad": 0.025,
+      "weightTolerance": 0.015
+    },
+    "sampleCount": 65,
+    "selectedCount": 9,
+    "scope": "supplied master samples only",
+    "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+  },
+  "normal": {
+    "curveId": "normal-fold",
+    "indices": [
+      0,
+      18,
+      35,
+      51,
+      64
+    ],
+    "parameter": [
+      0,
+      0.28125,
+      0.546875,
+      0.796875,
+      1
+    ],
+    "maximum": {
+      "positionM": 1.3877787807814457e-17,
+      "normalRad": 0.019775390624999004,
+      "weight": 0
+    },
+    "limits": {
+      "positionToleranceM": 0.00025,
+      "normalToleranceRad": 0.025,
+      "weightTolerance": 0.015
+    },
+    "sampleCount": 65,
+    "selectedCount": 5,
+    "scope": "supplied master samples only",
+    "binding": "All incident owners must use this same canonical selection, with declared traversal reversal only"
+  },
+  "wallMs": 9.862827000000003,
+  "newGeometry": 0,
+  "wholeCharacterAcceptance": false
+}

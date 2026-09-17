@@ -1,0 +1,31 @@
+{
+  "readImages": [
+    "docs/evidence/mira-reference-set-v64/head-assembly-registration/A01a-attachment-supplement/mira-A01a-attachment-v1.png",
+    "docs/evidence/mira-reference-set-v64/head-assembly-registration/F17-side-supplement/mira-F17-side-v2.png",
+    "docs/evidence/mira-reference-set-v64/head-assembly-registration/F21-supplement/mira-F21-v1.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/01-face-transitions-v1.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/02-nose-v2.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/03-central-mouth-v1.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/04-corners-v1.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/05-eye-and-brow-v2.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/06-eyelids-v1.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/07-front-scalp-v2.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/08-side-rear-scalp-v2.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/09-ear-outer-v1.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/10-ear-inner-v1.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/11-neck-v2.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/12-hair-front-v2.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/13-hair-back-v1.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-F07-F11-v2.png",
+    "docs/evidence/mira-reference-set-v64/head-reference-set/existing/mira-face-patches-F01-F05-F09-v2.png",
+    "docs/evidence/character-reference-v60/references/mira-head-views-v1.png",
+    "docs/evidence/character-reference-v60/references/mira-complete-six-views-v1.png"
+  ],
+  "calibration": "none; all new metres are deliberate author design, never inferred measurement from pixels",
+  "exclusions": [
+    "A01a above/toward +X caption is not a coordinate transform",
+    "F17 first side supplement extra projection rejected; v2 single ridge adopted qualitatively",
+    "hair HT01 vs HT02 becomes explicit lift .028 vs .013m, not claimed image measurement",
+    "ear canal beyond blind concha and oral cavity/open-mouth acting outside this closed-rest registration scope"
+  ]
+}

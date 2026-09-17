@@ -1,0 +1,85 @@
+{
+  "checks": {
+    "exact82InstanceIDs": true,
+    "41UniqueLeafTypes": true,
+    "allSelectedReferenceFilesExist": true,
+    "allNumbersFinite": true,
+    "allCurveEndpointsResolve": true,
+    "allCurveEndpointsNumericMatch": true,
+    "allPartTrimLoopsClosedByNodeID": true,
+    "ownersReferToCanonicalSourceBothWays": true,
+    "noCurveControlCopiesOnOwners": true,
+    "sharedSkinTraversalOpposite": true,
+    "skinBoundaryHasNoBranches": true,
+    "threeSkinBoundaryLoops": true,
+    "skinCombinatorialSphereWithThreeOpenings": true,
+    "oneOrTwoTrimOwners": true,
+    "everySingleOwnerHasExplicitPortOrLayer": true,
+    "canonicalFrameVectorsUnit": true,
+    "canonicalFramesOrthogonal": true,
+    "weightsNormalizedNonnegative": true,
+    "sampledPositionsAgreeWithCurves": true,
+    "explicitUVForEveryOwner": true,
+    "24UniqueHairRoots": true,
+    "rootsHaveOneExistingScalpSupport": true,
+    "rootOffsetIsExactNormalClearance": true,
+    "hairSpineStartsAtRoot": true,
+    "rootFramesRightHanded": true,
+    "v1NativeBytesUnchanged": true,
+    "v63SevenRecordsUnchanged": true,
+    "nativeSourceHashCorrect": true,
+    "allNativeSubcurvesExact": true,
+    "sixInternalNativeSeamsSingleSource": true,
+    "closedMouthIsContactNotPermanentWeld": true,
+    "externalPortsHaveRequiredFields": true,
+    "collarHasPositiveStaticRadialGap": true,
+    "smoothSkinNodesShareOneNormal": true,
+    "allSkinIncidentTangentRanksAtMostTwo": true,
+    "nodeTangentsLieOnRegisteredPlane": true
+  },
+  "passed": 36,
+  "failed": [],
+  "counts": {
+    "types": 41,
+    "instances": 82,
+    "skinFaces": 52,
+    "canonicalCurves": 277,
+    "skinTrimCurves": 171,
+    "hairSpines": 24,
+    "hairRoots": 24,
+    "skinNodes": 118,
+    "skinBoundaryLoops": 3,
+    "skinEulerCharacteristic": -1,
+    "nativeSeams": [
+      [
+        "HC006"
+      ],
+      [
+        "HC010"
+      ],
+      [
+        "HC013"
+      ],
+      [
+        "HC026"
+      ],
+      [
+        "HC023"
+      ],
+      [
+        "HC019"
+      ]
+    ],
+    "maxNodeNormalAngleDegrees": 1.2074182697257333e-06,
+    "maxNodeTangentNormalDot": 1.557087792036782e-14,
+    "maxNodeTangentRank": 2
+  },
+  "meaning": "numeric/data/topological consistency only; no triangulation or rendered/posed/visual quality acceptance",
+  "remaining": [
+    "Independent whole-person registration review",
+    "New surface Jacobian, self-intersections and full-width hair support not verified by trim graph",
+    "Native-to-new normal/weight compatibility under deformation needs construction checks",
+    "Bind-only neck/collar gap; no pose clearance proof",
+    "Closed mouth and blind concha/nasal recess only; not all facial performance anatomy"
+  ]
+}

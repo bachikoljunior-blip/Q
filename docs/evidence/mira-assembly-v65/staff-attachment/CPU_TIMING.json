@@ -1,0 +1,51 @@
+{
+  "context": "Node CPU on this executor. No rendering/FPS/device or allocation benchmark. Alternating order; same actor/time range/idle input, 500 warmups each.",
+  "iterationsPerRun": 2000,
+  "runs": [
+    {
+      "order": "adapter-first",
+      "baselineMsPerFrame": 0.024174378500000017,
+      "withAdapterMsPerFrame": 0.03940080499999999
+    },
+    {
+      "order": "baseline-first",
+      "baselineMsPerFrame": 0.024497551999999985,
+      "withAdapterMsPerFrame": 0.038675745499999976
+    },
+    {
+      "order": "adapter-first",
+      "baselineMsPerFrame": 0.023625532000000022,
+      "withAdapterMsPerFrame": 0.0396588165
+    },
+    {
+      "order": "baseline-first",
+      "baselineMsPerFrame": 0.022917035999999995,
+      "withAdapterMsPerFrame": 0.035657342999999966
+    },
+    {
+      "order": "adapter-first",
+      "baselineMsPerFrame": 0.02535382850000002,
+      "withAdapterMsPerFrame": 0.036188513
+    },
+    {
+      "order": "baseline-first",
+      "baselineMsPerFrame": 0.02466076099999998,
+      "withAdapterMsPerFrame": 0.036479798500000014
+    },
+    {
+      "order": "adapter-first",
+      "baselineMsPerFrame": 0.023195187999999915,
+      "withAdapterMsPerFrame": 0.037952538
+    },
+    {
+      "order": "baseline-first",
+      "baselineMsPerFrame": 0.02435739949999993,
+      "withAdapterMsPerFrame": 0.0323946555
+    }
+  ],
+  "medianBaselineMs": 0.02426588899999997,
+  "medianWithAdapterMs": 0.03721616825000001,
+  "capturedAt": "2026-09-16T23:56:28.869Z",
+  "attachmentSha256": "7e6cfccb9970db50d528d0be4cf8ab75cd8382dd849f215fed1b385c2eaae62c",
+  "medianDifferenceMs": 0.012950279250000037
+}

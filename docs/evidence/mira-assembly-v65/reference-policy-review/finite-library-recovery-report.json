@@ -1,0 +1,139 @@
+{
+  "task": "Q Mira original-reference recovery: Q-only derived finite search report",
+  "provenance": {
+    "sourceReportSHA256": "d9a02404360515f353fad19e677e900b8ef5bf680a0af01c3041f65caf443138",
+    "originalScratchReportPreserved": true,
+    "isByteIdenticalCopy": false,
+    "derivation": "Keep Q target search scope and finite non-recovery conclusion; omit unrelated content classifications and opaque item metadata."
+  },
+  "time": {
+    "first_measured_utc": "2026-09-16T23:26:40Z",
+    "inspection_finished_utc": "2026-09-16T23:27:18Z",
+    "true_start_time_not_recorded": true
+  },
+  "searches": [
+    {
+      "kind": "title",
+      "queries": [
+        "\"authored-v2\"",
+        "\"supplement-closure\"",
+        "\"whole-reference-registration-review\"",
+        "\"Mira\"",
+        "\"ミラ\""
+      ],
+      "exact_result_count": 0,
+      "supplemental_result_count": 0
+    },
+    {
+      "kind": "content",
+      "queries": [
+        "灰の巡礼",
+        "ミラ 微小部品 多角度",
+        "97b8017d 87c58673"
+      ],
+      "returned_chunks": 100,
+      "eligible_target_candidates": 0,
+      "has_unread_pagination": true,
+      "note": "Unrelated matches; no eligible target asset identity was established in the inspected results."
+    },
+    {
+      "kind": "list",
+      "sort": "modified_at desc",
+      "limit": 200,
+      "returned_items": 200,
+      "eligible_original_asset_candidates": 0,
+      "has_older_pagination": true
+    },
+    {
+      "kind": "title",
+      "queries": [
+        "mira"
+      ],
+      "exact_result_count": 0,
+      "supplemental_result_count": 0
+    },
+    {
+      "kind": "title",
+      "queries": [
+        "reference"
+      ],
+      "exact_result_count": 0,
+      "supplemental_result_count": 0
+    },
+    {
+      "kind": "title",
+      "queries": [
+        "巡礼"
+      ],
+      "exact_result_count": 1,
+      "eligible_original_asset_candidates": 0
+    },
+    {
+      "kind": "image-content",
+      "queries": [
+        "character reference head hair gloves boots turnaround"
+      ],
+      "returned_chunks": 30,
+      "eligible_target_candidates": 0,
+      "has_unread_pagination": true,
+      "note": "Unrelated matches; no eligible target asset identity was established in the inspected results."
+    },
+    {
+      "kind": "title",
+      "queries": [
+        "head",
+        "closure",
+        "registration",
+        "v64",
+        "Q-"
+      ],
+      "exact_result_count": 0,
+      "supplemental_result_count": 1,
+      "eligible_original_asset_candidates": 0
+    },
+    {
+      "kind": "generated-image-list",
+      "filters": {
+        "model_generated": true,
+        "include_file_types": [
+          "image"
+        ],
+        "modified_after": "2026-09-15T00:00:00Z"
+      },
+      "returned_items": 0,
+      "has_more": false
+    }
+  ],
+  "resolvedNonAssetQMatch": {
+    "kind": "Q Site text projection",
+    "readCompleted": true,
+    "eligibleOriginalAsset": false,
+    "materialized": false,
+    "exclusionReason": "The Q match was a text projection, not an original part image or numerical source manifest."
+  },
+  "recovery": {
+    "original_asset_files_recovered": 0,
+    "original_asset_bytes_recovered": 0,
+    "recovered_paths": [],
+    "recovered_sha256": [],
+    "materialize_calls": 0,
+    "download_helper_invocations": 0,
+    "reason": "No eligible original asset candidate with resolved Library identity was found."
+  },
+  "remainingNewerTargetsNotLocated": [
+    "head authored-v2 manifest prefix 97b8017d; 41 types / 82 placements / 154 curves / 24 hair roots",
+    "hands/shoes final numeric data: 134 curves / 160 joins",
+    "clothing final numeric data: 112 curves",
+    "TR02 notch newer revision",
+    "whole-reference-registration-review / whole view-policy correction"
+  ],
+  "gitRecoveryContext": {
+    "sourceCommit": "bc761f25aae76209d26623b509f97e1f3a5a12ca",
+    "olderSelectedPNGsRecoveredFromGit": 73,
+    "isLibraryRecovery": false
+  },
+  "conclusion": "Newer original assets were not located in the finite inspected Library scope; Library recovery remains zero. Parent reports that older PNGs and author proposals are already recovered from Git. This is not evidence of global absence or proof of never having been saved. No newer original assets are claimed recovered or completed.",
+  "limits": "Finite inspected search scope only; unread ranked-result and older-item pagination remains. This does not prove global absence or that an artifact was never saved.",
+  "remoteWrites": 0,
+  "pendingTools": 0
+}

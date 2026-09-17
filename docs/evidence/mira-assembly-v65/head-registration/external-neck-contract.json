@@ -1,0 +1,83 @@
+{
+  "id": "HEAD_NECK_COLLAR_V65",
+  "frames": {
+    "headFromChestTranslation": [
+      0,
+      -0.76,
+      0
+    ],
+    "neckFromChestTranslation": [
+      0,
+      -0.6,
+      0
+    ],
+    "poseConversion": "inverse(M_head)*M_chest; translation valid identity bind only"
+  },
+  "collar": {
+    "owners": [
+      "cloth:C01",
+      "cloth:C02"
+    ],
+    "lowerChestY": 0.56,
+    "upperChestY": 0.66,
+    "innerLower": [
+      0.1,
+      0.086
+    ],
+    "innerUpper": [
+      0.086,
+      0.083
+    ],
+    "outerLower": [
+      0.104,
+      0.09
+    ],
+    "outerUpper": [
+      0.09,
+      0.087
+    ],
+    "frontOpenHalfAngleDegrees": 12
+  },
+  "skinCut": {
+    "headY": -0.21,
+    "chestY": 0.55,
+    "radiiM": [
+      0.098,
+      0.078
+    ],
+    "owners": [
+      "head:N01",
+      "head:N02"
+    ],
+    "receiver": "body:neck-to-chest skin continuation",
+    "curveIds": [
+      "HC177",
+      "HC178",
+      "HC180",
+      "HC181"
+    ]
+  },
+  "verticalUnderlapM": 0.01,
+  "collarZoneNeckSections": [
+    {
+      "y": -0.2,
+      "rx": 0.094,
+      "rz": 0.076
+    },
+    {
+      "y": -0.1,
+      "rx": 0.078,
+      "rz": 0.076
+    }
+  ],
+  "staticSameRayGapMM": {
+    "min": 6.000000000000005,
+    "max": 9.999999999999995,
+    "samples": 34037
+  },
+  "interpretation": "positive radial air gap, separate layers; not a weld or posed collision test",
+  "pending": [
+    "torso skin cut receiver must be authored or supplied",
+    "neck/chest/head skin blend and collar in animated poses untested"
+  ]
+}

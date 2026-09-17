@@ -1,0 +1,81 @@
+{
+  "status": "PASS numerical author-registration consistency only",
+  "counts": {
+    "types": 21,
+    "placements": 90,
+    "handPlacements": 56,
+    "bootPlacements": 34,
+    "canonicalCurves": 164,
+    "twoOwnerJoins": 152,
+    "sharedJunctions": 114,
+    "canonicalSamples": 3156,
+    "externalPorts": 4,
+    "existingBones": 41,
+    "newMeshes": 0
+  },
+  "checks": [
+    "90 IDs/types match fixed v64 ledger",
+    "native41bones only and proper transforms",
+    "ordered curve samples unit normals/tangents, perpendicular, valid normalized weights",
+    "every open patch boundary endpoint degree2; coincident shared junction normal/weights identical",
+    "both shared owners resolve identical canonical attributes with opposite traversal",
+    "separate UV charts in range",
+    "8+12=20 rear partition and -108 support",
+    "all8 fastener seats within actual heel footprint",
+    "AH07 bare floor/AH08 separate plate",
+    "four sampled external ports including 40mm hem and9mm wrist overlap",
+    "right rigid staff scale1 retained; contact not accepted",
+    "source hashes and deterministic regeneration"
+  ],
+  "junctionRepair": {
+    "sourceRank3Junctions": 60,
+    "repairedMaxTripleProduct": 1.1787718023903437e-10,
+    "maxHermiteDerivativeRepairAngleDegrees": 35.8661319053,
+    "meaning": "authored interpolation derivatives changed into common normal domain; actual surface not yet built"
+  },
+  "maxima": {
+    "normalLengthError": 6.49120757145738e-11,
+    "tangentLengthError": 8.14580625174699e-11,
+    "normalTangentDot": 1.074551142510316e-10,
+    "weightSumError": 0,
+    "sharedPositionDifferenceMm": 0,
+    "sharedNormalAngleDegrees": 0,
+    "sharedTangentDifference": 0,
+    "sharedWeightDifference": 0,
+    "junctionTripleProduct": 1.1787718023903437e-10
+  },
+  "negativeControls": [
+    {
+      "fault": "normal nonunit",
+      "rejected": true
+    },
+    {
+      "fault": "per-owner duplicate normal",
+      "rejected": true
+    },
+    {
+      "fault": "22mm heel substitution",
+      "rejected": true
+    },
+    {
+      "fault": "renamed placement",
+      "rejected": true
+    },
+    {
+      "fault": "open endpoint",
+      "rejected": true
+    },
+    {
+      "fault": "unknown bone",
+      "rejected": true
+    }
+  ],
+  "regenerationIdentical": true,
+  "elapsedSeconds": 0.6817711709991272,
+  "notTested": [
+    "surface area/interior self-intersection",
+    "triangle nail/strap/grip contact",
+    "posed cloth clearance",
+    "runtime/render/material/device/PS4 or fixed10 comparison"
+  ]
+}
